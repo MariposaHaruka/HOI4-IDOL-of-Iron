@@ -1,0 +1,355 @@
+search_filter_prios = {
+	FOCUS_FILTER_POLITICAL = 1010
+	
+	FOCUS_FILTER_RESEARCH = 522
+	
+	FOCUS_FILTER_INDUSTRY = 509
+
+	FOCUS_FILTER_BALANCE_OF_POWER = 200
+	FOCUS_FILTER_SOV_POLITICAL_PARANOIA = 111
+	FOCUS_FILTER_PROPAGANDA = 110
+	FOCUS_FILTER_MISSIOLINI = 110
+	FOCUS_FILTER_ARMY_XP = 103
+	FOCUS_FILTER_NAVY_XP = 102
+	FOCUS_FILTER_AIR_XP = 101
+
+}
+
+focus_tree = {
+	id = generic_focus
+	
+	country = {
+		factor = 1
+	}
+	
+	default = yes
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = industrial_effort
+	}
+
+	focus = {
+		id = anime_making
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 1
+		y = 0
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = scenario_check_1
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = anime_making }
+		x = -7
+		y = 1
+		relative_position_id = anime_making
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = scenario_check_2
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = scenario_check_1 }
+		x = 0
+		y = 1
+		relative_position_id = scenario_check_1
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = scenario_check_3
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = scenario_check_2 }
+		x = 0
+		y = 1
+		relative_position_id = scenario_check_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+			add_ideas = generic_infantry_weapons_discount
+		}
+	}
+
+
+	focus = {
+		id = sceneart_check_1
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = anime_making }
+		x = -5
+		y = 1
+		relative_position_id = anime_making
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = sceneart_check_2
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = sceneart_check_1 }
+		x = 0
+		y = 1
+		relative_position_id = sceneart_check_1
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = sceneart_check_3
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = sceneart_check_2 }
+		x = 0
+		y = 1
+		relative_position_id = sceneart_check_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			add_ideas = generic_artillery_discount
+		}
+	}
+
+	focus = {
+		id = collabo_check_1
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = anime_making }
+		x = -3
+		y = 1
+		relative_position_id = anime_making
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1.0
+				uses = 1
+				category = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = collabo_check_2
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = collabo_check_1 promo_check_1 }
+		x = 0
+		y = 1
+		relative_position_id = collabo_check_1
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1.0
+				uses = 1
+				category = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = collabo_check_3
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = collabo_check_2 }
+		x = 0
+		y = 1
+		relative_position_id = collabo_check_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1.0
+				uses = 1
+				category = motorised_infantry
+			}
+			add_ideas = generic_artillery_discount
+		}
+	}
+
+	focus = {
+		id = promo_check_1
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = anime_making }
+		x = -1
+		y = 1
+		relative_position_id = anime_making
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = promo_check_2
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = promo_check_1 }
+		x = 0
+		y = 1
+		relative_position_id = promo_check_1
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = promo_check_3
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = promo_check_2 }
+		x = 0
+		y = 1
+		relative_position_id = promo_check_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+			add_ideas = generic_armor_discount
+		}
+	}
+
+	focus = {
+		id = _anime_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = anime_making }
+		x = 1
+		y = 1
+		relative_position_id = anime_making
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+}
