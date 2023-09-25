@@ -41,6 +41,7 @@ if = {
 			iw_large_airframe = 1
 			basic_medium_airframe = 1
 			basic_small_airframe = 1
+			basic_large_airframe = 1
 		}
 	else = {
 		set_air_oob = "IMA_1936_air_legacy"
@@ -58,9 +59,8 @@ if = {
 load_oob = "IMA_Motorized"
 
 set_research_slots = 4
-
-set_stability = 0.6
-set_war_support = 0.1
+set_stability = 0.5
+set_war_support = 0.05
 add_command_power = 20
 
 # Starting tech
@@ -134,6 +134,7 @@ if = {
 		early_ship_hull_light = 1
 		basic_ship_hull_light = 1
 		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
 		early_ship_hull_cruiser = 1
 		basic_ship_hull_cruiser = 1
 		early_ship_hull_heavy = 1
@@ -154,9 +155,9 @@ if = {
 		basic_fire_control_system = 1
 		basic_dp_light_battery = 1
 	}
-	add_ideas = MTG_naval_treaty_adherent
-	set_global_flag = MTG_second_london_conference
-	set_global_flag = { flag = MTG_naval_treaty_signatories value = 5 }
+	add_ideas = appstore_treaty_adherent
+	set_global_flag = appstore_conference
+	set_global_flag = { flag = appstore_treaty_signatories value = 5 }
 }
 
 if = {
@@ -168,16 +169,14 @@ if = {
 	}
 }
 
-set_variable = { var = eng_gateway_to_europe_influence value = 0 }
-
 add_ideas = {
-	stiff_upper_lip
-	ENG_the_war_to_end_all_wars
-	george_v
+	depressed_ip
+	old_ip
+	amami_haruka
 }
 	
 
-set_convoys = 800
+set_convoys = 900
 
 # DIPLOMACY
 if = {
@@ -231,7 +230,7 @@ set_popularities = {
 	neutrality = 1
 }
 
-create_faction = Bandai Namco Allies
+create_faction = "Bandai Namco Allies"
 add_to_faction = IMA
 #add_to_faction = BDG
 add_to_faction = ICG
@@ -241,7 +240,7 @@ add_to_faction = ISM
 
 #give_guarantee = UMA
 
-# Order matters - here Chamberlain becomes starting leader
+
 
 ### Leader 
 recruit_character = IMA_amami_haruka
@@ -260,6 +259,7 @@ recruit_character = IMA_ganaha_hibiki
 recruit_character = IMA_otonashi_kotori
 recruit_character = IMA_takaki_junjiro
 recruit_character = IMA_akabane_P
+recruit_character = IMA_majima_P
 
 ### Political recruit
 recruit_character = IMA_kisaragi_chihaya_pr
@@ -307,14 +307,29 @@ recruit_character = IMA_futami_mami_co
 recruit_character = IMA_ganaha_hibiki_co
 recruit_character = IMA_otonashi_kotori_co
 
+### Admiral
+recruit_character = IMA_amami_haruka_ad
+recruit_character = IMA_kisaragi_chihaya_ad
+recruit_character = IMA_hoshii_miki_ad
+recruit_character = IMA_hagiwara_yukiho_ad
+recruit_character = IMA_takatsuki_yayoi_ad
+recruit_character = IMA_kikuchi_makoto_ad
+recruit_character = IMA_minase_iori_ad
+recruit_character = IMA_shijou_takane_ad
+recruit_character = IMA_akizuki_ritsuko_ad
+recruit_character = IMA_miura_azusa_ad
+recruit_character = IMA_futami_ami_ad
+recruit_character = IMA_futami_mami_ad
+recruit_character = IMA_ganaha_hibiki_ad
+recruit_character = IMA_otonashi_kotori_ad
 
-### Ship Variants ###
+### Ship Variants - no MtG
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Variants ###
-	# SS #
+	# SS
 	create_equipment_variant = {
-		name = "O/P/R Class"
+		name = "Live For You Class"
 		type = submarine_1
 		parent_version = 0
 		upgrades = {
@@ -325,7 +340,7 @@ if = {
 		}
 	}
 	create_equipment_variant = {
-		name = "S Class"
+		name = "SP Class"
 		type = submarine_2
 		parent_version = 0
 		upgrades = {
@@ -335,9 +350,9 @@ if = {
 			sub_torpedo_upgrade = 3
 		}
 	}
-	# Destroyers #
+	# DD
 	create_equipment_variant = {
-		name = "A/B/C/D Class"
+		name = "SUN Class"
 		type = destroyer_1
 		parent_version = 0
 		upgrades = {
@@ -348,9 +363,23 @@ if = {
 		}
 		obsolete = yes
 	}
-	# Light Cruisers #
+
 	create_equipment_variant = {
-		name = "Emerald Class"
+		name = "MOON Class"
+		type = destroyer_2
+		parent_version = 0
+		upgrades = {
+			ship_torpedo_upgrade = 2
+			destroyer_engine_upgrade = 2
+			ship_ASW_upgrade = 2
+			ship_anti_air_upgrade = 2
+		}
+		obsolete = yes
+	}
+	
+	# CL
+	create_equipment_variant = {
+		name = "ONE FOR ALL Class"
 		type = light_cruiser_1
 		parent_version = 0
 		upgrades = {
@@ -362,9 +391,9 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "Amphion Class"
-		type = light_cruiser_1
-		parent_version = 1
+		name = "Dearly Class"
+		type = light_cruiser_2
+		parent_version = 0
 		upgrades = {
 			ship_reliability_upgrade = 3
 			ship_engine_upgrade = 3
@@ -372,9 +401,9 @@ if = {
 			ship_anti_air_upgrade = 3
 		}
 	}
-	# Heavy Cruisers #
+	# CA
 	create_equipment_variant = {
-		name = "County Class"
+		name = "Shiny Class"
 		type = heavy_cruiser_1
 		parent_version = 0
 		upgrades = {
@@ -384,10 +413,35 @@ if = {
 			ship_gun_upgrade = 3
 		}
 	}
-	# Battlecruisers #
+
 	create_equipment_variant = {
-		name = "Admiral Class"
+		name = "Festa Class"
+		type = heavy_cruiser_2
+		parent_version = 0
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 3
+			ship_armor_upgrade = 3
+			ship_gun_upgrade = 3
+		}
+	}
+
+	# BC
+	create_equipment_variant = {
+		name = "Platinum Class"
 		type = battle_cruiser_1
+		parent_version = 0
+		upgrades = {
+			ship_reliability_upgrade = 3
+			ship_engine_upgrade = 2
+			ship_armor_upgrade = 3
+			ship_gun_upgrade = 3
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Starlit Class"
+		type = battle_cruiser_2
 		parent_version = 0
 		upgrades = {
 			ship_reliability_upgrade = 3
@@ -396,9 +450,10 @@ if = {
 			ship_gun_upgrade = 2
 		}
 	}
-	# Battleships #
+
+	# BB
 	create_equipment_variant = {
-		name = "Nelson Class"
+		name = "Stella Class"
 		type = battleship_1
 		parent_version = 0
 		upgrades = {
@@ -409,22 +464,25 @@ if = {
 		}
 	}
 	create_equipment_variant = {
-		name = "Queen Elizabeth Class"
-		type = battleship_1
+		name = "THE iDOLM@STER Class"
+		type = battleship_2
 		parent_version = 0
 		upgrades = {
-			ship_reliability_upgrade = 1
-			ship_engine_upgrade = 2
-			ship_armor_upgrade = 1
+			ship_reliability_upgrade = 4
+			ship_engine_upgrade = 4
+			ship_armor_upgrade = 4
+			ship_gun_upgrade = 4
 		}
 	}
 }
+
+### Ship Variants - MtG
 if = {
 	limit = { has_dlc = "Man the Guns" }
-	### Variants ###
-	# Submarines #
+	### Variants
+	# SS
 	create_equipment_variant = {
-		name = "O/P/R Class"
+		name = "Live For You Class"
 		type = ship_hull_submarine_1
 		name_group = ENG_SS_HISTORICAL
 		parent_version = 0
@@ -435,22 +493,22 @@ if = {
 		}
 	}
 	create_equipment_variant = {
-		name = "S Class"
-		type = ship_hull_submarine_1
+		name = "SP Class"
+		type = ship_hull_submarine_2
 		name_group = ENG_SS_HISTORICAL
 		parent_version = 0
 		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = ship_torpedo_sub_1
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = ship_torpedo_sub_2
 		}
 	}
-	# Destroyers #
+	# DD
 	create_equipment_variant = {
-		name = "A/B/C/D Class"
+		name = "SUN Class III"
 		type = ship_hull_light_1
 		name_group = ENG_DD_HISTORICAL
-		parent_version = 0
+		parent_version = 2
 		modules = {
 			fixed_ship_battery_slot = dp_light_battery_2
 			fixed_ship_anti_air_slot = empty
@@ -464,7 +522,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "E/F/G/H Class"
+		name = "MOON Class"
 		type = ship_hull_light_2
 		name_group = ENG_DD_HISTORICAL
 		parent_version = 0
@@ -480,10 +538,10 @@ if = {
 		}
 	}
 	create_equipment_variant = {
-		name = "V/W Class"
+		name = "SUN Class II"
 		type = ship_hull_light_1
 		name_group = ENG_DD_HISTORICAL
-		parent_version = 0
+		parent_version = 1
 		modules = {
 			fixed_ship_battery_slot = dp_light_battery_1
 			fixed_ship_anti_air_slot = ship_anti_air_1
@@ -497,7 +555,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "S Class"
+		name = "SUN Class I"
 		type = ship_hull_light_1
 		name_group = ENG_DD_HISTORICAL
 		parent_version = 0
@@ -513,12 +571,12 @@ if = {
 		}
 		obsolete = yes
 	}
-	# Light Cruisers #
+	# CL
 	create_equipment_variant = {
-		name = "C-Class"
+		name = "ONE FOR ALL Class II" 
 		type = ship_hull_cruiser_1
 		name_group = ENG_CL_HISTORICAL
-		parent_version = 0
+		parent_version = 1
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
@@ -533,10 +591,10 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "Danae Class"
+		name = "ONE FOR ALL Class III"
 		type = ship_hull_cruiser_1
 		name_group = ENG_CL_HISTORICAL
-		parent_version = 0
+		parent_version = 2
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
 			fixed_ship_anti_air_slot = ship_anti_air_1
@@ -551,7 +609,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "Emerald Class"
+		name = "Dearly Class I"
 		type = ship_hull_cruiser_2
 		name_group = ENG_CL_HISTORICAL
 		parent_version = 0
@@ -570,10 +628,10 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "Leander Class"
+		name = "Dearly Class II"
 		type = ship_hull_cruiser_2
 		name_group = ENG_CL_HISTORICAL
-		parent_version = 0
+		parent_version = 1
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_2
 			fixed_ship_anti_air_slot = ship_anti_air_2
@@ -589,7 +647,7 @@ if = {
 		}
 	}
 	create_equipment_variant = {
-		name = "Adventure Class"						# cruiser minelayer
+		name = "ONE FOR ALL Class I"						# cruiser minelayer
 		type = ship_hull_cruiser_1
 		name_group = ENG_MINELAYERS_HISTORICAL
 		parent_version = 0
@@ -607,10 +665,10 @@ if = {
 		}
 	}
 	create_equipment_variant = {
-			name = "Town Class"
+			name = "Dearly Class III"
 			type = ship_hull_cruiser_2
 			name_group = ENG_CL_HISTORICAL
-			parent_version = 0
+			parent_version = 2
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_2
 				fixed_ship_anti_air_slot = ship_anti_air_2
@@ -625,12 +683,12 @@ if = {
 				rear_1_custom_slot = ship_light_medium_battery_2
 			}
 		}
-	# Heavy Cruisers #
+	# CA
 	create_equipment_variant = {
-		name = "County Class"
+		name = "Shiny Class II"
 		type = ship_hull_cruiser_1
 		name_group = ENG_CA_HISTORICAL
-		parent_version = 0
+		parent_version = 1
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_2
 			fixed_ship_anti_air_slot = ship_anti_air_1
@@ -645,8 +703,8 @@ if = {
 		}
 	}
 	create_equipment_variant = {
-		name = "York Class"
-		type = ship_hull_cruiser_1
+		name = "Festa Class"
+		type = ship_hull_cruiser_2
 		name_group = ENG_CA_HISTORICAL
 		parent_version = 0
 		modules = {
@@ -663,7 +721,7 @@ if = {
 		}
 	}
 	create_equipment_variant = {
-		name = "Hawkins Class"
+		name = "Shiny Class I"
 		type = ship_hull_cruiser_1
 		name_group = ENG_CA_HISTORICAL
 		parent_version = 0
@@ -680,9 +738,9 @@ if = {
 		}
 		obsolete = yes
 	}
-	# Battlecruisers #
+	# BC
 	create_equipment_variant = {
-		name = "Renown Class"
+		name = "Platinum Class I"
 		type = ship_hull_heavy_1
 		name_group = ENG_BC_HISTORICAL
 		parent_version = 0
@@ -701,12 +759,12 @@ if = {
 		}
 		obsolete = yes
 	}
-	# Battlecruisers #
+	
 	create_equipment_variant = {
-		name = "Admiral Class"
+		name = "Platinum Class II"
 		type = ship_hull_heavy_1
 		name_group = ENG_BC_HISTORICAL
-		parent_version = 0
+		parent_version = 1
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
 			fixed_ship_anti_air_slot = ship_anti_air_1
@@ -723,8 +781,8 @@ if = {
 	}
 
 	create_equipment_variant = {
-		name = "G3 Design"
-		type = ship_hull_heavy_1
+		name = "Starlit Class"
+		type = ship_hull_heavy_2
 		name_group = ENG_BC_HISTORICAL
 		parent_version = 0
 		modules = {
@@ -741,9 +799,9 @@ if = {
 			rear_1_custom_slot = empty
 		}
 	}
-	# Battleships #
+	# BB
 	create_equipment_variant = {
-		name = "Nelson Class"
+		name = "Stella Class I"
 		type = ship_hull_heavy_1
 		name_group = ENG_BB_HISTORICAL
 		parent_version = 0
@@ -763,8 +821,8 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "Queen Elizabeth Class"
-		type = ship_hull_heavy_1
+		name = "THE iDOLM@STER Class"
+		type = ship_hull_heavy_2
 		name_group = ENG_BB_HISTORICAL
 		parent_version = 0
 		modules = {
@@ -772,9 +830,9 @@ if = {
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_engine_slot = heavy_ship_engine_2
 			fixed_ship_secondaries_slot = dp_ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_bb_1
+			fixed_ship_armor_slot = ship_armor_bb_2
 			front_1_custom_slot = empty
 			mid_1_custom_slot = ship_airplane_launcher_1
 			mid_2_custom_slot = ship_secondaries_1
@@ -783,10 +841,10 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "Revenge Class"
+		name = "Stella Class II"
 		type = ship_hull_heavy_1
 		name_group = ENG_BB_HISTORICAL
-		parent_version = 0
+		parent_version = 1
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
 			fixed_ship_anti_air_slot = ship_anti_air_1
@@ -802,8 +860,10 @@ if = {
 		}
 		obsolete = yes
 	}
+
+	#CV
 	create_equipment_variant = {
-		name = "Eagle Class"
+		name = "Namco Class I"
 		type = ship_hull_carrier_conversion_bb
 		name_group = ENG_CV_HISTORICAL
 		parent_version = 0
@@ -820,7 +880,7 @@ if = {
 	}
 	
 	create_equipment_variant = {
-		name = "Hermes Class"
+		name = "Bandai Class"
 		type = ship_hull_carrier_conversion_ca
 		name_group = ENG_CVL_HISTORICAL
 		parent_version = 0
@@ -835,10 +895,10 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "Courageous Class"
+		name = "Namco Class II"
 		type = ship_hull_carrier_conversion_bb
 		name_group = ENG_CV_HISTORICAL
-		parent_version = 0
+		parent_version = 1
 		modules = {
 			fixed_ship_deck_slot_1 = ship_deck_space
 			fixed_ship_deck_slot_2 = ship_deck_space
@@ -851,7 +911,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-			name = "Ark Royal Class"
+			name = "765 Class"
 			type = ship_hull_carrier_1
 			name_group = ENG_CV_HISTORICAL
 			parent_version = 0
