@@ -6,13 +6,13 @@ if = {
 			has_dlc = "No Step Back"
 		}
 	}
-	set_oob = "ENG_1936"
+	set_oob = "IMA_1936"
 }
 if = {
 	limit = {
 		has_dlc = "No Step Back"
 	}
-	set_oob = "ENG_1936_nsb"
+	set_oob = "IMA_1936_nsb"
 }
 
 starting_train_buffer = 4
@@ -21,15 +21,15 @@ if = {
 	limit = {
 		has_dlc = "Man the Guns"
 	}
-	set_naval_oob = "ENG_1936_Naval"
+	set_naval_oob = "IMA_1936_Naval"
 	else = {
-		set_naval_oob = "ENG_1936_Naval_Legacy"
+		set_naval_oob = "IMA_1936_Naval_Legacy"
 	}
 }
 
 if = {
 	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "ENG_1936_air_bba"
+		set_air_oob = "IMA_1936_air_bba"
 		set_technology = {
 			aa_lmg = 1
 			engines_1 = 1
@@ -43,7 +43,7 @@ if = {
 			basic_small_airframe = 1
 		}
 	else = {
-		set_air_oob = "ENG_1936_air_legacy"
+		set_air_oob = "IMA_1936_air_legacy"
 		set_technology = {
 			early_fighter = 1
 			cv_early_fighter = 1
@@ -55,7 +55,7 @@ if = {
 	}
 }
 
-load_oob = "ENG_Motorized"
+load_oob = "IMA_Motorized"
 
 set_research_slots = 4
 
@@ -225,7 +225,8 @@ set_politics = {
 	elections_allowed = yes ##suspended through duration of war, which is handled via event
 }
 set_popularities = {
-	democratic = 97
+	democratic = 82
+	communism = 15
 	fascism = 2
 	neutrality = 1
 }
@@ -238,111 +239,80 @@ add_to_faction = IML
 add_to_faction = ISC
 add_to_faction = ISM
 
-#give_guarantee = CZE
+#give_guarantee = UMA
 
 # Order matters - here Chamberlain becomes starting leader
-recruit_character = ENG_oswald_mosley
-recruit_character = ENG_stanley_baldwin
-recruit_character = ENG_winston_churchill
-recruit_character = ENG_harry_pollitt
-recruit_character = ENG_alan_brooke
-recruit_character = ENG_bernard_montgomery
-recruit_character = ENG_claude_auchinleck
-recruit_character = ENG_neil_ritchie
-recruit_character = ENG_alan_cunningham
-recruit_character = ENG_william_slim
-recruit_character = ENG_richard_oconnor
-recruit_character = ENG_william_platt
-recruit_character = ENG_george_giffard
-recruit_character = ENG_harold_alexander
-recruit_character = ENG_jackie_smyth
-recruit_character = ENG_thomas_jacomb_hutton
-recruit_character = ENG_arthur_percival
-recruit_character = ENG_merton_beckwithsmith
-recruit_character = ENG_henry_pownall
-recruit_character = ENG_john_vereker
-recruit_character = ENG_henry_wilson
-recruit_character = ENG_william_gott
-recruit_character = ENG_jock_campbell
-recruit_character = ENG_oliver_leese
-recruit_character = ENG_miles_dempsey
-recruit_character = ENG_brian_horrocks
-recruit_character = ENG_archibald_wavell
-recruit_character = ENG_james_fownes_somerville
-recruit_character = ENG_henry_harwood
-recruit_character = ENG_andrew_cunningham
-recruit_character = ENG_bruce_fraser
-recruit_character = ENG_john_tovey
-recruit_character = ENG_bernard_rawlings
-recruit_character = ENG_john_cunningham
-recruit_character = ENG_charles_forbes
-recruit_character = ENG_algernon_willis
-recruit_character = ENG_arthur_power
-recruit_character = ENG_horatio_dundas
-recruit_character = ENG_edmund_ironside
-recruit_character = ENG_david_stirling
-recruit_character = ENG_james_somerville
-recruit_character = ENG_kenneth_anderson
-recruit_character = ENG_louis_mountbatten
-recruit_character = ENG_arthur_harris
-recruit_character = ENG_james_chadwick
-recruit_character = ENG_jfc_fuller
-recruit_character = ENG_frank_whittle
-recruit_character = ENG_random_communist_minister_15
-recruit_character = ENG_random_communist_minister_14
-recruit_character = ENG_ernle_chatfield
-recruit_character = ENG_trafford_leigh_mallory
-recruit_character = ENG_max_horton
-recruit_character = ENG_tom_phillips
-recruit_character = ENG_hugh_dowding
-recruit_character = ENG_charles_portal
-recruit_character = ENG_dudley_pound
-recruit_character = ENG_raymond_briggs
-recruit_character = ENG_frederick_bowhill
-recruit_character = ENG_cyril_newall
-recruit_character = ENG_sholto_douglas
-recruit_character = ENG_edward_ellington
 
+### Leader 
+recruit_character = IMA_amami_haruka
+recruit_character = IMA_kisaragi_chihaya
+recruit_character = IMA_hoshii_miki
+recruit_character = IMA_hagiwara_yukiho
+recruit_character = IMA_takatsuki_yayoi
+recruit_character = IMA_kikuchi_makoto
+recruit_character = IMA_minase_iori
+recruit_character = IMA_shijou_takane
+recruit_character = IMA_akizuki_ritsuko
+recruit_character = IMA_miura_azusa
+recruit_character = IMA_futami_ami
+recruit_character = IMA_futami_mami
+recruit_character = IMA_ganaha_hibiki
+recruit_character = IMA_otonashi_kotori
+recruit_character = IMA_takaki_junjiro
+recruit_character = IMA_akabane_P
 
+### Political recruit
+recruit_character = IMA_kisaragi_chihaya_pr
+recruit_character = IMA_hoshii_miki_pr
+recruit_character = IMA_hagiwara_yukiho_pr
+recruit_character = IMA_takatsuki_yayoi_pr
+recruit_character = IMA_kikuchi_makoto_pr
+recruit_character = IMA_minase_iori_pr
+recruit_character = IMA_shijou_takane_pr
+recruit_character = IMA_akizuki_ritsuko_pr
+recruit_character = IMA_miura_azusa_pr
+recruit_character = IMA_futami_ami_pr
+recruit_character = IMA_futami_mami_pr
+recruit_character = IMA_ganaha_hibiki_pr
+recruit_character = IMA_otonashi_kotori_pr
 
-recruit_character = ENG_john_beckett
-recruit_character = ENG_corgis_1
-recruit_character = ENG_corgis_2
-recruit_character = ENG_corgis_3
-recruit_character = ENG_alan_turing
-recruit_character = ENG_clement_attlee
-recruit_character = ENG_ernest_bevin
-recruit_character = ENG_leslie_hore_belisha
-recruit_character = ENG_george_orwell
-recruit_character = ENG_nevile_henderson
-recruit_character = ENG_random_communist_minister_8
-recruit_character = ENG_random_communist_minister_9
-recruit_character = ENG_david_lloyd_george
-recruit_character = ENG_random_communist_minister_1
-recruit_character = ENG_random_communist_minister_2
-recruit_character = ENG_random_communist_minister_3
-recruit_character = ENG_random_communist_minister_4
-recruit_character = ENG_random_communist_minister_5
-recruit_character = ENG_random_communist_minister_6
-recruit_character = ENG_random_communist_minister_7
-recruit_character = ENG_random_communist_minister_13
-recruit_character = ENG_random_communist_minister_12
-recruit_character = ENG_random_communist_minister_11
-recruit_character = ENG_random_communist_minister_10
-recruit_character = ENG_mary_sophia_allen
-recruit_character = ENG_philip_kerr
-recruit_character = ENG_sylvia_pankhurst
-recruit_character = ENG_stewart_menzies
-recruit_character = ENG_maxwell_aitken
-recruit_character = ENG_thomas_moore
+### Military recruit
+recruit_character = IMA_kisaragi_chihaya_mr
+recruit_character = IMA_hoshii_miki_mr
+recruit_character = IMA_hagiwara_yukiho_mr
+recruit_character = IMA_takatsuki_yayoi_mr
+recruit_character = IMA_kikuchi_makoto_mr
+recruit_character = IMA_minase_iori_mr
+recruit_character = IMA_shijou_takane_mr
+recruit_character = IMA_akizuki_ritsuko_mr
+recruit_character = IMA_miura_azusa_mr
+recruit_character = IMA_futami_ami_mr
+recruit_character = IMA_futami_mami_mr
+recruit_character = IMA_ganaha_hibiki_mr
+recruit_character = IMA_otonashi_kotori_mr
+
+### Commander
+recruit_character = IMA_amami_haruka_co
+recruit_character = IMA_kisaragi_chihaya_co
+recruit_character = IMA_hoshii_miki_co
+recruit_character = IMA_hagiwara_yukiho_co
+recruit_character = IMA_takatsuki_yayoi_co
+recruit_character = IMA_kikuchi_makoto_co
+recruit_character = IMA_minase_iori_co
+recruit_character = IMA_shijou_takane_co
+recruit_character = IMA_akizuki_ritsuko_co
+recruit_character = IMA_miura_azusa_co
+recruit_character = IMA_futami_ami_co
+recruit_character = IMA_futami_mami_co
+recruit_character = IMA_ganaha_hibiki_co
+recruit_character = IMA_otonashi_kotori_co
 
 
 ### Ship Variants ###
-
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Variants ###
-	# Submarines #
+	# SS #
 	create_equipment_variant = {
 		name = "O/P/R Class"
 		type = submarine_1
@@ -447,107 +417,6 @@ if = {
 			ship_engine_upgrade = 2
 			ship_armor_upgrade = 1
 		}
-	}
-}
-
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	create_equipment_variant = {
-		name = "Light Tank Mk. IV"
-		type = light_tank_chassis_1
-		parent_version = 0
-		modules = {
-			main_armament_slot = tank_heavy_machine_gun
-			turret_type_slot = tank_light_one_man_tank_turret
-			suspension_type_slot = tank_christie_suspension
-			armor_type_slot = tank_riveted_armor
-			engine_type_slot = tank_gasoline_engine
-		}
-		upgrades = {
-			tank_nsb_engine_upgrade = 2
-			tank_nsb_armor_upgrade = 1
-		}
-		icon = "GFX_ENG_basic_light_tank_medium"
-		obsolete = yes #used for oob
-	}
-	create_equipment_variant = {
-		name = "Light Tank Mk. VI"
-		type = light_tank_chassis_1
-		parent_version = 1
-		modules = {
-			main_armament_slot = tank_heavy_machine_gun
-			turret_type_slot = tank_light_two_man_tank_turret
-			suspension_type_slot = tank_bogie_suspension
-			armor_type_slot = tank_riveted_armor
-			engine_type_slot = tank_gasoline_engine
-			special_type_slot_1 = tank_radio_1
-			special_type_slot_2 = smoke_launchers
-		}
-		icon = "GFX_ENG_basic_light_tank_medium"
-		upgrades = {
-			tank_nsb_engine_upgrade = 2
-			tank_nsb_armor_upgrade = 2
-		}
-	}
-
-	create_equipment_variant = {
-		name = "Medium Mk. II"
-		type = medium_tank_chassis_0
-		parent_version = 0
-		modules = {
-			main_armament_slot = tank_small_cannon
-			turret_type_slot = tank_medium_three_man_tank_turret
-			suspension_type_slot = tank_bogie_suspension
-			armor_type_slot = tank_riveted_armor
-			engine_type_slot = tank_gasoline_engine
-			special_type_slot_1 = tank_radio_1
-		}
-		upgrades = {
-			tank_nsb_armor_upgrade = 1
-			tank_nsb_engine_upgrade = 2
-		}
-		icon = "GFX_ENG_basic_light_tank_medium"
-	}
-
-	create_equipment_variant = {
-		name = "Vickers 6 ton A"
-		type = light_tank_chassis_0
-		parent_version = 0
-		modules = {
-			main_armament_slot = tank_heavy_machine_gun
-			turret_type_slot = tank_light_one_man_tank_turret
-			suspension_type_slot = tank_bogie_suspension
-			armor_type_slot = tank_riveted_armor
-			engine_type_slot = tank_gasoline_engine
-			special_type_slot_1 = secondary_turret_hmg
-		}
-		upgrades = {
-			tank_nsb_armor_upgrade = 3
-			tank_nsb_engine_upgrade = 2
-		}
-		icon = "GFX_ENG_light_BAB_camo"
-		obsolete = yes #export only
-	}
-
-	create_equipment_variant = {
-		name = "Vickers 6 ton B"
-		type = light_tank_chassis_0
-		parent_version = 1
-		modules = {
-			main_armament_slot = tank_small_cannon
-			turret_type_slot = tank_light_two_man_tank_turret
-			suspension_type_slot = tank_bogie_suspension
-			armor_type_slot = tank_riveted_armor
-			engine_type_slot = tank_gasoline_engine
-		}
-		upgrades = {
-			tank_nsb_armor_upgrade = 3
-			tank_nsb_engine_upgrade = 2
-		}
-		icon = "GFX_ENG_light_BAB_camo"
-		obsolete = yes #export only
 	}
 }
 if = {
@@ -997,6 +866,108 @@ if = {
 			}
 		}
 	}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "Light Tank Mk. IV"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 1
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		obsolete = yes #used for oob
+	}
+	create_equipment_variant = {
+		name = "Light Tank Mk. VI"
+		type = light_tank_chassis_1
+		parent_version = 1
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = smoke_launchers
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Medium Mk. II"
+		type = medium_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_medium_three_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade = 1
+			tank_nsb_engine_upgrade = 2
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+	}
+
+	create_equipment_variant = {
+		name = "Vickers 6 ton A"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = secondary_turret_hmg
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade = 3
+			tank_nsb_engine_upgrade = 2
+		}
+		icon = "GFX_ENG_light_BAB_camo"
+		obsolete = yes #export only
+	}
+
+	create_equipment_variant = {
+		name = "Vickers 6 ton B"
+		type = light_tank_chassis_0
+		parent_version = 1
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade = 3
+			tank_nsb_engine_upgrade = 2
+		}
+		icon = "GFX_ENG_light_BAB_camo"
+		obsolete = yes #export only
+	}
+}
+
 	if = {
 		limit = {
 			has_dlc = "By Blood Alone"

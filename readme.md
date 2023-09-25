@@ -15,4 +15,5 @@ HOI4 Idol of Iron
 - Love Live Hasunnosora Girls High School Idol Club
 - Project Sekai
 - D4DJ
-- 
+- Ensemble Stars
+- and so on...
