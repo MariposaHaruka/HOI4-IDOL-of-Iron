@@ -29,13 +29,14 @@ focus_tree = {
 		focus = industrial_effort
 	}
 
+	### ARMY FOCUS
 	focus = {
 		id = anime_making
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 1
 		y = 0
 		cost = 5
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		
 		available_if_capitulated = yes
 
@@ -54,12 +55,12 @@ focus_tree = {
 		id = scenario_check_1
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = anime_making }
-		x = -7
+		x = -8
 		y = 1
 		relative_position_id = anime_making
 		cost = 10
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		
 		available_if_capitulated = yes
 
@@ -119,7 +120,7 @@ focus_tree = {
 				category = infantry_weapons
 				category = artillery
 			}
-			add_ideas = generic_infantry_weapons_discount
+			add_ideas = { generic_infantry_weapons_discount }
 		}
 	}
 
@@ -128,7 +129,7 @@ focus_tree = {
 		id = sceneart_check_1
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = anime_making }
-		x = -5
+		x = -6
 		y = 1
 		relative_position_id = anime_making
 		cost = 10
@@ -190,7 +191,7 @@ focus_tree = {
 				uses = 1
 				category = artillery
 			}
-			add_ideas = generic_artillery_discount
+			add_ideas = { generic_artillery_discount }
 		}
 	}
 
@@ -198,7 +199,7 @@ focus_tree = {
 		id = collabo_check_1
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = anime_making }
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = anime_making
 		cost = 10
@@ -260,7 +261,7 @@ focus_tree = {
 				uses = 1
 				category = motorised_infantry
 			}
-			add_ideas = generic_artillery_discount
+			add_ideas = { generic_artillery_discount }
 		}
 	}
 
@@ -268,7 +269,7 @@ focus_tree = {
 		id = promo_check_1
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = anime_making }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = anime_making
 		cost = 10
@@ -330,20 +331,20 @@ focus_tree = {
 				uses = 1
 				category = armor
 			}
-			add_ideas = generic_armor_discount
+			add_ideas = { generic_armor_discount }
 		}
 	}
 
 	focus = {
-		id = _anime_doctrine
+		id = anime_doctrine
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = anime_making }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = anime_making
 		cost = 10
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 		
 		available_if_capitulated = yes
 
@@ -352,4 +353,178 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = new_anime_project
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = anime_doctrine }
+		mutually_exclusive = { focus = slice_of_life focus = originality_anime focus = more_girls_in_anime 
+		}
+		x = -3
+		y = 1
+		relative_position_id = anime_doctrine
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = mobile_warfare_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	
+	focus = {
+		id = slice_of_life
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = anime_doctrine }
+		mutually_exclusive = { focus = new_anime_project focus = originality_anime focus = more_girls_in_anime 
+		}
+		x = -1
+		y = 1
+		relative_position_id = anime_doctrine
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = grand_battle_plan_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+
+	focus = {
+		id = originality_anime
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = anime_doctrine }
+		mutually_exclusive = { focus = new_anime_project focus = slice_of_life focus = more_girls_in_anime 
+		}
+		x = 1
+		y = 1
+		relative_position_id = anime_doctrine
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = mass_assault_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_mass_assault
+			}
+		}
+	}
+
+	focus = {
+		id = more_girls_in_anime
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = anime_doctrine }
+		mutually_exclusive = { focus = new_anime_project focus = slice_of_life focus = originality_anime 
+		}
+		x = 3
+		y = 1
+		relative_position_id = anime_doctrine
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = superior_firepower_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_superior_firepower
+			}
+		}
+	}
+
+	focus = {
+		id = establish_OVA_production_comittee
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = new_anime_project focus = slice_of_life focus = originality_anime focus = more_girls_in_anime }
+		x = 0
+		y = 1
+		relative_position_id = slice_of_life
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = special_forces_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = cat_special_forces_generic
+			}
+		}
+	}
+
+	focus = {
+		id = establish_anime_production_comittee
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = new_anime_project focus = slice_of_life focus = originality_anime focus = more_girls_in_anime }
+		x = 0
+		y = 1
+		relative_position_id = originality_anime
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_command_power = 20
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = the_grand_anime
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = scenario_check_3 focus = sceneart_check_3 focus = collabo_check_3 focus = promo_check_1 focus = establish_OVA_production_comittee focus = establish_anime_production_comittee }
+		x = 1
+		y = 2
+		relative_position_id = collabo_check_3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_ideas = the_grand_anime
+		}
+	}
+
+	### AIR FORCE FOCUS
+	
 }
