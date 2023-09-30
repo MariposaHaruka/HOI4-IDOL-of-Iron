@@ -55,7 +55,7 @@ focus_tree = {
 		id = scenario_check_1
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = anime_making }
-		x = -8
+		x = -7
 		y = 1
 		relative_position_id = anime_making
 		cost = 10
@@ -129,7 +129,7 @@ focus_tree = {
 		id = sceneart_check_1
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = anime_making }
-		x = -6
+		x = -5
 		y = 1
 		relative_position_id = anime_making
 		cost = 10
@@ -199,7 +199,7 @@ focus_tree = {
 		id = collabo_check_1
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = anime_making }
-		x = -4
+		x = -3
 		y = 1
 		relative_position_id = anime_making
 		cost = 10
@@ -269,7 +269,7 @@ focus_tree = {
 		id = promo_check_1
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = anime_making }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = anime_making
 		cost = 10
@@ -339,7 +339,7 @@ focus_tree = {
 		id = anime_doctrine
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = anime_making }
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = anime_making
 		cost = 10
@@ -598,7 +598,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = album_making }
 		mutually_exclusive = { focus = game_ost_album_making }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = album_making
 		cost = 10
@@ -643,7 +643,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = album_making }
 		mutually_exclusive = { focus = anime_ost_album_making }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = album_making
 		cost = 10
@@ -714,7 +714,7 @@ focus_tree = {
 		prerequisite = { focus = anime_ost_album_making }
 		prerequisite = { focus = album_production_meeting }
 		mutually_exclusive = { focus = songs_for_rhythm_game_album focus = superior_album }
-		x = 0
+		x = -1
 		y = 2
 		relative_position_id = anime_ost_album_making
 		cost = 10
@@ -765,7 +765,7 @@ focus_tree = {
 		prerequisite = { focus = game_ost_album_making }
 		prerequisite = { focus = album_production_meeting }
 		mutually_exclusive = { focus = superior_album focus = songs_for_anime_ost_album }
-		x = 0
+		x = 1
 		y = 2
 		relative_position_id = game_ost_album_making
 		cost = 10
@@ -1032,7 +1032,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = make_casual_games
+		id = make_casual_game
 		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = { focus = game_making }
 		mutually_exclusive = { focus = make_rhythm_game }
@@ -1041,12 +1041,18 @@ focus_tree = {
 		relative_position_id = game_making
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = { generic_plane_quantity_approved }
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = trade_interdiction_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_trade_interdiction
+			}
 		}
 	}
 
@@ -1054,135 +1060,45 @@ focus_tree = {
 		id = make_rhythm_game
 		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = { focus = game_making }
-		mutually_exclusive = { focus = make_casual_games }
-		x = 3
+		mutually_exclusive = { focus = make_casual_game }
+		x = 7
 		y = 1
 		relative_position_id = game_making
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = { generic_plane_quality_approved }
-		}
-	}
-}
-
-####### ON WORKING ###############################################################
-	focus = {
-		id = flexible_navy
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = naval_effort }
-		mutually_exclusive = { focus = large_navy }
-		x = -1
-		y = 1
-		relative_position_id = naval_effort
-		cost = 10
-		
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
+			navy_experience = 50
 			add_doctrine_cost_reduction = {
-				name = sub_op_bonus
+				name = trade_interdiction_bonus
 				cost_reduction = 0.5
 				uses = 2
-				technology = convoy_interdiction_ti
-				technology = unrestricted_submarine_warfare
-				technology = wolfpacks
-				technology = advanced_submarine_warfare
-				technology = combined_operations_raiding
+				category = cat_fleet_in_being
+				category = cat_base_strike
 			}
 		}
 	}
 
 	focus = {
-		id = large_navy
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = naval_effort }
-		mutually_exclusive = { focus = flexible_navy }
-		x = 1
-		y = 1
-		relative_position_id = naval_effort
-		cost = 10
-		
-		search_filters = {   FOCUS_FILTER_RESEARCH }
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = fleet_in_being_bonus
-				cost_reduction = 0.25
-				uses = 2
-				category = fleet_in_being_tree
-			}
-		}
-	}
-
-	focus = {
-		id = submarine_effort
+		id = game_for_newbie
 		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = flexible_navy focus = large_navy }
-		x = 0
+		prerequisite = { focus = make_casual_game }
+		x = -1
 		y = 1
-		relative_position_id = flexible_navy
+		relative_position_id = make_casual_game
 		cost = 10
-		
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
 
 		completion_reward = {
 			add_tech_bonus = {
 				name = ss_bonus
 				bonus = 1.0
-				ahead_reduction = 2
 				uses = 1
 				category = ss_tech
 			}
@@ -1190,31 +1106,40 @@ focus_tree = {
 	}
 
 	focus = {
-		id = cruiser_effort
-		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = large_navy focus = flexible_navy }
-		x = 0
+		id = our_casual
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = make_casual_game focus = make_rhythm_game }
+		x = 1
 		y = 1
-		relative_position_id = large_navy
+		relative_position_id = make_casual_game
 		cost = 10
-		
-		search_filters = {  FOCUS_FILTER_RESEARCH }
 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
 		available_if_capitulated = yes
 
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
 			}
 		}
+	}
+
+	focus = {
+		id = game_for_general_users
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = make_casual_game focus = make_rhythm_game }
+		x = 3
+		y = 1
+		relative_position_id = make_casual_game
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1229,82 +1154,99 @@ focus_tree = {
 	}
 
 	focus = {
-		id = destroyer_effort
-		icon = GFX_goal_generic_wolf_pack
-		prerequisite = { focus = submarine_effort }
-		x = 0
+		id = superior_rhythm_game
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = make_casual_game focus = make_rhythm_game }
+		x = 5
 		y = 1
-		relative_position_id = submarine_effort
+		relative_position_id = make_casual_game
 		cost = 10
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
 		completion_reward = {
-			add_tech_bonus = {
-				name = dd_bonus
-				bonus = 1.0
-				ahead_reduction = 2
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = trade_interdiction_bonus
+				cost_reduction = 0.5
 				uses = 1
-				category = dd_tech
+				category = cat_fleet_in_being
+			}
+			add_tech_bonus = {
+				name = bb_bonus
+				bonus = 1.0
+				uses = 1
+				category = bc_tech
+				category = bb_tech
 			}
 		}
 	}
 
 	focus = {
-		id = capital_ships_effort
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = cruiser_effort }
-		x = 0
+		id = new_rhythm_game_manual
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = make_rhythm_game }
+		x = 1
 		y = 1
-		relative_position_id = cruiser_effort
+		relative_position_id = make_rhythm_game
 		cost = 10
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
 		completion_reward = {
-			navy_experience = 25
-			add_tech_bonus = {
-				name = capital_ships_bonus
-				bonus = 1.0
-				ahead_reduction = 2
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = trade_interdiction_bonus
+				cost_reduction = 0.5
 				uses = 1
-				category = bc_tech
-				category = bb_tech
+				category = cat_base_strike
+			}
+			add_tech_bonus = {
+				name = cv_bonus
+				bonus = 1.0
+				uses = 1
 				category = cv_tech
 			}
 		}
 	}
+
+	focus = {
+		id = neo
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = our_casual focus = game_for_general_users focus = superior_rhythm_game focus = new_rhythm_game_manual }
+		x = 1
+		y = 1
+		relative_position_id = game_for_newbie
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = trade_interdiction_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = cat_base_strike
+			}
+			add_tech_bonus = {
+				name = cv_bonus
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+}
+
+####### ON WORKING ###############################################################
+	
 
 	focus = {
 		id = industrial_effort
