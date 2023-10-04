@@ -26,7 +26,7 @@ focus_tree = {
 	reset_on_civilwar = no
 
 	initial_show_position = {
-		focus = industrial_effort
+		focus = gain_fandom
 	}
 
 	### ARMY FOCUS
@@ -1215,9 +1215,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = neo
+		id = daily_free_gacha
 		icon = GFX_goal_generic_occupy_states_coastal
-		prerequisite = { focus = our_casual focus = game_for_general_users focus = superior_rhythm_game focus = new_rhythm_game_manual }
+		prerequisite = { focus = game_for_newbie focus = our_casual focus = game_for_general_users focus = superior_rhythm_game focus = new_rhythm_game_manual }
 		x = 1
 		y = 1
 		relative_position_id = game_for_newbie
@@ -1229,31 +1229,146 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 50
-			add_doctrine_cost_reduction = {
-				name = trade_interdiction_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = cat_base_strike
-			}
 			add_tech_bonus = {
-				name = cv_bonus
+				name = ship_battery_bonus
 				bonus = 1.0
-				uses = 1
-				category = cv_tech
+				uses = 2
+				category = cat_ship_light_battery
+				category = cat_ship_medium_battery
+				category = cat_ship_heavy_battery
 			}
 		}
 	}
-}
-
-####### ON WORKING ###############################################################
-	
 
 	focus = {
-		id = industrial_effort
-		icon = GFX_goal_generic_production
-		x = 13
-		y = 0
+		id = welcome_event
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = game_for_newbie focus = our_casual focus = game_for_general_users focus = superior_rhythm_game focus = new_rhythm_game_manual }
+		x = 3
+		y = 1
+		relative_position_id = game_for_newbie
 		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = mine_bonus
+				bonus = 1.0
+				uses = 1
+				category = tp_tech
+			}
+		}
+	}
+
+	focus = {
+		id = more_jewel
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = game_for_newbie focus = our_casual focus = game_for_general_users focus = superior_rhythm_game focus = new_rhythm_game_manual }
+		x = 5
+		y = 1
+		relative_position_id = game_for_newbie
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = mine_bonus
+				bonus = 1.0
+				uses = 1
+				category = mines
+				category = minelaying
+			}
+		}
+	}
+
+	focus = {
+		id = weigh_on_maniac
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = game_for_newbie focus = our_casual focus = game_for_general_users focus = superior_rhythm_game focus = new_rhythm_game_manual }
+		x = 7
+		y = 1
+		relative_position_id = game_for_newbie
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = mine_bonus
+				bonus = 1.0
+				uses = 1
+				category = asw_tech
+			}
+		}
+	}
+
+	focus = {
+		id = game_maintenance
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = game_for_newbie focus = our_casual focus = game_for_general_users focus = superior_rhythm_game focus = new_rhythm_game_manual }
+		x = 0
+		y = 3
+		relative_position_id = game_for_general_users
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = general_ship_bonus
+				bonus = 1.0
+				uses = 2
+				category = dd_tech
+				category = cl_tech
+				category = ca_tech
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+			add_ideas = { the_major_update }
+		}
+	}
+
+
+	focus = {
+		id = the_grand_game
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = game_maintenance }
+		x = 0
+		y = 1
+		relative_position_id = game_maintenance
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 50
+			add_ideas = { the_grand_game }
+		}
+	}
+
+	### industry & research focus
+	focus = {
+		id = gain_fandom
+		icon = GFX_goal_generic_production
+		x = 24
+		y = 0
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		
@@ -1292,20 +1407,18 @@ focus_tree = {
 	}
 
 	focus = {
-		id = construction_effort
+		id = preserve_rabbit
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = industrial_effort }
-		x = -1
+		prerequisite = { focus = gain_fandom }
+		x = 6
 		y = 1
-		relative_position_id = industrial_effort
+		relative_position_id = gain_fandom
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
 		available_if_capitulated = yes
 
-
-		
 		ai_will_do = {
 			factor = 2
 		}
@@ -1365,6 +1478,83 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = construction_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = preserve_rabbit }
+		x = -1
+		y = 1
+		relative_position_id = preserve_rabbit
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+####### ON WORKING ###############################################################
+
 
 	focus = {
 		id = production_effort
@@ -1433,80 +1623,6 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = construction_effort_2
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = construction_effort }
-		x = 0
-		y = 1
-		relative_position_id = construction_effort
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY  }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = construction_effort_tt
-				all_owned_state = {
-					free_building_slots = {
-						building = industrial_complex
-						size < 1
-						include_locked = yes
-					}
-				}
-			}
-		}
-
-		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}		
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
