@@ -4,7 +4,7 @@ state={
 	name="STATE_65"
 	manpower = 5592576
 	resources={
-		steel=53 # was: 90
+		steel=41 #was 12 was 32 #was 53 # was: 90
 	}
 
 	state_category = metropolis
@@ -24,6 +24,13 @@ state={
 			3535 5 
 		}
 		add_core_of = PRS
+		1939.1.1 = {
+			buildings = {
+				synthetic_refinery = 2
+				arms_factory = 5
+				industrial_complex = 10
+			}
+		}
 	}
 
 	provinces={
