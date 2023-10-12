@@ -10,27 +10,19 @@ state = {
 	}
 
 	history = {
+		owner = DFD
+		add_core_of = DFD
 		victory_points = {
 			11050 1
 		}
-		owner = NOR
-		add_core_of = NOR
-		if = {
-			limit = {
-				has_dlc = "Arms Against Tyranny"
-			}
-			add_core_of = SMI
-		}
 		buildings = {
 			infrastructure = 1
-			air_base = 1
-			
+			air_base = 1		
 			11050 = {
 				naval_base = 2
 			}
 		}
 	}
-
 
 	provinces={
 		44 91 3058 3082 6079 6107 6130 11050 11090 
