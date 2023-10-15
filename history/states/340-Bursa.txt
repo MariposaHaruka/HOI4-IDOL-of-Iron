@@ -11,6 +11,7 @@ state={
 
 	history={
 		owner = GUP
+		add_core_of = GUP
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -22,15 +23,6 @@ state={
 		}
 		victory_points = {
 			9799 5
-		}
-		add_core_of = GUP
-		if = {
-			limit = { has_dlc = "Battle for the Bosporus" }
-			set_demilitarized_zone = yes
-		}
-		
-		1936.11.9 = {
-			set_demilitarized_zone = no
 		}
 	}
 
