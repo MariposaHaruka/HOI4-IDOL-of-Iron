@@ -7,7 +7,10 @@ state = {
 	
 	state_category = rural
 
-	history = {
+	history = {		
+		owner = MAC
+		add_core_of = MAC
+		add_clame_by = ENS
 		set_variable = { ETH_state_development_production_speed = -0.3 }
 		set_variable = { ETH_state_development_local_building_slots_factor = -0.3 }
 		set_variable = { ETH_text_chitet_var = 3 }
@@ -22,7 +25,6 @@ state = {
 			modifier = ETH_state_decentralization_dynamic_modifier
 			scope = ETH
 		}
-		
 		buildings = {
 			industrial_complex = 1
 			air_base = 1
@@ -36,16 +38,6 @@ state = {
 		}
 		victory_points = { 
 			12812 1
-		}
-		
-		owner = MAC
-		add_core_of = MAC
-		add_core_of = MAC
-		add_core_of = HAR
-
-		1936.6.1 = {
-			owner = ENS
-			controller = ITA
 		}
 	}
 
