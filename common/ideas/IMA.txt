@@ -2001,15 +2001,14 @@ ideas = {
 		}
 	}
 	industrial_concern = {
-				
-		aioc = {
-			
+		IMA_mishima_industry = {
 			allowed = {
-				original_TAG = ENG
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
-			
-
-			
 			research_bonus = {
 				industry = 0.15
 			}
@@ -2018,7 +2017,6 @@ ideas = {
 			
 			modifier = {
 			}
-
 			ai_will_do = {
 				factor = 2
 				modifier = {
@@ -2028,31 +2026,31 @@ ideas = {
 			}
 		}
 		
-		english_electric = {
-			
+		IMA_minase_electric = {
 			allowed = {
-				original_TAG = ENG
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
-			
-
-			
 			research_bonus = {
 				electronics = 0.15
 			}
-			
 			traits = { electronics_concern }
-			
 			modifier = {
 			}
 		}
-		
 	}	
 
-	
 	tank_manufacturer = {
 		IMA_minase_heavyindustry_tank = {		
 			allowed = {
 				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
 			research_bonus = {
 				armor = 0.15
@@ -2065,6 +2063,10 @@ ideas = {
 		IMA_hagiwara_heavyindustry_tank = {
 			allowed = {
 				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
 			research_bonus = {
 				armor = 0.15
@@ -2077,6 +2079,10 @@ ideas = {
 		IMA_mishima_heavyindustry_tank = {
 			allowed = {
 				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
 			research_bonus = {
 				armor = 0.15
