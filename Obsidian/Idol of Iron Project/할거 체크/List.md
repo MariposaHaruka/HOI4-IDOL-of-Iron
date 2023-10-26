@@ -10,9 +10,9 @@
 
 - common/ideas 에서 국민정신, 설계사 지정
 - common/bop 에서 힘의 균형 지정
-- common/military_industrial_organization/policies 에서 버프 설정
+- common/military_industrial_organization/policies 에서 설계사 버프 설정
 - common/military_industrial_organization/organizations 에서 설계사 설정
 - common/ai_strategy 에서 행동 지정
 - common/national_focus 에서 중점 지정
 - common/decisions 에서 디시전 지정
-- common/characters 에서 지도자 지
+- common/characters 에서 지도자 지정
