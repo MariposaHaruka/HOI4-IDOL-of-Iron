@@ -51,8 +51,6 @@
 #	enable_ability = ability_key
 #}
 leader_traits = {
-
-	
 ##################################
 # Common Traits
 ##################################
@@ -79,12 +77,7 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Army Officers
-				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
-				factor = 0
-			}
 		}
-		
 	}
 	
 	starry_manager = { 
@@ -150,12 +143,7 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Army Officers
-				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
-				factor = 0
-			}
-		}
-		
+		}		
 	}
 	
 	
@@ -181,10 +169,6 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Army Officers
-				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
-				factor = 0
-			}
 		}
 	}
 	
@@ -196,10 +180,8 @@ leader_traits = {
 			experience_gain_factor = -0.1
 			promote_cost_factor = -0.5
 		}
-
 		new_commander_weight = {
 			factor = 1  
-			
 			modifier = {
 				is_army_leader = yes
 				FROM = { has_idea = best_of_the_best_spirit }
@@ -259,10 +241,6 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Army Officers
-				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
-				factor = 0
-			}
 		}
 		
 		planning_skill_factor = 1
@@ -294,13 +272,7 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Army Officers
-				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
-				factor = 0
-			}
 		}
-		
-		
 		defense_skill_factor = 1
 		logistics_skill_factor = 1
 	}
@@ -327,10 +299,6 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = academy_scholarships_spirit }
-				factor = 0
-			}
-			modifier = { #Purged Junior Army Officers
-				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
 				factor = 0
 			}
 		}
@@ -362,10 +330,6 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Army Officers
-				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
-				factor = 0
-			}
 		}
 	}
 
@@ -390,12 +354,7 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Army Officers
-				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
-				factor = 0
-			}
-		}
-		
+		}		
 		attack_skill_factor = 1
 		logistics_skill_factor = 1
 	}
@@ -436,16 +395,13 @@ leader_traits = {
 					OR = {
 						has_idea = best_of_the_best_spirit
 						has_idea = academy_scholarships_spirit
-						has_idea = SOV_purged_junior_army_officers_3
 					}
 				}
 			}
 		}
-		
 		trait_xp_factor = {
 			infantry_leader = 1     #+100%
 		}
-		
 		new_commander_weight = {
 			factor = 1
 			
@@ -464,18 +420,12 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Army Officers
-				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
-				factor = 0
-			}
-			
 			modifier = {
 				FROM = { 
 					has_dlc = "By Blood Alone"
 				}
 				factor = 0
 			}
-			
 		}
 		defense_skill_factor = 1
 		planning_skill_factor = 1
@@ -503,7 +453,6 @@ leader_traits = {
 					OR = {
 						has_idea = best_of_the_best_spirit
 						has_idea = academy_scholarships_spirit
-						has_idea = SOV_purged_junior_army_officers_3
 					}
 				}
 			}
@@ -524,20 +473,13 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Army Officers
-				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
-				factor = 0
-			}
-			
 			modifier = {
 				FROM = { 
 					has_dlc = "By Blood Alone"
 				}
 				factor = 0
 			}
-			
 		}
-		
 		attack_skill_factor = 1
 		logistics_skill_factor = 1
 	}
@@ -567,7 +509,6 @@ leader_traits = {
 					OR = {
 						has_idea = best_of_the_best_spirit
 						has_idea = academy_scholarships_spirit
-						has_idea = SOV_purged_junior_army_officers_3
 					}
 				}
 			}
@@ -591,11 +532,6 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Army Officers
-				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
-				factor = 0
-			}
-			
 			modifier = {
 				FROM = { 
 					has_dlc = "By Blood Alone"
@@ -665,18 +601,7 @@ leader_traits = {
 
 	irregulars_officer = { 
 		type = corps_commander
-
 		trait_type = personality_trait
-
-		allowed = {
-			FROM = {
-				OR = {
-					original_tag = ITA
-					original_tag = ETH
-				}
-			}
-		}
-
 		unit_type = {
 			type = cavalry
 			type = camelry
@@ -690,10 +615,6 @@ leader_traits = {
 				division_has_majority_template = irregular_infantry
 			}
 			owner = {
-				OR = {
-					original_tag = ITA
-					original_tag = ETH
-				}
 				NOT = {
 					OR = {
 						has_idea = best_of_the_best_spirit
@@ -714,110 +635,17 @@ leader_traits = {
 		}
 
 		new_commander_weight = {
-			base = 0
-			modifier = {
-				add = 0.5
-				FROM = { #Looks like the allowed parameter is doing NOTHING :D 
-					OR = {
-						original_tag = ITA
-						original_tag = ETH
-					}
-				}
-			}
-			modifier = { #ITALY
-				factor = 2
-				FROM = {
-					has_completed_focus = ITA_comandante_diavolo
-				}
-			}
-			modifier = { #ITALY
-				factor = 2
-				FROM = {
-					has_completed_focus = ITA_proclaim_the_italian_empire
-				}
+			factor = 0.5
 			}
 		}
-
 		attack_skill_factor = 1
 		planning_skill_factor = 1
-	}
-
-	ascari_officer = { 
-		type = corps_commander
-
-		trait_type = personality_trait
-
-		allowed = {
-			FROM = {
-				original_tag = ITA
-			}
-		}
-
-		unit_type = {
-			type = infantry
-		}
-
-		unit_trigger = {
-			division_has_majority_template = infantry
-			owner = {
-				original_tag = ITA
-				NOT = {
-					OR = {
-						has_idea = best_of_the_best_spirit
-						has_idea = academy_scholarships_spirit
-					}
-				}
-			}
-		}
-		
-		modifier = {
-			modifier_army_sub_unit_infantry_defence_factor = 0.05
-			modifier_army_sub_unit_cavalry_defence_factor = 0.05
-			modifier_army_sub_unit_camelry_defence_factor = 0.05
-			desert = {
-				defence = 0.05
-			}
-		}
-
-		new_commander_weight = {
-			base = 0
-			modifier = {
-				add = 0.5
-				FROM = { #Looks like the allowed parameter is doing NOTHING :D 
-					original_tag = ITA
-				}
-			}
-			modifier = { #ITALY
-				factor = 2
-				FROM = {
-					has_completed_focus = ITA_strengthen_ascari_corps
-				}
-			}
-			modifier = { #ITALY
-				factor = 2
-				FROM = {
-					has_completed_focus = ITA_novus_ordo
-				}
-			}
-		}
-
-		defense_skill_factor = 1
-		logistics_skill_factor = 1
 	}
 
 	militias_officer = { 
 		type = corps_commander
 
 		trait_type = personality_trait
-
-		allowed = {
-			FROM = {
-				OR = {
-					original_tag = ITA
-					original_tag = SWI
-				}
-			}
-		}
 
 		unit_type = {
 			type = militia
@@ -826,10 +654,6 @@ leader_traits = {
 		unit_trigger = {
 			division_has_majority_template = militia
 			owner = {
-				OR = {
-					original_tag = ITA
-					original_tag = SWI
-				}
 				NOT = {
 					OR = {
 						has_idea = best_of_the_best_spirit
@@ -846,34 +670,7 @@ leader_traits = {
 		}
 
 		new_commander_weight = {
-			base = 0
-			modifier = {
-				add = 0.5
-				FROM = { #Looks like the allowed parameter is doing NOTHING :D 
-					OR = {
-						original_tag = ITA
-						original_tag = SWI
-					}
-				}
-			}
-			modifier = { #ITALY
-				factor = 2
-				FROM = {
-					OR = {
-						has_completed_focus = ITA_strengthen_the_blackshirts
-						#TODO_Manu: Alt-hist focuses
-					}
-				}
-			}
-			modifier = { #ITALY
-				factor = 2
-				FROM = {
-					OR = {
-						has_completed_focus = ITA_divino_duce
-						has_completed_focus = ITA_a_greater_purpose
-					}
-				}
-			}
+			factor = 0.5
 		}
 
 		defense_skill_factor = 1
@@ -2837,10 +2634,6 @@ leader_traits = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Navy Officers
-				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
-				factor = 0
-			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2862,10 +2655,6 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
-				factor = 0
-			}
-			modifier = { #Purged Junior Navy Officers
-				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
 				factor = 0
 			}
 		}
@@ -2891,10 +2680,6 @@ leader_traits = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Navy Officers
-				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
-				factor = 0
-			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2917,11 +2702,6 @@ leader_traits = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Navy Officers
-				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
-				factor = 0
-			}
-		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -2942,10 +2722,6 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
-				factor = 0
-			}
-			modifier = { #Purged Junior Navy Officers
-				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
 				factor = 0
 			}
 		}
@@ -2973,10 +2749,6 @@ leader_traits = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Navy Officers
-				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
-				factor = 0
-			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2997,10 +2769,6 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
-				factor = 0
-			}
-			modifier = { #Purged Junior Navy Officers
-				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
 				factor = 0
 			}
 		}
@@ -3026,10 +2794,6 @@ leader_traits = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
 				factor = 0
 			}
-			modifier = { #Purged Junior Navy Officers
-				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
-				factor = 0
-			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -3051,10 +2815,6 @@ leader_traits = {
 			}
 			modifier = {
 				FROM = { has_idea = naval_academy_scholarships_spirit }
-				factor = 0
-			}
-			modifier = { #Purged Junior Navy Officers
-				FROM = { has_idea = SOV_purged_junior_navy_officers_3 }
 				factor = 0
 			}
 		}
@@ -3186,204 +2946,6 @@ leader_traits = {
 		ai_will_do = {
 			factor = 1
 		}
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-
-	trait_SPA_nationalist_sympathies = {
-
-		type = all
-		trait_type = personality_trait
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-
-	trait_SPA_falangist_loyalties = {
-
-		type = all
-		trait_type = personality_trait
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-
-	trait_SPA_carlist_loyalties = {
-
-		type = all
-		trait_type = personality_trait
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-
-	trait_SPR_republican_loyalties = {
-
-		type = all
-		trait_type = personality_trait
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-
-	trait_SPR_stalinist_loyalties = {
-
-		type = all
-		trait_type = personality_trait
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-
-	trait_SPR_anti_stalinist_loyalties = {
-
-		type = all
-		trait_type = personality_trait
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-
-	trait_BUL_zveno_member = {
-
-		type = all
-		trait_type = personality_trait
-
-		allowed = {
-			FROM = { original_tag = BUL }
-		}
-
-		new_commander_weight = {
-			factor = 1
-			modifier = {
-				factor = 0
-				FROM = { has_country_flag = BUL_zveno_destroyed_flag }
-			}
-		}
-	}
-
-	trait_BUL_tsar_loyalist = {
-
-		type = all
-		trait_type = personality_trait
-
-		allowed = {
-			FROM = { original_tag = BUL }
-		}
-
-		new_commander_weight = {
-			factor = 1
-			modifier = {
-				factor = 0
-				FROM = {
-					OR = {
-						neutrality < 0.05
-						has_completed_focus = BUL_overthrow_the_tsar
-						has_completed_focus = BUL_abolish_the_monarchy
-						has_completed_focus = BUL_depose_the_tsar
-						AND = {
-							has_completed_focus = BUL_plot_against_boris
-							NOT = { has_completed_focus = BUL_the_return_of_ferdinand_i }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	trait_BUL_ff_sympathizer = {
-
-		type = all
-		trait_type = personality_trait
-
-		allowed = {
-			FROM = { original_tag = BUL }
-		}
-
-		new_commander_weight = {
-			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					FROM = { communism < 0.05 }
-					FROM = { has_completed_focus = BUL_crush_the_communists }
-				}
-			}
-		}
-	}
-
-	trait_TUR_kemalist_champion = {
-
-		type = all
-		trait_type = personality_trait
-
-		allowed = {
-			FROM = { original_tag = TUR }
-		}
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-
-	trait_GRE_stauch_monarchist = {
-
-		type = all
-		trait_type = personality_trait
-
-		allowed = {
-			FROM = { original_tag = GRE }
-		}
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-
-	trait_GRE_venezelist_loyalist = {
-
-		type = all
-		trait_type = personality_trait
-
-		allowed = {
-			FROM = { original_tag = GRE }
-		}
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-
-	trait_GRE_marxist_acolyte = {
-
-		type = all
-		trait_type = personality_trait
-
-		allowed = {
-			FROM = { original_tag = GRE }
-		}
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-
-	trait_GRE_fascist_sympathizer = {
-
-		type = all
-		trait_type = personality_trait
-
-		allowed = {
-			FROM = { original_tag = GRE }
-		}
-
 		new_commander_weight = {
 			factor = 0
 		}
@@ -3636,5 +3198,4 @@ leader_traits = {
 			factor = 0
 		}
 	}
-
 }

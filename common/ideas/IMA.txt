@@ -1,6 +1,6 @@
 ideas = {
 	country = {
-		IMA_home_of_revolution = {
+		IMA_home_of_idol = {
 			removal_cost = -1
 			allowed = {
 				always = no
@@ -34,7 +34,6 @@ ideas = {
 					}
 				}
 			}
-			
 			removal_cost = -1
 			traits = { popular_unstablehead }
 		}
@@ -1668,8 +1667,8 @@ ideas = {
 
 			available = {
 				OR = {
-					tag = ENG
-					is_subject_of = ENG
+					tag = IMA
+					is_subject_of = IMA
 				}
 			}
 
@@ -1697,8 +1696,8 @@ ideas = {
 
 			available = {
 				OR = {
-					tag = ENG
-					is_subject_of = ENG
+					tag = IMA
+					is_subject_of = IMA
 				}
 			}
 
@@ -1759,38 +1758,32 @@ ideas = {
 		}
 
 		ENG_expand_the_repair_yards = {
-
 			picture = generic_coastal_defense_ships
-			
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				NOT = { has_government = communism }
 			}
-			
-			removal_cost = -1
-						
+			removal_cost = -1	
 			modifier = {
 				refit_ic_cost = -0.1
 				refit_speed = 0.1
 				repair_speed_factor = 0.1
 			}
 		}
-
 	}
 	
 	naval_manufacturer = {
-		
 		designer = yes
-		
 		yarrow_shipbuilders = {
-			
 			allowed = {
-				original_TAG = ENG
-			}
-						
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
+			}		
 			research_bonus = {
 				naval_equipment = 0.15
 			}
@@ -1802,7 +1795,11 @@ ideas = {
 		harland_wolff = {
 			
 			allowed = {
-				original_TAG = ENG
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
 			
 
@@ -1817,7 +1814,11 @@ ideas = {
 		cammell_laird = {
 			
 			allowed = {
-				original_TAG = ENG
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
 			
 
@@ -1835,9 +1836,12 @@ ideas = {
 		john_brown_company = {
 			
 			allowed = {
-				original_TAG = ENG
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
-			
 
 			
 			research_bonus = {
@@ -1855,7 +1859,11 @@ ideas = {
 		supermarine = {
 			
 			allowed = {
-				original_TAG = ENG
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
 			
 
@@ -1873,7 +1881,11 @@ ideas = {
 		hawker = {
 			
 			allowed = {
-				original_TAG = ENG
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
 			
 
@@ -1890,7 +1902,11 @@ ideas = {
 		de_havilland = {
 			
 			allowed = {
-				original_TAG = ENG
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
 			
 
@@ -1908,7 +1924,11 @@ ideas = {
 		avro = {
 			
 			allowed = {
-				original_TAG = ENG
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
 			
 
@@ -1926,7 +1946,11 @@ ideas = {
 		fairey_aviation = {
 			
 			allowed = {
-				original_TAG = ENG
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
 			
 
@@ -1949,7 +1973,11 @@ ideas = {
 		rsaf_enfield = {
 			
 			allowed = {
-				original_TAG = ENG
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
 			
 
@@ -1967,7 +1995,11 @@ ideas = {
 		vauxhall = {
 			
 			allowed = {
-				original_TAG = ENG
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
 			
 
@@ -1985,7 +2017,11 @@ ideas = {
 		royal_arsenal = {
 			
 			allowed = {
-				original_TAG = ENG
+				original_TAG = IMA
+				original_TAG = ICG
+				original_TAG = IML
+				original_TAG = ISC
+				original_TAG = ISM
 			}
 			
 

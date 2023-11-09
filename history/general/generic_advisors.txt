@@ -4,23 +4,13 @@
 # Political advisors
 every_possible_country = {
 	limit = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CZE tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR original_tag = POL tag = FIN } }
-		# avoid generic advisors in temporary countries
-		is_dynamic_country = no
 		NOT = {
-			has_allowed_idea_with_traits = { idea = communist_revolutionary characters = yes }
-		}
-		if = {
-			limit = { has_dlc = "Battle for the Bosporus" }
-			NOT = { tag = TUR tag = GRE }
-		}
-		if = {
-			limit = { has_dlc = "By Blood Alone" }
-			NOT = { OR = { tag = ETH tag = SWI } }
-		}
-		if = {
-			limit = { has_dlc = "Arms Against Tyranny" }
-			NOT = { OR = { tag = ICE tag = DEN tag = SWE tag = NOR } }
+			OR = { tag = IMA tag = ICG tag = IML tag = ISC tag = ISM }
+			# avoid generic advisors in temporary countries
+			is_dynamic_country = no
+			NOT = {
+				has_allowed_idea_with_traits = { idea = communist_revolutionary characters = yes }
+			}
 		}
 	}
 	generate_character = {
@@ -30,15 +20,13 @@ every_possible_country = {
 			traits = { communist_revolutionary }
 			available = {
 				if = {
-					limit = { 
-						original_tag = NZL
-						has_dlc = "Together for Victory"
+					OR = { tag = TOH tag = KTC tag = KJI tag = SBR tag = UNP tag = MMM tag = IOR }
+					if = {
+						AND = {
+							limit = { has_dlc = "Man the Guns" } 
+							NOT = { has_autonomy_state = autonomy_supervised_state }
+						}
 					}
-					has_completed_focus = NZL_the_lee_affair
-				}
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
 				}
 			}
 			ai_will_do = {
