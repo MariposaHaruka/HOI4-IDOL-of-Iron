@@ -1366,7 +1366,7 @@ focus_tree = {
 	focus = {
 		id = gain_fandom
 		icon = GFX_goal_generic_production
-		x = 28
+		x = 30
 		y = 0
 		cost = 5
 
@@ -1392,6 +1392,37 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = g123
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = gain_fandom }
+		x = -2
+		y = 2
+		cost = 10
+		relative_position_id = gain_fandom
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1939.1.1			
+			}
+		}
+	}
+	
 	focus = {
 		id = preserve_rabbit
 		icon = GFX_goal_generic_construct_civ_factory
@@ -1537,6 +1568,8 @@ focus_tree = {
 			}
 		}
 	}
+
+
 }
 
 ####### ON WORKING ###############################################################
