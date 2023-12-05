@@ -35,7 +35,7 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			traits = { popular_unstablehead }
+			traits = { unpopular_monarch }
 		}
 
 		IMA_queen_haruka = {
@@ -109,10 +109,10 @@ ideas = {
 			}
 		}
 
-		ENG_george_vi = {
+		IMA_amami_haruka_2 = {
 			
 			allowed = {
-				original_tag = ENG
+				original_tag = IMA
 			}
 
 			allowed_civil_war = {
@@ -121,7 +121,7 @@ ideas = {
 				}
 				NOT = {
 					any_other_country = {
-						original_tag = ENG
+						original_tag = IMA
 						has_government = democratic 
 						NOT = {
 							tag = ROOT
@@ -733,12 +733,17 @@ ideas = {
 			}
 
 			targeted_modifier = {
-				tag = GER
+				tag = PRS
 				attack_bonus_against = 0.1
 				defense_bonus_against = 0.1
 			}
 			targeted_modifier = {
-				tag = ITA
+				tag = ENS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = BDG
 				attack_bonus_against = 0.1
 				defense_bonus_against = 0.1
 			}
@@ -766,7 +771,7 @@ ideas = {
 			}
 
 			targeted_modifier = {
-				tag = GER
+				tag = PRS
 				attack_bonus_against = 0.1
 				defense_bonus_against = 0.1
 			}
@@ -794,7 +799,7 @@ ideas = {
 			}
 
 			targeted_modifier = {
-				tag = ITA
+				tag = ENS
 				attack_bonus_against = 0.1
 				defense_bonus_against = 0.1
 			}
@@ -822,7 +827,7 @@ ideas = {
 			}
 
 			targeted_modifier = {
-				tag = USA
+				tag = BLA
 				attack_bonus_against = 0.1
 				defense_bonus_against = 0.1
 			}
