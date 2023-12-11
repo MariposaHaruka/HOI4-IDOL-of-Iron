@@ -1,0 +1,11 @@
+technology_sharing_group = {
+	id = idolmaster_research
+	name = idolmaster_research_name
+	desc = idolmaster_research_desc
+	picture = GFX_commonwealth_research
+	research_sharing_per_country_bonus = 0.1
+    available = {
+        is_in_faction_with = IMA
+        compare_autonomy_state > autonomy_puppet
+    }
+}
