@@ -1,6 +1,6 @@
 ﻿division_template = {
 	name = "Infantry Division"			# 1st - 5th divisions = fully equipped, others = reserve divisions
-	division_names_group = IMA_INF_01
+	division_names_group = ENG_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -20,7 +20,7 @@
 }
 division_template = {
 	name = "Cavalry Brigade"
-	division_names_group = IMA_CAV_02
+	division_names_group = ENG_CAV_02
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -32,18 +32,20 @@ division_template = {
         recon = { x = 0 y = 0 }
 	}
 }
+
 division_template = {
 	name = "Tank Brigade"
-	division_names_group = IMA_ARM_02
+	division_names_group = ENG_ARM_02
 	regiments = {
 		light_armor = { x = 0 y = 0 }
 		light_armor = { x = 0 y = 1 }
 		light_armor = { x = 0 y = 2 }
 	}
 }
+
 division_template = {
 	name = "Colonial Garrison"
-	division_names_group = IMA_COL_01
+	division_names_group = ENG_COL_01
 	
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -56,6 +58,22 @@ division_template = {
 	priority = 0
 }
 
+division_template = {
+	name = "Motorised Division"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    mot_recon = { x = 0 y = 1 }
+	}
+}
 
 units = {
 	#Aldershot Command
