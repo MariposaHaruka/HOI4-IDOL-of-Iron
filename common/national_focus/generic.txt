@@ -901,7 +901,7 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 50
-			add_ideas = the_grand_album
+			add_ideas = { the_grand_album }
 		}
 	}
 
@@ -1688,7 +1688,7 @@ focus_tree = {
 		mutually_exclusive = { focus = nationalism_focus }
 		available = {
 			if = {
-				limit = { original_tag = CHI }
+				limit = { original_tag = AZU }
 				has_government = communism
 				else = {
 					OR = {
@@ -1845,13 +1845,9 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				tag = AUS
-			}
-			modifier = {
-				factor = 0
-				tag = SAU
-				is_in_faction_with = SOV
-				SOV = { has_government = communism }
+				tag = ZOS
+				is_in_faction_with = TOH
+				TOH = { has_government = communism }
 			}
 		}
 

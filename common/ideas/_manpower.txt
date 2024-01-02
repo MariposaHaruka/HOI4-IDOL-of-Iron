@@ -31,7 +31,7 @@ ideas = {
 				#has_manpower_for_recruit_change_to =  { value = 0.015 group = mobilization_laws }
 				if = {
 					limit = {
-						original_tag = HUN
+						original_tag = GRB
 						has_dlc = "Death or Dishonor"
 					}
 					NOT = { has_idea = HUN_treaty_of_triannon }
@@ -69,58 +69,6 @@ ideas = {
 				has_war_support > 0.1
 				NOT = { has_idea = undisturbed_isolation }
 				NOT = { has_idea = isolation }
-				if = {
-					limit = {
-						original_tag = AST
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = AST_citizen_military_forces
-				}
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = CAN_commit_to_the_war
-				}
-				if = {
-					limit = {
-						original_tag = RAJ
-						has_dlc = "Together for Victory"
-					}
-					is_subject = no
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}
-				}
-				if = {
-					limit = {
-						original_tag = ENG
-						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
-					}
-					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_dlc = "Battle for the Bosporus"
-					}
-					NOT = { has_idea = BUL_army_restrictions }
-				}
 			}
 
 			modifier = {
@@ -140,7 +88,7 @@ ideas = {
 					manpower_per_military_factory < 1000
 				}
 				modifier = {
-					tag = ENG
+					tag = IMA
 					has_idea_with_trait = military_theorist
 					factor = 20
 				}
@@ -172,61 +120,8 @@ ideas = {
 					}
 				}
 				has_war_support > 0.2
-				#Special rules AST in TFV
-				if = {
-					limit = {
-						original_tag = AST
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
-				}
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = CAN_commit_to_the_war
-					has_completed_focus = CAN_if_day
-				}
-				if = {
-					limit = {
-						original_tag = RAJ
-						has_dlc = "Together for Victory"
-					}
-					is_subject = no
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}
-				if = {
-					limit = {
-						original_tag = ENG
-						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
-					}
-					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_dlc = "Battle for the Bosporus"
-					}
-					NOT = { has_idea = BUL_army_restrictions }
-				}
 			}
+
 			ai_will_do = {
    				factor = 1
 
@@ -243,7 +138,7 @@ ideas = {
 				}
 
 				modifier = {
-					tag = TUR
+					tag = GUP
 					has_dlc = "Battle for the Bosporus"
 					factor = 50
 				}
@@ -252,7 +147,7 @@ ideas = {
 				modifier = {
 					factor = 3
 
-					original_tag = CHI
+					original_tag = AZU
 					has_manpower < 300000
 				}
 
@@ -260,14 +155,14 @@ ideas = {
 				modifier = {
 					factor = 3
 
-					original_tag = SOV
+					original_tag = TOH
 					has_manpower < 300000
 				}
 
 				modifier = {
 					factor = 5
 
-					original_tag = SOV
+					original_tag = TOH
 					has_war = yes
 					has_manpower < 1000000
 				}
@@ -316,63 +211,6 @@ ideas = {
 					has_war_support > 0.6
 					surrender_progress > 0
 				}
-
-				if = {
-					limit = {
-						original_tag = AST
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
-				}
-
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-					}
-					OR = {
-						has_completed_focus = CAN_compromise_with_quebec
-						has_completed_focus = CAN_forced_quebec_conscription
-					}
-				}
-				if = {
-					limit = {
-						original_tag = RAJ
-						has_dlc = "Together for Victory"
-					}
-					is_subject = no
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}
-				if = {
-					limit = {
-						original_tag = ENG
-						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
-					}
-					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_dlc = "Battle for the Bosporus"
-					}
-					NOT = { has_idea = BUL_army_restrictions }
-				}
 			}
 
 			ai_will_do = {
@@ -390,29 +228,29 @@ ideas = {
 				modifier = {
 					#Block has plenty manpower
 					factor = 0
-					NOT = { tag = CHI }
-					NOT = { tag = SOV }
+					NOT = { tag = AZU }
+					NOT = { tag = TOH }
 					manpower_per_military_factory >  3000
 				}
 
 				modifier = { # china relies a lot on throwing bodies at the enemy
 					factor = 3
 
-					original_tag = CHI
+					original_tag = AZU
 					has_manpower < 200000
 				}
 
 				modifier = {
 					factor = 5
 
-					original_tag = SOV
+					original_tag = TOH
 					has_manpower < 400000
 				}
 
 				modifier = { # germany needs this before russia, badly
 					factor = 10
 
-					original_tag = GER
+					original_tag = PRS
 					has_manpower < 2000000
 				}
 
@@ -455,63 +293,6 @@ ideas = {
 				#		ratio > 0.75
 				#	}
 				#}
-
-				if = {
-					limit = {
-						original_tag = AST
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
-				}
-
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-					}
-					OR = {
-						has_completed_focus = CAN_compromise_with_quebec
-						has_completed_focus = CAN_forced_quebec_conscription
-					}
-				}
-				if = {
-					limit = {
-						original_tag = RAJ
-						has_dlc = "Together for Victory"
-					}
-					is_subject = no
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}
-				if = {
-					limit = {
-						original_tag = ENG
-						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
-					}
-					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_dlc = "Battle for the Bosporus"
-					}
-					NOT = { has_idea = BUL_army_restrictions }
-				}
 			}
 
 			ai_will_do = {
@@ -529,19 +310,19 @@ ideas = {
 				modifier = {
 					#Block has plenty manpower
 					factor = 0
-					NOT = { tag = CHI }
+					NOT = { tag = AZU }
 					manpower_per_military_factory >  2800
 				}
 
 				modifier = { # china relies a lot on throwing bodies at the enemy
 					factor = 3
 
-					tag = CHI
+					tag = AZU
 					has_manpower < 200000
 				}
 				modifier = {
 					factor = 10
-					original_tag = SOV
+					original_tag = TOH
 					date > 1943.1.1
 					has_manpower < 2000000
 				}
@@ -585,62 +366,6 @@ ideas = {
 				#		ratio > 1
 				#	}
 				#}
-				if = {
-					limit = {
-						original_tag = AST
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
-				}
-
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-					}
-					OR = {
-						has_completed_focus = CAN_compromise_with_quebec
-						has_completed_focus = CAN_forced_quebec_conscription
-					}
-				}
-				if = {
-					limit = {
-						original_tag = RAJ
-						has_dlc = "Together for Victory"
-					}
-					is_subject = no
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}
-				if = {
-					limit = {
-						original_tag = ENG
-						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
-					}
-					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_dlc = "Battle for the Bosporus"
-					}
-					NOT = { has_idea = BUL_army_restrictions }
-				}
 			}
 
 			ai_will_do = {
@@ -797,5 +522,5 @@ ideas = {
 				ai_desired_divisions_factor = 2
 			}
 		}
-		
+	}	
 }
