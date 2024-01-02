@@ -6,24 +6,24 @@ if = {
 			has_dlc = "No Step Back"
 		}
 	}
-	set_oob = "CAN_1936"
+	set_oob = "IML_1936"
 }
 if = {
 	limit = {
 		has_dlc = "No Step Back"
 	}
-	set_oob = "CAN_1936_nsb"
+	set_oob = "IML_1936_nsb"
 }
 if = {
 	limit = { has_dlc = "Man the Guns" }
-	set_naval_oob = "CAN_1936_naval_mtg"
+	set_naval_oob = "IML_1936_naval_mtg"
 	else = {
-		set_naval_oob = "CAN_1936_naval_legacy"
+		set_naval_oob = "IML_1936_naval_legacy"
 	}
 }
 if = {
 	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "CAN_1936_air_bba"
+		set_air_oob = "IML_1936_air_bba"
 		set_technology = {
 			aa_lmg = 1
 			engines_1 = 1
@@ -31,7 +31,7 @@ if = {
 			iw_small_airframe = 1
 		}
 	else = {
-		set_air_oob = "CAN_1936_air_legacy"
+		set_air_oob = "IML_1936_air_legacy"
 	}
 }
 

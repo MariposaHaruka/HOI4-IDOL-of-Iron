@@ -1,6 +1,6 @@
 ﻿capital = 285
 
-oob = "AST_1936"
+oob = "ISC_1936"
 set_stability = 0.8
 set_war_support = 0.3
 # Starting tech
@@ -47,7 +47,7 @@ if = {
 		early_submarine = 1
 		transport = 1
 	}
-	set_naval_oob = "AST_1936_naval_legacy"
+	set_naval_oob = "ISC_1936_naval_legacy"
 }
 if = {
 	limit = {
@@ -66,13 +66,13 @@ if = {
 		basic_cruiser_armor_scheme = 1
 		mtg_transport = 1
 	}
-	set_naval_oob = "AST_1936_naval"
+	set_naval_oob = "ISC_1936_naval"
 }
 if = {
 	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "AST_1936_air_bba"
+		set_air_oob = "ISC_1936_air_bba"
 	else = {
-		set_air_oob = "AST_1936_air_legacy"
+		set_air_oob = "ISC_1936_air_legacy"
 		set_technology = {
 			early_fighter = 1
 			cv_early_fighter = 1
