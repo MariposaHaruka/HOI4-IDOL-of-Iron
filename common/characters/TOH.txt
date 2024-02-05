@@ -100,7 +100,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_patriarch_meletius
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				has_completed_focus = SOV_beaten_but_not_defeated
@@ -184,7 +184,7 @@ characters = {
 			idea_token = georgy_zhukov
 			ledger = army
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				has_completed_focus = SOV_positive_heroism
@@ -227,12 +227,12 @@ characters = {
 			idea_token = konstantin_rokossovsky
 			ledger = army
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 				hidden_trigger = {
 					NOT = {
 						any_other_country = {
 							has_war_with = SOV
-							original_tag = SOV
+							original_tag = TOH
 							has_unit_leader = 403.000
 						}
 					}
@@ -281,14 +281,14 @@ characters = {
 			idea_token = aleksandr_vasilevsky
 			ledger = army
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				hidden_trigger = {
 					NOT = {
 						any_other_country = {
 							has_war_with = SOV
-							original_tag = SOV
+							original_tag = TOH
 							has_unit_leader = 407.000
 						}
 					}
@@ -324,7 +324,7 @@ characters = {
 			idea_token = boris_shaposhnikov
 			ledger = army
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				military_theorist
@@ -376,7 +376,7 @@ characters = {
 			idea_token = ivan_konev
 			ledger = army
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				custom_trigger_tooltip = {
@@ -384,7 +384,7 @@ characters = {
 					NOT = {
 						any_other_country = {
 							has_war_with = SOV
-							original_tag = SOV
+							original_tag = TOH
 							has_unit_leader = 408.000
 						}
 					}
@@ -429,14 +429,14 @@ characters = {
 			slot = army_chief
 			idea_token = semyon_timoshenko
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				hidden_trigger = {
 					NOT = {
 						any_other_country = {
 							has_war_with = SOV
-							original_tag = SOV
+							original_tag = TOH
 							has_unit_leader = 404.000
 						}
 					}
@@ -482,14 +482,14 @@ characters = {
 			slot = army_chief
 			idea_token = kliment_voroshilov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				hidden_trigger = {
 					NOT = {
 						any_other_country = {
 							has_war_with = SOV
-							original_tag = SOV
+							original_tag = TOH
 							has_unit_leader = 405.000
 						}
 					}
@@ -536,7 +536,7 @@ characters = {
 			idea_token = mikhail_tukhachevsky
 			ledger = army
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				if = {
@@ -1116,7 +1116,7 @@ characters = {
 			idea_token = sergey_gorshkov
 			ledger = navy
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				if = {
@@ -1156,14 +1156,14 @@ characters = {
 			idea_token = gordey_levchenko
 			ledger = navy
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				hidden_trigger = {
 					NOT = {
 						any_other_country = {
 							has_war_with = SOV
-							original_tag = SOV
+							original_tag = TOH
 							has_unit_leader = 406
 						}
 					}
@@ -1211,14 +1211,14 @@ characters = {
 			idea_token = arseniy_golovko
 			ledger = navy
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				hidden_trigger = {
 					NOT = {
 						any_other_country = {
 							has_war_with = SOV
-							original_tag = SOV
+							original_tag = TOH
 							has_unit_leader = 409.000
 						}
 					}
@@ -1266,14 +1266,14 @@ characters = {
 			idea_token = vladimir_kasatonov
 			ledger = navy
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				hidden_trigger = {
 					NOT = {
 						any_other_country = {
 							has_war_with = SOV
-							original_tag = SOV
+							original_tag = TOH
 							has_unit_leader = 403.000
 						}
 					}
@@ -1319,7 +1319,7 @@ characters = {
 			idea_token = stepan_krasovsky
 			ledger = air
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				air_air_combat_training_2
@@ -1345,7 +1345,7 @@ characters = {
 			idea_token = vladimir_tributs
 			ledger = navy
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				grand_fleet_proponent
@@ -1366,7 +1366,7 @@ characters = {
 			idea_token = sergei_khudyakov
 			ledger = air
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				air_close_air_support_2
@@ -1390,7 +1390,7 @@ characters = {
 			slot = air_chief
 			idea_token = konstantin_vershinin
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				air_chief_ground_support_2
@@ -1417,7 +1417,7 @@ characters = {
 			idea_token = sergei_rudenko
 			ledger = air
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			
 			traits = {
@@ -1438,7 +1438,7 @@ characters = {
 			slot = navy_chief
 			idea_token = ivan_yumashev
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				navy_chief_decisive_battle_2
@@ -1462,7 +1462,7 @@ characters = {
 			slot = navy_chief
 			idea_token = nikolay_kuznetsov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				navy_chief_reform_2
@@ -1486,7 +1486,7 @@ characters = {
 			slot = air_chief
 			idea_token = yakov_smushkevich
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				air_chief_safety_2
@@ -1510,7 +1510,7 @@ characters = {
 			slot = air_chief
 			idea_token = pavel_rychagov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				air_chief_all_weather_2
@@ -1536,7 +1536,7 @@ characters = {
 			idea_token = alexander_golovanov
 			ledger = air
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = { air_warfare_theorist }
 		}		
@@ -1554,7 +1554,7 @@ characters = {
 			slot = navy_chief
 			idea_token = mikhail_frinovsky
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				navy_chief_commerce_raiding_1
@@ -1580,7 +1580,7 @@ characters = {
 			idea_token = igor_kurchatov
 			ledger = army
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			research_bonus = {
 				nuclear = 0.150
@@ -1605,7 +1605,7 @@ characters = {
 			idea_token = sergei_korolev
 			ledger = air
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			research_bonus = {
 				rocketry = 0.150
@@ -1629,7 +1629,7 @@ characters = {
 			idea_token = pavel_zhigarev
 			ledger = air
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				air_airborne_1
@@ -1653,7 +1653,7 @@ characters = {
 			slot = navy_chief
 			idea_token = pyotr_smirnov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				NOT = {
@@ -1682,7 +1682,7 @@ characters = {
 			slot = army_chief
 			idea_token = SOV_aleksandr_yegorov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				army_chief_defensive_2
@@ -1717,7 +1717,7 @@ characters = {
 			slot = army_chief
 			idea_token = SOV_vasily_blyukher
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				army_chief_maneuver_2
@@ -1751,7 +1751,7 @@ characters = {
 			slot = air_chief
 			idea_token = alexander_novikov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			traits = {
 				air_chief_reform_3
@@ -1902,7 +1902,7 @@ characters = {
 			slot = army_chief
 			idea_token = anton_denikin
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				if = {
@@ -2075,7 +2075,7 @@ characters = {
 			slot = political_advisor
 			idea_token = mikhail_kalinin
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			
 			visible = {
@@ -2117,7 +2117,7 @@ characters = {
 			slot = political_advisor
 			idea_token = nikita_khrushchyov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -2163,7 +2163,7 @@ characters = {
 			idea_token = SOV_nikolay_voznesensky
 			name = SOV_nikolay_voznesensky 
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			
 			visible = {
@@ -2192,7 +2192,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_lazar_kaganovich
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -2222,11 +2222,11 @@ characters = {
 			OR = {
 				has_completed_focus = SOV_the_plan_for_the_coup #Goes to right oppo if aligned via Plan for the Coup
 				AND = { #If not aligned by Right oppo, then stays with Stalin
-					original_tag = SOV
-					NOT = { tag = SOV }
+					original_tag = TOH
+					NOT = { tag = TOH }
 					NOT = {
 						any_other_country = {
-							original_tag = SOV
+							original_tag = TOH
 							has_completed_focus = SOV_the_plan_for_the_coup
 						}
 					}
@@ -2240,7 +2240,7 @@ characters = {
 			idea_token = SOV_genrikh_yagoda
 			can_be_fired = no
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -2273,11 +2273,11 @@ characters = {
 			OR = {
 				has_completed_focus = SOV_the_plan_for_the_coup #Goes to right oppo if aligned via Plan for the Coup
 				AND = { #If not aligned by Right oppo, then stays with Stalin
-					original_tag = SOV
-					NOT = { tag = SOV }
+					original_tag = TOH
+					NOT = { tag = TOH }
 					NOT = {
 						any_other_country = {
-							original_tag = SOV
+							original_tag = TOH
 							has_completed_focus = SOV_the_plan_for_the_coup
 						}
 					}
@@ -2291,7 +2291,7 @@ characters = {
 			idea_token = SOV_nikolay_yezhov
 			can_be_fired = no
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				NOT = { has_idea = SOV_genrikh_yagoda }
@@ -2318,9 +2318,9 @@ characters = {
 				has_dlc = "La Resistance"
 			}
 			allowed_civil_war = {
-				original_tag = SOV
+				original_tag = TOH
 				has_government = communism
-				NOT = { tag = SOV }
+				NOT = { tag = TOH }
 			}
 			name = SOV_lavrenty_beriya
 			portraits = {
@@ -2338,7 +2338,7 @@ characters = {
 				name = SOV_lavrenty_beriya
 				can_be_fired = no
 				allowed = {
-					original_tag = SOV
+					original_tag = TOH
 				}
 				visible = {
 					NOT = {
@@ -2370,8 +2370,8 @@ characters = {
 				NOT = { has_dlc = "La Resistance" }
 			}
 			allowed_civil_war = {
-				original_tag = SOV
-				NOT = { tag = SOV }
+				original_tag = TOH
+				NOT = { tag = TOH }
 				has_government = communism
 			}
 			name = SOV_lavrenty_beriya
@@ -2389,7 +2389,7 @@ characters = {
 				name = SOV_lavrenty_beriya
 				can_be_fired = no
 				allowed = {
-					original_tag = SOV
+					original_tag = TOH
 				}
 				visible = {
 					NOT = {
@@ -2436,7 +2436,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_vsevolod_merkulov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 				has_dlc = "La Resistance"
 			}
 			visible = {
@@ -2474,7 +2474,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_vyacheslav_molotov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -2505,7 +2505,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_maksim_litvinov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -2534,7 +2534,7 @@ characters = {
 		allowed_civil_war = { 
 			OR = {
 				AND = {
-					tag = SOV 
+					tag = TOH 
 					has_government = communism
 				}
 				AND = {
@@ -2548,7 +2548,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_lev_trotsky
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			on_add = {
 				if = {
@@ -2620,7 +2620,7 @@ characters = {
 		allowed_civil_war = { 
 			OR = {
 				AND = {
-					tag = SOV 
+					tag = TOH 
 					has_government = communism
 				}
 				AND = {
@@ -2634,7 +2634,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_ivan_smirnov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = { has_character_flag = SOV_character_purged_flag }
@@ -2679,7 +2679,7 @@ characters = {
 		allowed_civil_war = { 
 			OR = {
 				AND = {
-					tag = SOV 
+					tag = TOH 
 					has_government = communism
 				}
 				AND = {
@@ -2693,7 +2693,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_ivar_smilga
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -2737,12 +2737,12 @@ characters = {
 		allowed_civil_war = {
 			OR = {
 				AND = {
-					tag = SOV
+					tag = TOH
 					SOV_is_left_opposition = yes 
 					has_completed_focus = SOV_bring_old_trotskyists_back
 				}
 				AND = {
-					tag = SOV
+					tag = TOH
 					SOV_is_right_opposition = yes 
 					has_completed_focus = SOV_cooperation_against_stalin 
 				}
@@ -2757,7 +2757,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_karl_radek
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -2799,12 +2799,12 @@ characters = {
 		allowed_civil_war = {
 			OR = {
 				AND = {
-					tag = SOV
+					tag = TOH
 					SOV_is_left_opposition = yes 
 					has_completed_focus = SOV_bring_old_trotskyists_back
 				}
 				AND = {
-					tag = SOV
+					tag = TOH
 					SOV_is_right_opposition = yes 
 					has_completed_focus = SOV_cooperation_against_stalin 
 				}
@@ -2819,7 +2819,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_yevgeny_preobrazhensky
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -2829,12 +2829,12 @@ characters = {
 			available = {
 				OR = {
 					AND = {
-						tag = SOV
+						tag = TOH
 						SOV_is_left_opposition = yes 
 						has_completed_focus = SOV_bring_old_trotskyists_back
 					}
 					AND = {
-						tag = SOV
+						tag = TOH
 						SOV_is_right_opposition = yes 
 						has_completed_focus = SOV_cooperation_against_stalin 
 					}
@@ -2862,7 +2862,7 @@ characters = {
 		allowed_civil_war = { 
 			OR = {
 				AND = {
-					tag = SOV 
+					tag = TOH 
 					has_government = communism
 				}
 				AND = {
@@ -2876,7 +2876,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_aleksandr_shlyapnikov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -2937,7 +2937,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_nikolay_bukharin
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -2996,7 +2996,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_aleksey_rykov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -3036,7 +3036,7 @@ characters = {
 		allowed_civil_war = { 
 			OR = {
 				AND = {
-					tag = SOV 
+					tag = TOH 
 					has_government = communism
 				}
 				AND = {
@@ -3050,7 +3050,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_mikhail_tomsky
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -3090,7 +3090,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_grigory_sokolnikov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -3128,7 +3128,7 @@ characters = {
 		allowed_civil_war = { 
 			OR = {
 				AND = {
-					tag = SOV 
+					tag = TOH 
 					has_government = communism
 				}
 				AND = {
@@ -3142,7 +3142,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_grigory_zinovyev
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -3191,7 +3191,7 @@ characters = {
 		allowed_civil_war = { 
 			OR = {
 				AND = {
-					tag = SOV 
+					tag = TOH 
 					has_government = communism
 				}
 				AND = {
@@ -3205,7 +3205,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_lev_kamenev
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -3267,7 +3267,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_martemyan_ryutin
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -3317,7 +3317,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_patriarch_sergy
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				OR = {
@@ -3348,7 +3348,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_metropolitan_anastasy
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				has_completed_focus = SOV_beaten_but_not_defeated
@@ -3380,7 +3380,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_metropolitan_nikolay
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				has_completed_focus = SOV_beaten_but_not_defeated
@@ -3412,7 +3412,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_metropolitan_aleksy
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				has_completed_focus = SOV_the_declaration
@@ -3444,7 +3444,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_anastasy_vonsyatsky
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -3495,13 +3495,13 @@ characters = {
 			idea_token = SOV_grigory_semyonov
 			allowed = {
 				OR = {
-					original_tag = SOV
-					original_tag = MAN # This is where he starts the game
+					original_tag = TOH
+					original_tag = LNH # This is where he starts the game
 				}
 			}
 			available = {
 				if = { 
-					limit = { tag = MAN }
+					limit = { tag = LNH }
 					custom_trigger_tooltip = {
 					 	tooltip = SOV_grigory_semyonov_man_tt
 					 	SOV_soviet_civil_war_not_started = yes 
@@ -3510,7 +3510,7 @@ characters = {
 				}
 				
 				if = {
-					limit = { tag = SOV }
+					limit = { tag = TOH }
 					has_completed_focus = SOV_approach_semyonov
 				}
 				if = {
@@ -3549,7 +3549,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_nikolay_ustryalov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				has_completed_focus = SOV_consolidate_power
@@ -3578,7 +3578,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_aleksandr_kazembek
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			visible = {
 				NOT = {
@@ -3629,7 +3629,7 @@ characters = {
 			idea_token = SOV_aleksandr_prokofyev_seversky
 			ledger = air
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				SOV_is_exiles = yes
@@ -3669,7 +3669,7 @@ characters = {
 			slot = air_chief
 			idea_token = SOV_vyacheslav_tkachyov
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				SOV_is_exiles = yes
@@ -3709,7 +3709,7 @@ characters = {
 			slot = air_chief
 			idea_token = SOV_yan_nagursky
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				SOV_is_exiles = yes
@@ -3750,7 +3750,7 @@ characters = {
 			idea_token = SOV_vasily_yanchenko
 			ledger = air
 			allowed = {
-				original_tag = SOV
+				original_tag = TOH
 			}
 			available = {
 				SOV_is_exiles = yes
@@ -3815,7 +3815,7 @@ characters = {
 				slot = political_advisor
 				idea_token = konstantin_rodzaevsky
 				allowed = {
-					original_tag = SOV
+					original_tag = TOH
 				}
 				visible = {
 					NOT = {
@@ -3869,13 +3869,13 @@ characters = {
 			expire = "1953.3.1.1"
 			id = -1
 		}
-		allowed_civil_war = { tag = SOV}
+		allowed_civil_war = { tag = TOH}
 
 		advisor = {
 			slot = political_advisor
 			idea_token = SOV_aleksandr_kerensky
 			allowed = {
-					original_tag = SOV
+					original_tag = TOH
 			}
 			visible = {
 				NOT = {

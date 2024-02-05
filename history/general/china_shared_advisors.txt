@@ -4,7 +4,7 @@ every_possible_country = {
 	limit = {
 		OR = {
 			is_literally_china = yes
-			tag = MAN
+			tag = LNH
 		}
 		has_dlc = "Waking the Tiger"
 	}
@@ -145,11 +145,11 @@ every_possible_country = {
 			}
 			allowed  = {
 				OR = {
-					original_tag = CHI
+					original_tag = AZU
 					is_chinese_warlord = yes 
 				}
 				has_dlc = "La Resistance"
-				NOT = { original_tag = MAN }
+				NOT = { original_tag = LNH }
 			}
 			traits  = {
 				head_of_intelligence 
@@ -177,7 +177,7 @@ every_possible_country = {
 					is_chinese_warlord = yes
 				}
 				has_dlc = "La Resistance"
-				NOT = { original_tag = MAN }
+				NOT = { original_tag = LNH }
 			}
 			traits  = {
 				head_of_intelligence 
@@ -198,7 +198,7 @@ every_possible_country = {
 			}
 			allowed  = {
 				OR = {
-					original_tag = CHI
+					original_tag = AZU
 					is_chinese_warlord = yes 
 				}
 				has_dlc = "Waking the Tiger"
@@ -252,7 +252,7 @@ every_possible_country = {
 			}
 			allowed = {
 				OR = {
-					original_tag = CHI
+					original_tag = AZU
 					is_chinese_warlord = yes
 				}
 			}

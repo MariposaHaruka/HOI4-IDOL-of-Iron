@@ -616,7 +616,7 @@ default_mountaineers_production = {
 
 #default_marines_production = {
 #	enable = {
-#		NOT = { original_tag = GER }
+#		NOT = { original_tag = PRS }
 #		ai_wants_divisions > 49
 #	}
 #	abort = {
@@ -869,7 +869,7 @@ default_stockpile_management = {
 default_market_stockpile_management = {
 	enable = {
 		always = yes
-		# NOT = { original_tag = GER } # commented until actually needs override
+		# NOT = { original_tag = PRS } # commented until actually needs override
 	}
 	abort_when_not_enabled = yes
 
@@ -940,7 +940,7 @@ default_market_stockpile_management_if_at_war = {
 	enable = {
 		has_war = yes
 		# something something preparing for war?
-		# NOT = { original_tag = GER } # commented until actually needs override
+		# NOT = { original_tag = PRS } # commented until actually needs override
 	}
 	abort_when_not_enabled = yes
 

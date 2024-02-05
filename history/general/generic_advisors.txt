@@ -41,22 +41,22 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CZE tag = PRC tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR original_tag = POL tag = FIN } }
+		NOT = { OR = { tag = PRS tag = IMA tag = TOH original_tag = BDG tag = ENS tag = LLS tag = ICG tag = ISC tag = BLA tag = IML tag = ISM tag = PRK tag = PRC tag = AZU tag = LNH tag = DEN tag = STR original_tag = SPR original_tag = UMA tag = FIN } }
 		is_dynamic_country = no
 		NOT = {
 			has_allowed_idea_with_traits = { idea = democratic_reformer characters = yes }
 		}
 		if = {
 			limit = { has_dlc = "Battle for the Bosporus" }
-			NOT = { tag = TUR tag = GRE }
+			NOT = { tag = GUP tag = WDS }
 		}
 		if = {
 			limit = { has_dlc = "By Blood Alone" }
-			NOT = { OR = { tag = ETH tag = SWI } }
+			NOT = { OR = { tag = ETH tag = BOR } }
 		}
 		if = {
 			limit = { has_dlc = "Arms Against Tyranny" }
-			NOT = { OR = { tag = ICE tag = DEN tag = SWE tag = NOR } }
+			NOT = { OR = { tag = DFD } }
 		}
 	}
 	generate_character = {
@@ -92,22 +92,22 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = ROM tag = CZE tag = PRC tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR original_tag = POR original_tag = POL original_tag = LAT tag = FIN } }
+		NOT = { OR = { tag = PRS tag = IMA tag = TOH original_tag = BDG tag = ENS tag = LLS tag = ICG tag = ISC tag = BLA tag = IML tag = ISM tag = ROM tag = PRK tag = PRC tag = AZU tag = LNH tag = DEN tag = STR original_tag = SPR original_tag = POR original_tag = UMA original_tag = LAT tag = FIN } }
 		is_dynamic_country = no
 		NOT = {
 			has_allowed_idea_with_traits = { idea = fascist_demagogue characters = yes }
 		}
 		if = {
 			limit = { has_dlc = "Battle for the Bosporus" }
-			NOT = { tag = TUR tag = GRE }
+			NOT = { tag = GUP tag = WDS }
 		}
 		if = {
 			limit = { has_dlc = "By Blood Alone" }
-			NOT = { OR = { tag = ETH tag = SWI } }
+			NOT = { OR = { tag = ETH tag = BOR } }
 		}
 		if = {
 			limit = { has_dlc = "Arms Against Tyranny" }
-			NOT = { OR = { tag = ICE tag = DEN tag = SWE tag = NOR } }
+			NOT = { OR = { tag = DFD tag = NOR } }
 		}
 	}
 	generate_character = {
@@ -142,20 +142,20 @@ every_possible_country = {
 	limit = {
 		has_dlc = "La Resistance"
 		# china gets a special one via focus
-		NOT = { original_tag = CHI }
+		NOT = { original_tag = AZU }
 		NOT = { is_chinese_warlord = yes }
 		if = {
 			limit = {
 				has_dlc = "Battle for the Bosporus"
 			}
 			NOT = {
-				tag = GRE
-				tag = TUR
+				tag = WDS
+				tag = GUP
 			}
 		}
 		if = {
 			limit = { has_dlc = "By Blood Alone" }
-			NOT = { OR = { tag = ETH tag = SWI } }
+			NOT = { OR = { tag = ETH tag = BOR } }
 		}
 		NOT = {
 			has_allowed_idea_with_traits = { idea = head_of_intelligence characters = yes }
@@ -187,7 +187,7 @@ every_possible_country = {
 # Military advisors
 every_possible_country = {
 	limit = {
-		OR = { original_tag = MOR original_tag = KOR original_tag = SER  original_tag = SYR original_tag = LEB original_tag = EGY original_tag = JOR original_tag = CRO original_tag = LBA original_tag = INS original_tag = MAL original_tag = AZR original_tag = UKR original_tag = GEO original_tag = ARM original_tag = VIN original_tag = CAM original_tag = MNT original_tag = LIB original_tag = LAO original_tag = PAL original_tag = ALT original_tag = KAL original_tag = KAR original_tag = CRI original_tag = TAT original_tag = CIN original_tag = DAG original_tag = BYA original_tag = CKK original_tag = FER original_tag = YAK original_tag = VLA original_tag = KKP original_tag = YAM original_tag = TAY original_tag = OVO original_tag = NEN original_tag = KOM original_tag = ABK original_tag = KBK original_tag = NOA original_tag = VGE original_tag = BSK original_tag = KHI original_tag = BUK original_tag = UDM original_tag = CHU original_tag = MEL original_tag = HAR original_tag = TIG original_tag = AFA original_tag = BEG original_tag = GBA original_tag = SID original_tag = ORO original_tag = QEM original_tag = RIF original_tag = AOI original_tag = SMI }
+		OR = { original_tag = MOR original_tag = LAS original_tag = SER  original_tag = SYR original_tag = TSS original_tag = KJI original_tag = JOR original_tag = CRO original_tag = LBA original_tag = LST original_tag = MAL original_tag = AZR original_tag = UKR original_tag = GEO original_tag = ARM original_tag = VIN original_tag = CAM original_tag = MNT original_tag = AGN original_tag = LAO original_tag = PAL original_tag = ALT original_tag = KAL original_tag = KAR original_tag = CRI original_tag = TAT original_tag = CIN original_tag = DAG original_tag = BYA original_tag = CKK original_tag = FER original_tag = YAK original_tag = VLA original_tag = KKP original_tag = YAM original_tag = TAY original_tag = OVO original_tag = NEN original_tag = KOM original_tag = ABK original_tag = KBK original_tag = NOA original_tag = VGE original_tag = BSK original_tag = KHI original_tag = BUK original_tag = UDM original_tag = CHU original_tag = MEL original_tag = HAR original_tag = TIG original_tag = AFA original_tag = BEG original_tag = GBA original_tag = SID original_tag = ORO original_tag = QEM original_tag = RIF original_tag = AOI original_tag = SMI }
 	}
 	# generic political advisors
 	generate_character = {
@@ -379,7 +379,7 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-		original_tag = MAN
+		original_tag = LNH
 	}
 	generate_character = {
 		token_base = generic_captain_of_industry # token will be TAG_token_base

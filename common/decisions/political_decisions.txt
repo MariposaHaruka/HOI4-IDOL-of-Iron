@@ -1707,11 +1707,11 @@ political_actions = {
 
         allowed = {
             OR = {
-                original_tag = ENG
-                original_tag = USA
-                original_tag = FRA
-                original_tag = CAN
-                original_tag = TUR
+                original_tag = IMA
+                original_tag = ICG
+                original_tag = BDG
+                original_tag = IML
+                original_tag = GUP
             }
         }
 
@@ -1752,7 +1752,7 @@ political_actions = {
         ai_will_do = {
 			factor = 1
 			modifier = {
-				tag = ENG
+				tag = IMA
 				has_War = no
 				date < 1937.3.1
 				factor = 0
@@ -1765,11 +1765,11 @@ political_actions = {
 
         allowed = {
             OR = {
-                original_tag = ENG
-                original_tag = USA
-                original_tag = FRA
-                original_tag = CAN
-                original_tag = TUR
+                original_tag = IMA
+                original_tag = ICG
+                original_tag = BDG
+                original_tag = IML
+                original_tag = GUP
             }
 		}
 
@@ -1797,7 +1797,7 @@ political_actions = {
         ai_will_do = {
 			factor = 1
 			modifier = {
-				tag = ENG
+				tag = IMA
 				has_War = no
 				date < 1937.3.1
 				factor = 0
@@ -1867,7 +1867,7 @@ political_actions = {
 			}
 			modifier = {
 				add = 10
-				original_tag = ITA
+				original_tag = ENS
 				has_completed_focus = ITA_convene_the_grand_council
 				OR = {
 					ITA_is_monarchist_ai = yes
@@ -1876,7 +1876,7 @@ political_actions = {
 			}
 			modifier = {
 				add = 40
-				original_tag = ITA
+				original_tag = ENS
 				has_completed_focus = ITA_monarchia_d_italia
 			}
 		}
@@ -1985,7 +1985,7 @@ political_actions = {
 				limit = { 
 					has_dlc = "Battle for the Bosporus"	
 				}
-				NOT = { original_tag = GRE }
+				NOT = { original_tag = WDS }
 			}
 		}
 
@@ -2055,7 +2055,7 @@ political_actions = {
 				limit = { 
 					has_dlc = "Battle for the Bosporus"	
 				}
-				NOT = { original_tag = GRE }
+				NOT = { original_tag = WDS }
 			}
 		}
 
@@ -2125,7 +2125,7 @@ political_actions = {
 				limit = { 
 					has_dlc = "Battle for the Bosporus"	
 				}
-				NOT = { original_tag = GRE }
+				NOT = { original_tag = WDS }
 			}
 		}
 
@@ -2197,7 +2197,7 @@ political_actions = {
 			if = {
 				limit = {
 					has_dlc = "Battle for the Bosporus"
-					original_tag = BUL
+					original_tag = ONK
 				}
 				NOT = {
 					has_country_flag = {
@@ -2218,7 +2218,7 @@ political_actions = {
 				limit = { 
 					has_dlc = "Battle for the Bosporus"
 				}
-				NOT = { original_tag = GRE }
+				NOT = { original_tag = WDS }
 			}
 		}
 	
@@ -2252,7 +2252,7 @@ political_actions = {
 			}
 			if = {
 				limit = {
-					tag = TUR
+					tag = GUP
 					has_dlc = "Battle for the Bosporus"
 				}
 				NOT = {
@@ -2261,7 +2261,7 @@ political_actions = {
 			}
 			if = {
 				limit = {
-					original_tag = BUL
+					original_tag = ONK
 					has_dlc = "Battle for the Bosporus"				
 				}
 				NOT = {
@@ -2283,7 +2283,7 @@ political_actions = {
 				limit = { 
 					has_dlc = "Battle for the Bosporus"
 				}
-				NOT = { original_tag = GRE }
+				NOT = { original_tag = WDS }
 			}
 		}
 		
@@ -2317,7 +2317,7 @@ political_actions = {
 			}
 			if = {
 				limit = {
-					original_tag = BUL
+					original_tag = ONK
 					has_dlc = "Battle for the Bosporus"
 				}
 				NOT = {
@@ -2339,7 +2339,7 @@ political_actions = {
 				limit = { 
 					has_dlc = "Battle for the Bosporus"
 				}
-				NOT = { original_tag = GRE }
+				NOT = { original_tag = WDS }
 			}
 		}
 	
@@ -2373,7 +2373,7 @@ political_actions = {
 			}
 			if = {
 				limit = {
-					tag = TUR
+					tag = GUP
 					has_dlc = "Battle for the Bosporus"
 				}
 				NOT = {
@@ -2382,7 +2382,7 @@ political_actions = {
 			}
 			if = {
 				limit = {
-					original_tag = BUL
+					original_tag = ONK
 					has_dlc = "Battle for the Bosporus"
 				}
 				NOT = {
@@ -2404,7 +2404,7 @@ political_actions = {
 				limit = { 
 					has_dlc = "Battle for the Bosporus"
 				}
-				NOT = { original_tag = GRE }
+				NOT = { original_tag = WDS }
 			}
 		}
 	
