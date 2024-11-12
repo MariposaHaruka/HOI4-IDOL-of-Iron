@@ -1,0 +1,26 @@
+#랜덤 생성 조언가/기본 디시전 체크용
+is_00_crystalia_updated = {
+	OR = {
+		original_tag = IMA
+		original_tag = PRS
+		original_tag = TOH
+		original_tag = BLA
+	}
+}
+
+is_01_lachryma_requiem_updated = {
+	OR = {
+		original_tag = ICG
+		original_tag = IML
+		original_tag = ISC
+		original_tag = ISM
+		original_tag = IDS
+		original_tag = IGM
+		original_tag = LAS
+	}
+}
+
+has_unique_national_focus = {
+	is_00_crystalia_updated = no
+	is_01_lachryma_requiem_updated = no
+}

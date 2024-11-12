@@ -1,0 +1,102 @@
+# How to use:
+#
+#	set_temp_variable = { ideology_change_var = X } - increases ruling party popularity by X amount
+#	change_ruling_party_popularity = yes
+#
+#	set_temp_variable = { coalition_partner_var = token:ideology } -- adds/removes a coalition partner
+#	add_to_coalition = yes
+#	remove_from_coalition = yes
+#
+#	end_coalition = yes  -- disables any active coalitions
+#
+#	disable_party_popularity_PP_gain = yes -- disables popularity PP gain altogether
+
+add_to_coalition = {
+	if = {
+		limit = { NOT = { is_in_array = { coalition_partners = coalition_partner_var } } }
+		custom_effect_tooltip = add_to_coalition
+	}
+	if = {
+		limit = {
+			NOT = {
+				is_in_array = { coalition_partners = coalition_partner_var }
+				has_government = var:coalition_partner_var
+			}
+		}
+		set_variable = { is_in_coalition_with_@var:coalition_partner_var = 1 }
+		add_to_array = { coalition_partners = coalition_partner_var }
+	}
+}
+
+remove_from_coalition = {
+	if = {
+		limit = { is_in_array = { coalition_partners = coalition_partner_var } }
+		custom_effect_tooltip = remove_from_coalition
+		hidden_effect = {
+			clear_variable = is_in_coalition_with_@var:coalition_partner_var
+			if = {
+				limit = { check_variable = { coalition_partners^num = 1 } }
+				clear_array = coalition_partners
+			}
+			else = {
+				remove_from_array = { coalition_partners = coalition_partner_var }
+			}
+		}
+	}
+}
+
+end_coalition = {
+	clear_array = coalition_partners
+
+	clear_variable = is_in_coalition_with_@token:conservatism
+	clear_variable = is_in_coalition_with_@token:liberalism_mod
+	clear_variable = is_in_coalition_with_@token:progressivism
+	clear_variable = is_in_coalition_with_@token:socialdemocracy
+	clear_variable = is_in_coalition_with_@token:socialism
+	clear_variable = is_in_coalition_with_@token:communism
+	clear_variable = is_in_coalition_with_@token:authoritariancommunism
+	clear_variable = is_in_coalition_with_@token:anarchosyndicalism
+	clear_variable = is_in_coalition_with_@token:authoritariandemocracy
+	clear_variable = is_in_coalition_with_@token:autocracy
+	clear_variable = is_in_coalition_with_@token:fascism
+	clear_variable = is_in_coalition_with_@token:militarytotalism
+}
+
+change_ruling_party_popularity = {
+	if = {
+		limit = {
+			OR = {
+				check_variable = { ideology_change_var > 1 }
+				check_variable = { ideology_change_var < -1 }
+			}
+		}
+		multiply_temp_variable = { ideology_change_var = 0.01 }
+	}
+	add_popularity = {
+		ideology = var:current_party_ideology_group
+		popularity = ideology_change_var
+	}
+}
+
+save_current_party_popularities = {
+	clear_temp_array = saved_popularities
+	add_to_temp_array = { saved_popularities = party_popularity_100@conservatism }
+	add_to_temp_array = { saved_popularities = party_popularity_100@progressivism }
+	add_to_temp_array = { saved_popularities = party_popularity_100@liberalism_mod }
+	add_to_temp_array = { saved_popularities = party_popularity_100@socialdemocracy }
+	add_to_temp_array = { saved_popularities = party_popularity_100@socialism }
+	add_to_temp_array = { saved_popularities = party_popularity_100@communism }
+	add_to_temp_array = { saved_popularities = party_popularity_100@authoritariancommunism }
+	add_to_temp_array = { saved_popularities = party_popularity_100@anarchosyndicalism }
+	add_to_temp_array = { saved_popularities = party_popularity_100@authoritariandemocracy }
+	add_to_temp_array = { saved_popularities = party_popularity_100@autocracy }
+	add_to_temp_array = { saved_popularities = party_popularity_100@fascism }
+	add_to_temp_array = { saved_popularities = party_popularity_100@militarytotalism }
+
+	set_temp_variable = { sum = 100 }
+	for_each_loop = {
+		array = saved_popularities
+		subtract_from_temp_variable = { sum = v }
+	}
+	add_to_temp_array = { saved_popularities = sum } #last value (natpop), calculated directly to avoid rounding errors
+}

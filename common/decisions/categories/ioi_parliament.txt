@@ -1,0 +1,25 @@
+IMA_parliament_category = {
+	icon = generic_political_actions
+	priority = 100
+	allowed = { original_tag = IMA }
+	visible = {
+		OR = {
+			is_democratic = yes
+			NOT = { has_idea = no_parliament }
+		}
+	}
+	visible_when_empty = yes
+}
+
+IML_parliament_category = {
+	icon = generic_political_actions
+	priority = 100
+	allowed = { original_tag = IML }
+	visible = {
+		OR = {
+			is_democratic = yes
+			NOT = { has_idea = no_parliament }
+		}
+	}
+	visible_when_empty = yes
+}

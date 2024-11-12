@@ -1,0 +1,123 @@
+#수도
+capital = 107 #베오그라드
+
+#부대
+set_oob = "PRP_ar"
+starting_train_buffer = 3
+add_command_power = 10
+set_fuel_ratio = 0.4
+
+#시작 기술
+set_research_slots = 3
+set_technology = {
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	interwar_antitank = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	superior_firepower = 1
+	basic_train = 1
+}
+if = {
+	limit = { has_MtG = yes }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+	}
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_submarine = 1
+		}
+	}
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+
+if = {
+	limit = { has_BBA = yes }
+	set_technology = {
+		iw_small_airframe = 1
+		basic_small_airframe = 1
+		engines_1 = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 10
+
+#국민 정신
+
+#외교
+
+#정치 상황
+set_stability = 0.6
+set_war_support = 0.09
+set_politics = {
+	ruling_party = autocracy
+	last_election = "1935.5.3"
+	election_frequency = 36
+	elections_allowed = yes
+}
+set_popularities = {
+	conservatism = 2
+	liberalism_mod = 1
+	progressivism = 0
+	socialdemocracy = 1
+	socialism = 1
+	communism = 1
+	authoritariancommunism = 6
+	anarchosyndicalism = 1
+	fascism = 8
+	militarytotalism = 1
+	authoritariandemocracy = 10
+	autocracy = 68
+}
+
+
+
+#의회
+
+#캐릭터 
+recruit_character = PRP_manaka_laala
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

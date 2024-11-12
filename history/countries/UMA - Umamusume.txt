@@ -1,0 +1,257 @@
+#수도
+capital = 10 #바르샤바
+
+#부대
+set_oob = "UMA_ar"
+starting_train_buffer = 3
+add_command_power = 15
+set_fuel_ratio = 0.4
+
+#시작 기술
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	trench_warfare = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+	basic_train = 1
+}
+if = {
+	limit = { has_MtG = yes }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+	}
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			early_submarine = 1	
+		}
+	}
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			engines_1 = 1
+			early_bombs = 1
+		}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 10
+
+#국민 정신
+
+#외교
+
+#정치 상황
+set_stability = 0.4
+set_war_support = 0.1
+set_politics = {
+	ruling_party = authoritariandemocracy
+	last_election = "1935.9.8"
+	election_frequency = 36
+	elections_allowed = no
+}
+set_popularities = {
+	conservatism = 3
+	liberalism_mod = 21
+	progressivism = 0
+	socialdemocracy = 8
+	socialism = 8
+	communism = 0
+	authoritariancommunism = 11
+	anarchosyndicalism = 0
+	fascism = 9
+	militarytotalism = 2
+	authoritariandemocracy = 34
+	autocracy = 4
+}
+
+#의회
+
+#캐릭터
+recruit_character = UMA_special_week
+recruit_character = UMA_silence_suzuka
+recruit_character = UMA_tokai_teio
+recruit_character = UMA_maruzensky
+recruit_character = UMA_fuji_kiseki
+recruit_character = UMA_oguri_cap
+recruit_character = UMA_gold_ship
+recruit_character = UMA_vodka
+recruit_character = UMA_daiwa_scarlet
+recruit_character = UMA_taiki_shuttle
+recruit_character = UMA_grass_wonder
+recruit_character = UMA_hishi_amazon
+recruit_character = UMA_mejiro_mcqueen
+recruit_character = UMA_el_condor_pasa
+recruit_character = UMA_t_m_opera_o
+recruit_character = UMA_narita_brian
+recruit_character = UMA_symboli_rudolf
+recruit_character = UMA_air_groove
+recruit_character = UMA_agnes_digital
+recruit_character = UMA_seiun_sky
+recruit_character = UMA_tamamo_cross
+recruit_character = UMA_fine_motion
+recruit_character = UMA_biwa_hayahide
+recruit_character = UMA_mayano_top_gun
+recruit_character = UMA_manhattan_cafe
+recruit_character = UMA_mihono_bourbon
+recruit_character = UMA_mejiro_ryan
+recruit_character = UMA_hishi_akebono
+recruit_character = UMA_yukino_bijin
+recruit_character = UMA_rice_shower
+recruit_character = UMA_ines_fujin
+recruit_character = UMA_agnes_tachyon
+recruit_character = UMA_admire_vega
+recruit_character = UMA_inari_one
+recruit_character = UMA_winning_ticket
+recruit_character = UMA_air_shakur
+recruit_character = UMA_eishin_flash
+recruit_character = UMA_curren_chan
+recruit_character = UMA_kawakami_princess
+recruit_character = UMA_gold_city
+recruit_character = UMA_sakura_bakushin_o
+recruit_character = UMA_seeking_the_pearl
+recruit_character = UMA_shinko_windy
+recruit_character = UMA_sweep_tosho
+recruit_character = UMA_super_creek
+recruit_character = UMA_smart_falcon
+recruit_character = UMA_zenno_rob_roy
+recruit_character = UMA_tosen_jordan
+recruit_character = UMA_nakayama_festa
+recruit_character = UMA_narita_taishin
+recruit_character = UMA_nishino_flower
+recruit_character = UMA_haru_urara
+recruit_character = UMA_bamboo_memory
+recruit_character = UMA_biko_pegasus
+recruit_character = UMA_marvelous_sunday
+recruit_character = UMA_makitanefukukitaru
+recruit_character = UMA_mr_c_b
+recruit_character = UMA_meisho_doto
+recruit_character = UMA_mejiro_dober
+recruit_character = UMA_nice_nature
+recruit_character = UMA_king_halo
+recruit_character = UMA_matikane_tannhauser
+recruit_character = UMA_ikuno_dictus
+recruit_character = UMA_mejiro_palmer
+recruit_character = UMA_daitaku_helios
+recruit_character = UMA_twin_turbo
+recruit_character = UMA_satono_diamond
+recruit_character = UMA_kitasan_black
+recruit_character = UMA_sakura_chiyono_o
+recruit_character = UMA_sirius_symboli
+recruit_character = UMA_mejiro_ardan
+recruit_character = UMA_yaeno_muteki
+recruit_character = UMA_tsurumaru_tsuyoshi
+recruit_character = UMA_mejiro_bright
+recruit_character = UMA_daring_tact
+recruit_character = UMA_sakura_laurel
+recruit_character = UMA_narita_top_road
+recruit_character = UMA_yamanin_zephyr
+recruit_character = UMA_furioso
+recruit_character = UMA_transcend
+recruit_character = UMA_espoir_city
+recruit_character = UMA_north_flight
+recruit_character = UMA_symboli_kris_s
+recruit_character = UMA_tanino_gimlet
+recruit_character = UMA_daiichi_ruby
+recruit_character = UMA_mejiro_ramonu
+recruit_character = UMA_aston_machan
+recruit_character = UMA_satono_crown
+recruit_character = UMA_cheval_grand
+recruit_character = UMA_verxina
+recruit_character = UMA_vivlos
+recruit_character = UMA_dantsu_flame
+recruit_character = UMA_k_s_miracle
+recruit_character = UMA_jungle_pocket
+recruit_character = UMA_no_reason
+recruit_character = UMA_still_in_love
+recruit_character = UMA_copano_rickey
+recruit_character = UMA_hokko_tarumae
+recruit_character = UMA_wonder_acute
+recruit_character = UMA_samson_big
+recruit_character = UMA_sounds_of_earth
+recruit_character = UMA_royce_and_royce
+recruit_character = UMA_katsuragi_ace
+recruit_character = UMA_neo_universe
+recruit_character = UMA_hishi_miracle
+recruit_character = UMA_tap_dance_city
+recruit_character = UMA_duramente
+recruit_character = UMA_rhein_kraft
+recruit_character = UMA_cesario
+recruit_character = UMA_air_messiah
+recruit_character = UMA_daring_heart
+recruit_character = UMA_orfevre
+recruit_character = UMA_gentildonna
+recruit_character = UMA_win_variation
+recruit_character = UMA_happy_meek
+recruit_character = UMA_bitter_glasse
+recruit_character = UMA_little_cocon
+recruit_character = UMA_montjue
+recruit_character = UMA_venus_paques
+recruit_character = UMA_rigantona
+recruit_character = UMA_sonon_elfie
+recruit_character = UMA_hayakawa_tazuna
+recruit_character = UMA_akikawa_yayoi
+recruit_character = UMA_otonashi_etsuko
+recruit_character = UMA_kiryuin_aoi
+recruit_character = UMA_anshimzawa_sasami
+recruit_character = UMA_kashimoto_riko
+recruit_character = UMA_light_hello
+recruit_character = UMA_darley_arabian
+recruit_character = UMA_godolphin_barb
+recruit_character = UMA_byerley_turk
+recruit_character = UMA_satake_mei
+recruit_character = UMA_tsurugi_ryoka
+recruit_character = UMA_akasaka_misato
+recruit_character = UMA_hosoe_junko
+recruit_character = UMA_spica_trainer
+recruit_character = UMA_tojo_hana
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

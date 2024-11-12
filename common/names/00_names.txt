@@ -1,0 +1,43 @@
+### Names generation for aces ###
+# Surnames can be male/female dependent or general. Fe. in Polish some surnames has different endings depending on the gender.
+# Names and Surnames are randomly picked and will sometimes repeat, but will never repeat in combinations for example there will never be generated another "John Smith".
+# Assigning the callsign is random - may be assigned or not. If we use the callsign, it will never be assigned to anyone again. Callsigns are not obligatory to script.
+# Picking up a gender is random, and is influenced by the amount of names scripted.
+### Operations
+# Operations will randomly pick from national pools until exhausted
+# You can specify a strategic region for which an order name will be drawn
+# if any enemy province along the frontline matches this strategic region, this sub-pool will be considered and used in preference to default. 
+# Whether this 'historical' name pool is exhausted is dependent on the define: HISTORICAL_ORDER_NAME_EXHAUSTION
+# Strategic region index '0' is the generic national pool.
+# You can specify the same name in several regions, though I would suggest not doing this too often, for performance reasons.
+# After this, a first and second will be randomly picked from the default pool
+# The prefix must be provided for all pools
+
+default = {
+	male = {
+		names = { "사토" "스즈키" "다카하시" "다나카" "와타나베" "이토" "야마모토" "나카무라" "고바야시" "사이토" "가토" "요시다" "야마다" "사사키" "야마구치" "마쓰모토" "이노우에" "기무라" "하야시" "시미즈" "야마자키" "모리" "아베" "이케다" "하시모토" "야마시타" "이시카와" "나카지마" "마에다" "후지타" "오가와" "오카다" "고토" "하세가와" "무라카미" "곤도" "이시이" "사카모토" "엔도" "아오키" "후지이" "니시무라" "후쿠다" "오타" "미우라" "후지와라" "오카모토" "마쓰다" "나카가와" "나카노" }
+		surnames = { "토우마" "테루"  "미노리" "류" "하야토" "시키" "스자쿠" "사키" "시로" "타케루" "미치루"  "렌" "다이고" "에이신" "호쿠토" "카오루" "레이" "쿄지" "쿄스케"  "히데오"  "쥰" "나츠키" "겐부" "소이치로"  "나오" "미치오"  "지로" "카즈키" "아메히코" "쇼타" "츠바사" "케이" "유스케" "세이지" "쇼마" "쿠로" "하루나" "유키히로" "마키오" "카논" "루이" "료" "소라" "모모히토" "타카시" "켄" }
+		callsigns = { "Grinichi" "Nixon" "Puchkovets" "Podvyaznoy" "Botsman" "Chester" "Krot" "Belka" "Yaytso" "Hohol" "Maksimkin" "Shish" "Gavrosh" "Nemets" }
+	}
+	female = {
+		names = { "사토" "스즈키" "다카하시" "다나카" "와타나베" "이토" "야마모토" "나카무라" "고바야시" "사이토" "가토" "요시다" "야마다" "사사키" "야마구치" "마쓰모토" "이노우에" "기무라" "하야시" "시미즈" "야마자키" "모리" "아베" "이케다" "하시모토" "야마시타" "이시카와" "나카지마" "마에다" "후지타" "오가와" "오카다" "고토" "하세가와" "무라카미" "곤도" "이시이" "사카모토" "엔도" "아오키" "후지이" "니시무라" "후쿠다" "오타" "미우라" "후지와라" "오카모토" "마쓰다" "나카가와" "나카노" }
+		surnames = { "호시노" "시로코" "노노미" "세리카" "아야네" "유메" "마코토" "이로하" "이부키" "사츠키" "치아키" "히나" "아코" "이오리" "치나츠" "아루" "무츠키" "카요코" "하루카" "하루나" "아카리" "이즈미" "준코" "후우카" "주리" "세나" "카스미" "메구" "에리카" "키라라" "리오" "노아" "유우카" "코유키" "유즈" "모모이" "미도리" "아리스" "네루" "아스나" "카린" "아카네" "토키" "히마리" "치히로" "코타마" "하레" "마키" "우타하" "히비키" "코토리" "스미레" "에이미" "레이" }
+		callsigns = { "Queen Of The Sky" "The Red Princess" }
+	}
+	surnames = {  }
+	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" "Demon" }
+	
+	
+	#Operations - treat these as keys, not strings.
+	prefix = o_operation
+	
+	operation = {
+		0 = { o_default_operation }
+	}
+	
+	use_geographical_default_operation_names = yes
+	offensive_operation_suffix = o_strat_offensive_default
+	defensive_operation_suffix = o_strat_defensive_default
+	naval_operation_suffix = o_strat_naval_default
+	
+}

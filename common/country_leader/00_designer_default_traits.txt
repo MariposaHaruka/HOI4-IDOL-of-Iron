@@ -1,0 +1,566 @@
+leader_traits = {
+	### 항공기 설계사
+	# 항공기 설계사
+	aircraft_manufacturer = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# 경항공기 설계사
+	light_aircraft_manufacturer = {
+		random = no
+		equipment_bonus = {
+			small_plane_airframe = {
+				air_agility = 0.1 maximum_speed = 0.1
+			}
+			cv_small_plane_airframe = {
+				air_agility = 0.1 maximum_speed = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 기동성 중점 항공기 설계사
+	light_aircraft_manufacturer_2 = {
+		random = no
+		equipment_bonus = {
+			small_plane_airframe = {
+				air_agility = 0.2
+				maximum_speed = 0.1
+			}
+			cv_small_plane_airframe = {
+				air_agility = 0.2
+				maximum_speed = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	# 근접지원항공기 설계사
+	CAS_manufacturer = {
+		random = no
+		equipment_bonus = {
+			small_plane_cas_airframe = {
+				air_ground_attack = 0.1
+				reliability = 0.1
+			}
+			cv_small_plane_cas_airframe = {
+				air_ground_attack = 0.1
+				reliability = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 항속거리 중점 설계사
+	fuel_efficient_aircraft_manufacturer = {
+		random = no
+		equipment_bonus = {
+			small_plane_airframe = {
+				air_range = 0.1
+			}
+			medium_plane_fighter_airframe = {
+				air_range = 0.1
+				reliability = 0.2
+			}
+			medium_plane_airframe = {
+				reliability = 0.2
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 중항공기 설계사
+	heavy_aircraft_manufacturer = {
+		random = no
+		equipment_bonus = {
+			large_plane_airframe = {
+				air_bombing = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 해군 항공기 설계사
+	naval_aircraft_manufacturer = {
+		random = no
+		equipment_bonus = {
+			small_plane_naval_bomber_airframe = {
+				air_range = 0.1
+				naval_strike_attack = 0.1
+			}
+			cv_small_plane_naval_bomber_airframe = {
+				air_range = 0.1
+				naval_strike_attack = 0.1
+			}
+			cv_small_plane_airframe = {
+				air_range = 0.1
+				air_agility = 0.1
+			}
+			cv_small_plane_cas_airframe = {
+				air_range = 0.1
+				naval_strike_attack = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 다목적 항공기 설계사
+	multi_role_aircraft_manufacturer = {
+		random = no
+		equipment_bonus = {
+			small_plane_naval_bomber_airframe = {
+				reliability = 0.1
+			}
+			medium_plane_airframe = {
+				reliability = 0.1
+			}
+			small_plane_cas_airframe = {
+				reliability = 0.1
+			}
+			medium_plane_scout_plane_airframe = {
+				reliability = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	### 전차 설계사
+	# 전차 제조 공장
+	tank_refurbishment_plant = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				build_cost_ic = -0.05
+				reliability = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 고속전차 설계사
+	fast_tank_manufacturer = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				maximum_speed = 0.05
+				reliability = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 장갑전차 설계사
+	armored_car_manufacturer = {
+		random = no
+		equipment_bonus = {
+			armored_car_equipment = {
+				maximum_speed = 0.05
+				soft_attack = 0.05
+				hard_attack = 0.05
+			}
+			armor = {
+				armor_Value = 0.1 reliability = 0.2
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# 보병전차 설계사
+	infantry_tank_manufacturer = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				soft_attack = 0.05
+				armor_value = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 중형전차 설계사
+	medium_tank_manufacturer = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				reliability = 0.05
+				soft_attack = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 중전차 설계사
+	heavy_tank_manufacturer = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				armor_value = 0.05
+				hard_attack = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 전차 설계사
+	tank_manufacturer = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				reliability = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 전차 수리 및 개조 공장
+	repair_and_refurbishment_plant = {
+		random = no
+		equipment_bonus = {
+			screen_ship = {
+				build_cost_ic = -0.05
+			}
+			submarine = {
+				build_cost_ic = -0.05
+			}
+			capital_ship = {
+				build_cost_ic = -0.05
+			}
+			carrier = {
+				build_cost_ic = -0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	### 함선 설계사
+	# 흑해함대 설계사
+	black_sea_naval_manufacturer = { #NSB - Screen Ships and Submarines
+		random = no
+		equipment_bonus = {
+			screen_ship = {
+				build_cost_ic = -0.15
+				sub_detection = 0.1
+				naval_range = -0.25
+			}
+			submarine = {
+				build_cost_ic = -0.15
+				sub_visibility = -0.1
+				naval_range = -0.25
+			}
+			carrier = {
+				build_cost_ic = 0.15
+				naval_range = -0.25
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 잠수함 설계사
+	submarine_manufacturer = {
+		random = no
+		equipment_bonus = {
+			carrier = {
+				build_cost_ic = 0.1
+			}
+			capital_ship = {
+				build_cost_ic = 0.1
+			}
+			screen_ship = {
+				build_cost_ic = 0.1
+			}
+			submarine = {
+				build_cost_ic = -0.1
+				sub_visibility = -0.1
+				surface_visibility = -0.1
+				naval_speed = 0.1
+				naval_range = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 전투함대 설계사
+	battlefleet_designer = { #armored carriers, slightly buffed cap ships
+		random = no
+		equipment_bonus = {
+			capital_ship = {
+				armor_value = 0.15
+				hg_attack = 0.15
+			}
+			screen_ship = {
+				torpedo_attack = 0.25
+				sub_detection = -0.25
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 습격함대 설계사
+	raiding_fleet_naval_manufacturer = {
+		random = no
+		equipment_bonus = {
+			carrier = {
+				surface_visibility = -0.1
+				naval_speed = 0.1
+				#carrier_size = -0.1
+			}
+			capital_ship = {
+				surface_visibility = -0.1
+				naval_speed = 0.1
+				hg_attack = -0.1
+			}
+			screen_ship = {
+				surface_visibility = -0.1
+				naval_speed = 0.1
+			}
+			submarine = {
+				sub_visibility = -0.1
+				surface_visibility = -0.1
+				naval_speed = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 호위함대 설계사
+	convoy_escort_naval_manufacturer = {
+		random = no
+		equipment_bonus = {
+			carrier = {
+				carrier_size = 1
+				naval_speed = 0.1
+				armor_value = -0.15
+				naval_range = 0.1
+			}
+			screen_ship = {
+				naval_range = 0.3
+				sub_detection = 0.1
+				naval_speed = 0.1
+				build_cost_ic = -0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 함정 설계사
+	naval_manufacturer = {
+		random = no
+		equipment_bonus = {
+			carrier = {
+				reliability = 0.05
+			}
+			capital_ship = {
+				reliability = 0.05
+			}
+			screen_ship = {
+				reliability = 0.05
+			}
+			submarine = {
+				reliability = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	### 장비 설계사
+
+	# 대포 설계사
+	artillery_manufacturer = {
+		random = no
+		equipment_bonus = {
+			artillery = {
+				instant = yes
+				build_cost_ic = -0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 보병장비 설계사
+	infantry_equipment_manufacturer = {
+		random = no
+		equipment_bonus = {
+			infantry_equipment = {
+				instant = yes
+				build_cost_ic = -0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 지원장비 설계사
+	support_equipment_manufacturer = {
+		random = no
+		equipment_bonus = {
+			support = {
+				instant = yes
+				build_cost_ic = -0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 차량화 장비 설계사
+	motorized_equipment_manufacturer = {
+		random = no
+		equipment_bonus = {
+			motorized = {
+				instant = yes
+				build_cost_ic = -0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	### 산업 업체
+
+	# 산업 업체
+	industrial_concern = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# 건설 회사
+	construction_company = {
+		random = no
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 철도 회사
+	railway_company = {
+		random = no
+		production_speed_rail_way_factor = 0.15
+		production_speed_supply_node_factor = 0.15
+		equipment_bonus = {
+			train_equipment = {
+				instant = yes
+				build_cost_ic = -0.25
+				armor_value = 0.15
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 전자공학_개발사
+	electronics_developer = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 전자공학 업체
+	electronics_concern = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 광업 회사
+	mining_company = {
+		random = no
+		local_resources_factor = 0.1
+		production_lack_of_resource_penalty_factor = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# 삼림 기업
+	forestry_company = {
+		random = no
+		global_building_slots_factor = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# 정제 업체
+	refining_concern = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 중앙은행
+	central_bank = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 전화 회사
+	telephone_company = {
+		random = no
+		land_reinforce_rate = 0.02
+		coordination_bonus = 0.04
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

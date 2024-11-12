@@ -1,0 +1,112 @@
+focus_tree = {
+	id = BLA_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BLA
+		}
+	}
+	default = no
+
+	#경제 중점
+	focus = {
+		id = TOH_10001 #경제 위원회
+		icon = GFX_focus_TOH
+		cost = 1
+
+		x = 4
+		y = 0
+
+		ai_will_do = { factor = 30 }
+		available = { always = no }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRIAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_10001"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = TOH_11001 #제2차 5개년 계획 완료
+		icon = GFX_focus_TOH
+		cost = 1
+
+		x = 6
+		y = 0
+
+		ai_will_do = { factor = 30 }
+		available = { always = no }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRIAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_10001"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = TOH_11002 #제3차 5개년 개발
+		icon = GFX_focus_TOH
+		cost = 1
+
+		x = 8
+		y = 0
+
+		ai_will_do = { factor = 30 }
+		available = { always = no }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRIAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10002"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = TOH_10002 #중공업 계획
+		icon = GFX_focus_TOH
+		cost = 5
+	
+		relative_position_id = TOH_10001
+		x = -1
+		y = 1
+	
+		prerequisite = { focus = TOH_10001 }
+		ai_will_do = { factor = 30 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRIAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10002"
+			
+		}
+	}
+
+	focus = {
+		id = TOH_10003 #농업 집산화
+		icon = GFX_focus_TOH
+		cost = 5
+	
+		relative_position_id = TOH_10001
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = TOH_10001 }
+		ai_will_do = { factor = 30 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRIAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10003"
+			
+		}
+	}
+}

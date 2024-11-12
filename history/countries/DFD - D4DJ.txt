@@ -1,0 +1,178 @@
+#수도
+capital = 141 #스톡홀름
+
+#부대
+set_oob = "DFD_ar"
+starting_train_buffer = 2
+add_command_power = 20
+set_fuel_ratio = 1
+
+#시작 기술
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	basic_train = 1
+	interwar_antitank = 1 # 
+}
+if = {
+	limit = { has_MtG = yes }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+		early_ship_hull_carrier = 1
+		early_ship_hull_heavy = 1
+	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			basic_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+			transport = 1
+		}
+	}
+}
+if = {
+	limit = { has_LaR = yes }
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+		}
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+	else = {
+		set_technology = {
+			CAS1 = 1
+			early_fighter = 1
+			naval_bomber1 = 1
+			cv_naval_bomber1 = 1
+			early_bomber = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 25
+
+#국민 정신
+add_ideas = direct_election
+add_ideas = single_parliament
+
+#외교
+
+#정치 상황
+set_stability = 0.47
+set_war_support = 0.05
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1932.9.18"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	conservatism = 35
+	liberalism_mod = 7
+	progressivism = 0
+	socialdemocracy = 22
+	socialism = 10
+	communism = 4
+	authoritariancommunism = 12
+	anarchosyndicalism = 6
+	fascism = 1
+	militarytotalism = 1
+	authoritariandemocracy = 1 
+	autocracy = 1
+}
+
+#의회
+
+#캐릭터
+recruit_character = DFD_aimoto_rinku
+recruit_character = DFD_akashi_maho
+recruit_character = DFD_onaruto_muni
+recruit_character = DFD_togetsu_rei
+recruit_character = DFD_yamate_kyoko
+recruit_character = DFD_inuyose_shinobu
+recruit_character = DFD_sasago_jennifer_yuka
+recruit_character = DFD_shimizu_esora
+recruit_character = DFD_izumo_saki
+recruit_character = DFD_nijima_ibuki
+recruit_character = DFD_hanamaki_towa
+recruit_character = DFD_fukushima_noa
+recruit_character = DFD_seto_rika
+recruit_character = DFD_mizushima_marika
+recruit_character = DFD_hidaka_saori
+recruit_character = DFD_matsuyama_dalia
+recruit_character = DFD_aoyagi_tsubaki
+recruit_character = DFD_tsukimiyama_nagisa
+recruit_character = DFD_yano_hiiro
+recruit_character = DFD_miyake_aoi
+recruit_character = DFD_sakurada_miyu
+recruit_character = DFD_kasuga_haruna
+recruit_character = DFD_shiratori_kurumi
+recruit_character = DFD_takeshita_miiko
+recruit_character = DFD_amano_airi
+recruit_character = DFD_kase_mana
+recruit_character = DFD_himegami_shano
+recruit_character = DFD_takao_touka
+recruit_character = DFD_kaibara_michiru
+recruit_character = DFD_ichihoshi_rumina
+recruit_character = DFD_shinomia_kokoa
+recruit_character = DFD_tendo_hayate
+recruit_character = DFD_neo
+recruit_character = DFD_sophia
+recruit_character = DFD_elsie
+recruit_character = DFD_weronika
+recruit_character = DFD_asai_eimi
+recruit_character = DFD_bessho_beru
+recruit_character = DFD_shimazu_shika
+recruit_character = DFD_datechan
+recruit_character = DFD_kofune_ryujin
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

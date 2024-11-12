@@ -1,0 +1,149 @@
+ideas = {
+	is_industry_base = {
+        law = yes
+        use_list_view = yes
+
+        agrarian_base = {
+            available = {
+                num_of_civilian_factories < 20
+            }
+            level = 1
+            removal_cost = -1
+            modifier = {
+                political_power_factor = 0.10
+                monthly_population = 0.20
+				conscription_factor = -0.6
+				industrial_capacity_factory = -0.6
+				industrial_capacity_dockyard = -0.6
+                consumer_goods_factor = -0.70
+                production_speed_buildings_factor = -0.10
+                production_factory_max_efficiency_factor = -0.10
+                production_factory_efficiency_gain_factor = -0.10
+                industrial_capacity_factory = -0.10
+                industrial_capacity_dockyard = -0.20
+                research_speed_factor = -0.20
+            }
+
+            ai_will_do = {
+                base = 20
+                modifier = {
+                    is_major = yes
+                    add = -20
+                }
+                modifier = {
+                    num_of_civilian_factories < 10
+                    add = 60
+                }
+            }
+        }
+
+        natural_resources_base = { 
+            available = {
+                num_of_civilian_factories > 20
+                OR = {
+                    has_idea = export_focus
+					has_idea = free_trade
+                }
+            }
+            level = 2
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.05
+                local_resources_factor = 0.05
+                consumer_goods_factor = -0.025
+                min_export = 0.10
+                production_speed_synthetic_refinery_factor = 0.20
+                production_speed_industrial_complex_factor = -0.10
+            }
+
+            ai_will_do = {
+                base = 10
+                modifier = {
+                    OR = {
+						chromium > 10
+						tungsten > 10
+						oil > 10
+						aluminium > 50
+						rubber > 10
+						steel > 50
+					}
+					is_major = no
+                    add = 90
+                }
+            }
+        }
+
+        industry_manufacturing_base = {
+            available = {
+                num_of_factories > 50
+                NOT = { has_idea = agrarian_society }
+            }
+            level = 3
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = 0.15
+                industrial_capacity_factory = 0.10
+                production_speed_rail_way_factor = 0.15
+                production_speed_supply_node_factor = 0.15
+                production_speed_arms_factory_factor = 0.10
+                production_speed_industrial_complex_factor = 0.10
+                production_speed_fuel_silo_factor = 0.15
+                production_speed_nuclear_reactor_factor = 0.10
+            }
+
+            ai_will_do = {
+                base = 30
+                modifier = {
+                    NOT = { has_idea = agrarian_society }
+                    add = 60
+                }
+				modifier = {
+					is_major = yes
+					factor = 0
+				}
+				modifier = {
+					OR = {
+						is_neutrality = yes
+						is_fascism = yes
+					}
+					add = 40
+				}
+            }
+        }
+
+        business_and_enterprise_base = {
+            available = {
+                num_of_civilian_factories > 35
+                NOT = { has_idea = agrarian_society }
+            }
+            level = 4
+            removal_cost = -1
+
+            modifier = {
+                industrial_capacity_factory = 0.05
+                production_speed_infrastructure_factor = 0.15
+                production_speed_arms_factory_factor = 0.05
+                production_speed_dockyard_factor = 0.15
+                production_speed_industrial_complex_factor = 0.05
+            }
+
+            ai_will_do = {
+                base = 20
+                modifier = {
+                    is_major = yes
+                    add = 40
+                }
+                modifier = {
+                    is_democratic = yes
+                    add = 40
+                }
+                modifier = {
+                    is_communism = yes
+                    factor = 0
+                }
+            }
+        }
+    }
+}

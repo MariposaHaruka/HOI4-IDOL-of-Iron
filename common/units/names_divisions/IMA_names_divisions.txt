@@ -1,0 +1,126 @@
+IMA_01 = {
+	name = "프로듀서 보병 사단"
+	for_countries = { IMA ICG IML ISC ISM IDS IGM }
+	can_use = { always = yes }
+	division_types = { "infantry" }
+	fallback_name = "제%d 프로듀서 보병 사단"
+	ordered = {
+		1 = { "제%d 프로듀서 보병 사단" }
+		2 = { "제%d 프로듀서 보병 사단" }
+		3 = { "제%d 프로듀서 보병 사단" }
+		4 = { "제%d 프로듀서 보병 사단" }
+		5 = { "제%d 프로듀서 보병 사단" }
+		6 = { "제%d 프로듀서 보병 사단" }
+		7 = { "제%d 프로듀서 보병 사단"}
+		8 = { "제%d 프로듀서 보병 사단" }
+		9 = { "제%d 프로듀서 보병 사단" }
+		10 = { "제%d 프로듀서 보병 사단" }
+	}
+}
+
+IMA_02 = {
+	name = "프로듀서 기병 사단"
+	for_countries = { IMA ICG IML ISC ISM IDS IGM }
+	can_use = { always = yes }
+	division_types = { "cavalry" "camelry" "motorized" "mechanized" }
+	fallback_name = "제%d 프로듀서 기병 사단"
+	ordered = {
+		1 = { "제%d 프로듀서 기병 사단" }
+		2 = { "제%d 프로듀서 기병 사단" }
+		3 = { "제%d 프로듀서 기병 사단" }
+		4 = { "제%d 프로듀서 기병 사단" }
+		5 = { "제%d 프로듀서 기병 사단" }
+		6 = { "제%d 프로듀서 기병 사단" }
+		7 = { "제%d 프로듀서 기병 사단"}
+		8 = { "제%d 프로듀서 기병 사단" }
+		9 = { "제%d 프로듀서 기병 사단" }
+		10 = { "제%d 프로듀서 기병 사단" }
+	}
+}
+
+IMA_03 = {
+	name = "프로듀서 기갑 사단"
+	for_countries = { IMA ICG IML ISC ISM IDS IGM }
+	can_use = { always = yes }
+	division_types = { "medium_armor" "light_armor" "heavy_armor" "modern_armor" }
+	fallback_name = "제%d 프로듀서 기갑 사단"
+	ordered = {
+		1 = { "제%d 프로듀서 기갑 사단" }
+		2 = { "제%d 프로듀서 기갑 사단" }
+		3 = { "제%d 프로듀서 기갑 사단" }
+		4 = { "제%d 프로듀서 기갑 사단" }
+		5 = { "제%d 프로듀서 기갑 사단" }
+		6 = { "제%d 프로듀서 기갑 사단" }
+		7 = { "제%d 프로듀서 기갑 사단"}
+		8 = { "제%d 프로듀서 기갑 사단" }
+		9 = { "제%d 프로듀서 기갑 사단" }
+		10 = { "제%d 프로듀서 기갑 사단" }
+	}
+}
+
+IMA_04 = {
+	name = "프로듀서 상륙 여단"
+	for_countries = { IMA ICG IML ISC ISM IDS IGM }
+	can_use = { always = yes }
+	division_types = { "marine" "amphibious_armor" "amphibious_mechanized"
+	}
+	fallback_name = "제%d 프로듀서 상륙 여단"
+	ordered = {
+		1 = { "제%d 프로듀서 상륙 여단" }
+		2 = { "제%d 프로듀서 상륙 여단" }
+		3 = { "제%d 프로듀서 상륙 여단" }
+		4 = { "제%d 프로듀서 상륙 여단" }
+		5 = { "제%d 프로듀서 상륙 여단" }
+		6 = { "제%d 프로듀서 상륙 여단" }
+		7 = { "제%d 프로듀서 상륙 여단"}
+		8 = { "제%d 프로듀서 상륙 여단" }
+		9 = { "제%d 프로듀서 상륙 여단" }
+		10 = { "제%d 프로듀서 상륙 여단" }
+	}
+}
+
+IMA_05 = {
+	name = "프로듀서 공수 여단"
+	for_countries = { IMA ICG IML ISC ISM IDS IGM }
+	can_use = { always = yes }
+	division_types = { 
+		"paratrooper"
+	}
+	fallback_name = "제%d 프로듀서 공수 여단"
+	ordered = {
+		1 = { "제%d 프로듀서 공수 여단" }
+		2 = { "제%d 프로듀서 공수 여단" }
+		3 = { "제%d 프로듀서 공수 여단" }
+		4 = { "제%d 프로듀서 공수 여단" }
+		5 = { "제%d 프로듀서 공수 여단" }
+		6 = { "제%d 프로듀서 공수 여단" }
+		7 = { "제%d 프로듀서 공수 여단"}
+		8 = { "제%d 프로듀서 공수 여단" }
+		9 = { "제%d 프로듀서 공수 여단" }
+		10 = { "제%d 프로듀서 공수 여단" }
+	}
+}
+
+IMA_06 = {
+	name = "프로듀서 산악 여단"
+	for_countries = { IMA ICG IML ISC ISM IDS IGM }
+	can_use = { always = yes }
+	division_types = { 
+		"paratrooper"
+	}
+	fallback_name = "제%d 프로듀서 산악 여단"
+	ordered = {
+		1 = { "제%d 프로듀서 산악 여단" }
+		2 = { "제%d 프로듀서 산악 여단" }
+		3 = { "제%d 프로듀서 산악 여단" }
+		4 = { "제%d 프로듀서 산악 여단" }
+		5 = { "제%d 프로듀서 산악 여단" }
+		6 = { "제%d 프로듀서 산악 여단" }
+		7 = { "제%d 프로듀서 산악 여단"}
+		8 = { "제%d 프로듀서 산악 여단" }
+		9 = { "제%d 프로듀서 산악 여단" }
+		10 = { "제%d 프로듀서 산악 여단" }
+	}
+}
+
+

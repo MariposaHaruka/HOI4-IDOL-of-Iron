@@ -1,0 +1,115 @@
+autonomy_state = {
+	id = lls_colony
+	
+	min_freedom_level = 0.7
+	manpower_influence = 0.2
+	
+	rule = {
+		desc = "RULE_DESC_IS_A_SUBJECT"
+		can_not_declare_war = no
+		can_decline_call_to_war = yes
+		can_be_spymaster = yes
+	}
+	
+	modifier = {
+		autonomy_manpower_share = 0.0
+		extra_trade_to_overlord_factor = 0.25
+		overlord_trade_cost_factor = -0.25
+		peace_score_ratio_transferred_to_overlord = 0.05
+		lend_lease_tension_with_overlord = -0.1
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 0.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		if = {
+			limit = {
+				OVERLORD = { 
+					original_tag = LLS
+					is_communism = no
+					is_democratic = no
+				}
+			}
+		}
+	}
+
+	allowed_levels_filter = {
+		lls_colony
+		lls_integrated_colony
+	}
+
+	can_take_level = {
+		always = no #중점으로 독립 가능
+	}
+
+	can_lose_level = {
+		always = no
+	}
+}
+
+autonomy_state = {
+	id = lls_integrated_colony
+	
+	min_freedom_level = 0.2
+	manpower_influence = 0.2
+	
+	rule = {
+		desc = "RULE_DESC_IS_A_SUBJECT"
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+		can_be_spymaster = yes
+	}
+	
+	modifier = {
+		autonomy_manpower_share = 0.0
+		extra_trade_to_overlord_factor = 0.25
+		overlord_trade_cost_factor = -0.25
+		peace_score_ratio_transferred_to_overlord = 0.05
+		lend_lease_tension_with_overlord = -0.1
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 0.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		if = {
+			limit = {
+				OVERLORD = { 
+					original_tag = LLS
+					is_communism = no
+					is_democratic = no
+				}
+			}
+		}
+	}
+
+	allowed_levels_filter = {
+		lls_colony
+		lls_integrated_colony
+	}
+	
+	can_take_level = {
+	}
+
+	can_lose_level = {
+	}
+}

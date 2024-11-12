@@ -1,0 +1,81 @@
+capital = 525 #서울
+set_oob = "LSS_ar"
+starting_train_buffer = 0
+set_research_slots = 4
+set_stability = 0.2
+set_war_support = 0.45
+add_command_power = 20
+set_fuel_ratio = 0.8
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = { has_BBA = yes }
+	else = {
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+		}
+	}
+}
+
+set_variable = { country_intro_page_count = 2 }
+set_convoys = 5
+
+if = {
+	limit = { has_TfV = yes }
+	set_cosmetic_tag = LSS_LLS
+	add_to_tech_sharing_group = Lovelive_research
+	else = {
+		set_cosmetic_tag = LSS_LGR
+	}
+}
+
+
+#국민 정신
+
+add_ideas = agrarian_society
+
+
+set_politics = {
+	ruling_party = authoritariandemocracy
+	last_election = "1933.4.7"
+	election_frequency = 72
+	elections_allowed = no
+}
+
+set_popularities = {
+	conservatism = 9
+	authoritariancommunism = 9
+	militarytotalism = 9
+	authoritariandemocracy = 73
+}
+
+
+### Leader
+recruit_character = LSS_takami_chika
+recruit_character = LSS_sakurauchi_riko
+recruit_character = LSS_matsuura_kanan
+recruit_character = LSS_kurosawa_dia
+recruit_character = LSS_watanabe_you
+recruit_character = LSS_tsushima_yoshiko
+recruit_character = LSS_kunikida_hanamaru
+recruit_character = LSS_ohara_mari
+recruit_character = LSS_kurosawa_rubi
+recruit_character = LSS_kazuno_sarah
+recruit_character = LSS_kazuno_leah
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

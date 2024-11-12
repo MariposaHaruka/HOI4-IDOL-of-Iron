@@ -1,0 +1,103 @@
+capital = 327 #마닐라
+set_oob = "LST_ar"
+set_research_slots = 2
+set_stability = 0.4
+set_war_support = 0.05
+add_command_power = 20
+set_fuel_ratio = 1
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_recon = 1
+	fuel_silos = 1
+}
+
+if = {
+	limit = { has_MtG = yes }
+	set_technology = {
+		mtg_transport = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		basic_battery = 1
+	}
+	else = {
+		set_technology = {
+			transport = 1
+			early_submarine = 1
+			basic_destroyer = 1
+			early_destroyer = 1
+			early_light_cruiser = 1
+			basic_light_cruiser = 1
+			early_heavy_cruiser = 1
+		}
+	}
+}
+
+if = {
+	limit = { has_BBA = yes }
+	else = {
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+		}
+	}
+}
+
+set_variable = { country_intro_page_count = 2 }
+set_convoys = 25
+
+if = {
+	limit = { has_TfV = yes }
+	set_cosmetic_tag = LST_LLS
+	add_to_tech_sharing_group = Lovelive_research
+	else = {
+		set_cosmetic_tag = LST_LGR
+	}
+}
+
+#국민 정신
+
+add_ideas = agrarian_society
+
+
+set_politics = {
+	ruling_party = authoritariandemocracy
+	last_election = "1933.4.7"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	conservatism = 10
+	militarytotalism = 30
+	authoritariancommunism = 10
+	authoritariandemocracy = 50
+}
+
+### Leader
+recruit_character = LST_shibuya_kanon
+recruit_character = LST_tang_keke
+recruit_character = LST_arashi_chisato
+recruit_character = LST_heanna_sumire
+recruit_character = LST_hazuki_ren
+recruit_character = LST_sakurakoji_kinako
+recruit_character = LST_yoneme_mei
+recruit_character = LST_wakana_shiki
+recruit_character = LST_onitsuka_natsumi
+recruit_character = LST_wien_margarete
+recruit_character = LST_onitsuka_tomari
+recruit_character = LST_hiiragi_mao
+recruit_character = LST_hijirisawa_yuna
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}
+

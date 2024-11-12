@@ -1,0 +1,62 @@
+#수도
+capital = 44
+
+#부대
+set_oob = "FBD_ar"
+starting_train_buffer = 2
+add_command_power = 10
+set_fuel_ratio = 0.2
+
+#시작 기술
+set_technology = {
+	infantry_weapons = 1
+	tech_trucks = 1
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 10
+
+#국민 정신
+
+#외교
+
+#정치 상황
+set_stability = 0.4
+set_war_support = 0.1
+set_politics = {
+	ruling_party = authoritariandemocracy
+	last_election = "1932.6.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	conservatism = 1
+	liberalism_mod = 1
+	progressivism = 0
+	socialdemocracy = 1
+	socialism = 1
+	communism = 1
+	authoritariancommunism = 6
+	anarchosyndicalism = 1
+	fascism = 6
+	militarytotalism = 1
+	authoritariandemocracy = 80
+	autocracy = 1
+
+}
+
+#의회
+
+#캐릭터 
+recruit_character = FBD_igarashi_reo
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

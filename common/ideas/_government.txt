@@ -1,0 +1,138 @@
+ideas = {
+	is_government = {
+		law = yes
+		use_list_view = yes
+
+		unitary_state = {
+			removal_cost = -1
+
+			modifier = {
+                stability_factor = 0.10
+                war_support_factor = 0.10
+                global_building_slots_factor = 0.15
+                resistance_target = 0.05
+                resistance_decay = -0.1
+			}
+			
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 1
+			}
+			cancel_if_invalid = no
+		}
+
+		semi_unitary_state = {
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.05
+                global_building_slots_factor = 0.10
+                political_power_factor = 0.05
+                compliance_growth = 0.10
+                resistance_growth = -0.20
+                resistance_decay = -0.05
+            }
+			
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+            ai_will_do = {
+                factor = 1
+            }
+
+            cancel_if_invalid = no
+        }
+
+		federal_state = {
+			removal_cost = -1
+
+			modifier = {
+                stability_factor = 0.05
+                political_power_factor = 0.05
+                global_building_slots_factor = 0.10
+                compliance_growth = 0.05
+                resistance_growth = -0.10
+                resistance_decay = -0.05
+			}
+			
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 1
+			}
+			cancel_if_invalid = no
+		}
+
+		community_state = {
+			removal_cost = -1
+
+			modifier = {
+                political_power_factor = 0.15
+                stability_factor = -0.10
+                war_support_factor = -0.15
+                compliance_growth = 0.15
+                resistance_damage_to_garrison = -0.40
+			}
+			
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 1
+			}
+			cancel_if_invalid = no
+		}
+
+		city_state = {
+			removal_cost = -1
+
+			modifier = {
+                global_building_slots_factor = 5
+                industrial_capacity_factory = 2
+                industrial_capacity_dockyard = 5
+                conscription_factor = 0.20
+                production_speed_buildings_factor = 3
+                #production_speed_infrastructure_factor #= #2
+                #production_speed_bunker_factor = #3
+                #production_speed_coastal_bunker_factor #= #3
+                #production_speed_anti_air_building_factor #= #3
+                #production_speed_radar_station_factor #= #3
+                special_forces_min = 100
+			}
+			
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 1
+			}
+			cancel_if_invalid = no
+		}
+
+		local_self_federal_state = {
+			removal_cost = -1
+
+			modifier = {
+                stability_factor = -0.1
+                political_power_factor = -0.1
+                global_building_slots_factor = -0.10
+                compliance_growth = -0.05
+                resistance_growth = 0.10
+                resistance_decay = -0.10
+			}
+			
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 1
+			}
+			cancel_if_invalid = no
+		}
+
+		
+	}
+}

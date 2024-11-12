@@ -1,0 +1,117 @@
+scripted_gui = {
+	intro_page = {
+		context_type = player_context
+		window_name = "mod_welcome_container"
+		dirty = intro_variable
+
+		ai_enabled = { always = no }
+
+		visible = {
+			has_variable = intro_variable
+		}
+
+		triggers = {
+			tab_1_visible = { tag_has_country_intro = yes }
+			tab_2_visible = { tag_has_path_guide = yes }
+
+			tab_1_click_enabled = { NOT = { check_variable = { intro_variable = 1 } } }
+			tab_2_click_enabled = { NOT = { check_variable = { intro_variable = 2 } } }
+			tab_3_click_enabled = { NOT = { check_variable = { intro_variable = 3 } } }
+			tab_4_click_enabled = { NOT = { check_variable = { intro_variable = 4 } } }
+		}
+
+		effects = {
+			tab_1_click = { set_variable = { intro_variable = 1 } }
+			tab_2_click = { set_variable = { intro_variable = 2 } }
+			tab_3_click = { set_variable = { intro_variable = 3 } }
+			tab_4_click = { set_variable = { intro_variable = 4 } }
+
+			mod_options_button_click = {
+				clear_variable = intro_variable
+			}
+		}
+	}
+
+	intro_page_tab_1 = {
+		context_type = player_context
+		window_name =  mod_intro_tab_1_container
+		parent_window_name = "mod_welcome_container"
+		dirty = intro_variable
+		dirty = curr_page
+
+		ai_enabled = { always = no }
+
+		visible = {
+			check_variable = { intro_variable = 1 }
+		}
+
+		triggers = {
+			flip_back_visible = { has_variable = country_intro_page_count }
+			flip_forward_visible = { has_variable = country_intro_page_count }
+
+			flip_back_click_enabled = { check_variable = { curr_page > 0 } }
+			flip_forward_click_enabled = { check_variable = { curr_page < country_intro_page_count } }
+		}
+
+		effects = {
+			flip_back_click = {
+				if = {
+					limit = { check_variable = { curr_page > 0 } }
+					subtract_from_variable = { curr_page = 1 }
+				}
+			}
+			flip_forward_click = {
+				if = {
+					limit = { check_variable = { curr_page < country_intro_page_count } }
+					add_to_variable = { curr_page = 1 }
+				}
+			}
+		}
+
+		properties = {
+			mod_intro_tab_1_background_icon = {
+				image = "[ROOT.GetCountryIntroBackground]"
+			}
+		}
+	}
+
+	intro_page_tab_2 = {
+		context_type = player_context
+		window_name =  mod_intro_tab_2_container
+		parent_window_name = "mod_welcome_container"
+		dirty = intro_variable
+
+		ai_enabled = { always = no }
+
+		visible = {
+			check_variable = { intro_variable = 2 }
+		}
+	}
+
+	intro_page_tab_3 = {
+		context_type = player_context
+		window_name = mod_intro_tab_3_container
+		parent_window_name = "mod_welcome_container"
+		dirty = intro_variable
+
+		ai_enabled = { always = no }
+
+		visible = {
+			check_variable = { intro_variable = 3 }
+		}
+	}
+
+	intro_page_tab_4 = {
+		context_type = player_context
+		window_name = mod_intro_tab_4_container
+		parent_window_name = "mod_welcome_container"
+		dirty = intro_variable
+
+		ai_enabled = { always = no }
+
+		visible = {
+			check_variable = { intro_variable = 4 }
+		}
+	}
+}
+

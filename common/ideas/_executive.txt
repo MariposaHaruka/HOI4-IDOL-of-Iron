@@ -1,0 +1,213 @@
+ideas = {
+	is_executive = {
+		law = yes
+		use_list_view = yes
+
+		despotic_monarchy = {
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.1
+				high_command_cost_factor = -0.1
+				political_advisor_cost_factor = -0.1
+				army_chief_cost_factor = -0.1
+				navy_chief_cost_factor = -0.1
+				air_chief_cost_factor = -0.1
+                stability_factor = 0.05
+                war_support_factor = 0.05
+			}
+
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 1
+			}
+			cancel_if_invalid = no
+		}
+
+		constitutional_monarchy = {
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+                war_support_factor = 0.05
+			}
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 1
+			}
+			cancel_if_invalid = no
+		}
+
+		prime_minister = {
+			removal_cost = -1
+
+			modifier = {
+                political_power_factor = 0.15
+				stability_factor = 0.05
+			}
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					factor = 20
+					num_of_civilian_factories < 15
+				}
+				modifier = {
+					has_war_support > 0.25
+					factor = 0
+				}
+			}
+			cancel_if_invalid = no
+		}
+
+		president_idea = {
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+                war_support_factor = 0.10
+			}
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					factor = 0
+					has_war = yes
+				}
+			}
+			cancel_if_invalid = no
+		}
+
+		dual_executive = {
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+                war_support_factor = 0.10
+			}
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					factor = 0
+					has_war = yes
+				}
+			}
+			cancel_if_invalid = no
+		}
+
+		military_dictatorship_idea = {
+			removal_cost = -1
+
+			modifier = {
+                offensive_war_stability_factor = 0.10
+                defensive_war_stability_factor = 0.15
+                war_support_factor = 0.20
+                max_command_power_mult = 0.20
+                #max_command_power = 10
+                command_power_gain_mult = 0.20
+                #command_power_gain = 0.10
+                stability_factor = -0.10
+                political_power_factor = -0.05
+			}
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					factor = 20
+					OR = {
+						has_government = authoritariandemocracy
+						has_government = militarytotalism
+					}
+				}
+			}
+			cancel_if_invalid = no
+		}
+
+		chairman_guidence = {
+			removal_cost = -1
+
+			modifier = {
+                political_power_factor = 0.10
+                stability_factor = 0.05
+                drift_defence_factor = 0.20
+			}
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					factor = 20
+					OR = {
+						has_government = authoritariandemocracy
+						has_government = militarytotalism
+						has_government = authoritariancommunism
+					}
+				}
+			}
+			cancel_if_invalid = no
+		}
+
+		federal_council = {
+			removal_cost = -1
+
+			modifier = {
+                army_core_defence_factor = 0.10
+                political_power_factor = 0.10
+                stability_factor = 0.05
+                non_core_manpower = 0.50
+                war_support_factor = -0.30
+                compliance_growth = 0.20
+			}
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					factor = 20
+					OR = {
+						has_government = communism
+						has_government = socialism
+					}
+				}
+			}
+			cancel_if_invalid = no
+		}
+
+		workers_council = {
+			removal_cost = -1
+			modifier = {
+                political_power_factor = 0.05
+                war_support_factor = -0.20
+                stability_factor = 0.05
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
+                production_factory_start_efficiency_factor = 0.05
+                line_change_production_efficiency_factor = 0.05
+                production_factory_max_efficiency_factor = 0.05
+			}
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 1
+			}
+			cancel_if_invalid = no
+		}
+	}
+}

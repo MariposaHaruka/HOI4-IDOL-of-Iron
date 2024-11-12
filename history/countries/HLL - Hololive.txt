@@ -1,0 +1,146 @@
+#수도
+capital = 307 #카라카스
+
+#부대
+set_oob = "HLL_ar"
+starting_train_buffer = 3
+add_command_power = 15
+set_fuel_ratio = 0.6
+
+#시작 기술
+set_technology = {
+	infantry_weapons = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+if = {
+	limit = { has_BBA = yes }
+	set_technology = {
+		iw_small_airframe = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 10
+
+#국민 정신
+
+#외교
+
+#정치 상황
+set_stability = 0.6
+set_war_support = 0.7
+set_politics = {
+	ruling_party = militarytotalism
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	conservatism = 1
+	liberalism_mod = 1
+	progressivism = 0
+	socialdemocracy = 1
+	socialism = 1
+	communism = 1
+	authoritariancommunism = 1
+	anarchosyndicalism = 1
+	fascism = 1
+	militarytotalism = 74
+	authoritariandemocracy = 16 
+	autocracy = 2
+}
+
+#의회
+
+#캐릭터
+recruit_character = HLL_yagoo
+recruit_character = HLL_tokino_sora
+recruit_character = HLL_robocco_san
+recruit_character = HLL_azki
+recruit_character = HLL_sakura_miko
+recruit_character = HLL_hoshimachi_suisei
+recruit_character = HLL_yozora_mel
+recruit_character = HLL_aki_rosenthal
+recruit_character = HLL_akai_haato
+recruit_character = HLL_shirakami_fubuki
+recruit_character = HLL_natsuiro_matsuri
+recruit_character = HLL_hitomi_chris
+recruit_character = HLL_minato_aqua
+recruit_character = HLL_murasaki_shion
+recruit_character = HLL_nakiri_ayame
+recruit_character = HLL_yuzuki_choco
+recruit_character = HLL_oozora_subaru
+recruit_character = HLL_ookami_mio
+recruit_character = HLL_nekomata_okayu
+recruit_character = HLL_inugami_korone
+recruit_character = HLL_usada_pekora
+recruit_character = HLL_shiranui_flare
+recruit_character = HLL_shirogane_noel
+recruit_character = HLL_houshou_marine
+recruit_character = HLL_uruha_rushia
+recruit_character = HLL_amane_kanata
+recruit_character = HLL_tsunomaki_watame
+recruit_character = HLL_tokoyami_towa
+recruit_character = HLL_himemori_luna
+recruit_character = HLL_kiryu_coco
+recruit_character = HLL_yukihana_lamy
+recruit_character = HLL_momosuzu_nene
+recruit_character = HLL_shishiro_botan
+recruit_character = HLL_omaru_polka
+recruit_character = HLL_mano_aloe
+recruit_character = HLL_laplace_darkness
+recruit_character = HLL_takane_lui
+recruit_character = HLL_hakui_koyori
+recruit_character = HLL_sakamata_chloe
+recruit_character = HLL_kazama_iroha
+recruit_character = HLL_ayunda_risu
+recruit_character = HLL_moona_hoshinova
+recruit_character = HLL_airani_iofifteen
+recruit_character = HLL_kureiji_ollie
+recruit_character = HLL_anya_melfissa
+recruit_character = HLL_pavolia_reine
+recruit_character = HLL_vestia_zeta
+recruit_character = HLL_kaela_kovalskia
+recruit_character = HLL_kobo_kanaeru
+recruit_character = HLL_mori_calliope
+recruit_character = HLL_takanashi_kiara
+recruit_character = HLL_ninomae_inanis
+recruit_character = HLL_gawr_gura
+recruit_character = HLL_watson_amelia
+recruit_character = HLL_irys
+recruit_character = HLL_ceres_fauna
+recruit_character = HLL_ouro_kronii
+recruit_character = HLL_nanashi_mumei
+recruit_character = HLL_hakos_baelz
+recruit_character = HLL_tsukumo_sana
+recruit_character = HLL_shiori_novella
+recruit_character = HLL_koseki_bijou
+recruit_character = HLL_nerissa_ravencroft
+recruit_character = HLL_fuwawa_abyssgard
+recruit_character = HLL_mococo_abyssgard
+recruit_character = HLL_hiodoshi_ao
+recruit_character = HLL_otonose_kanade
+recruit_character = HLL_ichijou_ririka
+recruit_character = HLL_juufuutei_raden
+recruit_character = HLL_todoroki_hajime
+recruit_character = HLL_friend_a
+recruit_character = HLL_harusaki_nodoka
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

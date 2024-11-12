@@ -1,0 +1,30 @@
+on_actions = {
+    on_startup = {
+	    effect = {
+			IMA = { 
+				parliament_gui_initial_IMA = yes
+				clr_country_flag = parliament_gui_on
+				calc_parliament_support_IMA = yes
+			}
+			ICG = { 
+				parliament_gui_initial_ICG = yes
+				clr_country_flag = parliament_gui_on
+			}
+			IML = { 
+				parliament_gui_initial_IML = yes
+				clr_country_flag = parliament_gui_on
+			}
+        }
+    }
+	on_weekly = {
+		effect = {
+			IMA = {
+				if = {
+					limit = { IMA = { NOT = { has_idea = no_parliament } } }
+					calc_parliament_support_IMA = yes
+				}
+			}
+		}
+	}
+}
+# 시작이 민주주의가 아닌 경우 별도 이벤트로 켤 것

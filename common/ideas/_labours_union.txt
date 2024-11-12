@@ -1,0 +1,116 @@
+ideas = {
+	is_labours_union = {
+        law = yes
+        use_list_view = yes
+
+        workers_unions_banned = {
+            available = {
+				is_democratic = no
+				is_communism = no
+            }
+            level = 1
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.1
+                production_factory_max_efficiency_factor = -0.10
+                production_factory_efficiency_gain_factor = -0.15
+                industrial_capacity_factory = -0.1
+                industrial_capacity_dockyard = -0.1
+            }
+
+            ai_will_do = {
+                base = 20
+                modifier = {
+                    is_fascism = yes
+                    add = 60
+                }
+                modifier = {
+                    is_neutrality = yes
+                    add = 20
+                }
+            }
+        }
+
+        state_controlled_unions_allowed = {
+            available = {
+			   is_communism = no
+            }
+            level = 2
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.05
+                production_factory_max_efficiency_factor = -0.05
+                production_factory_efficiency_gain_factor = -0.1
+                industrial_capacity_factory = -0.05
+                industrial_capacity_dockyard = -0.05
+            }
+
+            ai_will_do = {
+                base = 30
+                modifier = {
+                    is_neutrality = yes
+                    add = 30
+                }
+                modifier = {
+                    is_fascism = yes
+                    has_stability > 0.8
+                    add = 20
+                }
+            } 
+        }
+
+        workers_unions_allowed = {
+            available = {
+                is_fascism = no
+                is_neutrality = no
+            }
+			level = 3
+            removal_cost = -1
+
+            modifier = {
+                production_factory_efficiency_gain_factor = -0.05
+            }
+
+            ai_will_do = {
+                base = 40
+                modifier = {
+                    is_democratic = yes
+                    add = 80
+                }
+                modifier = {
+                    is_communism = yes
+                    add = 80
+                }
+            }
+        }
+
+        worker_organs = {
+            visible = {
+                is_communism = yes
+            }
+            available = {
+                OR = {
+                    has_government = anarchosyndicalism
+                    has_government = socialism
+                }
+            }
+            level = 4
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.05
+                political_power_factor = 0.05
+                production_factory_max_efficiency_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
+            }
+            
+            ai_will_do = {
+                base = 40
+            }
+        }
+    }
+}

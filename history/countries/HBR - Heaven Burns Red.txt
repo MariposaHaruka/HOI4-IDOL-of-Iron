@@ -1,0 +1,145 @@
+#수도
+capital = 289 #방콕
+
+#부대
+set_oob = "HBR_ar"
+starting_train_buffer = 4
+add_command_power = 20
+set_fuel_ratio = 1
+
+#시작 기술
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+}
+if = {
+	limit = { has_MtG = yes }
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+		}
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	set_technology = {
+		iw_small_airframe = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 15
+
+#국민 정신
+
+add_ideas = agrarian_society
+
+#외교
+
+#정치 상황
+set_stability = 0.5
+set_war_support = 0.5
+set_politics = {
+	ruling_party = authoritariandemocracy
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	conservatism = 1
+	liberalism_mod = 1
+	progressivism = 0
+	socialdemocracy = 1
+	socialism = 1
+	communism = 1
+	authoritariancommunism = 1
+	anarchosyndicalism = 1
+	fascism = 16
+	militarytotalism = 1
+	authoritariandemocracy = 74 
+	autocracy = 2
+}
+
+#의회
+
+#캐릭터 
+recruit_character = HBR_kayamori_ruka
+recruit_character = HBR_izumi_yuki
+recruit_character = HBR_aikawa_megumi
+recruit_character = HBR_tojo_tsukasa
+recruit_character = HBR_asakura_karen
+recruit_character = HBR_kunimi_tama
+recruit_character = HBR_aoi_erika
+recruit_character = HBR_minase_ichigo
+recruit_character = HBR_minase_sumomo
+recruit_character = HBR_higuchi_seika
+recruit_character = HBR_hiiragi_kozue
+recruit_character = HBR_byakko
+recruit_character = HBR_yamawagi_bon_ivar
+recruit_character = HBR_sakuraba_seira
+recruit_character = HBR_tenne_miko
+recruit_character = HBR_bungo_yayoi
+recruit_character = HBR_kanaki_adelheid
+recruit_character = HBR_satsuki_mari
+recruit_character = HBR_shirakawa_yuina
+recruit_character = HBR_tsukishiro_monaka
+recruit_character = HBR_kiryu_miya
+recruit_character = HBR_sugawara_chie
+recruit_character = HBR_ogasahara_hisame
+recruit_character = HBR_kura_satomi
+recruit_character = HBR_nikaido_misato
+recruit_character = HBR_ishii_iroha
+recruit_character = HBR_mikoto_fubuki
+recruit_character = HBR_murofushi_risa
+recruit_character = HBR_date_akari
+recruit_character = HBR_mizuhara_aina
+recruit_character = HBR_ohshima_ichiko
+recruit_character = HBR_ohshima_niina
+recruit_character = HBR_ohshima_minori
+recruit_character = HBR_ohshima_yotsuha
+recruit_character = HBR_ohshima_isuzu
+recruit_character = HBR_ohshima_muua
+recruit_character = HBR_yanagi_mion
+recruit_character = HBR_maruyama_kanata
+recruit_character = HBR_hanamura_shiki
+recruit_character = HBR_matsuoka_chiroru
+recruit_character = HBR_natsume_inori
+recruit_character = HBR_kurosawa_maki
+recruit_character = HBR_carole_reaper
+recruit_character = HBR_li_yingxia
+recruit_character = HBR_irene_redmayne
+recruit_character = HBR_vritika_balakrishnan
+recruit_character = HBR_maria_de_angelis
+recruit_character = HBR_charlotta_skopovskaya
+recruit_character = HBR_tezuka_saki
+recruit_character = HBR_nanase_nanami
+recruit_character = HBR_asami_makiko
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

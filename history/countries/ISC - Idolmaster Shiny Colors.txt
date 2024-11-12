@@ -1,0 +1,174 @@
+﻿#수도
+capital = 285 #캔버라
+
+#부대
+oob = "ISC_ar"
+starting_train_buffer = 3
+add_command_power = 10
+set_fuel_ratio = 0.2
+
+#시작 기술
+set_research_slots = 2
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+	trench_warfare = 1
+	fuel_silos = 1
+	fleet_in_being = 1
+}
+if = {
+	limit = {  has_MtG = yes }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		mtg_transport = 1
+	}
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+			early_submarine = 1
+			transport = 1
+		}
+	}
+}
+
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 100
+
+#국민 정신
+add_ideas = direct_election
+add_ideas = double_parliament
+
+#외교
+set_cosmetic_tag = ISC_IMA
+add_to_tech_sharing_group = bandainamco_research
+
+#정치 상황
+set_stability = 0.4
+set_war_support = 0.02
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1934.09.15"
+	election_frequency = 36
+	elections_allowed = yes
+}
+set_popularities = {
+	conservatism = 37
+	liberalism_mod = 8
+	progressivism = 0
+	socialdemocracy = 33
+	socialism = 6
+	communism = 4
+	authoritariancommunism = 4
+	anarchosyndicalism = 4
+	fascism = 1
+	militarytotalism = 1
+	authoritariandemocracy = 1 
+	autocracy = 1
+}
+
+#의회
+set_variable = { ISC_communist_seats = 0 }
+set_variable = { ISC_producercommunist_seats = 0 }
+set_variable = { ISC_labor_seats = 51 }
+
+set_variable = { ISC_country_seats = 25 }
+set_variable = { ISC_united_tsubasa_seats = 71 }
+
+set_variable = { ISC_independent_seats = 8 }
+set_variable = { ISC_centre_seats = 0 }
+#Total seats - 155
+
+#캐릭터 
+recruit_character = ISC_kuwayama_chiyuki #스타팅
+recruit_character = ISC_sakuragi_mano #정사 기준 전시내각 총리
+recruit_character = ISC_kazano_hiori
+recruit_character = ISC_hachimiya_meguru
+recruit_character = ISC_tsukioka_kogane
+recruit_character = ISC_tanaka_mamimi
+recruit_character = ISC_shirase_sakuya
+recruit_character = ISC_mitsumine_yuika
+recruit_character = ISC_yukoku_kiriko
+recruit_character = ISC_komiya_kaho
+recruit_character = ISC_sonoda_chiyoko
+recruit_character = ISC_saijou_jyuri
+recruit_character = ISC_morino_rinze
+recruit_character = ISC_arisugawa_natsuha
+recruit_character = ISC_osaki_amana
+recruit_character = ISC_osaki_tenka
+recruit_character = ISC_serizawa_asahi
+recruit_character = ISC_mayuzumi_fuyuko
+recruit_character = ISC_izumi_mei
+recruit_character = ISC_asakura_touru
+recruit_character = ISC_higuchi_madoka
+recruit_character = ISC_fukumaru_koito
+recruit_character = ISC_ichikawa_hinana
+recruit_character = ISC_nanakusa_nichika
+recruit_character = ISC_aketa_mikoto
+recruit_character = ISC_ikaruga_ruka
+recruit_character = ISC_suzuki_hana
+recruit_character = ISC_ikuta_haruki
+recruit_character = ISC_nanakusa_hazuki
+recruit_character = ISC_amai_tsutomu
+recruit_character = ISC_natsume_p
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

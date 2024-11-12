@@ -1,0 +1,58 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+@experience_gain_low = 0.03
+@experience_gain_medium = 0.06
+@experience_gain_high = 0.08
+
+@chief_experience_gain_low = 0.20
+@chief_experience_gain_medium = 0.30
+@chief_experience_gain_high = 0.40
+
+leader_traits = {
+	trait_bla_arona = {
+		random = no
+		political_power_factor = 0.10
+		is_tarrif_cost_factor = -0.10
+		is_mobilization_law_cost_factor = -0.10
+		is_mobilization_economy_cost_factor  = -0.10
+		high_command_cost_factor = -0.10
+		air_chief_cost_factor = -0.10
+		army_chief_cost_factor = -0.10
+		navy_chief_cost_factor = -0.10
+		civilian_factory_use = 0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	trait_bla_nyantenmaru_1 = {
+		random = no
+		political_power_factor = 0.10
+		is_tarrif_cost_factor = -0.10
+		is_mobilization_law_cost_factor = -0.10
+		is_mobilization_economy_cost_factor  = -0.10
+		high_command_cost_factor = -0.10
+		air_chief_cost_factor = -0.10
+		army_chief_cost_factor = -0.10
+		navy_chief_cost_factor = -0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	trait_bla_nyantenmaru_2 = {
+		random = no
+		political_power_factor = -0.25
+		political_advisor_cost_factor = 0.25
+		is_tarrif_cost_factor = 0.25
+		is_mobilization_law_cost_factor = 0.25
+		is_mobilization_economy_cost_factor  = 0.25
+		high_command_cost_factor = 0.25
+		air_chief_cost_factor = 0.25
+		army_chief_cost_factor = 0.25
+		navy_chief_cost_factor = 0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

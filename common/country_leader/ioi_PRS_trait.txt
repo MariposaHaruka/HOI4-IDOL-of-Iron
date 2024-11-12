@@ -1,0 +1,42 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+@experience_gain_low = 0.03
+@experience_gain_medium = 0.06
+@experience_gain_high = 0.08
+
+@chief_experience_gain_low = 0.20
+@chief_experience_gain_medium = 0.30
+@chief_experience_gain_high = 0.40
+
+leader_traits = {
+	leader_prs_hoshino_ichika_1 = {
+		random = no
+		political_power_factor = 0.25
+		weekly_casualties_war_support = 0.001
+		ai_desired_divisions_factor = 0.20
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	leader_prs_hinomori_shiho_1 = {
+		random = no
+		political_power_factor = 0.15
+		weekly_casualties_war_support = 0.0005
+		ai_desired_divisions_factor = 0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	advisor_prs_hinomori_shiho = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

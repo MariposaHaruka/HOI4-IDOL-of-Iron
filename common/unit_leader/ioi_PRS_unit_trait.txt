@@ -1,0 +1,17 @@
+leader_traits = {
+	PRS_non_nvp = { 
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no
+		}
+		allowed = { FROM = { tag = PRS } }
+		modifier = { }
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,143 @@
+capital = 64
+set_oob = "PRS_ar"
+starting_train_buffer = 2
+set_research_slots = 6
+set_stability = 0.6
+set_war_support = 0.3
+add_command_power = 20
+set_fuel_ratio = 0.8
+
+# starting_truck_buffer = 0.8
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+	mobile_warfare = 1
+	trade_interdiction = 1
+	formation_flying = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+if = {
+	limit = { has_LaR = yes }
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+			improved_light_tank = 1
+			basic_heavy_tank = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 250
+
+#국민 정신
+add_ideas = {
+	PRS_sour_loser
+	PRS_generalstab
+	PRS_mefo_bills_1
+}
+
+add_dynamic_modifier = { modifier = PRS_industry }
+add_dynamic_modifier = { modifier = PRS_army }
+add_dynamic_modifier = { modifier = PRS_navy }
+add_dynamic_modifier = { modifier = PRS_air_force }
+
+#외교
+create_faction = vocaloid_axis
+add_to_faction = PRS
+
+create_import = {
+	resource = steel
+	factories = 2
+	exporter = DFD
+}
+
+#정치 상황
+set_stability = 0.72
+set_war_support = 0.35
+set_politics = {
+	ruling_party = fascism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	militarytotalism = 15
+	fascism = 85
+}
+ban_authoritariandemocracy_effect = yes
+ban_autocracy_effect = yes
+ban_communism_effect = yes
+ban_democratic_effect = yes
+
+# 캐릭터 
+recruit_character = PRS_hoshino_ichika
+recruit_character = PRS_tenma_saki
+recruit_character = PRS_mochizuki_honami
+recruit_character = PRS_hinomori_shiho
+recruit_character = PRS_hanasato_minori
+recruit_character = PRS_kiritani_haruka
+recruit_character = PRS_momoi_airi
+recruit_character = PRS_hinomori_shizuku
+recruit_character = PRS_azusawa_kohane
+recruit_character = PRS_shiraishi_an
+recruit_character = PRS_shinonome_akito
+recruit_character = PRS_aoyagi_touya
+recruit_character = PRS_tenma_tsukasa
+recruit_character = PRS_ootori_emu
+recruit_character = PRS_kusanagi_nene
+recruit_character = PRS_kamishiro_rui
+recruit_character = PRS_yoisaki_kanade
+recruit_character = PRS_asahina_mafuyu
+recruit_character = PRS_shinonome_ena
+recruit_character = PRS_akiyama_mizuki
+
+#보컬로이드 흡수시 사용 가능:
+recruit_character = PRS_hatsune_miku
+recruit_character = PRS_kagamine_rin
+recruit_character = PRS_kagamine_ren
+recruit_character = PRS_megurine_ruka
+recruit_character = PRS_meiko
+recruit_character = PRS_kaito
+
+#장관진
+add_ideas = PRS_tenma_saki
+add_ideas = PRS_hinomori_shiho
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

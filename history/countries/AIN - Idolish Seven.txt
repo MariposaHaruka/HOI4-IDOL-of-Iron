@@ -1,0 +1,122 @@
+#수도
+capital = 459
+
+#부대
+set_oob = "AIN_ar"
+add_command_power = 10
+set_fuel_ratio = 0.3
+
+#시작 기술
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+}
+if = {
+	limit = { has_MtG = yes }
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			transport = 1
+		}
+	}
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 20
+
+#국민 정신
+
+add_ideas = agrarian_society
+
+#외교
+
+#정치 상황
+set_stability = 0.6
+set_war_support = 0.1
+set_politics = {
+	ruling_party = authoritariandemocracy
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	conservatism = 1
+	liberalism_mod = 1
+	progressivism = 0
+	socialdemocracy = 1
+	socialism = 1
+	communism = 1
+	authoritariancommunism = 6
+	anarchosyndicalism = 1
+	fascism = 6
+	militarytotalism = 1
+	authoritariandemocracy = 80
+	autocracy = 1
+}
+
+#의회
+
+#캐릭터
+recruit_character = AIN_nanase_riku
+recruit_character = AIN_izumi_iori
+recruit_character = AIN_nikaido_yamato
+recruit_character = AIN_izumi_mitsuki
+recruit_character = AIN_yotsuba_tamaki
+recruit_character = AIN_osaka_sogo
+recruit_character = AIN_rokuya_nagi
+recruit_character = AIN_oogami_banri
+recruit_character = AIN_takanashi_otoharu
+recruit_character = AIN_takanashi_tsumugi
+recruit_character = AIN_yaotome_gaku
+recruit_character = AIN_kujo_tenn
+recruit_character = AIN_tsunashi_ryunosuke
+recruit_character = AIN_yaotome_sousuke
+recruit_character = AIN_anesagi_kaoru
+recruit_character = AIN_momo
+recruit_character = AIN_yuki
+recruit_character = AIN_okazaki_rinto
+recruit_character = AIN_okazaki_rintaro
+recruit_character = AIN_isumi_haruka
+recruit_character = AIN_inumaru_toma
+recruit_character = AIN_natsume_minami
+recruit_character = AIN_mido_torao
+recruit_character = AIN_tsukumo_ryo
+recruit_character = AIN_utsuki_shiro
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}
+
+

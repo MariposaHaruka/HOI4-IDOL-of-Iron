@@ -1,0 +1,129 @@
+ideas = {
+	is_local_autonomy_policy = {
+        law = yes
+        use_list_view = yes
+		
+		no_local_autonomy = {
+			removal_cost = -1
+			level = 1
+
+			modifier = {
+                political_power_factor = 0.05
+                global_building_slots_factor = -0.05
+                compliance_growth = -0.05
+                resistance_growth = 0.05
+                resistance_decay = -0.05
+			}
+			available = { 
+				is_democratic = no
+				NOT = { has_government = socialism }
+				NOT = { has_government = anarchosyndicalism }
+			}
+
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					is_fascism = yes
+					factor = 90
+				}
+				modifier = {
+					has_government = authoritariandemocracy
+					factor = 70
+				}
+				modifier = {
+					has_government = autocracy
+					factor = 30
+				}
+			}
+		}
+
+		weak_local_autonomy = {
+			removal_cost = -1
+			level = 2
+
+			modifier = {
+                stability_factor = -0.05
+			}
+			available = { }
+
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					is_democratic = yes
+					has_idea = unitary_state
+					factor = 80
+				}
+				modifier = {
+					has_government = autocracy
+					factor = 50
+				}
+			}
+		}
+
+		strong_local_autonomy = {
+			removal_cost = -1
+			level = 3
+
+			modifier = {
+                stability_factor = -0.1
+                political_power_factor = -0.05
+                global_building_slots_factor = 0.05
+			}
+			available = { 
+				is_fascism = no 
+				is_neutrality = no
+			}
+
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					is_democratic = yes
+					has_idea = semi_unitary_state
+					factor = 80
+				}
+				modifier = {
+					is_communism = yes
+					factor = 40
+				}
+			}
+		}
+
+		residential_autonomy = {
+			removal_cost = -1
+			level = 4
+
+			modifier = {
+                stability_factor = -0.15
+                political_power_factor = -0.1
+                global_building_slots_factor = 0.10
+                resistance_growth = 0.10
+                resistance_decay = -0.10
+			}
+			available = { 
+				OR = {
+					is_democratic = yes
+					AND = {
+						is_communism = yes
+						NOT = { has_government = communism }
+						NOT = { has_government = authoritariancommunism }
+					}
+				}
+			}
+
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					is_democratic = yes
+					has_idea = federal_state
+					factor = 10
+				}
+				modifier = {
+					is_communism = yes
+					NOT = { has_government = communism }
+					NOT = { has_government = authoritariancommunism }
+					factor = 60
+				}
+			}
+		}
+	}
+}

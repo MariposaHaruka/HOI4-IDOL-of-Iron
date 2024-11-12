@@ -1,0 +1,150 @@
+ideas = {
+	is_research = {
+		law = yes
+		use_list_view = yes
+		
+		college_research = {
+			removal_cost = -1
+			level = 1
+
+			visible = {
+				NOT = {
+					has_idea = no_official_education_system
+					has_idea = elementary_education
+				}
+			}
+			available = { }
+
+			modifier = {
+                drift_defence_factor = -0.05
+			}
+			ai_will_do = {
+				factor = 20
+			}
+		}
+
+		graduate_research = {
+			removal_cost = -1
+			level = 2
+
+			visible = {
+				NOT = {
+					has_idea = no_official_education_system
+					has_idea = elementary_education
+				}
+			}
+			available = { }
+
+			modifier = {
+                production_factory_max_efficiency_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+                research_speed_factor = 0.5
+                drift_defence_factor = -0.10
+			}
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					NOT = { has_idea = agrarian_base } 
+					add = 40
+				}
+				modifier = {
+					is_major = no
+					add = 60
+				}
+			}
+		}
+
+		university_research_complex = {
+			removal_cost = -1
+			level = 3
+
+			visible = {
+				NOT = {
+					has_idea = no_official_education_system
+					has_idea = elementary_education
+				}
+				has_idea = higher_education
+			}
+			available = {
+				is_fascism = no
+			}
+
+			modifier = {
+				add_research_slot = 1
+                consumer_goods_factor = 0.05
+                production_factory_max_efficiency_factor = 0.10
+                production_factory_efficiency_gain_factor = 0.10
+                research_speed_factor = 0.12
+                drift_defence_factor = -0.20
+			}
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					OR = {
+						is_communism = yes
+						is_democratic = yes
+					}
+					add = 80
+				}
+				modifier = {
+					is_major = yes
+					add = 20
+				}
+			}
+		}
+
+		institute_for_advansed_study = {
+			removal_cost = -1
+			level = 4
+
+			visible = {
+				NOT = {
+					has_idea = no_official_education_system
+					has_idea = elementary_education
+				}
+				has_IAS = yes
+			}
+			available = {
+				has_IAS = yes
+			}
+
+			modifier = {
+				add_research_slot = 2
+                consumer_goods_factor = 0.15
+                production_factory_max_efficiency_factor = 0.15
+                production_factory_efficiency_gain_factor = 0.15
+                research_speed_factor = 0.2
+                drift_defence_factor = -0.30
+			}
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					OR = {
+						original_tag = IMA
+						original_tag = ICG
+						original_tag = IML
+						original_tag = BLA
+						original_tag = LAS
+					}
+					has_IAS = yes
+					add = 80
+				}
+				modifier = {
+					has_IAS = yes
+					NOT = {
+						original_tag = IMA
+						original_tag = ICG
+						original_tag = IML
+						original_tag = BLA
+						original_tag = LAS
+					}
+					add = 20
+				}
+				modifier = {
+					has_IAS = no
+					factor = 0
+				}
+			}
+		}
+	}
+}

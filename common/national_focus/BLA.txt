@@ -1,0 +1,5341 @@
+focus_tree = {
+	id = BLA_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BLA
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 0
+		y = 2000
+	}
+
+	#군사 중점
+	focus = {
+		id = BLA_10001 #키보토스 군사 위원회
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 15
+		y = 0
+
+		ai_will_do = { factor = 0 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_10001"
+		}
+	}
+
+	focus = {
+		id = BLA_10002 #군수사업 최적화
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_10001
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_10001 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_10002"
+		}
+	}
+
+	focus = {
+		id = BLA_10003 #비행기 산업법
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_10002
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_10002 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_10002"
+		}
+	}
+
+	focus = {
+		id = BLA_10004 #에이미 함대 계획
+		icon = GFX_focus_BLA_10004
+		cost = 5
+
+		relative_position_id = BLA_10002
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_10002 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_10002"
+		}
+	}
+
+	#군사 중점 - 공군
+	focus = {
+		id = BLA_11001 #공군 문제 논의
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_10001
+		x = -6
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_10001 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11001"
+		}
+	}
+
+	focus = {
+		id = BLA_11002 #우트나피쉬팀 비행 훈련
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11001
+		x = -9
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11001 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11002"
+		}
+	}
+
+	focus = {
+		id = BLA_11003 #키보토스 비행학교
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11001
+		x = -7
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11003"
+		}
+	}
+
+	focus = {
+		id = BLA_11004 #영공을 감시하는 눈
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11003
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11003 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11004"
+		}
+	}
+
+	focus = {
+		id = BLA_11005 #독립된 공군
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11001
+		x = -5
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11001 }
+		mutually_exclusive = { focus = BLA_11006 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11005"
+		}
+	}
+
+	focus = {
+		id = BLA_11006 #방위군 비행단
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11001
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11001 }
+		mutually_exclusive = { focus = BLA_11005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11006"
+		}
+	}
+
+	focus = {
+		id = BLA_11024 #우트나피쉬팀 공군사령부
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11005
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11005 focus = BLA_11006 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11024"
+		}
+	}
+
+	focus = {
+		id = BLA_11007 #해외 라이센스 수입
+		icon = GFX_focus_generic_copy_plane_designs
+		cost = 5
+
+		relative_position_id = BLA_11001
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11001 }
+		mutually_exclusive = { focus = BLA_11008 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11007"
+		}
+	}
+
+	focus = {
+		id = BLA_11008 #엔지니어부 항공기 설계안
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11001
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11001 }
+		mutually_exclusive = { focus = BLA_11007 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11008"
+		}
+	}
+
+	focus = {
+		id = BLA_11009 #폭격기 계획
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11007
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11007 focus = BLA_11008 }
+		mutually_exclusive = { focus = BLA_11010 focus = BLA_11011 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11009"
+		}
+	}
+
+	focus = {
+		id = BLA_11010 #폭격기 계획
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11007
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11007 focus = BLA_11008 }
+		mutually_exclusive = { focus = BLA_11009 focus = BLA_11011 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11010"
+		}
+	}
+
+	focus = {
+		id = BLA_11011 #폭격기 계획
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11007
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11007 focus = BLA_11008 }
+		mutually_exclusive = { focus = BLA_11009 focus = BLA_11010 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11011"
+		}
+	}
+
+	focus = {
+		id = BLA_11101 #제1 폭격비행단
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11009
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11009 focus = BLA_11010 }
+		available = { NOT = { has_completed_focus = BLA_11201 } }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11101"
+		}
+	}
+
+	focus = {
+		id = BLA_11102 #전략폭격의 우월성
+		icon = GFX_focus_BLA_11102
+		cost = 5
+
+		relative_position_id = BLA_11101
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11101 }
+		mutually_exclusive = { focus = BLA_11103 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11102"
+		}
+	}
+
+	focus = {
+		id = BLA_11103 #전술적 폭격 강화
+		icon = GFX_focus_BLA_11103
+		cost = 5
+
+		relative_position_id = BLA_11101
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11101 }
+		mutually_exclusive = { focus = BLA_11102 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11103"
+		}
+	}
+
+	focus = {
+		id = BLA_11104 #트랙 크래셔
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11102
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11102 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11104"
+		}
+	}
+
+	focus = {
+		id = BLA_11105 #천둥이
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11103
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11103 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11105"
+		}
+	}
+
+	focus = {
+		id = BLA_11106 #대규모 폭격 작전
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11104
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11104 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11106"
+		}
+	}
+
+	focus = {
+		id = BLA_11107 #폭격 교리 개선
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11104
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11104 focus = BLA_11105 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11106"
+		}
+	}
+
+	focus = {
+		id = BLA_11108 #전선 폭격
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11104
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11105 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11108"
+		}
+	}
+
+	focus = {
+		id = BLA_11109 #더 많은 폭격
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11107
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11107 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11109"
+		}
+	}
+
+	focus = {
+		id = BLA_11201 #제1 폭격비행단
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11011
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11010 focus = BLA_11011 }
+		available = { NOT = { has_completed_focus = BLA_11101 } }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11101"
+		}
+	}
+
+	focus = {
+		id = BLA_11202 #영공 요격 시스템
+		icon = GFX_focus_BLA_11202
+		cost = 5
+
+		relative_position_id = BLA_11201
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11201 }
+		mutually_exclusive = { focus = BLA_11203 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11202"
+		}
+	}
+
+	focus = {
+		id = BLA_11203 #공중의 우월성
+		icon = GFX_focus_BLA_11203
+		cost = 5
+
+		relative_position_id = BLA_11201
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11201 }
+		mutually_exclusive = { focus = BLA_11202 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11203"
+		}
+	}
+
+	focus = {
+		id = BLA_11204 #차바스코
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11202
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11202 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11204"
+		}
+	}
+
+	focus = {
+		id = BLA_11205 #슈퍼노바
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11203
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11203 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11205"
+		}
+	}
+
+	focus = {
+		id = BLA_11206 #하늘의 방패
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11204
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11204 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11206"
+		}
+	}
+
+	focus = {
+		id = BLA_11207 #공중전 교리 개선
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11204
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11204 focus = BLA_11205 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11206"
+		}
+	}
+
+	focus = {
+		id = BLA_11208 #제공권 장악
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11204
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11205 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11208"
+		}
+	}
+
+	focus = {
+		id = BLA_11209 #폭격기 무적 신화
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11207
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11207 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11209"
+		}
+	}
+
+	focus = {
+		id = BLA_11012 #무츠키 제안
+		icon = GFX_focus_BLA_11012
+		cost = 5
+
+		relative_position_id = BLA_11010
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11009 focus = BLA_11010 }
+		mutually_exclusive = { focus = BLA_11013 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11012"
+		}
+	}
+
+	focus = {
+		id = BLA_11013 #히비키 제안
+		icon = GFX_focus_BLA_11013
+		cost = 5
+
+		relative_position_id = BLA_11010
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11010 focus = BLA_11011 }
+		mutually_exclusive = { focus = BLA_11012 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11013 "
+		}
+	}
+
+	focus = {
+		id = BLA_11014 #비행 훈련 강화
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11012
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11012 focus = BLA_11013 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11013 "
+		}
+	}
+
+	focus = {
+		id = BLA_11015 #다목적기 설계 개량
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11012
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11012 focus = BLA_11013 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11013 "
+		}
+	}
+
+	focus = {
+		id = BLA_11016 #토라마루 공수사단
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11012
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11012 focus = BLA_11013 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11013 "
+		}
+	}
+	
+	focus = {
+		id = BLA_11017 #트릭 오어 트릭
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11012
+		x = 0
+		y = 2
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11012 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11017"
+		}
+	}
+
+	focus = {
+		id = BLA_11018 #팬시 라이트
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11013
+		x = 0
+		y = 2
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11013 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11018"
+		}
+	}
+
+	focus = {
+		id = BLA_11019 #다목적 중전투기
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11017
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11017 focus = BLA_11018 }
+		mutually_exclusive = { focus = BLA_11020 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11019"
+		}
+	}
+
+	focus = {
+		id = BLA_11020 #근접지원전투기
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11017
+		x = 2
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11017 focus = BLA_11018 }
+		mutually_exclusive = { focus = BLA_11019 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11019"
+		}
+	}
+
+	focus = {
+		id = BLA_11021 #비행 훈련 강화
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11019
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11019 focus = BLA_11020 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11021"
+		}
+	}
+
+	focus = {
+		id = BLA_11022 #제트 엔진
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11019
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11019 focus = BLA_11020 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11022"
+		}
+	}
+
+	focus = {
+		id = BLA_11023 #전략 미사일
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_11019
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_11019 focus = BLA_11020 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_11023"
+		}
+	}
+
+	#군사 중점 - 해군
+	focus = {
+		id = BLA_12001 #해군 문제 논의
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_10001
+		x = 7
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_10001 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12001"
+		}
+	}
+
+	focus = {
+		id = BLA_12002 #우트나피쉬팀 해군 훈련
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12001
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12001 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12001"
+		}
+	}
+	
+	focus = {
+		id = BLA_12003 #오디세이아 해상 학교
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12001
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12001 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12001"
+		}
+	}
+	
+	focus = {
+		id = BLA_12004 #키보토스 해군사관학교
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12002
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12002 focus = BLA_12003 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12001"
+		}
+	}
+	
+	focus = {
+		id = BLA_12005 #선박 수송 위원회
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12001
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12001 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12001"
+		}
+	}
+	
+	focus = {
+		id = BLA_12006 #수송선 긴급 정발
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12005
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12005 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12001"
+		}
+	}
+	
+	focus = {
+		id = BLA_12007 #해안 경비 사령부
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12001
+		x = 5
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12001 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12001"
+		}
+	}
+
+	focus = {
+		id = BLA_12101 #아트라하시스 계획
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12004
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12004 }
+		mutually_exclusive = { focus = BLA_12201 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12101"
+		}
+	}
+
+	focus = {
+		id = BLA_12201 #히후미 계획
+		icon = GFX_focus_BLA_12201
+		cost = 5
+
+		relative_position_id = BLA_12004
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12004 }
+		mutually_exclusive = { focus = BLA_12101 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12101"
+		}
+	}
+
+	focus = {
+		id = BLA_12102 #아비도스급 전함
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12101
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12101 }
+		mutually_exclusive = { focus = BLA_12103 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12102"
+		}
+	}
+
+	focus = {
+		id = BLA_12103 #키보토스급 항공모함
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12101
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12101 }
+		mutually_exclusive = { focus = BLA_12102 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12102"
+		}
+	}
+
+	focus = {
+		id = BLA_12202 #키보트
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12201
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12201 }
+		mutually_exclusive = { focus = BLA_12203 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12202"
+		}
+	}
+
+	focus = {
+		id = BLA_12203 #토끼급 구축함
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12201
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12201 }
+		mutually_exclusive = { focus = BLA_12202 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12203"
+		}
+	}
+	
+	focus = {
+		id = BLA_12008 #민간선 징발령
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12004
+		x = 0
+		y = 2
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12101 focus = BLA_12201 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12008"
+		}
+	}
+	
+	focus = {
+		id = BLA_12009 #미식연구부급 중순양함
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12004
+		x = -1
+		y = 3
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12101 focus = BLA_12201 }
+		mutually_exclusive = { focus = BLA_12010 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12009"
+		}
+	}
+
+	focus = {
+		id = BLA_12010 #하루하바라급 경순양함
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12004
+		x = 1
+		y = 3
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12101 focus = BLA_12201 }
+		mutually_exclusive = { focus = BLA_12009 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12010"
+		}
+	}
+
+	focus = {
+		id = BLA_12104 #대양 함대 사령부
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12102
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12102 focus = BLA_12103 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12104"
+		}
+	}
+
+	focus = {
+		id = BLA_12204 #연안 함대 사령부부
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12202
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12202 focus = BLA_12203 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12204"
+		}
+	}
+
+	focus = {
+		id = BLA_12011 #장시간 작전 훈련
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12009
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12009 focus = BLA_12010 }
+		prerequisite = { focus = BLA_12104 focus = BLA_12204 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12011"
+		}
+	}
+
+	focus = {
+		id = BLA_12012 #대공 훈련
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12009
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12009 focus = BLA_12010 }
+		prerequisite = { focus = BLA_12104 focus = BLA_12204 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12012"
+		}
+	}
+
+	focus = {
+		id = BLA_12013 #수리창 확충
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12009
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12009 focus = BLA_12010 }
+		prerequisite = { focus = BLA_12104 focus = BLA_12204 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12013"
+		}
+	}
+
+	focus = {
+		id = BLA_12014 #어뢰 개량
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12009
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12009 focus = BLA_12010 }
+		prerequisite = { focus = BLA_12104 focus = BLA_12204 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12014"
+		}
+	}
+
+	focus = {
+		id = BLA_12015 #대잠수함 훈련
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12009
+		x = 5
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12009 focus = BLA_12010 }
+		prerequisite = { focus = BLA_12104 focus = BLA_12204 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12015"
+		}
+	}
+
+	focus = {
+		id = BLA_12016 #전투함대
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12013
+		x = -5
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12011 focus = BLA_12012 focus = BLA_12013 focus = BLA_12014 focus = BLA_12015 }
+		available = { has_completed_focus = BLA_12104 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12016"
+		}
+	}
+
+	focus = {
+		id = BLA_12017 #항공 기동 함대
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12013
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12011 focus = BLA_12012 focus = BLA_12013 focus = BLA_12014 focus = BLA_12015 }
+		available = { has_completed_focus = BLA_12104 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12017"
+		}
+	}
+
+	focus = {
+		id = BLA_12018 #봄베이 상륙 훈련
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12013
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12011 focus = BLA_12012 focus = BLA_12013 focus = BLA_12014 focus = BLA_12015 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12018"
+		}
+	}
+
+	focus = {
+		id = BLA_12019 #호송 훈련
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12013
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12011 focus = BLA_12012 focus = BLA_12013 focus = BLA_12014 focus = BLA_12015 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12019"
+		}
+	}
+
+	focus = {
+		id = BLA_12020 #전투함대
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12013
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12011 focus = BLA_12012 focus = BLA_12013 focus = BLA_12014 focus = BLA_12015 }
+		available = { has_completed_focus = BLA_12204 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12020"
+		}
+	}
+
+	focus = {
+		id = BLA_12021 #항공 기동 함대
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12013
+		x = 5
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12011 focus = BLA_12012 focus = BLA_12013 focus = BLA_12014 focus = BLA_12015 }
+		available = { has_completed_focus = BLA_12204 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12021"
+		}
+	}
+
+	focus = {
+		id = BLA_12022 #제1 해병사단
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12018
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12018 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12022"
+		}
+	}
+
+	focus = {
+		id = BLA_12023 #상륙지원함대
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12018
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12018 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12023"
+		}
+	}
+
+	focus = {
+		id = BLA_12024 #불곰급 구축함
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_12018
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_12019 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_12024"
+		}
+	}
+
+	#외교 중점
+	focus = {
+		id = BLA_20001 #키보토스 외교 위원회
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 35
+		y = 0
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20001"
+		}
+	}
+	
+	focus = {
+		id = BLA_21001 #키보토스 의용 사단
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_20001
+		x = -1
+		y = 1
+		prerequisite = { focus = BLA_20001 }
+		mutually_exclusive = { focus = BLA_22001 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_21001"
+		}
+	}
+	
+	focus = {
+		id = BLA_22001 #장강전쟁 개입
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_20001
+		x = 1
+		y = 1
+		prerequisite = { focus = BLA_20001 }
+		mutually_exclusive = { focus = BLA_21001 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_22001"
+		}
+	}
+	
+	focus = {
+		id = BLA_21101 #엠바고 협상
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_21001
+		x = -5
+		y = 1
+		prerequisite = { focus = BLA_21001 }
+		mutually_exclusive = { focus = BLA_21201 focus = BLA_20002 focus = BLA_22101 focus = BLA_22201 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_21101"
+		}
+	}
+	
+	focus = {
+		id = BLA_21102 #다시 제국의 품으로
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_21101
+		x = -1
+		y = 1
+		prerequisite = { focus = BLA_21101 }
+		mutually_exclusive = { focus = BLA_21103 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_21102"
+		}
+	}
+	
+	focus = {
+		id = BLA_21103 #콜롬보 회담
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_21101
+		x = 1
+		y = 1
+		prerequisite = { focus = BLA_21101 }
+		mutually_exclusive = { focus = BLA_21102 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_21103"
+		}
+	}
+	
+	focus = {
+		id = BLA_21104 #키보토스 자치령
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_21102
+		x = 0
+		y = 1
+		prerequisite = { focus = BLA_21102 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_21104"
+		}
+	}
+	
+	focus = {
+		id = BLA_21105 #이란 확보
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_21103
+		x = 0
+		y = 1
+		prerequisite = { focus = BLA_21103 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_21105"
+			create_wargoal = {
+				target = NPT
+				type = puppet_wargoal_focus
+				expire = 0
+			}
+		}
+	}
+	
+	focus = {
+		id = BLA_21106 #청사자 작전
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_21104
+		x = 1
+		y = 1
+		prerequisite = { focus = BLA_21104 focus = BLA_21105 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		bypass = {
+			has_war_with = AZU
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_21106"
+			create_wargoal = {
+				target = AZU
+				type = annex_everything
+				expire = 0
+			}
+		}
+	}
+	
+	focus = {
+		id = BLA_21201 #미쿠 회담
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_21001
+		x = -2
+		y = 1
+		prerequisite = { focus = BLA_21001 }
+		mutually_exclusive = { focus = BLA_21101 focus = BLA_20002 focus = BLA_22101 focus = BLA_22201 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_21201"
+		}
+	}
+	
+	focus = {
+		id = BLA_21202 #B-R-U 라인
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_21201
+		x = 0
+		y = 1
+		prerequisite = { focus = BLA_21201 }
+		
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_21201"
+		}
+	}
+	
+	focus = {
+		id = BLA_20002 #붉은 친구
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_21001
+		x = 1
+		y = 1
+		prerequisite = { focus = BLA_21001 focus = BLA_22001 }
+		mutually_exclusive = { focus = BLA_21101 focus = BLA_21201 focus = BLA_22101 focus = BLA_22201 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20002"
+		}
+	}
+	
+	focus = {
+		id = BLA_20003 #키보토스-환상향 불가침 조약
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_20002
+		x = -1
+		y = 1
+		prerequisite = { focus = BLA_20002 }
+		mutually_exclusive = { focus = BLA_20004 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20003"
+		}
+	}
+	
+	focus = {
+		id = BLA_20004 #모스크바 조약
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_20002
+		x = 1
+		y = 1
+		prerequisite = { focus = BLA_20002 }
+		mutually_exclusive = { focus = BLA_20003 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20003"
+			TOH = {
+				add_to_faction = BLA
+			}
+		}
+	}
+	
+	focus = {
+		id = BLA_22101 #아시아의 학생국가
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_21001
+		x = 4
+		y = 1
+		prerequisite = { focus = BLA_22001 }
+		mutually_exclusive = { focus = BLA_21101 focus = BLA_21201 focus = BLA_20002 focus = BLA_22201 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20002"
+		}
+	}
+	
+	focus = {
+		id = BLA_22102 #아시아주의
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_22101
+		x = 0
+		y = 1
+		prerequisite = { focus = BLA_22101 }
+		
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_21201"
+		}
+	}
+	
+	focus = {
+		id = BLA_20005 #흰 코끼리 작전
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_20003
+		x = -1
+		y = 1
+		prerequisite = { focus = BLA_21202 focus = BLA_20003 }
+		mutually_exclusive = { focus = BLA_20006 focus = BLA_20007 }
+		
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		bypass = { HBR = { is_in_faction_with = BLA } }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_21201"
+			create_wargoal = {
+				target = HBR
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+		id = BLA_20006 #히나 협상안
+		icon = GFX_focus_BLA_20006
+		cost = 5
+
+		relative_position_id = BLA_20003
+		x = 1
+		y = 1
+		prerequisite = { focus = BLA_20003 focus = BLA_20004 }
+		mutually_exclusive = { focus = BLA_20005 focus = BLA_20007 }
+		
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20006"
+		}
+	}
+	
+	focus = {
+		id = BLA_20007 #동남아시아 세력권
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_20003
+		x = 3
+		y = 1
+		prerequisite = { focus = BLA_20004 focus = BLA_22102 }
+		mutually_exclusive = { focus = BLA_20005 focus = BLA_20006 }
+		
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20007"
+		}
+	}
+	
+	focus = {
+		id = BLA_20008 #서쪽의 문제
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_20005
+		x = -1
+		y = 1
+		prerequisite = { focus = BLA_20005 }
+		prerequisite = { focus = BLA_21202 }
+		
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20007"
+		}
+	}
+	
+	focus = {
+		id = BLA_20009 #서쪽의 문제
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_20005
+		x = 1
+		y = 1
+		prerequisite = { focus = BLA_20005 focus = BLA_20006 focus = BLA_20007 }
+		
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20007"
+		}
+	}
+	
+	focus = {
+		id = BLA_20010 #서쪽의 문제
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_20005
+		x = 3
+		y = 1
+		prerequisite = { focus = BLA_20005 focus = BLA_20006 focus = BLA_20007 }
+		
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20010"
+		}
+	}
+	
+	focus = {
+		id = BLA_20011 #동쪽의 문제
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_20005
+		x = 5
+		y = 1
+		prerequisite = { focus = BLA_20007 }
+		prerequisite = { focus = BLA_22102 }
+		
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20011"
+			create_wargoal = {
+				target = LST
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+		id = BLA_20012 #아시아 패권국
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_20008
+		x = 0
+		y = 1
+		prerequisite = { focus = BLA_20008 }
+		
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20011"
+			create_wargoal = {
+				target = LST
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+		id = BLA_20013 #붉은곰 사냥
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_20011
+		x = 0
+		y = 1
+		prerequisite = { focus = BLA_20011 }
+		
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20011"
+			create_wargoal = {
+				target = LST
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+		id = BLA_22201 #태평양 회담
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_21001
+		x = 7
+		y = 1
+		prerequisite = { focus = BLA_22001 }
+		mutually_exclusive = { focus = BLA_21101 focus = BLA_21201 focus = BLA_20002 focus = BLA_22101 }
+		available = { LLS = { is_faction_leader = yes } }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_20002"
+		}
+	}
+	
+	focus = {
+		id = BLA_22202 #키보토스-스쿠페스 상호 불가침 조약
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_22201
+		x = -1
+		y = 1
+		prerequisite = { focus = BLA_22201 }
+		mutually_exclusive = { focus = BLA_22203 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_22202"
+		}
+	}
+	
+	focus = {
+		id = BLA_22203 #스쿨 아이돌 동맹
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_22201
+		x = 1
+		y = 1
+		prerequisite = { focus = BLA_22201 }
+		mutually_exclusive = { focus = BLA_22202 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_22203"
+			LLS = {
+				add_to_faction = BLA
+			}
+		}
+	}
+	
+	focus = {
+		id = BLA_22204 #실론 확보
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_22202
+		x = 0
+		y = 1
+		prerequisite = { focus = BLA_22202 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_22202"
+		}
+	}
+	
+	focus = {
+		id = BLA_22205 #윈난 진공 작전
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_22203
+		x = 0
+		y = 1
+		prerequisite = { focus = BLA_22203 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_22205"
+		}
+	}
+	
+	focus = {
+		id = BLA_22206 #태평양 진출을 위한 동인도
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = BLA_22204
+		x = 1
+		y = 1
+		prerequisite = { focus = BLA_22204 focus = BLA_22205 }
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_22206"
+		}
+	}
+
+	focus = {
+		id = BLA_31001 #선생 체제
+		icon = GFX_focus_bla_schalle
+		cost = 1
+
+		x = 53
+		y = 0
+
+		ai_will_do = { factor = 0 }
+		available = { always = no }
+		mutually_exclusive = { focus = BLA_32001 focus = BLA_33001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31001"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = BLA_32001 #나나가미 체제
+		icon = GFX_focus_BLA_32001
+		cost = 1
+
+		x = 61
+		y = 0
+
+		ai_will_do = { factor = 0 }
+		available = { always = no }
+		mutually_exclusive = { focus = BLA_31001 focus = BLA_33001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32001"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = BLA_33001 #긴급 총학생회 선거
+		icon = GFX_focus_bla_new_sc
+		cost = 1
+
+		x = 70
+		y = 0
+
+		ai_will_do = { factor = 0 }
+		available = { always = no }
+		mutually_exclusive = { focus = BLA_31001 focus = BLA_32001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33001"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+	
+	focus = {
+		id = BLA_32002 #샬레 설립
+		icon = GFX_focus_bla_schalle
+		cost = 5
+
+		x = 4
+		y = 1
+		relative_position_id = BLA_31001
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31001 focus = BLA_32001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32002"
+		}
+	}
+	
+	focus = {
+		id = BLA_31101 #학교에 위임
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 5
+
+		x = -9
+		y = 2
+		relative_position_id = BLA_31001
+
+		ai_will_do = { factor = 0 }
+		available = { 
+			#NOT = { has_country_flag = BLA_kivotos_ftf_open }
+			always = no
+		}
+		prerequisite = { focus = BLA_31001 }
+
+		mutually_exclusive = { focus = BLA_31201 focus = BLA_32003 focus = BLA_32004 focus = BLA_33102 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31101"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+	
+	focus = {
+		id = BLA_31102 #총학생회 이양 위원회
+		icon = GFX_focus_bla_dissolve_sc
+		cost = 5
+
+		x = 0
+		y = 7
+		relative_position_id = BLA_31101
+
+		ai_will_do = { factor = 0 }
+		available = { always = no }
+		prerequisite = { focus = BLA_31101 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31101"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+	
+	focus = {
+		id = BLA_31103 #행정권 이양
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -2
+		y = 1
+		relative_position_id = BLA_31102
+
+		ai_will_do = { factor = 0 }
+		available = { always = no }
+		prerequisite = { focus = BLA_31102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31103"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+	
+	focus = {
+		id = BLA_31104 #재무 이양
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_31102
+
+		ai_will_do = { factor = 0 }
+		available = { always = no }
+		prerequisite = { focus = BLA_31102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31104"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+	
+	focus = {
+		id = BLA_31105 #군사권 이양
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 2
+		y = 1
+		relative_position_id = BLA_31102
+
+		ai_will_do = { factor = 0 }
+		available = { always = no }
+		prerequisite = { focus = BLA_31102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31105"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+
+	#샬레 루트 공통중점	
+	focus = {
+		id = BLA_31201 #총학생회 해체
+		icon = GFX_focus_bla_dissolve_kivotos
+		cost = 5
+
+		x = 0
+		y = 2
+		relative_position_id = BLA_31001
+
+		ai_will_do = { factor = 0 }
+		available = { NOT = { has_country_flag = BLA_kivotos_ftf_open } }
+		prerequisite = { focus = BLA_31001 }
+
+		mutually_exclusive = { focus = BLA_31101 focus = BLA_32003 focus = BLA_32004 focus = BLA_33102 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31101"
+			# unlock_decision_category_tooltip = BLA_schalle_committee
+		}
+	}
+	
+	focus = {
+		id = BLA_31211 #군사 통합 위원회
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -4
+		y = 1
+		relative_position_id = BLA_31201
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31211"
+		}
+	}
+	
+	focus = {
+		id = BLA_31212 #샬레 군 창설
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_31211
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31211 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31212"
+		}
+	}
+	
+	focus = {
+		id = BLA_31213 #제식무기 통일
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -2
+		y = 1
+		relative_position_id = BLA_31212
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31212 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31213"
+		}
+	}
+	
+	focus = {
+		id = BLA_31214 #교리 통일
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_31212
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31212 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31214"
+		}
+	}
+	
+	focus = {
+		id = BLA_31215 #우트나피쉬팀 합동 훈련
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_31214
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31214 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31215"
+		}
+	}
+	
+	focus = {
+		id = BLA_31216 #키보토스 군사조약
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31214
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31214 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31216"
+		}
+	}
+	
+	focus = {
+		id = BLA_31221 #산업 통합 위원회
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_31201
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31221"
+		}
+	}
+	
+	focus = {
+		id = BLA_31222 #균형잡힌 예산안
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_31221
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31221 }
+		mutually_exclusive = { focus = BLA_31223 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31222"
+			add_political_power = 120
+			# add_ideas = BLA_budget_reconciliation
+		}
+	}
+	
+	focus = {
+		id = BLA_31223 #경제 개입
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31221
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31221 }
+		mutually_exclusive = { focus = BLA_31222 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31223"
+			# add_ideas = BLA_interventionism
+		}
+	}
+	
+	focus = {
+		id = BLA_31224 #금본위제 도입
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_31222
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31222 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31224"
+		}
+	}
+	
+	focus = {
+		id = BLA_31225 #아오이 계획
+		icon = GFX_focus_BLA_31225
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31222
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31222 focus = BLA_31223 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31225"
+		}
+	}
+	
+	focus = {
+		id = BLA_31226 #키보토스 경제개발 5개년 계획
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 3
+		y = 1
+		relative_position_id = BLA_31222
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31223 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31226"
+		}
+	}
+	
+	focus = {
+		id = BLA_31227 #세제 개편
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31224
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31224 }
+		prerequisite = { focus = BLA_31225 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31227"
+		}
+	}
+	
+	focus = {
+		id = BLA_31228 #노동 세칙 제정
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31225
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31225 }
+		prerequisite = { focus = BLA_31226 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31228"
+		}
+	}
+	
+	focus = {
+		id = BLA_31231 #행정 통합 위원회
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 4
+		y = 1
+		relative_position_id = BLA_31201
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31201 focus = BLA_32003 }
+		mutually_exclusive = { focus = BLA_32005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31231"
+			if = {
+				limit = { has_completed_focus = BLA_31201 }
+			}
+		}
+	}
+	
+	focus = {
+		id = BLA_31202 #아로나 기동
+		icon = GFX_focus_BLA_31202
+		cost = 5
+
+		x = 2
+		y = 1
+		relative_position_id = BLA_31201
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31201 focus = BLA_32003 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31202"
+			activate_advisor = BLA_arona
+		}
+	}
+	
+	focus = {
+		id = BLA_31203 #아로나 체제
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31202
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31202 focus = BLA_31231 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31203"
+		}
+	}
+	
+	focus = {
+		id = BLA_31233 #행정 통합령
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31231
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_31231 focus = BLA_32005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31233"
+		}
+	}
+	
+	focus = {
+		id = BLA_31232 #통합 행정 재편
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 2
+		relative_position_id = BLA_31233
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31233 focus = BLA_31203 }
+		available = { has_completed_focus = BLA_31201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31233"
+		}
+	}
+
+	focus = {
+		id = BLA_31204 #샬레 연구소
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -2
+		y = 1
+		relative_position_id = BLA_31215
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31215 focus = BLA_31216 focus = BLA_31227 focus = BLA_31228 focus = BLA_31232 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31204"
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = BLA_31205 #샬레 연구 예산 지원
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_31204
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31204 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31204"
+			# add_ideas = BLA_support_research_schalle
+		}
+	}
+
+	focus = {
+		id = BLA_31206 #우트나피쉬팀 고등과학원
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_31205
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31205 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31204"
+			add_research_slot = 1
+		}
+	}
+
+	#샬레 루트 - 공산 중점
+	focus = {
+		id = BLA_31401 #샬레 소비에트 연방
+		icon = GFX_focus_BLA_31401
+		cost = 5
+
+		x = -3
+		y = 1
+		relative_position_id = BLA_31227
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31215 focus = BLA_31216 focus = BLA_31227 focus = BLA_31228 focus = BLA_31232 }
+		available = { has_country_flag = BLA_schalle_integration }
+		mutually_exclusive = { focus = BLA_31501 focus = BLA_31601 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31233"
+			hidden_effect = { clr_country_flag = BLA_schalle_integration }
+		}
+	}
+
+	focus = {
+		id = BLA_31501 #샬레 군사정부
+		icon = GFX_focus_BLA_31501
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31227
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31215 focus = BLA_31216 focus = BLA_31227 focus = BLA_31228 focus = BLA_31232 }
+		available = { has_country_flag = BLA_schalle_integration }
+		mutually_exclusive = { focus = BLA_31401 focus = BLA_31601 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31233"
+			hidden_effect = { clr_country_flag = BLA_schalle_integration }
+		}
+	}
+
+	focus = {
+		id = BLA_31601 #샬레 왕조
+		icon = GFX_focus_BLA_31601
+		cost = 5
+
+		x = 5
+		y = 1
+		relative_position_id = BLA_31227
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31215 focus = BLA_31216 focus = BLA_31227 focus = BLA_31228 focus = BLA_31232 }
+		available = { has_country_flag = BLA_schalle_integration }
+		mutually_exclusive = { focus = BLA_31401 focus = BLA_31501 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31233"
+			hidden_effect = { clr_country_flag = BLA_schalle_integration }
+		}
+	}
+
+	focus = {
+		id = BLA_31402 #우트나피쉬팀 테제
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_31401
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31401 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31402"
+		}
+	}
+
+	focus = {
+		id = BLA_31403 #반대파 숙청
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31401
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31401 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31403"
+		}
+	}
+
+	focus = {
+		id = BLA_31404 #선생님은 위대한 영도자
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31402
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31402 focus = BLA_31403 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31404"
+		}
+	}
+
+	focus = {
+		id = BLA_31405 #샬레 학생조합
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_31404
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31404 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31405"
+		}
+	}
+
+	focus = {
+		id = BLA_31406 #샬레 계획경제
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31404
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31404 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31406"
+		}
+	}
+
+	focus = {
+		id = BLA_31502 #철권 정책
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_31501
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31501 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31402"
+		}
+	}
+
+	focus = {
+		id = BLA_31503 #크로노스 검열
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31501
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31501 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31402"
+		}
+	}
+
+	focus = {
+		id = BLA_31504 #모든 권력은 샬레에게서
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31502
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31502 focus = BLA_31503 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31402"
+		}
+	}
+
+	focus = {
+		id = BLA_31505 #이념 권력 채재
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_31504
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31504 }
+		mutually_exclusive = { focus = BLA_31506 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31505"
+		}
+	}
+
+	focus = {
+		id = BLA_31506 #군사 권력 체제
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31504
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31504 }
+		mutually_exclusive = { focus = BLA_31505 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31402"
+		}
+	}
+
+	focus = {
+		id = BLA_31602 #이념 권력 채재
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_31601
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31601 }
+		mutually_exclusive = { focus = BLA_31603 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31505"
+		}
+	}
+
+	focus = {
+		id = BLA_31603 #군사 권력 체제
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31601
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31601 }
+		mutually_exclusive = { focus = BLA_31602 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31402"
+		}
+	}
+
+	focus = {
+		id = BLA_31604 #책임 총리 위원회
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31602
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31602 focus = BLA_31603 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31604"
+			# unlock_decision_category_tooltip = BLA_leader_selection
+		}
+	}
+
+	focus = {
+		id = BLA_31605 #학생 결집
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_31604
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31604 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31505"
+		}
+	}
+
+	focus = {
+		id = BLA_31606 #입헌 총선거
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31604
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31604 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31402"
+		}
+	}
+
+	focus = {
+		id = BLA_31207 #자급 경제 체제
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_31505
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31405 focus = BLA_31406 focus = BLA_31505 focus = BLA_31506 focus = BLA_31605 focus = BLA_31606 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31207"
+		}
+	}
+
+	focus = {
+		id = BLA_31208 #군수 경제 체제
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_31505
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31405 focus = BLA_31406 focus = BLA_31505 focus = BLA_31506 focus = BLA_31605 focus = BLA_31606 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31208"
+		}
+	}
+
+	focus = {
+		id = BLA_31209 #전쟁부
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 3
+		y = 1
+		relative_position_id = BLA_31505
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_31405 focus = BLA_31406 focus = BLA_31505 focus = BLA_31506 focus = BLA_31605 focus = BLA_31606 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31209"
+		}
+	}
+
+	#나나가미 임시위원회 루트
+	focus = {
+		id = BLA_32003 #학생 위원회 체제
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 2
+		relative_position_id = BLA_32001
+
+		ai_will_do = { factor = 50 }
+		available = { NOT = { has_country_flag = BLA_kivotos_ftf_open } }
+		prerequisite = { focus = BLA_32001 focus = BLA_33002 }
+
+		mutually_exclusive = { focus = BLA_31101 focus = BLA_31201 focus = BLA_32004 focus = BLA_33102 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32003"
+		}
+	}
+	
+	focus = {
+		id = BLA_32004 #우트나피쉬팀 협정
+		icon = GFX_focus_bla_student_committee
+		cost = 5
+
+		x = 5
+		y = 2
+		relative_position_id = BLA_32001
+
+		ai_will_do = { factor = 0 }
+		available = { NOT = { has_country_flag = BLA_kivotos_ftf_open } }
+		prerequisite = { focus = BLA_32001 focus = BLA_33002 focus = BLA_33003 focus = BLA_33004 }
+		mutually_exclusive = { focus = BLA_31101 focus = BLA_31201 focus = BLA_32003 focus = BLA_33102 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32003"
+		}
+	}
+
+	focus = {
+		id = BLA_32005 #조정실 권한 확대
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32003
+
+		ai_will_do = { factor = 50 }
+		available = { NOT = { has_completed_focus = BLA_33101 } }
+		prerequisite = { focus = BLA_32003 focus = BLA_32004 focus = BLA_33102 }
+
+		mutually_exclusive = { focus = BLA_31231 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32005"
+		}
+	}
+
+	focus = {
+		id = BLA_32006 #재무실 확대
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 2
+		y = 1
+		relative_position_id = BLA_32003
+
+		ai_will_do = { factor = 50 }
+		available = { NOT = { has_completed_focus = BLA_33101 } }
+		prerequisite = { focus = BLA_32003 focus = BLA_32004 focus = BLA_33102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32006"
+		}
+	}
+
+	focus = {
+		id = BLA_32007 #방위실
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 4
+		y = 1
+		relative_position_id = BLA_32003
+
+		ai_will_do = { factor = 50 }
+		available = { NOT = { has_completed_focus = BLA_33101 } }
+		prerequisite = { focus = BLA_32003 focus = BLA_32004 focus = BLA_33102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32006"
+		}
+	}
+	
+	focus = {
+		id = BLA_32008 #산업 조정 위원회
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_32005
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_31231 focus = BLA_32005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32008"
+		}
+	}
+	
+	focus = {
+		id = BLA_32009 #학교 문제 해결
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_32005
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32005 }
+		prerequisite = { focus = BLA_32006 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32009"
+		}
+	}
+	
+	focus = {
+		id = BLA_32010 #우트나피쉬팀 방위군
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 3
+		y = 1
+		relative_position_id = BLA_32005
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32006 }
+		prerequisite = { focus = BLA_32007 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32010"
+		}
+	}
+	
+	focus = {
+		id = BLA_32011 #하이랜더 개편
+		icon = GFX_focus_bla_highlander
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_32008
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_31233 }
+		prerequisite = { focus = BLA_32008 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32011"
+			#하이랜더 추가
+		}
+	}
+	
+	focus = {
+		id = BLA_32012 #학교 교류회
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_32008
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32008 }
+		prerequisite = { focus = BLA_32009 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32012"
+		}
+	}
+	
+	focus = {
+		id = BLA_32013 #학교 교류회
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 3
+		y = 1
+		relative_position_id = BLA_32008
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32009 }
+		prerequisite = { focus = BLA_32010 }
+		mutually_exclusive = { focus = BLA_32014 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32012"
+		}
+	}
+	
+	focus = {
+		id = BLA_32014 #키보토스 연방군
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 5
+		y = 1
+		relative_position_id = BLA_32008
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32010 }
+		mutually_exclusive = { focus = BLA_32013 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32014"
+		}
+	}
+	
+	focus = {
+		id = BLA_32015 #철도망 확장
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32011
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32011 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32015"
+		}
+	}
+	
+	focus = {
+		id = BLA_32016 #에덴조약기구 확장
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_32012
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32012 }
+		prerequisite = { focus = BLA_32013 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32015"
+		}
+	}
+	
+	focus = {
+		id = BLA_32017 #우트나피쉬팀 위원회
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 3
+		y = 1
+		relative_position_id = BLA_32012
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32013 focus = BLA_32014 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32017"
+		}
+	}
+	
+	focus = {
+		id = BLA_32018 #국방실 재편
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 5
+		y = 1
+		relative_position_id = BLA_32012
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32014 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32018"
+		}
+	}
+	
+	focus = {
+		id = BLA_32019 #키보토스 연방 선포
+		icon = {
+			trigger = {
+				BLA_president = { is_country_leader = yes }
+			}
+			value = GFX_focus_BLA_32019_sc
+		}
+		icon = {
+			value = GFX_focus_BLA_32019
+		}
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_32018
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32016 focus = BLA_32017 focus = BLA_32018 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32019"
+		}
+	}
+	
+	focus = {
+		id = BLA_32020 #유우카 계획
+		icon = GFX_focus_BLA_32020
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_32019
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = BLA_32019 }
+		mutually_exclusive = { focus = BLA_32021 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32020"
+		}
+	}
+	
+	focus = {
+		id = BLA_32021 #아야네 계획
+		icon = GFX_focus_BLA_32021
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_32019
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = BLA_32019 }
+		mutually_exclusive = { focus = BLA_32020 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32021"
+		}
+	}
+	
+	focus = {
+		id = BLA_32022 #히마리 교육개혁
+		icon = GFX_focus_BLA_32022
+		cost = 5
+
+		x = -4
+		y = 1
+		relative_position_id = BLA_32020
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32020 focus = BLA_32021 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32022"
+		}
+	}
+	
+	focus = {
+		id = BLA_32023 #밀레니엄 연구단지
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32022
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32022 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32023"
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = BLA_32024 #키보토스 국가 연구소
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32023
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32023 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32024"
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = BLA_32025 #산타루치아 프로젝트
+		icon = GFX_focus_wonderweapons
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32024
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32024 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32025"
+			add_tech_bonus = {
+				name = BLA_32025
+				category = nuclear
+				bonus = 0.7
+				uses = 2
+			}
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = BLA_32026 #하나코 군사개혁
+		icon = GFX_focus_BLA_32026
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_32020
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32020 focus = BLA_32021 }
+		mutually_exclusive = { focus = BLA_32027 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32026"
+		}
+	}
+	focus = {
+		id = BLA_32027 #카요코 군사개혁
+		icon = GFX_focus_BLA_32027
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_32020
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32020 focus = BLA_32021 }
+		mutually_exclusive = { focus = BLA_32026 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32027"
+		}
+	}
+	
+	focus = {
+		id = BLA_32028 #야포 생산 위원회
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_32026
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32026 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32026"
+			# add_ideas = BLA_cannon_committee
+		}
+	}
+	
+	focus = {
+		id = BLA_32029 #제1 키보토스 포병여단
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32028
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32028 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32029"
+		}
+	}
+	
+	focus = {
+		id = BLA_32030 #TR-18파운드 야포
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32029
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32029 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32030"
+		}
+	}
+	
+	focus = {
+		id = BLA_32031 #자주 돌격포 여단
+		icon = GFX_focus_BLA_32031
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_32026
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32026 focus = BLA_32027 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32031"
+		}
+	}
+	
+	focus = {
+		id = BLA_32032 #크루세이더 돌격포
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32031
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32031 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32032"
+		}
+	}
+	
+	focus = {
+		id = BLA_32033 #전차 생산 위원회
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_32027
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32027 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32033"
+			# add_ideas = BLA_tank_committee
+		}
+	}
+	
+	focus = {
+		id = BLA_32034 #제1 키보토스 기갑여단
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32033
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32033 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32029"
+		}
+	}
+	
+	focus = {
+		id = BLA_32035 #트리니티 크루세이더
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_32034
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32034 }
+		mutually_exclusive = { focus = BLA_32036 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32030"
+		}
+	}
+	
+	focus = {
+		id = BLA_32036 #게헨나 토라마루
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_32034
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32034 }
+		mutually_exclusive = { focus = BLA_32035 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32030"
+		}
+	}
+	
+	focus = {
+		id = BLA_32037 #아오이 군수 계획
+		icon = GFX_focus_BLA_32037
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_32021
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32020 focus = BLA_32037 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32037"
+			# unlock_decision_category_tooltip = BLA_aoi_economy
+		}
+	}
+	
+	focus = {
+		id = BLA_32038 #아코 정치개혁
+		icon = GFX_focus_BLA_32038
+		cost = 5
+
+		x = 6
+		y = 1
+		relative_position_id = BLA_32019
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32019 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32019"
+		}
+	}
+	
+	focus = {
+		id = BLA_32039 #자유
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -2
+		y = 1
+		relative_position_id = BLA_32038
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32038 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32039"
+		}
+	}
+	
+	focus = {
+		id = BLA_32040 #평등
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32038
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32038 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32040"
+		}
+	}
+	
+	focus = {
+		id = BLA_32041 #박애
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 2
+		y = 1
+		relative_position_id = BLA_32038
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32038 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32041"
+		}
+	}
+	
+	focus = {
+		id = BLA_32042 #직접 선거제 도입
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -1
+		y = 2
+		relative_position_id = BLA_32038
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32039 }
+		prerequisite = { focus = BLA_32040 }
+		prerequisite = { focus = BLA_32041 }
+		mutually_exclusive = { focus = BLA_32043 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32042"
+		}
+	}
+	
+	focus = {
+		id = BLA_32043 #의회 선거제
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 2
+		relative_position_id = BLA_32038
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32039 }
+		prerequisite = { focus = BLA_32040 }
+		prerequisite = { focus = BLA_32041 }
+		mutually_exclusive = { focus = BLA_32042 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32043"
+		}
+	}
+	
+	focus = {
+		id = BLA_32101 #발키리 강화
+		icon = GFX_focus_BLA_32101
+		cost = 5
+
+		x = 2
+		y = 1
+		relative_position_id = BLA_32004
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32003 focus = BLA_32004 focus = BLA_33102 }
+		mutually_exclusive = { focus = BLA_32201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32101"
+		}
+	}
+	
+	focus = {
+		id = BLA_32201 #SRT 강화
+		icon = GFX_focus_BLA_32201
+		cost = 5
+
+		x = 6
+		y = 1
+		relative_position_id = BLA_32004
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32003 focus = BLA_32004 focus = BLA_33102 }
+		mutually_exclusive = { focus = BLA_32101 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32201"
+		}
+	}
+	
+	focus = {
+		id = BLA_32102 #SRT 해체
+		icon = GFX_focus_support_valkyrie
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_32101
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32101 }
+		mutually_exclusive = { focus = BLA_32103 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32102"
+		}
+	}
+	
+	focus = {
+		id = BLA_32103 #SRT 재편
+		icon = GFX_focus_bla_support_srt
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_32101
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32101 }
+		mutually_exclusive = { focus = BLA_32102 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32103"
+		}
+	}
+	
+	focus = {
+		id = BLA_32104 #샬레 특수군
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32102
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32102 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32104"
+		}
+	}
+	
+	focus = {
+		id = BLA_32105 #경찰 국가
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32103
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32103 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32105"
+		}
+	}
+	
+	focus = {
+		id = BLA_32202 #리베이트 문제
+		icon = GFX_focus_support_valkyrie
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_32201
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32201 }
+		mutually_exclusive = { focus = BLA_32203 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32202"
+		}
+	}
+	
+	focus = {
+		id = BLA_32203 #카이저 코퍼레이션과 협력
+		icon = GFX_focus_bla_associate_with_kaiser
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_32201
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32201 }
+		mutually_exclusive = { focus = BLA_32202 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32203"
+		}
+	}
+	
+	focus = {
+		id = BLA_32204 #키보토스 특수전 사령부
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32202
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = BLA_32202 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32204"
+		}
+	}
+	
+	focus = {
+		id = BLA_32205 #카이저 특수부대
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_32203
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_32203 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_32205"
+		}
+	}
+	
+	focus = {
+		id = BLA_33002 #전임의 유산 유지
+		icon = GFX_focus_BLA_33002
+		cost = 5
+
+		x = -2
+		y = 1
+		relative_position_id = BLA_33001
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33001 }
+		mutually_exclusive = { focus = BLA_33003 focus = BLA_33004 focus = BLA_33101 focus = BLA_33201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33002"
+		}
+	}
+	
+	focus = {
+		id = BLA_33003 #재무 우선 처리
+		icon = GFX_focus_BLA_33003
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_33001
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33001 }
+		mutually_exclusive = { focus = BLA_33002 focus = BLA_33004 focus = BLA_33101 focus = BLA_33201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33003"
+		}
+	}
+	
+	focus = {
+		id = BLA_33004 #연방제 재편
+		icon = GFX_focus_BLA_33004
+		cost = 5
+
+		x = 2
+		y = 1
+		relative_position_id = BLA_33001
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33001 }
+		mutually_exclusive = { focus = BLA_33002 focus = BLA_33003 focus = BLA_33101 focus = BLA_33201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33004"
+		}
+	}
+	
+	focus = {
+		id = BLA_33101 #학생주의
+		icon = GFX_focus_BLA_33101
+		cost = 5
+
+		x = 6
+		y = 1
+		relative_position_id = BLA_33001
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33001 }
+		mutually_exclusive = { focus = BLA_33002 focus = BLA_33003 focus = BLA_33004 focus = BLA_33201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33101"
+		}
+	}
+	
+	focus = {
+		id = BLA_33201 #권위주의
+		icon = GFX_focus_BLA_33201
+		cost = 5
+
+		x = 10
+		y = 1
+		relative_position_id = BLA_33001
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33001 }
+		mutually_exclusive = { focus = BLA_33002 focus = BLA_33003 focus = BLA_33004 focus = BLA_33101 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33101"
+		}
+	}
+	
+	focus = {
+		id = BLA_33102 #선생 편입
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = -2
+		y = 1
+		relative_position_id = BLA_33101
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33101 focus = BLA_33003 focus = BLA_33004 }
+		mutually_exclusive = { focus = BLA_31101 focus = BLA_31201 focus = BLA_32003 focus = BLA_32004 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33102"
+		}
+	}
+
+	focus = {
+		id = BLA_33103 #총학생회 재편
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33102
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = BLA_33101 }
+		prerequisite = { focus = BLA_33102 }
+
+		available_if_capitulated = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33103"
+		}
+	}
+
+	focus = {
+		id = BLA_33104 #키보토스 학생 평의회
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		cost = 5
+
+		x = 3
+		y = 1
+		relative_position_id = BLA_33102
+
+		prerequisite = { focus = BLA_33101 }
+		prerequisite = { focus = BLA_33102 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33104"
+		}
+	}
+
+	focus = {
+		id = BLA_33105 #학생 계획 경제
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_33104
+
+		prerequisite = { focus = BLA_33104 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33105"
+		}
+	}
+
+	focus = {
+		id = BLA_33106 #학생조합 생산위원회
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_33105
+
+		prerequisite = { focus = BLA_33105 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33106"
+		}
+	}
+
+	focus = {
+		id = BLA_33107 #방위실 재편
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33105
+
+		prerequisite = { focus = BLA_33105 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33107"
+		}
+	}
+
+	focus = {
+		id = BLA_33108 #학생조합 자주운영 체제
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_33106
+
+		prerequisite = { focus = BLA_33106 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33108"
+		}
+	}
+
+	focus = {
+		id = BLA_33109 #책임 분담
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33106
+
+		prerequisite = { focus = BLA_33106 }
+		prerequisite = { focus = BLA_33107 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33109"
+		}
+	}
+
+	focus = {
+		id = BLA_33110 #학생조합 교통위원회
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33108
+
+		prerequisite = { focus = BLA_33108 }
+		prerequisite = { focus = BLA_33109 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33110"
+		}
+	}
+
+	focus = {
+		id = BLA_33111 #집단농장
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33109
+
+		prerequisite = { focus = BLA_33109 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33111"
+		}
+	}
+
+	focus = {
+		id = BLA_33112 #학생조합 관리
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_33110
+
+		prerequisite = { focus = BLA_33110 }
+		prerequisite = { focus = BLA_33111 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33112"
+		}
+	}
+
+	focus = {
+		id = BLA_33113 #자유로운 학생
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33110
+
+		prerequisite = { focus = BLA_33110 }
+		prerequisite = { focus = BLA_33111 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33113"
+		}
+	}
+
+	focus = {
+		id = BLA_33114 #모든 학생은 평등하다
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33112
+
+		prerequisite = { focus = BLA_33112 }
+		prerequisite = { focus = BLA_33113 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33114"
+		}
+	}
+
+	focus = {
+		id = BLA_33115 #학생조합 혁명
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33113
+
+		prerequisite = { focus = BLA_33112 }
+		prerequisite = { focus = BLA_33113 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33115"
+			# add_ideas = BLA_student_council_knows_no_borders
+		}
+	}
+
+	focus = {
+		id = BLA_33116 #주변국에 혁명 전파
+		icon = GFX_focus_prc_infiltration
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33114
+
+		prerequisite = { focus = BLA_33114 }
+		prerequisite = { focus = BLA_33115 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33116"
+			# unlock_decision_category_tooltip = BLA_revoultion_from_border
+		}
+	}
+
+	focus = {
+		id = BLA_33117 #혁명의 불꽃은 유지되어야 한다
+		icon = GFX_focus_focus_fra_revolution_utmost
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33115
+
+		prerequisite = { focus = BLA_33115 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = BLA_33118 #아시아 학생혁명위원회
+		icon = GFX_goal_generic_alliance
+		cost = 5
+
+		x = -2
+		y = 1
+		relative_position_id = BLA_33116
+
+		prerequisite = { focus = BLA_33116 }
+		available = {
+			owns_state = 418 #NPT
+			owns_state = 267 #IDC
+			owns_state = 757 #TKI
+			owns_state = 613 #AZU
+			owns_state = 741 #SEL
+			owns_state = 289 #HBR
+			owns_state = 671 #PTK
+			owns_state = 336 #IGM
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = BLA_student_revolution_council_of_asia_tt
+			hidden_effect = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = BLA_SRC_of_asia
+				# unlock_decision_category_tooltip = BLA_SRC_of_asia_add_core
+			}
+			every_state = {
+				limit = { 
+					OR = {
+						is_core_of = NPT
+						is_core_of = IDC
+						is_core_of = TKI
+						is_core_of = AZU
+						is_core_of = SEL
+						is_core_of = HBR
+						is_core_of = PTK
+						is_core_of = IGM
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = BLA_33119 #해외 학생들과 협력
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_33116
+
+		prerequisite = { focus = BLA_33116 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = BLA_33120 #학생 자립경제
+		icon = GFX_goal_generic_construction2
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_33119
+
+		prerequisite = { focus = BLA_33119 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = BLA_33121 #해외 학생들과 협력
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5
+
+		x = -2
+		y = 1
+		relative_position_id = BLA_33120
+
+		prerequisite = { focus = BLA_33120 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = BLA_33122 #학생주의 군수산업
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_33120
+
+		prerequisite = { focus = BLA_33120 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = BLA_33123 #자립을 위한 자원 탐사
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33121
+
+		prerequisite = { focus = BLA_33121 }
+		prerequisite = { focus = BLA_33122 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = BLA_33124 #학생에게 국경은 없다
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_33123
+
+		prerequisite = { focus = BLA_33123 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = BLA_33125 #학생 혁명을 전세계로
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_33124
+
+		prerequisite = { focus = BLA_33124 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = BLA_33126 #범세계 학생혁명위원회
+		icon = GFX_goal_generic_alliance
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33124
+
+		prerequisite = { focus = BLA_33124 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = SPR_global_defense_council_tt
+			hidden_effect = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = BLA_WSRC
+			}
+			custom_effect_tooltip = SPR_global_defense_council_tt_2
+		}
+	}
+
+	focus = {
+		id = BLA_33127 #사상의 자유
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_33117
+
+		prerequisite = { focus = BLA_33117 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = BLA_33128 #내일의 횃불
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_33127
+
+		prerequisite = { focus = BLA_33127 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = BLA_33129 #혁명 대의의 믿음
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_33128
+
+		prerequisite = { focus = BLA_33128 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = BLA_33130 #전 학생의 무장화
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_33129
+
+		prerequisite = { focus = BLA_33129 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = BLA_33202 #용병 고용
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_33201
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33201 }
+		mutually_exclusive = { focus = BLA_33203 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33202"
+		}
+	}
+	
+	focus = {
+		id = BLA_33203 #방위실 강화
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33201
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33201 }
+		mutually_exclusive = { focus = BLA_33202 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33203"
+			add_popularity = {
+				ideology = militarytotalism
+				popularity = 20
+			}
+			add_stability = -10
+		}
+	}
+	
+	focus = {
+		id = BLA_33204 #권좌를 위한 협상
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33202
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33202 focus = BLA_33203 }
+		mutually_exclusive = { focus = BLA_33205 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33204"
+		}
+	}
+	
+	focus = {
+		id = BLA_33205 #샬레 폐지권좌를 위한 협상
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33203
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33202 focus = BLA_33203 }
+		mutually_exclusive = { focus = BLA_33204 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = -30
+			custom_effect_tooltip = BLA_civilwar_tt
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33205"
+		}
+	}
+	
+	focus = {
+		id = BLA_33206 #학교 회유
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = BLA_33204
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33204 }
+		mutually_exclusive = { focus = BLA_33207 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33206"
+		}
+	}
+	
+	focus = {
+		id = BLA_33207 #강제 통합령
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33204
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33204 }
+		mutually_exclusive = { focus = BLA_33206 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = -30
+			custom_effect_tooltip = BLA_civilwar_tt
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33207"
+			# unlock_decision_category_tooltip = BLA_kaya_integration
+		}
+	}
+	
+	focus = {
+		id = BLA_33208 #학교 회유
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = BLA_33206
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33206 focus = BLA_33207 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33208"
+		}
+	}
+	
+	focus = {
+		id = BLA_33209 #정권을 위한 확약
+		icon = GFX_goal_generic_major_alliance
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_33208
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33208 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_33209"
+		}
+	}
+	
+	focus = {
+		id = BLA_33210 #크로노스 선전
+		icon = GFX_goal_unknown_underconstruction
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = BLA_33209
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = BLA_33209 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_332109"
+		}
+	}
+
+	#학교별 중점
+	focus = {
+		id = BLA_30101 #산해경 고급중학교
+		icon = GFX_focus_bla_shanhaijing
+		cost = 5
+
+		x = -40
+		y = 1
+		relative_position_id = BLA_31102
+
+		ai_will_do = { factor = 0 }
+		available = { 
+			always = no
+			#NOT = { has_country_flag = BLA_next_kivotos }
+		}
+		prerequisite = { focus = BLA_31102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_31103"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+
+	focus = {
+		id = BLA_30201 #붉은겨울 연방학원
+		icon = GFX_focus_bla_redwinter
+		cost = 5
+
+		x = -24
+		y = 1
+		relative_position_id = BLA_31102
+
+		ai_will_do = { factor = 0 }
+		available = { 
+			always = no
+			#NOT = { has_country_flag = BLA_next_kivotos }
+		}
+		prerequisite = { focus = BLA_31102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_30201"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+
+	focus = {
+		id = BLA_30301 #게헨나 학원
+		icon = GFX_focus_bla_gehenna
+		cost = 5
+
+		x = -22
+		y = 1
+		relative_position_id = BLA_31102
+
+		ai_will_do = { factor = 0 }
+		available = { 
+			always = no
+			#NOT = { has_country_flag = BLA_next_kivotos }
+		}
+		prerequisite = { focus = BLA_31102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_30301"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+
+	focus = {
+		id = BLA_30401 #백귀야행 연합학원
+		icon = GFX_focus_bla_hyakkiyako
+		cost = 5
+
+		x = -20
+		y = 1
+		relative_position_id = BLA_31102
+
+		ai_will_do = { factor = 0 }
+		available = { 
+			always = no
+			#NOT = { has_country_flag = BLA_next_kivotos }
+		}
+		prerequisite = { focus = BLA_31102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_30401"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+
+	focus = {
+		id = BLA_30501 #밀레니엄 사이언스 스쿨
+		icon = GFX_focus_bla_millenium
+		cost = 5
+
+		x = -18
+		y = 1
+		relative_position_id = BLA_31102
+
+		ai_will_do = { factor = 0 }
+		available = { 
+			always = no
+			#NOT = { has_country_flag = BLA_next_kivotos }
+		}
+		prerequisite = { focus = BLA_31102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_30501"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+
+	focus = {
+		id = BLA_30601 #발키리 경찰학교
+		icon = GFX_focus_bla_srt
+		cost = 5
+
+		x = -16
+		y = 1
+		relative_position_id = BLA_31102
+
+		ai_will_do = { factor = 0 }
+		available = { 
+			always = no
+			#NOT = { has_country_flag = BLA_next_kivotos }
+		}
+		prerequisite = { focus = BLA_31102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_30601"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+
+	focus = {
+		id = BLA_30701 #SRT 특수학원
+		icon = GFX_focus_bla_srt
+		cost = 5
+
+		x = -14
+		y = 1
+		relative_position_id = BLA_31102
+
+		ai_will_do = { factor = 0 }
+		available = { 
+			always = no
+			#NOT = { has_country_flag = BLA_next_kivotos }
+		}
+		prerequisite = { focus = BLA_31102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_30301"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+
+	focus = {
+		id = BLA_30801 #트리니티 종합학원
+		icon = GFX_focus_bla_trinity
+		cost = 5
+
+		x = -12
+		y = 1
+		relative_position_id = BLA_31102
+
+		ai_will_do = { factor = 0 }
+		available = { 
+			always = no
+			#NOT = { has_country_flag = BLA_next_kivotos }
+		}
+		prerequisite = { focus = BLA_31102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_30301"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+
+	focus = {
+		id = BLA_30901 #아비도스 고등학교
+		icon = GFX_focus_bla_abydos
+		cost = 5
+
+		x = -10
+		y = 1
+		relative_position_id = BLA_31102
+
+		ai_will_do = { factor = 0 }
+		available = { 
+			always = no
+			#NOT = { has_country_flag = BLA_next_kivotos }
+		}
+		prerequisite = { focus = BLA_31102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_30301"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+
+	focus = {
+		id = BLA_30A01 #아리우스 분교
+		icon = GFX_focus_bla_arius
+		cost = 5
+
+		x = -8
+		y = 1
+		relative_position_id = BLA_31102
+
+		ai_will_do = { factor = 0 }
+		available = { 
+			always = no
+			#NOT = { has_country_flag = BLA_next_kivotos }
+		}
+		prerequisite = { focus = BLA_31102 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BLA_30301"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+}

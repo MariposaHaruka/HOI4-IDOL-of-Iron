@@ -1,0 +1,99 @@
+has_coalition = {
+	has_variable = coalition_partners^num
+}
+
+has_coalition_with_target = {
+	custom_trigger_tooltip = {
+		tooltip = has_coalition_with_target
+		has_variable = is_in_coalition_with_@var:coalition_target
+	}
+}
+
+is_in_coalition_with_conservatism = {
+	set_temp_variable = { coalition_target = token:conservatism }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_liberalism = {
+	set_temp_variable = { coalition_target = token:liberalism_mod }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_progressivism = {
+	set_temp_variable = { coalition_target = token:progressivism }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_socialdemocracy = {
+	set_temp_variable = { coalition_target = token:socialdemocracy }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_socialism = {
+	set_temp_variable = { coalition_target = token:socialism }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_communism = {
+	set_temp_variable = { coalition_target = token:communism }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_authoritariancommunism = {
+	set_temp_variable = { coalition_target = token:authoritariancommunism }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_anarchosyndicalism = {
+	set_temp_variable = { coalition_target = token:anarchosyndicalism }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_authoritariandemocracy = {
+	set_temp_variable = { coalition_target = token:authoritariandemocracy }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_autocracy = {
+	set_temp_variable = { coalition_target = token:autocracy }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_fascism = {
+	set_temp_variable = { coalition_target = token:fascism }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_militarytotalism = {
+	set_temp_variable = { coalition_target = token:militarytotalism }
+	has_coalition_with_target = yes
+}
+
+parliament_gui_open = {
+	has_country_flag = parliament_gui_open
+}
+
+
+#congress_low_support_trigger = {
+#	custom_trigger_tooltip = {
+#		tooltip = congress_low_support_trigger_tt
+#		check_variable = { var = senators_support value = quorum_low compare = greater_than_or_equals }
+#		check_variable = { var = representatives_support value = 174 compare = greater_than_or_equals }
+#	}
+#}
+
+#congress_medium_support_trigger = {
+#	custom_trigger_tooltip = {
+#		tooltip = congress_medium_support_trigger_tt
+#		check_variable = { var = senators_support value = quorum_medium compare = greater_than_or_equals }
+#		check_variable = { var = representatives_support value = 218 compare = greater_than_or_equals }
+#	}
+#}
+
+#congress_high_support_trigger = {
+#	custom_trigger_tooltip = {
+#		tooltip = congress_high_support_trigger_tt
+#		check_variable = { var = senators_support value = quorum_high compare = greater_than_or_equals }
+#		check_variable = { var = representatives_support value = 261 compare = greater_than_or_equals }
+#	}
+#}

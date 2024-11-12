@@ -1,0 +1,160 @@
+ideas = {
+    is_minors_policy = {
+        law = yes
+        use_list_view = yes
+
+        racial_hierarchy = {
+            available = {
+                OR = {
+                    is_fascism = yes
+                    is_neutrality = yes
+                }
+            }
+            level = 1
+            removal_cost = -1
+            
+            modifier = {
+                political_power_factor = 0.20
+                non_core_manpower = -0.50
+                conscription_factor = 0.10
+                stability_factor = -0.05
+                resistance_damage_to_garrison = 0.40
+            }
+
+            ai_will_do = {
+                base = 1
+                modifier = {
+                    is_fascism = yes
+                    add = 100
+                }
+                modifier = {
+                    factor = 3
+                }
+            }
+        }
+
+        racial_segregation = {
+            available = {
+				is_communism = no                
+            }
+            level = 2
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.10
+                non_core_manpower = -0.25
+                resistance_damage_to_garrison = 0.15
+            }
+
+            ai_will_do = {
+                base = 10
+                modifier = {
+                    is_neutrality = yes
+                    add = 30
+                }
+                modifier = {
+                    is_fascism = yes
+                    add = 60
+                }
+                modifier = {
+                    is_democratic = yes
+                    add = 10
+                }
+
+                modifier = {
+                    factor = 3
+                }
+
+            }
+        }
+
+        neutral_stance = {
+            available = { }
+            level = 3
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.05
+                non_core_manpower = 0.05
+                stability_factor = 0.025
+            }
+
+            ai_will_do = {
+                base = 30
+
+                modifier = {
+                    is_neutrality = yes
+                    add = 70
+                }
+
+                modifier = {
+                    is_democratic = yes
+                    add = 20
+                }
+
+                modifier = {
+                    factor = 3
+                }
+            }
+        }
+
+        significant_rights = {
+            available = {
+                is_fascism = no
+            }
+            level = 4
+            removal_cost = -1
+
+            modifier = {
+                non_core_manpower = 0.15
+                stability_factor = 0.05
+                resistance_damage_to_garrison = -0.15
+            }
+
+            ai_will_do = {
+                base = 20
+                modifier = {
+                    OR = {
+                        is_democratic = yes
+                        is_communism = yes
+                    }
+                    add = 40
+                } 
+                modifier = {
+                    factor = 3
+                }
+            }
+        }
+
+        affirmative_action = {
+            available = {
+                is_fascism = no
+            }
+            level = 5
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.20
+                non_core_manpower = 0.25
+                stability_factor = 0.10
+                resistance_damage_to_garrison = -0.30
+            }
+
+            ai_will_do = { 
+                base = 10
+                modifier = {
+                    is_democratic = yes
+                    add = 30
+                }
+                modifier = {
+                    is_communism = yes
+                    add = 70
+                }
+
+                modifier = {
+                    factor = 3
+                }
+            }
+        }
+    }
+}

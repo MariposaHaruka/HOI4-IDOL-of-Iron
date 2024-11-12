@@ -1,0 +1,67 @@
+ideas = {
+	hidden_ideas = { }
+	country = { 
+		ONK_army_restrictions = {
+			picture = tfv_can_conscription_crisis
+			allowed = { original_tag = ONK }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = { is_in_faction_with = PRS }
+
+			on_remove = {
+				country_lock_all_division_template = no
+				clear_rule = { can_not_declare_war = yes }
+			}
+			
+			modifier = {
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+				custom_modifier_tooltip = ONK_army_restrictions_mobilization_law_tt
+			}
+		}
+
+		ONK_army_restrictions_aat = {
+			name = tfv_can_conscription_crisis
+			picture = HUN_treaty_of_triannon
+			allowed = { original_tag = ONK }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = { is_in_faction_with = PRS }
+
+			on_remove = {
+				country_lock_all_division_template = no
+				clear_rule = { can_not_declare_war = yes }
+			}
+
+			rule = { can_access_market = no }
+			modifier = {
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+				custom_modifier_tooltip = ONK_army_restrictions_mobilization_law_tt
+			}
+		}
+
+		ONK_second_national_catastrophe = {
+			picture = HUN_treaty_of_triannon
+			allowed = { original_tag = ONK }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			cancel = { is_in_faction_with = PRS } #나중에 변경해놓을 것
+			
+			modifier = {
+				stability_factor = -0.1
+				stability_weekly = -0.003
+				war_support_factor = -0.1
+				custom_modifier_tooltip = ONK_second_national_catastrophe_tt
+			}
+		}
+	}
+	tank_manufacturer = { }
+	naval_manufacturer = { }
+	aircraft_manufacturer = { }
+	industrial_concern = { }
+	materiel_manufacturer = { }
+}

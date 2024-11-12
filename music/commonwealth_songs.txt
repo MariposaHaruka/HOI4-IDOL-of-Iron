@@ -1,0 +1,103 @@
+
+music_station = "base_music"
+
+music = {
+	song = "londoninflames"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.05
+			NOT = { is_in_faction_with = IMA }
+			NOT = {
+				OR = {
+					tag = ISM
+					tag = IML
+					tag = ICG
+					tag = ISC
+					tag = IDS
+					tag = IMA
+					tag = IGM
+				}
+			}
+			126 = { is_controlled_by = IMA }
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				tag = ISM
+				tag = IML
+				tag = ICG
+				tag = ISC
+				tag = IDS
+				tag = IMA
+				tag = IGM
+			}
+			date < 1936.01.02
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				126 = {
+					NOT = { is_controlled_by = IMA }
+				}
+				IMA = { surrender_progress > 0.7 }
+			}
+		}		
+		modifier = {
+			factor = 5
+			is_in_faction_with = IMA
+		}
+	}
+}
+
+music = {
+	song = "operationcompas"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.05
+			NOT = { is_in_faction_with = IMA }
+			NOT = {
+				OR = {
+					tag = ISM
+					tag = IML
+					tag = ICG
+					tag = ISC
+					tag = IDS
+					tag = IMA
+					tag = IGM
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			is_in_faction_with = IMA
+		}
+	}
+}
+
+music = {
+	song = "heroesofelalamein"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.05
+			NOT = { is_in_faction_with = IMA }
+			NOT = {
+				OR = {
+					tag = ISM
+					tag = IML
+					tag = ICG
+					tag = ISC
+					tag = IDS
+					tag = IMA
+					tag = IGM
+				}
+			}
+		}		
+		modifier = {
+			factor = 5
+			is_in_faction_with = IMA
+		}
+	}
+}

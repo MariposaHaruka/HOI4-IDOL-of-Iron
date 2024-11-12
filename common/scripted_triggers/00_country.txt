@@ -1,0 +1,185 @@
+is_imas = {
+	OR = {
+		original_tag = IMA
+		original_tag = ICG
+		original_tag = IML
+		original_tag = ISC
+		original_tag = ISM
+		original_tag = IDS
+		original_tag = IGM
+	}
+}
+
+is_lovelive = {
+	OR = {
+		original_tag = LLS
+		original_tag = LSS
+		original_tag = LNH
+		original_tag = LST
+		original_tag = LHH
+	}
+}
+
+is_ship = {
+	OR = {
+		original_tag = KTC
+		original_tag = AZU
+	}
+}
+
+is_1936_major = {
+	OR = {
+		original_tag = IMA
+		original_tag = ICG
+		original_tag = PRS
+		original_tag = TOH
+		original_tag = LLS
+		original_tag = AZU
+		original_tag = BLA
+		original_tag = BDG
+		original_tag = ENS
+		original_tag = UMA
+		original_tag = HLL
+		original_tag = GUP
+		original_tag = IML
+	}
+}
+
+GUP_is_friend_for_bosphorus = { #Scripted Trigger for handling the Bosphorus access before the Montreux Convention and after depending on the results of the event chain. 
+	hidden_trigger = {
+		OR = { 
+			AND = { #Before Montreux Convention, everyone treated as "Friend" as long as Turkey is not at war with them and they control the Bosphorus 
+				GUP = { 
+					 
+					controls_state = 797
+					NOT = { has_country_flag = GUP_strait_compromise_set }
+				}
+				NOT = { has_war_with = GUP }  	
+			}
+			AND = { #Bosphorus Compromise. As long as Turkey controls the Bosphorus and they're not at war with them, any country that owns a state bordering the Black Sea is treated as a "Friend"
+				GUP = {
+					controls_state = 797
+					has_country_flag = GUP_strait_compromise_set
+				}
+				NOT = { has_war_with = GUP }  	
+				GUP_owns_state_in_black_sea = yes
+			}
+			797 = { #This so countries allied to the controller of the Bosphorus can cross it. 
+				controller = {
+					OR = {
+						is_in_faction_with = ROOT 
+						ROOT = { has_military_access_to = PREV }
+					}
+				}
+			}
+			ROOT = { #So the controller can cross their own strait
+				controls_state = 797
+			}
+		}
+	}	
+}
+
+GUP_is_friend_for_dardanelles = { #Scripted Trigger for handling the Dardanelles access before the Montreux Convention and after depending on the results of the event chain. 
+	hidden_trigger = {
+		OR = { 
+			AND = { #Before Montreux Convention, everyone treated as "Friend" as long as Turkey is not at war with them and they control The Dardanelles provinces
+				GUP = { 
+					controls_province = 6864
+					controls_province = 849				
+					NOT = { has_country_flag = GUP_strait_compromise_set }
+				}
+				NOT = { has_war_with = GUP }  	
+			}
+			AND = { #Bosphorus Compromise. As long as Turkey controls the Dardanelles and they're not at war with them, any country that owns a state bordering the Black Sea is treated as a "Friend"
+				GUP = {
+					controls_province = 6864
+					controls_province = 849
+					has_country_flag = GUP_strait_compromise_set
+				}
+				NOT = { has_war_with = GUP }  	
+				GUP_owns_state_in_black_sea = yes 
+			}
+			797 = { #This so countries allied to the controller of the Dardanelles can cross them. 
+				controller = { 
+					OR = {
+						is_in_faction_with = ROOT 
+						ROOT = { has_military_access_to = PREV }
+					}
+				}
+			}
+			ROOT = { #So the controller can cross their own strait 
+				AND = {
+					controls_province = 6864
+					controls_province = 849
+				}
+			}
+		}
+	}	
+}
+
+GUP_owns_state_in_black_sea = {
+	OR = {
+		owns_state = 341
+		owns_state = 211
+		owns_state = 77
+		owns_state = 46
+		owns_state = 766
+		owns_state = 192
+		owns_state = 197
+		owns_state = 196
+		owns_state = 200
+		owns_state = 137
+		owns_state = 227
+		owns_state = 218
+		owns_state = 234
+		owns_state = 233
+		owns_state = 826
+		owns_state = 231
+		owns_state = 354
+		owns_state = 355
+		owns_state = 356
+		owns_state = 347
+	}
+}
+
+TOH_save_pp_for_manpower_trouble = {
+	has_manpower < 1000000
+	has_political_power < 200
+	surrender_progress > 0
+}
+
+independent_from_vocaloid_empire = {
+	OR = {
+		original_tag = PRS
+		original_tag = VCD
+		original_tag = PRP
+		original_tag = NNN
+	}
+}
+
+has_air_force_command = {
+	NOT = { has_country_flag = no_air_force }
+}
+
+has_air_academy = {
+	NOT = { has_country_flag = no_air_academy }
+}
+
+has_navy_command = {
+	NOT = { 
+		has_country_flag = no_navy
+		has_country_flag = pre_modern_navy 
+	}
+}
+
+has_naval_academy = {
+	NOT = { has_country_flag = no_naval_academy }
+}
+
+has_army_command = {
+	NOT = { has_country_flag = premodern_army }
+}
+
+has_military_academy = {
+	NOT = { has_country_flag = no_military_academy }
+}

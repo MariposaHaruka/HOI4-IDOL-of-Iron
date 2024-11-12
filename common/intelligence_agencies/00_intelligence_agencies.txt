@@ -1,0 +1,675 @@
+# List of names and logos for intelligence agencies
+# available trigger will determine if the logo is in the list of available logos or not
+# names is a list of names. Can be a localization entry, or the name directly. A random name will be picked from them.
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_uk
+	names = { "남코 전략정보실" }
+	default = { tag = IMA }
+	available = { tag = IMA }
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_usa
+	names = { "미시로 전략정보실" }
+	default = { tag = ICG }
+	available = { original_tag = ICG }
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_uk
+	names = { "남코 전략정보실 밀리언 지부" }
+	default = { 
+		tag = IML
+		has_cosmetic_tag = IML_IMA
+	}
+	available = { 
+		tag = IML
+		has_cosmetic_tag = IML_IMA
+	}
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_CAN_royal_canadian_mounted_police
+	names = { "밀리언 기마경찰대" }
+	default = { 
+		tag = IML
+		NOT = { has_cosmetic_tag = IML_IMA }
+	}
+	available = { 
+		tag = IML
+		NOT = { has_cosmetic_tag = IML_IMA }
+	}
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_7
+	names = { "츠바사 비밀정보국" }
+	available = { tag = ISC }
+	default = { tag = ISC } 
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_7
+	names = { "사이코 국가정보국" }
+	available = { tag = ISM }
+	default = { tag = ISM } 
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_7
+	names = { "반남 안보처 876호실" }
+	available = { tag = IDS }
+	default = { tag = IDS } 
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_7
+	names = { "하츠보시 국방정보국" }
+	available = { tag = IGM }
+	default = { tag = IGM } 
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_sov
+	names = { "환상향 공산당 내무인민위원부" }
+	default = { 
+		tag = TOH
+		is_communism = yes
+	}
+	available = { 
+		original_tag = TOH
+		is_communism = yes 
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_4
+	names = { "환상향 국가보안실" }
+	default = { 
+		tag = TOH
+		is_communism = no
+	}
+	available = { 
+		original_tag = TOH
+		is_communism = no 
+	} 
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_ger
+	names = { "세카이 국방군 방첩국" }
+	default = { 
+		tag = PRS
+		is_fascism = yes 
+	}
+	available = { 
+		original_tag = PRS 
+		is_fascism = yes 
+	}
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_ger
+	names = { "프로세카 연방정보국" }
+	default = { 
+		tag = PRS
+		is_fascism = no 
+	}
+	available = { 
+		original_tag = PRS 
+		is_fascism = no 
+	}
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_fra
+	names = { "대외안보총국" }
+	default = { tag = BDG }
+	available = { original_tag = BDG }
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_ita
+	names = { "유메노사키 정보보안부" }
+	default = { tag = ENS }
+	available = { original_tag = ENS }
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_jap
+	names = { "오토노키자카 특별고등검찰" }
+	default = { 
+		tag = LLS
+		OR = {
+			is_fascism = yes
+			is_neutrality = yes
+		} 
+	}
+	available = { 
+		original_tag = LLS
+		OR = {
+			is_fascism = yes
+			is_neutrality = yes
+		} 
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_jap
+	names = { "오토노키자카 정보보안국" }
+	default = { 
+		tag = LLS
+		is_fascism = no
+		is_neutrality = no
+	}
+	available = { 
+		original_tag = LLS
+		is_fascism = no
+		is_neutrality = no 
+	}
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_jap
+	names = { "우라노호시 특별고등검찰" }
+	default = { 
+		tag = LSS
+		OR = {
+			is_fascism = yes
+			is_neutrality = yes
+		} 
+	}
+	available = { 
+		original_tag = LSS
+		OR = {
+			is_fascism = yes
+			is_neutrality = yes
+		} 
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_jap
+	names = { "우라노호시 정보보안국" }
+	default = { 
+		tag = LSS
+		is_fascism = no
+		is_neutrality = no
+	}
+	available = { 
+		original_tag = LSS
+		is_fascism = no
+		is_neutrality = no 
+	}
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_jap
+	names = { "니지가사키 특별고등검찰" }
+	default = { 
+		tag = LNH
+		OR = {
+			is_fascism = yes
+			is_neutrality = yes
+		} 
+	}
+	available = { 
+		original_tag = LNH
+		OR = {
+			is_fascism = yes
+			is_neutrality = yes
+		} 
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_jap
+	names = { "니지가사키 정보보안국" }
+	default = { 
+		tag = LNH
+		is_fascism = no
+		is_neutrality = no
+	}
+	available = { 
+		original_tag = LNH
+		is_fascism = no
+		is_neutrality = no 
+	}
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_jap
+	names = { "유이가오카 특별고등검찰" }
+	default = { 
+		tag = LST
+		OR = {
+			is_fascism = yes
+			is_neutrality = yes
+		} 
+	}
+	available = { 
+		original_tag = LST
+		OR = {
+			is_fascism = yes
+			is_neutrality = yes
+		} 
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_jap
+	names = { "유이가오카 정보보안국" }
+	default = { 
+		tag = LST
+		is_fascism = no
+		is_neutrality = no
+	}
+	available = { 
+		original_tag = LST
+		is_fascism = no
+		is_neutrality = no 
+	}
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_jap
+	names = { "하스노소라 특별고등검찰" }
+	default = { 
+		tag = LHH
+		OR = {
+			is_fascism = yes
+			is_neutrality = yes
+		} 
+	}
+	available = { 
+		original_tag = LHH
+		OR = {
+			is_fascism = yes
+			is_neutrality = yes
+		} 
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_jap
+	names = { "하스노소라 정보보안국" }
+	default = { 
+		tag = LHH
+		is_fascism = no
+		is_neutrality = no
+	}
+	available = { 
+		original_tag = LHH
+		is_fascism = no
+		is_neutrality = no 
+	}
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_pol
+	names = { "트레센 국가정보국" }
+	default = { tag = UMA }
+	available = { original_tag = UMA }
+}
+
+intelligence_agency = {	
+	picture = GFX_intelligence_agency_logo_generic_6
+	names = { "랜드솔 정보부" }
+	available = { tag = PRK }
+	default = { tag = PRK } 
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_ARG_intelligence
+	names = { "호시미 정보사령부" }
+	default = { tag = IDP }
+	available = { original_tag = IDP }
+}
+
+intelligence_agency = {	
+	picture = GFX_intelligence_agency_logo_generic_3
+	names = { "세라프 정보방첩국" }
+	default = { tag = HBR }
+	available = { original_tag = HBR } 
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_hol
+	names = { "세이쇼 정보부" }
+	default = { tag = STR }
+	available = { original_tag = STR }
+}
+
+intelligence_agency = {	
+	picture = GFX_intelligence_agency_logo_swe
+	names = { "요우바 국방부 C실" }
+	default = { tag = DFD }
+	available = { original_tag = DFD }
+}
+
+intelligence_agency = {	
+	picture = GFX_intelligence_agency_logo_generic_2
+	names = { "서브마리너 전략정보부" }
+	default = { tag = AGN }
+	available = { original_tag = AGN }
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_5
+	names = { "총학생회 정보부" "발키리 특수공안국" }
+	default = { tag = BLA }
+	available = { 
+		original_tag = BLA
+		NOT = {
+			has_country_flag = BLA_gehenna
+			has_country_flag = BLA_trinity
+			has_country_flag = BLA_millenium
+			has_country_flag = BLA_hyakkiyako
+			has_country_flag = BLA_shanhaijing
+			has_country_flag = BLA_redwinter
+		}
+	}
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_5
+	names = { "게헨나 정보부" }
+	default = { tag = BLA }
+	available = { 
+		original_tag = BLA 
+		has_country_flag = BLA_gehenna
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_5
+	names = { "티파티 219호실" }
+	default = { tag = BLA }
+	available = { 
+		original_tag = BLA 
+		has_country_flag = BLA_trinity
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_5
+	names = { "세미나 특수부" }
+	default = { tag = BLA }
+	available = { 
+		original_tag = BLA 
+		has_country_flag = BLA_millenium
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_5
+	names = { "백화요란 첩보부" }
+	default = { tag = BLA }
+	available = { 
+		original_tag = BLA 
+		has_country_flag = BLA_hyakkiyako
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_5
+	names = { "현룡문 중앙방첩실" }
+	default = { tag = BLA }
+	available = { 
+		original_tag = BLA 
+		has_country_flag = BLA_shanhaijing
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_5
+	names = { "붉은겨울 사무국 보안위원회" }
+	default = { tag = BLA }
+	available = { 
+		original_tag = BLA 
+		has_country_flag = BLA_redwinter
+	}
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_1
+	names = { "프린세스 리퍼블릭 정보국" }	
+	default = { tag = TKI }
+	available = { original_tag = TKI }
+}
+
+intelligence_agency = {	
+	picture = GFX_intelligence_agency_logo_gre
+	names = { "다이스타 연방 정보사령부 주방위실" }
+	default = { tag = WDS }
+	available = { original_tag = WDS }
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_3
+	names = { "나나스타 육군 보안사령부" }
+	default = { tag = TSS }
+	available = { original_tag = TSS }
+}
+
+#AIN = ALG *아이돌리시 세븐
+#SBR = IRQ #*쇼바이락
+#DOB = MEX #전음부
+#GFR = PAN #GF
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_3
+	names = { "고백실행위원회 보안실" }
+	default = { tag = KJI }
+	available = { original_tag = KJI }
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_3
+	names = { "고백실행위원회 보안실" }
+	default = { tag = KJI }
+	available = { original_tag = KJI }
+}
+
+intelligence_agency = {	
+	picture = GFX_intelligence_agency_logo_tur
+	names = { "오아라이 선도부 정보보안기구" }
+	default = { tag = GUP }
+	available = { original_tag = GUP }
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_1
+	names = { "080 기관" }
+	available = { original_tag = LAS }
+	default = { tag = LAS } 
+}
+
+#ONK
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_BRA_communist
+	names = { "칼데아 위원회 인민정보위원회" }
+	available = { 
+		original_tag = FGO
+		is_communism = yes
+	}
+	default = { 		
+		tag = FGO
+		is_communism = yes
+	} 
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_BRA_neutrality
+	names = { "칼데아 중앙정보보안위원회" }
+	available = { 
+		original_tag = FGO
+		is_communism = no
+	}
+	default = { 		
+		tag = FGO
+		is_communism = no
+	} 
+}
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_BRA_communist
+	names = { "사쿠라 엠파이어 고등검찰국" }
+	available = { 
+		original_tag = AZU
+		is_fascism = yes
+	}
+	default = { 		
+		tag = AZU
+		is_fascism = yes
+	} 
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_BRA_neutrality
+	names = { "유니온 정보사령부" }
+	available = { 
+		original_tag = AZU
+		is_fascism = no
+	}
+	default = { 		
+		tag = AZU
+		is_fascism = no
+	} 
+}
+
+#ZOS
+#BOR
+#KON
+#SOE
+#TAK
+#AIK
+#PRP
+#SHP
+#UNP
+#MMM
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_prc
+	names = { "진수부 공안국" }
+	available = { original_tag = KTC }
+	default = { tag = KTC } 
+}
+
+#MCR
+#MLN
+#WUG
+#LCD
+#BPR
+#TSU
+#SZS
+
+intelligence_agency = {	
+	picture = GFX_intelligence_agency_logo_generic_6
+	names = { "커버 정보사령부" }
+	available = { original_tag = HLL }
+	default = { tag = HLL } 
+}
+
+#POP
+#CUE
+#UNU
+#LVD
+#IDI
+#AIC
+#IDC
+#GEC
+#DIF
+#LPR
+#YMC
+#NPT
+#VCD
+#TAB
+#DRF
+#AOP
+#GBC
+#NNN
+#FBD
+#ONS
+#EXT
+#PTD
+#RST
+#SEL
+#PTK
+#LOC
+#LOS
+#HDA
+#STI
+#HND
+#MKR
+#DEV
+#URA
+#VAM
+#REA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##################################################################
+
+#generic
+
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_1
+	names = { "Rooke" }
+	available = { always = yes }
+	default = { always = yes } 
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_2
+	names = { "Tower" }
+	available = { always = yes }
+	default = { always = yes } 
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_3
+	names = { "Snake" }
+	available = { always = yes }
+	default = { always = yes } 
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_4
+	names = { "Stag" }
+	available = { always = yes }
+	default = { always = yes } 
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_5
+	names = { "Golden Lion" }
+	available = { always = yes }
+	default = { always = yes } 
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_6
+	names = { "Arrow" }
+	available = { always = yes }
+	default = { always = yes } 
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_7
+	names = { "Lion Head" }
+	available = { always = yes }
+	default = { always = yes } 
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_8
+	names = { "Golden Eagle" }
+	available = { always = yes }
+	default = { always = yes } 
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_generic_9
+	names = { "Hammer and Sickle" }
+	available = { 
+		has_government = communism
+	}
+	default = { always = yes } 
+}
+

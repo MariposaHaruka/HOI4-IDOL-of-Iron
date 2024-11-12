@@ -1,0 +1,286 @@
+#수도
+capital = 219
+
+#부대
+set_oob = "TOH_ar"
+starting_train_buffer = 3.0
+add_command_power = 20
+set_fuel_ratio = 0.7
+
+#시작 기술
+set_research_slots = 3
+set_technology = { 
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	basic_train = 1
+	synth_oil_experiments = 1
+}
+if = {
+	limit = { has_MtG = yes }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			basic_submarine = 1
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+			early_battleship = 1
+			early_battlecruiser = 1
+			transport = 1
+		}
+	}
+}
+if = {
+	limit = { has_LaR = yes }
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		engine_tech_1 = 1
+		engine_tech_2 = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+		}
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_medium_airframe = 1
+			basic_small_airframe = 1
+			basic_large_airframe = 1
+		}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 50
+
+#국민 정신
+
+#외교
+create_faction = touhoumintern
+add_to_faction = TOH
+
+if = {
+	limit = { has_TfV = yes }
+	add_to_tech_sharing_group = Touhou_comin_research
+}
+
+#정치 상황
+set_stability = 0.5
+set_war_support = 0.3
+set_politics = {
+	ruling_party = authoritariancommunism
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	conservatism = 10
+	fascism = 2
+	authoritariancommunism = 88
+}
+ban_authoritariandemocracy_effect = yes
+ban_autocracy_effect = yes
+ban_fascism_effect = yes
+ban_democratic_effect = yes
+
+#의회
+
+#캐릭터
+recruit_character = TOH_hakurei_reimu
+recruit_character = TOH_kirisame_marisa
+recruit_character = TOH_rumia
+recruit_character = TOH_daiyousei
+recruit_character = TOH_cirno
+recruit_character = TOH_hong_meiling
+recruit_character = TOH_koakuma
+recruit_character = TOH_patchouli_knowledge
+recruit_character = TOH_izayoi_sakuya
+recruit_character = TOH_remilia_scarlet
+recruit_character = TOH_flandre_scarlet
+recruit_character = TOH_letty_whiterock
+recruit_character = TOH_chen
+recruit_character = TOH_alice_margatroid
+recruit_character = TOH_lily_white
+recruit_character = TOH_lunasa_prismriver
+recruit_character = TOH_merlin_prismriver
+recruit_character = TOH_lyrica_prismriver
+recruit_character = TOH_konpaku_youmu
+recruit_character = TOH_saigyouji_yuyuko
+recruit_character = TOH_yakumo_ran
+recruit_character = TOH_yakumo_yukari
+recruit_character = TOH_ibuki_suika
+recruit_character = TOH_wiggle_nightbug
+recruit_character = TOH_mystia_lorelei
+recruit_character = TOH_kamishirasawa_keine
+recruit_character = TOH_inaba_tewi
+recruit_character = TOH_reisen_udongein_inaba
+recruit_character = TOH_yagokoro_eirin
+recruit_character = TOH_horaisan_kaguya
+recruit_character = TOH_fujiwarano_mokou
+recruit_character = TOH_medicine_melancholy
+recruit_character = TOH_kazami_yuka
+recruit_character = TOH_onozuka_komachi
+recruit_character = TOH_shikieiki_yamazanadu
+recruit_character = TOH_aki_shizuha
+recruit_character = TOH_aki_minoriko
+recruit_character = TOH_kagiyama_hina
+recruit_character = TOH_kawashiro_nitori
+recruit_character = TOH_inubashiri_momiji
+recruit_character = TOH_shameimaru_aya
+recruit_character = TOH_kochiya_sanae
+recruit_character = TOH_yasaka_kanako
+recruit_character = TOH_moriya_suwako
+recruit_character = TOH_nagae_iku
+recruit_character = TOH_hinanawi_tenshi
+recruit_character = TOH_kisume
+recruit_character = TOH_kurodani_yamame
+recruit_character = TOH_mizuhashi_parsee
+recruit_character = TOH_hoshiguma_yugi
+recruit_character = TOH_komeiji_satori
+recruit_character = TOH_kaenbyo_rin
+recruit_character = TOH_reiuji_utsuho
+recruit_character = TOH_komeiji_koishi
+recruit_character = TOH_nazrin
+recruit_character = TOH_tatara_kogasa
+recruit_character = TOH_kumoi_ichirin
+recruit_character = TOH_murasa_minamatsu
+recruit_character = TOH_toramaru_shou
+recruit_character = TOH_hijiri_byakuren
+recruit_character = TOH_houjuu_nue
+recruit_character = TOH_himekaidou_hatate
+recruit_character = TOH_luna_child
+recruit_character = TOH_sunny_milk
+recruit_character = TOH_star_saphire
+recruit_character = TOH_kasodani_kyouko
+recruit_character = TOH_miyako_yoshika
+recruit_character = TOH_kaku_seiga
+recruit_character = TOH_sogano_tojiko
+recruit_character = TOH_mononobeno_futo
+recruit_character = TOH_toyosatomimino_miko
+recruit_character = TOH_futatsuiwa_mamizo
+recruit_character = TOH_hatano_kokoro
+recruit_character = TOH_wakasagihime
+recruit_character = TOH_sekibaki
+recruit_character = TOH_imaizumi_kakero
+recruit_character = TOH_tsukumo_yatsuhashi
+recruit_character = TOH_tsukumo_benben
+recruit_character = TOH_kijin_seija
+recruit_character = TOH_sukuna_shinmyoumaru
+recruit_character = TOH_horikawa_raiko
+recruit_character = TOH_ibaraki_kasen
+recruit_character = TOH_usami_sumireko
+recruit_character = TOH_seiran
+recruit_character = TOH_ringo
+recruit_character = TOH_doremi_sweet
+recruit_character = TOH_kishin_sagume
+recruit_character = TOH_clownpiece
+recruit_character = TOH_junko
+recruit_character = TOH_hecatia_lapislazuli
+recruit_character = TOH_yorigami_jyoon
+recruit_character = TOH_yorigami_shion
+recruit_character = TOH_etrenity_larva
+recruit_character = TOH_sakata_nemuno
+recruit_character = TOH_komano_aun
+recruit_character = TOH_teireida_mai
+recruit_character = TOH_yatadera_narumi
+recruit_character = TOH_nishida_satono
+recruit_character = TOH_matara_okina
+recruit_character = TOH_ebisu_eika
+recruit_character = TOH_ushizaki_urumi
+recruit_character = TOH_niwatari_kutaka
+recruit_character = TOH_kitcho_yachie
+recruit_character = TOH_joutougu_mayumi
+recruit_character = TOH_haniyasushin_keiki
+recruit_character = TOH_kurokoma_saki
+recruit_character = TOH_toutetsu_yuma
+recruit_character = TOH_gotokuji_mike
+recruit_character = TOH_yamashiro_takane
+recruit_character = TOH_komakusa_sannyo
+recruit_character = TOH_tamatsukuri_misumaru
+recruit_character = TOH_kudamaki_tsukasa
+recruit_character = TOH_izunamaru_megumu
+recruit_character = TOH_tenkyu_chimata
+recruit_character = TOH_himemushi_momoyo
+recruit_character = TOH_son_biten
+recruit_character = TOH_mitsugashira_enoko
+recruit_character = TOH_tengajin_chiyari
+recruit_character = TOH_yomotsu_hisami
+recruit_character = TOH_nippaku_zanmu
+recruit_character = TOH_okunoda_miyoi
+recruit_character = TOH_usami_renko
+recruit_character = TOH_maeriberie_hearn
+recruit_character = TOH_hiedano_akyuu
+recruit_character = TOH_watatsukino_yorihime
+recruit_character = TOH_watatsukino_toyohime
+recruit_character = TOH_morichika_rinnosuke
+recruit_character = TOH_motoori_kosuzu
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

@@ -1,0 +1,249 @@
+#수도
+capital = 2 #로마
+
+#부대
+set_oob = "ENS_ar"
+starting_train_buffer = 1.5
+add_command_power = 20
+set_fuel_ratio = 0.6
+
+#시작 기술
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	basic_train = 1
+}
+if = {
+	limit = { has_MtG = yes }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		basic_depth_charges = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_battery = 1
+		basic_medium_battery = 1
+		basic_light_battery = 1
+		basic_heavy_armor_scheme = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		mtg_transport = 1
+		coastal_defense_ships = 1
+		improved_airplane_launcher = 1
+	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+			early_battleship = 1
+			basic_battleship = 1
+			early_battlecruiser = 1
+			transport = 1
+		}
+	}
+}
+if = {
+	limit = { has_LaR = yes }
+	set_technology = {
+		armored_car1 = 1 
+	}
+}
+if = {
+	limit = { has_BftB = yes }
+	set_technology = { camelry = 1 }
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+		}
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+		set_technology = {
+			aa_lmg = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			engines_1 = 1
+			engines_2 = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_small_airframe = 1
+			basic_medium_airframe = 1
+			air_torpedoe_1 = 1
+		}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			naval_bomber1 = 1
+			CAS1 = 1
+		}
+	}
+}
+
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 200
+
+#외교
+if = {
+	limit = { has_start_date < 1936.01.02 }
+	declare_war_on = {
+		target = MCR
+		type = annex_everything
+	}
+}
+
+if = {
+	limit = { has_TfV = yes }
+	set_autonomy = {
+		target = REA
+		autonomous_state = ens_colony
+		freedom_level = 0.5
+	}
+	else = {
+		puppet = REA
+	}
+}
+
+#국민 정신
+
+550 = { #ERITREA
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}
+
+559 = { #SOMALILAND
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}
+
+844 = { #JUBALAND
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}
+
+#정치 상황
+set_stability = 0.6
+set_war_support = 0.7
+set_politics = {
+	ruling_party = fascism
+	last_election = "1934.3.26"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	conservatism = 2
+	liberalism_mod = 2
+	progressivism = 0
+	socialdemocracy = 12
+	socialism = 2
+	communism = 2
+	authoritariancommunism = 2
+	anarchosyndicalism = 1
+	fascism = 56
+	militarytotalism = 10
+	authoritariandemocracy = 1
+	autocracy = 10
+}
+
+recruit_character = ENS_tenshouin_eichi
+recruit_character = ENS_hibiki_wataru
+recruit_character = ENS_himemiya_tori
+recruit_character = ENS_fushimi_yuzuru
+recruit_character = ENS_hidaka_hokuto
+recruit_character = ENS_akehoshi_subaru
+recruit_character = ENS_yuuki_makoto
+recruit_character = ENS_isara_mao
+recruit_character = ENS_morisawa_chiaki
+recruit_character = ENS_shinkai_kanata
+recruit_character = ENS_nagumo_tetora
+recruit_character = ENS_takamine_midori
+recruit_character = ENS_sengoku_shinobu
+recruit_character = ENS_amagi_hiiro
+recruit_character = ENS_shiratori_aira
+recruit_character = ENS_ayase_mayoi
+recruit_character = ENS_kazehaya_tatsumi
+recruit_character = ENS_ran_nagisa
+recruit_character = ENS_tomoe_hiyori
+recruit_character = ENS_saegusa_ibara
+recruit_character = ENS_sazanami_jun
+recruit_character = ENS_itsuki_shu
+recruit_character = ENS_kagehara_mika
+recruit_character = ENS_aoi_hinata
+recruit_character = ENS_aoi_yuta
+recruit_character = ENS_amagi_rinne
+recruit_character = ENS_himeru
+recruit_character = ENS_oukawa_kohaku
+recruit_character = ENS_shiina_niki
+recruit_character = ENS_sakuma_rei
+recruit_character = ENS_hakaze_kaoru
+recruit_character = ENS_ogami_koga
+recruit_character = ENS_otogari_adonis
+recruit_character = ENS_nito_nazuna
+recruit_character = ENS_tenma_mitsuru
+recruit_character = ENS_mashiro_tomoya
+recruit_character = ENS_shino_hajime
+recruit_character = ENS_hasumi_keito
+recruit_character = ENS_kiryu_kuro
+recruit_character = ENS_kanzaki_souma
+recruit_character = ENS_suou_tsukasa
+recruit_character = ENS_tsukinaga_leo
+recruit_character = ENS_sena_izumi
+recruit_character = ENS_sakuma_ritsu
+recruit_character = ENS_narukami_arashi
+recruit_character = ENS_aoba_tsumugi
+recruit_character = ENS_sakasaki_natsume
+recruit_character = ENS_harukawa_sora
+recruit_character = ENS_mikejima_madara
+recruit_character = ENS_sagami_jin
+recruit_character = ENS_kunugi_akiomi
+recruit_character = ENS_kurone_hitsugi
+recruit_character = ENS_hidaka_seiya
+recruit_character = ENS_anju
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

@@ -1,0 +1,298 @@
+on_actions = {
+    on_startup = {
+	    effect = {
+			every_country = {
+				limit = { is_imas = yes }
+				add_ideas = prime_minister
+				add_ideas = double_parliament
+				add_ideas = direct_election
+				add_ideas = federal_state
+				add_ideas = independent_judiciary
+			}
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = GFR
+						original_tag = SHP
+						original_tag = IDI
+						original_tag = TSS
+						original_Tag = DIF
+					}
+				}
+				add_ideas = president_idea
+				add_ideas = single_parliament
+				add_ideas = indirect_election
+				add_ideas = unitary_state
+				add_ideas = subordinate_to_the_executive
+			}
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = SZS
+						original_tag = DFD
+						original_tag = PRK
+						original_tag = STR
+					}
+				}
+				add_ideas = constitutional_monarchy
+				add_ideas = single_parliament
+				add_ideas = indirect_election
+				add_ideas = unitary_state
+				add_ideas = independent_judiciary
+			}
+			every_country = {
+				limit = {
+					original_tag = BDG
+				}
+				add_ideas = dual_executive
+				add_ideas = double_parliament
+				add_ideas = direct_election
+				add_ideas = unitary_state
+				add_ideas = independent_judiciary
+			}
+			every_country = {
+				limit = {
+					original_tag = AGN
+				}
+				add_ideas = dual_executive
+				add_ideas = double_parliament
+				add_ideas = direct_election
+				add_ideas = semi_unitary_state
+				add_ideas = independent_judiciary
+			}
+			every_country = {
+				limit = {
+					original_tag = WDS
+				}
+				add_ideas = constitutional_monarchy
+				add_ideas = single_parliament
+				add_ideas = indirect_election
+				add_ideas = federal_state
+				add_ideas = subordinate_to_the_executive
+			}
+			every_country = {
+				limit = {
+					original_tag = BOR
+				}
+				add_ideas = dual_executive
+				add_ideas = double_parliament
+				add_ideas = indirect_election
+				add_ideas = federal_state
+				add_ideas = independent_judiciary
+			}
+			every_country = {
+				limit = {
+					original_tag = PRP
+				}
+				add_ideas = constitutional_monarchy
+				add_ideas = double_parliament
+				add_ideas = indirect_election
+				add_ideas = federal_state
+				add_ideas = ordinate_to_the_executive
+			}
+			every_country = {
+				limit = {
+					has_government = autocracy
+					NOT = { original_tag = PRP }
+				}
+				add_ideas = despotic_monarchy
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = unitary_state
+				add_ideas = ordinate_to_the_executive
+			}
+			every_country = {
+				limit = {
+					original_tag = KTC #공산주의는 공통 적용하고 싶은데 스타팅이 각 이념당 하나뿐이네? 
+				}
+				add_ideas = federal_council
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = unitary_state
+				add_ideas = judiciary_not_working
+			}
+			every_country = {
+				limit = {
+					original_tag = TOH #공산주의는 공통 적용하고 싶은데 스타팅이 각 이념당 하나뿐이네? 
+				}
+				add_ideas = federal_council
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = federal_state
+				add_ideas = judiciary_not_working
+			}
+			every_country = {
+				limit = {
+					original_tag = FGO #공산주의는 공통 적용하고 싶은데 스타팅이 각 이념당 하나뿐이네? 
+				}
+				add_ideas = workers_council
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = community_state
+				add_ideas = judiciary_not_working
+			}
+			every_country = {
+				limit = {
+					original_tag = BLA
+				}
+				add_ideas = prime_minister #student_council로 교체 필요
+				add_ideas = no_parliament
+				add_ideas = indirect_election
+				add_ideas = local_self_federal_state
+				add_ideas = subordinate_to_the_executive
+			}
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = LOC
+						original_tag = WUG
+					}
+				}
+				add_ideas = president_idea
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = city_state
+				add_ideas = subordinate_to_the_executive
+			}
+			every_country = {
+				limit = {
+					original_tag = AOP #1937년 헌법 제정후 민주화
+				}
+				add_ideas = president_idea
+				add_ideas = single_parliament
+				add_ideas = direct_election
+				add_ideas = unitary_state
+				add_ideas = subordinate_to_the_executive
+			}
+			every_country = {
+				limit = {
+					original_tag = PTK
+				}
+				add_ideas = chairman_guidence
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = unitary_state
+				add_ideas = subordinate_to_the_executive
+			}
+			every_country = {
+				limit = {
+					original_tag = LAS
+				}
+				add_ideas = chairman_guidence
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = unitary_state
+				add_ideas = ordinate_to_the_executive
+			}
+			every_country = {
+				limit = {
+					original_tag = PRS
+				}
+				add_ideas = chairman_guidence
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = unitary_state
+				add_ideas = judiciary_not_working
+			}
+			every_country = {
+				limit = {
+					OR = { 
+						original_tag = YMC
+						original_tag = HDA
+						original_tag = BPR
+					}
+				}
+				add_ideas = president_idea
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = semi_unitary_state
+				add_ideas = subordinate_to_the_executive
+			}
+			every_country = {
+				limit = {
+					original_tag = PTD
+				}
+				add_ideas = dual_executive
+				add_ideas = single_parliament
+				add_ideas = indirect_election
+				add_ideas = unitary_state
+				add_ideas = subordinate_to_the_executive
+			}
+			every_country = {
+				limit = {
+					original_tag = ENS
+				}
+				add_ideas = despotic_monarchy
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = federal_state
+				add_ideas = judiciary_not_working
+			}
+			every_country = {
+				limit = {
+					is_lovelive = yes
+				}
+				add_ideas = prime_minister
+				add_ideas = single_parliament
+				add_ideas = indirect_election
+				add_ideas = unitary_state
+				add_ideas = subordinate_to_the_executive
+			}
+			every_country = {
+				limit = {
+					has_government = authoritariandemocracy
+					NOT = { original_tag = BLA }
+					NOT = { original_tag = LOC }
+					NOT = { original_tag = WUG }
+					NOT = { original_tag = AOP }
+					NOT = { original_tag = PTK }
+					NOT = { original_tag = LAS }
+					NOT = { original_tag = YMC }
+					NOT = { original_tag = HDA }
+					NOT = { original_tag = BPR }
+					NOT = { original_tag = PTD }
+				}
+				add_ideas = president_idea
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = unitary_state
+				add_ideas = ordinate_to_the_executive
+			}
+			every_country = {
+				limit = {
+					has_government = militarytotalism
+					NOT = { original_tag = AZU }
+					NOT = { original_tag = HLL }
+				}
+				add_ideas = military_dictatorship_idea
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = unitary_state
+				add_ideas = judiciary_not_working
+			}
+			every_country = {
+				limit = {
+					original_tag = AZU
+				}
+				add_ideas = military_dictatorship_idea
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = semi_unitary_state
+				add_ideas = judiciary_not_working
+			}
+			every_country = {
+				limit = {
+					original_tag = HLL
+				}
+				add_ideas = military_dictatorship_idea
+				add_ideas = no_parliament
+				add_ideas = no_election
+				add_ideas = federal_state
+				add_ideas = judiciary_not_working
+			}
+			every_country = {
+				add_ideas = support_infrastructure_construction
+			}
+        }
+    }
+}

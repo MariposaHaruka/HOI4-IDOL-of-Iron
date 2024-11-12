@@ -1,0 +1,4080 @@
+focus_tree = {
+	id = IMA_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = IMA
+		}
+	}
+	default = no
+
+	### 경제 전반 중점
+	focus = {
+		id = IMA_11001 #하루카 계획
+		icon = GFX_focus_IMA_11001
+		cost = 5
+
+		x = 7
+		y = 0
+
+		ai_will_do = { factor = 50 }
+		mutually_exclusive = { focus = IMA_12001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11001"
+			add_political_power = 150
+			unlock_decision_category_tooltip = IMA_haruka_plan_category
+		}
+	}
+
+	focus = {
+		id = IMA_12001 #이오리 계획
+		icon = GFX_focus_IMA_12001
+		cost = 5
+
+		x = 15
+		y = 0
+
+		ai_will_do = { factor = 50 }
+		mutually_exclusive = { focus = IMA_11001 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12001"
+			add_political_power = 150
+			unlock_decision_category_tooltip = IMA_iori_plan_category
+		}
+	}
+
+	focus = {
+		id = IMA_11002 #복지법 개정
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11001
+		x = -4
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11002"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11003 #소득세 개정
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11002
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11003"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11004 #공공공사관리부
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11002
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11004"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11005 #건강 보험 제도
+		icon = GFX_focus_generic_military_academy
+		cost = 5
+
+		relative_position_id = IMA_11002
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11005"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11006 #유동 자본 규제
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11003
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11003 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11006"
+			#add_var
+		}
+	}
+
+	focus = {
+		id = IMA_11007 #기간 시설 국유화
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11004
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11004 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11007"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11008 #복지 예산 증액
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11005
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11008"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11009 #채권 추가 발행   
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11006
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11006 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11009"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11010 #문화예술 지원
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11007
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11007 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11010"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11011 #복지 확대
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5
+
+		relative_position_id = IMA_11008
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11008 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11011"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11012 #철강 관세 폐지
+		icon = GFX_focus_generic_treaty
+		cost = 5
+
+		relative_position_id = IMA_11001
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11012"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11013 #석탄 채굴 위원회
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11012
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11012 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11013"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11014 #농업 조정법
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11013
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11013 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11013"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11015 #조선소 지원
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11013
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11013 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11015"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11016 #자치령 경제 지원
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11014
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11014 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11016"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11017 #부채 재조정
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11015
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11015 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11017"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11018 #베버리지 보고서
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 5
+
+		relative_position_id = IMA_11016
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11009 }
+		prerequisite = { focus = IMA_11010 }
+		prerequisite = { focus = IMA_11011 }
+		prerequisite = { focus = IMA_11016 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11017"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11019 #전시 금 공여
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_11017
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11016 }
+		prerequisite = { focus = IMA_11017 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11019"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_11020 #켄싱턴 합의
+		icon = GFX_goal_generic_major_alliance
+		cost = 5
+
+		relative_position_id = IMA_11001
+		x = 2
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_11020"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12002 #더이상의 부채는 안된다
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12001
+		x = 4
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12002"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12003 #세금 인하
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12002
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12003"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12004 #시설 민영화
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12002
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12004"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12005 #소득세 인하
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12002
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12005"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12006 #구빈법 조합 폐지
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 5
+
+		relative_position_id = IMA_12003
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12003 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12006"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12007 #건설 규제 해제
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12004
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12004 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12007"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12008 #자본 규제 해소
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12005
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12008"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12009 #선별 복지 
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12006
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12006 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12009"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12010 #더 많은 집
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		cost = 5
+
+		relative_position_id = IMA_12007
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12007 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12010"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12011 #채권 매입
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12008
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12008 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12011"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12012 #제국 제무장관 회담
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12001
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12001 }
+		bypass = {
+			NOT = {
+				ICG = { is_subject_of = IMA }
+				IML = { is_subject_of = IMA }
+				ISC = { is_subject_of = IMA }
+				ISM = { is_subject_of = IMA }
+				IDS = { is_subject_of = IMA }
+				IGM = { is_subject_of = IMA }
+			}
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12012"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12013 #미나세 법
+		icon = GFX_focus_IMA_12013
+		cost = 5
+
+		relative_position_id = IMA_12012
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12012 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12013"
+			add_timed_idea = {
+				idea = the_grand_army
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = IMA_12014 #농업 지원
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12013
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12013 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12013"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12015 #기업세 인하
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12013
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12013 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12015"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12016 #금본위제 부활
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 5
+
+		relative_position_id = IMA_12014
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12014 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12016"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12017 #파운드화 평가 절상
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12015
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12015 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12017"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12018 #정부 고용 위원회
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12017
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12009 }
+		prerequisite = { focus = IMA_12010 }
+		prerequisite = { focus = IMA_12011 }
+		prerequisite = { focus = IMA_12016 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12017"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12019 #신뢰의 경제
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_12016
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12016 }
+		prerequisite = { focus = IMA_12017 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12019"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_12020 #노동법 개정
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 5
+
+		relative_position_id = IMA_12001
+		x = -2
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_12001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_12020"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_10001 #금리 인하
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		cost = 5
+
+		relative_position_id = IMA_11001
+		x = 4
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11001 focus = IMA_12001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_10001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_10002 #은행 감독
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_10001
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_10001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_10002"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_10003 #북부 산업 지원
+		icon = GFX_focus_generic_industry_3
+		cost = 5
+
+		relative_position_id = IMA_11020
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11020 focus = IMA_12020 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_10003"	
+		}
+	}
+
+	focus = {
+		id = IMA_10004 #남부 산업 지원
+		icon = GFX_focus_generic_industry_2
+		cost = 5
+
+		relative_position_id = IMA_12020
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_11020 focus = IMA_12020 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_10004"	
+		}
+	}
+	
+	focus = {
+		id = IMA_10005 #전자 산업
+		icon = GFX_focus_SWE_radiotjanst
+		cost = 5
+
+		relative_position_id = IMA_10003
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_10003 focus = IMA_10004 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_10005"	
+		}
+	}
+	
+	focus = {
+		id = IMA_10006 #자동차 산업
+		icon = GFX_goal_generic_army_motorized
+		cost = 5
+
+		relative_position_id = IMA_10003
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_10003 focus = IMA_10004 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_10006"	
+		}
+	}
+	
+	focus = {
+		id = IMA_10007 #전차 생산 계획
+		icon = GFX_goal_generic_build_tank
+		cost = 5
+
+		relative_position_id = IMA_10005
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_10005 }
+		prerequisite = { focus = IMA_10006 }
+		mutually_exclusive = { focus = IMA_10008 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_10005"
+			#add_ideas = IMA_tank_manufacturer_committee
+		}
+	}
+	
+	focus = {
+		id = IMA_10008 #항공기 생산 계획
+		icon = GFX_goal_generic_build_airforce
+		cost = 5
+
+		relative_position_id = IMA_10006
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_10005 }
+		prerequisite = { focus = IMA_10006 }
+		mutually_exclusive = { focus = IMA_10007 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_10008"	
+			#add_ideas = IMA_plane_manufacturer_committee
+		}
+	}
+
+	focus = {
+		id = IMA_10009 #전시 배급제도
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_10007
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_10007 focus = IMA_10008 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_10009"
+			#add_ideas = IMA_wartime_ration_system
+		}
+	}
+
+	focus = {
+		id = IMA_10010 #전시 산업
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_10007
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_10007 focus = IMA_10008 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_10010"	
+			#add_ideas = IMA_wartime_industry
+		}
+	}
+
+	focus = {
+		id = IMA_10011 #전시 생산 위원회
+		icon = GFX_focus_IMA
+		cost = 5
+
+		relative_position_id = IMA_10007
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_10007 focus = IMA_10008 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_10011"
+			#add_ideas = IMA_wartime_manufacture_committee
+		}
+	}
+
+
+	### 암호학 중점
+	focus = {
+		id = IMA_20001 #국립 학회 지원
+		icon = GFX_focus_research
+		cost = 5
+
+		x = 25
+		y = 0
+
+		ai_will_do = { factor = 50 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_20001"
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = IMA_20002 #옥스포드 연구단지
+		icon = GFX_focus_ima_oxford
+		cost = 5
+
+		relative_position_id = IMA_20001
+		x = -1
+		y = 1
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = IMA_20001 }
+		mutually_exclusive = { focus = IMA_20003 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_20002"
+			add_research_slot = 1
+			#add_ideas = IMA_oxford_research
+		}
+	}
+
+	focus = {
+		id = IMA_20003 #케임브리지 연구단지
+		icon = GFX_focus_ima_cambridge
+		cost = 5
+
+		relative_position_id = IMA_20001
+		x = 1
+		y = 1
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_20001 }
+		mutually_exclusive = { focus = IMA_20002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_20003"
+			add_research_slot = 1
+			#add_ideas = IMA_cambridge_research
+		}
+	}
+
+	focus = {
+		id = IMA_20004 #블레츨리 파크
+		icon = GFX_focus_SWE_hygienic_housing
+		cost = 5
+
+		relative_position_id = IMA_20002
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_20002 focus = IMA_20003 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_20004"
+			#add_ideas = IMA_bletley_park_1
+		}
+	}
+	
+	focus = {
+		id = IMA_20005 #울트라 계획
+		icon = GFX_focus_generic_cryptologic_bomb
+		cost = 5
+
+		relative_position_id = IMA_20004
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_20004 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_20005"
+			#swap_ideas = {
+			#	remove_idea = IMA_bletley_park_1
+			#	add_idea = IMA_bletley_park_2
+			#}
+		}
+	}
+	
+	focus = {
+		id = IMA_20006 #봄베
+		icon = GFX_focus_ima_bombe
+		cost = 5
+
+		relative_position_id = IMA_20005
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_20005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_20006"
+			#swap_ideas = {
+			#	remove_idea = IMA_bletley_park_2
+			#	add_idea = IMA_bletley_park_3
+			#}
+		}
+	}
+	
+	focus = {
+		id = IMA_20007 #콜로셔스
+		icon = GFX_focus_ima_colossus
+		cost = 5
+
+		relative_position_id = IMA_20006
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 } #AI는 안 찍음
+		prerequisite = { focus = IMA_20006 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_20007"
+			#swap_ideas = {
+			#	remove_idea = IMA_bletley_park_3
+			#	add_idea = IMA_bletley_park_4
+			#}		
+		}
+	}
+	
+	focus = {
+		id = IMA_20008 #라디오 과학 방송
+		icon = GFX_focus_SWE_radiotjanst
+		cost = 5
+
+		relative_position_id = IMA_20003
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_20002 focus = IMA_20003 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_20008"
+			#add_ideas = IMA_scientific_education
+		}
+	}
+	
+	focus = {
+		id = IMA_20009 #국가 과학 연구 위원회
+		icon = GFX_focus_research2
+		cost = 5
+
+		relative_position_id = IMA_20003
+		x = 2
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_20002 focus = IMA_20003 }
+		prerequisite = { focus = IMA_30002 }
+		prerequisite = { focus = IMA_30003 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_20008"
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = IMA_20010 #레이더 연구소
+		icon = GFX_goal_generic_radar
+		cost = 5
+
+		relative_position_id = IMA_20008
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_20008 }
+		prerequisite = { focus = IMA_20009 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_20010"
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = IMA_radar_project
+				bonus = 1.0
+				uses = 2
+				category = radar_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = IMA_20011 #MAUD 프로젝트
+		icon = GFX_focus_NORDIC_dem_selector_research
+		cost = 5
+
+		relative_position_id = IMA_20009
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_20008 }
+		prerequisite = { focus = IMA_20009 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_20010"
+			add_tech_bonus = {
+				name = IMA_project_MAUD
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+	
+	focus = {
+		id = IMA_20012 #티저드 작전
+		icon = GFX_goal_continuous_research
+		cost = 5
+
+		relative_position_id = IMA_20010
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_20010 }
+		prerequisite = { focus = IMA_20011 }
+		bypass = {
+			NOT = { 
+				ICG = { 
+					has_idea = IMA_westminster_statute
+					is_in_faction_with = IMA
+				}
+			}
+			NOT = {
+				IML = {
+					has_idea = IMA_westminster_statute
+					is_in_faction_with = IMA 
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_20012"
+			if = {
+				limit = { has_TfV = yes }
+				add_to_tech_sharing_group = IMA_tizard_mission
+#				hidden_effect = {
+#					if = {
+#						limit = {
+#							ICG = { 
+#								OR = {
+#									is_in_faction_with = IMA
+#									has_idea = IMA_westminster_statute 
+#								}
+#							}
+#							ICG = { country_event = IMA.1 }
+#						}
+#					}
+#					if = {
+#						limit = {
+#							IML = { 
+#								OR = {
+#									is_in_faction_with = IMA
+#									has_idea = IMA_westminster_statute 
+#								}
+#							}
+#							IML = { country_event = IMA.1 }
+#						}
+#					}
+#					if = {
+#						limit = {
+#							ISC = { 
+#								OR = {
+#									is_in_faction_with = IMA
+#									has_idea = IMA_westminster_statute 
+#								}
+#							}
+#							ISC = { country_event = IMA.1 }
+#						}
+#					}
+#					if = {
+#						limit = {
+#							ISM = { 
+#								OR = {
+#									is_in_faction_with = IMA
+#									has_idea = IMA_westminster_statute 
+#								}
+#							}
+#							ISM = { country_event = IMA.1 }
+#						}
+#					}
+#					if = {
+#						limit = {
+#							IDS = { 
+#								OR = {
+#									is_in_faction_with = IMA
+#									has_idea = IMA_westminster_statute 
+#								}
+#							}
+#							IDS = { country_event = IMA.1 }
+#						}
+#					}
+#					if = {
+#						limit = {
+#							IGM = { 
+#								OR = {
+#									is_in_faction_with = IMA
+#									has_idea = IMA_westminster_statute 
+#								}
+#							}
+#							IGM = { country_event = IMA.1 }
+#						}
+#					}
+#				}
+#				unlock_decision_category_tooltip = IMA_tizard_mission_expand
+				else = {
+					if = {
+						limit = {
+							ICG = { 
+								OR = {
+									is_in_faction_with = IMA
+									has_idea = IMA_westminster_statute 
+								}
+							}
+						}
+						ICG = {
+							add_tech_bonus = {
+								name = IMA_tizard_mission_nuke
+								bonus = 1.0
+								uses = 2
+								category = nuclear
+							}
+							add_tech_bonus = {
+								name = IMA_tizard_mission_radar
+								bonus = 2.0
+								uses = 2
+								category = radar_tech
+							}
+						}
+					}
+					if = {
+						limit = {
+							IML = { 
+								OR = {
+									is_in_faction_with = IMA
+									has_idea = IMA_westminster_statute 
+								}
+							}
+						}
+						IML = {
+							add_tech_bonus = {
+								name = IMA_tizard_mission_nuke
+								bonus = 1.0
+								uses = 2
+								category = nuclear
+							}
+							add_tech_bonus = {
+								name = IMA_tizard_mission_radar
+								bonus = 2.0
+								uses = 2
+								category = radar_tech
+							}
+						}
+					}
+					if = {
+						limit = {
+							ISC = { 
+								OR = {
+									is_in_faction_with = IMA
+									has_idea = IMA_westminster_statute 
+								}
+							}
+						}
+						ISC = {
+							add_tech_bonus = {
+								name = IMA_tizard_mission_nuke
+								bonus = 1.0
+								uses = 2
+								category = nuclear
+							}
+							add_tech_bonus = {
+								name = IMA_tizard_mission_radar
+								bonus = 2.0
+								uses = 2
+								category = radar_tech
+							}
+						}
+					}
+					if = {
+						limit = {
+							ISM = { 
+								OR = {
+									is_in_faction_with = IMA
+									has_idea = IMA_westminster_statute 
+								}
+							}
+						}
+						ISM = {
+							add_tech_bonus = {
+								name = IMA_tizard_mission_nuke
+								bonus = 1.0
+								uses = 2
+								category = nuclear
+							}
+							add_tech_bonus = {
+								name = IMA_tizard_mission_radar
+								bonus = 2.0
+								uses = 2
+								category = radar_tech
+							}
+						}
+					}
+					if = {
+						limit = {
+							IDS = { 
+								OR = {
+									is_in_faction_with = IMA
+									has_idea = IMA_westminster_statute 
+								}
+							}
+						}
+						IDS = {
+							add_tech_bonus = {
+								name = IMA_tizard_mission_nuke
+								bonus = 1.0
+								uses = 2
+								category = nuclear
+							}
+							add_tech_bonus = {
+								name = IMA_tizard_mission_radar
+								bonus = 2.0
+								uses = 2
+								category = radar_tech
+							}
+						}
+					}
+					if = {
+						limit = {
+							IGM = { 
+								OR = {
+									is_in_faction_with = IMA
+									has_idea = IMA_westminster_statute 
+								}
+							}
+						}
+						IGM = {
+							add_tech_bonus = {
+								name = IMA_tizard_mission_nuke
+								bonus = 1.0
+								uses = 2
+								category = nuclear
+							}
+							add_tech_bonus = {
+								name = IMA_tizard_mission_radar
+								bonus = 2.0
+								uses = 2
+								category = radar_tech
+							}
+						}
+					}
+				}
+			}
+			
+			custom_effect_tooltip = IMA_20012_tt
+		}
+	}
+	
+	focus = {
+		id = IMA_20013 #튜브 앨로이스
+		icon = GFX_focus_wonderweapons
+		cost = 5
+
+		relative_position_id = IMA_20012
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_20012 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_20013"
+			add_tech_bonus = {
+				name = tube_alloys
+				bonus = 3.0
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+
+	focus = {
+		id = IMA_30001 #비밀스런 재무장
+		icon = GFX_goal_generic_build_tank
+		cost = 5
+
+		x = 53
+		y = 0
+
+		ai_will_do = { factor = 50 }
+
+		bypass = {
+			NOT = {
+				any_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = IMA_limited_rearmament_focus_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_30001"
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IMA_30002 #그림자 공장
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+
+		relative_position_id = IMA_30001
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_30001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_30002"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_30003 #전면 재무장 선언
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5
+		
+		relative_position_id = IMA_30001
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_30001 }
+		available = {
+			if = {
+				limit = { has_MtG = yes }
+				OR = {
+					threat > 0.1 
+					has_war = yes
+					has_idea = IMA_no_further_appeasement_idea
+					is_democratic = no
+				}
+			}
+			if = {
+				limit = { has_MtG = no }
+				OR = {
+					threat > 0.1 
+					has_war = yes
+					is_democratic = no
+				}
+			}
+		}
+
+		continue_if_invalid = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_30003"
+			add_ideas = british_austerity_idea
+		}
+	}
+	
+	### 공군 중점
+
+	focus = {
+		id = IMA_31001 #전투기 사령부 설치
+		icon = GFX_goal_generic_air_fighter
+		cost = 5
+
+		relative_position_id = IMA_20004
+		x = 11
+		y = 0
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_30002 }
+		prerequisite = { focus = IMA_30003 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31001"
+			
+		}
+	}
+	
+	focus = {
+		id = IMA_31002 #전투기 사령부 설치
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
+
+		relative_position_id = IMA_31001
+		x = 2
+		y = 0
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_30002 }
+		prerequisite = { focus = IMA_30003 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31002"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31003 #도버 해협 감시
+		icon = GFX_goal_generic_radar
+		cost = 5
+
+		relative_position_id = IMA_31001
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31001 }
+		prerequisite = { focus = IMA_31002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31003"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31004 #조국을 지키는 방패
+		icon = GFX_focus_generic_air_defense
+		cost = 5
+
+		relative_position_id = IMA_31003
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31003 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31004"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31005 #크랜웰 비행훈련학교
+		icon = GFX_focus_generic_military_academy
+		cost = 5
+
+		relative_position_id = IMA_31003
+		x = -2
+		y = 0
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31001 }
+		prerequisite = { focus = IMA_31002 }
+
+		available = {
+			threat > 0.35
+			has_full_control_of_state = 129
+		}
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31005"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31006 #금속제 항공기
+		icon = GFX_goal_generic_air_production
+		cost = 5
+
+		relative_position_id = IMA_31001
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31006"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31101 #복엽기 퇴출
+		icon = GFX_focus_IMA_31101
+		cost = 5
+
+		relative_position_id = IMA_31001
+		x = -1
+		y = 2
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31001 }
+		prerequisite = { focus = IMA_31002 }
+		prerequisite = { focus = IMA_31006 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31101"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31201 #블렌헤임
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
+
+		relative_position_id = IMA_31001
+		x = 3
+		y = 2
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31001 }
+		prerequisite = { focus = IMA_31002 }
+		prerequisite = { focus = IMA_31006 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31201"
+			
+		}
+	}
+	
+	focus = {
+		id = IMA_31202 #전단지 살포
+		icon = GFX_goal_generic_propaganda
+		cost = 5
+
+		relative_position_id = IMA_31002
+		x = 3
+		y = 2
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = IMA_31002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31202"
+			custom_effect_tooltip = IMA_31202_tt
+		}
+	}
+
+	focus = {
+		id = IMA_31102 #허리케인 개량
+		icon = GFX_focus_generic_cas_aircraft
+		cost = 5
+
+		relative_position_id = IMA_31101
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31101 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31102"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31103 #타이푼
+		icon = GFX_focus_generic_cas_aircraft
+		cost = 5
+
+		relative_position_id = IMA_31102
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31102 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31103"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31104 #템페스트
+		icon = GFX_focus_generic_cas_aircraft
+		cost = 5
+
+		relative_position_id = IMA_31103
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31103 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31104"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31105 #스핏파이어
+		icon = GFX_goal_generic_air_fighter2
+		cost = 5
+
+		relative_position_id = IMA_31101
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31101 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31105"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31106 #더 많은 스핏파이어
+		icon = GFX_focus_NORDIC_dem_selector_airforce
+		cost = 5
+
+		relative_position_id = IMA_31105
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31105 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31106"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31107 #영공 수호
+		icon = GFX_focus_generic_home_defense
+		cost = 5
+
+		relative_position_id = IMA_31101
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31101 }
+		prerequisite = { focus = IMA_31201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31107"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31108 #항공기 생산 위원회
+		icon = GFX_goal_generic_air_production
+		cost = 5
+
+		relative_position_id = IMA_31107
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31107 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31108"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31109 #미티어
+		icon = GFX_focus_generic_jet_planes
+		cost = 5
+
+		relative_position_id = IMA_31108
+		x = -2
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31108 }
+		prerequisite = { focus = IMA_31106 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31109"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31110 #별을 향해서
+		icon = GFX_goal_generic_CAS
+		cost = 5
+
+		relative_position_id = IMA_31108
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31108 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31110"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31010 #보파이터
+		icon = GFX_goal_generic_air_fighter
+		cost = 5
+
+		relative_position_id = IMA_31201
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31101 }
+		prerequisite = { focus = IMA_31201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31010"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31011 #모스키토
+		icon = GFX_goal_generic_air_fighter
+		cost = 5
+
+		relative_position_id = IMA_31010
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31010 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31011"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31007 #해안 사령부 설치
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 5
+
+		relative_position_id = IMA_31002
+		x = 6
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31007"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31008 #보포트
+		icon = GFX_focus_generic_multi_role_aircraft
+		cost = 5
+
+		relative_position_id = IMA_31007
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31007 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31008"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31009 #리버레이터
+		icon = GFX_focus_generic_multi_role_aircraft
+		cost = 5
+
+		relative_position_id = IMA_31008
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31008 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31009"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31203 #스털링
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
+
+		relative_position_id = IMA_31201
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31203"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31204 #핼리팩스
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
+
+		relative_position_id = IMA_31203
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31203 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31204"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31205 #후타미 보고서
+		icon = GFX_focus_ima_futami_report
+		cost = 5
+
+		relative_position_id = IMA_31201
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31201 }
+		prerequisite = { focus = IMA_31202 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31205"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31206 #전략 폭격
+		icon = GFX_focus_SWE_marauder_bombers
+		cost = 5
+
+		relative_position_id = IMA_31205
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31205 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31206"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31207 #랭커스터
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
+
+		relative_position_id = IMA_31204
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31204 }
+		prerequisite = { focus = IMA_31206 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31207"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31208 #폭격기 호위 편대
+		icon = GFX_focus_NORDIC_dem_selector_airforce
+		cost = 5
+
+		relative_position_id = IMA_31206
+		x = 0
+		y = 1
+
+		available = { has_completed_focus = IMA_30001 }
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31206 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31208"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31209 #톨보이
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 5
+
+		relative_position_id = IMA_31207
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31207 }
+		prerequisite = { focus = IMA_31208 }
+			
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31209"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_31012 #SAS
+		icon = GFX_goal_ima_sas
+		cost = 5
+
+		relative_position_id = IMA_31007
+		x = 2
+		y = 2
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31001 }
+		prerequisite = { focus = IMA_31002 }
+		prerequisite = { focus = IMA_32002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31012"
+		}
+	}
+
+	focus = {
+		id = IMA_31013 #제1공수군단
+		icon = GFX_goal_ima_parachute_corp
+		cost = 5
+
+		relative_position_id = IMA_31012
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_31012 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_31013"
+			
+		}
+	}
+
+	### 육군 중점
+
+	focus = {
+		id = IMA_32001 #육군 긴급 재무장
+		icon = GFX_focus_SOV_mobilization_plan
+		cost = 5
+
+		relative_position_id = IMA_31002
+		x = 13
+		y = 0
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_30002 }
+		prerequisite = { focus = IMA_30003 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32002 #육군 동원
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 5
+
+		relative_position_id = IMA_32001
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32001 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32002"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32101 #포병 재무장
+		icon = GFX_goal_generic_army_artillery2
+		cost = 5
+
+		relative_position_id = IMA_32002
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32101"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32102 #포병부대 통합
+		icon = GFX_goal_generic_army_artillery2
+		cost = 5
+
+		relative_position_id = IMA_32101
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32101 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32102"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32103 #BL 7.2인치 곡사포
+		icon = GFX_goal_generic_army_artillery2
+		cost = 5
+
+		relative_position_id = IMA_32102
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32102 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32103"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32201 #국립 조병창
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+
+		relative_position_id = IMA_32002
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32201"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32202 #버밍엄 소화기 회사
+		icon = GFX_goal_generic_production2
+		cost = 5
+
+		relative_position_id = IMA_32201
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32202"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32203 #징집제
+		icon = GFX_focus_generic_concessions
+		cost = 5
+
+		relative_position_id = IMA_32202
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32202 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32203"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32301 #보빙턴 기갑전투차량학교
+		icon = GFX_focus_generic_military_academy
+		cost = 5
+
+		relative_position_id = IMA_32002
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32301"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32302 #기병 기계화 전환
+		icon = GFX_goal_generic_army_tanks
+		cost = 5
+
+		relative_position_id = IMA_32301
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32301 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32302"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32303 #수에즈 기갑사단
+		icon = GFX_goal_generic_army_tanks
+		cost = 5
+
+		relative_position_id = IMA_32302
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32302 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32303"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32401 #ATS(auxiliary territorial service)
+		icon = GFX_focus_SWE_education_reform
+		cost = 5
+
+		relative_position_id = IMA_32002
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32002 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32401"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32402 #차량 징발
+		icon = GFX_goal_generic_army_tanks
+		cost = 5
+
+		relative_position_id = IMA_32401
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32401 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32402"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32403 #차량화 보병
+		icon = GFX_focus_generic_modernize_industry
+		cost = 5
+
+		relative_position_id = IMA_32402
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32402 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32403"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32003 #대륙 원정군 계획
+		icon = GFX_focus_usa_focus_on_asia
+		cost = 5
+
+		relative_position_id = IMA_32103
+		x = 1
+		y = 1
+
+		available = { always = no }
+
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32103 }
+		prerequisite = { focus = IMA_32203 }
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32003"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32004 #근위 기갑 군단
+		icon = GFX_goal_generic_army_tanks
+		cost = 5
+
+		relative_position_id = IMA_32303
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32303 }
+		prerequisite = { focus = IMA_32403 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32004"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32104 #대공 사단
+		icon = GFX_focus_SMB_mountain_guns
+		cost = 5
+
+		relative_position_id = IMA_32003
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32003 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32204"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32204 #육군 예산 증액
+		icon = GFX_focus_SMB_special_forces_option_3
+		cost = 5
+
+		relative_position_id = IMA_32003
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32003 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32204"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32304 #순항전차
+		icon = GFX_focus_generic_army_tanks2
+		cost = 5
+
+		relative_position_id = IMA_32004
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = IMA_32004 }
+		mutually_exclusive = { focus = IMA_32404 }
+
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32304"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32404 #보병전차
+		icon = GFX_focus_NOR_rikstanken
+		cost = 5
+
+		relative_position_id = IMA_32004
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = IMA_32004 }
+		mutually_exclusive = { focus = IMA_32304 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32404"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32005 #사자의 기상
+		icon = GFX_focus_eng_imperial_federation
+		cost = 5
+
+		relative_position_id = IMA_32304
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32104 focus = IMA_32204 focus = IMA_32304 focus = IMA_32404 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32005"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32006 #본토를 지켜라
+		icon = GFX_focus_ima_protect_britain
+		cost = 5
+
+		relative_position_id = IMA_32005
+		x = -4
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32006"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32007 #군 규모 확대
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5
+
+		relative_position_id = IMA_32005
+		x = -2
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32007"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32008 #특수차량개발위원회
+		icon = GFX_focus_FIN_salvaged_and_retooled
+		cost = 5
+
+		relative_position_id = IMA_32005
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = IMA_32005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32008"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32009 #장갑차량
+		icon = GFX_goal_generic_army_motorized
+		cost = 5
+
+		relative_position_id = IMA_32005
+		x = 2
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = IMA_32005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32009"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32010 #홈가드
+		icon = GFX_focus_generic_manpower
+		cost = 5
+
+		relative_position_id = IMA_32005
+		x = 4
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32010"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32011 #해안 경비
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5
+
+		relative_position_id = IMA_32006
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32006 }
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32011"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32012 #추가 원수 진급
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+
+		relative_position_id = IMA_32007
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32007 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32012"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32013 #퍼니 전차
+		icon = GFX_focus_IMA_32013
+		cost = 5
+
+		relative_position_id = IMA_32008
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = IMA_32008 }
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32013"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32014 #유니버셜 캐리어
+		icon = GFX_focus_ima_universal_carrier
+		cost = 5
+
+		relative_position_id = IMA_32009
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = IMA_32009 }
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32014"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32015 #본토 대공포 강화
+		icon = GFX_focus_SMB_mountain_guns
+		cost = 5
+
+		relative_position_id = IMA_32010
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		prerequisite = { focus = IMA_32010 }
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32015"
+			
+		}
+	}
+
+	### 다병종 중점
+	focus = {
+		id = IMA_30004 #참모장 위원회 강화
+		icon = GFX_focus_eng_chiefs_of_staff_committee
+		cost = 5
+
+		relative_position_id = IMA_32001
+		x = 3
+		y = 0
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_30002 }
+		prerequisite = { focus = IMA_30003 }
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_30004"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_32016 #상륙전 사령부
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 5
+
+		relative_position_id = IMA_32002
+		x = 5
+		y = 2
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32002 }
+		prerequisite = { focus = IMA_33101 focus = IMA_33201 }
+
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32016"
+
+		}
+	}
+
+	focus = {
+		id = IMA_32017 #코만도 특전단
+		icon = GFX_goal_generic_special_forces
+		cost = 5
+
+		relative_position_id = IMA_32016
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_32016 }
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32017"
+			
+		}
+	}
+
+	### 해군 중점
+	focus = {
+		id = IMA_33101 #기동 함대 창설
+		icon = GFX_focus_SMB_blue_water_fleet
+		cost = 5
+
+		relative_position_id = IMA_30004
+		x = 9
+		y = 0
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_30002 }
+		prerequisite = { focus = IMA_30003 }
+		mutually_exclusive = { focus = IMA_33201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33101"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33201 #전함 건함 계획 부활
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 5
+
+		relative_position_id = IMA_33101
+		x = 2
+		y = 0
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_30002 }
+		prerequisite = { focus = IMA_30003 }
+		mutually_exclusive = { focus = IMA_33101 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33201"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33102 #일러스트리어스급 항공모함
+		icon = GFX_goal_generic_navy_carrier
+		cost = 5
+
+		relative_position_id = IMA_33101
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33101 focus = IMA_33201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33102"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33001 #조선소 건설 지원
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+
+		relative_position_id = IMA_33101
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33101 focus = IMA_33201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33202 #타카기 준이치로급 전함
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5
+
+		relative_position_id = IMA_33101
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33101 focus = IMA_33201 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33202"
+			
+		}
+	}
+	
+	focus = {
+		id = IMA_33103 #능동적인 해전
+		icon = GFX_focus_generic_africa_naval
+		cost = 5
+
+		relative_position_id = IMA_33102
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33102 focus = IMA_33202 }
+		mutually_exclusive = { focus = IMA_33203 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33103"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33203 #북해 봉쇄
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 5
+
+		relative_position_id = IMA_33102
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33102 focus = IMA_33202 }
+		mutually_exclusive = { focus = IMA_33103 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33203"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33104 #해군 항공대 통제
+		icon = GFX_goal_generic_air_fighter2
+		cost = 5
+
+		relative_position_id = IMA_33102
+		x = -4
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33102  }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33204 #북해 전술 훈련
+		icon = GFX_focus_SWE_coastal_support
+		cost = 5
+
+		relative_position_id = IMA_33202
+		x = 4
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33202 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33204"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33205 #본토 함대
+		icon = GFX_focus_generic_nav
+		cost = 5
+
+		relative_position_id = IMA_33204
+		x = -1
+		y = 1
+		mutually_exclusive = { focus = IMA_33206 }
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33204 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33205"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33206 #대서양 함대 부활
+		icon = GFX_focus_SWE_coastal_support
+		cost = 5
+
+		relative_position_id = IMA_33204
+		x = 1
+		y = 1
+		mutually_exclusive = { focus = IMA_33205 }
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33204 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33206"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33207 #인빈시블급 고속전함
+		icon = GFX_focus_SWE_coastal_support
+		cost = 5
+
+		relative_position_id = IMA_33205
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33205 focus = IMA_33206 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33207"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33004 #대잠 훈련 학교
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 5
+
+		relative_position_id = IMA_33103
+		x = -2
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33103 focus = IMA_33203 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33004"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33005 #영해 수호
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5
+
+		relative_position_id = IMA_33103
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33103 focus = IMA_33203 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33005"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33006 #수리창 확충
+		icon = GFX_goal_generic_production
+		cost = 5
+
+		relative_position_id = IMA_33103
+		x = 2
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33103 focus = IMA_33203 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33006"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33007 #반비접촉위원회
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 5
+
+		relative_position_id = IMA_33103
+		x = 4
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33103 focus = IMA_33203 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_33007"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33008 #호위항공모함
+		icon = GFX_goal_generic_navy_carrier
+		cost = 5
+
+		relative_position_id = IMA_33005
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33010 #연방 해군
+		icon = GFX_focus_NORDIC_dem_navy
+		cost = 5
+
+		relative_position_id = IMA_33005
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33013 #노후함 개장
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		cost = 5
+
+		relative_position_id = IMA_33005
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33015 #우리의 생명
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 5
+
+		relative_position_id = IMA_33005
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33018 #영국 해협 봉쇄
+		icon = GFX_focus_FIN_coastal_defense
+		cost = 5
+
+		relative_position_id = IMA_33005
+		x = 5
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33005 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33105 #차세대 함재기
+		icon = GFX_goal_generic_air_fighter
+		cost = 5
+
+		relative_position_id = IMA_33104
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33104 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33011 #대제국을 위한 순양함
+		icon = GFX_focus_generic_cruiser2
+		cost = 5
+
+		relative_position_id = IMA_33010
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33010 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33014 #선박 긴급 징발
+		icon = GFX_focus_generic_merchant_fleet
+		cost = 5
+
+		relative_position_id = IMA_33013
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33013 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33016 #기지를 위한 구축함
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 5
+
+		relative_position_id = IMA_33015
+		x = 0
+		y = 1
+
+		bypass = { NOT = { is_in_faction_with = ICG } }
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33015 }
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33019 #지중해 봉쇄
+		icon = GFX_focus_SWE_coastal_support
+		cost = 5
+
+		relative_position_id = IMA_33018
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33018 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33009 #대서양을 넘어서
+		icon = GFX_focus_generic_north_atlantic_fleet
+		cost = 5
+
+		relative_position_id = IMA_33008
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33008 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33012 #제국 해군의 정신
+		icon = GFX_focus_eng_imperial_federation
+		cost = 5
+
+		relative_position_id = IMA_33011
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33011 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33017 #호송선단 보호
+		icon = GFX_focus_generic_merchant_fleet
+		cost = 5
+
+		relative_position_id = IMA_33016
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33016 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_33106 #어태커
+		icon = GFX_focus_generic_jet_planes
+		cost = 5
+
+		relative_position_id = IMA_33105
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 0 } #전후 나온 함재기라 실제로 AI는 이거 안 찍음
+		prerequisite = { focus = IMA_33105 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			
+		}
+	}
+
+	#아이마스 연합
+	focus = {
+		id = IMA_41001 #모두는 하나를 위해
+		icon = GFX_focus_IMA
+		cost = 5
+
+		x = 10
+		y = 7
+		mutually_exclusive = {
+			focus = IMA_42001 focus = IMA_43001
+		}
+
+		ai_will_do = { factor = 0 } 
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_41001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_42001 #웨스트민스터 헌장
+		icon = GFX_focus_IMA
+		cost = 5
+
+		x = 11
+		y = 0
+		relative_position_id = IMA_41001
+		mutually_exclusive = {
+			focus = IMA_41001 focus = IMA_43001
+		}
+
+		ai_will_do = { factor = 0 } 
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_42001"
+			
+		}
+	}
+	focus = {
+		id = IMA_43001 #하나는 모두를 위해
+		icon = GFX_focus_IMA
+		cost = 5
+
+		x = 6
+		y = 0
+		relative_position_id = IMA_42001
+		mutually_exclusive = {
+			focus = IMA_41001 focus = IMA_42001
+		}
+
+		ai_will_do = { factor = 0 } 
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_43001"
+			
+		}
+	}
+
+	focus = {
+		id = IMA_41002 #해외복무 의무화
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = IMA_41001
+
+
+		ai_will_do = { factor = 0 } 
+		prerequisite = { focus = IMA_41001 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_41002"
+			army_experience = 5
+			navy_experience = 25
+			air_experience = 25
+			#add_ideas = IMA_service_oerseas_idea
+		}
+	}
+
+	focus = {
+		id = IMA_41003 #해외 엘리트 규합
+		icon = GFX_focus_research2
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = IMA_41002
+
+
+		ai_will_do = { factor = 0 } 
+		prerequisite = { focus = IMA_41002 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_IMA_COLONY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_41003"
+			#add_ideas = IMA_service_oerseas_elite
+		}
+	}
+
+	focus = {
+		id = IMA_41004 #자치령 개발
+		icon = GFX_focus_IMA
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = IMA_41003
+
+
+		ai_will_do = { factor = 0 } 
+		prerequisite = { focus = IMA_41003 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_41004"
+			#unlock_decision_category_tooltip = IMA_colony_development_category
+		}
+	}
+
+	focus = {
+		id = IMA_41005 #아이마스 제국 연방
+		icon = GFX_focus_eng_imperial_federation
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = IMA_41004
+
+		ai_will_do = { factor = 0 } 
+		prerequisite = { focus = IMA_41004 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_41005"
+			set_cosmetic_tag = IMA_IUF
+			#news_event = { id = IMA.news.8 days = 1 }
+			ICG = { every_unit_leader = { set_nationality = IMA } }
+			annex_country = {
+			    target = ICG
+			    transfer_troops = yes
+			}
+			every_state = {
+				limit = { is_core_of = ICG }
+				add_core_of = IMA
+			}
+			IML = { every_unit_leader = { set_nationality = IMA } }
+			annex_country = {
+			    target = IML
+			    transfer_troops = yes
+			}
+			every_state = {
+				limit = { is_core_of = IML }
+				add_core_of = IMA
+			}
+			ISC = { every_unit_leader = { set_nationality = IMA } }
+			annex_country = {
+			    target = ISC
+			    transfer_troops = yes
+			}
+			every_state = {
+				limit = { is_core_of = ISC }
+				add_core_of = IMA
+			}
+			ISM = { every_unit_leader = { set_nationality = IMA } }
+			annex_country = {
+			    target = ISM
+			    transfer_troops = yes
+			}
+			every_state = {
+				limit = { is_core_of = ISM }
+				add_core_of = IMA
+			}
+			IDS = { every_unit_leader = { set_nationality = IMA } }
+			annex_country = {
+			    target = IDS
+			    transfer_troops = yes
+			}
+			every_state = {
+				limit = { is_core_of = IDS }
+				add_core_of = IMA
+			}
+			IGM = { every_unit_leader = { set_nationality = IMA } }
+			annex_country = {
+			    target = IGM
+			    transfer_troops = yes
+			}
+			every_state = {
+				limit = { is_core_of = IGM }
+				add_core_of = IMA
+			}
+			#unlock_decision_category_tooltip = IMA_imperial_federation_expansion_category
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = IMA_70001 #어째서 당신이 총리인가요
+		icon = GFX_focus_IMA_70001
+		cost = 5
+
+		x = 150
+		y = 0
+		
+		ai_will_do = { factor = 50 }
+		mutually_exclusive = { focus = IMA_00002_1936_nov_election }
+
+		available = { always = no }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_70001"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = IMA_00002_1936_nov_election #1936년 11월 총선
+		icon = GFX_goal_support_democracy
+		cost = 5
+
+		relative_position_id = IMA_70001
+		x = 10
+		y = 0
+
+		ai_will_do = { factor = 50 }
+		mutually_exclusive = { focus = IMA_70001 }
+		
+		available = { always = no }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_00002_1936_nov_election"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+			add_stability = 0.2
+		}
+	}
+
+	focus = {
+		id = IMA_00003_peoples_front #인민 전선
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5
+
+		relative_position_id = IMA_70001
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_70001 }
+		mutually_exclusive = { focus = IMA_00004_national_front }
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_00003_peoples_front"
+			custom_effect_tooltip = IMA_1936_election_pf
+			add_ideas = IMA_peoples_front
+			#unlock_decision_category_tooltip = IMA_pf_category
+		}
+	}
+
+	focus = {
+		id = IMA_00004_national_front #국민 전선
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+
+		relative_position_id = IMA_70001
+		x = 9
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_70001 }
+		mutually_exclusive = { focus = IMA_00003_peoples_front }
+		
+		available = { always = no }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_00004_national_front"
+			custom_effect_tooltip = IMA_1936_election_nf
+			add_ideas = IMA_national_front
+			#unlock_decision_category_tooltip = IMA_nf_category
+		}
+	}
+
+	focus = {
+		id = IMA_00005_unauthorized_communism #인정받지 못한 공산당
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		cost = 5
+
+		relative_position_id = IMA_00003_peoples_front
+		x = -6
+		y = 2
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_00003_peoples_front }
+		mutually_exclusive = { focus = IMA_00007_idol_communism }
+
+		available = { always = no }
+
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_00005_unauthorized_communism"
+			add_popularity = {
+				ideology = anarchosyndicalism
+				popularity = 0.2
+			}
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = IMA_00006_rejoin_national_labour #국민노동당 흡수
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5
+
+		relative_position_id = IMA_00003_peoples_front
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_00003_peoples_front }
+
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_00006_rejoin_national_labour"
+			add_political_power = 120
+			add_popularity = {
+				ideology = socialdemocracy
+				popularity = 0.15
+			}
+		}
+	}
+
+	focus = {
+		id = IMA_00007_idol_communism #아이돌 공산당
+		icon = GFX_goal_support_communism
+		cost = 5
+
+		relative_position_id = IMA_00003_peoples_front
+		x = -2
+		y = 2
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_00003_peoples_front }
+		mutually_exclusive = { focus = IMA_00005_unauthorized_communism }
+
+		available = { always = no }
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_00007_idol_communism"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = IMA_00008_idol_communism #산업 집산화
+		icon = GFX_goal_support_communism
+		cost = 5
+
+		relative_position_id = IMA_00005_unauthorized_communism
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_00007_idol_communism focus = IMA_00005_unauthorized_communism }
+
+		available = { always = no }
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_00007_idol_communism"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+
+}

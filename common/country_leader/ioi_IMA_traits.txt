@@ -1,0 +1,140 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+@experience_gain_low = 0.03
+@experience_gain_medium = 0.06
+@experience_gain_high = 0.08
+
+@chief_experience_gain_low = 0.20
+@chief_experience_gain_medium = 0.30
+@chief_experience_gain_high = 0.40
+
+leader_traits = {
+	#political_advisor
+	star_of_fascism = { #파시스트 유명인 - IMA 호시이 미키
+		sprite = 13
+		random = no
+		fascism_drift = 0.15
+		stability_factor = 0.1
+		war_support_factor = 0.1
+	}
+	construction_economist = { #건설공학자 - IMA 하기와라 유키호
+		sprite = 10
+		random = no
+		production_speed_buildings_factor = 0.15
+	}
+	socialdemocracy_economist = { #사민경제주의자 - IMA 타카츠키 야요이
+		sprite = 10
+		random = no
+		consumer_goods_factor = -0.05
+		production_speed_arms_factory_factor = 0.05
+		production_speed_dockyard_factor = 0.05
+		production_speed_fuel_silo_factor = 0.05
+		production_speed_industrial_complex_factor = 0.15
+		production_speed_infrastructure_factor = 0.15
+		production_speed_rail_way_factor = 0.15
+		production_speed_synthetic_refinery_factor = 0.15
+		production_factory_efficiency_gain_factor = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		stability_factor = 0.15
+		research_speed_factor = 0.05
+	}
+	liberalism_economist = { #자유경제주의자 - IMA 미나세 이오리
+		sprite = 10
+		random = no
+		production_speed_industrial_complex_factor = 0.10
+		production_speed_infrastructure_factor = 0.10
+		production_speed_rail_way_factor = 0.10
+		production_speed_synthetic_refinery_factor = 0.10
+		production_factory_efficiency_gain_factor = 0.15
+		production_factory_max_efficiency_factor = 0.15
+		consumer_goods_factor = -0.10
+		stability_factor = 0.05
+		research_speed_factor = 0.15
+	}
+	top_secret_madam = { #비밀스런 첩보기관장 - IMA 시죠 타카네
+		random = no
+		sprite = 15
+		operative_slot = 2
+		agency_upgrade_time = -0.1
+		decryption_power = 15
+	}
+	planned_economist = { #계획경제주의자 - IMA 아키즈키 리츠코
+		sprite = 10
+		random = no
+		local_resources_factor = 0.1
+		production_lack_of_resource_penalty_factor = -0.2
+		production_factory_max_efficiency_factor = 0.1
+		line_change_production_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		industrial_capacity_factory = 0.1
+		production_speed_buildings_factor = 0.05
+		consumer_goods_factor = 0.05
+		stability_factor = 0.05
+	}
+	democratic_doordinator = { #민주주의의 조정자 - IMA 미우라 아즈사
+		sprite = 13
+		random = no
+		political_power_factor = 0.10
+		stability_factor = 0.05
+		conservatism_drift = 0.10
+		liberalism_mod_drift = 0.05
+		socialdemocracy_drift = 0.05
+		progressivism_drift = 0.05
+		liberalism_mod_acceptance = 40
+		progressivism_acceptance = 40
+		socialdemocracy_acceptance = 40
+	}
+	socialdemocracy_star_politician = { #진보주의 스타 - IMA 후타미 아미
+		sprite = 13
+		random = no
+		progressivism_drift = 0.10
+		socialdemocracy_drift = 0.05
+		socialism_drift = 0.05
+		socialism_acceptance = 30
+		stability_factor = 0.05
+	}
+	military_politician = { #군인 정치인 - IMA 가나하 히비키
+		sprite = 13
+		random = no
+		militarytotalism_drift = 0.15
+		stability_factor = 0.1
+		war_support_factor = 0.1
+	}
+	piyo_revolutionary = { #삐요 혁명가 - IMA 오토나시 코토리
+		sprite = 13
+		random = no
+		communism_drift = 0.15
+		socialism_drift = 0.05
+		authoritariancommunism_drift = 0.05
+		war_support_factor = 0.15
+		conscription = 0.05
+	}
+	producer_rovolutionary = { #프로듀서 혁명가 - IMA 마지마 P
+		sprite = 13
+		random = no
+		anarchosyndicalism_drift = 0.15
+		war_support_factor = 0.10
+		stability_factor = -0.15
+		conscription = 0.1
+		compliance_gain = 0.05
+		non_core_manpower = 0.05
+	}
+	
+	leader_ima_amami_haruka_1 = {
+		random = no
+		political_power_factor = -0.25
+		political_advisor_cost_factor = 0.25
+		is_tarrif_cost_factor = 0.25
+		is_mobilization_law_cost_factor = 0.25
+		is_mobilization_economy_cost_factor = 0.25
+		high_command_cost_factor = 0.25
+		air_chief_cost_factor = 0.25
+		army_chief_cost_factor = 0.25
+		navy_chief_cost_factor = 0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,24 @@
+scripted_gui = {
+	coalition_indicator = {
+		context_type = player_context
+		parent_window_name = coalition_pol_party_bg_anchor
+		window_name = "coalition_pol_party_bg"
+		visible = { has_coalition = yes }
+		ai_enabled = { always = no }
+
+		triggers = {
+			coalition_pol_party_bg_conservatism_visible = { is_in_coalition_with_conservatism = yes }
+			coalition_pol_party_bg_liberalism_visible = { is_in_coalition_with_liberalism = yes }
+			coalition_pol_party_bg_progressivism_visible = { is_in_coalition_with_progressivism = yes }
+			coalition_pol_party_bg_socialdemocracy_visible = { is_in_coalition_with_socialdemocracy = yes }
+			coalition_pol_party_bg_socialism_visible = { is_in_coalition_with_socialism = yes }
+			coalition_pol_party_bg_communism_visible = { is_in_coalition_with_communism = yes }
+			coalition_pol_party_bg_authoritariancommunism_visible = { is_in_coalition_with_authoritariancommunism = yes }
+			coalition_pol_party_bg_anarchosyndicalism_visible = { is_in_coalition_with_anarchosyndicalism = yes }
+			coalition_pol_party_bg_authoritariandemocracy_visible = { is_in_coalition_with_authoritariandemocracy = yes }
+			coalition_pol_party_bg_autocracy_visible = { is_in_coalition_with_autocracy = yes }
+			coalition_pol_party_bg_fascism_visible = { is_in_coalition_with_fascism = yes }
+			coalition_pol_party_bg_militarytotalism_visible = { is_in_coalition_with_militarytotalism = yes }
+		}
+	}
+}

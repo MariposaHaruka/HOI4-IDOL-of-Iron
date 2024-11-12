@@ -1,0 +1,149 @@
+﻿#수도
+capital = 275 #프리토리아
+
+#부대
+set_oob = "ISM_ar"
+starting_train_buffer = 2
+add_command_power = 10
+set_fuel_ratio = 0.2
+
+#시작 기술
+set_research_slots = 2
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+}
+if = {
+	limit = { has_MtG = yes }
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			transport = 1
+		}
+	} 
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 25
+
+#국민 정신
+add_ideas = direct_election
+add_ideas = double_parliament
+
+#외교
+set_cosmetic_tag = ISM_IMA
+add_to_tech_sharing_group = bandainamco_research
+	
+#정치 상황
+set_stability = 0.26
+set_war_support = 0.05
+set_politics = {
+	ruling_party = liberalism_mod
+	last_election = "1933.5.17"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	conservatism = 19
+	liberalism_mod = 30
+	progressivism = 0
+	socialdemocracy = 10
+	socialism = 2
+	communism = 4
+	authoritariancommunism = 12
+	anarchosyndicalism = 6
+	fascism = 14
+	militarytotalism = 1
+	authoritariandemocracy = 1 
+	autocracy = 1
+}
+
+#의회
+
+#캐릭터 
+recruit_character = ISM_tendo_teru
+recruit_character = ISM_sakuraba_kaoru
+recruit_character = ISM_kashiwagi_tsubasa
+recruit_character = ISM_amagase_touma
+recruit_character = ISM_mitarai_shota
+recruit_character = ISM_ijuin_hokuto
+recruit_character = ISM_tsuzuki_kei
+recruit_character = ISM_kagura_rei
+recruit_character = ISM_takajo_kyoji
+recruit_character = ISM_pierre
+recruit_character = ISM_watanabe_minori
+recruit_character = ISM_aoi_yusuke
+recruit_character = ISM_aoi_kyosuke
+recruit_character = ISM_akuno_hideo
+recruit_character = ISM_kimura_ryu
+recruit_character = ISM_shingen_seiji
+recruit_character = ISM_nekoyanagi_kirio
+recruit_character = ISM_hanamura_shoma
+recruit_character = ISM_kiyosumi_kuro
+recruit_character = ISM_akiyama_hayato
+recruit_character = ISM_sakaki_natsuki
+recruit_character = ISM_wakazato_haruna
+recruit_character = ISM_iseya_shiki
+recruit_character = ISM_akai_suzaku
+recruit_character = ISM_kurono_genbu
+recruit_character = ISM_kamiya_yukihiro
+recruit_character = ISM_shinonome_soichiro
+recruit_character = ISM_asselin_BB_II
+recruit_character = ISM_uzuki_makio
+recruit_character = ISM_mizushima_saki
+recruit_character = ISM_okamura_nao
+recruit_character = ISM_tachibana_shiro
+recruit_character = ISM_himeno_kanon
+recruit_character = ISM_hazama_michio
+recruit_character = ISM_maita_rui
+recruit_character = ISM_yamashita_jiro
+recruit_character = ISM_taiga_takeru
+recruit_character = ISM_enjoji_michiru
+recruit_character = ISM_kizaki_ren
+recruit_character = ISM_kabuto_daigo
+recruit_character = ISM_tsukumo_kazuki
+recruit_character = ISM_kuzunoha_amehiko
+recruit_character = ISM_kitamura_sora
+recruit_character = ISM_koron_chris
+recruit_character = ISM_amamine_shu
+recruit_character = ISM_hanazono_momohito
+recruit_character = ISM_mayumi_eishin
+recruit_character = ISM_yamamura_ken
+recruit_character = ISM_saito_takashi
+recruit_character = ISM_ishikawa_P
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

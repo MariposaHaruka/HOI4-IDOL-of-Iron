@@ -1,0 +1,317 @@
+ideas = {
+	is_economy_model = {
+        law = yes
+        use_list_view = yes
+
+        syndicalist_markets = {
+            available = {
+                OR = {
+                    has_government = anarchosyndicalism
+                    has_government = socialism
+                }
+            }
+            level = 1
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.05
+                consumer_goods_factor = -0.05
+                local_resources_factor = -0.05
+                production_speed_arms_factory_factor = -0.30
+                industrial_capacity_factory = 0.10
+                production_factory_start_efficiency_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.10
+                production_factory_max_efficiency_factor = 0.10
+                research_speed_factor = 0.05
+                min_export = 0.05
+            }
+
+            ai_will_do = {
+                base = 20
+                modifier = {
+                    has_government = socialism
+                    add = 50
+                }
+                modifier = {
+                    factor = 3
+                }
+            }
+        }
+
+        communal_economy = {
+            available = {
+                is_communism = yes
+            }
+            level = 2
+            removal_cost = -1
+        
+            modifier = {
+                political_power_factor = 0.10
+                local_resources_factor = -0.20
+                consumer_goods_factor = -0.30
+                stability_factor = -0.30
+                production_speed_buildings_factor = -0.10
+                production_factory_efficiency_gain_factor = 0.10
+                production_factory_max_efficiency_factor = 0.20
+                research_speed_factor = -0.10
+                industrial_capacity_factory = -0.15
+                conversion_cost_civ_to_mil_factor = +2.0
+                conversion_cost_mil_to_civ_factor = -2.0
+                min_export = -0.25
+
+            }
+
+            ai_will_do = {
+                base = 20
+                modifier = {
+                    has_government = socialism
+                    add = 20
+                }
+                modifier = {
+                    has_government = anarchosyndicalism
+                    add = 40
+                }
+                modifier = {
+                    factor = 3
+                }
+            }
+        }  
+        
+        planned_economy = {
+            available = { 
+                is_democratic = no
+            }
+            level = 3
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.1
+                local_resources_factor = 0.20
+                consumer_goods_factor = 0.10
+                stability_factor = 0.10
+                production_speed_buildings_factor = 0.10
+                production_factory_efficiency_gain_factor = 0.05
+                research_speed_factor = -0.075
+                industrial_capacity_factory = 0.10
+                conversion_cost_civ_to_mil_factor = -0.10
+                conversion_cost_mil_to_civ_factor = -0.10
+                min_export = -0.15
+            }
+
+            ai_will_do = {
+                base = 20
+                modifier = {
+                    is_fascism = yes
+                    add = 20
+                }
+                modifier = {
+                    is_communism = yes
+                    add = 80
+                }
+                modifier = {
+                    OR = {
+                        has_government = communism
+                        has_government = authoritariancommunism
+                    }
+                    add = 100
+                }
+                modifier = {
+                    factor = 3
+                }
+            }
+        }  
+
+        state_capitalism = {
+            available = { 
+                is_democratic = no
+            }
+            level = 4
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.05
+                local_resources_factor = 0.15
+                stability_factor = 0.07
+                consumer_goods_factor = 0.05
+                production_speed_buildings_factor = 0.075
+                production_factory_max_efficiency_factor = -0.025
+                research_speed_factor = -0.025
+                industrial_capacity_factory = 0.05
+                min_export = -0.10
+            }
+
+            ai_will_do = {
+                base = 20
+                modifier = {
+                    is_fascism = yes
+                    add = 40
+                }
+                modifier = {
+                   is_neutrality = yes
+                    add = 10
+                }
+                modifier = {
+                    OR = {
+                        original_tag = PRS
+                        original_tag = ENS
+                    }
+                    add = 100
+                }
+
+                modifier = {
+                    factor = 3
+                }
+            }
+        }
+
+        mixed_market = {
+            available = { }
+            level = 5
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.05
+                local_resources_factor = 0.10
+                stability_factor = 0.05
+                consumer_goods_factor = -0.05
+                production_speed_buildings_factor = 0.05
+                production_factory_max_efficiency_factor = -0.05
+                min_export = 0.05
+            }
+
+            ai_will_do = {
+                base = 40
+                modifier = {
+                    factor = 3
+                }
+            }
+        }
+
+        welfare_capitalism = {
+            available = {
+                is_fascism = no
+                is_communism = no
+            }
+            level = 6
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.07
+                local_resources_factor = -0.05
+                #consumer_goods_factor #= #-0.05
+                production_speed_buildings_factor = -0.05
+                #production_factory_max_efficiency_factor #= #-0.075
+                research_speed_factor = 0.05
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.10
+                min_export = 0.10
+            }
+
+            ai_will_do = {
+                base = 30
+                modifier = {
+                    is_democratic = yes
+                    add = 40
+                }
+                modifier = {
+                    is_neutrality = yes
+                    add = 10
+                }
+                modifier = {
+                    original_tag = IMA
+                    is_democratic = yes
+                    add = 100
+                }
+                modifier = {
+                    original_tag = ICG
+                    is_democratic = yes
+                    add = 100
+                }
+                modifier = {
+                    original_tag = IML
+                    is_democratic = yes
+                    add = 100
+                }
+                modifier = {
+                    factor = 3
+                }          
+            }
+        }
+
+        laisezz_faire = {
+            available = {
+                is_communism = no
+            }
+            level = 7
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.10
+                local_resources_factor = -0.05
+                consumer_goods_factor = -0.10
+                stability_factor = -0.05
+                production_speed_buildings_factor = -0.10
+                production_factory_max_efficiency_factor = 0.05
+                research_speed_factor = 0.10
+                industrial_capacity_factory = 0.10
+                industrial_capacity_dockyard = 0.20
+                min_export = 0.15
+
+            }
+
+            ai_will_do = {
+                base = 20
+                modifier = {
+                    is_neutrality = yes
+                    add = 40
+                }
+                modifier = {
+                    is_fascism = yes
+                    add = 20
+                }
+                modifier = {
+                    factor = 3
+                }
+            }
+        }
+
+        rentier_state = {
+            available = {
+                OR = {
+                    oil > 200
+                    rubber > 200
+                }
+                is_communism = no
+            }            
+            level = 8
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.25
+                local_resources_factor = 0.25
+                #consumer_goods_factor #= #-0.10
+                production_speed_buildings_factor = -0.10
+                industrial_capacity_factory = -0.10
+                research_speed_factor = -0.05
+                drift_defence_factor = 0.25
+                max_fuel_factor = 0.20
+                fuel_gain_factor = 0.20
+            }
+
+            ai_will_do = {
+                base = 40
+                modifier = {
+                    NOT = {
+                        has_idea = industry_manufacturing_base
+                        has_idea = business_and_enterprise_base
+                    }
+                    is_democratic = no
+                    add = 40
+                }
+                modifier = {
+                    factor = 3
+                }
+            }
+        }
+    }
+}

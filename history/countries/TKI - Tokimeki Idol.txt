@@ -1,0 +1,64 @@
+#수도
+capital = 757 #라싸
+
+#부대
+set_oob = "TKI_ar"
+starting_train_buffer = 2
+add_command_power = 10
+set_fuel_ratio = 0.2
+
+#시작 기술
+set_technology = {
+	infantry_weapons = 1
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+
+#국민 정신
+
+add_ideas = agrarian_society
+
+#외교
+
+#정치 상황
+set_stability = 0.6
+set_war_support = 0.3
+set_politics = {
+	ruling_party = autocracy
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	autocracy = 100
+}
+
+#의회
+
+#캐릭터 
+recruit_character = TKI_yuuki_akiha
+recruit_character = TKI_tsukishima_minato
+recruit_character = TKI_tanaka_francesca
+recruit_character = TKI_kawaguchi_natsumi
+recruit_character = TKI_aoyama_tsubasa
+recruit_character = TKI_sanada_koyukimura
+recruit_character = TKI_katagiri_nanana
+recruit_character = TKI_hibino_noriko
+recruit_character = TKI_tachikawa_midori
+recruit_character = TKI_tachikawa_akane
+recruit_character = TKI_kusakabe_nonoka
+recruit_character = TKI_izumi_izumi
+recruit_character = TKI_himari_misaki
+recruit_character = TKI_mita_rea
+recruit_character = TKI_asagiri_haruko
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

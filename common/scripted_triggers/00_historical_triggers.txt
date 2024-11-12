@@ -1,0 +1,123 @@
+
+
+#AZU_is_on_historical_plan_trigger = {
+#	has_WtT = yes
+#	OR = {
+#		AND = {
+#			is_historical_focus_on = yes
+#			has_game_rule = {
+#				rule = AZU_ai_behavior
+#				option = DEFAULT
+#			}
+#		}
+#		has_country_flag = AZU_AI_RANDOM_HISTORICAL
+#		has_game_rule = {
+#			rule = AZU_ai_behavior
+#			option = HISTORICAL
+#		}
+#	}
+#}
+
+#TOH_is_on_historical_plan_trigger = {
+#	OR = {
+#		AND = {
+#			is_historical_focus_on = yes
+#			has_game_rule = {
+#				rule = TOH_ai_behavior
+#				option = DEFAULT
+#			}
+#		}
+#		has_country_flag = TOH_AI_RANDOM_COMMUNIST_HISTORICAL
+#		has_game_rule = {
+#			rule = TOH_ai_behavior
+#			option = HISTORICAL
+#		}
+#	}
+#}
+
+#ICG_is_on_historical_plan_trigger = {
+#	OR = {
+#		AND = {
+#			is_historical_focus_on = yes
+#			has_game_rule = {
+#				rule = ICG_ai_behavior
+#				option = DEFAULT
+#			}
+#		}
+#		has_country_flag = ICG_AI_DEMOCRATIC_HISTORICAL
+#		has_game_rule = {
+#			rule = ICG_ai_behavior
+#			option = DEMOCRATIC_HISTORICAL
+#		}
+#	}
+#}
+
+#AIK_is_on_historical_plan_trigger = {
+#	has_DoD = yes
+#	OR = {
+#		AND = {
+#			is_historical_focus_on = yes
+#			has_game_rule = {
+#				rule = AIK_ai_behavior
+#				option = DEFAULT
+#			}
+#		}
+#		has_country_flag = AIK_AI_RANDOM_FASCIST_HISTORICAL
+#		has_game_rule = {
+#			rule = AIK_ai_behavior
+#			option = FASCIST_HISTORICAL
+#		}
+#	}
+#}
+
+#UMA_is_on_historical_plan_trigger = {
+#	has_DoD = yes
+#	OR = {
+#		AND = {
+#			is_historical_focus_on = yes
+#			has_game_rule = {
+#				rule = UMA_ai_behavior
+#				option = DEFAULT
+#			}
+#		}
+#		has_country_flag = UMA_AI_RANDOM_FASCIST_HISTORICAL
+#		has_game_rule = {
+#			rule = UMA_ai_behavior
+#			option = FASCIST_HISTORICAL
+#		}
+#	}
+#}
+
+#IMA_is_on_historical_plan_trigger = {
+#	OR = {
+#		AND = {
+#			is_historical_focus_on = yes
+#			has_game_rule = {
+#				rule = IMA_ai_behavior
+#				option = DEFAULT
+#			}
+#		}
+#		has_country_flag = IMA_AI_DEMOCRATIC_HISTORICAL
+#		has_game_rule = {
+#			rule = eng_ai_behavior
+#			option = DEMOCRATIC_HISTORICAL
+#		}
+#	}
+#}
+
+#IML_is_on_historical_plan_trigger = {
+#	OR = {
+#		AND = {
+#			is_historical_focus_on = yes
+#			has_game_rule = {
+#				rule = IML_ai_behavior
+#				option = DEFAULT
+#			}
+#		}
+#		has_country_flag = IML_AI_DEMOCRATIC_HISTORICAL
+#		has_game_rule = {
+#			rule = eng_ai_behavior
+#			option = DEMOCRATIC_HISTORICAL
+#		}
+#	}
+#}

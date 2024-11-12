@@ -1,0 +1,142 @@
+#수도
+capital = 554
+
+#부대
+set_oob = "TSS_ar"
+starting_train_buffer = 2
+add_command_power = 10
+set_fuel_ratio = 0.2
+
+#시작 기술
+set_research_slots = 2
+set_technology = {
+	infantry_weapons = 1
+	tech_trucks = 1
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+	else = { 
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 5
+
+#국민 정신
+add_ideas = direct_election
+add_ideas = single_parliament
+
+add_ideas = agrarian_society
+
+#외교
+
+#정치 상황
+set_stability = 0.4
+set_war_support = 0
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	conservatism = 38
+	liberalism_mod = 8
+	progressivism = 0
+	socialdemocracy = 4
+	socialism = 0
+	communism = 0
+	authoritariancommunism = 10
+	anarchosyndicalism = 0
+	fascism = 8
+	militarytotalism = 2
+	authoritariandemocracy = 30
+	autocracy = 0
+}
+
+#의회
+
+#캐릭터 
+recruit_character = TSS_kasukabe_haru
+recruit_character = TSS_tendoji_musubi
+recruit_character = TSS_tsunomori_rona
+recruit_character = TSS_nonohara_hime
+recruit_character = TSS_serizawa_momoka
+recruit_character = TSS_usuta_sumire
+recruit_character = TSS_kamishiro_sui
+recruit_character = TSS_kuonji_shizuka
+recruit_character = TSS_alessandra_susu
+recruit_character = TSS_harumi_sawara
+recruit_character = TSS_harumi_kajika
+recruit_character = TSS_harumi_shinjyu
+recruit_character = TSS_kawasumi_sisala
+recruit_character = TSS_uesugi_u_kyoko
+recruit_character = TSS_futagawa_mimi
+recruit_character = TSS_seto_ferb
+recruit_character = TSS_katsuragi_kasumi
+recruit_character = TSS_araki_rena
+recruit_character = TSS_nishizono_honoka
+recruit_character = TSS_tamasaka_makoto
+recruit_character = TSS_enami_madoka
+recruit_character = TSS_maezono_risyuri
+recruit_character = TSS_sakaiya_yumeno
+recruit_character = TSS_tasha_romanovsky
+recruit_character = TSS_jedah_diamond
+recruit_character = TSS_yamai_sawori
+recruit_character = TSS_kumomaki_monaka
+recruit_character = TSS_yukuhashi_ei
+recruit_character = TSS_mimori_matsuri
+recruit_character = TSS_shiratori_tomoe
+recruit_character = TSS_aihara_miu
+recruit_character = TSS_xiao_fei_hung
+recruit_character = TSS_hoshigaki_manon
+recruit_character = TSS_ootori_chacha
+recruit_character = TSS_echizen_murasaki
+recruit_character = TSS_azami_miwako
+recruit_character = TSS_orikasa_ayumu
+recruit_character = TSS_arisa_shirayuki
+recruit_character = TSS_saeki_hina
+recruit_character = TSS_wanibuchi_emoko
+recruit_character = TSS_kujyo_yume
+recruit_character = TSS_karakuri_hitoha
+recruit_character = TSS_karakuri_futaba
+recruit_character = TSS_amagami_nero
+recruit_character = TSS_higa_aguri
+recruit_character = TSS_shima_sabina
+recruit_character = TSS_shishigome_oto
+recruit_character = TSS_hourai_taki
+recruit_character = TSS_tezuka_seneka
+recruit_character = TSS_hoshigaki_manon
+recruit_character = TSS_hoshikage_ai
+recruit_character = TSS_tsukishiro_yu
+recruit_character = TSS_nanahoshi_ai
+recruit_character = TSS_ichinose_mai
+recruit_character = TSS_asanagi_shione
+recruit_character = TSS_tan_si_young
+recruit_character = TSS_flana_ling
+recruit_character = TSS_koibuchi_karen
+recruit_character = TSS_ichinose_miori
+recruit_character = TSS_alina_laisto
+recruit_character = TSS_nanasaki_nicole
+recruit_character = TSS_hanyuda_mito
+recruit_character = TSS_misonoo_mana
+recruit_character = TSS_kotobuki_qruit
+recruit_character = TSS_wakaoji_rui
+recruit_character = TSS_memoru_yusa
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

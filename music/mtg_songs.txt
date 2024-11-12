@@ -1,0 +1,120 @@
+
+music_station = "base_music"
+
+music = {
+	song = "claustrophobic_march"
+
+	chance = {
+		factor = 1
+		modifier = {
+			has_MtG = no
+			factor = 0
+		}
+		modifier = {
+			not = { original_tag = IMA }
+			factor = 0.25
+		}
+		modifier = {
+			has_stability < 0.5
+			factor = 1.5
+		}
+		modifier = {
+			original_tag = IMA
+			is_fascism = no
+			factor = 2
+		}
+	}
+
+}
+
+music = {
+	song = "communist_america"
+
+	chance = {
+		factor = 1
+		modifier = {
+			has_MtG = no
+			factor = 0
+		}
+		modifier = {
+			is_communism = no
+			factor = 0
+		}
+		modifier = {
+			original_tag = ICG
+			is_communism = no
+			factor = 2
+		}
+		modifier = {
+			original_tag = ICG
+			is_communism = yes
+			factor = 3
+		}
+		modifier = {
+			original_tag = ICG
+			has_civil_war = yes
+			is_communism = yes
+			factor = 3.5
+		}
+	}
+}
+
+music = {
+	song = "confederate_flags"
+
+	chance = {
+		factor = 1
+		modifier = {
+			has_MtG = no
+			factor = 0
+		}
+		modifier = {
+			original_tag = ICG
+			is_fascism = no
+			is_communism = yes
+			factor = 0
+		}
+		modifier = {
+			original_tag = ICG
+			is_fascism = no
+			factor = 2
+		}
+		modifier = {
+			original_tag = ICG
+			is_fascism = yes
+			factor = 3
+		}
+		modifier = {
+			original_tag = ICG
+			has_civil_war = yes
+			is_fascism = yes
+			factor = 1.5
+		}
+	}
+}
+
+music = {
+	song = "democratic_movements"
+
+	chance = {
+		factor = 1
+		modifier = {
+			has_MtG = no
+			factor = 0
+		}
+		modifier = {
+			OR = {
+				NOT = { 
+					original_tag = ICG
+					original_tag = IMA
+				}
+				is_democratic = no
+			}
+			factor = 0
+		}
+		modifier = {
+			has_war = yes
+			factor = 2
+		}
+	}
+}

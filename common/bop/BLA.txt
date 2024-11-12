@@ -1,0 +1,340 @@
+BLA_schalle_sc_balance = {
+	initial_value = 0.15
+	left_side = BLA_schalle_side	
+	right_side = BLA_sc_side	
+	decision_category = BLA_balance_of_power_category
+
+	### 중간
+	range = {
+		id = BLA_balance_range
+		min = -0.15
+		max = 0.15
+		modifier = {
+		}
+		on_activate = {
+		}
+		on_deactivate = {
+		}
+	}
+
+	### 샬레 측
+	side = {
+		id = BLA_schalle_side	
+		icon = GFX_bop_BLA_schalle_side
+
+		range = {
+			id = BLA_schalle_low_control_range
+			min = -0.45
+			max = -0.15
+			modifier = {
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = BLA_schalle_medium_control_range
+			min = -0.75
+			max = -0.45
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = BLA_schalle_high_control_range
+			min = -1
+			max = -0.75
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = BLA_schalle_sc_balance
+					side = BLA_schalle_side
+					gfx = GFX_bop_BLA_schalle_improved_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = BLA_schalle_sc_balance
+					side = BLA_schalle_side
+					gfx = GFX_bop_BLA_schalle_side
+				}
+			}
+		}
+	}
+
+	### 총학생회 측
+	side = {
+		id = BLA_sc_side	
+		icon = GFX_bop_BLA_sc_side
+
+		range = {
+			id = BLA_sc_low_control_range
+			min = 0.15
+			max = 0.45
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = BLA_sc_medium_control_range
+			min = 0.45
+			max = 0.75
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = BLA_sc_high_control_range
+			min = 0.75
+			max = 1
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = BLA_schalle_sc_balance
+					side = BLA_sc_side
+					gfx = GFX_bop_BLA_sc_improved_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = BLA_schalle_sc_balance
+					side = BLA_sc_side
+					gfx = GFX_bop_BLA_sc_side
+				}
+			}
+		}
+	}
+
+	### 카이저 코퍼레이션 측(vs 총학생회)
+	side = {
+		id = BLA_kaiser_l_side	
+		icon = GFX_bop_ITA_balbo_side
+
+		range = {
+			id = BLA_kaiser_l_low_control_range
+			min = -0.45
+			max = -0.15
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = BLA_kaiser_l_medium_control_range
+			min = -0.75
+			max = -0.45
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = BLA_kaiser_l_high_control_range
+			min = -1
+			max = -0.75
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+	}
+
+	### 카이저 코퍼레이션 측(vs 샬레)
+	side = {
+		id = BLA_kaiser_r_side	
+		icon = GFX_bop_ITA_balbo_side
+
+		range = {
+			id = BLA_kaiser_r_low_control_range
+			min = 0.15
+			max = 0.45
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = BLA_kaiser_r_medium_control_range
+			min = 0.45
+			max = 0.75
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = BLA_kaiser_r_high_control_range
+			min = 0.75
+			max = 1
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+	}
+
+	### 게마트리아 측(vs 샬레)
+	side = {
+		id = BLA_gematria_side	
+		icon = GFX_bop_ITA_balbo_side
+
+		range = {
+			id = BLA_gematria_low_control_range
+			min = 0.15
+			max = 0.45
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = BLA_gematria_medium_control_range
+			min = 0.45
+			max = 0.75
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = BLA_gematria_high_control_range
+			min = 0.75
+			max = 1
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+	}
+
+	### 헬멧단
+	side = {
+		id = BLA_helmet_side	
+		icon = GFX_bop_ITA_mussolini_side
+
+		range = {
+			id = BLA_helmet_low_control_range
+			min = 0.15
+			max = 0.45
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = BLA_helmet_medium_control_range
+			min = 0.45
+			max = 0.75
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = BLA_helmet_high_control_range
+			min = 0.75
+			max = 1
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+	}
+
+	### 소확행
+	side = {
+		id = BLA_sohwakhang_side	
+		icon = GFX_bop_ITA_grand_council_side
+
+		range = {
+			id = BLA_sohwakhang_low_control_range
+			min = -0.45
+			max = -0.15
+			modifier = {
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = BLA_sohwakhang_medium_control_range
+			min = -0.75
+			max = -0.45
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = BLA_sohwakhang_high_control_range
+			min = -1
+			max = -0.75
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+	}
+}
+

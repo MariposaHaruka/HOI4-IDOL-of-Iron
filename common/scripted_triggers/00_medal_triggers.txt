@@ -1,0 +1,71 @@
+#scripted triggers for Division Medals feature
+
+should_have_german_medals_trigger = {
+	original_tag = PRS
+}
+
+should_have_usa_medals_trigger = {
+	original_tag = ICG
+	NOT = { is_subject_of = IMA }
+}
+
+should_have_soviet_medals_trigger = {
+	original_tag = TOH
+}
+
+should_have_english_medals_trigger = {
+	is_imas = yes
+	OR = {
+		original_tag = IMA
+		is_subject_of = IMA
+	}
+}
+
+should_have_french_medals_trigger = {
+	original_tag = BDG
+}
+
+should_have_italian_medals_trigger = {
+	original_tag = ENS
+}
+
+should_have_japanese_medals_trigger = {
+	is_lovelive = yes
+}
+
+should_have_ethiopian_medals_trigger = {
+	original_tag = MCR
+}
+
+should_have_finnish_medals_trigger = {
+	original_tag = PTD
+}
+
+should_have_norwegian_medals_trigger = {
+	original_tag = DFD
+}
+
+should_have_danish_medals_trigger = {
+	original_tag = SZS
+}
+
+should_have_chilean_medals_trigger = {
+	original_tag = LPR
+}
+
+should_have_any_unique_medals_trigger = {
+	OR = {
+		should_have_german_medals_trigger = yes
+		should_have_usa_medals_trigger = yes
+		should_have_soviet_medals_trigger = yes
+		should_have_english_medals_trigger = yes
+		should_have_french_medals_trigger = yes
+		should_have_italian_medals_trigger = yes
+		should_have_japanese_medals_trigger = yes
+		should_have_ethiopian_medals_trigger = yes
+		should_have_finnish_medals_trigger = yes
+		should_have_norwegian_medals_trigger = yes 
+		should_have_chilean_medals_trigger = yes 
+		should_have_danish_medals_trigger = yes
+	}
+}

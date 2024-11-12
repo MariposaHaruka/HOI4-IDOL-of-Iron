@@ -1,0 +1,153 @@
+ideas = {
+	is_construction = {
+		law = yes
+		use_list_view = yes
+
+		support_infrastructure_construction = {
+			cost = 50
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				production_speed_dockyard_factor = -0.1
+				production_speed_air_base_factor = 0.1
+				production_speed_fuel_silo_factor = -0.1
+				production_speed_nuclear_reactor_factor = 0.1
+				production_speed_naval_base_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				production_speed_radar_station_factor = 0.1
+				production_speed_supply_node_factor = 0.1
+				production_speed_synthetic_refinery_factor = -0.1
+			}
+
+			ai_will_do = {
+				factor = 2
+
+				modifier = {
+					factor = 20
+					is_major = yes
+				}
+				modifier = {
+					has_war_support > 0.25
+					factor = 0
+				}
+				
+				modifier = {
+					tag = ENG
+					has_war = no
+					NOT = { has_completed_focus = IMA_70001 }
+					date < 1937.6.1
+					factor = 0
+				}
+			}
+			cancel_if_invalid = no
+		}
+
+		support_civilian_factory_construction = {
+			cost = 50
+			removal_cost = -1
+
+			modifier = {
+				production_speed_infrastructure_factor = -0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = -0.1
+				production_speed_dockyard_factor = -0.1
+			}
+
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					factor = 20
+					num_of_civilian_factories < 15
+				}
+				modifier = {
+					has_war_support > 0.25
+					factor = 0
+				}
+			}
+			cancel_if_invalid = no
+		}
+
+		support_military_factory_construction = {
+			cost = 50
+			removal_cost = -1
+
+			modifier = {
+				production_speed_infrastructure_factor = -0.1
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+			}
+
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					factor = 20
+					num_of_military_factories < 15
+				}
+				modifier = {
+					has_war_support < 0.25
+					factor = 0
+					has_war = no
+				}
+			}
+			cancel_if_invalid = no
+		}
+
+		support_defensive_facilities_construction = {
+			cost = 50
+			removal_cost = -1
+
+			modifier = {
+				production_speed_infrastructure_factor = -0.1
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				production_speed_dockyard_factor = -0.1
+				production_speed_bunker_factor = 0.2
+				production_speed_coastal_bunker_factor = 0.2
+				production_speed_anti_air_building_factor = 0.2
+			}
+
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					factor = 20
+					has_war_support > 0.5
+					has_war = yes
+					surrender_progress > 0.3
+				}
+				modifier = {
+					factor = 0
+					has_war = no
+				}
+			}
+			cancel_if_invalid = no
+		}
+
+		support_resource_excavations = {
+			cost = 50
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = -0.1
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				production_speed_dockyard_factor = -0.1
+				production_speed_air_base_factor = -0.1
+				production_speed_nuclear_reactor_factor = -0.1
+				production_speed_naval_base_factor = -0.1
+				production_speed_rail_way_factor = -0.1
+				production_speed_radar_station_factor = -0.1
+				production_speed_supply_node_factor = -0.1
+				production_speed_fuel_silo_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.1
+				local_resources_factor = 0.15
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+			cancel_if_invalid = no
+		}
+	}
+}

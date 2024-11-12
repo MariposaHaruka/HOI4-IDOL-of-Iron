@@ -1,0 +1,164 @@
+LAS_threat_of_iron_bug = {
+	enable = { always = yes }
+	icon = GFX_idea_LAS_iron_bug
+	#INITIAL
+	air_accidents_factor = LAS_airforce_air_accidents_factor #0.75
+	air_ace_generation_chance_factor = LAS_airforce_air_ace_generation_chance_factor #-0.5
+	air_night_penalty = LAS_airforce_air_night_penalty #0.3
+	air_weather_penalty = LAS_airforce_air_weather_penalty #0.3
+	air_wing_xp_loss_when_killed_factor = LAS_airforce_air_wing_xp_loss_when_killed_factor #0.3
+	air_mission_xp_gain_factor = LAS_airforce_air_mission_xp_gain_factor #0.1
+	air_training_xp_gain_factor = LAS_airforce_air_training_xp_gain_factor #-0.1
+	#FUTURE
+	aircraft_manufacturer_cost_factor = LAS_airforce_aircraft_manufacturer_cost_factor #-0.25 -> Expand the Aircraft Industry
+	air_range_factor = LAS_airforce_air_range_factor #0.05 -> Modernize Aircraft Factories
+	air_fuel_consumption_factor = LAS_airforce_air_fuel_consumption_factor #-0.05 -> Modernize Aircraft Factories / +0.1 Intensify Pilot Program
+	air_agility_factor = LAS_airforce_air_agility_factor #0.05 -> Modernize Aircraft Factories
+	air_strategic_bomber_night_penalty = LAS_airforce_air_strategic_bomber_night_penalty #-0.1 -> Raskova's Aviation Group
+	air_cas_present_factor = LAS_airforce_air_cas_present_factor #0.1 -> Ground Support
+	strategic_bomb_visibility = LAS_airforce_strategic_bomb_visibility #-0.1 -> Long Range Aircraft
+	air_mission_efficiency = LAS_airforce_air_mission_efficiency #0.1 -> The Modern War in the Skies
+	air_nav_efficiency = LAS_airforce_air_nav_efficiency #0.1 -> Expand the Morskaya Aviatsiya
+}
+
+LAS_war_economy_system = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_air_research
+	#INITIAL
+	air_accidents_factor = LAS_airforce_air_accidents_factor #0.75
+	air_ace_generation_chance_factor = LAS_airforce_air_ace_generation_chance_factor #-0.5
+	air_night_penalty = LAS_airforce_air_night_penalty #0.3
+	air_weather_penalty = LAS_airforce_air_weather_penalty #0.3
+	air_wing_xp_loss_when_killed_factor = LAS_airforce_air_wing_xp_loss_when_killed_factor #0.3
+	air_mission_xp_gain_factor = LAS_airforce_air_mission_xp_gain_factor #0.1
+	air_training_xp_gain_factor = LAS_airforce_air_training_xp_gain_factor #-0.1
+	#FUTURE
+	aircraft_manufacturer_cost_factor = LAS_airforce_aircraft_manufacturer_cost_factor #-0.25 -> Expand the Aircraft Industry
+	air_range_factor = LAS_airforce_air_range_factor #0.05 -> Modernize Aircraft Factories
+	air_fuel_consumption_factor = LAS_airforce_air_fuel_consumption_factor #-0.05 -> Modernize Aircraft Factories / +0.1 Intensify Pilot Program
+	air_agility_factor = LAS_airforce_air_agility_factor #0.05 -> Modernize Aircraft Factories
+	air_strategic_bomber_night_penalty = LAS_airforce_air_strategic_bomber_night_penalty #-0.1 -> Raskova's Aviation Group
+	air_cas_present_factor = LAS_airforce_air_cas_present_factor #0.1 -> Ground Support
+	strategic_bomb_visibility = LAS_airforce_strategic_bomb_visibility #-0.1 -> Long Range Aircraft
+	air_mission_efficiency = LAS_airforce_air_mission_efficiency #0.1 -> The Modern War in the Skies
+	air_nav_efficiency = LAS_airforce_air_nav_efficiency #0.1 -> Expand the Morskaya Aviatsiya
+}
+
+LAS_human = {
+	enable = { always = yes }
+	icon = GFX_idea_LAS_human
+	#INITIAL
+	drift_defence_factor = LAS_drift_defence_factor #0.05
+	#FUTURE
+	defensive_war_stability_factor = LAS_defensive_war_stability_factor #-0.25 -> Socialism in One Country
+	political_power_factor = LAS_political_power_factor #0.05 -> The Stalin Constitution
+	consumer_goods_factor = LAS_good_consumer_goods_factor #0.05 -> Collectivization Process
+	production_speed_buildings_factor = LAS_production_speed_buildings_factor #0.05 -> Collectivization Process
+	global_building_slots_factor = LAS_global_building_slots_factor #0.1 -> Collectivization Process
+	max_surrender_limit_offset = LAS_max_surrender_limit_offset #0.05 -> The Workers Dictatorship
+	max_command_power = LAS_max_command_power # 20 -> Organization, Centralization, Discipline
+	mobilization_speed = LAS_mobilization_speed # 0.1 -> Organization, Centralization, Discipline
+	operative_slot = LAS_operative_slot # 1 -> Behead the Snake
+	political_advisor_cost_factor = LAS_political_advisor_cost_factor #-0.15 -> Freedom of Debate, Unity of Action
+	opinion_gain_monthly_same_ideology_factor = LAS_opinion_gain_monthly_same_ideology_factor #0.25 -> The Construction of Communism
+}
+
+LAS_army_headquarter = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_army_art_asian_2d
+	#INITIALmobilization_laws_cost_factor = LAS_army_mobilization_laws_cost_factor #-0.1
+	army_org_factor = LAS_army_army_org_factor #-0.15 Meant to represent army disgruntledness
+	experience_gain_army_factor = LAS_army_experience_gain_army_factor #-0.1
+	experience_loss_factor = LAS_army_experience_loss_factor #0.25
+	#FUTURE
+	mobilization_speed = LAS_army_mobilization_speed #0.05 -> Strengthen the Mobilization Plan
+	conscription_factor = LAS_army_conscription_factor #0.03 -> Strengthen the Mobilization Plan
+	modifier_army_sub_unit_cavalry_speed_factor = LAS_army_modifier_army_sub_unit_cavalry_speed_factor # 0.05 -> Restore Cossack Units
+	cavalry_attack_factor = LAS_army_cavalry_attack_factor #0.05 -> Restore Cossack Units
+	training_time_factor = LAS_army_training_time_factor #-0.1 -> Cohesion First
+	heat_attrition_factor = LAS_army_heat_attrition_factor #-0.1 -> An Adaptable Army
+	winter_attrition_factor = LAS_army_winter_attrition_factor #-0.1 -> An Adaptable Army
+	acclimatization_cold_climate_gain_factor = LAS_army_acclimatization_cold_climate_gain_factor #0.15 -> An Adaptable Army
+	acclimatization_hot_climate_gain_factor = LAS_army_acclimatization_hot_climate_gain_factor #0.15 -> An Adaptable Army
+	terrain_penalty_reduction = LAS_army_terrain_penalty_reduction #0.05 -> An Adaptable Army
+	unit_infantry_design_cost_factor = LAS_army_unit_infantry_design_cost_factor #-0.1
+	unit_artillery_brigade_design_cost_factor = LAS_army_unit_artillery_brigade_design_cost_factor #-0.1
+	army_org_regain = LAS_army_army_org_regain #0.1 -> Barrier Troops
+	special_forces_cap = LAS_army_special_forces_cap # 0.1 -> The Glory of the Red Army
+	land_doctrine_cost_factor = LAS_army_land_doctrine_cost_factor # -0.1 -> The Glory of the Red Army
+	cas_damage_reduction = LAS_army_cas_damage_reduction #0.05 -> Experts in Camouflage
+	max_dig_in = LAS_army_max_dig_in #5 -> Experts in Camouflage
+	dig_in_speed_factor = LAS_army_dig_in_speed_factor #0.05 -> Experts in Camouflage
+	operative_slot  = LAS_army_operative_slot  #1 -> Organization of the Partisans
+	max_command_power_mult = LAS_army_max_command_power_mult #0.1 -> Depoliticize the Military
+}
+
+LAS_navy_headquarter = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_navy_bonus
+	#INITIAL
+	air_accidents_factor = LAS_airforce_air_accidents_factor #0.75
+	air_ace_generation_chance_factor = LAS_airforce_air_ace_generation_chance_factor #-0.5
+	air_night_penalty = LAS_airforce_air_night_penalty #0.3
+	air_weather_penalty = LAS_airforce_air_weather_penalty #0.3
+	air_wing_xp_loss_when_killed_factor = LAS_airforce_air_wing_xp_loss_when_killed_factor #0.3
+	air_mission_xp_gain_factor = LAS_airforce_air_mission_xp_gain_factor #0.1
+	air_training_xp_gain_factor = LAS_airforce_air_training_xp_gain_factor #-0.1
+
+	#FUTURE
+	aircraft_manufacturer_cost_factor = LAS_airforce_aircraft_manufacturer_cost_factor #-0.25 -> Expand the Aircraft Industry
+	air_range_factor = LAS_airforce_air_range_factor #0.05 -> Modernize Aircraft Factories
+	air_fuel_consumption_factor = LAS_airforce_air_fuel_consumption_factor #-0.05 -> Modernize Aircraft Factories / +0.1 Intensify Pilot Program
+	air_agility_factor = LAS_airforce_air_agility_factor #0.05 -> Modernize Aircraft Factories
+	air_strategic_bomber_night_penalty = LAS_airforce_air_strategic_bomber_night_penalty #-0.1 -> Raskova's Aviation Group
+	air_cas_present_factor = LAS_airforce_air_cas_present_factor #0.1 -> Ground Support
+	strategic_bomb_visibility = LAS_airforce_strategic_bomb_visibility #-0.1 -> Long Range Aircraft
+	air_mission_efficiency = LAS_airforce_air_mission_efficiency #0.1 -> The Modern War in the Skies
+	air_nav_efficiency = LAS_airforce_air_nav_efficiency #0.1 -> Expand the Morskaya Aviatsiya
+}
+
+LAS_air_force_headquarter = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_air_research
+	#INITIAL
+	air_accidents_factor = LAS_airforce_air_accidents_factor #0.75
+	air_ace_generation_chance_factor = LAS_airforce_air_ace_generation_chance_factor #-0.5
+	air_night_penalty = LAS_airforce_air_night_penalty #0.3
+	air_weather_penalty = LAS_airforce_air_weather_penalty #0.3
+	air_wing_xp_loss_when_killed_factor = LAS_airforce_air_wing_xp_loss_when_killed_factor #0.3
+	air_mission_xp_gain_factor = LAS_airforce_air_mission_xp_gain_factor #0.1
+	air_training_xp_gain_factor = LAS_airforce_air_training_xp_gain_factor #-0.1
+	#FUTURE
+	aircraft_manufacturer_cost_factor = LAS_airforce_aircraft_manufacturer_cost_factor #-0.25 -> Expand the Aircraft Industry
+	air_range_factor = LAS_airforce_air_range_factor #0.05 -> Modernize Aircraft Factories
+	air_fuel_consumption_factor = LAS_airforce_air_fuel_consumption_factor #-0.05 -> Modernize Aircraft Factories / +0.1 Intensify Pilot Program
+	air_agility_factor = LAS_airforce_air_agility_factor #0.05 -> Modernize Aircraft Factories
+	air_strategic_bomber_night_penalty = LAS_airforce_air_strategic_bomber_night_penalty #-0.1 -> Raskova's Aviation Group
+	air_cas_present_factor = LAS_airforce_air_cas_present_factor #0.1 -> Ground Support
+	strategic_bomb_visibility = LAS_airforce_strategic_bomb_visibility #-0.1 -> Long Range Aircraft
+	air_mission_efficiency = LAS_airforce_air_mission_efficiency #0.1 -> The Modern War in the Skies
+	air_nav_efficiency = LAS_airforce_air_nav_efficiency #0.1 -> Expand the Morskaya Aviatsiya
+}
+
+LAS_coexistence_with_AGS = {
+	enable = { always = yes }
+	icon = GFX_idea_LAS_AGS
+	#INITIAL
+	air_accidents_factor = LAS_airforce_air_accidents_factor #0.75
+	air_ace_generation_chance_factor = LAS_airforce_air_ace_generation_chance_factor #-0.5
+	air_night_penalty = LAS_airforce_air_night_penalty #0.3
+	air_weather_penalty = LAS_airforce_air_weather_penalty #0.3
+	air_wing_xp_loss_when_killed_factor = LAS_airforce_air_wing_xp_loss_when_killed_factor #0.3
+	air_mission_xp_gain_factor = LAS_airforce_air_mission_xp_gain_factor #0.1
+	air_training_xp_gain_factor = LAS_airforce_air_training_xp_gain_factor #-0.1
+	#FUTURE
+	aircraft_manufacturer_cost_factor = LAS_airforce_aircraft_manufacturer_cost_factor #-0.25 -> Expand the Aircraft Industry
+	air_range_factor = LAS_airforce_air_range_factor #0.05 -> Modernize Aircraft Factories
+	air_fuel_consumption_factor = LAS_airforce_air_fuel_consumption_factor #-0.05 -> Modernize Aircraft Factories / +0.1 Intensify Pilot Program
+	air_agility_factor = LAS_airforce_air_agility_factor #0.05 -> Modernize Aircraft Factories
+	air_strategic_bomber_night_penalty = LAS_airforce_air_strategic_bomber_night_penalty #-0.1 -> Raskova's Aviation Group
+	air_cas_present_factor = LAS_airforce_air_cas_present_factor #0.1 -> Ground Support
+	strategic_bomb_visibility = LAS_airforce_strategic_bomb_visibility #-0.1 -> Long Range Aircraft
+	air_mission_efficiency = LAS_airforce_air_mission_efficiency #0.1 -> The Modern War in the Skies
+	air_nav_efficiency = LAS_airforce_air_nav_efficiency #0.1 -> Expand the Morskaya Aviatsiya
+}

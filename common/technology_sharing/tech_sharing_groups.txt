@@ -1,0 +1,81 @@
+technology_sharing_group = {
+	id = bandainamco_research
+	name = bandainamco_research_name
+	desc = bandainamco_research_desc
+	picture = GFX_commonwealth_research
+
+	research_sharing_per_country_bonus = 0.2
+	
+    available = {
+        is_in_faction_with = IMA
+    }
+}
+
+technology_sharing_group = {
+	id = lovelive_research
+	name = lovelive_research_name
+	desc = lovelive_research_desc
+	picture = GFX_technology_sharing_default
+
+	research_sharing_per_country_bonus = 0.05
+	
+    available = {
+        is_in_faction_with = LLS
+    }
+}
+
+technology_sharing_group = {
+	id = touhou_comin_research
+	name = touhou_comin_research_name
+	desc = touhou_comin_research_desc
+	picture = GFX_technology_sharing_default
+
+	research_sharing_per_country_bonus = 0.15
+	
+    available = {
+        is_in_faction_with = TOH
+    }
+}
+
+technology_sharing_group = {
+	id = continuous_tech_share
+	name = continuous_tech_share_group_name
+	desc = continuous_tech_share_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.05
+	is_faction_sharing = yes
+
+    available = {
+        is_in_faction = yes
+    }
+}	
+
+technology_sharing_group = {
+	id = IMA_tizard_mission
+	name = IMA_tizard_mission_name
+	desc = IMA_tizard_mission_desc
+	picture = GFX_technology_sharing_default
+
+	research_sharing_per_country_bonus = 0.1
+	categories = {
+		electronics
+		radar_tech
+		air_equipment
+	}
+	
+    available = {
+		country_exists = IMA
+        IMA = { has_completed_focus = IMA_20012 }
+		OR = {
+			OR = {
+				country_exists = ICG
+				ICG = { is_in_faction_with = IMA }
+			}
+			OR = {
+				IML = { is_in_faction_with = IMA }
+				country_exists = IML
+			}
+		}
+    }
+}

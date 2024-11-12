@@ -1,0 +1,104 @@
+#수도
+capital = 543
+
+#부대
+set_oob = "AIC_ar"
+add_command_power = 5
+set_fuel_ratio = 0.2
+
+#시작 기술
+set_technology = {
+	infantry_weapons = 1
+	tech_trucks = 1
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 10
+
+#국민정신
+add_ideas = agrarian_society
+
+#외교
+
+#정치상황
+set_stability = 0.4
+set_war_support = 0.1
+
+set_politics = {
+	ruling_party = authoritariandemocracy
+	last_election = "1935.6.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	conservatism = 1
+	liberalism_mod = 1
+	progressivism = 0
+	socialdemocracy = 1
+	socialism = 0
+	communism = 0
+	authoritariancommunism = 3
+	anarchosyndicalism = 0
+	fascism = 2
+	militarytotalism = 1
+	authoritariandemocracy = 90
+	autocracy = 1
+}
+
+#의회
+
+#캐릭터
+recruit_character = AIC_aido_seiya
+recruit_character = AIC_minato_kanata
+recruit_character = AIC_mitsurugi_akira
+recruit_character = AIC_kururugi_satsuki
+recruit_character = AIC_kururugi_mutsuki
+recruit_character = AIC_noa
+recruit_character = AIC_leon
+recruit_character = AIC_li_chaoyang
+recruit_character = AIC_rabi
+recruit_character = AIC_lucas
+recruit_character = AIC_kusakabe_torahiko
+recruit_character = AIC_momoi_kyosuke
+recruit_character = AIC_tobikura_akio
+recruit_character = AIC_amabe_shiki
+recruit_character = AIC_orihara_hikaru
+recruit_character = AIC_wakaouji_raku
+recruit_character = AIC_hanabusa_kokoro
+recruit_character = AIC_kagurazaka_runa
+recruit_character = AIC_oikawa_momosuke
+recruit_character = AIC_todoroki_issei
+recruit_character = AIC_akabane_futami
+recruit_character = AIC_sanzenin_takamichi
+recruit_character = AIC_eva_armstrong
+recruit_character = AIC_yamanobe_mio
+recruit_character = AIC_jumonji_ban
+recruit_character = AIC_rindo_tsubaki
+recruit_character = AIC_honoki_toya
+recruit_character = AIC_madarao_tatsumi
+recruit_character = AIC_kakitsubata_aoi
+recruit_character = AIC_yakaku_kuro
+recruit_character = AIC_baber
+recruit_character = AIC_uruha_saku
+recruit_character = AIC_kizaki_rintaro
+recruit_character = AIC_kisaragi_mashiro
+recruit_character = AIC_hayami_go
+recruit_character = AIC_utakata_airu
+recruit_character = AIC_takara_onimaru
+recruit_character = AIC_arayashiki_junta
+recruit_character = AIC_christopher
+recruit_character = AIC_munakata_atsushi
+recruit_character = AIC_uj
+recruit_character = AIC_kumakocho
+recruit_character = AIC_producer
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

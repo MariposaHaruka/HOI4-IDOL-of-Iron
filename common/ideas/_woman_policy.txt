@@ -1,0 +1,175 @@
+ideas = {
+	is_woman_policy = {
+		law = yes
+		use_list_view = yes
+
+		patriarchal_society = {	
+			available = {
+				is_communism = no
+			}
+			level = 1
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.20
+				monthly_population = 0.1
+				stability_factor = 0.05
+				industrial_capacity_factory = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.10
+			}
+			
+			ai_will_do = {
+				base = 10
+				modifier = {
+					OR = {
+						is_fascism = yes
+						has_government = authoritariandemocracy
+					}
+					add = 90
+				}
+				modifier = {
+					has_government = autocracy
+					add = 10
+				}
+				modifier = {
+					factor = 3
+				}
+			}
+		}
+	
+		no_legal_protections = {
+			available = {
+				is_communism = no
+			}
+			level = 2
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.10
+				monthly_population = 0.2
+				conscription_factor = -0.05
+				industrial_capacity_factory = -0.05
+				production_factory_max_efficiency_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.05
+			}
+			
+			ai_will_do = {
+				base = 20
+				modifier = {
+					is_neutrality = yes
+					add = 30
+				}
+				modifier = {
+					is_fascism = yes
+					add = 50
+				}
+				modifier = {
+					factor = 3
+				}
+			}
+		}
+	
+		limited_womens_rights = {
+			available = {
+				is_communism = no
+			}
+			level = 3
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.05
+				monthly_population = 0.1
+				stability_factor = -0.05
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+
+			ai_will_do = {
+				base = 20
+				modifier = {
+					is_democratic = yes
+					add = 15
+				}
+				modifier = {
+					is_neutrality = yes
+					factor = 40
+				}
+				modifier = {
+					is_fascism = yes
+					add = 10
+				}
+				modifier = {
+					factor = 3
+				}
+			}
+		}
+	
+		full_equality = {
+			available = {
+				is_fascism = no
+				is_neutrality = no
+			}
+			level = 4
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.05
+				monthly_population = -0.15
+				conscription_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+
+			ai_will_do = {
+				base = 20
+				modifier = {
+					is_democratic = yes
+					add = 40
+				}
+				modifier = {
+					is_communism = yes
+					add = 30
+				}
+				modifier = {
+					factor = 3
+				}
+			}
+		}
+	
+		affirmative_action_female = {
+			available = {
+				has_government = anarchosyndicalism
+			}
+			visible = {
+				has_government = anarchosyndicalism
+			}
+			level = 5
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.3
+				monthly_population = -0.3
+				conscription_factor = 0.05
+				industrial_capacity_factory = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+			}
+	
+			ai_will_do = {
+				base = 10
+				modifier = {
+					has_government = anarchosyndicalism
+					add = 60
+				}
+				modifier = {
+					has_war = yes
+					factor = 0
+				}
+				modifier = {
+					factor = 3
+				}
+			}
+		}
+	}
+}

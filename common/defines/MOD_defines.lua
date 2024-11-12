@@ -1,0 +1,19 @@
+NDefines.NBuildings.MAX_SHARED_SLOTS = 50
+NDefines.NBuildings.MAX_BUILDING_LEVELS = 56
+NDefines.NBuildings.SUPPLY_ROUTE_RESOURCE_BONUS = 0.4
+NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.4
+NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 15
+NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 30
+NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 45
+NDefines.NTechnology.MAX_TECH_SHARING_BONUS = 0.8
+NDefines.NDiplomacy.IDEOLOGY_JOIN_FACTION_MIN_LEVEL = 0
+NDefines.NCountry.BASE_MAX_COMMAND_POWER = 500
+NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 1000
+NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 1000
+NDefines.NMilitary.MAX_AIR_EXPERIENCE = 1000
+NDefines.NMilitary.MAX_DIVISION_SUPPORT_WIDTH = 2
+
+NDefines.NDiplomacy.PEACE_SCORE_SCALE_FACTOR = 2.15							-- Vanilla is 1.35
+NDefines.NDiplomacy.PEACE_SCORE_DISTRIBUTION = { 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2 } -- Vanilla is 0.2 in the first five turns
+NDefines.NDiplomacy.PEACE_CONTEST_REFUND_FACTOR = { 1.0, 0.9, 0.7, 0.5 } -- Vanilla is 1.0, 0.92, 0.84, 0.76
+NDefines.NAI.PEACE_AI_EVALUATE_OTHER_ALWAYS = true;

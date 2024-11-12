@@ -1,0 +1,31 @@
+lovelive_KTC_infiltration = {
+	allowed = { is_lovelive = yes }
+	visible = {
+		AND = {
+			is_lovelive = yes
+			is_communism = no
+		}
+		country_exists = KTC
+		KTC = { has_country_flag = KTC_infiltration_to_enemy }
+	}
+}
+
+lovelive_LAS_infiltration = {
+	allowed = { is_lovelive = yes }
+	visible = {
+		
+		country_exists = LAS
+		LAS = { has_country_flag = LAS_infiltration_to_enemy }
+	}
+}
+
+AZU_KTC_infiltration = {
+	allowed = { original_tag = AZU }
+
+	visible = {
+		original_tag = AZU
+		NOT = { is_communism = no }
+		country_exists = KTC
+		LAS = { has_country_flag = KTC_infiltration_to_enemy }
+	}
+}

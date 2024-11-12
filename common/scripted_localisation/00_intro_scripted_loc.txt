@@ -1,0 +1,652 @@
+defined_text = { #Any commented out GFX means the intro screen is ready but is waiting for GFX additions
+	name = GetCountryIntroBackground
+	text = { trigger = { original_tag = IMA }  localization_key = "GFX_IMA_intro" }
+	text = { trigger = { original_tag = ICG }  localization_key = "GFX_ICG_intro" }
+	text = { trigger = { original_tag = IML }  localization_key = "GFX_IML_intro" }
+	text = { trigger = { original_tag = ISC }  localization_key = "GFX_ISC_intro" }
+	text = { trigger = { original_tag = ISM }  localization_key = "GFX_ISM_intro" }
+	text = { trigger = { original_tag = IDS }  localization_key = "GFX_IDS_intro" }
+	text = { trigger = { original_tag = IGM }  localization_key = "GFX_IGM_intro" }
+	text = { trigger = { original_tag = TOH }  localization_key = "GFX_TOH_intro" }
+	text = { trigger = { original_tag = PRS }  localization_key = "GFX_PRS_intro" }
+	text = { trigger = { original_tag = BDG }  localization_key = "GFX_BDG_intro" }
+	text = { trigger = { original_tag = ENS }  localization_key = "GFX_ENS_intro" }
+	text = { trigger = { original_tag = LLS }  localization_key = "GFX_LLS_intro" }
+	text = { trigger = { original_tag = LSS }  localization_key = "GFX_LSS_intro" }
+	text = { trigger = { original_tag = LNH }  localization_key = "GFX_LNH_intro" }
+	text = { trigger = { original_tag = LST }  localization_key = "GFX_LST_intro" }
+	text = { trigger = { original_tag = LHH }  localization_key = "GFX_LHH_intro" }
+	text = { trigger = { original_tag = UMA }  localization_key = "GFX_UMA_intro" }
+	text = { trigger = { original_tag = PRK }  localization_key = "GFX_PRK_intro" }
+	text = { trigger = { original_tag = IDP }  localization_key = "GFX_IDP_intro" }
+	text = { trigger = { original_tag = HBR }  localization_key = "GFX_HBR_intro" }
+	text = { trigger = { original_tag = STR }  localization_key = "GFX_STR_intro" }
+	text = { trigger = { original_tag = DFD }  localization_key = "GFX_DFD_intro" }
+	text = { trigger = { original_tag = AGN }  localization_key = "GFX_AGN_intro" }
+	text = { trigger = { original_tag = BLA }  localization_key = "GFX_BLA_intro" }
+	text = { trigger = { original_tag = TKI }  localization_key = "GFX_TKI_intro" }
+	text = { trigger = { original_tag = WDS }  localization_key = "GFX_WDS_intro" }
+	text = { trigger = { original_tag = TSS }  localization_key = "GFX_TSS_intro" }
+	text = { trigger = { original_tag = AIN }  localization_key = "GFX_AIN_intro" }
+	text = { trigger = { original_tag = SBR }  localization_key = "GFX_SBR_intro" }
+	text = { trigger = { original_tag = DOB }  localization_key = "GFX_DOB_intro" }
+	text = { trigger = { original_tag = GFR }  localization_key = "GFX_GFR_intro" }
+	text = { trigger = { original_tag = KJI }  localization_key = "GFX_KJI_intro" }
+	text = { trigger = { original_tag = GUP }  localization_key = "GFX_GUP_intro" }
+	text = { trigger = { original_tag = LAS }  localization_key = "GFX_LAS_intro" }
+	text = { trigger = { original_tag = ONK }  localization_key = "GFX_ONK_intro" }
+	text = { trigger = { original_tag = FGO }  localization_key = "GFX_FGO_intro" }
+	text = { trigger = { original_tag = AZU }  localization_key = "GFX_AZU_intro" }
+	text = { trigger = { original_tag = ZOS }  localization_key = "GFX_ZOS_intro" }
+	text = { trigger = { original_tag = BOR }  localization_key = "GFX_BOR_intro" }
+	text = { trigger = { original_tag = KON }  localization_key = "GFX_KON_intro" }
+	text = { trigger = { original_tag = SOE }  localization_key = "GFX_SOE_intro" }
+	text = { trigger = { original_tag = TAK }  localization_key = "GFX_TAK_intro" }
+	text = { trigger = { original_tag = AIK }  localization_key = "GFX_AIK_intro" }
+	text = { trigger = { original_tag = PRP }  localization_key = "GFX_PRP_intro" }
+	text = { trigger = { original_tag = SHP }  localization_key = "GFX_SHP_intro" }
+	text = { trigger = { original_tag = UNP }  localization_key = "GFX_UNP_intro" }
+	text = { trigger = { original_tag = MMM }  localization_key = "GFX_MMM_intro" }
+	text = { trigger = { original_tag = KTC }  localization_key = "GFX_KTC_intro" }
+	text = { trigger = { original_tag = MCR }  localization_key = "GFX_MCR_intro" }
+	text = { trigger = { original_tag = MLN }  localization_key = "GFX_MLN_intro" }
+	text = { trigger = { original_tag = WUG }  localization_key = "GFX_WUG_intro" }
+	text = { trigger = { original_tag = LCD }  localization_key = "GFX_LCD_intro" }
+	text = { trigger = { original_tag = BPR }  localization_key = "GFX_BPR_intro" }
+	text = { trigger = { original_tag = TSU }  localization_key = "GFX_TSU_intro" }
+	text = { trigger = { original_tag = SZS }  localization_key = "GFX_SZS_intro" }
+	text = { trigger = { original_tag = HLL }  localization_key = "GFX_HLL_intro" }
+	text = { trigger = { original_tag = POP }  localization_key = "GFX_POP_intro" }
+	text = { trigger = { original_tag = CUE }  localization_key = "GFX_CUE_intro" }
+	text = { trigger = { original_tag = UNU }  localization_key = "GFX_UNU_intro" }
+	text = { trigger = { original_tag = LVD }  localization_key = "GFX_LVD_intro" }
+	text = { trigger = { original_tag = IDI }  localization_key = "GFX_IDI_intro" }
+	text = { trigger = { original_tag = AIC }  localization_key = "GFX_AIC_intro" }
+	text = { trigger = { original_tag = IDC }  localization_key = "GFX_IDC_intro" }
+	text = { trigger = { original_tag = GEC }  localization_key = "GFX_GEC_intro" }
+	text = { trigger = { original_tag = DIF }  localization_key = "GFX_DIF_intro" }
+	text = { trigger = { original_tag = LPR }  localization_key = "GFX_LPR_intro" }
+	text = { trigger = { original_tag = YMC }  localization_key = "GFX_YMC_intro" }
+	text = { trigger = { original_tag = NPT }  localization_key = "GFX_NPT_intro" }
+	text = { trigger = { original_tag = VCD }  localization_key = "GFX_VCD_intro" }
+	text = { trigger = { original_tag = TAB }  localization_key = "GFX_TAB_intro" }
+	text = { trigger = { original_tag = DRF }  localization_key = "GFX_DRF_intro" }
+	text = { trigger = { original_tag = AOP }  localization_key = "GFX_AOP_intro" }
+	text = { trigger = { original_tag = GBC }  localization_key = "GFX_GBC_intro" }
+	text = { trigger = { original_tag = NNN }  localization_key = "GFX_NNN_intro" }
+	text = { trigger = { original_tag = FBD }  localization_key = "GFX_FBD_intro" }
+	text = { trigger = { original_tag = ONS }  localization_key = "GFX_ONS_intro" }
+	text = { trigger = { original_tag = EXT }  localization_key = "GFX_EXT_intro" }
+	text = { trigger = { original_tag = PTD }  localization_key = "GFX_PTD_intro" }
+	text = { trigger = { original_tag = RST }  localization_key = "GFX_RST_intro" }
+	text = { trigger = { original_tag = SEL }  localization_key = "GFX_SEL_intro" }
+	text = { trigger = { original_tag = PTK }  localization_key = "GFX_PTK_intro" }
+	text = { trigger = { original_tag = LOC }  localization_key = "GFX_LOC_intro" }
+	text = { trigger = { original_tag = LOS }  localization_key = "GFX_LOS_intro" }
+	text = { trigger = { original_tag = HDA }  localization_key = "GFX_HDA_intro" }
+	text = { trigger = { original_tag = STI }  localization_key = "GFX_STI_intro" }
+	text = { trigger = { original_tag = HND }  localization_key = "GFX_HND_intro" }
+	text = { trigger = { original_tag = MKR }  localization_key = "GFX_MKR_intro" }
+	text = { trigger = { original_tag = DEV }  localization_key = "GFX_DEV_intro" }
+	text = { trigger = { original_tag = URA }  localization_key = "GFX_URA_intro" }
+	text = { trigger = { original_tag = VAM }  localization_key = "GFX_VAM_intro" }
+	text = { trigger = { original_tag = REA }  localization_key = "GFX_REA_intro" }
+	text = { localization_key = "GFX_default_intro" }
+}
+
+defined_text = {
+	name = GetCountryIntroHeader
+	text = { trigger = { original_tag = IMA check_variable = { curr_page = 2 } }  localization_key = "IMA_country_intro_header_2" }
+	text = { trigger = { original_tag = IMA check_variable = { curr_page = 1 } }  localization_key = "IMA_country_intro_header_1" }
+	text = { trigger = { original_tag = IMA }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = ICG check_variable = { curr_page = 2 } }  localization_key = "ICG_country_intro_header_2" }
+	text = { trigger = { original_tag = ICG check_variable = { curr_page = 1 } }  localization_key = "ICG_country_intro_header_1" }
+	text = { trigger = { original_tag = ICG }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = IML check_variable = { curr_page = 2 } }  localization_key = "IML_country_intro_header_2" }
+	text = { trigger = { original_tag = IML check_variable = { curr_page = 1 } }  localization_key = "IML_country_intro_header_1" }
+	text = { trigger = { original_tag = IML }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = ISC check_variable = { curr_page = 2 } }  localization_key = "ISC_country_intro_header_2" }
+	text = { trigger = { original_tag = ISC check_variable = { curr_page = 1 } }  localization_key = "ISC_country_intro_header_1" }
+	text = { trigger = { original_tag = ISC }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = ISM check_variable = { curr_page = 2 } }  localization_key = "ISM_country_intro_header_2" }
+	text = { trigger = { original_tag = ISM check_variable = { curr_page = 1 } }  localization_key = "ISM_country_intro_header_1" }
+	text = { trigger = { original_tag = ISM }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = IDS check_variable = { curr_page = 2 } }  localization_key = "IDS_country_intro_header_2" }
+	text = { trigger = { original_tag = IDS check_variable = { curr_page = 1 } }  localization_key = "IDS_country_intro_header_1" }
+	text = { trigger = { original_tag = IDS }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = IGM check_variable = { curr_page = 2 } }  localization_key = "IGM_country_intro_header_2" }
+	text = { trigger = { original_tag = IGM check_variable = { curr_page = 1 } }  localization_key = "IGM_country_intro_header_1" }
+	text = { trigger = { original_tag = IGM }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = TOH check_variable = { curr_page = 2 } }  localization_key = "TOH_country_intro_header_2" }
+	text = { trigger = { original_tag = TOH check_variable = { curr_page = 1 } }  localization_key = "TOH_country_intro_header_1" }
+	text = { trigger = { original_tag = TOH }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = PRS check_variable = { curr_page = 2 } }  localization_key = "PRS_country_intro_header_2" }
+	text = { trigger = { original_tag = PRS check_variable = { curr_page = 1 } }  localization_key = "PRS_country_intro_header_1" }
+	text = { trigger = { original_tag = PRS }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = BDG check_variable = { curr_page = 2 } }  localization_key = "BDG_country_intro_header_2" }
+	text = { trigger = { original_tag = BDG check_variable = { curr_page = 1 } }  localization_key = "BDG_country_intro_header_1" }
+	text = { trigger = { original_tag = BDG }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = ENS check_variable = { curr_page = 2 } }  localization_key = "ENS_country_intro_header_2" }
+	text = { trigger = { original_tag = ENS check_variable = { curr_page = 1 } }  localization_key = "ENS_country_intro_header_1" }
+	text = { trigger = { original_tag = ENS }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = LLS check_variable = { curr_page = 2 } }  localization_key = "LLS_country_intro_header_2" }
+	text = { trigger = { original_tag = LLS check_variable = { curr_page = 1 } }  localization_key = "LLS_country_intro_header_1" }
+	text = { trigger = { original_tag = LLS }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = LSS check_variable = { curr_page = 2 } }  localization_key = "LSS_country_intro_header_2" }
+	text = { trigger = { original_tag = LSS check_variable = { curr_page = 1 } }  localization_key = "LSS_country_intro_header_1" }
+	text = { trigger = { original_tag = LSS }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = LNH check_variable = { curr_page = 2 } }  localization_key = "LNH_country_intro_header_2" }
+	text = { trigger = { original_tag = LNH check_variable = { curr_page = 1 } }  localization_key = "LNH_country_intro_header_1" }
+	text = { trigger = { original_tag = LNH }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = LST check_variable = { curr_page = 2 } }  localization_key = "LST_country_intro_header_2" }
+	text = { trigger = { original_tag = LST check_variable = { curr_page = 1 } }  localization_key = "LST_country_intro_header_1" }
+	text = { trigger = { original_tag = LST }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = LHH check_variable = { curr_page = 2 } }  localization_key = "LHH_country_intro_header_2" }
+	text = { trigger = { original_tag = LHH check_variable = { curr_page = 1 } }  localization_key = "LHH_country_intro_header_1" }
+	text = { trigger = { original_tag = LHH }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = UMA check_variable = { curr_page = 2 } }  localization_key = "UMA_country_intro_header_2" }
+	text = { trigger = { original_tag = UMA check_variable = { curr_page = 1 } }  localization_key = "UMA_country_intro_header_1" }
+	text = { trigger = { original_tag = UMA }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = PRK check_variable = { curr_page = 2 } }  localization_key = "PRK_country_intro_header_2" }
+	text = { trigger = { original_tag = PRK check_variable = { curr_page = 1 } }  localization_key = "PRK_country_intro_header_1" }
+	text = { trigger = { original_tag = PRK }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = IDP check_variable = { curr_page = 2 } }  localization_key = "IDP_country_intro_header_2" }
+	text = { trigger = { original_tag = IDP check_variable = { curr_page = 1 } }  localization_key = "IDP_country_intro_header_1" }
+	text = { trigger = { original_tag = IDP }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = HBR check_variable = { curr_page = 2 } }  localization_key = "HBR_country_intro_header_2" }
+	text = { trigger = { original_tag = HBR check_variable = { curr_page = 1 } }  localization_key = "HBR_country_intro_header_1" }
+	text = { trigger = { original_tag = HBR }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = STR check_variable = { curr_page = 2 } }  localization_key = "STR_country_intro_header_2" }
+	text = { trigger = { original_tag = STR check_variable = { curr_page = 1 } }  localization_key = "STR_country_intro_header_1" }
+	text = { trigger = { original_tag = STR }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = DFD check_variable = { curr_page = 2 } }  localization_key = "DFD_country_intro_header_2" }
+	text = { trigger = { original_tag = DFD check_variable = { curr_page = 1 } }  localization_key = "DFD_country_intro_header_1" }
+	text = { trigger = { original_tag = DFD }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = AGN check_variable = { curr_page = 2 } }  localization_key = "AGN_country_intro_header_2" }
+	text = { trigger = { original_tag = AGN check_variable = { curr_page = 1 } }  localization_key = "AGN_country_intro_header_1" }
+	text = { trigger = { original_tag = AGN }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = BLA check_variable = { curr_page = 2 } }  localization_key = "BLA_country_intro_header_2" }
+	text = { trigger = { original_tag = BLA check_variable = { curr_page = 1 } }  localization_key = "BLA_country_intro_header_1" }
+	text = { trigger = { original_tag = BLA }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = TKI check_variable = { curr_page = 2 } }  localization_key = "TKI_country_intro_header_2" }
+	text = { trigger = { original_tag = TKI check_variable = { curr_page = 1 } }  localization_key = "TKI_country_intro_header_1" }
+	text = { trigger = { original_tag = TKI }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = WDS check_variable = { curr_page = 2 } }  localization_key = "WDS_country_intro_header_2" }
+	text = { trigger = { original_tag = WDS check_variable = { curr_page = 1 } }  localization_key = "WDS_country_intro_header_1" }
+	text = { trigger = { original_tag = WDS }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = TSS check_variable = { curr_page = 2 } }  localization_key = "TSS_country_intro_header_2" }
+	text = { trigger = { original_tag = TSS check_variable = { curr_page = 1 } }  localization_key = "TSS_country_intro_header_1" }
+	text = { trigger = { original_tag = TSS }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = AIN check_variable = { curr_page = 2 } }  localization_key = "AIN_country_intro_header_2" }
+	text = { trigger = { original_tag = AIN check_variable = { curr_page = 1 } }  localization_key = "AIN_country_intro_header_1" }
+	text = { trigger = { original_tag = AIN }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = SBR check_variable = { curr_page = 2 } }  localization_key = "SBR_country_intro_header_2" }
+	text = { trigger = { original_tag = SBR check_variable = { curr_page = 1 } }  localization_key = "SBR_country_intro_header_1" }
+	text = { trigger = { original_tag = SBR }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = DOB check_variable = { curr_page = 2 } }  localization_key = "DOB_country_intro_header_2" }
+	text = { trigger = { original_tag = DOB check_variable = { curr_page = 1 } }  localization_key = "DOB_country_intro_header_1" }
+	text = { trigger = { original_tag = DOB }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = GFR check_variable = { curr_page = 2 } }  localization_key = "GFR_country_intro_header_2" }
+	text = { trigger = { original_tag = GFR check_variable = { curr_page = 1 } }  localization_key = "GFR_country_intro_header_1" }
+	text = { trigger = { original_tag = GFR }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = KJI check_variable = { curr_page = 2 } }  localization_key = "KJI_country_intro_header_2" }
+	text = { trigger = { original_tag = KJI check_variable = { curr_page = 1 } }  localization_key = "KJI_country_intro_header_1" }
+	text = { trigger = { original_tag = KJI }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = GUP check_variable = { curr_page = 2 } }  localization_key = "GUP_country_intro_header_2" }
+	text = { trigger = { original_tag = GUP check_variable = { curr_page = 1 } }  localization_key = "GUP_country_intro_header_1" }
+	text = { trigger = { original_tag = GUP }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = LAS check_variable = { curr_page = 2 } }  localization_key = "LAS_country_intro_header_2" }
+	text = { trigger = { original_tag = LAS check_variable = { curr_page = 1 } }  localization_key = "LAS_country_intro_header_1" }
+	text = { trigger = { original_tag = LAS }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = ONK check_variable = { curr_page = 2 } }  localization_key = "ONK_country_intro_header_2" }
+	text = { trigger = { original_tag = ONK check_variable = { curr_page = 1 } }  localization_key = "ONK_country_intro_header_1" }
+	text = { trigger = { original_tag = ONK }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = FGO check_variable = { curr_page = 2 } }  localization_key = "FGO_country_intro_header_2" }
+	text = { trigger = { original_tag = FGO check_variable = { curr_page = 1 } }  localization_key = "FGO_country_intro_header_1" }
+	text = { trigger = { original_tag = FGO }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = AZU check_variable = { curr_page = 2 } }  localization_key = "AZU_country_intro_header_2" }
+	text = { trigger = { original_tag = AZU check_variable = { curr_page = 1 } }  localization_key = "AZU_country_intro_header_1" }
+	text = { trigger = { original_tag = AZU }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = ZOS check_variable = { curr_page = 2 } }  localization_key = "ZOS_country_intro_header_2" }
+	text = { trigger = { original_tag = ZOS check_variable = { curr_page = 1 } }  localization_key = "ZOS_country_intro_header_1" }
+	text = { trigger = { original_tag = ZOS }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = BOR check_variable = { curr_page = 2 } }  localization_key = "BOR_country_intro_header_2" }
+	text = { trigger = { original_tag = BOR check_variable = { curr_page = 1 } }  localization_key = "BOR_country_intro_header_1" }
+	text = { trigger = { original_tag = BOR }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = KON check_variable = { curr_page = 2 } }  localization_key = "KON_country_intro_header_2" }
+	text = { trigger = { original_tag = KON check_variable = { curr_page = 1 } }  localization_key = "KON_country_intro_header_1" }
+	text = { trigger = { original_tag = KON }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = SOE check_variable = { curr_page = 2 } }  localization_key = "SOE_country_intro_header_2" }
+	text = { trigger = { original_tag = SOE check_variable = { curr_page = 1 } }  localization_key = "SOE_country_intro_header_1" }
+	text = { trigger = { original_tag = SOE }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = TAK check_variable = { curr_page = 2 } }  localization_key = "TAK_country_intro_header_2" }
+	text = { trigger = { original_tag = TAK check_variable = { curr_page = 1 } }  localization_key = "TAK_country_intro_header_1" }
+	text = { trigger = { original_tag = TAK }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = AIK check_variable = { curr_page = 2 } }  localization_key = "AIK_country_intro_header_2" }
+	text = { trigger = { original_tag = AIK check_variable = { curr_page = 1 } }  localization_key = "AIK_country_intro_header_1" }
+	text = { trigger = { original_tag = AIK }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = PRP check_variable = { curr_page = 2 } }  localization_key = "PRP_country_intro_header_2" }
+	text = { trigger = { original_tag = PRP check_variable = { curr_page = 1 } }  localization_key = "PRP_country_intro_header_1" }
+	text = { trigger = { original_tag = PRP }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = SHP check_variable = { curr_page = 2 } }  localization_key = "SHP_country_intro_header_2" }
+	text = { trigger = { original_tag = SHP check_variable = { curr_page = 1 } }  localization_key = "SHP_country_intro_header_1" }
+	text = { trigger = { original_tag = SHP }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = UNP check_variable = { curr_page = 2 } }  localization_key = "UNP_country_intro_header_2" }
+	text = { trigger = { original_tag = UNP check_variable = { curr_page = 1 } }  localization_key = "UNP_country_intro_header_1" }
+	text = { trigger = { original_tag = UNP }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = MMM check_variable = { curr_page = 2 } }  localization_key = "MMM_country_intro_header_2" }
+	text = { trigger = { original_tag = MMM check_variable = { curr_page = 1 } }  localization_key = "MMM_country_intro_header_1" }
+	text = { trigger = { original_tag = MMM }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = KTC check_variable = { curr_page = 2 } }  localization_key = "KTC_country_intro_header_2" }
+	text = { trigger = { original_tag = KTC check_variable = { curr_page = 1 } }  localization_key = "KTC_country_intro_header_1" }
+	text = { trigger = { original_tag = KTC }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = MCR check_variable = { curr_page = 2 } }  localization_key = "MCR_country_intro_header_2" }
+	text = { trigger = { original_tag = MCR check_variable = { curr_page = 1 } }  localization_key = "MCR_country_intro_header_1" }
+	text = { trigger = { original_tag = MCR }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = MLN check_variable = { curr_page = 2 } }  localization_key = "MLN_country_intro_header_2" }
+	text = { trigger = { original_tag = MLN check_variable = { curr_page = 1 } }  localization_key = "MLN_country_intro_header_1" }
+	text = { trigger = { original_tag = MLN }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = WUG check_variable = { curr_page = 2 } }  localization_key = "WUG_country_intro_header_2" }
+	text = { trigger = { original_tag = WUG check_variable = { curr_page = 1 } }  localization_key = "WUG_country_intro_header_1" }
+	text = { trigger = { original_tag = WUG }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = LCD check_variable = { curr_page = 2 } }  localization_key = "LCD_country_intro_header_2" }
+	text = { trigger = { original_tag = LCD check_variable = { curr_page = 1 } }  localization_key = "LCD_country_intro_header_1" }
+	text = { trigger = { original_tag = LCD }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = BPR check_variable = { curr_page = 2 } }  localization_key = "BPR_country_intro_header_2" }
+	text = { trigger = { original_tag = BPR check_variable = { curr_page = 1 } }  localization_key = "BPR_country_intro_header_1" }
+	text = { trigger = { original_tag = BPR }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = TSU check_variable = { curr_page = 2 } }  localization_key = "TSU_country_intro_header_2" }
+	text = { trigger = { original_tag = TSU check_variable = { curr_page = 1 } }  localization_key = "TSU_country_intro_header_1" }
+	text = { trigger = { original_tag = TSU }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = SZS check_variable = { curr_page = 2 } }  localization_key = "SZS_country_intro_header_2" }
+	text = { trigger = { original_tag = SZS check_variable = { curr_page = 1 } }  localization_key = "SZS_country_intro_header_1" }
+	text = { trigger = { original_tag = SZS }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = HLL check_variable = { curr_page = 2 } }  localization_key = "HLL_country_intro_header_2" }
+	text = { trigger = { original_tag = HLL check_variable = { curr_page = 1 } }  localization_key = "HLL_country_intro_header_1" }
+	text = { trigger = { original_tag = HLL }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = POP check_variable = { curr_page = 2 } }  localization_key = "POP_country_intro_header_2" }
+	text = { trigger = { original_tag = POP check_variable = { curr_page = 1 } }  localization_key = "POP_country_intro_header_1" }
+	text = { trigger = { original_tag = POP }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = CUE check_variable = { curr_page = 2 } }  localization_key = "CUE_country_intro_header_2" }
+	text = { trigger = { original_tag = CUE check_variable = { curr_page = 1 } }  localization_key = "CUE_country_intro_header_1" }
+	text = { trigger = { original_tag = CUE }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = UNU check_variable = { curr_page = 2 } }  localization_key = "UNU_country_intro_header_2" }
+	text = { trigger = { original_tag = UNU check_variable = { curr_page = 1 } }  localization_key = "UNU_country_intro_header_1" }
+	text = { trigger = { original_tag = UNU }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = LVD check_variable = { curr_page = 2 } }  localization_key = "LVD_country_intro_header_2" }
+	text = { trigger = { original_tag = LVD check_variable = { curr_page = 1 } }  localization_key = "LVD_country_intro_header_1" }
+	text = { trigger = { original_tag = LVD }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = IDI check_variable = { curr_page = 2 } }  localization_key = "IDI_country_intro_header_2" }
+	text = { trigger = { original_tag = IDI check_variable = { curr_page = 1 } }  localization_key = "IDI_country_intro_header_1" }
+	text = { trigger = { original_tag = IDI }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = AIC check_variable = { curr_page = 2 } }  localization_key = "AIC_country_intro_header_2" }
+	text = { trigger = { original_tag = AIC check_variable = { curr_page = 1 } }  localization_key = "AIC_country_intro_header_1" }
+	text = { trigger = { original_tag = AIC }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = IDC check_variable = { curr_page = 2 } }  localization_key = "IDC_country_intro_header_2" }
+	text = { trigger = { original_tag = IDC check_variable = { curr_page = 1 } }  localization_key = "IDC_country_intro_header_1" }
+	text = { trigger = { original_tag = IDC }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = GEC check_variable = { curr_page = 2 } }  localization_key = "GEC_country_intro_header_2" }
+	text = { trigger = { original_tag = GEC check_variable = { curr_page = 1 } }  localization_key = "GEC_country_intro_header_1" }
+	text = { trigger = { original_tag = GEC }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = DIF check_variable = { curr_page = 2 } }  localization_key = "DIF_country_intro_header_2" }
+	text = { trigger = { original_tag = DIF check_variable = { curr_page = 1 } }  localization_key = "DIF_country_intro_header_1" }
+	text = { trigger = { original_tag = DIF }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = LPR check_variable = { curr_page = 2 } }  localization_key = "LPR_country_intro_header_2" }
+	text = { trigger = { original_tag = LPR check_variable = { curr_page = 1 } }  localization_key = "LPR_country_intro_header_1" }
+	text = { trigger = { original_tag = LPR }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = YMC check_variable = { curr_page = 2 } }  localization_key = "YMC_country_intro_header_2" }
+	text = { trigger = { original_tag = YMC check_variable = { curr_page = 1 } }  localization_key = "YMC_country_intro_header_1" }
+	text = { trigger = { original_tag = YMC }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = NPT check_variable = { curr_page = 2 } }  localization_key = "NPT_country_intro_header_2" }
+	text = { trigger = { original_tag = NPT check_variable = { curr_page = 1 } }  localization_key = "NPT_country_intro_header_1" }
+	text = { trigger = { original_tag = NPT }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = VCD check_variable = { curr_page = 2 } }  localization_key = "VCD_country_intro_header_2" }
+	text = { trigger = { original_tag = VCD check_variable = { curr_page = 1 } }  localization_key = "VCD_country_intro_header_1" }
+	text = { trigger = { original_tag = VCD }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = TAB check_variable = { curr_page = 2 } }  localization_key = "TAB_country_intro_header_2" }
+	text = { trigger = { original_tag = TAB check_variable = { curr_page = 1 } }  localization_key = "TAB_country_intro_header_1" }
+	text = { trigger = { original_tag = TAB }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = DRF check_variable = { curr_page = 2 } }  localization_key = "DRF_country_intro_header_2" }
+	text = { trigger = { original_tag = DRF check_variable = { curr_page = 1 } }  localization_key = "DRF_country_intro_header_1" }
+	text = { trigger = { original_tag = DRF }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = AOP check_variable = { curr_page = 2 } }  localization_key = "AOP_country_intro_header_2" }
+	text = { trigger = { original_tag = AOP check_variable = { curr_page = 1 } }  localization_key = "AOP_country_intro_header_1" }
+	text = { trigger = { original_tag = AOP }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = GBC check_variable = { curr_page = 2 } }  localization_key = "GBC_country_intro_header_2" }
+	text = { trigger = { original_tag = GBC check_variable = { curr_page = 1 } }  localization_key = "GBC_country_intro_header_1" }
+	text = { trigger = { original_tag = GBC }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = NNN check_variable = { curr_page = 2 } }  localization_key = "NNN_country_intro_header_2" }
+	text = { trigger = { original_tag = NNN check_variable = { curr_page = 1 } }  localization_key = "NNN_country_intro_header_1" }
+	text = { trigger = { original_tag = NNN }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = FBD check_variable = { curr_page = 2 } }  localization_key = "FBD_country_intro_header_2" }
+	text = { trigger = { original_tag = FBD check_variable = { curr_page = 1 } }  localization_key = "FBD_country_intro_header_1" }
+	text = { trigger = { original_tag = FBD }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = ONS check_variable = { curr_page = 2 } }  localization_key = "ONS_country_intro_header_2" }
+	text = { trigger = { original_tag = ONS check_variable = { curr_page = 1 } }  localization_key = "ONS_country_intro_header_1" }
+	text = { trigger = { original_tag = ONS }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = EXT check_variable = { curr_page = 2 } }  localization_key = "EXT_country_intro_header_2" }
+	text = { trigger = { original_tag = EXT check_variable = { curr_page = 1 } }  localization_key = "EXT_country_intro_header_1" }
+	text = { trigger = { original_tag = EXT }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = PTD check_variable = { curr_page = 2 } }  localization_key = "PTD_country_intro_header_2" }
+	text = { trigger = { original_tag = PTD check_variable = { curr_page = 1 } }  localization_key = "PTD_country_intro_header_1" }
+	text = { trigger = { original_tag = PTD }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = RST check_variable = { curr_page = 2 } }  localization_key = "RST_country_intro_header_2" }
+	text = { trigger = { original_tag = RST check_variable = { curr_page = 1 } }  localization_key = "RST_country_intro_header_1" }
+	text = { trigger = { original_tag = RST }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = SEL check_variable = { curr_page = 2 } }  localization_key = "SEL_country_intro_header_2" }
+	text = { trigger = { original_tag = SEL check_variable = { curr_page = 1 } }  localization_key = "SEL_country_intro_header_1" }
+	text = { trigger = { original_tag = SEL }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = PTK check_variable = { curr_page = 2 } }  localization_key = "PTK_country_intro_header_2" }
+	text = { trigger = { original_tag = PTK check_variable = { curr_page = 1 } }  localization_key = "PTK_country_intro_header_1" }
+	text = { trigger = { original_tag = PTK }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = LOC check_variable = { curr_page = 2 } }  localization_key = "LOC_country_intro_header_2" }
+	text = { trigger = { original_tag = LOC check_variable = { curr_page = 1 } }  localization_key = "LOC_country_intro_header_1" }
+	text = { trigger = { original_tag = LOC }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = LOS check_variable = { curr_page = 2 } }  localization_key = "LOS_country_intro_header_2" }
+	text = { trigger = { original_tag = LOS check_variable = { curr_page = 1 } }  localization_key = "LOS_country_intro_header_1" }
+	text = { trigger = { original_tag = LOS }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = HDA check_variable = { curr_page = 2 } }  localization_key = "HDA_country_intro_header_2" }
+	text = { trigger = { original_tag = HDA check_variable = { curr_page = 1 } }  localization_key = "HDA_country_intro_header_1" }
+	text = { trigger = { original_tag = HDA }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = STI check_variable = { curr_page = 2 } }  localization_key = "STI_country_intro_header_2" }
+	text = { trigger = { original_tag = STI check_variable = { curr_page = 1 } }  localization_key = "STI_country_intro_header_1" }
+	text = { trigger = { original_tag = STI }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = HND check_variable = { curr_page = 2 } }  localization_key = "HND_country_intro_header_2" }
+	text = { trigger = { original_tag = HND check_variable = { curr_page = 1 } }  localization_key = "HND_country_intro_header_1" }
+	text = { trigger = { original_tag = HND }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = MKR check_variable = { curr_page = 2 } }  localization_key = "MKR_country_intro_header_2" }
+	text = { trigger = { original_tag = MKR check_variable = { curr_page = 1 } }  localization_key = "MKR_country_intro_header_1" }
+	text = { trigger = { original_tag = MKR }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = DEV check_variable = { curr_page = 2 } }  localization_key = "DEV_country_intro_header_2" }
+	text = { trigger = { original_tag = DEV check_variable = { curr_page = 1 } }  localization_key = "DEV_country_intro_header_1" }
+	text = { trigger = { original_tag = DEV }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = URA check_variable = { curr_page = 2 } }  localization_key = "URA_country_intro_header_2" }
+	text = { trigger = { original_tag = URA check_variable = { curr_page = 1 } }  localization_key = "URA_country_intro_header_1" }
+	text = { trigger = { original_tag = URA }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = VAM check_variable = { curr_page = 2 } }  localization_key = "VAM_country_intro_header_2" }
+	text = { trigger = { original_tag = VAM check_variable = { curr_page = 1 } }  localization_key = "VAM_country_intro_header_1" }
+	text = { trigger = { original_tag = VAM }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = REA check_variable = { curr_page = 2 } }  localization_key = "REA_country_intro_header_2" }
+	text = { trigger = { original_tag = REA check_variable = { curr_page = 1 } }  localization_key = "REA_country_intro_header_1" }
+	text = { trigger = { original_tag = REA }  localization_key = "great_war_intro_header" }
+	text = { localization_key =  "debug_country_intro_header" }
+}
+
+defined_text = {
+	name = GetCountryContent
+	text = { trigger = { original_tag = IMA check_variable = { curr_page = 2 } }  localization_key = "IMA_country_content_2" }
+	text = { trigger = { original_tag = IMA check_variable = { curr_page = 1 } }  localization_key = "IMA_country_content_1" }
+	text = { trigger = { original_tag = IMA }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = ICG check_variable = { curr_page = 2 } }  localization_key = "ICG_country_content_2" }
+	text = { trigger = { original_tag = ICG check_variable = { curr_page = 1 } }  localization_key = "ICG_country_content_1" }
+	text = { trigger = { original_tag = ICG }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = IML check_variable = { curr_page = 2 } }  localization_key = "IML_country_content_2" }
+	text = { trigger = { original_tag = IML check_variable = { curr_page = 1 } }  localization_key = "IML_country_content_1" }
+	text = { trigger = { original_tag = IML }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = ISC check_variable = { curr_page = 2 } }  localization_key = "ISC_country_content_2" }
+	text = { trigger = { original_tag = ISC check_variable = { curr_page = 1 } }  localization_key = "ISC_country_content_1" }
+	text = { trigger = { original_tag = ISC }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = ISM check_variable = { curr_page = 2 } }  localization_key = "ISM_country_content_2" }
+	text = { trigger = { original_tag = ISM check_variable = { curr_page = 1 } }  localization_key = "ISM_country_content_1" }
+	text = { trigger = { original_tag = ISM }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = IDS check_variable = { curr_page = 2 } }  localization_key = "IDS_country_content_2" }
+	text = { trigger = { original_tag = IDS check_variable = { curr_page = 1 } }  localization_key = "IDS_country_content_1" }
+	text = { trigger = { original_tag = IDS }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = IGM check_variable = { curr_page = 2 } }  localization_key = "IGM_country_content_2" }
+	text = { trigger = { original_tag = IGM check_variable = { curr_page = 1 } }  localization_key = "IGM_country_content_1" }
+	text = { trigger = { original_tag = IGM }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = TOH check_variable = { curr_page = 2 } }  localization_key = "TOH_country_content_2" }
+	text = { trigger = { original_tag = TOH check_variable = { curr_page = 1 } }  localization_key = "TOH_country_content_1" }
+	text = { trigger = { original_tag = TOH }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = PRS check_variable = { curr_page = 2 } }  localization_key = "PRS_country_content_2" }
+	text = { trigger = { original_tag = PRS check_variable = { curr_page = 1 } }  localization_key = "PRS_country_content_1" }
+	text = { trigger = { original_tag = PRS }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = BDG check_variable = { curr_page = 2 } }  localization_key = "BDG_country_content_2" }
+	text = { trigger = { original_tag = BDG check_variable = { curr_page = 1 } }  localization_key = "BDG_country_content_1" }
+	text = { trigger = { original_tag = BDG }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = ENS check_variable = { curr_page = 2 } }  localization_key = "ENS_country_content_2" }
+	text = { trigger = { original_tag = ENS check_variable = { curr_page = 1 } }  localization_key = "ENS_country_content_1" }
+	text = { trigger = { original_tag = ENS }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = LLS check_variable = { curr_page = 2 } }  localization_key = "LLS_country_content_2" }
+	text = { trigger = { original_tag = LLS check_variable = { curr_page = 1 } }  localization_key = "LLS_country_content_1" }
+	text = { trigger = { original_tag = LLS }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = LSS check_variable = { curr_page = 2 } }  localization_key = "LSS_country_content_2" }
+	text = { trigger = { original_tag = LSS check_variable = { curr_page = 1 } }  localization_key = "LSS_country_content_1" }
+	text = { trigger = { original_tag = LSS }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = LNH check_variable = { curr_page = 2 } }  localization_key = "LNH_country_content_2" }
+	text = { trigger = { original_tag = LNH check_variable = { curr_page = 1 } }  localization_key = "LNH_country_content_1" }
+	text = { trigger = { original_tag = LNH }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = LST check_variable = { curr_page = 2 } }  localization_key = "LST_country_content_2" }
+	text = { trigger = { original_tag = LST check_variable = { curr_page = 1 } }  localization_key = "LST_country_content_1" }
+	text = { trigger = { original_tag = LST }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = LHH check_variable = { curr_page = 2 } }  localization_key = "LHH_country_content_2" }
+	text = { trigger = { original_tag = LHH check_variable = { curr_page = 1 } }  localization_key = "LHH_country_content_1" }
+	text = { trigger = { original_tag = LHH }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = UMA check_variable = { curr_page = 2 } }  localization_key = "UMA_country_content_2" }
+	text = { trigger = { original_tag = UMA check_variable = { curr_page = 1 } }  localization_key = "UMA_country_content_1" }
+	text = { trigger = { original_tag = UMA }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = PRK check_variable = { curr_page = 2 } }  localization_key = "PRK_country_content_2" }
+	text = { trigger = { original_tag = PRK check_variable = { curr_page = 1 } }  localization_key = "PRK_country_content_1" }
+	text = { trigger = { original_tag = PRK }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = IDP check_variable = { curr_page = 2 } }  localization_key = "IDP_country_content_2" }
+	text = { trigger = { original_tag = IDP check_variable = { curr_page = 1 } }  localization_key = "IDP_country_content_1" }
+	text = { trigger = { original_tag = IDP }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = HBR check_variable = { curr_page = 2 } }  localization_key = "HBR_country_content_2" }
+	text = { trigger = { original_tag = HBR check_variable = { curr_page = 1 } }  localization_key = "HBR_country_content_1" }
+	text = { trigger = { original_tag = HBR }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = STR check_variable = { curr_page = 2 } }  localization_key = "STR_country_content_2" }
+	text = { trigger = { original_tag = STR check_variable = { curr_page = 1 } }  localization_key = "STR_country_content_1" }
+	text = { trigger = { original_tag = STR }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = DFD check_variable = { curr_page = 2 } }  localization_key = "DFD_country_content_2" }
+	text = { trigger = { original_tag = DFD check_variable = { curr_page = 1 } }  localization_key = "DFD_country_content_1" }
+	text = { trigger = { original_tag = DFD }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = AGN check_variable = { curr_page = 2 } }  localization_key = "AGN_country_content_2" }
+	text = { trigger = { original_tag = AGN check_variable = { curr_page = 1 } }  localization_key = "AGN_country_content_1" }
+	text = { trigger = { original_tag = AGN }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = BLA check_variable = { curr_page = 2 } }  localization_key = "BLA_country_content_2" }
+	text = { trigger = { original_tag = BLA check_variable = { curr_page = 1 } }  localization_key = "BLA_country_content_1" }
+	text = { trigger = { original_tag = BLA }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = TKI check_variable = { curr_page = 2 } }  localization_key = "TKI_country_content_2" }
+	text = { trigger = { original_tag = TKI check_variable = { curr_page = 1 } }  localization_key = "TKI_country_content_1" }
+	text = { trigger = { original_tag = TKI }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = WDS check_variable = { curr_page = 2 } }  localization_key = "WDS_country_content_2" }
+	text = { trigger = { original_tag = WDS check_variable = { curr_page = 1 } }  localization_key = "WDS_country_content_1" }
+	text = { trigger = { original_tag = WDS }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = TSS check_variable = { curr_page = 2 } }  localization_key = "TSS_country_content_2" }
+	text = { trigger = { original_tag = TSS check_variable = { curr_page = 1 } }  localization_key = "TSS_country_content_1" }
+	text = { trigger = { original_tag = TSS }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = AIN check_variable = { curr_page = 2 } }  localization_key = "AIN_country_content_2" }
+	text = { trigger = { original_tag = AIN check_variable = { curr_page = 1 } }  localization_key = "AIN_country_content_1" }
+	text = { trigger = { original_tag = AIN }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = SBR check_variable = { curr_page = 2 } }  localization_key = "SBR_country_content_2" }
+	text = { trigger = { original_tag = SBR check_variable = { curr_page = 1 } }  localization_key = "SBR_country_content_1" }
+	text = { trigger = { original_tag = SBR }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = DOB check_variable = { curr_page = 2 } }  localization_key = "DOB_country_content_2" }
+	text = { trigger = { original_tag = DOB check_variable = { curr_page = 1 } }  localization_key = "DOB_country_content_1" }
+	text = { trigger = { original_tag = DOB }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = GFR check_variable = { curr_page = 2 } }  localization_key = "GFR_country_content_2" }
+	text = { trigger = { original_tag = GFR check_variable = { curr_page = 1 } }  localization_key = "GFR_country_content_1" }
+	text = { trigger = { original_tag = GFR }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = KJI check_variable = { curr_page = 2 } }  localization_key = "KJI_country_content_2" }
+	text = { trigger = { original_tag = KJI check_variable = { curr_page = 1 } }  localization_key = "KJI_country_content_1" }
+	text = { trigger = { original_tag = KJI }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = GUP check_variable = { curr_page = 2 } }  localization_key = "GUP_country_content_2" }
+	text = { trigger = { original_tag = GUP check_variable = { curr_page = 1 } }  localization_key = "GUP_country_content_1" }
+	text = { trigger = { original_tag = GUP }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = LAS check_variable = { curr_page = 2 } }  localization_key = "LAS_country_content_2" }
+	text = { trigger = { original_tag = LAS check_variable = { curr_page = 1 } }  localization_key = "LAS_country_content_1" }
+	text = { trigger = { original_tag = LAS }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = ONK check_variable = { curr_page = 2 } }  localization_key = "ONK_country_content_2" }
+	text = { trigger = { original_tag = ONK check_variable = { curr_page = 1 } }  localization_key = "ONK_country_content_1" }
+	text = { trigger = { original_tag = ONK }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = FGO check_variable = { curr_page = 2 } }  localization_key = "FGO_country_content_2" }
+	text = { trigger = { original_tag = FGO check_variable = { curr_page = 1 } }  localization_key = "FGO_country_content_1" }
+	text = { trigger = { original_tag = FGO }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = AZU check_variable = { curr_page = 2 } }  localization_key = "AZU_country_content_2" }
+	text = { trigger = { original_tag = AZU check_variable = { curr_page = 1 } }  localization_key = "AZU_country_content_1" }
+	text = { trigger = { original_tag = AZU }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = ZOS check_variable = { curr_page = 2 } }  localization_key = "ZOS_country_content_2" }
+	text = { trigger = { original_tag = ZOS check_variable = { curr_page = 1 } }  localization_key = "ZOS_country_content_1" }
+	text = { trigger = { original_tag = ZOS }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = BOR check_variable = { curr_page = 2 } }  localization_key = "BOR_country_content_2" }
+	text = { trigger = { original_tag = BOR check_variable = { curr_page = 1 } }  localization_key = "BOR_country_content_1" }
+	text = { trigger = { original_tag = BOR }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = KON check_variable = { curr_page = 2 } }  localization_key = "KON_country_content_2" }
+	text = { trigger = { original_tag = KON check_variable = { curr_page = 1 } }  localization_key = "KON_country_content_1" }
+	text = { trigger = { original_tag = KON }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = SOE check_variable = { curr_page = 2 } }  localization_key = "SOE_country_content_2" }
+	text = { trigger = { original_tag = SOE check_variable = { curr_page = 1 } }  localization_key = "SOE_country_content_1" }
+	text = { trigger = { original_tag = SOE }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = TAK check_variable = { curr_page = 2 } }  localization_key = "TAK_country_content_2" }
+	text = { trigger = { original_tag = TAK check_variable = { curr_page = 1 } }  localization_key = "TAK_country_content_1" }
+	text = { trigger = { original_tag = TAK }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = AIK check_variable = { curr_page = 2 } }  localization_key = "AIK_country_content_2" }
+	text = { trigger = { original_tag = AIK check_variable = { curr_page = 1 } }  localization_key = "AIK_country_content_1" }
+	text = { trigger = { original_tag = AIK }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = PRP check_variable = { curr_page = 2 } }  localization_key = "PRP_country_content_2" }
+	text = { trigger = { original_tag = PRP check_variable = { curr_page = 1 } }  localization_key = "PRP_country_content_1" }
+	text = { trigger = { original_tag = PRP }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = SHP check_variable = { curr_page = 2 } }  localization_key = "SHP_country_content_2" }
+	text = { trigger = { original_tag = SHP check_variable = { curr_page = 1 } }  localization_key = "SHP_country_content_1" }
+	text = { trigger = { original_tag = SHP }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = UNP check_variable = { curr_page = 2 } }  localization_key = "UNP_country_content_2" }
+	text = { trigger = { original_tag = UNP check_variable = { curr_page = 1 } }  localization_key = "UNP_country_content_1" }
+	text = { trigger = { original_tag = UNP }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = MMM check_variable = { curr_page = 2 } }  localization_key = "MMM_country_content_2" }
+	text = { trigger = { original_tag = MMM check_variable = { curr_page = 1 } }  localization_key = "MMM_country_content_1" }
+	text = { trigger = { original_tag = MMM }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = KTC check_variable = { curr_page = 2 } }  localization_key = "KTC_country_content_2" }
+	text = { trigger = { original_tag = KTC check_variable = { curr_page = 1 } }  localization_key = "KTC_country_content_1" }
+	text = { trigger = { original_tag = KTC }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = MCR check_variable = { curr_page = 2 } }  localization_key = "MCR_country_content_2" }
+	text = { trigger = { original_tag = MCR check_variable = { curr_page = 1 } }  localization_key = "MCR_country_content_1" }
+	text = { trigger = { original_tag = MCR }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = MLN check_variable = { curr_page = 2 } }  localization_key = "MLN_country_content_2" }
+	text = { trigger = { original_tag = MLN check_variable = { curr_page = 1 } }  localization_key = "MLN_country_content_1" }
+	text = { trigger = { original_tag = MLN }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = WUG check_variable = { curr_page = 2 } }  localization_key = "WUG_country_content_2" }
+	text = { trigger = { original_tag = WUG check_variable = { curr_page = 1 } }  localization_key = "WUG_country_content_1" }
+	text = { trigger = { original_tag = WUG }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = LCD check_variable = { curr_page = 2 } }  localization_key = "LCD_country_content_2" }
+	text = { trigger = { original_tag = LCD check_variable = { curr_page = 1 } }  localization_key = "LCD_country_content_1" }
+	text = { trigger = { original_tag = LCD }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = BPR check_variable = { curr_page = 2 } }  localization_key = "BPR_country_content_2" }
+	text = { trigger = { original_tag = BPR check_variable = { curr_page = 1 } }  localization_key = "BPR_country_content_1" }
+	text = { trigger = { original_tag = BPR }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = TSU check_variable = { curr_page = 2 } }  localization_key = "TSU_country_content_2" }
+	text = { trigger = { original_tag = TSU check_variable = { curr_page = 1 } }  localization_key = "TSU_country_content_1" }
+	text = { trigger = { original_tag = TSU }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = SZS check_variable = { curr_page = 2 } }  localization_key = "SZS_country_content_2" }
+	text = { trigger = { original_tag = SZS check_variable = { curr_page = 1 } }  localization_key = "SZS_country_content_1" }
+	text = { trigger = { original_tag = SZS }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = HLL check_variable = { curr_page = 2 } }  localization_key = "HLL_country_content_2" }
+	text = { trigger = { original_tag = HLL check_variable = { curr_page = 1 } }  localization_key = "HLL_country_content_1" }
+	text = { trigger = { original_tag = HLL }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = POP check_variable = { curr_page = 2 } }  localization_key = "POP_country_content_2" }
+	text = { trigger = { original_tag = POP check_variable = { curr_page = 1 } }  localization_key = "POP_country_content_1" }
+	text = { trigger = { original_tag = POP }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = CUE check_variable = { curr_page = 2 } }  localization_key = "CUE_country_content_2" }
+	text = { trigger = { original_tag = CUE check_variable = { curr_page = 1 } }  localization_key = "CUE_country_content_1" }
+	text = { trigger = { original_tag = CUE }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = UNU check_variable = { curr_page = 2 } }  localization_key = "UNU_country_content_2" }
+	text = { trigger = { original_tag = UNU check_variable = { curr_page = 1 } }  localization_key = "UNU_country_content_1" }
+	text = { trigger = { original_tag = UNU }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = LVD check_variable = { curr_page = 2 } }  localization_key = "LVD_country_content_2" }
+	text = { trigger = { original_tag = LVD check_variable = { curr_page = 1 } }  localization_key = "LVD_country_content_1" }
+	text = { trigger = { original_tag = LVD }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = IDI check_variable = { curr_page = 2 } }  localization_key = "IDI_country_content_2" }
+	text = { trigger = { original_tag = IDI check_variable = { curr_page = 1 } }  localization_key = "IDI_country_content_1" }
+	text = { trigger = { original_tag = IDI }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = AIC check_variable = { curr_page = 2 } }  localization_key = "AIC_country_content_2" }
+	text = { trigger = { original_tag = AIC check_variable = { curr_page = 1 } }  localization_key = "AIC_country_content_1" }
+	text = { trigger = { original_tag = AIC }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = IDC check_variable = { curr_page = 2 } }  localization_key = "IDC_country_content_2" }
+	text = { trigger = { original_tag = IDC check_variable = { curr_page = 1 } }  localization_key = "IDC_country_content_1" }
+	text = { trigger = { original_tag = IDC }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = GEC check_variable = { curr_page = 2 } }  localization_key = "GEC_country_content_2" }
+	text = { trigger = { original_tag = GEC check_variable = { curr_page = 1 } }  localization_key = "GEC_country_content_1" }
+	text = { trigger = { original_tag = GEC }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = DIF check_variable = { curr_page = 2 } }  localization_key = "DIF_country_content_2" }
+	text = { trigger = { original_tag = DIF check_variable = { curr_page = 1 } }  localization_key = "DIF_country_content_1" }
+	text = { trigger = { original_tag = DIF }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = LPR check_variable = { curr_page = 2 } }  localization_key = "LPR_country_content_2" }
+	text = { trigger = { original_tag = LPR check_variable = { curr_page = 1 } }  localization_key = "LPR_country_content_1" }
+	text = { trigger = { original_tag = LPR }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = YMC check_variable = { curr_page = 2 } }  localization_key = "YMC_country_content_2" }
+	text = { trigger = { original_tag = YMC check_variable = { curr_page = 1 } }  localization_key = "YMC_country_content_1" }
+	text = { trigger = { original_tag = YMC }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = NPT check_variable = { curr_page = 2 } }  localization_key = "NPT_country_content_2" }
+	text = { trigger = { original_tag = NPT check_variable = { curr_page = 1 } }  localization_key = "NPT_country_content_1" }
+	text = { trigger = { original_tag = NPT }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = VCD check_variable = { curr_page = 2 } }  localization_key = "VCD_country_content_2" }
+	text = { trigger = { original_tag = VCD check_variable = { curr_page = 1 } }  localization_key = "VCD_country_content_1" }
+	text = { trigger = { original_tag = VCD }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = TAB check_variable = { curr_page = 2 } }  localization_key = "TAB_country_content_2" }
+	text = { trigger = { original_tag = TAB check_variable = { curr_page = 1 } }  localization_key = "TAB_country_content_1" }
+	text = { trigger = { original_tag = TAB }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = DRF check_variable = { curr_page = 2 } }  localization_key = "DRF_country_content_2" }
+	text = { trigger = { original_tag = DRF check_variable = { curr_page = 1 } }  localization_key = "DRF_country_content_1" }
+	text = { trigger = { original_tag = DRF }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = AOP check_variable = { curr_page = 2 } }  localization_key = "AOP_country_content_2" }
+	text = { trigger = { original_tag = AOP check_variable = { curr_page = 1 } }  localization_key = "AOP_country_content_1" }
+	text = { trigger = { original_tag = AOP }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = GBC check_variable = { curr_page = 2 } }  localization_key = "GBC_country_content_2" }
+	text = { trigger = { original_tag = GBC check_variable = { curr_page = 1 } }  localization_key = "GBC_country_content_1" }
+	text = { trigger = { original_tag = GBC }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = NNN check_variable = { curr_page = 2 } }  localization_key = "NNN_country_content_2" }
+	text = { trigger = { original_tag = NNN check_variable = { curr_page = 1 } }  localization_key = "NNN_country_content_1" }
+	text = { trigger = { original_tag = NNN }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = FBD check_variable = { curr_page = 2 } }  localization_key = "FBD_country_content_2" }
+	text = { trigger = { original_tag = FBD check_variable = { curr_page = 1 } }  localization_key = "FBD_country_content_1" }
+	text = { trigger = { original_tag = FBD }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = ONS check_variable = { curr_page = 2 } }  localization_key = "ONS_country_content_2" }
+	text = { trigger = { original_tag = ONS check_variable = { curr_page = 1 } }  localization_key = "ONS_country_content_1" }
+	text = { trigger = { original_tag = ONS }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = EXT check_variable = { curr_page = 2 } }  localization_key = "EXT_country_content_2" }
+	text = { trigger = { original_tag = EXT check_variable = { curr_page = 1 } }  localization_key = "EXT_country_content_1" }
+	text = { trigger = { original_tag = EXT }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = PTD check_variable = { curr_page = 2 } }  localization_key = "PTD_country_content_2" }
+	text = { trigger = { original_tag = PTD check_variable = { curr_page = 1 } }  localization_key = "PTD_country_content_1" }
+	text = { trigger = { original_tag = PTD }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = RST check_variable = { curr_page = 2 } }  localization_key = "RST_country_content_2" }
+	text = { trigger = { original_tag = RST check_variable = { curr_page = 1 } }  localization_key = "RST_country_content_1" }
+	text = { trigger = { original_tag = RST }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = SEL check_variable = { curr_page = 2 } }  localization_key = "SEL_country_content_2" }
+	text = { trigger = { original_tag = SEL check_variable = { curr_page = 1 } }  localization_key = "SEL_country_content_1" }
+	text = { trigger = { original_tag = SEL }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = PTK check_variable = { curr_page = 2 } }  localization_key = "PTK_country_content_2" }
+	text = { trigger = { original_tag = PTK check_variable = { curr_page = 1 } }  localization_key = "PTK_country_content_1" }
+	text = { trigger = { original_tag = PTK }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = LOC check_variable = { curr_page = 2 } }  localization_key = "LOC_country_content_2" }
+	text = { trigger = { original_tag = LOC check_variable = { curr_page = 1 } }  localization_key = "LOC_country_content_1" }
+	text = { trigger = { original_tag = LOC }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = LOS check_variable = { curr_page = 2 } }  localization_key = "LOS_country_content_2" }
+	text = { trigger = { original_tag = LOS check_variable = { curr_page = 1 } }  localization_key = "LOS_country_content_1" }
+	text = { trigger = { original_tag = LOS }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = HDA check_variable = { curr_page = 2 } }  localization_key = "HDA_country_content_2" }
+	text = { trigger = { original_tag = HDA check_variable = { curr_page = 1 } }  localization_key = "HDA_country_content_1" }
+	text = { trigger = { original_tag = HDA }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = STI check_variable = { curr_page = 2 } }  localization_key = "STI_country_content_2" }
+	text = { trigger = { original_tag = STI check_variable = { curr_page = 1 } }  localization_key = "STI_country_content_1" }
+	text = { trigger = { original_tag = STI }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = HND check_variable = { curr_page = 2 } }  localization_key = "HND_country_content_2" }
+	text = { trigger = { original_tag = HND check_variable = { curr_page = 1 } }  localization_key = "HND_country_content_1" }
+	text = { trigger = { original_tag = HND }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = MKR check_variable = { curr_page = 2 } }  localization_key = "MKR_country_content_2" }
+	text = { trigger = { original_tag = MKR check_variable = { curr_page = 1 } }  localization_key = "MKR_country_content_1" }
+	text = { trigger = { original_tag = MKR }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = DEV check_variable = { curr_page = 2 } }  localization_key = "DEV_country_content_2" }
+	text = { trigger = { original_tag = DEV check_variable = { curr_page = 1 } }  localization_key = "DEV_country_content_1" }
+	text = { trigger = { original_tag = DEV }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = URA check_variable = { curr_page = 2 } }  localization_key = "URA_country_content_2" }
+	text = { trigger = { original_tag = URA check_variable = { curr_page = 1 } }  localization_key = "URA_country_content_1" }
+	text = { trigger = { original_tag = URA }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = VAM check_variable = { curr_page = 2 } }  localization_key = "VAM_country_content_2" }
+	text = { trigger = { original_tag = VAM check_variable = { curr_page = 1 } }  localization_key = "VAM_country_content_1" }
+	text = { trigger = { original_tag = VAM }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = REA check_variable = { curr_page = 2 } }  localization_key = "REA_country_content_2" }
+	text = { trigger = { original_tag = REA check_variable = { curr_page = 1 } }  localization_key = "REA_country_content_1" }
+	text = { trigger = { original_tag = REA }  localization_key = "great_war_content" }
+	text = { localization_key =  "debug_country_content" }
+}
+

@@ -1,0 +1,31 @@
+is_democratic = {
+	OR = {
+		has_government = conservatism
+		has_government = liberalism_mod
+		has_government = progressivism
+		has_government = socialdemocracy
+	}
+}
+
+is_communism = {
+	OR = {
+		has_government = communism
+		has_government = authoritariancommunism
+		has_government = socialism
+		has_government = anarchosyndicalism
+	}
+}
+
+is_fascism = {
+	OR = {
+		has_government = fascism
+		has_government = militarytotalism
+	}
+}
+
+is_neutrality = {
+	OR = {
+		has_government = authoritariandemocracy
+		has_government = autocracy 
+	} 
+}

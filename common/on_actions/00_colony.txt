@@ -1,0 +1,327 @@
+on_actions = {
+	on_subject_free = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						original_tag = ICG
+						original_tag = IML
+						original_tag = ISC
+						original_tag = ISM
+						original_tag = IDS
+						original_tag = IGM
+						original_tag = LSS
+						original_tag = LNH
+						original_tag = LST
+						original_tag = LHH
+					}
+				}
+				abandon_colony_tag = yes
+			}
+		}
+	}
+
+	#ROOT is subject FROM is overlord
+	on_subject_autonomy_level_change = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { original_tag = ISM }
+				}
+				if = { 
+					limit = { tag = AIN }
+					set_country_flag = AIN_ISM
+				}
+				if = { 
+					limit = { tag = UNP }
+					set_country_flag = UNP_ISM
+				}
+				if = {
+					limit = { tag = TSU }
+					set_country_flag = TSU_ISM
+				}
+				if = { 
+					limit = { tag = TAB }
+					set_country_flag = TAB_ISM
+				}
+				if = {
+					limit = { tag = BPR }
+					set_country_flag = BPR_ISM
+				}
+				if = {
+					limit = { tag = DRF }
+					set_country_flag = DRF_ISM
+				}
+				if = {
+					limit = { tag = AOP }
+					set_country_flag = AOP_ISM
+				}
+				if = {
+					limit = { tag = UNU }
+					set_country_flag = UNU_ISM
+				}
+				if = {
+					limit = { tag = YMC }
+					set_country_flag = YMC_ISM
+				}
+				if = {
+					limit = { tag = AIC }
+					set_country_flag = AIC_ISM
+				}
+			}
+		}
+	}
+
+	#ROOT is subject FROM is overlord
+	on_subject_annexed = {
+
+	}
+
+	#used when puppeting in a peace conference
+	#ROOT = nation being puppeted, FROM = overlord
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					tag = ICG
+					FROM = { tag = IMA }
+				}
+				ICG = { set_cosmetic_tag = ICG_IMA }
+			}
+			if = {
+				limit = {
+					tag = IML
+					FROM = { tag = IMA }
+				}
+				IML = { set_cosmetic_tag = IML_IMA }
+			}
+			if = {
+				limit = {
+					tag = ISC
+					FROM = { tag = IMA }
+				}
+				ISC = { set_cosmetic_tag = ISC_IMA }
+			}
+			if = {
+				limit = {
+					tag = ISM
+					FROM = { tag = IMA }
+				}
+				ISM = { set_cosmetic_tag = ISM_IMA }
+			}
+			if = {
+				limit = {
+					tag = IDS
+					FROM = { tag = IDS }
+				}
+				IDS = { set_cosmetic_tag = IDS_IMA }
+			}
+			if = {
+				limit = {
+					tag = IGM
+					FROM = { tag = IGM }
+				}
+				IGM = { set_cosmetic_tag = IGM_IMA }
+			}
+			if = {
+				limit = {
+					tag = LSS
+					FROM = { tag = LLS }
+				}
+				LSS = { set_cosmetic_tag = LSS_LLS }
+			}
+			if = {
+				limit = {
+					tag = LNH
+					FROM = { tag = LLS }
+				}
+				LNH = { set_cosmetic_tag = LNH_LLS }
+			}
+			if = {
+				limit = {
+					tag = LST
+					FROM = { tag = LLS }
+				}
+				LST = { set_cosmetic_tag = LST_LLS }
+			}
+			if = {
+				limit = {
+					tag = LHH
+					FROM = { tag = LLS }
+				}
+				LHH = { set_cosmetic_tag = LHH_LLS }
+			}
+		}
+	}
+
+	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
+	#ROOT = nation being released, FROM = overlord
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = {
+					tag = ICG
+					FROM = { tag = IMA }
+				}
+				ICG = { set_cosmetic_tag = ICG_IMA }
+			}
+			if = {
+				limit = {
+					tag = IML
+					FROM = { tag = IMA }
+				}
+				IML = { set_cosmetic_tag = IML_IMA }
+			}
+			if = {
+				limit = {
+					tag = ISC
+					FROM = { tag = IMA }
+				}
+				ISC = { set_cosmetic_tag = ISC_IMA }
+			}
+			if = {
+				limit = {
+					tag = ISM
+					FROM = { tag = IMA }
+				}
+				ISM = { set_cosmetic_tag = ISM_IMA }
+			}
+			if = {
+				limit = {
+					tag = IDS
+					FROM = { tag = IDS }
+				}
+				IDS = { set_cosmetic_tag = IDS_IMA }
+			}
+			if = {
+				limit = {
+					tag = IGM
+					FROM = { tag = IGM }
+				}
+				IGM = { set_cosmetic_tag = IGM_IMA }
+			}
+			if = {
+				limit = {
+					tag = LSS
+					FROM = { tag = LLS }
+				}
+				LSS = { set_cosmetic_tag = LSS_LLS }
+			}
+			if = {
+				limit = {
+					tag = LNH
+					FROM = { tag = LLS }
+				}
+				LNH = { set_cosmetic_tag = LNH_LLS }
+			}
+			if = {
+				limit = {
+					tag = LST
+					FROM = { tag = LLS }
+				}
+				LST = { set_cosmetic_tag = LST_LLS }
+			}
+			if = {
+				limit = {
+					tag = LHH
+					FROM = { tag = LLS }
+				}
+				LHH = { set_cosmetic_tag = LHH_LLS }
+			}
+		}
+	}
+
+	#ROOT is free nation FROM is releaser
+	on_release_as_free = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						original_tag = ICG
+						original_tag = IML
+						original_tag = ISC
+						original_tag = ISM
+						original_tag = IDS
+						original_tag = IGM
+						original_tag = LSS
+						original_tag = LNH
+						original_tag = LST
+						original_tag = LHH
+					}
+				}
+				abandon_colony_tag = yes
+			}
+			if = {
+				limit = {
+					tag = ICG
+					FROM = { tag = IMA }
+				}
+				ICG = { set_cosmetic_tag = ICG_IMA }
+			}
+			if = {
+				limit = {
+					tag = IML
+					FROM = { tag = IMA }
+				}
+				IML = { set_cosmetic_tag = IML_IMA }
+			}
+			if = {
+				limit = {
+					tag = ISC
+					FROM = { tag = IMA }
+				}
+				ISC = { set_cosmetic_tag = ISC_IMA }
+			}
+			if = {
+				limit = {
+					tag = ISM
+					FROM = { tag = IMA }
+				}
+				ISM = { set_cosmetic_tag = ISM_IMA }
+			}
+			if = {
+				limit = {
+					tag = IDS
+					FROM = { tag = IDS }
+				}
+				ISM = { set_cosmetic_tag = IDS_IMA }
+			}
+			if = {
+				limit = {
+					tag = IGM
+					FROM = { tag = IGM }
+				}
+				ISM = { set_cosmetic_tag = IGM_IMA }
+			}
+			if = {
+				limit = {
+					tag = LSS
+					FROM = { tag = LLS }
+				}
+				LSS = { set_cosmetic_tag = LSS_LLS }
+			}
+			if = {
+				limit = {
+					tag = LNH
+					FROM = { tag = LLS }
+				}
+				LNH = { set_cosmetic_tag = LNH_LLS }
+			}
+			if = {
+				limit = {
+					tag = LST
+					FROM = { tag = LLS }
+				}
+				LST = { set_cosmetic_tag = LST_LLS }
+			}
+			if = {
+				limit = {
+					tag = LHH
+					FROM = { tag = LLS }
+				}
+				LHH = { set_cosmetic_tag = LHH_LLS }
+			}
+		}
+	}
+
+}

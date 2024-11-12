@@ -1,0 +1,86 @@
+#수도
+capital = 328
+
+#부대
+set_oob = "LNH_ar"
+starting_train_buffer = 2.5
+add_command_power = 15
+set_fuel_ratio = 0.5
+set_research_slots = 4
+set_stability = 0.2
+set_war_support = 0.4
+
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	tech_trucks = 1
+}
+
+set_variable = { country_intro_page_count = 2 }
+set_convoys = 5
+
+328 = { #Kirin
+	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
+}
+715 = { #Liaoning
+	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
+}
+714 = { #Heilungkiang
+	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
+}
+717 = { #Hungkiang
+	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
+}
+761 = { #Hulunbuir
+	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
+}
+
+if = {
+	limit = { has_TfV = yes }
+	set_cosmetic_tag = LNH_LLS
+	add_to_tech_sharing_group = Lovelive_research
+	else = {
+		set_cosmetic_tag = LNH_LGR
+	}
+}
+
+
+
+#국민 정신
+
+add_ideas = agrarian_society
+
+set_politics = {
+	ruling_party = authoritariandemocracy
+	last_election = "1933.4.7"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	authoritariandemocracy = 80
+	militarytotalism = 20
+}
+
+### Leader
+recruit_character = LNH_uehara_ayumu
+recruit_character = LNH_nakasu_kasumi
+recruit_character = LNH_osaka_shizuku
+recruit_character = LNH_asaka_karin
+recruit_character = LNH_miyashita_ai
+recruit_character = LNH_konoe_kanata
+recruit_character = LNH_yuki_setsuna
+recruit_character = LNH_emma_verde
+recruit_character = LNH_tennoji_rina
+recruit_character = LNH_mifune_shioriko
+recruit_character = LNH_mia_taylor
+recruit_character = LNH_zhong_lanzhu
+recruit_character = LNH_takasaki_yu
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

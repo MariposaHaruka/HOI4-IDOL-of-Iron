@@ -1,0 +1,19 @@
+swap_government_ideas_communism = {
+	if = {
+		limit = { has_idea = despotic_monarchy }
+		swap_ideas = {
+			remove_idea = despotic_monarchy
+			add_idea = federal_council
+		}
+	}
+	else_if = {
+		limit = { has_idea = constitutional_monarchy }
+		swap_ideas = {
+			remove_idea = constitutional_monarchy
+			add_idea = federal_council
+		}
+	}
+}
+swap_government_ideas_socialism = {
+
+}

@@ -1,0 +1,235 @@
+ideas = {
+	is_tarrif = {
+		law = yes
+		use_list_view = yes
+
+		free_trade = {
+			available = {
+
+			}
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0.8
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.10
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 20.0
+				cic_construction_boost_factor = 0.05
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 300
+					OR = {
+						tag = NPT
+						tag = SBR
+					}
+					is_in_faction = no
+				}
+
+				modifier = {
+					factor = 300
+					tag = FGO
+					date > 1943.1.1 # at this point we can probably cash in on rubber lack in the world
+				}
+
+				modifier = {
+					factor = 400
+					original_tag = DFD
+					date > 1941.6.1
+				}
+
+				# Oil for hitlers oil throne!
+				modifier = {
+					factor = 600
+					tag = AIK
+					is_in_faction_with = PRS
+				}
+   			}
+		}
+
+		export_focus = {
+			available = {
+			}
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0.5
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				civilian_intel_to_others = 20.0
+				navy_intel_to_others = 10.0
+				cic_construction_boost_factor = 0.1
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+				modifier = {
+					factor = 0
+					is_major = no
+					has_war = no
+					is_in_faction = no
+					OR = {
+						# portugal and sweden are special tungsten snowflakes
+						tag = MLN
+						tag = DFD
+
+						# Iraq & Iran are special oil snowflakes
+						tag = SBR
+						tag = NPT
+					}
+				}
+				#modifier = {
+				#	factor = 1000
+				#	has_idea = uncontrolled_exports #Poland should try and escape this as soon as they can
+				#}
+   			}
+		}
+
+		limited_exports = {
+			available = {
+				OR = {
+					AND = {
+						is_democratic = yes
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.2
+							}
+						}
+					}
+					AND = {
+						is_democratic = no
+						OR = {
+							has_idea = partial_economic_mobilisation
+							has_idea = war_economy
+							has_idea = tot_economic_mobilisation
+						}
+					}
+				}
+			}
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0.25
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.01
+				civilian_intel_to_others = 10.0
+				navy_intel_to_others = 5
+				lend_lease_tension = 0.20
+				cic_construction_boost = -0.05
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					add = -1
+					is_major = no
+					is_in_faction = yes
+					has_war = yes
+				}
+
+				# minors not at war should want to get the bonuses from free trade
+				modifier = {
+					add = -1
+					is_major = no
+					has_war = no
+				}
+				modifier = {
+					factor = 200
+					is_fascism = no
+					NOT = { has_idea = closed_economy }
+					has_war = yes
+					is_major = yes
+				}
+				modifier = {
+					add = 1500
+
+					# revert from closed_economy if we have large allies
+					has_idea = closed_economy
+					has_large_ally_not_pick_closed_economy = yes
+				}
+   			}
+		}
+
+		closed_economy = {
+			available = {
+				has_war = yes
+				OR = {
+					is_fascism = yes
+					is_communism = yes
+				}
+				OR = {
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
+				}
+				OR = {
+					NOT = {	tag = TOH }
+					NOT = { has_opinion_modifier = MR_pact }
+				}
+			}
+
+			rule = {
+				can_access_market = no
+				desc = can_not_access_market_closed_economy
+			}
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0
+				#civilian_intel_to_others = 0.0
+				lend_lease_tension = 0.40
+				cic_construction_boost = -0.1
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 0
+
+					is_major = no
+					is_in_faction = yes
+					has_war = yes
+				}
+
+				# minors not at war should want to get the bonuses from free trade
+				modifier = {
+					factor = 0
+
+					is_major = no
+					has_war = no
+				}
+
+				modifier = {
+					factor = 0
+
+					# don't take if we have a reasonable sized ally
+					# since they will require our trades
+					has_large_ally_not_pick_closed_economy = yes
+				}
+   			}
+		}
+	}
+}

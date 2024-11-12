@@ -1,0 +1,158 @@
+focus_tree = {
+	id = LAS_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LAS
+		}
+	}
+	default = no
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = LAS_1001a_army_committee_marie
+	}
+	continuous_focus_position = {
+		x = 0
+		y = 3100
+	}
+
+	focus = {
+		id = LAS_1001a_army_committee_marie
+		icon = GFX_goal_LAS_1001a_marie
+		x = 28
+		y = 0
+		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		available = {
+
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			set_division_template_lock = {
+				division_template = "스틸라인"
+				is_locked = no
+			}
+		}
+	}
+
+	focus = {
+		id = LAS_1001b_army_committee_leona
+		icon = GFX_goal_LAS_1001b_leona
+		x = 2
+		y = 0
+		relative_position_id = LAS_1001a_army_committee_marie
+		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		completion_reward = {			
+			set_division_template_lock = {
+				division_template = "시스터즈 오브 발할라"
+				is_locked = no
+			}
+		}
+	}
+
+	focus = {
+		id = LAS_1001c_army_committee_khan
+		icon = GFX_goal_LAS_1001c_khan
+		x = 4
+		y = 0
+		relative_position_id = LAS_1001a_army_committee_marie
+		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		completion_reward = {			
+			set_division_template_lock = {
+				division_template = "앵거 오브 호드"
+				is_locked = no
+			}
+		}
+	}
+
+	focus = {
+		id = LAS_1002_army_committee
+		icon = GFX_goal_LAS_1002_marie_leona
+		x = 0
+		y = 1
+		relative_position_id = LAS_1001b_army_committee_leona
+		prerequisite = { focus = LAS_1001a_army_committee_marie }
+		prerequisite = { focus = LAS_1001b_army_committee_leona }
+		prerequisite = { focus = LAS_1001c_army_committee_khan }
+		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		available_if_capitulated = yes
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = LAS_2001_naval_reform
+		icon = GFX_goal_generic_navy_submarine
+		x = 40
+		y = 0
+		cost = 5
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			navy_experience = 50
+		}
+	}
+
+	focus = {
+		id = LAS_2002_wake_the_dragon_up
+		icon = GFX_goal_LAS_2002_dragon_invinsible
+		x = 0
+		y = 1
+		relative_position_id = LAS_2001_naval_reform
+		prerequisite = { focus = LAS_2001_naval_reform }
+		cost = 5
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		available_if_capitulated = yes
+		completion_reward = {
+			navy_experience = 50
+		}
+	}
+
+	focus = {
+		id = LAS_3001_strategic_air_command
+		icon = GFX_goal_generic_air_bomber
+		x = 35
+		y = 0
+		cost = 5
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+
+	focus = {
+		id = LAS_3002_skyknights
+		icon = GFX_goal_skyknights
+		x = 0
+		y = 1
+		relative_position_id = LAS_3001_strategic_air_command
+		prerequisite = { focus = LAS_3001_strategic_air_command }
+		cost = 5
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		available_if_capitulated = yes
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+}

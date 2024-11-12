@@ -1,0 +1,134 @@
+ideas = {
+	is_education_policy = {
+        law = yes
+		use_list_view = yes
+
+        no_official_education_system = {
+			available = {
+				is_communism = no
+				is_democratic = no
+            }
+            level = 1
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = -0.05
+                production_factory_max_efficiency_factor = -0.10
+                production_factory_efficiency_gain_factor = -0.10
+                monthly_population = 0.25
+                research_speed_factor = -0.10
+                drift_defence_factor = 0.30
+            }
+
+            ai_will_do = {
+                base = 1
+            }
+        }
+
+        left_to_the_market = {
+            available = {
+				is_communism = no
+            }
+            level = 2
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = -0.10
+                research_speed_factor = 0.10
+                stability_factor = -0.05
+                industrial_capacity_factory = -0.05
+                female_random_operative_chance = 0.20
+                drift_defence_factor = -0.30
+            }
+
+            ai_will_do = {
+                base = 20
+            }
+        }
+
+        elementary_education = {
+			available = { }
+            level = 3
+            removal_cost = -1
+
+            modifier = {
+                monthly_population = 0.05
+                research_speed_factor = 0.02
+                female_random_operative_chance = 0.10
+            }
+
+            ai_will_do = {
+                base = 30
+                modifier = {
+					OR = {
+						is_democratic = yes
+						is_communism = yes
+					}
+                    add = -20
+                }
+            }
+        }
+
+        secondary_education = {
+			available = {
+				is_fascism = no
+			}
+			level = 4
+            removal_cost = -1
+
+            modifier = {
+				add_research_slot = 1
+                consumer_goods_factor = 0.05
+                production_factory_max_efficiency_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+                research_speed_factor = 0.08
+                drift_defence_factor = -0.10
+                female_random_operative_chance = 0.30
+            }
+
+            ai_will_do = {
+                base = 30
+                modifier = {
+					is_democratic = yes
+                    add = 40
+                }
+                modifier = {
+                    is_communism = yes
+                    add = 50
+                }
+            }
+        }
+		
+		higher_education = {
+			available = {
+				is_fascism = no
+			}
+            level = 5
+            removal_cost = -1
+
+            modifier = {
+				add_research_slot = 1
+                consumer_goods_factor = 0.10
+                production_factory_max_efficiency_factor = 0.10
+                production_factory_efficiency_gain_factor = 0.10
+                research_speed_factor = 0.2
+                drift_defence_factor = -0.30
+                female_random_operative_chance = 0.5
+                army_leader_start_level = 2
+            }
+			
+			ai_will_do = {
+                base = 20
+                modifier = {
+                    is_communism = yes
+					NOT = { has_government = anarchosyndicalism }
+                    add = 100
+                }
+                modifier = {
+                    is_democratic = yes
+                    add = 60
+                }
+            }
+        }
+    }
+}

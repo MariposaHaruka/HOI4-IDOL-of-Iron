@@ -1,0 +1,327 @@
+#수도
+capital = 126 #런던
+
+#부대
+if = {
+	limit = { has_NSB = yes }
+	set_oob = "IMA_ar_NSB"
+	else = { set_oob = "IMA_ar" }
+}
+if = {
+	limit = { has_MtG = yes }
+	else = {
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	else = {
+	}
+}
+starting_train_buffer = 4
+add_command_power = 20
+set_fuel_ratio = 0.8
+
+#시작 기술
+set_research_slots = 4
+set_technology = {
+	tech_trucks = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+if = {
+	limit = { has_MtG = yes }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		basic_fire_control_system = 1
+		basic_dp_light_battery = 1
+	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			basic_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+			early_battleship = 1
+			early_battlecruiser = 1
+			early_carrier = 1
+			transport = 1
+		}
+	}
+}
+if = {
+	limit = { has_BftB = yes }
+	set_technology = { 
+		camelry = 1
+	}
+}
+if = {
+	limit = { has_LaR = yes }
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+		}
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_medium_airframe = 1
+			basic_small_airframe = 1
+			basic_large_airframe = 1
+		}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 900
+
+#국민 정신
+add_ideas = {
+	IMA_great_depression
+	IMA_winner_of_great_war
+	IMA_961_problem
+	IMA_widespread_strikes
+	IMA_home_of_idol_democracy
+	IMA_amami_haruka_1
+}
+
+add_dynamic_modifier = { modifier = IMA_industry }
+add_dynamic_modifier = { modifier = IMA_army }
+add_dynamic_modifier = { modifier = IMA_navy }
+add_dynamic_modifier = { modifier = IMA_air_force }
+add_dynamic_modifier = { modifier = IMA_colonial_economy }
+
+#외교
+if = {
+	limit = { has_TfV = yes }
+	set_autonomy = {
+		target = ICG
+		autonomous_state = ima_westminster_dominion
+		freedom_level = 0.5
+	}
+	set_autonomy = {
+		target = IML
+		autonomous_state = ima_westminster_dominion
+		freedom_level = 0.7
+	}
+	set_autonomy = {
+		target = ISC
+		autonomous_state = ima_dominion
+		freedom_level = 0.1
+	}
+	set_autonomy = {
+		target = ISM
+		autonomous_state = ima_dominion
+		freedom_level = 0.1
+	}
+	set_autonomy = {
+		target = IDS
+		autonomous_state = ima_dominion
+		freedom_level = 0.1
+	}
+	set_autonomy = {
+		target = IGM
+		autonomous_state = ima_colony
+		freedom_level = 0.1
+	}
+	else = {
+		puppet = ICG
+		puppet = IML
+		puppet = ISC
+		puppet = ISM
+		puppet = IDS
+		puppet = IGM
+	}
+}
+
+if = {
+	limit = { has_TfV = yes }
+	add_to_tech_sharing_group = bandainamco_research
+}
+
+create_faction = bandai_namco_allies
+add_to_faction = IMA
+#add_to_faction = BDG
+add_to_faction = ICG
+add_to_faction = IML
+add_to_faction = ISC
+add_to_faction = ISM
+add_to_faction = IDS
+add_to_faction = IGM
+
+#정치 상황
+set_stability = 0.4
+set_war_support = 0.05
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1932.11.14"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	conservatism = 35
+	liberalism_mod = 7
+	progressivism = 0
+	socialdemocracy = 22
+	socialism = 10
+	communism = 4
+	authoritariancommunism = 12
+	anarchosyndicalism = 6
+	fascism = 1
+	militarytotalism = 1
+	authoritariandemocracy = 1 
+	autocracy = 1
+}
+set_country_flag = IMA_haruka_crisis
+
+#의회
+set_variable = { IMA_communist_seats = 8 }
+set_variable = { IMA_producercommunist_seats = 8 }
+set_variable = { IMA_labour_seats = 198 }
+
+set_variable = { IMA_nationallabour_seats = 59 }
+set_variable = { IMA_liberal_seats = 48 }
+set_variable = { IMA_conservative_seats = 259 }
+
+set_variable = { IMA_republicanpeople_seats = 20 }
+set_variable = { IMA_kingsparty_seats = 12 }
+set_variable = { IMA_fascist_seats = 3 }
+
+set_variable = { IMA_total_seats = 615 } #의석 총수이니 절대 바꾸지 말 것
+
+
+#캐릭터 
+recruit_character = IMA_amami_haruka
+recruit_character = IMA_kisaragi_chihaya
+recruit_character = IMA_hoshii_miki
+recruit_character = IMA_hagiwara_yukiho
+recruit_character = IMA_takatsuki_yayoi
+recruit_character = IMA_kikuchi_makoto
+recruit_character = IMA_minase_iori
+recruit_character = IMA_shijou_takane
+recruit_character = IMA_akizuki_ritsuko
+recruit_character = IMA_miura_azusa
+recruit_character = IMA_futami_ami
+recruit_character = IMA_futami_mami
+recruit_character = IMA_ganaha_hibiki
+recruit_character = IMA_otonashi_kotori
+recruit_character = IMA_takagi_junjirou
+recruit_character = IMA_akabane_p
+recruit_character = IMA_majima_p
+recruit_character = IMA_leon
+recruit_character = IMA_shiika
+recruit_character = IMA_kuroi_takeo
+recruit_character = IMA_okuzora_kohaku
+recruit_character = IMA_aya
+recruit_character = IMA_okuzora_mayumi
+
+#장관진
+
+#무기 프리셋
+if = {
+	limit = { has_NSB = yes }
+	create_equipment_variant = { 
+		name = "4호 경전차"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 3
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "GFX_ENG_basic_light_tank_medium"
+	}
+	else = {
+		create_equipment_variant = { 
+			name = "4호 경전차"
+			type = light_tank_equipment_1
+			parent_version = 0
+			upgrades = {
+				tank_armor_upgrade = 1
+				tank_engine_upgrade = 1
+				tank_gun_upgrade = 1
+				tank_reliability_upgrade = 1
+			}
+			icon = "GFX_ENG_basic_light_tank_medium"
+		}
+
+	}
+}
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}
