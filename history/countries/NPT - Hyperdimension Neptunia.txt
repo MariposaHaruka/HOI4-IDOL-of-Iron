@@ -3,6 +3,13 @@ capital = 266
 
 #부대
 set_oob = "NPT_ar"
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "NPT_ai_BBA"
+	else = {
+		set_air_oob = "NPT_ai"
+	}
+}
 starting_train_buffer = 2
 add_command_power = 10
 set_fuel_ratio = 0.15
@@ -37,6 +44,11 @@ set_convoys = 10
 #국민 정신
 
 add_ideas = agrarian_society
+
+add_dynamic_modifier = { modifier = NPT_industry }
+add_dynamic_modifier = { modifier = NPT_army }
+add_dynamic_modifier = { modifier = NPT_navy }
+add_dynamic_modifier = { modifier = NPT_air_force }
 
 #외교
 

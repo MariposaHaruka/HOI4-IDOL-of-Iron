@@ -1,14 +1,13 @@
-
-state={
-	id=296
-	name="STATE_296" # Guinea-Bissau
+state = {
+	id = 296
+	name = "STATE_296" # Guinea-Bissau
 	manpower = 364900
 	
 	state_category = enclave
-	resources={
-		rubber=1 # was: 1
+	resources = {
+		rubber = 1 # was: 1
 	}
-	history={
+	history = {
 		owner = AGN
 		add_core_of = AGN
 		victory_points = {
@@ -16,15 +15,17 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
 			12891 ={
 				naval_base = 1
 			}
 		}
 	}
 
-	provinces={
+	provinces = {
 		12747 12891 
 	}
 
-	local_supplies=0.0 
+	local_supplies = 0.0 
 }

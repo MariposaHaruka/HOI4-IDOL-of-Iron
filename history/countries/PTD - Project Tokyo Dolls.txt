@@ -3,6 +3,13 @@ capital = 111
 
 #부대
 set_oob = "PTD_ar"
+if = {
+	limit = { has_MtG = yes }
+	set_naval_oob = "PTD_na_MtG"
+	else = {
+		set_naval_oob = "PTD_na"
+	}
+}
 starting_train_buffer = 2
 add_command_power = 10
 set_fuel_ratio = 0.2
@@ -10,7 +17,32 @@ set_fuel_ratio = 0.2
 #시작 기술
 set_technology = {
 	infantry_weapons = 1
+	infantry_weapons1 = 1
 	tech_trucks = 1
+	gw_artillery = 1			
+	interwar_antiair = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	basic_train = 1
+}
+if = {
+	limit = { has_MtG = yes }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		coastal_defense_ships = 1
+	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			early_heavy_cruiser = 1
+		}
+	}
 }
 
 #인트로
@@ -20,6 +52,11 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 10
 
 #국민 정신
+
+add_dynamic_modifier = { modifier = PTD_industry }
+add_dynamic_modifier = { modifier = PTD_army }
+add_dynamic_modifier = { modifier = PTD_navy }
+add_dynamic_modifier = { modifier = PTD_air_force }
 
 #외교
 
@@ -56,7 +93,79 @@ recruit_character = PTD_sakura
 #장관진
 
 #무기 프리셋
-#create_equipment_variant = {
-#	name = ""
-#	type = amphibious_tank_equipment_2
-#}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "Vetehinen Class"								
+		type = ship_hull_submarine_1
+		name_group = PTD_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+		#design_team = mio:PTD_crichton_vulcan_organization
+	}
+	create_equipment_variant = {
+		name = "Vesikko Class"								
+		type = ship_hull_submarine_1
+		name_group = PTD_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+		#design_team = mio:PTD_crichton_vulcan_organization
+	}
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "Väinämöinen Class"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = PTD_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		#design_team = mio:PTD_crichton_vulcan_organization
+	}
+}
+if = {
+	limit = { has_NSB = yes }
+	create_equipment_variant = {
+		name = "FT mod. 31"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 2
+		}
+		obsolete = yes
+		icon = "GFX_FIN_gw_tank_renault_medium"
+	}
+
+	add_equipment_to_stockpile = { 
+		type = light_tank_chassis_0
+		variant_name = "FT mod. 31"
+		amount = 34
+		producer = BDG
+	}
+}

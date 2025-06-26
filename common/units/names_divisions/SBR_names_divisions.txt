@@ -1,0 +1,335 @@
+﻿SBR_INF_01 = {
+	name = "Infantry Divisions"
+
+	for_countries = { SBR }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SBR_GAR_01 }
+
+	fallback_name = "MIDI al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "MIDI al-Mushati al-%di" }
+		2 = { "MIDI al-Mushati al-%di" }
+		3 = { "MIDI al-Mushati al-%di" }
+		4 = { "MIDI al-Mushati al-%di" }
+		5 = { "MIDI al-Mushati al-%di" }
+		6 = { "MIDI al-Mushati al-%di" }
+		7 = { "MIDI al-Mushati al-%di" }
+		8 = { "MIDI al-Mushati al-%di" }
+		9 = { "MIDI al-Mushati al-%di" }
+		10 = { "MIDI al-Mushati al-%di" }
+		12 = { "MIDI al-Mushati al-%dr" }
+		13 = { "MIDI al-Mushati al-%dr" }
+		14 = { "MIDI al-Mushati al-%dr" }
+		15 = { "MIDI al-Mushati al-%dr" }
+		16 = { "MIDI al-Mushati al-%dr" }
+		17 = { "MIDI al-Mushati al-%dr" }
+		18 = { "MIDI al-Mushati al-%dr" }
+		19 = { "MIDI al-Mushati al-%dr" }
+		20 = { "MIDI al-Mushati al-%dr" }
+
+	}
+}
+
+SBR_CAV_01 = {
+	name = "Cavalry Divisions"
+
+	for_countries = { SBR }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { GER_Gar_01 }
+
+	fallback_name = "MIDI Sipahis al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "MIDI Sipahis al-%di" }
+		2 = { "MIDI Sipahis al-%di" }
+		3 = { "MIDI Sipahis al-%di" }
+		4 = { "MIDI Sipahis al-%di" }
+		5 = { "MIDI Sipahis al-%di" }
+		6 = { "MIDI Sipahis al-%di" }
+		7 = { "MIDI Sipahis al-%di" }
+		8 = { "MIDI Sipahis al-%di" }
+		9 = { "MIDI Sipahis al-%di" }
+		10 = { "MIDI Sipahis al-%di" }
+		11 = { "MIDI Sipahis al-%dr" }
+		12 = { "MIDI Sipahis al-%dr" }
+		13 = { "MIDI Sipahis al-%dr" }
+		14 = { "MIDI Sipahis al-%dr" }
+		15 = { "MIDI Sipahis al-%dr" }
+
+	}
+}
+
+SBR_MOT_01 = {
+	name = "Motorised Divisions"
+
+	for_countries = { SBR }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { SBR_INF_01 }
+
+	fallback_name = "MIDI al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "MIDI al-Mushati al-%di" }
+		2 = { "MIDI al-Mushati al-%di" }
+		3 = { "MIDI al-Mushati al-%di" }
+		4 = { "MIDI al-Mushati al-%di" }
+		5 = { "MIDI al-Mushati al-%di" }
+		6 = { "MIDI al-Mushati al-%di" }
+		7 = { "MIDI al-Mushati al-%di" }
+		8 = { "MIDI al-Mushati al-%di" }
+		9 = { "MIDI al-Mushati al-%di" }
+		10 = { "MIDI al-Mushati al-%di" }
+		12 = { "MIDI al-Mushati al-%dr" }
+		13 = { "MIDI al-Mushati al-%dr" }
+		14 = { "MIDI al-Mushati al-%dr" }
+		15 = { "MIDI al-Mushati al-%dr" }
+		16 = { "MIDI al-Mushati al-%dr" }
+		17 = { "MIDI al-Mushati al-%dr" }
+		18 = { "MIDI al-Mushati al-%dr" }
+		19 = { "MIDI al-Mushati al-%dr" }
+		20 = { "MIDI al-Mushati al-%dr" }
+
+	}
+}
+
+SBR_ARM_01 = {
+	name = "Armoured Divisions"
+
+	for_countries = { SBR }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { SBR_CAV_01 }
+
+	fallback_name = "MIDI Sipahis al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "MIDI Sipahis al-%di" }
+		2 = { "MIDI Sipahis al-%di" }
+		3 = { "MIDI Sipahis al-%di" }
+		4 = { "MIDI Sipahis al-%di" }
+		5 = { "MIDI Sipahis al-%di" }
+		6 = { "MIDI Sipahis al-%di" }
+		7 = { "MIDI Sipahis al-%di" }
+		8 = { "MIDI Sipahis al-%di" }
+		9 = { "MIDI Sipahis al-%di" }
+		10 = { "MIDI Sipahis al-%di" }
+		11 = { "MIDI Sipahis al-%dr" }
+		12 = { "MIDI Sipahis al-%dr" }
+		13 = { "MIDI Sipahis al-%dr" }
+		14 = { "MIDI Sipahis al-%dr" }
+		15 = { "MIDI Sipahis al-%dr" }
+
+	}
+}
+
+SBR_MEC_01 = {
+	name = "Mechanised Divisions"
+
+	for_countries = { SBR }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized"  }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { SBR_INF_01 }
+
+	fallback_name = "MIDI al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "MIDI al-Mushati al-%di" }
+		2 = { "MIDI al-Mushati al-%di" }
+		3 = { "MIDI al-Mushati al-%di" }
+		4 = { "MIDI al-Mushati al-%di" }
+		5 = { "MIDI al-Mushati al-%di" }
+		6 = { "MIDI al-Mushati al-%di" }
+		7 = { "MIDI al-Mushati al-%di" }
+		8 = { "MIDI al-Mushati al-%di" }
+		9 = { "MIDI al-Mushati al-%di" }
+		10 = { "MIDI al-Mushati al-%di" }
+		12 = { "MIDI al-Mushati al-%dr" }
+		13 = { "MIDI al-Mushati al-%dr" }
+		14 = { "MIDI al-Mushati al-%dr" }
+		15 = { "MIDI al-Mushati al-%dr" }
+		16 = { "MIDI al-Mushati al-%dr" }
+		17 = { "MIDI al-Mushati al-%dr" }
+		18 = { "MIDI al-Mushati al-%dr" }
+		19 = { "MIDI al-Mushati al-%dr" }
+		20 = { "MIDI al-Mushati al-%dr" }
+
+	}
+}
+
+SBR_GAR_01 = {
+	name = "Garrison Divisions"
+
+	for_countries = { SBR }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { SBR_INF_01 }
+
+	fallback_name = "MIDI al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "MIDI al-Mushati al-%di" }
+		2 = { "MIDI al-Mushati al-%di" }
+		3 = { "MIDI al-Mushati al-%di" }
+		4 = { "MIDI al-Mushati al-%di" }
+		5 = { "MIDI al-Mushati al-%di" }
+		6 = { "MIDI al-Mushati al-%di" }
+		7 = { "MIDI al-Mushati al-%di" }
+		8 = { "MIDI al-Mushati al-%di" }
+		9 = { "MIDI al-Mushati al-%di" }
+		10 = { "MIDI al-Mushati al-%di" }
+		12 = { "MIDI al-Mushati al-%dr" }
+		13 = { "MIDI al-Mushati al-%dr" }
+		14 = { "MIDI al-Mushati al-%dr" }
+		15 = { "MIDI al-Mushati al-%dr" }
+		16 = { "MIDI al-Mushati al-%dr" }
+		17 = { "MIDI al-Mushati al-%dr" }
+		18 = { "MIDI al-Mushati al-%dr" }
+		19 = { "MIDI al-Mushati al-%dr" }
+		20 = { "MIDI al-Mushati al-%dr" }
+
+	}
+}
+
+SBR_MAR_01 = {
+	name = "Marine Divisions"
+
+	for_countries = { SBR }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" "amphibious_armor" "amphibious_mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { SBR_INF_01 }
+
+	fallback_name = "MIDI al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		20 = { "MIDI al-Mushati al-%dr" }
+		21 = { "MIDI al-Mushati al-%dr" }
+		22 = { "MIDI al-Mushati al-%dr" }
+		23 = { "MIDI al-Mushati al-%dr" }
+		24 = { "MIDI al-Mushati al-%dr" }
+		25 = { "MIDI al-Mushati al-%dr" }
+		26 = { "MIDI al-Mushati al-%dr" }
+		27 = { "MIDI al-Mushati al-%dr" }
+		28 = { "MIDI al-Mushati al-%dr" }
+		29 = { "MIDI al-Mushati al-%dr" }
+		30 = { "MIDI al-Mushati al-%dr" }
+
+	}
+}
+
+SBR_MTN_01 = {
+	name = "Mountain Divisions"
+
+	for_countries = { SBR }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { SBR_INF_01 }
+
+	fallback_name = "MIDI al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "MIDI al-Mushati al-%di" }
+		2 = { "MIDI al-Mushati al-%di" }
+		3 = { "MIDI al-Mushati al-%di" }
+		4 = { "MIDI al-Mushati al-%di" }
+		5 = { "MIDI al-Mushati al-%di" }
+		6 = { "MIDI al-Mushati al-%di" }
+		7 = { "MIDI al-Mushati al-%di" }
+		8 = { "MIDI al-Mushati al-%di" }
+		9 = { "MIDI al-Mushati al-%di" }
+		10 = { "MIDI al-Mushati al-%di" }
+		12 = { "MIDI al-Mushati al-%dr" }
+		13 = { "MIDI al-Mushati al-%dr" }
+		14 = { "MIDI al-Mushati al-%dr" }
+		15 = { "MIDI al-Mushati al-%dr" }
+		16 = { "MIDI al-Mushati al-%dr" }
+		17 = { "MIDI al-Mushati al-%dr" }
+		18 = { "MIDI al-Mushati al-%dr" }
+		19 = { "MIDI al-Mushati al-%dr" }
+		20 = { "MIDI al-Mushati al-%dr" }
+
+	}
+}
+
+SBR_PAR_01 = {
+	name = "Paratrooper Divisions"
+
+	for_countries = { SBR }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { SBR_INF_01 }
+
+	fallback_name = "MIDI al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		20 = { "MIDI al-Mushati al-%dr" }
+		21 = { "MIDI al-Mushati al-%dr" }
+		22 = { "MIDI al-Mushati al-%dr" }
+		23 = { "MIDI al-Mushati al-%dr" }
+		24 = { "MIDI al-Mushati al-%dr" }
+		25 = { "MIDI al-Mushati al-%dr" }
+		26 = { "MIDI al-Mushati al-%dr" }
+		27 = { "MIDI al-Mushati al-%dr" }
+		28 = { "MIDI al-Mushati al-%dr" }
+		29 = { "MIDI al-Mushati al-%dr" }
+		30 = { "MIDI al-Mushati al-%dr" }
+
+	}
+}

@@ -1,0 +1,20 @@
+﻿units = {
+
+	##### Naval OOB #####
+	fleet = {
+		name = "Royal Million Navy"
+		naval_base = 7361 # Halifax
+		task_force = {				
+			name = "Atlantic Squadron"			
+			location = 7361 # Halifax
+			# Scrap Iron Flotilla
+			ship = { name = "ISMS Saguenay" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IML version_name = "River Class" } } }
+			ship = { name = "ISMS Skeena" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IML version_name = "River Class" } } }
+			# Outdated S class ships
+			ship = { name = "ISMS Champlain" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IML version_name = "S Class" } } }
+			ship = { name = "ISMS Vancouver" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IML version_name = "S Class" } } }
+		}				
+	}
+}
+
+

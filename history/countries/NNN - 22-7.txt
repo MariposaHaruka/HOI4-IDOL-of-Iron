@@ -3,9 +3,18 @@ capital = 43
 
 #부대
 set_oob = "NNN_ar"
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "NNN_ai_BBA"
+	else = {
+		set_air_oob = "NNN_ai"
+	}
+}
 starting_train_buffer = 2
 add_command_power = 10
 set_fuel_ratio = 0.2
+
+set_country_flag = no_naval_academy
 
 #시작 기술
 set_technology = {
@@ -19,6 +28,10 @@ set_variable = { country_intro_page_count = 2 }
 #수송선
 
 #국민 정신
+
+add_dynamic_modifier = { modifier = NNN_industry }
+add_dynamic_modifier = { modifier = NNN_army }
+add_dynamic_modifier = { modifier = NNN_air_force }
 
 #외교
 

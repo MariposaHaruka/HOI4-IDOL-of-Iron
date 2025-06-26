@@ -1,0 +1,19 @@
+DIF_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_DIF_dynamic_industry
+}
+
+DIF_army = {
+	enable = { always = yes }
+	icon = GFX_idea_DIF_dynamic_army
+}
+
+DIF_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_DIF_dynamic_naval
+}
+
+DIF_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_DIF_dynamic_airforce
+}

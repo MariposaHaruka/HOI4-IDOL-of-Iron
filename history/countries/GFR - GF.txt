@@ -3,6 +3,11 @@ capital = 304
 
 #부대
 set_oob = "GFR_ar"
+add_command_power = 0
+set_fuel_ratio = 0.3
+set_country_flag = no_military_academy
+set_country_flag = no_naval_academy
+set_country_flag = no_air_academy
 
 #시작 기술
 set_technology = {
@@ -17,12 +22,15 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 10
 
 #국민 정신
-add_ideas = direct_election
-add_ideas = single_parliament
+add_ideas = {
+	seio_national_police
+	agrarian_society
+}
 
-add_ideas = agrarian_society
+add_dynamic_modifier = { modifier = GFR_industry }
 
 #외교
+give_military_access = ICG
 
 #정치 상황
 set_stability = 0.65

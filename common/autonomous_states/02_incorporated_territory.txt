@@ -1,0 +1,98 @@
+autonomy_state = {
+	id = autonomy_federal_incorporated_territory
+
+	use_overlord_color = yes
+	min_freedom_level = 0.1
+	manpower_influence = 0.4
+	
+	rule = {
+		desc = "RULE_DESC_IS_A_SUBJECT"
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+		can_be_spymaster = no
+		contributes_operatives = no
+		can_create_collaboration_government = no
+	}
+	
+	modifier = {
+		autonomy_manpower_share = 0.5
+		extra_trade_to_overlord_factor = 0.0
+		overlord_trade_cost_factor = -1.0
+		can_master_build_for_us = 1
+		peace_score_ratio_transferred_to_overlord = 1.0
+		lend_lease_tension_with_overlord = -1.0
+		research_sharing_per_country_bonus_factor = -1.0
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 1.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		if = {
+			limit = { has_dlc = "Waking the Tiger" }
+			OVERLORD = { 
+				OR = {
+					is_democratic = yes
+					has_government = authoritariandemocracy
+				}
+			}
+			OVERLORD = { 
+				NOT = {
+					original_tag = IMA
+					original_tag = BDG
+					original_tag = LLS
+				}
+			}
+			OVERLORD = {
+				OR = {
+					has_idea = federal_state
+					has_idea = local_self_federal_state
+				}
+			}
+		}
+	}
+
+	allowed_levels_filter = {
+		autonomy_federal_colony
+		autonomy_federal_incorporated_territory
+	}
+
+	use_for_peace_conference_weight = {
+		base = 0
+		modifier = {
+			add = 10
+			FROM = {
+				NOT = {
+					original_tag = IMA
+					original_tag = BDG
+					original_tag = LLS
+				}
+				OR = {
+					is_democratic = yes
+					has_government = authoritariandemocracy
+				}
+				OR = {
+					has_idea = federal_state
+					has_idea = local_self_federal_state
+				}
+			}
+		}
+	}
+	
+	can_take_level = {
+		always = no #디시전으로 결정
+	}
+
+	can_lose_level = {
+		always = no #디시전으로 결정
+	}
+}

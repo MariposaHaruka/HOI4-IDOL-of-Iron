@@ -102,8 +102,14 @@ ideas = {
             level = 4
             
             available = {
-                is_fascism = no
-				is_communism = no
+                OR = {
+                    is_fascism = no
+                    is_communism = no
+                    AND = {
+                        original_tag = BLA
+                        NOT = { has_country_flag = BLA_chronos_banned }
+                    }
+                }
             }
 
             modifier = {

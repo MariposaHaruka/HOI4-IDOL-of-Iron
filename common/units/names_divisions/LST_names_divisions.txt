@@ -1,0 +1,339 @@
+﻿LST_INF_01 = {
+	name = "Infantry Division"
+
+	for_countries = { LST }				
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LST_INF_01 }
+
+	fallback_name = "%dth Liella Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Liella Division" }
+		11 = { "%dth Liella Division" }
+		21 = { "%dst Liella Division" }
+		31 = { "%dst Liella Division" }
+		41 = { "%dst Liella Division" }
+		51 = { "%dst Liella Division" }
+		61 = { "%dst Liella Division" }
+		71 = { "%dst Liella Division" }
+		81 = { "%dst Liella Division" }
+		91 = { "%dst Liella Division" }
+		101 = { "%dst Liella Division" }
+		2 = { "%dnd Liella Division" }
+		12 = { "%dth Liella Division" }
+		22 = { "%dnd Liella Division" }
+		32 = { "%dnd Liella Division" }
+		42 = { "%dnd Liella Division" }
+		52 = { "%dnd Liella Division" }
+		62 = { "%dnd Liella Division" }
+		72 = { "%dnd Liella Division" }
+		82 = { "%dnd Liella Division" }
+		92 = { "%dnd Liella Division" }
+		102 = { "%dnd Liella Division" }
+		3 = { "%drd Liella Division" }
+		13 = { "%dth Liella Division" }
+		23 = { "%drd Liella Division" }
+		33 = { "%drd Liella Division" }
+		43 = { "%drd Liella Division" }
+		53 = { "%drd Liella Division" }
+		63 = { "%drd Liella Division" }
+		73 = { "%drd Liella Division" }
+		83 = { "%drd Liella Division" }
+		93 = { "%drd Liella Division" }
+		103 = { "%drd Liella Division" }
+		4 = { "%dth Liella Division" }
+		14 = { "%dth Liella Division" }
+		24 = { "%dth Liella Division" }
+		34 = { "%dth Liella Division" }
+		44 = { "%dth Liella Division" }
+		54 = { "%dth Liella Division" }
+		64 = { "%dth Liella Division" }
+		74 = { "%dth Liella Division" }
+		84 = { "%dth Liella Division" }
+		94 = { "%dth Liella Division" }
+		104 = { "%dth Liella Division" }
+	}
+}
+
+LST_CAV_01 = {
+	name = "Cavalry Division"
+
+	for_countries = { LST }				
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LST_INF_01 }
+
+	fallback_name = "%dth Liella Cavalry Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Liella Cavalry Div." }
+		2 = { "%dnd Liella Cavalry Div." }
+		3 = { "%drd Liella Cavalry Div." }
+		4 = { "%dth Liella Cavalry Div." }
+		5 = { "%dth Liella Cavalry Div." }
+		6 = { "%dth Liella Cavalry Div." }
+		7 = { "%dth Liella Cavalry Div." }
+		8 = { "%dth Liella Cavalry Div." }
+		9 = { "%dth Liella Cavalry Div." }
+		10 = { "%dth Liella Cavalry Div." }
+	}
+}
+
+LST_MOT_01 = {
+	name = "Motorized Division"
+
+	for_countries = { LST }				
+	
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LST_INF_01 }
+	
+	fallback_name = "%dth Liella Motorized Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Liella Motorized Div." }
+		2 = { "%dnd Liella Motorized Div." }
+		3 = { "%drd Liella Motorized Div." }
+		4 = { "%dth Liella Motorized Div." }
+		5 = { "%dth Liella Motorized Div." }
+		6 = { "%dth Liella Motorized Div." }
+		7 = { "%dth Liella Motorized Div." }	
+		8 = { "%dth Liella Motorized Div." }
+		9 = { "%dth Liella Motorized Div." }
+		10 = { "%dth Liella Motorized Div." }
+	}
+}
+
+LST_MEC_01 = {
+	name = "Mechanized Division"
+
+	for_countries = { LST }				
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LST_INF_01 }
+
+	fallback_name = "%dth Liella Mechanized Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Liella Mechanized Div." }
+		2 = { "%dnd Liella Mechanized Div." }
+		3 = { "%drd Liella Mechanized Div." }
+		4 = { "%dth Liella Mechanized Div." }
+		5 = { "%dth Liella Mechanized Div." }
+		6 = { "%dth Liella Mechanized Div." }
+		7 = { "%dth Liella Mechanized Div." }	
+		8 = { "%dth Liella Mechanized Div." }
+		9 = { "%dth Liella Mechanized Div." }
+		10 = { "%dth Liella Mechanized Div." }
+	}
+}
+
+LST_ARM_01 = {
+	name = "Tank Group"
+
+	for_countries = { LST }	
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LST_INF_01 }
+
+	fallback_name = "%dth Liella Tank Group"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Liella Tank Group" }
+		2 = { "%dnd Liella Tank Group" }
+		3 = { "%drd Liella Tank Group" }
+		4 = { "%dth Liella Tank Group" }
+		5 = { "%dth Liella Tank Group" }
+		6 = { "%dth Liella Tank Group" }
+		7 = { "%dth Liella Tank Group" }
+		8 = { "%dth Liella Tank Group" }
+		9 = { "%dth Liella Tank Group" }
+		10 = { "%dth Liella Tank Group" }
+	}
+}
+
+LST_PAR_01 = {
+	name = "Airborne Division"
+
+	for_countries = { LST }				# Includes active nations and releasable (former) British colonies
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LST_INF_01 }
+
+	fallback_name = "%dth Liella Airborne Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Liella Airborne Div." }
+		2 = { "%dnd Liella Airborne Div." }	
+		3 = { "%drd Liella Airborne Div." }
+		4 = { "%dth Liella Airborne Div." }
+		5 = { "%dth Liella Airborne Div." }
+		6 = { "%dth Liella Airborne Div." }
+		7 = { "%dth Liella Airborne Div." }	
+		8 = { "%dth Liella Airborne Div." }
+		9 = { "%dth Liella Airborne Div." }
+		10 = { "%dth Liella Airborne Div." }
+	}
+}
+
+LST_MAR_01 = {
+	name = "Marine Division"
+
+	for_countries = { LST }				
+
+	can_use = { always = yes }
+
+	division_types = { "marine" "amphibious_armor" "amphibious_mechanized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LST_INF_01 }
+
+	fallback_name = "%dth Liella Marine Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Liella Marine Div." }
+		2 = { "%dnd Liella Marine Div." }
+		3 = { "%drd Liella Marine Div." }
+		4 = { "%dth Liella Marine Div." }
+		5 = { "%dth Liella Marine Div." }
+		6 = { "%dth Liella Marine Div." }
+		7 = { "%dth Liella Marine Div." }
+		8 = { "%dth Liella Marine Div." }
+		9 = { "%dth Liella Marine Div." }
+		10 = { "%dth Liella Marine Div." }
+	}
+}
+
+LST_MNT_01 = {
+	name = "Mountain Division"
+
+	for_countries = { LST }				
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LST_INF_01 }
+
+	fallback_name = "%dth Liella Mountain Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Liella Mountain Div." }
+		2 = { "%dnd Liella Mountain Div." }
+		3 = { "%drd Liella Mountain Div." }
+		4 = { "%dth Liella Mountain Div." }
+		5 = { "%dth Liella Mountain Div." }
+		6 = { "%dth Liella Mountain Div." }
+		7 = { "%dth Liella Mountain Div." }
+		8 = { "%dthLiella Mountain Div." }
+		9 = { "%dth Liella Mountain Div." }
+		10 = { "%dth Liella Mountain Div." }
+	}
+}
+
+LST_GAR_01 = {
+	name = "Garrison Division"
+
+	for_countries = { LST }				
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LST_INF_01 }
+
+	fallback_name = "%dth Liella Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Liella Division" }
+		11 = { "%dth Liella Division" }
+		21 = { "%dst Liella Division" }
+		31 = { "%dst Liella Division" }
+		41 = { "%dst Liella Division" }
+		51 = { "%dst Liella Division" }
+		61 = { "%dst Liella Division" }
+		71 = { "%dst Liella Division" }
+		81 = { "%dst Liella Division" }
+		91 = { "%dst Liella Division" }
+		101 = { "%dst Liella Division" }
+		2 = { "%dnd Liella Division" }
+		12 = { "%dth Liella Division" }
+		22 = { "%dnd Liella Division" }
+		32 = { "%dnd Liella Division" }
+		42 = { "%dnd Liella Division" }
+		52 = { "%dnd Liella Division" }
+		62 = { "%dnd Liella Division" }
+		72 = { "%dnd Liella Division" }
+		82 = { "%dnd Liella Division" }
+		92 = { "%dnd Liella Division" }
+		102 = { "%dnd Liella Division" }
+		3 = { "%drd Liella Division" }
+		13 = { "%dth Liella Division" }
+		23 = { "%drd Liella Division" }
+		33 = { "%drd Liella Division" }
+		43 = { "%drd Liella Division" }
+		53 = { "%drd Liella Division" }
+		63 = { "%drd Liella Division" }
+		73 = { "%drd Liella Division" }
+		83 = { "%drd Liella Division" }
+		93 = { "%drd Liella Division" }
+		103 = { "%drd Liella Division" }
+		4 = { "%dth Liella Division" }
+		14 = { "%dth Liella Division" }
+		24 = { "%dth Liella Division" }
+		34 = { "%dth Liella Division" }
+		44 = { "%dth Liella Division" }
+		54 = { "%dth Liella Division" }
+		64 = { "%dth Liella Division" }
+		74 = { "%dth Liella Division" }
+		84 = { "%dth Liella Division" }
+		94 = { "%dth Liella Division" }
+		104 = { "%dth Liella Division" }
+
+	}
+}
+

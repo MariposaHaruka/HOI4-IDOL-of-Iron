@@ -1,0 +1,293 @@
+prs_inner_circle_inlay_window = {
+	window_name = prs_inner_circle_ui_window
+	internal = yes
+	visible = {
+		NOT = { has_completed_focus = PRS_32001 }
+		has_government = fascism
+	}
+
+	scripted_images = {
+		#FUHRER
+		fuhrer_portrait = {
+			GFX_inner_circle_leader_hoshino_ichika = yes
+			GFX_inner_circle_leader_kusanagi_nene = {
+				has_country_leader = {
+					ruling_only = yes
+					character = PRS_kusanagi_nene
+				}
+			}
+			GFX_inner_circle_leader_kamishiro_rui = {
+				has_country_leader = {
+					ruling_only = yes
+					character = PRS_kamishiro_rui
+				}
+			}
+			GFX_inner_circle_leader_ootori_emu = {
+				has_country_leader = {
+					ruling_only = yes
+					character = PRS_ootori_emu
+				}
+			}
+			GFX_inner_circle_leader_tenma_tsukasa = {
+				has_country_leader = {
+					ruling_only = yes
+					character = PRS_tenma_tsukasa
+				}
+			}
+			GFX_inner_circle_leader_yoisaki_kanade = {
+				has_country_leader = {
+					ruling_only = yes
+					character = PRS_yoisaki_kanade
+				}
+			}
+			GFX_inner_circle_leader_tenma_saki = {
+				has_country_leader = {
+					ruling_only = yes
+					character = PRS_tenma_saki
+				}
+			}
+			GFX_inner_circle_leader_mochizuki_honami = {
+				has_country_leader = {
+					ruling_only = yes
+					character = PRS_mochizuki_honami
+				}
+			}
+			GFX_inner_circle_leader_hinomori_shiho = {
+				has_country_leader = {
+					ruling_only = yes
+					character = PRS_hinomori_shiho
+				}
+			}
+		}
+
+		#ASCENDED
+		ascended_advisor_1_portrait = {
+			GFX_blank_leader_portrait = {
+				check_variable = { PRS_ascended_advisor_1 = 0 }
+			}
+			GFX_portrait_PRS_kusanagi_nene = {
+	   			check_variable = { PRS_ascended_advisor_1 = 1 }
+			}
+			GFX_portrait_PRS_kamishiro_rui = {
+				check_variable = { PRS_ascended_advisor_1 = 2 }
+			}
+			GFX_portrait_PRS_ootori_emu = {
+				check_variable = { PRS_ascended_advisor_1 = 3 }
+			}
+			GFX_portrait_PRS_tenma_tsukasa = {
+				check_variable = { PRS_ascended_advisor_1 = 4 }
+			}
+			GFX_portrait_PRS_yoisaki_kanade = {
+				check_variable = { PRS_ascended_advisor_1 = 5 }
+			}
+			GFX_portrait_PRS_tenma_saki = {
+				check_variable = { PRS_ascended_advisor_1 = 6 }
+			}
+			GFX_portrait_PRS_mochizuki_honami = {
+				check_variable = { PRS_ascended_advisor_1 = 7 }
+			}
+			GFX_portrait_PRS_hinomori_shiho = {
+				check_variable = { PRS_ascended_advisor_1 = 8 }
+			}
+		}
+		ascended_advisor_2_portrait = {
+			GFX_blank_leader_portrait = {
+				check_variable = { PRS_ascended_advisor_2 = 0 }
+			}
+			GFX_portrait_PRS_kusanagi_nene = {
+	   			check_variable = { PRS_ascended_advisor_2 = 1 }
+			}
+			GFX_portrait_PRS_kamishiro_rui = {
+				check_variable = { PRS_ascended_advisor_2 = 2 }
+			}
+			GFX_portrait_PRS_ootori_emu = {
+				check_variable = { PRS_ascended_advisor_2 = 3 }
+			}
+			GFX_portrait_PRS_tenma_tsukasa = {
+				check_variable = { PRS_ascended_advisor_2 = 4 }
+			}
+			GFX_portrait_PRS_yoisaki_kanade = {
+				check_variable = { PRS_ascended_advisor_2 = 5 }
+			}
+			GFX_portrait_PRS_tenma_saki = {
+				check_variable = { PRS_ascended_advisor_2 = 6 }
+			}
+			GFX_portrait_PRS_mochizuki_honami = {
+				check_variable = { PRS_ascended_advisor_2 = 7 }
+			}
+			GFX_portrait_PRS_hinomori_shiho = {
+				check_variable = { PRS_ascended_advisor_2 = 8 }
+			}
+		}
+		ascended_advisor_3_portrait = {
+			GFX_blank_leader_portrait = {
+				check_variable = { PRS_ascended_advisor_3 = 0 }
+			}
+			GFX_portrait_PRS_kusanagi_nene = {
+	   			check_variable = { PRS_ascended_advisor_3 = 1 }
+			}
+			GFX_portrait_PRS_kamishiro_rui = {
+				check_variable = { PRS_ascended_advisor_3 = 2 }
+			}
+			GFX_portrait_PRS_ootori_emu = {
+				check_variable = { PRS_ascended_advisor_3 = 3 }
+			}
+			GFX_portrait_PRS_tenma_tsukasa = {
+				check_variable = { PRS_ascended_advisor_3 = 4 }
+			}
+			GFX_portrait_PRS_yoisaki_kanade = {
+				check_variable = { PRS_ascended_advisor_3 = 5 }
+			}
+			GFX_portrait_PRS_tenma_saki = {
+				check_variable = { PRS_ascended_advisor_3 = 6 }
+			}
+			GFX_portrait_PRS_mochizuki_honami = {
+				check_variable = { PRS_ascended_advisor_3 = 7 }
+			}
+			GFX_portrait_PRS_hinomori_shiho = {
+				check_variable = { PRS_ascended_advisor_3 = 8 }
+			}
+		}
+
+		ascended_advisor_1_frame = {
+			GFX_ascended_advisors_frame = {
+				check_variable = { PRS_ascended_advisor_1 = 0 compare = not_equals }	
+			}
+			GFX_ascended_advisors_unappointed_frame = yes
+		}
+		ascended_advisor_2_frame = {
+			GFX_ascended_advisors_frame = {
+				check_variable = { PRS_ascended_advisor_2 = 0 compare = not_equals }	
+			}
+			GFX_ascended_advisors_unappointed_frame = yes
+		}
+		ascended_advisor_3_frame = {
+			GFX_ascended_advisors_frame = {
+				check_variable = { PRS_ascended_advisor_3 = 0 compare = not_equals }	
+			}
+			GFX_ascended_advisors_unappointed_frame = yes
+		}
+
+		#ADVISOR
+		advisor_kusanagi_nene_portrait = {
+			GFX_kusanagi_nene_selected_small = {
+				OR = {
+					check_variable = { PRS_ascended_advisor_1 = 1 }
+					check_variable = { PRS_ascended_advisor_2 = 1 }
+					check_variable = { PRS_ascended_advisor_3 = 1 }
+				}
+			}
+			GFX_kusanagi_nene_unavailable_small = {
+				check_variable = { PRS_ascended_advisor_1 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_2 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_3 = 0 compare = not_equals }
+			}
+			GFX_kusanagi_nene_available_small = yes
+		}
+		advisor_kamishiro_rui_portrait = {
+			GFX_kamishiro_rui_selected_small = {
+				OR = {
+					check_variable = { PRS_ascended_advisor_1 = 2 }
+					check_variable = { PRS_ascended_advisor_2 = 2 }
+					check_variable = { PRS_ascended_advisor_3 = 2 }
+				}
+			}
+			GFX_kamishiro_rui_unavailable_small = {
+				check_variable = { PRS_ascended_advisor_1 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_2 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_3 = 0 compare = not_equals }
+			}
+			GFX_kamishiro_rui_available_small = yes
+		}
+		advisor_ootori_emu_portrait = {
+			GFX_ootori_emu_selected_small = {
+				OR = {
+					check_variable = { PRS_ascended_advisor_1 = 3 }
+					check_variable = { PRS_ascended_advisor_2 = 3 }
+					check_variable = { PRS_ascended_advisor_3 = 3 }
+				}
+			}
+			GFX_ootori_emu_unavailable_small = {
+				check_variable = { PRS_ascended_advisor_1 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_2 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_3 = 0 compare = not_equals }
+			}
+			GFX_ootori_emu_available_small = yes
+		}
+		advisor_tenma_tsukasa_portrait = {
+			GFX_tenma_tsukasa_selected_small = {
+				OR = {
+					check_variable = { PRS_ascended_advisor_1 = 4 }
+					check_variable = { PRS_ascended_advisor_2 = 4 }
+					check_variable = { PRS_ascended_advisor_3 = 4 }
+				}
+			}
+			GFX_tenma_tsukasa_unavailable_small = {
+				check_variable = { PRS_ascended_advisor_1 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_2 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_3 = 0 compare = not_equals }
+			}
+			GFX_tenma_tsukasa_available_small = yes
+		}
+		advisor_yoisaki_kanade_portrait = {
+			GFX_yoisaki_kanade_selected_small = {
+				OR = {
+					check_variable = { PRS_ascended_advisor_1 = 5 }
+					check_variable = { PRS_ascended_advisor_2 = 5 }
+					check_variable = { PRS_ascended_advisor_3 = 5 }
+				}
+			}
+			GFX_yoisaki_kanade_unavailable_small = {
+				check_variable = { PRS_ascended_advisor_1 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_2 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_3 = 0 compare = not_equals }
+			}
+			GFX_yoisaki_kanade_available_small = yes
+		}
+		advisor_tenma_saki_portrait = {
+			GFX_tenma_saki_selected_small = {
+				OR = {
+					check_variable = { PRS_ascended_advisor_1 = 6 }
+					check_variable = { PRS_ascended_advisor_2 = 6 }
+					check_variable = { PRS_ascended_advisor_3 = 6 }
+				}
+			}
+			GFX_tenma_saki_unavailable_small = {
+				check_variable = { PRS_ascended_advisor_1 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_2 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_3 = 0 compare = not_equals }
+			}
+			GFX_tenma_saki_available_small = yes
+		}
+		advisor_mochizuki_honami_portrait = {
+			GFX_mochizuki_honami_selected_small = {
+				OR = {
+					check_variable = { PRS_ascended_advisor_1 = 7 }
+					check_variable = { PRS_ascended_advisor_2 = 7 }
+					check_variable = { PRS_ascended_advisor_3 = 7 }
+				}
+			}
+			GFX_mochizuki_honami_unavailable_small = {
+				check_variable = { PRS_ascended_advisor_1 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_2 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_3 = 0 compare = not_equals }
+			}
+			GFX_mochizuki_honami_available_small = yes
+		}
+		advisor_hinomori_shiho_portrait = {
+			GFX_hinomori_shiho_selected_small = {
+				OR = {
+					check_variable = { PRS_ascended_advisor_1 = 7 }
+					check_variable = { PRS_ascended_advisor_2 = 7 }
+					check_variable = { PRS_ascended_advisor_3 = 7 }
+				}
+			}
+			GFX_hinomori_shiho_unavailable_small = {
+				check_variable = { PRS_ascended_advisor_1 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_2 = 0 compare = not_equals }
+				check_variable = { PRS_ascended_advisor_3 = 0 compare = not_equals }
+			}
+			GFX_hinomori_shiho_available_small = yes
+		}
+	}
+}

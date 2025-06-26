@@ -1,11 +1,9 @@
 # AI tank design for testing
 
-FRA_light_tanks = {
+BDG_light_tanks = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_light_tank
@@ -226,12 +224,10 @@ FRA_light_tanks = {
 	}
 }
 
-FRA_light_tank_destroyers = {
+BDG_light_tank_destroyers = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_light_tank_destroyer
@@ -352,12 +348,10 @@ FRA_light_tank_destroyers = {
 	}
 }
 
-FRA_light_tank_artillery = {
+BDG_light_tank_artillery = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_light_tank_artillery
@@ -499,12 +493,10 @@ FRA_light_tank_artillery = {
 	}
 }
 
-FRA_light_tank_anti_air = {
+BDG_light_tank_anti_air = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_light_tank_anti_air
@@ -652,12 +644,10 @@ FRA_light_tank_anti_air = {
 	}
 }
 
-FRA_medium_tanks = {
+BDG_medium_tanks = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_medium_tank
@@ -843,12 +833,10 @@ FRA_medium_tanks = {
 	}
 }
 
-FRA_medium_tank_destroyer = {
+BDG_medium_tank_destroyer = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_medium_tank_destroyer
@@ -1040,12 +1028,10 @@ FRA_medium_tank_destroyer = {
 	}
 }
 
-FRA_medium_tank_artillery = {
+BDG_medium_tank_artillery = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_medium_tank_artillery
@@ -1187,12 +1173,10 @@ FRA_medium_tank_artillery = {
 	}
 }
 
-FRA_medium_tank_anti_air = {
+BDG_medium_tank_anti_air = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_medium_tank_anti_air
@@ -1340,12 +1324,10 @@ FRA_medium_tank_anti_air = {
 	}
 }
 ###HEAVY TANKS
-FRA_heavy_tanks = {
+BDG_heavy_tanks = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_heavy_tank
@@ -1367,7 +1349,8 @@ FRA_heavy_tanks = {
 				factor = 0 #let's not waste XP here
 			}
 			modifier = {
-				has_completed_focus = FRA_division_cuirassee
+				has_country_flag = BDG_mobile_Warfare
+				#has_completed_focus = BDG_division_cuirassee
 				factor = 25
 			}
 			
@@ -1543,12 +1526,10 @@ FRA_heavy_tanks = {
 	}
 }
 
-FRA_heavy_tank_destroyer = {
+BDG_heavy_tank_destroyer = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_heavy_tank_destroyer
@@ -1742,12 +1723,10 @@ FRA_heavy_tank_destroyer = {
 	}
 }
 
-FRA_heavy_tank_artillery = {
+BDG_heavy_tank_artillery = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_heavy_tank_artillery
@@ -1890,12 +1869,10 @@ FRA_heavy_tank_artillery = {
 	}
 }
 
-FRA_heavy_tank_anti_air = {
+BDG_heavy_tank_anti_air = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_heavy_tank_anti_air
@@ -2043,12 +2020,10 @@ FRA_heavy_tank_anti_air = {
 	}
 }
 
-FRA_super_heavy_tanks = {
+BDG_super_heavy_tanks = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_super_heavy_tank
@@ -2135,12 +2110,10 @@ FRA_super_heavy_tanks = {
 	}
 }
 
-FRA_modern_tanks = {
+BDG_modern_tanks = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_modern_tank
@@ -2220,12 +2193,10 @@ FRA_modern_tanks = {
 	}
 }
 
-FRA_modern_tank_destroyer = {
+BDG_modern_tank_destroyer = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_modern_tank_destroyer
@@ -2306,12 +2277,10 @@ FRA_modern_tank_destroyer = {
 	}
 }
 
-FRA_amphibious_tanks = {
+BDG_amphibious_tanks = {
 	category = land
 
-	blocked_for = {}
-
-	available_for = {FRA}
+	available_for = { BDG }
 
 	roles = {
 		land_amphibious_tank
@@ -2326,8 +2295,8 @@ FRA_amphibious_tanks = {
 			factor = 10
 			modifier = { 
 				OR = {
-					TAG = USA
-					TAG = JAP
+					TAG = ICG
+					TAG = LLS
 				}
 				factor = 5
 			}

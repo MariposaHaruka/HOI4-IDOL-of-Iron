@@ -19,8 +19,6 @@ ideas = {
                 production_speed_buildings_factor = -0.10
                 production_factory_max_efficiency_factor = -0.10
                 production_factory_efficiency_gain_factor = -0.10
-                industrial_capacity_factory = -0.10
-                industrial_capacity_dockyard = -0.20
                 research_speed_factor = -0.20
             }
 
@@ -115,7 +113,7 @@ ideas = {
 
         business_and_enterprise_base = {
             available = {
-                num_of_civilian_factories > 35
+                num_of_civilian_factories > 30
                 NOT = { has_idea = agrarian_society }
             }
             level = 4

@@ -1,0 +1,127 @@
+﻿### REGULAR DESTROYER NAMES###
+GFR_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { GFR }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "ARSF "
+	fallback_name = "Destructor %d"					
+
+	unique = {								
+		"Punta Arenas" "Nicoya" "Liberia" "Bagaces" "Puerto Jesús"									
+		"Chiriquí" "Panamá" "Panquiaco" "Tres De Noviembre" "10 de Noviembre" "28 de Noviembre" "Escudo de Veraguas" "Flamenco" "Naos" "Negrita" "Nombre de Dios" "Taboga" 
+	}
+}
+
+### LIGHT CRUISER NAMES###
+GFR_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { GFR }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "ARSF "
+	fallback_name = "Crucero Ligero %d"
+
+	unique = {
+		"Punta Arenas" "Nicoya" "Liberia" "Bagaces" "Puerto Jesús" 
+		"Colón" "La Chorrera" "David" "Penonome" "Punta Mata" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+GFR_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { GFR }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "ARSF "
+	fallback_name = "Crucero Pesado %d"
+
+	unique = {
+		"Punta Arenas" "Nicoya" "Liberia" "Bagaces" "Puerto Jesús" 
+		"Colón" "La Chorrera" "David" "Penonome" "Punta Mata" 
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+GFR_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { GFR }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "ARSF "
+	fallback_name = "Acorazado %d"		
+
+	unique = {
+		"San José" "Limón" 
+		"Ciudad de Panamá" "La Revolución de 1889" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+GFR_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { GFR }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "ARSF "
+	fallback_name = "Crucero de Batalla %d"		
+
+	unique = {
+		"San José" "Limón" 
+		"Ciudad de Panamá" "La Revolución de 1889" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+GFR_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { GFR }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "ARSF "
+	fallback_name = "Portaaviones %d"	
+
+	unique = {
+		"República de Seio"
+		"República de Panamá" "El Destructor"
+		"República de Costa Rica" "Bahía Coronado"  
+	}
+}
+
+### SUBMARINES ###
+GFR_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { GFR }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "ARSF "
+	fallback_name = "Submarino %d"
+	
+	unique = {
+		"Chiriquí" "Panamá" "Panquiaco" "Tres De Noviembre" "10 de Noviembre" "28 de Noviembre" "Escudo de Veraguas" "Flamenco" "Naos" "Negrita" "Nombre de Dios" "Taboga" 
+		"Punta Arenas" "Nicoya" "Liberia" "Bagaces" "Puerto Jesús" 
+	}
+}

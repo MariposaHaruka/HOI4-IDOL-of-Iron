@@ -1,0 +1,19 @@
+UNU_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_UNU_dynamic_industry
+}
+
+UNU_army = {
+	enable = { always = yes }
+	icon = GFX_idea_UNU_dynamic_army
+}
+
+UNU_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_UNU_dynamic_naval
+}
+
+UNU_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_UNU_dynamic_airforce
+}

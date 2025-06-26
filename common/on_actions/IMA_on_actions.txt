@@ -1,5 +1,71 @@
 on_actions = {
-    on_startup = {
+	on_startup = {
+		#역사적 AI
+		effect = {
+			IMA = {
+				if = {
+					limit = { 
+						is_ai = yes
+						is_historical_focus_on = yes 
+					}
+					add_ideas = {
+						stay_conservatism
+						ally_like_hidden
+					}
+				}
+			}
+		}
+		#스타팅 정책
+		effect = {
+			IMA = {
+				add_ideas = {
+					prime_minister
+					double_parliament
+					direct_election
+					federal_state
+					independent_judiciary
+					
+					free_press
+					neutral_stance
+					full_equality
+					strong_local_autonomy
+					higher_education
+					moderate_state_welfare
+
+					welfare_capitalism
+					standard_taxation
+					civilian_economy
+					free_trade
+					low_military_budget
+					support_infrastructure_construction
+
+					supreme_command
+					navy_dominant
+					push_system
+					basic_training
+					service_prohibited
+					major_officer_training
+
+					volunteer_only
+					segregated_regiments
+					extraction_programs
+					business_and_enterprise_base
+					workers_unions_allowed
+					university_research_complex				
+				}
+			}
+		}
+	}
+	on_startup = {
+		#의회
+		effect = {
+			IMA = { 
+				parliament_gui_initial_IMA = yes
+				clr_country_flag = parliament_gui_on
+				calc_parliament_support_IMA = yes
+			}
+        }
+		#보수당-자유당 연정
 	    effect = {
 			IMA = {
 				set_temp_variable = { coalition_partner_var = token:liberalism_mod }
@@ -7,5 +73,15 @@ on_actions = {
 			}
         }
     }
+	on_weekly = {
+		#의회 지지도 계산
+		effect = {
+			IMA = {
+				if = {
+					limit = { IMA = { NOT = { has_idea = no_parliament } } }
+					calc_parliament_support_IMA = yes
+				}
+			}
+		}
+	}
 }
-

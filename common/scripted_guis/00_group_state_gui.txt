@@ -1,0 +1,59 @@
+scripted_gui = {
+
+	group_state_gui = {
+		context_type = selected_state_context
+		window_name = group_state_system
+		parent_window_token = selected_state_view
+
+		ai_enabled = { always = no }
+
+		visible = {
+			OR = {
+				AND = {
+					is_owned_by = BLA
+					OR = { 
+						has_state_flag = BLA_gehenna_state_flag
+						has_state_flag = BLA_trinity_state_flag
+						has_state_flag = BLA_millenium_state_flag
+						has_state_flag = BLA_hyakiyakko_state_flag
+						has_state_flag = BLA_abydos_state_flag
+						has_state_flag = BLA_shanhaijimg_state_flag
+						has_state_flag = BLA_redwinter_state_flag
+						has_state_flag = BLA_arius_state_flag
+						has_state_flag = BLA_valkyrie_state_flag
+						has_state_flag = BLA_srt_state_flag
+						has_state_flag = BLA_highlander_state_flag
+						has_state_flag = BLA_wildhunt_state_flag
+						has_state_flag = BLA_cronos_state_flag
+						has_state_flag = BLA_odyssey_state_flag
+					}
+				}
+			}
+		}
+	}
+	BLA_group_state_gui = {
+		context_type = selected_state_context
+		window_name = BLA_group_state_system
+		parent_window_token = selected_state_view
+		ai_enabled = { always = no }
+		visible = {
+			is_owned_by = BLA
+			OR = { 
+				has_state_flag = BLA_gehenna_state_flag
+				has_state_flag = BLA_trinity_state_flag
+				has_state_flag = BLA_millenium_state_flag
+				has_state_flag = BLA_hyakiyakko_state_flag
+				has_state_flag = BLA_abydos_state_flag
+				has_state_flag = BLA_shanhaijimg_state_flag
+				has_state_flag = BLA_redwinter_state_flag
+				has_state_flag = BLA_arius_state_flag
+				has_state_flag = BLA_valkyrie_state_flag
+				has_state_flag = BLA_srt_state_flag
+				has_state_flag = BLA_highlander_state_flag
+				has_state_flag = BLA_wildhunt_state_flag
+				has_state_flag = BLA_cronos_state_flag
+				has_state_flag = BLA_odyssey_state_flag
+			}				
+		}
+	}
+}

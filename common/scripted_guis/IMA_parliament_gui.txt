@@ -1,0 +1,68 @@
+scripted_gui = {
+	parliament_gui_open_button_IMA = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "parliament_gui_open_button_IMA"
+		ai_enabled = { always = no }
+		visible = {
+			original_tag = IMA
+			OR = {
+				is_democratic = yes
+				NOT = { has_idea = no_parliament }
+			}
+		}
+		effects = {
+			show_parliament_click = {
+				if = {
+					limit = { has_country_flag = parliament_gui_on }
+					clr_country_flag = parliament_gui_on
+				}
+				else = {
+					set_country_flag = parliament_gui_on
+				}
+			}
+		}
+	}
+	parliament_window_IMA = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "parliament_gui_container_IMA"
+
+		visible = {
+			original_tag = IMA
+			has_country_flag = parliament_gui_on
+		}
+
+		effects = {
+			close_button_click = {
+				clr_country_flag = parliament_gui_on
+			}
+		}
+
+		dynamic_lists = {
+			parliament_main_grid_IMA = {
+				array = IMA.parliament_main_array
+				index = IMA.parliament_main_index
+				change_scope = no
+				entry_container = parliament_main_entry_IMA
+			}
+			parliament_member_grid_IMA = {
+				array = IMA.parliament_member_array
+				index = IMA.parliament_member_index
+				change_scope = no
+				entry_container = parliament_member_entry_IMA
+			}
+		}
+
+		properties = {
+			parliament_main_icon_IMA = {
+				frame = IMA.v
+				x = IMA.parliament_x_array^IMA.parliament_main_index
+				y = IMA.parliament_y_array^IMA.parliament_main_index
+			}
+			parliament_member_icon_IMA = {
+				frame = IMA.v
+			}
+		}
+	}
+}

@@ -1,15 +1,14 @@
-
-state={
-	id=272
-	name="STATE_272"
+state = {
+	id = 272
+	name = "STATE_272"
 	manpower = 1638000
-	resources={
-		steel=3 # was: 4
+	resources = {
+		steel = 3 # was: 4
 	}
 	
 	state_category = pastoral
 
-	history={
+	history = {
 		owner = AGN
 		add_core_of = AGN
 		victory_points = {
@@ -17,6 +16,7 @@ state={
 		}
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 1
 			air_base = 4
 			4948 = {
 				naval_base = 3
@@ -24,9 +24,9 @@ state={
 		}
 	}
 
-	provinces={
+	provinces = {
 		2100 4948 7972 8015 12710 12834 
 	}
 
-	local_supplies=1.0 
+	local_supplies = 1.0 
 }

@@ -1,0 +1,19 @@
+PRP_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_PRP_dynamic_industry
+}
+
+PRP_army = {
+	enable = { always = yes }
+	icon = GFX_idea_PRP_dynamic_army
+}
+
+PRP_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_PRP_dynamic_naval
+}
+
+PRP_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_PRP_dynamic_airforce
+}

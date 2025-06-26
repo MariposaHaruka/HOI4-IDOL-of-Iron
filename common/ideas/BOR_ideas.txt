@@ -1,0 +1,31 @@
+ideas = {
+	country = {
+		BOR_neutrality = {
+			allowed = { original_tag = BOR }
+			cancel = { has_war = yes }
+			removal_cost = -1
+			picture = BOR_neutrality
+			
+			modifier = {
+				join_faction_tension = 1.0
+				send_volunteer_factor = 0.2
+				guarantee_tension = 1.0
+				embargo_threshold_factor = 2.5
+				ai_badass_factor = 0.01
+				ai_get_ally_desire_factor = -150
+				army_chief_cost_factor = 2
+				opinion_gain_monthly_factor = -0.2
+				enemy_justify_war_goal_time = 2.5
+				conservatism_drift = 0.0025
+				liberalism_mod_drift = 0.0025
+				progressivism_drift = 0.0025
+				socialdemocracy_drift = 0.0025
+			}
+		}
+	}
+	tank_manufacturer = { }
+	naval_manufacturer = { }
+	aircraft_manufacturer = { }
+	industrial_concern = { }
+	materiel_manufacturer = { }
+}

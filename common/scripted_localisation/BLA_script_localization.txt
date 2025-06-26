@@ -1,0 +1,190 @@
+#의회
+#당수
+#중점
+#focus_inlay
+defined_text = {
+	name = BLAGehennaSchoolCommitteeMember
+	text = {
+		trigger = { 
+			BLA = { BLA_gehenna_participate = yes }
+		}
+		localization_key = TRIGGER_FULLFILLED_PREFIX
+	}
+	text = {
+		localization_key = TRIGGER_UNFULLFILLED_PREFIX
+	}
+}
+defined_text = {
+	name = BLATrinitySchoolCommitteeMember
+	text = {
+		trigger = { 
+			BLA = { BLA_trinity_participate = yes }
+		}
+		localization_key = TRIGGER_FULLFILLED_PREFIX
+	}
+	text = {
+		localization_key = TRIGGER_UNFULLFILLED_PREFIX
+	}
+}
+defined_text = {
+	name = BLAMilleniumSchoolCommitteeMember
+	text = {
+		trigger = { 
+			BLA = { BLA_millenium_participate = yes }
+		}
+		localization_key = TRIGGER_FULLFILLED_PREFIX
+	}
+	text = {
+		localization_key = TRIGGER_UNFULLFILLED_PREFIX
+	}
+}
+defined_text = {
+	name = BLAHyakkiyakoSchoolCommitteeMember
+	text = {
+		trigger = { 
+			BLA = { BLA_hyakkiyako_participate = yes }
+		}
+		localization_key = TRIGGER_FULLFILLED_PREFIX
+	}
+	text = {
+		localization_key = TRIGGER_UNFULLFILLED_PREFIX
+	}
+}
+defined_text = {
+	name = BLAAbydosSchoolCommitteeMember
+	text = {
+		trigger = { 
+			BLA = { BLA_abydos_participate = yes }
+		}
+		localization_key = TRIGGER_FULLFILLED_PREFIX
+	}
+	text = {
+		localization_key = TRIGGER_UNFULLFILLED_PREFIX
+	}
+}
+defined_text = {
+	name = BLAShanhaijingSchoolCommitteeMember
+	text = {
+		trigger = { 
+			BLA = { BLA_shanhaijing_participate = yes }
+		}
+		localization_key = TRIGGER_FULLFILLED_PREFIX
+	}
+	text = {
+		localization_key = TRIGGER_UNFULLFILLED_PREFIX
+	}
+}
+defined_text = {
+	name = BLARedwinterSchoolCommitteeMember
+	text = {
+		trigger = { 
+			BLA = { BLA_redwinter_participate = yes }
+		}
+		localization_key = TRIGGER_FULLFILLED_PREFIX
+	}
+	text = {
+		localization_key = TRIGGER_UNFULLFILLED_PREFIX
+	}
+}
+defined_text = {
+	name = BLAAriusSchoolCommitteeMember
+	text = {
+		trigger = { 
+			BLA = { BLA_arius_participate = yes }
+		}
+		localization_key = TRIGGER_FULLFILLED_PREFIX
+	}
+	text = {
+		localization_key = TRIGGER_UNFULLFILLED_PREFIX
+	}
+}
+defined_text = {
+	name = BLAValkyrieSchoolCommitteeMember
+	text = {
+		trigger = { 
+			BLA = { BLA_valkyrie_participate = yes }
+		}
+		localization_key = TRIGGER_FULLFILLED_PREFIX
+	}
+	text = {
+		localization_key = TRIGGER_UNFULLFILLED_PREFIX
+	}
+}
+defined_text = {
+	name = BLASRTSchoolCommitteeMember
+	text = {
+		trigger = { 
+			BLA = { BLA_srt_participate = yes }
+		}
+		localization_key = TRIGGER_FULLFILLED_PREFIX
+	}
+	text = {
+		localization_key = TRIGGER_UNFULLFILLED_PREFIX
+	}
+}
+defined_text = {
+	name = GetBLASchoolName
+	text = {
+		trigger = { has_state_flag = BLA_kivotos_state_flag }
+		localization_key = BLA_kivotos_state
+	}
+	text = {
+		trigger = { has_state_flag = BLA_gehenna_state_flag }
+		localization_key = BLA_gehenna_state
+	}
+	text = {
+		trigger = { has_state_flag = BLA_trinity_state_flag }
+		localization_key = BLA_trinity_state
+	}
+	text = {
+		trigger = { has_state_flag = BLA_millenium_state_flag }
+		localization_key = BLA_millenium_state
+	}
+	text = {
+		trigger = { has_state_flag = BLA_hyakiyakko_state_flag }
+		localization_key = orenburg_state
+	}
+	text = {
+		trigger = { has_state_flag = BLA_abydos_state_flag }
+		localization_key = BLA_abydos_state
+	}
+	text = {
+		trigger = { has_state_flag = BLA_shanhaijimg_state_flag }
+		localization_key = BLA_shanhaijimg_state
+	}
+	text = {
+		trigger = { has_state_flag = BLA_redwinter_state_flag }
+		localization_key = BLA_redwinter_state
+	}
+	text = {
+		trigger = { has_state_flag = BLA_arius_state_flag }
+		localization_key = BLA_arius_state
+	}
+	text = {
+		trigger = { has_state_flag = BLA_valkyrie_state_flag }
+		localization_key = BLA_valkyrie_state
+	}
+	text = {
+		trigger = { has_state_flag = BLA_srt_state_flag }
+		localization_key = BLA_srt_state
+	}
+	text = {
+		trigger = { has_state_flag = BLA_highlander_state_flag }
+		localization_key = BLA_highlander_state
+	}
+	text = {
+		trigger = { has_state_flag = BLA_wildhunt_state_flag }
+		localization_key = BLA_wildhunt_state
+	}
+	text = {
+		trigger = { has_state_flag = BLA_cronos_state_flag }
+		localization_key = BLA_cronos_state
+	} 
+	text = {
+		trigger = { has_state_flag = BLA_odyssey_state_flag }
+		localization_key = BLA_odyssey_state
+	}
+	text = {
+		localization_key = BLA_kivotos_colony_state
+	}
+}

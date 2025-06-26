@@ -1,0 +1,478 @@
+
+units= {
+
+	##### NAVAL UNITS #####
+	### METRPOLITAN BDGNCE ###
+	fleet = {
+		name = "Amiral Nord"
+		naval_base = 575 # Dunkerque
+		task_force = {				
+			name = "1ère Région Navale"			
+			location = 575 # Dunkerque			
+			# 8e Division des Contre-Torpilleurs
+			ship = { name = "CN Le Terrible" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Le Fantasque Class" } } }
+			ship = { name = "CN L'Audacieux" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Le Fantasque Class" } } }
+		}
+		task_force = {				
+			name = "Sous-Marins Force du Nord"			
+			location = 575 # Dunkerque	
+			# 16e Division des Sous-Marins
+			ship = { name = "CN Orphée" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			ship = { name = "CN Amazone" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			ship = { name = "CN La Sybille" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			ship = { name = "CN Antiope" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+		}				
+	}
+		
+	fleet = {
+		name = "Amiral Ouest"
+		naval_base = 3552 # Brest
+		task_force = {
+			name = "2ème Région Navale"
+			location = 3552 # Brest			
+			ship = { name = "CN Béarn" definition = carrier equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = BDG version_name = "Béarn Class" } } 
+			}
+			# 2e Division des Contre-Torpilleurs
+			ship = { name = "CN Jaguar" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Chacal" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Léopard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Panthère" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			# 2e Légère Division des Contre-Torpilleurs
+			ship = { name = "CN Fougueux" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			ship = { name = "CN Frondeur" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			ship = { name = "CN L'Adroit" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			# 4e Légère Division des Contre-Torpilleurs
+			ship = { name = "CN Bourrasque" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			ship = { name = "CN Ouragan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }
+			ship = { name = "CN Orage" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			# 5e Légère Division des Contre-Torpilleurs
+			ship = { name = "CN Brestois" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			ship = { name = "CN Le Foudroyant" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			ship = { name = "CN Boulonnais" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			# 6e Légère Division des Contre-Torpilleurs
+			ship = { name = "CN Cyclone" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }
+			ship = { name = "CN Siroco" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			ship = { name = "CN Mistral" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+		}				
+		task_force = {				
+			name = "4ème Escadron Sous-Marins"			
+			location = 3552 # Brest			
+			# 2e Division des Sous-Marins
+			ship = { name = "CN Pasteur" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			ship = { name = "CN Achille" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			# 6e Division des Sous-Marins
+			ship = { name = "CN Persée" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			ship = { name = "CN Poncelet" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			ship = { name = "CN Ajax" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			ship = { name = "CN Archimède" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			# 8e Division des Sous-Marins
+			ship = { name = "CN Surcouf" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = BDG version_name = "Surcouf Class" } } }
+			ship = { name = "CN Phénix" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+		}				
+	}
+
+	fleet = {
+		name = "Amiral Sud"			
+		naval_base = 911 # Toulon
+		task_force = {				
+			name = "3ème Région Navale"			
+			location = 911 # Toulon	
+			ship = { name = "CN Courbet" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = BDG version_name = "Courbet Class" } } }        
+			ship = { name = "CN Paris" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = BDG version_name = "Courbet Class" } } }
+			ship = { name = "CN Algérie" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "Algérie Class" } } }			
+			ship = { name = "CN Foch" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "Suffren Class" } } }
+			ship = { name = "CN Dupleix" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "Suffren Class" } } }
+			ship = { name = "CN Colbert" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "Suffren Class" } } }
+			ship = { name = "CN Duquesne" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "Suffren Class" } } }
+			ship = { name = "CN Tourville" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "Suffren Class" } } }
+			# 4e Division des Contre-Torpilleurs
+			ship = { name = "CN Lynx" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Tigre" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			# 5e Division des Contre-Torpilleurs
+			ship = { name = "CN Tartu" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Chevalier Paul" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Vauquelin" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			# 7e Division des Contre-Torpilleurs
+			ship = { name = "CN Gerfaut" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Albatros" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Vautour" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			# 9e Division des Contre-Torpilleurs
+			ship = { name = "CN Cassard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Maillé Brézé" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Kersaint" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+		}				
+		task_force = {				
+			name = "3ème Escadron Sous-Marins"			
+			location = 911 # Toulon			
+			# 1e Division des Sous-Marins
+			ship = { name = "CN Le Glorieux" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			# 3 Division des Sous-Marins
+			ship = { name = "CN Protée" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			ship = { name = "CN Actéon" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			ship = { name = "CN Fresnel" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			ship = { name = "CN Achéron" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			# 5e Division des Sous-Marins
+			ship = { name = "CN L`Espoire" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			ship = { name = "CN Pégase" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			ship = { name = "CN Monge" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+		}				
+		task_force = {				
+			name = "5ème Escadron Sous-Marins"			
+			location = 911 # Toulon			
+			# 7e Division des Sous-Marins
+			ship = { name = "CN Redoutable" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			ship = { name = "CN Vengeur" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			# 13e Division des Sous-Marins
+			ship = { name = "CN Circé" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			ship = { name = "CN Calypso" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			ship = { name = "CN Thétis" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			ship = { name = "CN Doris" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			# 15e Division des Sous-Marins
+			ship = { name = "CN Argonaute" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			ship = { name = "CN Sirène" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			ship = { name = "CN Naïade" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			ship = { name = "CN Galathée" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			# 21e Division des Sous-Marins
+			ship = { name = "CN Diamant" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "Saphir Class" } } }
+			ship = { name = "CN Perle" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "Saphir Class" } } }
+		}				
+	}
+
+	### NORTH AFRICA ###				
+	fleet = {
+		name = "Amiral Afrique"			
+		naval_base = 3838 # Oran
+		task_force = {				
+			name = "Flottille de Haute Mers"			
+			location = 3838 # Oran			
+			ship = { name = "CN Provence" pride_of_the_fleet = yes definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = BDG version_name = "Bretagne Class" } } }			
+			ship = { name = "CN Lorraine" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = BDG version_name = "Bretagne Class" } } }			
+			ship = { name = "CN Bretagne" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = BDG version_name = "Bretagne Class" } } }			
+			ship = { name = "CN Pluton" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "Duguay-Trouin Class" } } }
+			# 1e Legere Division des Contre-Torpilleurs
+			ship = { name = "CN La Palme" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			ship = { name = "CN Le Mars" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			ship = { name = "CN Tempete" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			# 3e Legere Division des Contre-Torpilleurs
+			ship = { name = "CN La Railleuse" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			ship = { name = "CN Le Fortune" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			ship = { name = "CN Simoun" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }
+			# 7e Legere Division des Contre-Torpilleurs
+			ship = { name = "CN Tramontane" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }
+			ship = { name = "CN Typhon" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }
+			ship = { name = "CN Tornade" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			# 8e Legere Division des Contre-Torpilleurs
+			ship = { name = "CN Le Bordelais" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			ship = { name = "CN L'Alcyon" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			ship = { name = "CN Trombe" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			# 9e Legere Division des Contre-Torpilleurs
+			ship = { name = "CN Forbin" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+			ship = { name = "CN Basque" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Bourrasque Class" } } }	
+		}				
+		task_force = {				
+			name = "Force d'Attaque Legere"			
+			location = 3838 # Bizerte, Tunisia	
+			ship = { name = "CN La Galissonnière" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "La Galissonniere Class" } } }
+			ship = { name = "CN Émile Bertin" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "Émile Bertin Class" } } }
+			# 1e Division des Contre-Torpilleurs
+			ship = { name = "CN Lion" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Vauban" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Bison" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			# 3e Division des Contre-Torpilleurs
+			ship = { name = "CN Guepard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Valmy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Verdun" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			# 6e Division des Contre-Torpilleurs
+			ship = { name = "CN Aigle" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Milan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+			ship = { name = "CN Épervier" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BDG version_name = "Chacal Class" } } }
+		}				
+		task_force = {				
+			name = "Flotte d'Afrique de l'Ouest"			
+			location = 3838 # Dakar			
+			ship = { name = "CN Jeanne d'Arc" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "Duguay-Trouin Class" } } }
+			ship = { name = "CN Duguay-Trouin" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "Duguay-Trouin Class" } } }
+			ship = { name = "CN Primauguet" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "Duguay-Trouin Class" } } }
+		}
+		task_force = {				
+			name = "2eme Escadron Sous-Marins" 			
+			location = 3838 # Oran			
+			# 4e Division des Sous-Marins
+			ship = { name = "CN Le Centaure" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			ship = { name = "CN Argo" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			ship = { name = "CN Pascal" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			ship = { name = "CN Henri Poincaré" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = BDG version_name = "Redoutable Class" } } }
+			# 12e Division des Sous-Marins
+			ship = { name = "CN Orion" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			ship = { name = "CN Ondine" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			ship = { name = "CN Méduse" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			ship = { name = "CN Amphitrite" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			ship = { name = "CN Oréade" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			ship = { name = "CN La Psyché" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			# 14e Division des Sous-Marins
+			ship = { name = "CN Diane" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			ship = { name = "CN Ariane" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			ship = { name = "CN Eurydice" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			ship = { name = "CN Danaé" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+		}				
+		task_force = {				
+			name = "6eme Escadron Sous-Marins"			
+			location = 3838 # Bizerte, Tunisia	
+			# 9e Division des Sous-Marins
+			ship = { name = "CN Caïman" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			ship = { name = "CN Morse" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			ship = { name = "CN Souffleur" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			# 10e Division des Sous-Marins
+			ship = { name = "CN Phoque" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			ship = { name = "CN Espadon" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			ship = { name = "CN Dauphin" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			# 17e Division des Sous-Marins
+			ship = { name = "CN Aréthuse" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			ship = { name = "CN Atalante" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			ship = { name = "CN La Vestale" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			ship = { name = "CN La Sultane" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "630 Series" } } }
+			# 20e Division des Sous-Marins
+			ship = { name = "CN Saphir" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "Saphir Class" } } }
+			ship = { name = "CN Turquoise" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "Saphir Class" } } }
+			ship = { name = "CN Nautilus" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "Saphir Class" } } }
+			ship = { name = "CN Rubis" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "Saphir Class" } } }
+		}				
+		task_force = {				
+			name = "Sous-Marins Force de Levant"			
+			location = 3838 # Beirut			
+			# 11e Division des Sous-Marins
+			ship = { name = "CN Requin" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			ship = { name = "CN Marsouin" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+			ship = { name = "CN Narval" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BDG version_name = "600 Series" } } }				
+		}				
+	}
+
+	### FAR EAST ###				
+	fleet = {
+		name = "Flotte d'Extrême Orient"
+		naval_base = 11981 # Saigon
+		task_force = {
+			name = "Flotte d'Extrême Orient"
+			location = 11981 # Saigon			
+			ship = { name = "CN Suffren" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "Suffren Class" } } }
+			ship = { name = "CN Lamotte-Picquet" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BDG version_name = "Duguay-Trouin Class" } } }
+		}
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	# Ship Production
+	# DD: Le Fantasque class (x4) ("Le Malin" "L'Indomptable" "Le Fantasque" "Le Triomphant")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "BDG" 
+			version_name = "Le Fantasque Class"
+		}
+		name = "Le Malin" 
+		requested_factories = 1
+		progress = 0.60
+		amount = 1
+		#industrial_manufacturer = mio:BDG_fcm_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "BDG" 
+			version_name = "Le Fantasque Class"
+		}
+		name = "L'Indomptable" 
+		requested_factories = 1
+		progress = 0.85
+		amount = 1
+		#industrial_manufacturer = mio:BDG_fcm_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "BDG" 
+			version_name = "Le Fantasque Class"
+		}
+		name = "Le Fantasque" 
+		requested_factories = 1
+		progress = 0.75
+		amount = 1
+		#industrial_manufacturer = mio:BDG_fcm_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "BDG" 
+			version_name = "Le Fantasque Class"
+		}
+		name = "Le Triomphant" 
+		requested_factories = 1
+		progress = 0.60
+		amount = 1
+		#industrial_manufacturer = mio:BDG_fcm_organization
+	}
+	# BC: Dunkerque (Comm. 16-Apr, 1937)	
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_heavy_2
+			creator = "BDG" 
+			version_name = "Dunkerque Class"
+		}
+		name = "Dunkerque" 
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+		#industrial_manufacturer = mio:BDG_acl_organization
+	}
+	# BB: Richelieu	
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_heavy_2
+			creator = "BDG" 
+			version_name = "Richelieu Class"
+		}
+		requested_factories = 1
+		progress = 0.10
+		amount = 1
+		#industrial_manufacturer = mio:BDG_acl_organization
+	}
+	 # CL: La Galissonniere class (x4) ("Jean de Vienne" "Marseillaise" "Gloire" "Montcalm") ("Georges Leygues" launched 24-Mar 1936)
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_1
+			creator = "BDG" 
+			version_name = "La Galissonniere Class"
+		}
+		name = "Jean de Vienne" 
+		requested_factories = 1
+		progress = 0.35
+		amount = 1
+		#industrial_manufacturer = mio:BDG_aeb_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_1
+			creator = "BDG" 
+			version_name = "La Galissonniere Class"
+		}
+		name = "Marseillaise" 
+		requested_factories = 1
+		progress = 0.15
+		amount = 1
+		#industrial_manufacturer = mio:BDG_aeb_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_1
+			creator = "BDG" 
+			version_name = "La Galissonniere Class"
+		}
+		name = "Gloire" 
+		requested_factories = 1
+		progress = 0.15
+		amount = 1
+		#industrial_manufacturer = mio:BDG_aeb_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_1
+			creator = "BDG" 
+			version_name = "La Galissonniere Class"
+		}
+		name = "Montcalm" 
+		requested_factories = 1
+		progress = 0.15
+		amount = 1
+		#industrial_manufacturer = mio:BDG_aeb_organization
+	}
+	# SS: Redoutable variant (x7) ("Le Heros" "Le Conquerant" "Le Tonnant" "Agosta" "Sfax" "Casabianca" "Beveziers")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "BDG" 
+			version_name = "Redoutable Class"
+		}
+		requested_factories = 1
+		progress = 0.20
+		amount = 3
+		#industrial_manufacturer = mio:BDG_acf_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "BDG" 
+			version_name = "Redoutable Class"
+		}
+		requested_factories = 1
+		progress = 0.20
+		amount = 2
+		#industrial_manufacturer = mio:BDG_acf_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "BDG" 
+			version_name = "Redoutable Class"
+		}
+		requested_factories = 1
+		progress = 0.25
+		amount = 2
+		#industrial_manufacturer = mio:BDG_acf_organization
+	}
+	# SS: Minerve class (x4) ("Iris" "Minerve" "Venus" "Junon")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_1
+			creator = "BDG" 
+			version_name = "Minerve Class"
+		}
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+		#industrial_manufacturer = mio:BDG_acf_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_1
+			creator = "BDG" 
+			version_name = "Minerve Class"
+		}
+
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+		#industrial_manufacturer = mio:BDG_acf_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_1
+			creator = "BDG" 
+			version_name = "Minerve Class"
+		}
+ 
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+		#industrial_manufacturer = mio:BDG_acf_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_1
+			creator = "BDG" 
+			version_name = "Minerve Class"
+		}
+
+		requested_factories = 1
+		progress = 0.10
+		amount = 1
+		#industrial_manufacturer = mio:BDG_acf_organization
+	}
+}
+
+#####################

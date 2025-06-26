@@ -1,0 +1,327 @@
+﻿TAK_INF_01 = {
+	name = "Infantry Divisions"
+
+	for_countries = { TAK }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { TAK_GAR_01 }
+
+	fallback_name = "Symphonica al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Alfurqat Alfursan Almalika" }
+		2 = { "Symphonica al-Mushati al-%di" }
+		3 = { "Symphonica al-Mushati al-%di" }
+		4 = { "Symphonica al-Mushati al-%di" }
+		5 = { "Symphonica al-Mushati al-%di" }
+		6 = { "Symphonica al-Mushati al-%di" }
+		7 = { "Symphonica al-Mushati al-%di" }
+		8 = { "Symphonica al-Mushati al-%di" }
+		9 = { "Symphonica al-Mushati al-%di" }
+		10 = { "Symphonica al-Mushati al-%di" }
+		12 = { "Symphonica al-Mushati al-%dr" }
+		13 = { "Symphonica al-Mushati al-%dr" }
+		14 = { "Symphonica al-Mushati al-%dr" }
+		15 = { "Symphonica al-Mushati al-%dr" }
+		16 = { "Symphonica al-Mushati al-%dr" }
+		17 = { "Symphonica al-Mushati al-%dr" }
+		18 = { "Symphonica al-Mushati al-%dr" }
+		19 = { "Symphonica al-Mushati al-%dr" }
+		20 = { "Symphonica al-Mushati al-%dr" }
+
+	}
+}
+
+TAK_CAV_01 = {
+	name = "Cavalry Divisions"
+
+	for_countries = { TAK }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { GER_Gar_01 }
+
+	fallback_name = "Symphonica Sipahis al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Alfurqat Almasha Almalika" }
+		2 = { "Symphonica Sipahis al-%di" }
+		3 = { "Symphonica Sipahis al-%di" }
+		4 = { "Symphonica Sipahis al-%di" }
+		5 = { "Symphonica Sipahis al-%di" }
+		6 = { "Symphonica Sipahis al-%di" }
+		7 = { "Symphonica Sipahis al-%di" }
+		8 = { "Symphonica Sipahis al-%di" }
+		9 = { "Symphonica Sipahis al-%di" }
+		10 = { "Symphonica Sipahis al-%di" }
+		11 = { "Symphonica Sipahis al-%dr" }
+		12 = { "Symphonica Sipahis al-%dr" }
+		13 = { "Symphonica Sipahis al-%dr" }
+		14 = { "Symphonica Sipahis al-%dr" }
+		15 = { "Symphonica Sipahis al-%dr" }
+
+	}
+}
+
+TAK_MOT_01 = {
+	name = "Motorised Divisions"
+
+	for_countries = { TAK }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { TAK_INF_01 }
+
+	fallback_name = "Symphonica al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Alfurqat Alfursan Almalika" }
+		2 = { "Symphonica al-Mushati al-%di" }
+		3 = { "Symphonica al-Mushati al-%di" }
+		4 = { "Symphonica al-Mushati al-%di" }
+		5 = { "Symphonica al-Mushati al-%di" }
+		6 = { "Symphonica al-Mushati al-%di" }
+		7 = { "Symphonica al-Mushati al-%di" }
+		8 = { "Symphonica al-Mushati al-%di" }
+		9 = { "Symphonica al-Mushati al-%di" }
+		10 = { "Symphonica al-Mushati al-%di" }
+		12 = { "Symphonica al-Mushati al-%dr" }
+		13 = { "Symphonica al-Mushati al-%dr" }
+		14 = { "Symphonica al-Mushati al-%dr" }
+		15 = { "Symphonica al-Mushati al-%dr" }
+		16 = { "Symphonica al-Mushati al-%dr" }
+		17 = { "Symphonica al-Mushati al-%dr" }
+		18 = { "Symphonica al-Mushati al-%dr" }
+		19 = { "Symphonica al-Mushati al-%dr" }
+		20 = { "Symphonica al-Mushati al-%dr" }
+
+	}
+}
+
+TAK_ARM_01 = {
+	name = "Armoured Divisions"
+
+	for_countries = { TAK }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { TAK_CAV_01 }
+
+	fallback_name = "Symphonica Sipahis al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Alfurqat Almasha Almalika" }
+		2 = { "Symphonica Sipahis al-%di" }
+		3 = { "Symphonica Sipahis al-%di" }
+		4 = { "Symphonica Sipahis al-%di" }
+		5 = { "Symphonica Sipahis al-%di" }
+		6 = { "Symphonica Sipahis al-%di" }
+		7 = { "Symphonica Sipahis al-%di" }
+		8 = { "Symphonica Sipahis al-%di" }
+		9 = { "Symphonica Sipahis al-%di" }
+		10 = { "Symphonica Sipahis al-%di" }
+		11 = { "Symphonica Sipahis al-%dr" }
+		12 = { "Symphonica Sipahis al-%dr" }
+		13 = { "Symphonica Sipahis al-%dr" }
+		14 = { "Symphonica Sipahis al-%dr" }
+		15 = { "Symphonica Sipahis al-%dr" }
+
+	}
+}
+
+TAK_MEC_01 = {
+	name = "Mechanised Divisions"
+
+	for_countries = { TAK }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized"  }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { TAK_INF_01 }
+
+	fallback_name = "Symphonica al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Alfurqat Alfursan Almalika" }
+		2 = { "Symphonica al-Mushati al-%di" }
+		3 = { "Symphonica al-Mushati al-%di" }
+		4 = { "Symphonica al-Mushati al-%di" }
+		5 = { "Symphonica al-Mushati al-%di" }
+		6 = { "Symphonica al-Mushati al-%di" }
+		7 = { "Symphonica al-Mushati al-%di" }
+		8 = { "Symphonica al-Mushati al-%di" }
+		9 = { "Symphonica al-Mushati al-%di" }
+		10 = { "Symphonica al-Mushati al-%di" }
+		12 = { "Symphonica al-Mushati al-%dr" }
+		13 = { "Symphonica al-Mushati al-%dr" }
+		14 = { "Symphonica al-Mushati al-%dr" }
+		15 = { "Symphonica al-Mushati al-%dr" }
+		16 = { "Symphonica al-Mushati al-%dr" }
+		17 = { "Symphonica al-Mushati al-%dr" }
+		18 = { "Symphonica al-Mushati al-%dr" }
+		19 = { "Symphonica al-Mushati al-%dr" }
+		20 = { "Symphonica al-Mushati al-%dr" }
+
+	}
+}
+
+TAK_GAR_01 = {
+	name = "Garrison Divisions"
+
+	for_countries = { TAK }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { TAK_INF_01 }
+
+	fallback_name = "Symphonica al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Alfurqat Alfursan Almalika" }
+		2 = { "Symphonica al-Mushati al-%di" }
+		3 = { "Symphonica al-Mushati al-%di" }
+		4 = { "Symphonica al-Mushati al-%di" }
+		5 = { "Symphonica al-Mushati al-%di" }
+		6 = { "Symphonica al-Mushati al-%di" }
+		7 = { "Symphonica al-Mushati al-%di" }
+		8 = { "Symphonica al-Mushati al-%di" }
+		9 = { "Symphonica al-Mushati al-%di" }
+		10 = { "Symphonica al-Mushati al-%di" }
+		12 = { "Symphonica al-Mushati al-%dr" }
+		13 = { "Symphonica al-Mushati al-%dr" }
+		14 = { "Symphonica al-Mushati al-%dr" }
+		15 = { "Symphonica al-Mushati al-%dr" }
+		16 = { "Symphonica al-Mushati al-%dr" }
+		17 = { "Symphonica al-Mushati al-%dr" }
+		18 = { "Symphonica al-Mushati al-%dr" }
+		19 = { "Symphonica al-Mushati al-%dr" }
+		20 = { "Symphonica al-Mushati al-%dr" }
+
+	}
+}
+
+TAK_MAR_01 = {
+	name = "Marine Divisions"
+
+	for_countries = { TAK }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" "amphibious_armor" "amphibious_mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { TAK_INF_01 }
+
+	fallback_name = "Symphonica al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		20 = { "Symphonica al-Mushati al-%dr" }
+		21 = { "Symphonica al-Mushati al-%dr" }
+		22 = { "Symphonica al-Mushati al-%dr" }
+		23 = { "Symphonica al-Mushati al-%dr" }
+		24 = { "Symphonica al-Mushati al-%dr" }
+		25 = { "Symphonica al-Mushati al-%dr" }
+		26 = { "Symphonica al-Mushati al-%dr" }
+		27 = { "Symphonica al-Mushati al-%dr" }
+		28 = { "Symphonica al-Mushati al-%dr" }
+		29 = { "Symphonica al-Mushati al-%dr" }
+		30 = { "Symphonica al-Mushati al-%dr" }
+
+	}
+}
+
+TAK_MTN_01 = {
+	name = "Mountain Divisions"
+
+	for_countries = { TAK }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { TAK_INF_01 }
+
+	fallback_name = "Symphonica al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		20 = { "Symphonica al-Mushati al-%dr" }
+		21 = { "Symphonica al-Mushati al-%dr" }
+		22 = { "Symphonica al-Mushati al-%dr" }
+		23 = { "Symphonica al-Mushati al-%dr" }
+		24 = { "Symphonica al-Mushati al-%dr" }
+		25 = { "Symphonica al-Mushati al-%dr" }
+		26 = { "Symphonica al-Mushati al-%dr" }
+		27 = { "Symphonica al-Mushati al-%dr" }
+		28 = { "Symphonica al-Mushati al-%dr" }
+		29 = { "Symphonica al-Mushati al-%dr" }
+		30 = { "Symphonica al-Mushati al-%dr" }
+
+	}
+}
+
+TAK_PAR_01 = {
+	name = "Paratrooper Divisions"
+
+	for_countries = { TAK }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { TAK_INF_01 }
+
+	fallback_name = "Symphonica al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		20 = { "Symphonica al-Mushati al-%dr" }
+		21 = { "Symphonica al-Mushati al-%dr" }
+		22 = { "Symphonica al-Mushati al-%dr" }
+		23 = { "Symphonica al-Mushati al-%dr" }
+		24 = { "Symphonica al-Mushati al-%dr" }
+		25 = { "Symphonica al-Mushati al-%dr" }
+		26 = { "Symphonica al-Mushati al-%dr" }
+		27 = { "Symphonica al-Mushati al-%dr" }
+		28 = { "Symphonica al-Mushati al-%dr" }
+		29 = { "Symphonica al-Mushati al-%dr" }
+		30 = { "Symphonica al-Mushati al-%dr" }
+
+	}
+}

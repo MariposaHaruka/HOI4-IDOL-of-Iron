@@ -1,11 +1,9 @@
 # AI plane design for testing
 
-USA_fighter = {
+ICG_fighter = {
 	category = air
 
-	blocked_for = {}
-
-	available_for = {USA}
+	available_for = {ICG}
 
 	roles = {
 		air_fighter
@@ -154,12 +152,10 @@ USA_fighter = {
 	}
 }
 
-USA_cas = {
+ICG_cas = {
 	category = air
 
-	blocked_for = {}
-
-	available_for = {USA}
+	available_for = {ICG}
 
 	roles = {
 		air_cas
@@ -241,12 +237,10 @@ USA_cas = {
 	}
 }
 
-USA_naval_bomber = {
+ICG_naval_bomber = {
 	category = air
 
-	blocked_for = {}
-
-	available_for = {USA}
+	available_for = {ICG}
 
 	roles = {
 		air_naval_bomber
@@ -324,12 +318,12 @@ USA_naval_bomber = {
 	}
 }
 
-USA_cv_fighter = {
+ICG_cv_fighter = {
 	category = air
 
-	#blocked_for = {  ENG USA FRA JAP }
+	#blocked_for = {  IMA ICG BDG LLS }
 
-	available_for = {USA}
+	available_for = {ICG}
 
 	roles = {
 		air_cv_fighter
@@ -345,7 +339,7 @@ USA_cv_fighter = {
 			factor = 0
 		}
 		modifier = {
-			has_war_with = JAP
+			has_war_with = LLS
 			factor = 2
 		}
 	}
@@ -479,12 +473,12 @@ USA_cv_fighter = {
 	}
 }
 
-USA_cv_cas = {
+ICG_cv_cas = {
 	category = air
 
-	#blocked_for = { ENG USA FRA JAP }
+	#blocked_for = { IMA ICG BDG LLS }
 
-	available_for = {USA}
+	available_for = {ICG}
 
 	roles = {
 		air_cv_cas
@@ -577,12 +571,12 @@ USA_cv_cas = {
 	}
 }
 
-USA_cv_naval_bomber = {
+ICG_cv_naval_bomber = {
 	category = air
 
-	#blocked_for = {  ENG USA FRA JAP }
+	#blocked_for = {  IMA ICG BDG LLS }
 
-	available_for = {USA}
+	available_for = {ICG}
 
 	roles = {
 		air_cv_naval_bomber
@@ -681,12 +675,10 @@ USA_cv_naval_bomber = {
 
 
 
-USA_tactical_bomber = {
+ICG_tactical_bomber = {
 	category = air
 
-	blocked_for = {}
-
-	available_for = {USA}
+	available_for = {ICG}
 
 	roles = {
 		air_tactical_bomber
@@ -841,12 +833,10 @@ USA_tactical_bomber = {
 	}
 }
 
-USA_heavy_fighter = {
+ICG_heavy_fighter = {
 	category = air
 
-	blocked_for = {}
-
-	available_for = {USA}
+	available_for = {ICG}
 
 	roles = {
 		air_heavy_fighter
@@ -939,12 +929,10 @@ USA_heavy_fighter = {
 	}
 }
 
-USA_strategic_bomber = {
+ICG_strategic_bomber = {
 	category = air
 
-	blocked_for = {}
-
-	available_for = {USA}
+	available_for = {ICG}
 
 	roles = {
 		air_strategic_bomber
@@ -1071,12 +1059,10 @@ USA_strategic_bomber = {
 	}
 }
 
-USA_maritime_patrol = {
+ICG_maritime_patrol = {
 	category = air
 
-	blocked_for = {}
-
-	available_for = {USA}
+	available_for = {ICG}
 
 	roles = {
 		air_maritime_patrol
@@ -1085,7 +1071,7 @@ USA_maritime_patrol = {
 	priority = {
 		factor = 200
 		modifier = {
-			has_war_with = JAP
+			has_war_with = LLS
 			factor = 2
 		}
 	}

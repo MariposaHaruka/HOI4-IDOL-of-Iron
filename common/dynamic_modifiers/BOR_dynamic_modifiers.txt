@@ -1,0 +1,19 @@
+BOR_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_BOR_dynamic_industry
+}
+
+BOR_army = {
+	enable = { always = yes }
+	icon = GFX_idea_BOR_dynamic_army
+}
+
+BOR_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_BOR_dynamic_naval
+}
+
+BOR_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_BOR_dynamic_airforce
+}

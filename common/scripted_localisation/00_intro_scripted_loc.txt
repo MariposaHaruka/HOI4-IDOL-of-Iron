@@ -16,6 +16,7 @@ defined_text = { #Any commented out GFX means the intro screen is ready but is w
 	text = { trigger = { original_tag = LNH }  localization_key = "GFX_LNH_intro" }
 	text = { trigger = { original_tag = LST }  localization_key = "GFX_LST_intro" }
 	text = { trigger = { original_tag = LHH }  localization_key = "GFX_LHH_intro" }
+	text = { trigger = { original_tag = LBB }  localization_key = "GFX_LBB_intro" }
 	text = { trigger = { original_tag = UMA }  localization_key = "GFX_UMA_intro" }
 	text = { trigger = { original_tag = PRK }  localization_key = "GFX_PRK_intro" }
 	text = { trigger = { original_tag = IDP }  localization_key = "GFX_IDP_intro" }
@@ -144,6 +145,9 @@ defined_text = {
 	text = { trigger = { original_tag = LHH check_variable = { curr_page = 2 } }  localization_key = "LHH_country_intro_header_2" }
 	text = { trigger = { original_tag = LHH check_variable = { curr_page = 1 } }  localization_key = "LHH_country_intro_header_1" }
 	text = { trigger = { original_tag = LHH }  localization_key = "great_war_intro_header" }
+	text = { trigger = { original_tag = LBB check_variable = { curr_page = 2 } }  localization_key = "LBB_country_intro_header_2" }
+	text = { trigger = { original_tag = LBB check_variable = { curr_page = 1 } }  localization_key = "LBB_country_intro_header_1" }
+	text = { trigger = { original_tag = LBB }  localization_key = "great_war_intro_header" }
 	text = { trigger = { original_tag = UMA check_variable = { curr_page = 2 } }  localization_key = "UMA_country_intro_header_2" }
 	text = { trigger = { original_tag = UMA check_variable = { curr_page = 1 } }  localization_key = "UMA_country_intro_header_1" }
 	text = { trigger = { original_tag = UMA }  localization_key = "great_war_intro_header" }
@@ -422,6 +426,9 @@ defined_text = {
 	text = { trigger = { original_tag = LHH check_variable = { curr_page = 2 } }  localization_key = "LHH_country_content_2" }
 	text = { trigger = { original_tag = LHH check_variable = { curr_page = 1 } }  localization_key = "LHH_country_content_1" }
 	text = { trigger = { original_tag = LHH }  localization_key = "great_war_content" }
+	text = { trigger = { original_tag = LBB check_variable = { curr_page = 2 } }  localization_key = "LBB_country_content_2" }
+	text = { trigger = { original_tag = LBB check_variable = { curr_page = 1 } }  localization_key = "LBB_country_content_1" }
+	text = { trigger = { original_tag = LBB }  localization_key = "great_war_content" }
 	text = { trigger = { original_tag = UMA check_variable = { curr_page = 2 } }  localization_key = "UMA_country_content_2" }
 	text = { trigger = { original_tag = UMA check_variable = { curr_page = 1 } }  localization_key = "UMA_country_content_1" }
 	text = { trigger = { original_tag = UMA }  localization_key = "great_war_content" }

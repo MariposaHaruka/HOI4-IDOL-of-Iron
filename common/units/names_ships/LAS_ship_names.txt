@@ -1,0 +1,169 @@
+### REGULAR DESTROYER NAMES###
+LAS_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { LAS }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "ROS "							
+	fallback_name = "Je %d Guchukham"					
+
+	unique = {											
+		"Donghae" "Suwon" "Gangneung" "Nampo" "Gaeseong" "Pohang" "Gunsan" "Gyeongju" "Mokpo"
+		"Gimcheon" "Chungju" "Jinju" "Yeosu" "Jinhae" "Suncheon" "Iksan" "Andong" "Cheonan" "Wonju"
+		"Jecheon" "Sokcho" "Yeongju" "Namwon" "Sinseong" "Sariwon" "Gongju" "Gaechon" "Manpo" "Gimje" "Sangju"
+		"Chuncheon" "Jeonju" "Naju" "Sacheon" "Jinnampo" "Mungyeong" "Songrim" "Geoje" "Jeongeup" "Ganggye" "Dancheon" 
+		"Samcheok" "Hoeryong" "Hyesan" 
+	}
+}
+
+
+### LIGHT CRUISER NAMES###
+LAS_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { LAS }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "ROS "							
+	fallback_name = "Je %d Gyeongsunyangham"	
+
+	unique = {
+		"Seoul" "Busan" "Pyeongyang" "Cheongjin" "Daegu" "Incheon" "Haeju" "Hamheung" "Wonju" "Hwanghae"
+		"Wonsan" "Chungbuk" "Jeonbuk" "Daejeon" "Gwangju" "Gangwon" "Gyeonggi" "Ulsan" "Chungnam" "Masan" "Gyeongbuk"
+		"Jeonnam" "Jeju" "Cheongju" "Pyeongnam" "Hamnam" "Sinuiju" "Gyeongnam" "Heungnam" "Najin" "Yeongil" "Hambuk" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+LAS_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { LAS }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "ROS "							
+	fallback_name = "Je %d Jungsunyangham"
+
+	unique = {
+		"Chungmugong Yi Sunshin" "Jang Bogo" "Yulgok Yi I" "Seoae Ryu Sungryong" "Muuigong Yi Sunshin" "choi Museon" "Park Wi"
+		"Lee Jongmu" "Baekam Park Eunsik" "Yi cheon" "Jeong un" "Na Daeyong" "Yi Eokgi" "Jeong Ji" "An Junggeun" "Kim Jwajin" "Hong Beomdo"
+		"Shin Dolseok" "Eulji Mundeok" "Yang Manchun" "Gang Gamchan" "Choi Yeong"
+	}
+}
+
+### BATTLESHIP NAMES ###
+LAS_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { LAS }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "ROS "							
+	fallback_name = "Je %d Sunyangjeonham"		
+
+	unique = {
+		"Sejong the Great" "Gwanggaeto the Great" "King Geunchogo" "Muyeol the Great" "Songjae Seo Jaepil" "Bak Hyeokgeose"
+		"Jeongjo the Great" "Queen Seondeok" "Munmu the great" "King Jinheung" "Taejo Yi Seong-gye" 
+		"Dangun Wanggeom" "Dongmyeong the Saint" "Haemosu" "Dae Joyeong" "Wang Geon"
+	}
+}
+
+### BATTLECRUISER NAMES ###
+LAS_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { LAS }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "ROS "							
+	fallback_name = "Je %d Sunyangjeonham"		
+
+	unique = {
+		"Sejong the Great" "Gwanggaeto the Great" "King Geunchogo" "Muyeol the Great" "Songjae Seo Jaepil" "Bak Hyeokgeose"
+		"Jeongjo the Great" "Queen Seondeok" "King Hyeonjong" "King Jinheung" "Taejo Yi Seong-gye" 
+		"Dangun Wanggeom" "Dongmyeong the Saint" "Haemosu" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+LAS_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { LAS }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "ROS "							
+	fallback_name = "Je %d Hanggongmoham"		
+
+	unique = {
+		"Orca" "Saryeonggwan" "Labiata" "Mujeok ui Yong" "Jinchwi" "Constantia"
+	}
+}
+
+
+### SUBMARINES ###
+LAS_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { LAS }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "ROS "							
+	fallback_name = "Je %d Jamsuham"
+	
+	unique = {
+		"Dolgorae-001" "Dolgorae-002" "Dolgorae-003" "Dolgorae-004" "Dolgorae-005" "Dolgorae-006" "Dolgorae-007" "Dolgorae-008" "Dolgorae-009" "Dolgorae-010" 
+		"Dolgorae-011" "Dolgorae-012" "Dolgorae-013" "Dolgorae-014" "Dolgorae-015" "Dolgorae-016" "Dolgorae-017" "Dolgorae-018" "Dolgorae-019" "Dolgorae-020" 
+		"Dolgorae-021" "Dolgorae-022" "Dolgorae-023" "Dolgorae-024" "Dolgorae-025" "Dolgorae-026" "Dolgorae-027" "Dolgorae-028" "Dolgorae-029" "Dolgorae-030" 
+		"Dolgorae-031" "Dolgorae-032" "Dolgorae-033" "Dolgorae-034" "Dolgorae-035" "Dolgorae-036" "Dolgorae-037" "Dolgorae-038" "Dolgorae-039" "Dolgorae-040" 
+		"Dolgorae-041" "Dolgorae-042" "Dolgorae-043" "Dolgorae-044" "Dolgorae-045" "Dolgorae-046" "Dolgorae-047" "Dolgorae-048" "Dolgorae-049" "Dolgorae-050" 
+		"Dolgorae-051" "Dolgorae-052" "Dolgorae-053" "Dolgorae-054" "Dolgorae-055" "Dolgorae-056" "Dolgorae-057" "Dolgorae-058" "Dolgorae-059" "Dolgorae-060" 
+		"Dolgorae-061" "Dolgorae-062" "Dolgorae-063" "Dolgorae-064" "Dolgorae-065" "Dolgorae-066" "Dolgorae-067" "Dolgorae-068" "Dolgorae-069" "Dolgorae-070" 
+		"Dolgorae-071" "Dolgorae-072" "Dolgorae-073" "Dolgorae-074" "Dolgorae-075" "Dolgorae-076" "Dolgorae-077" "Dolgorae-078" "Dolgorae-079" "Dolgorae-040" 
+		"Dolgorae-081" "Dolgorae-082" "Dolgorae-083" "Dolgorae-084" "Dolgorae-085" "Dolgorae-086" "Dolgorae-087" "Dolgorae-088" "Dolgorae-089" "Dolgorae-090" 
+		"Dolgorae-091" "Dolgorae-092" "Dolgorae-093" "Dolgorae-094" "Dolgorae-095" "Dolgorae-096" "Dolgorae-097" "Dolgorae-098" "Dolgorae-099" "Dolgorae-100" 
+		"Dolgorae-101" "Dolgorae-102" "Dolgorae-103" "Dolgorae-104" "Dolgorae-105" "Dolgorae-106" "Dolgorae-107" "Dolgorae-108" "Dolgorae-109" "Dolgorae-110" 
+		"Dolgorae-111" "Dolgorae-112" "Dolgorae-113" "Dolgorae-114" "Dolgorae-115" "Dolgorae-116" "Dolgorae-117" "Dolgorae-118" "Dolgorae-119" "Dolgorae-120"
+		"Beomgorae-001" "Beomgorae-002" "Beomgorae-003" "Beomgorae-004" "Beomgorae-005" "Beomgorae-006" "Beomgorae-007" "Beomgorae-008" "Beomgorae-009" "Beomgorae-010" 
+		"Beomgorae-011" "Beomgorae-012" "Beomgorae-013" "Beomgorae-014" "Beomgorae-015" "Beomgorae-016" "Beomgorae-017" "Beomgorae-018" "Beomgorae-019" "Beomgorae-020" 
+		"Beomgorae-021" "Beomgorae-022" "Beomgorae-023" "Beomgorae-024" "Beomgorae-025" "Beomgorae-026" "Beomgorae-027" "Beomgorae-028" "Beomgorae-029" "Beomgorae-030" 
+		"Beomgorae-031" "Beomgorae-032" "Beomgorae-033" "Beomgorae-034" "Beomgorae-035" "Beomgorae-036" "Beomgorae-037" "Beomgorae-038" "Beomgorae-039" "Beomgorae-040" 
+		"Beomgorae-041" "Beomgorae-042" "Beomgorae-043" "Beomgorae-044" "Beomgorae-045" "Beomgorae-046" "Beomgorae-047" "Beomgorae-048" "Beomgorae-049" "Beomgorae-050" 
+		"Beomgorae-051" "Beomgorae-052" "Beomgorae-053" "Beomgorae-054" "Beomgorae-055" "Beomgorae-056" "Beomgorae-057" "Beomgorae-058" "Beomgorae-059" "Beomgorae-060" 
+		"Beomgorae-061" "Beomgorae-062" "Beomgorae-063" "Beomgorae-064" "Beomgorae-065" "Beomgorae-066" "Beomgorae-067" "Beomgorae-068" "Beomgorae-069" "Beomgorae-070" 
+		"Beomgorae-071" "Beomgorae-072" "Beomgorae-073" "Beomgorae-074" "Beomgorae-075" "Beomgorae-076" "Beomgorae-077" "Beomgorae-078" "Beomgorae-079" "Beomgorae-040" 
+		"Beomgorae-081" "Beomgorae-082" "Beomgorae-083" "Beomgorae-084" "Beomgorae-085" "Beomgorae-086" "Beomgorae-087" "Beomgorae-088" "Beomgorae-089" "Beomgorae-090" 
+		"Beomgorae-091" "Beomgorae-092" "Beomgorae-093" "Beomgorae-094" "Beomgorae-095" "Beomgorae-096" "Beomgorae-097" "Beomgorae-098" "Beomgorae-099" "Beomgorae-100" 
+		"Beomgorae-101" "Beomgorae-102" "Beomgorae-103" "Beomgorae-104" "Beomgorae-105" "Beomgorae-106" "Beomgorae-107" "Beomgorae-108" "Beomgorae-109" "Beomgorae-110" 
+		"Beomgorae-111" "Beomgorae-112" "Beomgorae-113" "Beomgorae-114" "Beomgorae-115" "Beomgorae-116" "Beomgorae-117" "Beomgorae-118" "Beomgorae-119" "Beomgorae-120" 
+	}
+}
+
+LAS_MOUNTAIN = {
+	name = NAME_THEME_MOUNTAIN
+
+	for_countries = { LAS }
+
+	type = ship
+	
+	unique = {
+		"Baekdusan" "Hanrasan" "Geumgangsan" "Myohyangsan" "Samgaksan" "Jirisan" "Seoraksan" "Odaesan" "Geumjeongsan" "Mudeungsan"
+	}
+}
+
+

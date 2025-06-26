@@ -1,0 +1,24 @@
+LLS_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_LLS_dynamic_industry
+}
+
+LLS_army = {
+	enable = { always = yes }
+	icon = GFX_idea_LLS_dynamic_army
+}
+
+LLS_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_LLS_dynamic_naval
+}
+
+LLS_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_LLS_dynamic_airforce
+}
+
+LLS_lovelive_economy = {
+	enable = { always = yes }
+	icon = GFX_idea_POL_succesful_four_year_plan
+}

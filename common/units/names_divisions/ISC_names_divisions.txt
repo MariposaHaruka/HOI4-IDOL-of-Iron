@@ -1,71 +1,535 @@
-ISC_01 = {
-	name = "츠바사 민병연대"
-	for_countries = { ISC }
-	can_use = { always = yes }
-	division_types = { "militia" }
-	fallback_name = "제%d 츠바사 민병연대"
-	ordered = {
-		1 = { "제%d 츠바사 민병연대" }
-		2 = { "제%d 츠바사 민병연대" }
-		3 = { "제%d 츠바사 민병연대" }
-		4 = { "제%d 츠바사 민병연대" }
-		5 = { "제%d 츠바사 민병연대" }
-	}
-}
+﻿ISC_INF_01 = {
+	name = "Producer Infantry Divisions"
 
-ISC_02 = {
-	name = "츠바사 기병연대"
 	for_countries = { ISC }
-	can_use = { always = yes }
-	division_types = { "cavalry" "camelry" "motorized" "mechanized" }
-	fallback_name = "제%d 츠바사 기병연대"
-	ordered = {
-		1 = { "제%d 츠바사 기병연대" }
-		2 = { "제%d 츠바사 기병연대" }
-		3 = { "제%d 츠바사 기병연대" }
-		4 = { "제%d 츠바사 기병연대" }
-		5 = { "제%d 츠바사 기병연대" }
-	}
-}
 
-ISC_03 = {
-	name = "츠바사 지역군"
-	for_countries = { ISC }
 	can_use = { always = yes }
+
 	division_types = { "infantry" }
-	fallback_name = "츠바사 지역군 제%d연대"
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { GER_Gar_01 }
+
+	fallback_name = "%d Producer Infantry Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "츠바사 지역군 제%d연대" }
-		2 = { "츠바사 지역군 제%d연대" }
-		3 = { "츠바사 지역군 제%d연대" }
-		4 = { "츠바사 지역군 제%d연대" }
-		5 = { "츠바사 지역군 제%d연대" }
-		6 = { "츠바사 지역군 제%d연대" }
-		7 = { "츠바사 지역군 제%d연대"}
-		8 = { "츠바사 지역군 제%d연대" }
-		9 = { "츠바사 지역군 제%d연대" }
-		10 = { "츠바사 지역군 제%d연대" }
+		1 = { "%dst Producer Infantry Division" }
+		2 = { "%dnd Producer Infantry Division" }
+		3 = { "%drd Producer Infantry Division" }
+		4 = { "%dth Producer Infantry Division" }
+		5 = { "%dth Producer Infantry Division" }
+		6 = { "%dth Producer Infantry Division" }
+		7 = { "%dth Producer Infantry Division" }
+		8 = { "%dth Producer Infantry Division" }
+		9 = { "%dth Producer Infantry Division" }
+		10 = { "%dth Producer Infantry Division" }
+		11 = { "%dth Producer Infantry Division" }
+		12 = { "%dth Producer Infantry Division" }
+		13 = { "%dth Producer Infantry Division" }
+		14 = { "%dth Producer Infantry Division" }
+		15 = { "%dth Producer Infantry Division" }
+		16 = { "%dth Producer Infantry Division" }
+		17 = { "%dth Producer Infantry Division" }
+		18 = { "%dth Producer Infantry Division" }
+		19 = { "%dth Producer Infantry Division" }
+		20 = { "%dth Producer Infantry Division" }
+		21 = { "%dst Producer Infantry Division" }
+		22 = { "%dnd Producer Infantry Division" }
+		23 = { "%drd Producer Infantry Division" }
+		24 = { "%dth Producer Infantry Division" }
+		25 = { "%dth Producer Infantry Division" }
+		26 = { "%dth Producer Infantry Division" }
+		27 = { "%dth Producer Infantry Division" }
+		28 = { "%dth Producer Infantry Division" }
+		29 = { "%dth Producer Infantry Division" }
+		30 = { "%dth Producer Infantry Division" }
+		31 = { "%dst Producer Infantry Division" }
+		32 = { "%dnd Producer Infantry Division" }
+		33 = { "%drd Producer Infantry Division" }
+		34 = { "%dth Producer Infantry Division" }
+		35 = { "%dth Producer Infantry Division" }
+		36 = { "%dth Producer Infantry Division" }
+		37 = { "%dth Producer Infantry Division" }
+		38 = { "%dth Producer Infantry Division" }
+		39 = { "%dth Producer Infantry Division" }
+		40 = { "%dth Producer Infantry Division" }
+		41 = { "%dst Producer Infantry Division" }
+		42 = { "%dnd Producer Infantry Division" }
+		43 = { "%drd Producer Infantry Division" }
+		44 = { "%dth Producer Infantry Division" }
+		45 = { "%dth Producer Infantry Division" }
+		46 = { "%dth Producer Infantry Division" }
+		47 = { "%dth Producer Infantry Division" }
+		48 = { "%dth Producer Infantry Division" }
+		49 = { "%dth Producer Infantry Division" }
+		50 = { "%dth Producer Infantry Division" }
+		51 = { "%dst Producer Infantry Division" }
+		52 = { "%dnd Producer Infantry Division" }
+		53 = { "%drd Producer Infantry Division" }
+
+		# This list covers both the Citizens Military Force (CMF) and Australian Imperial Force (AIF) infantry divisions either extant during the interwar years or raised during the war.  It'd be possible to split the lists in two (CMF and AIF divisions having their own list, as CMF divisions only served in Australia and Australian territories (or thereabouts) but that's probably overkill, given they all had the same naming convention - probably makes more sense for the player in-game to have their militia and infantry divisions use the same name list, as far as I understand the system).
+		# Australia only raised 12 infantry divisions historically.  This list is longer to avoid things like the 22th Producer Infantry Division for Australias that build lots of divisions.
 	}
 }
 
-ISC_03 = {
-	name = "츠바사 프로듀서 보병사단"
+ISC_CAV_01 = {
+	name = "Producer Cavalry Divisions"
+
 	for_countries = { ISC }
+
 	can_use = { always = yes }
-	division_types = { "infantry" }
-	fallback_name = "츠바사 제%d 프로듀서 보병사단"
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { GER_Gar_01 }
+
+	fallback_name = "%d Producer Cavalry Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "츠바사 제%d 프로듀서 보병사단" }
-		2 = { "츠바사 제%d 프로듀서 보병사단" }
-		3 = { "츠바사 제%d 프로듀서 보병사단" }
-		4 = { "츠바사 제%d 프로듀서 보병사단" }
-		5 = { "츠바사 제%d 프로듀서 보병사단" }
-		6 = { "츠바사 제%d 프로듀서 보병사단" }
-		7 = { "츠바사 제%d 프로듀서 보병사단" }
-		8 = { "츠바사 제%d 프로듀서 보병사단" }
-		9 = { "츠바사 제%d 프로듀서 보병사단" }
-		10 = { "츠바사 제%d 프로듀서 보병사단" }
+		1 = { "%dst Producer Cavalry Division" }
+		2 = { "%dnd Producer Cavalry Division" }
+		3 = { "%drd Producer Cavalry Division" }
+		4 = { "%dth Producer Cavalry Division" }
+		5 = { "%dth Producer Cavalry Division" }
+		6 = { "%dth Producer Cavalry Division" }
+		7 = { "%dth Producer Cavalry Division" }
+		8 = { "%dth Producer Cavalry Division" }
+		9 = { "%dth Producer Cavalry Division" }
+		10 = { "%dth Producer Cavalry Division" }
+		11 = { "%dth Producer Cavalry Division" }
+		12 = { "%dth Producer Cavalry Division" }
+		13 = { "%dth Producer Cavalry Division" }
+		14 = { "%dth Producer Cavalry Division" }
+		15 = { "%dth Producer Cavalry Division" }
+		16 = { "%dth Producer Cavalry Division" }
+		17 = { "%dth Producer Cavalry Division" }
+		18 = { "%dth Producer Cavalry Division" }
+		19 = { "%dth Producer Cavalry Division" }
+		20 = { "%dth Producer Cavalry Division" }
+		21 = { "%dst Producer Cavalry Division" }
+		22 = { "%dnd Producer Cavalry Division" }
+		23 = { "%drd Producer Cavalry Division" }
+		24 = { "%dth Producer Cavalry Division" }
+		25 = { "%dth Producer Cavalry Division" }
+		26 = { "%dth Producer Cavalry Division" }
+		27 = { "%dth Producer Cavalry Division" }
+		28 = { "%dth Producer Cavalry Division" }
+		29 = { "%dth Producer Cavalry Division" }
+		30 = { "%dth Producer Cavalry Division" }
+		31 = { "%dst Producer Cavalry Division" }
+		32 = { "%dnd Producer Cavalry Division" }
+		33 = { "%drd Producer Cavalry Division" }
+		34 = { "%dth Producer Cavalry Division" }
+		35 = { "%dth Producer Cavalry Division" }
+		36 = { "%dth Producer Cavalry Division" }
+		37 = { "%dth Producer Cavalry Division" }
+		38 = { "%dth Producer Cavalry Division" }
+		39 = { "%dth Producer Cavalry Division" }
+		40 = { "%dth Producer Cavalry Division" }
+		41 = { "%dst Producer Cavalry Division" }
+		42 = { "%dnd Producer Cavalry Division" }
+		43 = { "%drd Producer Cavalry Division" }
+		44 = { "%dth Producer Cavalry Division" }
+		45 = { "%dth Producer Cavalry Division" }
+		46 = { "%dth Producer Cavalry Division" }
+		47 = { "%dth Producer Cavalry Division" }
+		48 = { "%dth Producer Cavalry Division" }
+		49 = { "%dth Producer Cavalry Division" }
+		50 = { "%dth Producer Cavalry Division" }
+		51 = { "%dst Producer Cavalry Division" }
+		52 = { "%dnd Producer Cavalry Division" }
+		53 = { "%drd Producer Cavalry Division" }
+
+		# Historically, there's no way Australia would have had 50 Cav divisions (1st and 2nd were the only two historical divs), but have taken the list this far because of cav's suppression role in-game.
 	}
 }
 
+ISC_MOT_01 = {
+	name = "Motorised Producer Divisions"
 
+	for_countries = { ISC }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ISC_CAV_01 }
+
+	fallback_name = "%d Producer Motor Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Producer Motor Division" } #Formed from 1st Producer Cavalry Division
+		2 = { "%dnd Producer Motor Division" } #Formed from 2nd Producer Cavalry Division
+		3 = { "%drd Producer Motor Division" }
+		4 = { "%dth Producer Motor Division" }
+		5 = { "%dth Producer Motor Division" }
+		6 = { "%dth Producer Motor Division" }
+		7 = { "%dth Producer Motor Division" }
+		8 = { "%dth Producer Motor Division" }
+		9 = { "%dth Producer Motor Division" }
+		10 = { "%dth Producer Motor Division" }
+		11 = { "%dth Producer Motor Division" }
+		12 = { "%dth Producer Motor Division" }
+		13 = { "%dth Producer Motor Division" }
+		14 = { "%dth Producer Motor Division" }
+		15 = { "%dth Producer Motor Division" }
+		16 = { "%dth Producer Motor Division" }
+		17 = { "%dth Producer Motor Division" }
+		18 = { "%dth Producer Motor Division" }
+		19 = { "%dth Producer Motor Division" }
+		20 = { "%dth Producer Motor Division" }
+		21 = { "%dst Producer Motor Division" }
+		22 = { "%dnd Producer Motor Division" }
+		23 = { "%drd Producer Motor Division" }
+
+		# Historically only the 1st and 2nd Motor divisions were raised, and were fairly quickly transformed into the 2nd and 3rd Producer Armoured Division.
+	}
+}
+
+ISC_ARM_01 = {
+	name = "Producer Armoured Divisions"
+
+	for_countries = { ISC }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ISC_CAV_01 }
+
+	fallback_name = "%d Producer Armoured Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Producer Armoured Division" }
+		2 = { "%dnd Producer Armoured Division" } #Formed from 2nd Producer Motor Division
+		3 = { "%drd Producer Armoured Division" } #Formed from 1st Producer Motor Division
+		4 = { "%dth Producer Armoured Division" }
+		5 = { "%dth Producer Armoured Division" }
+		6 = { "%dth Producer Armoured Division" }
+		7 = { "%dth Producer Armoured Division" }
+		8 = { "%dth Producer Armoured Division" }
+		9 = { "%dth Producer Armoured Division" }
+		10 = { "%dth Producer Armoured Division" }
+		11 = { "%dth Producer Armoured Division" }
+		12 = { "%dth Producer Armoured Division" }
+		13 = { "%dth Producer Armoured Division" }
+		14 = { "%dth Producer Armoured Division" }
+		15 = { "%dth Producer Armoured Division" }
+		16 = { "%dth Producer Armoured Division" }
+		17 = { "%dth Producer Armoured Division" }
+		18 = { "%dth Producer Armoured Division" }
+		19 = { "%dth Producer Armoured Division" }
+		20 = { "%dth Producer Armoured Division" }
+		21 = { "%dst Producer Armoured Division" }
+		22 = { "%dnd Producer Armoured Division" }
+		23 = { "%drd Producer Armoured Division" }
+
+		# Historically only the 1st and 2nd Motor divisions were raised, and were fairly quickly transformed into the 2nd and 3rd Producer Armoured Division.
+	}
+}
+
+ISC_MEC_01 = {
+	name = "Producer Mechanised Divisions"
+
+	for_countries = { ISC }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized"  }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ISC_CAV_01 }
+
+	fallback_name = "%d Producer Mechanised Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Producer Mechanised Division" }
+		2 = { "%dnd Producer Mechanised Division" }
+		3 = { "%drd Producer Mechanised Division" }
+		4 = { "%dth Producer Mechanised Division" }
+		5 = { "%dth Producer Mechanised Division" }
+		6 = { "%dth Producer Mechanised Division" }
+		7 = { "%dth Producer Mechanised Division" }
+		8 = { "%dth Producer Mechanised Division" }
+		9 = { "%dth Producer Mechanised Division" }
+		10 = { "%dth Producer Mechanised Division" }
+		11 = { "%dth Producer Mechanised Division" }
+		12 = { "%dth Producer Mechanised Division" }
+		13 = { "%dth Producer Mechanised Division" }
+		14 = { "%dth Producer Mechanised Division" }
+		15 = { "%dth Producer Mechanised Division" }
+		16 = { "%dth Producer Mechanised Division" }
+		17 = { "%dth Producer Mechanised Division" }
+		18 = { "%dth Producer Mechanised Division" }
+		19 = { "%dth Producer Mechanised Division" }
+		20 = { "%dth Producer Mechanised Division" }
+		21 = { "%dst Producer Mechanised Division" }
+		22 = { "%dnd Producer Mechanised Division" }
+		23 = { "%drd Producer Mechanised Division" }
+
+		# None historically.  Have linked with the CAV/MOT/ARM lists for consistency.
+	}
+}
+
+ISC_GAR_01 = {
+	name = "Producer Garrison Divisions"
+
+	for_countries = { ISC }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ISC_INF_01 }
+
+	fallback_name = "%d Producer Infantry Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Producer Infantry Division" }
+		2 = { "%dnd Producer Infantry Division" }
+		3 = { "%drd Producer Infantry Division" }
+		4 = { "%dth Producer Infantry Division" }
+		5 = { "%dth Producer Infantry Division" }
+		10 = { "%dth Producer Infantry Division" }
+		11 = { "%dth Producer Infantry Division" }
+		12 = { "%dth Producer Infantry Division" }
+		13 = { "%dth Producer Infantry Division" }
+		14 = { "%dth Producer Infantry Division" }
+		15 = { "%dth Producer Infantry Division" }
+		16 = { "%dth Producer Infantry Division" }
+		17 = { "%dth Producer Infantry Division" }
+		18 = { "%dth Producer Infantry Division" }
+		19 = { "%dth Producer Infantry Division" }
+		20 = { "%dth Producer Infantry Division" }
+		21 = { "%dst Producer Infantry Division" }
+		22 = { "%dnd Producer Infantry Division" }
+		23 = { "%drd Producer Infantry Division" }
+		24 = { "%dth Producer Infantry Division" }
+		25 = { "%dth Producer Infantry Division" }
+		26 = { "%dth Producer Infantry Division" }
+		27 = { "%dth Producer Infantry Division" }
+		28 = { "%dth Producer Infantry Division" }
+		29 = { "%dth Producer Infantry Division" }
+		30 = { "%dth Producer Infantry Division" }
+		31 = { "%dst Producer Infantry Division" }
+		32 = { "%dnd Producer Infantry Division" }
+		33 = { "%drd Producer Infantry Division" }
+		34 = { "%dth Producer Infantry Division" }
+		35 = { "%dth Producer Infantry Division" }
+		36 = { "%dth Producer Infantry Division" }
+		37 = { "%dth Producer Infantry Division" }
+		38 = { "%dth Producer Infantry Division" }
+		39 = { "%dth Producer Infantry Division" }
+		40 = { "%dth Producer Infantry Division" }
+		41 = { "%dst Producer Infantry Division" }
+		42 = { "%dnd Producer Infantry Division" }
+		43 = { "%drd Producer Infantry Division" }
+		44 = { "%dth Producer Infantry Division" }
+		45 = { "%dth Producer Infantry Division" }
+		46 = { "%dth Producer Infantry Division" }
+		47 = { "%dth Producer Infantry Division" }
+		48 = { "%dth Producer Infantry Division" }
+		49 = { "%dth Producer Infantry Division" }
+		50 = { "%dth Producer Infantry Division" }
+		51 = { "%dst Producer Infantry Division" }
+		52 = { "%dnd Producer Infantry Division" }
+		53 = { "%drd Producer Infantry Division" }
+
+		# The OOB file for ISC has CMF divisions as regular infantry divisions (rather than garrison), so while it could be argued the 1st-5th divisions and 10th (briefly), 11th and 12th were garrison divs, as long as the 1st-5th use an infantry division template in the unit file it may be better to just leave it like this.
+	}
+}
+
+ISC_MAR_01 = {
+	name = "Producer Marine Divisions"
+
+	for_countries = { ISC }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" "amphibious_armor" "amphibious_mechanized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ISC_GAR_01 }
+
+	fallback_name = "%d Producer Marine Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Producer Marine Division" }
+		2 = { "%dnd Producer Marine Division" }
+		3 = { "%drd Producer Marine Division" }
+		4 = { "%dth Producer Marine Division" }
+		5 = { "%dth Producer Marine Division" }
+		6 = { "%dth Producer Marine Division" }
+		7 = { "%dth Producer Marine Division" }
+		8 = { "%dth Producer Marine Division" }
+		9 = { "%dth Producer Marine Division" }
+		10 = { "%dth Producer Marine Division" }
+		11 = { "%dth Producer Marine Division" }
+		12 = { "%dth Producer Marine Division" }
+		13 = { "%dth Producer Marine Division" }
+		14 = { "%dth Producer Marine Division" }
+		15 = { "%dth Producer Marine Division" }
+		16 = { "%dth Producer Marine Division" }
+		17 = { "%dth Producer Marine Division" }
+		18 = { "%dth Producer Marine Division" }
+		19 = { "%dth Producer Marine Division" }
+		20 = { "%dth Producer Marine Division" }
+		21 = { "%dst Producer Marine Division" }
+		22 = { "%dnd Producer Marine Division" }
+		23 = { "%drd Producer Marine Division" }
+		24 = { "%dth Producer Marine Division" }
+		25 = { "%dth Producer Marine Division" }
+		26 = { "%dth Producer Marine Division" }
+		27 = { "%dth Producer Marine Division" }
+		28 = { "%dth Producer Marine Division" }
+		29 = { "%dth Producer Marine Division" }
+		30 = { "%dth Producer Marine Division" }
+
+		# ISC didn't have any Marine divisions, these are all fictional.
+	}
+}
+
+ISC_MTN_01 = {
+	name = "Mountain Producer Divisions"
+
+	for_countries = { ISC }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ISC_INF_01 }
+
+	fallback_name = "%d Producer Infantry Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Producer Infantry Division" }
+		2 = { "%dnd Producer Infantry Division" }
+		3 = { "%drd Producer Infantry Division" }
+		4 = { "%dth Producer Infantry Division" }
+		5 = { "%dth Producer Infantry Division" }
+		6 = { "%dth Producer Infantry Division" }
+		7 = { "%dth Producer Infantry Division" }
+		8 = { "%dth Producer Infantry Division" }
+		9 = { "%dth Producer Infantry Division" }
+		10 = { "%dth Producer Infantry Division" }
+		11 = { "%dth Producer Infantry Division" }
+		12 = { "%dth Producer Infantry Division" }
+		13 = { "%dth Producer Infantry Division" }
+		14 = { "%dth Producer Infantry Division" }
+		15 = { "%dth Producer Infantry Division" }
+		16 = { "%dth Producer Infantry Division" }
+		17 = { "%dth Producer Infantry Division" }
+		18 = { "%dth Producer Infantry Division" }
+		19 = { "%dth Producer Infantry Division" }
+		20 = { "%dth Producer Infantry Division" }
+		21 = { "%dst Producer Infantry Division" }
+		22 = { "%dnd Producer Infantry Division" }
+		23 = { "%drd Producer Infantry Division" }
+		24 = { "%dth Producer Infantry Division" }
+		25 = { "%dth Producer Infantry Division" }
+		26 = { "%dth Producer Infantry Division" }
+		27 = { "%dth Producer Infantry Division" }
+		28 = { "%dth Producer Infantry Division" }
+		29 = { "%dth Producer Infantry Division" }
+		30 = { "%dth Producer Infantry Division" }
+		31 = { "%dst Producer Infantry Division" }
+		32 = { "%dnd Producer Infantry Division" }
+		33 = { "%drd Producer Infantry Division" }
+		34 = { "%dth Producer Infantry Division" }
+		35 = { "%dth Producer Infantry Division" }
+		36 = { "%dth Producer Infantry Division" }
+		37 = { "%dth Producer Infantry Division" }
+		38 = { "%dth Producer Infantry Division" }
+		39 = { "%dth Producer Infantry Division" }
+		40 = { "%dth Producer Infantry Division" }
+		41 = { "%dst Producer Infantry Division" }
+		42 = { "%dnd Producer Infantry Division" }
+		43 = { "%drd Producer Infantry Division" }
+		44 = { "%dth Producer Infantry Division" }
+		45 = { "%dth Producer Infantry Division" }
+		46 = { "%dth Producer Infantry Division" }
+		47 = { "%dth Producer Infantry Division" }
+		48 = { "%dth Producer Infantry Division" }
+		49 = { "%dth Producer Infantry Division" }
+		50 = { "%dth Producer Infantry Division" }
+		51 = { "%dst Producer Infantry Division" }
+		52 = { "%dnd Producer Infantry Division" }
+		53 = { "%drd Producer Infantry Division" }
+
+		# ISC didn't have any Mountain divisions, have created an overlapping identical namelist with infantry - not sure if necessary or something else desired?
+	}
+}
+
+ISC_PAR_01 = {
+	name = "Producer Airborne Divisions"
+
+	for_countries = { ISC }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ISC_GAR_01 }
+
+	fallback_name = "%d Producer Airborne Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Producer Airborne Division" }
+		2 = { "%dnd Producer Airborne Division" }
+		3 = { "%drd Producer Airborne Division" }
+		4 = { "%dth Producer Airborne Division" }
+		5 = { "%dth Producer Airborne Division" }
+		6 = { "%dth Producer Airborne Division" }
+		7 = { "%dth Producer Airborne Division" }
+		8 = { "%dth Producer Airborne Division" }
+		9 = { "%dth Producer Airborne Division" }
+		10 = { "%dth Producer Airborne Division" }
+		11 = { "%dth Producer Airborne Division" }
+		12 = { "%dth Producer Airborne Division" }
+		13 = { "%dth Producer Airborne Division" }
+		14 = { "%dth Producer Airborne Division" }
+		15 = { "%dth Producer Airborne Division" }
+		16 = { "%dth Producer Airborne Division" }
+		17 = { "%dth Producer Airborne Division" }
+		18 = { "%dth Producer Airborne Division" }
+		19 = { "%dth Producer Airborne Division" }
+		20 = { "%dth Producer Airborne Division" }
+		21 = { "%dst Producer Airborne Division" }
+		22 = { "%dnd Producer Airborne Division" }
+		23 = { "%drd Producer Airborne Division" }
+		24 = { "%dth Producer Airborne Division" }
+		25 = { "%dth Producer Airborne Division" }
+		26 = { "%dth Producer Airborne Division" }
+		27 = { "%dth Producer Airborne Division" }
+		28 = { "%dth Producer Airborne Division" }
+		29 = { "%dth Producer Airborne Division" }
+		30 = { "%dth Producer Airborne Division" }
+
+		# ISC didn't have any Marine divisions, these are all fictional.
+	}
+}

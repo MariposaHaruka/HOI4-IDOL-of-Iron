@@ -1,0 +1,128 @@
+﻿##### LATVIA NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+GBC_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { GBC }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }
+
+	prefix = "TKNS "
+
+	fallback_name = "Iznicinatajs %d"					
+
+	unique = {											
+		"Cesis" "Liepaja" "Priekule" "Daugavpils" "Aglona" "Auce" 
+	}
+}
+
+### LIGHT CRUISER NAMES###
+GBC_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { GBC }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+
+	prefix = "TKNS "
+	
+	fallback_name = "Gaismas Kruizeri %d"
+
+	unique = {
+		"Cesis" "Liepaja" "Priekule" "Daugavpils" "Aglona" "Auce" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+GBC_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { GBC }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+
+	prefix = "TKNS "
+	
+	fallback_name = "Smagais Kruizeri %d"
+
+	unique = {
+		"Riga" "Mazsalaca" "Dundaga" "Bauska" "Jurmala" "Kuldiga" "Madona" "Rezekne" "Valmiera" 
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+GBC_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { GBC }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+
+	prefix = "TKNS "
+	
+	fallback_name = "Linijkugis %d"		
+
+	unique = {
+		"Riga" "Mazsalaca" "Dundaga" "Bauska" "Jurmala" "Kuldiga" "Madona" "Rezekne" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+GBC_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { GBC }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+
+	prefix = "TKNS "
+	
+	fallback_name = "Linijkreiseris %d"		
+
+	unique = {
+		"Valmiera" "Cesis" "Liepaja" "Priekule" "Daugavpils" "Aglona" "Auce" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+GBC_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { GBC }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+
+	prefix = "TKNS "
+	
+	fallback_name = "Lidmasinu Parvadatajs %d"	
+
+	unique = {
+		"Riga" "Mazsalaca" "Dundaga" "Bauska" "Jurmala" "Kuldiga" "Madona" "Rezekne" "Valmiera" "Cesis" "Liepaja" 
+		"Priekule" "Daugavpils" "Aglona" "Auce" "Virsaitis" "Namejs" 
+	}
+}
+
+### SUBMARINES ###
+GBC_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { GBC }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+
+	prefix = "TKNS "
+	
+	fallback_name = "Zemudene %d"
+	
+	unique = {
+		"Ronis" "Spidola" 
+	}
+}

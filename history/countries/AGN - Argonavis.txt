@@ -2,7 +2,7 @@
 capital = 272
 
 #부대
-set_oob = "AGN_ar"
+set_oob = "AGN_ar" 
 starting_train_buffer = 2
 add_command_power = 10
 set_fuel_ratio = 0.5
@@ -66,7 +66,14 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 25
 
 #국민 정신
-add_ideas = agrarian_society
+add_ideas = { 
+	agrarian_society
+}
+
+add_dynamic_modifier = { modifier = AGN_industry }
+add_dynamic_modifier = { modifier = AGN_army }
+add_dynamic_modifier = { modifier = AGN_navy }
+add_dynamic_modifier = { modifier = AGN_air_force }
 
 #외교
 
@@ -130,7 +137,3 @@ recruit_character = AGN_furusawa_kazuki
 #장관진
 
 #무기 프리셋
-#create_equipment_variant = {
-#	name = ""
-#	type = amphibious_tank_equipment_2
-#}

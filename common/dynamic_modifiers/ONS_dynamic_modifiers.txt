@@ -1,0 +1,19 @@
+ONS_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_ONS_dynamic_industry
+}
+
+ONS_army = {
+	enable = { always = yes }
+	icon = GFX_idea_ONS_dynamic_army
+}
+
+ONS_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_ONS_dynamic_naval
+}
+
+ONS_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_ONS_dynamic_airforce
+}

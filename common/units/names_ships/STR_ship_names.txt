@@ -1,0 +1,288 @@
+﻿##### HOLLAND NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+STR_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { STR }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "SRS "
+	fallback_name = "Torpedobootjager %d"					
+
+	unique = {											
+		"Piet Hein" "Eversten" "Van Ghent" "Kortenaer" "Van Galen" "Witte de With" "Banckert" "Van Nes" "Gerard Callenburgh" "Isaac Sweers" "Tjerk Hiddes" "Philips van Almonde"
+		"Campbelltown" "Marnix" "Seisho" "Zeeland" "Noord-Brabant" "Gelderland" "Friesland" "Groningen" "Limburg" "Overijssel" "Drenthe" "Utrecht" "Rotterdam" "Amsterdam"
+		"Wolf" "Fret" "Bulhond" "Jakhals" "Hermelijn" "Lynx" "Vos" "Panter" 										
+		"Artevelde" "Zinnia" "Jan Breydel" "Victor Billet" "Wielingen" "Westdiep" "Wandelaar" "Westhinder" "Leopold I" "Louise-Marie" "Brugge" 
+	}
+}
+
+### LIGHT CRUISER NAMES###
+STR_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { STR }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "SRS "
+	fallback_name = "Kruiser %d"
+
+	unique = {
+		"Java" "Sumatra" "De Ruyter" "Tromp" "Jacob van Heemskerck" "De Zeven Provinciën" "Kijkduin" "Gelderland" "Zeeland" "Friesland" "Gelderland" "Noord-Brabant" 
+		"Utrecht" "Drenthe" "Brabant" "Limburg"
+	}
+}
+
+### HEAVY CRUISER NAMES###
+STR_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { STR }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "SRS "
+	fallback_name = "Panterschip %d"
+
+	unique = {
+		"Hertog Hendrik" "Jacob van Heemskerck" "Soerabaja" "Celebes" "Batjan" "Ceram" "Ambon" "Banda" "Ternate"
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+STR_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { STR }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "SRS "
+	fallback_name = "Slagschip %d"		
+
+	unique = {
+		"Reinier Claeszen" "Evertsen" "Piet Hein" "Kortenaer" "Koningin Regentes" "Hertog Hendrik" "Van Speijk" "Witte de With" 
+		"Roi Leopold I" "Roi Leopold II" "Roi Albert I" "Reine Astrid" "Jeneval" "General Brialmont" "Leopoldville" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+STR_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { STR }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "SRS "
+	fallback_name = "Slagkruiser %d"		
+
+	unique = {
+		"Van Speijk" "Witte de With" "Piet Hein" "Kortenaer" "Koningin Regentes" "Hertog Hendrik" 
+		"Roi Leopold I" "Roi Leopold II" "Roi Albert I" "Reine Astrid" "Jeneval" "General Brialmont" "Leopoldville" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+STR_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { STR }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "SRS "
+	fallback_name = "Vliegdekschip %d"	
+
+	unique = {
+		"Karel Doorman" "De Zeven Provinciën" "De Ruyter" "Tromp" "Piet Hein" 
+		"Graaf van Vlaanderen" "Hainaut" "Robrecht de Béthune" 	"Aster" "Bellis" "Crocus" "Lobelia" "Narcis" "Primula" 
+	}
+}
+
+### SUBMARINES ###
+STR_SS_OCLASS = {
+	name = NAME_THEME_HISTORICAL_SUBS_OCLASS
+
+	for_countries = { STR }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "SRS "
+	fallback_name = "O-%d"
+	
+	ordered = {
+		1 = {"O-%d"}
+		2 = {"O-%d"} 
+		3 = {"O-%d"} 
+		4 = {"O-%d"} 
+		5 = {"O-%d"}
+		6 = {"O-%d"}
+		7 = {"O-%d"}
+		8 = {"O-%d"}
+		9 = {"O-%d"}
+		10 = {"O-%d"}
+		11 = {"O-%d"}
+		12 = {"O-%d"}
+		13 = {"O-%d"}
+		14 = {"O-%d"}
+		15 = {"O-%d"}
+		16 = {"O-%d"}
+		17 = {"O-%d"}
+		18 = {"O-%d"}
+		19 = {"O-%d"}
+		20 = {"O-%d"}
+		21 = {"O-%d"}
+		22 = {"O-%d"}
+		23 = {"O-%d"}
+		24 = {"O-%d"}
+		25 = {"O-%d"}
+	}
+}
+STR_SS_KCLASS = {
+	name = NAME_THEME_HISTORICAL_SUBS_KCLASS
+
+	for_countries = { STR }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "SRS "
+	fallback_name = "B-%s"
+	
+	ordered = {
+		1 = {"K-%s"}
+		2 = {"K-%s"} 
+		3 = {"K-%s"} 
+		4 = {"K-%s"} 
+		5 = {"K-%s"}
+		6 = {"K-%s"}
+		7 = {"K-%s"}
+		8 = {"K-%s"}
+		9 = {"K-%s"}
+		10 = {"K-%s"}
+		11 = {"K-%s"}
+		12 = {"K-%s"}
+		13 = {"K-%s"}
+		14 = {"K-%s"}
+		15 = {"K-%s"}
+		16 = {"K-%s"}
+		17 = {"K-%s"}
+		18 = {"K-%s"}
+		19 = {"K-%s"}
+		20 = {"K-%s"}
+		21 = {"K-%s"}
+		22 = {"K-%s"}
+		23 = {"K-%s"}
+		24 = {"K-%s"}
+		25 = {"K-%s"}
+	}
+}
+
+STR_SS_BCLASS = {
+	name = NAME_THEME_HISTORICAL_SUBS_KCLASS
+
+	for_countries = { STR }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "SRS "
+	fallback_name = "B-%s"
+	
+	ordered = {
+		1 = {"B-%s"}
+		2 = {"B-%s"} 
+		3 = {"B-%s"} 
+		4 = {"B-%s"} 
+		5 = {"B-%s"}
+		6 = {"B-%s"}
+		7 = {"B-%s"}
+		8 = {"B-%s"}
+		9 = {"B-%s"}
+		10 = {"B-%s"}
+		11 = {"B-%s"}
+		12 = {"B-%s"}
+		13 = {"B-%s"}
+		14 = {"B-%s"}
+		15 = {"B-%s"}
+		16 = {"B-%s"}
+		17 = {"B-%s"}
+		18 = {"B-%s"}
+		19 = {"B-%s"}
+		20 = {"B-%s"}
+		21 = {"B-%s"}
+		22 = {"B-%s"}
+		23 = {"B-%s"}
+		24 = {"B-%s"}
+		25 = {"B-%s"}
+	}
+}
+### THEME: DUTCH REGIONS  ###
+STR_REGIONS = {
+	name = NAME_THEME_REGIONS
+
+	for_countries = { STR }
+
+	type = ship
+
+	prefix = "SRS "							
+	unique = {
+		"Gelderland" "Zeeland" "Friesland" "Gelderland" "Noord-Brabant" "Utrecht" "Drenthe" "Brabant" "Limburg"
+	}
+}
+
+## THEME: DUTCH CITIES ###
+STR_CITIES = {
+	name = NAME_THEME_CITIES
+
+	for_countries = { STR }
+
+	type = ship
+
+	prefix = "SRS "							
+	unique = {
+		"Rotterdam" "Amsterdam" "Den Haag" "Utrecht" "Eindhoven" "Tilburg" "Groningen" "Nijmegen" "Breda" "Almere Stad" "Enschede" 
+		"Arnhem" "Amersfoort" "Maastricht" "Zwolle" "Deventer" "Venlo" "Zoetermeer" "Roosendaal" "Apeldoorn" 
+		"Wielingen" "Westdiep" "Wandelaar" "Albertville" "Elisabethville" "Antwerpen" "Bruxelles" "Gent" "Ieper" "Liege" "Brugge" "Roeselare"
+	}
+}
+
+## THEME: DUTCH COLONIES ###
+STR_COLONIES = {
+	name = NAME_THEME_COLONIES
+
+	for_countries = { STR }
+
+	type = ship
+
+	prefix = "SRS "							
+	unique = {
+		"Java" "Sumatra" "Soerabaja" "Celebes" "Batjan" "Ceram" "Ambon" "Banda" "Ternate" "Batavia" "Sulawesi" "Sunda" "Bali" "Papua" "Medan" 
+		"Makassar" "Palembang" "Balikpapan" "Manado" "Hollandia"
+	}
+}
+
+## THEME: FISH ###
+STR_FISH = {
+	name = NAME_THEME_FISH
+
+	for_countries = { STR }
+
+	type = ship
+
+	prefix = "SRS "							
+	unique = {
+		"Dolfijn" "Zeehond" "Zwaardvis" "Tijgerhaai" "Walrus" "Zeeleeuw" "Potvis" "Tonijn" "Zwaardvis" "Bruinvis"
+	}
+}

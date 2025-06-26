@@ -12,61 +12,73 @@ has_coalition_with_target = {
 is_in_coalition_with_conservatism = {
 	set_temp_variable = { coalition_target = token:conservatism }
 	has_coalition_with_target = yes
+	NOT = { has_government = conservatism }
 }
 
 is_in_coalition_with_liberalism = {
 	set_temp_variable = { coalition_target = token:liberalism_mod }
 	has_coalition_with_target = yes
+	NOT = { has_government = liberalism_mod }
 }
 
 is_in_coalition_with_progressivism = {
 	set_temp_variable = { coalition_target = token:progressivism }
 	has_coalition_with_target = yes
+	NOT = { has_government = progressivism }
 }
 
 is_in_coalition_with_socialdemocracy = {
 	set_temp_variable = { coalition_target = token:socialdemocracy }
 	has_coalition_with_target = yes
+	NOT = { has_government = socialdemocracy }
 }
 
 is_in_coalition_with_socialism = {
 	set_temp_variable = { coalition_target = token:socialism }
 	has_coalition_with_target = yes
+	NOT = { has_government = socialism }
 }
 
 is_in_coalition_with_communism = {
 	set_temp_variable = { coalition_target = token:communism }
 	has_coalition_with_target = yes
+	NOT = { has_government = communism }
 }
 
 is_in_coalition_with_authoritariancommunism = {
 	set_temp_variable = { coalition_target = token:authoritariancommunism }
 	has_coalition_with_target = yes
+	NOT = { has_government = authoritariancommunism }
 }
 
 is_in_coalition_with_anarchosyndicalism = {
 	set_temp_variable = { coalition_target = token:anarchosyndicalism }
 	has_coalition_with_target = yes
+	NOT = { has_government = anarchosyndicalism }
 }
 
 is_in_coalition_with_authoritariandemocracy = {
 	set_temp_variable = { coalition_target = token:authoritariandemocracy }
 	has_coalition_with_target = yes
+	NOT = { has_government = authoritariandemocracy }
 }
 
 is_in_coalition_with_autocracy = {
 	set_temp_variable = { coalition_target = token:autocracy }
 	has_coalition_with_target = yes
+	NOT = { has_government = autocracy }
 }
 
 is_in_coalition_with_fascism = {
 	set_temp_variable = { coalition_target = token:fascism }
 	has_coalition_with_target = yes
+	NOT = { has_government = fascism }
 }
 
 is_in_coalition_with_militarytotalism = {
 	set_temp_variable = { coalition_target = token:militarytotalism }
 	has_coalition_with_target = yes
+	NOT = { has_government = militarytotalism }
 }
 
 parliament_gui_open = {

@@ -14,6 +14,7 @@ on_actions = {
 						original_tag = LNH
 						original_tag = LST
 						original_tag = LHH
+						original_tag = LBB
 					}
 				}
 				abandon_colony_tag = yes
@@ -151,6 +152,13 @@ on_actions = {
 				}
 				LHH = { set_cosmetic_tag = LHH_LLS }
 			}
+			if = {
+				limit = {
+					tag = LBB
+					FROM = { tag = LLS }
+				}
+				LBB = { set_cosmetic_tag = LBB_LLS }
+			}
 		}
 	}
 
@@ -228,6 +236,13 @@ on_actions = {
 				}
 				LHH = { set_cosmetic_tag = LHH_LLS }
 			}
+			if = {
+				limit = {
+					tag = LBB
+					FROM = { tag = LLS }
+				}
+				LBB = { set_cosmetic_tag = LBB_LLS }
+			}
 		}
 	}
 
@@ -247,6 +262,7 @@ on_actions = {
 						original_tag = LNH
 						original_tag = LST
 						original_tag = LHH
+						original_tag = LBB
 					}
 				}
 				abandon_colony_tag = yes
@@ -320,6 +336,13 @@ on_actions = {
 					FROM = { tag = LLS }
 				}
 				LHH = { set_cosmetic_tag = LHH_LLS }
+			}
+			if = {
+				limit = {
+					tag = LBB
+					FROM = { tag = LLS }
+				}
+				LBB = { set_cosmetic_tag = LBB_LLS }
 			}
 		}
 	}

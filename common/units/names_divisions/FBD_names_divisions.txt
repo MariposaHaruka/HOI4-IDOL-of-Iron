@@ -1,0 +1,290 @@
+﻿FBD_INF_01 = {
+	name = "Infantry Division"
+
+	for_countries = { FBD }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FBD_INF_01 }
+
+	fallback_name = "%s Këmbësori Pjesëtim"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s Këmbësori Pjesëtim" }
+		2 = { "%s Këmbësori Pjesëtim" }
+		3 = { "%s Këmbësori Pjesëtim" }
+		4 = { "%s Këmbësori Pjesëtim" }
+		5 = { "%s Këmbësori Pjesëtim" }
+		6 = { "%s Këmbësori Pjesëtim" }
+		7 = { "%s Këmbësori Pjesëtim" }
+		8 = { "%s Këmbësori Pjesëtim" }
+		9 = { "%s Këmbësori Pjesëtim" }
+		10 = { "%s Këmbësori Pjesëtim" }
+		11 = { "%s Këmbësori Pjesëtim" }
+		12 = { "%s Këmbësori Pjesëtim" }
+		13 = { "%s Këmbësori Pjesëtim" }
+		14 = { "%s Këmbësori Pjesëtim" }
+		15 = { "%s Këmbësori Pjesëtim" }
+		16 = { "%s Këmbësori Pjesëtim" }
+		17 = { "%s Këmbësori Pjesëtim" }
+		18 = { "%s Këmbësori Pjesëtim" }
+		19 = { "%s Këmbësori Pjesëtim" }
+		20 = { "%s Këmbësori Pjesëtim" }		
+	}
+}
+
+FBD_CAV_01 = {
+	name = "Cavalry Division"
+
+	for_countries = { FBD }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FBD_INF_01 }
+
+	fallback_name = "%s Kavaleri Pjesëtim"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s Kavaleri Pjesëtim" }
+		2 = { "%s Kavaleri Pjesëtim" }
+		3 = { "%s Kavaleri Pjesëtim" }
+		4 = { "%s Kavaleri Pjesëtim" }
+		5 = { "%s Kavaleri Pjesëtim" }
+		6 = { "%s Kavaleri Pjesëtim" }
+		7 = { "%s Kavaleri Pjesëtim" }
+		8 = { "%s Kavaleri Pjesëtim" }
+		9 = { "%s Kavaleri Pjesëtim" }
+		10 = { "%s Kavaleri Pjesëtim" }
+	}
+}
+
+FBD_MOT_01 = {
+	name = "Motorized Division"
+
+	for_countries = { FBD }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { FBD_INF_01 }
+
+	fallback_name = "%s Këmbësori Pje. përdor Kamion"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s Këmbësori Pje. përdor Kamion" }
+		2 = { "%s Këmbësori Pje. përdor Kamion" }
+		3 = { "%s Këmbësori Pje. përdor Kamion" }
+		4 = { "%s Këmbësori Pje. përdor Kamion" }
+		5 = { "%s Këmbësori Pje. përdor Kamion" }
+		6 = { "%s Këmbësori Pje. përdor Kamion" }
+		7 = { "%s Këmbësori Pje. përdor Kamion" }
+		8 = { "%s Këmbësori Pje. përdor Kamion" }
+		9 = { "%s Këmbësori Pje. përdor Kamion" }
+		10 = { "%s Këmbësori Pje. përdor Kamion" }
+	}
+}
+
+FBD_MEC_01 = {
+	name = "Mechanized Division"
+
+	for_countries = { FBD }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { FBD_INF_01 }
+
+	fallback_name = "%s Këmb. Pje. për. Kamion Mekanik"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s Këmb. Pje. për. Kamion Mekanik" }
+		2 = { "%s Këmb. Pje. për. Kamion Mekanik" }
+		3 = { "%s Këmb. Pje. për. Kamion Mekanik" }
+		4 = { "%s Këmb. Pje. për. Kamion Mekanik" }
+		5 = { "%s Këmb. Pje. për. Kamion Mekanik" }
+		6 = { "%s Këmb. Pje. për. Kamion Mekanik" }
+		7 = { "%s Këmb. Pje. për. Kamion Mekanik" }
+		8 = { "%s Këmb. Pje. për. Kamion Mekanik" }
+		9 = { "%s Këmb. Pje. për. Kamion Mekanik" }
+		10 = { "%s Këmb. Pje. për. Kamion Mekanik" }
+	}
+}
+
+FBD_ARM_01 = {
+	name = "Armored Division"
+
+	for_countries = { FBD }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FBD_INF_01 }
+
+	fallback_name = "%s Koraca Pjesëtim"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s Koraca Pjesëtim" }
+		2 = { "%s Koraca Pjesëtim" }
+		3 = { "%s Koraca Pjesëtim" }
+		4 = { "%s Koraca Pjesëtim" }
+		5 = { "%s Koraca Pjesëtim" }
+		6 = { "%s Koraca Pjesëtim" }
+		7 = { "%s Koraca Pjesëtim" }
+		8 = { "%s Koraca Pjesëtim" }
+		9 = { "%s Koraca Pjesëtim" }
+		10 = { "%s Koraca Pjesëtim" }
+	}
+}
+
+FBD_PAR_01 = {
+	name = "Paratrooper Division"
+
+	for_countries = { FBD }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FBD_INF_01 }
+
+	fallback_name = "%s Ushtar përdor Aviacion Pjesëtim"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s Ushtar përdor Aviacion Pjesëtim" }
+		2 = { "%s Ushtar përdor Aviacion Pjesëtim" }
+		3 = { "%s Ushtar përdor Aviacion Pjesëtim" }
+		4 = { "%s Ushtar përdor Aviacion Pjesëtim" }
+		5 = { "%s Ushtar përdor Aviacion Pjesëtim" }
+		6 = { "%s Ushtar përdor Aviacion Pjesëtim" }
+		7 = { "%s Ushtar përdor Aviacion Pjesëtim" }
+		8 = { "%s Ushtar përdor Aviacion Pjesëtim" }
+		9 = { "%s Ushtar përdor Aviacion Pjesëtim" }
+		10 = { "%s Ushtar përdor Aviacion Pjesëtim" }
+	}
+}
+
+FBD_MAR_01 = {
+	name = "Marine Division"
+
+	for_countries = { FBD }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" "amphibious_armor" "amphibious_mechanized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FBD_INF_01 }
+
+	fallback_name = "%s Marinë Këmbësori Pjesëtim"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s Marinë Këmbësori Pjesëtim" }
+		2 = { "%s Marinë Këmbësori Pjesëtim" }
+		3 = { "%s Marinë Këmbësori Pjesëtim" }
+		4 = { "%s Marinë Këmbësori Pjesëtim" }
+		5 = { "%s Marinë Këmbësori Pjesëtim" }
+		6 = { "%s Marinë Këmbësori Pjesëtim" }
+		7 = { "%s Marinë Këmbësori Pjesëtim" }
+		8 = { "%s Marinë Këmbësori Pjesëtim" }
+		9 = { "%s Marinë Këmbësori Pjesëtim" }
+		10 = { "%s Marinë Këmbësori Pjesëtim" }
+	}
+}
+
+FBD_MNT_01 = {
+	name = "Mountain Division"
+
+	for_countries = { FBD }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { FBD_INF_01 }
+
+	fallback_name = "%s Bjeshkë Këmbësori Pjesëtim"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s Bjeshkë Këmbësori Pjesëtim" }
+		2 = { "%s Bjeshkë Këmbësori Pjesëtim" }
+		3 = { "%s Bjeshkë Këmbësori Pjesëtim" }
+		4 = { "%s Bjeshkë Këmbësori Pjesëtim" }
+		5 = { "%s Bjeshkë Këmbësori Pjesëtim" }
+		6 = { "%s Bjeshkë Këmbësori Pjesëtim" }
+		7 = { "%s Bjeshkë Këmbësori Pjesëtim" }
+		8 = { "%s Bjeshkë Këmbësori Pjesëtim" }
+		9 = { "%s Bjeshkë Këmbësori Pjesëtim" }
+		10 = { "%s Bjeshkë Këmbësori Pjesëtim" }
+	}
+}
+
+FBD_GAR_01 = {
+	name = "Garrison Division"
+
+	for_countries = { FBD }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { FBD_INF_01 }
+
+	fallback_name = "%s Këmbësori Pjesëtim"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s Këmbësori Pjesëtim" }
+		2 = { "%s Këmbësori Pjesëtim" }
+		3 = { "%s Këmbësori Pjesëtim" }
+		4 = { "%s Këmbësori Pjesëtim" }
+		5 = { "%s Këmbësori Pjesëtim" }
+		6 = { "%s Këmbësori Pjesëtim" }
+		7 = { "%s Këmbësori Pjesëtim" }
+		8 = { "%s Këmbësori Pjesëtim" }
+		9 = { "%s Këmbësori Pjesëtim" }
+		10 = { "%s Këmbësori Pjesëtim" }
+		11 = { "%s Këmbësori Pjesëtim" }
+		12 = { "%s Këmbësori Pjesëtim" }
+		13 = { "%s Këmbësori Pjesëtim" }
+		14 = { "%s Këmbësori Pjesëtim" }
+		15 = { "%s Këmbësori Pjesëtim" }
+		16 = { "%s Këmbësori Pjesëtim" }
+		17 = { "%s Këmbësori Pjesëtim" }
+		18 = { "%s Këmbësori Pjesëtim" }
+		19 = { "%s Këmbësori Pjesëtim" }
+		20 = { "%s Këmbësori Pjesëtim" }		
+	}
+}
+

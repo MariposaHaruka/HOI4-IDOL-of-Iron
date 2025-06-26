@@ -3,9 +3,17 @@ capital = 458
 
 #부대
 set_oob = "HND_ar"
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "HND_ai_BBA"
+	else = {
+		set_air_oob = "HND_ai"
+	}
+}
 starting_train_buffer = 2
 add_command_power = 10
 set_fuel_ratio = 0.2
+set_country_flag = no_naval_academy
 
 #시작 기술
 set_technology = {
@@ -20,8 +28,11 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 10
 
 #국민 정신
-
 add_ideas = agrarian_society
+
+add_dynamic_modifier = { modifier = HND_industry }
+add_dynamic_modifier = { modifier = HND_army }
+add_dynamic_modifier = { modifier = HND_air_force }
 
 #외교
 

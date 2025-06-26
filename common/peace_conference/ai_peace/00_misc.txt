@@ -603,7 +603,7 @@ peace_ai_desires = {
         peace_action_type = liberate
         enable = {
             ROOT.FROM = {
-                original_tag = GER
+                original_tag = PRS
                 has_government = fascism
             }
         }
@@ -693,7 +693,7 @@ peace_ai_desires = {
                     is_subject_of = ROOT
                     AND = {
                         pc_is_puppeted_by = ROOT
-                        NOT = { original_tag = GER } #This messes with yalta too much.
+                        NOT = { original_tag = PRS } #This messes with yalta too much.
                     }
                 }
             }
@@ -836,7 +836,7 @@ peace_ai_desires = {
             ROOT.FROM.FROM = {
                 pc_is_puppeted = yes
                 NOT = { ROOT.FROM.FROM = { pc_is_puppeted_by = ROOT } }
-                NOT = { original_tag = GER }
+                NOT = { original_tag = PRS }
             }
         }
         ai_desire = -50
@@ -939,7 +939,7 @@ peace_ai_desires = {
                     pc_is_puppeted_by = ROOT
                 }
                 overlord = {
-                    NOT = { tag = GER }
+                    NOT = { tag = PRS }
                 }
             }
             ROOT.FROM.FROM.FROM = {

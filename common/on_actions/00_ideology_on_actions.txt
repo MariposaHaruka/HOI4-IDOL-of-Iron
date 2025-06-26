@@ -1,0 +1,65 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { is_democratic = yes }
+				add_ideas = democratic_hidden
+			}
+		}
+	}
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { 
+					OR = {
+						has_government = communism
+						has_government = socialism
+					} 
+				}
+				add_ideas = communism_hidden
+			}
+		}
+	}
+	on_ruling_party_change = {
+		effect = {
+			every_country = {
+				limit = { is_democratic = yes }
+				add_ideas = democratic_hidden
+			}
+		}
+	}
+	on_ruling_party_change = {
+		effect = {
+			every_country = {
+				limit = { 
+					OR = {
+						has_government = communism
+						has_government = socialism
+					} 
+				}
+				add_ideas = communism_hidden
+			}
+		}
+	}
+	on_ruling_party_change = {
+		effect = {
+			every_country = {
+				limit = { is_democratic = no }
+				remove_ideas = democratic_hidden
+			}
+		}
+	}
+	on_ruling_party_change = {
+		effect = {
+			every_country = {
+				limit = { 
+					NOT = {
+						has_government = communism
+						has_government = socialism
+					} 
+				}
+				remove_ideas = communism_hidden
+			}
+		}
+	}
+}

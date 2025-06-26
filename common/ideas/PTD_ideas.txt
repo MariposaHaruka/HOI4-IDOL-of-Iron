@@ -1,0 +1,29 @@
+ideas = {
+	country = {
+		PTD_sisu = { # AAT version
+			name = PTD_sisu
+			picture = sisu
+			allowed = {
+				original_tag = PTD
+			}
+
+			allowed_civil_war = {
+				#has_power_balance = {
+				#	id = PTD_power_balance
+				#}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.05
+				army_core_defence_factor = 0.1
+			}
+		}
+	}
+	tank_manufacturer = { }
+	naval_manufacturer = { }
+	aircraft_manufacturer = { }
+	industrial_concern = { }
+	materiel_manufacturer = { }
+}

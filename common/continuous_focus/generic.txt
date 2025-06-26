@@ -127,15 +127,11 @@ continuous_focus_palette = {
 			factor = 1
 			modifier = {
 				factor = 0
-				
 				num_occupied_states < 1
 			}
 		}
-		
 		supports_ai_strategy = ai_focus_military_advancements
-		
 		daily_cost = 1
-		
 		available_if_capitulated = yes
 	}
 
@@ -239,33 +235,22 @@ continuous_focus_palette = {
 
 	focus = {
 		id = continuous_restrict_freedom
-		
 		icon = GFX_goal_continuous_restrict_freedom
-		
 		available = {
 			hidden_trigger = { has_dlc = "Together for Victory" }
 		}
-
 		enable = {
 			num_subjects > 0
 		}
-
 		modifier = {
 			custom_modifier_tooltip = subject_autonomy_mod_tt
 			hidden_modifier = { subjects_autonomy_gain = -0.5 }
 		}
-		
 		ai_will_do = {
 			factor = 0
 		}
-		
 		supports_ai_strategy = ai_focus_military_advancements
-		
 		daily_cost = 1
-		
 		available_if_capitulated = yes
 	}
-
-	
-
 }

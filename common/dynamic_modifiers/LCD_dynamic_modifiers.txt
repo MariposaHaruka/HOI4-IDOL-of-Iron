@@ -1,0 +1,19 @@
+LCD_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_LCD_dynamic_industry
+}
+
+LCD_army = {
+	enable = { always = yes }
+	icon = GFX_idea_LCD_dynamic_army
+}
+
+LCD_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_LCD_dynamic_naval
+}
+
+LCD_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_LCD_dynamic_airforce
+}

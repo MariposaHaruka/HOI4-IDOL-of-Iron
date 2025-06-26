@@ -6,10 +6,15 @@ set_oob = "AOP_ar"
 add_command_power = 10
 set_fuel_ratio = 0.2
 
+set_country_flag = no_air_academy
+set_country_flag = no_naval_academy
+
 #시작 기술
 set_technology = {
 	infantry_weapons = 1
 	tech_trucks = 1
+	tech_support = 1
+	trench_warfare = 1
 }
 
 
@@ -20,7 +25,11 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 10
 
 #국민 정신
-add_ideas = agrarian_society
+add_ideas = {
+	agrarian_society
+}
+add_dynamic_modifier = { modifier = AOP_industry }
+add_dynamic_modifier = { modifier = AOP_army }
 
 #외교
 
@@ -52,6 +61,24 @@ set_popularities = {
 
 #캐릭터 
 recruit_character = AOP_suzumiya_hajime
+recruit_character = AOP_tanba_rin
+recruit_character = AOP_kariyazono_michitaka
+recruit_character = AOP_shihou_luka
+recruit_character = AOP_soenji_sayo
+recruit_character = AOP_coresawa_maito
+recruit_character = AOP_ayase_mitsuo
+recruit_character = AOP_shigaki_akira
+recruit_character = AOP_soenji_asaharu
+recruit_character = AOP_nekoyashiki_yui
+recruit_character = AOP_shinkai_fukami
+recruit_character = AOP_harumiya_hisaomi
+recruit_character = AOP_fukisako_sunao
+recruit_character = AOP_osato_honami
+recruit_character = AOP_hango_sui
+recruit_character = AOP_hinano_shu
+recruit_character = AOP_isa_yoshikazu
+
+#recruit_character = AOP_tshekedi_khama
 
 #장관진
 

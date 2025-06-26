@@ -1,5 +1,5 @@
 #수도
-capital = 448
+capital = 772
 
 #부대
 set_oob = "REA_ar"
@@ -22,6 +22,11 @@ set_convoys = 10
 #국민 정신
 
 add_ideas = agrarian_society
+
+add_dynamic_modifier = { modifier = REA_industry }
+add_dynamic_modifier = { modifier = REA_army }
+add_dynamic_modifier = { modifier = REA_navy }
+add_dynamic_modifier = { modifier = REA_air_force }
 
 #외교
 

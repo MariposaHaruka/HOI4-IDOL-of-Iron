@@ -1,5 +1,70 @@
 ideas = {
 	is_logistic = {
+        law = yes
+        use_list_view = yes
 
-	}
+        push_system = {
+            available = { }
+			cost = 80
+            removal_cost = -1
+
+            modifier = {
+                supply_factor = 0.30
+                out_of_supply_factor = 0.20
+                max_fuel_factor = 0.20
+                army_fuel_capacity_factor = 0.20
+                planning_speed = -0.10
+            }
+            
+            ai_will_do = {
+                base = 20
+                modifier = {
+                    tag = TOH 
+                    add = 80
+                }
+                modifier = {
+                    is_fascism = yes
+                    add = 60
+                }
+			}
+		}
+
+        pull_system = {
+			available = { }
+			cost = 80
+            removal_cost = -1
+
+            modifier = {
+                out_of_supply_factor = -0.20
+                supply_combat_penalties_on_core_factor = -0.50
+                attrition = -0.05
+                truck_attrition_factor = -0.10
+            }
+
+            ai_will_do = {
+                base = 20
+                modifier = {
+                    is_democratic = yes
+                    add = 40
+                }
+                modifier = {
+                    tag = PRS 
+                    add = 60
+                }
+                modifier = {
+                    OR = {
+                        tag = IMA 
+                        tag = ICG
+						tag = IML
+                    }
+                    add = 60
+                }
+                modifier = {
+					is_communism = yes
+					NOT = { has_government = authoritariancommunism }
+                    add = 60
+                }
+            }
+        }
+    }
 }

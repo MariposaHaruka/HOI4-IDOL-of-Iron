@@ -2,7 +2,14 @@
 capital = 275 #프리토리아
 
 #부대
-set_oob = "ISM_ar"
+set_oob = "ISM_ar" 
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "ISM_ai_BBA"
+	else = {
+		set_air_oob = "ISM_ai"
+	}
+}
 starting_train_buffer = 2
 add_command_power = 10
 set_fuel_ratio = 0.2
@@ -55,8 +62,13 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 25
 
 #국민 정신
-add_ideas = direct_election
-add_ideas = double_parliament
+add_ideas = {
+}
+add_dynamic_modifier = { modifier = ISM_industry }
+add_dynamic_modifier = { modifier = ISM_army }
+add_dynamic_modifier = { modifier = ISM_navy }
+add_dynamic_modifier = { modifier = ISM_air_force }
+add_dynamic_modifier = { modifier = IMA_colonial_economy }
 
 #외교
 set_cosmetic_tag = ISM_IMA

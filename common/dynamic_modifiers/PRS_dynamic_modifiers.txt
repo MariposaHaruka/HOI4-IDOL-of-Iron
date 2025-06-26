@@ -1,0 +1,24 @@
+PRS_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_PRS_dynamic_industry
+}
+
+PRS_army = {
+	enable = { always = yes }
+	icon = GFX_idea_PRS_dynamic_army
+}
+
+PRS_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_PRS_dynamic_naval
+}
+
+PRS_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_PRS_dynamic_airforce
+}
+
+PRS_MEFO_bill = {
+	enable = { always = yes }
+	icon = GFX_idea_ger_mefo_bills
+}

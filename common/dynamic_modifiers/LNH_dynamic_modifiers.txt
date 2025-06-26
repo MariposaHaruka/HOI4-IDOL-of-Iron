@@ -1,0 +1,19 @@
+LNH_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_LNH_dynamic_industry
+}
+
+LNH_army = {
+	enable = { always = yes }
+	icon = GFX_idea_LNH_dynamic_army
+}
+
+LNH_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_LNH_dynamic_naval
+}
+
+LNH_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_LNH_dynamic_airforce
+}

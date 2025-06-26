@@ -1,0 +1,33 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	### Türk Donanmasi ###
+	fleet = {
+		name = "Türk Donanmasi"			
+		naval_base = 4112 # Izmir
+		task_force = {				
+			name = "Türk Donanmasi"			
+			location = 4112 # Izmir
+			ship = { name = "OFCG Yavuz" pride_of_the_fleet = yes definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = GUP } } }			
+			ship = { name = "OFCG Mecidiye" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUP } } }
+			ship = { name = "OFCG Hamidiye" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUP } } }
+			ship = { name = "OFCG Peyk" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GUP } } }
+			ship = { name = "OFCG Berk" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GUP } } }
+			ship = { name = "OFCG Kocatepe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GUP version_name = "Kocatepe Class" } } }
+			ship = { name = "OFCG Adatepe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GUP version_name = "Kocatepe Class" } } }
+			ship = { name = "OFCG Zafer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GUP version_name = "Tinaztepe Class" } } }
+			ship = { name = "OFCG Tinaztepe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GUP version_name = "Tinaztepe Class" } } }
+		}				
+		task_force = {				
+			name = "Filotilla Denizalti Kücük"			
+			location = 11881 # Samsun
+			ship = { name = "OFCG Birinci Inönü" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GUP } } }		
+			ship = { name = "OFCG Ikinci Inönü" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GUP } } }		
+			ship = { name = "OFCG Dumlupinar" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GUP version_name = "Dumlupinar Class" } } }
+			ship = { name = "OFCG Sakarya" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GUP version_name = "Dumlupinar Class" } } }
+			ship = { name = "OFCG Gür" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GUP version_name = "Dumlupinar Class" } } }
+		}				
+	}
+} 
+

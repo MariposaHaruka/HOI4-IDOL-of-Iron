@@ -2,7 +2,27 @@
 capital = 7 #암스테르담
 
 #부대
-set_oob = "STR_ar"
+if = {
+	limit = { has_LaR = yes }
+	set_oob = "STR_ar_LaR" #라레지스탕스에서 장갑차가 추가되서 분리함
+	else = {
+		set_oob = "STR_ar"
+	}
+}
+if = {
+	limit = { has_MtG = yes }
+	set_naval_oob = "STR_na_MtG"
+	else = {
+		set_naval_oob = "STR_na"
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "STR_ai_BBA"
+	else = {
+		set_air_oob = "STR_ai"
+	}
+}
 starting_train_buffer = 3
 add_command_power = 10
 set_fuel_ratio = 0.3
@@ -81,6 +101,11 @@ set_convoys = 150
 add_ideas = direct_election
 add_ideas = single_parliament
 
+add_dynamic_modifier = { modifier = STR_industry }
+add_dynamic_modifier = { modifier = STR_army }
+add_dynamic_modifier = { modifier = STR_navy }
+add_dynamic_modifier = { modifier = STR_air_force }
+
 #외교
 
 #정치 상황
@@ -111,40 +136,40 @@ set_popularities = {
 
 #캐릭터 
 recruit_character = STR_aijo_karen
-recruit_character = STR_kagura_hikari
-recruit_character = STR_tsuyuzaki_mahiru
-recruit_character = STR_saijo_claudine
-recruit_character = STR_tendo_maya
-recruit_character = STR_hoshimi_junna
-recruit_character = STR_daiba_nana
-recruit_character = STR_isurugi_futaba
-recruit_character = STR_hanayagi_kaoruko
-recruit_character = STR_yanagi_koharu
-recruit_character = STR_minase_suzu
-recruit_character = STR_honami_hisame
-recruit_character = STR_tomoe_tamao
-recruit_character = STR_otonashi_ichie
-recruit_character = STR_yumeoji_fumi
-recruit_character = STR_akikaza_rui
-recruit_character = STR_tanaka_yuyuko
-recruit_character = STR_otsuki_aruru
-recruit_character = STR_kano_misono
-recruit_character = STR_nonomiya_lalafin
-recruit_character = STR_ebisu_tsukasa
-recruit_character = STR_kocho_shizuka
-recruit_character = STR_yukihiro_akira
-recruit_character = STR_otori_michiru
-recruit_character = STR_liu_mei_fan
-recruit_character = STR_yumeori_shiori
-recruit_character = STR_tsuruhime_yachiyo
-recruit_character = STR_takachiko_stella
-recruit_character = STR_ogami_shiro
-recruit_character = STR_kobato_ryoko
-recruit_character = STR_umibe_minku
-recruit_character = STR_moriyasu_kuina
-recruit_character = STR_elle
-recruit_character = STR_giraffe
-recruit_character = STR_andrew
+#recruit_character = STR_kagura_hikari
+#recruit_character = STR_tsuyuzaki_mahiru
+#recruit_character = STR_saijo_claudine
+#recruit_character = STR_tendo_maya
+#recruit_character = STR_hoshimi_junna
+#recruit_character = STR_daiba_nana
+#recruit_character = STR_isurugi_futaba
+#recruit_character = STR_hanayagi_kaoruko
+#recruit_character = STR_yanagi_koharu
+#recruit_character = STR_minase_suzu
+#recruit_character = STR_honami_hisame
+#recruit_character = STR_tomoe_tamao
+#recruit_character = STR_otonashi_ichie
+#recruit_character = STR_yumeoji_fumi
+#recruit_character = STR_akikaza_rui
+#recruit_character = STR_tanaka_yuyuko
+#recruit_character = STR_otsuki_aruru
+#recruit_character = STR_kano_misono
+#recruit_character = STR_nonomiya_lalafin
+#recruit_character = STR_ebisu_tsukasa
+#recruit_character = STR_kocho_shizuka
+#recruit_character = STR_yukihiro_akira
+#recruit_character = STR_otori_michiru
+#recruit_character = STR_liu_mei_fan
+#recruit_character = STR_yumeori_shiori
+#recruit_character = STR_tsuruhime_yachiyo
+#recruit_character = STR_takachiko_stella
+#recruit_character = STR_ogami_shiro
+#recruit_character = STR_kobato_ryoko
+#recruit_character = STR_umibe_minku
+#recruit_character = STR_moriyasu_kuina
+#recruit_character = STR_elle
+#recruit_character = STR_giraffe
+#recruit_character = STR_andrew
 
 #장관진
 

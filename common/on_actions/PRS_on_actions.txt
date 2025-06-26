@@ -1,0 +1,38 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = { #Check how many occupied states Germany has
+			if = {
+				limit = {
+					ROOT = { original_tag = PRS }
+					FROM.FROM = {
+						NOT = {	is_core_of = ROOT }
+						is_on_continent = europe
+					}
+				}
+				add_to_variable = { PRS_occupied_states_europe = 1 }
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = PRS }
+					FROM.FROM = {
+						NOT = {	is_core_of = FROM }
+						is_on_continent = europe
+					}
+				}
+				subtract_from_variable = { PRS_occupied_states_europe = 1 }
+			}
+		}
+	}
+
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { original_tag = PRS }
+					ROOT = { is_major = yes }
+				}
+				FROM = { add_to_variable = { GER_capitulated_major_countries = 1 } }
+			}
+		}
+	}
+}

@@ -1,0 +1,229 @@
+ai_wants_to_stay = {
+	OR = {
+		has_idea = stay_conservatism
+		has_idea = stay_liberalism
+		has_idea = stay_progressivism
+		has_idea = stay_socialdemocracy
+		has_idea = stay_socialism
+		has_idea = stay_communism
+		has_idea = stay_authoritariancommunism
+		has_idea = stay_anarchosyndicalism
+		has_idea = stay_fascism
+		has_idea = stay_militarytotalism
+		has_idea = stay_authoritariandemocracy
+		has_idea = stay_autocracy
+	}
+}
+
+ai_wants_to_stay_democratic = {
+	OR = {
+		has_idea = stay_conservatism
+		has_idea = stay_liberalism
+		has_idea = stay_progressivism
+		has_idea = stay_socialdemocracy
+	}
+}
+
+ai_wants_to_stay_communism = {
+	OR = {
+		has_idea = stay_socialism
+		has_idea = stay_communism
+		has_idea = stay_authoritariancommunism
+		has_idea = stay_anarchosyndicalism
+	}
+}
+
+ai_wants_to_stay_fascism = {
+	OR = {
+		has_idea = stay_fascism
+		has_idea = stay_militarytotalism
+	}
+}
+
+ai_wants_to_stay_neutrality = {
+	OR = {
+		has_idea = stay_authoritariandemocracy
+		has_idea = stay_autocracy
+	}
+}
+
+ai_wants_to_change = {
+	OR = {
+		has_idea = conservatism_movement
+		has_idea = liberalism_movement
+		has_idea = progressivism_movement
+		has_idea = socialdemocracy_movement
+		has_idea = socialism_movement
+		has_idea = communism_movement
+		has_idea = authoritariancommunism_movement
+		has_idea = anarchosyndicalism_movement
+		has_idea = fascism_movement
+		has_idea = militarytotalism_movement
+		has_idea = authoritariandemocracy_movement
+		has_idea = autocracy_movement
+	}
+}
+
+ai_wants_to_change_democratic = {
+	OR = {
+		has_idea = conservatism_movement
+		has_idea = liberalism_movement
+		has_idea = progressivism_movement
+		has_idea = socialdemocracy_movement
+	}
+}
+
+ai_wants_to_change_communism = {
+	OR = {
+		has_idea = socialism_movement
+		has_idea = communism_movement
+		has_idea = authoritariancommunism_movement
+		has_idea = anarchosyndicalism_movement
+	}
+}
+
+ai_wants_to_change_fascism = {
+	OR = {
+		has_idea = fascism_movement
+		has_idea = militarytotalism_movement
+	}
+}
+
+ai_wants_to_change_neutrality = {
+	OR = {
+		has_idea = authoritariandemocracy_movement
+		has_idea = autocracy_movement
+	}
+}
+
+ai_conservatism = {
+	OR = {
+		has_idea = stay_conservatism
+		has_idea = conservatism_movement
+	}
+}
+
+ai_liberalism = {
+	OR = {
+		has_idea = stay_liberalism
+		has_idea = liberalism_movement
+	}
+}
+
+ai_progressivism = {
+	OR = {
+		has_idea = stay_progressivism
+		has_idea = progressivism_movement
+	}
+}
+
+ai_socialdemocracy = {
+	OR = {
+		has_idea = stay_socialdemocracy
+		has_idea = socialdemocracy_movement
+	}
+}
+
+ai_socialism = {
+	OR = {
+		has_idea = stay_socialism
+		has_idea = socialism_movement
+	}
+}
+
+ai_communism = {
+	OR = {
+		has_idea = stay_communism
+		has_idea = communism_movement
+	}
+}
+
+ai_authoritariancommunism = {
+	OR = {
+		has_idea = stay_authoritariancommunism
+		has_idea = authoritariancommunism_movement
+	}
+}
+
+ai_anarchosyndicalism = {
+	OR = {
+		has_idea = stay_anarchosyndicalism
+		has_idea = anarchosyndicalism_movement
+	}
+}
+
+ai_fascism = {
+	OR = {
+		has_idea = stay_fascism
+		has_idea = fascism_movement
+	}
+}
+
+ai_militarytotalism = {
+	OR = {
+		has_idea = stay_militarytotalism
+		has_idea = militarytotalism_movement
+	}
+}
+
+ai_authoritariandemocracy = {
+	OR = {
+		has_idea = stay_authoritariandemocracy
+		has_idea = authoritariandemocracy_movement
+	}
+}
+
+ai_autocracy = {
+	OR = {
+		has_idea = stay_autocracy
+		has_idea = autocracy_movement
+	}
+}
+
+onto_communism = {
+	has_idea_with_trait = communism_revolutionary_worker
+}
+
+onto_socialism = {
+	has_idea_with_trait = socialism_revolutionary_worker
+}
+
+onto_authoritariancommunism = {
+	has_idea_with_trait = authoritariancommunism_revolutionary_worker
+}
+
+onto_anarchosyndicalism = {
+	has_idea_with_trait = anarchosyndicalism_revolutionary_worker
+}
+
+onto_conservatism = {
+	has_idea_with_trait = conservatism_worker
+}
+
+onto_liberalism = {
+	has_idea_with_trait = liberalism_worker
+}
+
+onto_progressivism = {
+	has_idea_with_trait = progressivism_worker
+}
+
+onto_socialdemocracy = {
+	has_idea_with_trait = socialdemocracy_worker
+}
+
+onto_fascism = {
+	has_idea_with_trait = fanatic_fascist
+}
+
+onto_militarytotalism = {
+	has_idea_with_trait = fanatic_militarytotalism
+}
+
+onto_authoritariandemocracy = {
+	has_idea_with_trait = autocracy_royalist
+}
+
+onto_autocracy = {
+	has_idea_with_trait = authoritarian_royalist
+}

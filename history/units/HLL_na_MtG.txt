@@ -1,0 +1,168 @@
+﻿units = {
+	fleet = {
+		name = "Armada Nacional"
+		naval_base = 8113 
+		task_force = {
+			name = "Armada Nacional"
+			location = 8113
+			ship = { name = "ARH YAGOO" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = HLL version_name = "YAGOO Class" } } }
+			ship = { name = "ARH Caracas" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = HLL version_name = "Caracas Class" } } }
+			ship = { name = "ARH Usada Pekora" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = HLL version_name = "YAGOO Class"} } }
+			ship = { name = "ARH Maracay" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = HLL version_name = "Maracay Class" } } }
+			ship = { name = "ARH Petare Teques" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = HLL version_name = "Valencia Class"} } }
+			ship = { name = "ARH Puerto de la Cruz" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = HLL version_name = "Valencia Class" } } }
+			ship = { name = "ARH Zulia" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HLL version_name = "Zulia Class"} } }
+			ship = { name = "ARH Nueva Esparta" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HLL version_name = "Zulia Class"} } }
+			ship = { name = "ARH Aragua" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HLL version_name = "Zulia Class" } } }
+		}
+	}
+		
+	fleet = {
+		name = "Armada de Submarinos"
+		naval_base = 8252
+		task_force = {
+			name = "Flotilla de Submarinos nro. 1"
+			location = 8252
+			ship = { name = "ARH Sábalo" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = HLL version_name = "Caribe Class" } } }		
+			ship = { name = "ARH Caribe" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = HLL version_name = "Caribe Class" } } }		
+			ship = { name = "ARH Bacalao" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = HLL version_name = "Caribe Class" } } }
+		}
+		task_force = {
+			name = "Flotilla de Submarinos nro. 2"
+			location = 5023
+			ship = { name = "ARH Atún" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = HLL version_name = "Caribe Class" } } }	
+			ship = { name = "ARH Sardina" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = HLL version_name = "Caribe Class" } } }	
+			ship = { name = "ARH Pez espada" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = HLL version_name = "Caribe Class" } } }			
+		}				
+	}
+				
+	fleet = {
+		name = "Armada de Pacífico"
+		naval_base = 8252 
+		task_force = {
+			name = "Flotilla de Nacional nro. 1"
+			location = 8252 
+			ship = { name = "ARH Hoshimachi Suisei" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = HLL version_name = "YAGOO Class" } } }
+			ship = { name = "ARH Almirante San Pablo" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = HLL version_name = "Caracas Class" } } }
+			ship = { name = "ARH Coronel Eduardo Blanco" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = HLL version_name = "Caracas Class"} } }
+			ship = { name = "ARH Barquisimeto" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = HLL version_name = "Maracay Class" } } }
+			ship = { name = "ARH Valencia" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = HLL version_name = "Valencia Class"} } }
+			ship = { name = "ARH Cumana" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = HLL version_name = "Valencia Class" } } }
+			ship = { name = "ARH Maturín" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = HLL version_name = "Valencia Class" } } }
+			ship = { name = "ARH Almirante Clemente" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HLL version_name = "Zulia Class"} } }
+			ship = { name = "ARH General Flores" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HLL version_name = "Zulia Class"} } }
+			ship = { name = "ARH General Morán" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HLL version_name = "Zulia Class" } } }
+		}				
+	}
+}
+instant_effect = {
+	### Ongoing Ship Production Jan 1 1936 ###
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_heavy_1
+			creator = "HLL" 
+			version_name = "YAGOO Class"
+		}
+		name = "ARH Tokino Sora"
+		requested_factories = 1
+		progress = 0.25
+		amount = 1
+		#industrial_manufacturer = mio:HLL_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "HLL" 
+			version_name = "Zulia Class"
+		}
+		name = "ARH Almirante García"
+		requested_factories = 1
+		progress = 0.90
+		amount = 1
+		#industrial_manufacturer = mio:HLL_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "HLL" 
+			version_name = "Zulia Class"
+		}
+		name = "ARH General Austria"
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		#industrial_manufacturer = mio:HLL_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "HLL" 
+			version_name = "Zulia Class"
+		}
+		name = "ARH Almirante Brión"
+		requested_factories = 1
+		progress = 0.90
+		amount = 1
+		#industrial_manufacturer = mio:HLL_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_1
+			creator = "HLL" 
+			version_name = "Valencia Class"
+		}
+		name = "ARH Sotavento"
+		requested_factories = 1
+		progress = 0.95
+		amount = 1
+		#industrial_manufacturer = mio:HLL_cammell_laird_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_1
+			creator = "HLL" 
+			version_name = "Valencia Class"
+		}
+		name = "ARH Pedregal"
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+		#industrial_manufacturer = mio:HLL_cammell_laird_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_1
+			creator = "HLL" 
+			version_name = "Caribe Class"
+		}
+		name = "ARH Bacalao"
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+		#industrial_manufacturer = mio:HLL_john_brown_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_1
+			creator = "HLL" 
+			version_name = "Caribe Class"
+		}
+		name = "ARH Trucha"
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+		#industrial_manufacturer = mio:HLL_john_brown_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_1
+			creator = "HLL" 
+			version_name = "Caribe Class"
+		}
+		name = "ARH Merluza"
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+		#industrial_manufacturer = mio:HLL_john_brown_organization
+	}
+}

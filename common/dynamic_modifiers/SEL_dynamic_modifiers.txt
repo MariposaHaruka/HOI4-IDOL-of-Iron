@@ -1,0 +1,19 @@
+SEL_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_SEL_dynamic_industry
+}
+
+SEL_army = {
+	enable = { always = yes }
+	icon = GFX_idea_SEL_dynamic_army
+}
+
+SEL_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_SEL_dynamic_naval
+}
+
+SEL_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_SEL_dynamic_airforce
+}

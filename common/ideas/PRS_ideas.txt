@@ -1,0 +1,63 @@
+ideas = {
+	country = { 
+		PRS_sour_loser = {
+			picture = sour_loser
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.5
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+	tank_manufacturer = {
+		designer = yes
+		#바닐라 출신
+		PRS_porsche = {
+			picture = porsche
+			allowed = { }
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { heavy_tank_manufacturer }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		
+		PRS_henschel = {
+			picture = henschel
+			allowed = { }
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { fast_tank_manufacturer }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PRS_MAN = {
+			picture = GER_MAN
+			allowed = { }
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { medium_tank_manufacturer }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	naval_manufacturer = { }
+	aircraft_manufacturer = { }
+	industrial_concern = { }
+	materiel_manufacturer = { }
+}

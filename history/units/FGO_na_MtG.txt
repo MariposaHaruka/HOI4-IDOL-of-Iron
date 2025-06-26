@@ -1,0 +1,34 @@
+﻿
+
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "Marinha do Chaldea"			
+		naval_base = 10980 # Rio de Janiero
+		task_force = {
+			name = "Marinha do Chaldea"
+			location = 10980 # Rio de Janiero
+			ship = { name = "NFC Minas Gerais" pride_of_the_fleet = yes definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = FGO version_name = "Minas Geras Class"} } }
+			ship = { name = "NFC São Paulo" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = FGO version_name = "Minas Geras Class"} } }
+			ship = { name = "NFC Bahia" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FGO version_name = "Bahia Class"} } }
+			ship = { name = "NFC Rio Grande do Sul" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FGO version_name = "Bahia Class"} } }
+			# 1a Flotilla de Contratorpedeiros
+			ship = { name = "NFC Piaui" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FGO version_name = "Para Class"} } }
+			ship = { name = "NFC Rio Grande do Norte" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FGO version_name = "Para Class"} } }
+			ship = { name = "NFC Paraíba" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FGO version_name = "Para Class"} } }
+			ship = { name = "NFC Alagoas" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FGO version_name = "Para Class"} } }
+			# 2a Flotilla de Contratorpedeiros
+			ship = { name = "NFC Marnhao" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FGO version_name = "Para Class"} } }	
+			ship = { name = "NFC Sergipe" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FGO version_name = "Para Class"} } }
+			ship = { name = "NFC Santa Catharina" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FGO version_name = "Para Class"} } }
+			ship = { name = "NFC Mato Grosso" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FGO version_name = "Para Class"} } }
+		}				
+		task_force = {				
+			name = "Flotilha de Submarinos"			
+			location = 10980 # Rio de Janiero
+			ship = { name = "NFC Humayta" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = FGO version_name = "Humayta Class"} } }
+		}				
+	}
+}
+

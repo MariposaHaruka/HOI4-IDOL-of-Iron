@@ -1,49 +1,243 @@
 ﻿division_template = {
-	name = "Infantry Division"		
-	division_names_group = USA_INF_01		# Uses generic English templates
-	# Note: Represents both regular infantry and militia units
+	name = "Juntuán"				# Represents: two-division infantry corps (generally poorly-equipped, but decent experience),
+	division_names_group = KTC_INF_01
+									#	KTC divisions were well-trained in guerilla mountain tactics.
+	regiments = {
+		infantry = { x = 0 y = 0 }	# Note: Chinese divisions were brigade-sized compared other nations' armies
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Renmin Jundui"				# Represents three-column local militia groups (Triangular Corps); poorly-equipped, lowest experience
+	division_names_group = KTC_GAR_01
+
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 0 }
 		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
 	}
-	support = {
-       	engineer = { x = 0 y = 0 }
-       	artillery = { x = 0 y = 1 }
-	}
+	priority = 1
 }
-
-
 
 units = {
+	##### Eighth Route Army (CO: Mao Zedong, Zhu De) #####
+	division = {
+		name = "115 Bubing Shi"
+		location = 5007
+		division_template = "Juntuán"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division = {
+		name = "120 Bubing Shi"
+		location = 7208
+		division_template = "Juntuán"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division = {
+		name = "129 Bubing Shi"
+		location = 517
+		division_template = "Juntuán"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
 	
+	### Provincial Forces ###
+	division = { #  "1 Shensi Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12156
+		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.5
+
+	}
+	division = { #  "2 Shensi Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 10733
+		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.5
+
+	}
+	division = { #  "3 Shensi Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 10733
+		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.5
+
+	}
+	division = { #  "4 Shensi Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 8049
+		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.5
+
+	}
+	division = { #  "5 Shensi Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 8049
+		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.5
+
+	}
+
+	division = {
+		name = "Suiyuan Jingbei"
+		location = 4174
+		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.2
+
+	}
+	division = {
+		name = "Chahar Jingbei"
+		location = 7048
+		division_template = "Renmin Jundui"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.2
+
+	}
+
+	division = { # "80 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 80
+		}
+		location = 12846
+		division_template = "Renmin Jundui"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	division = { # "81 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 81
+		}
+		location = 1647
+		division_template = "Renmin Jundui"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	division = { # "82 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 82
+		}
+		location = 1933
+		division_template = "Renmin Jundui"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	division = { # "1 Ma Qibing Jun"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7911
+		division_template = "Renmin Jundui"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	division = { # "2 Ma Qibing Jun"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 531
+		division_template = "Renmin Jundui"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	division = { # "3 Ma Qibing Jun"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 12846
+		division_template = "Renmin Jundui"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	division = {
+		name = "Golmud Jingbei"
+		location = 12846
+		division_template = "Juntuán"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.3
+
+	}
+
+	division = { # "1 Xin'jiang Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4709
+		division_template = "Renmin Jundui"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division = { # "2 Xin'jiang Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 4709
+		division_template = "Renmin Jundui"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division = { # "3 Xin'jiang Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 4709
+		division_template = "Renmin Jundui"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
 }
 
-
-### No air forces (small handful of various aircraft in 1935) ###
-
-#########################
-## STARTING PRODUCTION ##
-#########################
-
+##### STARTING PRODUCTION #####
 instant_effect = {
-
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_0
 			creator = "KTC"
 		}
-		requested_factories = 2
-		progress = 0.1
-		efficiency = 50
+		requested_factories = 4
+		progress = 0.64
+		efficiency = 100
 	}
-
 }
-
-#################################

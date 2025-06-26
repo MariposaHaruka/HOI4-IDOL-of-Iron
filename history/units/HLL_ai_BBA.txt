@@ -1,0 +1,25 @@
+﻿air_wings = {
+	305 = {
+		small_plane_airframe_0 =  { owner = "HLL" amount = 31 version_name = "Nousagi-1"}
+	}
+	306 = {
+		small_plane_airframe_0 =  { owner = "HLL" amount = 33 version_name = "Nousagi-1"}
+	}
+	307 = {
+		small_plane_airframe_0 =  { owner = "HLL" amount = 62 version_name = "Nousagi-1"}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_0
+			creator = "HLL" 
+			version_name = "Nousagi-1"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		#industrial_manufacturer = mio:HLL_usada_organization
+	}
+}

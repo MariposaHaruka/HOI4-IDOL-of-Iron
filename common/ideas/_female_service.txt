@@ -1,5 +1,137 @@
 ideas = {
 	is_female_service = {
+        law = yes
+        use_list_view = yes
 
-	}
+        service_prohibited = {
+            available = {
+                OR = {
+                    NOT = {
+                        has_idea = full_equality
+                        has_idea = affirmative_action_female
+                    }
+                    has_war = no
+                }
+            }
+            level = 1
+			removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.05
+                stability_factor = -0.05
+                drift_defence_factor = 0.05
+            }
+
+            ai_will_do = {
+                base = 10
+                modifier = {
+                    is_fascism = yes
+                    add = 100
+                }
+				modifier = {
+                    has_idea = no_legal_protections
+                    add = 70
+                }
+            }
+        }
+
+        non_combat_roles = {
+            available = {
+                NOT = {
+                    has_idea = full_equality
+                    has_idea = affirmative_action_female
+                }
+            }
+			level = 2
+			removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.025
+                conscription_factor = 0.05
+                attrition = -0.10
+            }
+
+            research_bonus = { 
+				hospital_tech = 0.25
+			}
+
+            ai_will_do = {
+                base = 20
+                modifier = {
+                    has_idea = no_legal_protections
+                    add = 20
+                }
+            }
+        }
+
+        support_roles = {
+            available = {
+                NOT = {
+                    has_idea = no_legal_protections
+                    has_idea = patriarchal_society
+                }
+            }
+            level = 3
+			removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.025
+                stability_factor = 0.05
+                conscription_factor = 0.10
+                training_time_army_factor = -0.05
+                army_morale_factor = 0.05
+                experience_loss_factor = -0.05
+            }
+
+            ai_will_do = {
+                base = 30 
+                modifier = {
+                    has_idea = limited_womens_rights
+                    add = 20
+                }
+                modifier = {
+                    is_democratic = yes
+                    add = 10
+                }
+            }
+        }
+
+        equal_service = {
+            available = {
+                has_idea = full_equality
+                has_idea = affirmative_action_female
+            }
+            level = 4
+			removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.05
+                war_support_factor = 0.05
+                stability_factor = 0.05
+                conscription_factor = 0.25
+				army_org_factor = -0.10
+            }
+
+            ai_will_do = {
+                base = 20
+                modifier = {
+                    is_communism = yes
+                    add = 80
+                }
+                modifier = {
+                    tag = TOH
+					is_communism = yes 
+                    add = 400
+                }
+                modifier = {
+                    has_idea = full_equality
+                    add = 40
+                }
+                modifier = {
+                    has_idea = affirmative_action_female
+                    add = 40
+                }
+			}
+        }
+    }
 } 

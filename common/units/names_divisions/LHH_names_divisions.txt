@@ -1,0 +1,318 @@
+﻿LHH_INF_01 = {
+	name = "Infantry Divisions"
+
+	for_countries = { LHH }
+
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LHH_GAR_01 }
+
+	fallback_name = "%d-p Hasunosora Strelkovaya Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d-r Hasunosora Strelkovaya Div." }
+		2 = { "%d-p Hasunosora Strelkovaya Div." }
+		3 = { "%d-p Hasunosora Strelkovaya Div." }
+		4 = { "%d-p Hasunosora Strelkovaya Div." }
+		5 = { "%d-p Hasunosora Strelkovaya Div." }
+		6 = { "%d-p Hasunosora Strelkovaya Div." }
+		8 = { "%d-p Hasunosora Strelkovaya Div." }
+		10 = { "%d-p Hasunosora Strelkovaya Div." }
+		11 = { "%d-p Hasunosora Strelkovaya Div." }
+		12 = { "%d-p Hasunosora Strelkovaya Div." }
+		13 = { "%d-p Hasunosora Strelkovaya Div." }
+		14 = { "%d-p Hasunosora Strelkovaya Div." }
+		16 = { "%d-p Hasunosora Strelkovaya Div." }
+		17 = { "%d-p Hasunosora Strelkovaya Div." }
+		19 = { "%d-p Hasunosora Strelkovaya Div." }
+		21 = { "%d-p Hasunosora Strelkovaya Div." }
+		22 = { "%d-p Hasunosora Strelkovaya Div." }
+		23 = { "%d-p Hasunosora Strelkovaya Div." }
+		24 = { "%d-p Hasunosora Strelkovaya Div." }
+		25 = { "%d-p Hasunosora Strelkovaya Div." }
+
+	}
+}
+
+LHH_CAV_01 = {
+	name = "Cavalry Divisions"
+
+	for_countries = { LHH }
+
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LHH_INF_01 }
+
+	fallback_name = "%d-p Morit Diviziin"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d-r Morit Diviziin" }
+		2 = { "%d-p Morit Diviziin" }
+		3 = { "%d-p Morit Diviziin" }
+		4 = { "%d-p Morit Diviziin" }
+		5 = { "%d-p Morit Diviziin" }
+		6 = { "%d-p Morit Diviziin" }
+		7 = { "%d-p Morit Diviziin" }
+		8 = { "%d-p Morit Diviziin" }
+		9 = { "%d-p Morit Diviziin" }
+		10 = { "%d-p Morit Diviziin" }
+
+	}
+}
+
+LHH_MOT_01 = {
+	name = "Motorised Divisions"
+
+	for_countries = { LHH }
+
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LHH_INF_01 }
+
+	fallback_name = "%d-r Hasunosora Motorizovannaya Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		2 = { "%d-p Hasunosora Motorizovannaya Div." }
+		1 = { "%d-r Hasunosora Motorizovannaya Div." }
+		3 = { "%d-p Hasunosora Motorizovannaya Div." }
+		4 = { "%d-p Hasunosora Motorizovannaya Div." }
+		5 = { "%d-p Hasunosora Motorizovannaya Div." }
+		6 = { "%d-p Hasunosora Motorizovannaya Div." }
+		8 = { "%d-p Hasunosora Motorizovannaya Div." }
+		10 = { "%d-p Hasunosora Motorizovannaya Div." }
+		11 = { "%d-p Hasunosora Motorizovannaya Div." }
+		12 = { "%d-p Hasunosora Motorizovannaya Div." }
+		13 = { "%d-p Hasunosora Motorizovannaya Div." }
+		14 = { "%d-p Hasunosora Motorizovannaya Div." }
+		16 = { "%d-p Hasunosora Motorizovannaya Div." }
+		17 = { "%d-p Hasunosora Motorizovannaya Div." }
+		19 = { "%d-p Hasunosora Motorizovannaya Div." }
+		21 = { "%d-p Hasunosora Motorizovannaya Div." }
+		22 = { "%d-p Hasunosora Motorizovannaya Div." }
+		23 = { "%d-p Hasunosora Motorizovannaya Div." }
+		24 = { "%d-p Hasunosora Motorizovannaya Div." }
+		25 = { "%d-p Hasunosora Motorizovannaya Div." }
+
+	}
+}
+
+LHH_ARM_01 = {
+	name = "Armored Divisions"
+
+	for_countries = { LHH }
+
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LHH_INF_01 }
+
+	fallback_name = "%d-p Hasunosora Tankovaya Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d-r Hasunosora Tankovaya Div." }
+		2 = { "%d-p Hasunosora Tankovaya Div." }
+		3 = { "%d-p Hasunosora Tankovaya Div." }
+		4 = { "%d-p Hasunosora Tankovaya Div." }
+		5 = { "%d-p Hasunosora Tankovaya Div." }
+		6 = { "%d-p Hasunosora Tankovaya Div." }
+		7 = { "%d-p Hasunosora Tankovaya Div." }
+		8 = { "%d-p Hasunosora Tankovaya Div." }
+		9 = { "%d-p Hasunosora Tankovaya Div." }
+		10 = { "%d-p Hasunosora Tankovaya Div." }
+
+	}
+}
+
+LHH_MEC_01 = {
+	name = "Mechanized Divisions"
+
+	for_countries = { LHH }
+
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	division_types = { "mechanized"  }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LHH_INF_01 }
+
+	fallback_name = "%d-p Hasunosora Motostrelkovaya Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d-r Hasunosora Motostrelkovaya Div." }
+		2 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		3 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		4 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		5 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		6 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		8 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		10 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		11 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		12 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		13 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		14 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		16 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		17 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		19 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		21 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		22 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		23 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		24 = { "%d-p Hasunosora Motostrelkovaya Div." }
+		25 = { "%d-p Hasunosora Motostrelkovaya Div." }
+
+	}
+}
+
+LHH_GAR_01 = {
+	name = "Garrison Divisions"
+
+	for_countries = { LHH }
+
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LHH_INF_01 }
+
+	fallback_name = "%d-p Hasunosora Strelkovaya Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d-r Hasunosora Strelkovaya Div." }
+		2 = { "%d-p Hasunosora Strelkovaya Div." }
+		3 = { "%d-p Hasunosora Strelkovaya Div." }
+		4 = { "%d-p Hasunosora Strelkovaya Div." }
+		5 = { "%d-p Hasunosora Strelkovaya Div." }
+		6 = { "%d-p Hasunosora Strelkovaya Div." }
+		8 = { "%d-p Hasunosora Strelkovaya Div." }
+		10 = { "%d-p Hasunosora Strelkovaya Div." }
+		11 = { "%d-p Hasunosora Strelkovaya Div." }
+		12 = { "%d-p Hasunosora Strelkovaya Div." }
+		13 = { "%d-p Hasunosora Strelkovaya Div." }
+		14 = { "%d-p Hasunosora Strelkovaya Div." }
+		16 = { "%d-p Hasunosora Strelkovaya Div." }
+		17 = { "%d-p Hasunosora Strelkovaya Div." }
+		19 = { "%d-p Hasunosora Strelkovaya Div." }
+		21 = { "%d-p Hasunosora Strelkovaya Div." }
+		22 = { "%d-p Hasunosora Strelkovaya Div." }
+		23 = { "%d-p Hasunosora Strelkovaya Div." }
+		24 = { "%d-p Hasunosora Strelkovaya Div." }
+		25 = { "%d-p Hasunosora Strelkovaya Div." }
+
+	}
+}
+
+LHH_MAR_01 = {
+	name = "Marine Divisions"
+
+	for_countries = { LHH }
+
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	division_types = { "marine" "amphibious_armor" "amphibious_mechanized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LHH_INF_01 }
+
+	fallback_name = "%d-p Hasunosora Morskoi Pekhoty"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d-r Hasunosora Morskoi Pekhoty" }
+		2 = { "%d-p Hasunosora Morskoi Pekhoty" }
+		3 = { "%d-p Hasunosora Morskoi Pekhoty" }
+		4 = { "%d-p Hasunosora Morskoi Pekhoty" }
+		5 = { "%d-p Hasunosora Morskoi Pekhoty" }
+		6 = { "%d-p Hasunosora Morskoi Pekhoty" }
+		7 = { "%d-p Hasunosora Morskoi Pekhoty" }
+		8 = { "%d-p Hasunosora Morskoi Pekhoty" }
+		9 = { "%d-p Hasunosora Morskoi Pekhoty" }
+		10 = { "%d-p Hasunosora Morskoi Pekhoty" }
+
+	}
+}
+
+LHH_MTN_01 = {
+	name = "Mountain Divisions"
+
+	for_countries = { LHH }
+
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LHH_INF_01 }
+
+	fallback_name = "%d-p Hasunosora Gornostrelkovaya Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d-r Hasunosora Gornostrelkovaya Div." }
+		2 = { "%d-p Hasunosora Gornostrelkovaya Div." }
+		3 = { "%d-p Hasunosora Gornostrelkovaya Div." }
+		4 = { "%d-p Hasunosora Gornostrelkovaya Div." }
+		5 = { "%d-p Hasunosora Gornostrelkovaya Div." }
+		6 = { "%d-p Hasunosora Gornostrelkovaya Div." }
+		7 = { "%d-p Hasunosora Gornostrelkovaya Div." }
+		8 = { "%d-p Hasunosora Gornostrelkovaya Div." }
+		9 = { "%d-p Hasunosora Gornostrelkovaya Div." }
+		10 = { "%d-p Hasunosora Gornostrelkovaya Div." }
+
+	}
+}
+
+LHH_PAR_01 = {
+	name = "Paratrooper Divisions"
+
+	for_countries = { LHH }
+
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LHH_INF_01 }
+
+	fallback_name = "%d-p Hasunosora Vozdushno-Desantnaya Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d-r Hasunosora Vozdushno-Desantnaya Div." }
+		2 = { "%d-p Hasunosora Vozdushno-Desantnaya Div." }
+		3 = { "%d-p Hasunosora Vozdushno-Desantnaya Div." }
+		4 = { "%d-p Hasunosora Vozdushno-Desantnaya Div." }
+		5 = { "%d-p Hasunosora Vozdushno-Desantnaya Div." }
+		6 = { "%d-p Hasunosora Vozdushno-Desantnaya Div." }
+		7 = { "%d-p Hasunosora Vozdushno-Desantnaya Div." }
+		8 = { "%d-p Hasunosora Vozdushno-Desantnaya Div." }
+		9 = { "%d-p Hasunosora Vozdushno-Desantnaya Div." }
+		10 = { "%d-p Hasunosora Vozdushno-Desantnaya Div." }
+
+	}
+}

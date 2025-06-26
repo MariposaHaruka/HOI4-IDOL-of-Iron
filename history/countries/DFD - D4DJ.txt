@@ -3,6 +3,20 @@ capital = 141 #스톡홀름
 
 #부대
 set_oob = "DFD_ar"
+if = {
+	limit = { has_MtG = yes }
+	set_naval_oob = "DFD_na_MtG"
+	else = {
+		set_naval_oob = "DFD_na"
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "DFD_ai_BBA"
+	else = {
+		set_air_oob = "DFD_ai"
+	}
+}
 starting_train_buffer = 2
 add_command_power = 20
 set_fuel_ratio = 1
@@ -95,8 +109,12 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 25
 
 #국민 정신
-add_ideas = direct_election
-add_ideas = single_parliament
+add_ideas = {
+}
+add_dynamic_modifier = { modifier = DFD_industry }
+add_dynamic_modifier = { modifier = DFD_army }
+add_dynamic_modifier = { modifier = DFD_navy }
+add_dynamic_modifier = { modifier = DFD_air_force }
 
 #외교
 

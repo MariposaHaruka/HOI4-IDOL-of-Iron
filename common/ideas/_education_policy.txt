@@ -77,7 +77,6 @@ ideas = {
             removal_cost = -1
 
             modifier = {
-				add_research_slot = 1
                 consumer_goods_factor = 0.05
                 production_factory_max_efficiency_factor = 0.05
                 production_factory_efficiency_gain_factor = 0.05
@@ -85,6 +84,12 @@ ideas = {
                 drift_defence_factor = -0.10
                 female_random_operative_chance = 0.30
             }
+			on_add = {
+				add_research_slot = 1
+			}
+			on_remove = {
+				add_research_slot = -1
+			}
 
             ai_will_do = {
                 base = 30
@@ -107,7 +112,6 @@ ideas = {
             removal_cost = -1
 
             modifier = {
-				add_research_slot = 1
                 consumer_goods_factor = 0.10
                 production_factory_max_efficiency_factor = 0.10
                 production_factory_efficiency_gain_factor = 0.10
@@ -116,6 +120,12 @@ ideas = {
                 female_random_operative_chance = 0.5
                 army_leader_start_level = 2
             }
+			on_add = {
+				add_research_slot = 1
+			}
+			on_remove = {
+				add_research_slot = -1
+			}
 			
 			ai_will_do = {
                 base = 20

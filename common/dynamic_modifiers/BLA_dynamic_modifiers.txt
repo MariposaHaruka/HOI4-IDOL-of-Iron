@@ -1,0 +1,19 @@
+BLA_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_BLA_dynamic_industry
+}
+
+BLA_army = {
+	enable = { always = yes }
+	icon = GFX_idea_BLA_dynamic_army
+}
+
+BLA_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_BLA_dynamic_naval
+}
+
+BLA_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_BLA_dynamic_airforce
+}

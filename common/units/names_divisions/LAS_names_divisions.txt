@@ -1,107 +1,168 @@
 LAS_01 = {
-	name = "스틸라인"
+	name = "Steel Line"
 	for_countries = { LAS }
 	can_use = { always = yes }
 	division_types = { "infantry" }
-	fallback_name = "스틸라인 제%d사단"
+	fallback_name = "Steel Line Division"
 	ordered = {
-		1 = { "스틸라인 제%d사단" }
-		2 = { "스틸라인 제%d사단" }
-		3 = { "스틸라인 제%d사단" }
-		4 = { "스틸라인 제%d사단" }
-		5 = { "스틸라인 제%d사단" }
-		6 = { "스틸라인 제%d사단" }
-		7 = { "스틸라인 제%d사단"}
-		8 = { "스틸라인 제%d사단" }
-		9 = { "스틸라인 제%d사단" }
-		10 = { "스틸라인 제%d사단" }
+		1 = { "%dst Steel Line Division" }
+		2 = { "%dnd Steel Line Division" }
+		3 = { "%drd Steel Line Division" }
+		4 = { "%dth Steel Line Division" }
+		5 = { "%dth Steel Line Division" }
+		6 = { "%dth Steel Line Division" }
+		7 = { "%dth Steel Line Division"}
+		8 = { "%dth Steel Line Division" }
+		9 = { "%dth Steel Line Division" }
+		10 = { "%dth Steel Line Division" }
 	}
 }
 
 LAS_02 = {
-	name = "시스터즈 오브 발할라"
+	name = "Sisters of Valhalla"
 	for_countries = { LAS }
 	can_use = { always = yes }
 	division_types = { "mountaineers" }
-	fallback_name = "시스터즈 오브 발할라 제%d사단"
+	fallback_name = "Sisters of Valhalla Division"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "시스터즈 오브 발할라 제%d사단" }
-		2 = { "시스터즈 오브 발할라 제%d사단" }
-		3 = { "시스터즈 오브 발할라 제%d사단" }
-		4 = { "시스터즈 오브 발할라 제%d사단" }
-		5 = { "시스터즈 오브 발할라 제%d사단" }
-		6 = { "시스터즈 오브 발할라 제%d사단" }
-		7 = { "시스터즈 오브 발할라 제%d사단"}
-		8 = { "시스터즈 오브 발할라 제%d사단" }
-		9 = { "시스터즈 오브 발할라 제%d사단" }
-		10 = { "시스터즈 오브 발할라 제%d사단" }
+		1 = { "%dst Sisters of Valhalla Division" }
+		2 = { "%dnd Sisters of Valhalla Division" }
+		3 = { "%drd Sisters of Valhalla Division" }
+		4 = { "%dth Sisters of Valhalla Division" }
+		5 = { "%dth Sisters of Valhalla Division" }
+		6 = { "%dth Sisters of Valhalla Division" }
+		7 = { "%dth Sisters of Valhalla Division"}
+		8 = { "%dth Sisters of Valhalla Division" }
+		9 = { "%dth Sisters of Valhalla Division" }
+		10 = { "%dth Sisters of Valhalla Division" }
 	}
 }
 
 LAS_03 = {
-	name = "앵거 오브 호드"
+	name = "Anger of Horde"
 	for_countries = { LAS }
 	can_use = { always = yes }
 	division_types = { "motorized" "mechanized" }
-	fallback_name = "앵거 오브 호드 제%d사단"
+	fallback_name = "%dth Anger of Horde Division"
 	ordered = {
-		1 = { "앵거 오브 호드 제%d사단" }
-		2 = { "앵거 오브 호드 제%d사단" }
-		3 = { "앵거 오브 호드 제%d사단" }
-		4 = { "앵거 오브 호드 제%d사단" }
-		5 = { "앵거 오브 호드 제%d사단" }
-		6 = { "앵거 오브 호드 제%d사단" }
-		7 = { "앵거 오브 호드 제%d사단"}
-		8 = { "앵거 오브 호드 제%d사단" }
-		9 = { "앵거 오브 호드 제%d사단" }
-		10 = { "앵거 오브 호드 제%d사단" }
+		1 = { "%dst Anger of Horde Division" }
+		2 = { "%dnd Anger of Horde Division" }
+		3 = { "%drd Anger of Horde Division" }
+		4 = { "%dth Anger of Horde Division" }
+		5 = { "%dth Anger of Horde Division" }
+		6 = { "%dth Anger of Horde Division" }
+		7 = { "%dth Anger of Horde Division"}
+		8 = { "%dth Anger of Horde Division" }
+		9 = { "%dth Anger of Horde Division" }
+		10 = { "%dth Anger of Horde Division" }
 	}
 }
 
 LAS_04 = {
-	name = "AA 캐노니어"
+	name = "AA Cannoniers"
 	for_countries = { LAS }
 	can_use = { always = yes }
-	division_types = {
-		"artillery"
-	}
-	fallback_name = "AA 캐노니어 제%d사단"
+	division_types = { "artillery" }
+	fallback_name = "%dth AA Cannoniers Division"
 	ordered = {
-		1 = { "AA 캐노니어 제%d사단" }
-		2 = { "AA 캐노니어 제%d사단" }
-		3 = { "AA 캐노니어 제%d사단" }
-		4 = { "AA 캐노니어 제%d사단" }
-		5 = { "AA 캐노니어 제%d사단" }
-		6 = { "AA 캐노니어 제%d사단" }
-		7 = { "AA 캐노니어 제%d사단"}
-		8 = { "AA 캐노니어 제%d사단" }
-		9 = { "AA 캐노니어 제%d사단" }
-		10 = { "AA 캐노니어 제%d사단" }
+		1 = { "%dst AA Cannoniers Division" }
+		2 = { "%dnd AA Cannoniers Division" }
+		3 = { "%drd AA Cannoniers Division" }
+		4 = { "%dth AA Cannoniers Division" }
+		5 = { "%dth AA Cannoniers Division" }
+		6 = { "%dth AA Cannoniers Division" }
+		7 = { "%dth AA Cannoniers Division"}
+		8 = { "%dth AA Cannoniers Division" }
+		9 = { "%dth AA Cannoniers Division" }
+		10 = { "%dth AA Cannoniers Division" }
 	}
 }
 
 LAS_05 = {
-	name = "아머드 메이든"
+	name = "Armored Maiden"
 	for_countries = { LAS }
 	can_use = { always = yes }
 	division_types = {
-		"medium_armor"
+		"light_armor" "medium_armor" "heavy_armor" "modern_armor"
 	}
-	fallback_name = "아머드 메이든 제%d사단"
+	fallback_name = "%dth Armored Maiden Division"
 	ordered = {
-		1 = { "아머드 메이든 제%d사단" }
-		2 = { "아머드 메이든 제%d사단" }
-		3 = { "아머드 메이든 제%d사단" }
-		4 = { "아머드 메이든 제%d사단" }
-		5 = { "아머드 메이든 제%d사단" }
-		6 = { "아머드 메이든 제%d사단" }
-		7 = { "아머드 메이든 제%d사단"}
-		8 = { "아머드 메이든 제%d사단" }
-		9 = { "아머드 메이든 제%d사단" }
-		10 = { "아머드 메이든 제%d사단" }
+		1 = { "%dst Armored Maiden Division" }
+		2 = { "%dnd Armored Maiden Division" }
+		3 = { "%drd Armored Maiden Division" }
+		4 = { "%dth Armored Maiden Division" }
+		5 = { "%dth Armored Maiden Division" }
+		6 = { "%dth Armored Maiden Division" }
+		7 = { "%dth Armored Maiden Division"}
+		8 = { "%dth Armored Maiden Division" }
+		9 = { "%dth Armored Maiden Division" }
+		10 = { "%dth Armored Maiden Division" }
 	}
 }
 
+LAS_NON_01 = {
+	name = "Cavalry Divisions"
+	for_countries = { LAS }
+	can_use = { always = yes }
+	division_types = {
+		"cavalry" "camelry" 
+	}
+	fallback_name = "%dth Orca Cavalry Division"
+	ordered = {
+		1 = { "%dst Orca Cavalry Division" }
+		2 = { "%dnd Orca Cavalry Division" }
+		3 = { "%drd Orca Cavalry Division" }
+		4 = { "%dth Orca Cavalry Division" }
+		5 = { "%dth Orca Cavalry Division" }
+		6 = { "%dth Orca Cavalry Division" }
+		7 = { "%dth Orca Cavalry Division"}
+		8 = { "%dth Orca Cavalry Division" }
+		9 = { "%dth Orca Cavalry Division" }
+		10 = { "%dth Orca Cavalry Division" }
+	}
+}
+
+LAS_NON_02 = {
+	name = "Marine Divisions"
+	for_countries = { LAS }
+	can_use = { always = yes }
+	division_types = { "marine" "amphibious_armor" "amphibious_mechanized" }
+	fallback_name = "%dth Orca Marine Division"
+	ordered = {
+		1 = { "%dst Orca Marine Division" }
+		2 = { "%dnd Orca Marine Division" }
+		3 = { "%drd Orca Marine Division" }
+		4 = { "%dth Orca Marine Division" }
+		5 = { "%dth Orca Marine Division" }
+		6 = { "%dth Orca Marine Division" }
+		7 = { "%dth Orca Marine Division"}
+		8 = { "%dth Orca Marine Division" }
+		9 = { "%dth Orca Marine Division" }
+		10 = { "%dth Orca Marine Division" }
+	}
+}
+
+LAS_NON_03 = {
+	name = "Airborne Divisions"
+	for_countries = { LAS }
+	can_use = { always = yes }
+	division_types = { 
+		"paratrooper"
+	}
+	fallback_name = "%dth Orca Airborne Division"
+	ordered = {
+		1 = { "%dst Orca Airborne Division" }
+		2 = { "%dnd Orca Airborne Division" }
+		3 = { "%drd Orca Airborne Division" }
+		4 = { "%dth Orca Airborne Division" }
+		5 = { "%dth Orca Airborne Division" }
+		6 = { "%dth Orca Airborne Division" }
+		7 = { "%dth Orca Airborne Division"}
+		8 = { "%dth Orca Airborne Division" }
+		9 = { "%dth Orca Airborne Division" }
+		10 = { "%dth Orca Airborne Division" }
+	}
+}

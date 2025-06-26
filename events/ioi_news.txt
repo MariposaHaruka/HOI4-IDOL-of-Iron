@@ -1,0 +1,136 @@
+add_namespace = ioi_news
+add_namespace = ioi_news_alt
+add_namespace = ioi_news_hidden
+
+news_event = {
+	id = ioi_news.1
+	title = ioi_news.1.t
+	desc = ioi_news.1.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		IDP_nagase_mana_died = yes
+	}
+	
+	option = {
+		name = ioi_news.1.a
+	}
+}
+
+news_event = {
+	id = ioi_news_hidden.1
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1936.1.31
+		date < 1936.3.1
+		country_exists = IDP
+		IDP = { IDP_nagase_mana = { is_country_leader = yes } }
+	}
+
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		random_list = {
+			70 = {
+				modifier = {
+					factor = 0
+					IDP = { has_country_flag = IDP_nagase_mana_saved }
+				}
+				IDP = { news_event = { id = ioi_news.1 } }
+			}
+			30 = { }
+		}
+	}
+	
+	option = {
+		name = ioi_news_hidden.1.a
+	}
+	
+}
+
+news_event = {
+	id = ioi_news.2
+	title = ioi_news.2.t
+	desc = ioi_news.2.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		ONK_hoshino_ai_died = yes
+	}
+	
+	option = {
+		name = ioi_news.2.a
+	}
+}
+
+news_event = {
+	id = ioi_news_hidden.2
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1936.2.28
+		date < 1936.4.1
+		country_exists = ONK
+		ONK = { ONK_hoshino_ai = { is_country_leader = yes } }
+	}
+
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		random_list = {
+			70 = {
+				modifier = {
+					factor = 0
+					ONK = { has_country_flag = ONK_hoshino_ai_saved }
+				}
+				ONK = { news_event = { id = ioi_news.2 } }
+			}
+			30 = { }
+		}
+	}
+	
+	option = {
+		name = ioi_news_hidden.2.a
+	}
+	
+}
+
+news_event = {
+	id = ioi_news.3
+	title = ioi_news.3.t
+	desc = ioi_news.3.d
+	picture = GFX_news_event_032
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ioi_news.3.a
+		trigger = {
+			NOT = { original_tag = MMM }
+		}
+	}
+	option = {
+		name = ioi_news.3.b
+		trigger = { 
+			original_tag = MMM
+		}
+	}
+}
+

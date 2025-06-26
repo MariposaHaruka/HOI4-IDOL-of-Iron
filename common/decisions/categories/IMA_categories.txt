@@ -1,4 +1,4 @@
-IMA_haruka_crisis_category = {
+IMA_haruka_crisis_category = { #하루카 위기
 	icon = generic_political_actions
 	priority = 98
 	allowed = { original_tag = IMA }
@@ -7,7 +7,8 @@ IMA_haruka_crisis_category = {
 	}
 	visible_when_empty = yes
 }
-IMA_haruka_plan_category = {
+
+IMA_haruka_plan_category = { #하루카 계획
 	icon = generic_political_actions
 	priority = 97
 	allowed = { original_tag = IMA }
@@ -16,7 +17,8 @@ IMA_haruka_plan_category = {
 	}
 	visible_when_empty = yes
 }
-IMA_iori_plan_category = {
+
+IMA_iori_plan_category = { #이오리 계획
 	icon = generic_political_actions
 	priority = 97
 	allowed = { original_tag = IMA }
@@ -25,18 +27,29 @@ IMA_iori_plan_category = {
 	}
 	visible_when_empty = yes
 }
-IMA_westminster_statute_category = {
+
+IMA_westminster_statute_category = { #웨스트민스터 헌장
 	icon = generic_political_actions
 	priority = 96
 	allowed = {
-		IMA = { NOT = { has_completed_focus = IMA_41001 } }
+		IMA = { 
+			NOT = { 
+				has_completed_focus = IMA_41001
+				has_completed_focus = IMA_43001
+			} 
+		}
 		OR = {
 			has_idea = IMA_westminster_statute
 			original_tag = IMA
 		}
 	}
 	visible = {
-		IMA = { NOT = { has_completed_focus = IMA_41001 } }
+		IMA = { 
+			NOT = { 
+				has_completed_focus = IMA_41001
+				has_completed_focus = IMA_43001
+			} 
+		}
 		OR = {
 			has_idea = IMA_westminster_statute
 			original_tag = IMA
@@ -44,3 +57,74 @@ IMA_westminster_statute_category = {
 	}
 	visible_when_empty = yes
 }
+
+IMA_thames_plan_category = { #템즈 계획
+	icon = generic_foreign_policy
+	priority = 96
+	allowed = {
+		has_completed_focus = IMA_43001
+		original_tag = IMA
+	}
+	visible = {
+		has_completed_focus = IMA_43001
+		original_tag = IMA
+	}
+	visible_when_empty = yes
+}
+
+IMA_homeland_defence_category = { #본토 방어 계획
+	icon = generic_fortification
+	priority = 95
+	allowed = {
+		threat > 0.25
+		original_tag = IMA
+	}
+	visible = {
+		threat > 0.25
+		original_tag = IMA
+	}
+	visible_when_empty = yes
+}
+
+IMA_foreign_defence_plan_category = { #해외 방어 계획
+	icon = generic_fortification
+	priority = 95
+	allowed = {
+		original_tag = IMA
+	}
+	visible = {
+		has_completed_focus = IMA_40001
+	}
+	visible_when_empty = yes
+}
+
+IMA_intervension_plan_category = { #개입 계획
+	icon = generic_foreign_policy
+	priority = 96
+	allowed = {
+		original_tag = IMA
+	}
+	visible = {
+		OR = {
+			has_completed_focus = IMA_51101
+			has_completed_focus = IMA_51201
+		}
+	}
+	visible_when_empty = yes
+}
+
+IMA_idolmaster_conference_category = { #아이돌 마스터 회의
+	icon = SWI_federal_council
+	priority = 94
+	allowed = {
+		OR = {
+			original_tag = IMA
+			is_subject_of = IMA
+		}
+	}
+	visible = {
+		has_country_flag = IMA_idolmaster_conference
+	}
+	visible_when_empty = yes
+}
+

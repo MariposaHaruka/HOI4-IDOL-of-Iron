@@ -1,0 +1,201 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+LLS_osaka_army_arsenal_organization = {
+	name = JAP_osaka_army_arsenal_organization
+	include = generic_tank_organization
+	icon = GFX_idea_osaka_army_arsenal
+	allowed = {	
+		original_tag = LLS
+		has_dlc = "Arms Against Tyranny"
+	}
+} 
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+
+LLS_kure_naval_arsenal_organization = {
+	name = JAP_kure_naval_arsenal_organization
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_kure_naval_arsenal
+	allowed = {	
+		original_tag = LLS
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = { }
+}
+
+LLS_yokosuka_naval_arsenal_organization = {
+	name = JAP_yokosuka_naval_arsenal_organization
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_yokosuka_naval_arsenal
+	allowed = {	
+		original_tag = LLS
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+LLS_maizuru_naval_arsenal_organization = {
+	name = JAP_maizuru_naval_arsenal_organization
+	include = generic_escort_ship_organization
+	icon = GFX_idea_maizuru_naval_arsenal
+	
+	allowed = {
+		original_tag = LLS 
+	}
+	
+	visible = { }
+	
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = LLS } }
+			}
+			FROM = { NOT = { has_war_with = LLS } }
+		}
+	}
+}
+
+LLS_sasebo_naval_arsenal_organization = {
+	name = JAP_sasebo_naval_arsenal_organization
+	include = generic_raider_ship_organization
+	icon = GFX_idea_sasebo_naval_arsenal
+	allowed = {	 
+		original_tag = LLS
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+
+LLS_mitsubishi_organization = {
+	name = JAP_mitsubishi_organization
+	include = generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_mitsubishi
+	
+	allowed = {	
+		original_tag = LLS 
+	}
+	
+	visible = { }
+	
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = LLS } }
+			}
+			FROM = { NOT = { has_war_with = LLS } }
+		}
+	}
+} 
+
+LLS_aichi_organization = {
+	name = JAP_aichi_organization
+	include = generic_range_focused_aircraft_organization
+	icon = GFX_idea_aichi
+	allowed = {	
+		original_tag = LLS
+	}
+	available = { }
+}
+
+LLS_nakajima_organization = {
+	name = JAP_nakajima_organization
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_nakajima
+	allowed = {	
+		original_tag = LLS
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+LLS_yokosuka_organization = {
+	name = JAP_yokosuka_organization
+	include = generic_naval_aircraft_organization 
+	icon = GFX_idea_yokosuka
+	allowed = {	
+		original_tag = LLS
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+LLS_tokyo_arsenal_organization = {
+	name = JAP_tokyo_arsenal_organization
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_tokyo_arsenal
+	allowed = {	
+		original_tag = LLS
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+LLS_osaka_army_arsenal_artillery_organization = {
+	name = JAP_osaka_army_arsenal_artillery_organization
+	include = generic_artillery_organization
+	icon = GFX_idea_osaka_army_arsenal
+	allowed = {	
+		original_tag = LLS
+		has_dlc = "Arms Against Tyranny"
+	}
+} 
+
+LLS_nissan_organization = {
+	name = JAP_nissan_organization
+	include = generic_motorized_mechanized_organization 
+	icon = GFX_idea_nissan
+	allowed = {	
+		original_tag = LLS 
+	}
+	
+	visible = { }
+	
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = LLS } }
+			}
+			FROM = { NOT = { has_war_with = LLS } }
+		}
+	}
+}

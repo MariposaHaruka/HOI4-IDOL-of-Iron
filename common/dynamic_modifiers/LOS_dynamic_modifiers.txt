@@ -1,0 +1,19 @@
+LOS_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_LOS_dynamic_industry
+}
+
+LOS_army = {
+	enable = { always = yes }
+	icon = GFX_idea_LOS_dynamic_army
+}
+
+LOS_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_LOS_dynamic_naval
+}
+
+LOS_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_LOS_dynamic_airforce
+}

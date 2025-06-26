@@ -3,6 +3,20 @@ capital = 41 #마드리드
 
 #부대
 set_oob = "MMM_ar"
+if = {
+	limit = { has_MtG = yes }
+	set_naval_oob = "MMM_na_MtG"
+	else = {
+		set_naval_oob = "MMM_na"
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "MMM_ai_BBA"
+	else = {
+		set_air_oob = "MMM_ai"
+	}
+}
 starting_train_buffer = 2
 add_command_power = 10
 set_fuel_ratio = 0.12
@@ -81,6 +95,11 @@ set_convoys = 150
 #국민 정신
 add_ideas = direct_election
 add_ideas = single_parliament
+
+add_dynamic_modifier = { modifier = MMM_industry }
+add_dynamic_modifier = { modifier = MMM_army }
+add_dynamic_modifier = { modifier = MMM_navy }
+add_dynamic_modifier = { modifier = MMM_air_force }
 
 #외교
 

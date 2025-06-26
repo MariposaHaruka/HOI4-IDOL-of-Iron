@@ -1,0 +1,19 @@
+DOB_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_DOB_dynamic_industry
+}
+
+DOB_army = {
+	enable = { always = yes }
+	icon = GFX_idea_DOB_dynamic_army
+}
+
+DOB_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_DOB_dynamic_naval
+}
+
+DOB_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_DOB_dynamic_airforce
+}

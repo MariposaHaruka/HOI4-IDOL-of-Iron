@@ -1,16 +1,15 @@
-
-state={
-	id=181
-	name="STATE_181"
+state = {
+	id = 181
+	name = "STATE_181"
 	manpower = 964700
 	
 	state_category = town
 	
-	resources={
-		tungsten=95 #was 150 # was: 300
+	resources = {
+		tungsten = 95 #was 150 # was: 300
 	}
 
-	history={
+	history = {
 		owner = MLN
 		add_core_of = MLN
 		victory_points = {
@@ -22,12 +21,15 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2
+
+			# Cabril Dam
+			#11885 = { dam = 1 }
 		}
 	}
 
-	provinces={
+	provinces = {
 		845 889 938 3969 6818 6996 9787 11885 
 	}
 
-	local_supplies=0.0 
+	local_supplies = 0.0 
 }

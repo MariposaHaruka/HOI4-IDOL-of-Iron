@@ -7,78 +7,7 @@ bookmarks = {
 		default_country = IMA
 		default = yes
 		
-		#backdrop_0
-		FGO = {
-			history = FGO_IDOL_of_WAR_DESC
-			ideology = anarchosyndicalism
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-
-			}
-		}
-
-		IDP = {
-			history = IDP_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-
-			}
-		}
-
-		DOB = {
-			minor = yes
-			history = DOB_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-
-			}
-		}
-		
-		GFR = {
-			minor = yes
-			history = GFR_IDOL_of_WAR_DESC
-			ideology = conservatism
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-		
-		MLN = {
-			minor = yes
-			history = MLN_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-		
-		WDS = {
-			minor = yes
-			history = WDS_IDOL_of_WAR_DESC
-			ideology = conservatism
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-
-		#backdrop_1
+		#backdrop_0		
 		BDG = {
 			history = BDG_IDOL_of_WAR_DESC
 			ideology = liberalism_mod
@@ -89,18 +18,7 @@ bookmarks = {
 				
 			}
 		}
-
-		MCR = {
-			history = MCR_IDOL_of_WAR_DESC
-			ideology = conservatism
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-
+		
 		AGN = {
 			minor = yes
 			history = AGN_IDOL_of_WAR_DESC
@@ -148,89 +66,76 @@ bookmarks = {
 				
 			}
 		}
+
+		#backdrop_1
+		TOH = {
+			history = TOH_IDOL_of_WAR_DESC
+			ideology = authoritariancommunism
+			ideas = {
+				the_grand_army
+			}
+			focuses = {
+				
+			}	
+		}
+		
+		GUP = {
+			minor = yes
+			history = GUP_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			ideas = {
+				the_grand_army
+			}
+			focuses = {
+				
+			}
+		}
+		
+		KTC = {
+			minor = yes
+			history = KTC_IDOL_of_WAR_DESC
+			ideology = communism
+			ideas = {
+				the_grand_army
+			}
+			focuses = {
+				
+			}
+		}
+		
+		TKI = {
+			minor = yes
+			history = TKI_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			ideas = {
+				the_grand_army
+			}
+			focuses = {
+				
+			}
+		}
+		
+		NPT = {
+			minor = yes
+			history = NPT_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			ideas = {
+				the_grand_army
+			}
+			focuses = {
+				
+			}
+		}
 		
 		#backdrop_2
-		LLS = {
-			history = LLS_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}	
-			focuses = {
-				
-			}			
-		}
-
-		LSS = {
-			history = LSS_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-		
-		LNH = {
-			minor = yes
-			history = LNH_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-		
-		LST = {
-			minor = yes
-			history = LST_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-		
-		LHH = {
-			minor = yes
-			history = LHH_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-		
-		KON = {
-			minor = yes
-			history = KON_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}		
-
-		#backdrop_3
 		IMA = {
 			history = IMA_IDOL_of_WAR_DESC
 			ideology = conservatism
 			ideas = {
 				IMA_great_depression
 				IMA_winner_of_great_war
-				IMA_961_problem
 				IMA_widespread_strikes
 				IMA_home_of_idol_democracy
-				IMA_amami_haruka_1
 				IMA_westminster_statute
 			}
 			focuses = {
@@ -239,6 +144,7 @@ bookmarks = {
 		}
 
 		ICG = {
+			minor = yes
 			history = ICG_IDOL_of_WAR_DESC
 			ideology = liberalism_mod
 			ideas = {
@@ -285,12 +191,56 @@ bookmarks = {
 			}
 		}
 
-		IDS = {
+		#backdrop_3
+
+		ZYX = {
+			ideology = authoritariandemocracy
+			history = Debug_KR_gathering_storm_desc
+		}
+		
+		
+		FGO = {
 			minor = yes
-			history = IDS_IDOL_of_WAR_DESC
-			ideology = conservatism
+			history = FGO_IDOL_of_WAR_DESC
+			ideology = anarchosyndicalism
+			ideas={
+				the_grand_army
+			}
+			focuses = {
+				
+			}			
+		}
+
+		IDP = {
+			minor = yes
+			history = IDP_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
 			ideas = {
-				IMA_westminster_statute
+				the_grand_army
+			}
+			focuses = {
+				
+			}
+		}
+
+		GBC = {
+			minor = yes
+			history = GBC_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			ideas = {
+				the_grand_army
+			}
+			focuses = {
+				
+			}	
+		}
+		
+		MCR = {
+			minor = yes
+			history = MCR_IDOL_of_WAR_DESC
+			ideology = autocracy
+			ideas = {
+				the_grand_army
 			}
 			focuses = {
 				
@@ -310,6 +260,7 @@ bookmarks = {
 		}
 
 		ENS = {
+			minor = yes
 			history = ENS_IDOL_of_WAR_DESC
 			ideology = fascism
 			ideas={
@@ -320,56 +271,8 @@ bookmarks = {
 			}			
 		}
 
-		VCD = {
-			minor = yes
-			history = VCD_IDOL_of_WAR_DESC
-			ideology = conservatism
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-
-		PRP = {
-			minor = yes
-			history = PRP_IDOL_of_WAR_DESC
-			ideology = liberalism_mod
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-
-		AIK = {
-			minor = yes
-			history = AIK_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-
-		MMM = {
-			minor = yes
-			history = MMM_IDOL_of_WAR_DESC
-			ideology = socialdemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-
-		#backdrop_5
 		HLL = {
+			minor = yes
 			history = HLL_IDOL_of_WAR_DESC
 			ideology = militarytotalism
 			ideas = {
@@ -381,6 +284,7 @@ bookmarks = {
 		}
 
 		UMA = {
+			minor = yes
 			history = UMA_IDOL_of_WAR_DESC
 			ideology = authoritariandemocracy
 			ideas = {
@@ -402,116 +306,8 @@ bookmarks = {
 				
 			}
 		}
-		
-		KJI = {
-			minor = yes
-			history = KJI_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
 
-		SOE = {
-			minor = yes
-			history = SOE_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-			
-			}
-		}
-		
-		ONK = {
-			minor = yes
-			history = ONK_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-		
-		#backdrop_6
-		TOH = {
-			history = TOH_IDOL_of_WAR_DESC
-			ideology = authoritariancommunism
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}	
-		}
-		
-		GUP = {
-			history = GUP_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-		
-		KTC = {
-			minor = yes
-			history = KTC_IDOL_of_WAR_DESC
-			ideology = communism
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-		
-		NPT = {
-			minor = yes
-			history = NPT_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-		
-		TKI = {
-			minor = yes
-			history = TKI_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-		
-		WUG = {
-			minor = yes
-			history = WUG_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-
-
-		#backdrop_7
+		#backdrop_5
 		BLA = {
 			history = BLA_IDOL_of_WAR_DESC
 			ideology = authoritariandemocracy
@@ -523,7 +319,8 @@ bookmarks = {
 			}	
 		}
 
-		AZU = {
+		AZU = {			
+			minor = yes
 			history = AZU_IDOL_of_WAR_DESC
 			ideology = authoritariandemocracy
 			ideas = {
@@ -546,21 +343,9 @@ bookmarks = {
 			}
 		}
 		
-		BOR = {
+		PTK = {
 			minor = yes
-			history = BOR_IDOL_of_WAR_DESC
-			ideology = conservatism
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-				
-			}
-		}
-		
-		ZOS = {
-			minor = yes
-			history = ZOS_IDOL_of_WAR_DESC
+			history = PTK_IDOL_of_WAR_DESC
 			ideology = authoritariandemocracy
 			ideas = {
 				the_grand_army
@@ -569,11 +354,71 @@ bookmarks = {
 				
 			}
 		}
-
-		PRK = {
+		
+		WUG = {
 			minor = yes
-			history = PRK_IDOL_of_WAR_DESC
-			ideology = conservatism
+			history = WUG_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			ideas = {
+				the_grand_army
+			}
+			focuses = {
+				
+			}
+		}
+		
+		#backdrop_6
+		LLS = {
+			history = LLS_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			ideas = {
+				the_grand_army
+			}	
+			focuses = {
+				
+			}			
+		}
+
+		LSS = {
+			minor = yes
+			history = LSS_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			ideas = {
+				the_grand_army
+			}
+			focuses = {
+				
+			}
+		}
+		
+		LNH = {
+			minor = yes
+			history = LNH_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			ideas = {
+				the_grand_army
+			}
+			focuses = {
+				
+			}
+		}
+		
+		LST = {
+			minor = yes
+			history = LST_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			ideas = {
+				the_grand_army
+			}
+			focuses = {
+				
+			}
+		}
+		
+		LHH = {
+			minor = yes
+			history = LHH_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
 			ideas = {
 				the_grand_army
 			}

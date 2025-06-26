@@ -1,11 +1,10 @@
-
-state={
-	id=780
-	name="STATE_780" # Guinea
+state = {
+	id = 780
+	name = "STATE_780" # Guinea
 	manpower = 195041
 	
 	state_category = pastoral
-	history={
+	history = {
 		owner = AGN
 		add_core_of = AGN
 		victory_points = {
@@ -13,15 +12,16 @@ state={
 		}
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 1
 			1909 = {
 				naval_base = 1
 			}
 		}
 	}
 
-	provinces={
+	provinces = {
 		1909 4957 5039 8008 12802 12858
 	}
 
-	local_supplies=1.0 
+	local_supplies = 1.0 
 }

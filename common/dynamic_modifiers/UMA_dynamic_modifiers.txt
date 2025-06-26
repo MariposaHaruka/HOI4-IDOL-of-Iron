@@ -1,0 +1,19 @@
+UMA_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_UMA_dynamic_industry
+}
+
+UMA_army = {
+	enable = { always = yes }
+	icon = GFX_idea_UMA_dynamic_army
+}
+
+UMA_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_UMA_dynamic_naval
+}
+
+UMA_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_UMA_dynamic_airforce
+}

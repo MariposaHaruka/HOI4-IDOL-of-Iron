@@ -1,0 +1,120 @@
+﻿##### IDIA NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+IDI_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { IDI }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "ARN "
+	fallback_name = "Destructor %d"					
+
+	unique = {											
+		"Santa Clara" "Diez de Octubre" "Veinticuatro de Febrero" "Patria" "Habana" "Pinar del Río" "Cuba" "Río Damuji" "Río Jatibonico" 
+	}
+}
+
+### LIGHT CRUISER NAMES###
+IDI_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { IDI }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "ARN "
+	fallback_name = "Crucero Ligero %d"
+
+	unique = {
+		"La Habana" "Santiago de Cuba" "Marinao" "Santa Clara" "Guantánamo" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+IDI_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { IDI }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "ARN "
+	fallback_name = "Crucero Pesado %d"
+
+	unique = {
+		"La Habana" "Santiago de Cuba" "Marinao" "Santa Clara" "Guantánamo" 
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+IDI_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { IDI }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "ARN "
+	fallback_name = "Acorazado %d"		
+
+	unique = {
+		"Theodore Roosevelt" "Fulgencio Batista" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+IDI_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { IDI }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "ARN "
+	fallback_name = "Crucero de Batalla %d"		
+
+	unique = {
+		"Theodore Roosevelt" "Fulgencio Batista" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+IDI_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { IDI }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "ARN "
+	fallback_name = "Portaaviones %d"	
+
+	unique = {
+		"República de Cuba" "La Sabana" "Almendares" "Cauto" 
+	}
+}
+
+### SUBMARINES ###
+IDI_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { IDI }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "ARN "
+	fallback_name = "Submarino %d"
+	
+	unique = {
+		"Santa Clara" "Diez de Octubre" "Veinticuatro de Febrero" "Patria" "Habana" "Pinar del Río" "Cuba" "Río Damuji" "Río Jatibonico" 
+	}
+}

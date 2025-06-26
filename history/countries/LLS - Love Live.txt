@@ -2,7 +2,25 @@
 capital = 282 #도쿄
 
 #부대
-set_oob = "LLS_ar"
+if = {
+	limit = { has_NSB = yes }
+	set_oob = "LLS_ar_NSB"
+	else = { set_oob = "LLS_ar" }
+}
+if = {
+	limit = { has_MtG = yes }
+	set_naval_oob = "LLS_na_MtG"
+	else = {
+		set_naval_oob = "LLS_na"
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "LLS_ai_BBA"
+	else = {
+		set_air_oob = "LLS_ai"
+	}
+}
 starting_train_buffer = 3.5
 add_command_power = 20
 set_fuel_ratio = 0.6
@@ -112,6 +130,15 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 400
 
 #국민 정신
+add_ideas = {
+	LLS_peace_preservation_law
+	LLS_narrow_gauge_railway
+	LNH_south_manchuria_railway_company
+}
+add_dynamic_modifier = { modifier = LLS_industry }
+add_dynamic_modifier = { modifier = LLS_army }
+add_dynamic_modifier = { modifier = LLS_navy }
+add_dynamic_modifier = { modifier = LLS_air_force }
 
 
 #외교
@@ -144,23 +171,16 @@ if = {
 		target = LHH
 		autonomous_state = lls_colony
 	}
+	set_autonomy = {
+		target = LBB
+		autonomous_state = lls_colony
+	}
 	else = {
-		set_autonomy = {
-			target = LNH
-			autonomous_state = autonomy_puppet
-		}
-		set_autonomy = {
-			target = LSS
-			autonomous_state = autonomy_puppet
-		}
-		set_autonomy = {
-			target = LST
-			autonomous_state = autonomy_puppet
-		}
-		set_autonomy = {
-			target = LHH
-			autonomous_state = autonomy_puppet
-		}
+		puppet = LSS
+		puppet = LNH
+		puppet = LST
+		puppet = LHH
+		puppet = LBB
 	}
 }
 
@@ -208,6 +228,7 @@ set_popularities = {
 	authoritariandemocracy = 70
 	militarytotalism = 30
 }
+ban_communism_effect = yes
 
 #시작시점 의회
 set_variable = { LLS_communist_seats = 0 } #러브라이브 공산당
@@ -221,7 +242,7 @@ set_variable = { LLS_otonokizakakai_seats = 0 } #오토노키자카회
 set_variable = { LLS_kokumindomei_seats = 2 } #국민동맹
 #Total seats - 466
 
-#19360220 선거 이후 의회
+#1936/02/20 선거 이후 의회
 #set_variable = { LLS_communist_seats = 0 } #러브라이브 공산당
 
 #set_variable = { LLS_shakaidaishuto_seats = 18 } #사회대중당

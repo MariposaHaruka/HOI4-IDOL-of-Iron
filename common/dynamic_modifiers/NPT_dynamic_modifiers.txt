@@ -1,0 +1,19 @@
+NPT_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_NPT_dynamic_industry
+}
+
+NPT_army = {
+	enable = { always = yes }
+	icon = GFX_idea_NPT_dynamic_army
+}
+
+NPT_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_NPT_dynamic_naval
+}
+
+NPT_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_NPT_dynamic_airforce
+}

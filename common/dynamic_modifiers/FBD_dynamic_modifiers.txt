@@ -1,0 +1,19 @@
+FBD_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_FBD_dynamic_industry
+}
+
+FBD_army = {
+	enable = { always = yes }
+	icon = GFX_idea_FBD_dynamic_army
+}
+
+FBD_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_FBD_dynamic_naval
+}
+
+FBD_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_FBD_dynamic_airforce
+}

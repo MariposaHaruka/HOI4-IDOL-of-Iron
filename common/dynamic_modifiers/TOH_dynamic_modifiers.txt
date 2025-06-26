@@ -1,0 +1,19 @@
+TOH_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_TOH_dynamic_industry
+}
+
+TOH_army = {
+	enable = { always = yes }
+	icon = GFX_idea_TOH_dynamic_army
+}
+
+TOH_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_TOH_dynamic_naval
+}
+
+TOH_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_TOH_dynamic_airforce
+}

@@ -1,0 +1,19 @@
+HBR_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_HBR_dynamic_industry
+}
+
+HBR_army = {
+	enable = { always = yes }
+	icon = GFX_idea_HBR_dynamic_army
+}
+
+HBR_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_HBR_dynamic_naval
+}
+
+HBR_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_HBR_dynamic_airforce
+}

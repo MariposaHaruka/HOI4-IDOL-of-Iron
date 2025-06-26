@@ -1,0 +1,19 @@
+SZS_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_SZS_dynamic_industry
+}
+
+SZS_army = {
+	enable = { always = yes }
+	icon = GFX_idea_SZS_dynamic_army
+}
+
+SZS_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_SZS_dynamic_naval
+}
+
+SZS_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_SZS_dynamic_airforce
+}

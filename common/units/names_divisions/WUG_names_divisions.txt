@@ -1,0 +1,327 @@
+﻿WUG_INF_01 = {
+	name = "Infantry Divisions"
+
+	for_countries = { WUG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { WUG_GAR_01 }
+
+	fallback_name = "Green Leaves al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Alquwwat Almusallahat Alssultan" }
+		2 = { "Green Leaves al-Mushati al-%di" }
+		3 = { "Green Leaves al-Mushati al-%di" }
+		4 = { "Green Leaves al-Mushati al-%di" }
+		5 = { "Green Leaves al-Mushati al-%di" }
+		6 = { "Green Leaves al-Mushati al-%di" }
+		7 = { "Green Leaves al-Mushati al-%di" }
+		8 = { "Green Leaves al-Mushati al-%di" }
+		9 = { "Green Leaves al-Mushati al-%di" }
+		10 = { "Green Leaves al-Mushati al-%di" }
+		12 = { "Green Leaves al-Mushati al-%dr" }
+		13 = { "Green Leaves al-Mushati al-%dr" }
+		14 = { "Green Leaves al-Mushati al-%dr" }
+		15 = { "Green Leaves al-Mushati al-%dr" }
+		16 = { "Green Leaves al-Mushati al-%dr" }
+		17 = { "Green Leaves al-Mushati al-%dr" }
+		18 = { "Green Leaves al-Mushati al-%dr" }
+		19 = { "Green Leaves al-Mushati al-%dr" }
+		20 = { "Green Leaves al-Mushati al-%dr" }
+
+	}
+}
+
+WUG_CAV_01 = {
+	name = "Cavalry Divisions"
+
+	for_countries = { WUG }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { GER_Gar_01 }
+
+	fallback_name = "Green Leaves Sipahis al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Green Leaves Sipahis al-%di" }
+		2 = { "Green Leaves Sipahis al-%di" }
+		3 = { "Green Leaves Sipahis al-%di" }
+		4 = { "Green Leaves Sipahis al-%di" }
+		5 = { "Green Leaves Sipahis al-%di" }
+		6 = { "Green Leaves Sipahis al-%di" }
+		7 = { "Green Leaves Sipahis al-%di" }
+		8 = { "Green Leaves Sipahis al-%di" }
+		9 = { "Green Leaves Sipahis al-%di" }
+		10 = { "Green Leaves Sipahis al-%di" }
+		11 = { "Green Leaves Sipahis al-%dr" }
+		12 = { "Green Leaves Sipahis al-%dr" }
+		13 = { "Green Leaves Sipahis al-%dr" }
+		14 = { "Green Leaves Sipahis al-%dr" }
+		15 = { "Green Leaves Sipahis al-%dr" }
+
+	}
+}
+
+WUG_MOT_01 = {
+	name = "Motorised Divisions"
+
+	for_countries = { WUG }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { WUG_INF_01 }
+
+	fallback_name = "Green Leaves al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Alquwwat Almusallahat Alssultan" }
+		2 = { "Green Leaves al-Mushati al-%di" }
+		3 = { "Green Leaves al-Mushati al-%di" }
+		4 = { "Green Leaves al-Mushati al-%di" }
+		5 = { "Green Leaves al-Mushati al-%di" }
+		6 = { "Green Leaves al-Mushati al-%di" }
+		7 = { "Green Leaves al-Mushati al-%di" }
+		8 = { "Green Leaves al-Mushati al-%di" }
+		9 = { "Green Leaves al-Mushati al-%di" }
+		10 = { "Green Leaves al-Mushati al-%di" }
+		12 = { "Green Leaves al-Mushati al-%dr" }
+		13 = { "Green Leaves al-Mushati al-%dr" }
+		14 = { "Green Leaves al-Mushati al-%dr" }
+		15 = { "Green Leaves al-Mushati al-%dr" }
+		16 = { "Green Leaves al-Mushati al-%dr" }
+		17 = { "Green Leaves al-Mushati al-%dr" }
+		18 = { "Green Leaves al-Mushati al-%dr" }
+		19 = { "Green Leaves al-Mushati al-%dr" }
+		20 = { "Green Leaves al-Mushati al-%dr" }
+
+	}
+}
+
+WUG_ARM_01 = {
+	name = "Armoured Divisions"
+
+	for_countries = { WUG }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { WUG_CAV_01 }
+
+	fallback_name = "Green Leaves Sipahis al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Green Leaves Sipahis al-%di" }
+		2 = { "Green Leaves Sipahis al-%di" }
+		3 = { "Green Leaves Sipahis al-%di" }
+		4 = { "Green Leaves Sipahis al-%di" }
+		5 = { "Green Leaves Sipahis al-%di" }
+		6 = { "Green Leaves Sipahis al-%di" }
+		7 = { "Green Leaves Sipahis al-%di" }
+		8 = { "Green Leaves Sipahis al-%di" }
+		9 = { "Green Leaves Sipahis al-%di" }
+		10 = { "Green Leaves Sipahis al-%di" }
+		11 = { "Green Leaves Sipahis al-%dr" }
+		12 = { "Green Leaves Sipahis al-%dr" }
+		13 = { "Green Leaves Sipahis al-%dr" }
+		14 = { "Green Leaves Sipahis al-%dr" }
+		15 = { "Green Leaves Sipahis al-%dr" }
+
+	}
+}
+
+WUG_MEC_01 = {
+	name = "Mechanised Divisions"
+
+	for_countries = { WUG }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized"  }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { WUG_INF_01 }
+
+	fallback_name = "Green Leaves al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Alquwwat Almusallahat Alssultan" }
+		2 = { "Green Leaves al-Mushati al-%di" }
+		3 = { "Green Leaves al-Mushati al-%di" }
+		4 = { "Green Leaves al-Mushati al-%di" }
+		5 = { "Green Leaves al-Mushati al-%di" }
+		6 = { "Green Leaves al-Mushati al-%di" }
+		7 = { "Green Leaves al-Mushati al-%di" }
+		8 = { "Green Leaves al-Mushati al-%di" }
+		9 = { "Green Leaves al-Mushati al-%di" }
+		10 = { "Green Leaves al-Mushati al-%di" }
+		12 = { "Green Leaves al-Mushati al-%dr" }
+		13 = { "Green Leaves al-Mushati al-%dr" }
+		14 = { "Green Leaves al-Mushati al-%dr" }
+		15 = { "Green Leaves al-Mushati al-%dr" }
+		16 = { "Green Leaves al-Mushati al-%dr" }
+		17 = { "Green Leaves al-Mushati al-%dr" }
+		18 = { "Green Leaves al-Mushati al-%dr" }
+		19 = { "Green Leaves al-Mushati al-%dr" }
+		20 = { "Green Leaves al-Mushati al-%dr" }
+
+	}
+}
+
+WUG_GAR_01 = {
+	name = "Garrison Divisions"
+
+	for_countries = { WUG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { WUG_INF_01 }
+
+	fallback_name = "Green Leaves al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Alquwwat Almusallahat Alssultan" }
+		2 = { "Green Leaves al-Mushati al-%di" }
+		3 = { "Green Leaves al-Mushati al-%di" }
+		4 = { "Green Leaves al-Mushati al-%di" }
+		5 = { "Green Leaves al-Mushati al-%di" }
+		6 = { "Green Leaves al-Mushati al-%di" }
+		7 = { "Green Leaves al-Mushati al-%di" }
+		8 = { "Green Leaves al-Mushati al-%di" }
+		9 = { "Green Leaves al-Mushati al-%di" }
+		10 = { "Green Leaves al-Mushati al-%di" }
+		12 = { "Green Leaves al-Mushati al-%dr" }
+		13 = { "Green Leaves al-Mushati al-%dr" }
+		14 = { "Green Leaves al-Mushati al-%dr" }
+		15 = { "Green Leaves al-Mushati al-%dr" }
+		16 = { "Green Leaves al-Mushati al-%dr" }
+		17 = { "Green Leaves al-Mushati al-%dr" }
+		18 = { "Green Leaves al-Mushati al-%dr" }
+		19 = { "Green Leaves al-Mushati al-%dr" }
+		20 = { "Green Leaves al-Mushati al-%dr" }
+
+	}
+}
+
+WUG_MAR_01 = {
+	name = "Marine Divisions"
+
+	for_countries = { WUG }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" "amphibious_armor" "amphibious_mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { WUG_INF_01 }
+
+	fallback_name = "Green Leaves al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		20 = { "Green Leaves al-Mushati al-%dr" }
+		21 = { "Green Leaves al-Mushati al-%dr" }
+		22 = { "Green Leaves al-Mushati al-%dr" }
+		23 = { "Green Leaves al-Mushati al-%dr" }
+		24 = { "Green Leaves al-Mushati al-%dr" }
+		25 = { "Green Leaves al-Mushati al-%dr" }
+		26 = { "Green Leaves al-Mushati al-%dr" }
+		27 = { "Green Leaves al-Mushati al-%dr" }
+		28 = { "Green Leaves al-Mushati al-%dr" }
+		29 = { "Green Leaves al-Mushati al-%dr" }
+		30 = { "Green Leaves al-Mushati al-%dr" }
+
+	}
+}
+
+WUG_MTN_01 = {
+	name = "Mountain Divisions"
+
+	for_countries = { WUG }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { WUG_INF_01 }
+
+	fallback_name = "Green Leaves al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		20 = { "Green Leaves al-Mushati al-%dr" }
+		21 = { "Green Leaves al-Mushati al-%dr" }
+		22 = { "Green Leaves al-Mushati al-%dr" }
+		23 = { "Green Leaves al-Mushati al-%dr" }
+		24 = { "Green Leaves al-Mushati al-%dr" }
+		25 = { "Green Leaves al-Mushati al-%dr" }
+		26 = { "Green Leaves al-Mushati al-%dr" }
+		27 = { "Green Leaves al-Mushati al-%dr" }
+		28 = { "Green Leaves al-Mushati al-%dr" }
+		29 = { "Green Leaves al-Mushati al-%dr" }
+		30 = { "Green Leaves al-Mushati al-%dr" }
+
+	}
+}
+
+WUG_PAR_01 = {
+	name = "Paratrooper Divisions"
+
+	for_countries = { WUG }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { WUG_INF_01 }
+
+	fallback_name = "Green Leaves al-Mushati al-%dr"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		20 = { "Green Leaves al-Mushati al-%dr" }
+		21 = { "Green Leaves al-Mushati al-%dr" }
+		22 = { "Green Leaves al-Mushati al-%dr" }
+		23 = { "Green Leaves al-Mushati al-%dr" }
+		24 = { "Green Leaves al-Mushati al-%dr" }
+		25 = { "Green Leaves al-Mushati al-%dr" }
+		26 = { "Green Leaves al-Mushati al-%dr" }
+		27 = { "Green Leaves al-Mushati al-%dr" }
+		28 = { "Green Leaves al-Mushati al-%dr" }
+		29 = { "Green Leaves al-Mushati al-%dr" }
+		30 = { "Green Leaves al-Mushati al-%dr" }
+
+	}
+}

@@ -1,0 +1,77 @@
+IMA_haruka_not_fired = {
+	has_country_flag = IMA_haruka_exist
+	has_country_leader = {
+		character = IMA_amami_haruka
+		ruling_only = yes
+	}
+}
+
+#아이마스 커먼웰스 관련
+commonwealth_leader_exist = {
+	custom_trigger_tooltip = {
+		tooltip = commonwealth_leader_tt
+		OR = {
+			AND = {
+				original_tag = IMA
+				has_country_flag = commonwealth_leader
+			}
+			AND = {
+				original_tag = ICG
+				has_country_flag = commonwealth_leader
+			}
+			AND = {
+				original_tag = IML
+				has_country_flag = commonwealth_leader
+			}
+			AND = {
+				original_tag = ISC
+				has_country_flag = commonwealth_leader
+			}
+			AND = {
+				original_tag = ISM
+				has_country_flag = commonwealth_leader
+			}
+			AND = {
+				original_tag = IDS
+				has_country_flag = commonwealth_leader
+			}
+			AND = {
+				original_tag = IGM
+				has_country_flag = commonwealth_leader
+			}
+		}
+		NOT = { has_global_flag = Idolmaster_commonwealth_formed }
+	}
+}
+
+commonwealth_leader_possible = {
+	custom_trigger_tooltip = {
+		tooltip = commonwealth_leader_check_tt
+		is_imas = yes
+		is_faction_leader = yes
+		commonwealth_leader_exist = no
+		has_country_flag = commonwealth_leader_possible
+		NOT = { has_global_flag = Idolmaster_commonwealth_formed }
+	}
+}
+
+commonwealth_member_possible = {
+	custom_trigger_tooltip = {
+		tooltip = commonwealth_member_check_tt
+		commonwealth_leader_exist = yes
+		NOT = { has_dynamic_modifier = { modifier = IMA_commonwealth } }
+		OR = {
+			is_in_faction_with = IMA
+			is_subject_of = IMA
+		}
+		has_global_flag = Idolmaster_commonwealth_formed
+	}
+}
+
+commomwealth_joined = {
+	custom_trigger_tooltip = {
+		tooltip = commomwealth_joined_tt
+		has_global_flag = Idolmaster_commonwealth_formed
+		has_dynamic_modifier = { modifier = IMA_commonwealth }
+	}
+}

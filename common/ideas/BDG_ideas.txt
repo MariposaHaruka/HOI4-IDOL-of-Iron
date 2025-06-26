@@ -1,0 +1,25 @@
+ideas = {
+	country = { 
+		BDG_disjointed_government = {
+			allowed = {
+				original_tag = BDG
+				always = no
+			}
+			allowed_civil_war = {
+				is_democratic = yes
+			}
+			removal_cost = -1
+			picture = generic_disjointed_gov
+			modifier = {
+				political_power_cost = 0.8
+				stability_factor = -0.10
+				surrender_limit = -0.5
+			}
+		}
+	}
+	tank_manufacturer = { }
+	naval_manufacturer = { }
+	aircraft_manufacturer = { }
+	industrial_concern = { }
+	materiel_manufacturer = { }
+}

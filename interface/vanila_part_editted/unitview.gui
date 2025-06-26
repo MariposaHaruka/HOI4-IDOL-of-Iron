@@ -363,7 +363,7 @@ guiTypes = {
 			name = "group_name"
 			position = {x=66 y=10}
 			size = {x=135 y=23}
-			font = "hoi_18"
+			font = "name_18"
 			text = ""
 			#maxWidth = 300
 			#maxHeight = 20
@@ -1419,7 +1419,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "unit_name"
 			position = {x=180 y=2}
-			font = "hoi_18"
+			font = "name_18"
 			maxWidth = 175
 			maxHeight = 23
 			format = left
@@ -1735,8 +1735,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "equipment_name"
-			position = { x =104 y = 0 }
-			font = "hoi_18mbs"
+			position = { x =104 y = -3 }
+			font = "name_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 110
@@ -1778,7 +1778,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "equipment_name"
 			position = { x = -75 y = -20 }
-			font = "hoi_24header"
+			font = "name_24header"
 			borderSize = {x = 0 y = 0}
 			text = "name"
 			fixedsize = yes
@@ -2138,7 +2138,7 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "base_stats_label"
-					position = { x = 5 y = 12 }
+					position = { x = 5 y = 17 }
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_BASE_STATS_LABEL"
 					maxWidth = 180
@@ -2148,7 +2148,7 @@ guiTypes = {
 
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 5 y = 36 }
+					position = { x = 5 y = 40 }
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -2164,7 +2164,7 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "combat_stats_label"
-					position = { x = 10 y = 12 }
+					position = { x = 10 y = 17 }
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_COMBAT_STATS_LABEL"
 					maxWidth = 165
@@ -2174,7 +2174,7 @@ guiTypes = {
 
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 10 y = 36 }
+					position = { x = 10 y = 40 }
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -2191,7 +2191,7 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "misc_stats_label"
-					position = { x = 10 y = 12 }
+					position = { x = 10 y = 17 }
 					font = "hoi4_typewriter22"
 					text = "FE_MISC_STATS"
 					maxWidth = 165
@@ -2201,7 +2201,7 @@ guiTypes = {
 
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 7 y = 36 }
+					position = { x = 7 y = 40 }
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -2504,7 +2504,7 @@ guiTypes = {
 			editBoxType = {
 				name = "editbox"
 				position = { x = 6 y = 5 }
-				font = "hoi_16mbs"
+				font = "name_16mbs"
 				size = { x=242 y=30 }
 			}
 
@@ -2700,7 +2700,7 @@ guiTypes = {
 			position = { x = 113 y = 42 }
 			size = {x=264 y=20}
 			#textureFile = ""
-			font = "hoi_20b"
+			font = "name_20b"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			#maxWidth = 300
@@ -2794,13 +2794,13 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "base_stats"
-				position = { x=10 y=15 }
+				position = { x=10 y=17 }
 				size = { width=165 height=200 }
 				clipping = no
 
 				instantTextboxType = {
 					name = "base_stats_label"
-					position = { x = 5 y = 14 }
+					position = { x = 5 y = 17 }
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_BASE_STATS_LABEL"
 					maxWidth = 170
@@ -2810,7 +2810,7 @@ guiTypes = {
 
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 5 y = 36 }
+					position = { x = 5 y = 40 }
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -2820,13 +2820,13 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "combat_stats"
-				position = { x=179 y=15 }
+				position = { x=179 y=17 }
 				size = { width=165 height=200 }
 				clipping = no
 
 				instantTextboxType = {
 					name = "combat_stats_label"
-					position = { x = 10 y = 14 }
+					position = { x = 10 y = 17 }
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_COMBAT_STATS_LABEL"
 					maxWidth = 170
@@ -2836,7 +2836,7 @@ guiTypes = {
 
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 8 y = 36 }
+					position = { x = 8 y = 40 }
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -2846,14 +2846,14 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "misc_stats"
-				position = { x=354 y=15 }
+				position = { x=354 y=17 }
 				size = { width=165 height=200 }
 				Orientation = UPPER_LEFT
 				clipping = no
 
 				instantTextboxType = {
 					name = "misc_stats_label"
-					position = { x = 10 y = 14 }
+					position = { x = 10 y = 17 }
 					font = "hoi4_typewriter22"
 					text = "FE_MISC_STATS"
 					maxWidth = 150
@@ -2863,7 +2863,7 @@ guiTypes = {
 
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 7 y = 36 }
+					position = { x = 7 y = 40 }
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -2891,7 +2891,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "air_wings"
-			position = { x=547 y=0}
+			position = { x=547 y=2}
 			size = { width=300 height=100%% }
 			margin = { bottom = 8 }
 			clipping = no
@@ -2978,7 +2978,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "count"
-			position = {x=80 y=19}
+			position = {x=80 y=24}
 			font = "hoi_18mbs"
 			maxWidth = 100
 			maxHeight = 23
@@ -2988,7 +2988,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "name"
-			position = {x=80 y=4}
+			position = {x=80 y=8}
 			font = "hoi_18mbs"
 			maxWidth = 185
 			maxHeight = 23

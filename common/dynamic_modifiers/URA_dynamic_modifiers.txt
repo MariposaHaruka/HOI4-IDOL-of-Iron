@@ -1,0 +1,19 @@
+URA_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_URA_dynamic_industry
+}
+
+URA_army = {
+	enable = { always = yes }
+	icon = GFX_idea_URA_dynamic_army
+}
+
+URA_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_URA_dynamic_naval
+}
+
+URA_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_URA_dynamic_airforce
+}

@@ -1,0 +1,37 @@
+IMA_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_IMA_dynamic_industry
+}
+
+IMA_army = {
+	enable = { always = yes }
+	icon = GFX_idea_IMA_dynamic_army
+}
+
+IMA_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_IMA_dynamic_naval
+}
+
+IMA_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_IMA_dynamic_airforce
+}
+
+IMA_colonial_economy = {
+	enable = { always = yes }
+	icon = GFX_idea_POL_succesful_four_year_plan
+}
+
+IMA_commonwealth = {
+	enable = { 
+		OR = {
+			original_tag = IMA
+			AND = {
+				is_subject_of = IMA
+				has_autonomy_state = ima_westminster_dominion
+			}
+		}
+	}
+	icon = GFX_idea_POL_succesful_four_year_plan
+}

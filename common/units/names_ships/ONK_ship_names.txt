@@ -1,0 +1,159 @@
+﻿### REGULAR DESTROYER NAMES###
+ONK_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { ONK }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	fallback_name = "Razrushitel %d"					
+
+	unique = {											
+		"Drazki" "Smeli" "Khrabri" "Strogi" "Letyashchi" "Shumni" "Bodri" "Zheleznyakov" "Georgi Dimitrov" "Vasil Levski" "Khristo Botev" "Nadezhda" 
+	}
+}
+
+### LIGHT CRUISER NAMES###
+ONK_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { ONK }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "ING "
+	
+	fallback_name = "Lek Kraitser %d"
+
+	unique = {
+		"Sofia" "Pernik" "Svoge" "Slivnica" "Breznik" "Radomir" "Shipka" "Svetlinen Kraitser"
+	}
+}
+
+### HEAVY CRUISER NAMES###
+ONK_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { ONK }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "ING "
+	
+	fallback_name = "Tezhuk Kraitser %d"
+
+	unique = {
+		"Sofia" "Pernik" "Svoge" "Slivnica" "Breznik" "Radomir" "Shipka"
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+ONK_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { ONK }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "ING "
+
+
+	fallback_name = "Lineen Korab %d"		
+
+	unique = {
+		"Vasil Levsky" "Hristo Botev" "Georgi Benkovsky" "Georgi Rakovsky" "Lyuben Karavelov" "Stefan Stambolov" "Zahari Stoyanov" "Rayna Knyagina" "Panayot Hitov" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+ONK_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { ONK }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "ING "
+	
+	fallback_name = "Boen Kraitser %d"		
+
+	unique = {
+		"Shipka" "Doyran" "Slivnitsa" "Odrin" "Tutrakan" "Karapelit" "Sheynovo" "Lule-Burgaz" "Pleven" "Vidin" "Ongal"
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+ONK_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { ONK }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "ING "
+	
+	fallback_name = "Samoletonosach %d"	
+
+	unique = {
+		"Nadezhda" "General Vladimir Vazov" "General Georgi Todorov" "General Stefan Toshev" "General Panteley Kiselov" "General Ivan Kolev" "General Aleksandar Protogerov" "Mayor Boris Drangov" "General Boris Vazov"  
+	}
+}
+
+### SUBMARINES ###
+ONK_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { ONK }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "ING "
+	
+	fallback_name = "Podvodnitsa %d"
+	
+	unique = {
+		"Slava" "Pobeda" "Drazki" "Smeli" "Khrabri" "Strogi" "Letyashchi" "Shumni" 
+	}
+}
+
+### THEME: BULGARIAN PROVINCES ###
+ONK_PROVINCES = {
+	name = NAME_THEME_PROVINCES
+
+	for_countries = { ONK }
+	
+	prefix = "ING "
+
+	type = ship
+
+	unique = {
+		"Chernomorets" "Belomorets" "Sofia" "Plovdiv" "Varna" "Burgas" "Ruse" "Stara Zagora" "Pleven" "Haskovo" "Lovech" "Ferdinand" "Razgrad" "Gorna Dzhumaya" 
+		"Pazardzhik" "Veliko Tarnovo" "Vratsa" "Sliven" "Dobrich" "Shumen" "Kardzhali" "Kyustendil" "Yambol" "Pernik" "Gabrovo" 
+		"Silistra" "Smolyan" "Targovishte" "Vidin" 
+	}
+}
+
+## THEME: BULGARIAN CITIES ###
+ONK_CITIES = {
+	name = NAME_THEME_CITIES
+
+	for_countries = { ONK }
+	
+	prefix = "ING "
+
+	type = ship
+
+	unique = {
+		"Sofia" "Plovdiv" "Varna" "Burgas" "Ruse" "Stara Zagora" "Pleven" "Dobrich" "Sliven" "Shumen" "Pernik" "Haskovo" "Yambol" "Pazardzhik" 
+		"Gorna Dzhumaya" "Veliko Tarnovo" "Vratsa" "Gabrovo" "Asenovgrad" "Vidin" "Kazanlak" "Kyustendil" "Kardzhali" "Ferdinand" "Dimitrovgrad" "Targovishte" "Lovech" 
+		"Silistra" "Dupnitsa" "Svishtov" "Razgrad" "Gorna Oryahovitsa" "Smolyan" "Petrich" "Sandanski" "Samokov" "Sevlievo" "Lom" 
+	}
+}

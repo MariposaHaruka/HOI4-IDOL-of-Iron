@@ -3,6 +3,20 @@ capital = 500
 
 #부대
 set_oob = "FGO_ar"
+if = {
+	limit = { has_MtG = yes }
+	set_naval_oob = "FGO_na_MtG"
+	else = {
+		set_naval_oob = "FGO_na"
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "FGO_ai_BBA"
+	else = {
+		set_air_oob = "FGO_ai"
+	}
+}
 starting_train_buffer = 2
 add_command_power = 10
 set_fuel_ratio = 0.5
@@ -73,6 +87,11 @@ set_convoys = 40
 
 add_ideas = agrarian_society
 
+add_dynamic_modifier = { modifier = FGO_industry }
+add_dynamic_modifier = { modifier = FGO_army }
+add_dynamic_modifier = { modifier = FGO_navy }
+add_dynamic_modifier = { modifier = FGO_air_force }
+
 #외교
 
 #정치 상황
@@ -102,6 +121,14 @@ set_popularities = {
 #의회
 
 #캐릭터 
+recruit_character = FGO_dummy_CON #더미
+recruit_character = FGO_dummy_LIB #더미
+recruit_character = FGO_dummy_PRO #더미
+recruit_character = FGO_dummy_SOD #더미
+recruit_character = FGO_dummy_FAS #더미
+recruit_character = FGO_dummy_MIL #더미
+recruit_character = FGO_dummy_AUD #더미
+recruit_character = FGO_dummy_AUT #더미
 recruit_character = FGO_olgamally_animusphere
 
 #장관진

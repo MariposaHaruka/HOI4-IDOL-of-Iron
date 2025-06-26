@@ -1,0 +1,39 @@
+﻿
+
+### Air Wings
+air_wings = {
+	# Luchtvaartafdeling -- NONE
+	# Note: All European aircraft were built by Fokker or ordered from USA starting in 1938
+
+	# Militaire Luchtvaart van het Koninklijk Nederlands-Indisch Leger (ML-KNIL) -- Celebes
+	# Note: ML-KNIL would increase in size during 1937-40 with USA models:
+	#	Curtis P-36 Hawks (H-75), CW-21 Interceptors, Brewster Buffaloes, Martin B-10s (WH-1--WH-3s)
+	673 = {
+		fighter_equipment_0 = {		# Curtis P-6
+			owner = "STR" 
+			amount = 12
+		}
+	}
+	
+	6 = {
+		# 2e Régiment d'Aéronautique 
+		# Consisted of 50 operational Gladiator Is, Hurricanes, CR.42s in 1940
+		# Only had Fairey Fox recon/l bombers that were also used as fighters in 1936, along with trainers
+		fighter_equipment_0 =  {
+			owner = "STR" 
+			amount = 43
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "STR"
+		}
+		requested_factories = 1
+		progress = 0.85
+		efficiency = 100
+	}
+}

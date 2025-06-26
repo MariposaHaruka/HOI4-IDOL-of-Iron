@@ -1,0 +1,19 @@
+LOC_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_LOC_dynamic_industry
+}
+
+LOC_army = {
+	enable = { always = yes }
+	icon = GFX_idea_LOC_dynamic_army
+}
+
+LOC_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_LOC_dynamic_naval
+}
+
+LOC_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_LOC_dynamic_airforce
+}

@@ -1,49 +1,43 @@
 ﻿division_template = {
-	name = "Infantry Division"		
-	division_names_group = USA_INF_01		# Uses generic English templates
-	# Note: Represents both regular infantry and militia units
+	name = "Infantry Brigade"		
+	division_names_group = Common_B_INFB_01		
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-        infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-	}
-	support = {
-       	engineer = { x = 0 y = 0 }
-       	artillery = { x = 0 y = 1 }
 	}
 }
-
-
 
 units = {
-	
+	division = {
+		name = "Capital Defense Command"
+		location = 8214
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1580
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
 }
 
-
-### No air forces (small handful of various aircraft in 1935) ###
-
-#########################
-## STARTING PRODUCTION ##
-#########################
-
 instant_effect = {
-
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_0
 			creator = "AOP"
 		}
-		requested_factories = 2
-		progress = 0.1
-		efficiency = 50
+		requested_factories = 1
+		progress = 0.12
+		efficiency = 100
 	}
-
 }
-
-#################################

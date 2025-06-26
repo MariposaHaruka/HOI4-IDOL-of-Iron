@@ -1,0 +1,19 @@
+HDA_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_HDA_dynamic_industry
+}
+
+HDA_army = {
+	enable = { always = yes }
+	icon = GFX_idea_HDA_dynamic_army
+}
+
+HDA_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_HDA_dynamic_naval
+}
+
+HDA_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_HDA_dynamic_airforce
+}

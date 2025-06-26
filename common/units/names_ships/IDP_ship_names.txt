@@ -1,0 +1,123 @@
+##### IDPENTINA NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+IDP_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { IDP }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "HRA "
+	fallback_name = "Destructor %d"					
+
+	unique = {											
+		"Catamarca" "Jujuy" "Córdoba" "La Plata" "Cervantes" "Juan de Garay" "Mendoza" "La Rioja" "Tucumán" "Buenos Aires" "Entre Ríos" "Corrientes" "San Juan" 
+		"San Luis" "Misiones" "Santa Cruz" "Almirante Domecq García" "Brown" "Espora" "Rosales" "Almirante Storni" "Seguí" "Bouchard" "Piedra Buena" "Py" "Hércules" 
+		"Santísima Trinidad" "Santiago" "Rioja" "Salta" 
+	}
+}
+
+### LIGHT CRUISER NAMES###
+IDP_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { IDP }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "HRA "
+	fallback_name = "Crucero Ligero %d"
+
+	unique = {
+		"Libertad" "Independencia" "Guerrico" "Granville" "Rosales" "Spiro" "Parker" "Rosales" "Robinson" "Gómez Roca" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+IDP_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { IDP }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "HRA "
+	fallback_name = "Crucero Pesado %d"
+
+	unique = {
+		"Veinticinco de Mayo" "Almirante Brown" "Pueyrredon" "La Argentina" "General Belgrano" "Nueve de Julio" "Murature" "King" "Heroína" "Drummond" 
+		"Guerrico" "Granville" "Rosales" "Spiro" "Parker" "Rosales" "Robinson" "Gómez Roca" 
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+IDP_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { IDP }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "HRA "
+	fallback_name = "Acorazado %d"		
+
+	unique = {
+		"Rivadavia" "Moreno" "Azopardo" "Sarandí" "Espora"
+	}
+}
+
+### BATTLECRUISER NAMES ###
+IDP_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { IDP }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "HRA "
+	fallback_name = "Crucero de Batalla %d"		
+
+	unique = {
+		"Azopardo" "Sarandí" "Espora" "Rivadavia" "Moreno" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+IDP_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { IDP }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "HRA "
+	fallback_name = "Portaaviones %d"	
+
+	unique = {
+		"Independencia" "República" "General San Martín" 
+	}
+}
+
+### SUBMARINES ###
+IDP_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { IDP }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "HRA "
+	fallback_name = "Submarino %d"
+	
+	unique = {
+		"Santa Fe" "Santiago del Estero" "Salta" "San Luis" "Santa Cruz" "San Juan" 
+	}
+}

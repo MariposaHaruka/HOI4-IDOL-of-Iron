@@ -1,0 +1,73 @@
+#의회
+defined_text = {
+	name = GetParliamentPartyNameIML
+	text = {
+		trigger = { check_variable = { v = 1 } }
+		localization_key = IML_conservative
+	}
+	text = {
+		trigger = { check_variable = { v = 2 } }
+		localization_key = IML_liberal
+	}
+	text = {
+		trigger = { check_variable = { v = 3 } }
+		localization_key = IML_liberal_progressive
+	}
+	text = {
+		trigger = { check_variable = { v = 4 } }
+		localization_key = IML_co_operative_commonwealth
+	}
+	text = {
+		trigger = { check_variable = { v = 5 } }
+		localization_key = IML_labour
+	}
+	text = {
+		trigger = { check_variable = { v = 6 } }
+		localization_key = IML_communist
+	}
+	text = {
+		trigger = { check_variable = { v = 8 } }
+		localization_key = IML_producercommunist
+	}
+	text = {
+		trigger = { check_variable = { v = 9 } }
+		localization_key = IML_national_unity
+	}
+	text = {
+		trigger = { check_variable = { v = 11 } }
+		localization_key = IML_technocrat
+	}
+	text = {
+		trigger = { check_variable = { v = 12 } }
+		localization_key = IML_independent
+	}
+	text = {
+		localization_key = no_party
+	}
+}
+
+defined_text = {
+	name = GetCoallitionCheckIML
+	text = {
+		trigger = {
+			OR = {
+				is_in_coalition_with_conservatism = yes
+				is_in_coalition_with_liberalism = yes
+				is_in_coalition_with_progressivism = yes
+				is_in_coalition_with_socialdemocracy = yes
+				is_in_coalition_with_socialism = yes
+				is_in_coalition_with_communism = yes
+				is_in_coalition_with_authoritariancommunism = yes
+				is_in_coalition_with_anarchosyndicalism = yes
+				is_in_coalition_with_fascism = yes
+				is_in_coalition_with_militarytotalism = yes
+				is_in_coalition_with_authoritariandemocracy = yes
+				is_in_coalition_with_autocracy = yes
+			}
+		}
+		localization_key = is_in_coalition
+	}
+	text = {
+		localization_key = is_not_in_coalition
+	}
+}

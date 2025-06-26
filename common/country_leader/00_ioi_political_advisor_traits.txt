@@ -1,269 +1,170 @@
 leader_traits = {
-	### 기본 트레잇
 	conservatism_worker = { #보수주의자
-		random = no
+		random = yes
 		sprite = 13
 		conservatism_drift = 0.15
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				has_country_flag = ai_drift_to_conservatism
-				add = 10
+				ai_conservatism = yes
+				add = 100
+			}
+			modifier = {
+				has_completed_focus = maintain_political_stance
+				is_democratic = yes
+				NOT = { has_government = conservatism }
+				add = 50
 			}
 		}
 	}
 	liberalism_worker = { #자유주의자
-		random = no
+		random = yes
 		sprite = 13
 		liberalism_mod_drift = 0.15
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				has_country_flag = ai_drift_to_liberalism
-				add = 10
+				ai_liberalism = yes
+				add = 100
+			}
+			modifier = {
+				has_completed_focus = maintain_political_stance
+				is_democratic = yes
+				NOT = { has_government = liberalism_mod }
+				add = 50
 			}
 		}
 	}
 	progressivism_worker = { #진보주의자
-		random = no
+		random = yes
 		sprite = 13
 		progressivism_drift = 0.15
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				has_country_flag = ai_drift_to_progressivism
-				add = 10
+				ai_progressivism = yes
+				add = 100
+			}
+			modifier = {
+				has_completed_focus = maintain_political_stance
+				is_democratic = yes
+				NOT = { has_government = progressivism }
+				add = 50
 			}
 		}
 	}
 	socialdemocracy_worker = { #사민주의자
-		random = no
+		random = yes
 		sprite = 13
 		socialdemocracy_drift = 0.15
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				has_country_flag = ai_drift_to_socialdemocracy
-				add = 10
+				ai_socialdemocracy = yes
+				add = 100
+			}
+			modifier = {
+				has_completed_focus = maintain_political_stance
+				is_democratic = yes
+				NOT = { has_government = socialdemocracy }
+				add = 50
 			}
 		}
 	}
 	communism_revolutionary_worker = { #연속혁명 운동가
-		random = no
+		random = yes
 		sprite = 13
 		communism_drift = 0.15
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				has_country_flag = ai_drift_to_communism
-				add = 10
+				ai_communism = yes
+				add = 100
 			}
 		}
 	}
 	socialism_revolutionary_worker = { #사회주의자
-		random = no
+		random = yes
 		sprite = 13
 		socialism_drift = 0.15
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				has_country_flag = ai_drift_to_socialism
-				add = 10
+				ai_socialism = yes
+				add = 100
 			}
 		}
 	}
 	authoritariancommunism_revolutionary_worker = { #공산혁명 운동가
-		random = no
+		random = yes
 		sprite = 13
 		authoritariancommunism_drift = 0.15
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				has_country_flag = ai_drift_to_authoritariancommunism
-				add = 10
+				ai_authoritariancommunism = yes
+				add = 100
 			}
 		}
 	}
 	anarchosyndicalism_revolutionary_worker = { #아나키스트
-		random = no
+		random = yes
 		sprite = 13
 		anarchosyndicalism_drift = 0.15
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				has_country_flag = ai_drift_to_anarchosyndicalism
-				add = 10
+				ai_anarchosyndicalism = yes
+				add = 100
 			}
 		}
 	}
 	fanatic_fascist = { #파시스트 운동가
-		random = no
+		random = yes
 		sprite = 13
 		fascism_drift = 0.15
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				has_country_flag = ai_drift_to_fascism
-				add = 10
+				ai_fascism = yes
+				add = 100
 			}
 		}
 	}
 	fanatic_militarytotalism = { #군국주의 운동가
-		random = no
+		random = yes
 		sprite = 13
 		militarytotalism_drift = 0.15
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				has_country_flag = ai_drift_to_militarytotalism
-				add = 10
+				ai_militarytotalism = yes
+				add = 100
 			}
 		}
 	}
 	autocracy_royalist = { #왕당주의자
-		random = no
+		random = yes
 		sprite = 13
 		autocracy_drift = 0.15
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				has_country_flag = ai_drift_to_autocracy
-				add = 10
+				ai_autocracy = yes
+				add = 100
 			}
 		}
 	}
 	authoritarian_royalist = { #권위주의자
-		random = no
+		random = yes
 		sprite = 13
 		authoritariandemocracy_drift = 0.15
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				has_country_flag = ai_drift_to_authoritariandemocracy
-				add = 10
+				ai_authoritariandemocracy = yes
+				add = 100
 			}
 		}
-	}
-	popular_figurehead = { #인기있는 얼굴마담
-		sprite = 13
-		stability_factor = 0.15
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	silent_workhorse = { #조용한 일꾼
-		random = yes
-		sprite = 13
-		political_power_factor = 0.15
-		ai_will_do = {
-			factor = 10
-		}
-	}
-	head_of_intelligence = { #현혹적인 신사
-		random = no
-		sprite = 15
-		operative_slot = 1
-		agency_upgrade_time = -0.15
-	}
-
-	war_propagandist = { #전쟁론자
-		sprite = 13
-		war_support_factor = 0.1
-		offensive_war_stability_factor = 0.1
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				OR = {
-					has_country_flag = ai_drift_to_fascism
-					has_country_flag = ai_drift_to_militarytotalism
-					has_country_flag = ai_drift_to_communism
-					has_country_flag = ai_drift_to_anarchosyndicalism
-					has_country_flag = ai_drift_to_authoritariancommunism
-					has_country_flag = ai_drift_to_socialism
-				}
-				add = 10
-			}
-		}
-	}
-	war_industrialist = { #군수공업가
-		sprite = 10
-		random = yes
-		production_speed_arms_factory_factor = 0.15
-		production_speed_dockyard_factor = 0.15
-		production_speed_fuel_silo_factor = 0.15
-	}
-
-	### 기본 트레잇 - 인원 수 적은 국가 용
-	communist_revolutionary = { #공산주의 혁명가
-		random = no
-		sprite = 13
-		communism_drift = 0.0375
-		socialism_drift = 0.0375
-		anarchosyndicalism_drift = 0.0375
-		authoritariancommunism_drift = 0.0375
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				OR = {
-					has_country_flag = ai_drift_to_communism
-					has_country_flag = ai_drift_to_socialism
-					has_country_flag = ai_drift_to_anarchosyndicalism
-					has_country_flag = ai_drift_to_authoritariancommunism
-				}
-				add = 10
-			}
-		}
-	}
-	democratic_reformer = { #민주주의 개혁가
-		random = no
-		sprite = 13
-		conservatism_drift = 0.0375
-		liberalism_mod_drift = 0.0375
-		progressivism_drift = 0.0375
-		socialdemocracy_drift = 0.0375
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				OR = {
-					has_country_flag = ai_drift_to_conservatism
-					has_country_flag = ai_drift_to_liberalism
-					has_country_flag = ai_drift_to_progressivism
-					has_country_flag = ai_drift_to_socialdemocracy
-				}
-				add = 10
-			}
-		}
-	}
-	fascist_demagogue = { #파시즘 선동가
-		random = no
-		sprite = 13
-		fascism_drift = 0.075
-		militarytotalism_drift = 0.075
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				OR = {
-					has_country_flag = ai_drift_to_fascism
-					has_country_flag = ai_drift_to_militarytotalism
-				}
-				add = 10
-			}
-		}
-	}
-	staunch_authoritarian = { #확고한 권위주의자
-		random = no
-		sprite = 13
-		autocracy_drift = 0.075
-		authoritariandemocracy_drift = 0.075
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				has_country_flag = ai_drift_to_autocracy
-				add = 10
-			}
-		}
-	}
-
-	### 메이저 국가용 트레잇
-	
+	}	
 }

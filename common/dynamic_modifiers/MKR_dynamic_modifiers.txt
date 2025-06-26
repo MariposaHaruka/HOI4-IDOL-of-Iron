@@ -1,0 +1,19 @@
+MKR_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_MKR_dynamic_industry
+}
+
+MKR_army = {
+	enable = { always = yes }
+	icon = GFX_idea_MKR_dynamic_army
+}
+
+MKR_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_MKR_dynamic_naval
+}
+
+MKR_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_MKR_dynamic_airforce
+}

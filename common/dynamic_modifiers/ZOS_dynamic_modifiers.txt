@@ -1,0 +1,19 @@
+ZOS_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_ZOS_dynamic_industry
+}
+
+ZOS_army = {
+	enable = { always = yes }
+	icon = GFX_idea_ZOS_dynamic_army
+}
+
+ZOS_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_ZOS_dynamic_naval
+}
+
+ZOS_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_ZOS_dynamic_airforce
+}

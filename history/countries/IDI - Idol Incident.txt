@@ -20,10 +20,13 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 10
 
 #국민 정신
-add_ideas = direct_election
-add_ideas = single_parliament
-
-add_ideas = agrarian_society
+add_ideas = {
+	agrarian_society
+}
+add_dynamic_modifier = { modifier = IDI_industry }
+add_dynamic_modifier = { modifier = IDI_army }
+add_dynamic_modifier = { modifier = IDI_navy }
+add_dynamic_modifier = { modifier = IDI_air_force }
 
 #정치 상황
 set_stability = 0.5

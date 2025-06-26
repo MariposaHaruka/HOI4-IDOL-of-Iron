@@ -7,7 +7,7 @@ starting_train_buffer = 2
 add_command_power = 25
 set_fuel_ratio = 0.1
 
-
+set_country_flag = no_naval_academy
 
 #시작 기술
 set_research_slots = 2
@@ -25,8 +25,11 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 5
 
 #국민 정신
-
 add_ideas = agrarian_society
+
+add_dynamic_modifier = { modifier = MCR_industry }
+add_dynamic_modifier = { modifier = MCR_army }
+add_dynamic_modifier = { modifier = MCR_air_force }
 
 #외교
 

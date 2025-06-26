@@ -1,0 +1,26 @@
+guiTypes = {
+	containerWindowType = {
+		name = "group_state_system"
+		iconType = {
+			name = "group_state_system_header"
+			spriteType = GFX_group_state_header
+			position = { x = 5 y = -30 }
+			alwaystransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "BLA_group_state_system"
+		instantTextBoxType = {
+			name = "BLA_group_state_name"
+			text = "[THIS.GetBLASchoolName]"
+			font = hoi_24header
+			format = center
+
+			position = { x = 80 y = -15 }
+			maxWidth = 330
+			maxHeight = 30
+		}
+	}
+}
+

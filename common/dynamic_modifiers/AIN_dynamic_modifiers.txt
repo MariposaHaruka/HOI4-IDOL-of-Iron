@@ -1,0 +1,19 @@
+AIN_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_AIN_dynamic_industry
+}
+
+AIN_army = {
+	enable = { always = yes }
+	icon = GFX_idea_AIN_dynamic_army
+}
+
+AIN_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_AIN_dynamic_naval
+}
+
+AIN_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_AIN_dynamic_airforce
+}

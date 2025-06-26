@@ -1,0 +1,1991 @@
+	shared_focus = {
+		id = IMA_shared_00001 #커먼웰스의 남코연방
+		icon = GFX_focus_IMA_shared_00001
+		cost = 5
+		dynamic = yes
+		text_icon = Commonwealth_IMA_style
+		allow_branch = { always = yes }
+
+		#이대로면 해당 중점은 남코 연방 중점 (21,13) 에서 중점이 나옵니다
+		x = 21
+		y = 13
+
+		offset = { #임시 위치, 이대로면 해당 중점은 (9,0) 에서 중점이 나옵니다
+			x = -12
+			y = -13
+			trigger = {
+				OR = {
+					has_focus_tree = ICG_focus
+					has_focus_tree = IML_focus
+					has_focus_tree = ISC_focus
+					has_focus_tree = ISM_focus
+					has_focus_tree = IDS_focus
+					has_focus_tree = IGM_focus
+				}
+			}
+		}
+
+		offset = { #이대로면 해당 중점은 하츠보시 자치령 중점 (18,10) 에서 중점이 나옵니다
+			x = 9
+			y = 10
+			trigger = {
+				has_focus_tree = IGM_focus
+			}
+		}
+		
+		#offset = { #이대로면 해당 중점은  (18,10) 에서 중점이 나옵니다
+		#	x = 9
+		#	y = 10
+		#	trigger = {
+		#		is_subject_of = IMA
+		#	}
+		#}
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_42008 focus = IMA_43007 }
+		available_if_capitulated = yes
+		available = {
+			original_tag = IMA
+			OR = {
+				commonwealth_leader_possible = yes
+				commonwealth_member_possible = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00001"
+			IMA = { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			custom_effect_tooltip = commonwealth_effect_tt
+			hidden_effect = {
+				if = {
+					limit = { commonwealth_leader_exist = no }
+					set_global_flag = Idolmaster_commonwealth_formed
+					IMA = { set_country_flag = commonwealth_leader }
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = IMA_shared_00002 #커먼웰스의 츠바사 자치령
+		icon = {
+			trigger = { 
+				ISC = { is_subject_of = IMA }
+			}
+			value = GFX_focus_IMA_shared_00002a
+		}
+		icon = {
+			value = GFX_focus_IMA_shared_00002b
+		}
+		cost = 5
+		text_icon = Commonwealth_ISC_style
+
+		x = -9
+		y = 0
+		relative_position_id = IMA_shared_00001
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		available = {
+			original_tag = ISC
+			OR = {
+				commonwealth_leader_possible = yes
+				commonwealth_member_possible = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00002"
+			ISC = { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			custom_effect_tooltip = commonwealth_effect_tt
+			hidden_effect = {
+				if = {
+					limit = { commonwealth_leader_exist = no }
+					set_global_flag = Idolmaster_commonwealth_formed
+					ISC = { set_country_flag = commonwealth_leader }
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = IMA_shared_00003 #커먼웰스의 사이코 자치령
+		icon = {
+			trigger = { 
+				ISM = { is_subject_of = IMA }
+			}
+			value = GFX_focus_IMA_shared_00003a
+		}
+		icon = {
+			value = GFX_focus_IMA_shared_00003b
+		}
+		cost = 5
+		text_icon = Commonwealth_ISM_style
+
+		x = -6
+		y = 0
+		relative_position_id = IMA_shared_00001
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		available = {
+			original_tag = ISM
+			OR = {
+				commonwealth_leader_possible = yes
+				commonwealth_member_possible = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00003"
+			ISM = { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			custom_effect_tooltip = commonwealth_effect_tt
+			hidden_effect = {
+				if = {
+					limit = { commonwealth_leader_exist = no }
+					set_global_flag = Idolmaster_commonwealth_formed
+					IML = { set_country_flag = commonwealth_leader }
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = IMA_shared_00004 #커먼웰스의 밀리언 자치령
+		icon = {
+			trigger = { 
+				IML = { is_subject_of = IMA }
+			}
+			value = GFX_focus_IMA_shared_00004a
+		}
+		icon = {
+			value = GFX_focus_IMA_shared_00004b
+		}
+		cost = 5
+		text_icon = Commonwealth_IML_style
+
+		x = -3
+		y = 0
+		relative_position_id = IMA_shared_00001
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		available = {
+			original_tag = IML
+			OR = {
+				commonwealth_leader_possible = yes
+				commonwealth_member_possible = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00004"
+			IML = { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			custom_effect_tooltip = commonwealth_effect_tt
+			hidden_effect = {
+				if = {
+					limit = { commonwealth_leader_exist = no }
+					set_global_flag = Idolmaster_commonwealth_formed
+					IML = { set_country_flag = commonwealth_leader }
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = IMA_shared_00005 #커먼웰스의 미시로 자치령
+		icon = {
+			trigger = { 
+				ICG = { is_subject_of = IMA }
+			}
+			value = GFX_focus_IMA_shared_00005a
+		}
+		icon = {
+			value = GFX_focus_IMA_shared_00005b
+		}
+		cost = 5
+		text_icon = Commonwealth_ICG_style
+
+		x = 3
+		y = 0
+		relative_position_id = IMA_shared_00001
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		available = {
+			original_tag = ICG
+			OR = {
+				commonwealth_leader_possible = yes
+				commonwealth_member_possible = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00005"
+			ICG = { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			custom_effect_tooltip = commonwealth_effect_tt
+			hidden_effect = {
+				if = {
+					limit = { commonwealth_leader_exist = no }
+					set_global_flag = Idolmaster_commonwealth_formed
+					ICG = { set_country_flag = commonwealth_leader }
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = IMA_shared_00006 #커먼웰스의 디어리 자치령
+		icon = {
+			trigger = { 
+				IDS = { is_subject_of = IMA }
+			}
+			value = GFX_focus_IMA_shared_00006a
+		}
+		icon = {
+			value = GFX_focus_IMA_shared_00006b
+		}
+		cost = 5
+		text_icon = Commonwealth_IDS_style
+
+		x = 6
+		y = 0
+		relative_position_id = IMA_shared_00001
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		available = {
+			original_tag = IDS
+			OR = {
+				commonwealth_leader_possible = yes
+				commonwealth_member_possible = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00006"
+			IDS = { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			custom_effect_tooltip = commonwealth_effect_tt
+			hidden_effect = {
+				if = {
+					limit = { commonwealth_leader_exist = no }
+					set_global_flag = Idolmaster_commonwealth_formed
+					IDS = { set_country_flag = commonwealth_leader }
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = IMA_shared_00007 #커먼웰스의 하츠보시 자치령
+		icon = {
+			trigger = { 
+				IGM = { is_subject_of = IMA }
+			}
+			value = GFX_focus_IMA_shared_00007a
+		}
+		icon = {
+			value = GFX_focus_IMA_shared_00007b
+		}
+		cost = 5
+		text_icon = Commonwealth_IGM_style
+
+		x = 9
+		y = 0
+		relative_position_id = IMA_shared_00001
+
+		ai_will_do = { factor = 50 }
+		available_if_capitulated = yes
+		available = {
+			original_tag = IGM
+			OR = {
+				commonwealth_leader_possible = yes
+				commonwealth_member_possible = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00007"
+			IGM= { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			custom_effect_tooltip = commonwealth_effect_tt
+			hidden_effect = {
+				if = {
+					limit = { commonwealth_leader_exist = no }
+					set_global_flag = Idolmaster_commonwealth_formed
+					IGM = { set_country_flag = commonwealth_leader }
+				}
+			}
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_10001 #연합군 사령부
+		icon = GFX_focus_IMA_shared_10001
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -14
+		y = 1
+		relative_position_id = IMA_shared_00001
+
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_00001 focus = IMA_shared_00002 focus = IMA_shared_00003 focus = IMA_shared_00004 focus = IMA_shared_00005 focus = IMA_shared_00006 focus = IMA_shared_00007 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_10001"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_11001 #연합 공군 사령부
+		icon = GFX_focus_IMA_shared_11001
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -4
+		y = 1
+		relative_position_id = IMA_shared_10001
+
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_10001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11001"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_12001 #연합 해군 사령부
+		icon = GFX_focus_IMA_shared_12001
+		cost = 5
+
+		x =2
+		y = 1
+		relative_position_id = IMA_shared_10001
+
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_10001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12001"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_13001 #연합 특수전 사령부
+		icon = GFX_focus_IMA_shared_13001
+		cost = 5
+		text_icon = joint_focus_style
+
+		x = 8
+		y = 1
+		relative_position_id = IMA_shared_10001
+
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_10001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_13001"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_14001 #연합 육군 사령부
+		icon = GFX_focus_IMA_shared_14001
+		cost = 5
+		text_icon = joint_focus_style
+
+		x = 12
+		y = 1
+		relative_position_id = IMA_shared_10001
+
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_10001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14001"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_11002 #합동 공군 훈련
+		icon = GFX_focus_IMA_shared_11001
+		cost = 5
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_11001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_11001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11002"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_11003 #연합 뇌격기 사령부
+		icon = GFX_focus_IMA_shared_11003
+		cost = 5
+		text_icon = Commonwealth_IMA_ICG_style
+	
+		x = -2
+		y = 1
+		relative_position_id = IMA_shared_11002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_11002 }
+		available = {
+			OR = {
+				AND = {
+					original_tag = IMA
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = ICG
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			IMA = { commomwealth_joined = no }
+			ICG = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11003"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_11004 #연합 폭격기 사령부
+		icon = GFX_focus_IMA_shared_11004
+		cost = 5
+		text_icon = Commonwealth_ICG_ISC_style
+	
+		x = 0
+		y = 1
+		relative_position_id = IMA_shared_11002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_11002 }
+		available = {
+			OR = {
+				AND = {
+					original_tag = ICG
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = ISC
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			ICG = { commomwealth_joined = no }
+			ISC = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11004"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_11005 #연합 전투기 사령부
+		icon = GFX_focus_IMA_shared_11005
+		cost = 5
+		text_icon = Commonwealth_IML_ISC_style
+	
+		x = 2
+		y = 1
+		relative_position_id = IMA_shared_11002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_11002 }
+		available = {
+			OR = {
+				AND = {
+					original_tag = IML
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = ISC
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			IML = { commomwealth_joined = no }
+			ISC = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11005"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_11006 #커먼웰스 항공기 생산 계획
+		icon = GFX_focus_generic_aircraft_production
+		cost = 5
+		text_icon = Commonwealth_IMA_style
+	
+		x = 0
+		y = 1
+		relative_position_id = IMA_shared_11004
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_11003 }
+		prerequisite = { focus = IMA_shared_11004 }
+		prerequisite = { focus = IMA_shared_11005 }
+		available = {
+			original_tag = IMA
+			IMA = { commomwealth_joined = yes }
+		}
+		bypass = {
+			IMA = { commomwealth_joined = no }
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = yes
+		bypass = {
+			IMA = { commomwealth_joined = no }
+		}
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11006"
+			if = {
+				limit = { any_country = { commomwealth_joined = yes } }
+				custom_effect_tooltip = { 
+					localization_key = IMA_shared_11006_tt
+					add_ideas = commonwealth_aircraft_discount
+				}
+			}
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_11051 #공군 비행단 파견
+		icon = GFX_focus_IMA_shared_11051
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 2
+		y = 1
+		relative_position_id = IMA_shared_11001
+		mutually_exclusive = { focus = IMA_shared_12051 }
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_11001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11051"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_12051 #연합 해군항공대 창설
+		icon = GFX_focus_IMA_shared_12051
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -2
+		y = 1
+		relative_position_id = IMA_shared_12001
+		mutually_exclusive = { focus = IMA_shared_11051 }
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_12001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12051"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_12052 #연합 항모전단
+		icon = GFX_focus_IMA_shared_12052
+		cost = 5
+		text_icon = Commonwealth_IMA_ICG_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_11051
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_11051 focus = IMA_shared_12051 }
+		available = {
+			OR = {
+				AND = {
+					original_tag = IMA
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = ICG
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			IMA = { commomwealth_joined = no }
+			ICG = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12052"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_12002 #합동 해군 훈련
+		icon = GFX_focus_IMA_shared_12002
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 2
+		y = 1
+		relative_position_id = IMA_shared_12001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_12001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12002"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_12003 #태평양 제해권 확보
+		icon = GFX_focus_IMA_shared_12003
+		cost = 5
+		text_icon = Commonwealth_ICG_ISC_style
+	
+		x = -3
+		y = 1
+		relative_position_id = IMA_shared_12002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_12002 }
+		available = {
+			OR = {
+				AND = {
+					original_tag = ICG
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = ISC
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			ICG = { commomwealth_joined = no }
+			ISC = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12003"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_12004 #대서양 제해권 확보
+		icon = GFX_focus_IMA_shared_12004
+		cost = 5
+		text_icon = Commonwealth_IMA_IML_style
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_12002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_12002 }
+		available = {
+			OR = {
+				AND = {
+					original_tag = IMA
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = IML
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			IMA = { commomwealth_joined = no }
+			IML = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12004"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_12005 #인도양 제해권 확보
+		icon = GFX_focus_IMA_shared_12005
+		cost = 5
+		text_icon = Commonwealth_ISM_IGM_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_12002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_12002 }
+		available = {
+			OR = {
+				AND = {
+					original_tag = ISM
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = IGM
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			ISM = { commomwealth_joined = no }
+			IGM = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12005"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_12006 #빈슨 계획
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		cost = 5
+		text_icon = Commonwealth_ICG_style
+	
+		x = 0
+		y = 2
+		relative_position_id = IMA_shared_12002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_12003 }
+		prerequisite = { focus = IMA_shared_12004 }
+		prerequisite = { focus = IMA_shared_12005 }
+		available = {
+			original_tag = ICG
+			commomwealth_joined = yes
+		}
+		bypass = {
+			ICG = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12006"
+			if = {
+				limit = { any_country = { commomwealth_joined = yes } }
+				custom_effect_tooltip = { 
+					localization_key = IMA_shared_12006_tt
+					add_ideas = commonwealth_ship_discount
+				}
+			}
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_13012 #연합 공수전 사령부
+		icon = GFX_focus_IMA_shared_13002
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_13001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_13001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_13012"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_13013 #제1 연합공수군
+		icon = GFX_focus_IMA
+		cost = 5
+		text_icon = Commonwealth_IMA_IML_style
+	
+		x = 0
+		y = 1
+		relative_position_id = IMA_shared_13012
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_13012 }
+		available = {
+			OR = {
+				AND = {
+					original_tag = IMA
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = IML
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			IMA = { commomwealth_joined = no }
+			IML = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_13013"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_13022 #연합 해병대 사령부
+		icon = GFX_focus_IMA
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_13001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_13001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_13022"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_13023 #갈리폴리의 반성
+		icon = GFX_focus_IMA_shared_13023
+		cost = 5
+		text_icon = Commonwealth_ICG_ISC_style
+	
+		x = 0
+		y = 1
+		relative_position_id = IMA_shared_13022
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_13022 }
+		available = {
+			OR = {
+				AND = {
+					original_tag = ICG
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = ISC
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			ICG = { commomwealth_joined = no }
+			ISC = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_13023"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_14002 #합동 작전 훈련
+		icon = GFX_focus_IMA_shared_14002
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_14001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_14001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14002"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_14003 #합동 기동 훈련
+		icon = GFX_focus_IMA_shared_14003
+		cost = 5
+		text_icon = Commonwealth_ICG_IML_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_14001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_14001 }
+		available = { 
+			OR = {
+				AND = {
+					original_tag = ICG
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = IML
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			ICG = { commomwealth_joined = no }
+			IML = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14003"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_14004 #제15 집단군
+		icon = GFX_focus_IMA_shared_14004
+		cost = 5
+		text_icon = Commonwealth_IMA_style
+	
+		x = 0
+		y = 1
+		relative_position_id = IMA_shared_14002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_14002 }
+		available = { 
+			original_tag = IMA
+			commomwealth_joined = yes
+		}
+		bypass = {
+			IMA = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14004"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_14005 #연합 기갑군
+		icon = GFX_focus_IMA_shared_14005
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 0
+		y = 1
+		relative_position_id = IMA_shared_14003
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_14003 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14005"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_14006 #통합 모병
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 5
+		text_icon = Commonwealth_IML_ISM_style
+	
+		x = 1
+		y = 2
+		relative_position_id = IMA_shared_14002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_14004 }
+		prerequisite = { focus = IMA_shared_14005 }
+		available = { 
+			OR = {
+				AND = {
+					original_tag = IML
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = ISM
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			IML = { commomwealth_joined = no }
+			ISM = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14006"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_14007 #커먼웰스 기갑 생산위원회
+		icon = GFX_focus_generic_tank_production
+		cost = 5
+		text_icon = Commonwealth_IML_style
+	
+		x = 3
+		y = 2
+		relative_position_id = IMA_shared_14002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_14005 }
+		available = { 
+			original_tag = IML
+			commomwealth_joined = yes
+		}
+		bypass = {
+			IML = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14007"
+			if = {
+				limit = { any_country = { commomwealth_joined = yes } }
+				custom_effect_tooltip = { 
+					localization_key = IMA_shared_14007_tt
+					add_ideas = commonwealth_tank_discount
+				}
+			}
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_20001 #커먼웰스 정치협력
+		icon = GFX_focus_IMA_shared_20001
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_00001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_00001 focus = IMA_shared_00002 focus = IMA_shared_00003 focus = IMA_shared_00004 focus = IMA_shared_00005 focus = IMA_shared_00006 focus = IMA_shared_00007 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_20001"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_20002 #정보 공유
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_20001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_20001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_20002"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_20003 #커먼웰스 장관위원회
+		icon = GFX_focus_IMA_shared_20003
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_20001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_20001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_20003"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_20004 #커먼웰스 총리회의
+		icon = GFX_focus_IMA_shared_20004
+		cost = 5
+		text_icon = Commonwealth_IMA_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_20002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_20002 }
+		prerequisite = { focus = IMA_shared_20003 }
+		available = { 
+			commomwealth_joined = yes
+			original_tag = IMA
+		}
+		bypass = {
+			IMA = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_20004"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_30001 #커먼웰스 경제협력
+		icon = GFX_focus_IMA_shared_30001
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 5
+		y = 1
+		relative_position_id = IMA_shared_00001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_00001 focus = IMA_shared_00002 focus = IMA_shared_00003 focus = IMA_shared_00004 focus = IMA_shared_00005 focus = IMA_shared_00006 focus = IMA_shared_00007 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_30001"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_31001 #커먼웰스 산업발전 기금
+		icon = GFX_focus_IMA_shared_31001
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_30001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_30001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_31001"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_32001 #커먼웰스 경제개발위원회
+		icon = GFX_focus_IMA_shared_32001
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_30001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_30001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_32001"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_31002 #제조업 지원
+		icon = GFX_goal_generic_production2
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_31001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_31001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_31002"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_31003 #건설 예산
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_32001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_31001 }
+		prerequisite = { focus = IMA_shared_32001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_31003"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_32002 #커먼웰스 군수산업
+		icon = GFX_focus_IMA_shared_32002
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_32001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_32001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_32002"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_31004 #생활수준 개선
+		icon = GFX_focus_generic_low_cost_housing
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_31002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_31002 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_31004"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_31005 #기반시설 건설
+		icon = GFX_focus_generic_road_investment
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_31003
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_31002 }
+		prerequisite = { focus = IMA_shared_31003 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_31005"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_31006 #채굴시설 건설
+		icon = GFX_focus_generic_mining_industry
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_31003
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_31003 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_31006"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_31007 #라디오와 자동차
+		icon = GFX_focus_SWE_radiotjanst
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 0
+		y = 1
+		relative_position_id = IMA_shared_31004
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_31004 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_31004"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_31008 #철도 확장
+		icon = GFX_focus_generic_railroad
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 0
+		y = 1
+		relative_position_id = IMA_shared_31005
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_31005 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_31008"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_31009 #제련 산업 확장
+		icon = GFX_focus_generic_steel
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 0
+		y = 1
+		relative_position_id = IMA_shared_31006
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_31006 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_31009"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_31010 #비행장 확충
+		icon = GFX_focus_generic_air_bases
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_31008
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_31008 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_31010"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_31011 #항만 확충
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_31008
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_31008 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_31011"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_33001 #표준 군수품 설계
+		icon = GFX_focus_IMA_shared_33001
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 5
+		y = 1
+		relative_position_id = IMA_shared_30001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_30001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_33001"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_40001 #커먼웰스 합동 연구 계획
+		icon = GFX_focus_IMA_shared_40001
+		text_icon = joint_focus_style
+		cost = 5
+	
+		x = 13
+		y = 1
+		relative_position_id = IMA_shared_00001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_00001 focus = IMA_shared_00002 focus = IMA_shared_00003 focus = IMA_shared_00004 focus = IMA_shared_00005 focus = IMA_shared_00006 focus = IMA_shared_00007 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_40001"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_41001 #공작기계 연구
+		icon = GFX_focus_IMA_shared_41001
+		text_icon = joint_focus_style
+		cost = 5
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_40001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_40001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_41001"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_33002 #대량생산
+		icon = GFX_focus_IMA_shared_33002
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_33001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_32001 }
+		prerequisite = { focus = IMA_shared_33001 }
+		prerequisite = { focus = IMA_shared_41001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_33002"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_33003 #중공업단지
+		icon = GFX_focus_IMA_shared_33003
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_33002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_31003 }
+		prerequisite = { focus = IMA_shared_32002 }
+		prerequisite = { focus = IMA_shared_33002 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_33003"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_33004 #군수산업단지
+		icon = GFX_focus_IMA_shared_33004
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_33002
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_31003 }
+		prerequisite = { focus = IMA_shared_32002 }
+		prerequisite = { focus = IMA_shared_33002 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_33004"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_33005 #더 많은 공업단지
+		icon = GFX_focus_IMA_shared_33005
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_33003
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_33003 }
+		prerequisite = { focus = IMA_shared_33004 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_33005"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_41002 #군수품 품질 개선
+		icon = GFX_focus_IMA_shared_41002
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_41001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_41001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_41002"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_42001 #합동 연구투자
+		icon = GFX_focus_IMA_shared_42001
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_40001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_40001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42001"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_42002 #합동 공군연구
+		icon = GFX_focus_IMA_shared_42002
+		cost = 5
+		text_icon = Commonwealth_IMA_ISC_style
+
+		x = 0
+		y = 1
+		relative_position_id = IMA_shared_42001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_42001 }
+		available = { 
+			OR = {
+				AND = {
+					original_tag = IMA
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = ISC
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			IMA = { commomwealth_joined = no }
+			ISC = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42002"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_42003 #합동 기갑연구
+		icon = GFX_focus_IMA_shared_42003
+		cost = 5
+		text_icon = Commonwealth_ICG_IML_style
+	
+		x = 2
+		y = 1
+		relative_position_id = IMA_shared_42001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_42001 }
+		available = { 
+			OR = {
+				AND = {
+					original_tag = ICG
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = IML
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			ICG = { commomwealth_joined = no }
+			IML = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42003"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_42004 #합동 함선연구
+		icon = GFX_focus_IMA_shared_42004
+		cost = 5
+		text_icon = Commonwealth_IMA_ICG_style
+	
+		x = 4
+		y = 1
+		relative_position_id = IMA_shared_42001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_42001 }
+		available = { 
+			OR = {
+				AND = {
+					original_tag = IMA
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = ICG
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			IMA = { commomwealth_joined = no }
+			ICG = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42004"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_42005 #합동 산업연구
+		icon = GFX_focus_IMA_shared_42005
+		cost = 5
+		text_icon = joint_focus_style
+	
+		x = 6
+		y = 1
+		relative_position_id = IMA_shared_42001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_42001 }
+		available = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_44505"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_43001 #고등연구소
+		icon = GFX_focus_IMA_shared_43001
+		cost = 5
+		text_icon = Commonwealth_IMA_ICG_IML_style
+	
+		x = -1
+		y = 2
+		relative_position_id = IMA_shared_42001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_41001 }
+		prerequisite = { focus = IMA_shared_42001 }
+		available = { 
+			OR = {
+				AND = {
+					original_tag = IMA
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = ICG
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = IML
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			IMA = { commomwealth_joined = no }
+			ICG = { commomwealth_joined = no }
+			IML = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_43001"
+			if = {
+				limit = { IMA = { commomwealth_joined = yes } }
+				custom_effect_tooltip = IMA_shared_43001_IMA_tt
+			}
+			if = {
+				limit = { ICG = { commomwealth_joined = yes } }
+				custom_effect_tooltip = IMA_shared_43001_ICG_tt
+			}
+			if = {
+				limit = { IML = { commomwealth_joined = yes } }
+				custom_effect_tooltip = IMA_shared_43001_IML_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = { IMA = { commomwealth_joined = yes } }
+					IMA = { 
+						set_country_flag = IAS_installed 
+						swap_ideas = {
+							remove_idea = university_research_complex
+							add_idea = institute_for_advanced_study
+						}
+					}
+				}
+				if = {
+					limit = { ICG = { commomwealth_joined = yes } }
+					ICG = { 
+						set_country_flag = IAS_installed 
+						swap_ideas = {
+							remove_idea = university_research_complex
+							add_idea = institute_for_advanced_study
+						}
+					}
+				}
+				if = {
+					limit = { IML = { commomwealth_joined = yes } }
+					IML = { 
+						set_country_flag = IAS_installed 
+						swap_ideas = {
+							remove_idea = university_research_complex
+							add_idea = institute_for_advanced_study
+						}
+					}
+				}
+			}
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_43002 #핵 연구
+		icon = GFX_focus_generic_nuclear_development
+		cost = 5
+		text_icon = Commonwealth_IMA_ICG_IML_style
+
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_43001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_43001 }
+		available = { 
+			OR = {
+				AND = {
+					original_tag = IMA
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = ICG
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = IML
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			IMA = { commomwealth_joined = no }
+			ICG = { commomwealth_joined = no }
+			IML = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42002"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_43003 #로켓 공학 연구
+		icon = GFX_focus_rocketry
+		cost = 5
+		text_icon = Commonwealth_IMA_ICG_IML_style
+	
+		x = 1
+		y = 1
+		relative_position_id = IMA_shared_43001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_43001 }
+		available = { 
+			OR = {
+				AND = {
+					original_tag = IMA
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = ICG
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = IML
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			IMA = { commomwealth_joined = no }
+			ICG = { commomwealth_joined = no }
+			IML = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42003"
+		}
+	}
+	
+	joint_focus = {
+		id = IMA_shared_43004 #레이더 연구
+		icon = GFX_goal_generic_radar
+		cost = 5
+		text_icon = Commonwealth_IMA_ICG_IML_style
+	
+		x = 3
+		y = 1
+		relative_position_id = IMA_shared_43001
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_43001 }
+		available = { 
+			OR = {
+				AND = {
+					original_tag = IMA
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = ICG
+					commomwealth_joined = yes
+				}
+				AND = {
+					original_tag = IML
+					commomwealth_joined = yes
+				}
+			}
+		}
+		bypass = {
+			IMA = { commomwealth_joined = no }
+			ICG = { commomwealth_joined = no }
+			IML = { commomwealth_joined = no }
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42004"
+		}
+	}

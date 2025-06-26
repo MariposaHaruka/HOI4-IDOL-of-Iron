@@ -1,0 +1,198 @@
+﻿##### BRITISH RAJ/INDIA NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+BLA_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { BLA }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "KMS "							
+	fallback_name = "Destroyer %s"					
+
+	unique = {											
+		"Rabbit" "Fox" "Bear" "Lion" "Tiger" "Monkey" "Gorila" "Bull" "Elephant" "Cat" "Dog" "Panda" "Cheetah" "Snake" "Deer" "Mouse" "Dragon" "Hen" "Parrot" 
+		"Bat" "Falcon" "Lizard" "Alligator" "Chipmunk" "Wolf" "Hedgehog" "Hamster" "Seal" "Impala" "Zebra" "Hyena" "Goat" "Camel" "Llama" "Marmot" 
+		"Swan" "Turkey" "Turtle" "Rhinoceros"
+	}
+}
+
+
+### LIGHT CRUISER NAMES###
+BLA_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { BLA }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "KMS "							
+	fallback_name = "Light Cruiser %s"
+
+	unique = {
+		"Gourmet Research Society" "Prefect Team" "Pandemonium Society" "Problem Solver 68" "School Lunch Club" "Hot Springs Development Department" "Sparkle Club" "Medical Emergency Club" 
+		"Tea Party" "Make Up Work Club" "Trinity Vigilante Club" "Library Committee" "After School Sweets Club" "Remedial Knights" "Justice Task Force" "Sisterhood" "Arius Squad"
+		"Foreclosure Task Force" "Seminar" "Game Development Department" "Veritas" "Cleaning & Clearing" "Engineering Department" "Athletics Training Club" "Super Phenomenon Task Force"
+		"Yin Yang Club" "Festival Operations Department" "Inner Discipline Club" "Ninjutsu Research Club" "Hyakkayouran Resolution Council"
+		"Genryumon" "Eastern Alchemy Society" "Plum Blossom Garden" "Black Tortoise Promenade" "Peking Opera Club" "Red Winter Office" "Spec Ops No. 227" "Knowledge Liberation Front" "Public Works Department" "Publishing Department"
+		"RABBIT Squad" "FOX Squad" "General Student Council" "Public Peace Bureau" "Public Safety Bureau" 	    
+	}
+}
+
+### HEAVY CRUISER NAMES###
+BLA_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { BLA }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "KMS "							
+	fallback_name = "Heavy Cruiser %s"
+
+	unique = {
+		"Haruhabara" "Utnapishtim" "Black Market" "Hennom" "Araba" "Eridu" "Kousagi"
+	}
+}
+
+### BATTLESHIP NAMES ###
+BLA_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { BLA }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "KMS "							
+	fallback_name = "Battleship %s"		
+
+	unique = {
+		"Abidos" "Gehenna" "Millenium" "Trinity" "Arius" "Hyakkiyako" "Shanhaijing" "Red Winter" "Kronos" "Wildhunt" "Odyssey" "Highlander"
+	}
+}
+
+### BATTLECRUISER NAMES ###
+BLA_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { BLA }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "KMS "							
+	fallback_name = "Battlecruiser %s"		
+
+	unique = {
+		"Abidos" "Gehenna" "Millenium" "Trinity" "Arius" "Hyakkiyako" "Shanhaijing" "Red Winter" "Kronos" "Wildhunt" "Odyssey" "Highlander" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+BLA_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { BLA }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "KMS "							
+	fallback_name = "Carrier %s"		
+
+	unique = {
+		 "Kivotos" "Schalle" "Sensei" "Eden" "Nanagami Rin" "Tsukatsuki Rio" "Sorasaki Hina" 
+		 "Oki Aoi" "Akeboshi Himari" "Amau Ako" "Tendo Aris" "Ajitani Hifumi" "Iwabitsu Ayumu"
+		 "Yuraki Momoka" "Urawa Hanako" "Rikuhachima Aru" "Okusora Ayane" "Amachi Niya" "Ryuge Kisaki"
+		 "Renkawa Cherino" "Ogata Kanna" "Tsukiyuki Miyako" "Joumae Saori"
+	}
+}
+
+
+### SUBMARINES ### #키보트
+BLA_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { BLA }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "KMS "							
+	fallback_name = "K-%D"
+}
+
+
+
+
+### THEME: BRITISH INDIAN REGIONS ###
+BLA_PROVINCES = {
+	name = NAME_THEME_PROVINCES
+
+	for_countries = { BLA }
+
+	type = ship
+
+	prefix = "KMS "							
+	unique = {
+		"Madras" "Bombay" "Punjab" "Assam" "Bengal" "United Provinces" "Central Provinces" "Berar" "Burma" "North-West Frontier" "Baluchistan" 
+		"Coorg" "Amjer-Merwara" "Andaman Islands" "Nicobar Islands" "Bihar" "Orissa" "Panth-Piploda" "Sind" 
+	}
+}
+
+## THEME: BRITISH INDIAN CITIES ###
+BLA_CITIES = {
+	name = NAME_THEME_CITIES
+
+	for_countries = { BLA }
+
+	type = ship
+
+	prefix = "KMS "							
+	unique = {
+	   "Delhi" "Bombay" "Mysore" "Karachi" "Rangoon" "Hyderabad" "Lucknow" "Ahmadabad" "Patna" "Mandalay" "Dacca" "Calcutta" 
+	   "Bhopal" "Agra" "Madras" "Cochin" "Trivandrum" "Baroda" "Pondicherry"  "Aurangabad" "Mahabubabad" "Mahbubnagar" "Osmanabad" 
+	   "Lahore" "Faisalabad" "Rawalpindi" "	Gujranwala" "Peshawar" "Multan" "Islamabad" "Quetta"  
+	   "Ahmednagar" "Shimla" "Ahmedabad" "Sultanpur" "Muzaffarnagar" "Akbarpur" "Jubbulpore" "Jajesmow" "Cawnpore" "Cuddapah" "Belgaum" "Tumkur" 
+	   "Hubli" "Shimoga" "Hospet" "Gulbarga" "Chikmagalur" "Bijapur" "Bellary" "Mangalore" "Rajahmundry" "Gurgaon" "Allahabad" 
+	   "Alleppey" "Gauhati" "Indhur" "Conjevaram" "Cannanore" "Quilon" "Quilandi" "Calicut" "Kudanthai" "Mayavaram" "Nerbudda" 
+	   "Nowgong" "Palghat" "Panjim" "Poona" "Ramnad" "Saugor" "Simla" "Tellicherry" "Tanjore" "Tuticorin" "Trichur" 
+	   "Tinthirivanam" "Trichinopoly" "Tinnevelly" "Triplicane" "Ootacamund" "Vizhupparaiyar" "Benares" "Badagara" "Vriddhachalam" 
+	   "Bejawada" "Waltair" 
+	}
+}
+
+## THEME: FISHES ###
+BLA_FISHES = {
+	name = NAME_THEME_FISHES
+
+	for_countries = { BLA }
+
+	type = ship
+
+	prefix = "KMS "							
+	unique = {
+		"Catshark" "Mudskipper" "Sawfish" "Moray" "Parrotfish" "Pipefish" "Mackerel" "Manta" "Milkfish" "Eel" "Trumpetfish" "Mud Skate"
+	}
+}
+
+### THEME: RAJ DD NAMES ###
+BLA_DD_HISTORICAL = {
+	name = NAME_THEME_RAJ_HISTORICAL_DESTROYERS
+
+	for_countries = { BLA }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "KMS "	
+	unique = {											
+		"Sutlej" "Jumna" "Narbada" "Godavari" "Kistna" "Cauvery" "Sabarmati" "Vatrak" "Mohar" "Mahi" "Panam" "Anas" "Moran" "Banas" "Luni" "Sukari" "Bandi" "Chambel" 
+		"Asan" "Ghaghara" "Sarda" "Gandak" "Koshi" "Mahananda" "Brahmaputra" "Kopili" "Digaru" "Puthimari" "Baralia" "Pagaldiya" "Kaladiya" "Beki" "Manas" "Champabati" 
+		"Shil Torsa" "Tir" "Talwar" "Trishul"
+	}
+}

@@ -440,19 +440,19 @@ clear_sabotaged_resources_if_necesary = {
 
 remove_from_allowed_party = {
 	if = {
-		limit = { is_democratic = yes  }
+		limit = { is_democratic = yes }
 		set_temp_variable = { allowed_party_democratic = 0 }
 	}
 	else_if = {
-		limit = { is_fascism = yes  }
+		limit = { is_fascism = yes }
 		set_temp_variable = { allowed_party_fascism = 0 }
 	}
 	else_if = {
-		limit = { is_communism = yes  }
+		limit = { is_communism = yes }
 		set_temp_variable = { allowed_party_communism = 0 }
 	}
 	else_if = {
-		limit = { is_neutrality = yes  }
+		limit = { is_neutrality = yes }
 		set_temp_variable = { allowed_party_neutrality = 0 }
 	}
 }

@@ -20,8 +20,13 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 10
 
 #국민 정신
-
 add_ideas = agrarian_society
+
+add_dynamic_modifier = { modifier = MKR_industry }
+add_dynamic_modifier = { modifier = MKR_army }
+add_dynamic_modifier = { modifier = MKR_navy }
+add_dynamic_modifier = { modifier = MKR_air_force }
+
 
 #외교
 

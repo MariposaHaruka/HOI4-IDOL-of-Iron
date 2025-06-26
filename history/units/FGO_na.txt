@@ -1,0 +1,35 @@
+﻿
+units = {
+	
+	##### Naval OOB #####
+	fleet = {
+		name = "Marinha do Chaldea"			
+		naval_base = 10980 # Rio de Janiero
+		task_force = {
+			name = "Marinha do Chaldea"
+			location = 10980 # Rio de Janiero
+			ship = { name = "NFC Minas Gerais" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = FGO } } }
+			ship = { name = "NFC Sao Paulo" definition = battleship equipment = { battleship_1 = { amount = 1 owner = FGO } } }
+			ship = { name = "NFC Bahia" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = FGO } } }
+			ship = { name = "NFC Rio Grande do Sul" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = FGO } } }
+			# 1a Flotilla de Contratorpedeiros
+			ship = { name = "NFC Piaui" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FGO } } }
+			ship = { name = "NFC Rio Grande do Norte" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FGO } } }
+			ship = { name = "NFC Paraíba" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FGO } } }
+			ship = { name = "NFC Alagoas" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FGO } } }
+			# 2a Flotilla de Contratorpedeiros
+			ship = { name = "NFC Marnhao" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FGO } } }	
+			ship = { name = "NFC Sergipe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FGO } } }
+			ship = { name = "NFC Santa Catharina" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FGO } } }
+			ship = { name = "NFC Mato Grosso" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FGO } } }
+		}				
+		task_force = {				
+			name = "Flotilha de Submarinos"			
+			location = 10980 # Rio de Janiero
+			ship = { name = "NFC Humayta" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FGO } } }
+		}				
+	}
+}
+
+
+

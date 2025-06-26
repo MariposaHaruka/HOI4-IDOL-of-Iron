@@ -1,5 +1,176 @@
 ideas = {
 	is_military_budget = {
+        law = yes
+        use_list_view = yes
 
+		no_military_budget = {
+			available = {
+				OR = {
+                    is_fascism = no
+                    NOT = { has_government = authoritariandemocracy }
+                    original_tag = BLA
+                }
+            }
+			level = 1
+            removal_cost = -1
+            
+            modifier = {
+            consumer_goods_factor = -0.10
+            production_speed_industrial_complex_factor = 0.10
+            production_speed_arms_factory_factor = 0.10
+            production_speed_dockyard_factor = 0.10
+            production_speed_bunker_factor = 0.30
+            production_speed_coastal_bunker_factor = 0.30
+            production_speed_anti_air_building_factor = 0.20
+            }
+
+            ai_will_do = {
+                base = 20
+				modifier = {
+                    has_war = no
+					industrial_complex < 15
+                    add = 60
+                }
+			}
+		}
+		
+		very_low_military_budget = {
+			available = {
+				OR = {
+                    is_fascism = no
+                    NOT = { has_government = authoritariandemocracy }
+                    original_tag = BLA
+                }
+            }
+			level = 2
+            removal_cost = -1
+            
+            modifier = {
+            consumer_goods_factor = -0.05
+            production_speed_industrial_complex_factor = 0.05
+            production_speed_arms_factory_factor = 0.05
+            production_speed_dockyard_factor = 0.05
+            production_speed_bunker_factor = 0.20
+            production_speed_coastal_bunker_factor = 0.20
+            production_speed_anti_air_building_factor = 0.10
+            }
+
+            ai_will_do = {
+                base = 20
+				modifier = {
+                    has_war = no
+					has_war_support < 0.2
+                    add = 60
+                }
+			}
+		}
+		
+		low_military_budget = {
+			available = {
+				is_fascism = no
+				NOT = { has_government = authoritariandemocracy }
+            }
+			level = 3
+            removal_cost = -1
+            
+            modifier = {
+            production_speed_bunker_factor = 0.10
+            production_speed_coastal_bunker_factor = 0.10
+            }
+
+            ai_will_do = {
+                base = 30
+			}
+		}
+		
+		normal_military_budget = {
+			available = { }
+			level = 4
+            removal_cost = -1
+            
+            modifier = {
+            consumer_goods_factor = 0.05
+            production_speed_industrial_complex_factor = -0.05
+            production_speed_arms_factory_factor = -0.05
+            production_speed_dockyard_factor = -0.05
+            production_speed_anti_air_building_factor = -0.10
+            }
+
+            ai_will_do = {
+                base = 20
+				modifier = {
+					has_war_support > 0.5
+                    add = 60
+                }
+			}
+		}
+		
+		high_military_budget = {
+			available = {
+				OR = {
+					is_fascism = yes
+					has_government = authoritariandemocracy
+					has_war = yes 
+				}
+            }
+			level = 5
+            removal_cost = -1
+            
+            modifier = {
+            consumer_goods_factor = 0.10
+            production_speed_industrial_complex_factor = -0.10
+            production_speed_arms_factory_factor = -0.10
+            production_speed_dockyard_factor = -0.10
+            production_speed_bunker_factor = -0.10
+            production_speed_coastal_bunker_factor = -0.10
+            production_speed_anti_air_building_factor = -0.20
+			production_factory_efficiency_gain_factor = 0.05
+			production_factory_max_efficiency_factor = 0.05
+			production_lack_of_resource_penalty_factor = 0.05
+            }
+
+            ai_will_do = {
+                base = 20
+				modifier = {
+                    has_war = yes
+					industrial_complex < 15
+                    add = 60
+                }
+			}
+		}
+
+		very_high_military_budget = {
+			available = {
+				OR = {
+					is_fascism = yes
+					has_government = authoritariandemocracy
+					has_war = yes 
+				}
+            }
+			level = 6
+            removal_cost = -1
+            
+            modifier = {
+            consumer_goods_factor = 0.20
+            production_speed_industrial_complex_factor = -0.15
+            production_speed_arms_factory_factor = -0.15
+            production_speed_dockyard_factor = -0.15
+            production_speed_bunker_factor = -0.20
+            production_speed_coastal_bunker_factor = -0.20
+            production_speed_anti_air_building_factor = -0.20
+			production_factory_efficiency_gain_factor = 0.10
+			production_factory_max_efficiency_factor = 0.10
+			production_lack_of_resource_penalty_factor = 0.10
+            }
+
+            ai_will_do = {
+                base = 20
+				modifier = {
+                    has_war = no
+					industrial_complex > 15
+                    add = 60
+                }
+			}
+		}
 	}
 }

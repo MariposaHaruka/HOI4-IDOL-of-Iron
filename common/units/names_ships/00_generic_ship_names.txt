@@ -1,0 +1,87 @@
+GENERIC_DD_HISTORICAL = {
+	name = NAME_GENERIC_THEME_DD
+
+	for_countries = { AIC AIN AOP BOR BPR DEV DIF DRF EXT FBD GEC HND IDC IDS LHH POP PTK SEL STI TAB TAK TKI TSS TSU UNP UNU URA VAM WUG YMC }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }	
+	
+	fallback_name = "Destroyer %d"
+}
+
+### LIGHT CRUISER NAMES###
+GENERIC_CL_HISTORICAL = {
+	name = NAME_GENERIC_THEME_CL
+
+	for_countries = { AIC AIN AOP BOR BPR DEV DIF DRF EXT FBD GEC HND IDC IDS LHH POP PTK SEL STI TAB TAK TKI TSS TSU UNP UNU URA VAM WUG YMC }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	fallback_name = "Light Cruiser %d"
+}
+
+### HEAVY CRUISER NAMES###
+GENERIC_CA_HISTORICAL = {
+	name = NAME_GENERIC_THEME_CA
+
+	for_countries = { AIC AIN AOP BOR BPR DEV DIF DRF EXT FBD GEC HND IDC IDS LHH POP PTK SEL STI TAB TAK TKI TSS TSU UNP UNU URA VAM WUG YMC }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	fallback_name = "Heavy Cruiser %d"
+}
+
+
+### BATTLESHIP NAMES ###
+GENERIC_BB_HISTORICAL = {
+	name = NAME_GENERIC_THEME_BB
+
+	for_countries = { AIC AIN AOP BOR BPR DEV DIF DRF EXT FBD GEC HND IDC IDS LHH POP PTK SEL STI TAB TAK TKI TSS TSU UNP UNU URA VAM WUG YMC }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	fallback_name = "Battleship %d"		
+
+}
+
+### BATTLECRUISER NAMES ###
+GENERIC_BC_HISTORICAL = {
+	name = NAME_GENERIC_THEME_BC
+
+	for_countries = { AIC AIN AOP BOR BPR DEV DIF DRF EXT FBD GEC HND IDC IDS LHH POP PTK SEL STI TAB TAK TKI TSS TSU UNP UNU URA VAM WUG YMC }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	fallback_name = "Battlecruiser %d"		
+
+}
+
+### AIRCRAFT CARRIER NAMES ###
+GENERIC_CV_HISTORICAL = {
+	name = NAME_GENERIC_THEME_CV
+
+	for_countries = { AIC AIN AOP BOR BPR DEV DIF DRF EXT FBD GEC HND IDC IDS LHH POP PTK SEL STI TAB TAK TKI TSS TSU UNP UNU URA VAM WUG YMC }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+
+	fallback_name = "Aircraft Carrier %d"	
+
+
+}
+
+### SUBMARINES ###
+GENERIC_SS_HISTORICAL = {
+	name = NAME_GENERIC_THEME_SS
+
+	for_countries = { AIC AIN AOP BOR BPR DEV DIF DRF EXT FBD GEC HND IDC IDS LHH POP PTK SEL STI TAB TAK TKI TSS TSU UNP UNU URA VAM WUG YMC }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+
+	fallback_name = "Submarine %d"
+}

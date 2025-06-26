@@ -1,6 +1,6 @@
 # AI Ship Designs for GLORIOUS NIPPON STEEL FOLDED 1000 TIMES
 
-JAP_destroyers = {
+LLS_destroyers = {
 	category = naval
 	available_for = {
 		LLS LSS LNH LST LHH
@@ -236,8 +236,8 @@ JAP_destroyers = {
 			factor = 500
 			modifier = {
 				OR = {
-					has_war_with = USA
-					has_war_with = ENG
+					has_war_with = ICG
+					has_war_with = IMA
 				}
 				factor = 10
 			}
@@ -278,7 +278,7 @@ JAP_destroyers = {
 	}
 }
 
-JAP_escorts = {
+LLS_escorts = {
 	category = naval
 	available_for = {
 		LLS LSS LNH LST LHH
@@ -416,7 +416,7 @@ JAP_escorts = {
 	}
 }
 
-JAP_naval_light_cruiser = {
+LLS_naval_light_cruiser = {
 
 	category = naval
 	available_for = {
@@ -803,7 +803,7 @@ JAP_naval_light_cruiser = {
 	}
 }
 
-JAP_naval_light_AA_cruiser = {
+LLS_naval_light_AA_cruiser = {
 
 	category = naval
 	available_for = {
@@ -819,8 +819,8 @@ JAP_naval_light_AA_cruiser = {
 		modifier = {
 			factor = 200
 			OR = {
-				has_war_with = USA
-				has_war_with = ENG
+				has_war_with = ICG
+				has_war_with = IMA
 			}
 		}
 	}
@@ -871,7 +871,7 @@ JAP_naval_light_AA_cruiser = {
 		}
 	}
 }
-JAP_naval_cruiser_heavy = {
+LLS_naval_cruiser_heavy = {
 	category = naval
 	available_for = {
 		LLS LSS LNH LST LHH
@@ -1217,7 +1217,7 @@ JAP_naval_cruiser_heavy = {
 	}
 }
 
-JAP_naval_capital_battleship = {
+LLS_naval_capital_battleship = {
 	category = naval
 	available_for = {
 		LLS LSS LNH LST LHH
@@ -1527,7 +1527,7 @@ JAP_naval_capital_battleship = {
 	}
 }
 
-JAP_naval_capital_super_heavy = {
+LLS_naval_capital_super_heavy = {
 	category = naval
 	available_for = {
 		LLS LSS LNH LST LHH
@@ -1635,7 +1635,7 @@ JAP_naval_capital_super_heavy = {
 	
 }
 
-JAP_naval_carrier = {
+LLS_naval_carrier = {
 	category = naval
 	available_for = {
 		LLS LSS LNH LST LHH
@@ -1821,7 +1821,7 @@ JAP_naval_carrier = {
 	}
 }
 
-JAP_naval_carrier_light = {
+LLS_naval_carrier_light = {
 	category = naval
 	available_for = {
 		LLS LSS LNH LST LHH
@@ -1984,7 +1984,7 @@ JAP_naval_carrier_light = {
 	}
 }
 
-JAP_naval_submarine = {
+LLS_naval_submarine = {
 	category = naval
 	available_for = {
 		LLS LSS LNH LST LHH
@@ -2088,7 +2088,7 @@ JAP_naval_submarine = {
 			factor = 50
 			modifier = {
 				factor = 15
-				has_war_with = USA
+				has_war_with = ICG
 			}
 		}
 		role_icon_index = 6
@@ -2120,7 +2120,7 @@ JAP_naval_submarine = {
 			factor = 500
 			modifier = {
 				factor = 150
-				has_war_with = USA
+				has_war_with = ICG
 			}
 		}
 		role_icon_index = 6
@@ -2148,7 +2148,7 @@ JAP_naval_submarine = {
 	}
 }
 
-JAP_naval_mine_sweeper = {
+LLS_naval_mine_sweeper = {
 	category = naval
 	available_for = {
 		LLS LSS LNH LST LHH
@@ -2249,7 +2249,7 @@ JAP_naval_mine_sweeper = {
 	}
 }
 
-JAP_naval_mine_layer = {
+LLS_naval_mine_layer = {
 	category = naval
 	available_for = {
 		LLS LSS LNH LST LHH

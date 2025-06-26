@@ -1,7 +1,7 @@
-state={
-	id=856
-	name="STATE_856"
-	provinces={
+state = {
+	id = 856
+	name = "STATE_856"
+	provinces = {
 		1923 2090 5037 8073 10786 12883 
 	}
 	history = {
@@ -9,6 +9,7 @@ state={
 		add_core_of = ZOS
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
 			12883 = {
 				naval_base = 5
 			}
@@ -16,10 +17,14 @@ state={
 		victory_points = {
 			12883 1 
 		}
+
+		victory_points = {
+			5037 5
+		}
 	}
-	manpower=500000
-	state_category=pastoral
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	manpower = 500000
+	state_category = pastoral
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
 
 }

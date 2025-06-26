@@ -1,0 +1,130 @@
+﻿##### FINLAND NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+PTD_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { PTD }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }
+	
+	prefix = "DRNS "
+	fallback_name = "Hävittäjä %d"					
+
+	unique = {											
+		"Hämeenmaa" "Matti Kurki" "Uusimaa" "Karjala" "Turunmaa" "Sisu" "Hurja" "Isku" "Syöksy" 
+		"Nuoli" "Vinha" "Raju" "Vasama" "Vihuri" "Viima"
+	}
+}
+
+### LIGHT CRUISER NAMES###
+PTD_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { PTD }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "DRNS "
+	
+	fallback_name = "Kevyt Risteilijä %d"
+
+	unique = {
+		"Joukahainen" "Tapio" "Lemminkäinen" "Helsinki" "Rauma" "Turku" "Kemi" "Maarianhamina" "Vaasa" 
+		"Viipuri" "Kotka" "Oulu" "Rauma" "Väinämöinen" "Ilmarinen" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+PTD_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { PTD }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "DRNS "
+	
+	fallback_name = "Raskas Risteilijä %d"
+
+	unique = {
+		"Väinämöinen" "Ilmarinen" "Joukahainen" "Tapio" "Lemminkäinen" "Helsinki" "Rauma" "Turku" "Kemi" "Maarianhamina" "Vaasa" 
+		"Viipuri" "Kotka" "Oulu" "Rauma" 
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+PTD_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { PTD }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "DRNS "
+	
+	fallback_name = "Taistelulaiva %d"		
+
+	unique = {
+		"Uusimaa" "Karjala" "Pohjanmaa" "Rauma" "Turku" "Viipuri" "Pietarsaari" "Vaasa" "Oulu" "Aura" "Kemi" "Tampere" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+PTD_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { PTD }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "DRNS "
+	
+	fallback_name = "Taisteluristeilijä %d"		
+
+	unique = {
+		"Uusimaa" "Karjala" "Pohjanmaa" "Rauma" "Turku" "Viipuri" "Pietarsaari" "Vaasa" "Oulu" "Aura" "Kemi" "Tampere" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+PTD_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { PTD }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "DRNS "
+	
+	fallback_name = "Lentotukialus %d"	
+
+	unique = {
+		"Suur-Suomi" "Karjala" "Turku" "Pohjanmaa" "Mannerheim" "Viipuri" "Vaasa" "Uusimaa" "Ahvenanmaa" "Oulu" "Kemi" 
+		"Turku" "Pohjanmaa" "Mannerheim" "Viipuri" "Vaasa" "Uusimaa" "Ahvenanmaa" "Oulu" "Kemi" 
+	}
+}
+
+### SUBMARINES ###
+PTD_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { PTD }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "DRNS "
+	
+	fallback_name = "Sukellusvene %d"
+	
+	unique = {
+		"Vetehinen" "Vesihiisi" "Iku-Turso" "Vesikko" 
+	}
+}

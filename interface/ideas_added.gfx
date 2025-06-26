@@ -1,10 +1,1488 @@
 spriteTypes = {
+	#military/industry dynamic modifiers in each countries
 	spriteType = {
-		name = "GFX_idea_eodangli"
-		texturefile = "gfx/ideas/GFX_Idea_Eodangli.dds"
+		name = "GFX_idea_AGN_dynamic_industry"
+		texturefile = "gfx/interface/ideas/AGN_dynamic_industry.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_the_great_leader"
-		texturefile = "gfx/ideas/GFX_Idea_The_Great_Leader.dds"
+		name = "GFX_idea_AGN_dynamic_army"
+		texturefile = "gfx/interface/ideas/AGN_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AGN_dynamic_naval"
+		texturefile = "gfx/interface/ideas/AGN_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AGN_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/AGN_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIC_dynamic_industry"
+		texturefile = "gfx/interface/ideas/AIC_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIC_dynamic_army"
+		texturefile = "gfx/interface/ideas/AIC_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIC_dynamic_naval"
+		texturefile = "gfx/interface/ideas/AIC_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIC_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/AIC_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIK_dynamic_industry"
+		texturefile = "gfx/interface/ideas/AIK_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIK_dynamic_army"
+		texturefile = "gfx/interface/ideas/AIK_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIK_dynamic_naval"
+		texturefile = "gfx/interface/ideas/AIK_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIK_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/AIK_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIN_dynamic_industry"
+		texturefile = "gfx/interface/ideas/AIN_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIN_dynamic_army"
+		texturefile = "gfx/interface/ideas/AIN_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIN_dynamic_naval"
+		texturefile = "gfx/interface/ideas/AIN_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AIN_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/AIN_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AOP_dynamic_industry"
+		texturefile = "gfx/interface/ideas/AOP_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AOP_dynamic_army"
+		texturefile = "gfx/interface/ideas/AOP_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AOP_dynamic_naval"
+		texturefile = "gfx/interface/ideas/AOP_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AOP_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/AOP_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AZU_dynamic_industry"
+		texturefile = "gfx/interface/ideas/AZU_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AZU_dynamic_army"
+		texturefile = "gfx/interface/ideas/AZU_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AZU_dynamic_naval"
+		texturefile = "gfx/interface/ideas/AZU_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AZU_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/AZU_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BDG_dynamic_industry"
+		texturefile = "gfx/interface/ideas/BDG_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BDG_dynamic_army"
+		texturefile = "gfx/interface/ideas/BDG_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BDG_dynamic_naval"
+		texturefile = "gfx/interface/ideas/BDG_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BDG_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/BDG_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BLA_dynamic_industry"
+		texturefile = "gfx/interface/ideas/BLA_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BLA_dynamic_army"
+		texturefile = "gfx/interface/ideas/BLA_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BLA_dynamic_naval"
+		texturefile = "gfx/interface/ideas/BLA_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BLA_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/BLA_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BOR_dynamic_industry"
+		texturefile = "gfx/interface/ideas/BOR_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BOR_dynamic_army"
+		texturefile = "gfx/interface/ideas/BOR_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BOR_dynamic_naval"
+		texturefile = "gfx/interface/ideas/BOR_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BOR_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/BOR_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BPR_dynamic_industry"
+		texturefile = "gfx/interface/ideas/BPR_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BPR_dynamic_army"
+		texturefile = "gfx/interface/ideas/BPR_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BPR_dynamic_naval"
+		texturefile = "gfx/interface/ideas/BPR_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BPR_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/BPR_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CUE_dynamic_industry"
+		texturefile = "gfx/interface/ideas/CUE_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CUE_dynamic_army"
+		texturefile = "gfx/interface/ideas/CUE_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CUE_dynamic_naval"
+		texturefile = "gfx/interface/ideas/CUE_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CUE_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/CUE_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DEV_dynamic_industry"
+		texturefile = "gfx/interface/ideas/DEV_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DEV_dynamic_army"
+		texturefile = "gfx/interface/ideas/DEV_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DEV_dynamic_naval"
+		texturefile = "gfx/interface/ideas/DEV_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DEV_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/DEV_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DFD_dynamic_industry"
+		texturefile = "gfx/interface/ideas/DFD_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DFD_dynamic_army"
+		texturefile = "gfx/interface/ideas/DFD_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DFD_dynamic_naval"
+		texturefile = "gfx/interface/ideas/DFD_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DFD_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/DFD_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DIF_dynamic_industry"
+		texturefile = "gfx/interface/ideas/DIF_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DIF_dynamic_army"
+		texturefile = "gfx/interface/ideas/DIF_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DIF_dynamic_naval"
+		texturefile = "gfx/interface/ideas/DIF_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DIF_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/DIF_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DOB_dynamic_industry"
+		texturefile = "gfx/interface/ideas/DOB_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DOB_dynamic_army"
+		texturefile = "gfx/interface/ideas/DOB_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DOB_dynamic_naval"
+		texturefile = "gfx/interface/ideas/DOB_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DOB_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/DOB_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DRF_dynamic_industry"
+		texturefile = "gfx/interface/ideas/DRF_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DRF_dynamic_army"
+		texturefile = "gfx/interface/ideas/DRF_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DRF_dynamic_naval"
+		texturefile = "gfx/interface/ideas/DRF_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DRF_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/DRF_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ENS_dynamic_industry"
+		texturefile = "gfx/interface/ideas/ENS_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ENS_dynamic_army"
+		texturefile = "gfx/interface/ideas/ENS_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ENS_dynamic_naval"
+		texturefile = "gfx/interface/ideas/ENS_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ENS_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/ENS_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_EXT_dynamic_industry"
+		texturefile = "gfx/interface/ideas/EXT_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_EXT_dynamic_army"
+		texturefile = "gfx/interface/ideas/EXT_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_EXT_dynamic_naval"
+		texturefile = "gfx/interface/ideas/EXT_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_EXT_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/EXT_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FBD_dynamic_industry"
+		texturefile = "gfx/interface/ideas/FBD_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FBD_dynamic_army"
+		texturefile = "gfx/interface/ideas/FBD_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FBD_dynamic_naval"
+		texturefile = "gfx/interface/ideas/FBD_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FBD_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/FBD_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FGO_dynamic_industry"
+		texturefile = "gfx/interface/ideas/FGO_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FGO_dynamic_army"
+		texturefile = "gfx/interface/ideas/FGO_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FGO_dynamic_naval"
+		texturefile = "gfx/interface/ideas/FGO_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FGO_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/FGO_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GBC_dynamic_industry"
+		texturefile = "gfx/interface/ideas/GBC_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GBC_dynamic_army"
+		texturefile = "gfx/interface/ideas/GBC_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GBC_dynamic_naval"
+		texturefile = "gfx/interface/ideas/GBC_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GBC_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/GBC_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEC_dynamic_industry"
+		texturefile = "gfx/interface/ideas/GEC_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEC_dynamic_army"
+		texturefile = "gfx/interface/ideas/GEC_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEC_dynamic_naval"
+		texturefile = "gfx/interface/ideas/GEC_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEC_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/GEC_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GFR_dynamic_industry"
+		texturefile = "gfx/interface/ideas/GFR_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GFR_dynamic_army"
+		texturefile = "gfx/interface/ideas/GFR_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GFR_dynamic_naval"
+		texturefile = "gfx/interface/ideas/GFR_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GFR_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/GFR_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GUP_dynamic_industry"
+		texturefile = "gfx/interface/ideas/GUP_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GUP_dynamic_army"
+		texturefile = "gfx/interface/ideas/GUP_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GUP_dynamic_naval"
+		texturefile = "gfx/interface/ideas/GUP_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GUP_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/GUP_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HBR_dynamic_industry"
+		texturefile = "gfx/interface/ideas/HBR_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HBR_dynamic_army"
+		texturefile = "gfx/interface/ideas/HBR_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HBR_dynamic_naval"
+		texturefile = "gfx/interface/ideas/HBR_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HBR_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/HBR_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HDA_dynamic_industry"
+		texturefile = "gfx/interface/ideas/HDA_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HDA_dynamic_army"
+		texturefile = "gfx/interface/ideas/HDA_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HDA_dynamic_naval"
+		texturefile = "gfx/interface/ideas/HDA_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HDA_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/HDA_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HLL_dynamic_industry"
+		texturefile = "gfx/interface/ideas/HLL_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HLL_dynamic_army"
+		texturefile = "gfx/interface/ideas/HLL_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HLL_dynamic_naval"
+		texturefile = "gfx/interface/ideas/HLL_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HLL_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/HLL_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HND_dynamic_industry"
+		texturefile = "gfx/interface/ideas/HND_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HND_dynamic_army"
+		texturefile = "gfx/interface/ideas/HND_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HND_dynamic_naval"
+		texturefile = "gfx/interface/ideas/HND_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HND_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/HND_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ICG_dynamic_industry"
+		texturefile = "gfx/interface/ideas/ICG_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ICG_dynamic_army"
+		texturefile = "gfx/interface/ideas/ICG_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ICG_dynamic_naval"
+		texturefile = "gfx/interface/ideas/ICG_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ICG_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/ICG_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDC_dynamic_industry"
+		texturefile = "gfx/interface/ideas/IDC_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDC_dynamic_army"
+		texturefile = "gfx/interface/ideas/IDC_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDC_dynamic_naval"
+		texturefile = "gfx/interface/ideas/IDC_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDC_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/IDC_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDI_dynamic_industry"
+		texturefile = "gfx/interface/ideas/IDI_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDI_dynamic_army"
+		texturefile = "gfx/interface/ideas/IDI_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDI_dynamic_naval"
+		texturefile = "gfx/interface/ideas/IDI_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDI_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/IDI_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDP_dynamic_industry"
+		texturefile = "gfx/interface/ideas/IDP_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDP_dynamic_army"
+		texturefile = "gfx/interface/ideas/IDP_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDP_dynamic_naval"
+		texturefile = "gfx/interface/ideas/IDP_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDP_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/IDP_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDS_dynamic_industry"
+		texturefile = "gfx/interface/ideas/IDS_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDS_dynamic_army"
+		texturefile = "gfx/interface/ideas/IDS_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDS_dynamic_naval"
+		texturefile = "gfx/interface/ideas/IDS_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IDS_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/IDS_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IGM_dynamic_industry"
+		texturefile = "gfx/interface/ideas/IGM_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IGM_dynamic_army"
+		texturefile = "gfx/interface/ideas/IGM_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IGM_dynamic_naval"
+		texturefile = "gfx/interface/ideas/IGM_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IGM_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/IGM_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IMA_dynamic_industry"
+		texturefile = "gfx/interface/ideas/IMA_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IMA_dynamic_army"
+		texturefile = "gfx/interface/ideas/IMA_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IMA_dynamic_naval"
+		texturefile = "gfx/interface/ideas/IMA_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IMA_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/IMA_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IML_dynamic_industry"
+		texturefile = "gfx/interface/ideas/IML_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IML_dynamic_army"
+		texturefile = "gfx/interface/ideas/IML_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IML_dynamic_naval"
+		texturefile = "gfx/interface/ideas/IML_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IML_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/IML_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ISC_dynamic_industry"
+		texturefile = "gfx/interface/ideas/ISC_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ISC_dynamic_army"
+		texturefile = "gfx/interface/ideas/ISC_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ISC_dynamic_naval"
+		texturefile = "gfx/interface/ideas/ISC_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ISC_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/ISC_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ISM_dynamic_industry"
+		texturefile = "gfx/interface/ideas/ISM_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ISM_dynamic_army"
+		texturefile = "gfx/interface/ideas/ISM_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ISM_dynamic_naval"
+		texturefile = "gfx/interface/ideas/ISM_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ISM_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/ISM_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KJI_dynamic_industry"
+		texturefile = "gfx/interface/ideas/KJI_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KJI_dynamic_army"
+		texturefile = "gfx/interface/ideas/KJI_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KJI_dynamic_naval"
+		texturefile = "gfx/interface/ideas/KJI_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KJI_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/KJI_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KON_dynamic_industry"
+		texturefile = "gfx/interface/ideas/KON_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KON_dynamic_army"
+		texturefile = "gfx/interface/ideas/KON_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KON_dynamic_naval"
+		texturefile = "gfx/interface/ideas/KON_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KON_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/KON_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KTC_dynamic_industry"
+		texturefile = "gfx/interface/ideas/KTC_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KTC_dynamic_army"
+		texturefile = "gfx/interface/ideas/KTC_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KTC_dynamic_naval"
+		texturefile = "gfx/interface/ideas/KTC_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KTC_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/KTC_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LAS_dynamic_industry"
+		texturefile = "gfx/interface/ideas/LAS_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LAS_dynamic_army"
+		texturefile = "gfx/interface/ideas/LAS_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LAS_dynamic_naval"
+		texturefile = "gfx/interface/ideas/LAS_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LAS_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/LAS_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LBB_dynamic_industry"
+		texturefile = "gfx/interface/ideas/LBB_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LBB_dynamic_army"
+		texturefile = "gfx/interface/ideas/LBB_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LBB_dynamic_naval"
+		texturefile = "gfx/interface/ideas/LBB_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LBB_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/LBB_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LCD_dynamic_industry"
+		texturefile = "gfx/interface/ideas/LCD_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LCD_dynamic_army"
+		texturefile = "gfx/interface/ideas/LCD_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LCD_dynamic_naval"
+		texturefile = "gfx/interface/ideas/LCD_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LCD_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/LCD_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LHH_dynamic_industry"
+		texturefile = "gfx/interface/ideas/LHH_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LHH_dynamic_army"
+		texturefile = "gfx/interface/ideas/LHH_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LHH_dynamic_naval"
+		texturefile = "gfx/interface/ideas/LHH_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LHH_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/LHH_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LLS_dynamic_industry"
+		texturefile = "gfx/interface/ideas/LLS_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LLS_dynamic_army"
+		texturefile = "gfx/interface/ideas/LLS_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LLS_dynamic_naval"
+		texturefile = "gfx/interface/ideas/LLS_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LLS_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/LLS_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LNH_dynamic_industry"
+		texturefile = "gfx/interface/ideas/LNH_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LNH_dynamic_army"
+		texturefile = "gfx/interface/ideas/LNH_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LNH_dynamic_naval"
+		texturefile = "gfx/interface/ideas/LNH_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LNH_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/LNH_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LOC_dynamic_industry"
+		texturefile = "gfx/interface/ideas/LOC_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LOC_dynamic_army"
+		texturefile = "gfx/interface/ideas/LOC_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LOC_dynamic_naval"
+		texturefile = "gfx/interface/ideas/LOC_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LOC_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/LOC_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LOS_dynamic_industry"
+		texturefile = "gfx/interface/ideas/LOS_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LOS_dynamic_army"
+		texturefile = "gfx/interface/ideas/LOS_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LOS_dynamic_naval"
+		texturefile = "gfx/interface/ideas/LOS_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LOS_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/LOS_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LPR_dynamic_industry"
+		texturefile = "gfx/interface/ideas/LPR_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LPR_dynamic_army"
+		texturefile = "gfx/interface/ideas/LPR_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LPR_dynamic_naval"
+		texturefile = "gfx/interface/ideas/LPR_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LPR_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/LPR_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LSS_dynamic_industry"
+		texturefile = "gfx/interface/ideas/LSS_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LSS_dynamic_army"
+		texturefile = "gfx/interface/ideas/LSS_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LSS_dynamic_naval"
+		texturefile = "gfx/interface/ideas/LSS_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LSS_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/LSS_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LST_dynamic_industry"
+		texturefile = "gfx/interface/ideas/LST_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LST_dynamic_army"
+		texturefile = "gfx/interface/ideas/LST_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LST_dynamic_naval"
+		texturefile = "gfx/interface/ideas/LST_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LST_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/LST_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LVD_dynamic_industry"
+		texturefile = "gfx/interface/ideas/LVD_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LVD_dynamic_army"
+		texturefile = "gfx/interface/ideas/LVD_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LVD_dynamic_naval"
+		texturefile = "gfx/interface/ideas/LVD_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LVD_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/LVD_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MCR_dynamic_industry"
+		texturefile = "gfx/interface/ideas/MCR_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MCR_dynamic_army"
+		texturefile = "gfx/interface/ideas/MCR_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MCR_dynamic_naval"
+		texturefile = "gfx/interface/ideas/MCR_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MCR_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/MCR_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MKR_dynamic_industry"
+		texturefile = "gfx/interface/ideas/MKR_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MKR_dynamic_army"
+		texturefile = "gfx/interface/ideas/MKR_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MKR_dynamic_naval"
+		texturefile = "gfx/interface/ideas/MKR_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MKR_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/MKR_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLN_dynamic_industry"
+		texturefile = "gfx/interface/ideas/MLN_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLN_dynamic_army"
+		texturefile = "gfx/interface/ideas/MLN_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLN_dynamic_naval"
+		texturefile = "gfx/interface/ideas/MLN_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLN_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/MLN_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MMM_dynamic_industry"
+		texturefile = "gfx/interface/ideas/MMM_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MMM_dynamic_army"
+		texturefile = "gfx/interface/ideas/MMM_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MMM_dynamic_naval"
+		texturefile = "gfx/interface/ideas/MMM_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MMM_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/MMM_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NNN_dynamic_industry"
+		texturefile = "gfx/interface/ideas/NNN_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NNN_dynamic_army"
+		texturefile = "gfx/interface/ideas/NNN_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NNN_dynamic_naval"
+		texturefile = "gfx/interface/ideas/NNN_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NNN_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/NNN_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NPT_dynamic_industry"
+		texturefile = "gfx/interface/ideas/NPT_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NPT_dynamic_army"
+		texturefile = "gfx/interface/ideas/NPT_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NPT_dynamic_naval"
+		texturefile = "gfx/interface/ideas/NPT_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NPT_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/NPT_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ONK_dynamic_industry"
+		texturefile = "gfx/interface/ideas/ONK_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ONK_dynamic_army"
+		texturefile = "gfx/interface/ideas/ONK_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ONK_dynamic_naval"
+		texturefile = "gfx/interface/ideas/ONK_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ONK_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/ONK_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ONS_dynamic_industry"
+		texturefile = "gfx/interface/ideas/ONS_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ONS_dynamic_army"
+		texturefile = "gfx/interface/ideas/ONS_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ONS_dynamic_naval"
+		texturefile = "gfx/interface/ideas/ONS_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ONS_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/ONS_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POP_dynamic_industry"
+		texturefile = "gfx/interface/ideas/POP_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POP_dynamic_army"
+		texturefile = "gfx/interface/ideas/POP_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POP_dynamic_naval"
+		texturefile = "gfx/interface/ideas/POP_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POP_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/POP_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRK_dynamic_industry"
+		texturefile = "gfx/interface/ideas/PRK_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRK_dynamic_army"
+		texturefile = "gfx/interface/ideas/PRK_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRK_dynamic_naval"
+		texturefile = "gfx/interface/ideas/PRK_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRK_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/PRK_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRP_dynamic_industry"
+		texturefile = "gfx/interface/ideas/PRP_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRP_dynamic_army"
+		texturefile = "gfx/interface/ideas/PRP_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRP_dynamic_naval"
+		texturefile = "gfx/interface/ideas/PRP_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRP_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/PRP_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRS_dynamic_industry"
+		texturefile = "gfx/interface/ideas/PRS_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRS_dynamic_army"
+		texturefile = "gfx/interface/ideas/PRS_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRS_dynamic_naval"
+		texturefile = "gfx/interface/ideas/PRS_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRS_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/PRS_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PTD_dynamic_industry"
+		texturefile = "gfx/interface/ideas/PTD_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PTD_dynamic_army"
+		texturefile = "gfx/interface/ideas/PTD_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PTD_dynamic_naval"
+		texturefile = "gfx/interface/ideas/PTD_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PTD_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/PTD_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PTK_dynamic_industry"
+		texturefile = "gfx/interface/ideas/PTK_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PTK_dynamic_army"
+		texturefile = "gfx/interface/ideas/PTK_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PTK_dynamic_naval"
+		texturefile = "gfx/interface/ideas/PTK_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PTK_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/PTK_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_REA_dynamic_industry"
+		texturefile = "gfx/interface/ideas/REA_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_REA_dynamic_army"
+		texturefile = "gfx/interface/ideas/REA_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_REA_dynamic_naval"
+		texturefile = "gfx/interface/ideas/REA_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_REA_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/REA_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RST_dynamic_industry"
+		texturefile = "gfx/interface/ideas/RST_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RST_dynamic_army"
+		texturefile = "gfx/interface/ideas/RST_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RST_dynamic_naval"
+		texturefile = "gfx/interface/ideas/RST_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RST_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/RST_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SBR_dynamic_industry"
+		texturefile = "gfx/interface/ideas/SBR_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SBR_dynamic_army"
+		texturefile = "gfx/interface/ideas/SBR_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SBR_dynamic_naval"
+		texturefile = "gfx/interface/ideas/SBR_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SBR_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/SBR_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SEL_dynamic_industry"
+		texturefile = "gfx/interface/ideas/SEL_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SEL_dynamic_army"
+		texturefile = "gfx/interface/ideas/SEL_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SEL_dynamic_naval"
+		texturefile = "gfx/interface/ideas/SEL_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SEL_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/SEL_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SHP_dynamic_industry"
+		texturefile = "gfx/interface/ideas/SHP_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SHP_dynamic_army"
+		texturefile = "gfx/interface/ideas/SHP_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SHP_dynamic_naval"
+		texturefile = "gfx/interface/ideas/SHP_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SHP_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/SHP_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOE_dynamic_industry"
+		texturefile = "gfx/interface/ideas/SOE_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOE_dynamic_army"
+		texturefile = "gfx/interface/ideas/SOE_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOE_dynamic_naval"
+		texturefile = "gfx/interface/ideas/SOE_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOE_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/SOE_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_STI_dynamic_industry"
+		texturefile = "gfx/interface/ideas/STI_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_STI_dynamic_army"
+		texturefile = "gfx/interface/ideas/STI_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_STI_dynamic_naval"
+		texturefile = "gfx/interface/ideas/STI_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_STI_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/STI_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_STR_dynamic_industry"
+		texturefile = "gfx/interface/ideas/STR_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_STR_dynamic_army"
+		texturefile = "gfx/interface/ideas/STR_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_STR_dynamic_naval"
+		texturefile = "gfx/interface/ideas/STR_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_STR_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/STR_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SZS_dynamic_industry"
+		texturefile = "gfx/interface/ideas/SZS_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SZS_dynamic_army"
+		texturefile = "gfx/interface/ideas/SZS_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SZS_dynamic_naval"
+		texturefile = "gfx/interface/ideas/SZS_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SZS_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/SZS_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TAB_dynamic_industry"
+		texturefile = "gfx/interface/ideas/TAB_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TAB_dynamic_army"
+		texturefile = "gfx/interface/ideas/TAB_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TAB_dynamic_naval"
+		texturefile = "gfx/interface/ideas/TAB_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TAB_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/TAB_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TAK_dynamic_industry"
+		texturefile = "gfx/interface/ideas/TAK_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TAK_dynamic_army"
+		texturefile = "gfx/interface/ideas/TAK_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TAK_dynamic_naval"
+		texturefile = "gfx/interface/ideas/TAK_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TAK_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/TAK_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TKI_dynamic_industry"
+		texturefile = "gfx/interface/ideas/TKI_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TKI_dynamic_army"
+		texturefile = "gfx/interface/ideas/TKI_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TKI_dynamic_naval"
+		texturefile = "gfx/interface/ideas/TKI_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TKI_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/TKI_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TOH_dynamic_industry"
+		texturefile = "gfx/interface/ideas/TOH_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TOH_dynamic_army"
+		texturefile = "gfx/interface/ideas/TOH_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TOH_dynamic_naval"
+		texturefile = "gfx/interface/ideas/TOH_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TOH_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/TOH_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TSS_dynamic_industry"
+		texturefile = "gfx/interface/ideas/TSS_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TSS_dynamic_army"
+		texturefile = "gfx/interface/ideas/TSS_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TSS_dynamic_naval"
+		texturefile = "gfx/interface/ideas/TSS_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TSS_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/TSS_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TSU_dynamic_industry"
+		texturefile = "gfx/interface/ideas/TSU_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TSU_dynamic_army"
+		texturefile = "gfx/interface/ideas/TSU_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TSU_dynamic_naval"
+		texturefile = "gfx/interface/ideas/TSU_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TSU_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/TSU_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UMA_dynamic_industry"
+		texturefile = "gfx/interface/ideas/UMA_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UMA_dynamic_army"
+		texturefile = "gfx/interface/ideas/UMA_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UMA_dynamic_naval"
+		texturefile = "gfx/interface/ideas/UMA_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UMA_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/UMA_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UNP_dynamic_industry"
+		texturefile = "gfx/interface/ideas/UNP_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UNP_dynamic_army"
+		texturefile = "gfx/interface/ideas/UNP_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UNP_dynamic_naval"
+		texturefile = "gfx/interface/ideas/UNP_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UNP_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/UNP_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UNU_dynamic_industry"
+		texturefile = "gfx/interface/ideas/UNU_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UNU_dynamic_army"
+		texturefile = "gfx/interface/ideas/UNU_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UNU_dynamic_naval"
+		texturefile = "gfx/interface/ideas/UNU_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UNU_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/UNU_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_URA_dynamic_industry"
+		texturefile = "gfx/interface/ideas/URA_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_URA_dynamic_army"
+		texturefile = "gfx/interface/ideas/URA_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_URA_dynamic_naval"
+		texturefile = "gfx/interface/ideas/URA_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_URA_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/URA_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VAM_dynamic_industry"
+		texturefile = "gfx/interface/ideas/VAM_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VAM_dynamic_army"
+		texturefile = "gfx/interface/ideas/VAM_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VAM_dynamic_naval"
+		texturefile = "gfx/interface/ideas/VAM_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VAM_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/VAM_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VCD_dynamic_industry"
+		texturefile = "gfx/interface/ideas/VCD_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VCD_dynamic_army"
+		texturefile = "gfx/interface/ideas/VCD_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VCD_dynamic_naval"
+		texturefile = "gfx/interface/ideas/VCD_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VCD_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/VCD_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WDS_dynamic_industry"
+		texturefile = "gfx/interface/ideas/WDS_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WDS_dynamic_army"
+		texturefile = "gfx/interface/ideas/WDS_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WDS_dynamic_naval"
+		texturefile = "gfx/interface/ideas/WDS_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WDS_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/WDS_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WUG_dynamic_industry"
+		texturefile = "gfx/interface/ideas/WUG_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WUG_dynamic_army"
+		texturefile = "gfx/interface/ideas/WUG_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WUG_dynamic_naval"
+		texturefile = "gfx/interface/ideas/WUG_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WUG_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/WUG_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_YMC_dynamic_industry"
+		texturefile = "gfx/interface/ideas/YMC_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_YMC_dynamic_army"
+		texturefile = "gfx/interface/ideas/YMC_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_YMC_dynamic_naval"
+		texturefile = "gfx/interface/ideas/YMC_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_YMC_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/YMC_dynamic_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ZOS_dynamic_industry"
+		texturefile = "gfx/interface/ideas/ZOS_dynamic_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ZOS_dynamic_army"
+		texturefile = "gfx/interface/ideas/ZOS_dynamic_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ZOS_dynamic_naval"
+		texturefile = "gfx/interface/ideas/ZOS_dynamic_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ZOS_dynamic_airforce"
+		texturefile = "gfx/interface/ideas/ZOS_dynamic_airforce.dds"
+	}
+	#national_ideas
+	spriteType = {
+		name = "GFX_idea_IML_ratatat"
+		texturefile = "gfx/interface/ideas/GFX_IML_ratatat.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_democratic_opinion_modifier"
+		texturefile = "gfx/interface/ideas/GFX_idea_generic_democratic_opinion_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_communism_opinion_modifier"
+		texturefile = "gfx/interface/ideas/GFX_idea_generic_communism_opinion_modifier.dds"
 	}
 }

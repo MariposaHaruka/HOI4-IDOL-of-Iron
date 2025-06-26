@@ -2,7 +2,25 @@
 capital = 219
 
 #부대
-set_oob = "TOH_ar"
+if = {
+	limit = { has_NSB = yes }
+	set_oob = "TOH_ar_NSB"
+	else = { set_oob = "TOH_ar" }
+}
+if = {
+	limit = { has_MtG = yes }
+	set_naval_oob = "TOH_na_MtG"
+	else = {
+		set_naval_oob = "TOH_na"
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "TOH_ai_BBA"
+	else = {
+		set_air_oob = "TOH_ai"
+	}
+}
 starting_train_buffer = 3.0
 add_command_power = 20
 set_fuel_ratio = 0.7
@@ -117,6 +135,11 @@ set_convoys = 50
 
 #국민 정신
 
+add_dynamic_modifier = { modifier = TOH_industry }
+add_dynamic_modifier = { modifier = TOH_army }
+add_dynamic_modifier = { modifier = TOH_navy }
+add_dynamic_modifier = { modifier = TOH_air_force }
+
 #외교
 create_faction = touhoumintern
 add_to_faction = TOH
@@ -148,6 +171,14 @@ ban_democratic_effect = yes
 #의회
 
 #캐릭터
+recruit_character = TOH_dummy_CON #더미
+recruit_character = TOH_dummy_LIB #더미
+recruit_character = TOH_dummy_PRO #더미
+recruit_character = TOH_dummy_SOD #더미
+recruit_character = TOH_dummy_FAS #더미
+recruit_character = TOH_dummy_MIL #더미
+recruit_character = TOH_dummy_AUD #더미
+recruit_character = TOH_dummy_AUT #더미
 recruit_character = TOH_hakurei_reimu
 recruit_character = TOH_kirisame_marisa
 recruit_character = TOH_rumia
@@ -284,3 +315,8 @@ recruit_character = TOH_motoori_kosuzu
 #	name = ""
 #	type = amphibious_tank_equipment_2
 #}
+
+#이벤트
+country_event = { id = TOH_1936_committee.1 days = 2 } #1936년 공산당 최고인민위원회 제1안건
+country_event = { id = TOH_1936_committee.2 days = 5 } #1936년 공산당 최고인민위원회 제2안건
+country_event = { id = TOH_1936_committee.3 days = 8 } #1936년 공산당 최고인민위원회 제3안건

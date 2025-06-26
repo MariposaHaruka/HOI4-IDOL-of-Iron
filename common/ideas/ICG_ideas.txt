@@ -1,0 +1,60 @@
+ideas = {
+	country = { 
+		ICG_great_depression = {
+			allowed = {
+				original_tag = ICG
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				political_power_cost = 1
+				consumer_goods_factor = 0.60
+				conscription_factor = -0.5
+				join_faction_tension = 0.20
+				local_resources_factor = -0.2
+			}
+		}
+		ICG_widespread_strikes = {
+			allowed = {
+				original_tag = ICG
+			}
+			allowed_civil_war = {
+				NOT = {
+					is_communism = yes
+				}
+			}
+			removal_cost = -1
+			picture = ICE_general_strike
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+		}
+		ICG_full_neutral = {
+			allowed = {
+				original_tag = ICG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = neutrality_idea
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+		}
+	}
+	tank_manufacturer = { }
+	naval_manufacturer = { }
+	aircraft_manufacturer = { }
+	industrial_concern = { }
+	materiel_manufacturer = { }
+}

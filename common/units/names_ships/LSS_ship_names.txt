@@ -1,0 +1,130 @@
+### REGULAR DESTROYER NAMES###
+LSS_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { LSS LNH }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "URN "							
+	fallback_name = "%d Quzujian"					
+
+	unique = {											
+		"Tze Kiang" "Ta Tung" "Chien Wei" "Chien An" 
+		"Shen Yang" "Tan Yang" "Fen Yang" "An Shan" "Fu Shun" "Chang Chun" 
+		"Chien Kang" "Tung An" "Ching Po" "Lung Tuan" 
+		"Fu Po" "Fei Hung" "Yu Chang" "Chang Feng" "Lung Tuan" 
+	}
+}
+
+
+### LIGHT CRUISER NAMES###
+LSS_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { LSS LNH }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "URN "							
+	fallback_name = "%d Qingxing Xunyangjian"
+
+	unique = {
+		"Hairong" "Zhaohe" "Haiqi" "Yingrui" "Ninghai" "Pinghai" "Zhongeng" "Haizhao" "Haizhen"	"Feihong" "Nanshen" "Paonin" "Yingjing" "Tuanji"  
+	}
+}
+
+### HEAVY CRUISER NAMES###
+LSS_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { LSS LNH }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "URN "							
+	fallback_name = "%d Zhan lie Xunyangjian"		
+
+	unique = {
+		"Zhongeng" "Haizhao" "Haizhen"	"Feihong" "Nanshen" "Paonin" "Yingjing" "Tuanji" "Hairong" "Zhaohe" "Haiqi" "Yingrui" "Ninghai" "Pinghai" 
+	}
+}
+
+### BATTLESHIP NAMES ###
+LSS_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { LSS LNH }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "URN "							
+	fallback_name = "%d Zhanjian"		
+
+	unique = {
+		"Nanshen" "Paonin" "Yingjing" "Tuanji" "Hairong" "Zhaohe" "Haiqi" "Yingrui" "Ninghai" "Pinghai" "Zhongeng" "Haizhao" "Haizhen"	"Feihong" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+LSS_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { LSS LNH }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "URN "							
+	fallback_name = "%d Zhan lie Xunyangjian"	
+
+	unique = {
+		"Nanshen" "Paonin" "Yingjing" "Tuanji" "Hairong" "Zhaohe" "Haiqi" "Yingrui" "Ninghai" "Pinghai" "Zhongeng" "Haizhao" "Haizhen"	"Feihong" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+LSS_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { LSS LNH }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "URN "							
+	fallback_name = "%d Hangmu"		
+
+	unique = {
+		"Nanshen" "Paonin" "Yingjing" "Tuanji" "Hairong" "Zhaohe" "Haiqi" "Yingrui" "Ninghai" "Pinghai" "Zhongeng" "Haizhao" "Haizhen"	"Feihong" 
+	}
+}
+
+
+### SUBMARINES ###
+LSS_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { LSS LNH }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "URN "							
+	fallback_name = "%d Qianting"
+	
+	unique = {
+		"Ching Po" "Lung Tuan" "Fen Yang" "An Shan" "Yu Chang" "Chang Feng" "Fu Po" "Fei Hung" "Tan Yang" "Shen Yang" 
+	}
+}

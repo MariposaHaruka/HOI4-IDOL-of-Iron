@@ -1,0 +1,19 @@
+CUE_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_CUE_dynamic_industry
+}
+
+CUE_army = {
+	enable = { always = yes }
+	icon = GFX_idea_CUE_dynamic_army
+}
+
+CUE_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_CUE_dynamic_naval
+}
+
+CUE_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_CUE_dynamic_airforce
+}

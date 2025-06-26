@@ -63,8 +63,14 @@ ideas = {
 
         workers_unions_allowed = {
             available = {
-                is_fascism = no
-                is_neutrality = no
+                OR = {
+                    is_fascism = no
+                    is_neutrality = no
+                    AND = {
+                        original_tag = BLA
+                        NOT = { has_country_flag = BLA_minori_banned }
+                    }
+                }
             }
 			level = 3
             removal_cost = -1

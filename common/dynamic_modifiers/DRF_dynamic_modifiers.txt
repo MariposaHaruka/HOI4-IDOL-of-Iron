@@ -1,0 +1,19 @@
+DRF_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_DRF_dynamic_industry
+}
+
+DRF_army = {
+	enable = { always = yes }
+	icon = GFX_idea_DRF_dynamic_army
+}
+
+DRF_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_DRF_dynamic_naval
+}
+
+DRF_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_DRF_dynamic_airforce
+}

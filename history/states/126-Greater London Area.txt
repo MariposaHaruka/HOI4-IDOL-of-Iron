@@ -5,7 +5,7 @@ state = {
 	
 	state_category = megalopolis
 
-	history={
+	history = {
 		owner = IMA
 		add_core_of = IMA
 		victory_points = {
@@ -22,12 +22,22 @@ state = {
 			11374 = {
 				naval_base = 10
 			}
+
+			6103 = { 
+			    landmark_big_ben = {
+			        allowed = {
+			            has_dlc = "Gotterdammerung"
+			        }
+			        level = 1
+			    }
+			}
+
 		}
 	}
 
-	provinces={
+	provinces = {
 		6103 9239 11333 11374 
 	}
 
-	local_supplies=0.0 
+	local_supplies = 0.0 
 }

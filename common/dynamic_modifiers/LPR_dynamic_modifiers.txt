@@ -1,0 +1,19 @@
+LPR_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_LPR_dynamic_industry
+}
+
+LPR_army = {
+	enable = { always = yes }
+	icon = GFX_idea_LPR_dynamic_army
+}
+
+LPR_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_LPR_dynamic_naval
+}
+
+LPR_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_LPR_dynamic_airforce
+}

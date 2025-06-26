@@ -1,74 +1,145 @@
 #의회
 defined_text = {
-	name = IMAconservative
+	name = GetParliamentPartyNameIMA
+	text = {
+		trigger = { check_variable = { v = 1 } }
+		localization_key = IMA_conservative
+	}
+	text = {
+		trigger = { check_variable = { v = 2 } }
+		localization_key = IMA_liberal
+	}
+	text = {
+		trigger = { check_variable = { v = 3 } }
+		localization_key = IMA_nationallabour
+	}
+	text = {
+		trigger = { check_variable = { v = 4 } }
+		localization_key = IMA_labour
+	}
+	text = {
+		trigger = { check_variable = { v = 6 } }
+		localization_key = IMA_communist
+	}
+	text = {
+		trigger = { check_variable = { v = 8 } }
+		localization_key = IMA_producercommunist
+	}
+	text = {
+		trigger = { check_variable = { v = 9 } }
+		localization_key = IMA_fascist
+	}
+	text = {
+		trigger = { check_variable = { v = 11 } }
+		localization_key = IMA_republicanpeople
+	}
+	text = {
+		trigger = { check_variable = { v = 12 } }
+		localization_key = IMA_kingsparty
+	}
+	text = {
+		localization_key = no_party
+	}
+}
+
+defined_text = {
+	name = GetCoallitionCheckIMA
 	text = {
 		trigger = {
-			has_country_flag = IMA_miura_azusa
+			OR = {
+				is_in_coalition_with_conservatism = yes
+				is_in_coalition_with_liberalism = yes
+				is_in_coalition_with_progressivism = yes
+				is_in_coalition_with_socialdemocracy = yes
+				is_in_coalition_with_socialism = yes
+				is_in_coalition_with_communism = yes
+				is_in_coalition_with_authoritariancommunism = yes
+				is_in_coalition_with_anarchosyndicalism = yes
+				is_in_coalition_with_fascism = yes
+				is_in_coalition_with_militarytotalism = yes
+				is_in_coalition_with_authoritariandemocracy = yes
+				is_in_coalition_with_autocracy = yes
+			}
 		}
-		localization_key = IMA_conservative_2_tt
+		localization_key = is_in_coalition
 	}
 	text = {
-		localization_key = IMA_conservative_1_tt
+		localization_key = is_not_in_coalition
 	}
 }
+
+#당수
+
 defined_text = {
-	name = IMAliberal
+	name = GetParliamentPartyLeaderIMA
 	text = {
-		trigger = {
-			has_country_flag = IMA_minase_iori
+		trigger = { 
+			check_variable = { v = 1 }
+			NOT = { has_country_flag = IMA_miura_rebellion }
 		}
-		localization_key = IMA_liberal_2_tt
+		localization_key = IMA_amami_haruka
 	}
 	text = {
-		localization_key = IMA_liberal_1_tt
-	}
-}
-defined_text = {
-	name = IMAnationallabour
-	text = {
-		localization_key = IMA_nationallabour_tt
-	}
-}
-defined_text = {
-	name = IMAlabour
-	text = {
-		trigger = {
-			has_country_flag = IMA_futami_mami
+		trigger = { 
+			check_variable = { v = 1 }
+			has_country_flag = IMA_miura_rebellion
 		}
-		localization_key = IMA_labour_2_tt
+		localization_key = IMA_miura_azusa
 	}
 	text = {
-		localization_key = IMA_labour_1_tt
+		trigger = { 
+			check_variable = { v = 2 }
+			NOT = { has_country_flag = IMA_minase_elected }
+		}
+		localization_key = IMA_kisaragi_chihaya
 	}
-}
-defined_text = {
-	name = IMAcommunist
 	text = {
-		localization_key = IMA_communist_tt
+		trigger = { 
+			check_variable = { v = 2 }
+			has_country_flag = IMA_minase_elected
+		}
+		localization_key = IMA_minase_iori
 	}
-}
-defined_text = {
-	name = IMAproducercommunist
 	text = {
-		localization_key = IMA_producercommunist_tt
+		trigger = { check_variable = { v = 3 } }
+		localization_key = IMA_futami_ami
 	}
-}
-defined_text = {
-	name = IMAfascist
 	text = {
-		localization_key = IMA_fascist_tt
+		trigger = { 
+			check_variable = { v = 4 }
+			NOT = { has_country_flag = IMA_labour_integrate_failed }
+		}
+		localization_key = IMA_takatsuki_yayoi
 	}
-}
-defined_text = {
-	name = IMArepublicanpeople
 	text = {
-		localization_key = IMA_republicanpeople_tt
+		trigger = { 
+			check_variable = { v = 4 }
+			has_country_flag = IMA_labour_integrate_failed
+		}
+		localization_key = IMA_futami_mami
 	}
-}
-defined_text = {
-	name = IMAkingsparty
 	text = {
-		localization_key = IMA_kingsparty_tt
+		trigger = { check_variable = { v = 6 } }
+		localization_key = IMA_otonashi_kotori
+	}
+	text = {
+		trigger = { check_variable = { v = 8 } }
+		localization_key = IMA_akabane_p
+	}
+	text = {
+		trigger = { check_variable = { v = 9 } }
+		localization_key = IMA_hoshii_miki
+	}
+	text = {
+		trigger = { check_variable = { v = 11 } }
+		localization_key = IMA_hagiwara_yukiho
+	}
+	text = {
+		trigger = { check_variable = { v = 12 } }
+		localization_key = IMA_shijou_takane
+	}
+	text = {
+		localization_key = no_party_leader
 	}
 }
 

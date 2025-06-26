@@ -1,0 +1,19 @@
+TAB_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_TAB_dynamic_industry
+}
+
+TAB_army = {
+	enable = { always = yes }
+	icon = GFX_idea_TAB_dynamic_army
+}
+
+TAB_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_TAB_dynamic_naval
+}
+
+TAB_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_TAB_dynamic_airforce
+}

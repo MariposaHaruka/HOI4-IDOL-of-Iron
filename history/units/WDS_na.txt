@@ -1,0 +1,35 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Vasilikó Polemikó Naftikó"			
+		naval_base = 4109 # Athens
+		task_force = {				
+			name = "Vasilikós Stólos"				
+			location = 4109 # Athens
+			ship = { name = "SFNS Georgios Averof" pride_of_the_fleet = yes definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = WDS } } }				
+			ship = { name = "SFNS Elli" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = WDS } } }				
+			# Destroyer Flotilla
+			ship = { name = "SFNS Aetos" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WDS } } }		
+			ship = { name = "SFNS Ierax" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WDS } } }		
+			ship = { name = "SFNS Leon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WDS } } }		
+			ship = { name = "SFNS Panthir" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WDS } } }		
+			ship = { name = "SFNS Kountouriotis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WDS version_name =  "Hydra Class" } } }
+			ship = { name = "SFNS Hydra" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WDS version_name =  "Hydra Class" } } }
+			ship = { name = "SFNS Psara" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WDS version_name =  "Hydra Class" } } }
+			ship = { name = "SFNS Spetsai" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WDS version_name =  "Hydra Class" } } }
+		}					
+		task_force = {					
+			name = "Stolískou Ypovrychíon"				
+			location = 4109 # Athens
+			ship = { name = "SFNS Katsonis" definition = submarine equipment = { submarine_1 = { amount = 1 owner = WDS } } }		
+			ship = { name = "SFNS Papanikolis" definition = submarine equipment = { submarine_1 = { amount = 1 owner = WDS } } }		
+			ship = { name = "SFNS Protefs" definition = submarine equipment = { submarine_1 = { amount = 1 owner = WDS } } }		
+			ship = { name = "SFNS Nirefs" definition = submarine equipment = { submarine_1 = { amount = 1 owner = WDS } } }		 
+			ship = { name = "SFNS Triton" definition = submarine equipment = { submarine_1 = { amount = 1 owner = WDS } } }		
+			ship = { name = "SFNS Glafkos" definition = submarine equipment = { submarine_1 = { amount = 1 owner = WDS } } }		
+		}					
+	}
+} 
+

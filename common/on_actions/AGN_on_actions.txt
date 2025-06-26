@@ -1,0 +1,54 @@
+on_actions = {
+	on_startup = {
+		#역사적 AI
+		effect = {
+			AGN = {
+				if = {
+					limit = { 
+						is_ai = yes
+						is_historical_focus_on = yes 
+					}
+					add_ideas = {
+						stay_conservatism
+						ally_like_hidden
+					}
+				}
+			}
+		}
+		#스타팅 정책
+		effect = {
+			AGN = {
+				add_ideas = {
+					dual_executive
+					double_parliament
+					direct_election
+					semi_unitary_state
+					independent_judiciary
+
+					
+				}
+			}
+		}
+	}
+	#on_startup = {
+		#의회
+	#	effect = {
+	#		AGN = { 
+	#			parliament_gui_initial_AGN = yes
+	#			clr_country_flag = parliament_gui_on
+	#			calc_parliament_support_AGN = yes
+	#		}
+    #    }
+    #}
+	#on_weekly = {
+		#의회 지지도 계산
+	#	effect = {
+	#		AGN = {
+	#			if = {
+	#				limit = { AGN = { NOT = { has_idea = no_parliament } } }
+	#				calc_parliament_support_AGN = yes
+	#			}
+	#		}
+	#	}
+	#}
+}

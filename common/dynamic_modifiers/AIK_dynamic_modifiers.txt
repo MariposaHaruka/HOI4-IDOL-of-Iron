@@ -1,0 +1,19 @@
+AIK_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_AIK_dynamic_industry
+}
+
+AIK_army = {
+	enable = { always = yes }
+	icon = GFX_idea_AIK_dynamic_army
+}
+
+AIK_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_AIK_dynamic_naval
+}
+
+AIK_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_AIK_dynamic_airforce
+}

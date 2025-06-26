@@ -1,0 +1,14 @@
+PRS_naval_interest_trigger = {
+	OR = {
+		AND = {
+			not = { has_war_with = TOH }
+			OR = {
+				has_war_with = IMA
+				has_war_with = ICG
+				has_war_with = LLS
+			}
+		}
+		#has_completed_focus = PRS_plan_z
+		#has_completed_focus = PRS_rebuild_the_high_seas_fleet
+	}
+}

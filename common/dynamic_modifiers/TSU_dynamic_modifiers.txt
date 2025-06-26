@@ -1,0 +1,19 @@
+TSU_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_TSU_dynamic_industry
+}
+
+TSU_army = {
+	enable = { always = yes }
+	icon = GFX_idea_TSU_dynamic_army
+}
+
+TSU_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_TSU_dynamic_naval
+}
+
+TSU_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_TSU_dynamic_airforce
+}

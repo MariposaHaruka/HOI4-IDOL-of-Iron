@@ -76,3 +76,488 @@ IMA_haruka_crisis_category = { #하루카 위기
 		}
 	}
 }
+
+IMA_haruka_plan_category = {
+
+}
+
+IMA_iori_plan_category = {
+
+}
+
+IMA_westminster_statute_category = {
+	IMA_westminster_statute_ICG = {
+		priority = 1
+		icon = GFX_decision_generic_factory
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+
+		allowed = { original_tag = IMA }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		visible = { 
+			country_exists = ICG
+			ICG = { is_subject_of = IMA }
+		}
+
+		targets = { ICG }
+
+		target_trigger = {
+			country_exists = FROM
+		}
+
+		fire_only_once = yes
+		cost = 0
+
+		days_remove = 1
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = test_tt
+		}
+	}
+	IMA_westminster_statute_IML = {
+		priority = 1
+		icon = GFX_decision_generic_factory
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+
+		allowed = { original_tag = IMA }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		visible = { 
+			country_exists = IML
+			IML = { is_subject_of = IMA }
+		}
+
+		targets = { IML }
+
+		target_trigger = {
+			country_exists = FROM
+		}
+
+		fire_only_once = yes
+		cost = 0
+
+		days_remove = 1
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = test_tt
+		}
+	}
+	IMA_westminster_statute_ISC = {
+		priority = 1
+		icon = GFX_decision_generic_factory
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+
+		allowed = { original_tag = IMA }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		visible = { 
+			country_exists = ISC
+			ISC = { is_subject_of = IMA }
+		}
+
+		targets = { ISC }
+
+		target_trigger = {
+			country_exists = FROM
+		}
+
+		fire_only_once = yes
+		cost = 0
+
+		days_remove = 1
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = test_tt
+		}
+	}
+	IMA_westminster_statute_ISM = {
+		priority = 1
+		icon = GFX_decision_generic_factory
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+
+		allowed = { original_tag = IMA }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		visible = { 
+			country_exists = ISM
+			ISM = { is_subject_of = IMA }
+		}
+
+		targets = { ISM }
+
+		target_trigger = {
+			country_exists = FROM
+		}
+		
+		fire_only_once = yes
+		cost = 0
+
+		days_remove = 1
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = test_tt
+		}
+	}
+	IMA_westminster_statute_IDS = {
+		priority = 1
+		icon = GFX_decision_generic_factory
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+
+		allowed = { original_tag = IMA }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		visible = { 
+			country_exists = IDS
+			IDS = { is_subject_of = IMA }
+		}
+
+		targets = { IDS }
+
+		target_trigger = {
+			country_exists = FROM
+		}
+
+		fire_only_once = yes
+		cost = 0
+
+		days_remove = 1
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = test_tt
+		}
+	}
+	IMA_westminster_statute_IGM = {
+		priority = 1
+		icon = GFX_decision_generic_factory
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+
+		allowed = { original_tag = IMA }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		visible = { 
+			country_exists = IGM
+			IGM = { is_subject_of = IMA }
+		}
+
+		targets = { IGM }
+
+		target_trigger = {
+			country_exists = FROM
+		}
+		
+		fire_only_once = yes
+		cost = 0
+
+		days_remove = 1
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = test_tt
+		}
+	}
+}
+
+IMA_thames_plan_category = {
+
+}
+
+IMA_homeland_defence_category = {
+
+}
+
+IMA_foreign_defence_plan_category = {
+
+}
+
+IMA_intervension_plan_category = {
+	IMA_topple_AIN = {
+		priority = 1
+		icon = generic_tank
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+
+		available = { has_completed_focus = IMA_51007 }
+		visible = { has_completed_focus = IMA_51007 }
+
+		targets = { AIN }
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+		war_with_target_on_remove = yes
+
+		fire_only_once = yes
+		cost = 15
+
+		days_remove = 35
+
+		remove_effect = {
+			declare_war_on = {
+				target = AIN
+				type = topple_government
+				generator = { 459 460 }
+			}
+		}
+	}
+	IMA_topple_HND = {
+		priority = 1
+		icon = generic_tank
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+
+		available = { has_completed_focus = IMA_51007 }
+		visible = { has_completed_focus = IMA_51007 }
+
+		targets = { HND }
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+		war_with_target_on_remove = yes
+
+		fire_only_once = yes
+		cost = 15
+		war_with_target_on_remove = yes
+
+		days_remove = 35
+
+		remove_effect = {
+			declare_war_on = {
+				target = HND
+				type = topple_government
+				generator = { 458 }
+			}
+		}
+	}
+	IMA_topple_NPT = {
+		priority = 1
+		icon = generic_tank
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+		
+		available = { has_completed_focus = IMA_51008 }
+		visible = { has_completed_focus = IMA_51008 }
+
+		targets = { NPT }
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+		war_with_target_on_remove = yes
+
+		fire_only_once = yes
+		cost = 15
+
+		days_remove = 35
+
+		remove_effect = {
+			declare_war_on = {
+				target = NPT
+				type = topple_government
+				generator = { 412 413 417 }
+			}
+		}
+	}
+	IMA_topple_TSS = {
+		priority = 1
+		icon = generic_tank
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+		
+		available = { has_completed_focus = IMA_51008 }
+		visible = { has_completed_focus = IMA_51008 }
+
+		targets = { TSS }
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+		war_with_target_on_remove = yes
+
+		fire_only_once = yes
+		cost = 15
+
+		days_remove = 35
+
+		remove_effect = {
+			declare_war_on = {
+				target = TSS
+				type = topple_government
+				generator = { 554 677 }
+			}
+		}
+	}
+	IMA_topple_DIF = {
+		priority = 1
+		icon = generic_tank
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+		
+		available = { has_completed_focus = IMA_51008 }
+		visible = { has_completed_focus = IMA_51008 }
+
+		targets = { DIF }
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+		war_with_target_on_remove = yes
+
+		fire_only_once = yes
+		cost = 15
+
+		days_remove = 35
+
+		remove_effect = {
+			declare_war_on = {
+				target = DIF
+				type = topple_government
+				generator = { 455 }
+			}
+		}
+	}
+	IMA_topple_EXT = {
+		priority = 1
+		icon = generic_tank
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+		
+		available = { has_completed_focus = IMA_51008 }
+		visible = { has_completed_focus = IMA_51008 }
+
+		targets = { EXT }
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+		war_with_target_on_remove = yes
+
+		fire_only_once = yes
+		cost = 15
+
+		days_remove = 35
+
+		remove_effect = {
+			declare_war_on = {
+				target = EXT
+				type = topple_government
+				generator = { 454 }
+			}
+		}
+	}
+	IMA_topple_ONS = {
+		priority = 1
+		icon = generic_tank
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+		
+		available = { has_completed_focus = IMA_51008 }
+		visible = { has_completed_focus = IMA_51008 }
+
+		targets = { ONS }
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+		war_with_target_on_remove = yes
+
+		fire_only_once = yes
+		cost = 15
+
+		days_remove = 35
+
+		remove_effect = {
+			declare_war_on = {
+				target = ONS
+				type = topple_government
+				generator = { 553 }
+			}
+		}
+	}
+	IMA_topple_SZS = {
+		priority = 1
+		icon = generic_tank
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+		
+		available = { has_completed_focus = IMA_51009 }
+		visible = { has_completed_focus = IMA_51009 }
+
+		targets = { SZS }
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+		war_with_target_on_remove = yes
+
+		fire_only_once = yes
+		cost = 15
+
+		days_remove = 35
+
+		remove_effect = {
+			declare_war_on = {
+				target = SZS
+				type = topple_government
+				generator = { 911 37 99 }
+			}
+		}
+	}
+	IMA_topple_MMM = {
+		priority = 1
+		icon = generic_tank
+		ai_will_do = { #Integrated republics go after puppets
+			base = 0.5
+		}
+		
+		available = { has_completed_focus = IMA_51011 }
+		visible = { has_completed_focus = IMA_51011 }
+
+		targets = { MMM }
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+		war_with_target_on_remove = yes
+
+		fire_only_once = yes
+		cost = 15
+
+		days_remove = 35
+
+		remove_effect = {
+			declare_war_on = {
+				target = MMM
+				type = topple_government
+				generator = { 41 165 169 }
+			}
+		}
+	}
+}
+
+IMA_idolmaster_conference_category = {
+	
+}
+

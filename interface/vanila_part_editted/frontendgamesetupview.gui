@@ -152,7 +152,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "country_name"
-			position = { x = 0 y = 75 }
+			position = { x = 0 y = 78 }
 			font = "hoi_16mbs"
 			borderSize = { x = 0 y = 0 }
 			maxWidth = 172
@@ -601,7 +601,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "gamesetup_interesting_countries_window"
-		size = { width = 1397 height = 717 }
+		size = { width = 1225 height = 717 }
 		Orientation = center
 		origo = center
 		clipping = no
@@ -609,7 +609,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 521 y = 12 }
+			position = { x = 442 y = 12 }							### NOT PROPERLY CENTRED IN VANILLA
 			textureFile = ""
 			font = "hoi_24header"
 			borderSize = {x = 0 y = 0}
@@ -621,9 +621,11 @@ guiTypes = {
 
 		background = {
 			name = "single_player_country_bg"
-			quadTextureSprite ="GFX_country_selection_bg"
+			quadTextureSprite = "GFX_country_selection_bg"
 		}
-		
+
+	### SETUP FOR FACTION BACKDROP TEXTURES ###
+
 		containerWindowType = {
 			name = "backdrop_0"
 			position = { x = 10   y = 45 }
@@ -632,7 +634,7 @@ guiTypes = {
 
 			iconType = {
 				name = "backdrop_texture_0"
-				quadTextureSprite = "GFX_FGO_intro"
+				quadTextureSprite = "GFX_BDG_intro"
 				position = { x = 2  y = 2 }
 			}
 		}
@@ -645,7 +647,7 @@ guiTypes = {
 
 			iconType = {
 				name = "backdrop_texture_1"
-				quadTextureSprite = "GFX_BDG_intro"
+				quadTextureSprite = "GFX_TOH_intro"
 				position = { x = 2  y = 2 }
 			}
 		}
@@ -658,7 +660,7 @@ guiTypes = {
 
 			iconType = {
 				name = "backdrop_texture_2"
-				quadTextureSprite = "GFX_LLS_intro"
+				quadTextureSprite = "GFX_IMA_intro"
 				position = { x = 2  y = 2 }
 			}
 		}
@@ -671,7 +673,7 @@ guiTypes = {
 
 			iconType = {
 				name = "backdrop_texture_3"
-				quadTextureSprite = "GFX_IMA_intro"
+				quadTextureSprite = "GFX_00_intro"
 				position = { x = 2  y = 2 }
 			}
 		}
@@ -697,7 +699,7 @@ guiTypes = {
 
 			iconType = {
 				name = "backdrop_texture_5"
-				quadTextureSprite = "GFX_HLL_intro"
+				quadTextureSprite = "GFX_BLA_intro"
 				position = { x = 2  y = 2 }
 			}
 		}
@@ -710,41 +712,30 @@ guiTypes = {
 
 			iconType = {
 				name = "backdrop_texture_6"
-				quadTextureSprite = "GFX_TOH_intro"
+				quadTextureSprite = "GFX_LLS_intro"
 				position = { x = 2  y = 2 }
 			}
 		}
 
-		containerWindowType = {
-			name = "backdrop_7"
-			position = { x = 1214 y = 45 }
-			size = { width = 172  height = 380 }
-			background = { quadTextureSprite = "GFX_tiled_paper_bg2" }
-
-			iconType = {
-				name = "backdrop_texture_6"
-				quadTextureSprite = "GFX_BLA_intro"
-				position = { x = 2  y = 2 }
-			}
-		}
+	### END of SECTION ###
 
 		ButtonType = {
 			name = "back_button"
-			position = { x = -1580 y = -520 }
-			quadTextureSprite ="GFX_button_148x34"
+			position = { x = 30 y = -57 }
+			quadTextureSprite = "GFX_button_148x34"
 			buttonText = "BACK"
 			buttonFont = "hoi_18mbs"
 			Orientation = "CENTER_DOWN"
 			clicksound = click_close
 			oversound = ui_menu_over
-			shortcut = "ESCAPE"
-			hide = yes #기능 안 먹혀서 막음
+			#shortcut = "ESCAPE"
+			hide = yes	#기능 안먹혀서 막음
 		}
 
 		ButtonType = {
 			name = "select_button"
 			position = { x = -130 y = -52 }
-			quadTextureSprite ="GFX_button_261x34"
+			quadTextureSprite = "GFX_button_261x34"
 			buttonText = "FE_SELECT_COUNTRY"
 			buttonFont = "hoi_18mbs"
 			Orientation = "CENTER_DOWN"
@@ -754,28 +745,28 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-			name ="countries"
-			position = { x = 10 y = 140 }
-			size = { width = -15 height = 120}
+			name = "countries"
+			position = { x = 10 y = 225 }
+			size = { width = -15 height = 120 }
 
 			gridboxType = {
-				name ="countries_grid"
+				name = "countries_grid"
 				position = { x = 0 y = 0 }
 				size = { width = 100% height = 100% }
 				slotsize = { width = 172 height = 95 }
 				add_horizontal = no
-				max_slots_vertical = 2
+				max_slots_vertical = 1
 				format = "UPPER_LEFT"
 			}
 		}
 
 		containerWindowType = {
-			name ="countries_medium"
-			position = { x = 15 y = 330 }
+			name = "countries_medium"
+			position = { x = 15 y = 225 }
 			size = { width = -15 height = 120 }
 
 			gridboxType = {
-				name ="countries_grid"
+				name = "countries_grid"
 				position = { x = 0 y = 0 }
 				size = { width = 100% height = 100% }
 				slotsize = { width = 150 height = 0 }
@@ -786,12 +777,12 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-			name ="countries_mini"
+			name = "countries_mini"
 			position = { x = 24 y = 330 }
 			size = { width = -15 height = 120 }
 
 			gridboxType = {
-				name ="countries_grid"
+				name = "countries_grid"
 				position = { x = 0 y = 0 }
 				size = { width = 100% height = 100% }
 				slotsize = { width = 86 height = 45 }
@@ -802,6 +793,626 @@ guiTypes = {
 			}
 		}
 
+		### SETUP FOR COVER-UP ###
+
+		instantTextBoxType = {
+			name = "new_this_patch_title_b"
+			position = { x = 525  y = 54 } ## offset to produce shadow-like effect
+			font = "hoi_36header"
+			text = "UPDATE_TT"
+			maxWidth = 172
+			maxHeight = 95
+			format = centre
+			hide = yes
+		}
+
+		instantTextBoxType = {
+			name = "new_this_patch_title"
+			position = { x = 526  y = 55 }
+			font = "hoi_36header"
+			text = "UPDATE_TT"
+			maxWidth = 172
+			maxHeight = 95
+			format = centre
+			hide = yes
+		}
+
+		
+
+		containerWindowType = {
+			name = "coverup_3"
+			position = { x = 526  y = 225 }
+			size = { width = 172  height = 105 }
+			clipping = yes
+
+			containerWindowType = {
+				name = "coverup_3_bg"
+				position = { x = 0   y = -180 }
+				size = { width = 172 height = 380 }
+				background = { quadTextureSprite = "GFX_tiled_paper_bg2" }
+
+				iconType = {
+					name = "backdrop_texture_3"
+					quadTextureSprite = "GFX_00_intro"
+					position = { x = 2  y = 2 }
+				}
+			}
+		}
+
+		### SETUP FOR HIGHLIGHTING MAJOR TAGS
+
+		containerWindowType = {
+			name = highlight_major_0 #뱅드림 플레이 가능 여부
+			position = { x = 144 y = 224 }
+			## x: ± 172 to move one slot left or right
+			## y: ± 95 to move one slot up or down
+
+			iconType = {
+				name = "highlight_major_button"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 0  y = 0 }
+				rotation = 0.25
+				scale = 0.8
+				pdx_tooltip = highlight_BDG_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_major_1 #동방 플레이 가능 여부
+			position = { x = 316 y = 224 }
+			## x: ± 172 to move one slot left or right
+			## y: ± 95 to move one slot up or down
+
+			iconType = {
+				name = "highlight_major_button"
+				quadTextureSprite = "GFX_content_partialy_playable"
+				position = { x = 0  y = 0 }
+				rotation = 0.25
+				scale = 0.8
+				pdx_tooltip = highlight_TOH_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_major_2 #아이마스 플레이 가능 여부
+			position = { x = 488 y = 224 }
+			## x: ± 172 to move one slot left or right
+			## y: ± 95 to move one slot up or down
+
+			iconType = {
+				name = "highlight_major_button"
+				quadTextureSprite = "GFX_content_partialy_playable"
+				position = { x = 0  y = 0 }
+				rotation = 0.25
+				scale = 0.8
+				pdx_tooltip = highlight_IMA_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_major_3 #업데이트 국가 플레이 가능 여부
+			position = { x = 660 y = 224 }
+			## x: ± 172 to move one slot left or right
+			## y: ± 95 to move one slot up or down
+			hide = yes
+
+			iconType = {
+				name = "highlight_major_button"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 0  y = 0 }
+				rotation = 0.25
+				scale = 0.8
+				pdx_tooltip = highlight_major_3_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_major_4 #프세카 플레이 가능 여부
+			position = { x = 832 y = 224 }
+			## x: ± 172 to move one slot left or right
+			## y: ± 95 to move one slot up or down
+
+			iconType = {
+				name = "highlight_major_button"
+				quadTextureSprite = "GFX_content_partialy_playable"
+				position = { x = 0  y = 0 }
+				rotation = 0.25
+				scale = 0.8
+				pdx_tooltip = highlight_PRS_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_major_5 #블루아카 플레이 가능 여부
+			position = { x = 1004 y = 224 }
+			## x: ± 172 to move one slot left or right
+			## y: ± 95 to move one slot up or down
+
+			iconType = {
+				name = "highlight_major_button"
+				quadTextureSprite = "GFX_content_partialy_playable"
+				position = { x = 0  y = 0 }
+				rotation = 0.25
+				scale = 0.8
+				pdx_tooltip = highlight_BLA_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_major_6 #럽라 플레이 가능여부
+			position = { x = 1176 y = 224 }
+			## x: ± 172 to move one slot left or right
+			## y: ± 95 to move one slot up or down
+
+			iconType = {
+				name = "highlight_major_button"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 0  y = 0 }
+				rotation = 0.25
+				scale = 0.8
+				pdx_tooltip = highlight_LLS_tt
+			}
+		}
+
+		### SETUP FOR HIGHLIGHTING MINOR TAGS
+
+		#뱅드림 아래 4개국(highlight_0)
+		containerWindowType = {
+			name = highlight_minor_0_1 #아르고나비스 플레이 가능 여부
+			position = { x = 41 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_AGN_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_0_2 #레뷰스타 플레이 가능 여부
+			position = { x = 127 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_STR_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_0_3 #디포디제 플레이 가능 여부
+			position = { x = 41 y = 390 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_DFD_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_0_4 #심포기어 플레이 가능 여부
+			position = { x = 127 y = 390 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_SZS_tt
+			}
+		}
+
+		#동방 아래 4개국(highlight_1)
+		containerWindowType = {
+			name = highlight_minor_1_1 #걸판 플레이 가능 여부
+			position = { x = 213 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_GUP_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_1_2 #도키메키 아이돌 플레이 가능 여부
+			position = { x = 299 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_TKI_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_1_3 #칸코레 플레이 가능 여부
+			position = { x = 213 y = 390 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_KTC_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_1_4 #초차원 넵튠 플레이 가능 여부
+			position = { x = 299 y = 390 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_NPT_tt
+			}
+		}
+
+		#아이마스 아래 4개국(highlight_2)
+		containerWindowType = {
+			name = highlight_minor_2_1 #데레마스 플레이 가능 여부
+			position = { x = 385 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_ICG_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_2_2 #샤니마스 플레이 가능 여부
+			position = { x = 471 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_ISC_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_2_3 #밀리마스 플레이 가능 여부
+			position = { x = 385 y = 390 } 
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_IML_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_2_4 #사이드엠 플레이 가능 여부
+			position = { x = 471 y = 390 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_ISM_tt
+			}
+		}
+
+		#메인 업데이트 아래 4개국(highlight_3)
+		containerWindowType = {
+			name = highlight_minor_3_1 #페그오 플레이 가능 여부
+			position = { x = 557 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_FGO_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_3_2 #걸밴크 플레이 가능 여부
+			position = { x = 643 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_GBC_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_3_3 #아돌프 플레이 가능 여부
+			position = { x = 557 y = 390 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_IDP_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_3_4 #마크로스 플레이 가능 여부
+			position = { x = 643 y = 390 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_MCR_tt
+			}
+		}
+
+		#프세카 아래 4개국(highlight_4)
+		containerWindowType = {
+			name = highlight_minor_4_1 #앙스타 플레이 가능 여부
+			position = { x = 729 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_ENS_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_4_2 #우마무스메 플레이 가능 여부
+			position = { x = 815 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_UMA_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_4_3 #홀로라이브 플레이 가능 여부
+			position = { x = 729 y = 390 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_HLL_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_4_4 #헤번레 플레이 가능 여부
+			position = { x = 815 y = 390 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_HBR_tt
+			}
+		}
+
+		#블루아카 아래 4개국(highlight_5)
+		containerWindowType = {
+			name = highlight_minor_5_1 #벽람항로 플레이 가능 여부
+			position = { x = 901 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_AZU_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_5_2 #파리피 공명 플레이 가능 여부
+			position = { x = 987 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_PTK_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_5_3 #라스트오리진 플레이 가능 여부
+			position = { x = 901 y = 390 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_LAS_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_5_4 #WUG 플레이 가능 여부
+			position = { x = 987 y = 390 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_WUG_tt
+			}
+		}
+
+		#럽라 아래 4개국(highlight_6)
+		containerWindowType = {
+			name = highlight_minor_6_1 #럽라 선샤인 플레이 가능 여부
+			position = { x = 1073 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_LSS_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_6_2 #럽라 슈퍼스타 플레이 가능 여부
+			position = { x = 1159 y = 345 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_LST_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_6_3 #니지동 플레이 가능 여부
+			position = { x = 1073 y = 390 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_LNH_tt
+			}
+		}
+
+		containerWindowType = {
+			name = highlight_minor_6_4 #하스노소라 플레이 가능 여부
+			position = { x = 1159 y = 390 }
+			## x: ± 86 to move one slot left or right
+			## y: ± 45 to move one slot up or down
+			## make a copy of this element if you want to highlight a second minor
+
+			iconType = {
+				name = "highlight_minor_wrench"
+				quadTextureSprite = "GFX_content_under_construction"
+				position = { x = 25  y = 10 }
+				scale = 0.5
+				pdx_tooltip = highlight_LHH_tt
+			}
+		}
+		
+		### END of SECTION ###
+
 		iconType = {
 			name = "minor_country_leader"
 			quadTextureSprite = "GFX_leader_unknown"
@@ -811,9 +1422,9 @@ guiTypes = {
 		}
 
 		iconType = {
-				name = "minor_portrait_overlay"
-				spriteType = "GFX_minor_portrait_overlay"
-				position = { x= 280 y = 430 }
+			name = "minor_portrait_overlay"
+			spriteType = "GFX_minor_portrait_overlay"
+			position = { x = 280 y = 430 }
 		}
 
 
@@ -934,7 +1545,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "nation_title"
-			position = { x = 528 y = 421 }
+			position = { x = 442 y = 421 }
 			font = "hoi_24header"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 340
@@ -948,39 +1559,39 @@ guiTypes = {
 			position = { x = 451 y = 475 }
 
 			iconType = {
-				name ="pol_faction_icon"
+				name = "pol_faction_icon"
 				spriteType = "GFX_pol_factions_strip"
 				position = { x = 0 y = 0 }
 				frame = 1
 			}
 
 			containerWindowType = {
-				name ="ideas"
+				name = "ideas"
 				position = { x = 91 y = -1 }
-				size = { width = 100% height = 70 }
+				size = { width = 100%% height = 70 }
 
 				gridboxType = {
-					name ="ideas_grid"
+					name = "ideas_grid"
 					position = { x = 0 y = 0 }
 					size = { width = 100% height = 70 }
 					slotsize = { width = 60 height = 66 }
-					max_slots = { x = 6 y = 1 }
+					max_slots = { x = 3 y = 1 }
 					add_horizontal = yes
 					format = "UPPER_LEFT"
 				}
 			}
 
 			containerWindowType = {
-				name ="focus"
+				name = "focus"
 				position = { x = 9 y = 85 }
 				size = { width = 100% height = 100 }
 
 				gridboxType = {
-					name ="focus_grid"
+					name = "focus_grid"
 					position = { x = 17 y = 8 }
 					size = { width = 100% height = 100 }
-					slotsize = { width = 100 height = 100 }
-					max_slots = { x = 5 y = 1 }
+					slotsize = { width = 105 height = 100 }
+					max_slots = { x = 4 y = 1 }
 					add_horizontal = yes
 					format = "UPPER_LEFT"
 				}
@@ -989,7 +1600,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "history_title"
-			position = { x = 1004 y = 450 }
+			position = { x = 830 y = 450 }
 			font = "hoi4_typewriter22"
 			borderSize = {x = 0 y = 0}
 			text = "FE_COUNTRY_HISTORY_TITLE"
@@ -1000,7 +1611,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "history"
-			position = { x = 981 y = 490 }
+			position = { x = 810 y = 490 }
 			font = "hoi4_typewriter16"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 380
@@ -1008,7 +1619,6 @@ guiTypes = {
 			format = left
 		}
 	}
-
 	containerWindowType = {
 		name ="gamesetup_important_message_window"
 		position = { x = -170 y = 300 }

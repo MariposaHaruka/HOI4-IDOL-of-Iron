@@ -1,0 +1,19 @@
+AOP_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_AOP_dynamic_industry
+}
+
+AOP_army = {
+	enable = { always = yes }
+	icon = GFX_idea_AOP_dynamic_army
+}
+
+AOP_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_AOP_dynamic_naval
+}
+
+AOP_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_AOP_dynamic_airforce
+}

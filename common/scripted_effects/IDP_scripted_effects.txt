@@ -1,0 +1,13 @@
+IDP_nagase_mana_died = {
+	IDP = {
+		kill_country_leader = yes
+	}
+	add_country_leader_role = {
+		character = IDP_nagase_kotono
+		promote_leader = yes
+		country_leader = {
+			ideology = authoritariandemocracy_subtype
+			expire = "2099.12.31"
+		}
+	}
+}

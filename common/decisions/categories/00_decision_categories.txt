@@ -63,7 +63,7 @@ fascism_on_the_rise = {
 		
 	}
 	visible = {
-		has_completed_focus = change_political_stance
+		always = no
 		is_fascism = no
 		OR = {
 			fascism > 0.2
@@ -81,7 +81,7 @@ democratic_on_the_rise = {
 	}
 
 	visible = {
-		has_completed_focus = change_political_stance
+		always = no
 		is_democratic = no
 		OR = {
 			conservatism > 0.2
@@ -99,7 +99,7 @@ communism_on_the_rise = {
 		has_unique_national_focus = no
 	}
 	visible = {
-		has_completed_focus = change_political_stance
+		always = no
 		is_communism = no
 		OR = {
 			socialism > 0.2
@@ -117,8 +117,7 @@ neutralism_on_the_rise = {
 		has_unique_national_focus = no
 	}
 	visible = { 
-		has_completed_focus = change_political_stance
-		is_neutrality = no
+		always = no
 		OR = {
 			autocracy > 0.2
 			authoritariandemocracy > 0.2
@@ -146,6 +145,7 @@ demobilization = {
 	
 	visible = {
 		has_war = no
+		has_idea = dfg
 	}
 }
 
@@ -352,20 +352,10 @@ generic_refit_civilian_ships_category = {
 	visible_when_empty = no
 }
 
-#정치적 행동
-political_actions_suppress = {
+democratic_actions = {
 	icon = generic_political_actions
-	allowed = { always = yes }
+	allowed = { is_democratic = yes }
 	priority = {
-		base = 5
-	}
-}
-
-#정치적 행동
-political_actions_support = {
-	icon = generic_political_actions
-	allowed = { always = yes }
-	priority = {
-		base = 4
+		base = 3
 	}
 }

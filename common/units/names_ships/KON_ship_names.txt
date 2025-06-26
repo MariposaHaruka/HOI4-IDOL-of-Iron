@@ -1,0 +1,120 @@
+﻿##### ESTONIA NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+KON_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { KON }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "SRML "
+	fallback_name = "Torpeedopaatide %d"					
+
+	unique = {											
+		"Wambola" "Lennuk" "Sulev" "Pikker" "Lembit" "Lane" 
+	}
+}
+
+### LIGHT CRUISER NAMES###
+KON_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { KON }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "SRML "
+	fallback_name = "Kerge Ristleja %d"
+
+	unique = {
+		"Muhu" "Hiiumaa" "Saaremaa" "Abruka" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+KON_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { KON }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "SRML "
+	fallback_name = "Raskeristleja %d"
+
+	unique = {
+		"Tallinn" "Valga" "Tartu" "Mustvee" "Haapsalu" "Rapla" "Paldiski" "Kihnu" "Vormsi" 
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+KON_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { KON }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "SRML "
+	fallback_name = "Lahingulaev %d"		
+
+	unique = {
+		"Tallinn" "Valga" "Tartu" "Mustvee" "Haapsalu" "Rapla" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+KON_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { KON }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "SRML "
+	fallback_name = "Lahing Ristleja %d"		
+
+	unique = {
+		"Paldiski" "Muhu" "Hiiumaa" "Saaremaa" "Abruka" "Kihnu" "Vormsi" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+KON_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { KON }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "SRML "
+	fallback_name = "Lennukikandja %d"	
+
+	unique = {
+		"Tallinn" "Valga" "Tartu" "Muhu" "Hiiumaa" "Saaremaa" "Abruka" "Kihnu" "Vormsi" "Sulev" "Wambola" "Vaindlo" "Olev" 
+	}
+}
+
+### SUBMARINES ###
+KON_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { KON }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "SRML "
+	fallback_name = "Allveelaevade %d"
+	
+	unique = {
+		"Kalev" "Lembit" "Wambola" "Lennuk" "Sulev" "Pikker" "Lembit" "Lane" 
+	}
+}

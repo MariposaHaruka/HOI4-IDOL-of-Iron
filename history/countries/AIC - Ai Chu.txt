@@ -6,10 +6,15 @@ set_oob = "AIC_ar"
 add_command_power = 5
 set_fuel_ratio = 0.2
 
+set_country_flag = no_air_academy
+
 #시작 기술
 set_technology = {
 	infantry_weapons = 1
 	tech_trucks = 1
+	tech_support = 1	
+	trench_warfare = 1
+	fleet_in_being = 1
 }
 
 #인트로
@@ -19,7 +24,12 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 10
 
 #국민정신
-add_ideas = agrarian_society
+add_ideas = {
+	agrarian_society
+}
+
+add_dynamic_modifier = { modifier = AIC_industry }
+add_dynamic_modifier = { modifier = AIC_army }
 
 #외교
 
@@ -98,7 +108,3 @@ recruit_character = AIC_producer
 #장관진
 
 #무기 프리셋
-#create_equipment_variant = {
-#	name = ""
-#	type = amphibious_tank_equipment_2
-#}

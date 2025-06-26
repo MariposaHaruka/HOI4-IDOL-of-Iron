@@ -2,30 +2,6 @@ on_actions = {
     on_startup = {
 	    effect = {
 			every_country = {
-				limit = { is_imas = yes }
-				add_ideas = prime_minister
-				add_ideas = double_parliament
-				add_ideas = direct_election
-				add_ideas = federal_state
-				add_ideas = independent_judiciary
-			}
-			every_country = {
-				limit = {
-					OR = {
-						original_tag = GFR
-						original_tag = SHP
-						original_tag = IDI
-						original_tag = TSS
-						original_Tag = DIF
-					}
-				}
-				add_ideas = president_idea
-				add_ideas = single_parliament
-				add_ideas = indirect_election
-				add_ideas = unitary_state
-				add_ideas = subordinate_to_the_executive
-			}
-			every_country = {
 				limit = {
 					OR = {
 						original_tag = SZS
@@ -38,26 +14,6 @@ on_actions = {
 				add_ideas = single_parliament
 				add_ideas = indirect_election
 				add_ideas = unitary_state
-				add_ideas = independent_judiciary
-			}
-			every_country = {
-				limit = {
-					original_tag = BDG
-				}
-				add_ideas = dual_executive
-				add_ideas = double_parliament
-				add_ideas = direct_election
-				add_ideas = unitary_state
-				add_ideas = independent_judiciary
-			}
-			every_country = {
-				limit = {
-					original_tag = AGN
-				}
-				add_ideas = dual_executive
-				add_ideas = double_parliament
-				add_ideas = direct_election
-				add_ideas = semi_unitary_state
 				add_ideas = independent_judiciary
 			}
 			every_country = {
@@ -132,22 +88,7 @@ on_actions = {
 				add_ideas = judiciary_not_working
 			}
 			every_country = {
-				limit = {
-					original_tag = BLA
-				}
-				add_ideas = prime_minister #student_council로 교체 필요
-				add_ideas = no_parliament
-				add_ideas = indirect_election
-				add_ideas = local_self_federal_state
-				add_ideas = subordinate_to_the_executive
-			}
-			every_country = {
-				limit = {
-					OR = {
-						original_tag = LOC
-						original_tag = WUG
-					}
-				}
+				limit = { original_tag = WUG }
 				add_ideas = president_idea
 				add_ideas = no_parliament
 				add_ideas = no_election
@@ -193,20 +134,6 @@ on_actions = {
 				add_ideas = no_election
 				add_ideas = unitary_state
 				add_ideas = judiciary_not_working
-			}
-			every_country = {
-				limit = {
-					OR = { 
-						original_tag = YMC
-						original_tag = HDA
-						original_tag = BPR
-					}
-				}
-				add_ideas = president_idea
-				add_ideas = no_parliament
-				add_ideas = no_election
-				add_ideas = semi_unitary_state
-				add_ideas = subordinate_to_the_executive
 			}
 			every_country = {
 				limit = {
@@ -261,7 +188,6 @@ on_actions = {
 			every_country = {
 				limit = {
 					has_government = militarytotalism
-					NOT = { original_tag = AZU }
 					NOT = { original_tag = HLL }
 				}
 				add_ideas = military_dictatorship_idea
@@ -289,9 +215,6 @@ on_actions = {
 				add_ideas = no_election
 				add_ideas = federal_state
 				add_ideas = judiciary_not_working
-			}
-			every_country = {
-				add_ideas = support_infrastructure_construction
 			}
         }
     }

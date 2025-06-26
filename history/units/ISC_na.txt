@@ -1,0 +1,29 @@
+
+
+
+
+units = {
+	
+
+	##### Naval OOB #####
+	fleet = {
+		name = "Royal Tsubasa Navy"			
+		naval_base = 12406 # Sydney
+		task_force = {
+			name = "Tsubasa Squadron"
+			location = 12406 # Sydney
+			ship = { name = "ISSS Canberra" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ISC version_name = "Canberra Class" } }	}
+			ship = { name = "ISSS Australia" pride_of_the_fleet = yes definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ISC version_name = "Canberra Class" } } }
+			ship = { name = "ISSS Sydney" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ISC } } }
+			ship = { name = "ISSS Adelaide" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ISC } } }
+			# Scrap Iron Flotilla
+			ship = { name = "ISSS Stuart" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISC } } }
+			ship = { name = "ISSS Vampire" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISC } } }
+			ship = { name = "ISSS Vendetta" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISC } } }
+			ship = { name = "ISSS Voyager" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISC } } }
+			ship = { name = "ISSS Waterhen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISC } } }
+		}				
+	}
+}
+
+

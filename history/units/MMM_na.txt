@@ -1,0 +1,104 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Base Naval El Ferrol"
+		naval_base = 758  # Ferrol/Coruna
+		task_force = {
+			name = "Escuadrón de El Ferrol"
+			location = 758  # Ferrol/Coruna
+			ship = { name = "ARM Jaime I" definition = battleship equipment = { battleship_1 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM España" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM Libertad" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MMM version_name = "Príncipe Alfonso Class" } } }
+			ship = { name = "ARM Almirante Cervera" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MMM version_name = "Príncipe Alfonso Class" } } }
+			ship = { name = "ARM Miguel de Cervantes" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MMM version_name = "Príncipe Alfonso Class" } } }
+			# Flotilla de Destructores de El Ferrol
+			ship = { name = "ARM Alsedo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM Velasco" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM Lazaga" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MMM } } }
+		}
+	}
+		
+	fleet = {
+		name = "Base Naval Cádiz"
+		naval_base = 1048  #Cádiz
+		task_force = {
+			name = "Escuadrón de Cádiz"
+			location = 1048  #Cádiz
+			ship = { name = "ARM República" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM Méndez Núñez" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MMM } } }
+		}
+		task_force = {
+			name = "Grupo de Cádiz"
+			location = 1048  #Cádiz
+			# S103 Flotilla
+			ship = { name = "ARM B1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM B2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM B3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM B4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = MMM } } }
+		}
+	}
+		
+	fleet = {
+		name = "Base Naval Cartagena"
+		naval_base = 10024  #Cartagena/Murcia
+		task_force = {
+			name = "Escuadrón de Cartagena"
+			location = 10024  #Cartagena/Murcia
+			# Flotilla de Destructores n.1
+			ship = { name = "ARM Almirante Ferrándiz" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM Sánchez Barcáiztegui" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM Alcalá Galiano" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM Almirante Valdés" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = MMM } } }
+			# Flotilla de Destructores n.2
+			ship = { name = "ARM Churucca" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM José Luis Díez" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM Lepanto" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM Almirante Antequera" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = MMM } } }
+		}
+		task_force = {
+			name = "Grupo de Cartagena"
+			location = 10024  #Cartagena/Murcia
+			# S101 Flotilla
+			ship = { name = "ARM B5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM B6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = MMM } } }
+			ship = { name = "ARM C1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = MMM version_name = "C Class" } } }
+			ship = { name = "ARM C2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = MMM version_name = "C Class" } } }
+			ship = { name = "ARM C3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = MMM version_name = "C Class" } } }
+			ship = { name = "ARM C4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = MMM version_name = "C Class" } } }
+			ship = { name = "ARM C5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = MMM version_name = "C Class" } } }
+			ship = { name = "ARM C6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = MMM version_name = "C Class" } } }
+		}
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	### Under Contruction Notes ###
+	# DD: Churucca class (x3) ("ARE Almirante Miranda" "ARE Gravina" "ARE Escaño" "ARE Císcar" "ARE Jorge Juan" "ARE Ulloa")
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "MMM"
+		}
+		requested_factories = 1
+		progress = 0.80
+		amount = 3
+	}
+	# CA: ARE Canarias (Canarias class, comm. 1-Oct, 1936), ARE Baleares (Canarias class, comm. 28-Dec, 1936)
+	add_equipment_production = {
+		equipment = {
+			type = heavy_cruiser_2
+			creator = "MMM"
+		}
+		requested_factories = 2
+		progress = 0.85
+		amount = 2
+	}
+}

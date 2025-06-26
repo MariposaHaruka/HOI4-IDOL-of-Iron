@@ -3,11 +3,57 @@ capital = 279
 
 #부대
 set_oob = "LPR_ar"
+if = {
+	limit = { has_MtG = yes }
+	set_naval_oob = "LPR_na_MtG"
+	else = {
+		set_naval_oob = "LPR_na"
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "LPR_ai_BBA"
+	else = {
+		set_air_oob = "LPR_ai"
+	}
+}
 
 #시작 기술
 set_technology = {
 	infantry_weapons = 1
 	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	basic_train = 1
+}
+if = {
+	limit = { has_MtG = yes }
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+			early_battleship = 1
+			transport = 1
+		}
+	}
 }
 
 #인트로
@@ -20,11 +66,16 @@ set_convoys = 10
 
 add_ideas = agrarian_society
 
+add_dynamic_modifier = { modifier = LPR_industry }
+add_dynamic_modifier = { modifier = LPR_army }
+add_dynamic_modifier = { modifier = LPR_navy }
+add_dynamic_modifier = { modifier = LPR_air_force }
+
 #외교
 
 #정치 상황
-set_stability = 0.41
-set_war_support = 0.1
+set_stability = 0.25 
+set_war_support = 0.40
 set_politics = {
 	ruling_party = authoritariandemocracy
 	last_election = "1932.6.5"
@@ -54,7 +105,143 @@ recruit_character = LPR_tiara
 #장관진
 
 #무기 프리셋
-#create_equipment_variant = {
-#	name = ""
-#	type = amphibious_tank_equipment_2
-#}
+IF = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "H1 Class"				
+		type = ship_hull_submarine_1
+		name_group = LPR_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Capitán O'Brien Class"				
+		type = ship_hull_submarine_1
+		name_group = LPR_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_torpedo_sub_1
+		}
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Almirante Lynch Class"				
+		type = ship_hull_light_1
+		name_group = LPR_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Serrano Class"	
+		type = ship_hull_light_1
+		name_group = LPR_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	# Cruisers #
+	create_equipment_variant = {
+		name = "O'Higgins Class"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = LPR_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Chacabuco Class"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = LPR_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = empty
+			fixed_ship_secondaries_slot = empty
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_torpedo_1
+		}
+	}
+	# Battleships #
+	create_equipment_variant = {
+		name = "Almirante Latorre Class"	
+		type = ship_hull_heavy_1
+		name_group = LPR_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = ship_airplane_launcher_1
+			rear_1_custom_slot = empty
+		}
+	}
+	else = {
+		create_equipment_variant = {
+			name = "Capitán O'Brien Class"
+			type = submarine_1
+			upgrades = {
+				ship_reliability_upgrade = 1
+				sub_engine_upgrade = 1
+				sub_stealth_upgrade = 1
+				sub_torpedo_upgrade = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Serrano Class"
+			type = destroyer_1
+			upgrades = {
+				ship_torpedo_upgrade = 1
+				destroyer_engine_upgrade = 1
+				ship_ASW_upgrade = 1
+				ship_anti_air_upgrade = 1
+			}
+		}
+	}
+}

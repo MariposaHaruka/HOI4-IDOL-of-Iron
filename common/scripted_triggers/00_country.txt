@@ -183,3 +183,10 @@ has_army_command = {
 has_military_academy = {
 	NOT = { has_country_flag = no_military_academy }
 }
+
+is_federal = {
+	OR = {
+		has_idea = federal_state
+		has_idea = local_self_federal_state
+	} 
+}

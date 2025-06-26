@@ -1,11 +1,10 @@
-
-state={
-	id=57
-	name="STATE_57"
+state = {
+	id = 57
+	name = "STATE_57"
 	manpower = 5109333
 	state_category = large_city
 
-	history={
+	history = {
 		owner = PRS
 		add_core_of = PRS
 		victory_points = {
@@ -19,12 +18,15 @@ state={
 			arms_factory = 3
 			industrial_complex = 1
 			air_base = 3
+
+			# Möhne Reservoir
+			11431 = { dam = 1 }
 		}
 	}
 
-	provinces={
+	provinces = {
 		405 495 3355 3398 6535 6622 9443 9509 11346 11431 
 	}
 
-	local_supplies=0.0 
+	local_supplies = 0.0 
 }

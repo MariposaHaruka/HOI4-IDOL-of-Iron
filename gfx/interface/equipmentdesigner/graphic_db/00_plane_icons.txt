@@ -104,6 +104,7 @@ PRS = {
 			}
 		}
 	}
+
 	small_plane_airframe_1 = {
 		pool = {
 			weight = 1.1
@@ -112,6 +113,7 @@ PRS = {
 			}
 		}
 	}
+
 	small_plane_airframe_2 = {
 		pool = {
 			weight = 1.1
@@ -120,6 +122,7 @@ PRS = {
 			}
 		}
 	}
+
 	small_plane_airframe_3 = {
 		pool = {
 			weight = 1.1
@@ -128,11 +131,24 @@ PRS = {
 			}
 		}
 	}
+
 	small_plane_airframe_4 = {
 		pool = {
 			weight = 1.1
 			icons = {
 				GFX_GER_light_plane_4_medium
+			}
+		}
+	}
+	
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
 			}
 		}
 	}
@@ -144,6 +160,7 @@ PRS = {
 			}
 		}
 	}
+
 	small_plane_cas_airframe_2 = {
 		pool = {
 			weight = 1.1
@@ -152,6 +169,7 @@ PRS = {
 			}
 		}
 	}
+	
 	small_plane_cas_airframe_3 = {
 		pool = {
 			weight = 1.1
@@ -160,6 +178,7 @@ PRS = {
 			}
 		}
 	}
+
 	small_plane_naval_bomber_airframe_1 = {
 		pool = {
 			weight = 1.1
@@ -168,6 +187,7 @@ PRS = {
 			}
 		}
 	}
+
 	small_plane_naval_bomber_airframe_2 = {
 		pool = {
 			weight = 1.1
@@ -176,6 +196,7 @@ PRS = {
 			}
 		}
 	}
+
 	small_plane_naval_bomber_airframe_3 = {
 		pool = {
 			weight = 1.1
@@ -184,6 +205,7 @@ PRS = {
 			}
 		}
 	}
+
 	cv_small_plane_airframe = {
 		pool = {
 			icons = {
@@ -284,7 +306,6 @@ PRS = {
 	}
 	
 	medium_plane_airframe = {
-
 		pool = {
 			icons = {
 				GFX_GER_tactical_bomber3_medium
@@ -432,6 +453,18 @@ PRS = {
 			weight = 1.1
 			icons = {
 				GFX_GER_naval_bomber3_medium
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
 			}
 		}
 	}

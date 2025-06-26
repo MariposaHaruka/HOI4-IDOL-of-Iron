@@ -2,7 +2,27 @@
 capital = 276 #오타와
 
 #부대
-set_oob = "IML_ar"
+if = {
+	limit = { has_NSB = yes }
+	set_oob = "IML_ar_NSB"
+	else = {
+		set_oob = "IML_ar"
+	}
+}
+if = {
+	limit = { has_MtG = yes }
+	set_naval_oob = "IML_na_MtG"
+	else = {
+		set_naval_oob = "IML_na"
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "IML_ai_BBA"
+	else = {
+		set_air_oob = "IML_ai"
+	}
+}
 starting_train_buffer = 4
 add_command_power = 20
 set_fuel_ratio = 1
@@ -80,9 +100,15 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 100
 
 #국민 정신
-add_ideas = direct_election
-add_ideas = double_parliament
-add_ideas = IMA_westminster_statute
+add_ideas = {
+	IMA_westminster_statute
+	IML_ratatat_1
+}
+add_dynamic_modifier = { modifier = IML_industry }
+add_dynamic_modifier = { modifier = IML_army }
+add_dynamic_modifier = { modifier = IML_navy }
+add_dynamic_modifier = { modifier = IML_air_force }
+add_dynamic_modifier = { modifier = IMA_colonial_economy }
 
 #외교
 set_cosmetic_tag = IML_IMA
@@ -127,6 +153,9 @@ set_variable = { IML_technocrat_seats = 3 }
 
 set_variable = { IML_national_unity_seats = 8 }
 set_variable = { IML_independent_seats = 3 }
+
+set_variable = { IML_total_seats = 245 }
+
 #Total seats - 245
 
 # 캐릭터 

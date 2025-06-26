@@ -1,0 +1,969 @@
+﻿ICG_INF_01 = {
+	name = "Producer Infantry Divisions"
+
+	for_countries = { ICG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ICG_INF_01 }
+
+	fallback_name = "%d Producer Infantry Division"
+	link_numbering_with = { IMA_INF_02 }
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Producer Infantry 'Big Red One' Division" }
+		2 = { "%dnd Producer Infantry 'Indianhead' Division" }
+		3 = { "%drd Producer Infantry 'Rock of the Marne' Division" }
+		5 = { "%dth Producer Infantry 'Red Devils' Division" }
+		6 = { "%dth Producer Infantry 'Sightseeing Sixth' Division" }
+		4 = { "%dth Producer Infantry 'Ivy' Division" }
+		7 = { "%dth Producer Infantry 'Bayonet' Division" }
+		8 = { "%dth Producer Infantry 'Pathfinder' Division" }
+		9 = { "%dth Producer Infantry 'Old Reliables' Division" }
+		30 = { "%dth Producer Infantry 'Old Hickory' Division" }
+		41 = { "%dst Producer Infantry 'Sunset' Division" }
+		44 = { "%dth Producer Infantry Division" }
+		45 = { "%dth Producer Infantry 'Thunderbird' Division" }
+		27 = { "%dth Producer Infantry 'New York' Division" }
+		32 = { "%dnd Producer Infantry 'Red Arrow' Division" }
+		37 = { "%dth Producer Infantry 'Buckeye' Division" }
+		31 = { "%dst Producer Infantry 'Dixie' Division" }
+		36 = { "%dth Producer Infantry 'Texas' Division" }
+		35 = { "%dth Producer Infantry 'Santa Fe' Division" }
+		26 = { "%dth Producer Infantry 'Yankee' Division" }
+		38 = { "%dth Producer Infantry 'Cyclone' Division" }
+		29 = { "%dth Producer Infantry 'Blue and Gray' Division" }
+		34 = { "%dth Producer Infantry 'Red Bull' Division" }
+		28 = { "%dth Producer Infantry 'Keystone' Division" }
+		43 = { "%drd Producer Infantry 'Winged Victory' Division" }
+		33 = { "%drd Producer Infantry 'Golden Cross' Division" }
+		40 = { "%dth Producer Infantry 'Sunshine' Division" }
+		24 = { "%dth Producer Infantry 'Victory' Division" }
+		25 = { "%dth Producer Infantry 'Tropic Lightning' Division" }
+		77 = { "%dth Producer Infantry 'Liberty' Division" }
+		90 = { "%dth Producer Infantry 'Tough Ombres' Division" }
+		85 = { "%dth Producer Infantry 'Custer' Division" }
+		93 = { "%drd Producer Infantry 'Blue Helmets' Division" }
+		23 = { "'Americal' Producer Infantry Division" }
+		76 = { "%dth Producer Infantry 'Onaway' Division" }
+		79 = { "%dth Producer Infantry Division" }
+		81 = { "%dst Producer Infantry 'Wildcat' Division" }
+		80 = { "%dth Producer Infantry 'Blue Ridge' Division" }
+		88 = { "%dth Producer Infantry 'Blue Devils' Division" }
+		89 = { "%dth Producer Infantry 'Rolling W' Division" }
+		95 = { "%dth Producer Infantry 'Victory' Division" }
+		78 = { "%dth Producer Infantry 'Lightning' Division" }
+		83 = { "%drd Producer Infantry 'Thunderbolts' Division" }
+		91 = { "%dst Producer Infantry 'Pine Tree' Division" }
+		96 = { "%dth Producer Infantry 'Deadeye' Division" }
+		94 = { "%dth Producer Infantry 'Neuf Quatres' Division" }
+		98 = { "%dth Producer Infantry 'Iroquois' Division" }
+		102 = { "%dnd Producer Infantry 'Ozarks' Division" }
+		104 = { "%dth Producer Infantry 'Timberwolves' Division" }
+		84 = { "%dth Producer Infantry 'Railsplitters' Division" }
+		92 = { "%dnd Producer Infantry 'Buffalo Soldiers' Division" }
+		99 = { "%dth Producer Infantry 'Checkerboard' Division" }
+		100 = { "%dth Producer Infantry 'Century' Division" }
+		103 = { "%drd Producer Infantry 'Cactus' Division" }
+		86 = { "%dth Producer Infantry 'Blackhawk' Division" }
+		87 = { "%dth Producer Infantry 'Golden Acorns' Division" }
+		97 = { "%dth Producer Infantry 'Trident' Division" }
+		106 = { "%dth Producer Infantry 'Golden Lions' Division" }
+		66 = { "%dth Producer Infantry 'Black Panthers' Division" }
+		75 = { "%dth Producer Infantry Division" }
+		69 = { "%dth Producer Infantry 'Fighting 69th' Division" }
+		63 = { "%drd Producer Infantry 'Blood Fire' Division" }
+		70 = { "%dth Producer Infantry 'Trailblazers' Division" }
+		42 = { "%dnd Producer Infantry 'Rainbow' Division" }
+		71 = { "%dst Producer Infantry 'Red Circle' Division" }
+		65 = { "%dth Producer Infantry 'Battle Axe' Division" }
+		61 = { "%dst Producer Infantry Division" }			# start of unorganized WW2 divisions here
+		62 = { "%dnd Producer Infantry Division" }
+		67 = { "%dth Producer Infantry Division" }
+		68 = { "%dth Producer Infantry Division" }
+		72 = { "%dnd Producer Infantry Division" }
+		73 = { "%drd Producer Infantry Division" }
+		74 = { "%dth Producer Infantry Division" }
+		105 = { "%dth Producer Infantry Division" }
+		107 = { "%dth Producer Infantry Division" }
+		11 = { "%dth Producer Infantry 'Lafayette' Division" }		# start of Normandy phantom divisions here
+		14 = { "%dth Producer Infantry Division" }
+		15 = { "%dth Producer Infantry Division" }
+		16 = { "%dth Producer Infantry Division" }
+		17 = { "%dth Producer Infantry Division" }
+		19 = { "%dth Producer Infantry Division" }
+		21 = { "%dth Producer Infantry Division" }
+		22 = { "%dth Producer Infantry Division" }
+		50 = { "%dth Producer Infantry Division" }
+		55 = { "%dth Producer Infantry Division" }
+		59 = { "%dth Producer Infantry Division" }
+		108 = { "%dth Producer Infantry 'Golden Griffons' Division" }
+		109 = { "%dth Producer Infantry Division" }
+		112 = { "%dth Producer Infantry Division" }
+		119 = { "%dth Producer Infantry 'White Knights' Division" }
+		125 = { "%dth Producer Infantry 'Robert E. Lee' Division" }
+		130 = { "%dth Producer Infantry 'Dirty Bastards' Division" }
+		141 = { "%dst Producer Infantry Division" }
+		157 = { "%dth Producer Infantry 'Titans' Division" }
+		39 = { "%dth Producer Infantry 'Delta' Division" }			# start of postwar divisions here
+		47 = { "%dth Producer Infantry 'Viking' Division" }
+		46 = { "%dth Producer Infantry 'Ironfist' Division" }
+		48 = { "%dth Producer Infantry 'Hurricane' Division" }
+		51 = { "%dst Producer Infantry 'Rattlesnake' Division" }
+		49 = { "%dth Producer Infantry '49ers' Division" }
+		52 = { "%dnd Producer Infantry 'Argonauts' Division" }
+		110 = { "%dth Producer Infantry 'Washington' Division" }		# old HOI3 names (not verifed as historical)
+		115 = { "%dth Producer Infantry 'Jefferson' Division" }
+		116 = { "%dth Producer Infantry 'Headhunters' Division" }
+		128 = { "%dth Producer Infantry 'Brooklyn' Division" }
+		131 = { "%dth Producer Infantry 'Lincoln' Division" }
+		164 = { "%dth Producer Infantry 'U.S. Grant' Division" }
+		165 = { "%dth Producer Infantry 'Adams' Division" }
+		166 = { "%dth Producer Infantry 'Franklin' Division" }
+		167 = { "%dth Producer Infantry 'Lions' Division" }
+		168 = { "%dth Producer Infantry 'Lady Liberty' Division" }
+		169 = { "%dth Producer Infantry 'Madison' Division" }
+		170 = { "%dth Producer Infantry 'Bloodhounds' Division" }
+		171 = { "%dst Producer Infantry Division" }
+		172 = { "%dnd Producer Infantry 'Misfits' Division" }
+		173 = { "%drd Producer Infantry 'Metropolitan' Division" }
+		187 = { "%dth Producer Infantry Division" }
+		188 = { "%dth Producer Infantry Division" }
+		189 = { "%dth Producer Infantry 'Black Diamonds' Division" }
+		190 = { "%dth Producer Infantry Division" }
+		191 = { "%dst Producer Infantry 'Sam Houston' Division" }
+		192 = { "%dnd Producer Infantry 'Banditos' Division" }
+		193 = { "%drd Producer Infantry 'Fighting 193rd' Division" }
+		194 = { "%dth Producer Infantry 'Dust Devils' Division" }
+		195 = { "%dth Producer Infantry 'Blue Dragons' Division" }
+		196 = { "%dth Producer Infantry 'Volunteers' Division" }
+		197 = { "%dth Producer Infantry 'Hercules' Division" }
+		198 = { "%dth Producer Infantry Division" }
+		199 = { "%dth Producer Infantry 'Davy Crockett' Division" }
+		200 = { "%dth Producer Infantry 'Black Tigers' Division" }
+		201 = { "%dst Producer Infantry 'Iron Men' Division" }
+		203 = { "%drd Producer Infantry 'Armadillos' Division" }
+		204 = { "%dth Producer Infantry 'Mountain Lions' Division" }
+		205 = { "%dth Producer Infantry 'Widowmakers' Division" }
+		158 = { "%dth Producer Infantry 'Green Clovers' Division" }
+		159 = { "%dth Producer Infantry 'Longhorn' Division" }
+		160 = { "%dth Producer Infantry 'Freedom!' Division" }
+		161 = { "%dst Producer Infantry 'Desert Scorpion' Division" }
+		162 = { "%dnd Producer Infantry 'Seminole' Division" }
+		163 = { "%drd Producer Infantry Division" }
+		174 = { "%dth Producer Infantry 'Black Knights' Division" }
+		175 = { "%dth Producer Infantry 'Apache' Division" }
+		176 = { "%dth Producer Infantry Division" }
+		177 = { "%dth Producer Infantry 'Old Muddy' Division" }
+		178 = { "%dth Producer Infantry 'Black Widows' Division" }
+		179 = { "%dth Producer Infantry 'Moccasins' Division" }
+		180 = { "%dth Producer Infantry 'Centaur' Division" }
+		181 = { "%dst Producer Infantry 'Howling Coyotes' Division" }
+		182 = { "%dnd Producer Infantry Division" }
+		183 = { "%drd Producer Infantry 'Harlem' Division" }
+		184 = { "%dth Producer Infantry Division" }
+		185 = { "%dth Producer Infantry 'Ragin' Cajuns' Division" }
+		186 = { "%dth Producer Infantry 'Bulldog' Division" }
+		219 = { "%dth Producer Infantry Division" }
+		220 = { "%dth Producer Infantry 'Chicago' Division" }
+		221 = { "%dst Producer Infantry 'Fighting Lumberjacks' Division" }
+		222 = { "%dnd Producer Infantry 'Explorers' Division" }
+		223 = { "%drd Producer Infantry 'Mavericks' Division" }
+		224 = { "%dth Producer Infantry 'San Francisco' Division" }
+		225 = { "%dth Producer Infantry 'Falcons' Division" }
+		226 = { "%dth Producer Infantry 'Alamo' Division" }
+		227 = { "%dth Producer Infantry Division" }
+		228 = { "%dth Producer Infantry 'Buccaneers' Division" }
+		229 = { "%dth Producer Infantry 'Philadelphia' Division" }
+		230 = { "%dth Producer Infantry Division" }
+		231 = { "%dst Producer Infantry 'Cowboys' Division" }
+		232 = { "%dnd Producer Infantry 'Archers' Division" }
+		233 = { "%drd Producer Infantry 'Daniel Boone' Division" }
+		234 = { "%dth Producer Infantry Division" }
+		235 = { "%dth Producer Infantry 'Mean Green' Division" }
+		236 = { "%dth Producer Infantry 'Revenge!' Division" }
+		237 = { "%dth Producer Infantry Division" }
+		238 = { "%dth Producer Infantry '1776' Division" }
+		239 = { "%dth Producer Infantry 'Detroit' Division" }
+		240 = { "%dth Producer Infantry 'Minuteman' Division" }
+		241 = { "%dst Producer Infantry 'Centurion' Division" }
+		244 = { "%dth Producer Infantry Division" }
+		245 = { "%dth Producer Infantry 'Enthusiasts' Division" }
+		246 = { "%dth Producer Infantry Division" }
+		247 = { "%dth Producer Infantry 'Rebel Yell' Division" }
+		248 = { "%dth Producer Infantry 'Jayhawkers' Division" }
+		249 = { "%dth Producer Infantry 'Swamp Fox' Division" }
+		250 = { "%dth Producer Infantry 'Blue Streaks' Division" }
+		251 = { "%dst Producer Infantry 'Bearcats' Division" }
+		252 = { "%dnd Producer Infantry 'Gorillas' Division" }
+		253 = { "%drd Producer Infantry 'Big Green' Division" }
+		254 = { "%dth Producer Infantry 'Mustangs' Division" }
+		255 = { "%dth Producer Infantry Division" }
+		256 = { "%dth Producer Infantry 'Flying Dutchmen' Division" }
+		257 = { "%dth Producer Infantry 'Phoenix' Division" }
+		258 = { "%dth Producer Infantry 'Crusader' Division" }
+		259 = { "%dth Producer Infantry 'Boston' Division" }
+		260 = { "%dth Producer Infantry 'Viking' Division" }
+		261 = { "%dst Producer Infantry 'Braves' Division" }
+		262 = { "%dnd Producer Infantry Division" }
+		263 = { "%drd Producer Infantry 'Yellow Jackets' Division" }
+		264 = { "%dth Producer Infantry Division" }
+		265 = { "%dth Producer Infantry 'Celtic' Division" }
+		266 = { "%dth Producer Infantry 'Spartans' Division" }
+		267 = { "%dth Producer Infantry 'Brocos' Division" }
+		268 = { "%dth Producer Infantry 'Infamous 268th' Division" }
+		269 = { "%dth Producer Infantry 'Forrester' Division" }
+		270 = { "%dth Producer Infantry 'Gamecocks' Division" }
+		319 = { "%dth Producer Infantry Division" }
+		320 = { "%dth Producer Infantry 'Vanguard' Division" }
+		321 = { "%dst Producer Infantry 'Pioneer' Division" }
+		322 = { "%dnd Producer Infantry 'Beavers' Division" }
+		323 = { "%drd Producer Infantry Division" }
+		324 = { "%dth Producer Infantry 'Cavaliers' Division" }
+		325 = { "%dth Producer Infantry Division" }
+		326 = { "%dth Producer Infantry 'Cardinals' Division" }
+		327 = { "%dth Producer Infantry 'Polar Bears' Division" }
+		328 = { "%dth Producer Infantry 'Gettysburg' Division" }
+		329 = { "%dth Producer Infantry 'Vicksburg' Division" }
+		330 = { "%dth Producer Infantry 'Comet' Division" }
+		331 = { "%dst Producer Infantry Division" }
+		332 = { "%dnd Producer Infantry 'Mastadons' Division" }
+		333 = { "%drd Producer Infantry 'Lucky Lindy' Division" }
+		334 = { "%dth Producer Infantry 'Golden Gophers' Division" }
+		335 = { "%dth Producer Infantry 'Fighting Irish' Division" }
+		336 = { "%dth Producer Infantry Division" }
+		337 = { "%dth Producer Infantry 'Red Hawks' Division" }
+		338 = { "%dth Producer Infantry Division" }
+		339 = { "%dth Producer Infantry 'Hilltoppers' Division" }
+		340 = { "%dth Producer Infantry 'Green Demons' Division" }
+		341 = { "%dst Producer Infantry 'Black Ravens' Division" }
+		344 = { "%dth Producer Infantry Division" }
+		345 = { "%dth Producer Infantry 'Wasps' Division" }
+		346 = { "%dth Producer Infantry 'Jackrabbits' Division" }
+		347 = { "%dth Producer Infantry 'Columbus' Division" }
+		348 = { "%dth Producer Infantry 'Giants' Division" }
+		349 = { "%dth Producer Infantry 'Highlanders' Division" }
+		350 = { "%dth Producer Infantry 'Lakers' Division" }
+		351 = { "%dst Producer Infantry 'Saints' Division" }
+		352 = { "%dnd Producer Infantry 'Roadrunner' Division" }
+		353 = { "%drd Producer Infantry 'Maccabees' Division" }
+		354 = { "%dth Producer Infantry 'Green Gators' Division" }
+		355 = { "%dth Producer Infantry 'Seattle' Division" }
+		356 = { "%dth Producer Infantry 'Warhawks' Division" }
+		357 = { "%dth Producer Infantry 'Grey Owls' Division" }
+		358 = { "%dth Producer Infantry 'Chrimson' Division" }
+		359 = { "%dth Producer Infantry 'Trojans' Division" }
+		360 = { "%dth Producer Infantry 'Bloody Saber' Division" }
+		361 = { "%dst Producer Infantry 'Billy  Johnny' DivisionÜ" }
+		362 = { "%dnd Producer Infantry 'Amerigo Vespucci' Division" }
+		363 = { "%drd Producer Infantry 'Chocktaw' Division" }
+		364 = { "%dth Producer Infantry 'Ogre' Division" }
+		365 = { "%dth Producer Infantry 'Patriot' Division" }
+		366 = { "%dth Producer Infantry 'Storm' Division" }
+		367 = { "%dth Producer Infantry 'Hoosiers' Division" }
+		368 = { "%dth Producer Infantry 'Jaguars' Division" }
+		369 = { "%dth Producer Infantry 'Corsairs' Division" }
+		370 = { "%dth Producer Infantry Division" }
+	}
+}
+
+ICG_CAV_01 = {
+	name = "Producer Cavalry Divisions"
+
+	for_countries = { ICG }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ICG_INF_01 }
+
+	fallback_name = "%d Producer Cavalry Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Producer Cavalry 'The 1st Team' Div." }
+		2 = { "%dnd Producer Cavalry (Colored) Division" }
+		3 = { "%drd Producer Cavalry Division" }
+		15 = { "%dth Producer Cavalry Division" }
+		21 = { "%dst Producer Cavalry Division" }
+		24 = { "%dth Producer Cavalry Division" }
+		61 = { "%dst Producer Cavalry Division" }
+		62 = { "%dnd Producer Cavalry Division" }
+		63 = { "%drd Producer Cavalry Division" }
+		64 = { "%dth Producer Cavalry Division" }
+		65 = { "%dth Producer Cavalry Division" }
+		66 = { "%dth Producer Cavalry Division" }
+		22 = { "%dnd Producer Cavalry Division" }
+		23 = { "%drd Producer Cavalry Division" }
+		56 = { "%dth Producer Cavalry Division" }
+		25 = { "%dth Producer Cavalry Division" }
+		26 = { "%dth Producer Cavalry Division" }
+		27 = { "%dth Producer Cavalry Division" }
+		28 = { "%dth Producer Cavalry Division" }
+		29 = { "%dth Producer Cavalry Division" }
+		30 = { "%dth Producer Cavalry Division" }
+	}
+}
+
+ICG_MOT_01 = {
+	name = "Producer Motorized Infantry Divisions"
+
+	for_countries = { ICG }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ICG_INF_01 }
+
+	fallback_name = "%d Producer Motorized Infantry Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		4 = { "%dth Producer Motorized Infantry 'Ivy' Division" }					# historical motorized divisions listed first
+		6 = { "%dth Producer Motorized Infantry 'Sightseeing Sixth' Division" }
+		7 = { "%dth Producer Motorized Infantry 'Bayonet' Division" }
+		8 = { "%dth Producer Motorized Infantry 'Pathfinder' Division" }
+		90 = { "%dth Producer Motorized Infantry 'Tough Ombres' Division" }
+		5 = { "%dth Producer Motorized Infantry 'Red Devils' Division" }
+		1 = { "%dst Producer Motorized Infantry 'Big Red One' Division" }			# other regular infantry divisions next
+		2 = { "%dnd Producer Motorized Infantry 'Indianhead' Division" }
+		3 = { "%drd Producer Motorized Infantry 'Rock of the Marne' Division" }
+		9 = { "%dth Producer Motorized Infantry 'Old Reliables' Division" }
+		30 = { "%dth Producer Motorized Infantry 'Old Hickory' Division" }
+		41 = { "%dst Producer Motorized Infantry 'Sunset' Division" }
+		44 = { "%dth Producer Motorized Infantry Division" }
+		45 = { "%dth Producer Motorized Infantry 'Thunderbird' Division" }
+		27 = { "%dth Producer Motorized Infantry 'New York' Division" }
+		32 = { "%dnd Producer Motorized Infantry 'Red Arrow' Division" }
+		37 = { "%dth Producer Motorized Infantry 'Buckeye' Division" }
+		31 = { "%dst Producer Motorized Infantry 'Dixie' Division" }
+		36 = { "%dth Producer Motorized Infantry 'Texas' Division" }
+		35 = { "%dth Producer Motorized Infantry 'Santa Fe' Division" }
+		26 = { "%dth Producer Motorized Infantry 'Yankee' Division" }
+		38 = { "%dth Producer Motorized Infantry 'Cyclone' Division" }
+		29 = { "%dth Producer Motorized Infantry 'Blue and Gray' Division" }
+		34 = { "%dth Producer Motorized Infantry 'Red Bull' Division" }
+		28 = { "%dth Producer Motorized Infantry 'Keystone' Division" }
+		43 = { "%drd Producer Motorized Infantry 'Winged Victory' Division" }
+		33 = { "%drd Producer Motorized Infantry 'Golden Cross' Division" }
+		40 = { "%dth Producer Motorized Infantry 'Sunshine' Division" }
+		24 = { "%dth Producer Motorized Infantry 'Victory' Division" }
+		25 = { "%dth Producer Motorized Infantry 'Tropic Lightning' Division" }
+		77 = { "%dth Producer Motorized Infantry 'Liberty' Division" }
+		85 = { "%dth Producer Motorized Infantry 'Custer' Division" }
+		93 = { "%drd Producer Motorized Infantry 'Blue Helmets' Division" }
+		23 = { "'Americal' Producer Motorized Infantry Division" }
+		76 = { "%dth Producer Motorized Infantry 'Onaway' Division" }
+		79 = { "%dth Producer Motorized Producer Infantry Division" }
+		81 = { "%dst Producer Motorized Infantry 'Wildcat' Division" }
+		80 = { "%dth Producer Motorized Infantry 'Blue Ridge' Division" }
+		88 = { "%dth Producer Motorized Infantry 'Blue Devils' Division" }
+		89 = { "%dth Producer Motorized Infantry 'Rolling W' Division" }
+		95 = { "%dth Producer Motorized Infantry 'Victory' Division" }
+		78 = { "%dth Producer Motorized Infantry 'Lightning' Division" }
+		83 = { "%drd Producer Motorized Infantry 'Thunderbolts' Division" }
+		91 = { "%dst Producer Motorized Infantry 'Pine Tree' Division" }
+		96 = { "%dth Producer Motorized Infantry 'Deadeye' Division" }
+		94 = { "%dth Producer Motorized Infantry 'Neuf Quatres' Division" }
+		98 = { "%dth Producer Motorized Infantry 'Iroquois' Division" }
+		102 = { "%dnd Producer Motorized Infantry 'Ozarks' Division" }
+		104 = { "%dth Producer Motorized Infantry 'Timberwolves' Division" }
+		84 = { "%dth Producer Motorized Infantry 'Railsplitters' Division" }
+		92 = { "%dnd Producer Motorized Infantry 'Buffalo Soldiers' Division" }
+		99 = { "%dth Producer Motorized Infantry 'Checkerboard' Division" }
+		100 = { "%dth Producer Motorized Infantry 'Century' Division" }
+		103 = { "%drd Producer Motorized Infantry 'Cactus' Division" }
+		86 = { "%dth Producer Motorized Infantry 'Blackhawk' Division" }
+		87 = { "%dth Producer Motorized Infantry 'Golden Acorns' Division" }
+		97 = { "%dth Producer Motorized Infantry 'Trident' Division" }
+		106 = { "%dth Producer Motorized Infantry 'Golden Lions' Division" }
+		66 = { "%dth Producer Motorized Infantry 'Black Panthers' Division" }
+		75 = { "%dth Producer Motorized Infantry Division" }
+		69 = { "%dth Producer Motorized Infantry 'Fighting 69th' Division" }
+		63 = { "%drd Producer Motorized Infantry 'Blood Fire' Division" }
+		70 = { "%dth Producer Motorized Infantry 'Trailblazers' Division" }
+		42 = { "%dnd Producer Motorized Infantry 'Rainbow' Division" }
+		71 = { "%dst Producer Motorized Infantry 'Red Circle' Division" }
+		65 = { "%dth Producer Motorized Infantry 'Battle Axe' Division" }
+		108 = { "%dth Producer Motorized Infantry 'Golden Griffons' Division" }
+		39 = { "%dth Producer Motorized Infantry 'Delta' Division" }			# start of postwar divisions here
+		47 = { "%dth Producer Motorized Infantry 'Viking' Division" }
+		46 = { "%dth Producer Motorized Infantry 'Ironfist' Division" }
+		48 = { "%dth Producer Motorized Infantry 'Hurricane' Division" }
+		51 = { "%dst Producer Motorized Infantry 'Rattlesnake' Division" }
+		49 = { "%dth Producer Motorized Infantry '49ers' Division" }
+		52 = { "%dnd Producer Motorized Infantry 'Argonauts' Division" }
+	}
+}
+
+ICG_MEC_01 = {
+	name = "Producer Mechanized Infantry Divisions"
+
+	for_countries = { ICG }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ICG_INF_01 }
+
+	fallback_name = "%d Producer Mechanized Infantry Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		4 = { "%dth Producer Mechanized Infantry 'Ivy' Division" }					# historical motorized divisions listed first
+		6 = { "%dth Producer Mechanized Infantry 'Sightseeing Sixth' Division" }
+		7 = { "%dth Producer Mechanized Infantry 'Bayonet' Division" }
+		8 = { "%dth Producer Mechanized Infantry 'Pathfinder' Division" }
+		90 = { "%dth Producer Mechanized Infantry 'Tough Ombres' Division" }
+		5 = { "%dth Producer Mechanized Infantry 'Red Devils' Division" }
+		1 = { "%dst Producer Mechanized Infantry 'Big Red One' Division" }			# other regular infantry divisions next
+		2 = { "%dnd Producer Mechanized Infantry 'Indianhead' Division" }
+		3 = { "%drd Producer Mechanized Infantry 'Rock of the Marne' Division" }
+		9 = { "%dth Producer Mechanized Infantry 'Old Reliables' Division" }
+		30 = { "%dth Producer Mechanized Infantry 'Old Hickory' Division" }
+		41 = { "%dst Producer Mechanized Infantry 'Sunset' Division" }
+		44 = { "%dth Producer Mechanized Infantry Division" }
+		45 = { "%dth Producer Mechanized Infantry 'Thunderbird' Division" }
+		27 = { "%dth Producer Mechanized Infantry 'New York' Division" }
+		32 = { "%dnd Producer Mechanized Infantry 'Red Arrow' Division" }
+		37 = { "%dth Producer Mechanized Infantry 'Buckeye' Division" }
+		31 = { "%dst Producer Mechanized Infantry 'Dixie' Division" }
+		36 = { "%dth Producer Mechanized Infantry 'Texas' Division" }
+		35 = { "%dth Producer Mechanized Infantry 'Santa Fe' Division" }
+		26 = { "%dth Producer Mechanized Infantry 'Yankee' Division" }
+		38 = { "%dth Producer Mechanized Infantry 'Cyclone' Division" }
+		29 = { "%dth Producer Mechanized Infantry 'Blue and Gray' Division" }
+		34 = { "%dth Producer Mechanized Infantry 'Red Bull' Division" }
+		28 = { "%dth Producer Mechanized Infantry 'Keystone' Division" }
+		43 = { "%drd Producer Mechanized Infantry 'Winged Victory' Division" }
+		33 = { "%drd Producer Mechanized Infantry 'Golden Cross' Division" }
+		40 = { "%dth Producer Mechanized Infantry 'Sunshine' Division" }
+		24 = { "%dth Producer Mechanized Infantry 'Victory' Division" }
+		25 = { "%dth Producer Mechanized Infantry 'Tropic Lightning' Division" }
+		77 = { "%dth Producer Mechanized Infantry 'Liberty' Division" }
+		85 = { "%dth Producer Mechanized Infantry 'Custer' Division" }
+		93 = { "%drd Producer Mechanized Infantry 'Blue Helmets' Division" }
+		23 = { "'Americal' Producer Mechanized Infantry Division" }
+		76 = { "%dth Producer Mechanized Infantry 'Onaway' Division" }
+		79 = { "%dth Producer Mechanized Infantry Division" }
+		81 = { "%dst Producer Mechanized Infantry 'Wildcat' Division" }
+		80 = { "%dth Producer Mechanized Infantry 'Blue Ridge' Division" }
+		88 = { "%dth Producer Mechanized Infantry 'Blue Devils' Division" }
+		89 = { "%dth Producer Mechanized Infantry 'Rolling W' Division" }
+		95 = { "%dth Producer Mechanized Infantry 'Victory' Division" }
+		78 = { "%dth Producer Mechanized Infantry 'Lightning' Division" }
+		83 = { "%drd Producer Mechanized Infantry 'Thunderbolts' Division" }
+		91 = { "%dst Producer Mechanized Infantry 'Pine Tree' Division" }
+		96 = { "%dth Producer Mechanized Infantry 'Deadeye' Division" }
+		94 = { "%dth Producer Mechanized Infantry 'Neuf Quatres' Division" }
+		98 = { "%dth Producer Mechanized Infantry 'Iroquois' Division" }
+		102 = { "%dnd Producer Mechanized Infantry 'Ozarks' Division" }
+		104 = { "%dth Producer Mechanized Infantry 'Timberwolves' Division" }
+		84 = { "%dth Producer Mechanized Infantry 'Railsplitters' Division" }
+		92 = { "%dnd Producer Mechanized Infantry 'Buffalo Soldiers' Division" }
+		99 = { "%dth Producer Mechanized Infantry 'Checkerboard' Division" }
+		100 = { "%dth Producer Mechanized Infantry 'Century' Division" }
+		103 = { "%drd Producer Mechanized Infantry 'Cactus' Division" }
+		86 = { "%dth Producer Mechanized Infantry 'Blackhawk' Division" }
+		87 = { "%dth Producer Mechanized Infantry 'Golden Acorns' Division" }
+		97 = { "%dth Producer Mechanized Infantry 'Trident' Division" }
+		106 = { "%dth Producer Mechanized Infantry 'Golden Lions' Division" }
+		66 = { "%dth Producer Mechanized Infantry 'Black Panthers' Division" }
+		75 = { "%dth Producer Mechanized Infantry Division" }
+		69 = { "%dth Producer Mechanized Infantry 'Fighting 69th' Division" }
+		63 = { "%drd Producer Mechanized Infantry 'Blood Fire' Division" }
+		70 = { "%dth Producer Mechanized Infantry 'Trailblazers' Division" }
+		42 = { "%dnd Producer Mechanized Infantry 'Rainbow' Division" }
+		71 = { "%dst Producer Mechanized Infantry 'Red Circle' Division" }
+		65 = { "%dth Producer Mechanized Infantry 'Battle Axe' Division" }
+		108 = { "%dth Producer Mechanized Infantry 'Golden Griffons' Division" }
+		39 = { "%dth Producer Mechanized Infantry 'Delta' Division" }			# start of postwar divisions here
+		47 = { "%dth Producer Mechanized Infantry 'Viking' Division" }
+		46 = { "%dth Producer Mechanized Infantry 'Ironfist' Division" }
+		48 = { "%dth Producer Mechanized Infantry 'Hurricane' Division" }
+		51 = { "%dst Producer Mechanized Infantry 'Rattlesnake' Division" }
+		49 = { "%dth Producer Mechanized Infantry '49ers' Division" }
+		52 = { "%dnd Producer Mechanized Infantry 'Argonauts' Division" }
+	}
+}
+
+ICG_ARM_01 = {
+	name = "Producer Armored Divisions"
+
+	for_countries = { ICG }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ICG_INF_01 }
+
+	fallback_name = "%d Producer Armored Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Producer Armored 'Old Ironsides' Div." }
+		2 = { "%dnd Producer Armored 'Hell on Wheels' Div." }
+		3 = { "%drd Producer Armored 'Spearhead' Div." }
+		4 = { "%dth Producer Armored 'Breakthrough' Div." }
+		5 = { "%dth Producer Armored 'Victory' Div." }
+		6 = { "%dth Producer Armored 'Super Sixth' Div." }
+		7 = { "%dth Producer Armored 'Lucky Seventh' Div." }
+		8 = { "%dth Producer Armored 'Thundering Herd' Div." }
+		9 = { "%dth Producer Armored 'Phantom' Div." }
+		10 = { "%dth Producer Armored 'Tiger' Div." }
+		11 = { "%dth Producer Armored 'Thunderbolt' Div." }
+		12 = { "%dth Producer Armored 'Hellcat' Div." }
+		13 = { "%dth Producer Armored 'Blackcat' Div." }
+		14 = { "%dth Producer Armored 'Liberator' Div." }
+		15 = { "%dth Producer Armored Division" }
+		16 = { "%dth Producer Armored Division" }
+		20 = { "%dth Producer Armored Division" }
+		21 = { "%dst Producer Armored Division" }
+		22 = { "%dnd Producer Armored Division" }
+		18 = { "%dth Producer Armored Division" }
+		19 = { "%dth Producer Armored Division" }
+		25 = { "%dth Producer Armored Division" }
+		39 = { "%dth Producer Armored Division" }
+		27 = { "%dth Producer Armored 'Empire' Div." }
+		30 = { "%dth Producer Armored 'Dixie' Div." }
+		40 = { "%dth Producer Armored 'Grizzly' Div." }
+		48 = { "%dth Producer Armored 'Hurricane' Div." }
+		49 = { "%dth Producer Armored 'Lone Star' Div." }
+		50 = { "%drd Producer Armored 'Jersey Blues' Div." }
+		51 = { "%dst Producer Armored 'Cavaliers' Div." }
+		52 = { "%dnd Producer Armored Division" }
+		53 = { "%drd Producer Armored 'Jaguar' Div." }
+		54 = { "%dth Producer Armored 'Roadrunners' Div." }
+		55 = { "%dth Producer Armored 'Old Virginia' Div." }
+		56 = { "%dth Producer Armored 'Crusaders' Div." }
+		57 = { "%dth Producer Armored Division" }
+		58 = { "%dth Producer Armored 'Patriot' Div." }
+		59 = { "%dth Producer Armored 'Rough Riders' Div." }
+		60 = { "%dth Producer Armored Division" }
+		61 = { "%dst Producer Armored 'Stampede' Div." }
+		62 = { "%dnd Producer Armored Division" }
+		63 = { "%drd Producer Armored 'Charge!' Div." }
+		64 = { "%dth Producer Armored 'Broncos' Div." }
+		65 = { "%dth Producer Armored 'Lynx' Div." }
+		66 = { "%dth Producer Armored 'Cheetah' Div." }
+		67 = { "%dth Producer Armored 'Forward!' Div." }
+		68 = { "%dth Producer Armored Division" }
+		69 = { "%dth Producer Armored 'Leopard' Div." }
+		70 = { "%dth Producer Armored Division" }
+		71 = { "%dst Producer Armored 'Lancers' Div." }
+		72 = { "%dnd Producer Armored Division" }
+		73 = { "%drd Producer Armored Division" }
+		74 = { "%dth Producer Armored 'Brandy Station' Div." }
+	}
+}
+
+ICG_PAR_01 = {
+	name = "Producer Airborne Divisions"
+
+	for_countries = { ICG }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ICG_INF_01 }
+
+	fallback_name = "%d Producer Airborne Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		82 = { "%dnd Producer Airborne 'All American' Division" }
+		101 = { "%dst Producer Airborne 'Screaming Eagles' Division" }
+		11 = { "%dth Producer Airborne 'The Angels' Division" }
+		13 = { "%dth Producer Airborne 'Golden Unicorns' Division" }
+		17 = { "%dth Producer Airborne 'Golden Talons' Division" }
+		18 = { "%dth Producer Airborne Division" }
+		21 = { "%dst Producer Airborne Division" }
+		135 = { "%dth Producer Airborne Division" }
+		108 = { "%dth Airborne'Golden Griffons' Division" }
+		15 = { "%dth Producer Airborne Division" }
+		6 = { "%dth Producer Airborne Division" }
+		9 = { "%dth Producer Airborne Division" }
+		80 = { "%dth Producer Airborne 'Blue Ridge' Division" }
+		84 = { "%dth Producer Airborne 'Railsplitters' Division" }
+		100 = { "%dth Producer Airborne 'Century' Division" }
+		202 = { "%dnd Producer Airborne 'Flat-Hatters' Division" }
+		271 = { "%dst Producer Airborne Division" }
+		272 = { "%dnd Producer Airborne Division" }
+		273 = { "%dth Producer Airborne Division" }
+		274 = { "%dth Producer Airborne Division" }
+		275 = { "%dth Producer Airborne Division" }
+		276 = { "%dth Producer Airborne Division" }
+		277 = { "%dth Producer Airborne Division" }
+		278 = { "%dth Producer Airborne Division" }
+	}
+}
+
+ICG_MAR_01 = {
+	name = "Producer Marine Divisions"
+
+	for_countries = { ICG }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" "amphibious_armor" "amphibious_mechanized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ICG_INF_01 }
+
+	fallback_name = "%d Producer Marine Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Producer Marine 'The Old Breed' Div." }
+		2 = { "%dnd Producer Marine 'Follow Me' Division" }
+		3 = { "%drd Producer Marine Division" }
+		4 = { "%dth Producer Marine Division" }
+		5 = { "%dth Producer Marine Division" }
+		6 = { "%dth Producer Marine Division" }
+		7 = { "%dth Producer Marine Division" }
+		8 = { "%dth Producer Marine Division" }
+		9 = { "%dth Producer Marine Division" }
+		10 = { "%dth Producer Marine Division" }
+		11 = { "%dth Producer Marine Division" }
+		12 = { "%dth Producer Marine Division" }
+		13 = { "%dth Producer Marine Division" }
+		14 = { "%dth Producer Marine Division" }
+		15 = { "%dth Producer Marine Division" }
+		16 = { "%dth Producer Marine Division" }
+		17 = { "%dth Producer Marine Division" }
+		18 = { "%dth Producer Marine Division" }
+		19 = { "%dth Producer Marine Division" }
+		20 = { "%dth Producer Marine Division" }
+		21 = { "%dst Producer Marine Division" }
+		22 = { "%dnd Producer Marine Division" }
+		23 = { "%drd Producer Marine Division" }
+		24 = { "%dth Producer Marine Division" }
+		25 = { "%dth Producer Marine Division" }
+		26 = { "%dth Producer Marine Division" }
+		27 = { "%dth Producer Marine Division" }
+		28 = { "%dth Producer Marine Division" }
+		29 = { "%dth Producer Marine Division" }
+		30 = { "%dth Producer Marine Division" }
+		31 = { "%dst Producer Marine Division" }
+		32 = { "%dnd Producer Marine Division" }
+		33 = { "%drd Producer Marine Division" }
+		34 = { "%dth Producer Marine Division" }
+		35 = { "%dth Producer Marine Division" }
+		36 = { "%dth Producer Marine Division" }
+		37 = { "%dth Producer Marine Division" }
+		38 = { "%dth Producer Marine Division" }
+		39 = { "%dth Producer Marine Division" }
+		40 = { "%dth Producer Marine Division" }
+		41 = { "%dst Producer Marine Division" }
+		42 = { "%dnd Producer Marine Division" }
+		43 = { "%drd Producer Marine Division" }
+		44 = { "%dth Producer Marine Division" }
+		45 = { "%dth Producer Marine Division" }
+		46 = { "%dth Producer Marine Division" }
+		47 = { "%dth Producer Marine Division" }
+		48 = { "%dth Producer Marine Division" }
+		49 = { "%dth Producer Marine Division" }
+	}
+}
+
+ICG_MNT_01 = {
+	name = "Producer Mountain Divisions"
+
+	for_countries = { ICG }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ICG_INF_01 }
+
+	fallback_name = "%d Producer Mountain Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		10 = { "%dth Producer Mountain Division" }
+		14 = { "%dth Producer Mountain Division" }
+		22 = { "%dnd Producer Mountain Division" }
+		50 = { "%dth Producer Mountain Division" }
+		55 = { "%dth Producer Mountain Division" }
+		12 = { "%dth 'Rocky Mountain' Division" }
+		15 = { "%dth 'Appalachia' Division" }
+		16 = { "%dth 'Smoky Mountains' Division" }
+		19 = { "%dth 'Cold Mountain' Division" }
+		20 = { "%dth 'Sierra Nevada' Division" }
+		48 = { "%dth 'Stone Mountain' Division" }
+		49 = { "%dth 'Granite' Division" }
+		51 = { "%dst Producer Mountain Division" }
+		52 = { "%dnd 'Catskills' Division" }
+		53 = { "%drd Producer Mountain Division" }
+		54 = { "%dth 'Wasatch Mountains' Division" }
+		56 = { "%dth 'Yellowstone' Division" }
+		57 = { "%dth Producer Mountain Division" }
+		58 = { "%dth 'Yosemite' Division" }
+		59 = { "%dth Producer Mountain Division" }
+		204 = { "%dth 'Mountain Lions' Division" }
+		279 = { "%dth Producer Mountain Division" }
+		280 = { "%dth Producer Mountain Division" }
+		281 = { "%dst Producer Mountain Division" }
+		282 = { "%dnd Producer Mountain Division" }
+		283 = { "%drd Producer Mountain Division" }
+		284 = { "%dth Producer Mountain Division" }
+		285 = { "%dth Producer Mountain Division" }
+		286 = { "%dth Producer Mountain Division" }
+		287 = { "%dth Producer Mountain Division" }
+		288 = { "%dth Producer Mountain Division" }
+	}
+}
+
+ICG_GAR_01 = {
+	name = "Producer Garrison Divisions"
+
+	for_countries = { ICG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ICG_INF_01 }
+
+	fallback_name = "%d Producer National Guard Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		77 = { "%dth Producer National Guard 'Liberty' Division" }
+		90 = { "%dth Producer National Guard 'Tough Ombres' Division" }
+		85 = { "%dth Producer National Guard 'Custer' Division" }
+		93 = { "%drd Producer National Guard 'Blue Helmets' Division" }
+		23 = { "'Americal' Producer National Guard Division" }
+		76 = { "%dth Producer National Guard 'Onaway' Division" }
+		79 = { "%dth Producer National Guard Division" }
+		81 = { "%dst Producer National Guard 'Wildcat' Division" }
+		80 = { "%dth Producer National Guard 'Blue Ridge' Division" }
+		88 = { "%dth Producer National Guard 'Blue Devils' Division" }
+		89 = { "%dth Producer National Guard 'Rolling W' Division" }
+		95 = { "%dth Producer National Guard 'Victory' Division" }
+		78 = { "%dth Producer National Guard 'Lightning' Division" }
+		83 = { "%drd Producer National Guard 'Thunderbolts' Division" }
+		91 = { "%dst Producer National Guard 'Pine Tree' Division" }
+		96 = { "%dth Producer National Guard 'Deadeye' Division" }
+		94 = { "%dth Producer National Guard 'Neuf Quatres' Division" }
+		98 = { "%dth Producer National Guard 'Iroquois' Division" }
+		102 = { "%dnd Producer National Guard 'Ozarks' Division" }
+		104 = { "%dth Producer National Guard 'Timberwolves' Division" }
+		84 = { "%dth Producer National Guard 'Railsplitters' Division" }
+		92 = { "%dnd Producer National Guard 'Buffalo Soldiers' Division" }
+		99 = { "%dth Producer National Guard 'Checkerboard' Division" }
+		100 = { "%dth Producer National Guard 'Century' Division" }
+		103 = { "%drd Producer National Guard 'Cactus' Division" }
+		86 = { "%dth Producer National Guard 'Blackhawk' Division" }
+		87 = { "%dth Producer National Guard 'Golden Acorns' Division" }
+		97 = { "%dth Producer National Guard 'Trident' Division" }
+		106 = { "%dth Producer National Guard 'Golden Lions' Division" }
+		66 = { "%dth Producer National Guard 'Black Panthers' Division" }
+		75 = { "%dth Producer National Guard Division" }
+		69 = { "%dth Producer National Guard 'Fighting 69th' Division" }
+		63 = { "%drd Producer National Guard 'Blood Fire' Division" }
+		70 = { "%dth Producer National Guard 'Trailblazers' Division" }
+		42 = { "%dnd Producer National Guard 'Rainbow' Division" }
+		71 = { "%dst Producer National Guard 'Red Circle' Division" }
+		65 = { "%dth Producer National Guard 'Battle Axe' Division" }
+		61 = { "%dst Producer National Guard Division" }			# start of unorganized WW2 divisions here
+		62 = { "%dnd Producer National Guard Division" }
+		67 = { "%dth Producer National Guard Division" }
+		68 = { "%dth Producer National Guard Division" }
+		72 = { "%dnd Producer National Guard Division" }
+		73 = { "%drd Producer National Guard Division" }
+		74 = { "%dth Producer National Guard Division" }
+		105 = { "%dth Producer National Guard Division" }
+		107 = { "%dth Producer National Guard Division" }
+		108 = { "%dth Producer National Guard 'Golden Griffons' Division" }	# start of postwar divisions here
+		39 = { "%dth Producer National Guard 'Delta' Division" }			
+		47 = { "%dth Producer National Guard 'Viking' Division" }
+		46 = { "%dth Producer National Guard 'Ironfist' Division" }
+		48 = { "%dth Producer National Guard 'Hurricane' Division" }
+		51 = { "%dst Producer National Guard 'Rattlesnake' Division" }
+		49 = { "%dth Producer National Guard '49ers' Division" }
+		52 = { "%dnd Producer National Guard 'Argonauts' Division" }
+		110 = { "%dth Producer National Guard 'Washington' Division" }		# old HOI3 names (not verifed as historical)
+		115 = { "%dth Producer National Guard 'Jefferson' Division" }
+		116 = { "%dth Producer National Guard 'Headhunters' Division" }
+		125 = { "%dth Producer National Guard 'Robert E. Lee' Division" }
+		128 = { "%dth Producer National Guard 'Brooklyn' Division" }
+		131 = { "%dth Producer National Guard 'Lincoln' Division" }
+		164 = { "%dth Producer National Guard 'U.S. Grant' Division" }
+		165 = { "%dth Producer National Guard 'Adams' Division" }
+		166 = { "%dth Producer National Guard 'Franklin' Division" }
+		167 = { "%dth Producer National Guard 'Lions' Division" }
+		168 = { "%dth Producer National Guard 'Lady Liberty' Division" }
+		169 = { "%dth Producer National Guard 'Madison' Division" }
+		170 = { "%dth Producer National Guard 'Bloodhounds' Division" }
+		171 = { "%dst Producer National Guard Division" }
+		172 = { "%dnd Producer National Guard 'Misfits' Division" }
+		173 = { "%drd Producer National Guard 'Metropolitan' Division" }
+		187 = { "%dth Producer National Guard Division" }
+		188 = { "%dth Producer National Guard Division" }
+		189 = { "%dth Producer National Guard 'Black Diamonds' Division" }
+		190 = { "%dth Producer National Guard Division" }
+		191 = { "%dst Producer National Guard 'Sam Houston' Division" }
+		192 = { "%dnd Producer National Guard 'Banditos' Division" }
+		193 = { "%drd Producer National Guard 'Fighting 193rd' Division" }
+		194 = { "%dth Producer National Guard 'Dust Devils' Division" }
+		195 = { "%dth Producer National Guard 'Blue Dragons' Division" }
+		196 = { "%dth Producer National Guard 'Volunteers' Division" }
+		197 = { "%dth Producer National Guard 'Hercules' Division" }
+		198 = { "%dth Producer National Guard Division" }
+		199 = { "%dth Producer National Guard 'Davy Crockett' Division" }
+		200 = { "%dth Producer National Guard 'Black Tigers' Division" }
+		201 = { "%dst Producer National Guard 'Iron Men' Division" }
+		203 = { "%drd Producer National Guard 'Armadillos' Division" }
+		204 = { "%dth Producer National Guard 'Mountain Lions' Division" }
+		205 = { "%dth Producer National Guard 'Widowmakers' Division" }
+		119 = { "%dth Producer National Guard 'White Knights' Division" }
+		130 = { "%dth Producer National Guard 'Dirty Bastards' Division" }
+		157 = { "%dth Producer National Guard 'Titans' Division" }
+		158 = { "%dth Producer National Guard 'Green Clovers' Division" }
+		159 = { "%dth Producer National Guard 'Longhorn' Division" }
+		160 = { "%dth Producer National Guard 'Freedom!' Division" }
+		161 = { "%dst Producer National Guard 'Desert Scorpion' Division" }
+		162 = { "%dnd Producer National Guard 'Seminole' Division" }
+		163 = { "%drd Producer National Guard Division" }
+		174 = { "%dth Producer National Guard 'Black Knights' Division" }
+		175 = { "%dth Producer National Guard 'Apache' Division" }
+		176 = { "%dth Producer National Guard Division" }
+		177 = { "%dth Producer National Guard 'Old Muddy' Division" }
+		178 = { "%dth Producer National Guard 'Black Widows' Division" }
+		179 = { "%dth Producer National Guard 'Moccasins' Division" }
+		180 = { "%dth Producer National Guard 'Centaur' Division" }
+		181 = { "%dst Producer National Guard 'Howling Coyotes' Division" }
+		182 = { "%dnd Producer National Guard Division" }
+		183 = { "%drd Producer National Guard 'Harlem' Division" }
+		184 = { "%dth Producer National Guard Division" }
+		185 = { "%dth Producer National Guard 'Ragin' Cajuns' Division" }
+		186 = { "%dth Producer National Guard 'Bulldog' Division" }
+		219 = { "%dth Producer National Guard Division" }
+		220 = { "%dth Producer National Guard 'Chicago' Division" }
+		221 = { "%dst Producer National Guard 'Fighting Lumberjacks' Division" }
+		222 = { "%dnd Producer National Guard 'Explorers' Division" }
+		223 = { "%drd Producer National Guard 'Mavericks' Division" }
+		224 = { "%dth Producer National Guard 'San Francisco' Division" }
+		225 = { "%dth Producer National Guard 'Falcons' Division" }
+		226 = { "%dth Producer National Guard 'Alamo' Division" }
+		227 = { "%dth Producer National Guard Division" }
+		228 = { "%dth Producer National Guard 'Buccaneers' Division" }
+		229 = { "%dth Producer National Guard 'Philadelphia' Division" }
+		230 = { "%dth Producer National Guard Division" }
+		231 = { "%dst Producer National Guard 'Cowboys' Division" }
+		232 = { "%dnd Producer National Guard 'Archers' Division" }
+		233 = { "%drd Producer National Guard 'Daniel Boone' Division" }
+		234 = { "%dth Producer National Guard Division" }
+		235 = { "%dth Producer National Guard 'Mean Green' Division" }
+		236 = { "%dth Producer National Guard 'Revenge!' Division" }
+		237 = { "%dth Producer National Guard Division" }
+		238 = { "%dth Producer National Guard '1776' Division" }
+		239 = { "%dth Producer National Guard 'Detroit' Division" }
+		240 = { "%dth Producer National Guard 'Minuteman' Division" }
+		241 = { "%dst Producer National Guard 'Centurion' Division" }
+		244 = { "%dth Producer National Guard Division" }
+		245 = { "%dth Producer National Guard 'Enthusiasts' Division" }
+		246 = { "%dth Producer National Guard Division" }
+		247 = { "%dth Producer National Guard 'Rebel Yell' Division" }
+		248 = { "%dth Producer National Guard 'Jayhawkers' Division" }
+		249 = { "%dth Producer National Guard 'Swamp Fox' Division" }
+		250 = { "%dth Producer National Guard 'Blue Streaks' Division" }
+		251 = { "%dst Producer National Guard 'Bearcats' Division" }
+		252 = { "%dnd Producer National Guard 'Gorillas' Division" }
+		253 = { "%drd Producer National Guard 'Big Green' Division" }
+		254 = { "%dth Producer National Guard 'Mustangs' Division" }
+		255 = { "%dth Producer National Guard Division" }
+		256 = { "%dth Producer National Guard 'Flying Dutchmen' Division" }
+		257 = { "%dth Producer National Guard 'Phoenix' Division" }
+		258 = { "%dth Producer National Guard 'Crusader' Division" }
+		259 = { "%dth Producer National Guard 'Boston' Division" }
+		260 = { "%dth Producer National Guard 'Viking' Division" }
+		261 = { "%dst Producer National Guard 'Braves' Division" }
+		262 = { "%dnd Producer National Guard Division" }
+		263 = { "%drd Producer National Guard 'Yellow Jackets' Division" }
+		264 = { "%dth Producer National Guard Division" }
+		265 = { "%dth Producer National Guard 'Celtic' Division" }
+		266 = { "%dth Producer National Guard 'Spartans' Division" }
+		267 = { "%dth Producer National Guard 'Brocos' Division" }
+		268 = { "%dth Producer National Guard 'Infamous 268th' Division" }
+		269 = { "%dth Producer National Guard 'Forrester' Division" }
+		270 = { "%dth Producer National Guard 'Gamecocks' Division" }
+		319 = { "%dth Producer National Guard Division" }
+		320 = { "%dth Producer National Guard 'Vanguard' Division" }
+		321 = { "%dst Producer National Guard 'Pioneer' Division" }
+		322 = { "%dnd Producer National Guard 'Beavers' Division" }
+		323 = { "%drd Producer National Guard Division" }
+		324 = { "%dth Producer National Guard 'Cavaliers' Division" }
+		325 = { "%dth Producer National Guard Division" }
+		326 = { "%dth Producer National Guard 'Cardinals' Division" }
+		327 = { "%dth Producer National Guard 'Polar Bears' Division" }
+		328 = { "%dth Producer National Guard 'Gettysburg' Division" }
+		329 = { "%dth Producer National Guard 'Vicksburg' Division" }
+		330 = { "%dth Producer National Guard 'Comet' Division" }
+		331 = { "%dst Producer National Guard Division" }
+		332 = { "%dnd Producer National Guard 'Mastadons' Division" }
+		333 = { "%drd Producer National Guard 'Lucky Lindy' Division" }
+		334 = { "%dth Producer National Guard 'Golden Gophers' Division" }
+		335 = { "%dth Producer National Guard 'Fighting Irish' Division" }
+		336 = { "%dth Producer National Guard Division" }
+		337 = { "%dth Producer National Guard 'Red Hawks' Division" }
+		338 = { "%dth Producer National Guard Division" }
+		339 = { "%dth Producer National Guard 'Hilltoppers' Division" }
+		340 = { "%dth Producer National Guard 'Green Demons' Division" }
+		341 = { "%dst Producer National Guard 'Black Ravens' Division" }
+		344 = { "%dth Producer National Guard Division" }
+		345 = { "%dth Producer National Guard 'Wasps' Division" }
+		346 = { "%dth Producer National Guard 'Jackrabbits' Division" }
+		347 = { "%dth Producer National Guard 'Columbus' Division" }
+		348 = { "%dth Producer National Guard 'Giants' Division" }
+		349 = { "%dth Producer National Guard 'Highlanders' Division" }
+		350 = { "%dth Producer National Guard 'Lakers' Division" }
+		351 = { "%dst Producer National Guard 'Saints' Division" }
+		352 = { "%dnd Producer National Guard 'Roadrunner' Division" }
+		353 = { "%drd Producer National Guard 'Maccabees' Division" }
+		354 = { "%dth Producer National Guard 'Green Gators' Division" }
+		355 = { "%dth Producer National Guard 'Seattle' Division" }
+		356 = { "%dth Producer National Guard 'Warhawks' Division" }
+		357 = { "%dth Producer National Guard 'Grey Owls' Division" }
+		358 = { "%dth Producer National Guard 'Chrimson' Division" }
+		359 = { "%dth Producer National Guard 'Trojans' Division" }
+		360 = { "%dth Producer National Guard 'Bloody Saber' Division" }
+		361 = { "%dst Producer National Guard 'Billy  Johnny' DivisionÜ" }
+		362 = { "%dnd Producer National Guard 'Amerigo Vespucci' Division" }
+		363 = { "%drd Producer National Guard 'Chocktaw' Division" }
+		364 = { "%dth Producer National Guard 'Ogre' Division" }
+		365 = { "%dth Producer National Guard 'Patriot' Division" }
+		366 = { "%dth Producer National Guard 'Storm' Division" }
+		367 = { "%dth Producer National Guard 'Hoosiers' Division" }
+		368 = { "%dth Producer National Guard 'Jaguars' Division" }
+		369 = { "%dth Producer National Guard 'Corsairs' Division" }
+		370 = { "%dth Producer National Guard Division" }
+	}
+}

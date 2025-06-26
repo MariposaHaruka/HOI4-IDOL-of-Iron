@@ -441,20 +441,12 @@ crisis = {
 demobilization = {
 	demobilization_economic = {
 		icon = generic_industry
-		is_good = no
 		available = {
-			has_unsupported_economic_law = yes
 			has_war = no
-		}
-		activation = {
 			has_unsupported_economic_law = yes
-			has_war = no
 		}
+		allowed = { always = yes }
 		cost = 50
-		visible = {
-			has_war = no
-			has_unsupported_economic_law = yes
-		}
 		complete_effect = {
 			if = {
 				limit = { has_war_support < 0.15 }
@@ -498,7 +490,6 @@ demobilization = {
 				has_war = yes
 			}
 		}
-
 		activation = {
 			has_unsupported_economic_law = yes
 			has_war = no
@@ -594,10 +585,7 @@ demobilization = {
 		}
 	}
 	demobilization_manpower = {
-		icon = generic_prepare_civil_war
 		icon = revolt
-		is_good = no
-
 		available = {
 			has_unsupported_manpower_law = yes
 			has_war = no
@@ -607,12 +595,6 @@ demobilization = {
 		cost = 50
 		ai_will_do = {
 			factor = 500
-		}
-		
-
-		visible = {
-			has_unsupported_manpower_law = yes
-			has_war = no
 		}
 		complete_effect = {
 			if = {

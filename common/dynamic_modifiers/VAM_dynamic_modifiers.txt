@@ -1,0 +1,19 @@
+VAM_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_VAM_dynamic_industry
+}
+
+VAM_army = {
+	enable = { always = yes }
+	icon = GFX_idea_VAM_dynamic_army
+}
+
+VAM_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_VAM_dynamic_naval
+}
+
+VAM_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_VAM_dynamic_airforce
+}

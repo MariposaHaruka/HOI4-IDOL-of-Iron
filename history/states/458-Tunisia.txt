@@ -1,14 +1,13 @@
-
-state={
-	id=458
-	name="STATE_458"
+state = {
+	id = 458
+	name = "STATE_458"
 	manpower = 1982940
 	state_category = town
-	resources={
-		steel=31 #was 14 # was: 8
+	resources = {
+		steel = 31 #was 14 # was: 8
 	}
 
-	history={
+	history = {
 		owner = HND
 		add_core_of = HND
 		victory_points = {
@@ -22,7 +21,8 @@ state={
 		}
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
+			industrial_complex = 3
+			arms_factory = 2
 			air_base = 8
 			9994 = {
 				naval_base = 8
@@ -30,9 +30,9 @@ state={
 		}
 	}
 
-	provinces={
+	provinces = {
 		1037 1046 4061 4129 4163 7077 7162 7180 9994 10091 11921 11969 
 	}
 
-	local_supplies=0.0 
+	local_supplies = 0.0 
 }

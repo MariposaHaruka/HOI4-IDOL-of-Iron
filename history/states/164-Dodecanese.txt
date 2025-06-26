@@ -1,7 +1,6 @@
-state=
-{
-	id=164
-	name="STATE_164"
+state = {
+	id = 164
+	name = "STATE_164"
 	manpower = 120000
 	
 	state_category = small_island
@@ -23,13 +22,13 @@ state=
 			}
 		}
 		#CONTROLLED BY ITALY AT GAME START -> ITALIAN NAMES
-		set_state_name = STATE_164_ITA
-		set_province_name = { id = 10007 name = VICTORY_POINTS_10007_ITA }
+		#set_state_name = STATE_164_ITA
+		#set_province_name = { id = 10007 name = VICTORY_POINTS_10007_ITA }
 	}
 
 	provinces = {
 		7003 10007
 	}
 
-	local_supplies=0.0 
+	local_supplies = 0.0 
 }

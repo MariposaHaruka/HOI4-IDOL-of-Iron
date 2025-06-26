@@ -1,0 +1,19 @@
+MLN_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_MLN_dynamic_industry
+}
+
+MLN_army = {
+	enable = { always = yes }
+	icon = GFX_idea_MLN_dynamic_army
+}
+
+MLN_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_MLN_dynamic_naval
+}
+
+MLN_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_MLN_dynamic_airforce
+}

@@ -1,0 +1,16 @@
+PRS_reichskommissariats = {
+
+	icon = GFX_decision_category_ger_reichskommissariats
+	priority = 9
+	visible_when_empty = yes 
+	allowed = {
+		original_tag = PRS
+	}
+
+	visible = {
+		has_completed_focus = PRS_31010
+		is_fascism = yes
+	}
+
+	scripted_gui = PRS_rk_ui
+}

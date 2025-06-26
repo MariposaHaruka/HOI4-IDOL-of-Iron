@@ -1,0 +1,19 @@
+RST_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_RST_dynamic_industry
+}
+
+RST_army = {
+	enable = { always = yes }
+	icon = GFX_idea_RST_dynamic_army
+}
+
+RST_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_RST_dynamic_naval
+}
+
+RST_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_RST_dynamic_airforce
+}

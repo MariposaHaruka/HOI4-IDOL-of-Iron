@@ -18,5 +18,29 @@ on_actions = {
 				}
 			}
         }
+
+		#너희 왜 학교 명이 둘다 사쿠라가오카인건데
+		effect = {
+			KON = {
+				add_opinion_modifier = {
+					target = KJI
+					modifier = same_sakuragaoka_pos
+				}
+				add_opinion_modifier = {
+					target = KJI
+					modifier = same_sakuragaoka_neg
+				}
+			}
+			KJI = {
+				add_opinion_modifier = {
+					target = KON
+					modifier = same_sakuragaoka_pos
+				}
+				add_opinion_modifier = {
+					target = KON
+					modifier = same_sakuragaoka_neg
+				}
+			}
+		}
     }
 }

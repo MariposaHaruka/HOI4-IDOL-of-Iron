@@ -189,6 +189,34 @@ ideas = {
 			cancel_if_invalid = no
 		}
 
+		student_council = {
+			removal_cost = -1
+
+			modifier = {
+                army_core_defence_factor = 0.10
+                political_power_factor = 0.10
+                stability_factor = 0.05
+                non_core_manpower = 0.50
+                war_support_factor = -0.30
+                compliance_growth = 0.20
+			}
+			available = { always = no }
+			visible = { 
+				original_tag = BLA
+				NOT = { has_country_flag = BLA_student_council }
+			}
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					factor = 20
+					original_tag = BLA
+				}
+			}
+			cancel_if_invalid = no
+		}
+
 		workers_council = {
 			removal_cost = -1
 			modifier = {

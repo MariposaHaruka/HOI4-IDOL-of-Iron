@@ -1,46 +1,34 @@
 governments_in_exile = {
 
 	request_reinstatement = {
-
 		icon = generic_independence
-
 		days_re_enable = 120 # Prevent event spam
-
 		cost = 10
-
 		available = {
 			all_owned_state = {
 				is_controlled_by = ROOT
 			}
 		}
-
 		visible = {
 			FROM = { is_hosting_exile = ROOT }
 			any_owned_state = {
 				is_controlled_by = ROOT
 			}
 		}
-
-
 		targets = { host }
-
 		target_trigger = { FROM = { is_hosting_exile = ROOT } }
-
 		complete_effect = {
 			FROM = {
 				country_event = { id = mtg_exile_government.2 }
 			}
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
 	}
 
 	grant_parliamentary_audience = {
-
 		icon = eng_install_government
-
 		available = {
 		    FROM = {
 		    	has_legitimacy < 95
@@ -50,30 +38,22 @@ governments_in_exile = {
 				has_political_power > 30
 			}
 		}
-
 		visible = {
 			FROM = { is_exiled_in = ROOT }
 		    FROM = {
 		    	has_legitimacy < 100
 		    }
 		}
-
-
 		target_array = exiles
-
 		target_trigger = { FROM = { is_exiled_in = ROOT } }
-
 		modifier = {
 			political_power_cost = 0.15
 		}
-
 		targeted_modifier = {
 			tag = FROM
 			targeted_legitimacy_daily = 0.05
 		}
-
 		days_remove = 120
-
 		ai_will_do = {
 			factor = 0.03
 			modifier = {
@@ -98,31 +78,23 @@ governments_in_exile = {
 	}
 
 	lobby_for_parliamentary_support = {
-
 		icon = eng_install_government
-
 		available = {
 			OR = {
 				political_power_daily > 0.25
 				has_political_power > 30
 			}
 		}
-
 		visible = {
 			FROM = { is_hosting_exile = ROOT }
 		    has_legitimacy < 100
 		}
-
-
 		targets = { host }
-
 		target_trigger = { FROM = { is_hosting_exile = ROOT } }
-
 		modifier = {
 			political_power_cost = 0.25
 			legitimacy_daily = 0.05
 		}
-
 		days_remove = 120
 		remove_effect = {
 			country_event = {
@@ -140,9 +112,7 @@ governments_in_exile = {
 	}
 
 	public_support_for_from = {
-
 		icon = eng_install_government
-
 		available = {
 			OR = {
 				political_power_daily > 0.25
@@ -339,16 +309,11 @@ governments_in_exile = {
 		    	}
 		    }
 		}
-
-		#targeted_modifier = {
-		#	tag = ETH
-		#	targeted_legitimacy_daily = -1
-		#	democratic_drift = 0.05
-		#}
+		
 		complete_effect = {
 			FROM = {
 				add_timed_idea = {
-					idea = ETH_purge_ideology_boost_idea
+					idea = purge_ideology_boost_idea
 					days = 30
 				}
 			}			

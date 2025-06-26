@@ -1,0 +1,89 @@
+leader_traits = {
+	armaments_organizer = { #군비 조직가
+		sprite = 10
+		random = yes
+		conversion_cost_civ_to_mil_factor = -0.2
+		production_speed_supply_node_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	war_industrialist = { #군수공업가
+		sprite = 10
+		random = yes
+		production_speed_arms_factory_factor = 0.15
+		production_speed_dockyard_factor = 0.15
+		production_speed_fuel_silo_factor = 0.15
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	captain_of_industry = { #대실업가
+		sprite = 10
+		random = yes
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		production_speed_synthetic_refinery_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.8
+				date < 1939.1.1
+			}
+		}
+	}
+	
+	economist = { #경제학자
+		sprite = 10
+		random = yes
+		production_factory_max_efficiency_factor = 0.05
+		consumer_goods_factor = -0.05
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	fortification_engineer = { #요새화 공학자
+		sprite = 10
+		random = yes
+		production_speed_bunker_factor = 0.2
+		production_speed_coastal_bunker_factor = 0.2
+		production_speed_anti_air_building_factor = 0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	quartermaster_general = { #병참감
+		sprite = 10
+		random = yes
+		production_speed_air_base_factor = 0.15
+		production_speed_naval_base_factor = 0.15
+		production_speed_rocket_site_factor = 0.15
+		production_speed_radar_station_factor = 0.15
+		production_speed_nuclear_reactor_factor = 0.15
+
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+	
+	technocrat = { #기술관료
+		sprite = 13
+		random = no
+
+		production_speed_industrial_complex_factor = 0.05
+		research_speed_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

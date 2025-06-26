@@ -1,0 +1,19 @@
+LVD_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_LVD_dynamic_industry
+}
+
+LVD_army = {
+	enable = { always = yes }
+	icon = GFX_idea_LVD_dynamic_army
+}
+
+LVD_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_LVD_dynamic_naval
+}
+
+LVD_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_LVD_dynamic_airforce
+}

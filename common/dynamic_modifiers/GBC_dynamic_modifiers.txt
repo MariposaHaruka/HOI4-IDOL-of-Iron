@@ -1,0 +1,19 @@
+GBC_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_GBC_dynamic_industry
+}
+
+GBC_army = {
+	enable = { always = yes }
+	icon = GFX_idea_GBC_dynamic_army
+}
+
+GBC_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_GBC_dynamic_naval
+}
+
+GBC_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_GBC_dynamic_airforce
+}

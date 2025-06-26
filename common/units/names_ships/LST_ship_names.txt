@@ -1,0 +1,129 @@
+### REGULAR DESTROYER NAMES###
+LST_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { LST }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "RYS "							
+	fallback_name = "Destroyer %d"					
+
+	unique = {											
+		"Rajah Soliman" "Rajah Lakandula" "Datu Kalantiaw" "Datu Sikatuna" "Andres Bonifacio" "Gregorio del Pilar" "Diego Silang" "Francisco Dagohoy" 
+		"Datu Marikudo" "Negros Occidental" "Leyte" 
+	}
+}
+
+
+### LIGHT CRUISER NAMES###
+LST_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { LST }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "RYS "							
+	fallback_name = "Light Cruiser %d"
+
+	unique = {
+		"Quezon" "Rizal" "Cebu" "Pangasinan" "Iloilo" "Manila" "Luzon" "Cabanatuan" "Batangas" "Cadiz" "Davao" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+LST_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { LST }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "RYS "							
+	fallback_name = "Heavy Cruiser %d"
+
+	unique = {
+		"Quezon" "Rizal" "Cebu" "Pangasinan" "Iloilo" "Manila" "Luzon" "Cabanatuan" "Batangas" "Cadiz" "Davao" 
+	}
+}
+
+### BATTLESHIP NAMES ###
+LST_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { LST }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "RYS "							
+	fallback_name = "Battleship %d"		
+
+	unique = {
+		"Manila" "Luzon" "Yuigaoka Republic" "General Manchatas" "Cabanatuan" "San Pablo" "Batangas" "Bacolod" "Cadiz" "San Carlos" "Davao" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+LST_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { LST }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "RYS "							
+	fallback_name = "Battlecruiser %d"		
+
+	unique = {
+ 		"Manila" "Luzon" "Yuigaoka Republic" "General Manchatas" "Cabanatuan" "San Pablo" "Batangas" "Bacolod" "Cadiz" "San Carlos" "Davao" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+LST_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { LST }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "RYS "							
+	fallback_name = "Carrier %d"		
+
+	unique = {
+		"Manila" "Luzon" "Yuigaoka Republic" "General Manchatas" "Cabanatuan" "San Pablo" "Batangas" "Bacolod" "Cadiz" "San Carlos" "Davao" 
+	}
+}
+
+
+### SUBMARINES ###
+LST_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { LST }
+	can_use = { NOT = { is_subject_of = LLS } }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "RYS "							
+	fallback_name = "Submarine %d"
+	
+	unique = {
+		"Arabis" "Arbutus" "Hawea" "Kaniere" "Pukaki" "Rotoiti" "Taupo" "Tutira" "Echuca" "Thrust" "Inverell" "Kiama" "Stawell" 
+		"Otago" "Taranaki" "Waikato" "Blackpool" "Canterbury"
+	}
+}

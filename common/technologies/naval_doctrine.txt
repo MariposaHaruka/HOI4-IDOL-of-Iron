@@ -25,7 +25,15 @@ technologies = {
 		}
 		mines_planting_by_fleets_factor = 0.1
 		#####
-
+		on_research_complete = {
+			if = {
+				limit = { has_dlc = "Gotterdammerung"}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_naval_underway_replenishment	
+				}
+			}
+		}
 
 		xor = { trade_interdiction base_strike } 
 		
@@ -113,7 +121,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = ENG
+				tag = IMA
 				factor = 2
 			}
 			modifier = {
@@ -167,7 +175,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = ENG
+				tag = IMA
 				factor = 2
 			}
 			modifier = {
@@ -232,11 +240,11 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_war_with = GER
+				has_war_with = PRS
 				factor = 5
 			}
 			modifier = {
-				tag = ENG
+				tag = IMA
 				factor = 2
 			}
 			modifier = {
@@ -396,7 +404,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				tag = ENG
+				tag = IMA
 				factor = 2
 			}
 			modifier = {
@@ -460,7 +468,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = ENG
+				tag = IMA
 				factor = 2
 			}
 			modifier = {
@@ -517,7 +525,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = ENG
+				tag = IMA
 				factor = 2
 			}
 			modifier = {
@@ -581,7 +589,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = ENG
+				tag = IMA
 				factor = 2
 			}
 			modifier = {
@@ -653,7 +661,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = ENG
+				tag = IMA
 				factor = 2
 			}
 			modifier = {
@@ -871,8 +879,6 @@ technologies = {
 		doctrine_name = "TITLE_TRADE_INTERDICTION"
 		
 		# This tree is focused on sinking convoys, and boosting Subs and all types of Cruiser. It has some boosts for CVs and Battleships, but the CVs should be a bit worse and the BBs a lot worse than Fleet in being's.
-
-		xp_research_type = navy
 		
 		# EFFECT ##############
 		submarine = {
@@ -909,7 +915,8 @@ technologies = {
 			leads_to_tech = carrier_operations 
 			research_cost_coeff = 1
 		}
-
+		
+		xp_research_type = navy
 		xp_unlock_cost = 100
 		doctrine = yes	
 		research_cost = 3
@@ -933,7 +940,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = GER
+				tag = PRS
 				factor = 3
 			}
 			modifier = {
@@ -991,7 +998,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = GER
+				tag = PRS
 				factor = 3
 			}
 			modifier = {
@@ -1047,7 +1054,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = GER
+				tag = PRS
 				factor = 3
 			}
 			modifier = {
@@ -1113,7 +1120,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = GER
+				tag = PRS
 				factor = 3
 			}
 			modifier = {
@@ -1177,7 +1184,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = GER
+				tag = PRS
 				factor = 2
 			}
 			modifier = {
@@ -1252,7 +1259,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = GER
+				tag = PRS
 				factor = 2
 			}
 			modifier = {
@@ -1719,8 +1726,6 @@ technologies = {
 		doctrine_name = "TITLE_BASE_STRIKE"
 		#This tree is primarily focused on Carriers. It should have the best Carriers, Battleships that are better than Trade interdiction but worse than Fleet in being, and has the same Sub tree as FiB. Convoy defense is better than TI but worse than FiB
 		
-		xp_research_type = navy
-		
 		# EFFECT ##############
 		carrier = {
 			max_organisation = 20
@@ -1744,7 +1749,16 @@ technologies = {
 			leads_to_tech =  convoy_escorts_bs
 			research_cost_coeff = 1
 		}
-		
+		on_research_complete = {
+			if = {
+				limit = { has_dlc = "Gotterdammerung"}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_naval_underway_replenishment	
+				}
+			}
+		}		
+		xp_research_type = navy
 		xp_unlock_cost = 100
 		doctrine = yes	
 		research_cost = 3
@@ -1767,8 +1781,8 @@ technologies = {
 			}
 			modifier = {
 				OR = {
-					tag = USA
-					tag = JAP
+					tag = ICG
+					tag = LLS
 				}
 				factor = 2.5
 			}
@@ -1828,15 +1842,15 @@ technologies = {
 			}
 			modifier = {
 				OR = {
-					tag = USA
-					tag = JAP
+					tag = ICG
+					tag = LLS
 				}
 				factor = 2.5
 			}
 			modifier = {
 				OR = {
-					has_war_with = JAP
-					has_war_with = USA
+					has_war_with = LLS
+					has_war_with = ICG
 				}
 				factor = 2
 			}
@@ -1897,15 +1911,15 @@ technologies = {
 			}
 			modifier = {
 				OR = {
-					tag = USA
-					tag = JAP
+					tag = ICG
+					tag = LLS
 				}
 				factor = 2.5
 			}
 			modifier = {
 				OR = {
-					has_war_with = JAP
-					has_war_with = USA
+					has_war_with = LLS
+					has_war_with = ICG
 				}
 				factor = 2
 			}
@@ -1967,15 +1981,15 @@ technologies = {
 			}
 			modifier = {
 				OR = {
-					tag = USA
-					tag = JAP
+					tag = ICG
+					tag = LLS
 				}
 				factor = 2.5
 			}
 			modifier = {
 				OR = {
-					has_war_with = JAP
-					has_war_with = USA
+					has_war_with = LLS
+					has_war_with = ICG
 				}
 				factor = 2
 			}
@@ -2045,8 +2059,8 @@ technologies = {
 			}
 			modifier = {
 				OR = {
-					tag = USA
-					tag = JAP
+					tag = ICG
+					tag = LLS
 				}
 				factor = 2.5
 			}
@@ -2060,8 +2074,8 @@ technologies = {
 			}
 			modifier = {
 				OR = {
-					has_war_with = JAP
-					has_war_with = USA
+					has_war_with = LLS
+					has_war_with = ICG
 				}
 				factor = 2
 			}
@@ -2113,15 +2127,15 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = USA
-					tag = JAP
+					tag = ICG
+					tag = LLS
 				}
 				factor = 4
 			}
 			modifier = {
 				OR = {
-					has_war_with = JAP
-					has_war_with = USA
+					has_war_with = LLS
+					has_war_with = ICG
 				}
 				factor = 2
 			}
@@ -2181,15 +2195,15 @@ technologies = {
 			}
 			modifier = {
 				OR = {
-					tag = USA
-					tag = JAP
+					tag = ICG
+					tag = LLS
 				}
 				factor = 2.5
 			}
 			modifier = {
 				OR = {
-					has_war_with = JAP
-					has_war_with = USA
+					has_war_with = LLS
+					has_war_with = ICG
 				}
 				factor = 2
 			}
@@ -2253,7 +2267,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = USA
+				tag = ICG
 				factor = 2
 			}
 			modifier = {
@@ -2305,7 +2319,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = USA
+				tag = ICG
 				factor = 2
 			}
 			modifier = {
@@ -2367,7 +2381,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = USA
+				tag = ICG
 				factor = 2
 			}
 			modifier = {
@@ -2422,7 +2436,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = USA
+				tag = ICG
 				factor = 2
 			}
 			modifier = {
@@ -2484,7 +2498,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = USA
+				tag = ICG
 				factor = 2
 			}
 			modifier = {
@@ -2544,7 +2558,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = USA
+				tag = ICG
 				factor = 2
 			}
 			modifier = {
@@ -2607,7 +2621,7 @@ technologies = {
 				factor = 5
 			}
 			modifier = {
-				tag = USA
+				tag = ICG
 				factor = 2
 			}
 			modifier = {

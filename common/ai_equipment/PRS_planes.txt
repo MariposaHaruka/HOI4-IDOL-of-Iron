@@ -1,9 +1,9 @@
 # AI plane design for testing
 
-GER_fighter = {
+PRS_fighter = {
 	category = air
 
-	available_for = { GER }
+	available_for = { PRS }
 
 	roles = {
 		air_fighter
@@ -186,10 +186,10 @@ GER_fighter = {
 	}
 }
 
-GER_cas = {
+PRS_cas = {
 	category = air
 
-	available_for = {GER}
+	available_for = { PRS }
 
 	roles = {
 		air_cas
@@ -303,10 +303,10 @@ GER_cas = {
 	}
 }
 
-GER_naval_bomber = {
+PRS_naval_bomber = {
 	category = air
 
-	available_for = { GER }
+	available_for = { PRS }
 
 	roles = {
 		air_naval_bomber
@@ -392,10 +392,10 @@ GER_naval_bomber = {
 }
 
 
-GER_tactical_bomber = {
+PRS_tactical_bomber = {
 	category = air
 
-	available_for = {GER}
+	available_for = { PRS }
 
 	roles = {
 		air_tactical_bomber
@@ -544,10 +544,10 @@ GER_tactical_bomber = {
 	}
 }
 
-GER_heavy_fighter = {
+PRS_heavy_fighter = {
 	category = air
 
-	available_for = {GER}
+	available_for = { PRS }
 
 	roles = {
 		air_heavy_fighter
@@ -556,8 +556,8 @@ GER_heavy_fighter = {
 	priority = {
 		factor = 500
 		modifier = {
-			has_war_with = ENG
-			NOT = { has_war_with = SOV }
+			has_war_with = IMA
+			NOT = { has_war_with = TOH }
 			factor = 2
 		}
 	}
@@ -641,10 +641,10 @@ GER_heavy_fighter = {
 }
 
 
-GER_strategic_bomber = {
+PRS_strategic_bomber = {
 	category = air
 
-	available_for = {GER}
+	available_for = { PRS }
 
 	roles = {
 		air_strategic_bomber
@@ -658,10 +658,10 @@ GER_strategic_bomber = {
 		}
 		modifier = { #beat the Soviets already
 			has_War = yes
-			SOV = {
+			TOH = {
 				OR = {
 					exists = no
-					is_subject_of = GER
+					is_subject_of = PRS
 				}
 			}
 			factor = 4
@@ -781,10 +781,10 @@ GER_strategic_bomber = {
 	}
 }
 
-GER_maritime_patrol = {
+PRS_maritime_patrol = {
 	category = air
 
-	available_for = {GER}
+	available_for = { PRS }
 
 	roles = {
 		air_maritime_patrol

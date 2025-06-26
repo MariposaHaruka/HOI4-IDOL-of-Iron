@@ -1,0 +1,203 @@
+autonomy_state = {
+	id = autonomy_dominion_colony
+	
+	min_freedom_level = 0.6
+	manpower_influence = 0.2
+	
+	rule = {
+		desc = "RULE_DESC_IS_A_SUBJECT"
+		can_not_declare_war = no
+		can_decline_call_to_war = yes
+		can_be_spymaster = no
+	}
+	
+	modifier = {
+		autonomy_manpower_share = 0.0
+		extra_trade_to_overlord_factor = 0.25
+		overlord_trade_cost_factor = -0.25
+		peace_score_ratio_transferred_to_overlord = 0.05
+		lend_lease_tension_with_overlord = -0.1
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 0.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		if = {
+			limit = { has_dlc = "Waking the Tiger" }
+			OVERLORD = { 
+				has_government = autocracy
+			}
+			OVERLORD = {
+				NOT = { 
+					original_tag = ENS
+					original_tag = BDG
+				}
+			}
+		}
+	}
+
+	allowed_levels_filter = {
+		autonomy_dominion_colony
+		autonomy_semi_colony
+		autonomy_integrated_colony
+		autonomy_personal_union
+	}
+
+	can_take_level = {
+		always = no #중점으로 독립 가능
+	}
+
+	can_lose_level = {
+		always = no
+	}
+}
+
+autonomy_state = {
+	id = autonomy_semi_colony
+	
+	min_freedom_level = 0.4
+	manpower_influence = 0.2
+	
+	rule = {
+		desc = "RULE_DESC_IS_A_SUBJECT"
+		can_not_declare_war = no
+		can_decline_call_to_war = yes
+		can_be_spymaster = no
+	}
+	
+	modifier = {
+		autonomy_manpower_share = 0.0
+		extra_trade_to_overlord_factor = 0.25
+		overlord_trade_cost_factor = -0.25
+		peace_score_ratio_transferred_to_overlord = 0.05
+		lend_lease_tension_with_overlord = -0.1
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 0.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		if = {
+			limit = { has_dlc = "Waking the Tiger" }
+			OVERLORD = { 
+				has_government = autocracy
+			}
+			OVERLORD = {
+				NOT = { 
+					original_tag = ENS
+					original_tag = BDG
+				}
+			}
+		}
+	}
+
+	allowed_levels_filter = {
+		autonomy_dominion_colony
+		autonomy_semi_colony
+		autonomy_integrated_colony
+		autonomy_personal_union
+	}
+
+	can_take_level = {
+		always = no #중점으로 독립 가능
+	}
+
+	can_lose_level = {
+		always = no
+	}
+}
+
+autonomy_state = {
+	id = autonomy_integrated_colony
+	
+	min_freedom_level = 0.2
+	manpower_influence = 0.2
+	
+	rule = {
+		desc = "RULE_DESC_IS_A_SUBJECT"
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+		can_be_spymaster = yes
+	}
+	
+	modifier = {
+		autonomy_manpower_share = 0.0
+		extra_trade_to_overlord_factor = 0.25
+		overlord_trade_cost_factor = -0.25
+		peace_score_ratio_transferred_to_overlord = 0.05
+		lend_lease_tension_with_overlord = -0.1
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 0.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		if = {
+			limit = { has_dlc = "Waking the Tiger" }
+			OVERLORD = { 
+				has_government = autocracy
+			}
+			OVERLORD = {
+				NOT = { 
+					original_tag = ENS
+					original_tag = BDG
+				}
+			}
+		}
+	}
+
+	allowed_levels_filter = {
+		autonomy_dominion_colony
+		autonomy_semi_colony
+		autonomy_integrated_colony
+		autonomy_personal_union
+	}
+	
+	use_for_peace_conference_weight = {
+		base = 0
+		modifier = {
+			add = 10
+			FROM = {
+				NOT = { 
+					original_tag = ENS
+					original_tag = BDG
+				}
+				has_government = autocracy
+			}
+		}
+	}
+	
+	can_take_level = {
+	}
+
+	can_lose_level = {
+	}
+}

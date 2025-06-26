@@ -1,0 +1,481 @@
+﻿HBR_INF_01 = {
+	name = "Infantry Divisions"
+
+	for_countries = { HBR }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { HBR_GAR_01 }
+
+	fallback_name = "%dth Infantry Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Infantry Division" }
+		2 = { "%dnd Infantry Division" }
+		3 = { "%drd Infantry Division" }
+		4 = { "%dth Infantry Division" }
+		6 = { "%dth Infantry Division" }
+		7 = { "%dth Infantry Division" }
+		8 = { "%dth Infantry Division" }
+		9 = { "%dth Infantry Division" }
+		10 = { "%dth Infantry Division" }
+		11 = { "%dth Infantry Division" }
+		12 = { "%dth Infantry Division" }
+		13 = { "%dth Infantry Division" }
+		14 = { "%dth Infantry Division" }
+		15 = { "%dth Infantry Division" }
+		16 = { "%dth Infantry Division" }
+		17 = { "%dth Infantry Division" }
+		18 = { "%dth Infantry Division" }
+		19 = { "%dth Infantry Division" }
+		20 = { "%dth Infantry Division" }
+		21 = { "%dst Infantry Division" }
+		22 = { "%dnd Infantry Division" }
+		23 = { "%drd Infantry Division" }
+		24 = { "%dth Infantry Division" }
+		25 = { "%dth Infantry Division" }
+		26 = { "%dth Infantry Division" }
+		27 = { "%dth Infantry Division" }
+		28 = { "%dth Infantry Division" }
+		29 = { "%dth Infantry Division" }
+		30 = { "%dth Infantry Division" }
+		31 = { "%dst Infantry Division" }
+		32 = { "%dnd Infantry Division" }
+		33 = { "%drd Infantry Division" }
+		34 = { "%dth Infantry Division" }
+		35 = { "%dth Infantry Division" }
+		36 = { "%dth Infantry Division" }
+		37 = { "%dth Infantry Division" }
+		38 = { "%dth Infantry Division" }
+		39 = { "%dth Infantry Division" }
+		40 = { "%dth Infantry Division" }
+		41 = { "%dst Infantry Division" }
+		42 = { "%dnd Infantry Division" }
+		43 = { "%drd Infantry Division" }
+		44 = { "%dth Infantry Division" }
+		45 = { "%dth Infantry Division" }
+		46 = { "%dth Infantry Division" }
+		47 = { "%dth Infantry Division" }
+		48 = { "%dth Infantry Division" }
+		49 = { "%dth Infantry Division" }
+		50 = { "%dth Infantry Division" }
+		51 = { "%dst Infantry Division" }
+		52 = { "%dnd Infantry Division" }
+		53 = { "%drd Infantry Division" }
+
+	}
+}
+
+HBR_CAV_01 = {
+	name = "Cavalry Divisions"
+
+	for_countries = { HBR }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { GER_Gar_01 }
+
+	fallback_name = "%dth Seraph Cavalry"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Seraph Cavalry" }
+		2 = { "%dnd Seraph Cavalry" }
+		3 = { "%drd Seraph Cavalry" }
+		4 = { "%dth Seraph Cavalry" }
+		5 = { "%dth Seraph Cavalry" }
+		6 = { "%dth Seraph Cavalry" }
+		7 = { "%dth Seraph Cavalry" }
+		8 = { "%dth Seraph Cavalry" }
+		9 = { "%dth Seraph Cavalry" }
+		10 = { "%dth Seraph Cavalry" }
+		11 = { "%dth Seraph Cavalry" }
+		12 = { "%dth Seraph Cavalry" }
+		13 = { "%dth Seraph Cavalry" }
+		14 = { "%dth Seraph Cavalry" }
+		15 = { "%dth Seraph Cavalry" }
+		16 = { "%dth Seraph Cavalry" }
+		17 = { "%dth Seraph Cavalry" }
+		18 = { "%dth Seraph Cavalry" }
+		19 = { "%dth Seraph Cavalry" }
+		20 = { "%dth Seraph Cavalry" }
+		21 = { "%dst Seraph Cavalry" }
+		22 = { "%dnd Seraph Cavalry" }
+		23 = { "%drd Seraph Cavalry" }
+		24 = { "%dth Seraph Cavalry" }
+		25 = { "%dth Seraph Cavalry" }
+		26 = { "%dth Seraph Cavalry" }
+		27 = { "%dth Seraph Cavalry" }
+		28 = { "%dth Seraph Cavalry" }
+		29 = { "%dth Seraph Cavalry" }
+		30 = { "%dth Seraph Cavalry" }
+		31 = { "%dst Seraph Cavalry" }
+		32 = { "%dnd Seraph Cavalry" }
+		33 = { "%drd Seraph Cavalry" }
+		34 = { "%dth Seraph Cavalry" }
+		35 = { "%dth Seraph Cavalry" }
+		36 = { "%dth Seraph Cavalry" }
+		37 = { "%dth Seraph Cavalry" }
+		38 = { "%dth Seraph Cavalry" }
+		39 = { "%dth Seraph Cavalry" }
+		40 = { "%dth Seraph Cavalry" }
+		41 = { "%dst Seraph Cavalry" }
+		42 = { "%dnd Seraph Cavalry" }
+		43 = { "%drd Seraph Cavalry" }
+		44 = { "%dth Seraph Cavalry" }
+		45 = { "%dth Seraph Cavalry" }
+		46 = { "%dth Seraph Cavalry" }
+		47 = { "%dth Seraph Cavalry" }
+		48 = { "%dth Seraph Cavalry" }
+		49 = { "%dth Seraph Cavalry" }
+		50 = { "%dth Seraph Cavalry" }
+		51 = { "%dst Seraph Cavalry" }
+		52 = { "%dnd Seraph Cavalry" }
+
+	}
+}
+
+HBR_MOT_01 = {
+	name = "Motorised Divisions"
+
+	for_countries = { HBR }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { HBR_INF_01 }
+
+	fallback_name = "%dth Seraph Infantry Motordiv."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Seraph Infantry Motordiv." }
+		2 = { "%dnd Seraph Infantry Motordiv." }
+		3 = { "%drd Seraph Infantry Motordiv." }
+		4 = { "%dth Seraph Infantry Motordiv." }
+		5 = { "%dth Seraph Infantry Motordiv." }
+		6 = { "%dth Seraph Infantry Motordiv." }
+		7 = { "%dth Seraph Infantry Motordiv." }
+		8 = { "%dth Seraph Infantry Motordiv." }
+		9 = { "%dth Seraph Infantry Motordiv." }
+		10 = { "%dth Seraph Infantry Motordiv." }
+		11 = { "%dth Seraph Infantry Motordiv." }
+		12 = { "%dth Seraph Infantry Motordiv." }
+		13 = { "%dth Seraph Infantry Motordiv." }
+		14 = { "%dth Seraph Infantry Motordiv." }
+		15 = { "%dth Seraph Infantry Motordiv." }
+		16 = { "%dth Seraph Infantry Motordiv." }
+		17 = { "%dth Seraph Infantry Motordiv." }
+		18 = { "%dth Seraph Infantry Motordiv." }
+		19 = { "%dth Seraph Infantry Motordiv." }
+		20 = { "%dth Seraph Infantry Motordiv." }
+		21 = { "%dst Seraph Infantry Motordiv." }
+		22 = { "%dnd Seraph Infantry Motordiv." }
+		23 = { "%drd Seraph Infantry Motordiv." }
+
+	}
+}
+
+HBR_ARM_01 = {
+	name = "Armoured Divisions"
+
+	for_countries = { HBR }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { HBR_INF_01 }
+
+	fallback_name = "%dth Seraph Tank Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Seraph Tank Division" }
+		2 = { "%dnd Seraph Tank Division" }
+		3 = { "%drd Seraph Tank Division" }
+		4 = { "%dth Seraph Tank Division" }
+		5 = { "%dth Seraph Tank Division" }
+		6 = { "%dth Seraph Tank Division" }
+		7 = { "%dth Seraph Tank Division" }
+		8 = { "%dth Seraph Tank Division" }
+		9 = { "%dth Seraph Tank Division" }
+		10 = { "%dth Seraph Tank Division" }
+		11 = { "%dth Seraph Tank Division" }
+		12 = { "%dth Seraph Tank Division" }
+		13 = { "%dth Seraph Tank Division" }
+		14 = { "%dth Seraph Tank Division" }
+		15 = { "%dth Seraph Tank Division" }
+		16 = { "%dth Seraph Tank Division" }
+		17 = { "%dth Seraph Tank Division" }
+		18 = { "%dth Seraph Tank Division" }
+		19 = { "%dth Seraph Tank Division" }
+		20 = { "%dth Seraph Tank Division" }
+		21 = { "%dst Seraph Tank Division" }
+		22 = { "%dnd Seraph Tank Division" }
+		23 = { "%drd Seraph Tank Division" }
+
+	}
+}
+
+HBR_MEC_01 = {
+	name = "Mechanised Divisions"
+
+	for_countries = { HBR }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized"  }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { HBR_INF_01 }
+
+	fallback_name = "%dth Seraph Mechanized Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Seraph Mechanized Div." }
+		2 = { "%dnd Seraph Mechanized Div." }
+		3 = { "%drd Seraph Mechanized Div." }
+		4 = { "%dth Seraph Mechanized Div." }
+		5 = { "%dth Seraph Mechanized Div." }
+		6 = { "%dth Seraph Mechanized Div." }
+		7 = { "%dth Seraph Mechanized Div." }
+		8 = { "%dth Seraph Mechanized Div." }
+		9 = { "%dth Seraph Mechanized Div." }
+		10 = { "%dth Seraph Mechanized Div." }
+		11 = { "%dth Seraph Mechanized Div." }
+		12 = { "%dth Seraph Mechanized Div." }
+		13 = { "%dth Seraph Mechanized Div." }
+		14 = { "%dth Seraph Mechanized Div." }
+		15 = { "%dth Seraph Mechanized Div." }
+		16 = { "%dth Seraph Mechanized Div." }
+		17 = { "%dth Seraph Mechanized Div." }
+		18 = { "%dth Seraph Mechanized Div." }
+		19 = { "%dth Seraph Mechanized Div." }
+		20 = { "%dth Seraph Mechanized Div." }
+		21 = { "%dst Seraph Mechanized Div." }
+		22 = { "%dnd Seraph Mechanized Div." }
+		23 = { "%drd Seraph Mechanized Div." }
+
+	}
+}
+
+HBR_GAR_01 = {
+	name = "Garrison Divisions"
+
+	for_countries = { HBR }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { HBR_INF_01 }
+
+	fallback_name = "%dth Infantry Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Infantry Division" }
+		2 = { "%dnd Infantry Division" }
+		3 = { "%drd Infantry Division" }
+		4 = { "%dth Infantry Division" }
+		6 = { "%dth Infantry Division" }
+		7 = { "%dth Infantry Division" }
+		8 = { "%dth Infantry Division" }
+		9 = { "%dth Infantry Division" }
+		10 = { "%dth Infantry Division" }
+		11 = { "%dth Infantry Division" }
+		12 = { "%dth Infantry Division" }
+		13 = { "%dth Infantry Division" }
+		14 = { "%dth Infantry Division" }
+		15 = { "%dth Infantry Division" }
+		16 = { "%dth Infantry Division" }
+		17 = { "%dth Infantry Division" }
+		18 = { "%dth Infantry Division" }
+		19 = { "%dth Infantry Division" }
+		20 = { "%dth Infantry Division" }
+		21 = { "%dst Infantry Division" }
+		22 = { "%dnd Infantry Division" }
+		23 = { "%drd Infantry Division" }
+		24 = { "%dth Infantry Division" }
+		25 = { "%dth Infantry Division" }
+		26 = { "%dth Infantry Division" }
+		27 = { "%dth Infantry Division" }
+		28 = { "%dth Infantry Division" }
+		29 = { "%dth Infantry Division" }
+		30 = { "%dth Infantry Division" }
+		31 = { "%dst Infantry Division" }
+		32 = { "%dnd Infantry Division" }
+		33 = { "%drd Infantry Division" }
+		34 = { "%dth Infantry Division" }
+		35 = { "%dth Infantry Division" }
+		36 = { "%dth Infantry Division" }
+		37 = { "%dth Infantry Division" }
+		38 = { "%dth Infantry Division" }
+		39 = { "%dth Infantry Division" }
+		40 = { "%dth Infantry Division" }
+		41 = { "%dst Infantry Division" }
+		42 = { "%dnd Infantry Division" }
+		43 = { "%drd Infantry Division" }
+		44 = { "%dth Infantry Division" }
+		45 = { "%dth Infantry Division" }
+		46 = { "%dth Infantry Division" }
+		47 = { "%dth Infantry Division" }
+		48 = { "%dth Infantry Division" }
+		49 = { "%dth Infantry Division" }
+		50 = { "%dth Infantry Division" }
+		51 = { "%dst Infantry Division" }
+		52 = { "%dnd Infantry Division" }
+		53 = { "%drd Infantry Division" }
+
+	}
+}
+
+HBR_MAR_01 = {
+	name = "Marine Divisions"
+
+	for_countries = { HBR }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" "amphibious_armor" "amphibious_mechanized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { HBR_GAR_01 }
+
+	fallback_name = "%dth Seraph Marine Inf. Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Seraph Marine Inf. Division" }
+		2 = { "%dnd Seraph Marine Inf. Division" }
+		3 = { "%drd Seraph Marine Inf. Division" }
+		4 = { "%dth Seraph Marine Inf. Division" }
+		5 = { "%dth Seraph Marine Inf. Division" }
+		6 = { "%dth Seraph Marine Inf. Division" }
+		7 = { "%dth Seraph Marine Inf. Division" }
+		8 = { "%dth Seraph Marine Inf. Division" }
+		9 = { "%dth Seraph Marine Inf. Division" }
+		10 = { "%dth Seraph Marine Inf. Division" }
+		11 = { "%dth Seraph Marine Inf. Division" }
+		12 = { "%dth Seraph Marine Inf. Division" }
+		13 = { "%dth Seraph Marine Inf. Division" }
+		14 = { "%dth Seraph Marine Inf. Division" }
+		15 = { "%dth Seraph Marine Inf. Division" }
+		16 = { "%dth Seraph Marine Inf. Division" }
+		17 = { "%dth Seraph Marine Inf. Division" }
+		18 = { "%dth Seraph Marine Inf. Division" }
+		19 = { "%dth Seraph Marine Inf. Division" }
+		20 = { "%dth Seraph Marine Inf. Division" }
+		21 = { "%dst Seraph Marine Inf. Division" }
+		22 = { "%dnd Seraph Marine Inf. Division" }
+		23 = { "%drd Seraph Marine Inf. Division" }
+
+	}
+}
+
+HBR_MTN_01 = {
+	name = "Mountain Divisions"
+
+	for_countries = { HBR }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { HBR_MEC_01 }
+
+	fallback_name = "%dth Seraph Monpak Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Seraph Monpak Division" }
+		2 = { "%dnd Seraph Monpak Division" }
+		3 = { "%drd Seraph Monpak Division" }
+		4 = { "%dth Seraph Monpak Division" }
+		5 = { "%dth Seraph Monpak Division" }
+		6 = { "%dth Seraph Monpak Division" }
+		7 = { "%dth Seraph Monpak Division" }
+		8 = { "%dth Seraph Monpak Division" }
+		9 = { "%dth Seraph Monpak Division" }
+		10 = { "%dth Seraph Monpak Division" }
+		11 = { "%dth Seraph Monpak Division" }
+		12 = { "%dth Seraph Monpak Division" }
+		13 = { "%dth Seraph Monpak Division" }
+		14 = { "%dth Seraph Monpak Division" }
+		15 = { "%dth Seraph Monpak Division" }
+		16 = { "%dth Seraph Monpak Division" }
+		17 = { "%dth Seraph Monpak Division" }
+		18 = { "%dth Seraph Monpak Division" }
+		19 = { "%dth Seraph Monpak Division" }
+		20 = { "%dth Seraph Monpak Division" }
+		21 = { "%dst Seraph Monpak Division" }
+		22 = { "%dnd Seraph Monpak Division" }
+		23 = { "%drd Seraph Monpak Division" }
+
+	}
+}
+
+HBR_PAR_01 = {
+	name = "Paratrooper Divisions"
+
+	for_countries = { HBR }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+
+	fallback_name = "%dth Seraph Paracommando Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%dst Seraph Paracommando Division" }
+		2 = { "%dnd Seraph Paracommando Division" }
+		3 = { "%drd Seraph Paracommando Division" }
+		4 = { "%dth Seraph Paracommando Division" }
+		5 = { "%dth Seraph Paracommando Division" }
+		6 = { "%dth Seraph Paracommando Division" }
+		7 = { "%dth Seraph Paracommando Division" }
+		8 = { "%dth Seraph Paracommando Division" }
+		9 = { "%dth Seraph Paracommando Division" }
+		10 = { "%dth Seraph Paracommando Division" }
+		11 = { "%dth Seraph Paracommando Division" }
+		12 = { "%dth Seraph Paracommando Division" }
+		13 = { "%dth Seraph Paracommando Division" }
+		14 = { "%dth Seraph Paracommando Division" }
+		15 = { "%dth Seraph Paracommando Division" }
+		16 = { "%dth Seraph Paracommando Division" }
+		17 = { "%dth Seraph Paracommando Division" }
+		18 = { "%dth Seraph Paracommando Division" }
+		19 = { "%dth Seraph Paracommando Division" }
+		20 = { "%dth Seraph Paracommando Division" }
+		21 = { "%dst Seraph Paracommando Division" }
+		22 = { "%dnd Seraph Paracommando Division" }
+		23 = { "%drd Seraph Paracommando Division" }
+
+	}
+}

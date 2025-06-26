@@ -1,0 +1,39 @@
+
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Flota Starlight de Mare"			
+		naval_base = 657 # Constanta
+		task_force = {				
+			name = "Flota Starlight de Mare"			
+			location = 657 # Constanta
+			ship = { name = "SNS Marasti" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AIK version_name = "Marasti Class" } } }
+			ship = { name = "SNS Marasesti" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AIK version_name = "Marasti Class" } } }
+			ship = { name = "SNS Regele Ferdinand" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AIK version_name = "Regele Ferdinand Class" } } }
+			ship = { name = "SNS Regina Maria" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AIK version_name = "Regele Ferdinand Class" } } }
+		}				
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	### Under Contruction Notes ###
+	# SS: Delfinul class (x1) ("SNS Delfinul")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "AIK"
+			version_name = "Delfinul Class"
+		}
+		name = "SNS Delfinul" 
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+}

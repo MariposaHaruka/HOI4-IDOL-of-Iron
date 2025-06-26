@@ -1,12 +1,15 @@
-
-state={
-	id=506
-	name="STATE_506" # Antofagasta
-	manpower = 283605
+state = {
+	id = 506
+	name = "STATE_506" # Antofagasta
+	manpower = 423605
 	
-	state_category = rural
+	state_category = town
 
-	history={
+	resources = {
+		tungsten = 42
+	}
+
+	history = {
 		owner = LPR
 		add_core_of = LPR
 		buildings = {
@@ -22,9 +25,9 @@ state={
 		}
 	}
 
-	provinces={
+	provinces = {
 		5146 5171 12994 13301 13302 13304
 	}
 
-	local_supplies=0.0 
+	local_supplies = 0.0 
 }

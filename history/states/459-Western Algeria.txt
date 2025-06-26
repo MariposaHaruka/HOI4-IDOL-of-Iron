@@ -1,15 +1,14 @@
-
-state={
-	id=459
-	name="STATE_459" # Algiers
+state = {
+	id = 459
+	name = "STATE_459" # Algiers
 	manpower = 3089944
 	state_category = town
 	
-	resources={
-		steel=65 # was:26 was: 36
+	resources = {
+		steel = 65 # was:26 was: 36
 	}
 
-	history={
+	history = {
 		owner = AIN
 		add_core_of = AIN
 		add_claim_by = BDG
@@ -23,6 +22,8 @@ state={
 		buildings = {
 			infrastructure = 2
 			air_base = 5
+			industrial_complex = 3
+			arms_factory = 2
 			1145 = {
 				naval_base = 2
 			}
@@ -32,9 +33,9 @@ state={
 		}
 	}
 
-	provinces={
+	provinces = {
 		1013 1145 4116 4131 4146 7132 9964 11923 11939 12760 
 	}
 
-	local_supplies=0.0 
+	local_supplies = 0.0 
 }

@@ -1,0 +1,19 @@
+IDI_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_IDI_dynamic_industry
+}
+
+IDI_army = {
+	enable = { always = yes }
+	icon = GFX_idea_IDI_dynamic_army
+}
+
+IDI_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_IDI_dynamic_naval
+}
+
+IDI_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_IDI_dynamic_airforce
+}

@@ -1,0 +1,2298 @@
+characters = {
+	IMA_amami_haruka = {
+        name = IMA_amami_haruka
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_amami_haruka"
+                small = "GFX_idea_IMA_amami_haruka"
+            }
+            army = {
+                large = "GFX_portrait_IMA_amami_haruka"
+                small = "GFX_idea_IMA_amami_haruka"
+            }
+        }
+        country_leader = {
+            ideology = conservatism_subtype
+            traits = { popular_queen }
+            desc = IMA_amami_haruka_dem_desc
+        }
+        field_marshal = {
+            visible = { 
+                OR = {
+                    is_democratic = yes
+                    IMA_amami_haruka = { is_country_leader = yes }
+                    has_country_flag = fascism_national_mobilization_law
+                } 
+            }
+            traits = { media_personality }
+            skill = 5
+            attack_skill = 4
+            defense_skill = 4
+            planning_skill = 4
+            logistics_skill = 4
+        }
+    }
+    
+    IMA_kisaragi_chihaya = {
+        name = IMA_kisaragi_chihaya
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_kisaragi_chihaya"
+                small = "GFX_idea_IMA_kisaragi_chihaya"
+            }
+            army = {
+                large = "GFX_portrait_IMA_kisaragi_chihaya"
+                small = "GFX_idea_IMA_kisaragi_chihaya"
+            }
+        }
+        country_leader = {
+            ideology = liberalism_subtype
+            traits = {  }
+            desc = IMA_kisaragi_chihaya_desc
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = IMA_kisaragi_chihaya
+            allowed = { 
+                IMA_kisaragi_chihaya = { is_country_leader = no }
+                NOT = { has_idea = IMA_kisaragi_chihaya } 
+            } 
+            traits = { liberalism_worker }
+            ai_will_do = {
+                factor = 4
+            }
+        }
+        navy_leader = {
+            visible = { 
+                OR = {
+                    is_democratic = yes
+                    has_country_flag = fascism_national_mobilization_law
+                } 
+            }
+            traits = { aviation_enthusiast }
+            skill = 4
+            attack_skill = 4
+            defense_skill = 4
+            maneuvering_skill = 7
+            coordination_skill = 2
+        }
+    }
+
+    IMA_hoshii_miki = {
+        name = IMA_hoshii_miki
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_hoshii_miki"
+                small = "GFX_idea_IMA_hoshii_miki"
+            }
+            army = {
+                large = "GFX_portrait_IMA_hoshii_miki"
+                small = "GFX_idea_IMA_hoshii_miki"
+            }
+        }
+        country_leader = {
+            ideology = fascism_subtype
+            traits = {  }
+            desc = IMA_hoshii_miki_desc
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = IMA_hoshii_miki
+            allowed = { IMA_hoshii_miki = { is_country_leader = no } }
+            visible = { is_communism = no } 
+            traits = { fanatic_fascist }
+            ai_will_do = {
+                factor = 4
+            }
+        }
+        field_marshal = {
+            visible = { is_communism = no }
+            traits = { }
+            skill = 4
+            attack_skill = 5
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 1
+        }
+    }
+
+    IMA_hagiwara_yukiho = {
+        name = IMA_hagiwara_yukiho
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_hagiwara_yukiho"
+                small = "GFX_idea_IMA_hagiwara_yukiho"
+            }
+            army = {
+                large = "GFX_portrait_IMA_hagiwara_yukiho"
+                small = "GFX_idea_IMA_hagiwara_yukiho"
+            }
+        }
+        country_leader = {
+            ideology = authoritariandemocracy_subtype
+            traits = {  }
+            desc = IMA_hagiwara_yukiho_desc
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = IMA_hagiwara_yukiho
+            allowed = { IMA_hagiwara_yukiho = { is_country_leader = no } }
+            visible = { is_communism = no } 
+            traits = { construction_economist }
+            ai_will_do = {
+                factor = 4
+            }
+        }
+        corps_commander = {
+            visible = { is_communism = no }
+            traits = { }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 6
+            planning_skill = 2
+            logistics_skill = 4
+        }
+    }
+
+    IMA_takatsuki_yayoi = {
+        name = IMA_takatsuki_yayoi
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_takatsuki_yayoi"
+                small = "GFX_idea_IMA_takatsuki_yayoi"
+            }
+            army = {
+                large = "GFX_portrait_IMA_takatsuki_yayoi"
+                small = "GFX_idea_IMA_takatsuki_yayoi"
+            }
+        }
+        country_leader = {
+            ideology = socialdemocracy_subtype
+            traits = {  }
+            desc = IMA_takatsuki_yayoi_desc
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = IMA_takatsuki_yayoi
+            allowed = { 
+                IMA_takatsuki_yayoi = { is_country_leader = no } 
+                is_fascism = no
+                is_neutrality = no
+            }
+            traits = { socialdemocracy_economist }
+            ai_will_do = {
+                factor = 4
+            }
+        }
+        navy_leader = {
+            visible = { 
+                OR = {
+                    is_fascism = no
+                    is_neutrality = no
+                    has_country_flag = fascism_national_mobilization_law
+                }
+            }
+            traits = { }
+            skill = 2
+            attack_skill = 1
+            defense_skill = 3
+            maneuvering_skill = 3
+            coordination_skill = 4
+        }
+    }
+
+    IMA_kikuchi_makoto = {
+        name = IMA_kikuchi_makoto
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_kikuchi_makoto"
+                small = "GFX_idea_IMA_kikuchi_makoto"
+            }
+            army = {
+                large = "GFX_portrait_IMA_kikuchi_makoto"
+                small = "GFX_idea_IMA_kikuchi_makoto"
+            }
+        }
+        country_leader = {
+            ideology = militarytotalism_subtype
+            traits = {  }
+            desc = IMA_kikuchi_makoto_desc
+        }
+        corps_commander = {
+            visible = { is_communism = no }
+            traits = { }
+            skill = 3
+            attack_skill = 4
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+
+    IMA_minase_iori = {
+        name = IMA_minase_iori
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_minase_iori"
+                small = "GFX_idea_IMA_minase_iori"
+            }
+            army = {
+                large = "GFX_portrait_IMA_minase_iori"
+                small = "GFX_idea_IMA_minase_iori"
+            }
+        }
+        country_leader = {
+            ideology = liberalism_subtype
+            traits = {  }
+            desc = IMA_minase_iori_desc
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = IMA_minase_iori
+            allowed = { IMA_minase_iori = { is_country_leader = no } }
+            visible = { 
+                OR = {
+                    is_communism = no
+                    has_country_flag = IMA_minase_reinstated
+                }
+            }
+            traits = { liberalism_economist }
+            ai_will_do = {
+                factor = 4
+            }
+        }
+        corps_commander = {
+            visible = { 
+                OR = {
+                    is_communism = no
+                    has_country_flag = IMA_minase_reinstated
+                }
+            }
+            traits = { }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 4
+        }
+    }
+
+    IMA_shijou_takane = {
+        name = IMA_shijou_takane
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_shijou_takane"
+                small = "GFX_idea_IMA_shijou_takane"
+            }
+            army = {
+                large = "GFX_portrait_IMA_shijou_takane"
+                small = "GFX_idea_IMA_shijou_takane"
+            }
+        }
+        country_leader = {
+            ideology = autocracy_subtype
+            traits = {  }
+            desc = IMA_shijou_takane_desc
+        }
+        navy_leader = {
+            visible = { is_communism = no }
+            traits = { }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 4
+            maneuvering_skill = 2
+            coordination_skill = 4
+        }
+    }
+
+    IMA_akizuki_ritsuko = {
+        name = IMA_akizuki_ritsuko
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_akizuki_ritsuko"
+                small = "GFX_idea_IMA_akizuki_ritsuko"
+            }
+            army = {
+                large = "GFX_portrait_IMA_akizuki_ritsuko"
+                small = "GFX_idea_IMA_akizuki_ritsuko"
+            }
+        }
+        country_leader = {
+            ideology = authoritariancommunism_subtype
+            traits = {  }
+            desc = IMA_akizuki_ritsuko_desc
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = IMA_akizuki_ritsuko
+            allowed = { IMA_akizuki_ritsuko = { is_country_leader = no } }
+            visible = {
+                is_fascism = no
+                is_neutrality = no
+            } 
+            traits = { planned_economist }
+            ai_will_do = {
+                factor = 4
+            }
+        }
+        corps_commander = {
+            visible = {
+                OR = {
+                    is_fascism = no
+                    is_neutrality = no
+                    has_country_flag = fascism_national_mobilization_law
+                }
+            }
+            traits = { }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 7
+            logistics_skill = 7
+        }
+    }
+
+    IMA_miura_azusa = {
+        name = IMA_miura_azusa
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_miura_azusa"
+                small = "GFX_idea_IMA_miura_azusa"
+            }
+            army = {
+                large = "GFX_portrait_IMA_miura_azusa"
+                small = "GFX_idea_IMA_miura_azusa"
+            }
+        }
+        country_leader = {
+            ideology = conservatism_subtype
+            traits = {  }
+            desc = IMA_miura_azusa_desc
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = IMA_miura_azusa
+            allowed = { IMA_miura_azusa = { is_country_leader = no } } 
+            visible = { is_democratic = yes } 
+            traits = { conservatism_worker }
+            ai_will_do = {
+                factor = 4
+            }
+        }
+        navy_leader = {
+            visible = {
+                OR = {
+                    is_democratic = yes
+                    has_country_flag = fascism_national_mobilization_law
+                }
+            }
+            traits = { }
+            skill = 2
+            attack_skill = 1
+            defense_skill = 3
+            maneuvering_skill = 2
+            coordination_skill = 4
+        }
+    }
+
+    IMA_futami_ami = {
+        name = IMA_futami_ami
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_futami_ami"
+                small = "GFX_idea_IMA_futami_ami"
+            }
+            army = {
+                large = "GFX_portrait_IMA_futami_ami"
+                small = "GFX_idea_IMA_futami_ami"
+            }
+        }
+        country_leader = {
+            ideology = progressivism_subtype
+            traits = {  }
+            desc = IMA_futami_ami_desc
+        }
+        corps_commander = {
+            visible = {
+                OR = {
+                    is_democratic = yes
+                    has_country_flag = fascism_national_mobilization_law
+                }
+            }
+            traits = { }
+            skill = 1
+            attack_skill = 3
+            defense_skill = 1
+            planning_skill = 4
+            logistics_skill = 2
+        }
+    }
+
+    IMA_futami_mami = {
+        name = IMA_futami_mami
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_futami_mami"
+                small = "GFX_idea_IMA_futami_mami"
+            }
+            army = {
+                large = "GFX_portrait_IMA_futami_mami"
+                small = "GFX_idea_IMA_futami_mami"
+            }
+        }
+        country_leader = {
+            ideology = socialdemocracy_subtype
+            traits = {  }
+            desc = IMA_futami_mami_desc
+        }
+        corps_commander = {
+            visible = {
+                OR = {
+                    is_democratic = yes
+                    has_country_flag = fascism_national_mobilization_law
+                }
+            }
+            traits = { }
+            skill = 1
+            attack_skill = 1
+            defense_skill = 3
+            planning_skill = 4
+            logistics_skill = 2
+        }
+    }
+
+    IMA_ganaha_hibiki = {
+        name = IMA_ganaha_hibiki
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_ganaha_hibiki"
+                small = "GFX_idea_IMA_ganaha_hibiki"
+            }
+            army = {
+                large = "GFX_portrait_IMA_ganaha_hibiki"
+                small = "GFX_idea_IMA_ganaha_hibiki"
+            }
+        }
+        country_leader = {
+            ideology = fascism_subtype
+            traits = {  }
+            desc = IMA_ganaha_hibiki_desc
+        }
+        advisor = {
+            slot = political_advisor
+            ledger = civilian
+            idea_token = IMA_ganaha_hibiki
+            allowed = { IMA_ganaha_hibiki = { is_country_leader = no } }
+            visible = { is_communism = no } 
+            traits = { fanatic_militarytotalism }
+            ai_will_do = {
+                factor = 4
+            }
+        }
+        corps_commander = {
+            visible = { is_communism = no }
+            traits = { }
+            skill = 5
+            attack_skill = 5
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+
+    IMA_otonashi_kotori = {
+        name = IMA_otonashi_kotori
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_otonashi_kotori"
+                small = "GFX_idea_IMA_otonashi_kotori"
+            }
+            army = {
+                large = "GFX_portrait_IMA_otonashi_kotori"
+                small = "GFX_idea_IMA_otonashi_kotori"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            ledger = civilian
+            idea_token = IMA_otonashi_kotori
+            allowed = { IMA_otonashi_kotori = { is_country_leader = no } }
+            visible = {
+                is_fascism = no
+                is_neutrality = no
+            }
+            traits = { socialism_revolutionary_worker }
+            ai_will_do = {
+                factor = 0
+            }
+        }
+        country_leader = {
+            ideology = socialism_subtype
+            traits = {  }
+            desc = IMA_otonashi_kotori_desc
+        }
+        country_leader = {
+            ideology = communism_subtype
+            traits = {  }
+            desc = IMA_otonashi_kotori_desc
+        }
+        corps_commander = {
+            visible = { has_country_flag = fascism_national_mobilization_law }
+            traits = { }
+            skill = 3
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+
+    IMA_takagi_junjirou = {
+        name = IMA_takagi_junjirou
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_takagi_junjirou"
+                small = "GFX_idea_IMA_takagi_junjirou"
+            }
+            army = {
+                large = "GFX_portrait_IMA_takagi_junjirou"
+                small = "GFX_idea_IMA_takagi_junjirou"
+            }
+        }
+        advisor = {
+            slot = internal_advisor
+            idea_token = IMA_takagi_junjirou
+            allowed = { is_democratic = yes }
+            traits = { privy_council_president }
+            ai_will_do = {
+                factor = 10
+            }
+        }
+    }
+
+    IMA_akabane_p = {
+        name = IMA_akabane_p
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_akabane_p"
+                small = "GFX_idea_IMA_akabane_p"
+            }
+            army = {
+                large = "GFX_portrait_IMA_akabane_p"
+                small = "GFX_idea_IMA_akabane_p"
+            }
+        }
+        country_leader = {
+            ideology = anarchosyndicalism_subtype
+            traits = {  }
+            desc = IMA_akabane_p_desc
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = IMA_akabane_p
+            allowed = { IMA_akabane_p = { is_country_leader = no } }
+            visible = { has_country_flag = PRS_reinstated_nvp_leadership } 
+            traits = { anarchosyndicalism_revolutionary_worker }
+            ai_will_do = {
+                factor = 4
+            }
+        }
+        field_marshal = {
+            visible = {
+                OR = {
+                    is_fascism = no
+                    is_neutrality = no
+                    has_country_flag = fascism_national_mobilization_law
+                }
+            }
+            traits = { }
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+
+    IMA_majima_p = {
+        name = IMA_majima_p
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_majima_p"
+                small = "GFX_idea_IMA_majima_p"
+            }
+            army = {
+                large = "GFX_portrait_IMA_majima_p"
+                small = "GFX_idea_IMA_majima_p"
+            }
+        }
+        country_leader = {
+            ideology = anarchosyndicalism_subtype
+            traits = {  }
+            desc = IMA_majima_p_desc
+        }
+        field_marshal = {
+            visible = {
+                OR = {
+                    is_fascism = no
+                    is_neutrality = no
+                    has_country_flag = fascism_national_mobilization_law
+                }
+            }
+            traits = { }
+            skill = 4
+            attack_skill = 5
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 1
+        }
+    }
+
+    IMA_leon = {
+        name = IMA_leon
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_leon"
+                small = "GFX_idea_IMA_leon"
+            }
+            army = {
+                large = "GFX_portrait_IMA_leon"
+                small = "GFX_idea_IMA_leon"
+            }
+        }
+        field_marshal = {
+            visible = { has_country_flag = IMA_intgrate_961_0936 }
+            skill = 4
+            attack_skill = 5
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 1
+        }
+    }
+
+    IMA_shiika = {
+        name = IMA_shiika
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_shiika"
+                small = "GFX_idea_IMA_shiika"
+            }
+            army = {
+                large = "GFX_portrait_IMA_shiika"
+                small = "GFX_idea_IMA_shiika"
+            }
+        }
+        corps_commander = {
+            visible = { has_country_flag = IMA_intgrate_961_0936 }
+            traits = { }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 4
+            logistics_skill = 4
+        }
+    }
+
+    IMA_kuroi_takeo = {
+        name = IMA_kuroi_takeo
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_kuroi_takeo"
+                small = "GFX_idea_IMA_kuroi_takeo"
+            }
+        }
+    }
+
+    IMA_okuzora_kohaku = {
+        name = IMA_okuzora_kohaku
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_okuzora_kohaku"
+                small = "GFX_idea_IMA_okuzora_kohaku"
+            }
+            army = {
+                large = "GFX_portrait_IMA_okuzora_kohaku"
+                small = "GFX_idea_IMA_okuzora_kohaku"
+            }
+        }
+        field_marshal = {
+            visible = { has_country_flag = IMA_intgrate_961_0936 }
+            traits = { }
+            skill = 1
+            attack_skill = 3
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+
+    IMA_aya = {
+        name = IMA_aya
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_aya"
+                small = "GFX_idea_IMA_aya"
+            }
+            army = {
+                large = "GFX_portrait_IMA_aya"
+                small = "GFX_idea_IMA_aya"
+            }
+        }
+        corps_commander = {
+            visible = { has_country_flag = IMA_intgrate_961_0936 }
+            traits = { }
+            skill = 2
+            attack_skill = 1
+            defense_skill = 4
+            planning_skill = 3
+            logistics_skill = 3
+        }
+    }
+
+    IMA_okuzora_mayumi = {
+        name = IMA_okuzora_mayumi
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_IMA_okuzora_mayumi"
+                small = "GFX_idea_IMA_okuzora_mayumi"
+            }
+        }
+    }
+
+    #from vanila
+	IMA_alan_brooke = {
+		name = ENG_alan_brooke
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_alan_brooke"
+				small = "GFX_idea_alan_brooke"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = alan_brooke
+			allowed = {
+				original_tag = IMA
+			}
+			available = {
+				is_communism = no
+			}
+			traits = {
+				army_chief_maneuver_3
+			}
+			cost = 200
+			ai_will_do = {
+				base = 0.5
+			}
+		}
+		
+		field_marshal = {
+			traits = { career_officer trait_cautious defensive_doctrine }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 3
+		}
+	}
+
+	IMA_bernard_montgomery = {
+		name = ENG_bernard_montgomery
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_bernard_montgomery"
+				small = "GFX_idea_bernard_montgomery"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = bernard_montgomery
+			ledger = army
+			allowed = {
+				original_tag = IMA
+			}
+			available = {
+				is_communism = no
+			}
+			
+			traits = {
+				grand_battle_plan_expert
+			}
+
+			ai_will_do = {
+				base = 2
+				modifier = {
+					has_idea_with_trait = industrial_concern
+					has_idea_with_trait = silent_workhorse
+					factor = 5
+				}
+			}
+		}
+		
+		field_marshal = {
+			traits = { inflexible_strategist trait_cautious media_personality organizer logistics_wizard offensive_doctrine }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+
+	IMA_claude_auchinleck = {
+		name = ENG_claude_auchinleck
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_claude_auchinleck"
+				small = "GFX_idea_claude_auchinleck"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = claude_auchinleck
+			ledger = army
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 2
+			}
+		}
+		
+		corps_commander = {
+			traits = { inflexible_strategist career_officer }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 5
+		}
+	}
+
+	IMA_neil_ritchie = {
+		name = ENG_neil_ritchie
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_neil_ritchie"
+				small = "GFX_portrait_ENG_neil_ritchie_small"
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist armor_officer politically_connected }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+
+	IMA_alan_cunningham = {
+		name = ENG_alan_cunningham
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_alan_cunningham"
+				small = "GFX_portrait_ENG_alan_cunningham_small"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+
+	IMA_william_slim = {
+		name = ENG_william_slim
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_william_slim"
+				small = "GFX_portrait_ENG_william_slim_small"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero trickster }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 5
+		}
+	}
+
+	IMA_richard_oconnor = {
+		name = ENG_richard_oconnor
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_richard_oconnor"
+				small = "GFX_portrait_ENG_richard_oconnor_small"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+
+	IMA_william_platt = {
+		name = ENG_william_platt
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_william_platt"
+				small = "GFX_portrait_ENG_william_platt_small"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+
+	IMA_george_giffard = {
+		name = ENG_george_giffard
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_george_giffard"
+				small = "GFX_portrait_ENG_george_giffard_small"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+
+	IMA_harold_alexander = {
+		name = ENG_harold_alexander
+		portraits = {
+			army = {
+				small = "GFX_idea_harold_alexander"
+			}
+			army = {
+				large = "GFX_portrait_ENG_harold_alexander"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = harold_alexander
+			ledger = army
+			allowed = {
+				original_tag = IMA
+			}
+			available = {
+				is_communism = no
+			}
+			traits = {
+				military_theorist
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}
+		
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 5
+		}
+	}
+
+	IMA_jackie_smyth = {
+		name = ENG_jackie_smyth
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_jackie_smyth"
+				small = "GFX_portrait_ENG_jackie_smyth_small"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	IMA_thomas_jacomb_hutton = {
+		name = ENG_thomas_jacomb_hutton
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_thomas_jacomb_hutton"
+				small = "GFX_portrait_ENG_thomas_jacomb_hutton_small"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	IMA_arthur_percival = {
+		name = ENG_arthur_percival
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_arthur_percival"
+				small = "GFX_portrait_ENG_arthur_percival_small"
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	IMA_merton_beckwithsmith = {
+		name = ENG_merton_beckwithsmith
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_merton_beckwithsmith"
+				small = "GFX_portrait_ENG_merton_beckwithsmith_small"
+			}
+		}
+		corps_commander = {
+			traits = { commando }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	IMA_henry_pownall = {
+		name = ENG_henry_pownall
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_henry_pownall"
+				small = "GFX_portrait_ENG_henry_pownall_small"
+			}
+		}
+		corps_commander = {
+			traits = { trickster }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	IMA_john_vereker = {
+		name = ENG_john_vereker
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_john_vereker"
+				small = "GFX_idea_john_vereker"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = john_vereker
+			allowed = {
+				original_tag = IMA
+			}
+			available = {
+				is_communism = no
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 3
+				modifier = {
+					has_idea_with_trait = industrial_concern
+					has_idea_with_trait = silent_workhorse
+					factor = 10
+				}
+			}
+		}
+
+		corps_commander = {
+			traits = { trait_cautious politically_connected }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+
+	IMA_henry_wilson = {
+		name = ENG_henry_wilson
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_henry_wilson"
+				small = "GFX_portrait_ENG_henry_wilson_small"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard politically_connected }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+
+	IMA_william_gott = {
+		name = ENG_william_gott
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_william_gott"
+				small = "GFX_portrait_ENG_william_gott_small"
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist armor_officer war_hero }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	IMA_jock_campbell = {
+		name = ENG_jock_campbell
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_jock_campbell"
+				small = "GFX_portrait_ENG_jock_campbell_small"
+			}
+		}
+		corps_commander = {
+			traits = { armor_officer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+
+	IMA_oliver_leese = {
+		name = ENG_oliver_leese
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_oliver_leese"
+				small = "GFX_portrait_ENG_oliver_leese_small"
+			}
+		}
+		corps_commander = {
+			traits = { harsh_leader armor_officer politically_connected }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+
+	IMA_miles_dempsey = {
+		name = ENG_miles_dempsey
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_miles_dempsey"
+				small = "GFX_portrait_ENG_miles_dempsey_small"
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist career_officer infantry_officer }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
+
+	IMA_brian_horrocks = {
+		name = ENG_brian_horrocks
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_brian_horrocks"
+				small = "GFX_portrait_ENG_brian_horrocks_small"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer armor_officer war_hero }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+
+	IMA_archibald_wavell = {
+		name = ENG_archibald_wavell
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_archibald_wavell"
+				small = "GFX_idea_archibald_wavell"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = archibald_wavell
+			ledger = army
+			allowed = {
+				original_tag = IMA
+			}
+			available = {
+				is_communism = no
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1
+			}
+		}
+		
+		corps_commander = {
+			traits = { career_officer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+
+	IMA_thomas_moore = {
+		name = ENG_thomas_moore
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_thomas_moore"
+				small = "GFX_portrait_ENG_thomas_moore_small"
+			}
+		}
+		corps_commander = {
+			traits = { jungle_rat }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	IMA_james_fownes_somerville = {
+		name = ENG_james_fownes_somerville
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_james_fownes_somerville"
+				small = "GFX_portrait_ENG_james_fownes_somerville_small"
+			}
+		}
+		navy_leader = {
+			traits = { navy_career_officer aviation_enthusiast superior_tactician }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 4
+			coordination_skill = 5
+		}
+	}
+
+	IMA_henry_harwood = {
+		name = ENG_henry_harwood
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_henry_harwood"
+				small = "GFX_idea_henry_harwood"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = henry_harwood
+			ledger = navy
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				navy_screen_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 0.7
+			}
+		}
+		
+		navy_leader = {
+			traits = { old_guard_navy bold }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
+
+	IMA_andrew_cunningham = {
+		name = ENG_andrew_cunningham
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_andrew_cunningham"
+				small = "GFX_idea_andrew_cunningham"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = andrew_cunningham
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				navy_chief_naval_aviation_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 0.5
+			}
+		}
+		
+		navy_leader = {
+			traits = { gunnery_expert bold navy_career_officer blockade_runner superior_tactician }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			maneuvering_skill = 3
+			coordination_skill = 4
+		}
+	}
+
+	IMA_bruce_fraser = {
+		name = ENG_bruce_fraser
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_bruce_fraser"
+				small = "GFX_portrait_ENG_bruce_fraser_small"
+			}
+		}
+		navy_leader = {
+			traits = { aviation_enthusiast naval_lineage blockade_runner }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 4
+			coordination_skill = 4
+		}
+	}
+
+	IMA_john_tovey = {
+		name = ENG_john_tovey
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_john_tovey"
+				small = "GFX_portrait_ENG_john_tovey_small"
+			}
+		}
+		navy_leader = {
+			traits = { gentlemanly naval_lineage superior_tactician }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 5
+		}
+	}
+
+	IMA_bernard_rawlings = {
+		name = ENG_bernard_rawlings
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_bernard_rawlings"
+				small = "GFX_portrait_ENG_bernard_rawlings_small"
+			}
+		}
+		navy_leader = {
+			traits = { gentlemanly }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
+
+	IMA_john_cunningham = {
+		name = ENG_john_cunningham
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_john_cunningham"
+				small = "GFX_portrait_ENG_john_cunningham_small"
+			}
+		}
+		navy_leader = {
+			traits = { navy_career_officer green_water_expert }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 3
+		}
+	}
+
+	IMA_charles_forbes = {
+		name = ENG_charles_forbes
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_charles_forbes"
+				small = "GFX_portrait_ENG_charles_forbes_small"
+			}
+		}
+		navy_leader = {
+			traits = { gunnery_expert fly_swatter }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+	}
+
+	IMA_algernon_willis = {
+		name = ENG_algernon_willis
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_algernon_willis"
+				small = "GFX_portrait_ENG_algernon_willis_small"
+			}
+		}
+		navy_leader = {
+			traits = { battleship_adherent spotter }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
+
+	IMA_arthur_power = {
+		name = ENG_arthur_power
+		portraits = {
+			army = {
+				large = "GFX_portrait_ENG_arthur_power"
+				small = "GFX_portrait_ENG_arthur_power_small"
+			}
+		}
+		navy_leader = {
+			traits = { gunnery_expert }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 2
+		}
+	}
+
+    #Advisors
+    IMA_edmund_ironside = {
+		name = ENG_edmund_ironside
+		portraits = {
+			army = {
+				small = "GFX_idea_edmund_ironside"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = edmund_ironside
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 2
+			}
+		}
+	}
+
+
+	### NAVY CHIEFS ###
+
+	# Andrew Cunningham up there
+
+	IMA_ernle_chatfield = {
+		name = ENG_ernle_chatfield
+		portraits = {
+			army = {
+				small = "GFX_idea_ernle_chatfield"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = ernle_chatfield
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 3
+			}
+		}
+	}
+
+	IMA_dudley_pound = {
+		name = ENG_dudley_pound
+		portraits = {
+			army = {
+				small = "GFX_idea_dudley_pound"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = dudley_pound
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+			cost =  50
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+
+	### AIR CHIEFS ###
+
+	IMA_cyril_newall = {
+		name = ENG_cyril_newall
+		portraits = {
+			army = {
+				small = "GFX_idea_cyril_newall"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = cyril_newall
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 2
+			}
+		}
+	}
+
+	IMA_charles_portal = {
+		name = ENG_charles_portal
+		portraits = {
+			army = {
+				small = "GFX_idea_charles_portal"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = charles_portal
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				air_chief_night_operations_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 3
+			}
+		}
+	}
+
+	IMA_edward_ellington = {
+		name = ENG_edward_ellington
+		portraits = {
+			army = {
+				small = "GFX_idea_edward_ellington"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = edward_ellington
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				air_chief_safety_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1
+			}
+		}		
+	}
+
+	### MILITARY HIGH COMMAND ###
+
+	# Auchinleck up there
+
+	# Wavell up there
+
+	# Harwood up there
+
+	IMA_kenneth_anderson = {
+		name = ENG_kenneth_anderson
+		portraits = {
+			army = {
+				small = "GFX_idea_kenneth_anderson"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = kenneth_anderson
+			ledger = army
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 2
+			}
+		}
+	}
+
+	IMA_sholto_douglas = {
+		name = ENG_sholto_douglas
+		portraits = {
+			army = {
+				small = "GFX_idea_sholto_douglas"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = sholto_douglas
+			ledger = air
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				air_air_superiority_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	IMA_trafford_leigh_mallory = {
+		name = ENG_trafford_leigh_mallory
+		portraits = {
+			army = {
+				small = "GFX_idea_trafford_leigh_mallory"
+			}
+		}
+		advisor = {	
+			slot = high_command
+			idea_token = trafford_leigh_mallory
+			ledger = air
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				air_bomber_interception_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	IMA_frederick_bowhill = {
+		name = ENG_frederick_bowhill
+		portraits = {
+			army = {
+				small = "GFX_idea_frederick_bowhill"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = frederick_bowhill
+			ledger = navy
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				air_naval_strike_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	IMA_louis_mountbatten = { #This guy is duplicated in RAJ
+		name = ENG_louis_mountbatten
+		portraits = {
+			army = {
+				small = "GFX_idea_louis_mountbatten"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = louis_mountbatten
+			ledger = army
+			allowed = {
+				original_tag = IMA
+			}
+			available = {
+				is_communism = no
+			}
+			traits = {
+				navy_amphibious_assault_3
+			}
+			cost = 200
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+
+	IMA_max_horton = {
+		name = ENG_max_horton
+		portraits = {
+			army = {
+				small = "GFX_idea_max_horton"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = max_horton
+			ledger = navy
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				navy_submarine_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 0.2
+			}
+		}
+	}
+
+	IMA_david_stirling = {
+		name = ENG_david_stirling
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor = {	
+			slot = high_command
+			idea_token = IMA_david_stirling
+			ledger = army
+			available = {
+				has_completed_focus = ENG_special_air_service
+			}
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				army_commando_3
+			}
+			cost = 200
+			ai_will_do = {
+				base = 0.2
+			}
+		}
+	}
+
+
+	### POLITICAL ADVISORS ###
+
+	# Churchill up there
+
+	# Mosley up there
+
+	# Pollit up there
+
+	IMA_clement_attlee = {
+		name = ENG_clement_attlee
+		portraits = {
+			army = {
+				small = "GFX_idea_clement_attlee"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = clement_attlee
+			available = { is_democratic = yes }
+			allowed = { original_tag = IMA }
+			traits = { socialdemocracy_worker  }
+			do_effect = { is_democratic = no }
+			ai_will_do = {
+				base = 0
+			}
+		}		
+	}
+	
+	IMA_john_beckett = {
+		name = ENG_john_beckett
+		portraits = {
+			army = {
+				small = "GFX_idea_john_beckett"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = john_beckett
+			allowed = {
+				original_tag = IMA
+			}
+			available = { }
+			traits = {
+				fanatic_fascist 
+			}
+			do_effect = {
+				NOT = {
+					is_fascism = no
+				}
+			}
+			ai_will_do = {
+				base = 0
+			}
+		}
+	}
+
+	IMA_philip_kerr = {
+		name = ENG_philip_kerr
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_philip_kerr"
+			}
+		}
+		advisor = {
+			slot = internal_advisor
+			idea_token = IMA_philip_kerr
+			available = {
+				is_democratic = yes
+				NOT = { has_completed_focus = IMA_51202 }
+			}
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				silent_workhorse 
+			}
+			ai_will_do = {
+				base = 2
+				modifier = {
+					has_country_leader = {
+						character = IMA_amami_haruka
+						ruling_only = yes 
+					}
+					factor = 10
+				}
+			}
+		}		
+	}
+
+	IMA_nevile_henderson = {
+		name = ENG_nevile_henderson
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_nevile_henderson"
+			}
+		}
+		advisor = {
+			slot = internal_advisor
+			idea_token = IMA_nevile_henderson
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				backroom_backstabber 
+			}
+			ai_will_do = {
+				base = 0.5
+			}
+		}
+	}
+
+	IMA_maxwell_aitken = {
+		name = ENG_maxwell_aitken
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_maxwell_aitken"
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = IMA_maxwell_aitken
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				war_industrialist 
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}
+	}
+
+	IMA_leslie_hore_belisha = {
+		name = ENG_leslie_hore_belisha
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_leslie_hore_belisha"
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = IMA_leslie_hore_belisha
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				armaments_organizer 
+			}
+			ai_will_do = {
+				base = 0
+			}
+		}
+	}
+
+	IMA_ernest_bevin = {
+		name = ENG_ernest_bevin
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_ernest_bevin"
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = IMA_ernest_bevin
+			allowed = {
+				original_tag = IMA
+			}
+			traits = {
+				quartermaster_general 
+			}
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+
+	IMA_mary_sophia_allen = {
+		name = ENG_mary_sophia_allen
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_mary_sophia_allen"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = IMA_mary_sophia_allen
+			available = { is_fascism = yes }
+			allowed = {
+				original_tag = IMA
+				has_dlc = "Man the Guns"
+			}
+			traits = {
+				princess_of_terror 
+			}
+			ai_will_do = {
+				base = 1.5
+			}
+		}
+	}
+
+	IMA_george_orwell = {
+		name = ENG_george_orwell
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_george_orwell"
+			}
+		}
+		advisor = {
+			slot = internal_advisor
+			idea_token = IMA_george_orwell
+			available = { is_communism = yes }
+			allowed = {
+				original_tag = IMA
+				has_dlc = "Man the Guns"
+			}
+			traits = {
+				socialist_novelist 
+			}
+			ai_will_do = {
+				base = 1.5
+			}
+		}
+	}
+
+	IMA_sylvia_pankhurst = {
+		name = ENG_sylvia_pankhurst
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_sylvia_pankhurst"
+			}
+		}
+		gender = female
+		advisor = {
+			slot = political_advisor
+			idea_token = IMA_sylvia_pankhurst
+			available = { is_communism = yes }
+			allowed = { original_tag = IMA }
+			traits = {
+				authoritariancommunism_revolutionary_worker 
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	IMA_david_lloyd_george = {
+		name = ENG_david_lloyd_george
+		portraits = {
+			army = {
+				small = "GFX_idea_ENG_david_lloyd_george"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = IMA_david_lloyd_george
+			available = { }
+			allowed = { original_tag = IMA }
+			traits = { autocracy_royalist }
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}	
+
+	IMA_stewart_menzies = {
+		name = ENG_stewart_menzies
+		portraits = {
+			army = {
+				small = "GFX_idea_eng_stewart_menzies"
+			}
+		}
+		advisor = {
+			slot = internal_advisor
+			idea_token = eng_stewart_menzies
+			available = {
+				has_intelligence_agency = yes 
+			}
+			allowed = {
+				original_tag = IMA
+				has_dlc = "La Resistance"
+			}
+			traits = {
+				head_of_intelligence 
+			}
+			ai_will_do = {
+				base = 0.5
+			}
+		}
+	}
+
+	IMA_alan_turing = {
+		name = ENG_alan_turing
+		portraits = {
+			army = {
+				small = "GFX_idea_eng_alan_turing"
+			}
+		}
+		advisor = {
+			slot = internal_advisor
+			idea_token = eng_alan_turing
+			available = {
+				has_intelligence_agency = yes 
+				custom_trigger_tooltip = {
+					tooltip = cyptology_tooltip_tt
+					has_done_agency_upgrade = upgrade_form_department 
+				}
+			}
+			ai_will_do = {
+				base = 1
+				modifier = {
+					has_political_power < 200
+					factor = 0
+				}
+			}
+			allowed = {
+				original_tag = IMA
+				has_dlc = "La Resistance"
+			}
+			traits = {
+				mastermind_code_cracker 
+			}
+		}
+	}
+
+
+    #Scientists
+    IMA_james_chadwick = {
+		name = ENG_james_chadwick
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_james_chadwick
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_warfare_expert }
+			skills = {
+				specialization_nuclear = 2
+			}
+		}
+	}
+
+	IMA_frank_whittle = {
+		name = ENG_frank_whittle
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_frank_whittle
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_jet_expert scientist_trait_bright }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	IMA_john_cockcroft = {
+		name = ENG_john_cockcroft
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_john_cockcroft
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_power_expert }
+			skills = {
+				specialization_nuclear = 2
+			}
+		}
+	}
+
+	IMA_charles_goodeve = {
+		name = ENG_charles_goodeve
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_charles_goodeve
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist }
+			skills = {
+				specialization_naval = 2
+			}
+		}
+	}
+
+	IMA_nevil_shute = {
+		name = ENG_nevil_shute
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_nevil_shute
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist scientist_trait_gifted_engineer }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	IMA_robert_watson_watt = {
+		name = ENG_robert_watson_watt
+		portraits = {
+			army = {
+				large = GFX_portrait_ENG_robert_watson_watt
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_electronics_specialist }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+}

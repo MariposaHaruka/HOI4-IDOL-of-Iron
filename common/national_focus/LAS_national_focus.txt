@@ -1,0 +1,156 @@
+focus_tree = {
+	id = LAS_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LAS
+		}
+	}
+	default = no
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = LAS_10001
+	}
+	continuous_focus_position = {
+		x = 0
+		y = 3100
+	}
+
+	focus = {
+		id = LAS_10001 #마리
+		icon = GFX_focus_LAS_10001
+		x = 28
+		y = 0
+		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		available = {
+
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			set_division_template_lock = {
+				division_template = "스틸라인"
+				is_locked = no
+			}
+		}
+	}
+
+	focus = {
+		id = LAS_10002 #레오나
+		icon = GFX_focus_LAS_10002
+		x = 2
+		y = 0
+		relative_position_id = LAS_10001
+		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		completion_reward = {			
+			set_division_template_lock = {
+				division_template = "시스터즈 오브 발할라"
+				is_locked = no
+			}
+		}
+	}
+
+	focus = {
+		id = LAS_10003 #칸
+		icon = GFX_focus_LAS_10003
+		x = 4
+		y = 0
+		relative_position_id = LAS_10001
+		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		completion_reward = {			
+			set_division_template_lock = {
+				division_template = "앵거 오브 호드"
+				is_locked = no
+			}
+		}
+	}
+
+	focus = {
+		id = LAS_10004 #육군 사령부 설치
+		icon = GFX_focus_LAS_10004
+		x = 0
+		y = 1
+		relative_position_id = LAS_10002
+		prerequisite = { focus = LAS_10001 }
+		prerequisite = { focus = LAS_10002 }
+		prerequisite = { focus = LAS_10003 }
+		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		available_if_capitulated = yes
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = LAS_20001 #해군 재조직
+		icon = GFX_goal_generic_navy_submarine
+		x = 40
+		y = 0
+		cost = 5
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		available = { }
+
+		available_if_capitulated = yes
+		completion_reward = {
+			navy_experience = 50
+		}
+	}
+
+	focus = {
+		id = LAS_20002 #무적의 용
+		icon = GFX_focus_LAS_20002
+		x = 2
+		y = 0
+		relative_position_id = LAS_20001
+		cost = 5
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		available_if_capitulated = yes
+		completion_reward = {
+			navy_experience = 50
+		}
+	}
+
+	focus = {
+		id = LAS_30001 #전략 공군 사령부 설치
+		icon = GFX_goal_generic_air_bomber
+		x = 35
+		y = 0
+		cost = 5
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+
+	focus = {
+		id = LAS_30002 #스카이나이츠
+		icon = GFX_focus_LAS_30002
+		x = 2
+		y = 0
+		relative_position_id = LAS_30001
+		cost = 5
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		available_if_capitulated = yes
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+}

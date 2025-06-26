@@ -1,0 +1,17 @@
+#생제르맹 위원회
+saint_germain_committee = {
+	icon = generic_foreign_policy
+	allowed = { has_country_flag = saint_germain_committee_member }
+	visible = { has_country_flag = saint_germain_committee_member }
+	priority = { base = 100 }
+	visible_when_empty = no
+}
+
+#커먼웰스 회의
+Commonwealth_conference_category = { 
+	icon = SWI_federal_council
+	priority = 93
+	allowed = { has_country_flag = commonwealth_joined }
+	visible = { has_country_flag = commonwealth_joined }
+	visible_when_empty = yes
+}

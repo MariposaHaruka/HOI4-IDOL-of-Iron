@@ -1,12 +1,11 @@
-
-state={
-	id=500
-	name="STATE_500"
+state = {
+	id = 500
+	name = "STATE_500"
 	manpower = 6665500
 	
 	state_category = large_city
 	
-	history={
+	history = {
 		owner = FGO
 		add_core_of = FGO
 		buildings = {
@@ -17,6 +16,12 @@ state={
 			air_base = 7
 			10980 = {
 				naval_base = 7
+                landmark_cristo_redentor = {
+                    level = 1
+                    allowed = {
+                        has_dlc = "Gotterdammerung"
+                    }
+                }
 			}
 		}
 		victory_points = {
@@ -24,9 +29,9 @@ state={
 		}
 	}
 
-	provinces={
+	provinces = {
 		5172 8190 10980 12996 
 	}
 
-	local_supplies=0.0 
+	local_supplies = 0.0 
 }

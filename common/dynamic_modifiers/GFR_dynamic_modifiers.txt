@@ -1,0 +1,19 @@
+GFR_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_GFR_dynamic_industry
+}
+
+GFR_army = {
+	enable = { always = yes }
+	icon = GFX_idea_GFR_dynamic_army
+}
+
+GFR_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_GFR_dynamic_naval
+}
+
+GFR_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_GFR_dynamic_airforce
+}

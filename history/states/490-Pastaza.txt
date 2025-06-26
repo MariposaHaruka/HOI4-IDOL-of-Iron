@@ -1,12 +1,11 @@
-
-state={
-	id=490
-	name="STATE_490"
+state = {
+	id = 490
+	name = "STATE_490"
 	manpower = 70020
 	
 	state_category = pastoral
 
-	history={
+	history = {
 		owner = HLL
 		add_core_of = HLL
 		add_core_of = LCD
@@ -15,11 +14,14 @@ state={
 			industrial_complex = 1
 			air_base = 1
 		}
+		victory_points = {
+			13289 2
+		}
 	}
 
-	provinces={
+	provinces = {
 		8149 10942 13289 13290
 	}
 
-	local_supplies=6.0 
+	local_supplies = 6.0 
 }

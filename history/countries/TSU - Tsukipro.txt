@@ -7,6 +7,8 @@ starting_train_buffer = 2
 add_command_power = 10
 set_fuel_ratio = 0.2
 
+set_country_flag = no_naval_academy
+
 #시작 기술
 set_research_slots = 2
 set_technology = {
@@ -22,6 +24,10 @@ set_convoys = 5
 #국민 정신
 
 add_ideas = agrarian_society
+
+add_dynamic_modifier = { modifier = TSS_industry }
+add_dynamic_modifier = { modifier = TSS_army }
+add_dynamic_modifier = { modifier = TSS_air_force }
 
 #외교
 

@@ -3,6 +3,20 @@ capital = 47 #아테네
 
 #부대
 set_oob = "WDS_ar"
+if = {
+	limit = { has_MtG = yes }
+	set_naval_oob = "WDS_na_MtG"
+	else = {
+		set_naval_oob = "WDS_na"
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "WDS_ai_BBA"
+	else = {
+		set_air_oob = "WDS_ai"
+	}
+}
 starting_train_buffer = 2
 add_command_power = 10
 set_fuel_ratio = 0.2
@@ -73,6 +87,11 @@ set_convoys = 80
 add_ideas = direct_election
 add_ideas = single_parliament
 
+add_dynamic_modifier = { modifier = WDS_industry }
+add_dynamic_modifier = { modifier = WDS_army }
+add_dynamic_modifier = { modifier = WDS_navy }
+add_dynamic_modifier = { modifier = WDS_air_force }
+
 #외교
 
 #정치 상황
@@ -103,26 +122,26 @@ set_popularities = {
 
 #캐릭터 
 recruit_character = WDS_otori_kokona
-recruit_character = WDS_shizuka
-recruit_character = WDS_kathrina_griebel
-recruit_character = WDS_niizuma_yae
-recruit_character = WDS_yanagiba_panda
-recruit_character = WDS_sasuga_chisa
-recruit_character = WDS_senju_koyomi
-recruit_character = WDS_ramona_wolf
-recruit_character = WDS_wang_xue
-recruit_character = WDS_lilja_kurtbay
-recruit_character = WDS_yonaguni_hikari
-recruit_character = WDS_senju_iroha
-recruit_character = WDS_shiromaru_mito
-recruit_character = WDS_akiru_kamira
-recruit_character = WDS_nekoashi_tsubomi
-recruit_character = WDS_motosu_towa
-recruit_character = WDS_renjakuno_hatsumi
-recruit_character = WDS_karasumori_daikoku
-recruit_character = WDS_toneri_nikako
-recruit_character = WDS_yorozu_iruru
-recruit_character = WDS_fudeshima_shigure
+#recruit_character = WDS_shizuka
+#recruit_character = WDS_kathrina_griebel
+#recruit_character = WDS_niizuma_yae
+#recruit_character = WDS_yanagiba_panda
+#recruit_character = WDS_sasuga_chisa
+#recruit_character = WDS_senju_koyomi
+#recruit_character = WDS_ramona_wolf
+#recruit_character = WDS_wang_xue
+#recruit_character = WDS_lilja_kurtbay
+#recruit_character = WDS_yonaguni_hikari
+#recruit_character = WDS_senju_iroha
+#recruit_character = WDS_shiromaru_mito
+#recruit_character = WDS_akiru_kamira
+#recruit_character = WDS_nekoashi_tsubomi
+#recruit_character = WDS_motosu_towa
+#recruit_character = WDS_renjakuno_hatsumi
+#recruit_character = WDS_karasumori_daikoku
+#recruit_character = WDS_toneri_nikako
+#recruit_character = WDS_yorozu_iruru
+#recruit_character = WDS_fudeshima_shigure
 
 #장관진
 

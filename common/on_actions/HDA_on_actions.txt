@@ -1,0 +1,83 @@
+on_actions = {
+	on_startup = {
+		#역사적 AI
+		effect = {
+			HDA = {
+				if = {
+					limit = { 
+						is_ai = yes
+						is_historical_focus_on = yes 
+					}
+					add_ideas = {
+						stay_authoritariandemocracy
+						non_interventionism_hidden
+					}
+				}
+			}
+		}
+		#스타팅 정책
+		effect = {
+			HDA = {
+				add_ideas = {
+					president_idea
+					no_parliament
+					no_election
+					semi_unitary_state
+					subordinate_to_the_executive
+					
+					censored_press
+					racial_hierarchy
+					patriarchal_society
+					no_local_autonomy
+					left_to_the_market
+					no_state_welfare
+
+					state_capitalism
+					civilian_economy
+					high_taxation
+					limited_exports
+					low_military_budget
+					support_infrastructure_construction
+
+					supreme_command
+					army_dominant
+					push_system
+					basic_training
+					service_prohibited
+					junior_officer_training
+
+					volunteer_only
+					non_core_recruitment_prohibited
+					extraction_programs
+					agrarian_base
+					workers_unions_banned
+					college_research				
+				}
+			}
+		}
+	}
+	#on_ruling_party_change_immediate = {
+		#의회
+	#	effect = {
+	#		HDA = { 
+	#			if = {
+	#				limit = { is_democratic = yes}
+	#				parliament_gui_initial_HDA = yes
+	#				clr_country_flag = parliament_gui_on
+	#				calc_parliament_support_HDA = yes
+	#			}
+	#		}
+    #    }
+    #}
+	#on_weekly = {
+		#의회 지지도 계산
+	#	effect = {
+	#		HDA = {
+	#			if = {
+	#				limit = { HDA = { NOT = { has_idea = no_parliament } } }
+	#				calc_parliament_support_HDA = yes
+	#			}
+	#		}
+	#	}
+	#}
+}

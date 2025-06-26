@@ -1,0 +1,19 @@
+BDG_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_BDG_dynamic_industry
+}
+
+BDG_army = {
+	enable = { always = yes }
+	icon = GFX_idea_BDG_dynamic_army
+}
+
+BDG_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_BDG_dynamic_naval
+}
+
+BDG_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_BDG_dynamic_airforce
+}

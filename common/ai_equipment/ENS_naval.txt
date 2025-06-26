@@ -1,12 +1,9 @@
 # AI Ship Designs for Italy
-ITA_destroyers = {
+ENS_destroyers = {
 	category = naval
 	
-	blocked_for = {
-	}
-	
 	available_for = {
-		ITA
+		ENS
 	}
 	
 	roles = {
@@ -253,9 +250,9 @@ ITA_destroyers = {
 			factor = 50
 			modifier = {
 				OR = {
-					has_war_with = USA
-					has_war_with = JAP
-					has_war_with = ENG
+					has_war_with = ICG
+					has_war_with = LLS
+					has_war_with = IMA
 				}
 				factor = 2
 			}
@@ -293,15 +290,12 @@ ITA_destroyers = {
 	}
 }
 
-ITA_naval_light_cruiser = {
+ENS_naval_light_cruiser = {
 
 	category = naval
 	
-	blocked_for = {
-	}
-	
 	available_for = {
-		ITA
+		ENS
 	}
 	
 	roles = {
@@ -603,15 +597,12 @@ ITA_naval_light_cruiser = {
 	}
 }
 
-ITA_naval_light_AA_cruiser = {
+ENS_naval_light_AA_cruiser = {
 
 	category = naval
 	
-	blocked_for = {
-	}
-	
 	available_for = {
-		ITA
+		ENS
 	}
 	
 	roles = {
@@ -623,9 +614,9 @@ ITA_naval_light_AA_cruiser = {
 		modifier = {
 			factor = 10
 			OR = {
-				has_war_with = USA
-				has_war_with = ENG
-				has_war_with = JAP
+				has_war_with = ICG
+				has_war_with = IMA
+				has_war_with = LLS
 			}
 		}
 	}
@@ -676,14 +667,11 @@ ITA_naval_light_AA_cruiser = {
 		}
 	}
 }
-ITA_naval_cruiser_heavy = {
+ENS_naval_cruiser_heavy = {
 	category = naval
 	
-	blocked_for = {
-	}
-	
 	available_for = {
-		ITA
+		ENS
 	}
 	
 	roles = {
@@ -990,14 +978,11 @@ ITA_naval_cruiser_heavy = {
 	}
 }
 
-ITA_naval_capital_battleship = {
+ENS_naval_capital_battleship = {
 	category = naval
 	
-	blocked_for = {
-	}
-	
 	available_for = {
-		ITA
+		ENS
 	}
 	
 	roles = {
@@ -1244,14 +1229,11 @@ ITA_naval_capital_battleship = {
 	}
 }
 
-ITA_naval_carrier = {
+ENS_naval_carrier = {
 	category = naval
 	
-	blocked_for = {
-	}
-	
 	available_for = {
-		ITA
+		ENS
 	}
 	
 	roles = {
@@ -1440,14 +1422,11 @@ ITA_naval_carrier = {
 }
 
 
-ITA_naval_submarine = {
+ENS_naval_submarine = {
 	category = naval
 	
-	blocked_for = {
-	}
-	
 	available_for = {
-		ITA
+		ENS
 	}
 	
 	roles = {
@@ -1557,7 +1536,7 @@ ITA_naval_submarine = {
 			factor = 50
 			modifier = {
 				factor = 15
-				has_war_with = ITA
+				has_war_with = ENS
 			}
 		}
 		role_icon_index = 6
@@ -1585,14 +1564,11 @@ ITA_naval_submarine = {
 	}
 }
 
-ITA_naval_mine_sweeper = {
+ENS_naval_mine_sweeper = {
 	category = naval
 	
-	blocked_for = {
-	}
-	
 	available_for = {
-		ITA
+		ENS
 	}
 	
 	roles = {
@@ -1692,14 +1668,11 @@ ITA_naval_mine_sweeper = {
 	}
 }
 
-ITA_naval_mine_layer = {
+ENS_naval_mine_layer = {
 	category = naval
 	
-	blocked_for = {
-	}
-	
 	available_for = {
-		ITA
+		ENS
 	}
 	
 	roles = {

@@ -23,6 +23,11 @@ set_convoys = 10
 
 add_ideas = agrarian_society
 
+add_dynamic_modifier = { modifier = CUE_industry }
+add_dynamic_modifier = { modifier = CUE_army }
+add_dynamic_modifier = { modifier = CUE_navy }
+add_dynamic_modifier = { modifier = CUE_air_force }
+
 #정치 상황
 set_stability = 0.4
 set_war_support = 0.1
@@ -55,7 +60,3 @@ recruit_character = CUE_mutsuishi_haruna
 #장관진
 
 #무기 프리셋
-#create_equipment_variant = {
-#	name = ""
-#	type = amphibious_tank_equipment_2
-#}

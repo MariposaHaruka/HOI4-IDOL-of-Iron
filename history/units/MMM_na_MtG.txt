@@ -1,0 +1,187 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Base Naval El Ferrol"
+		naval_base = 758  # Ferrol/Coruna
+		task_force = {
+			name = "Escuadrón de El Ferrol"
+			location = 758  # Ferrol/Coruna
+			ship = { name = "ARM España" pride_of_the_fleet = yes definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = MMM version_name = "España Class" } } }
+			ship = { name = "ARM Jaime I" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = MMM version_name = "España Class" } } }
+			ship = { name = "ARM Libertad" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = MMM version_name = "Príncipe Alfonso Class" } } }
+			ship = { name = "ARM Almirante Cervera" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = MMM version_name = "Príncipe Alfonso Class" } } }
+			ship = { name = "ARM Miguel de Cervantes" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = MMM version_name = "Príncipe Alfonso Class" } } }
+			# Flotilla de Destructores de El Ferrol
+			ship = { name = "ARM Alsedo" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = MMM version_name = "Alsedo Class" } } }
+			ship = { name = "ARM Velasco" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = MMM version_name = "Alsedo Class" } } }
+			ship = { name = "ARM Lazaga" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = MMM version_name = "Alsedo Class" } } }
+		}
+	}
+		
+	fleet = {
+		name = "Base Naval Cádiz"
+		naval_base = 1048  #Cádiz
+		task_force = {
+			name = "Escuadrón de Cádiz"
+			location = 1048  #Cádiz
+			ship = { name = "ARM República" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = MMM version_name = "República Class" } } }
+			ship = { name = "ARM Méndez Núñez" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = MMM version_name = "Méndez Núñes Class" } } }
+		}
+		task_force = {
+			name = "Grupo de Cádiz"
+			location = 1048  #Cádiz
+			# S103 Flotilla
+			ship = { name = "ARM B1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = MMM version_name = "B Class" } } }
+			ship = { name = "ARM B2" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = MMM version_name = "B Class" } } }
+			ship = { name = "ARM B3" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = MMM version_name = "B Class" } } }
+			ship = { name = "ARM B4" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = MMM version_name = "B Class" } } }
+		}
+	}
+		
+	fleet = {
+		name = "Base Naval Cartagena"
+		naval_base = 10024  #Cartagena/Murcia
+		task_force = {
+			name = "Escuadrón de Cartagena"
+			location = 10024  #Cartagena/Murcia
+			ship = { name = "ARM Almirante Miranda" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = MMM version_name = "Churucca Class" } } }
+			# Flotilla de Destructores n.1
+			ship = { name = "ARM Almirante Ferrándiz" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = MMM version_name = "Churucca Class" } } }
+			ship = { name = "ARM Sánchez Barcáiztegui" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = MMM version_name = "Churucca Class" } } }
+			ship = { name = "ARM Alcalá Galiano" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = MMM version_name = "Churucca Class" } } }
+			ship = { name = "ARM Almirante Valdés" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = MMM version_name = "Churucca Class" } } }
+			# Flotilla de Destructores n.2
+			ship = { name = "ARM Churucca" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = MMM version_name = "Churucca Class" } } }
+			ship = { name = "ARM José Luis Díez" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = MMM version_name = "Churucca Class" } } }
+			ship = { name = "ARM Lepanto" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = MMM version_name = "Churucca Class" } } }
+			ship = { name = "ARM Almirante Antequera" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = MMM version_name = "Churucca Class" } } }
+		}
+		task_force = {
+			name = "Grupo de Cartagena"
+			location = 10024  #Cartagena/Murcia
+			# S101 Flotilla
+			ship = { name = "ARM B5" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = MMM version_name = "B Class" } } }
+			ship = { name = "ARM B6" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = MMM version_name = "B Class" } } }
+			ship = { name = "ARM C1" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = MMM version_name = "C Class" } } }
+			ship = { name = "ARM C2" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = MMM version_name = "C Class" } } }
+			ship = { name = "ARM C3" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = MMM version_name = "C Class" } } }
+			ship = { name = "ARM C4" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = MMM version_name = "C Class" } } }
+			ship = { name = "ARM C5" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = MMM version_name = "C Class" } } }
+			ship = { name = "ARM C6" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = MMM version_name = "C Class" } } }
+		}
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	### Under Construction Notes ###
+	# CA: ARE Canarias (Canarias class, comm. 1-Oct, 1936), ARE Baleares (Canarias class, comm. 28-Dec, 1936)
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "MMM"
+			version_name = "Canarias Class"
+		}
+		name = "ARM Canarias" 
+		requested_factories = 1
+		progress = 0.35
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "MMM"
+			version_name = "Canarias Class"
+		}
+		name = "ARM Baleares" 
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+	}
+	# DD: Júpiter class (x2) (minelayers) ("ARE Júpiter" "ARE Vulcano")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "MMM"
+			version_name = "Júpiter Class"
+		}
+		name = "ARM Júpiter" 
+		requested_factories = 1
+		progress = 0.15
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "MMM"
+			version_name = "Júpiter Class"
+		}
+		name = "ARM Vulcano" 
+		requested_factories = 1
+		progress = 0.15
+		amount = 1
+	}
+	# DD: Churucca class (x6) ("ARE Gravina" "ARE Escaño" "ARE Císcar" "ARE Jorge Juan" "ARE Ulloa")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "MMM"
+			version_name = "Churucca Class"
+		}
+		name = "ARM Gravina" 
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "MMM"
+			version_name = "Churucca Class"
+		}
+		name = "ARM Escaño" 
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "MMM"
+			version_name = "Churucca Class"
+		}
+		name = "ARM Císcar" 
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "MMM"
+			version_name = "Churucca Class"
+		}
+		name = "ARM Jorge Juan" 
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "MMM"
+			version_name = "Churucca Class"
+		}
+		name = "ARM Ulloa" 
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+	}
+}

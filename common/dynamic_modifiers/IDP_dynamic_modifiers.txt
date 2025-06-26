@@ -1,0 +1,19 @@
+IDP_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_IDP_dynamic_industry
+}
+
+IDP_army = {
+	enable = { always = yes }
+	icon = GFX_idea_IDP_dynamic_army
+}
+
+IDP_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_IDP_dynamic_naval
+}
+
+IDP_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_IDP_dynamic_airforce
+}

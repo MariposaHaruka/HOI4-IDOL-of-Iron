@@ -1,0 +1,120 @@
+﻿### REGULAR DESTROYER NAMES###
+HBR_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { HBR }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "SRNS "
+	fallback_name = "Reux phikhat %d"					
+
+	unique = {											
+		"Phra Ruang" "Maeklong" "Tachin" "Chonbori" "Trat" "Songkhla" "Phuke" "Pattani" "Surat Thani" "Chanthaburi" "Rayong" "Chumphon" 
+		"Kyongyai" "Kantan" "Takbai" "Bangpakong" "Prasae" 
+	}
+}
+
+### LIGHT CRUISER NAMES###
+HBR_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { HBR }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "SRNS "
+	fallback_name = "Fi Reuxrb %d"
+
+	unique = {
+		"Taksin" "Naresuan" "Chon Buri" "Samut Phrakan" "Si Racha" "Rayong" "Chanthaburi" "Khao Saming" "Ratanakosin" "Sukhothai" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+HBR_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { HBR }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "SRNS "
+	fallback_name = "Reux Ladtrawen Hnak %d"
+
+	unique = {
+		"Sri Ayuthia" "Dhonburi" "Chon Buri" "Samut Phrakan" "Si Racha" "Rayong" "Chanthaburi" "Khao Saming" "Ratanakosin" "Sukhothai" 
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+HBR_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { HBR }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "SRNS "
+	fallback_name = "Reuxrb %d"		
+
+	unique = {
+		"Krung Thep" "Thale Luang" "Ko Samui" "Ratanakosin" "Sukhothai" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+HBR_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { HBR }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "SRNS "
+	fallback_name = "Rb Khruy Sexr %d"		
+
+	unique = {
+		"Krung Thep" "Thale Luang" "Ko Samui" "Ratanakosin" "Sukhothai" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+HBR_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { HBR }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "SRNS "
+	fallback_name = "Reux Brrthuk Kheruxngbin %d"	
+
+	unique = {
+		"Muang Seraph" "Ao Seraph" "Chakri Nareubet"
+	}
+}
+
+### SUBMARINES ###
+HBR_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { HBR }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "SRNS "
+	fallback_name = "Reux da na %d"
+	
+	unique = {
+		"Matchanu" "Wirun" "Sinsamut" "Phlai-chumphon" 
+	}
+}

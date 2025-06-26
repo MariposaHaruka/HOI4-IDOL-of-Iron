@@ -1,0 +1,5857 @@
+focus_tree = {
+	id = TOH_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TOH
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 0
+		y = 1200
+	}
+
+	focus = {
+		id = TOH_00001 #최고위원회 회의
+		icon = GFX_goal_support_communism
+		cost = 1
+
+		x = 85
+		y = 0
+
+		ai_will_do = { factor = 30 }
+		cancelable = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_00001"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	#경제 중점
+	focus = {
+		id = TOH_10001 #경제 위원회/경제 정책
+		icon = GFX_focus_TOH_10001
+		cost = 0
+
+		x = 4
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		available = { always = no }
+		prerequisite = { focus = TOH_00001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10001"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = TOH_11001 #제2차 5개년 계획 완료
+		icon = GFX_focus_TOH_11001
+		cost = 0
+		x = 6
+		y = 2
+
+		ai_will_do = { factor = 30 }
+		available = { always = no }
+		prerequisite = { focus = TOH_10001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11001"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = TOH_11002 #제3차 5개년 개발
+		icon = GFX_focus_TOH_11002
+		cost = 0
+
+		x = 8
+		y = 2
+
+		ai_will_do = { factor = 30 }
+		available = { always = no }
+		prerequisite = { focus = TOH_10001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11002"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = TOH_10002 #중공업 확장계획/중공업 확장정책
+		icon = GFX_focus_TOH_10002
+		cost = 5
+	
+		relative_position_id = TOH_10001
+		x = -1
+		y = 2
+
+		available = { NOT = { has_completed_focus = TOH_11001 } }	
+		prerequisite = { focus = TOH_10001 }
+		ai_will_do = { factor = 30 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10002"
+			
+		}
+	}
+
+	focus = {
+		id = TOH_10003 #농업 생산 계획/농업 정책
+		icon = GFX_focus_TOH_10003
+		cost = 5
+	
+		relative_position_id = TOH_10001
+		x = 1
+		y = 2
+
+		available = { NOT = { has_completed_focus = TOH_11001 } }
+		prerequisite = { focus = TOH_10001 }
+		ai_will_do = { factor = 30 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10003"
+			
+		}
+	}
+
+	focus = {
+		id = TOH_10004 #철도 건설
+		icon = GFX_focus_TOH_10004
+		cost = 5
+	
+		relative_position_id = TOH_10002
+		x = -1
+		y = 1
+
+		available = { NOT = { has_completed_focus = TOH_11001 } }
+		prerequisite = { focus = TOH_10002 }
+		ai_will_do = { factor = 30 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10004"
+			
+		}
+	}
+
+	focus = {
+		id = TOH_10005 #도심지 건설
+		icon = GFX_focus_TOH_10005
+		cost = 5
+	
+		relative_position_id = TOH_10002
+		x = 1
+		y = 1
+
+		available = { NOT = { has_completed_focus = TOH_11001 } }
+		prerequisite = { focus = TOH_10002 }
+		ai_will_do = { factor = 30 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10005"
+			
+		}
+	}
+
+	focus = {
+		id = TOH_10006 #조선소 확장
+		icon = GFX_focus_TOH_10006
+		cost = 5
+	
+		relative_position_id = TOH_10004
+		x = -1
+		y = 1
+
+		available = { NOT = { has_completed_focus = TOH_11001 } }
+		prerequisite = { focus = TOH_10004 }
+		prerequisite = { focus = TOH_10005 }
+		ai_will_do = { factor = 30 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10006"
+			
+		}
+	}
+
+	focus = {
+		id = TOH_10007 #군수공장 투자
+		icon = GFX_focus_TOH_10007
+		cost = 5
+	
+		relative_position_id = TOH_10004
+		x = 1
+		y = 1
+
+		available = { NOT = { has_completed_focus = TOH_11001 } }
+		prerequisite = { focus = TOH_10004 }
+		prerequisite = { focus = TOH_10005 }
+		ai_will_do = { factor = 30 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10007"
+			
+		}
+	}
+
+	focus = {
+		id = TOH_10008 #연방 과학학술원
+		icon = GFX_focus_TOH_10007
+		cost = 5
+	
+		relative_position_id = TOH_10005
+		x = 1
+		y = 1
+
+		available = { NOT = { has_completed_focus = TOH_11001 } }
+		prerequisite = { focus = TOH_10003 }
+		prerequisite = { focus = TOH_10005 }
+		ai_will_do = { factor = 30 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10008"
+			
+		}
+	}
+
+	focus = {
+		id = TOH_10009 #국내 전문가 초빙
+		icon = GFX_focus_TOH_10009
+		cost = 5
+	
+		relative_position_id = TOH_10006
+		x = -1
+		y = 1
+
+		available = { NOT = { has_completed_focus = TOH_11001 } }
+		prerequisite = { focus = TOH_10006 }
+		prerequisite = { focus = TOH_10007 }
+		mutually_exclusive = { focus = TOH_10010 }
+		ai_will_do = { factor = 30 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10009"
+			
+		}
+	}
+
+	focus = {
+		id = TOH_10010 #해외 전문가 초빙
+		icon = GFX_focus_TOH_10010
+		cost = 5
+	
+		relative_position_id = TOH_10006
+		x = 1
+		y = 1
+
+		available = { NOT = { has_completed_focus = TOH_11001 } }
+		prerequisite = { focus = TOH_10006 }
+		prerequisite = { focus = TOH_10007 }
+		mutually_exclusive = { focus = TOH_10009 }
+		ai_will_do = { factor = 30 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10010"
+			
+		}
+	}
+
+	focus = {
+		id = TOH_10011 #사회주의 과학
+		icon = GFX_focus_TOH_10011
+		cost = 5
+	
+		relative_position_id = TOH_10007
+		x = 1
+		y = 1
+
+		available = { NOT = { has_completed_focus = TOH_11001 } }
+		prerequisite = { focus = TOH_10008 }
+		ai_will_do = { factor = 30 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10011"
+			
+		}
+	}
+
+	focus = {
+		id = TOH_10012 #국내 전문가 초빙
+		icon = GFX_focus_TOH_10012
+		cost = 5
+	
+		relative_position_id = TOH_10010
+		x = -1
+		y = 1
+
+		available = { NOT = { has_completed_focus = TOH_11001 } }
+		prerequisite = { focus = TOH_10009 focus = TOH_10010 }
+		ai_will_do = { factor = 30 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10012"
+			
+		}
+	}
+
+	focus = {
+		id = TOH_10013 #해외 전문가 초빙
+		icon = GFX_focus_TOH_10013
+		cost = 5
+	
+		relative_position_id = TOH_10010
+		x = 1
+		y = 1
+
+		available = { NOT = { has_completed_focus = TOH_11001 } }
+		prerequisite = { focus = TOH_10009 focus = TOH_10010 }
+		ai_will_do = { factor = 30 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_10013"
+			
+		}
+	}
+
+	focus = {
+		id = TOH_11003 #중공업 위원회/중공업 정책
+		icon = GFX_focus_TOH_11003
+		cost = 5
+
+		relative_position_id = TOH_11002
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		available = { 
+			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
+			hidden_trigger = { TOH_5year_plan_disturbed = no }
+		}
+		prerequisite = { focus = TOH_11001 }
+		prerequisite = { focus = TOH_11002 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11003"
+		}
+	}
+
+	focus = {
+		id = TOH_11004 #국방 공업 위원회/국방 공업 정책
+		icon = GFX_focus_TOH_11004
+		cost = 5
+
+		relative_position_id = TOH_11002
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		available = { 
+			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
+			hidden_trigger = { TOH_5year_plan_disturbed = no }
+		}
+		prerequisite = { focus = TOH_11001 }
+		prerequisite = { focus = TOH_11002 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11004"
+		}
+	}
+
+	focus = {
+		id = TOH_11005 #우랄 이전 계획
+		icon = GFX_focus_TOH_11005
+		cost = 5
+
+		relative_position_id = TOH_11004
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		available = { 
+			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
+			hidden_trigger = { TOH_5year_plan_disturbed = no }
+		}
+		prerequisite = { focus = TOH_11003 }
+		prerequisite = { focus = TOH_11004 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11005"
+		}
+	}
+
+	focus = {
+		id = TOH_11006 #전시 생산 위원회
+		icon = GFX_focus_TOH_11006
+		cost = 5
+
+		relative_position_id = TOH_11004
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		available = { 
+			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
+			hidden_trigger = { TOH_5year_plan_disturbed = no }
+		}
+		prerequisite = { focus = TOH_11003 }
+		prerequisite = { focus = TOH_11004 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11006"
+		}
+	}
+	focus = {
+		id = TOH_11007 #국립 과학 아카데미
+		icon = GFX_focus_TOH_11007
+		cost = 5
+
+		relative_position_id = TOH_11005
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		available = { 
+			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
+			hidden_trigger = { TOH_5year_plan_disturbed = no }
+		}
+		prerequisite = { focus = TOH_11003 }
+		prerequisite = { focus = TOH_11004 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11007"
+		}
+	}
+
+	focus = {
+		id = TOH_11008 #산업시설 현대화
+		icon = GFX_focus_TOH_11008
+		cost = 5
+
+		relative_position_id = TOH_11006
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		available = { 
+			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
+			hidden_trigger = { TOH_5year_plan_disturbed = no }
+		}
+		prerequisite = { focus = TOH_11005 }
+		prerequisite = { focus = TOH_11006 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11008"
+		}
+	}
+
+	focus = {
+		id = TOH_11009 #공학 인민 위원부/공학 위원회
+		icon = GFX_focus_TOH_11009
+		cost = 5
+
+		relative_position_id = TOH_11006
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		available = { 
+			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
+			hidden_trigger = { TOH_5year_plan_disturbed = no }
+		}
+		prerequisite = { focus = TOH_11005 }
+		prerequisite = { focus = TOH_11006 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11009"
+		}
+	}
+	focus = {
+		id = TOH_11010 #전시 제철소
+		icon = GFX_focus_TOH_11010
+		cost = 5
+
+		relative_position_id = TOH_11008
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_11008 }
+		prerequisite = { focus = TOH_11009 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11010"
+		}
+	}
+
+	focus = {
+		id = TOH_11011 #항공기 생산공장 통합
+		icon = GFX_focus_TOH_11011
+		cost = 5
+
+		relative_position_id = TOH_11009
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_11008 }
+		prerequisite = { focus = TOH_11009 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11011"
+		}
+	}
+
+	focus = {
+		id = TOH_11012 #군수품 생산 공장 통합
+		icon = GFX_focus_TOH_11012
+		cost = 5
+
+		relative_position_id = TOH_11009
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_11008 }
+		prerequisite = { focus = TOH_11009 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11012"
+		}
+	}
+
+	focus = {
+		id = TOH_11013 #탄코그라드
+		icon = GFX_focus_TOH_11013
+		cost = 5
+
+		relative_position_id = TOH_11011
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_11010 }
+		prerequisite = { focus = TOH_11011 }
+		prerequisite = { focus = TOH_11012 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11013"
+		}
+	}
+
+	focus = {
+		id = TOH_11014 #조선소 통합
+		icon = GFX_focus_TOH_11014
+		cost = 5
+
+		relative_position_id = TOH_11011
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_11010 }
+		prerequisite = { focus = TOH_11011 }
+		prerequisite = { focus = TOH_11012 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_11014"
+		}
+	}
+
+	focus = {
+		id = TOH_13001 #자연과학 투자
+		icon = GFX_focus_TOH_13001
+		cost = 5
+
+		relative_position_id = TOH_10008
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_10008 }
+		prerequisite = { focus = TOH_11007 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_13001"
+		}
+	}
+
+	focus = {
+		id = TOH_13002 #네크로판타지아 계획
+		icon = GFX_focus_TOH_13002
+		cost = 5
+
+		relative_position_id = TOH_13001
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_13001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_13002"
+		}
+	}
+
+	focus = {
+		id = TOH_13003 #탄도 미사일 계획
+		icon = GFX_focus_TOH_13001
+		cost = 5
+
+		relative_position_id = TOH_13002
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_13002 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_13003"
+		}
+	}
+
+	focus = {
+		id = TOH_12001 #제4차 5개년 개발
+		icon = GFX_focus_TOH_12001
+		cost = 0
+
+		x = 13
+		y = 2
+
+		ai_will_do = { factor = 30 }
+		available = { always = no }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = TOH_10001 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_12001"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = TOH_12002 #네크로판타지아 계획
+		icon = GFX_focus_TOH_12002
+		cost = 5
+
+		relative_position_id = TOH_12001
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_12001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_12002"
+		}
+	}
+
+	focus = {
+		id = TOH_12003 #탄도 미사일 계획
+		icon = GFX_focus_TOH_12003
+		cost = 5
+
+		relative_position_id = TOH_12002
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_12002 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_12003"
+		}
+	}
+
+	focus = {
+		id = TOH_12004 #탄도 미사일 계획
+		icon = GFX_focus_TOH_12004
+		cost = 5
+
+		relative_position_id = TOH_12002
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_12002 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_12004"
+		}
+	}
+
+	focus = {
+		id = TOH_12005 #탄도 미사일 계획
+		icon = GFX_focus_TOH_12005
+		cost = 5
+
+		relative_position_id = TOH_12001
+		x = 2
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_12001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_12005"
+		}
+	}
+
+	#외교 중점
+	focus = {
+		id = TOH_20001 #외교 위원회/외교 정책
+		icon = GFX_focus_TOH_20001
+		cost = 0
+
+		x = 24
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		available = { always = no }
+		prerequisite = { focus = TOH_00001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_20001"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = TOH_21001 #개별 안보 정책/대 환상향 주의
+		icon = GFX_focus_TOH_21001
+		cost = 5
+
+		relative_position_id = TOH_20001
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_22001 }
+		prerequisite = { focus = TOH_20001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21001"
+		}
+	}
+	
+	focus = {
+		id = TOH_22001 #집단 안보 정책/친서방 외교
+		icon = GFX_focus_TOH_22001
+		cost = 5
+
+		relative_position_id = TOH_20001
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_21001 }
+		prerequisite = { focus = TOH_20001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22001"
+		}
+	}
+
+	focus = {
+		id = TOH_21002 #반 자본주의 정책
+		icon = GFX_focus_TOH_21002
+		cost = 5
+
+		relative_position_id = TOH_21001
+		x = -4
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21001"
+		}
+	}
+
+	focus = {
+		id = TOH_21003 #발칸 압박
+		icon = GFX_focus_TOH_21003
+		cost = 5
+
+		relative_position_id = TOH_21001
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21003"
+		}
+	}
+
+	focus = {
+		id = TOH_21004 #이스탄불 회담
+		icon = GFX_focus_TOH_21004
+		cost = 5
+
+		relative_position_id = TOH_21001
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21004"
+		}
+	}
+
+	focus = {
+		id = TOH_21005 #극동 개방
+		icon = GFX_focus_TOH_21005
+		cost = 5
+
+		relative_position_id = TOH_21002
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21002 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21005"
+		}
+	}
+
+	focus = {
+		id = TOH_21006 #모스크바-베를린 조약
+		icon = GFX_focus_TOH_21006
+		cost = 5
+
+		relative_position_id = TOH_21002
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21002 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21006"
+		}
+	}
+
+	focus = {
+		id = TOH_21007 #벨라루스 영유권
+		icon = GFX_focus_ioi_generic_attack_UMA
+		cost = 5
+
+		relative_position_id = TOH_21003
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21003 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21007"
+		}
+	}
+
+	focus = {
+		id = TOH_21008 #반 아이마스 협정
+		icon = GFX_focus_TOH_21008
+		cost = 5
+
+		relative_position_id = TOH_21005
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21005 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21008"
+		}
+	}
+
+	focus = {
+		id = TOH_21009 #새로운 환상향 영유권
+		icon = GFX_focus_TOH_21006
+		cost = 5
+
+		relative_position_id = TOH_21006
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21006 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21009"
+		}
+	}
+
+	focus = {
+		id = TOH_21010 #베사라비아 영유권
+		icon = GFX_focus_ioi_generic_attack_AIK
+		cost = 5
+
+		relative_position_id = TOH_21007
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21007 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21010"
+		}
+	}
+
+	focus = {
+		id = TOH_21011 #만주 압박
+		icon = GFX_focus_TOH_21011
+		cost = 5
+
+		relative_position_id = TOH_21008
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21008 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21011"
+		}
+	}
+
+	focus = {
+		id = TOH_21012 #지중해 남하정책
+		icon = GFX_focus_TOH_21012 
+		cost = 5
+
+		relative_position_id = TOH_21010
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21010 }
+		mutually_exclusive = { focus = TOH_21013}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21012"
+		}
+	}
+
+	focus = {
+		id = TOH_21013 #인도양 남하정책
+		icon = GFX_focus_TOH_21013
+		cost = 5
+
+		relative_position_id = TOH_21010
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21010 }
+		mutually_exclusive = { focus = TOH_21012}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21013"
+		}
+	}
+
+	focus = {
+		id = TOH_21014 #신강 영유권
+		icon = GFX_focus_TOH_21014
+		cost = 5
+
+		relative_position_id = TOH_21011
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21011 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21014"
+		}
+	}
+
+	focus = {
+		id = TOH_21015 #동쪽으로의 진출
+		icon = GFX_focus_TOH_21015
+		cost = 5
+
+		relative_position_id = TOH_21014
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21014 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_21015"
+		}
+	}
+
+	focus = {
+		id = TOH_22002 #반 파시즘 정책
+		icon = GFX_focus_TOH_22002
+		cost = 5
+
+		relative_position_id = TOH_22001
+		x = 4
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22001"
+		}
+	}
+
+	focus = {
+		id = TOH_22003 #발트 압박
+		icon = GFX_focus_TOH_22003
+		cost = 5
+
+		relative_position_id = TOH_22001
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22003"
+		}
+	}
+
+	focus = {
+		id = TOH_22004 #밢푸르기스 내전 지원
+		icon = GFX_focus_TOH_22004
+		cost = 5
+
+		relative_position_id = TOH_22001
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22004"
+		}
+	}
+
+	focus = {
+		id = TOH_22005 #극동 계획
+		icon = GFX_focus_TOH_22005
+		cost = 5
+
+		relative_position_id = TOH_22002
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22002 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22005"
+		}
+	}
+
+	focus = {
+		id = TOH_22006 #파리 조약
+		icon = GFX_focus_TOH_22006
+		cost = 5
+
+		relative_position_id = TOH_22002
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22002 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22006"
+		}
+	}
+
+	focus = {
+		id = TOH_22007 #유카리그라드 보호
+		icon = GFX_focus_ioi_generic_attack_PTD
+		cost = 5
+
+		relative_position_id = TOH_22003
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22003 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22007"
+		}
+	}
+
+	focus = {
+		id = TOH_22008 #극동 국경 요새화
+		icon = GFX_focus_TOH_22008
+		cost = 5
+
+		relative_position_id = TOH_22005
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22005 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22008"
+		}
+	}
+
+	focus = {
+		id = TOH_22009 #복수
+		icon = GFX_focus_ioi_generic_attack_PRS
+		cost = 5
+
+		relative_position_id = TOH_22006
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22006 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22009"
+		}
+	}
+
+	focus = {
+		id = TOH_22010 #스칸디나비아 통제
+		icon = GFX_focus_ioi_generic_attack_DFD
+		cost = 5
+
+		relative_position_id = TOH_22007
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22007 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22010"
+		}
+	}
+
+	focus = {
+		id = TOH_22011 #이글 유니온 지원
+		icon = GFX_focus_TOH_22011
+		cost = 5
+
+		relative_position_id = TOH_22008
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22008 }
+		mutually_exclusive = { focus = TOH_22012 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22011"
+		}
+	}
+
+	focus = {
+		id = TOH_22012 #진수부 지원
+		icon = GFX_focus_TOH_22012 
+		cost = 5
+
+		relative_position_id = TOH_22008
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22008 }
+		mutually_exclusive = { focus = TOH_22011 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22012"
+		}
+	}
+
+	focus = {
+		id = TOH_22013 #발트해는 우리의 내해
+		icon = GFX_focus_ioi_generic_attack_SZS
+		cost = 5
+
+		relative_position_id = TOH_22010
+		x = -0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22010 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22013"
+		}
+	}
+
+	focus = {
+		id = TOH_22014 #장강 전쟁 개입
+		icon = GFX_focus_TOH_22014
+		cost = 5
+
+		relative_position_id = TOH_22011
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22011 focus = TOH_22012 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22014"
+		}
+	}
+	focus = {
+		id = TOH_22015 #위협 선제 제거
+		icon = GFX_focus_TOH_22015 
+		cost = 5
+
+		relative_position_id = TOH_22014
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22014 }
+		mutually_exclusive = { focus = TOH_22016 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22012"
+		}
+	}
+
+	focus = {
+		id = TOH_22016 #동방-럽라 상호 불가침 조약
+		icon = GFX_focus_TOH_22016
+		cost = 5
+
+		relative_position_id = TOH_22014
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_22014 }
+		mutually_exclusive = { focus = TOH_22015 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_22013"
+		}
+	}
+
+	focus = {
+		id = TOH_20002 #남부 압박
+		icon = GFX_focus_TOH_20002
+		cost = 5
+
+		relative_position_id = TOH_20001
+		x = 0
+		y = 2
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_21001 focus = TOH_22001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_20002"
+		}
+	}
+
+	focus = {
+		id = TOH_20003 #남부 압박
+		icon = GFX_focus_TOH_20003
+		cost = 5
+
+		relative_position_id = TOH_20002
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_20002 }
+		mutually_exclusive = { focus = TOH_20004 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_20003"
+		}
+	}
+
+	focus = {
+		id = TOH_20004 #중동 공산화
+		icon = GFX_focus_TOH_20004
+		cost = 5
+
+		relative_position_id = TOH_20002
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_20002 }
+		mutually_exclusive = { focus = TOH_20004 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_20004"
+		}
+	}
+
+	focus = {
+		id = TOH_20005 #이부키 작전
+		icon = GFX_focus_ioi_generic_attack_BLA
+		cost = 5
+
+		relative_position_id = TOH_20002
+		x = 0
+		y = 2
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_20003 focus = TOH_20004 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_20005"
+			declare_war_on = {
+				target = BLA
+				type = annex_everything
+			}
+		}
+	}
+
+	#군사 중점
+	focus = {
+		id = TOH_30001 #군사 위원회/군사 정책
+		icon = GFX_focus_TOH_20001
+		cost = 0
+
+		x = 41
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		available = { always = no }
+		prerequisite = { focus = TOH_00001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_20001"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = TOH_31001 #방위산업 인민 위원회/방위산업부
+		icon = GFX_focus_TOH_21001
+		cost = 5
+
+		relative_position_id = TOH_30001
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_30001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31001"
+		}
+	}
+	
+	focus = {
+		id = TOH_32001 #육군 인민 위원회/육군부
+		icon = GFX_focus_TOH_32001
+		cost = 5
+
+		relative_position_id = TOH_30001
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_30001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32001"
+		}
+	}
+
+	focus = {
+		id = TOH_33001 #공군 인민 위원회/공군부
+		icon = GFX_focus_TOH_33001
+		cost = 5
+
+		relative_position_id = TOH_30001
+		x = 14
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_30001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33001"
+		}
+	}
+
+	focus = {
+		id = TOH_33002 #조종사 영웅
+		icon = GFX_focus_TOH_33002
+		cost = 0
+
+		relative_position_id = TOH_30001
+		x = 18
+		y = 1
+
+		ai_will_do = { factor = 0 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = { always = no }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33001"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+	
+	focus = {
+		id = TOH_34001 #해군 인민 위원회/해군부
+		icon = GFX_focus_TOH_34001
+		cost = 5
+
+		relative_position_id = TOH_30001
+		x = 29
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_30001 }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34001"
+		}
+	}
+
+	focus = {
+		id = TOH_31002 #공병대학교
+		icon = GFX_focus_TOH_31002
+		cost = 5
+
+		relative_position_id = TOH_31001
+		x = -2
+		y = 1
+
+		prerequisite = { focus = TOH_31001 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31002"
+		}
+	}
+
+	focus = {
+		id = TOH_31003 #기계공학인민위원부/기계공학위원회
+		icon = GFX_focus_TOH_31003
+		cost = 5
+
+		relative_position_id = TOH_31001
+		x = 2
+		y = 1
+
+		prerequisite = { focus = TOH_31001 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31003"
+		}
+	}
+
+	focus = {
+		id = TOH_31051 #유카리그라드 공학기술원/상트페테르부르크 공학기술원
+		icon = GFX_focus_TOH_31051
+		cost = 5
+
+		relative_position_id = TOH_31003
+		x = -1
+		y = 1
+
+		prerequisite = { focus = TOH_31003 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31051"
+		}
+	}
+
+	focus = {
+		id = TOH_31004 #하쿠레이 선
+		icon = GFX_focus_TOH_31004
+		cost = 5
+
+		relative_position_id = TOH_31002
+		x = -1
+		y = 1
+
+		prerequisite = { focus = TOH_31002 }
+		mutually_exclusive = { focus = TOH_31005 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31004"
+		}
+	}
+
+	focus = {
+		id = TOH_31005 #몰로토프 선
+		icon = GFX_focus_TOH_31003
+		cost = 5
+
+		relative_position_id = TOH_31002
+		x = 1
+		y = 1
+
+		prerequisite = { focus = TOH_31002 }
+		mutually_exclusive = { focus = TOH_31004 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31005"
+		}
+	}
+
+	focus = {
+		id = TOH_31006 #카렐리아 방어선
+		icon = GFX_focus_TOH_31006
+		cost = 5
+
+		relative_position_id = TOH_31004
+		x = -1
+		y = 1
+
+		prerequisite = { focus = TOH_31004 }
+		prerequisite = { focus = TOH_31051 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31006"
+		}
+	}
+
+	focus = {
+		id = TOH_31007 #모스크바 방어
+		icon = GFX_focus_TOH_31007
+		cost = 5
+
+		relative_position_id = TOH_31004
+		x = 1
+		y = 1
+
+		prerequisite = { focus = TOH_31004 focus = TOH_31005 }
+		prerequisite = { focus = TOH_31051 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31007"
+		}
+	}
+
+	focus = {
+		id = TOH_31008 #거점 요새
+		icon = GFX_focus_TOH_31008
+		cost = 5
+
+		relative_position_id = TOH_31005
+		x = 1
+		y = 1
+
+		prerequisite = { focus = TOH_31005 }
+		prerequisite = { focus = TOH_31051 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31008"
+		}
+	}
+
+	focus = {
+		id = TOH_30002 #대조국전쟁
+		icon = GFX_focus_TOH_30002
+		cost = 0
+
+		relative_position_id = TOH_31008
+		x = 1
+		y = 2
+
+		ai_will_do = { factor = 0 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = { always = no }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_30002"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = TOH_30003 #스타프카
+		icon = GFX_focus_TOH_30003
+		cost = 0
+
+		relative_position_id = TOH_30002
+		x = 2
+		y = 0
+
+		ai_will_do = { factor = 0 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = { always = no }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_30002"
+			custom_effect_tooltip = complete_national_focus_by_event_tt
+		}
+	}
+
+	focus = {
+		id = TOH_31009 #시베리아 산업 긴급이전
+		icon = GFX_focus_TOH_31009
+		cost = 5
+
+		relative_position_id = TOH_30002
+		x = -2
+		y = 1
+
+		prerequisite = { focus = TOH_30002 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31009"
+		}
+	}
+
+	focus = {
+		id = TOH_31010 #대조국 총력전
+		icon = GFX_focus_TOH_31010
+		cost = 5
+
+		relative_position_id = TOH_31009
+		x = 0
+		y = 1
+
+		prerequisite = { focus = TOH_31009 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31010"
+		}
+	}
+
+	focus = {
+		id = TOH_31011 #군수품 품질 개선
+		icon = GFX_focus_TOH_31011
+		cost = 5
+
+		relative_position_id = TOH_31010
+		x = 0
+		y = 1
+
+		prerequisite = { focus = TOH_31010 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31011"
+		}
+	}
+
+	focus = {
+		id = TOH_31012 #규모의 경제
+		icon = GFX_focus_TOH_31012
+		cost = 5
+
+		relative_position_id = TOH_31011
+		x = 0
+		y = 1
+
+		prerequisite = { focus = TOH_31011 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31012"
+		}
+	}
+
+	focus = {
+		id = TOH_31013 #랜드리스
+		icon = GFX_focus_TOH_31013
+		cost = 5
+
+		relative_position_id = TOH_30002
+		x = 1
+		y = 1
+
+		prerequisite = { focus = TOH_30002 }
+		prerequisite = { focus = TOH_30003 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31013"
+			custom_effect_tooltip = TOH_31013_tt
+			hidden_effect = {
+				unlock_decision_category_tooltip = TOH_landlease_decision
+			}
+		}
+	}
+
+	focus = {
+		id = TOH_31014 #생명의 길
+		icon = GFX_focus_SOV_the_road_of_life
+		cost = 5
+
+		relative_position_id = TOH_31013
+		x = -1
+		y = 1
+
+		prerequisite = { focus = TOH_31013 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+			OR = {
+				195 = { #LENINGRAD
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						is_owned_by = ROOT
+						NOT = { is_fully_controlled_by = ROOT }
+					}
+				}
+				219 = { #MOSCOW
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						is_owned_by = ROOT
+						NOT = { is_fully_controlled_by = ROOT }
+					}
+				}
+				217 = { #STALINGRAD
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						is_owned_by = ROOT
+						NOT = { is_fully_controlled_by = ROOT }
+					}
+				}
+				137 = { #SEVASTOPOL
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						is_owned_by = ROOT
+						NOT = { is_fully_controlled_by = ROOT }
+					}
+				}
+				202 = { #Kiev
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						is_owned_by = ROOT
+						NOT = { is_fully_controlled_by = ROOT }
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31014"
+			add_timed_idea = {
+				idea = TOH_the_road_of_life
+				days = 730
+			}
+		}
+	}
+
+	focus = {
+		id = TOH_31015 #랜드리스 루트 확보
+		icon = GFX_focus_TOH_31015
+		cost = 5
+
+		relative_position_id = TOH_31013
+		x = 1
+		y = 1
+
+		prerequisite = { focus = TOH_31013 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31015"
+		}
+	}
+
+	focus = {
+		id = TOH_31016 #보급 개선
+		icon = GFX_focus_TOH_31016
+		cost = 5
+
+		relative_position_id = TOH_31014
+		x = 1
+		y = 1
+
+		prerequisite = { focus = TOH_31014 }
+		prerequisite = { focus = TOH_31015 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_31016"
+		}
+	}
+
+	focus = {
+		id = TOH_32002 #종심돌파이론
+		icon = GFX_focus_TOH_32002
+		cost = 5
+
+		relative_position_id = TOH_32001
+		x = -1
+		y = 1
+
+		prerequisite = { focus = TOH_32001 }
+		mutually_exclusive = { focus = TOH_32003 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32002"
+		}
+	}
+
+	focus = {
+		id = TOH_32003 #새로운 화력 이론
+		icon = GFX_focus_TOH_32003
+		cost = 5
+
+		relative_position_id = TOH_32001
+		x = 1
+		y = 1
+
+		prerequisite = { focus = TOH_32001 }
+		mutually_exclusive = { focus = TOH_32002 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32003"
+		}
+	}
+
+	focus = {
+		id = TOH_32004 #T-34
+		icon = GFX_focus_TOH_32004
+		cost = 5
+
+		relative_position_id = TOH_32002
+		x = -2
+		y = 1
+
+		prerequisite = { focus = TOH_32002 focus = TOH_32003 }
+		prerequisite = { focus = TOH_31003 }
+		mutually_exclusive = { focus = TOH_32005 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32004"
+		}
+	}
+
+	focus = {
+		id = TOH_32005 #T-34M
+		icon = GFX_focus_TOH_32005
+		cost = 5
+
+		relative_position_id = TOH_32002
+		x = 0
+		y = 1
+
+		prerequisite = { focus = TOH_32002 focus = TOH_32003 }
+		prerequisite = { focus = TOH_31003 }
+		mutually_exclusive = { focus = TOH_32004 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32005"
+		}
+	}
+
+	focus = {
+		id = TOH_32006 #소구경포 생산
+		icon = GFX_focus_TOH_32006
+		cost = 5
+
+		relative_position_id = TOH_32003
+		x = 0
+		y = 1
+
+		prerequisite = { focus = TOH_32002 focus = TOH_32003 }
+		prerequisite = { focus = TOH_31003 }
+		mutually_exclusive = { focus = TOH_32007 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32006"
+		}
+	}
+
+	focus = {
+		id = TOH_32007 #대구경포 생산
+		icon = GFX_focus_TOH_32007
+		cost = 5
+
+		relative_position_id = TOH_32003
+		x = 2
+		y = 1
+
+		prerequisite = { focus = TOH_32002 focus = TOH_32003 }
+		prerequisite = { focus = TOH_31003 }
+		mutually_exclusive = { focus = TOH_32006 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32007"
+		}
+	}
+
+	focus = {
+		id = TOH_32008 #차량화 준비
+		icon = GFX_focus_TOH_32008
+		cost = 5
+
+		relative_position_id = TOH_32005
+		x = -1
+		y = 1
+
+		prerequisite = { focus = TOH_32004 focus = TOH_32005 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32008"
+		}
+	}
+
+	focus = {
+		id = TOH_32009 #차량화 장비 인민위원부/차량화 전환 위원회
+		icon = GFX_focus_TOH_32009
+		cost = 5
+
+		relative_position_id = TOH_32008
+		x = 0
+		y = 1
+
+		prerequisite = { focus = TOH_32008 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32009"
+		}
+	}
+
+	focus = {
+		id = TOH_32010 #차량화 준비
+		icon = GFX_focus_TOH_32010
+		cost = 5
+
+		relative_position_id = TOH_32007
+		x = -1
+		y = 1
+
+		prerequisite = { focus = TOH_32006 focus = TOH_32007 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32010"
+		}
+	}
+
+	focus = {
+		id = TOH_32011 #박격포 장비 인민위원부/박격포 전환 위원회
+		icon = GFX_focus_TOH_32011
+		cost = 5
+
+		relative_position_id = TOH_32010
+		x = 0
+		y = 1
+
+		prerequisite = { focus = TOH_32010 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32011"
+		}
+	}
+
+	focus = {
+		id = TOH_32012 #기관단총 개선
+		icon = GFX_focus_TOH_32012
+		cost = 5
+
+		relative_position_id = TOH_32006
+		x = -1
+		y = 1
+
+		prerequisite = { focus = TOH_32004 focus = TOH_32005 focus = TOH_32006 focus = TOH_32007 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32012"
+		}
+	}
+
+	focus = {
+		id = TOH_32013 #궁여지책
+		icon = GFX_focus_TOH_32013
+		cost = 5
+
+		relative_position_id = TOH_32012
+		x = 0
+		y = 2
+
+		prerequisite = { focus = TOH_32009 focus = TOH_32011 focus = TOH_32012  }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = { TOH_the_sacred_war = yes }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32013"
+		}
+	}
+
+	focus = {
+		id = TOH_32014 #전쟁의 교훈
+		icon = GFX_focus_TOH_32014
+		cost = 5
+
+		relative_position_id = TOH_32013
+		x = 0
+		y = 1
+
+		prerequisite = { focus = TOH_30003 }
+		prerequisite = { focus = TOH_32013 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32014"
+		}
+	}
+
+	focus = {
+		id = TOH_32015 #군대 재건
+		icon = GFX_focus_TOH_32015
+		cost = 5
+
+		relative_position_id = TOH_32014
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = TOH_32014 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32015"
+		}
+	}
+
+	focus = {
+		id = TOH_32016 #형벌부대
+		icon = GFX_focus_TOH_32016
+		cost = 5
+
+		relative_position_id = TOH_32015
+		x = -2
+		y = 1
+		
+		prerequisite = { focus = TOH_32015 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32016"
+		}
+	}
+
+	focus = {
+		id = TOH_32017 #더 이상의 후퇴는 없다
+		icon = GFX_focus_TOH_32017
+		cost = 5
+
+		relative_position_id = TOH_32015
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = TOH_32015 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32017"
+		}
+	}
+
+	focus = {
+		id = TOH_32018 #유연한 군대
+		icon = GFX_focus_TOH_32018
+		cost = 5
+
+		relative_position_id = TOH_32015
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = TOH_32015 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32018"
+		}
+	}
+
+	focus = {
+		id = TOH_32019 #인민의 군대
+		icon = GFX_focus_TOH_32019
+		cost = 5
+
+		relative_position_id = TOH_32015
+		x = 4
+		y = 1
+		
+		prerequisite = { focus = TOH_32015 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32019"
+		}
+	}
+
+	focus = {
+		id = TOH_32020 #정치 장교 유지
+		icon = GFX_focus_TOH_32020
+		cost = 5
+
+		relative_position_id = TOH_32017
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = TOH_32017 }
+		mutually_exclusive = { focus = TOH_32021 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32020"
+		}
+	}
+
+	focus = {
+		id = TOH_32021 #군 정치 고문
+		icon = GFX_focus_TOH_32021
+		cost = 5
+
+		relative_position_id = TOH_32017
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = TOH_32017 }
+		mutually_exclusive = { focus = TOH_32020 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32021"
+		}
+	}
+
+	focus = {
+		id = TOH_32022 #파르티잔 조직
+		icon = GFX_focus_TOH_32022
+		cost = 5
+
+		relative_position_id = TOH_32018
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = TOH_32018 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32022"
+		}
+	}
+
+	focus = {
+		id = TOH_32023 #인민의 군대
+		icon = GFX_focus_TOH_32023
+		cost = 5
+
+		relative_position_id = TOH_32019
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = TOH_32019 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32023"
+		}
+	}
+
+	focus = {
+		id = TOH_32024 #정치 장교 유지
+		icon = GFX_focus_TOH_32024
+		cost = 5
+
+		relative_position_id = TOH_32020
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = TOH_32020 focus = TOH_32021 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32024"
+		}
+	}
+
+	focus = {
+		id = TOH_32025 #군 정치 고문
+		icon = GFX_focus_TOH_32025
+		cost = 5
+
+		relative_position_id = TOH_32021
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = TOH_32020 focus = TOH_32021 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32025"
+		}
+	}
+
+	focus = {
+		id = TOH_32026 #전술 재정비
+		icon = GFX_focus_TOH_32026
+		cost = 5
+
+		relative_position_id = TOH_32022
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = TOH_32020 focus = TOH_32021 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32026"
+		}
+	}
+
+	focus = {
+		id = TOH_32027 #독전대
+		icon = GFX_focus_TOH_32027
+		cost = 5
+
+		relative_position_id = TOH_32023
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = TOH_32023 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32027"
+		}
+	}
+	focus = {
+		id = TOH_32028 #기계화장비인민위원부/기계화 전환 위원회
+		icon = GFX_focus_TOH_32025
+		cost = 5
+
+		relative_position_id = TOH_32025
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = TOH_32024 focus = TOH_32025 focus = TOH_32026 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32028"
+		}
+	}
+
+	focus = {
+		id = TOH_32029 #붉은 육군의 영광/환상향 육군의 영광
+		icon = {
+			trigger = { is_communism = yes }
+			value = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		}
+		icon = { value = GFX_focus_SOV_the_glory_of_the_red_army_alternative }
+		cost = 5
+
+		relative_position_id = TOH_32026
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = TOH_32024 }
+		prerequisite = { focus = TOH_32025 }
+		prerequisite = { focus = TOH_32026 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		available = {
+			any_enemy_country = {
+				TOH_is_major_not_original_TOH = yes
+			}
+			surrender_progress < 0.05
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_32029"
+			add_to_variable = { TOH_special_forces_cap = 0.1 }
+			add_to_variable = { TOH_land_doctrine_cost_factor = -0.1 }
+			custom_effect_tooltip = SOV_the_glory_of_the_red_army_ns_tt
+			army_experience = 75
+			show_unit_leaders_tooltip = SOV_pavel_rybalko
+
+			#New
+			hidden_effect = {
+				set_technology = { masterful_blitz = 1 popup = no }
+			}
+			custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.25
+			}
+		}
+	}
+
+	focus = {
+		id = TOH_33003 #방공군
+		icon = GFX_focus_TOH_33003
+		cost = 5
+
+		relative_position_id = TOH_33001
+		x = -5
+		y = 1
+		
+		prerequisite = { focus = TOH_33001 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33003"
+		}
+	}
+
+	focus = {
+		id = TOH_33004 #중폭격기 개발
+		icon = GFX_focus_TOH_33004
+		cost = 5
+
+		relative_position_id = TOH_33001
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = TOH_33001 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33004"
+		}
+	}
+
+	focus = {
+		id = TOH_33005 #유카리그라드 공군 과학 연구소/상트페테르부르크 공군 과학 연구소
+		icon = GFX_focus_TOH_33005
+		cost = 5
+
+		relative_position_id = TOH_33001
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = TOH_33001 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33005"
+		}
+	}
+
+	focus = {
+		id = TOH_33006 #극지 비행
+		icon = GFX_focus_TOH_33006
+		cost = 5
+
+		relative_position_id = TOH_33002
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = TOH_33001 }
+		prerequisite = { focus = TOH_33002 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33006"
+		}
+	}
+
+	focus = {
+		id = TOH_33007 #비행 클럽
+		icon = GFX_focus_TOH_33007
+		cost = 5
+
+		relative_position_id = TOH_33002
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = TOH_33001 }
+		prerequisite = { focus = TOH_33002 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33007"
+		}
+	}
+
+	focus = {
+		id = TOH_33008 #대공포대 강화
+		icon = GFX_focus_TOH_33008
+		cost = 5
+
+		relative_position_id = TOH_33003
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = TOH_33003 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33008"
+		}
+	}
+
+	focus = {
+		id = TOH_33009 #항공기 생산시설 확장
+		icon = GFX_focus_TOH_33009
+		cost = 5
+
+		relative_position_id = TOH_33005
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = TOH_33004 }
+		prerequisite = { focus = TOH_33005 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33009"
+		}
+	}
+
+	focus = {
+		id = TOH_33010 #조종사 교육 프로그램 강화
+		icon = GFX_focus_TOH_33010
+		cost = 5
+
+		relative_position_id = TOH_33006
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = TOH_33006 }
+		prerequisite = { focus = TOH_33007 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33010"
+		}
+	}
+
+	focus = {
+		id = TOH_33011 #항공기 생산시설 확장
+		icon = GFX_focus_TOH_33011
+		cost = 5
+
+		relative_position_id = TOH_33009
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = TOH_33009 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33011"
+		}
+	}
+
+	focus = {
+		id = TOH_33012 #여성 조종사 양성
+		icon = GFX_focus_TOH_33012
+		cost = 5
+
+		relative_position_id = TOH_33010
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = TOH_33010 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33012"
+		}
+	}
+
+	focus = {
+		id = TOH_33013 #Il-2
+		icon = GFX_focus_TOH_33013
+		cost = 5
+
+		relative_position_id = TOH_33011
+		x = -2
+		y = 1
+		
+		prerequisite = { focus = TOH_33011 }
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_33014 focus = TOH_33015 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33013"
+		}
+	}
+
+	focus = {
+		id = TOH_33014 #Tu-2
+		icon = GFX_focus_TOH_33014
+		cost = 5
+
+		relative_position_id = TOH_33011
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = TOH_33011 }
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_33013 focus = TOH_33015 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33014"
+		}
+	}
+
+	focus = {
+		id = TOH_33015 #TB-7
+		icon = GFX_focus_TOH_33015
+		cost = 5
+
+		relative_position_id = TOH_33011
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = TOH_33011 }
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_33013 focus = TOH_33014 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33015"
+		}
+	}
+
+	focus = {
+		id = TOH_33016 #라스코바 항공대
+		icon = GFX_focus_TOH_33016
+		cost = 5
+
+		relative_position_id = TOH_33012
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = TOH_33010 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33016"
+		}
+	}
+
+	focus = {
+		id = TOH_33017 #공군 재편성
+		icon = GFX_focus_TOH_33017
+		cost = 5
+
+		relative_position_id = TOH_33014
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = TOH_33013 focus = TOH_33014 focus = TOH_33015 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33017"
+		}
+	}
+
+	focus = {
+		id = TOH_33018 #대구경 대공포
+		icon = GFX_focus_TOH_33018
+		cost = 5
+
+		relative_position_id = TOH_33008
+		x = -1
+		y = 4
+		
+		prerequisite = { focus = TOH_33008 }
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_33019 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33018"
+		}
+	}
+
+	focus = {
+		id = TOH_33019 #전투기 요격
+		icon = GFX_focus_TOH_33019
+		cost = 5
+
+		relative_position_id = TOH_33008
+		x = 1
+		y = 4
+		
+		prerequisite = { focus = TOH_33008 }
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_33018 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33019"
+		}
+	}
+
+	focus = {
+		id = TOH_33020 #지상 지원
+		icon = GFX_focus_TOH_33020
+		cost = 5
+
+		relative_position_id = TOH_33017
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = TOH_33017 }
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_33021 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33020"
+		}
+	}
+
+	focus = {
+		id = TOH_33021 #장거리 폭격
+		icon = GFX_focus_TOH_33021
+		cost = 5
+
+		relative_position_id = TOH_33017
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = TOH_33017 }
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_33020 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33021"
+		}
+	}
+
+	focus = {
+		id = TOH_33022 #즈베노 프로젝트
+		icon = GFX_focus_TOH_33022
+		cost = 5
+	
+		relative_position_id = TOH_33018
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = TOH_33018 focus = TOH_33019 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33022"
+		}
+	}
+
+	focus = {
+		id = TOH_33023 #항공기 역설계
+		icon = GFX_focus_TOH_33023
+		cost = 5
+
+		relative_position_id = TOH_33019
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = TOH_33020 focus = TOH_33021 }
+		prerequisite = { focus = TOH_32014 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33023"
+		}
+	}
+
+	focus = {
+		id = TOH_33024 #지상 지원
+		icon = GFX_focus_TOH_33024
+		cost = 5
+
+		relative_position_id = TOH_33020
+		x = 0
+		y = 1
+	
+		prerequisite = { focus = TOH_33020 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33024"
+		}
+	}
+
+	focus = {
+		id = TOH_33025 #장거리 폭격
+		icon = GFX_focus_TOH_33025
+		cost = 5
+	
+		relative_position_id = TOH_33021
+		x = 0
+		y = 1
+	
+		prerequisite = { focus = TOH_33021 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33025"
+		}
+	}
+
+	focus = {
+		id = TOH_33026 #방공구역 재편
+		icon = GFX_focus_TOH_33026
+		cost = 5
+
+		relative_position_id = TOH_33019
+		x = 0
+		y = 2
+	
+		prerequisite = { focus = TOH_33018 focus = TOH_33019 }
+		prerequisite = { focus = TOH_32014 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33026"
+		}
+	}
+
+	focus = {
+		id = TOH_33027 #제트 연구소
+		icon = GFX_focus_TOH_33027
+		cost = 5
+
+		relative_position_id = TOH_33023
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = TOH_33023 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33027"
+		}
+	}
+
+	focus = {
+		id = TOH_33028 #현대 공중전
+		icon = GFX_focus_TOH_33028
+		cost = 5
+	
+		relative_position_id = TOH_33024
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = TOH_33024 focus = TOH_33025 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33025"
+		}
+	}
+
+	focus = {
+		id = TOH_33029 #방공구역 재편
+		icon = GFX_focus_TOH_33029
+		cost = 5
+
+		relative_position_id = TOH_33026
+		x = 0
+		y = 1
+	
+		prerequisite = { focus = TOH_33026 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33029"
+		}
+	}
+
+	focus = {
+		id = TOH_33030 #붉은 공군의 영광/환상향 공군의 영광
+		icon = GFX_focus_TOH_33030
+		cost = 5
+	
+		relative_position_id = TOH_33028
+		x = 0
+		y = 1
+	
+		prerequisite = { focus = TOH_33028 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_33030"
+		}
+	}
+
+	focus = {
+		id = TOH_34002 #발트 함대
+		icon = GFX_focus_TOH_34002
+		cost = 5
+	
+		relative_position_id = TOH_34001
+		x = -3
+		y = 1
+	
+		prerequisite = { focus = TOH_34001 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34002"
+		}
+	}
+
+	focus = {
+		id = TOH_34003 #북극 함대
+		icon = GFX_focus_TOH_34003
+		cost = 5
+	
+		relative_position_id = TOH_34001
+		x = -1
+		y = 1
+	
+		prerequisite = { focus = TOH_34001 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34003"
+		}
+	}
+
+	focus = {
+		id = TOH_34004 #흑해 함대
+		icon = GFX_focus_TOH_34004
+		cost = 5
+	
+		relative_position_id = TOH_34001
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = TOH_34001 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34004"
+		}
+	}
+
+	focus = {
+		id = TOH_34005 #태평양 함대
+		icon = GFX_focus_TOH_34005
+		cost = 5
+	
+		relative_position_id = TOH_34001
+		x = 3
+		y = 1
+	
+		prerequisite = { focus = TOH_34001 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34005"
+		}
+	}
+
+	focus = {
+		id = TOH_34006 #쿠즈네초프 건함계획
+		icon = GFX_focus_TOH_34006
+		cost = 5
+	
+		relative_position_id = TOH_34002
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = TOH_34002 focus = TOH_34003 focus = TOH_34004 focus = TOH_34005 }
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_34007 focus = TOH_34008 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34006"
+		}
+	}
+
+	focus = {
+		id = TOH_34007 #쿠즈네초프 수정 건함계획
+		icon = GFX_focus_TOH_34007
+		cost = 5
+	
+		relative_position_id = TOH_34003
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = TOH_34002 focus = TOH_34003 focus = TOH_34004 focus = TOH_34005 }
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_34006 focus = TOH_34008 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34007"
+		}
+	}
+
+	focus = {
+		id = TOH_34008 #잠수함 계획
+		icon = GFX_focus_TOH_34008
+		cost = 5
+	
+		relative_position_id = TOH_34004
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = TOH_34002 focus = TOH_34003 focus = TOH_34004 focus = TOH_34005 }
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_34006 focus = TOH_34007 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34008"
+		}
+	}
+
+	focus = {
+		id = TOH_34010 #조선소 확장
+		icon = GFX_focus_TOH_34010
+		cost = 5
+	
+		relative_position_id = TOH_34002
+		x = -3
+		y = 1
+	
+		prerequisite = { focus = TOH_34002 focus = TOH_34003 focus = TOH_34004 focus = TOH_34005 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34010"
+		}
+	}
+
+	focus = {
+		id = TOH_34011 #해군 기동 훈련
+		icon = GFX_focus_TOH_34011
+		cost = 5
+	
+		relative_position_id = TOH_34006
+		x = -1
+		y = 1
+	
+		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34011"
+		}
+	}
+
+	focus = {
+		id = TOH_34009 #해군 보병
+		icon = GFX_focus_TOH_34009
+		cost = 5
+	
+		relative_position_id = TOH_34011
+		x = 0
+		y = 1
+	
+		prerequisite = { focus = TOH_34011 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34009"
+		}
+	}
+
+	focus = {
+		id = TOH_34012 #해군 항공대 확장
+		icon = GFX_focus_TOH_34012
+		cost = 5
+	
+		relative_position_id = TOH_34006
+		x = -7
+		y = 1
+	
+		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
+		prerequisite = { focus = TOH_33010 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34012"
+		}
+	}
+
+	focus = {
+		id = TOH_34013 #기뢰전
+		icon = GFX_focus_TOH_34013
+		cost = 5
+	
+		relative_position_id = TOH_34006
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34013"
+		}
+	}
+
+	focus = {
+		id = TOH_34014 #흑해 상륙훈련
+		icon = GFX_focus_TOH_34014
+		cost = 5
+
+		relative_position_id = TOH_34009
+		x = -1
+		y = 1
+	
+		prerequisite = { focus = TOH_34009 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34014"
+		}
+	}
+
+	focus = {
+		id = TOH_34015 #항구 방어 준비
+		icon = GFX_focus_TOH_34015
+		cost = 5
+	
+		relative_position_id = TOH_34009
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = TOH_34009 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34015"
+		}
+	}
+
+	focus = {
+		id = TOH_34016 #태평양 상륙훈련
+		icon = GFX_focus_TOH_34016
+		cost = 5
+
+		relative_position_id = TOH_34014
+		x = 0
+		y = 1
+	
+		prerequisite = { focus = TOH_34014 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34016"
+		}
+	}
+
+	focus = {
+		id = TOH_34017 #해안요새 강화
+		icon = GFX_focus_TOH_34017
+		cost = 5
+	
+		relative_position_id = TOH_34015
+		x = 0
+		y = 1
+	
+		prerequisite = { focus = TOH_34015 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34017"
+		}
+	}
+
+	focus = {
+		id = TOH_34018 #해외 라이센스 수입
+		icon = GFX_focus_TOH_34018
+		cost = 5
+
+		relative_position_id = TOH_34010
+		x = -1
+		y = 1
+	
+		prerequisite = { focus = TOH_34010 }
+		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_34019 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34018"
+		}
+	}
+
+	focus = {
+		id = TOH_34019 #독자 설계 군함
+		icon = GFX_focus_TOH_34019
+		cost = 5
+	
+		relative_position_id = TOH_34010
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = TOH_34010 }
+		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
+		mutually_exclusive = { focus = TOH_34018 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34019"
+		}
+	}
+
+	focus = {
+		id = TOH_34020 #21형 전함
+		icon = GFX_focus_TOH_34020
+		cost = 5
+
+		relative_position_id = TOH_34007
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = TOH_34010 }
+		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_34021 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34020"
+		}
+	}
+
+	focus = {
+		id = TOH_34021 #23형 전함
+		icon = GFX_focus_TOH_34021
+		cost = 5
+	
+		relative_position_id = TOH_34007
+		x = 3
+		y = 1
+	
+		prerequisite = { focus = TOH_34010 }
+		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
+		mutually_exclusive = { focus = TOH_34020 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34021"
+		}
+	}
+
+	focus = {
+		id = TOH_34022 #26형 경순양함
+		icon = GFX_focus_TOH_34022
+		cost = 5
+
+		relative_position_id = TOH_34008
+		x = 3
+		y = 1
+	
+		prerequisite = { focus = TOH_34010 }
+		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34022"
+		}
+	}
+
+	focus = {
+		id = TOH_34023 #7형 구축함
+		icon = GFX_focus_TOH_34020
+		cost = 5
+
+		relative_position_id = TOH_34008
+		x = 5
+		y = 1
+	
+		prerequisite = { focus = TOH_34010 }
+		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = { focus = TOH_34024 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34023"
+		}
+	}
+
+	focus = {
+		id = TOH_34024 #20형 구축함
+		icon = GFX_focus_TOH_34021
+		cost = 5
+	
+		relative_position_id = TOH_34008
+		x = 7
+		y = 1
+	
+		prerequisite = { focus = TOH_34010 }
+		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
+		mutually_exclusive = { focus = TOH_34023 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34024"
+		}
+	}
+
+	focus = {
+		id = TOH_34025 #S급 잠수함
+		icon = GFX_focus_TOH_34025
+		cost = 5
+
+		relative_position_id = TOH_34008
+		x = 9
+		y = 1
+	
+		prerequisite = { focus = TOH_34010 }
+		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34025"
+		}
+	}
+
+	focus = {
+		id = TOH_34026 #해군 예산 배정
+		icon = GFX_focus_TOH_34026
+		cost = 5
+
+		relative_position_id = TOH_34018
+		x = 1
+		y = 1
+
+		prerequisite = { focus = TOH_34018 focus = TOH_34019 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34026"
+		}
+	}
+
+	focus = {
+		id = TOH_34027 #71형 항공모함
+		icon = GFX_focus_TOH_34027
+		cost = 5
+
+		relative_position_id = TOH_34020
+		x = -1
+		y = 1
+
+		prerequisite = { focus = TOH_34020 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34027"
+		}
+	}
+
+	focus = {
+		id = TOH_34028 #69형 순양전함
+		icon = GFX_focus_TOH_34028
+		cost = 5
+
+		relative_position_id = TOH_34021
+		x = -1
+		y = 1
+
+		prerequisite = { focus = TOH_34021 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34028"
+		}
+	}
+
+	focus = {
+		id = TOH_34029 #X형 중순양함
+		icon = GFX_focus_TOH_34029
+		cost = 5
+
+		relative_position_id = TOH_34022
+		x = -1
+		y = 1
+
+		prerequisite = { focus = TOH_34022 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34029"
+		}
+	}
+
+	focus = {
+		id = TOH_34030 #65형 경순양함
+		icon = GFX_focus_TOH_34030
+		cost = 5
+
+		relative_position_id = TOH_34022
+		x = 1
+		y = 1
+
+		prerequisite = { focus = TOH_34022 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34030"
+		}
+	}
+
+	focus = {
+		id = TOH_34031 #48형 구축함
+		icon = GFX_focus_TOH_34031
+		cost = 5
+
+		relative_position_id = TOH_34023
+		x = 1
+		y = 1
+
+		prerequisite = { focus = TOH_34023 focus = TOH_34024 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34031"
+		}
+	}
+
+	focus = {
+		id = TOH_34032 #K급 잠수함
+		icon = GFX_focus_TOH_34032
+		cost = 5
+
+		relative_position_id = TOH_34025
+		x = 0
+		y = 1
+
+		prerequisite = { focus = TOH_34025 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34032"
+		}
+	}
+
+	focus = {
+		id = TOH_34033 #해군 전투 평가
+		icon = GFX_focus_TOH_34033
+		cost = 5
+
+		relative_position_id = TOH_34026
+		x = 0
+		y = 1
+
+		prerequisite = { focus = TOH_34026 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34033"
+		}
+	}
+
+	focus = {
+		id = TOH_34034 #새로운 10개년 건조계획
+		icon = GFX_focus_TOH_34034
+		cost = 5
+
+		relative_position_id = TOH_34033
+		x = 0
+		y = 1
+
+		prerequisite = { focus = TOH_34033 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34034"
+		}
+	}
+
+	focus = {
+		id = TOH_34035 #붉은 해군의 영광/환상향 해군의 영광
+		icon = GFX_focus_TOH_34035
+		cost = 5
+
+		relative_position_id = TOH_34034
+		x = -1
+		y = 1
+
+		prerequisite = { focus = TOH_34034 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34035"
+		}
+	}
+
+	focus = {
+		id = TOH_34036 #대양해군 재건
+		icon = GFX_focus_TOH_34036
+		cost = 5
+
+		relative_position_id = TOH_34034
+		x = 1
+		y = 1
+
+		prerequisite = { focus = TOH_34034 }
+		ai_will_do = { factor = 30 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_34036"
+		}
+	}
+
+	#정치 중점 - 레이무/유카리 루트
+	focus = {
+		id = TOH_41001 #유카리 복귀
+		icon = GFX_focus_TOH_41001
+		cost = 5
+
+		relative_position_id = TOH_00001
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_00001 }
+		mutually_exclusive = { focus = TOH_42001 focus = TOH_43001 focus = TOH_44001 focus = TOH_45001 focus = TOH_46001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_41001"
+		}
+	}
+
+	focus = {
+		id = TOH_42001 #하쿠레이 체제
+		icon = GFX_focus_TOH_42001
+		cost = 5
+
+		relative_position_id = TOH_00001
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_00001 }
+		mutually_exclusive = { focus = TOH_41001 focus = TOH_43001 focus = TOH_44001 focus = TOH_45001 focus = TOH_46001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_41001"
+		}
+	}
+
+	focus = {
+		id = TOH_43001 #키리사메 체제
+		icon = GFX_focus_TOH_43001
+		cost = 5
+
+		relative_position_id = TOH_00001
+		x = 13
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_00001 }
+		mutually_exclusive = { focus = TOH_41001 focus = TOH_42001 focus = TOH_44001 focus = TOH_45001 focus = TOH_46001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_41001"
+		}
+	}
+
+	focus = {
+		id = TOH_44001 #코치야 체제
+		icon = GFX_focus_TOH_44001
+		cost = 5
+
+		relative_position_id = TOH_00001
+		x = 26
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_00001 }
+		mutually_exclusive = { focus = TOH_41001 focus = TOH_42001 focus = TOH_43001 focus = TOH_45001 focus = TOH_46001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44001"
+		}
+	}
+
+	focus = {
+		id = TOH_45001 #신묘마루 사변
+		icon = GFX_focus_TOH_45001
+		cost = 5
+
+		relative_position_id = TOH_00001
+		x = 35
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_00001 }
+		available = { always = no }
+		mutually_exclusive = { focus = TOH_41001 focus = TOH_42001 focus = TOH_43001 focus = TOH_44001 focus = TOH_46001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_45001"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+
+	focus = {
+		id = TOH_46001 #쓰러지되 쓰러지지 않았다
+		icon = GFX_focus_TOH_46001
+		cost = 5
+
+		relative_position_id = TOH_45001
+		x = 2
+		y = 0
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_00001 }
+		
+		mutually_exclusive = { focus = TOH_41001 focus = TOH_42001 focus = TOH_43001 focus = TOH_44001 focus = TOH_45001 }
+		available = { always = no }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_46001"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+
+	focus = {
+		id = TOH_46002 #반소비에트파 결집
+		icon = GFX_focus_TOH_46002
+		cost = 5
+
+		relative_position_id = TOH_46001
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_46001 }
+		available = { always = no }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_46002"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+
+	#정치 중점 - 레이무/유카리 루트
+	focus = {
+		id = TOH_41002 #유카리-레닌 체제
+		icon = GFX_focus_TOH_41002
+		cost = 5
+
+		relative_position_id = TOH_41001
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_41001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_41002"
+		}
+	}
+	
+	focus = {
+		id = TOH_40002 #환상향 소비에트 헌법
+		icon = GFX_focus_TOH_41002
+		cost = 5
+
+		relative_position_id = TOH_41001
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_41001 focus = TOH_42001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40002"
+		}
+	}
+	
+	focus = {
+		id = TOH_42002 #일국사회주의 유지
+		icon = GFX_focus_TOH_42002
+		cost = 5
+
+		relative_position_id = TOH_42001
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_42001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_42002"
+		}
+	}
+	
+	focus = {
+		id = TOH_41003 #권력 분산 체제
+		icon = GFX_focus_TOH_41003
+		cost = 5
+
+		relative_position_id = TOH_41002
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40002 }
+		prerequisite = { focus = TOH_41002 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_41003"
+		}
+	}
+	
+	focus = {
+		id = TOH_42003 #레이무 숭배
+		icon = GFX_focus_TOH_42003
+		cost = 5
+
+		relative_position_id = TOH_42002
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40002 }
+		prerequisite = { focus = TOH_42002 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_42003"
+		}
+	}
+	
+	focus = {
+		id = TOH_41004 #민주적 체제
+		icon = GFX_focus_TOH_41004
+		cost = 5
+
+		relative_position_id = TOH_41003
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_41003 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_41004"
+		}
+	}
+	
+	focus = {
+		id = TOH_40003 #모리야 그룹
+		icon = GFX_focus_TOH_40003
+		cost = 5
+
+		relative_position_id = TOH_41003
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_41003 focus = TOH_42003 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40003"
+		}
+	}
+	
+	focus = {
+		id = TOH_42004 #키리사메 그룹
+		icon = GFX_focus_TOH_42004
+		cost = 5
+
+		relative_position_id = TOH_42003
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_42003 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_42004"
+		}
+	}
+	
+	focus = {
+		id = TOH_41005 #사회주의적 애국주의
+		icon = GFX_focus_TOH_41005
+		cost = 5
+
+		relative_position_id = TOH_41004
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_41004 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_41005"
+		}
+	}
+	
+	focus = {
+		id = TOH_40004 #군부 정리
+		icon = GFX_focus_TOH_40004
+		cost = 5
+
+		relative_position_id = TOH_40003
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40003 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40004"
+		}
+	}
+	
+	focus = {
+		id = TOH_42005 #스쿠나 그룹
+		icon = GFX_focus_TOH_42005
+		cost = 5
+
+		relative_position_id = TOH_42004
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_42004 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_42005"
+		}
+	}
+	
+	focus = {
+		id = TOH_41006 #단계적 집산화
+		icon = GFX_focus_TOH_41005
+		cost = 5
+
+		relative_position_id = TOH_41005
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_41005 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_41006"
+		}
+	}
+	
+	focus = {
+		id = TOH_40005 #프톨레타리아 독재
+		icon = GFX_focus_TOH_40004
+		cost = 5
+
+		relative_position_id = TOH_40004
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40004 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40005"
+		}
+	}
+	
+	focus = {
+		id = TOH_42006 #집산화 정책
+		icon = GFX_focus_TOH_42006
+		cost = 5
+
+		relative_position_id = TOH_42005
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_42005 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_42006"
+		}
+	}
+	
+	focus = {
+		id = TOH_40006 #1인 숭배의 완성
+		icon = GFX_focus_TOH_40006
+		cost = 5
+
+		relative_position_id = TOH_40005
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40005 }
+		prerequisite = { focus = TOH_41006 focus = TOH_42006 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40006"
+		}
+	}
+	
+	focus = {
+		id = TOH_40007 #전위적 혁명의 계승
+		icon = GFX_focus_TOH_40007
+		cost = 5
+
+		relative_position_id = TOH_40006
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		available = { has_completed_focus = TOH_41001 }
+		prerequisite = { focus = TOH_40006 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40007"
+		}
+	}
+	
+	focus = {
+		id = TOH_40008 #계승자
+		icon = GFX_focus_TOH_40006
+		cost = 5
+
+		relative_position_id = TOH_40006
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40006 }
+		mutually_exclusive = { focus = TOH_40009 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40008"
+		}
+	}
+	
+	focus = {
+		id = TOH_40009 #충복
+		icon = GFX_focus_TOH_40006
+		cost = 5
+
+		relative_position_id = TOH_40006
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40006 }
+		mutually_exclusive = { focus = TOH_40008 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40009"
+		}
+	}
+	
+	focus = {
+		id = TOH_40010 #정치국 장악
+		icon = GFX_focus_TOH_40010
+		cost = 5
+
+		relative_position_id = TOH_40006
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		available = { has_completed_focus = TOH_42001 }
+		prerequisite = { focus = TOH_40006 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40010"
+		}
+	}
+	
+	focus = {
+		id = TOH_40011 #혁명가
+		icon = GFX_focus_TOH_40011
+		cost = 5
+
+		relative_position_id = TOH_40008
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40008 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40011"
+		}
+	}
+	
+	focus = {
+		id = TOH_40012 #새로운 영도자
+		icon = GFX_focus_TOH_40012
+		cost = 5
+
+		relative_position_id = TOH_40008
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40008 focus = TOH_40009 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40012"
+		}
+	}
+	
+	focus = {
+		id = TOH_40013 #과도한 영웅 숭배 금지
+		icon = GFX_focus_TOH_40013
+		cost = 5
+
+		relative_position_id = TOH_40009
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40009 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40013"
+		}
+	}
+	
+	focus = {
+		id = TOH_40014 #대원수
+		icon = GFX_focus_TOH_40014
+		cost = 5
+
+		relative_position_id = TOH_40008
+		x = 0
+		y = 2
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40008 }
+		prerequisite = { focus = TOH_40012 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40014"
+		}
+	}
+	
+	focus = {
+		id = TOH_40015 #공산주의의 설계자
+		icon = GFX_focus_TOH_40015
+		cost = 5
+
+		relative_position_id = TOH_40009
+		x = 0
+		y = 2
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40009 }
+		prerequisite = { focus = TOH_40012 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40015"
+		}
+	}
+	
+	focus = {
+		id = TOH_40016 #인민의 어머니
+		icon = GFX_focus_TOH_40016
+		cost = 5
+
+		relative_position_id = TOH_40014
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40014 focus = TOH_40015 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40016"
+		}
+	}
+	
+	focus = {
+		id = TOH_40101 #내부 문제
+		icon = GFX_focus_TOH_40101
+		cost = 5
+
+		relative_position_id = TOH_42001
+		x = 6
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_41001 focus = TOH_42001 focus = TOH_43001 focus = TOH_44001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40101"
+		}
+	}
+	
+	focus = {
+		id = TOH_40102 #내무인민위원부
+		icon = GFX_focus_TOH_40102
+		cost = 5
+
+		relative_position_id = TOH_40101
+		x = -2
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40101 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40101"
+		}
+	}
+	
+	focus = {
+		id = TOH_40103 #선전선동국
+		icon = GFX_focus_TOH_40103
+		cost = 5
+
+		relative_position_id = TOH_40101
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40101 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40103"
+		}
+	}
+	
+	focus = {
+		id = TOH_40104 #신여성
+		icon = GFX_focus_TOH_4014
+		cost = 5
+
+		relative_position_id = TOH_40101
+		x = 2
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40101 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40104"
+		}
+	}
+	
+	focus = {
+		id = TOH_40105 #환상향 내무위원회 사단
+		icon = GFX_focus_TOH_40105
+		cost = 5
+
+		relative_position_id = TOH_40102
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40102 }
+		available = { has_completed_focus = TOH_42001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40102"
+		}
+	}
+	
+	focus = {
+		id = TOH_40106 #내부 문제
+		icon = GFX_focus_TOH_40106
+		cost = 5
+
+		relative_position_id = TOH_40103
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40103 }
+		mutually_exclusive = { focus = TOH_40107 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40106"
+		}
+	}
+	
+	focus = {
+		id = TOH_40107 #영웅주의 선전
+		icon = GFX_focus_TOH_40107
+		cost = 5
+
+		relative_position_id = TOH_40103
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40103 }
+		mutually_exclusive = { focus = TOH_40106 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40107"
+		}
+	}
+	
+	focus = {
+		id = TOH_40108 #집산주의 선전
+		icon = GFX_focus_TOH_40108
+		cost = 5
+
+		relative_position_id = TOH_40104
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40104 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40108"
+		}
+	}
+	
+	focus = {
+		id = TOH_40109 #스타하노프 운동
+		icon = GFX_focus_TOH_40109
+		cost = 5
+
+		relative_position_id = TOH_40106
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40106 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40109"
+		}
+	}
+	
+	focus = {
+		id = TOH_40110 #사회주의 경쟁
+		icon = GFX_focus_TOH_40110
+		cost = 5
+
+		relative_position_id = TOH_40107
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40107 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40110"
+		}
+	}
+	
+	focus = {
+		id = TOH_40111 #전쟁 영웅
+		icon = GFX_focus_TOH_40111
+		cost = 5
+
+		relative_position_id = TOH_40109
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40109 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40111"
+		}
+	}
+	
+	focus = {
+		id = TOH_40112 #사회주의 리얼리즘
+		icon = GFX_focus_TOH_40112
+		cost = 5
+
+		relative_position_id = TOH_40110
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40110 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40112"
+		}
+	}
+	
+	focus = {
+		id = TOH_40113 #과학의 전파자
+		icon = GFX_focus_TOH_40113
+		cost = 5
+
+		relative_position_id = TOH_40111
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40111 focus = TOH_40112 }
+		mutually_exclusive = { focus = TOH_40114 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40113"
+		}
+	}
+	
+	focus = {
+		id = TOH_40114 #전 환상향의 종교 지도자/무녀
+		icon = GFX_focus_TOH_40114
+		cost = 5
+
+		relative_position_id = TOH_40112
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40111 focus = TOH_40112 }
+		mutually_exclusive = { focus = TOH_40113 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40114"
+		}
+	}
+	
+	focus = {
+		id = TOH_43002 #키리사메 인터내셔널
+		icon = GFX_focus_TOH_43002
+		cost = 5
+
+		relative_position_id = TOH_43001
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43002"
+		}
+	}
+	
+	focus = {
+		id = TOH_43003 #키리사메주의자들의 귀환
+		icon = GFX_focus_TOH_43003
+		cost = 5
+
+		relative_position_id = TOH_43001
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43003"
+		}
+	}
+	
+	focus = {
+		id = TOH_43004 #망명위원회
+		icon = GFX_focus_TOH_43004
+		cost = 5
+
+		relative_position_id = TOH_43002
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43002 }
+		prerequisite = { focus = TOH_43003 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43004"
+		}
+	}
+	
+	focus = {
+		id = TOH_43005 #키리사메주의자 석방
+		icon = GFX_focus_TOH_43005
+		cost = 5
+
+		relative_position_id = TOH_43002
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43002 }
+		prerequisite = { focus = TOH_43003 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43005"
+		}
+	}
+	
+	focus = {
+		id = TOH_43006 #투하쳅스키와 접촉
+		icon = GFX_focus_TOH_43004
+		cost = 5
+
+		relative_position_id = TOH_43005
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43005 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43004"
+		}
+	}
+	
+	focus = {
+		id = TOH_43007 #프리마코프와 접촉
+		icon = GFX_focus_TOH_43005
+		cost = 5
+
+		relative_position_id = TOH_43005
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43005 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43005"
+		}
+	}
+	
+	focus = {
+		id = TOH_43008 #코치야 그룹 제거
+		icon = GFX_focus_TOH_43005
+		cost = 5
+
+		relative_position_id = TOH_43005
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43005 }
+		mutually_exclusive = { focus = TOH_40204 focus = TOH_44006 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43005"
+		}
+	}
+	
+	focus = {
+		id = TOH_43009 #첫번쨰 유성
+		icon = GFX_focus_TOH_43009
+		cost = 5
+
+		relative_position_id = TOH_43006
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43006 focus = TOH_43007 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43009"
+		}
+	}
+	
+	focus = {
+		id = TOH_43010 #새로운 전위대
+		icon = GFX_focus_TOH_43010
+		cost = 5
+
+		relative_position_id = TOH_43009
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43009 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43010"
+		}
+	}
+	
+	focus = {
+		id = TOH_43011 #노동자 정부 만세
+		icon = GFX_focus_TOH_43011
+		cost = 5
+
+		relative_position_id = TOH_43009
+		x = 2
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43009 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43011"
+		}
+	}
+	
+	focus = {
+		id = TOH_43012 #연속혁명론
+		icon = GFX_focus_TOH_43012
+		cost = 5
+
+		relative_position_id = TOH_43010
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43004 }
+		prerequisite = { focus = TOH_43009 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43012"
+		}
+	}
+	
+	focus = {
+		id = TOH_43013 #혁명 정신 재점화
+		icon = GFX_focus_TOH_43013
+		cost = 5
+
+		relative_position_id = TOH_43011
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43011 }
+		mutuallY_exclusive = { focus = TOH_43014 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43013"
+		}
+	}
+	
+	focus = {
+		id = TOH_43014 #붉은 군대의 건설자
+		icon = GFX_focus_TOH_43014
+		cost = 5
+
+		relative_position_id = TOH_43011
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43011 }
+		mutuallY_exclusive = { focus = TOH_43013 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43014"
+		}
+	}
+	
+	focus = {
+		id = TOH_43015 #영구혁명
+		icon = GFX_focus_TOH_43015
+		cost = 5
+
+		relative_position_id = TOH_43012
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43012 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43015"
+		}
+	}
+	
+	focus = {
+		id = TOH_43016 #군 비정치화
+		icon = GFX_focus_TOH_43013
+		cost = 5
+
+		relative_position_id = TOH_43013
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43013 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43013"
+		}
+	}
+	
+	focus = {
+		id = TOH_43017 #키리사메 중공업
+		icon = GFX_focus_TOH_43017
+		cost = 5
+
+		relative_position_id = TOH_43014
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43013 focus = TOH_43014 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43017"
+		}
+	}
+	
+	focus = {
+		id = TOH_43018 #파벌 정리
+		icon = GFX_focus_TOH_43018
+		cost = 5
+
+		relative_position_id = TOH_43014
+		x = 2
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43014 }
+		mutually_exclusive = { focus = TOH_40207 focus = TOH_44016 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43018"
+		}
+	}
+	
+	focus = {
+		id = TOH_43019 #반자본주의
+		icon = GFX_focus_TOH_43013
+		cost = 5
+
+		relative_position_id = TOH_43015
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43015 }
+		mutuallY_exclusive = { focus = TOH_43020 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43019"
+		}
+	}
+	
+	focus = {
+		id = TOH_43020 #반파시즘
+		icon = GFX_focus_TOH_43020
+		cost = 5
+
+		relative_position_id = TOH_43015
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43015 }
+		mutuallY_exclusive = { focus = TOH_43019 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43020"
+		}
+	}
+	
+	focus = {
+		id = TOH_43021 #탈중앙화 체제
+		icon = GFX_focus_TOH_43021
+		cost = 5
+
+		relative_position_id = TOH_43017
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43013 focus = TOH_43014 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43021"
+		}
+	}
+	
+	focus = {
+		id = TOH_43022 #두번째 유성
+		icon = GFX_focus_TOH_43022
+		cost = 5
+
+		relative_position_id = TOH_43019
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43019 focus = TOH_43020 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43022"
+		}
+	}
+	
+	focus = {
+		id = TOH_43023 #궁극의 마스터 스파크
+		icon = GFX_focus_TOH_43023
+		cost = 5
+
+		relative_position_id = TOH_43022
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43022 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43023"
+		}
+	}
+	
+	focus = {
+		id = TOH_43024 #영구혁명의 지도자
+		icon = GFX_focus_TOH_43023
+		cost = 5
+
+		relative_position_id = TOH_43022
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43022 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43024"
+		}
+	}
+	
+	focus = {
+		id = TOH_43025 #혁명의 승리
+		icon = GFX_focus_TOH_43023
+		cost = 5
+
+		relative_position_id = TOH_43023
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43022 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43025"
+		}
+	}
+	
+	focus = {
+		id = TOH_43026 #세번째 유성
+		icon = GFX_focus_TOH_43023
+		cost = 5
+
+		relative_position_id = TOH_43023
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43023 }
+		prerequisite = { focus = TOH_43024 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43026"
+		}
+	}
+	
+	focus = {
+		id = TOH_43027 #소비에트 노동자
+		icon = GFX_focus_TOH_43023
+		cost = 5
+
+		relative_position_id = TOH_43024
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43022 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43024"
+		}
+	}
+	
+	focus = {
+		id = TOH_43028 #지역 개발
+		icon = GFX_focus_generic_soviet_politics
+		cost = 5
+
+		relative_position_id = TOH_43021
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43021 }
+		mutually_exclusive = { focus = TOH_40301 focus = TOH_44025 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_43028"
+			add_political_power = 150 
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 202 # Kiev
+						state = 229 # Azerbaijan
+						state = 230 # Armenia
+						state = 231 # Georgia
+						state = 405 # tashkent
+						state = 408 # Vladivostok
+						state = 584 # Askabad
+						state = 586 # Alma Ata
+						state = 654 # Oyrot
+						state = 732 # Pamir
+						state = 743 # Dushanbe
+						state = 206 # minsk
+					}
+					free_building_slots = {
+					    building = industrial_complex 
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = TOH_43029 #소비에트 공화국 국제연방
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
+		cost = 5
+
+		relative_position_id = TOH_43028
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43028 }
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_to_variable = { SOV_factionalism_overlord_trade_cost_factor = -0.10 } 
+			add_to_variable = { SOV_factionalism_popularity_stability_cost_factor = 0.10 } 
+			custom_effect_tooltip = SOV_international_union_of_soviet_republics_tt 
+			every_country = {
+				limit = { is_subject_of = ROOT }
+				add_ideas = { SOV_puppet_international_of_soviet_republics_idea }
+				custom_effect_tooltip = SOV_international_union_of_soviet_republics_puppet_tt
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = { is_capital = yes }
+						add_building_construction = {
+						    type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+						add_building_construction = {
+						    type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					add_ideas = { 
+						SOV_system_decentralization_idea
+						SOV_the_local_soviets_idea
+					}
+					
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = TOH_44002 #경제정책 재검토
+		icon = GFX_focus_TOH_44002
+		cost = 5
+
+		relative_position_id = TOH_44001
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44002"
+		}
+	}
+	
+	focus = {
+		id = TOH_44003 #농민 봉기 조직
+		icon = GFX_focus_TOH_44003
+		cost = 5
+
+		relative_position_id = TOH_44002
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44002 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44003"
+		}
+	}
+	
+	focus = {
+		id = TOH_44004 #레이무 반대파 결집
+		icon = GFX_focus_TOH_44004
+		cost = 5
+
+		relative_position_id = TOH_44002
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44002 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44004"
+		}
+	}
+	
+	focus = {
+		id = TOH_44005 #집산화 폐지
+		icon = GFX_focus_TOH_44005
+		cost = 5
+
+		relative_position_id = TOH_44002
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44002 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44005"
+		}
+	}
+	
+	focus = {
+		id = TOH_44006 #키리사메 그룹 제거
+		icon = GFX_focus_TOH_44006
+		cost = 5
+
+		relative_position_id = TOH_44003
+		x = -3
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44003 }
+		mutually_exclusive = { focus = TOH_40204 focus = TOH_43008 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44006"
+		}
+	}
+	
+	focus = {
+		id = TOH_44007 #반 하쿠레이 운동
+		icon = GFX_focus_TOH_44007
+		cost = 5
+
+		relative_position_id = TOH_44003
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44003 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44007"
+		}
+	}
+	
+	focus = {
+		id = TOH_44008 #지하조직 결성
+		icon = GFX_focus_TOH_44008
+		cost = 5
+
+		relative_position_id = TOH_44003
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44003 }
+		prerequisite = { focus = TOH_44004 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44008"
+		}
+	}
+	
+	focus = {
+		id = TOH_44009 #타협적 외교
+		icon = GFX_focus_TOH_44005
+		cost = 5
+
+		relative_position_id = TOH_44005
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44005 }
+		mutually_exclusive = { focus = TOH_44010 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44009"
+		}
+	}
+	
+	focus = {
+		id = TOH_44010 #사회주의의 본산
+		icon = GFX_focus_TOH_44010
+		cost = 5
+
+		relative_position_id = TOH_44005
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44005 }
+		mutually_exclusive = { focus = TOH_44009 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44010"
+		}
+	}
+	
+	focus = {
+		id = TOH_44011 #쿠데타 계획
+		icon = GFX_focus_TOH_44011
+		cost = 5
+
+		relative_position_id = TOH_44007
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44007 }
+		prerequisite = { focus = TOH_44008 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44011"
+		}
+	}
+	
+	focus = {
+		id = TOH_44012 #사나에 쿠데타
+		icon = GFX_focus_TOH_44012
+		cost = 5
+
+		relative_position_id = TOH_44004
+		x = 0
+		y = 3
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44004 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44012"
+		}
+	}
+	
+	focus = {
+		id = TOH_44013 #사회주의 군대
+		icon = GFX_focus_TOH_44013
+		cost = 5
+
+		relative_position_id = TOH_44012
+		x = -4
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44012 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44013"
+		}
+	}
+	
+	focus = {
+		id = TOH_44014 #사회주의 군대
+		icon = GFX_focus_TOH_44014
+		cost = 5
+
+		relative_position_id = TOH_44012
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44012 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44014"
+		}
+	}
+	
+	focus = {
+		id = TOH_44015 #사회주의 군대
+		icon = GFX_focus_TOH_44013
+		cost = 5
+
+		relative_position_id = TOH_44012
+		x = 2
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44012 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44015"
+		}
+	}
+	
+	focus = {
+		id = TOH_44016 #반사회주의 장교 숙군
+		icon = GFX_focus_TOH_44016
+		cost = 5
+
+		relative_position_id = TOH_44013
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44013 }
+		mutually_exclusive = { focus = TOH_40207 focus = TOH_43018 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44016"
+		}
+	}
+	
+	focus = {
+		id = TOH_44017 #행정 개혁
+		icon = GFX_focus_TOH_44017
+		cost = 5
+
+		relative_position_id = TOH_44014
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44014}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44017"
+		}
+	}
+	
+	focus = {
+		id = TOH_44018 #사나에주의
+		icon = GFX_focus_TOH_44018
+		cost = 5
+
+		relative_position_id = TOH_44014
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44014 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44018"
+		}
+	}
+	
+	focus = {
+		id = TOH_44019 #신경제정책 부활
+		icon = GFX_focus_TOH_44019
+		cost = 5
+
+		relative_position_id = TOH_44015
+		x = 2
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44015 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44019"
+		}
+	}
+	
+	focus = {
+		id = TOH_44020 #지방조직 통합
+		icon = GFX_focus_TOH_44020
+		cost = 5
+
+		relative_position_id = TOH_44017
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44014}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44020"
+		}
+	}
+	
+	focus = {
+		id = TOH_44021 #사회주의 운동
+		icon = GFX_focus_TOH_44021
+		cost = 5
+
+		relative_position_id = TOH_44018
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44014 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44021"
+		}
+	}
+	
+	focus = {
+		id = TOH_44022 #계획경제
+		icon = GFX_focus_TOH_44022
+		cost = 5
+
+		relative_position_id = TOH_44019
+		x = -2
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44019 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44022"
+		}
+	}
+	
+	focus = {
+		id = TOH_44023 #단계적 산업화
+		icon = GFX_focus_TOH_44023
+		cost = 5
+
+		relative_position_id = TOH_44019
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44019 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44023"
+		}
+	}
+	
+	focus = {
+		id = TOH_44024 #노동자들의 노동조합
+		icon = GFX_focus_TOH_44024
+		cost = 5
+
+		relative_position_id = TOH_44019
+		x = 2
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44019 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44024"
+		}
+	}
+	
+	focus = {
+		id = TOH_44025 #공익 추구
+		icon = GFX_focus_TOH_44025
+		cost = 5
+
+		relative_position_id = TOH_44020
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44020 }
+		mutually_exclusive = { focus = TOH_40301 focus = TOH_43028 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44025"
+		}
+	}
+	
+	focus = {
+		id = TOH_44026 #인민의 적
+		icon = GFX_focus_TOH_44026
+		cost = 5
+
+		relative_position_id = TOH_44021
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44021 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44026"
+		}
+	}
+	
+	focus = {
+		id = TOH_44027 #지속 가능한 경제
+		icon = GFX_focus_TOH_44027
+		cost = 5
+
+		relative_position_id = TOH_44023
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44022 focus = TOH_44023 focus = TOH_44024 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44027"
+		}
+	}
+	
+	focus = {
+		id = TOH_44028 #사회주의 휴머니즘
+		icon = GFX_focus_TOH_44025
+		cost = 5
+
+		relative_position_id = TOH_44025
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44025 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44028"
+		}
+	}
+	
+	focus = {
+		id = TOH_44029 #환상향 패권 선언
+		icon = GFX_focus_TOH_44026
+		cost = 5
+
+		relative_position_id = TOH_44026
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_44026 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_44029"
+		}
+	}
+	
+	focus = {
+		id = TOH_40201 #노동자 설득
+		icon = GFX_focus_TOH_40201
+		cost = 5
+
+		relative_position_id = TOH_43001
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43001 focus = TOH_44001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40201"
+		}
+	}
+	
+	focus = {
+		id = TOH_40202 #내무인민위원부 잠입
+		icon = GFX_focus_TOH_40201
+		cost = 5
+
+		relative_position_id = TOH_43001
+		x = 5
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43001 focus = TOH_44001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40202"
+		}
+	}
+	
+	focus = {
+		id = TOH_40203 #당원 지지 확보
+		icon = GFX_focus_TOH_40203
+		cost = 5
+
+		relative_position_id = TOH_43001
+		x = 7
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43001 focus = TOH_44001 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40203"
+		}
+	}
+	
+	focus = {
+		id = TOH_40204 #대 하쿠레이 협력 체제
+		icon = GFX_focus_TOH_40204
+		cost = 5
+
+		relative_position_id = TOH_40203
+		x = 0
+		y = 2
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40203 }
+		mutually_exclusive = { focus = TOH_43008 focus = TOH_44006 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40204"
+		}
+	}
+	
+	focus = {
+		id = TOH_40205 #지노비예프 그룹 설득
+		icon = GFX_focus_TOH_40205
+		cost = 5
+
+		relative_position_id = TOH_40204
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40204 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40205"
+		}
+	}
+	
+	focus = {
+		id = TOH_40206 #비판자들의 해방
+		icon = GFX_focus_TOH_40206
+		cost = 5
+
+		relative_position_id = TOH_40204
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40204 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40205"
+		}
+	}
+	
+	focus = {
+		id = TOH_40207 #당 민주주의 회복
+		icon = GFX_focus_TOH_40207
+		cost = 5
+
+		relative_position_id = TOH_40204
+		x = 0
+		y = 4
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40204 }
+		mutually_exclusive = { focus = TOH_43018 focus = TOH_44016 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40204"
+		}
+	}
+	
+	focus = {
+		id = TOH_40208 #군 견제
+		icon = GFX_focus_TOH_40208
+		cost = 5
+
+		relative_position_id = TOH_43001
+		x = 9
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43001 focus = TOH_44001 }
+		mutually_exclusive = { focus = TOH_40209 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40208"
+		}
+	}
+	
+	focus = {
+		id = TOH_40209 #군의 지지 확보
+		icon = GFX_focus_TOH_40209
+		cost = 5
+
+		relative_position_id = TOH_43001
+		x = 11
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43001 focus = TOH_44001 }
+		mutually_exclusive = { focus = TOH_40208 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40209"
+		}
+	}
+	
+	focus = {
+		id = TOH_40301 #노동조합 강화
+		icon = GFX_focus_generic_treaty
+		cost = 5
+
+		relative_position_id = TOH_40207
+		x = 0
+		y = 2
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_43021 focus = TOH_44020 }
+		mutually_exclusive = { focus = TOH_43028 focus = TOH_44025 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40301"
+			add_political_power = 70
+			if = {
+				limit = { has_completed_focus = TOH_43001 }
+				add_popularity = {
+					ideology = communism 
+					popularity = 0.05
+				}
+			}
+			if = {
+				limit = { has_completed_focus = TOH_44001 }
+				add_popularity = {
+					ideology = socialism 
+					popularity = 0.05
+				}
+			}
+			add_ideas = TOH_strong_trade_unions_idea
+		}
+	}
+	
+	focus = {
+		id = TOH_40302 #최고 소비에트
+		icon = GFX_focus_por_workers_of_iberia
+		cost = 5
+
+		relative_position_id = TOH_40301
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_40301 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_40302"
+			if = {
+				limit = { has_completed_focus = TOH_43001 }
+				add_popularity = {
+					ideology = communism 
+					popularity = 0.05
+				}
+			}
+			if = {
+				limit = { has_completed_focus = TOH_44001 }
+				add_popularity = {
+					ideology = socialism 
+					popularity = 0.05
+				}
+			}
+			add_ideas = SOV_the_peoples_revolution_idea
+			add_trait = strong_party_discipline
+		}
+	}
+
+	focus = {
+		id = TOH_45002 #범부 레이무
+		icon = GFX_focus_TOH_45002
+		cost = 5
+
+		relative_position_id = TOH_45001
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 30 }
+		prerequisite = { focus = TOH_45001 }
+		available = { always = no }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TOH_45002"
+			custom_effect_tooltip = on_construction_tt
+		}
+	}
+}

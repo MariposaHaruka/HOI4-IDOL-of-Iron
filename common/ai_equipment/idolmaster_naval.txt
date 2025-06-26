@@ -2,8 +2,9 @@
 
 IMA_destroyers = {
 	category = naval
+	
 	available_for = {
-		IMA ICG IML ISC ISM IDS IGM
+		IMA ICG IML ISC ISM
 	}
 	
 	roles = {
@@ -315,8 +316,9 @@ IMA_destroyers = {
 
 IMA_escorts = {
 	category = naval
+	
 	available_for = {
-		IMA ICG IML ISC ISM IDS IGM
+		IMA ICG IML ISC ISM
 	}
 	
 	roles = {
@@ -386,7 +388,7 @@ IMA_escorts = {
 		enable = {
 			AND = {
 				has_tech = improved_depth_charges
-				has_tech = decimetric_radar
+				has_tech = cavity_magnatron
 			}
 		}
 		role_icon_index = 2
@@ -420,8 +422,9 @@ IMA_escorts = {
 
 IMA_naval_light_cruiser = {
 	category = naval
+	
 	available_for = {
-		IMA ICG IML ISC ISM IDS IGM
+		IMA ICG IML ISC ISM
 	}
 	
 	roles = {
@@ -817,8 +820,9 @@ IMA_naval_light_cruiser = {
 IMA_naval_light_AA_cruiser = {
 
 	category = naval
+	
 	available_for = {
-		IMA ICG IML ISC ISM IDS IGM
+		IMA ICG IML ISC ISM
 	}
 	
 	roles = {
@@ -830,8 +834,8 @@ IMA_naval_light_AA_cruiser = {
 		modifier = {
 			factor = 20
 			OR = {
-				has_war_with = USA
-				has_war_with = JAP
+				has_war_with = ICG
+				has_war_with = LLS
 			}
 		}
 	}
@@ -884,11 +888,11 @@ IMA_naval_light_AA_cruiser = {
 		}
 	}
 }
-
 IMA_naval_cruiser_heavy = {
 	category = naval
+	
 	available_for = {
-		IMA ICG IML ISC ISM IDS IGM
+		IMA ICG IML ISC ISM
 	}
 	
 	roles = {
@@ -1136,8 +1140,9 @@ IMA_naval_cruiser_heavy = {
 
 IMA_naval_capital_battleship = {
 	category = naval
+	
 	available_for = {
-		IMA ICG IML ISC ISM IDS IGM
+		IMA ICG IML ISC ISM
 	}
 	
 	roles = {
@@ -1398,7 +1403,7 @@ IMA_naval_capital_bc = {
 	category = naval
 	
 	available_for = {
-		IMA ICG IML ISC ISM IDS IGM
+		IMA ICG IML ISC ISM
 	}
 	
 	roles = {
@@ -1573,8 +1578,9 @@ IMA_naval_capital_bc = {
 
 IMA_naval_carrier = {
 	category = naval
+	
 	available_for = {
-		IMA ICG IML ISC ISM IDS IGM
+		IMA ICG IML ISC ISM
 	}
 	
 	roles = {
@@ -1764,10 +1770,11 @@ IMA_naval_carrier = {
 	}
 }
 
-IMA_naval_carrier_light = {
+naval_carrier_light = {
 	category = naval
+	
 	available_for = {
-		IMA ICG IML ISC ISM IDS IGM
+		IMA ICG IML ISC ISM
 	}
 	
 	roles = {
@@ -1817,10 +1824,11 @@ IMA_naval_carrier_light = {
 	}
 }
 
-IMA_naval_submarine = {
+naval_submarine = {
 	category = naval
+	
 	available_for = {
-		IMA ICG IML ISC ISM IDS IGM
+		IMA ICG IML ISC ISM
 	}
 	
 	roles = {
@@ -1832,14 +1840,6 @@ IMA_naval_submarine = {
 		modifier = {
 			factor = 10
 			has_war = yes
-		}
-		modifier = {
-			factor = 10
-			OR = {
-				original_tag = ISM
-				original_tag = IDS
-				original_tag = IGM
-			}
 		}
 	}
 
@@ -1938,7 +1938,7 @@ IMA_naval_submarine = {
 			factor = 50
 			modifier = {
 				factor = 15
-				has_war_with = JAP
+				has_war_with = LLS
 			}
 		}
 		role_icon_index = 6
@@ -1966,10 +1966,11 @@ IMA_naval_submarine = {
 	}
 }
 
-IMA_naval_mine_sweeper = {
+naval_mine_sweeper = {
 	category = naval
+	
 	available_for = {
-		IMA ICG IML ISC ISM IDS IGM
+		IMA ICG IML ISC ISM
 	}
 	
 	roles = {
@@ -2071,10 +2072,11 @@ IMA_naval_mine_sweeper = {
 	}
 }
 
-IMA_naval_mine_layer = {
+naval_mine_layer = {
 	category = naval
+	
 	available_for = {
-		IMA ICG IML ISC ISM IDS IGM
+		IMA ICG IML ISC ISM
 	}
 	
 	roles = {

@@ -1,0 +1,54 @@
+ideas = {
+	country = { 
+		STR_great_depression = {
+			allowed = {
+				original_tag = STR
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				production_speed_buildings_factor = -0.5
+			}
+		}
+		STR_scars_of_ww1 = {
+			allowed = {
+				original_tag = STR
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = BEL_scars_of_ww1
+			modifier = {
+				army_org_factor = -0.15
+				recruitable_population_factor = -0.15
+				war_support_factor = -0.30
+				production_speed_arms_factory_factor = -0.2
+			}
+		}
+		STR_unstable_nation = {
+			allowed = {
+				original_tag = STR
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = BEL_scars_of_ww1
+			modifier = {
+				political_power_cost = -0.15
+				stability_factor = -0.2
+				war_support_factor = -0.10
+				conscription_factor = -0.15
+			}
+		}
+	}
+	tank_manufacturer = { }
+	naval_manufacturer = { }
+	aircraft_manufacturer = { }
+	industrial_concern = { }
+	materiel_manufacturer = { }
+}

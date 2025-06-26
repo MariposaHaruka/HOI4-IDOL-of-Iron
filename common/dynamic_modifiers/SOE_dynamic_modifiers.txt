@@ -1,0 +1,19 @@
+SOE_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_SOE_dynamic_industry
+}
+
+SOE_army = {
+	enable = { always = yes }
+	icon = GFX_idea_SOE_dynamic_army
+}
+
+SOE_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_SOE_dynamic_naval
+}
+
+SOE_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_SOE_dynamic_airforce
+}

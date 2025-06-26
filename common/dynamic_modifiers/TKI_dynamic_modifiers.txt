@@ -1,0 +1,19 @@
+TKI_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_TKI_dynamic_industry
+}
+
+TKI_army = {
+	enable = { always = yes }
+	icon = GFX_idea_TKI_dynamic_army
+}
+
+TKI_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_TKI_dynamic_naval
+}
+
+TKI_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_TKI_dynamic_airforce
+}

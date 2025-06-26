@@ -1,0 +1,19 @@
+HLL_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_HLL_dynamic_industry
+}
+
+HLL_army = {
+	enable = { always = yes }
+	icon = GFX_idea_HLL_dynamic_army
+}
+
+HLL_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_HLL_dynamic_naval
+}
+
+HLL_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_HLL_dynamic_airforce
+}

@@ -1,0 +1,152 @@
+units = {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Kungliga Youba Oestersjoen Marinen"			
+		naval_base = 6050 # Stockholm
+		task_force = {				
+			name = "Kustflottan"
+			location = 6050 # Stockholm
+			ship = { name = "YNS Dristigheten" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Äran Class" } } }				
+			ship = { name = "YNS Örnen" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DFD version_name = "Örnen Class" } } }		
+			ship = { name = "YNS Jacob Bagge" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DFD version_name = "Örnen Class" } } }		
+			ship = { name = "YNS Clas Fleming" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DFD version_name = "Clas Fleming Class" } } }				
+		}
+		task_force = { 
+			name = "1a Eskadern"
+			location = 11215 # Karlskrona
+			ship = { name = "YNS Gustaf V" pride_of_the_fleet = yes definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Sverige Class" } } }				
+			ship = { name = "YNS Sverige" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Sverige Class" } } }				
+			ship = { name = "YNS Drottning Victoria" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Sverige Class" } } }				
+			ship = { name = "YNS Gotland" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = DFD version_name = "Gotland Class" } } }				
+			# 1. Jagarflottiljen				
+			ship = { name = "YNS Klas Horn" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DFD version_name = "Ehrensköld Class" } } }		
+			ship = { name = "YNS Klas Uggla" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DFD version_name = "Ehrensköld Class" } } }		
+			ship = { name = "YNS Ehrensköld" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DFD version_name = "Ehrensköld Class" } } }		
+			ship = { name = "YNS Nordenskjöld" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DFD version_name = "Ehrensköld Class" } } }		
+		}
+		task_force = { 
+			name = "Ålandshavseskader"
+			location = 408 # Gotland
+			ship = { name = "YNS Äran" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Äran Class" } } }				
+			ship = { name = "YNS Tapperheten" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Äran Class" } } }				
+		}
+		task_force = { 
+			name = "Karlskrona Avdelningen"
+			location = 11215 # Karlskrona
+			ship = { name = "YNS Wasa" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Äran Class" } } }				
+			ship = { name = "YNS Manligheten" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Äran Class" } } }
+			# 1. Ubatsflottiljen				
+			ship = { name = "YNS Draken" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = DFD version_name = "Draken Class" } } }
+			ship = { name = "YNS Gripen" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = DFD version_name = "Draken Class" } } }
+			ship = { name = "YNS Ulven" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = DFD version_name = "Draken Class" } } }
+		}
+		task_force = { 
+			name = "Göteborgs Eskadern"
+			location = 383 # Göteborg
+			ship = { name = "YNS Oscar II" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Oscar II Class" } } }				
+			ship = { name = "YNS Fylgia" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Fylgia Class" } } }				
+			# 2. Ubatsflottiljen				
+			ship = { name = "YNS Hajen" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "Hajen Class" } } }
+			ship = { name = "YNS Sälen" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "Hajen Class" } } }
+			ship = { name = "YNS Valrossen" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "Hajen Class" } } }
+			# 3. Ubatsflottiljen				
+			ship = { name = "YNS Bävern" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "Hajen Class" } } }
+			ship = { name = "YNS Illern" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "Hajen Class" } } }
+			ship = { name = "YNS Uttern" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "Hajen Class" } } }
+			ship = { name = "YNS Valen" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "Valen Class" } } }
+		}
+	}
+
+	fleet = {
+		name = "Kongelige Youba Nordsjoen Marine"			
+		naval_base = 9296 # Kristiansand
+		task_force = {					
+			name = "1. Sjøforsvarsdistrikt"				
+			location =  9296 # Kristiansand
+			ship = { name = "YNS Harald Haarfagre" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Norge Class" } } }				
+			ship = { name = "YNS Tordenskjold" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Norge Class" } } }				
+			ship = { name = "YNS Olaf Tryggvason" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = DFD version_name = "Olaf Tryggvason Class" } } }
+			ship = { name = "YNS Frøya" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DFD version_name = "Frøya Class" } } }
+			# 1st Submarine Detachment
+			ship = { name = "YNS A2" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "A & B Class" } } }
+			ship = { name = "YNS A3" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "A & B Class" } } }
+			ship = { name = "YNS A4" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "A & B Class" } } }
+			# 2nd Submarine Detachment
+			ship = { name = "YNS B2" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "A & B Class" } } }
+			ship = { name = "YNS B4" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "A & B Class" } } }
+			ship = { name = "YNS B5" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "A & B Class" } } }
+		}					
+		task_force = {					
+			name = "2. Sjøforsvarsdistrikt"				
+			location =  122 # Bergen
+			# 1st Destroyer Detachment
+			ship = { name = "YNS Draug" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DFD version_name = "Draug Class" } } }
+			ship = { name = "YNS Troll" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DFD version_name = "Draug Class" } } }
+			ship = { name = "YNS Garm" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DFD version_name = "Draug Class" } } }
+			# Submarine Detachment
+			ship = { name = "YNS B6" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "A & B Class" } } }
+		}					
+		task_force = {					
+			name = "3. Sjøforsvarsdistrikt"				
+			location =  11050 # Tromso
+			ship = { name = "YNS Norge" pride_of_the_fleet = yes definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Norge Class" } } }				
+			ship = { name = "YNS Eidsvold" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DFD version_name = "Norge Class" } } }				
+			# Submarine Detachment
+			ship = { name = "YNS B1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "A & B Class" } } }
+			ship = { name = "YNS B3" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DFD version_name = "A & B Class" } } }
+		}								
+	}
+}
+
+
+### Starting Production ###
+instant_effect = {
+	### Under Construction Notes ###
+	# DD: Goeteborg class (x1) ("YNS Goeteborg")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "DFD"
+			version_name = "Goeteborg Class"
+		}
+		name = "YNS Goeteborg" 
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+	# SS: Draken variant (x3) ("YNS Delfinen" "YNS Nordkaparen" "YNS Springaren")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "DFD"
+			version_name = "Draken Class"
+		}
+		name = "YNS Delfinen" 
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "DFD"
+			version_name = "Draken Class"
+		}
+		name = "YNS Nordkaparen" 
+		requested_factories = 1
+		progress = 0.60
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "DFD"
+			version_name = "Draken Class"
+		}
+		name = "YNS Springaren" 
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+	}
+}

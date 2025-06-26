@@ -1,0 +1,19 @@
+IGM_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_IGM_dynamic_industry
+}
+
+IGM_army = {
+	enable = { always = yes }
+	icon = GFX_idea_IGM_dynamic_army
+}
+
+IGM_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_IGM_dynamic_naval
+}
+
+IGM_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_IGM_dynamic_airforce
+}

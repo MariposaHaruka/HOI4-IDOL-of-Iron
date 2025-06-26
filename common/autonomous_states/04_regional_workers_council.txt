@@ -1,0 +1,64 @@
+autonomy_state = {
+	id = autonomy_regional_worker_council
+	
+	min_freedom_level = 0.0
+	manpower_influence = 1.0
+	
+	rule = {
+		desc = "RULE_DESC_IS_A_SUBJECT"
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+		can_be_spymaster = no
+	}
+	
+	modifier = {
+		autonomy_manpower_share = 0.0
+		extra_trade_to_overlord_factor = 0.0
+		overlord_trade_cost_factor = 0.0
+		peace_score_ratio_transferred_to_overlord = 0.05
+		lend_lease_tension_with_overlord = -0.1
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 1.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed_levels_filter = {
+		autonomy_regional_worker_council
+	}
+
+	allowed = {
+		if = {
+			limit = { has_dlc = "Waking the Tiger" }
+			OVERLORD = { 
+				has_government = anarchosyndicalism
+			}	
+		}
+	}
+
+	use_for_peace_conference_weight = {
+		base = 0
+		modifier = {
+			add = 10
+			FROM = {
+				has_government = anarchosyndicalism
+			}
+		}
+	}
+	
+	can_take_level = {
+		always = no #디시전으로 해방 가능
+	}
+
+	can_lose_level = {
+		always = no #디시전으로 합병 가능
+	}
+}

@@ -6,6 +6,10 @@ set_oob = "BLA_ar"
 add_command_power = 10
 set_fuel_ratio = 0.3
 
+set_country_flag = no_military_academy
+#해군은 오디세이아 해양학교가 있어요
+set_country_flag = no_air_academy
+
 #시작 기술
 set_technology = {
 	infantry_weapons = 1
@@ -14,7 +18,7 @@ set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	tech_recon = 1
-	trench_warfare = 1
+	mobile_warfare = 1
 	fleet_in_being = 1
 	fuel_silos = 1
 	fuel_refining = 1
@@ -68,13 +72,37 @@ set_variable = { country_intro_page_count = 2 }
 set_convoys = 20
 
 #국민 정신
+787 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+423 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+424 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+425 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+426 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+427 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+428 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+430 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+431 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+432 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+433 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+434 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+435 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+436 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+437 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+438 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+439 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+440 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+441 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+442 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+443 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+444 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+445 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+288 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+640 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+323 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+324 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
+640 = { add_dynamic_modifier = { modifier = strongly_autonomous_state } }
 
-640 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
-432 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
-427 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
-436 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
-437 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
-433 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
+add_dynamic_modifier = { modifier = BLA_industry }
+add_dynamic_modifier = { modifier = BLA_army }
 
 #외교
 IMA = { embargo_ROOT = yes }
@@ -84,6 +112,8 @@ ISM = { embargo_ROOT = yes }
 ISC = { embargo_ROOT = yes }
 IDS = { embargo_ROOT = yes }
 IGM = { embargo_ROOT = yes }
+
+
 
 #정치 상황
 set_stability = 0.4
@@ -120,6 +150,33 @@ if = {
 		set_value = 0.15
 	}
 }
+set_country_flag = BLA_student_council
+set_country_flag = BLA_kivotos_ftf_open
+
+#학교 연락 위원회
+set_country_flag = BLA_shanhaijing_not_participated
+set_country_flag = BLA_redwinter_not_participated
+set_country_flag = BLA_gehenna_not_participated
+set_country_flag = BLA_hyakkiyako_not_participated
+set_country_flag = BLA_millenium_not_participated
+set_country_flag = BLA_trinity_not_participated
+set_country_flag = BLA_abydos_not_participated
+set_country_flag = BLA_arius_not_participated
+
+set_variable = { BLA_GEH_leader = 0 }
+set_variable = { BLA_TRI_leader = 0 }
+set_variable = { BLA_MIL_leader = 0 }
+set_variable = { BLA_HYA_leader = 0 }
+set_variable = { BLA_ABY_leader = 0 }
+set_variable = { BLA_SHA_leader = 0 }
+set_variable = { BLA_RED_leader = 0 }
+set_variable = { BLA_ARI_leader = 0 }
+set_variable = { BLA_VAL_leader = 2 }
+set_variable = { BLA_SRT_leader = 2 }
+
+
+set_country_flag = BLA_president_missing
+
 
 #의회 #에덴조약 이후 열림
 set_variable = { BLA_redwinterparty_seats = 73 }
@@ -311,9 +368,15 @@ recruit_character = BLA_peroro
 recruit_character = BLA_nyantenmaru
 
 #장관진
+add_ideas = {
+	BLA_nanagami_rin
+	BLA_yuragi_momoka
+	BLA_iwabitsu_ayumu
+	BLA_shiranui_kaya
+	BLA_oki_aoi
+	BLA_sumomo
+	BLA_haine
+}
 
-#무기 프리셋
-#create_equipment_variant = {
-#	name = ""
-#	type = amphibious_tank_equipment_2
-#}
+#이벤트
+country_event = { id = BLA_kivotos_ftf.1 days = 3 } #총학생회 비상의결

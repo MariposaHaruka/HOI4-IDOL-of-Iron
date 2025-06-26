@@ -1,4 +1,7 @@
+#수도
 capital = 327 #마닐라
+
+#부대
 set_oob = "LST_ar"
 set_research_slots = 2
 set_stability = 0.4
@@ -62,7 +65,15 @@ if = {
 
 #국민 정신
 
-add_ideas = agrarian_society
+add_ideas = {
+	agrarian_society
+	LNH_south_manchuria_railway_company
+}
+
+add_dynamic_modifier = { modifier = LST_industry }
+add_dynamic_modifier = { modifier = LST_army }
+add_dynamic_modifier = { modifier = LST_navy }
+add_dynamic_modifier = { modifier = LST_air_force }
 
 
 set_politics = {
@@ -77,6 +88,7 @@ set_popularities = {
 	authoritariancommunism = 10
 	authoritariandemocracy = 50
 }
+ban_communism_effect = yes
 
 ### Leader
 recruit_character = LST_shibuya_kanon

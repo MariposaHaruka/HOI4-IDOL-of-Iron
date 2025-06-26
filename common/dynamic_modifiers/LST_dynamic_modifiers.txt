@@ -1,0 +1,19 @@
+LST_industry = {
+	enable = { always = yes }
+	icon = GFX_idea_LST_dynamic_industry
+}
+
+LST_army = {
+	enable = { always = yes }
+	icon = GFX_idea_LST_dynamic_army
+}
+
+LST_navy = {
+	enable = { NOT = { has_country_flag = no_naval_academy } }
+	icon = GFX_idea_LST_dynamic_naval
+}
+
+LST_air_force = {
+	enable = { NOT = { has_country_flag = no_air_academy } }
+	icon = GFX_idea_LST_dynamic_airforce
+}

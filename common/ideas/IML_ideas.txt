@@ -1,0 +1,45 @@
+ideas = {
+	country = { 
+		IML_ratatat_1 = {
+			allowed = {
+				original_tag = IML
+			}
+			allowed_civil_war = {
+				always = no
+			}	
+			removal_cost = -1
+			picture = IML_ratatat
+			modifier = {
+				stability_factor = -0.1
+				war_stability_factor = -0.1
+				consumer_goods_factor = 0.1
+				conscription_factor = 0.02
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		IML_ratatat_2 = {
+			allowed = {
+				original_tag = IML
+			}
+			allowed_civil_war = {
+				always = no
+			}	
+			removal_cost = -1
+			picture = IML_ratatat
+			modifier = {
+				stability_factor = 0.1
+				war_stability_factor = 0.1
+				consumer_goods_factor = -0.1
+				conscription_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				local_building_slots_factor = 0.1
+				state_resources_factor = 0.1
+			}
+		}
+	}
+	tank_manufacturer = { }
+	naval_manufacturer = { }
+	aircraft_manufacturer = { }
+	industrial_concern = { }
+	materiel_manufacturer = { }
+}

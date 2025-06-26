@@ -3,6 +3,20 @@ capital = 37
 
 #부대
 set_oob = "SZS_ar"
+if = {
+	limit = { has_MtG = yes }
+	set_naval_oob = "SZS_na_MtG"
+	else = {
+		set_naval_oob = "SZS_na"
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "SZS_ai_BBA"
+	else = {
+		set_air_oob = "SZS_ai"
+	}
+}
 starting_train_buffer = 4
 add_command_power = 20
 set_fuel_ratio = 0.8
@@ -18,6 +32,29 @@ set_technology = {
 	gw_artillery = 1
 	fuel_silos = 1
 	basic_train = 1
+}
+if = {
+	limit = { has_MtG = yes }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			early_heavy_cruiser = 1
+			transport = 1
+		}
+	}
 }
 if = {
 	limit = { has_NSB = yes }
@@ -49,11 +86,20 @@ if = {
 set_variable = { country_intro_page_count = 2 }
 
 #수송선
-set_convoys = 120
+set_convoys = 55
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 7
+}
 
 #국민 정신
 add_ideas = direct_election
 add_ideas = single_parliament
+
+add_dynamic_modifier = { modifier = SZS_industry }
+add_dynamic_modifier = { modifier = SZS_army }
+add_dynamic_modifier = { modifier = SZS_navy }
+add_dynamic_modifier = { modifier = SZS_air_force }
 
 #외교
 
@@ -89,7 +135,56 @@ recruit_character = SZS_tachibana_hibiki
 #장관진
 
 #무기 프리셋
-#create_equipment_variant = {
-#	name = ""
-#	type = amphibious_tank_equipment_2
-#}
+if = {
+	limit = { has_MtG = yes }
+	# Submarines #
+	create_equipment_variant = {
+		name = "Rota Class"								# represents Rota and Daphne classes
+		type = ship_hull_submarine_1
+		name_group = SZS_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "Herluf Trolle Class"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = SZS_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_torpedo_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Niels Iuel Class"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = SZS_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			fixed_ship_secondaries_slot = empty
+			mid_1_custom_slot = ship_anti_air_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_light_medium_battery_1
+		}
+	}
+}

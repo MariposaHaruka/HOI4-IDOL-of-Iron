@@ -1,12 +1,12 @@
 ﻿##### Britain NAME LISTS #####
 ### REGULAR DESTROYER NAMES###
-ENG_DD_HISTORICAL = {
+IMA_DD_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_DESTROYERS
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = {
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -58,13 +58,13 @@ ENG_DD_HISTORICAL = {
 }
 
 ### DESTROYER ESCORT NAMES###
-ENG_DE_HISTORICAL = {
+IMA_DE_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_DE
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -96,13 +96,13 @@ ENG_DE_HISTORICAL = {
 }
 
 ### LIGHT CRUISER NAMES###
-ENG_CL_HISTORICAL = {
+IMA_CL_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_CL
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -127,13 +127,13 @@ ENG_CL_HISTORICAL = {
 }
 
 ### A-A LIGHT CRUISER NAMES###
-ENG_CLAA_HISTORICAL = {
+IMA_CLAA_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_CLAA
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -154,13 +154,13 @@ ENG_CLAA_HISTORICAL = {
 }
 
 ### HEAVY CRUISER NAMES###
-ENG_CA_HISTORICAL = {
+IMA_CA_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_CA
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -181,13 +181,13 @@ ENG_CA_HISTORICAL = {
 
 
 ### MINELAYER NAMES###
-ENG_MINELAYERS_HISTORICAL = {
+IMA_MINELAYERS_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_MINELAYERS
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -205,13 +205,13 @@ ENG_MINELAYERS_HISTORICAL = {
 }
 
 ### BATTLESHIP NAMES ###
-ENG_BB_HISTORICAL = {
+IMA_BB_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_BB
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -229,13 +229,13 @@ ENG_BB_HISTORICAL = {
 }
 
 ### BATTLECRUISER NAMES ###
-ENG_BC_HISTORICAL = {
+IMA_BC_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_BC
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -251,13 +251,13 @@ ENG_BC_HISTORICAL = {
 }
 
 ### AIRCRAFT CARRIER NAMES ###
-ENG_CV_HISTORICAL = {
+IMA_CV_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_CARRIERS
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -275,13 +275,13 @@ ENG_CV_HISTORICAL = {
 }
 
 ### LIGHT CARRIER NAMES ###
-ENG_CVL_HISTORICAL = {
+IMA_CVL_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_CVL
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -300,13 +300,13 @@ ENG_CVL_HISTORICAL = {
 }
 
 ### SUBMARINES ###
-ENG_SS_HISTORICAL = {
+IMA_SS_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_SUBMARINES
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -344,13 +344,13 @@ ENG_SS_HISTORICAL = {
 
 
 ### THEME: BRITISH COUNTIES ###
-ENG_COUNTIES = {
+IMA_COUNTIES = {
 	name = NAME_THEME_COUNTIES
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -373,13 +373,13 @@ ENG_COUNTIES = {
 }
 
 ## THEME: BRITISH CITIES ###
-ENG_CITIES = {
+IMA_CITIES = {
 	name = NAME_THEME_CITIES
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -398,13 +398,13 @@ ENG_CITIES = {
 }
 
 ## THEME: BRITISH COLONIES ###
-ENG_COLONIES = {
+IMA_COLONIES = {
 	name = NAME_THEME_COLONIES
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		not = { has_government = communism }
+		not = { is_communism = yes }
 	}
 
 	type = ship
@@ -416,13 +416,13 @@ ENG_COLONIES = {
 }
 
 ## THEME: BRITISH KINGS ###
-ENG_KINGS = {
+IMA_KINGS = {
 	name = NAME_THEME_KINGS # 1066 - 1936
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		NOT = { has_government = communism }
+		NOT = { is_communism = yes }
 	}
 
 	type = ship
@@ -430,7 +430,7 @@ ENG_KINGS = {
 	prefix = "ISS "
 
 	unique = {
-		"King Edward VIII" "King George V" "King Edward VII" "Queen Victoria" "King William IV" "King George IV" 
+		"King George V" "King Edward VII" "Queen Victoria" "King William IV" "King George IV" 
 		"King George III" "King George II" "King George I" "Queen Anne" "King William III" "King James II" 
 		"King Charles II" "King Charles I" "King James I" "Queen Elizabeth" "Queen Mary" "King Edward VI" "King Henry VIII" 
 		"King Henry VII" "King Richard III" "King Edward V" "King Edward IV" "King Henry VI" "King Henry V" "King Henry IV" 
@@ -440,13 +440,13 @@ ENG_KINGS = {
 }
 
 ## THEME: BRITISH BATTLES ###
-ENG_BATTLES = {
+IMA_BATTLES = {
 	name = NAME_THEME_BATTLES # 878 - 1916
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		NOT = { has_government = communism }
+		NOT = { is_communism = yes }
 	}
 
 	type = ship
@@ -462,13 +462,13 @@ ENG_BATTLES = {
 }
 
 ## THEME: BRITISH RIVERS ###
-ENG_RIVERS = {
+IMA_RIVERS = {
 	name = NAME_THEME_RIVERS
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		NOT = { has_government = communism }
+		NOT = { is_communism = yes }
 	}
 
 	type = ship
@@ -483,13 +483,13 @@ ENG_RIVERS = {
 }
 
 ## THEME: BRITISH MYTHOLOGY ###
-ENG_MYTHOLOGY = {
+IMA_MYTHOLOGY = {
 	name = NAME_THEME_MYTHOLOGY
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		NOT = { has_government = communism }
+		NOT = { is_communism = yes }
 	}
 
 	type = ship
@@ -509,13 +509,13 @@ ENG_MYTHOLOGY = {
 
 ##### Britain NAME LISTS COMMUNISM #####
 ### REGULAR DESTROYER NAMES###
-ENG_DD_COMMUNIST = {
+IMA_DD_COMMUNIST = {
 	name = NAME_THEME_HISTORICAL_DESTROYERS
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -567,13 +567,13 @@ ENG_DD_COMMUNIST = {
 }
 
 ### DESTROYER ESCORT NAMES###
-ENG_DE_COMMUNISM = {
+IMA_DE_COMMUNISM = {
 	name = NAME_THEME_HISTORICAL_DE
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -605,13 +605,13 @@ ENG_DE_COMMUNISM = {
 }
 
 ### LIGHT CRUISER NAMES###
-ENG_CL_COMMUNISM = {
+IMA_CL_COMMUNISM = {
 	name = NAME_THEME_HISTORICAL_CL
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -636,13 +636,13 @@ ENG_CL_COMMUNISM = {
 }
 
 ### A-A LIGHT CRUISER NAMES###
-ENG_CLAA_COMMUNISM = {
+IMA_CLAA_COMMUNISM = {
 	name = NAME_THEME_HISTORICAL_CLAA
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -663,13 +663,13 @@ ENG_CLAA_COMMUNISM = {
 }
 
 ### HEAVY CRUISER NAMES###
-ENG_CA_COMMUNISM = {
+IMA_CA_COMMUNISM = {
 	name = NAME_THEME_HISTORICAL_CA
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -690,13 +690,13 @@ ENG_CA_COMMUNISM = {
 
 
 ### MINELAYER NAMES###
-ENG_MINELAYERS_COMMUNISM = {
+IMA_MINELAYERS_COMMUNISM = {
 	name = NAME_THEME_HISTORICAL_MINELAYERS
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -714,13 +714,13 @@ ENG_MINELAYERS_COMMUNISM = {
 }
 
 ### BATTLESHIP NAMES ###
-ENG_BB_COMMUNISM = {
+IMA_BB_COMMUNISM = {
 	name = NAME_THEME_HISTORICAL_BB
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -738,13 +738,13 @@ ENG_BB_COMMUNISM = {
 }
 
 ### BATTLECRUISER NAMES ###
-ENG_BC_COMMUNISM = {
+IMA_BC_COMMUNISM = {
 	name = NAME_THEME_HISTORICAL_BC
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -760,13 +760,13 @@ ENG_BC_COMMUNISM = {
 }
 
 ### AIRCRAFT CARRIER NAMES ###
-ENG_CV_COMMUNISM = {
+IMA_CV_COMMUNISM = {
 	name = NAME_THEME_HISTORICAL_CARRIERS
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -784,13 +784,13 @@ ENG_CV_COMMUNISM = {
 }
 
 ### LIGHT CARRIER NAMES ###
-ENG_CVL_COMMUNISM = {
+IMA_CVL_COMMUNISM = {
 	name = NAME_THEME_HISTORICAL_CVL
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -809,13 +809,13 @@ ENG_CVL_COMMUNISM = {
 }
 
 ### SUBMARINES ###
-ENG_SS_COMMUNISM= {
+IMA_SS_COMMUNISM= {
 	name = NAME_THEME_HISTORICAL_SUBMARINES
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -853,13 +853,13 @@ ENG_SS_COMMUNISM= {
 
 
 ### THEME: BRITISH COUNTIES ###
-ENG_COUNTIES_COMMUNIST = {
+IMA_COUNTIES_COMMUNIST = {
 	name = NAME_THEME_COUNTIES
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -883,13 +883,13 @@ ENG_COUNTIES_COMMUNIST = {
 }
 
 ## THEME: BRITISH CITIES ###
-ENG_CITIES_COMMUNIST = {
+IMA_CITIES_COMMUNIST = {
 	name = NAME_THEME_CITIES
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -897,25 +897,25 @@ ENG_CITIES_COMMUNIST = {
 	prefix = "PMS "
 
 	unique = {
-		"London" "Birmingham" "Leeds" "Glasgow" "Sheffield" "Bradford" "Manchester" "에든버러" "리버풀" "브리스톨" 
-		"카디프" "벨파스트" "레스터" "Wakefield" "코번트리" "노팅엄" "뉴캐슬" "선덜랜드" "Brighton" 
-		"Hove" "Hull" "Plymouth" "울버햄프턴" "스토크" "더비" "스완지" "Southampton" "Salford" "웨스트민스터" 
-		"Portsmouth" "York" "에버딘" "Peterborough" "Chelmsford" "Dundee" "Oxford" "Canterbury" "뉴포트" 
-		"St. Albans" "Preston" "Lancaster" "Norwich" "Cambridge" "Gloucester" "Lisburn" "Exeter" "윈체스터" 
-		"런던데리" "Carlisle" "Worcester" "Durham" "Lincoln" "Chester" "Bath" "Inverness" "Armagh" "Hereford" 
+		"London" "Birmingham" "Leeds" "Glasgow" "Sheffield" "Bradford" "Manchester" "Edinburgh" "Liverpool" "Bristol" 
+		"Cardiff" "Belfast" "Leicester" "Wakefield" "Coventry" "Nottingham" "Newcastle" "Sunderland" "Brighton" 
+		"Hove" "Hull" "Plymouth" "Wolverhampton" "Stoke" "Derby" "Swansea" "Southampton" "Salford" "Westminster" 
+		"Portsmouth" "York" "Aberdeen" "Peterborough" "Chelmsford" "Dundee" "Oxford" "Canterbury" "Newport" 
+		"St. Albans" "Preston" "Lancaster" "Norwich" "Cambridge" "Gloucester" "Lisburn" "Exeter" "Winchester" 
+		"Londonderry" "Carlisle" "Worcester" "Durham" "Lincoln" "Chester" "Bath" "Inverness" "Armagh" "Hereford" 
 		"Perth" "Salisbury" "Stirling" "Lichfield" "Newry" "Chichester" "Ely" "Bangor" "Truro" "Ripon" "Wells" 
 		"St. Asaph" "St. David's" 
 	}
 }
 
 ## THEME: BRITISH ADMIRALS ###
-ENG_ADMIRALS_COMMUNIST = {
+IMA_ADMIRALS_COMMUNIST = {
 	name = NAME_THEME_ADMIRALS # 1649 - 1665
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -923,19 +923,19 @@ ENG_ADMIRALS_COMMUNIST = {
 	prefix = "PMS "
 
 	unique = {
-		"Blake" "Deane" "Popham" "Monck" "Penn" "몬태규" "Desborow" 
+		"Blake" "Deane" "Popham" "Monck" "Penn" "Montague" "Desborow" 
 		"Jones" "Clerk" "Stone" "Burton" "Gooking" "Kelsey" "Ayscue" "Appleton" 
 	}
 }
 
 ## THEME: BRITISH BATTLES ###
-ENG_BATTLES_COMMUNIST = {
+IMA_BATTLES_COMMUNIST = {
 	name = NAME_THEME_BATTLES # 1642 - 1651
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -953,13 +953,13 @@ ENG_BATTLES_COMMUNIST = {
 }
 
 ## THEME: BRITISH RIVERS ###
-ENG_RIVERS_COMMUNIST = {
+IMA_RIVERS_COMMUNIST = {
 	name = NAME_THEME_RIVERS
 
-	for_countries = { IMA ICG IML ISC IDS IGM }
+	for_countries = { IMA }
 
 	can_use = { 
-		has_government = communism
+		is_communism = yes
 	}
 
 	type = ship
@@ -967,7 +967,7 @@ ENG_RIVERS_COMMUNIST = {
 	prefix = "PMS "
 
 	unique = {
-		"Severn" "템즈" "Trent" "Great Ouse" "Wye" "Ure" "Tay" "Clyde" "Spey" "Nene" "Bann" "Tweed" 
+		"Severn" "Thames" "Trent" "Great Ouse" "Wye" "Ure" "Tay" "Clyde" "Spey" "Nene" "Bann" "Tweed" 
 		"Avon" "Eden" "Dee" "Witham" "Teme" "Don" "Foyle" "Teifi" "Twyi" "Ribble" "Tyne" "Derwent" 
 		"Aire" "Nith" "Tees" "Medway" "Mersey" 
 	}

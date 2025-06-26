@@ -40,17 +40,16 @@ autonomy_state = {
 	}
 
 	allowed_levels_filter = {
-		prs_marionettenregierung
+		prs_reichsprotectorate
+		prs_reichskommissariat
 		prs_militarverwaltung
 	}
 
 	allowed = {
 		if = {
 			limit = { has_dlc = "Waking the Tiger" }
-			AND = {
-				OVERLORD = { original_tag = PRS }
-				OVERLORD = { is_fascism = yes }
-			}
+			OVERLORD = { original_tag = PRS }
+			OVERLORD = { is_fascism = yes }
 		}
 	}
 	

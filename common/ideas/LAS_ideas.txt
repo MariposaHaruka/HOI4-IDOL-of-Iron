@@ -1,0 +1,27 @@
+ideas = {
+	country = {
+		LAS_disjointed_command = {
+			allowed = {
+				original_tag = LAS
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = generic_disjointed_gov
+			modifier = {
+				production_speed_buildings_factor = -100
+				training_time_factor = 100
+				political_advisor_cost_factor = 100
+				political_power_gain = -0.9
+				land_doctrine_cost_factor = 100
+				naval_doctrine_cost_factor = 100
+				air_doctrine_cost_factor = 100
+				army_advisor_cost_factor = 100
+				navy_advisor_cost_factor = 100
+				air_advisor_cost_factor = 100
+				conscription_factor = -0.9
+			}
+		}
+	}
+}
