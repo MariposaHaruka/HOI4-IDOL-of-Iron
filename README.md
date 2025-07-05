@@ -4,7 +4,7 @@
 
 이 모드는 아이돌 삼국지 모드에서 영감을 얻어 아이돌 세력간의 전쟁물을 만든다면 어떨까 하는 아이디어에서 만들기 시작했습니다.
 
-## v0.1.0 Beta 패치노트
+## v0.1.0 Beta(Update Crystalia) 패치노트
 - 모드 공개
 
 ## 주요 국가
@@ -40,14 +40,15 @@
 **필수 적용 모드** : [한국어 모드](https://steamcommunity.com/sharedfiles/filedetails/?id=2743487021)  
 **사용 불가능한 모드** : 프로빈스와 주를 수정하는 모드, 기타 대형모드
 
-## 지원하는 언어 | Supported languages
-- 한국어 | Korean
+## 지원 언어
+- 한국어
+- 그외 언어는 interface 파일을 크게 수정해야 해서 지원하기 힘듭니다
 
 ## 관련 링크
 디스코드 : <https://discord.gg/ctSCFge8tQ>   
 스팀 : <https://steamcommunity.com/sharedfiles/filedetails/?id=3404084143>  
 
-## GFX 원본 가져온곳(GFX ORIGIN source)
+## GFX 원본 출처
 - 특별한 경우가 아닌 이상, 대부분의 일러스트는 공식 일러스트만 사용했음을 공지합니다.
 - 동방의 경우, 동방홍룡동 이전의 캐릭터의 경우 인요명감의 일러스트를, 그외의 경우 인게임 일러만 사용했습니다.
 - 일부 중점 아이콘의 경우, 카이저라이히 모드에서 갖고 왔습니다.
