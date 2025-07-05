@@ -45,8 +45,7 @@
 
 ## 관련 링크
 디스코드 : <https://discord.gg/ctSCFge8tQ>   
-스팀 : <https://steamcommunity.com/sharedfiles/filedetails/?id=3404084143>   
-유튜브 : <https://www.youtube.com/@HOI4BlueArchiveMod> 
+스팀 : <https://steamcommunity.com/sharedfiles/filedetails/?id=3404084143>  
 
 ## GFX 원본 가져온곳(GFX ORIGIN source)
 - 특별한 경우가 아닌 이상, 대부분의 일러스트는 공식 일러스트만 사용했음을 공지합니다.
