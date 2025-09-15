@@ -72,8 +72,8 @@
 
 ### 영감을 얻거나 참고한 모드
 - Kaiserreich : <https://steamcommunity.com/sharedfiles/filedetails/?id=1521695605> - 시스템 관련해서 많은 참고를 받았을 뿐만 아니라, 일부 GFX도 사용했습니다. 아주 좋은 모드입니다.
-- Core With Compliance : <https://steamcommunity.com/sharedfiles/filedetails/?id=2505154898> - 일정 순응도 이상 넘으면 핵심주 부여하는 시스템을 참고했습니다.
+- Core With Compliance : <https://steamcommunity.com/sharedfiles/filedetails/?id=2505154898> - 일정 순응도 이상 넘으면 핵심주 부여하는 시스템을 넣는데 참고했습니다.
 - Too Many Ideologies : <https://steamcommunity.com/sharedfiles/filedetails/?id=3136127823> - 이념 설정 관련해서 참고를 했습니다.
 - FPS Map : <https://steamcommunity.com/sharedfiles/filedetails/?id=2404689961> - 쉐이더를 일부 참고했습니다.
 - Kaiserreich Anime Mod: Moereich! : <https://steamcommunity.com/sharedfiles/filedetails/?id=1821967568> - 파일럿 에이스 이미지를 일부 갖고왔습니다.
-- Better Laws and Policies : <https://steamcommunity.com/sharedfiles/filedetails/?id=3097661966> - 다양한 법률 시스템및 정책을 추가하는데, 일부 참고했습니다.
+- Better Laws and Policies : <https://steamcommunity.com/sharedfiles/filedetails/?id=3097661966> - 다양한 법률 시스템 및 정책을 넣는데, 일부 참고했습니다.
