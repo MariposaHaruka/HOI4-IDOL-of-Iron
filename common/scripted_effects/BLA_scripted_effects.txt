@@ -81,3 +81,57 @@ BLA_bop_very_low_decrease_effect = {
 		value = -0.05
 	}
 }
+
+BLA_scientific_improve = {
+	if = {
+		limit = { has_idea = BLA_scientific_improvement_1 }
+		swap_ideas = {
+			remove_idea = BLA_scientific_improvement_1
+			add_idea = BLA_scientific_improvement_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = BLA_scientific_improvement_2 }
+		swap_ideas = {
+			remove_idea = BLA_scientific_improvement_2
+			add_idea = BLA_scientific_improvement_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = BLA_scientific_improvement_3 }
+		swap_ideas = {
+			remove_idea = BLA_scientific_improvement_3
+			add_idea = BLA_scientific_improvement_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = BLA_scientific_improvement_4 }
+		swap_ideas = {
+			remove_idea = BLA_scientific_improvement_4
+			add_idea = BLA_scientific_improvement_5
+		}
+	}
+	else = {
+		add_timed_idea = {
+			idea = BLA_scientific_improvement_max
+			days = 100
+		}
+	}
+}
+
+BLA_agriculture_society_relieve = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+		remove_dynamic_modifier = { modifier = agriculture_society_state_7 }
+		add_dynamic_modifier = { modifier = agriculture_society_state_5 }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = agriculture_society_state_5 } }
+		remove_dynamic_modifier = { modifier = agriculture_society_state_5 }
+		add_dynamic_modifier = { modifier = agriculture_society_state_3 }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = agriculture_society_state_3 } }
+		remove_dynamic_modifier = { modifier = agriculture_society_state_3 }
+	}
+}

@@ -1,0 +1,29 @@
+add_namespace = AZU_tmp
+
+country_event = {
+	id = AZU_tmp.1
+	title = AZU_tmp.1.t
+	desc = AZU_tmp.1.desc
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		AZU = {
+			declare_war_on = {
+				target = KTC
+				type = annex_everything
+			}
+			if = {
+				limit = { 
+					is_historical_focus_on = yes
+					ROOT = { is_ai = yes }
+					KTC = { is_ai = yes } 
+				}
+				add_ideas = hidden_buff
+			}
+		}
+		news_event = { id = ioi_news.4 hours = 6 }
+		set_global_flag = ship_civil_war
+	}
+}

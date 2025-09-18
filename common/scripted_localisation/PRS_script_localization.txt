@@ -70,7 +70,7 @@ defined_text = {
 		}
 		localization_key = empty_key
 	}
-	text = {
+	text = { #NENE
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 1 }
 		}
@@ -245,172 +245,172 @@ defined_text = {
 		localization_key = empty_key
 	}
 
-	# TODT
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_1 = 1 }
-			has_idea = PRS_todt_reich_minister_of_armaments
-		}
-		localization_key = idea_desc|PRS_todt_reich_minister_of_armaments
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_1 = 1 }
-			has_idea = PRS_todt_reich_engineer
-		}
-		localization_key = idea_desc|PRS_todt_reich_engineer
-	}
-
-	# SPEER
+	# RUI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 2 }
-			has_idea = PRS_speer_reich_minister_of_armaments
+			has_idea = PRS_rui_reich_minister_of_armaments
 		}
-		localization_key = idea_desc|PRS_speer_reich_minister_of_armaments
+		localization_key = idea_desc|PRS_rui_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 2 }
-			has_idea = PRS_speer_reich_architect
+			has_idea = PRS_rui_reich_architect
 		}
-		localization_key = idea_desc|PRS_speer_reich_architect
+		localization_key = idea_desc|PRS_rui_reich_architect
 	}
 
-	#GÖRING
+	# EMU
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 3 }
-			has_idea = PRS_goring_four_year_plan_plenipotentiary
+			has_idea = PRS_emu_reich_minister_of_armaments
 		}
-		localization_key = idea_desc|PRS_goring_four_year_plan_plenipotentiary
+		localization_key = idea_desc|PRS_emu_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 3 }
-			has_idea = PRS_goring_overseer_four_year_plan
+			has_idea = PRS_emu_reich_engineer
 		}
-		localization_key = idea_desc|PRS_goring_overseer_four_year_plan
+		localization_key = idea_desc|PRS_emu_reich_engineer
 	}
 
-	#HIMMLER
+	#TSUKASA
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 4 }
-			has_idea = PRS_himmler_reichsfuhrer_ss
+			has_idea = PRS_tsukasa_four_year_plan_plenipotentiary
 		}
-		localization_key = idea_desc|PRS_himmler_reichsfuhrer_ss
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_1 = 4 }
-			has_idea = PRS_himmler_director_reich_security
-		}
-		localization_key = idea_desc|PRS_himmler_director_reich_security
+		localization_key = idea_desc|PRS_tsukasa_four_year_plan_plenipotentiary
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 4 }
-			has_idea = PRS_himmler_chief_of_german_police
+			has_idea = PRS_tsukasa_overseer_four_year_plan
 		}
-		localization_key = idea_desc|PRS_himmler_chief_of_german_police
+		localization_key = idea_desc|PRS_tsukasa_overseer_four_year_plan
 	}
 
-	#GOEBBELS
+	#KANADE
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master
+			has_idea = PRS_kanade_reichsfuhrer_ss
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_master
+		localization_key = idea_desc|PRS_kanade_reichsfuhrer_ss
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+			has_idea = PRS_kanade_director_reich_security
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+		localization_key = idea_desc|PRS_kanade_director_reich_security
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_film
+			has_idea = PRS_kanade_chief_of_german_police
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_film
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_ministry
-		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_ministry
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda
-		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda
+		localization_key = idea_desc|PRS_kanade_chief_of_german_police
 	}
 
-	#HESS
+	#SAKI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_first_among_equals
+			has_idea = PRS_saki_reich_minister_of_propaganda_master
 		}
-		localization_key = idea_desc|PRS_hess_first_among_equals
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_master
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_first_among_equals_no_aat
+			has_idea = PRS_saki_reich_minister_of_propaganda_master_no_lar
 		}
-		localization_key = idea_desc|PRS_hess_first_among_equals_no_aat
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_master_no_lar
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved
+			has_idea = PRS_saki_reich_minister_of_propaganda_film
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor_improved
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_film
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved_no_aat
+			has_idea = PRS_saki_reich_minister_of_propaganda_ministry
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor_improved_no_aat
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_ministry
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_party_chancellor
+			has_idea = PRS_saki_reich_minister_of_propaganda
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda
 	}
 
-	#BORMANN
+	#HONAMI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 7 }
-			has_idea = PRS_bormann_brown_eminence
+			has_idea = PRS_honami_first_among_equals
 		}
-		localization_key = idea_desc|PRS_bormann_brown_eminence
+		localization_key = idea_desc|PRS_honami_first_among_equals
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer_improved
+			has_idea = PRS_honami_first_among_equals_no_aat
 		}
-		localization_key = idea_desc|PRS_bormann_secretary_to_the_fuhrer_improved
+		localization_key = idea_desc|PRS_honami_first_among_equals_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer
+			has_idea = PRS_honami_party_chancellor_improved
 		}
-		localization_key = idea_desc|PRS_bormann_secretary_to_the_fuhrer
+		localization_key = idea_desc|PRS_honami_party_chancellor_improved
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_1 = 7 }
+			has_idea = PRS_honami_party_chancellor_improved_no_aat
+		}
+		localization_key = idea_desc|PRS_honami_party_chancellor_improved_no_aat
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_1 = 7 }
+			has_idea = PRS_honami_party_chancellor
+		}
+		localization_key = idea_desc|PRS_honami_party_chancellor
+	}
+
+	#SHIHO
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_1 = 8 }
+			has_idea = PRS_shiho_brown_eminence
+		}
+		localization_key = idea_desc|PRS_shiho_brown_eminence
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_1 = 8 }
+			has_idea = PRS_shiho_secretary_to_the_fuhrer_improved
+		}
+		localization_key = idea_desc|PRS_shiho_secretary_to_the_fuhrer_improved
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_1 = 8 }
+			has_idea = PRS_shiho_secretary_to_the_fuhrer
+		}
+		localization_key = idea_desc|PRS_shiho_secretary_to_the_fuhrer
 	}
 }
 
@@ -423,172 +423,172 @@ defined_text = {
 		localization_key = empty_key
 	}
 
-	# TODT
+	#EMU
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 1 }
-			has_idea = PRS_todt_reich_minister_of_armaments
+			has_idea = PRS_emu_reich_minister_of_armaments
 		}
-		localization_key = idea_desc|PRS_todt_reich_minister_of_armaments
+		localization_key = idea_desc|PRS_emu_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 1 }
-			has_idea = PRS_todt_reich_engineer
+			has_idea = PRS_emu_reich_engineer
 		}
-		localization_key = idea_desc|PRS_todt_reich_engineer
+		localization_key = idea_desc|PRS_emu_reich_engineer
 	}
 
-	# SPEER
+	# RUI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 2 }
-			has_idea = PRS_speer_reich_minister_of_armaments
+			has_idea = PRS_rui_reich_minister_of_armaments
 		}
-		localization_key = idea_desc|PRS_speer_reich_minister_of_armaments
+		localization_key = idea_desc|PRS_rui_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 2 }
-			has_idea = PRS_speer_reich_architect
+			has_idea = PRS_rui_reich_architect
 		}
-		localization_key = idea_desc|PRS_speer_reich_architect
+		localization_key = idea_desc|PRS_rui_reich_architect
 	}
 
-	#GÖRING
+	#TSUKASA
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 3 }
-			has_idea = PRS_goring_four_year_plan_plenipotentiary
+			has_idea = PRS_tsukasa_four_year_plan_plenipotentiary
 		}
-		localization_key = idea_desc|PRS_goring_four_year_plan_plenipotentiary
+		localization_key = idea_desc|PRS_tsukasa_four_year_plan_plenipotentiary
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 3 }
-			has_idea = PRS_goring_overseer_four_year_plan
+			has_idea = PRS_tsukasa_overseer_four_year_plan
 		}
-		localization_key = idea_desc|PRS_goring_overseer_four_year_plan
+		localization_key = idea_desc|PRS_tsukasa_overseer_four_year_plan
 	}
 
-	#HIMMLER
+	#KANADE
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 4 }
-			has_idea = PRS_himmler_reichsfuhrer_ss
+			has_idea = PRS_kanade_reichsfuhrer_ss
 		}
-		localization_key = idea_desc|PRS_himmler_reichsfuhrer_ss
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_2 = 4 }
-			has_idea = PRS_himmler_director_reich_security
-		}
-		localization_key = idea_desc|PRS_himmler_director_reich_security
+		localization_key = idea_desc|PRS_kanade_reichsfuhrer_ss
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 4 }
-			has_idea = PRS_himmler_chief_of_german_police
+			has_idea = PRS_kanade_director_reich_security
 		}
-		localization_key = idea_desc|PRS_himmler_chief_of_german_police
+		localization_key = idea_desc|PRS_kanade_director_reich_security
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_2 = 4 }
+			has_idea = PRS_kanade_chief_of_german_police
+		}
+		localization_key = idea_desc|PRS_kanade_chief_of_german_police
 	}
 
-	#GOEBBELS
+	#SAKI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master
+			has_idea = PRS_saki_reich_minister_of_propaganda_master
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_master
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_master
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+			has_idea = PRS_saki_reich_minister_of_propaganda_master_no_lar
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_master_no_lar
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_film
+			has_idea = PRS_saki_reich_minister_of_propaganda_film
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_film
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_film
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_ministry
+			has_idea = PRS_saki_reich_minister_of_propaganda_ministry
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_ministry
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_ministry
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda
+			has_idea = PRS_saki_reich_minister_of_propaganda
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda
 	}
 
-	#HESS
+	#HONAMI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_first_among_equals
+			has_idea = PRS_honami_first_among_equals
 		}
-		localization_key = idea_desc|PRS_hess_first_among_equals
+		localization_key = idea_desc|PRS_honami_first_among_equals
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_first_among_equals_no_aat
+			has_idea = PRS_honami_first_among_equals_no_aat
 		}
-		localization_key = idea_desc|PRS_hess_first_among_equals_no_aat
+		localization_key = idea_desc|PRS_honami_first_among_equals_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved
+			has_idea = PRS_honami_party_chancellor_improved
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor_improved
+		localization_key = idea_desc|PRS_honami_party_chancellor_improved
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved_no_aat
+			has_idea = PRS_honami_party_chancellor_improved_no_aat
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor_improved_no_aat
+		localization_key = idea_desc|PRS_honami_party_chancellor_improved_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_party_chancellor
+			has_idea = PRS_honami_party_chancellor
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor
+		localization_key = idea_desc|PRS_honami_party_chancellor
 	}
 
-	#BORMANN
+	#SHIHO
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 7 }
-			has_idea = PRS_bormann_brown_eminence
+			has_idea = PRS_shiho_brown_eminence
 		}
-		localization_key = idea_desc|PRS_bormann_brown_eminence
+		localization_key = idea_desc|PRS_shiho_brown_eminence
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer_improved
+			has_idea = PRS_shiho_secretary_to_the_fuhrer_improved
 		}
-		localization_key = idea_desc|PRS_bormann_secretary_to_the_fuhrer_improved
+		localization_key = idea_desc|PRS_shiho_secretary_to_the_fuhrer_improved
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer
+			has_idea = PRS_shiho_secretary_to_the_fuhrer
 		}
-		localization_key = idea_desc|PRS_bormann_secretary_to_the_fuhrer
+		localization_key = idea_desc|PRS_shiho_secretary_to_the_fuhrer
 	}
 }
 
@@ -601,172 +601,172 @@ defined_text = {
 		localization_key = empty_key
 	}
 
-	# TODT
+	#EMU
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 1 }
-			has_idea = PRS_todt_reich_minister_of_armaments
+			has_idea = PRS_emu_reich_minister_of_armaments
 		}
-		localization_key = idea_desc|PRS_todt_reich_minister_of_armaments
+		localization_key = idea_desc|PRS_emu_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 1 }
-			has_idea = PRS_todt_reich_engineer
+			has_idea = PRS_emu_reich_engineer
 		}
-		localization_key = idea_desc|PRS_todt_reich_engineer
+		localization_key = idea_desc|PRS_emu_reich_engineer
 	}
 
-	# SPEER
+	# RUI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 2 }
-			has_idea = PRS_speer_reich_minister_of_armaments
+			has_idea = PRS_rui_reich_minister_of_armaments
 		}
-		localization_key = idea_desc|PRS_speer_reich_minister_of_armaments
+		localization_key = idea_desc|PRS_rui_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 2 }
-			has_idea = PRS_speer_reich_architect
+			has_idea = PRS_rui_reich_architect
 		}
-		localization_key = idea_desc|PRS_speer_reich_architect
+		localization_key = idea_desc|PRS_rui_reich_architect
 	}
 
-	#GÖRING
+	#TSUKASA
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 3 }
-			has_idea = PRS_goring_four_year_plan_plenipotentiary
+			has_idea = PRS_tsukasa_four_year_plan_plenipotentiary
 		}
-		localization_key = idea_desc|PRS_goring_four_year_plan_plenipotentiary
+		localization_key = idea_desc|PRS_tsukasa_four_year_plan_plenipotentiary
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 3 }
-			has_idea = PRS_goring_overseer_four_year_plan
+			has_idea = PRS_tsukasa_overseer_four_year_plan
 		}
-		localization_key = idea_desc|PRS_goring_overseer_four_year_plan
+		localization_key = idea_desc|PRS_tsukasa_overseer_four_year_plan
 	}
 
-	#HIMMLER
+	#KANADE
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 4 }
-			has_idea = PRS_himmler_reichsfuhrer_ss
+			has_idea = PRS_kanade_reichsfuhrer_ss
 		}
-		localization_key = idea_desc|PRS_himmler_reichsfuhrer_ss
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_3 = 4 }
-			has_idea = PRS_himmler_director_reich_security
-		}
-		localization_key = idea_desc|PRS_himmler_director_reich_security
+		localization_key = idea_desc|PRS_kanade_reichsfuhrer_ss
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 4 }
-			has_idea = PRS_himmler_chief_of_german_police
+			has_idea = PRS_kanade_director_reich_security
 		}
-		localization_key = idea_desc|PRS_himmler_chief_of_german_police
+		localization_key = idea_desc|PRS_kanade_director_reich_security
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_3 = 4 }
+			has_idea = PRS_kanade_chief_of_german_police
+		}
+		localization_key = idea_desc|PRS_kanade_chief_of_german_police
 	}
 
-	#GOEBBELS
+	#SAKI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master
+			has_idea = PRS_saki_reich_minister_of_propaganda_master
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_master
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_master
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+			has_idea = PRS_saki_reich_minister_of_propaganda_master_no_lar
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_master_no_lar
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_film
+			has_idea = PRS_saki_reich_minister_of_propaganda_film
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_film
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_film
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_ministry
+			has_idea = PRS_saki_reich_minister_of_propaganda_ministry
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_ministry
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_ministry
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda
+			has_idea = PRS_saki_reich_minister_of_propaganda
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda
 	}
 
-	#HESS
+	#HONAMI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_first_among_equals
+			has_idea = PRS_honami_first_among_equals
 		}
-		localization_key = idea_desc|PRS_hess_first_among_equals
+		localization_key = idea_desc|PRS_honami_first_among_equals
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_first_among_equals_no_aat
+			has_idea = PRS_honami_first_among_equals_no_aat
 		}
-		localization_key = idea_desc|PRS_hess_first_among_equals_no_aat
+		localization_key = idea_desc|PRS_honami_first_among_equals_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved
+			has_idea = PRS_honami_party_chancellor_improved
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor_improved
+		localization_key = idea_desc|PRS_honami_party_chancellor_improved
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved_no_aat
+			has_idea = PRS_honami_party_chancellor_improved_no_aat
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor_improved_no_aat
+		localization_key = idea_desc|PRS_honami_party_chancellor_improved_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_party_chancellor
+			has_idea = PRS_honami_party_chancellor
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor
+		localization_key = idea_desc|PRS_honami_party_chancellor
 	}
 
-	#BORMANN
+	#SHIHO
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 7 }
-			has_idea = PRS_bormann_brown_eminence
+			has_idea = PRS_shiho_brown_eminence
 		}
-		localization_key = idea_desc|PRS_bormann_brown_eminence
+		localization_key = idea_desc|PRS_shiho_brown_eminence
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer_improved
+			has_idea = PRS_shiho_secretary_to_the_fuhrer_improved
 		}
-		localization_key = idea_desc|PRS_bormann_secretary_to_the_fuhrer_improved
+		localization_key = idea_desc|PRS_shiho_secretary_to_the_fuhrer_improved
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer
+			has_idea = PRS_shiho_secretary_to_the_fuhrer
 		}
-		localization_key = idea_desc|PRS_bormann_secretary_to_the_fuhrer
+		localization_key = idea_desc|PRS_shiho_secretary_to_the_fuhrer
 	}
 }
 
@@ -779,172 +779,172 @@ defined_text = {
 		localization_key = empty_key
 	}
 
-	# TODT
+	#EMU
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 1 }
-			has_idea = PRS_todt_reich_minister_of_armaments
+			has_idea = PRS_emu_reich_minister_of_armaments
 		}
-		localization_key = PRS_todt_reich_minister_of_armaments
+		localization_key = PRS_emu_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 1 }
-			has_idea = PRS_todt_reich_engineer
+			has_idea = PRS_emu_reich_engineer
 		}
-		localization_key = PRS_todt_reich_engineer
+		localization_key = PRS_emu_reich_engineer
 	}
 
-	# SPEER
+	# RUI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 2 }
-			has_idea = PRS_speer_reich_minister_of_armaments
+			has_idea = PRS_rui_reich_minister_of_armaments
 		}
-		localization_key = PRS_speer_reich_minister_of_armaments
+		localization_key = PRS_rui_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 2 }
-			has_idea = PRS_speer_reich_architect
+			has_idea = PRS_rui_reich_architect
 		}
-		localization_key = PRS_speer_reich_architect
+		localization_key = PRS_rui_reich_architect
 	}
 
-	#GÖRING
+	#TSUKASA
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 3 }
-			has_idea = PRS_goring_four_year_plan_plenipotentiary
+			has_idea = PRS_tsukasa_four_year_plan_plenipotentiary
 		}
-		localization_key = PRS_goring_four_year_plan_plenipotentiary
+		localization_key = PRS_tsukasa_four_year_plan_plenipotentiary
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 3 }
-			has_idea = PRS_goring_overseer_four_year_plan
+			has_idea = PRS_tsukasa_overseer_four_year_plan
 		}
-		localization_key = PRS_goring_overseer_four_year_plan
+		localization_key = PRS_tsukasa_overseer_four_year_plan
 	}
 
-	#HIMMLER
+	#KANADE
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 4 }
-			has_idea = PRS_himmler_reichsfuhrer_ss
+			has_idea = PRS_kanade_reichsfuhrer_ss
 		}
-		localization_key = PRS_himmler_reichsfuhrer_ss
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_1 = 4 }
-			has_idea = PRS_himmler_director_reich_security
-		}
-		localization_key = PRS_himmler_director_reich_security
+		localization_key = PRS_kanade_reichsfuhrer_ss
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 4 }
-			has_idea = PRS_himmler_chief_of_german_police
+			has_idea = PRS_kanade_director_reich_security
 		}
-		localization_key = PRS_himmler_chief_of_german_police
+		localization_key = PRS_kanade_director_reich_security
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_1 = 4 }
+			has_idea = PRS_kanade_chief_of_german_police
+		}
+		localization_key = PRS_kanade_chief_of_german_police
 	}
 
-	#GOEBBELS
+	#SAKI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master
+			has_idea = PRS_saki_reich_minister_of_propaganda_master
 		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda_master
+		localization_key = PRS_saki_reich_minister_of_propaganda_master
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+			has_idea = PRS_saki_reich_minister_of_propaganda_master_no_lar
 		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+		localization_key = PRS_saki_reich_minister_of_propaganda_master_no_lar
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_film
+			has_idea = PRS_saki_reich_minister_of_propaganda_film
 		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda_film
+		localization_key = PRS_saki_reich_minister_of_propaganda_film
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_ministry
+			has_idea = PRS_saki_reich_minister_of_propaganda_ministry
 		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda_ministry
+		localization_key = PRS_saki_reich_minister_of_propaganda_ministry
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda
+			has_idea = PRS_saki_reich_minister_of_propaganda
 		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda
+		localization_key = PRS_saki_reich_minister_of_propaganda
 	}
 
-	#HESS
+	#HONAMI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_first_among_equals
+			has_idea = PRS_honami_first_among_equals
 		}
-		localization_key = PRS_hess_first_among_equals
+		localization_key = PRS_honami_first_among_equals
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_first_among_equals_no_aat
+			has_idea = PRS_honami_first_among_equals_no_aat
 		}
-		localization_key = PRS_hess_first_among_equals_no_aat
+		localization_key = PRS_honami_first_among_equals_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved
+			has_idea = PRS_honami_party_chancellor_improved
 		}
-		localization_key = PRS_hess_party_chancellor_improved
+		localization_key = PRS_honami_party_chancellor_improved
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved_no_aat
+			has_idea = PRS_honami_party_chancellor_improved_no_aat
 		}
-		localization_key = PRS_hess_party_chancellor_improved_no_aat
+		localization_key = PRS_honami_party_chancellor_improved_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_party_chancellor
+			has_idea = PRS_honami_party_chancellor
 		}
-		localization_key = PRS_hess_party_chancellor
+		localization_key = PRS_honami_party_chancellor
 	}
 
-	#BORMANN
+	#SHIHO
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 7 }
-			has_idea = PRS_bormann_brown_eminence
+			has_idea = PRS_shiho_brown_eminence
 		}
-		localization_key = PRS_bormann_brown_eminence
+		localization_key = PRS_shiho_brown_eminence
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer_improved
+			has_idea = PRS_shiho_secretary_to_the_fuhrer_improved
 		}
-		localization_key = PRS_bormann_secretary_to_the_fuhrer_improved
+		localization_key = PRS_shiho_secretary_to_the_fuhrer_improved
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer
+			has_idea = PRS_shiho_secretary_to_the_fuhrer
 		}
-		localization_key = PRS_bormann_secretary_to_the_fuhrer
+		localization_key = PRS_shiho_secretary_to_the_fuhrer
 	}
 }
 
@@ -957,172 +957,172 @@ defined_text = {
 		localization_key = empty_key
 	}
 
-	# TODT
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_2 = 1 }
-			has_idea = PRS_todt_reich_minister_of_armaments
-		}
-		localization_key = PRS_todt_reich_minister_of_armaments
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_2 = 1 }
-			has_idea = PRS_todt_reich_engineer
-		}
-		localization_key = PRS_todt_reich_engineer
-	}
-
-	# SPEER
+	# EMU
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 2 }
-			has_idea = PRS_speer_reich_minister_of_armaments
+			has_idea = PRS_emu_reich_minister_of_armaments
 		}
-		localization_key = PRS_speer_reich_minister_of_armaments
+		localization_key = PRS_emu_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 2 }
-			has_idea = PRS_speer_reich_architect
+			has_idea = PRS_emu_reich_engineer
 		}
-		localization_key = PRS_speer_reich_architect
+		localization_key = PRS_emu_reich_engineer
 	}
 
-	#GÖRING
+	# RUI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 3 }
-			has_idea = PRS_goring_four_year_plan_plenipotentiary
+			has_idea = PRS_rui_reich_minister_of_armaments
 		}
-		localization_key = PRS_goring_four_year_plan_plenipotentiary
+		localization_key = PRS_rui_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 3 }
-			has_idea = PRS_goring_overseer_four_year_plan
+			has_idea = PRS_rui_reich_architect
 		}
-		localization_key = PRS_goring_overseer_four_year_plan
+		localization_key = PRS_rui_reich_architect
 	}
 
-	#HIMMLER
+	#TSUKASA
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 4 }
-			has_idea = PRS_himmler_reichsfuhrer_ss
+			has_idea = PRS_tsukasa_four_year_plan_plenipotentiary
 		}
-		localization_key = PRS_himmler_reichsfuhrer_ss
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_2 = 4 }
-			has_idea = PRS_himmler_director_reich_security
-		}
-		localization_key = PRS_himmler_director_reich_security
+		localization_key = PRS_tsukasa_four_year_plan_plenipotentiary
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 4 }
-			has_idea = PRS_himmler_chief_of_german_police
+			has_idea = PRS_tsukasa_overseer_four_year_plan
 		}
-		localization_key = PRS_himmler_chief_of_german_police
+		localization_key = PRS_tsukasa_overseer_four_year_plan
 	}
 
-	#GOEBBELS
+	#KANADE
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master
+			has_idea = PRS_kanade_reichsfuhrer_ss
 		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda_master
+		localization_key = PRS_kanade_reichsfuhrer_ss
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+			has_idea = PRS_kanade_director_reich_security
 		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+		localization_key = PRS_kanade_director_reich_security
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_film
+			has_idea = PRS_kanade_chief_of_german_police
 		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda_film
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_ministry
-		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda_ministry
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda
-		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda
+		localization_key = PRS_kanade_chief_of_german_police
 	}
 
-	#HESS
+	#SAKI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_first_among_equals
+			has_idea = PRS_saki_reich_minister_of_propaganda_master
 		}
-		localization_key = PRS_hess_first_among_equals
+		localization_key = PRS_saki_reich_minister_of_propaganda_master
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_first_among_equals_no_aat
+			has_idea = PRS_saki_reich_minister_of_propaganda_master_no_lar
 		}
-		localization_key = PRS_hess_first_among_equals_no_aat
+		localization_key = PRS_saki_reich_minister_of_propaganda_master_no_lar
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved
+			has_idea = PRS_saki_reich_minister_of_propaganda_film
 		}
-		localization_key = PRS_hess_party_chancellor_improved
+		localization_key = PRS_saki_reich_minister_of_propaganda_film
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved_no_aat
+			has_idea = PRS_saki_reich_minister_of_propaganda_ministry
 		}
-		localization_key = PRS_hess_party_chancellor_improved_no_aat
+		localization_key = PRS_saki_reich_minister_of_propaganda_ministry
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_party_chancellor
+			has_idea = PRS_saki_reich_minister_of_propaganda
 		}
-		localization_key = PRS_hess_party_chancellor
+		localization_key = PRS_saki_reich_minister_of_propaganda
 	}
 
-	#BORMANN
+	#HONAMI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 7 }
-			has_idea = PRS_bormann_brown_eminence
+			has_idea = PRS_honami_first_among_equals
 		}
-		localization_key = PRS_bormann_brown_eminence
+		localization_key = PRS_honami_first_among_equals
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer_improved
+			has_idea = PRS_honami_first_among_equals_no_aat
 		}
-		localization_key = PRS_bormann_secretary_to_the_fuhrer_improved
+		localization_key = PRS_honami_first_among_equals_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer
+			has_idea = PRS_honami_party_chancellor_improved
 		}
-		localization_key = PRS_bormann_secretary_to_the_fuhrer
+		localization_key = PRS_honami_party_chancellor_improved
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_2 = 7 }
+			has_idea = PRS_honami_party_chancellor_improved_no_aat
+		}
+		localization_key = PRS_honami_party_chancellor_improved_no_aat
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_2 = 7 }
+			has_idea = PRS_honami_party_chancellor
+		}
+		localization_key = PRS_honami_party_chancellor
+	}
+
+	#SHIHO
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_2 = 8 }
+			has_idea = PRS_shiho_brown_eminence
+		}
+		localization_key = PRS_shiho_brown_eminence
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_2 = 8 }
+			has_idea = PRS_shiho_secretary_to_the_fuhrer_improved
+		}
+		localization_key = PRS_shiho_secretary_to_the_fuhrer_improved
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_2 = 8 }
+			has_idea = PRS_shiho_secretary_to_the_fuhrer
+		}
+		localization_key = PRS_shiho_secretary_to_the_fuhrer
 	}
 }
 
@@ -1135,172 +1135,172 @@ defined_text = {
 		localization_key = empty_key
 	}
 
-	# TODT
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_3 = 1 }
-			has_idea = PRS_todt_reich_minister_of_armaments
-		}
-		localization_key = PRS_todt_reich_minister_of_armaments
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_3 = 1 }
-			has_idea = PRS_todt_reich_engineer
-		}
-		localization_key = PRS_todt_reich_engineer
-	}
-
-	# SPEER
+	#EMU
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 2 }
-			has_idea = PRS_speer_reich_minister_of_armaments
+			has_idea = PRS_emu_reich_minister_of_armaments
 		}
-		localization_key = PRS_speer_reich_minister_of_armaments
+		localization_key = PRS_emu_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 2 }
-			has_idea = PRS_speer_reich_architect
+			has_idea = PRS_emu_reich_engineer
 		}
-		localization_key = PRS_speer_reich_architect
+		localization_key = PRS_emu_reich_engineer
 	}
 
-	#GÖRING
+	# RUI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 3 }
-			has_idea = PRS_goring_four_year_plan_plenipotentiary
+			has_idea = PRS_rui_reich_minister_of_armaments
 		}
-		localization_key = PRS_goring_four_year_plan_plenipotentiary
+		localization_key = PRS_rui_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 3 }
-			has_idea = PRS_goring_overseer_four_year_plan
+			has_idea = PRS_rui_reich_architect
 		}
-		localization_key = PRS_goring_overseer_four_year_plan
+		localization_key = PRS_rui_reich_architect
 	}
 
-	#HIMMLER
+	#TSUKASA
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 4 }
-			has_idea = PRS_himmler_reichsfuhrer_ss
+			has_idea = PRS_tsukasa_four_year_plan_plenipotentiary
 		}
-		localization_key = PRS_himmler_reichsfuhrer_ss
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_3 = 4 }
-			has_idea = PRS_himmler_director_reich_security
-		}
-		localization_key = PRS_himmler_director_reich_security
+		localization_key = PRS_tsukasa_four_year_plan_plenipotentiary
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 4 }
-			has_idea = PRS_himmler_chief_of_german_police
+			has_idea = PRS_tsukasa_overseer_four_year_plan
 		}
-		localization_key = PRS_himmler_chief_of_german_police
+		localization_key = PRS_tsukasa_overseer_four_year_plan
 	}
 
-	#GOEBBELS
+	#KANADE
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master
+			has_idea = PRS_kanade_reichsfuhrer_ss
 		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda_master
+		localization_key = PRS_kanade_reichsfuhrer_ss
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+			has_idea = PRS_kanade_director_reich_security
 		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+		localization_key = PRS_kanade_director_reich_security
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_film
+			has_idea = PRS_kanade_chief_of_german_police
 		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda_film
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_ministry
-		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda_ministry
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda
-		}
-		localization_key = PRS_goebbels_reich_minister_of_propaganda
+		localization_key = PRS_kanade_chief_of_german_police
 	}
 
-	#HESS
+	#SAKI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_first_among_equals
+			has_idea = PRS_saki_reich_minister_of_propaganda_master
 		}
-		localization_key = PRS_hess_first_among_equals
+		localization_key = PRS_saki_reich_minister_of_propaganda_master
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_first_among_equals_no_aat
+			has_idea = PRS_saki_reich_minister_of_propaganda_master_no_lar
 		}
-		localization_key = PRS_hess_first_among_equals_no_aat
+		localization_key = PRS_saki_reich_minister_of_propaganda_master_no_lar
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved
+			has_idea = PRS_saki_reich_minister_of_propaganda_film
 		}
-		localization_key = PRS_hess_party_chancellor_improved
+		localization_key = PRS_saki_reich_minister_of_propaganda_film
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved_no_aat
+			has_idea = PRS_saki_reich_minister_of_propaganda_ministry
 		}
-		localization_key = PRS_hess_party_chancellor_improved_no_aat
+		localization_key = PRS_saki_reich_minister_of_propaganda_ministry
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_party_chancellor
+			has_idea = PRS_saki_reich_minister_of_propaganda
 		}
-		localization_key = PRS_hess_party_chancellor
+		localization_key = PRS_saki_reich_minister_of_propaganda
 	}
 
-	#BORMANN
+	#HONAMI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 7 }
-			has_idea = PRS_bormann_brown_eminence
+			has_idea = PRS_honami_first_among_equals
 		}
-		localization_key = PRS_bormann_brown_eminence
+		localization_key = PRS_honami_first_among_equals
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer_improved
+			has_idea = PRS_honami_first_among_equals_no_aat
 		}
-		localization_key = PRS_bormann_secretary_to_the_fuhrer_improved
+		localization_key = PRS_honami_first_among_equals_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer
+			has_idea = PRS_honami_party_chancellor_improved
 		}
-		localization_key = PRS_bormann_secretary_to_the_fuhrer
+		localization_key = PRS_honami_party_chancellor_improved
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_3 = 7 }
+			has_idea = PRS_honami_party_chancellor_improved_no_aat
+		}
+		localization_key = PRS_honami_party_chancellor_improved_no_aat
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_3 = 7 }
+			has_idea = PRS_honami_party_chancellor
+		}
+		localization_key = PRS_honami_party_chancellor
+	}
+
+	#SHIHO
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_3 = 8 }
+			has_idea = PRS_shiho_brown_eminence
+		}
+		localization_key = PRS_shiho_brown_eminence
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_3 = 8 }
+			has_idea = PRS_shiho_secretary_to_the_fuhrer_improved
+		}
+		localization_key = PRS_shiho_secretary_to_the_fuhrer_improved
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_3 = 8 }
+			has_idea = PRS_shiho_secretary_to_the_fuhrer
+		}
+		localization_key = PRS_shiho_secretary_to_the_fuhrer
 	}
 }
 
@@ -1356,43 +1356,43 @@ defined_text = { #PORTRAIT OF ASCENDING ADSVISOR (THAT WILL REPLACE SOMEONE) FOR
 		trigger = {
 			check_variable = { PRS_ascending_advisor = 1 }
 		}
-		localization_key = GFX_report_event_PRS_todt
+		localization_key = GFX_report_event_PRS_emu
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascending_advisor = 2 }
 		}
-		localization_key = GFX_report_event_PRS_speer
+		localization_key = GFX_report_event_PRS_rui
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascending_advisor = 3 }
 		}
-		localization_key = GFX_report_event_PRS_goring
+		localization_key = GFX_report_event_PRS_tsukasa
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascending_advisor = 4 }
 		}
-		localization_key = GFX_report_event_PRS_himmler
+		localization_key = GFX_report_event_PRS_kanade
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascending_advisor = 5 }
 		}
-		localization_key = GFX_report_event_PRS_goebbels
+		localization_key = GFX_report_event_PRS_saki
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascending_advisor = 6 }
 		}
-		localization_key = GFX_report_event_PRS_hess
+		localization_key = GFX_report_event_PRS_honami
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascending_advisor = 7 }
 		}
-		localization_key = GFX_report_event_PRS_bormann
+		localization_key = GFX_report_event_PRS_shiho
 	}
 }
 
@@ -1405,172 +1405,172 @@ defined_text = {
 		localization_key = empty_key
 	}
 
-	# TODT
+	#EMU
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 1 }
-			has_idea = PRS_todt_reich_minister_of_armaments
+			has_idea = PRS_emu_reich_minister_of_armaments
 		}
-		localization_key = idea_desc|PRS_todt_reich_minister_of_armaments
+		localization_key = idea_desc|PRS_emu_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 1 }
-			has_idea = PRS_todt_reich_engineer
+			has_idea = PRS_emu_reich_engineer
 		}
-		localization_key = idea_desc|PRS_todt_reich_engineer
+		localization_key = idea_desc|PRS_emu_reich_engineer
 	}
 
-	# SPEER
+	# RUI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 2 }
-			has_idea = PRS_speer_reich_minister_of_armaments
+			has_idea = PRS_rui_reich_minister_of_armaments
 		}
-		localization_key = idea_desc|PRS_speer_reich_minister_of_armaments
+		localization_key = idea_desc|PRS_rui_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 2 }
-			has_idea = PRS_speer_reich_architect
+			has_idea = PRS_rui_reich_architect
 		}
-		localization_key = idea_desc|PRS_speer_reich_architect
+		localization_key = idea_desc|PRS_rui_reich_architect
 	}
 
-	#GÖRING
+	#TSUKASA
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 3 }
-			has_idea = PRS_goring_four_year_plan_plenipotentiary
+			has_idea = PRS_tsukasa_four_year_plan_plenipotentiary
 		}
-		localization_key = idea_desc|PRS_goring_four_year_plan_plenipotentiary
+		localization_key = idea_desc|PRS_tsukasa_four_year_plan_plenipotentiary
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 3 }
-			has_idea = PRS_goring_overseer_four_year_plan
+			has_idea = PRS_tsukasa_overseer_four_year_plan
 		}
-		localization_key = idea_desc|PRS_goring_overseer_four_year_plan
+		localization_key = idea_desc|PRS_tsukasa_overseer_four_year_plan
 	}
 
-	#HIMMLER
+	#KANADE
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 4 }
-			has_idea = PRS_himmler_reichsfuhrer_ss
+			has_idea = PRS_kanade_reichsfuhrer_ss
 		}
-		localization_key = idea_desc|PRS_himmler_reichsfuhrer_ss
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_1 = 4 }
-			has_idea = PRS_himmler_director_reich_security
-		}
-		localization_key = idea_desc|PRS_himmler_director_reich_security
+		localization_key = idea_desc|PRS_kanade_reichsfuhrer_ss
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 4 }
-			has_idea = PRS_himmler_chief_of_german_police
+			has_idea = PRS_kanade_director_reich_security
 		}
-		localization_key = idea_desc|PRS_himmler_chief_of_german_police
+		localization_key = idea_desc|PRS_kanade_director_reich_security
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_1 = 4 }
+			has_idea = PRS_kanade_chief_of_german_police
+		}
+		localization_key = idea_desc|PRS_kanade_chief_of_german_police
 	}
 
-	#GOEBBELS
+	#SAKI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master
+			has_idea = PRS_saki_reich_minister_of_propaganda_master
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_master
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_master
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+			has_idea = PRS_saki_reich_minister_of_propaganda_master_no_lar
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_master_no_lar
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_film
+			has_idea = PRS_saki_reich_minister_of_propaganda_film
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_film
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_film
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_ministry
+			has_idea = PRS_saki_reich_minister_of_propaganda_ministry
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_ministry
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_ministry
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda
+			has_idea = PRS_saki_reich_minister_of_propaganda
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda
 	}
 
-	#HESS
+	#HONAMI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_first_among_equals
+			has_idea = PRS_honami_first_among_equals
 		}
-		localization_key = idea_desc|PRS_hess_first_among_equals
+		localization_key = idea_desc|PRS_honami_first_among_equals
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_first_among_equals_no_aat
+			has_idea = PRS_honami_first_among_equals_no_aat
 		}
-		localization_key = idea_desc|PRS_hess_first_among_equals_no_aat
+		localization_key = idea_desc|PRS_honami_first_among_equals_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved
+			has_idea = PRS_honami_party_chancellor_improved
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor_improved
+		localization_key = idea_desc|PRS_honami_party_chancellor_improved
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved_no_aat
+			has_idea = PRS_honami_party_chancellor_improved_no_aat
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor_improved_no_aat
+		localization_key = idea_desc|PRS_honami_party_chancellor_improved_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 6 }
-			has_idea = PRS_hess_party_chancellor
+			has_idea = PRS_honami_party_chancellor
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor
+		localization_key = idea_desc|PRS_honami_party_chancellor
 	}
 
-	#BORMANN
+	#SHIHO
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 7 }
-			has_idea = PRS_bormann_brown_eminence
+			has_idea = PRS_shiho_brown_eminence
 		}
-		localization_key = idea_desc|PRS_bormann_brown_eminence
+		localization_key = idea_desc|PRS_shiho_brown_eminence
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer_improved
+			has_idea = PRS_shiho_secretary_to_the_fuhrer_improved
 		}
-		localization_key = idea_desc|PRS_bormann_secretary_to_the_fuhrer_improved
+		localization_key = idea_desc|PRS_shiho_secretary_to_the_fuhrer_improved
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_1 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer
+			has_idea = PRS_shiho_secretary_to_the_fuhrer
 		}
-		localization_key = idea_desc|PRS_bormann_secretary_to_the_fuhrer
+		localization_key = idea_desc|PRS_shiho_secretary_to_the_fuhrer
 	}
 }
 
@@ -1583,172 +1583,172 @@ defined_text = {
 		localization_key = empty_key
 	}
 
-	# TODT
+	#EMU
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 1 }
-			has_idea = PRS_todt_reich_minister_of_armaments
+			has_idea = PRS_emu_reich_minister_of_armaments
 		}
-		localization_key = idea_desc|PRS_todt_reich_minister_of_armaments
+		localization_key = idea_desc|PRS_emu_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 1 }
-			has_idea = PRS_todt_reich_engineer
+			has_idea = PRS_emu_reich_engineer
 		}
-		localization_key = idea_desc|PRS_todt_reich_engineer
+		localization_key = idea_desc|PRS_emu_reich_engineer
 	}
 
-	# SPEER
+	# RUI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 2 }
-			has_idea = PRS_speer_reich_minister_of_armaments
+			has_idea = PRS_rui_reich_minister_of_armaments
 		}
-		localization_key = idea_desc|PRS_speer_reich_minister_of_armaments
+		localization_key = idea_desc|PRS_rui_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 2 }
-			has_idea = PRS_speer_reich_architect
+			has_idea = PRS_rui_reich_architect
 		}
-		localization_key = idea_desc|PRS_speer_reich_architect
+		localization_key = idea_desc|PRS_rui_reich_architect
 	}
 
-	#GÖRING
+	#TSUKASA
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 3 }
-			has_idea = PRS_goring_four_year_plan_plenipotentiary
+			has_idea = PRS_tsukasa_four_year_plan_plenipotentiary
 		}
-		localization_key = idea_desc|PRS_goring_four_year_plan_plenipotentiary
+		localization_key = idea_desc|PRS_tsukasa_four_year_plan_plenipotentiary
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 3 }
-			has_idea = PRS_goring_overseer_four_year_plan
+			has_idea = PRS_tsukasa_overseer_four_year_plan
 		}
-		localization_key = idea_desc|PRS_goring_overseer_four_year_plan
+		localization_key = idea_desc|PRS_tsukasa_overseer_four_year_plan
 	}
 
-	#HIMMLER
+	#KANADE
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 4 }
-			has_idea = PRS_himmler_reichsfuhrer_ss
+			has_idea = PRS_kanade_reichsfuhrer_ss
 		}
-		localization_key = idea_desc|PRS_himmler_reichsfuhrer_ss
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_2 = 4 }
-			has_idea = PRS_himmler_director_reich_security
-		}
-		localization_key = idea_desc|PRS_himmler_director_reich_security
+		localization_key = idea_desc|PRS_kanade_reichsfuhrer_ss
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 4 }
-			has_idea = PRS_himmler_chief_of_german_police
+			has_idea = PRS_kanade_director_reich_security
 		}
-		localization_key = idea_desc|PRS_himmler_chief_of_german_police
+		localization_key = idea_desc|PRS_kanade_director_reich_security
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_2 = 4 }
+			has_idea = PRS_kanade_chief_of_german_police
+		}
+		localization_key = idea_desc|PRS_kanade_chief_of_german_police
 	}
 
-	#GOEBBELS
+	#SAKI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master
+			has_idea = PRS_saki_reich_minister_of_propaganda_master
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_master
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_master
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+			has_idea = PRS_saki_reich_minister_of_propaganda_master_no_lar
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_master_no_lar
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_film
+			has_idea = PRS_saki_reich_minister_of_propaganda_film
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_film
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_film
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_ministry
+			has_idea = PRS_saki_reich_minister_of_propaganda_ministry
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_ministry
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_ministry
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda
+			has_idea = PRS_saki_reich_minister_of_propaganda
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda
 	}
 
-	#HESS
+	#HONAMI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_first_among_equals
+			has_idea = PRS_honami_first_among_equals
 		}
-		localization_key = idea_desc|PRS_hess_first_among_equals
+		localization_key = idea_desc|PRS_honami_first_among_equals
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_first_among_equals_no_aat
+			has_idea = PRS_honami_first_among_equals_no_aat
 		}
-		localization_key = idea_desc|PRS_hess_first_among_equals_no_aat
+		localization_key = idea_desc|PRS_honami_first_among_equals_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved
+			has_idea = PRS_honami_party_chancellor_improved
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor_improved
+		localization_key = idea_desc|PRS_honami_party_chancellor_improved
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved_no_aat
+			has_idea = PRS_honami_party_chancellor_improved_no_aat
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor_improved_no_aat
+		localization_key = idea_desc|PRS_honami_party_chancellor_improved_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 6 }
-			has_idea = PRS_hess_party_chancellor
+			has_idea = PRS_honami_party_chancellor
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor
+		localization_key = idea_desc|PRS_honami_party_chancellor
 	}
 
-	#BORMANN
+	#SHIHO
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 7 }
-			has_idea = PRS_bormann_brown_eminence
+			has_idea = PRS_shiho_brown_eminence
 		}
-		localization_key = idea_desc|PRS_bormann_brown_eminence
+		localization_key = idea_desc|PRS_shiho_brown_eminence
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer_improved
+			has_idea = PRS_shiho_secretary_to_the_fuhrer_improved
 		}
-		localization_key = idea_desc|PRS_bormann_secretary_to_the_fuhrer_improved
+		localization_key = idea_desc|PRS_shiho_secretary_to_the_fuhrer_improved
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_2 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer
+			has_idea = PRS_shiho_secretary_to_the_fuhrer
 		}
-		localization_key = idea_desc|PRS_bormann_secretary_to_the_fuhrer
+		localization_key = idea_desc|PRS_shiho_secretary_to_the_fuhrer
 	}
 }
 
@@ -1761,172 +1761,172 @@ defined_text = {
 		localization_key = empty_key
 	}
 
-	# TODT
+	#EMU
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 1 }
-			has_idea = PRS_todt_reich_minister_of_armaments
+			has_idea = PRS_emu_reich_minister_of_armaments
 		}
-		localization_key = idea_desc|PRS_todt_reich_minister_of_armaments
+		localization_key = idea_desc|PRS_emu_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 1 }
-			has_idea = PRS_todt_reich_engineer
+			has_idea = PRS_emu_reich_engineer
 		}
-		localization_key = idea_desc|PRS_todt_reich_engineer
+		localization_key = idea_desc|PRS_emu_reich_engineer
 	}
 
-	# SPEER
+	# RUI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 2 }
-			has_idea = PRS_speer_reich_minister_of_armaments
+			has_idea = PRS_rui_reich_minister_of_armaments
 		}
-		localization_key = idea_desc|PRS_speer_reich_minister_of_armaments
+		localization_key = idea_desc|PRS_rui_reich_minister_of_armaments
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 2 }
-			has_idea = PRS_speer_reich_architect
+			has_idea = PRS_rui_reich_architect
 		}
-		localization_key = idea_desc|PRS_speer_reich_architect
+		localization_key = idea_desc|PRS_rui_reich_architect
 	}
 
-	#GÖRING
+	#TSUKASA
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 3 }
-			has_idea = PRS_goring_four_year_plan_plenipotentiary
+			has_idea = PRS_tsukasa_four_year_plan_plenipotentiary
 		}
-		localization_key = idea_desc|PRS_goring_four_year_plan_plenipotentiary
+		localization_key = idea_desc|PRS_tsukasa_four_year_plan_plenipotentiary
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 3 }
-			has_idea = PRS_goring_overseer_four_year_plan
+			has_idea = PRS_tsukasa_overseer_four_year_plan
 		}
-		localization_key = idea_desc|PRS_goring_overseer_four_year_plan
+		localization_key = idea_desc|PRS_tsukasa_overseer_four_year_plan
 	}
 
-	#HIMMLER
+	#KANADE
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 4 }
-			has_idea = PRS_himmler_reichsfuhrer_ss
+			has_idea = PRS_kanade_reichsfuhrer_ss
 		}
-		localization_key = idea_desc|PRS_himmler_reichsfuhrer_ss
-	}
-	text = {
-		trigger = {
-			check_variable = { PRS_ascended_advisor_3 = 4 }
-			has_idea = PRS_himmler_director_reich_security
-		}
-		localization_key = idea_desc|PRS_himmler_director_reich_security
+		localization_key = idea_desc|PRS_kanade_reichsfuhrer_ss
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 4 }
-			has_idea = PRS_himmler_chief_of_german_police
+			has_idea = PRS_kanade_director_reich_security
 		}
-		localization_key = idea_desc|PRS_himmler_chief_of_german_police
+		localization_key = idea_desc|PRS_kanade_director_reich_security
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_ascended_advisor_3 = 4 }
+			has_idea = PRS_kanade_chief_of_german_police
+		}
+		localization_key = idea_desc|PRS_kanade_chief_of_german_police
 	}
 
-	#GOEBBELS
+	#SAKI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master
+			has_idea = PRS_saki_reich_minister_of_propaganda_master
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_master
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_master
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+			has_idea = PRS_saki_reich_minister_of_propaganda_master_no_lar
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_master_no_lar
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_master_no_lar
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_film
+			has_idea = PRS_saki_reich_minister_of_propaganda_film
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_film
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_film
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda_ministry
+			has_idea = PRS_saki_reich_minister_of_propaganda_ministry
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda_ministry
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda_ministry
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 5 }
-			has_idea = PRS_goebbels_reich_minister_of_propaganda
+			has_idea = PRS_saki_reich_minister_of_propaganda
 		}
-		localization_key = idea_desc|PRS_goebbels_reich_minister_of_propaganda
+		localization_key = idea_desc|PRS_saki_reich_minister_of_propaganda
 	}
 
-	#HESS
+	#HONAMI
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_first_among_equals
+			has_idea = PRS_honami_first_among_equals
 		}
-		localization_key = idea_desc|PRS_hess_first_among_equals
+		localization_key = idea_desc|PRS_honami_first_among_equals
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_first_among_equals_no_aat
+			has_idea = PRS_honami_first_among_equals_no_aat
 		}
-		localization_key = idea_desc|PRS_hess_first_among_equals_no_aat
+		localization_key = idea_desc|PRS_honami_first_among_equals_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved
+			has_idea = PRS_honami_party_chancellor_improved
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor_improved
+		localization_key = idea_desc|PRS_honami_party_chancellor_improved
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_party_chancellor_improved_no_aat
+			has_idea = PRS_honami_party_chancellor_improved_no_aat
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor_improved_no_aat
+		localization_key = idea_desc|PRS_honami_party_chancellor_improved_no_aat
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 6 }
-			has_idea = PRS_hess_party_chancellor
+			has_idea = PRS_honami_party_chancellor
 		}
-		localization_key = idea_desc|PRS_hess_party_chancellor
+		localization_key = idea_desc|PRS_honami_party_chancellor
 	}
 
-	#BORMANN
+	#SHIHO
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 7 }
-			has_idea = PRS_bormann_brown_eminence
+			has_idea = PRS_shiho_brown_eminence
 		}
-		localization_key = idea_desc|PRS_bormann_brown_eminence
+		localization_key = idea_desc|PRS_shiho_brown_eminence
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer_improved
+			has_idea = PRS_shiho_secretary_to_the_fuhrer_improved
 		}
-		localization_key = idea_desc|PRS_bormann_secretary_to_the_fuhrer_improved
+		localization_key = idea_desc|PRS_shiho_secretary_to_the_fuhrer_improved
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_ascended_advisor_3 = 7 }
-			has_idea = PRS_bormann_secretary_to_the_fuhrer
+			has_idea = PRS_shiho_secretary_to_the_fuhrer
 		}
-		localization_key = idea_desc|PRS_bormann_secretary_to_the_fuhrer
+		localization_key = idea_desc|PRS_shiho_secretary_to_the_fuhrer
 	}
 }
 
@@ -1939,7 +1939,7 @@ defined_text = {
 		localization_key = empty_key
 	}
 	text = {
-		localization_key = PRS_the_inner_circle_tt_ascended_advisor_1
+		localization_key = GER_the_inner_circle_tt_ascended_advisor_1
 	}
 }
 
@@ -1952,7 +1952,7 @@ defined_text = {
 		localization_key = empty_key
 	}
 	text = {
-		localization_key = PRS_the_inner_circle_tt_ascended_advisor_2
+		localization_key = GER_the_inner_circle_tt_ascended_advisor_2
 	}
 }
 
@@ -1965,10 +1965,9 @@ defined_text = {
 		localization_key = empty_key
 	}
 	text = {
-		localization_key = PRS_the_inner_circle_tt_ascended_advisor_3
+		localization_key = GER_the_inner_circle_tt_ascended_advisor_3
 	}
 }
-
 
 defined_text = {
 	name = GetFuhrerName
@@ -1976,10 +1975,10 @@ defined_text = {
 		trigger = {
 			has_country_leader = {
 				ruling_only = yes
-				character = PRS_adolf_hitler
+				character = PRS_hoshino_ichika
 			}
 		}
-		localization_key = PRS_adolf_hitler
+		localization_key = PRS_hoshino_ichika
 	}
 	text = {
 		trigger = {
@@ -2048,10 +2047,10 @@ defined_text = {
 		trigger = {
 			has_country_leader = {
 				ruling_only = yes
-				character = PRS_eva_braun
+				character = PRS_hinomori_shiho
 			}
 		}
-		localization_key = PRS_eva_braun
+		localization_key = PRS_hinomori_shiho
 	}
 }
 
@@ -2061,10 +2060,10 @@ defined_text = { #FUHRER PORTRAIT FOR EVENT PIC (STRONG SUCCESSOR)
 		trigger = {
 			has_country_leader = {
 				ruling_only = yes
-				character = PRS_adolf_hitler
+				character = PRS_hoshino_ichika
 			}
 		}
-		localization_key = GFX_report_event_PRS_hitler
+		localization_key = GFX_report_event_PRS_ichika
 	}
 	text = {
 		trigger = {
@@ -2073,7 +2072,7 @@ defined_text = { #FUHRER PORTRAIT FOR EVENT PIC (STRONG SUCCESSOR)
 				character = PRS_kusanagi_nene
 			}
 		}
-		localization_key = GFX_report_event_PRS_todt
+		localization_key = GFX_report_event_PRS_nene
 	}
 	text = {
 		trigger = {
@@ -2082,7 +2081,7 @@ defined_text = { #FUHRER PORTRAIT FOR EVENT PIC (STRONG SUCCESSOR)
 				character = PRS_kamishiro_rui
 			}
 		}
-		localization_key = GFX_report_event_PRS_speer
+		localization_key = GFX_report_event_PRS_rui
 	}
 	text = {
 		trigger = {
@@ -2091,7 +2090,7 @@ defined_text = { #FUHRER PORTRAIT FOR EVENT PIC (STRONG SUCCESSOR)
 				character = PRS_ootori_emu
 			}
 		}
-		localization_key = GFX_report_event_PRS_goring
+		localization_key = GFX_report_event_PRS_emu
 	}
 	text = {
 		trigger = {
@@ -2100,7 +2099,7 @@ defined_text = { #FUHRER PORTRAIT FOR EVENT PIC (STRONG SUCCESSOR)
 				character = PRS_tenma_tsukasa
 			}
 		}
-		localization_key = GFX_report_event_PRS_himmler
+		localization_key = GFX_report_event_PRS_tsukasa
 	}
 	text = {
 		trigger = {
@@ -2109,7 +2108,7 @@ defined_text = { #FUHRER PORTRAIT FOR EVENT PIC (STRONG SUCCESSOR)
 				character = PRS_yoisaki_kanade
 			}
 		}
-		localization_key = GFX_report_event_PRS_goebbels
+		localization_key = GFX_report_event_PRS_kanade
 	}
 	text = {
 		trigger = {
@@ -2118,7 +2117,7 @@ defined_text = { #FUHRER PORTRAIT FOR EVENT PIC (STRONG SUCCESSOR)
 				character = PRS_tenma_saki
 			}
 		}
-		localization_key = GFX_report_event_PRS_hess
+		localization_key = GFX_report_event_PRS_saki
 	}
 	text = {
 		trigger = {
@@ -2127,16 +2126,16 @@ defined_text = { #FUHRER PORTRAIT FOR EVENT PIC (STRONG SUCCESSOR)
 				character = PRS_mochizuki_honami
 			}
 		}
-		localization_key = GFX_report_event_PRS_bormann
+		localization_key = GFX_report_event_PRS_honami
 	}
 	text = {
 		trigger = {
 			has_country_leader = {
 				ruling_only = yes
-				character = PRS_eva_braun
+				character = PRS_hinomori_shiho
 			}
 		}
-		localization_key = GFX_report_event_PRS_braun
+		localization_key = GFX_report_event_PRS_shiho
 	}
 }
 
@@ -2184,34 +2183,40 @@ defined_text = { #NAME OF ADVISOR (For Intrigue event)
 		}
 		localization_key = PRS_mochizuki_honami
 	}
+	text = {
+		trigger = {
+			check_variable = { PRS_intrigue_character = 8 }
+		}
+		localization_key = PRS_hinomori_shiho
+	}
 }
 
 defined_text = { #PORTRAIT OF ADVISOR (For Intrigue event) - The one who triggered the event
 	name = GetIndustrialIntrigueEventPortrait
 	text = {
 		trigger = {
-			check_variable = { PRS_intrigue_character = 1 }
-		}
-		localization_key = GFX_report_event_PRS_todt
-	}
-	text = {
-		trigger = {
 			check_variable = { PRS_intrigue_character = 2 }
 		}
-		localization_key = GFX_report_event_PRS_speer
+		localization_key = GFX_report_event_PRS_emu
 	}
 	text = {
 		trigger = {
 			check_variable = { PRS_intrigue_character = 3 }
 		}
-		localization_key = GFX_report_event_PRS_goring
+		localization_key = GFX_report_event_PRS_rui
+	}
+	text = {
+		trigger = {
+			check_variable = { PRS_intrigue_character = 4 }
+		}
+		localization_key = GFX_report_event_PRS_tsukasa
 	}
 }
 
-defined_text = { #HESS TRAIT TO DISPLAY IN THE FLIGHT OF HESS EVENTS
+defined_text = { #HONAMI TRAIT TO DISPLAY IN THE FLIGHT OF HONAMI EVENTS
 	name = GetHessTraitForFlight
 	text = {
-		localization_key = idea_desc|PRS_hess_party_chancellor
+		localization_key = idea_desc|PRS_honami_party_chancellor
 	}
 }
 

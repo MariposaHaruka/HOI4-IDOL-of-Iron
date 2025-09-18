@@ -14,7 +14,7 @@ characters = {
         }
         country_leader = {
             ideology = fascism_subtype
-            traits = { leader_prs_hoshino_ichika_1 }
+            traits = { PRS_der_fuhrer }
             desc = PRS_hoshino_ichika_desc
         }
         advisor = {
@@ -1146,6 +1146,7 @@ characters = {
         }
     }
     
+    #더미용 캐릭터
     PRS_dummy_CON = {
         name = PRS_dummy_CON
         portraits = {
@@ -1158,7 +1159,6 @@ characters = {
             traits = {  }
         }
     }
-
     PRS_dummy_LIB = {
         name = PRS_dummy_LIB
         portraits = {
@@ -1171,7 +1171,6 @@ characters = {
             traits = {  }
         }
     }
-
     PRS_dummy_PRO = {
         name = PRS_dummy_PRO
         portraits = {
@@ -1184,7 +1183,6 @@ characters = {
             traits = {  }
         }
     }
-
     PRS_dummy_SOD = {
         name = PRS_dummy_SOD
         portraits = {
@@ -1197,7 +1195,6 @@ characters = {
             traits = {  }
         }
     }
-
     PRS_dummy_SOC = {
         name = PRS_dummy_SOC
         portraits = {
@@ -1210,7 +1207,6 @@ characters = {
             traits = {  }
         }
     }
-
     PRS_dummy_COM = {
         name = PRS_dummy_COM
         portraits = {
@@ -1223,7 +1219,6 @@ characters = {
             traits = {  }
         }
     }
-
     PRS_dummy_AUC = {
         name = PRS_dummy_AUC
         portraits = {
@@ -1236,7 +1231,6 @@ characters = {
             traits = {  }
         }
     }
-
     PRS_dummy_ANA = {
         name = PRS_dummy_ANA
         portraits = {
@@ -1249,7 +1243,6 @@ characters = {
             traits = {  }
         }
     }
-
     PRS_dummy_AUD = {
         name = PRS_dummy_AUD
         portraits = {
@@ -1262,11 +1255,10 @@ characters = {
             traits = {  }
         }
     }
-
     PRS_dummy_AUT = {
         name = PRS_dummy_AUT
         portraits = {
-            civilian = {
+        civilian = {
                 large = "GFX_Portrait_PRS_Female_Generic_3"
             }
         }

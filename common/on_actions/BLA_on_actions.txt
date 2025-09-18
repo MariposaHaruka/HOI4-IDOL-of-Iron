@@ -56,8 +56,243 @@ on_actions = {
 			}
 		}
 		effect = {
-			433 = { set_state_flag = BLA_gehenna_state_flag }
-			443 = { set_state_flag = BLA_gehenna_state_flag }
+			#키보토스 직할령
+			429 = { set_state_flag = BLA_kivotos_state_flag }
+
+			#게헨나 학원
+			442 = { 
+				set_state_flag = BLA_gehenna_state_flag 
+			}
+			443 = { 
+				set_state_flag = BLA_gehenna_state_flag 
+			}
+			444 = { 
+				set_state_flag = BLA_gehenna_state_flag 
+			}
+			445 = { 
+				set_state_flag = BLA_gehenna_state_flag 
+			}
+			988 = { 
+				set_state_flag = BLA_gehenna_state_flag 
+			}
+			987 = { 
+				set_state_flag = BLA_gehenna_state_flag 
+			}
+			1012 = { 
+				set_state_flag = BLA_gehenna_state_flag 
+			}
+
+			#아비도스 고등학교
+			989 = { 
+				set_state_flag = BLA_abydos_state_flag 
+			}
+			433 = { 
+				set_state_flag = BLA_abydos_state_flag 
+			}
+
+			#붉은겨울 연방학원
+			787 = { 
+				set_state_flag = BLA_redwinter_state_flag 
+			}
+			441 = { 
+				set_state_flag = BLA_redwinter_state_flag 
+			}
+			440 = { 
+				set_state_flag = BLA_redwinter_state_flag 
+			}
+			986 = { 
+				set_state_flag = BLA_redwinter_state_flag 
+			}
+			439 = { 
+				set_state_flag = BLA_redwinter_state_flag 
+			}
+
+			#와일드헌트 예술학원
+			427 = { 
+				set_state_flag = BLA_trinity_state_flag 
+			}
+
+			#트리니티 종합학원
+			438 = { 
+				set_state_flag = BLA_trinity_state_flag
+			}
+			991 = { 
+				set_state_flag = BLA_trinity_state_flag
+			}
+			437 = { 
+				set_state_flag = BLA_trinity_state_flag
+			}
+			428 = { 
+				set_state_flag = BLA_trinity_state_flag
+			}
+			435 = { 
+				set_state_flag = BLA_trinity_state_flag
+			}
+			436 = { 
+				set_state_flag = BLA_trinity_state_flag
+			}
+			984 = { 
+				set_state_flag = BLA_trinity_state_flag
+			}
+			426 = { 
+				set_state_flag = BLA_trinity_state_flag
+			}
+
+			#밀레니엄 사이언스 스쿨
+			423 = { 
+				set_state_flag = BLA_millenium_state_flag 
+			}
+			424 = { 
+				set_state_flag = BLA_millenium_state_flag 
+			}
+			425 = { 
+				set_state_flag = BLA_millenium_state_flag 
+			}
+			982 = { 
+				set_state_flag = BLA_millenium_state_flag 
+			}
+			983 = { 
+				set_state_flag = BLA_millenium_state_flag 
+			}
+
+			#아리우스 분교
+			323 = { 
+				set_state_flag = BLA_arius_state_flag 
+			}
+			985 = { 
+				set_state_flag = BLA_arius_state_flag 
+			}
+
+			#백귀야행 연합학원
+			324 = { 
+				set_state_flag = BLA_hyakkiyako_state_flag
+			}
+			430 = { 
+				set_state_flag = BLA_hyakkiyako_state_flag
+			}
+			431 = { 
+				set_state_flag = BLA_hyakkiyako_state_flag
+			}
+			432 = { 
+				set_state_flag = BLA_hyakkiyako_state_flag
+			}
+			434 = { 
+				set_state_flag = BLA_hyakkiyako_state_flag
+			}
+			990 = { 
+				set_state_flag = BLA_hyakkiyako_state_flag
+			}
+
+			#산해경 고급중학교
+			288 = { 
+				set_state_flag = BLA_shanhaijing_state_flag 
+			}
+			640 = { 
+				set_state_flag = BLA_shanhaijing_state_flag 
+			}
+			993 = { 
+				set_state_flag = BLA_shanhaijing_state_flag 
+			}
+			994 = { 
+				set_state_flag = BLA_shanhaijing_state_flag 
+			}
+			995 = { 
+				set_state_flag = BLA_shanhaijing_state_flag 
+			}
+			996 = { 
+				set_state_flag = BLA_shanhaijing_state_flag 
+			}
+			997 = { 
+				set_state_flag = BLA_shanhaijing_state_flag 
+			}
+			998 = { 
+				set_state_flag = BLA_shanhaijing_state_flag 
+			}
+			999 = { 
+				set_state_flag = BLA_shanhaijing_state_flag 
+			}
+		}
+		effect = {
+			#키보토스 직할령
+			every_state = {
+				limit = {
+					is_owned_by = BLA
+					has_state_flag = BLA_kivotos_state_flag
+				}
+				add_dynamic_modifier = { modifier = BLA_KIV_modifiers }
+			}
+
+			#게헨나 학원
+			every_state = {
+				limit = {
+					is_owned_by = BLA
+					has_state_flag = BLA_gehenna_state_flag
+				}
+				add_dynamic_modifier = { modifier = BLA_GEH_modifiers }
+			}
+
+			#아비도스 고등학교
+			every_state = {
+				limit = {
+					is_owned_by = BLA
+					has_state_flag = BLA_abydos_state_flag
+				}
+				add_dynamic_modifier = { modifier = BLA_ABY_modifiers }
+			}
+
+			#붉은겨울 연방학원
+			every_state = {
+				limit = {
+					is_owned_by = BLA
+					has_state_flag = BLA_redwinter_state_flag
+				}
+				add_dynamic_modifier = { modifier = BLA_RED_modifiers }
+			}
+
+			#트리니티 종합학원
+			every_state = {
+				limit = {
+					is_owned_by = BLA
+					has_state_flag = BLA_trinity_state_flag
+				}
+				add_dynamic_modifier = { modifier = BLA_TRN_modifiers }
+			}
+
+			#밀레니엄 사이언스 스쿨
+			every_state = {
+				limit = {
+					is_owned_by = BLA
+					has_state_flag = BLA_millenium_state_flag
+				}
+				add_dynamic_modifier = { modifier = BLA_MIL_modifiers }
+			}
+
+			#아리우스 분교
+			every_state = {
+				limit = {
+					is_owned_by = BLA
+					has_state_flag = BLA_arius_state_flag
+				}
+				add_dynamic_modifier = { modifier = BLA_ARI_modifiers }
+			}
+
+			#백귀야행 연합학원
+			every_state = {
+				limit = {
+					is_owned_by = BLA
+					has_state_flag = BLA_hyakkiyako_state_flag
+				}
+				add_dynamic_modifier = { modifier = BLA_HYA_modifiers }
+			}
+
+			#산해경 고급중학교
+			every_state = {
+				limit = {
+					is_owned_by = BLA
+					has_state_flag = BLA_shanhaijing_state_flag
+				}
+				add_dynamic_modifier = { modifier = BLA_SHA_modifiers }
+			}
 		}
 	}
 	#on_ruling_party_change_immediate = {

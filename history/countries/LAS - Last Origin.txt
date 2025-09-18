@@ -114,9 +114,13 @@ set_convoys = 5
 #국민 정신
 add_ideas = {
 	LAS_disjointed_command
+	LAS_robot_technology_1
+
 	extensive_conscription
 	civilian_economy
 }
+
+add_dynamic_modifier = { modifier = LAS_industry }
 
 add_dynamic_modifier = { modifier = LAS_air_force }
 set_variable = { LAS_airforce_air_accidents_factor = 0.75 }
@@ -196,15 +200,6 @@ set_variable = { LAS_mobilization_speed = 0 } # -> Organization, Centralization,
 set_variable = { LAS_operative_slot = 0 } # -> Behead the Snake
 set_variable = { LAS_political_advisor_cost_factor = 0 } # -> Freedom of Debate, Unity of Action
 set_variable = { LAS_opinion_gain_monthly_same_ideology_factor = 0 } # -> The Construction of Communism
-
-
-add_dynamic_modifier = { modifier = LAS_threat_of_iron_bug }
-
-
-add_dynamic_modifier = { modifier = LAS_industry }
-
-
-add_dynamic_modifier = { modifier = LAS_coexistence_with_AGS }
 
 #외교
 RST = { embargo_ROOT = yes }

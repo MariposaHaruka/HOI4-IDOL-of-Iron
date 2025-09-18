@@ -6,6 +6,44 @@ IMA_haruka_not_fired = {
 	}
 }
 
+IMA_is_britain_homeland = {
+	OR = {
+		has_state_flag = IMA_ireland_state
+		has_state_flag = IMA_welsh_state
+		has_state_flag = IMA_scottish_state
+		has_state_flag = IMA_english_state
+	}
+}
+
+IMA_is_bankrupt = {
+	custom_trigger_tooltip = {
+		tooltip = IMA_bankrupt_trigger_tt
+		has_country_flag = IMA_bankrupt_flag
+	}
+}
+
+IMA_reduce_depression_ongoing = {
+	custom_trigger_tooltip = {
+		tooltip = IMA_reduce_depression_ongoing_tt
+		NOT = { has_country_flag = IMA_reduce_depression_flag }
+	}
+}
+
+IMA_political_stabilized = {
+	custom_trigger_tooltip = {
+		tooltip = IMA_political_stabilized_tt
+		OR = {
+			has_completed_focus = IMA_51002a
+			has_completed_focus = IMA_51002b
+			has_completed_focus = IMA_51002c
+			has_completed_focus = IMA_51002d
+			has_completed_focus = IMA_51002e
+			has_completed_focus = IMA_51002f
+			has_completed_focus = IMA_51002g
+		}
+	}
+}
+
 #아이마스 커먼웰스 관련
 commonwealth_leader_exist = {
 	custom_trigger_tooltip = {

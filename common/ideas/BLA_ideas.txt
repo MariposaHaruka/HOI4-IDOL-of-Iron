@@ -1,8 +1,548 @@
 ideas = {
-	country = { }
-	tank_manufacturer = { }
-	naval_manufacturer = { }
-	aircraft_manufacturer = { }
-	industrial_concern = { }
-	materiel_manufacturer = { }
+	hidden_ideas = {
+		BLA_abydos_construction = { #인트로 소개 부분에만 나올 국민정신
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				civilian_factory_use = 10
+			}
+		}
+	}
+	
+	country = {
+		BLA_bad_administrative_static = { #인트로 소개 부분에만 나올 국민정신
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_disjointed_gov
+			modifier = {
+				conscription_factor = -0.45
+				mobilization_speed = -0.72
+				political_advisor_cost_factor = 1.5
+				economic_advisor_cost_factor = 1.5
+				internal_advisor_cost_factor = 1.5
+				army_chief_cost_factor = 2.5
+				air_chief_cost_factor = 2.5
+				navy_chief_cost_factor = 2.5
+				theorist_cost_factor = 2.5
+				high_command_cost_factor = 2.5
+				is_press_policy_cost_factor = 1.5
+				is_minors_policy_cost_factor = 1.5
+				is_woman_policy_cost_factor = 1.5
+				is_local_autonomy_policy_cost_factor = 1.5
+				is_education_policy_cost_factor = 1.5
+				is_welfare_policy_cost_factor = 1.5
+				industrial_concern_cost_factor = 1.5
+				is_economy_model_cost_factor = 1.5
+				is_mobilization_economy_cost_factor = 1.5
+				is_taxation_cost_factor = 1.5
+				is_tarrif_cost_factor = 1.5
+				is_military_budget_cost_factor = 2.5
+				is_construction_cost_factor = 1.5
+				is_high_command_order_cost_factor = 2.5
+				is_army_navy_balance_cost_factor = 2.5
+				is_logistic_cost_factor = 2.5
+				is_training_quality_cost_factor = 2.5
+				is_female_service_cost_factor = 2.5
+				is_officer_training_cost_factor = 2.5
+				is_mobilization_law_cost_factor = 2.12
+				is_non_core_mobilization_law_cost_factor = 2.12
+				is_resource_cost_factor = 1.5
+				is_industry_base_cost_factor = 1.5
+				is_labours_union_cost_factor = 1.5
+				is_research_cost_factor = 1.5
+			}
+		}
+		
+		BLA_robot_technology_1 = { #로봇 기술
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = BLA_robot_technology
+			modifier = { 
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_speed_factor = -0.1
+			}
+		}
+		
+		BLA_robot_technology_2 = { #로봇 기술
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = BLA_robot_technology
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				conscription_factor = 0.1
+			}
+		}
+		
+		BLA_robot_technology_3 = { #로봇 기술
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = BLA_robot_technology
+			modifier = {
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				conscription_factor = 0.2
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+			}
+		}
+		
+		BLA_scientific_improvement_1 = { #과학적 발전
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = BLA_scientific_improvement
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		
+		BLA_scientific_improvement_2 = { #과학적 발전
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = BLA_scientific_improvement
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		
+		BLA_scientific_improvement_3 = { #과학적 발전
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = BLA_scientific_improvement
+			modifier = { 
+				research_speed_factor = 0.15
+			}
+		}
+		
+		BLA_scientific_improvement_4 = { #과학적 발전
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = BLA_scientific_improvement
+			modifier = {
+				research_speed_factor = 0.2
+				research_sharing_per_country_bonus_factor = 0.05
+			}
+		}
+		
+		BLA_scientific_improvement_5 = { #과학적 발전
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = BLA_scientific_improvement
+			modifier = { 
+				research_speed_factor = 0.25
+				research_sharing_per_country_bonus_factor = 0.1
+				production_lack_of_resource_penalty_factor = 0.05
+			}
+		}
+		
+		BLA_scientific_improvement_max = { #과학적 발전
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = BLA_scientific_improvement_max
+			modifier = {
+				research_speed_factor = 0.05
+				research_sharing_per_country_bonus_factor = 0.05
+				production_lack_of_resource_penalty_factor = 0.05
+			}
+		}
+
+		BLA_famine_problem = { #기근 문제
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = raj_risk_of_famine
+			modifier = { }
+		}
+
+		BLA_famine = { #기근
+			picture = ENG_the_war_to_end_all_wars
+			allowed = {
+				original_tag = BLA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.1
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+				conscription_factor = -0.1
+				consumer_goods_factor = 0.10
+			}
+		}
+
+		
+		BLA_kivotos_bharat_problem = { #키보토스-인도인 문제
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_disjointed_gov
+			modifier = { }
+		}
+
+		BLA_eimi_fleet_plan_idea = { #종합 해군 생산계획 
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = BLA_eimi_fleet_plan
+			equipment_bonus = { 
+				capital_ship = {
+					build_cost_ic = -0.1
+				} 
+				screen_ship = {
+					build_cost_ic = -0.1
+				} 
+				submarine = {
+					build_cost_ic = -0.1
+				} 
+				carrier = {
+					build_cost_ic = -0.1
+				}
+				convoy = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		BLA_airplane_production_plan_idea = { #종합 공군 생산계획 
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = BLA_airplane_production_plan_idea
+			equipment_bonus = { 
+				air_transport = {
+					build_cost_ic = -0.1
+				}
+				cas = {
+					build_cost_ic = -0.1
+				}
+				fighter = {
+					build_cost_ic = -0.1
+				}
+				interceptor = {
+					build_cost_ic = -0.1
+				}
+				tactical_bomber = {
+					build_cost_ic = -0.1
+				}
+				missile = {
+					build_cost_ic = -0.1
+				}
+				naval_bomber = {
+					build_cost_ic = -0.1
+				}
+				strategic_bomber = {
+					build_cost_ic = -0.1
+				}
+				suicide = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+	}
+	tank_manufacturer = { 
+		designer = yes
+		BLA_millenium_engineer_tank_development = {
+			picture = BLA_engineer
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = { 
+				armor = 0.25
+			}
+			traits = { fast_tank_manufacturer }
+			available = {
+				BLA_millenium_participate = yes
+			}
+			ai_will_do  = {
+				base = 2
+			}
+		}
+		BLA_gehenna_toramaru_factory = {
+			picture = BLA_gehenna
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = { 
+				armor = 0.25
+			}
+			traits = { heavy_tank_manufacturer }
+			available = {
+				BLA_gehenna_participate = yes
+			}
+			ai_will_do  = {
+				base = 2
+			}
+		}
+		BLA_trinity_crusader_factory = {
+			picture = BLA_trinity
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = { 
+				armor = 0.25
+			}
+			traits = { infantry_tank_manufacturer }
+			available = {
+				BLA_trinity_participate = yes
+			}
+			ai_will_do  = {
+				base = 2
+			}
+		}
+		BLA_saint_nephthys_heavy_industry = {
+			picture = BLA_saint_nephthys
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = { 
+				armor = 0.25
+			}
+			traits = { medium_tank_manufacturer }
+			available = {
+				has_completed_focus = BLA_ABY_11004
+			}
+			ai_will_do  = {
+				base = 2
+			}
+		}
+		BLA_kaiser_industry_heavy_industry = {
+			picture = BLA_kaiser_industry
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { tank_manufacturer }
+			available = {
+			}
+			ai_will_do = {
+				base = 1 
+				modifier = {
+					has_country_flag = BLA_kaiser_country
+					factor = 10
+				}
+			}
+		}
+	}
+	naval_manufacturer = { 
+		designer = yes
+		BLA_millenium_engineer_battleship_development = {
+			picture = BLA_engineer
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = { 
+				naval_equipment = 0.25
+			}
+			traits = { battlefleet_designer }
+			available = {
+				BLA_millenium_participate = yes
+			}
+			ai_will_do  = {
+				base = 2
+			}
+		}
+		BLA_saint_nephthys_shipyard = {
+			picture = BLA_saint_nephthys
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = { 
+				naval_equipment = 0.25
+			}
+			traits = { convoy_escort_naval_manufacturer }
+			available = {
+				has_completed_focus = BLA_ABY_11004
+			}
+			ai_will_do  = {
+				base = 2
+			}
+		}
+		BLA_kaiser_industry_shipyard = {
+			picture = BLA_kaiser_industry
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { naval_manufacturer }
+			available = {
+			}
+			ai_will_do = {
+				base = 1 
+				modifier = {
+					has_country_flag = BLA_kaiser_country
+					factor = 10
+				}
+			}
+		}
+	}
+	aircraft_manufacturer = {
+		designer = yes
+		BLA_millenium_engineer_aircraft_development = {
+			picture = BLA_engineer
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = { 
+				air_equipment = 0.25
+			}
+			traits = { multi_role_aircraft_manufacturer }
+			available = {
+				BLA_millenium_participate = yes
+			}
+			ai_will_do  = {
+				base = 2
+			}
+		}
+		BLA_saint_nephthys_air = {
+			picture = BLA_saint_nephthys
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = { 
+				air_equipment = 0.25
+			}
+			traits = { multi_role_aircraft_manufacturer }
+			available = {
+				has_completed_focus = BLA_ABY_11004
+			}
+			ai_will_do  = {
+				base = 2
+			}
+		}
+		BLA_kaiser_industry_aerodynamics = {
+			picture = BLA_kaiser_industry
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { aircraft_manufacturer }
+			available = {
+			}
+			ai_will_do = {
+				base = 1 
+				modifier = {
+					has_country_flag = BLA_kaiser_country
+					factor = 10
+				}
+			}
+		}
+	}
+	industrial_concern = {
+		BLA_kaiser_industry = {
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+			available = {
+			}
+			ai_will_do = {
+				base = 1 
+				modifier = {
+					has_country_flag = BLA_kaiser_country
+					factor = 10
+				}
+			}
+		}
+		BLA_saint_nephthys = {
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { construction_company }
+			available = {
+				has_completed_focus = BLA_ABY_11004
+			}
+			ai_will_do  = {
+				base = 2
+			}
+		}
+		BLA_highlander_railway_school = {
+			picture = BLA_highlander
+			allowed = {
+				original_TAG = BLA
+			}
+			research_bonus = { 
+				train_tech = 0.25
+			}
+			traits = { construction_company }
+			available = {
+				BLA_highlander_participate = yes
+			}
+			ai_will_do  = {
+				base = 2
+			}
+		}
+	}
+	materiel_manufacturer = {
+		designer = yes 
+		BLA_kazeyama = {
+			allowed = {
+				original_tag = BLA
+			}
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+			modifier = {
+			}
+		}
+		BLA_saint_nephthys_arsenal = {
+			picture = BLA_saint_nephthys
+			allowed = {
+				original_tag = BLA
+			}
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+			available = {
+				has_completed_focus = BLA_ABY_11004
+			}
+		}
+		BLA_trinity_arsenal = {
+			picture = BLA_trinity
+			allowed = {
+				original_tag = BLA
+			}
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+			available = {
+				BLA_trinity_participate = yes
+			}
+		}
+	}
 }

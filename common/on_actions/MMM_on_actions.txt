@@ -77,4 +77,15 @@ on_actions = {
 	#		}
 	#	}
 	#}
+
+	on_civil_war_end = { #발푸르기스 내전 버프 제거용
+		effect = {
+			MMM = {
+				if = {
+					limit = { has_global_flag = walpurgisnacht_civil_war }
+					remove_ideas = hidden_buff
+				}
+			}
+		}
+	}
 }

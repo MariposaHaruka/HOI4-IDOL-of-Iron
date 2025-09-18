@@ -1,0 +1,191 @@
+add_namespace = TOH_1936_committee
+add_namespace = TOH_great_patriotic_war
+add_namespace = TOH_3rd_5_year_plan
+
+country_event = {
+	id = TOH_1936_committee.1 # 1936년 최고인민위원회 제1안건
+	title = TOH_1936_committee.1.t
+	desc = TOH_1936_committee.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = TOH_1936_committee.1.a
+		ai_chance = { 
+			base = 99
+		}
+		complete_national_focus = TOH_10001
+	}
+}
+
+country_event = {
+	id = TOH_1936_committee.2 # 1936년 최고인민위원회 제2안건
+	title = TOH_1936_committee.2.t
+	desc = TOH_1936_committee.2.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = TOH_1936_committee.2.a
+		ai_chance = { 
+			base = 99
+		}
+		complete_national_focus = TOH_20001
+	}
+}
+
+country_event = {
+	id = TOH_1936_committee.3 # 1936년 최고인민위원회 제3안건
+	title = TOH_1936_committee.3.t
+	desc = TOH_1936_committee.3.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = TOH_1936_committee.3.a
+		ai_chance = { 
+			base = 99
+		}
+		complete_national_focus = TOH_30001
+		hidden_effect = {
+			#country_event = { id = TOH_1936_committee.4 days = 2 } 
+		}
+	}
+}
+
+country_event = {
+	id = TOH_1936_committee.4 # 1936년 최고인민위원회 제4안건
+	title = TOH_1936_committee.4.t
+	desc = TOH_1936_committee.4.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = TOH_1936_committee.4.a #
+		ai_chance = { 
+			base = 1
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+				has_country_flag = TOH_authoritariancommunism_yukari
+			}
+		}
+	}	
+	option = {
+		name = TOH_1936_committee.4.b
+		ai_chance = { 
+			base = 1
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+				has_country_flag = TOH_authoritariancommunism_yukari
+			}
+		}
+	}	
+	option = {
+		name = TOH_1936_committee.4.c
+		ai_chance = { 
+			base = 1
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+				has_country_flag = TOH_authoritariancommunism_yukari
+			}
+		}
+	}
+}
+
+country_event = {
+	id = TOH_3rd_5_year_plan.1 # 성공적으로 끝난 제2차 5개년 계획
+	title = TOH_3rd_5_year_plan.1.t
+	desc = TOH_3rd_5_year_plan.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = TOH_3rd_5_year_plan.1.a
+		ai_chance = { 
+			base = 99
+		}
+		complete_national_focus = TOH_11001
+		hidden_effect = { country_event = { id = TOH_3rd_5_year_plan.2 days = 1 } }
+	}
+}
+
+country_event = {
+	id = TOH_3rd_5_year_plan.2 # 제3차 5개년 계획 개시
+	title = TOH_3rd_5_year_plan.2.t
+	desc = TOH_3rd_5_year_plan.2.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = TOH_3rd_5_year_plan.2.a
+		ai_chance = { 
+			base = 99
+		}
+		complete_national_focus = TOH_11002
+		custom_effect_tooltip = TOH_3rd_5_year_plan_tt
+	}
+}
+
+country_event = {
+	id = TOH_great_patriotic_war.01
+	title = TOH_great_patriotic_war.01.t
+	desc = TOH_great_patriotic_war.01.desc
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #VAYA POR DIOS
+		name = TOH_great_patriotic_war.01.a
+		custom_effect_tooltip = TOH_5year_plan_tt
+		hidden_effect = {
+			country_event = { id = TOH_great_patriotic_war.02 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = TOH_great_patriotic_war.02
+	title = TOH_great_patriotic_war.02.t
+	desc = TOH_great_patriotic_war.02.desc
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #VAYA POR DIOS
+		name = TOH_great_patriotic_war.02.a
+		complete_national_focus = TOH_30002
+		hidden_effect = {
+			country_event = { id = TOH_great_patriotic_war.03 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = TOH_great_patriotic_war.03
+	title = TOH_great_patriotic_war.03.t
+	desc = TOH_great_patriotic_war.03.desc
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #VAYA POR DIOS
+		name = TOH_great_patriotic_war.03.a
+		complete_national_focus = TOH_30003
+	}
+}
+
+country_event = {
+	id = TOH_great_patriotic_war.04
+	title = TOH_great_patriotic_war.04.t
+	desc = TOH_great_patriotic_war.04.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #VAYA POR DIOS
+		name = TOH_great_patriotic_war.03.a
+		complete_national_focus = TOH_12001
+	}
+}
+	
+	

@@ -1,0 +1,631 @@
+add_namespace = IMA_haruka_crisis
+add_namespace = IMA_great_depression
+add_namespace = IMA_global
+add_namespace = IMA_bankrupt
+
+### 하루카 위기 이벤트
+country_event = {
+	id = IMA_haruka_crisis.1 #리버풀 신년 시위
+	title = IMA_haruka_crisis.1.t
+	desc = IMA_haruka_crisis.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_haruka_crisis.1.a
+		ai_chance = { 
+			base = 99 
+			modifier = {
+				add = -99
+				is_historical_focus_on = no
+			}
+		}
+		subtract_from_variable = {
+			IMA_left_anger = 1
+			tooltip = IMA_left_anger_subtract_tt
+		}
+		add_to_variable = {
+			IMA_right_anger = 1
+			tooltip = IMA_right_anger_add_tt
+		}
+		hidden_effect = {
+			set_country_flag = IMA_liverpool_draft
+		}
+	}
+
+	option = {
+		name = IMA_haruka_crisis.1.b
+		ai_chance = { 
+			base = 0
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+			}
+		}
+		add_to_variable = {
+			IMA_left_anger = 1
+			tooltip = IMA_left_anger_add_tt
+		}
+		subtract_from_variable = {
+			IMA_right_anger = 1
+			tooltip = IMA_right_anger_subtract_tt
+		}
+		hidden_effect = {
+			set_country_flag = IMA_liverpool_draft
+		}
+	}
+
+	option = {
+		name = IMA_haruka_crisis.1.c
+		ai_chance = { 
+			base = 0 
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+			}
+		}
+		add_political_power = -50
+		hidden_effect = {
+			set_country_flag = IMA_liverpool_draft
+		}
+	}
+}
+
+country_event = {
+	id = IMA_haruka_crisis.2 #케이블가 행진
+	title = IMA_haruka_crisis.2.t
+	desc = IMA_haruka_crisis.2.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_haruka_crisis.2.a
+		ai_chance = { 
+			base = 99 
+			modifier = {
+				add = -99
+				is_historical_focus_on = no
+			}
+		}
+		complete_national_focus = IMA_50001
+		custom_effect_tooltip = generic_line_break_tt
+		add_to_variable = {
+			IMA_left_anger = 1
+			tooltip = IMA_left_anger_add_tt
+		}
+		subtract_from_variable = {
+			IMA_right_anger = 1
+			tooltip = IMA_right_anger_subtract_tt
+		}
+		hidden_effect = {
+			set_country_flag = IMA_london_march
+		}
+	}
+
+	option = {
+		name = IMA_haruka_crisis.2.b
+		ai_chance = { 
+			base = 0
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+			}
+		}
+		complete_national_focus = IMA_50001
+		custom_effect_tooltip = generic_line_break_tt
+		subtract_from_variable = {
+			IMA_left_anger = 1
+			tooltip = IMA_left_anger_subtract_tt
+		}
+		add_to_variable = {
+			IMA_right_anger = 1
+			tooltip = IMA_right_anger_add_tt
+		}
+		hidden_effect = {
+			set_country_flag = IMA_london_march
+		}
+	}
+
+	option = {
+		name = IMA_haruka_crisis.2.c
+		ai_chance = { 
+			base = 0 
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+			}
+		}
+		complete_national_focus = IMA_50001
+		add_political_power = -50
+		hidden_effect = {
+			set_country_flag = IMA_london_march
+		}
+	}
+}
+
+country_event = {
+	id = IMA_haruka_crisis.3 #국민노동당 문제
+	title = IMA_haruka_crisis.3.t
+	desc = IMA_haruka_crisis.3.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_haruka_crisis.3.a #아미 안
+		ai_chance = { 
+			base = 0 
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+			}
+		}
+		trigger = { check_variable = { IMA_left_anger < 4 } }
+		complete_national_focus = IMA_50002
+		custom_effect_tooltip = generic_line_break_tt
+		add_to_variable = {
+			IMA_left_anger = 1
+			tooltip = IMA_left_anger_add_tt
+		}
+	}
+
+	option = {
+		name = IMA_haruka_crisis.3.b #마미 안
+		ai_chance = { 
+			base = 0
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+			}
+		}
+		complete_national_focus = IMA_50002
+		custom_effect_tooltip = generic_line_break_tt
+		subtract_from_variable = {
+			IMA_left_anger = 1
+			tooltip = IMA_left_anger_subtract_tt
+		}
+		add_to_variable = {
+			IMA_right_anger = 1
+			tooltip = IMA_right_anger_add_tt
+		}
+		hidden_effect = {
+			set_country_flag = IMA_labour_integrate_failed
+		}
+	}
+
+	option = {
+		name = IMA_haruka_crisis.3.c
+		ai_chance = { 
+			base = 0 
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+			}
+		}
+		set_party_name = {
+			ideology = progressivism
+			long_name = IMA_progressivism_party1_long_tt
+			name = IMA_progressivism_party1_tt
+		}
+		trigger = { check_variable = { IMA_left_anger > 3 } }
+		complete_national_focus = IMA_50002
+		custom_effect_tooltip = generic_line_break_tt
+		add_to_variable = {
+			IMA_right_anger = 1
+			tooltip = IMA_right_anger_add_tt
+		}
+		hidden_effect = {
+			set_temp_variable = { coalition_partner_var = token:progressivism }
+			remove_from_coalition = yes
+		}
+	}
+}
+
+country_event = {
+	id = IMA_haruka_crisis.4 #자유국민당
+	title = IMA_haruka_crisis.4.t
+	desc = IMA_haruka_crisis.4.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_haruka_crisis.4.a #치하야의 승리
+		ai_chance = { 
+			base = 99 
+			modifier = {
+				add = -99
+				is_historical_focus_on = no
+			}
+		}
+		trigger = { check_variable = { IMA_right_anger < 4 } }
+		complete_national_focus = IMA_50003
+		custom_effect_tooltip = generic_line_break_tt
+		custom_effect_tooltip = IMA_chihaya_liberalism_tt
+		custom_effect_tooltip = generic_line_break_tt
+		subtract_from_variable = {
+			IMA_left_anger = 1
+			tooltip = IMA_left_anger_subtract_tt
+		}
+	}
+
+	option = {
+		name = IMA_haruka_crisis.4.b #이오리의 승리
+		ai_chance = { 
+			base = 0
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+			}
+		}
+		trigger = { check_variable = { IMA_right_anger > 3 } }
+		complete_national_focus = IMA_50003
+		custom_effect_tooltip = generic_line_break_tt
+		custom_effect_tooltip = IMA_iori_liberalism_tt
+		custom_effect_tooltip = generic_line_break_tt
+		add_to_variable = {
+			IMA_left_anger = 1
+			tooltip = IMA_left_anger_add_tt
+		
+		}if = {
+			limit = { IMA = { has_completed_focus = IMA_12001 } }
+			subtract_from_variable = {
+				IMA_right_anger = 1
+				tooltip = IMA_right_anger_subtract_tt
+			}
+		}
+		hidden_effect = {
+			set_temp_variable = { coalition_partner_var = token:liberalism_mod }
+			remove_from_coalition = yes
+			set_country_flag = IMA_minase_elected
+		}
+	}
+}
+
+country_event = {
+	id = IMA_haruka_crisis.5 #보수당 총재 불신임 선거
+	title = IMA_haruka_crisis.4.t
+	desc = IMA_haruka_crisis.4.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_haruka_crisis.5.a #하루카의 승리
+		ai_chance = { 
+			base = 99 
+			modifier = {
+				add = -99
+				is_historical_focus_on = no
+			}
+		}
+		trigger = { check_variable = { IMA_right_anger < 5 } }
+		complete_national_focus = IMA_50004
+		custom_effect_tooltip = IMA_haruka_conservatism_tt
+		if = {
+			limit = { IMA = { has_completed_focus = IMA_11001 } }
+			subtract_from_variable = {
+				IMA_left_anger = 1
+				tooltip = IMA_left_anger_subtract_tt
+			}
+		}
+	}
+
+	option = {
+		name = IMA_haruka_crisis.4.b #아즈사의 승리
+		ai_chance = { 
+			base = 0
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+			}
+		}
+		trigger = { check_variable = { IMA_right_anger > 4 } }
+		complete_national_focus = IMA_50004
+		custom_effect_tooltip = IMA_azusa_conservatism_tt
+		add_to_variable = {
+			IMA_left_anger = 1
+			tooltip = IMA_left_anger_add_tt
+		}
+		hidden_effect = {
+			set_country_flag = IMA_miura_rebellion
+			clr_country_flag = IMA_haruka_exist
+			country_event = { id = IMA_haruka_crisis.6 days = 30 }
+		}
+	}
+}
+
+country_event = {
+	id = IMA_haruka_crisis.6 #수상 불신임 선거
+	title = IMA_haruka_crisis.6.t
+	desc = IMA_haruka_crisis.6.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_haruka_crisis.6.a #하루카의 승리
+		ai_chance = { 
+			base = 99 
+			modifier = {
+				add = -99
+				is_historical_focus_on = no
+			}
+		}
+		trigger = { 
+			check_variable = { IMA_left_anger < 5 } 
+			check_variable = { IMA_right_anger < 5 } 
+		}
+		complete_national_focus = IMA_51001
+		complete_national_focus = IMA_51002a
+		
+	}
+
+	option = {
+		name = IMA_haruka_crisis.6.b #아즈사의 승리
+		ai_chance = { 
+			base = 0
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+			}
+		}
+		trigger = { check_variable = { IMA_right_anger > 4 } }
+		complete_national_focus = IMA_50004
+		custom_effect_tooltip = IMA_left_anger_add_tt
+		hidden_effect = {
+			add_to_variable = { IMA_left_anger = 1 }
+		}
+		custom_effect_tooltip = IMA_azusa_conservatism_tt
+		hidden_effect = {
+			clr_country_flag = IMA_haruka_exist
+		}
+	}
+}
+
+
+### 대공황 이벤트
+country_event = {
+	id = IMA_great_depression.1 #경제 회복 선언
+	title = IMA_great_depression.1.t
+	desc = IMA_great_depression.1.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_chamberlain_announce
+	
+	option = {
+		name = IMA_great_depression.1.a #그것 참 좋은 소식이네
+		ai_chance = { 
+			base = 99
+		}
+		if = {
+			limit = { has_country_flag = IMA_haruka_crisis }
+			subtract_from_variable = {
+				IMA_left_anger = 2
+				tooltip = IMA_left_anger_subtract_tt
+			}
+			subtract_from_variable = {
+				IMA_right_anger = 2
+				tooltip = IMA_right_anger_subtract_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+		}
+		add_stability = 0.1
+		hidden_effect = {
+			remove_ideas = IMA_great_depression_3
+			set_country_flag = IMA_depression_overcomed
+			news_event = { id = IMA_global.2 hours = 6 }
+		}
+	}
+}
+
+news_event = {
+	id = IMA_global.2 #경제 회복 선언
+	title = IMA_global.2.t
+	desc = IMA_global.2.desc
+	is_triggered_only = yes
+	picture = GFX_news_event_019
+	
+	option = {
+		name = IMA_global.2.a #그것 참 좋은 소식이네
+		ai_chance = { 
+			base = 99
+		}
+		trigger = {
+			OR = {
+				is_subject_of = IMA
+				is_in_faction_with = IMA
+				is_democratic = yes
+			}
+		}
+	}
+
+	option = {
+		name = IMA_global.2.b #...
+		ai_chance = { 
+			base = 99
+		}
+		trigger = {
+			NOT = {
+				is_subject_of = IMA
+				is_in_faction_with = IMA
+				is_democratic = yes
+			}
+		}
+	}
+}
+
+###
+
+news_event = {
+	id = IMA_global.1 #리버풀 신년 시위
+	title = IMA_global.1.t
+	desc = IMA_global.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_global.1.a
+		ai_chance = { 
+			base = 99 
+		}
+	}
+}
+
+
+### 남코 연방 모라토리엄 이벤트
+country_event = {
+	id = IMA_bankrupt.1 #남코 연방 모라토리엄 선언
+	title = IMA_bankrupt.1.t
+	desc = IMA_bankrupt.1.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = IMA_bankrupt.1.a #으악 안돼!
+		ai_chance = { 
+			base = 99
+		}
+		add_ideas = IMA_bankrupted
+		custom_effect_tooltip = IMA_left_anger_add_tt
+		custom_effect_tooltip = IMA_right_anger_add_tt
+		add_to_variable = { IMA_left_anger = 2 }
+		add_to_variable = { IMA_right_anger = 2 }
+		custom_effect_tooltip = generic_line_break_tt
+		custom_effect_tooltip = IMA_bankrupt_tt
+		hidden_effect = {
+			set_country_flag = IMA_bankrupt_flag
+			if = {
+				limit = { has_idea = IMA_great_depression_1 }
+				swap_ideas = {
+					remove_idea = IMA_great_depression_1
+					add_idea = IMA_great_depression_ex
+				}
+			}
+			else_if = {
+				limit = { has_idea = IMA_great_depression_2 }
+				swap_ideas = {
+					remove_idea = IMA_great_depression_2
+					add_idea = IMA_great_depression_1
+				}
+			}
+			else_if = {
+				limit = { has_idea = IMA_great_depression_3 }
+				swap_ideas = {
+					remove_idea = IMA_great_depression_3
+					add_idea = IMA_great_depression_2
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	id = IMA_global.3 #남코 연방의 모라토리엄 선언
+	title = IMA_global.3.t
+	desc = IMA_global.3.desc
+	is_triggered_only = yes
+	picture = GFX_news_event_019
+	
+	option = {
+		name = IMA_global.3.a #저런...
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+### 남코 연방 2차대전 이벤트
+country_event = {
+	id = IMA_global.11 #성 조지 작전 개시
+	title = IMA_global.11.t
+	desc = IMA_global.11.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = IMA_global.11.a #저 간악한 파시즘 세력을 무찌르러 가자!
+		ai_chance = { 
+			base = 99
+		}
+		trigger = {
+			NOT = {
+				any_country = {
+					is_subject_of = IMA 
+					has_country_flag = IMA_boston_promise
+				}
+			}
+		}
+		hidden_effect = {
+			news_event = { id = IMA_global.14 hours = 6 }
+		}
+	}
+	
+	option = {
+		name = IMA_global.11.b #저 간악한 파시즘 세력을 무찌르러 가자!
+		ai_chance = { 
+			base = 99
+		}
+		trigger = {
+			NOT = {
+				any_country = {
+					is_subject_of = IMA 
+					has_country_flag = IMA_boston_promise
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = IMA_global.13 hours = 3 }
+			news_event = { id = IMA_global.14 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = IMA_global.12 #유럽에서의 전쟁
+	title = IMA_global.12.t
+	desc = IMA_global.12.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = IMA_global.12.a #또 다시 시작이군...
+		ai_chance = { 
+			base = 99
+		}
+		trigger = {
+			NOT = {
+				any_country = {
+					is_subject_of = IMA 
+					has_country_flag = IMA_boston_promise
+				}
+			}
+		}
+		hidden_effect = {
+			news_event = { id = IMA_global.14 hours = 6 }
+		}
+	}
+	
+	option = {
+		name = IMA_global.12.b #또 다시 시작이군...
+		ai_chance = { 
+			base = 99
+		}
+		trigger = {
+			NOT = {
+				any_country = {
+					is_subject_of = IMA 
+					has_country_flag = IMA_boston_promise
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = IMA_global.13 hours = 3 }
+			news_event = { id = IMA_global.14 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = IMA_global.13 #보스턴 회담에 따른 약속 이행
+	title = IMA_global.13.t
+	desc = IMA_global.13.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = IMA_global.12.a #으악 안돼!
+		ai_chance = { 
+			base = 99
+		}
+	}
+}

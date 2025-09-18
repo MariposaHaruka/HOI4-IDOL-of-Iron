@@ -1,0 +1,83 @@
+on_actions = {
+	on_startup = {
+		#역사적 AI
+		effect = {
+			KTC = {
+				if = {
+					limit = { 
+						is_ai = yes
+						is_historical_focus_on = yes 
+					}
+					add_ideas = {
+						stay_communism
+						toh_like_hidden
+					}
+				}
+			}
+		}
+		#스타팅 정책
+		effect = {
+			KTC = {
+				add_ideas = {
+					military_dictatorship_idea
+					no_parliament
+					no_election
+					semi_unitary_state
+					judiciary_not_working
+					
+					national_press
+					affirmative_action
+					patriarchal_society
+					no_local_autonomy
+					elementary_education
+					basic_state_welfare 
+
+					communal_economy
+					war_economy
+					high_taxation
+					limited_exports
+					high_military_budget
+					support_military_factory_construction
+
+					supreme_command
+					army_dominant
+					push_system
+					minimal_training
+					equal_service
+					foreign_officer_missions
+
+					service_by_requirement
+					non_core_recruitment_prohibited
+					extraction_programs
+					agrarian_base
+					worker_organs
+					college_research				
+				}
+			}
+		}
+	}
+	#on_ruling_party_change_immediate = {
+		#의회
+	#	effect = {
+	#		KTC = { 
+	#			if = {
+	#				limit = { is_democratic = yes}
+	#				parliament_gui_initial_KTC = yes
+	#				clr_country_flag = parliament_gui_on
+	#				calc_parliament_support_KTC = yes
+	#			}
+	#		}
+    #    }
+    #}
+	#on_weekly = {
+		#의회 지지도 계산
+	#	effect = {
+	#		KTC = {
+	#			if = {
+	#				limit = { KTC = { NOT = { has_idea = no_parliament } } }
+	#				calc_parliament_support_KTC = yes
+	#			}
+	#		}
+	#	}
+	#}
+}

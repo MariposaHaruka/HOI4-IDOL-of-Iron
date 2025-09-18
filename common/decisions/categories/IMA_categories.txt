@@ -4,8 +4,10 @@ IMA_haruka_crisis_category = { #하루카 위기
 	allowed = { original_tag = IMA }
 	visible = {
 		has_country_flag = IMA_haruka_crisis
+		IMA_political_stabilized = no
 	}
 	visible_when_empty = yes
+	scripted_gui = IMA_haruka_crisis_gui
 }
 
 IMA_haruka_plan_category = { #하루카 계획
@@ -14,8 +16,10 @@ IMA_haruka_plan_category = { #하루카 계획
 	allowed = { original_tag = IMA }
 	visible = {
 		has_completed_focus = IMA_11001
+		NOT = { has_country_flag = IMA_depression_overcomed }
 	}
 	visible_when_empty = yes
+	scripted_gui = IMA_haruka_plan_gui
 }
 
 IMA_iori_plan_category = { #이오리 계획
@@ -24,8 +28,10 @@ IMA_iori_plan_category = { #이오리 계획
 	allowed = { original_tag = IMA }
 	visible = {
 		has_completed_focus = IMA_12001
+		NOT = { has_country_flag = IMA_depression_overcomed }
 	}
 	visible_when_empty = yes
+	scripted_gui = IMA_iori_plan_gui
 }
 
 IMA_westminster_statute_category = { #웨스트민스터 헌장

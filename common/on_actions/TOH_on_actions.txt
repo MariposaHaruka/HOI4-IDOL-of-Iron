@@ -1,0 +1,94 @@
+on_actions = {
+	#시작 국민정신 설정
+	on_war_relation_added = { 
+		effect = { #TOH - Great Patriotic War and Third Five Year Plan
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							ROOT = { original_tag = TOH }
+							FROM = {
+								is_major = yes
+								NOT = { original_tag = TOH }
+							}
+						}
+						AND = {
+							FROM = { original_tag = TOH }
+							ROOT = {
+								is_major = yes
+								NOT = { original_tag = TOH }
+							}
+						}
+					}
+				}
+				if = { ## GREAT PATRIOTIC WAR
+					limit = { NOT = { has_country_flag = TOH_great_patriotic_war_flag } }
+					TOH = { set_country_flag = TOH_great_patriotic_war_flag }
+				}
+				if = { ## THIRD FIVE YEAR PLAN
+					limit = {
+						TOH = { NOT = { has_country_flag = TOH_third_five_year_plan_locked_flag } }
+					}
+					TOH = {
+						set_country_flag = TOH_third_five_year_plan_locked_flag
+						if = { #Prio Germany if possible
+							limit = {
+								has_war_with = PRS
+								PRS = { is_major = yes }
+							}
+							PRS = { set_country_flag = TOH_third_five_year_plan_disruptor_flag }
+						}
+						else = { #If no Germany, choose a random enemy major
+							random_enemy_country = {
+								limit = { is_major = yes }
+								set_country_flag = TOH_third_five_year_plan_disruptor_flag
+							}
+						}
+						random_country = {
+							limit = { has_country_flag = TOH_third_five_year_plan_disruptor_flag }
+							#log = "The disruptor is [THIS.GetName]"
+						}
+
+						country_event = TOH_great_patriotic_war.01
+						TOH = {
+							TOH_remove_5year_plan = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	on_peaceconference_ended = { 
+		effect = { #SOV - Fourth Five Year Plan
+			if = {
+				limit = {
+					original_tag = TOH
+					has_country_flag = TOH_third_five_year_plan_locked_flag
+					NOT = { has_country_flag = TOH_fourth_five_year_plan_available_flag }
+					OR = {
+						NOT = {
+							any_country = {
+								has_country_flag = TOH_third_five_year_plan_disruptor_flag
+							}
+						}
+						any_country = {
+							has_country_flag = TOH_third_five_year_plan_disruptor_flag
+							NOT = { has_war_with = ROOT }
+						}
+					}
+				}
+				set_country_flag = TOH_fourth_five_year_plan_available_flag
+				clr_country_flag = TOH_great_patriotic_war_flag
+				country_event = TOH_great_patriotic_war.04
+			}
+		}
+	}
+	on_monthly_TOH = {
+		effect = {
+			if = {
+				limit = { TOH_2nd_5year_plan_completed = yes }
+				country_event = TOH_3rd_5_year_plan.1
+			}
+		}
+	}
+}

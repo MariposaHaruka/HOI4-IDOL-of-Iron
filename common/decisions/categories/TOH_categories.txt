@@ -1,0 +1,14 @@
+TOH_stavka_category = {
+	icon = gre_faction_management
+	priority = 135
+	allowed = {
+		original_tag = TOH
+	}
+	visible = {
+		has_completed_focus = TOH_30003
+		any_enemy_country = {
+			TOH_is_major_not_original_TOH = yes
+		} 
+	}
+	visible_when_empty = yes
+}

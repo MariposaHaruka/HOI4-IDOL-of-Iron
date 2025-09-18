@@ -1,0 +1,74 @@
+add_namespace = ONK_ai
+
+country_event = {
+	id = ONK_ai.1 #미심쩍은 첩보
+	title = ONK_ai.1.t
+	desc = ONK_ai.1.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ONK_ai.1.a #단순한 헛소리 일뿐이다
+		ai_chance = { 
+			base = 100
+			modifier = {
+				add = -99
+				is_historical_focus_on = no
+			}
+		}
+		hidden_effect = {
+			country_event = { id = ONK_ai.2 days = 12 }
+		}
+	}
+	option = {
+		name = ONK_ai.1.b #헛소리 같아도 허투루 듣긴 힘드니, 일단 보안이라도 올려두는 게 좋겠지?
+		ai_chance = { 
+			base = 1
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ONK_ai.2 #소피아의 총성
+	title = ONK_ai.2.t
+	desc = ONK_ai.2.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ONK_ai.2.a #루비가 적법한 후계자이니, 루비가 물려받아야 한다
+		ai_chance = { 
+			base = 100
+			modifier = {
+				add = -99
+				is_historical_focus_on = no
+			}
+		}
+		hidden_effect = {
+			retire_character = ONK_hoshino_ai
+			promote_character = ONK_hoshino_ruby
+			remove_ideas = ONK_saito_ichigo
+			add_ideas = ONK_saito_miyako
+			news_event = { id = ioi_news.2 days = 2 }
+		}
+	}
+	option = {
+		name = ONK_ai.2.b #아쿠아마린이 적법한 후계자이니, 아쿠아마린이 물려받아야 한다
+		ai_chance = { 
+			base = 1
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+			}
+		}
+		hidden_effect = {
+			retire_character = ONK_hoshino_ai
+			promote_character = ONK_hoshino_aquamarine
+			remove_ideas = ONK_saito_ichigo
+			add_ideas = ONK_saito_miyako
+			news_event = { id = ioi_news.2 days = 2 }
+		}
+	}
+}

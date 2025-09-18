@@ -1,8 +1,35 @@
 ideas = {
-	country = { }
+	country = { 
+		LLS_narrow_gauge_railway = {
+			picture = generic_railroads
+			allowed = {
+				original_tag = LLS
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = -0.15
+				production_speed_rail_way_factor = 0.15
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }
-	industrial_concern = { }
+	industrial_concern = {
+		LLS_japan_steel = {
+			picture = generic_industrial_concern_2
+			allowed = { original_tag = LLS }
+			research_bonus = { industry = 0.15 }
+			traits = { refining_concern }
+			modifier = { state_resource_steel = 5 }
+
+			ai_will_do = {
+				base = 20 #강철은 중요하다
+			}
+		}
+	}
 	materiel_manufacturer = { }
 }

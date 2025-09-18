@@ -1,0 +1,1132 @@
+PRS_amerika_bomber_focke_wulf_completion_MIO_effects = { #SCOPE IS MIO
+	add_mio_research_bonus = 0.15 #After project completion, MIO research goes back to normal #WARNING! Any change in this bonus needs to be applied on the penalty applied in the event GOT_PRS_amerikabomber.01 
+	complete_mio_trait = PRS_mio_trait_amerikabomber_learnings
+}
+
+PRS_amerika_bomber_focke_wulf_completion_SP_effects = { #SCOPE IS PRS
+	add_equipment_bonus = {
+		name = PRS_22304
+		bonus = {
+			strat_bomber_intercontinental_equipment_1 = {
+				maximum_speed = 0.1
+				build_cost_ic = 0.05
+				instant = yes
+			}
+		}
+	}
+}
+
+#AMERIKABOMBER - Heinkel
+PRS_amerika_bomber_heinkel_completion_MIO_effects = { #SCOPE IS MIO
+	add_mio_research_bonus = 0.15 #After project completion, MIO research goes back to normal #WARNING! Any change in this bonus needs to be applied on the penalty applied in the event GOT_PRS_amerikabomber.01 
+	complete_mio_trait = PRS_mio_trait_amerikabomber_learnings
+}
+
+PRS_amerika_bomber_heinkel_completion_SP_effects = { #SCOPE IS PRS
+	add_equipment_bonus = {
+		name = PRS_22304
+		bonus = {
+			strat_bomber_intercontinental_equipment_1 = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+		}
+	}
+}
+
+#AMERIKABOMBER - Junkers
+PRS_amerika_bomber_junkers_completion_MIO_effects = { #SCOPE IS MIO
+	add_mio_research_bonus = 0.15 #After project completion, MIO research goes back to normal #WARNING! Any change in this bonus needs to be applied on the penalty applied in the event GOT_PRS_amerikabomber.01 
+	complete_mio_trait = PRS_mio_trait_amerikabomber_learnings
+}
+
+PRS_amerika_bomber_junkers_completion_SP_effects = { #SCOPE IS PRS
+	add_equipment_bonus = {
+		name = PRS_22304
+		bonus = {
+			strat_bomber_intercontinental_equipment_1 = {
+				reliability = -0.1
+				air_defence = 0.1
+				instant = yes
+			}
+		}
+	}
+}
+
+#AMERIKABOMBER - Messerschmitt
+PRS_amerika_bomber_messerschmitt_completion_MIO_effects = { #SCOPE IS MIO
+	add_mio_research_bonus = 0.15 #After project completion, MIO research goes back to normal #WARNING! Any change in this bonus needs to be applied on the penalty applied in the event GOT_PRS_amerikabomber.01 
+	complete_mio_trait = PRS_mio_trait_amerikabomber_learnings
+}
+
+PRS_amerika_bomber_messerschmitt_completion_SP_effects = { #SCOPE IS PRS
+	add_equipment_bonus = {
+		name = PRS_22304
+		bonus = {
+			strat_bomber_intercontinental_equipment_1 = {
+				air_range = 0.1
+				air_bombing = 0.05
+				build_cost_ic = 0.1
+				instant = yes
+			}
+		}
+	}
+}
+
+
+
+
+
+
+# INNER CIRCLE
+PRS_remove_replaced_advisor_1_effects = {
+	custom_effect_tooltip = {
+		localization_key = replace_ascended_advisor_tt
+		CHARACTER = [GetAscendedAdvisorName1]
+		TRAIT = [GetAscendedAdvisorTrait1]
+	}
+	hidden_effect = {
+		if = { # EMU REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 1 }
+			}
+			PRS_remove_nene_effects = yes
+		}
+		else_if = { # # EMU REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 2 }
+			}
+			PRS_remove_emu_effects = yes
+		}
+		else_if = { # RUI REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 3 }
+			}
+			PRS_remove_rui_effects = yes
+		}
+		else_if = { # TSUKASA REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 4 }
+			}
+			PRS_remove_tsukasa_effects = yes
+		}
+		else_if = { # KANADE REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 5 }
+			}
+			PRS_remove_kanade_effects = yes
+		}
+		else_if = { # SAKI REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 6 }
+			}
+			PRS_remove_saki_effects = yes
+		}
+		else_if = { # HONAMI REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 7 }
+			}
+			PRS_remove_honami_effects = yes
+		}
+		else_if = { # SHIHO REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 8 }
+			}
+			PRS_remove_shiho_effects = yes
+		}
+		else = {
+			log = "Something bad happened trying to remove advisor [?PRS_ascended_advisor_1] effects."
+		}
+	}
+}
+
+PRS_remove_replaced_advisor_2_effects = {
+	custom_effect_tooltip = {
+		localization_key = replace_ascended_advisor_tt
+		CHARACTER = [GetAscendedAdvisorName1]
+		TRAIT = [GetAscendedAdvisorTrait1]
+	}
+	hidden_effect = {
+		if = { # EMU REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 1 }
+			}
+			PRS_remove_nene_effects = yes
+		}
+		else_if = { # # EMU REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 2 }
+			}
+			PRS_remove_emu_effects = yes
+		}
+		else_if = { # RUI REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 3 }
+			}
+			PRS_remove_rui_effects = yes
+		}
+		else_if = { # TSUKASA REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 4 }
+			}
+			PRS_remove_tsukasa_effects = yes
+		}
+		else_if = { # KANADE REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 5 }
+			}
+			PRS_remove_kanade_effects = yes
+		}
+		else_if = { # SAKI REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 6 }
+			}
+			PRS_remove_saki_effects = yes
+		}
+		else_if = { # HONAMI REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 7 }
+			}
+			PRS_remove_honami_effects = yes
+		}
+		else_if = { # SHIHO REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 8 }
+			}
+			PRS_remove_shiho_effects = yes
+		}
+		else = {
+			log = "Something bad happened trying to remove advisor [?PRS_ascended_advisor_2] effects."
+		}
+	}
+}
+
+PRS_remove_replaced_advisor_3_effects = {
+	custom_effect_tooltip = {
+		localization_key = replace_ascended_advisor_tt
+		CHARACTER = [GetAscendedAdvisorName1]
+		TRAIT = [GetAscendedAdvisorTrait1]
+	}
+	hidden_effect = {
+		if = { # EMU REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 1 }
+			}
+			PRS_remove_nene_effects = yes
+		}
+		else_if = { # # EMU REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 2 }
+			}
+			PRS_remove_emu_effects = yes
+		}
+		else_if = { # RUI REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 3 }
+			}
+			PRS_remove_rui_effects = yes
+		}
+		else_if = { # TSUKASA REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 4 }
+			}
+			PRS_remove_tsukasa_effects = yes
+		}
+		else_if = { # KANADE REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 5 }
+			}
+			PRS_remove_kanade_effects = yes
+		}
+		else_if = { # SAKI REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 6 }
+			}
+			PRS_remove_saki_effects = yes
+		}
+		else_if = { # HONAMI REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 7 }
+			}
+			PRS_remove_honami_effects = yes
+		}
+		else_if = { # SHIHO REPLACED
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 8 }
+			}
+			PRS_remove_shiho_effects = yes
+		}
+		else = {
+			log = "Something bad happened trying to remove advisor [?PRS_ascended_advisor_3] effects."
+		}
+	}
+}
+
+# Adding the new advisor effects after having replaced someone else
+PRS_add_replacing_advisor_effects = {
+	if = { # NENE ADDED
+		limit = {
+			check_variable = { PRS_ascending_advisor = 1 }
+		}
+		PRS_add_nene_effects = yes
+	}
+	else_if = { # EMU ADDED
+		limit = {
+			check_variable = { PRS_ascending_advisor = 2 }
+		}
+		PRS_add_emu_effects = yes
+	}
+	else_if = { # RUI ADDED
+		limit = {
+			check_variable = { PRS_ascending_advisor = 2 }
+		}
+		PRS_add_rui_effects = yes
+	}
+	else_if = { # TSUKASA ADDED
+		limit = {
+			check_variable = { PRS_ascending_advisor = 3 }
+		}
+		PRS_add_tsukasa_effects = yes
+	}
+	else_if = { # KANADE ADDED
+		limit = {
+			check_variable = { PRS_ascending_advisor = 4 }
+		}
+		PRS_add_kanade_effects = yes
+	}
+	else_if = { # SAKI ADDED
+		limit = {
+			check_variable = { PRS_ascending_advisor = 5 }
+		}
+		PRS_add_saki_effects = yes
+	}
+	else_if = { # HONAMI ADDED
+		limit = {
+			check_variable = { PRS_ascending_advisor = 6 }
+		}
+		PRS_add_honami_effects = yes
+	}
+	else_if = { # SHIHO ADDED
+		limit = {
+			check_variable = { PRS_ascending_advisor = 7 }
+		}
+		PRS_add_shiho_effects = yes
+	}
+	else = {
+		log = "Something bad happened trying to add advisor [?PRS_ascending_advisor] effects."
+	}
+}
+
+# ADD/REMOVE NENE EFFECTS
+PRS_add_nene_effects = {
+	if = {
+		limit = {
+			has_completed_focus = PRS_31010
+		}
+		add_ideas = PRS_nene_reich_minister_of_armaments
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = PRS_31009
+		}
+		add_ideas = PRS_nene_reich_engineer
+	}
+}
+
+PRS_remove_nene_effects = {
+	if = {
+		limit = { has_idea = PRS_nene_reich_minister_of_armaments }
+		remove_ideas = PRS_nene_reich_minister_of_armaments
+	}
+	else_if = {
+		limit = { has_idea = PRS_nene_reich_engineer }
+		remove_ideas = PRS_nene_reich_engineer
+	}
+	else = {
+		log = "NOTHING TO REMOVE FROM EMU"
+	}
+
+	if = { #STOP ANY FOCUS IN-PROGRESS (WITH SHINY EFFECT)
+		limit = {
+			has_shine_effect_on_focus = PRS_31010
+		}
+		deactivate_shine_on_focus = PRS_31010
+		clr_country_flag = PRS_31010_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_31011
+		}
+		deactivate_shine_on_focus = PRS_31011
+		clr_country_flag = PRS_31011_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_31012
+			check_variable = { PRS_wonder_weapons_focus_advisor = 1 }
+		}
+		deactivate_shine_on_focus = PRS_31012
+		clr_country_flag = PRS_31012_in_progress_flag
+		set_variable = { PRS_wonder_weapons_focus_advisor = 0 }
+	}
+
+	#Uncomplete Ascension focus so that he can be picked later on
+	uncomplete_national_focus = {
+		focus = PRS_31009
+		uncomplete_children = no
+		refund_political_power = no
+	}
+
+	if = { # REMOVE EMU FROM ASCENDED ADVISOR
+		limit = {
+			check_variable = { PRS_ascended_advisor_1 = 1 }
+		}
+		set_variable = { PRS_ascended_advisor_1 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_2 = 1 }
+		}
+		set_variable = { PRS_ascended_advisor_2 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_3 = 1 }
+		}
+		set_variable = { PRS_ascended_advisor_3 = 0 }
+	}
+}
+
+# ADD/REMOVE EMU EFFECTS
+PRS_add_emu_effects = {
+	if = {
+		limit = {
+			has_completed_focus = PRS_31017
+			NOT = { has_idea = PRS_rui_reich_minister_of_armaments }
+		}
+		add_ideas = PRS_emu_reich_minister_of_armaments
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = PRS_31015
+		}
+		add_ideas = PRS_emu_reich_engineer
+	}
+}
+
+PRS_remove_emu_effects = {
+	if = {
+		limit = {
+			has_idea = PRS_emu_reich_minister_of_armaments
+		}
+		remove_ideas = PRS_emu_reich_minister_of_armaments
+	}
+	else_if = {
+		limit = {
+			has_idea = PRS_emu_reich_engineer
+		}
+		remove_ideas = PRS_emu_reich_engineer
+	}
+	else = {
+		log = "NOTHING TO REMOVE FROM EMU"
+	}
+
+	if = { #STOP ANY FOCUS IN-PROGRESS (WITH SHINY EFFECT)
+		limit = { has_shine_effect_on_focus = PRS_31016 }
+		deactivate_shine_on_focus = PRS_31016
+		clr_country_flag = PRS_31016_in_progress_flag
+	}
+	else_if = {
+		limit = { 
+			has_shine_effect_on_focus = PRS_31017
+			has_idea = PRS_emu_reich_engineer
+		}
+		deactivate_shine_on_focus = PRS_31017
+		clr_country_flag = PRS_31017_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_31012
+			check_variable = { PRS_wonder_weapons_focus_advisor = 1 }
+		}
+		deactivate_shine_on_focus = PRS_31012
+		clr_country_flag = PRS_31012_in_progress_flag
+		set_variable = { PRS_wonder_weapons_focus_advisor = 0 }
+	}
+
+	#Uncomplete Ascension focus so that he can be picked later on
+	uncomplete_national_focus = {
+		focus = PRS_31015
+		uncomplete_children = no
+		refund_political_power = no
+	}
+
+	if = { # REMOVE EMU FROM ASCENDED ADVISOR
+		limit = { check_variable = { PRS_ascended_advisor_1 = 2 } }
+		set_variable = { PRS_ascended_advisor_1 = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { PRS_ascended_advisor_2 = 2 } }
+		set_variable = { PRS_ascended_advisor_2 = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { PRS_ascended_advisor_3 = 2 } }
+		set_variable = { PRS_ascended_advisor_3 = 0 }
+	}
+}
+
+# ADD/REMOVE RUI EFFECTS
+PRS_add_rui_effects = {
+	if = {
+		limit = { 
+			has_completed_focus = PRS_31017
+			NOT = { has_idea = PRS_emu_reich_minister_of_armaments }
+		}
+		add_ideas = PRS_rui_reich_minister_of_armaments
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = PRS_31013
+		}
+		add_ideas = PRS_rui_reich_architect
+	}
+}
+
+PRS_remove_rui_effects = {
+	if = {
+		limit = { has_idea = PRS_rui_reich_minister_of_armaments }
+		remove_ideas = PRS_rui_reich_minister_of_armaments
+	}
+	else_if = {
+		limit = { has_idea = PRS_rui_reich_architect }
+		remove_ideas = PRS_rui_reich_architect
+	}
+
+	if = { #STOP ANY FOCUS IN-PROGRESS (WITH SHINY EFFECT)
+		limit = {
+			has_shine_effect_on_focus = PRS_31014
+		}
+		deactivate_shine_on_focus = PRS_31014
+		clr_country_flag = PRS_31014_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_31017
+			has_idea = PRS_rui_reich_architect
+		}
+		deactivate_shine_on_focus = PRS_31017
+		clr_country_flag = PRS_31017_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_31012
+			check_variable = { PRS_wonder_weapons_focus_advisor = 2 }
+		}
+		deactivate_shine_on_focus = PRS_31012
+		clr_country_flag = PRS_31012_in_progress_flag
+		set_variable = { PRS_wonder_weapons_focus_advisor = 0 }
+	}
+
+	#Uncomplete Ascension focus so that he can be picked later on
+	uncomplete_national_focus = {
+		focus = PRS_31013
+		uncomplete_children = no
+		refund_political_power = no
+	}
+
+	if = { # REMOVE RUI FROM ASCENDED ADVISOR
+		limit = {
+			check_variable = { PRS_ascended_advisor_1 = 3 }
+		}
+		set_variable = { PRS_ascended_advisor_1 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_2 = 3 }
+		}
+		set_variable = { PRS_ascended_advisor_2 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_3 = 3 }
+		}
+		set_variable = { PRS_ascended_advisor_3 = 0 }
+	}
+}
+
+# ADD/REMOVE TSUKASA EFFECTS
+PRS_add_tsukasa_effects = {
+	if = {
+		limit = {
+			has_completed_focus = PRS_plenipotentiary_of_the_four_year_plan
+		}
+		add_ideas = PRS_tsukasa_four_year_plan_plenipotentiary
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = PRS_31020
+		}
+		add_ideas = PRS_tsukasa_overseer_four_year_plan
+	}
+}
+
+PRS_remove_tsukasa_effects = {
+	if = {
+		limit = {
+			has_idea = PRS_tsukasa_four_year_plan_plenipotentiary
+		}
+		remove_ideas = PRS_tsukasa_four_year_plan_plenipotentiary
+	}
+	else_if = {
+		limit = {
+			has_idea = PRS_tsukasa_overseer_four_year_plan
+		}
+		remove_ideas = PRS_tsukasa_overseer_four_year_plan
+	}
+
+	if = { #STOP ANY FOCUS IN-PROGRESS (WITH SHINY EFFECT)
+		limit = {
+			has_shine_effect_on_focus = PRS_prioritize_the_four_year_plan
+		}
+		deactivate_shine_on_focus = PRS_prioritize_the_four_year_plan
+		clr_country_flag = PRS_prioritize_the_four_year_plan_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_plenipotentiary_of_the_four_year_plan
+		}
+		deactivate_shine_on_focus = PRS_plenipotentiary_of_the_four_year_plan
+		clr_country_flag = PRS_plenipotentiary_of_the_four_year_plan_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_integration_of_puppet_economies
+		}
+		deactivate_shine_on_focus = PRS_integration_of_puppet_economies
+		clr_country_flag = PRS_integration_of_puppet_economies_in_progress_flag
+	}
+
+	#Uncomplete Ascension focus so that he can be picked later on
+	uncomplete_national_focus = {
+		focus = PRS_31020
+		uncomplete_children = no
+		refund_political_power = no
+	}
+
+	if = { # REMOVE TSUKASA FROM ASCENDED ADVISOR
+		limit = {
+			check_variable = { PRS_ascended_advisor_1 = 3 }
+		}
+		set_variable = { PRS_ascended_advisor_1 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_2 = 3 }
+		}
+		set_variable = { PRS_ascended_advisor_2 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_3 = 3 }
+		}
+		set_variable = { PRS_ascended_advisor_3 = 0 }
+	}
+}
+
+# ADD/REMOVE KANADE EFFECTS
+PRS_add_kanade_effects = {
+	log ="ADDING KANADE"
+	if = {
+		limit = {
+			has_completed_focus = PRS_strengthen_the_waffen_ss
+		}
+		add_ideas = PRS_kanade_reichsfuhrer_ss
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_completed_focus = PRS_expand_ss_security_duties
+				has_completed_focus = PRS_absorb_the_abwehr
+			}
+		}
+		add_ideas = PRS_kanade_director_reich_security
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = PRS_ascension_of_kanade
+		}
+		add_ideas = PRS_kanade_chief_of_german_police
+	}
+
+	custom_effect_tooltip = generic_skip_one_line_tt
+
+	country_event = PRS_inner_circle_kanade.00
+}
+
+PRS_remove_kanade_effects = {
+	if = {
+		limit = {
+			has_idea = PRS_kanade_reichsfuhrer_ss
+		}
+		remove_ideas = PRS_kanade_reichsfuhrer_ss
+	}
+	else_if = {
+		limit = {
+			has_idea = PRS_kanade_director_reich_security
+		}
+		remove_ideas = PRS_kanade_director_reich_security
+	}
+	else_if = {
+		limit = {
+			has_idea = PRS_kanade_chief_of_german_police
+		}
+		remove_ideas = PRS_kanade_chief_of_german_police
+	}
+
+	if = { #STOP ANY FOCUS IN-PROGRESS (WITH SHINY EFFECT)
+		limit = {
+			has_shine_effect_on_focus = PRS_expand_ss_security_duties
+		}
+		deactivate_shine_on_focus = PRS_expand_ss_security_duties
+		clr_country_flag = PRS_expand_ss_security_duties_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_strengthen_the_waffen_ss
+		}
+		deactivate_shine_on_focus = PRS_strengthen_the_waffen_ss
+		clr_country_flag = PRS_strengthen_the_waffen_ss_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_expand_gestapo
+		}
+		deactivate_shine_on_focus = PRS_expand_gestapo
+		clr_country_flag = PRS_expand_gestapo_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_absorb_the_abwehr
+		}
+		deactivate_shine_on_focus = PRS_absorb_the_abwehr
+		clr_country_flag = PRS_absorb_the_abwehr_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_hegemony_of_the_ss
+		}
+		deactivate_shine_on_focus = PRS_hegemony_of_the_ss
+		clr_country_flag = PRS_hegemony_of_the_ss_in_progress_flag
+	}
+
+	#Uncomplete Ascension focus so that he can be picked later on
+	uncomplete_national_focus = {
+		focus = PRS_ascension_of_kanade
+		uncomplete_children = no
+		refund_political_power = no
+	}
+
+	if = { # REMOVE KANADE FROM ASCENDED ADVISOR
+		limit = {
+			check_variable = { PRS_ascended_advisor_1 = 4 }
+		}
+		set_variable = { PRS_ascended_advisor_1 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_2 = 4 }
+		}
+		set_variable = { PRS_ascended_advisor_2 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_3 = 4 }
+		}
+		set_variable = { PRS_ascended_advisor_3 = 0 }
+	}
+}
+
+# ADD/REMOVE SAKI EFFECTS
+PRS_add_saki_effects = {
+	if = {
+		limit = {
+			has_completed_focus = PRS_propaganda_master
+		}
+		add_ideas = PRS_saki_reich_minister_of_propaganda_master
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = PRS_fund_the_film_department
+		}
+		add_ideas = PRS_saki_reich_minister_of_propaganda_film
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = PRS_ministry_of_public_enlightenment
+		}
+		add_ideas = PRS_saki_reich_minister_of_propaganda_ministry
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = PRS_ascension_of_saki
+		}
+		add_ideas = PRS_saki_reich_minister_of_propaganda
+	}
+}
+
+PRS_remove_saki_effects = {
+	if = {
+		limit = {
+			has_idea = PRS_saki_reich_minister_of_propaganda_master
+		}
+		remove_ideas = PRS_saki_reich_minister_of_propaganda_master
+	}
+	else_if = {
+		limit = {
+			has_idea = PRS_saki_reich_minister_of_propaganda_film
+		}
+		remove_ideas = PRS_saki_reich_minister_of_propaganda_film
+	}
+	else_if = {
+		limit = {
+			has_idea = PRS_saki_reich_minister_of_propaganda_ministry
+		}
+		remove_ideas = PRS_saki_reich_minister_of_propaganda_ministry
+	}
+	else_if = {
+		limit = {
+			has_idea = PRS_saki_reich_minister_of_propaganda
+		}
+		remove_ideas = PRS_saki_reich_minister_of_propaganda
+	}
+
+	if = { #STOP ANY FOCUS IN-PROGRESS (WITH SHINY EFFECT)
+		limit = {
+			has_shine_effect_on_focus = PRS_ministry_of_public_enlightenment
+		}
+		deactivate_shine_on_focus = PRS_ministry_of_public_enlightenment
+		clr_country_flag = PRS_ministry_of_public_enlightenment_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_fund_the_film_department
+		}
+		deactivate_shine_on_focus = PRS_fund_the_film_department
+		clr_country_flag = PRS_fund_the_film_department_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_propaganda_master
+		}
+		deactivate_shine_on_focus = PRS_propaganda_master
+		clr_country_flag = PRS_propaganda_master_in_progress_flag
+	}
+
+	#Uncomplete Ascension focus so that he can be picked later on
+	uncomplete_national_focus = {
+		focus = PRS_ascension_of_saki
+		uncomplete_children = no
+		refund_political_power = no
+	}
+
+	if = { # REMOVE SAKI FROM ASCENDED ADVISOR
+		limit = {
+			check_variable = { PRS_ascended_advisor_1 = 5 }
+		}
+		set_variable = { PRS_ascended_advisor_1 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_2 = 5 }
+		}
+		set_variable = { PRS_ascended_advisor_2 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_3 = 5 }
+		}
+		set_variable = { PRS_ascended_advisor_3 = 0 }
+	}
+}
+
+# ADD/REMOVE HONAMI EFFECTS
+PRS_add_honami_effects = {
+	if = {
+		limit = {
+			has_completed_focus = PRS_total_control_over_domestic_affairs
+		}
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			add_ideas = PRS_honami_first_among_equals
+		}
+		else = {
+			add_ideas = PRS_honami_first_among_equals_no_aat
+		}
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = PRS_rally_the_industrialists
+		}
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			add_ideas = PRS_honami_party_chancellor_improved
+		}
+		else = {
+			add_ideas = PRS_honami_party_chancellor_improved_no_aat
+		}
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = PRS_party_chancellor_honami
+		}
+		add_ideas = PRS_honami_party_chancellor
+	}
+}
+
+PRS_remove_honami_effects = {
+	if = {
+		limit = {
+			OR = {
+				has_idea = PRS_honami_first_among_equals
+				has_idea = PRS_honami_first_among_equals_no_aat
+			}
+		}
+		if = {
+			limit = {
+				has_idea = PRS_honami_first_among_equals
+			}
+			remove_ideas = PRS_honami_first_among_equals
+		}
+		else = {
+			remove_ideas = PRS_honami_first_among_equals
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_idea = PRS_honami_party_chancellor_improved
+				has_idea = PRS_honami_party_chancellor_improved_no_aat
+			}
+		}
+		if = {
+			limit = {
+				has_idea = PRS_honami_party_chancellor_improved
+			}
+			remove_ideas = PRS_honami_party_chancellor_improved
+		}
+		else = {
+			remove_ideas = PRS_honami_party_chancellor_improved_no_aat
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = PRS_honami_party_chancellor
+		}
+		remove_ideas = PRS_honami_party_chancellor
+	}
+
+	if = { #STOP ANY FOCUS IN-PROGRESS (WITH SHINY EFFECT)
+		limit = {
+			has_shine_effect_on_focus = PRS_optimize_reich_labour_service
+			check_variable = { PRS_optimize_reich_service_focus_advisor = 6 }
+		}
+		deactivate_shine_on_focus = PRS_optimize_reich_labour_service
+		clr_country_flag = PRS_optimize_reich_labour_service_in_progress_flag
+		set_variable = { PRS_optimize_reich_service_focus_advisor = 0 }
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_rally_the_industrialists
+		}
+		deactivate_shine_on_focus = PRS_rally_the_industrialists
+		clr_country_flag = PRS_rally_the_industrialists_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_total_control_over_domestic_affairs
+			check_variable = { PRS_total_control_over_domestic_affairs_focus_advisor = 6 }
+		}
+		deactivate_shine_on_focus = PRS_total_control_over_domestic_affairs
+		clr_country_flag = PRS_total_control_over_domestic_affairs_in_progress_flag
+		set_variable = { PRS_total_control_over_domestic_affairs_focus_advisor = 0 }
+	}
+
+	#Uncomplete Ascension focus so that he can be picked later on
+	uncomplete_national_focus = {
+		focus = PRS_party_chancellor_honami
+		uncomplete_children = no
+		refund_political_power = no
+	}
+
+	if = { # REMOVE HONAMI FROM ASCENDED ADVISOR
+		limit = {
+			check_variable = { PRS_ascended_advisor_1 = 6 }
+		}
+		set_variable = { PRS_ascended_advisor_1 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_2 = 6 }
+		}
+		set_variable = { PRS_ascended_advisor_2 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_3 = 6 }
+		}
+		set_variable = { PRS_ascended_advisor_3 = 0 }
+	}
+}
+
+# ADD/REMOVE SHIHO EFFECTS
+PRS_add_shiho_effects = {
+	if = {
+		limit = {
+			has_completed_focus = PRS_total_control_over_domestic_affairs
+		}
+		add_ideas = PRS_shiho_brown_eminence
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = PRS_glorify_party_rallies
+		}
+		add_ideas = PRS_shiho_secretary_to_the_fuhrer_improved
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = PRS_party_chancellor_shiho
+		}
+		add_ideas = PRS_shiho_secretary_to_the_fuhrer
+	}
+}
+
+PRS_remove_shiho_effects = {
+	if = {
+		limit = {
+			has_idea = PRS_shiho_brown_eminence
+		}
+		remove_ideas = PRS_shiho_brown_eminence
+	}
+	else_if = {
+		limit = {
+			has_idea = PRS_shiho_secretary_to_the_fuhrer_improved
+		}
+		remove_ideas = PRS_shiho_secretary_to_the_fuhrer_improved
+	}
+	else_if = {
+		limit = {
+			has_idea = PRS_shiho_secretary_to_the_fuhrer
+		}
+		remove_ideas = PRS_shiho_secretary_to_the_fuhrer
+	}
+
+	if = { #STOP ANY FOCUS IN-PROGRESS (WITH SHINY EFFECT)
+		limit = {
+			has_shine_effect_on_focus = PRS_optimize_reich_labour_service
+			check_variable = { PRS_optimize_reich_service_focus_advisor = 7 }
+		}
+		deactivate_shine_on_focus = PRS_optimize_reich_labour_service
+		clr_country_flag = PRS_optimize_reich_labour_service_in_progress_flag
+		set_variable = { PRS_optimize_reich_service_focus_advisor = 0 }
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_glorify_party_rallies
+		}
+		deactivate_shine_on_focus = PRS_glorify_party_rallies
+		clr_country_flag = PRS_glorify_party_rallies_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = PRS_total_control_over_domestic_affairs
+			check_variable = { PRS_total_control_over_domestic_affairs_focus_advisor = 7 }
+		}
+		deactivate_shine_on_focus = PRS_total_control_over_domestic_affairs
+		clr_country_flag = PRS_total_control_over_domestic_affairs_in_progress_flag
+		set_variable = { PRS_total_control_over_domestic_affairs_focus_advisor = 0 }
+	}
+
+	#Uncomplete Ascension focus so that he can be picked later on
+	uncomplete_national_focus = {
+		focus = PRS_party_chancellor_shiho
+		uncomplete_children = no
+		refund_political_power = no
+	}
+
+	if = { # REMOVE SHIHO FROM ASCENDED ADVISOR
+		limit = {
+			check_variable = { PRS_ascended_advisor_1 = 7 }
+		}
+		set_variable = { PRS_ascended_advisor_1 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_2 = 7 }
+		}
+		set_variable = { PRS_ascended_advisor_2 = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { PRS_ascended_advisor_3 = 7 }
+		}
+		set_variable = { PRS_ascended_advisor_3 = 0 }
+	}
+}
+
+# For when Göring can be promoted to country leader via content outside of Inner Circle - make sure that if he was the prevailing industrialist but didn't complete focus, someone else will be enabled
+PRS_replace_tsukasa_as_prevailing_industrialist = {
+	#ASSIGN SOMEONE ELSE AS PREVAILING INDUSTRIALIST if he was chosen to prevail but didn't complete his focus before promoting to country leader. Pick a new Prevailing Advisor (very arbitrarily but better than nothing)
+	if = { #Only applicable if he was Prevailing Industrialist and didnt complete his focus before promoting
+		limit = {
+			check_variable = { PRS_industrialist_prevailed = 2 }
+			NOT = {	has_completed_focus = PRS_31017 }
+		}
+		if = { #RUI IS ASCENDED -> PICK HIM FIRST
+			limit = {
+				OR = {
+					check_variable = { PRS_ascended_advisor_1 = 2 }
+					check_variable = { PRS_ascended_advisor_2 = 2 }
+					check_variable = { PRS_ascended_advisor_3 = 2 }
+				}
+			}
+			set_variable = { PRS_industrialist_prevailed = 2 }
+		}
+		else_if = { #EMU IS ASCENDED -> PICK HIM
+			limit = {
+				OR = {
+					check_variable = { PRS_ascended_advisor_1 = 1 }
+					check_variable = { PRS_ascended_advisor_2 = 1 }
+					check_variable = { PRS_ascended_advisor_3 = 1 }
+				}
+			}
+			set_variable = { PRS_industrialist_prevailed = 1 }
+		}
+		else_if = { #RUI COMPLETED ANY FOCUS
+			limit = {
+				has_completed_focus = PRS_31014
+			}
+			set_variable = { PRS_industrialist_prevailed = 2 }
+		}
+		else_if = { #EMU COMPLETED ANY FOCUS
+			limit = {
+				has_completed_focus = PRS_31016
+			}
+			set_variable = { PRS_industrialist_prevailed = 1 }
+		}
+		else = { #NO ONE COMPLETED ANY FOCUS OR IS ASCENDED - PICK RUI over Todt
+			set_variable = { PRS_industrialist_prevailed = 2 }
+		}
+	}
+}
+
+PRS_inner_circle_set_ascension_cd = {
+	set_country_flag = {
+		flag = PRS_inner_circle_cd_flag
+		days = 175
+		value = 1
+	}
+}

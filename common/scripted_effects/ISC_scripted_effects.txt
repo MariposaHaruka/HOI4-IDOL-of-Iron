@@ -1,2 +1,593 @@
-#generic = {
-#}
+parliament_gui_initial_ISC = {
+	add_to_array = { ISC.parliament_seat_array = ISC_united_tsubasa_seats } 
+	add_to_array = { ISC.parliament_seat_array = ISC_country_seats }
+	add_to_array = { ISC.parliament_seat_array = 0 } #당 없음
+	add_to_array = { ISC.parliament_seat_array = ISC_labor_seats }
+	add_to_array = { ISC.parliament_seat_array = 0 } #당 없음
+	add_to_array = { ISC.parliament_seat_array = ISC_communist_seats } 
+	add_to_array = { ISC.parliament_seat_array = 0 } #당 없음
+	add_to_array = { ISC.parliament_seat_array = ISC_producercommunist_seats }
+	add_to_array = { ISC.parliament_seat_array = ISC_centre_seats }
+	add_to_array = { ISC.parliament_seat_array = 0 } #당 없음
+	add_to_array = { ISC.parliament_seat_array = 0 } #당 없음
+	add_to_array = { ISC.parliament_seat_array = ISC_independent_seats }
+	
+	add_to_array = { ISC.parliament_member_array = 1 }
+	add_to_array = { ISC.parliament_member_array = 2 }
+	add_to_array = { ISC.parliament_member_array = 3 }
+	add_to_array = { ISC.parliament_member_array = 4 }
+	add_to_array = { ISC.parliament_member_array = 5 }
+	add_to_array = { ISC.parliament_member_array = 6 }
+	add_to_array = { ISC.parliament_member_array = 7 }
+	add_to_array = { ISC.parliament_member_array = 8 }
+	add_to_array = { ISC.parliament_member_array = 9 }
+	add_to_array = { ISC.parliament_member_array = 10 }
+	add_to_array = { ISC.parliament_member_array = 11 }
+	add_to_array = { ISC.parliament_member_array = 12 }
+
+	parliament_gui_positions_ISC = yes
+	reload_parliament_gui = yes
+}
+
+parliament_gui_reload_ISC = {
+	clear_array = ISC.parliament_seat_array
+	add_to_array = { ISC.parliament_seat_array = ISC_united_tsubasa_seats } 
+	add_to_array = { ISC.parliament_seat_array = ISC_country_seats }
+	add_to_array = { ISC.parliament_seat_array = 0 }
+	add_to_array = { ISC.parliament_seat_array = ISC_labor_seats }
+	add_to_array = { ISC.parliament_seat_array = 0 }
+	add_to_array = { ISC.parliament_seat_array = ISC_communist_seats } 
+	add_to_array = { ISC.parliament_seat_array = 0 } 
+	add_to_array = { ISC.parliament_seat_array = ISC_producercommunist_seats }
+	add_to_array = { ISC.parliament_seat_array = ISC_centre_seats }
+	add_to_array = { ISC.parliament_seat_array = 0 } 
+	add_to_array = { ISC.parliament_seat_array = 0 }
+	add_to_array = { ISC.parliament_seat_array = ISC_independent_seats }
+
+	parliament_gui_positions_ISC = yes
+	reload_parliament_gui = yes
+}
+
+parliament_gui_positions_ISC = {
+	add_to_array = { ISC.parliament_x_array = 0 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+	add_to_array = { ISC.parliament_x_array = 19 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+	add_to_array = { ISC.parliament_x_array = 37 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+	add_to_array = { ISC.parliament_x_array = 56 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+	add_to_array = { ISC.parliament_x_array = 75 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+	add_to_array = { ISC.parliament_x_array = 94 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+	add_to_array = { ISC.parliament_x_array = 112 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+	add_to_array = { ISC.parliament_x_array = 2 }
+	add_to_array = { ISC.parliament_y_array = 186 }
+	add_to_array = { ISC.parliament_x_array = 21 }
+	add_to_array = { ISC.parliament_y_array = 185 }
+	add_to_array = { ISC.parliament_x_array = 40 }
+	add_to_array = { ISC.parliament_y_array = 185 }
+	add_to_array = { ISC.parliament_x_array = 59 }
+	add_to_array = { ISC.parliament_y_array = 185 }
+	add_to_array = { ISC.parliament_x_array = 78 }
+	add_to_array = { ISC.parliament_y_array = 185 }
+	add_to_array = { ISC.parliament_x_array = 6 }
+	add_to_array = { ISC.parliament_y_array = 165 }
+	add_to_array = { ISC.parliament_x_array = 98 }
+	add_to_array = { ISC.parliament_y_array = 186 }
+	add_to_array = { ISC.parliament_x_array = 26 }
+	add_to_array = { ISC.parliament_y_array = 163 }
+	add_to_array = { ISC.parliament_x_array = 45 }
+	add_to_array = { ISC.parliament_y_array = 164 }
+	add_to_array = { ISC.parliament_x_array = 117 }
+	add_to_array = { ISC.parliament_y_array = 185 }
+	add_to_array = { ISC.parliament_x_array = 65 }
+	add_to_array = { ISC.parliament_y_array = 163 }
+	add_to_array = { ISC.parliament_x_array = 13 }
+	add_to_array = { ISC.parliament_y_array = 144 }
+	add_to_array = { ISC.parliament_x_array = 34 }
+	add_to_array = { ISC.parliament_y_array = 141 }
+	add_to_array = { ISC.parliament_x_array = 86 }
+	add_to_array = { ISC.parliament_y_array = 163 }
+	add_to_array = { ISC.parliament_x_array = 54 }
+	add_to_array = { ISC.parliament_y_array = 143 }
+	add_to_array = { ISC.parliament_x_array = 21 }
+	add_to_array = { ISC.parliament_y_array = 124 }
+	add_to_array = { ISC.parliament_x_array = 105 }
+	add_to_array = { ISC.parliament_y_array = 165 }
+	add_to_array = { ISC.parliament_x_array = 75 }
+	add_to_array = { ISC.parliament_y_array = 143 }
+	add_to_array = { ISC.parliament_x_array = 44 }
+	add_to_array = { ISC.parliament_y_array = 121 }
+	add_to_array = { ISC.parliament_x_array = 127 }
+	add_to_array = { ISC.parliament_y_array = 165 }
+	add_to_array = { ISC.parliament_x_array = 32 }
+	add_to_array = { ISC.parliament_y_array = 105 }
+	add_to_array = { ISC.parliament_x_array = 64 }
+	add_to_array = { ISC.parliament_y_array = 124 }
+	add_to_array = { ISC.parliament_x_array = 96 }
+	add_to_array = { ISC.parliament_y_array = 143 }
+	add_to_array = { ISC.parliament_x_array = 56 }
+	add_to_array = { ISC.parliament_y_array = 102 }
+	add_to_array = { ISC.parliament_x_array = 87 }
+	add_to_array = { ISC.parliament_y_array = 124 }
+	add_to_array = { ISC.parliament_x_array = 117 }
+	add_to_array = { ISC.parliament_y_array = 146 }
+	add_to_array = { ISC.parliament_x_array = 44 }
+	add_to_array = { ISC.parliament_y_array = 87 }
+	add_to_array = { ISC.parliament_x_array = 77 }
+	add_to_array = { ISC.parliament_y_array = 106 }
+	add_to_array = { ISC.parliament_x_array = 110 }
+	add_to_array = { ISC.parliament_y_array = 124 }
+	add_to_array = { ISC.parliament_x_array = 71 }
+	add_to_array = { ISC.parliament_y_array = 85 }
+	add_to_array = { ISC.parliament_x_array = 58 }
+	add_to_array = { ISC.parliament_y_array = 71 }
+	add_to_array = { ISC.parliament_x_array = 141 }
+	add_to_array = { ISC.parliament_y_array = 147 }
+	add_to_array = { ISC.parliament_x_array = 101 }
+	add_to_array = { ISC.parliament_y_array = 107 }
+	add_to_array = { ISC.parliament_x_array = 92 }
+	add_to_array = { ISC.parliament_y_array = 90 }
+	add_to_array = { ISC.parliament_x_array = 132 }
+	add_to_array = { ISC.parliament_y_array = 129 }
+	add_to_array = { ISC.parliament_x_array = 74 }
+	add_to_array = { ISC.parliament_y_array = 56 }
+	add_to_array = { ISC.parliament_x_array = 87 }
+	add_to_array = { ISC.parliament_y_array = 69 }
+	add_to_array = { ISC.parliament_x_array = 127 }
+	add_to_array = { ISC.parliament_y_array = 109 }
+	add_to_array = { ISC.parliament_x_array = 118 }
+	add_to_array = { ISC.parliament_y_array = 92 }
+	add_to_array = { ISC.parliament_x_array = 109 }
+	add_to_array = { ISC.parliament_y_array = 76 }
+	add_to_array = { ISC.parliament_x_array = 91 }
+	add_to_array = { ISC.parliament_y_array = 43 }
+	add_to_array = { ISC.parliament_x_array = 105 }
+	add_to_array = { ISC.parliament_y_array = 55 }
+	add_to_array = { ISC.parliament_x_array = 159 }
+	add_to_array = { ISC.parliament_y_array = 132 }
+	add_to_array = { ISC.parliament_x_array = 149 }
+	add_to_array = { ISC.parliament_y_array = 116 }
+	add_to_array = { ISC.parliament_x_array = 109 }
+	add_to_array = { ISC.parliament_y_array = 31 }
+	add_to_array = { ISC.parliament_x_array = 128 }
+	add_to_array = { ISC.parliament_y_array = 64 }
+	add_to_array = { ISC.parliament_x_array = 137 }
+	add_to_array = { ISC.parliament_y_array = 80 }
+	add_to_array = { ISC.parliament_x_array = 146 }
+	add_to_array = { ISC.parliament_y_array = 96 }
+	add_to_array = { ISC.parliament_x_array = 125 }
+	add_to_array = { ISC.parliament_y_array = 44 }
+	add_to_array = { ISC.parliament_x_array = 128 }
+	add_to_array = { ISC.parliament_y_array = 22 }
+	add_to_array = { ISC.parliament_x_array = 148 }
+	add_to_array = { ISC.parliament_y_array = 54 }
+	add_to_array = { ISC.parliament_x_array = 169 }
+	add_to_array = { ISC.parliament_y_array = 106 }
+	add_to_array = { ISC.parliament_x_array = 158 }
+	add_to_array = { ISC.parliament_y_array = 71 }
+	add_to_array = { ISC.parliament_x_array = 146 }
+	add_to_array = { ISC.parliament_y_array = 35 }
+	add_to_array = { ISC.parliament_x_array = 179 }
+	add_to_array = { ISC.parliament_y_array = 122 }
+	add_to_array = { ISC.parliament_x_array = 167 }
+	add_to_array = { ISC.parliament_y_array = 87 }
+	add_to_array = { ISC.parliament_x_array = 149 }
+	add_to_array = { ISC.parliament_y_array = 14 }
+	add_to_array = { ISC.parliament_x_array = 169 }
+	add_to_array = { ISC.parliament_y_array = 47 }
+	add_to_array = { ISC.parliament_x_array = 168 }
+	add_to_array = { ISC.parliament_y_array = 28 }
+	add_to_array = { ISC.parliament_x_array = 179 }
+	add_to_array = { ISC.parliament_y_array = 64 }
+	add_to_array = { ISC.parliament_x_array = 170 }
+	add_to_array = { ISC.parliament_y_array = 9 }
+	add_to_array = { ISC.parliament_x_array = 191 }
+	add_to_array = { ISC.parliament_y_array = 100 }
+	add_to_array = { ISC.parliament_x_array = 190 }
+	add_to_array = { ISC.parliament_y_array = 81 }
+	add_to_array = { ISC.parliament_x_array = 191 }
+	add_to_array = { ISC.parliament_y_array = 43 }
+	add_to_array = { ISC.parliament_x_array = 190 }
+	add_to_array = { ISC.parliament_y_array = 25 }
+	add_to_array = { ISC.parliament_x_array = 201 }
+	add_to_array = { ISC.parliament_y_array = 117 }
+	add_to_array = { ISC.parliament_x_array = 191 }
+	add_to_array = { ISC.parliament_y_array = 6 }
+	add_to_array = { ISC.parliament_x_array = 201 }
+	add_to_array = { ISC.parliament_y_array = 61 }
+	add_to_array = { ISC.parliament_x_array = 213 }
+	add_to_array = { ISC.parliament_y_array = 98 }
+	add_to_array = { ISC.parliament_x_array = 213 }
+	add_to_array = { ISC.parliament_y_array = 79 }
+	add_to_array = { ISC.parliament_x_array = 213 }
+	add_to_array = { ISC.parliament_y_array = 23 }
+	add_to_array = { ISC.parliament_x_array = 213 }
+	add_to_array = { ISC.parliament_y_array = 5 }
+	add_to_array = { ISC.parliament_x_array = 213 }
+	add_to_array = { ISC.parliament_y_array = 42 }
+	add_to_array = { ISC.parliament_x_array = 224 }
+	add_to_array = { ISC.parliament_y_array = 61 }
+	add_to_array = { ISC.parliament_x_array = 234 }
+	add_to_array = { ISC.parliament_y_array = 6 }
+	add_to_array = { ISC.parliament_x_array = 224 }
+	add_to_array = { ISC.parliament_y_array = 117 }
+	add_to_array = { ISC.parliament_x_array = 235 }
+	add_to_array = { ISC.parliament_y_array = 25 }
+	add_to_array = { ISC.parliament_x_array = 235 }
+	add_to_array = { ISC.parliament_y_array = 43 }
+	add_to_array = { ISC.parliament_x_array = 235 }
+	add_to_array = { ISC.parliament_y_array = 81 }
+	add_to_array = { ISC.parliament_x_array = 235 }
+	add_to_array = { ISC.parliament_y_array = 100 }
+	add_to_array = { ISC.parliament_x_array = 256 }
+	add_to_array = { ISC.parliament_y_array = 9 }
+	add_to_array = { ISC.parliament_x_array = 246 }
+	add_to_array = { ISC.parliament_y_array = 64 }
+	add_to_array = { ISC.parliament_x_array = 258 }
+	add_to_array = { ISC.parliament_y_array = 28 }
+	add_to_array = { ISC.parliament_x_array = 256 }
+	add_to_array = { ISC.parliament_y_array = 47 }
+	add_to_array = { ISC.parliament_x_array = 276 }
+	add_to_array = { ISC.parliament_y_array = 14 }
+	add_to_array = { ISC.parliament_x_array = 258 }
+	add_to_array = { ISC.parliament_y_array = 87 }
+	add_to_array = { ISC.parliament_x_array = 246 }
+	add_to_array = { ISC.parliament_y_array = 122 }
+	add_to_array = { ISC.parliament_x_array = 279 }
+	add_to_array = { ISC.parliament_y_array = 35 }
+	add_to_array = { ISC.parliament_x_array = 268 }
+	add_to_array = { ISC.parliament_y_array = 71 }
+	add_to_array = { ISC.parliament_x_array = 256 }
+	add_to_array = { ISC.parliament_y_array = 106 }
+	add_to_array = { ISC.parliament_x_array = 277 }
+	add_to_array = { ISC.parliament_y_array = 54 }
+	add_to_array = { ISC.parliament_x_array = 297 }
+	add_to_array = { ISC.parliament_y_array = 22 }
+	add_to_array = { ISC.parliament_x_array = 300 }
+	add_to_array = { ISC.parliament_y_array = 44 }
+	add_to_array = { ISC.parliament_x_array = 279 }
+	add_to_array = { ISC.parliament_y_array = 96 }
+	add_to_array = { ISC.parliament_x_array = 288 }
+	add_to_array = { ISC.parliament_y_array = 80 }
+	add_to_array = { ISC.parliament_x_array = 297 }
+	add_to_array = { ISC.parliament_y_array = 64 }
+	add_to_array = { ISC.parliament_x_array = 316 }
+	add_to_array = { ISC.parliament_y_array = 31 }
+	add_to_array = { ISC.parliament_x_array = 276 }
+	add_to_array = { ISC.parliament_y_array = 116 }
+	add_to_array = { ISC.parliament_x_array = 267 }
+	add_to_array = { ISC.parliament_y_array = 132 }
+	add_to_array = { ISC.parliament_x_array = 320 }
+	add_to_array = { ISC.parliament_y_array = 55 }
+	add_to_array = { ISC.parliament_x_array = 334 }
+	add_to_array = { ISC.parliament_y_array = 43 }
+	add_to_array = { ISC.parliament_x_array = 316 }
+	add_to_array = { ISC.parliament_y_array = 76 }
+	add_to_array = { ISC.parliament_x_array = 307 }
+	add_to_array = { ISC.parliament_y_array = 92 }
+	add_to_array = { ISC.parliament_x_array = 298 }
+	add_to_array = { ISC.parliament_y_array = 109 }
+	add_to_array = { ISC.parliament_x_array = 338 }
+	add_to_array = { ISC.parliament_y_array = 69 }
+	add_to_array = { ISC.parliament_x_array = 351 }
+	add_to_array = { ISC.parliament_y_array = 56 }
+	add_to_array = { ISC.parliament_x_array = 293 }
+	add_to_array = { ISC.parliament_y_array = 129 }
+	add_to_array = { ISC.parliament_x_array = 333 }
+	add_to_array = { ISC.parliament_y_array = 90 }
+	add_to_array = { ISC.parliament_x_array = 324 }
+	add_to_array = { ISC.parliament_y_array = 107 }
+	add_to_array = { ISC.parliament_x_array = 284 }
+	add_to_array = { ISC.parliament_y_array = 147 }
+	add_to_array = { ISC.parliament_x_array = 367 }
+	add_to_array = { ISC.parliament_y_array = 71 }
+	add_to_array = { ISC.parliament_x_array = 354 }
+	add_to_array = { ISC.parliament_y_array = 85 }
+	add_to_array = { ISC.parliament_x_array = 315 }
+	add_to_array = { ISC.parliament_y_array = 124 }
+	add_to_array = { ISC.parliament_x_array = 348 }
+	add_to_array = { ISC.parliament_y_array = 106 }
+	add_to_array = { ISC.parliament_x_array = 381 }
+	add_to_array = { ISC.parliament_y_array = 87 }
+	add_to_array = { ISC.parliament_x_array = 308 }
+	add_to_array = { ISC.parliament_y_array = 146 }
+	add_to_array = { ISC.parliament_x_array = 339 }
+	add_to_array = { ISC.parliament_y_array = 124 }
+	add_to_array = { ISC.parliament_x_array = 369 }
+	add_to_array = { ISC.parliament_y_array = 102 }
+	add_to_array = { ISC.parliament_x_array = 329 }
+	add_to_array = { ISC.parliament_y_array = 143 }
+	add_to_array = { ISC.parliament_x_array = 361 }
+	add_to_array = { ISC.parliament_y_array = 124 }
+	add_to_array = { ISC.parliament_x_array = 393 }
+	add_to_array = { ISC.parliament_y_array = 105 }
+	add_to_array = { ISC.parliament_x_array = 298 }
+	add_to_array = { ISC.parliament_y_array = 165 }
+	add_to_array = { ISC.parliament_x_array = 381 }
+	add_to_array = { ISC.parliament_y_array = 121 }
+	add_to_array = { ISC.parliament_x_array = 351 }
+	add_to_array = { ISC.parliament_y_array = 143 }
+	add_to_array = { ISC.parliament_x_array = 320 }
+	add_to_array = { ISC.parliament_y_array = 165 }
+	add_to_array = { ISC.parliament_x_array = 404 }
+	add_to_array = { ISC.parliament_y_array = 124 }
+	add_to_array = { ISC.parliament_x_array = 372 }
+	add_to_array = { ISC.parliament_y_array = 143 }
+	add_to_array = { ISC.parliament_x_array = 339 }
+	add_to_array = { ISC.parliament_y_array = 163 }
+	add_to_array = { ISC.parliament_x_array = 391 }
+	add_to_array = { ISC.parliament_y_array = 141 }
+	add_to_array = { ISC.parliament_x_array = 412 }
+	add_to_array = { ISC.parliament_y_array = 144 }
+	add_to_array = { ISC.parliament_x_array = 360 }
+	add_to_array = { ISC.parliament_y_array = 163 }
+	add_to_array = { ISC.parliament_x_array = 308 }
+	add_to_array = { ISC.parliament_y_array = 185 }
+	add_to_array = { ISC.parliament_x_array = 380 }
+	add_to_array = { ISC.parliament_y_array = 164 }
+	add_to_array = { ISC.parliament_x_array = 399 }
+	add_to_array = { ISC.parliament_y_array = 163 }
+	add_to_array = { ISC.parliament_x_array = 328 }
+	add_to_array = { ISC.parliament_y_array = 186 }
+	add_to_array = { ISC.parliament_x_array = 419 }
+	add_to_array = { ISC.parliament_y_array = 165 }
+	add_to_array = { ISC.parliament_x_array = 347 }
+	add_to_array = { ISC.parliament_y_array = 185 }
+	add_to_array = { ISC.parliament_x_array = 366 }
+	add_to_array = { ISC.parliament_y_array = 185 }
+	add_to_array = { ISC.parliament_x_array = 385 }
+	add_to_array = { ISC.parliament_y_array = 185 }
+	add_to_array = { ISC.parliament_x_array = 404 }
+	add_to_array = { ISC.parliament_y_array = 185 }
+	add_to_array = { ISC.parliament_x_array = 423 }
+	add_to_array = { ISC.parliament_y_array = 186 }
+	add_to_array = { ISC.parliament_x_array = 313 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+	add_to_array = { ISC.parliament_x_array = 332 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+	add_to_array = { ISC.parliament_x_array = 350 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+	add_to_array = { ISC.parliament_x_array = 369 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+	add_to_array = { ISC.parliament_x_array = 388 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+	add_to_array = { ISC.parliament_x_array = 406 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+	add_to_array = { ISC.parliament_x_array = 425 }
+	add_to_array = { ISC.parliament_y_array = 207 }
+}
+
+calc_parliament_support_ISC = {
+	#없는 지지 이념 정당은 주석처리할 것
+	set_variable = { ISC.support_seats = 0 }
+	if = {
+		limit = { 
+			OR = {
+				has_government = conservatism
+				is_in_coalition_with_conservatism = yes
+			}
+		}
+		set_variable = { ISC.conservative_support = 1 }
+		else = { set_variable = { ISC.conservative_support = 0 } }
+	}
+	if = {
+		limit = { 
+			OR = {
+				has_government = liberalism_mod
+				is_in_coalition_with_liberalism = yes
+			}
+		}
+		set_variable = { ISC.liberalism_support = 1 }
+		else = { set_variable = { ISC.liberalism_support = 0 } }
+	}
+	if = {
+		limit = { 
+			OR = {
+				has_government = progressivism
+				is_in_coalition_with_progressivism = yes
+			}
+		}
+		set_variable = { ISC.progressivism_support = 1 }
+		else = { set_variable = { ISC.progressivism_support = 0 } }
+	}
+	if = {
+		limit = { 
+			OR = {
+				has_government = socialdemocracy
+				is_in_coalition_with_socialdemocracy = yes
+			}
+		}
+		set_variable = { ISC.support_seats = 1 }
+		else = { set_variable = { ISC.socialdemocracy_support = 0 } }
+	}
+	if = {
+		limit = { is_in_coalition_with_socialism = yes }
+		set_variable = { ISC.socialism_support = 1 }
+	else = { set_variable = { ISC.socialism_support = 0 } }
+	}
+	if = {
+		limit = { is_in_coalition_with_communism = yes }
+		set_variable = { ISC.communist_support = 1 }
+		else = { set_variable = { ISC.communist_support = 0 } }
+	}
+	#if = {
+	#	limit = { is_in_coalition_with_authoritariancommunism = yes }
+	#	set_variable = { ISC.authoritariancommunism_support = 1 }
+	#	else = { set_variable = { ISC.authoritariancommunism_support = 0 } }
+	#}
+	if = {
+		limit = { is_in_coalition_with_anarchosyndicalism = yes }
+		set_variable = { ISC.anarchosyndicalism_seats = 1 }
+		else = { set_variable = { ISC.anarchosyndicalism_support = 0 } }
+	}
+	if = {
+		limit = { is_in_coalition_with_fascism = yes }
+		set_variable = { ISC.fascism_support = 1 }
+		else = { set_variable = { ISC.fascism_support = 0 } }
+	}
+	#if = {
+	#	limit = { is_in_coalition_with_militarytotalism = yes }
+	#	set_variable = { ISC.militarytotalism_support = 1 }
+	#	else = { set_variable = { ISC.militarytotalism_support = 0 } }
+	#}
+	if = {
+		limit = { is_in_coalition_with_authoritariandemocracy = yes }
+		set_variable = { ISC.authoritariandemocracy_support = 1 }
+		else = { set_variable = { ISC.authoritariandemocracy_support = 0 } }
+	}
+	if = {
+		limit = { is_in_coalition_with_autocracy = yes }
+		set_variable = { ISC.autocracy_support = 1 }
+		else = { set_variable = { ISC.autocracy_support = 0 } }
+	}
+	multiply_variable = { ISC.conservative_support = ISC_united_tsubasa_seats }
+	multiply_variable = { ISC.liberalism_support = ISC_country_seats }
+	#multiply_variable = { ISC.progressivism_support = 0 }
+	multiply_variable = { ISC.socialdemocracy_support = ISC_labor_seats }
+	#multiply_variable = { ISC.socialism_support = 0 }
+	multiply_variable = { ISC.communist_support = ISC_communist_seats }
+	#multiply_variable = { ISC.authoritariancommunism_support = 0 }
+	multiply_variable = { ISC.anarchosyndicalism_support = ISC_producercommunist_seats }
+	multiply_variable = { ISC.fascism_support = ISC_centre_seats }
+	#multiply_variable = { ISC.militarytotalism_support = 0 }
+	#multiply_variable = { ISC.authoritariandemocracy_support = 0 }
+	multiply_variable = { ISC.autocracy_support = ISC_independent_seats }
+	add_to_variable = { ISC.support_seats = ISC.conservative_support }
+	add_to_variable = { ISC.support_seats = ISC.liberalism_support }
+	#add_to_variable = { ISC.support_seats = ISC.progressivism_support }
+	add_to_variable = { ISC.support_seats = ISC.socialdemocracy_support }
+	#dd_to_variable = { ISC.support_seats = ISC.socialism_support }
+	add_to_variable = { ISC.support_seats = ISC.communist_support }
+	#add_to_variable = { ISC.support_seats = ISC.authoritariancommunism_support }
+	add_to_variable = { ISC.support_seats = ISC.anarchosyndicalism_support }
+	add_to_variable = { ISC.support_seats = ISC.fascism_support }
+	#add_to_variable = { ISC.support_seats = ISC.militarytotalism_support }
+	#add_to_variable = { ISC.support_seats = ISC.authoritariandemocracy_support }
+	add_to_variable = { ISC.support_seats = ISC.autocracy_support }
+	divide_variable = { ISC.support_seats = ISC_total_seats }
+}
+
+#의회 디시전 시스템
+parliament_seek_cooperation_1_idea_effect = { 
+	custom_effect_tooltip = conservatism_party_5_tt
+	hidden_effect = {
+		add_to_variable = { conservatism_party_score = 5 }
+		set_country_flag = { flag = conservatism_action days = 100 }
+	}
+}
+parliament_persuasion_1_idea_effect = { }
+parliament_relation_1_idea_effect = { }
+parliament_patronage_1_idea_effect = { }
+parliament_ask_to_join_coalition_1_idea_effect = { } 
+parliament_seek_cooperation_2_idea_effect = { } 
+parliament_persuasion_2_idea_effect = { } 
+parliament_relation_2_idea_effect = { } 
+parliament_patronage_2_idea_effect = { } 
+parliament_ask_to_join_coalition_2_idea_effect = { } 
+parliament_seek_cooperation_3_idea_effect = { } 
+parliament_persuasion_3_idea_effect = { } 
+parliament_relation_3_idea_effect = { } 
+parliament_patronage_3_idea_effect = { } 
+parliament_ask_to_join_coalition_3_idea_effect = { } 
+parliament_seek_cooperation_4_idea_effect = { } 
+parliament_persuasion_4_idea_effect = { } 
+parliament_relation_4_idea_effect = { } 
+parliament_patronage_4_idea_effect = { } 
+parliament_ask_to_join_coalition_4_idea_effect = { } 
+parliament_seek_cooperation_5_idea_effect = { } 
+parliament_persuasion_5_idea_effect = { } 
+parliament_relation_5_idea_effect = { } 
+parliament_patronage_5_idea_effect = { } 
+parliament_ask_to_join_coalition_5_idea_effect = { } 
+parliament_seek_cooperation_6_idea_effect = { } 
+parliament_persuasion_6_idea_effect = { } 
+parliament_relation_6_idea_effect = { } 
+parliament_patronage_6_idea_effect = { } 
+parliament_ask_to_join_coalition_6_idea_effect = { } 
+parliament_seek_cooperation_7_idea_effect = { } 
+parliament_persuasion_7_idea_effect = { } 
+parliament_relation_7_idea_effect = { } 
+parliament_patronage_7_idea_effect = { } 
+parliament_ask_to_join_coalition_7_idea_effect = { } 
+parliament_seek_cooperation_8_idea_effect = { } 
+parliament_persuasion_8_idea_effect = { } 
+parliament_relation_8_idea_effect = { } 
+parliament_patronage_8_idea_effect = { } 
+parliament_ask_to_join_coalition_8_idea_effect = { } 
+parliament_seek_cooperation_9_idea_effect = { } 
+parliament_persuasion_9_idea_effect = { } 
+parliament_relation_9_idea_effect = { } 
+parliament_patronage_9_idea_effect = { } 
+parliament_ask_to_join_coalition_9_idea_effect = { } 
+parliament_seek_cooperation_10_idea_effect = { } 
+parliament_persuasion_10_idea_effect = { } 
+parliament_relation_10_idea_effect = { } 
+parliament_patronage_10_idea_effect = { } 
+parliament_ask_to_join_coalition_10_idea_effect = { } 
+parliament_seek_cooperation_11_idea_effect = { } 
+parliament_persuasion_11_idea_effect = { } 
+parliament_relation_11_idea_effect = { } 
+parliament_patronage_11_idea_effect = { } 
+parliament_ask_to_join_coalition_11_idea_effect = { } 
+parliament_seek_cooperation_12_idea_effect = { } 
+parliament_persuasion_12_idea_effect = { } 
+parliament_relation_12_idea_effect = { } 
+parliament_patronage_12_idea_effect = { } 
+parliament_ask_to_join_coalition_12_idea_effect = { }
+
+ISC_reset_party_score = { #선거후 리셋에 필요
+	clear_variable = conservatism_party_score
+	set_variable = { conservatism_party_score = 0 }
+	clear_variable = liberalism_party_score
+	set_variable = { liberalism_party_score = 0 }
+	clear_variable = progressivism_party_score
+	set_variable = { progressivism_party_score = 0 }
+	clear_variable = socialdemocracy_party_score
+	set_variable = { socialdemocracy_party_score = 0 }
+	clear_variable = socialism_party_score
+	set_variable = { socialism_party_score = 0 }
+	clear_variable = communism_party_score
+	set_variable = { communism_party_score = 0 }
+	clear_variable = authoritariancommunism_party_score
+	set_variable = { authoritariancommunism_party_score = 0 }
+	clear_variable = anarchosyndicalism_party_score
+	set_variable = { anarchosyndicalism_party_score = 0 }
+	clear_variable = fascism_party_score
+	set_variable = { fascism_party_score = 0 }
+	clear_variable = militarytotalism_party_score
+	set_variable = { militarytotalism_party_score = 0 }
+	clear_variable = authoritariandemocracy_party_score
+	set_variable = { authoritariandemocracy_party_score = 0 }
+	clear_variable = autocracy_party_score
+	set_variable = { autocracy_party_score = 0 }
+}
+
+ISC_add_reward = {
+	if = {
+		limit = { var:parliament_decision_list = { has_character_flag = ISC_parliament_effect } }
+		meta_effect = {
+			text = { [PARLIAMENT_ACTION_IDEA]_idea_effect = yes }
+			PARLIAMENT_ACTION_IDEA = "[?parliament_decision_list.GetName]"
+		}
+	}
+	else = {
+		meta_effect = {
+			text = {
+				add_timed_idea = { idea = [PARLIAMENT_ACTION_IDEA] days = 180 }
+			}
+			PARLIAMENT_ACTION_IDEA = "[?parliament_decision_list.GetName]_idea"
+		}
+	}
+}
+
+set_parliament_decision_arrays_ISC = {
+	clear_array = ISC_parliament_action_decision_list
+	for_each_loop = {
+		array = ISC.parliament_decision_list
+		add_to_array = { ISC_parliament_action_decision_list = v }
+	}
+}

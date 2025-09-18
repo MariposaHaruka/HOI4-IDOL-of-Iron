@@ -13,7 +13,7 @@
 #기본 전차 설계사 - Based on Daimler Benz
 generic_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
-	allowed = { always = yes }
+	allowed = { has_unique_national_focus = no }
 
 	equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
 	research_categories = { mio_cat_tech_light_armor_and_modules mio_cat_tech_medium_armor_and_modules }
@@ -1487,43 +1487,43 @@ generic_tank_refurbishment_plant_organization = {
 #주력전차 설계사
 generic_universal_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
-	allowed = { always = yes }
+	allowed = { always = no }
 }
 
 #경전차 설계사
 generic_light_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
-	allowed = { always = yes }
+	allowed = { always = no }
 }
 
 #구축전차 설계사
 generic_tank_destoryer_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
-	allowed = { always = yes }
+	allowed = { always = no }
 }
 
 #화방전차 설계사 - 신들의 황혼 패치 이후 추가
 generic_flame_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
-	allowed = { always = yes }
+	allowed = { always = no }
 }
 
 #수륙양용전차 설계사 - 신들의 황혼 패치 이후 추가
 generic_amphibious_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
-	allowed = { always = yes }
+	allowed = { always = no }
 }
 
 #자주포 설계사
 generic_artillery_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
-	allowed = { always = yes }
+	allowed = { always = no }
 }
 
 #대공전차 설계사
 generic_anti_air_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
-	allowed = { always = yes }
+	allowed = { always = no }
 }
 
 #돌격포 설계사
@@ -2375,9 +2375,7 @@ generic_battle_line_ship_organization = {
 generic_escort_ship_organization = {
 	icon = GFX_idea_generic_naval_manufacturer_1
 
-	allowed = {
-		always = yes
-	}
+	allowed = { has_unique_national_focus = no }
 
 	equipment_type = {
 		screen_ship
@@ -3846,9 +3844,7 @@ generic_destroyer_organization = {
 generic_general_aircraft_organization = {
 	icon = GFX_idea_generic_air_manufacturer_1
 
-	allowed = {
-		always = yes
-	}
+	allowed = { has_unique_national_focus = no }
 
 	equipment_type = {
 		mio_cat_eq_all_small_plane
@@ -6550,9 +6546,7 @@ generic_range_focused_aircraft_organization = {
 generic_artillery_organization = {
 	icon = GFX_idea_generic_artillery_manufacturer_2
 
-	allowed = {
-		always = yes
-	}
+	allowed = { has_unique_national_focus = no }
 
 	equipment_type = {
 		artillery_equipment
@@ -6859,10 +6853,7 @@ generic_artillery_organization = {
 
 generic_infantry_equipment_organization = {
 	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
-
-	allowed = {
-		always = yes
-	}
+	allowed = { has_unique_national_focus = no }
 
 	equipment_type = {
 		infantry_equipment
@@ -7413,9 +7404,7 @@ generic_support_equipment_organization = {
 generic_motorized_mechanized_organization = {
 	icon = GFX_idea_generic_motorized_equipment_manufacturer_3
 
-	allowed = {
-		always = yes
-	}
+	allowed = { has_unique_national_focus = no }
 
 	equipment_type = {
 		motorized_equipment

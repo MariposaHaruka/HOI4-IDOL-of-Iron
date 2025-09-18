@@ -34,6 +34,9 @@ focus_tree = {
 		y = 0
 
 		ai_will_do = { factor = 50 }
+		allow_branch = {
+			always = no
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }

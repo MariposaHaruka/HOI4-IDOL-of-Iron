@@ -1306,45 +1306,7 @@ news_event = {
 	}
 }
 
-# Hindenburg Disaster
-news_event = {
-	id = global_news.42
-	title = global_news.42.t
-	desc = global_news.42.d
-	picture = GFX_news_event_025
-	
-	major = yes
-	
-	is_triggered_only = yes
 
-	immediate = {
-		set_global_flag = hindenburg_destroyed
-	}
-	
-	option = {
-		name = global_news.42.a
-	}
-}
-
-# Hindenburg Disaster Averted
-news_event = {
-	id = global_news.43
-	title = global_news.43.t
-	desc = global_news.43.d
-	picture = GFX_news_event_hindenburg_intact
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		set_global_flag = hindenburg_survives
-	}
-	
-	option = {
-		name = global_news.43.a
-	}
-}
 
 # Flight of Rudolf Hess
 news_event = {
@@ -1518,45 +1480,6 @@ news_event = {
 	}
 }
 
-# Hindenburg Trigger (HIDDEN)
-news_event = {
-	id = global_news.51
-	hidden = yes
-	
-	fire_only_once = yes
-	
-	trigger = {
-		date > 1937.5.5
-		date < 1939.5.5
-		country_exists = ICG
-		country_exists = PRS
-		ICG = { has_war = no }
-		PRS = { has_war = no }
-		PRS = { has_civil_war = no }
-		NOT = { has_global_flag = hindenburg_destroyed }
-		NOT = { has_global_flag = hindenburg_event_in_progress }
-	}
-
-	mean_time_to_happen = {
-		days = 240
-	}
-	
-	immediate = {
-		if = {
-			limit = { has_global_flag = PRS_air_safety_regulations_flag }
-			ICG = { news_event = { id = global_news.43 } }
-			else = {
-				random_list = {
-					70 = { ICG = { news_event = { id = global_news.42 } } }
-					30 = { ICG = { news_event = { id = global_news.43 } } }
-				}
-			}
-		}
-	}
-	option = {
-		name = global_news.51.a
-	}
-}
 
 # Rudolf Hess Trigger (HIDDEN)
 news_event = {
@@ -2162,58 +2085,7 @@ news_event = {
 	}
 }
 
-# Games of the XI Olympiad
-news_event = {
-	id = global_news.66
-	title = global_news.66.t
-	desc = {
-		text = global_news.66.d
-		trigger = {
-			NOT = { has_global_flag = PRS_civil_war_end }
-		}
-	}
-	desc = {
-		text = global_news.66.d.b
-		trigger = {
-			has_global_flag = PRS_civil_war_end
-		}
-	}
-	picture = GFX_news_event_olympics_1940
-	
-	major = yes
-	
-	trigger = {
-		date > 1936.8.15
-		NOT = { has_global_flag = olympics_1936 }
-		NOT = { has_global_flag = civil_war_olympics }
-		country_exists = PRS
-		country_exists = ICG
-		PRS = { has_war = no }
-		PRS = { has_civil_war = no }
-		BDG = { has_war = no }
-		IMA = { has_war = no }
-		ICG = { has_war = no }
-	}
-	
-	mean_time_to_happen = {
-		days = 2
-	}
-	
-	immediate = {
-		set_global_flag = olympics_1936 
-	}
-	
-	option = {
-		name = global_news.66.a
-		trigger = { 
-			NOT = { tag = PRS }
-		}
-	}
-	option = {
-		name = global_news.66.b
-		trigger = { tag = PRS }
-	}
-}
+
 
 # Games of the XII Olympiad (Tokyo)
 news_event = {
@@ -2250,7 +2122,7 @@ news_event = {
 	}
 	
 	option = {
-		name = global_news.66.a
+		name = ioi_news.5.a
 	}
 }
 
@@ -2293,7 +2165,7 @@ news_event = {
 	}
 	
 	option = {
-		name = global_news.66.a
+		name = ioi_news.5.a
 	}
 }
 
@@ -12538,7 +12410,7 @@ news_event = {
 		}
 		if = {
 			limit = {
-				original_tag = IMA
+				original_tag = ENG
 			}
 			add_war_support = -0.05
 			add_stability = -0.05
@@ -12553,7 +12425,7 @@ news_event = {
 		}
 		if = {
 			limit = {
-				original_tag = IMA
+				original_tag = ENG
 			}
 			add_war_support = -0.05
 			add_stability = -0.05
@@ -12686,7 +12558,7 @@ news_event = {
 		}
 		if = {
 			limit = {
-				original_tag = ICG
+				original_tag = USA
 			}
 			add_war_support = -0.05
 			add_stability = -0.05
@@ -12700,7 +12572,7 @@ news_event = {
 		}
 		if = {
 			limit = {
-				original_tag = ICG
+				original_tag = USA
 			}
 			add_war_support = -0.05
 			add_stability = -0.05
@@ -12803,7 +12675,7 @@ news_event = {
 	option = {
 		name = global_news.503.a
 		trigger = {
-			original_tag = IMA
+			original_tag = ENG
 			has_country_flag = rebuilt_suez
 		}
 		clr_country_flag = rebuilt_suez
@@ -12811,7 +12683,7 @@ news_event = {
 	option = {
 		name = global_news.503.b
 		trigger = {
-			NOT = { original_tag = IMA }
+			NOT = { original_tag = ENG }
 			has_country_flag = rebuilt_suez
 		}
 		clr_country_flag = rebuilt_suez
@@ -12869,7 +12741,7 @@ news_event = {
 	option = {
 		name = global_news.504.a
 		trigger = {
-			original_tag = ICG
+			original_tag = USA
 			has_country_flag = rebuilt_panama
 		}
 		clr_country_flag = rebuilt_panama
@@ -12877,7 +12749,7 @@ news_event = {
 	option = {
 		name = global_news.504.b
 		trigger = {
-			NOT = { original_tag = ICG }
+			NOT = { original_tag = USA }
 			has_country_flag = rebuilt_panama
 		}
 		clr_country_flag = rebuilt_panama

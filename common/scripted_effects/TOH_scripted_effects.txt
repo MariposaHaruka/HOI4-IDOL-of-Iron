@@ -1,0 +1,30 @@
+TOH_spawn_penal_divisions_effect = {
+	hidden_effect = {
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"Shtrafnaya Chast\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+				owner = ROOT
+				count = 4
+			}
+		}
+		set_country_flag = {
+			flag = TOH_penal_units_raised_flag
+			value = 4
+		}
+	}
+}
+
+TOH_remove_5year_plan = {
+	if = {
+		limit = { has_idea = TOH_2nd_5_year_plan }
+		remove_ideas = TOH_2nd_5_year_plan
+	}
+	else_if = {
+		limit = { has_idea = TOH_3rd_5_year_plan }
+		remove_ideas = TOH_3rd_5_year_plan
+	}
+	else_if = {
+		limit = { has_idea = TOH_4th_5_year_plan }
+		remove_ideas = TOH_4th_5_year_plan
+	}
+}

@@ -5,4 +5,72 @@ TOH_is_major_not_original_TOH = {
 		NOT = { original_tag = TOH }
 	}
 }
+
+#제2차 5개년 계획
+TOH_2nd_5year_plan_focus_completed = {
+	has_completed_focus = TOH_10011
+	OR = {
+		has_completed_focus = TOH_10009
+		has_completed_focus = TOH_10010
+	}
+}
+
+TOH_2nd_5year_plan_completed = {
+	custom_trigger_tooltip = {
+		tooltip = TOH_2nd_5year_plan_completed_tt
+		NOT = { has_country_flag = TOH_2nd_5year_plan_completed_flag }
+		OR = {
+			TOH_2nd_5year_plan_focus_completed = yes
+			date > 1937.12.31
+		}
+	}
+}
+
+TOH_3rd_5year_plan_available = {
+	custom_trigger_tooltip = {
+		tooltip = TOH_3rd_5year_plan_available_tt
+		NOT = { has_country_flag = TOH_third_five_year_plan_locked_flag }
+	}
+}
+
+TOH_is_industrial_relocation_destiny_state = { 
+	OR = {
+		state = 573 #Zlatoust
+		state = 653 #Sverdlovsk
+		state = 651 #Ufa
+		state = 572 #Chelyabinsk
+		state = 582 #Magnitogorsk
+		state = 398 #Perm
+		state = 652 #Orenburg
+	}
+}
+
+TOH_is_manchuria = { 
+	OR = {
+		state = 761 
+		state = 714 
+		state = 715 
+		state = 716 
+		state = 717 
+		state = 318 
+		state = 610 
+		state = 745 
+	}
+}
+
+TOH_is_sinkang = { 
+	OR = {
+		state = 287 
+		state = 617 
+		state = 618 
+		state = 619 
+	}
+}
+
 #AI
+TOH_has_enough_penal_battallion = {
+	has_country_flag = {
+		flag = TOH_penal_units_raised_flag
+		value > 50
+	}
+}

@@ -1,0 +1,425 @@
+add_namespace = BLA_kivotos_ftf
+add_namespace = BLA_schalle
+add_namespace = BLA_ABY
+add_namespace = BLA_ARI
+add_namespace = BLA_GEH
+add_namespace = BLA_HIG
+add_namespace = BLA_HYA
+add_namespace = BLA_MIL
+add_namespace = BLA_RED
+add_namespace = BLA_SHA
+add_namespace = BLA_SRT
+add_namespace = BLA_TRN
+add_namespace = BLA_VAL
+add_namespace = BLA_diplomacy
+
+country_event = {
+	id = BLA_kivotos_ftf.1 #
+	title = BLA_kivotos_ftf.1.t
+	desc = BLA_kivotos_ftf.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_kivotos_ftf.1.a
+		ai_chance = { 
+			base = 1 
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+				has_country_flag = BLA_schalle_route
+			}
+		}
+		hidden_effect = { set_country_flag = BLA_schalle_focus }
+	}
+
+	option = {
+		name = BLA_kivotos_ftf.1.b
+		ai_chance = { 
+			base = 99
+			modifier = {
+				add = -99
+				has_country_flag = BLA_schalle_route
+			}
+		}
+		hidden_effect = { set_country_flag = BLA_student_committee_focus }
+	}
+}
+
+country_event = {
+	id = BLA_kivotos_ftf.2 #비상대책위원회 최종의결
+	title = BLA_kivotos_ftf.2.t
+	desc = BLA_kivotos_ftf.2.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_kivotos_ftf.2.a
+		ai_chance = { 
+			base = 1 
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+				has_country_flag = BLA_schalle_route
+			}
+		}
+		complete_national_focus = BLA_31001
+	}
+
+	option = {
+		name = BLA_kivotos_ftf.2.b
+		ai_chance = { 
+			base = 99
+			modifier = {
+				add = -99
+				is_historical_focus_on = no
+			}
+		}
+		complete_national_focus = BLA_32001
+	}
+
+	option = {
+		name = BLA_kivotos_ftf.2.c
+		trigger = { has_country_flag = underconstruction_flag } #이쪽 루트는 임시로 막아둠
+		ai_chance = { 
+			base = 1 
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+				has_country_flag = BLA_new_council_route
+			}
+		}
+		complete_national_focus = BLA_33001
+	}
+}
+
+country_event = {
+	id = BLA_kivotos_ftf.3 #총학생회 비상대책위원회 폐회
+	title = BLA_kivotos_ftf.3.t
+	desc = BLA_kivotos_ftf.3.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_kivotos_ftf.3.a
+		ai_chance = { 
+			base = 99
+		}
+		custom_effect_tooltip = BLA_kivotos_ftf_close_tt
+		hidden_effect = {
+			clr_country_flag = BLA_kivotos_ftf_open
+		}
+	}
+}
+
+unit_leader_event = {
+	id = BLA_schalle.1 #
+	title = BLA_schalle.1.t
+	desc = BLA_schalle.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_schalle.1.a
+		ai_chance = { 
+			base = 99 
+		}
+		custom_effect_tooltip = BLA_schalle_unlock_tt
+		hidden_effect = {
+			unlock_decision_category_tooltip = BLA_schalle_todolist_category
+		}
+	}
+}
+
+country_event = {
+	id = BLA_ABY.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_ABY.1.t
+	desc = BLA_ABY.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_ABY.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+country_event = {
+	id = BLA_ARI.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_ARI.1.t
+	desc = BLA_ARI.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_ARI.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+country_event = {
+	id = BLA_GEH.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_GEH.1.t
+	desc = BLA_GEH.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_GEH.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+country_event = {
+	id = BLA_HIG.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_HIG.1.t
+	desc = BLA_HIG.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_HIG.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+country_event = {
+	id = BLA_HYA.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_HYA.1.t
+	desc = BLA_HYA.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_HYA.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+country_event = {
+	id = BLA_MIL.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_MIL.1.t
+	desc = BLA_MIL.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_MIL.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+country_event = {
+	id = BLA_RED.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_RED.1.t
+	desc = BLA_RED.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_RED.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+country_event = {
+	id = BLA_SHA.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_SHA.1.t
+	desc = BLA_SHA.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_SHA.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+country_event = {
+	id = BLA_SRT.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_SRT.1.t
+	desc = BLA_SRT.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_SRT.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+country_event = {
+	id = BLA_TRN.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_TRN.1.t
+	desc = BLA_TRN.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_TRN.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+country_event = {
+	id = BLA_VAL.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_VAL.1.t
+	desc = BLA_VAL.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_VAL.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+country_event = {
+	id = BLA_diplomacy.1 #항공기 라이센스 생산 요청
+	title = BLA_diplomacy.1.t
+	desc = BLA_diplomacy.1.desc
+	is_triggered_only = yes
+	
+	option = { # 승인 - PRS
+		name = BLA_diplomacy.1.a
+		trigger = { original_tag = PRS }
+		ai_chance = { 
+			base = 99
+			modifier = {
+				add = -99
+				OR = {
+					is_historical_focus_on = no
+					ROOT = { has_war_with = BLA }
+					ROOT = { is_embargoing = BLA }
+				}
+			}
+		}
+		ROOT = { air_experience = 50 }
+		BLA = { 
+			create_equipment_variant = { 
+				type = land_cruiser_equipment_1
+			}
+			#country_event = { id = BLA_diplomacy.2 hours = 6 }
+		}
+	}
+
+	option = { # 거부
+		name = BLA_diplomacy.1.b
+		trigger = { original_tag = PRS }
+		ai_chance = { 
+			base = 1
+			modifier = {
+				add = 99
+				OR = {
+					is_historical_focus_on = no
+					ROOT = { has_war_with = BLA }
+					ROOT = { is_embargoing = BLA }
+				}
+			}
+		}
+		ROOT = { add_political_power = 50 }
+		BLA = { 
+			air_experience = 50 
+			#country_event = { id = BLA_diplomacy.3 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = BLA_diplomacy.1 #항공기 라이센스 생산 요청
+	title = BLA_diplomacy.1.t
+	desc = BLA_diplomacy.1.desc
+	is_triggered_only = yes
+	
+	option = { # 승인
+		name = BLA_diplomacy.1.a
+		ai_chance = { 
+			base = 99
+			modifier = {
+				add = -99
+				OR = {
+					is_historical_focus_on = no
+					ROOT = { has_war_with = BLA }
+					ROOT = { is_embargoing = BLA }
+				}
+			}
+		}
+		ROOT = { air_experience = 50 }
+		BLA = { 
+			create_equipment_variant = { 
+				type = land_cruiser_equipment_1
+			}
+			#country_event = { id = BLA_diplomacy.2 hours = 6 }
+		}
+	}
+
+	option = { # 거부
+		name = BLA_diplomacy.1.b
+		ai_chance = { 
+			base = 1
+			modifier = {
+				add = 99
+				OR = {
+					is_historical_focus_on = no
+					ROOT = { has_war_with = BLA }
+					ROOT = { is_embargoing = BLA }
+				}
+			}
+		}
+		ROOT = { add_political_power = 50 }
+		BLA = { 
+			air_experience = 50 
+			#country_event = { id = BLA_diplomacy.3 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = BLA_diplomacy.2 #항공기 라이센스 생산 요청 승인받음
+	title = BLA_diplomacy.2.t
+	desc = BLA_diplomacy.2.desc
+	is_triggered_only = yes
+	
+	option = { # 승인 - PRS
+		name = BLA_diplomacy.1.a
+		trigger = { original_tag = PRS }
+		ai_chance = { 
+			base = 100
+		}
+		ROOT = { air_experience = 50 }
+		BLA = { 
+			create_equipment_variant = { 
+				type = land_cruiser_equipment_1
+			}
+			#country_event = { id = BLA_diplomacy.2 hours = 6 }
+		}
+	}
+
+	option = { # 거부
+		name = BLA_diplomacy.1.b
+		trigger = { original_tag = PRS }
+		ai_chance = { 
+			base = 1
+			modifier = {
+				add = 99
+				OR = {
+					is_historical_focus_on = no
+					ROOT = { has_war_with = BLA }
+					ROOT = { is_embargoing = BLA }
+				}
+			}
+		}
+		ROOT = { add_political_power = 50 }
+		BLA = { 
+			air_experience = 50 
+			#country_event = { id = BLA_diplomacy.3 hours = 6 }
+		}
+	}
+}

@@ -7,7 +7,92 @@
  #  #  # #  # # # ## 
 
  #################### 
+BLA_millenium_engineer_tank_development = {
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_BLA_engineer
 
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = {
+		FROM = { 
+			OR = {
+				AND = {
+					original_tag = BLA
+					BLA_millenium_participate = yes
+				}
+			}
+		}
+	}
+}
+BLA_gehenna_toramaru_factory = {
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_BLA_gehenna
+
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = {
+		FROM = { 
+			OR = {
+				AND = {
+					original_tag = BLA
+					BLA_gehenna_participate = yes
+				}
+			}
+		}
+	}
+}
+BLA_trinity_crusader_factory = {
+	include = generic_medium_tank_organization
+	icon = GFX_idea_BLA_trinity
+
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = {
+		FROM = { 
+			OR = {
+				AND = {
+					original_tag = BLA
+					BLA_trinity_participate = yes
+				}
+			}
+		}
+	}
+}
+BLA_saint_nephthys_heavy_industry = {
+	include = generic_medium_tank_organization
+	icon = GFX_idea_BLA_saint_nephthys
+
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = {
+		FROM = { 
+			OR = {
+				AND = {
+					original_tag = BLA
+					has_completed_focus = BLA_ABY_11004
+				}
+			}
+		}	
+	}
+}
+BLA_kaiser_industry_heavy_industry = {
+	include = generic_tank_organization
+	icon = GFX_idea_BLA_kaiser_industry
+
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = { }
+}
 
 
 #####################
@@ -19,7 +104,54 @@
 ##  #  # ### #    ##  
  
 #####################
+BLA_millenium_engineer_battleship_development = {
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_BLA_engineer
 
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = {
+		FROM = { 
+			OR = {
+				AND = {
+					original_tag = BLA
+					BLA_millenium_participate = yes
+				}
+			}
+		}
+	}
+}
+BLA_saint_nephthys_shipyard = {
+	include = generic_escort_ship_organization
+	icon = GFX_idea_BLA_saint_nephthys
+
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = {
+		FROM = { 
+			OR = {
+				AND = {
+					original_tag = BLA
+					has_completed_focus = BLA_ABY_11004
+				}
+			}
+		}	
+	}
+}
+BLA_kaiser_industry_shipyard = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_BLA_kaiser_industry
+
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = { }
+}
 
 
 ###########################
@@ -31,7 +163,54 @@
 #    ### #  # #  # ### ##  
 
 ###########################
+BLA_millenium_engineer_aircraft_development = {
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_BLA_engineer
 
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = {
+		FROM = { 
+			OR = {
+				AND = {
+					original_tag = BLA
+					BLA_millenium_participate = yes
+				}
+			}
+		}
+	}
+}
+BLA_saint_nephthys_air = {
+	include = generic_multi_role_aircraft_organization
+	icon = GFX_idea_BLA_saint_nephthys
+
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = {
+		FROM = { 
+			OR = {
+				AND = {
+					original_tag = BLA
+					has_completed_focus = BLA_ABY_11004
+				}
+			}
+		}	
+	}
+}
+BLA_kaiser_industry_aerodynamics = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_BLA_kaiser_industry
+
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = { }
+}
 
 
 ################################### 
@@ -44,3 +223,53 @@
 
 
 ###################################
+
+BLA_kazeyama = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_BLA_kazeyama
+
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = {
+		FROM = { original_tag = BLA }
+	}
+}
+BLA_saint_nephthys_arsenal = {
+	include = generic_artillery_organization
+	icon = GFX_idea_BLA_saint_nephthys
+
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = {
+		FROM = { 
+			OR = {
+				AND = {
+					original_tag = BLA
+					has_completed_focus = BLA_ABY_11004
+				}
+			}
+		}	
+	}
+}
+BLA_trinity_arsenal = {
+	include = generic_artillery_organization
+	icon = GFX_idea_BLA_trinity
+	allowed = {	
+		original_tag = BLA
+	}
+
+	available = {
+		FROM = { 
+			OR = {
+				AND = {
+					original_tag = BLA
+					BLA_trinity_participate = yes
+				}
+			}
+		}
+	}
+}

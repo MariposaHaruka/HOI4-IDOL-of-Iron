@@ -31,9 +31,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11001"
 			add_political_power = 150
+			custom_effect_tooltip = generic_line_break_tt
 			unlock_decision_category_tooltip = IMA_haruka_plan_category
+			subtract_from_variable = {
+				IMA_left_anger = 1
+				tooltip = IMA_left_anger_subtract_tt
+			}
 		}
 	}
 
@@ -51,16 +56,24 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12001"
 			add_political_power = 150
+			custom_effect_tooltip = generic_line_break_tt
 			unlock_decision_category_tooltip = IMA_iori_plan_category
+			hidden_effect = {
+				clear_variable = IMA_built_a_civ
+				clear_variable = IMA_built_a_mil
+				clear_variable = IMA_built_a_dockyard
+				clear_variable = IMA_built_a_infra
+				clear_variable = IMA_added_slot
+			}
 		}
 	}
 
 	focus = {
 		id = IMA_11002 #복지법 개정
 		icon = GFX_focus_IMA_11002
-		cost = 5
+		cost = 5 
 
 		relative_position_id = IMA_11001
 		x = -4
@@ -72,10 +85,15 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11002"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11002"
+			subtract_from_variable = {
+				IMA_left_anger = 1
+				tooltip = IMA_left_anger_subtract_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
 			add_to_variable = {
 				IMA_debt = 10
-				tooltip = IMA_dept_add_10_tt
+				tooltip = IMA_dept_add_tt
 			}
 		}
 	}
@@ -95,10 +113,11 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11003"
-			add_to_variable = {
-				IMA_debt = -20
-				tooltip = IMA_dept_subtract_20_tt
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11003"
+			custom_effect_tooltip = generic_line_break_tt
+			subtract_from_variable= {
+				IMA_debt = 20
+				tooltip = IMA_dept_subtract_tt
 			}
 		}
 	}
@@ -106,7 +125,7 @@ focus_tree = {
 	focus = {
 		id = IMA_11004 #공공공사관리부
 		icon = GFX_goal_generic_production
-		cost = 5
+		cost = 5 
 
 		relative_position_id = IMA_11002
 		x = -1
@@ -118,8 +137,23 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11004"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11004"
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_production_speed_industrial_complex_factor = 0.1
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			add_to_variable = {
+				IMA_industry_production_speed_infrastructure_factor = 0.1
+				tooltip = production_speed_infrastructure_factor_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			unlock_decision_tooltip = IMA_haruka_plan_build_infrastructure
+			unlock_decision_tooltip = IMA_haruka_plan_build_industrial_complex
 			custom_effect_tooltip = IMA_11004_tt
+			hidden_effect = {
+				set_variable = { IMA_available_WPA_works = 3 }
+			}
 		}
 	}
 
@@ -138,10 +172,20 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11005"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11005"
+			add_stability = 0.1
+			custom_effect_tooltip = generic_line_break_tt
+			if = {
+				limit = { has_country_flag = IMA_haruka_crisis }
+				subtract_from_variable = {
+					IMA_left_anger = 1
+					tooltip = IMA_left_anger_subtract_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
+			}
 			add_to_variable = {
 				IMA_debt = 10
-				tooltip = IMA_dept_add_10_tt
+				tooltip = IMA_dept_add_tt
 			}
 		}
 	}
@@ -161,11 +205,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11006"
-			#unlock_decision_tooltip = { decision = ddd }
-			add_to_variable = {
-				IMA_debt = -20
-				tooltip = IMA_dept_subtract_20_tt
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11006"
+			unlock_decision_tooltip = IMA_haruka_plan_taxable_income_investigate
+			custom_effect_tooltip = IMA_11006_tt
+			subtract_from_variable= {
+				IMA_debt = 20
+				tooltip = IMA_dept_subtract_tt
 			}
 		}
 	}
@@ -185,12 +230,27 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11007"
-			#unlock_decision_tooltip = { decision = ddd }
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11007"
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_production_speed_rail_way_factor = 0.1
+				tooltip = production_speed_rail_way_factor_tt
+			}
+			add_to_variable = {
+				IMA_industry_production_speed_air_base_factor_tt = 0.1
+				tooltip = production_speed_air_base_factor_tt
+			}
 			add_to_variable = {
 				IMA_debt = 15
-				tooltip = IMA_dept_add_15_tt
-			}			
+				tooltip = IMA_dept_add_tt
+			}
+			add_to_variable = {
+				IMA_right_anger = 1
+				tooltip = IMA_right_anger_add_tt
+			}
+			#unlock_decision_tooltip = { decision = ddd }
+			custom_effect_tooltip = IMA_11007_tt
+			add_to_variable = { IMA_available_WPA_works = 2 }
 		}
 	}
 
@@ -209,10 +269,18 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11008"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11008"
+			if = {
+				limit = { has_country_flag = IMA_haruka_crisis }
+				subtract_from_variable = {
+					IMA_left_anger = 1
+					tooltip = IMA_left_anger_subtract_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
+			}
 			add_to_variable = {
 				IMA_debt = 10
-				tooltip = IMA_dept_add_10_tt
+				tooltip = IMA_dept_add_tt
 			}
 		}
 	}
@@ -232,11 +300,16 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11009"
-			add_to_variable = {
-				IMA_debt = -20
-				tooltip = IMA_dept_add_10_tt
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11009"
+			custom_effect_tooltip = generic_line_break_tt
+			subtract_from_variable= {
+				IMA_debt = 20
+				tooltip = IMA_dept_subtract_tt
 			}
+			#add_timed_idea = {
+			#	idea = IMA_bond_affect
+			#	days = 250
+			#}
 		}
 	}
 
@@ -255,11 +328,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11010"
-			#unlock_decision_tooltip = { decision = ddd }
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11010"
+			add_stability = 0.1
+			custom_effect_tooltip = generic_line_break_tt
 			add_to_variable = {
 				IMA_debt = 5
-				tooltip = IMA_dept_add_5_tt
+				tooltip = IMA_dept_add_tt
 			}
 		}
 	}
@@ -279,10 +353,20 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11011"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11011"
+			add_stability = 0.1
+			custom_effect_tooltip = generic_line_break_tt
+			if = {
+				limit = { has_country_flag = IMA_haruka_crisis }
+				subtract_from_variable = {
+					IMA_left_anger = 1
+					tooltip = IMA_left_anger_subtract_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
+			}
 			add_to_variable = {
 				IMA_debt = 15
-				tooltip = IMA_dept_add_15_tt
+				tooltip = IMA_dept_add_tt
 			}
 		}
 	}
@@ -298,13 +382,18 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_11001 }
+		available = { IMA_reduce_depression_ongoing = yes }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11012"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11012"
+			IMA_reduce_depression = yes
 			#unlock_decision_tooltip = { decision = ddd }
-			
+			add_to_variable = {
+				IMA_debt = 10
+				tooltip = IMA_dept_add_tt
+			}
 		}
 	}
 
@@ -323,9 +412,15 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11013"
-			#unlock_decision_tooltip = { decision = ddd }
-			
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11013"
+			unlock_decision_tooltip = { decision = IMA_haruka_plan_support_colliery }
+			132 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -344,8 +439,17 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11013"
-			#unlock_decision_tooltip = { decision = ddd }
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11013"
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_consumer_goods_factor = -0.04
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				IMA_debt = 5
+				tooltip = IMA_dept_add_tt
+			}
+			unlock_decision_tooltip = { decision = IMA_haruka_plan_support_farmer_society }
 		}
 	}
 
@@ -364,8 +468,30 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11015"
-			#unlock_decision_tooltip = { decision = ddd }
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11015"
+			unlock_decision_tooltip = IMA_haruka_plan_build_dockyard
+			if = {
+				limit = { has_AAT = yes }
+				mio:IMA_john_brown_organization = { add_mio_funds = 3000 }
+				mio:IMA_harland_wolff_organization = { add_mio_funds = 3000 }
+				mio:IMA_yarrow_shipbuilders_organization = { add_mio_funds = 3000 }
+				mio:IMA_cammell_laird_organization = { add_mio_funds = 3000 }
+				custom_effect_tooltip = generic_line_break_tt
+				add_to_variable = {
+					IMA_debt = 10
+					tooltip = IMA_dept_add_tt
+				}
+				else = {
+					custom_effect_tooltip = available_designer
+					show_ideas_tooltip = IMA_john_brown
+					custom_effect_tooltip = available_designer
+					show_ideas_tooltip = IMA_harland_wolff
+					custom_effect_tooltip = available_designer
+					show_ideas_tooltip = IMA_yarrow_shipbuilders
+					custom_effect_tooltip = available_designer
+					show_ideas_tooltip = IMA_cammell_laird
+				}
+			}
 		}
 	}
 
@@ -384,14 +510,17 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11016"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11016"
 			#unlock_decision_tooltip = { decision = ddd }
+			custom_effect_tooltip = IMA_11016_tt
 			add_to_variable = {
 				IMA_debt = 25
-				tooltip = IMA_dept_add_25_tt
+				tooltip = IMA_dept_add_tt
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = IMA_11016_tt
+			subtract_from_variable = {
+				IMA_right_anger = 1
+				tooltip = IMA_right_anger_subtract_tt
+			}
 		}
 	}
 
@@ -410,11 +539,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11017"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11017"
 			#unlock_decision_tooltip = { decision = ddd }	
-			add_to_variable = {
-				IMA_debt = -40
-				tooltip = IMA_dept_subtract_40_tt
+			custom_effect_tooltip = generic_line_break_tt
+			subtract_from_variable= {
+				IMA_debt = 40
+				tooltip = IMA_dept_subtract_tt
 			}
 			add_timed_idea = {
 				idea = IMA_debt_negotiations
@@ -437,11 +567,15 @@ focus_tree = {
 		prerequisite = { focus = IMA_11010 }
 		prerequisite = { focus = IMA_11011 }
 		prerequisite = { focus = IMA_11016 }
+		available = {
+			date > 1940.1.1
+			IMA_is_bankrupt = no
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11017"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11017"
 			
 		}
 	}
@@ -462,7 +596,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11019"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11019"
 			
 		}
 	}
@@ -474,16 +608,38 @@ focus_tree = {
 
 		relative_position_id = IMA_11001
 		x = 2
-		y = 1
+		y = 2
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_11001 }
+		available = {
+			has_stability > 0.4
+			custom_trigger_tooltip = {
+				tooltip = IMA_11020_trigget_tt
+				check_variable = { IMA_left_anger < 2 }
+			}
+			has_completed_focus = IMA_11005
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_11020"
-			#add_ideas = IMA_kenshington_agree
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11020"
+			remove_ideas = IMA_widespread_strikes
+			add_timed_idea = {
+				idea = IMA_kenshington_agree
+				days = 200
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = IMA_11020_tt
+			hidden_effect = {
+				if = {
+					limit = { is_in_coalition_with_socialdemocracy = no }
+					set_temp_variable = { coalition_partner_var = token:socialdemocracy }
+					add_to_coalition = yes
+				}
+				set_country_flag = IMA_ready_for_new_union_law
+			}
 		}
 	}
 
@@ -502,7 +658,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12002"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12002"
 			
 		}
 	}
@@ -518,11 +674,12 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_12002 }
+		available = { has_completed_focus = IMA_12013 }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12003"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12003"
 			
 		}
 	}
@@ -538,11 +695,12 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_12002 }
+		available = { has_completed_focus = IMA_12013 }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12004"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12004"
 			
 		}
 	}
@@ -558,11 +716,12 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_12002 }
+		available = { has_completed_focus = IMA_12013 }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12005"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12005"
 			
 		}
 	}
@@ -582,7 +741,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12006"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12006"
 			
 		}
 	}
@@ -602,8 +761,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12007"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12007"
 			
+			IMA_upgrade_minase_fund = yes
 		}
 	}
 
@@ -622,8 +782,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12008"
-			
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12008"
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = { 
+				IMA_industry_consumer_goods_factor = -0.05 
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 
@@ -642,7 +806,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12009"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12009"
 			
 		}
 	}
@@ -662,8 +826,27 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12010"
-			
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12010"
+			123 = { 
+				increase_state_category_by_one_level = yes
+				add_extra_state_shared_building_slots = 1 
+			}
+			125 = { 
+				increase_state_category_by_one_level = yes
+				add_extra_state_shared_building_slots = 1 
+			}
+			126 = { 
+				increase_state_category_by_one_level = yes
+				add_extra_state_shared_building_slots = 1 
+			}
+			127 = { 
+				increase_state_category_by_one_level = yes
+				add_extra_state_shared_building_slots = 1 
+			}
+			338 = { 
+				increase_state_category_by_one_level = yes
+				add_extra_state_shared_building_slots = 1 
+			}
 		}
 	}
 
@@ -682,7 +865,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12011"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12011"
 			
 		}
 	}
@@ -712,7 +895,19 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12012"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12012"
+			IMA_reduce_depression = yes
+			add_to_variable= {
+				IMA_debt = 5
+				tooltip = IMA_dept_add_tt
+			}
+			if = {
+				limit = { has_country_flag = IMA_haruka_crisis }
+				subtract_from_variable = {
+					IMA_right_anger = 1
+					tooltip = IMA_right_anger_subtract_tt
+				}
+			}
 			
 		}
 	}
@@ -732,11 +927,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12013"
-			add_timed_idea = {
-				idea = the_grand_army
-				days = 365
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12013"
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = { 
+				IMA_industry_consumer_goods_factor = -0.05 
+				tooltip = consumer_goods_factor_tt
 			}
+			activate_mission = IMA_iori_plan_minase_fund_1
+			set_country_flag = IMA_iori_plan_minase_fund_flag_1
 		}
 	}
 
@@ -755,8 +953,11 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12013"
-			
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12013"
+			subtract_from_variable = {
+				IMA_left_anger = 1
+				tooltip = IMA_left_anger_subtract_tt
+			}
 		}
 	}
 
@@ -775,8 +976,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12015"
-			
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12015"
+			IMA_upgrade_minase_fund = yes
 		}
 	}
 
@@ -795,7 +996,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12016"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12016"
 			
 		}
 	}
@@ -815,7 +1016,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12017"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12017"
 			
 		}
 	}
@@ -838,7 +1039,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12017"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12017"
 			
 		}
 	}
@@ -859,7 +1060,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12019"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12019"
 			
 		}
 	}
@@ -871,16 +1072,23 @@ focus_tree = {
 
 		relative_position_id = IMA_12001
 		x = -2
-		y = 1
+		y = 2
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_12001 }
+		available = {
+			has_stability > 0.4
+			custom_trigger_tooltip = {
+				tooltip = IMA_11020_trigget_tt
+				check_variable = { IMA_left_anger < 2 }
+			}
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_12020"
-			
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12020"
+			remove_ideas = IMA_widespread_strikes
 		}
 	}
 
@@ -899,10 +1107,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_10001"
-			add_to_variable = {
-				IMA_consumer_goods_factor = -0.05
-				tooltip = consumer_goods_factor_5_tt
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10001"
+			IMA_reduce_depression = yes
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = { 
+				IMA_industry_consumer_goods_factor = -0.05 
+				tooltip = consumer_goods_factor_tt
 			}
 		}
 	}
@@ -922,7 +1132,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_10002"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10002"
 			
 		}
 	}
@@ -933,7 +1143,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IMA_11020
-		x = 0
+		x = 1
 		y = 1
 
 		ai_will_do = { factor = 50 }
@@ -942,7 +1152,42 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_10003"	
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10003"	
+			128 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			130 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			131 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			132 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			931 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -952,7 +1197,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IMA_12020
-		x = 0
+		x = -1
 		y = 1
 
 		ai_will_do = { factor = 50 }
@@ -961,7 +1206,57 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_10004"	
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10004"
+			125 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			126 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			127 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			338 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			129 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -971,7 +1266,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IMA_10003
-		x = 1
+		x = 0
 		y = 1
 
 		ai_will_do = { factor = 50 }
@@ -980,9 +1275,24 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_10005"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10005"
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_consumer_goods_factor = -0.03
+				tooltip = consumer_goods_factor_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			126 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
 			add_tech_bonus = {
-				name = IMA_electronics
+				name = IMA_10005
 				category = electronics
 				uses = 1
 				bonus = 1
@@ -996,7 +1306,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IMA_10003
-		x = 3
+		x = 2
 		y = 1
 
 		ai_will_do = { factor = 50 }
@@ -1005,9 +1315,24 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_10006"	
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10006"
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_consumer_goods_factor = -0.03
+				tooltip = consumer_goods_factor_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			131 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}	
 			add_tech_bonus = {
-				name = IMA_motors
+				name = IMA_10006
 				category = motorized_equipment
 				uses = 1
 				bonus = 1
@@ -1032,8 +1357,17 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_10005"
-			add_ideas = IMA_tank_manufacturer_committee
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10007"
+			mio:IMA_vickers_armstrong_organization = { add_mio_funds = 3000 }
+			mio:IMA_vauxhall_organization = { add_mio_funds = 3000 }
+			custom_effect_tooltip = IMA_army_tt
+			add_to_variable = {
+				IMA_army_build_cost_ic_armor = -0.1
+				tooltip = build_cost_ic_armor_tt
+			}
+			hidden_effect = {
+				add_ideas = IMA_tank_manufacturer_committee
+			}
 		}
 	}
 	
@@ -1054,8 +1388,20 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_10008"	
-			add_ideas = IMA_plane_manufacturer_committee
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10008"	
+			mio:IMA_supermarine_organization = { add_mio_funds = 3000 }
+			mio:IMA_hawker_organization = { add_mio_funds = 3000 }
+			mio:IMA_de_havilland_organization = { add_mio_funds = 3000 }
+			mio:IMA_fairey_aviation_organization = { add_mio_funds = 3000 }
+			mio:IMA_avro_organization = { add_mio_funds = 3000 }
+			custom_effect_tooltip = IMA_air_force_tt
+			add_to_variable = {
+				IMA_airforce_build_cost_ic_fighter = -0.1
+				tooltip = build_cost_ic_fighter_tt
+			}
+			hidden_effect = {
+				add_ideas = IMA_plane_manufacturer_committee
+			}
 		}
 	}
 
@@ -1069,12 +1415,18 @@ focus_tree = {
 		y = 1
 
 		ai_will_do = { factor = 50 }
+		available = {
+			OR = {
+				has_completed_focus = IMA_51013
+				has_completed_focus = IMA_51014
+			}
+		}
 		prerequisite = { focus = IMA_10007 focus = IMA_10008 }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_10009"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10009"
 			#add_ideas = IMA_wartime_ration_system
 		}
 	}
@@ -1090,12 +1442,87 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_10007 focus = IMA_10008 }
+		available = {
+			OR = {
+				has_completed_focus = IMA_51013
+				has_completed_focus = IMA_51014
+			}
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_10010"	
-			#add_ideas = IMA_wartime_industry
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10010"	
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industy_production_factory_max_efficiency_factor = 0.1
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = {
+				IMA_industy_production_factory_efficiency_gain_factor = 0.1
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = {
+				IMA_industy_production_lack_of_resource_penalty_factor = -0.1
+				tooltip = production_lack_of_resource_penalty_factor_tt
+			}
+			add_to_variable = {
+				IMA_industy_industrial_capacity_factory = 0.1
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				IMA_industy_industrial_capacity_dockyard = 0.1
+				tooltip = industrial_capacity_dockyard_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			130 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			131 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			132 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			931 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -1110,11 +1537,17 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_10007 focus = IMA_10008 }
+		available = {
+			OR = {
+				has_completed_focus = IMA_51013
+				has_completed_focus = IMA_51014
+			}
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_10011"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10011"
 			#add_ideas = IMA_wartime_manufacture_committee
 		}
 	}
@@ -1134,7 +1567,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_20001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20001"
 			add_research_slot = 1
 		}
 	}
@@ -1154,7 +1587,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_20002"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20002"
 			add_research_slot = 1
 			#add_ideas = IMA_oxford_research
 		}
@@ -1175,7 +1608,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_20003"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20003"
 			add_research_slot = 1
 			#add_ideas = IMA_cambridge_research
 		}
@@ -1199,7 +1632,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_20004"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20004"
 			#add_ideas = IMA_bletley_park_1
 		}
 	}
@@ -1219,7 +1652,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_20005"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20005"
 			#swap_ideas = {
 			#	remove_idea = IMA_bletley_park_1
 			#	add_idea = IMA_bletley_park_2
@@ -1242,7 +1675,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_20006"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20006"
 			#swap_ideas = {
 			#	remove_idea = IMA_bletley_park_2
 			#	add_idea = IMA_bletley_park_3
@@ -1259,13 +1692,13 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 0 } #AI는 안 찍음
+		ai_will_do = { factor = 50 } #AI는 안 찍음
 		prerequisite = { focus = IMA_20006 }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_20007"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20007"
 			#swap_ideas = {
 			#	remove_idea = IMA_bletley_park_3
 			#	add_idea = IMA_bletley_park_4
@@ -1288,14 +1721,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_20008"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20008"
 			#add_ideas = IMA_scientific_education
 		}
 	}
 	
 	focus = {
 		id = IMA_20009 #국가 과학 연구 위원회
-		icon = GFX_focus_research2
+		icon = GFX_focus_research
 		cost = 5
 
 		relative_position_id = IMA_20003
@@ -1310,7 +1743,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_20008"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20008"
 			add_research_slot = 1
 		}
 	}
@@ -1331,7 +1764,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_20010"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20010"
 			add_research_slot = 1
 			add_tech_bonus = {
 				name = IMA_radar_project
@@ -1344,7 +1777,7 @@ focus_tree = {
 	
 	focus = {
 		id = IMA_20011 #MAUD 프로젝트
-		icon = GFX_focus_NORDIC_dem_selector_research
+		icon = GFX_focus_ioi_generic_national_academy_of_sciences_1
 		cost = 5
 
 		relative_position_id = IMA_20009
@@ -1361,7 +1794,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_20010"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20010"
 			add_tech_bonus = {
 				name = IMA_project_MAUD
 				bonus = 1.0
@@ -1373,7 +1806,7 @@ focus_tree = {
 	
 	focus = {
 		id = IMA_20012 #티저드 작전
-		icon = GFX_goal_continuous_research
+		icon = GFX_focus_ioi_generic_national_academy_of_sciences_2
 		cost = 5
 
 		relative_position_id = IMA_20010
@@ -1401,7 +1834,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_20012"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20012"
 			if = {
 				limit = { has_TfV = yes }
 				add_to_tech_sharing_group = IMA_tizard_mission
@@ -1641,7 +2074,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_20013"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20013"
 			add_tech_bonus = {
 				name = tube_alloys
 				bonus = 3.0
@@ -1688,7 +2121,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_30001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_30001"
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1739,7 +2172,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_30002"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_30002"
 			
 		}
 	}
@@ -1779,13 +2212,12 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }	
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_30003"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_30003"
 			add_ideas = british_austerity_idea
 		}
 	}
 	
 	### 공군 중점
-
 	focus = {
 		id = IMA_31001 #전투기 사령부 설치
 		icon = GFX_goal_generic_air_fighter
@@ -1802,13 +2234,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31001"
+			air_experience = 50
 			
 		}
 	}
 	
 	focus = {
-		id = IMA_31002 #전투기 사령부 설치
+		id = IMA_31002 #폭격기 사령부 설치
 		icon = GFX_goal_generic_air_bomber
 		cost = 5
 
@@ -1823,8 +2256,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31002"
-			
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31002"
+			air_experience = 50
 		}
 	}
 
@@ -1840,11 +2273,14 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_31001 }
 		prerequisite = { focus = IMA_31002 }
+		available = {
+			has_tech = centimetric_radar
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31003"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31003"
 			
 		}
 	}
@@ -1864,14 +2300,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31004"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31004"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_31005 #크랜웰 비행훈련학교
-		icon = GFX_focus_IMA_31005
+		icon = GFX_focus_ioi_generic_air_school
 		cost = 5
 
 		relative_position_id = IMA_31003
@@ -1888,7 +2324,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31005"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31005"
 			
 		}
 	}
@@ -1908,8 +2344,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31006"
-			
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31006"
+			add_tech_bonus = {
+				name = IMA_31006
+				bonus = 0.5
+				uses = 3
+				category = air_equipment
+			}
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -1930,7 +2372,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31101"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31101"
 			
 		}
 	}
@@ -1952,7 +2394,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31201"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31201"
 			
 		}
 	}
@@ -1972,7 +2414,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31202"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31202"
 			custom_effect_tooltip = IMA_31202_tt
 		}
 	}
@@ -1992,14 +2434,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31102"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31102"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_31103 #타이푼
-		icon = GFX_focus_generic_cas_aircraft
+		icon = GFX_focus_ioi_generic_air_cas_1
 		cost = 5
 
 		relative_position_id = IMA_31102
@@ -2012,14 +2454,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31103"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31103"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_31104 #템페스트
-		icon = GFX_focus_generic_cas_aircraft
+		icon = GFX_focus_ioi_generic_air_cas_2
 		cost = 5
 
 		relative_position_id = IMA_31103
@@ -2032,14 +2474,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31104"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31104"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_31105 #스핏파이어
-		icon = GFX_goal_generic_air_fighter2
+		icon = GFX_focus_ioi_generic_air_fighter_1
 		cost = 5
 
 		relative_position_id = IMA_31101
@@ -2052,7 +2494,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31105"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31105"
 			
 		}
 	}
@@ -2072,7 +2514,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31106"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31106"
 			
 		}
 	}
@@ -2093,14 +2535,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31107"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31107"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_31108 #항공기 생산 위원회
-		icon = GFX_goal_generic_air_production
+		icon = GFX_focus_generic_aircraft_production
 		cost = 5
 
 		relative_position_id = IMA_31107
@@ -2113,7 +2555,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31108"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31108"
 			
 		}
 	}
@@ -2134,7 +2576,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31109"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31109"
 			
 		}
 	}
@@ -2154,14 +2596,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31110"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31110"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_31010 #보파이터
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_focus_ioi_generic_air_heavy_fighter_1
 		cost = 5
 
 		relative_position_id = IMA_31201
@@ -2175,14 +2617,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31010"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31010"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_31011 #모스키토
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_focus_ioi_generic_air_heavy_fighter_2
 		cost = 5
 
 		relative_position_id = IMA_31010
@@ -2195,7 +2637,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31011"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31011"
 			
 		}
 	}
@@ -2215,14 +2657,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31007"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31007"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_31008 #보포트
-		icon = GFX_focus_generic_multi_role_aircraft
+		icon = GFX_focus_ioi_generic_air_naval_bomber_2
 		cost = 5
 
 		relative_position_id = IMA_31007
@@ -2235,7 +2677,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31008"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31008"
 			
 		}
 	}
@@ -2255,14 +2697,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31009"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31009"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_31203 #스털링
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_focus_ioi_generic_air_bomber_2
 		cost = 5
 
 		relative_position_id = IMA_31201
@@ -2275,14 +2717,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31203"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31203"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_31204 #핼리팩스
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_focus_ioi_generic_air_bomber_3
 		cost = 5
 
 		relative_position_id = IMA_31203
@@ -2295,7 +2737,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31204"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31204"
 			
 		}
 	}
@@ -2316,7 +2758,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31205"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31205"
 			
 		}
 	}
@@ -2336,14 +2778,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31206"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31206"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_31207 #랭커스터
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_focus_ioi_generic_air_bomber_1
 		cost = 5
 
 		relative_position_id = IMA_31204
@@ -2357,14 +2799,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31207"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31207"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_31208 #폭격기 호위 편대
-		icon = GFX_focus_NORDIC_dem_selector_airforce
+		icon = GFX_focus_usa_escort_fighters
 		cost = 5
 
 		relative_position_id = IMA_31206
@@ -2379,7 +2821,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31208"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31208"
 			
 		}
 	}
@@ -2400,7 +2842,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31209"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31209"
 			
 		}
 	}
@@ -2422,7 +2864,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31012"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31012"
 		}
 	}
 
@@ -2441,7 +2883,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_31013"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31013"
 			
 		}
 	}
@@ -2464,7 +2906,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -2484,7 +2926,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32002"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32002"
 			
 		}
 	}
@@ -2504,7 +2946,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32101"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32101"
 			
 		}
 	}
@@ -2524,7 +2966,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32102"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32102"
 			
 		}
 	}
@@ -2544,7 +2986,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32103"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32103"
 			
 		}
 	}
@@ -2564,14 +3006,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32201"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32201"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_32202 #버밍엄 소화기 회사
-		icon = GFX_focus_ioi_generic_small_arms
+		icon = GFX_goal_generic_small_arms
 		cost = 5
 
 		relative_position_id = IMA_32201
@@ -2584,7 +3026,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32202"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32202"
 			
 		}
 	}
@@ -2604,14 +3046,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32203"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32203"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_32301 #보빙턴 기갑전투차량학교
-		icon = GFX_focus_generic_military_academy
+		icon = GFX_focus_ioi_generic_armor_school
 		cost = 5
 
 		relative_position_id = IMA_32002
@@ -2624,7 +3066,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32301"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32301"
 			
 		}
 	}
@@ -2644,7 +3086,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32302"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32302"
 			
 		}
 	}
@@ -2664,7 +3106,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32303"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32303"
 			
 		}
 	}
@@ -2684,7 +3126,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32401"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32401"
 			
 		}
 	}
@@ -2704,7 +3146,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32402"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32402"
 			
 		}
 	}
@@ -2724,7 +3166,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32403"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32403"
 			
 		}
 	}
@@ -2748,7 +3190,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32003"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32003"
 			
 		}
 	}
@@ -2769,14 +3211,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32004"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32004"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_32104 #대공 사단
-		icon = GFX_focus_ioi_generic_air_defence
+		icon = GFX_focus_ioi_generic_air_defense_4
 		cost = 5
 
 		relative_position_id = IMA_32003
@@ -2789,7 +3231,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32204"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32204"
 			
 		}
 	}
@@ -2809,7 +3251,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32204"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32204"
 			
 		}
 	}
@@ -2831,7 +3273,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32304"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32304"
 			
 		}
 	}
@@ -2852,7 +3294,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32404"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32404"
 			
 		}
 	}
@@ -2872,7 +3314,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32005"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32005"
 			
 		}
 	}
@@ -2892,14 +3334,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32006"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32006"
 			
 		}
 	}
 
 	focus = {
 		id = IMA_32007 #군 규모 확대
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_focus_ioi_generic_mass_concentration_of_army
 		cost = 5
 
 		relative_position_id = IMA_32005
@@ -2912,7 +3354,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32007"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32007"
 			
 		}
 	}
@@ -2932,7 +3374,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32008"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32008"
 			
 		}
 	}
@@ -2952,7 +3394,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32009"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32009"
 			
 		}
 	}
@@ -2972,7 +3414,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32010"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32010"
 			
 		}
 	}
@@ -2995,7 +3437,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32011"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32011"
 			
 		}
 	}
@@ -3015,7 +3457,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32012"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32012"
 			
 		}
 	}
@@ -3038,7 +3480,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32013"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32013"
 			
 		}
 	}
@@ -3061,7 +3503,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32014"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32014"
 			
 		}
 	}
@@ -3084,7 +3526,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32015"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32015"
 			
 		}
 	}
@@ -3109,7 +3551,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_30004"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_30004"
 			
 		}
 	}
@@ -3134,7 +3576,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32016"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32016"
 
 		}
 	}
@@ -3157,7 +3599,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32017"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32017"
 			
 		}
 	}
@@ -3180,7 +3622,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33101"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33101"
 			
 		}
 	}
@@ -3202,7 +3644,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33201"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33201"
 			
 		}
 	}
@@ -3222,7 +3664,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33102"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33102"
 			
 		}
 	}
@@ -3242,7 +3684,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33001"
 			
 		}
 	}
@@ -3262,7 +3704,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33202"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33202"
 			
 		}
 	}
@@ -3283,7 +3725,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33103"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33103"
 			
 		}
 	}
@@ -3304,7 +3746,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33203"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33203"
 			
 		}
 	}
@@ -3324,7 +3766,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3344,7 +3786,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33204"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33204"
 			
 		}
 	}
@@ -3365,7 +3807,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33205"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33205"
 			
 		}
 	}
@@ -3386,7 +3828,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33206"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33206"
 			
 		}
 	}
@@ -3406,7 +3848,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33207"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33207"
 			
 		}
 	}
@@ -3426,7 +3868,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33004"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33004"
 			
 		}
 	}
@@ -3446,7 +3888,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33005"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33005"
 			
 		}
 	}
@@ -3466,7 +3908,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33006"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33006"
 			
 		}
 	}
@@ -3486,7 +3928,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_33007"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33007"
 			
 		}
 	}
@@ -3506,7 +3948,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3526,7 +3968,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3546,7 +3988,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3566,7 +4008,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3586,7 +4028,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3606,7 +4048,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3625,7 +4067,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3644,7 +4086,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3665,7 +4107,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3684,7 +4126,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3703,7 +4145,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3726,7 +4168,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3745,7 +4187,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			
 		}
 	}
@@ -3762,11 +4204,11 @@ focus_tree = {
 			focus = IMA_42001 focus = IMA_43001
 		}
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_41001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_41001"
 			
 		}
 	}
@@ -3783,11 +4225,11 @@ focus_tree = {
 			focus = IMA_41001 focus = IMA_43001
 		}
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_42001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_42001"
 			
 		}
 	}
@@ -3803,11 +4245,11 @@ focus_tree = {
 			focus = IMA_41001 focus = IMA_42001
 		}
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_43001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43001"
 			
 		}
 	}
@@ -3822,12 +4264,12 @@ focus_tree = {
 		relative_position_id = IMA_41001
 
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_41001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_41002"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_41002"
 			army_experience = 5
 			navy_experience = 25
 			air_experience = 25
@@ -3845,12 +4287,12 @@ focus_tree = {
 		relative_position_id = IMA_41002
 
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_41002 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_IMA_COLONY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_41003"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_41003"
 			#add_ideas = IMA_service_oerseas_elite
 		}
 	}
@@ -3865,12 +4307,12 @@ focus_tree = {
 		relative_position_id = IMA_41003
 
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_41003 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_41004"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_41004"
 			#unlock_decision_category_tooltip = IMA_colony_development_category
 		}
 	}
@@ -3885,12 +4327,12 @@ focus_tree = {
 		relative_position_id = IMA_41003
 
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_41003 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_41004"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_41004"
 			#unlock_decision_category_tooltip = IMA_colony_development_category
 		}
 	}
@@ -3904,13 +4346,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_41004
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_41004 }
 		prerequisite = { focus = IMA_41005 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_41005"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_41005"
 			set_cosmetic_tag = IMA_IUF
 			#news_event = { id = IMA.news.8 days = 1 }
 			ICG = { every_unit_leader = { set_nationality = IMA } }
@@ -3980,12 +4422,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_41001
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_41001 focus = IMA_42001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_40001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40001"
 			unlock_decision_category_tooltip = IMA_foreign_defence_plan_category
 		}
 	}
@@ -3999,12 +4441,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_40001
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_40002"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40002"
 		}
 	}
 
@@ -4017,12 +4459,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_40001
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_40003"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40003"
 		}
 	}
 
@@ -4035,12 +4477,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_40001
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_40004"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40004"
 		}
 	}
 
@@ -4053,12 +4495,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_40001
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_40005"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40005"
 		}
 	}
 
@@ -4071,12 +4513,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_40003
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40003 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_40006"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40006"
 		}
 	}
 
@@ -4088,12 +4530,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_40004
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40003 focus = IMA_40004 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_40007"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40007"
 		}
 	}
 
@@ -4106,12 +4548,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_40005
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40004 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_40008"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40008"
 		}
 	}
 	
@@ -4157,12 +4599,87 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_42001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_IMA_COLONY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_42002"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_42002"
+			ICG = {
+				random_owned_controlled_state = {
+					limit = {
+						impassable = no
+						is_core_of = ICG
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 3
+				}
+				random_owned_controlled_state = {
+					limit = {
+						impassable = no
+						is_core_of = ICG
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			IMA = {
+				random_owned_controlled_state = {
+					limit = {
+						is_controlled_by = FROM
+						impassable = no
+						is_core_of = FROM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_controlled_by = FROM
+						impassable = no
+						is_core_of = FROM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
 		}
 	}
 
@@ -4175,7 +4692,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_42001
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_42001 }
 		available_if_capitulated = yes
 		available = {
@@ -4213,8 +4730,82 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_IMA_COLONY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_42003"
-			#add_ideas = IMA_service_oerseas_elite
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_42003"
+			IML = {
+				random_owned_controlled_state = {
+					limit = {
+						impassable = no
+						is_core_of = IML
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 3
+				}
+				random_owned_controlled_state = {
+					limit = {
+						impassable = no
+						is_core_of = IML
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			IMA = {
+				random_owned_controlled_state = {
+					limit = {
+						is_controlled_by = FROM
+						impassable = no
+						is_core_of = FROM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_controlled_by = FROM
+						impassable = no
+						is_core_of = FROM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
 		}
 	}
 
@@ -4227,7 +4818,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = IMA_42001
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_42001 }
 		available = {
 			any_country = {
@@ -4265,8 +4856,82 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_IMA_COLONY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_42004"
-			#unlock_decision_category_tooltip = IMA_colony_development_category
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_42004"
+			ISM = {
+				random_owned_controlled_state = {
+					limit = {
+						impassable = no
+						is_core_of = ISM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 3
+				}
+				random_owned_controlled_state = {
+					limit = {
+						impassable = no
+						is_core_of = ISM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			IMA = {
+				random_owned_controlled_state = {
+					limit = {
+						is_controlled_by = FROM
+						impassable = no
+						is_core_of = FROM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_controlled_by = FROM
+						impassable = no
+						is_core_of = FROM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
 		}
 	}
 
@@ -4279,7 +4944,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = IMA_42002
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_42001 }
 		available = {
 			any_country = {
@@ -4317,8 +4982,82 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_IMA_COLONY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_42005"
-			#unlock_decision_category_tooltip = IMA_colony_development_category
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_42005"
+			ISC = {
+				random_owned_controlled_state = {
+					limit = {
+						impassable = no
+						is_core_of = ISC
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 3
+				}
+				random_owned_controlled_state = {
+					limit = {
+						impassable = no
+						is_core_of = ISC
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			IMA = {
+				random_owned_controlled_state = {
+					limit = {
+						is_controlled_by = FROM
+						impassable = no
+						is_core_of = FROM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_controlled_by = FROM
+						impassable = no
+						is_core_of = FROM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
 		}
 	}
 
@@ -4331,7 +5070,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = IMA_42003
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_42003 }
 		available = {
 			any_country = {
@@ -4369,7 +5108,82 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_IMA_COLONY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_42006"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_42006"
+			IDS = {
+				random_owned_controlled_state = {
+					limit = {
+						impassable = no
+						is_core_of = IDS
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 3
+				}
+				random_owned_controlled_state = {
+					limit = {
+						impassable = no
+						is_core_of = IDS
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			IMA = {
+				random_owned_controlled_state = {
+					limit = {
+						is_controlled_by = FROM
+						impassable = no
+						is_core_of = FROM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_controlled_by = FROM
+						impassable = no
+						is_core_of = FROM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
 		}
 	}
 
@@ -4382,7 +5196,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_42004
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_42004 }
 		available = {
 			any_country = {
@@ -4420,7 +5234,82 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_IMA_COLONY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_42007"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_42007"
+			IGM = {
+				random_owned_controlled_state = {
+					limit = {
+						impassable = no
+						is_core_of = IGM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 3
+				}
+				random_owned_controlled_state = {
+					limit = {
+						impassable = no
+						is_core_of = IGM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			IMA = {
+				random_owned_controlled_state = {
+					limit = {
+						is_controlled_by = FROM
+						impassable = no
+						is_core_of = FROM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_controlled_by = FROM
+						impassable = no
+						is_core_of = FROM
+						NOT = { 
+							has_state_category = tiny_island
+							has_state_category = small_island
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
 		}
 	}
 
@@ -4433,14 +5322,20 @@ focus_tree = {
 		y = 2
 		relative_position_id = IMA_42007
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_42005 }
 		prerequisite = { focus = IMA_42006 }
 		prerequisite = { focus = IMA_42007 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_IMA_COLONY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_42007"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_42007"
+			add_political_power = 150
+			unlock_decision_tooltip = IMA_westminster_statute_construct_infrastructure_improved
+			unlock_decision_tooltip = IMA_westminster_statute_support_civil_factory_improved
+			unlock_decision_tooltip = IMA_westminster_statute_support_military_factory_improved
+			unlock_decision_tooltip = IMA_westminster_statute_support_dockyard_improved
+			set_country_flag = commonwealth_leader_possible
 		}
 	}
 
@@ -4453,12 +5348,23 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_42001
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_42001 focus = IMA_43001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_IMA_COLONY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_40101"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40101"
+			every_country = {
+				limit = {
+					is_subject_of = IMA
+					NOT = { has_autonomy_state = ima_westminster_dominion }
+				}
+				add_autonomy_ratio = {
+					value = 0.2
+					localization = IMA_40101
+				}
+				add_political_power = 150
+			}
 		}
 	}
 
@@ -4471,12 +5377,30 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_40101
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40101 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_40002"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40002"
+			every_country = {
+				limit = {
+					is_subject_of = IMA
+					NOT = { has_autonomy_state = ima_westminster_dominion }
+				}
+				add_autonomy_ratio = {
+					value = 0.2
+					localization = IMA_40101
+				}
+				add_political_power = 150
+			}
+			every_country = {
+				limit = {
+					is_subject_of = IMA
+					has_autonomy_state = ima_westminster_dominion
+				}
+				add_political_power = 300
+			}
 		}
 	}
 
@@ -4490,12 +5414,12 @@ focus_tree = {
 		relative_position_id = IMA_40102
 		available = { has_completed_focus = IMA_43001 }
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40102 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_40003"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40003"
 		}
 	}
 
@@ -4508,12 +5432,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_43001
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_43001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_43002"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43002"
 		}
 	}
 
@@ -4526,12 +5450,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_43002
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_43002 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_43003"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43003"
 		}
 	}
 
@@ -4544,12 +5468,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_43001
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_43001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_43004"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43004"
 		}
 	}
 
@@ -4562,29 +5486,29 @@ focus_tree = {
 		y = 1
 		relative_position_id = IMA_43004
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_43004 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_43005"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43005"
 		}
 	}
 
 	focus = {
 		id = IMA_43006 #새로운 연방 선포
-		icon = GFX_focus_IMA_43006
+		icon = GFX_focus_IMA_51028
 		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = IMA_43005
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_43005 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_43006"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43006"
 		}
 	}
 
@@ -4597,56 +5521,57 @@ focus_tree = {
 		y = 3
 		relative_position_id = IMA_43003
 
-		ai_will_do = { factor = 0 } 
+		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40103 }
 		prerequisite = { focus = IMA_43003 }
 		prerequisite = { focus = IMA_43006 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_43007"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43007"
+			set_country_flag = commonwealth_leader_possible
 		}
 	}
 
 	#정치 중점
 	focus = {
-		id = IMA_50001 #하루카 위기
+		id = IMA_50001 #어째서 당신이 총리인가요
 		icon = GFX_focus_IMA_50001
 		cost = 0
 
 		x = 79
 		y = 0
 		
-		ai_will_do = { factor = 0 } #이벤트 통과 중점
+		ai_will_do = { factor = 50 } #이벤트 통과 중점
 		available = { always = no }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_50001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_50001"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 		}
 	}
 
 	focus = {
 		id = IMA_50002 #국민노동당 문제
-		icon = GFX_focus_IMA
+		icon = GFX_focus_IMA_50002
 		cost = 5
 
 		relative_position_id = IMA_50001
 		x = -2
 		y = 1
 
-		ai_will_do = { factor = 0 } #이벤트 통과 중점
+		ai_will_do = { factor = 50 } #이벤트 통과 중점
 		prerequisite = { focus = IMA_50001 }
 		available = { always = no }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_50002"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_50002"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 		}
 	}
 
 	focus = {
 		id = IMA_50003 #자유당 당수 선거
-		icon = GFX_focus_IMA
+		icon = GFX_focus_IMA_50003
 		cost = 0
 
 		relative_position_id = IMA_50001
@@ -4657,14 +5582,14 @@ focus_tree = {
 		prerequisite = { focus = IMA_50001 }
 		available = { always = no }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_50003"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_50003"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 		}
 	}
 
 	focus = {
 		id = IMA_50004 #아즈사의 반란
-		icon = GFX_focus_IMA
+		icon = GFX_focus_IMA_50004
 		cost = 0
 
 		relative_position_id = IMA_50001
@@ -4675,14 +5600,14 @@ focus_tree = {
 		prerequisite = { focus = IMA_50001 }
 		available = { always = no }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_50004"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_50004"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 		}
 	}
 
 	focus = {
 		id = IMA_51001 #연정 유지
-		icon = GFX_focus_IMA
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
 		cost = 0
 
 		relative_position_id = IMA_50001
@@ -4698,7 +5623,7 @@ focus_tree = {
 		available = { always = no }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51001"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51001"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 		}
 	}
@@ -4722,7 +5647,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51002a"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51002a"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -4747,7 +5672,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51002b"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51002b"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -4772,7 +5697,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51002c"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51002c"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -4797,7 +5722,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51002d"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51002d"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -4822,7 +5747,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51002e"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51002e"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -4847,7 +5772,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51002f"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51002f"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -4872,7 +5797,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51002g"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51002g"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -4880,7 +5805,7 @@ focus_tree = {
 
 	focus = {
 		id = IMA_51003 #국민동원계획
-		icon = GFX_focus_IMA
+		icon = GFX_focus_generic_limited_social_mobilization
 		cost = 5
 
 		relative_position_id = IMA_51002a
@@ -4890,7 +5815,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51002a focus = IMA_51002b focus = IMA_51002c focus = IMA_51002d focus = IMA_51002e focus = IMA_51002f focus = IMA_51002g }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51003"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51003"
 		}
 	}
 
@@ -4907,7 +5832,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51002a focus = IMA_51002b focus = IMA_51002c focus = IMA_51002d focus = IMA_51002e focus = IMA_51002f focus = IMA_51002g }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51101"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51101"
 		}
 	}
 
@@ -4924,7 +5849,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51002a focus = IMA_51002b focus = IMA_51002c focus = IMA_51002d focus = IMA_51002e focus = IMA_51002f focus = IMA_51002g }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51101"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51101"
 		}
 	}
 
@@ -4957,7 +5882,7 @@ focus_tree = {
 
 	focus = {
 		id = IMA_51005 #군사 훈련법
-		icon = GFX_focus_IMA
+		icon = GFX_focus_ioi_generic_army_soldiers_2
 		cost = 5
 
 		relative_position_id = IMA_51004
@@ -4967,13 +5892,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51004 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51005"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51005"
 		}
 	}
 
 	focus = {
 		id = IMA_51006 #전시 수송 명령
-		icon = GFX_focus_IMA
+		icon = GFX_focus_ioi_generic_truck_1
 		cost = 5
 
 		relative_position_id = IMA_51005
@@ -4983,7 +5908,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51005 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51006"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51006"
 		}
 	}
 
@@ -4992,14 +5917,14 @@ focus_tree = {
 		icon = GFX_focus_ioi_generic_attack_DEV
 		cost = 5
 
-		relative_position_id = IMA_51009
-		x = -1
-		y = -1
+		relative_position_id = IMA_51201
+		x = -3
+		y = 1
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51101 focus = IMA_51201 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51007"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51007"
 			declare_war_on = {
 				target = DEV
 				type = topple_government
@@ -5015,9 +5940,9 @@ focus_tree = {
 		icon = GFX_focus_ioi_generic_attack_SBR
 		cost = 5
 
-		relative_position_id = IMA_51009
-		x = -3
-		y = -1
+		relative_position_id = IMA_51101
+		x = 3
+		y = 1
 
 		ai_will_do = { factor = 50 }
 		available = {
@@ -5025,7 +5950,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = IMA_51101 focus = IMA_51201 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51008"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51008"
 			declare_war_on = {
 				target = SBR
 				type = topple_government
@@ -5051,7 +5976,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51101 focus = IMA_51201 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51009"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51009"
 			declare_war_on = {
 				target = DFD
 				type = topple_government
@@ -5073,7 +5998,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51101 focus = IMA_51201 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51010"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51010"
 			declare_war_on = {
 				target = STR
 				type = topple_government
@@ -5094,7 +6019,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51101 focus = IMA_51201 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51011"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51011"
 			declare_war_on = {
 				target = MLN
 				type = topple_government
@@ -5125,7 +6050,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = IMA_51009 focus = IMA_51010 focus = IMA_51011 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51011"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51011"
 			declare_war_on = {
 				target = TOH
 				type = topple_government
@@ -5146,7 +6071,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51101 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51102"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51102"
 		}
 	}
 
@@ -5162,13 +6087,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51101 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51103"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51103"
 		}
 	}
 
 	focus = {
 		id = IMA_51104 #경계심 유지
-		icon = GFX_focus_IMA
+		icon = GFX_focus_hol_united_netherlands
 		cost = 5
 
 		relative_position_id = IMA_51102
@@ -5179,13 +6104,13 @@ focus_tree = {
 		prerequisite = { focus = IMA_51102 }
 		prerequisite = { focus = IMA_51103 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51104"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51104"
 		}
 	}
 
 	focus = {
 		id = IMA_51105 #금수조치
-		icon = GFX_focus_IMA
+		icon = GFX_focus_ARG_anti_corruption_policies
 		cost = 5
 
 		relative_position_id = IMA_51104
@@ -5196,13 +6121,13 @@ focus_tree = {
 		prerequisite = { focus = IMA_51102 }
 		prerequisite = { focus = IMA_51104 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51105"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51105"
 		}
 	}
 
 	focus = {
 		id = IMA_51106 #포용의 민주주의
-		icon = GFX_focus_IMA
+		icon = GFX_goal_support_democracy
 		cost = 5
 
 		relative_position_id = IMA_51104
@@ -5213,13 +6138,13 @@ focus_tree = {
 		prerequisite = { focus = IMA_51103 }
 		prerequisite = { focus = IMA_51104 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51106"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51106"
 		}
 	}
 
 	focus = {
 		id = IMA_51202 #더이상의 유화책은 없다
-		icon = GFX_focus_IMA
+		icon = GFX_focus_eng_motion_of_no_confidence
 		cost = 5
 
 		relative_position_id = IMA_51201
@@ -5229,13 +6154,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51201 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51202"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51202"
 		}
 	}
 
 	focus = {
 		id = IMA_51203 #국가보안법
-		icon = GFX_focus_IMA
+		icon = GFX_goal_generic_political_pressure
 		cost = 5
 
 		relative_position_id = IMA_51201
@@ -5245,13 +6170,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51201 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51203"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51203"
 		}
 	}
 
 	focus = {
 		id = IMA_51204 #전쟁 선전
-		icon = GFX_focus_IMA
+		icon = GFX_goal_generic_propaganda
 		cost = 5
 
 		relative_position_id = IMA_51202
@@ -5262,13 +6187,13 @@ focus_tree = {
 		prerequisite = { focus = IMA_51202 }
 		prerequisite = { focus = IMA_51203 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51204"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51204"
 		}
 	}
 
 	focus = {
 		id = IMA_51205 #최후통첩
-		icon = GFX_focus_IMA
+		icon = GFX_goal_generic_major_war
 		cost = 5
 
 		relative_position_id = IMA_51204
@@ -5279,13 +6204,13 @@ focus_tree = {
 		prerequisite = { focus = IMA_51202 }
 		prerequisite = { focus = IMA_51204 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51205"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51205"
 		}
 	}
 
 	focus = {
 		id = IMA_51206 #배타적 민주주의
-		icon = GFX_focus_IMA
+		icon = GFX_focus_generic_strike_at_democracy2
 		cost = 5
 
 		relative_position_id = IMA_51204
@@ -5296,13 +6221,13 @@ focus_tree = {
 		prerequisite = { focus = IMA_51203 }
 		prerequisite = { focus = IMA_51204 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51206"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51206"
 		}
 	}
 
 	focus = {
 		id = IMA_51013 #전시 상황
-		icon = GFX_focus_IMA
+		icon = GFX_focus_generic_national_security
 		cost = 0
 
 		relative_position_id = IMA_51012
@@ -5314,7 +6239,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51105 focus = IMA_51205 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51013"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51013"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 		}
 	}
@@ -5336,7 +6261,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51105 focus = IMA_51205 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51206"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51206"
 			declare_war_on = {
 				target = TOH
 				type = topple_government
@@ -5347,7 +6272,7 @@ focus_tree = {
 
 	focus = {
 		id = IMA_51015 #아이돌 위원회
-		icon = GFX_focus_IMA
+		icon = GFX_focus_IMA_51015
 		cost = 0
 
 		relative_position_id = IMA_51013
@@ -5359,7 +6284,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51013 focus = IMA_51014 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51015"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51015"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 		}
 	}
@@ -5378,14 +6303,14 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51013 focus = IMA_51014 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51016"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51016"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 		}
 	}
 
 	focus = {
 		id = IMA_51017 #전시 첩보망 확대
-		icon = GFX_focus_IMA
+		icon = GFX_focus_ioi_generic_secret_police
 		cost = 5
 
 		relative_position_id = IMA_51015
@@ -5395,13 +6320,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51015 focus = IMA_51016 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51017"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51017"
 		}
 	}
 
 	focus = {
 		id = IMA_51018 #징병 확대
-		icon = GFX_focus_IMA
+		icon = GFX_focus_ioi_generic_mass_concentration_of_army
 		cost = 5
 
 		relative_position_id = IMA_51017
@@ -5411,13 +6336,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51017 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51018"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51018"
 		}
 	}
 
 	focus = {
 		id = IMA_51019 #피리부는 사나이
-		icon = GFX_focus_RAJ_enrollment_of_dali_children
+		icon = GFX_focus_generic_population_growth
 		cost = 5
 
 		relative_position_id = IMA_51017
@@ -5428,12 +6353,12 @@ focus_tree = {
 		prerequisite = { focus = IMA_51017 }
 		completion_reward = {
 			custom_effect_tooltip = IMA_51019_tt
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51019"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51019"
 			hidden_effect = {
-				country_event = { 
-					id = IMA_war_events.23
-					days = 5 
-				}
+				#country_event = { 
+				#	id = IMA_war_events.23
+				#	days = 5 
+				#}
 			}
 		}
 	}
@@ -5450,7 +6375,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51015 focus = IMA_51016 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51020"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51020"
 		}
 	}
 
@@ -5466,7 +6391,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51015 focus = IMA_51016 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51021"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51021"
 		}
 	}
 
@@ -5482,7 +6407,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51015 focus = IMA_51016 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51022"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51022"
 		}
 	}
 
@@ -5498,7 +6423,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51015 focus = IMA_51016 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51023"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51023"
 		}
 	}
 
@@ -5515,7 +6440,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51020 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51024"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51024"
 		}
 	}
 
@@ -5532,7 +6457,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51021 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51025"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51025"
 		}
 	}
 
@@ -5548,7 +6473,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51022 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51026"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51026"
 		}
 	}
 
@@ -5573,7 +6498,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51023 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51027"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51027"
 		}
 	}
 
@@ -5589,7 +6514,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51024 focus = IMA_51025 focus = IMA_51026 focus = IMA_51027 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51028"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51028"
 		}
 	}
 
@@ -5612,7 +6537,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51028 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51024"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51024"
 		}
 	}
 
@@ -5635,7 +6560,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51028 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51025"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51025"
 			declare_war_on = {
 				target = RST
 				type = puppet_wargoal_focus
@@ -5657,7 +6582,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51028 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51031"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51031"
 		}
 	}
 
@@ -5675,7 +6600,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51028 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51032"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51032"
 		}
 	}
 
@@ -5693,7 +6618,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51028 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51033"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51033"
 		}
 	}
 
@@ -5711,7 +6636,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51028 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51034"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51034"
 		}
 	}
 
@@ -5721,13 +6646,13 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IMA_51016
-		x = 5
+		x = 6
 		y = 1
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51015 focus = IMA_51016 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51035"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51035"
 		}
 	}
 
@@ -5737,18 +6662,18 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IMA_51035
-		x = -1
+		x = 0
 		y = 1
 		available = {
 			date > 1940.1.1
 			has_war = no
 		}
-		mutually_exclusive = { focus = IMA_51037 }
+		mutually_exclusive = { focus = IMA_51037 focus = IMA_51038 }
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51035 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51036"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51036"
 		}
 	}
 
@@ -5758,19 +6683,40 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IMA_51035
-		x = 1
+		x = 2
 		y = 1
 		available = {
 			date > 1940.1.1
 			has_war = no
 		}
-		mutually_exclusive = { focus = IMA_51036 }
+		mutually_exclusive = { focus = IMA_51036 focus = IMA_51038 }
 
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51035 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_51037"
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51037"
+		}
+	}
+
+	focus = {
+		id = IMA_51038 #유럽을 향하여
+		icon = GFX_focus_generic_democratic_europe
+		cost = 5
+
+		relative_position_id = IMA_51035
+		x = -2
+		y = 1
+		available = {
+			date > 1940.1.1
+			has_war = no
+		}
+		mutually_exclusive = { focus = IMA_51036 focus = IMA_51037 }
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_51035 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51038"
 		}
 	}
 }

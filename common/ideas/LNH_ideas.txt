@@ -1,5 +1,42 @@
 ideas = {
-	country = { }
+	country = {
+		LNH_south_manchuria_railway_company = {
+			allowed = {
+				OR = {
+					original_tag = LLS
+					is_subject_of = LLS
+				}
+			}
+			allowed_civil_war = {
+				always = no
+			}	
+			removal_cost = -1
+			picture = LNH_south_manchuria_railway_company
+			modifier = {
+				research_sharing_per_country_bonus_factor = 0.1
+				research_speed_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		LNH_south_manchuria_railway_company_expanded = {
+			allowed = {
+				OR = {
+					original_tag = LLS
+					is_subject_of = LLS
+				}
+			}
+			allowed_civil_war = {
+				always = no
+			}	
+			removal_cost = -1
+			picture = LNH_south_manchuria_railway_company
+			modifier = {
+				research_sharing_per_country_bonus_factor = 0.15
+				research_speed_factor = 0.15
+				consumer_goods_factor = -0.1
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

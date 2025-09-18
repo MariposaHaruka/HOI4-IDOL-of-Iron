@@ -56,16 +56,16 @@ on_actions = {
 			}
 		}
 	}
-	#on_startup = {
+	on_startup = {
 		#의회
-	#	effect = {
-	#		ISC = { 
-	#			parliament_gui_initial_ISC = yes
-	#			clr_country_flag = parliament_gui_on
-	#			calc_parliament_support_ISC = yes
-	#		}
-    #    }
-    #}
+		effect = {
+			ISC = { 
+				parliament_gui_initial_ISC = yes
+				clr_country_flag = parliament_gui_on
+				calc_parliament_support_ISC = yes
+			}
+        }
+    }
 	#on_weekly = {
 		#의회 지지도 계산
 	#	effect = {

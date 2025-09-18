@@ -11,7 +11,7 @@
 @chief_experience_gain_high = 0.40
 
 leader_traits = {
-	leader_prs_hoshino_ichika_1 = {
+	PRS_der_fuhrer = {
 		random = no
 		political_power_factor = 0.25
 		weekly_casualties_war_support = 0.001
@@ -20,14 +20,159 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	leader_prs_hinomori_shiho_1 = {
+	PRS_der_fuhrer_wehrmacht = { }
+	PRS_der_fuhrer_neurath = { }
+	PRS_der_fuhrer_fuhrerprinzip = { }
+	PRS_der_fuhrer_fuhrerprinzip_wehrmacht = { }
+	PRS_der_fuhrer_fuhrerprinzip_neurath = { }	
+
+	PRS_emu_fuhrer = { # Todt Fuhrer - Shoud match idea PRS_emu_reich_minister_of_armaments
 		random = no
+
+		political_power_gain = 0.25 #Common for all fuhrers (inlcuding Hitler after Fuhrerprinzip)
+
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		production_speed_arms_factory_factor = 0.1
+		production_speed_dockyard_factor = 0.1
+	}
+
+	PRS_rui_fuhrer = { # Speer Fuhrer - Shoud match idea PRS_rui_reich_minister_of_armaments
+		random = no
+		
+		political_power_gain = 0.25 #Common for all fuhrers (inlcuding Hitler after Fuhrerprinzip)
+
+		production_speed_buildings_factor = 0.05
+		fascism_drift = 0.01
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+	}
+
+	PRS_tsukasa_fuhrer = { # Göring Fuhrer - Shoud match idea PSR_tsukasa_four_year_plan_plenipotentiary
+		random = no
+		
+		political_power_gain = 0.25 #Common for all fuhrers (inlcuding Hitler after Fuhrerprinzip)
+
+		local_resources_factor = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		production_factory_start_efficiency_factor = 0.05
+		line_change_production_efficiency_factor = 0.05
+	}
+
+	PRS_kanade_fuhrer_abwehr = { # Himmler Fuhrer - Shoud match idea PRS_kanade_director_reich_security
+		random = no
+		
+		political_power_gain = 0.25 #Common for all fuhrers (inlcuding Hitler after Fuhrerprinzip)
+
+		resistance_damage_to_garrison = -0.25
+		foreign_subversive_activites = -0.3
+		non_core_manpower = 0.02
+		subversive_activites_upkeep = -0.25
+		operative_slot = 1
+		intelligence_agency_defense = 0.2
+		intel_from_combat_factor = 0.25
+	}
+
+	PRS_kanade_fuhrer_ss = { # Himmler Fuhrer - Shoud match idea PRS_kanade_reichsfuhrer_ss
+		random = no
+		
+		political_power_gain = 0.25 #Common for all fuhrers (inlcuding Hitler after Fuhrerprinzip)
+
+		resistance_damage_to_garrison = -0.25
+		foreign_subversive_activites = -0.3
+		non_core_manpower = 0.04
+		subversive_activites_upkeep = -0.25
+		operative_slot = 1
+		intelligence_agency_defense = 0.2
+		intel_from_combat_factor = 0.25
+		resistance_growth = -0.15
+		compliance_growth = -0.1
+		special_forces_cap = 0.05
+	}
+
+	PRS_saki_fuhrer = { # Goebbels Fuhrer - Shoud match idea PRS_saki_reich_minister_of_propaganda_master
+		random = no
+		
+		political_power_gain = 0.25 #Common for all fuhrers (inlcuding Hitler after Fuhrerprinzip)
+
+		war_support_factor = 0.1
+		fascism_drift = 0.2
+		party_popularity_stability_factor= 0.1
+		surrender_limit = 0.1
+		offensive_war_stability_factor = 0.1
+		defensive_war_stability_factor = 0.1
+		operative_slot = 2
+		boost_ideology_mission_factor = 0.15
+		boost_resistance_factor = 0.15
+	}
+
+	PRS_saki_fuhrer_no_lar = { # Goebbels Fuhrer - Shoud match idea PRS_saki_reich_minister_of_propaganda_master_no_lar
+		random = no
+		
+		political_power_gain = 0.25 #Common for all fuhrers (inlcuding Hitler after Fuhrerprinzip)
+
+		war_support_factor = 0.1
+		fascism_drift = 0.2
+		party_popularity_stability_factor= 0.1
+		surrender_limit = 0.1
+		offensive_war_stability_factor = 0.1
+		defensive_war_stability_factor = 0.1
+		subversive_activites_upkeep = -0.5
+	}
+
+	PRS_honami_fuhrer = { # Honami Fuhrer - Shoud match idea PRS_honami_first_among_equals
+		random = no
+		
+		political_power_gain = 0.25 #Common for all fuhrers (inlcuding Hitler after Fuhrerprinzip)
+
+		opinion_gain_monthly_same_ideology_factor = 1
+		military_industrial_organization_funds_gain = 0.15
+		military_industrial_organization_research_bonus = 0.15
+		conscription_factor = 0.05
 		political_power_factor = 0.15
-		weekly_casualties_war_support = 0.0005
-		ai_desired_divisions_factor = 0.10
-		ai_will_do = {
-			factor = 1
-		}
+		mobilization_laws_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		research_speed_factor = 0.05
+	}
+
+	PRS_honami_fuhrer_no_aat = { # Honami Fuhrer - Shoud match idea PRS_honami_first_among_equals_no_aat
+		random = no
+		
+		political_power_gain = 0.25 #Common for all fuhrers (inlcuding Hitler after Fuhrerprinzip)
+
+		opinion_gain_monthly_same_ideology_factor = 1
+		tank_manufacturer_cost_factor = -0.35
+		materiel_manufacturer_cost_factor = -0.35
+		aircraft_manufacturer_cost_factor = -0.35
+		naval_manufacturer_cost_factor = -0.35
+		conscription_factor = 0.05
+		political_power_factor = 0.15
+		mobilization_laws_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		research_speed_factor = 0.05
+	}
+
+	PRS_shiho_fuhrer = { # Shiho Fuhrer - Shoud match idea PRS_shiho_brown_eminence
+		random = no
+		
+		political_power_gain = 0.25 #Common for all fuhrers (inlcuding Hitler after Fuhrerprinzip)
+
+		political_advisor_cost_factor = -0.5
+		theorist_cost_factor = -0.25
+		army_chief_cost_factor = -0.25
+		navy_chief_cost_factor = -0.25
+		air_chief_cost_factor = -0.25
+		high_command_cost_factor = -0.25
+		conscription_factor = 0.05
+		political_power_factor = 0.15
+		mobilization_laws_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		research_speed_factor = 0.05
 	}
 
 	advisor_prs_hinomori_shiho = {

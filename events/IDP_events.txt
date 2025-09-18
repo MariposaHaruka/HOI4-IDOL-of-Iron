@@ -1,0 +1,53 @@
+add_namespace = IDP_mina
+
+country_event = {
+	id = IDP_mina.1 #공군 정비 비리 사건
+	title = IDP_mina.1.t
+	desc = IDP_mina.1.desc
+	picture = GFX_report_event_ITA_air_crash
+	is_triggered_only = yes
+
+	option = {
+		name = IDP_mina.1.a #일단 공군 항공기가 제일 중요하니, 공군 항공기부터 확인하자
+		ai_chance = { 
+			base = 100
+			modifier = {
+				add = -100
+				is_historical_focus_on = no
+			}
+		}
+		hidden_effect = {
+			country_event = { id = IDP_mina.2 days = 12 }
+		}
+	}
+	option = {
+		name = IDP_mina.1.b #헛소리 같아도 허투루 듣긴 힘드니, 일단 보안이라도 올려두는 게 좋겠지?
+		ai_chance = { 
+			base = 0
+			modifier = {
+				add = 100
+				is_historical_focus_on = no
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IDP_mina.2 #대통령기가 추락하다
+	title = IDP_mina.2.t
+	desc = IDP_mina.2.desc
+	picture = GFX_report_event_ITA_air_crash
+	is_triggered_only = yes
+
+	option = {
+		name = IDP_mina.2.a #동생 입장에서 힘든 상황이 되었군...
+		ai_chance = { 
+			base = 100
+		}
+		hidden_effect = {
+			retire_character = IDP_nagase_mana
+			promote_character = IDP_nagase_kotono
+			news_event = { id = ioi_news.1 days = 2 }
+		}
+	}
+}

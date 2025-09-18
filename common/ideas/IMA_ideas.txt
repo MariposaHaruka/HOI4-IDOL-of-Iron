@@ -1,7 +1,8 @@
 ideas = {
 	country = {
 		#시작 중점
-		IMA_great_depression = {
+		IMA_great_depression_1 = {
+			name = IMA_great_depression
 			allowed = {
 				original_tag = IMA
 			}
@@ -13,9 +14,74 @@ ideas = {
 			modifier = {
 				political_power_cost = 1
 				consumer_goods_factor = 0.60
-				conscription_factor = -0.5
 				join_faction_tension = 0.20
 				local_resources_factor = -0.2
+			}
+		}
+		IMA_great_depression_2 = {
+			name = IMA_great_depression
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_2
+			modifier = {
+				political_power_cost = 0.65
+				consumer_goods_factor = 0.50
+				join_faction_tension = 0.20
+				local_resources_factor = -0.15
+			}
+		}
+		IMA_great_depression_3 = {
+			name = IMA_great_depression
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression
+			modifier = {
+				political_power_cost = 0.25
+				consumer_goods_factor = 0.35
+				join_faction_tension = 0.20
+				local_resources_factor = -0.1
+			}
+		}
+		IMA_great_depression_ex = { #1에서 더 심화된 것
+			name = IMA_great_depression
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				political_power_cost = 1.2
+				consumer_goods_factor = 0.80
+				join_faction_tension = 0.50
+				local_resources_factor = -0.5
+			}
+		}
+		IMA_minor_economic_boom = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = foreign_capital
+			modifier = {
+				political_power_cost = -0.15
+				consumer_goods_factor = -0.15
+				local_resources_factor = 0.1
 			}
 		}
 		IMA_winner_of_great_war = {
@@ -28,7 +94,7 @@ ideas = {
 			removal_cost = -1
 			picture = ENG_the_war_to_end_all_wars
 			modifier = {
-				conscription_factor = -0.3
+				conscription_factor = -0.5
 				experience_gain_air_factor = -0.75
 				experience_gain_navy_factor = -0.75
 				experience_gain_army_factor = -0.75
@@ -79,5 +145,72 @@ ideas = {
 				autonomy_gain = 0.1
 			}
 		}
+
+		#켄싱턴 협정
+		IMA_kenshington_agree = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				is_fascism = no
+			}
+
+			modifier = {
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				stability_factor = 0.1
+				consumer_goods_factor = 0.10
+			}
+		}
+	}
+	naval_manufacturer = {
+		designer = yes
+		IMA_yarrow_shipbuilders = {
+			name = yarrow_shipbuilders
+			picture = yarrow_shipbuilders
+			allowed = {
+				original_tag = IMA
+			}
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+		IMA_harland_wolff = {
+			name = harland_wolff
+			picture = harland_wolff
+			allowed = {
+				original_tag = IMA
+			}
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+		IMA_cammell_laird = {
+			name = cammell_laird
+			picture = cammell_laird
+			allowed = {
+				original_tag = IMA
+			}
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { atlantic_fleet_naval_manufacturer }
+		}
+		
+		IMA_john_brown = {
+			name = john_brown_company
+			picture = john_brown_company
+			allowed = {
+				original_tag = IMA
+			}
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { coastal_defence_naval_manufacturer }
+		}	
 	}
 }

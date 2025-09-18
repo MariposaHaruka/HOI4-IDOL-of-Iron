@@ -8,7 +8,18 @@ PRS_naval_interest_trigger = {
 				has_war_with = LLS
 			}
 		}
-		#has_completed_focus = PRS_plan_z
-		#has_completed_focus = PRS_rebuild_the_high_seas_fleet
+		has_completed_focus = PRS_23102
+	}
+}
+
+PRS_preparing_war_against_sekai = {
+	custom_trigger_tooltip = {
+		tooltip = PRS_preparing_war_against_sekai_tt
+		has_completed_focus = PRS_32001
+		NOT = {
+			has_completed_focus = PRS_32007
+			has_completed_focus = PRS_32008
+			has_completed_focus = PRS_32009
+		}
 	}
 }

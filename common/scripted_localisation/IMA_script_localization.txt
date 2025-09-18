@@ -69,7 +69,6 @@ defined_text = {
 }
 
 #당수
-
 defined_text = {
 	name = GetParliamentPartyLeaderIMA
 	text = {
@@ -166,5 +165,74 @@ defined_text = {
 	}
 	text = {
 		localization_key = IMA_london_front_non_tt
+	}
+}
+
+defined_text = {
+	name = GetStatusDebt
+	text = {
+		trigger = { 
+			check_variable = { IMA_debt > 99.9 } 
+			check_variable = { IMA_debt < 130 } 
+		}
+		localization_key = IMA_debt_level_2
+	}
+	text = {
+		trigger = { 
+			check_variable = { IMA_debt > 129.9 } 
+			check_variable = { IMA_debt < 170 } 
+		}
+		localization_key = IMA_debt_level_3
+	}
+	text = {
+		trigger = { 
+			check_variable = { IMA_debt > 169.9 } 
+			check_variable = { IMA_debt < 200 } 
+		}
+		localization_key = IMA_debt_level_4
+	}
+	text = {
+		trigger = { check_variable = { IMA_debt > 199.9 }  }
+		localization_key = IMA_debt_level_5
+	}
+	text = {
+		localization_key = IMA_debt_level_1
+	}
+}
+
+defined_text = {
+	name = GetStatusEconomy
+	text = {
+		trigger = { 
+			has_idea = IMA_great_depression_ex
+		}
+		localization_key = IMA_economy_level_0
+	}
+	text = {
+		trigger = { 
+			has_idea = IMA_great_depression_1
+		}
+		localization_key = IMA_economy_level_1
+	}
+	text = {
+		trigger = { 
+			has_idea = IMA_great_depression_2
+		}
+		localization_key = IMA_economy_level_2
+	}
+	text = {
+		trigger = { 
+			has_idea = IMA_great_depression_3
+		}
+		localization_key = IMA_economy_level_3
+	}
+	text = {
+		trigger = { 
+			has_idea = IMA_minor_economic_boom
+		}
+		localization_key = IMA_economy_level_5
+	}
+	text = {
+		localization_key = IMA_economy_level_4
 	}
 }

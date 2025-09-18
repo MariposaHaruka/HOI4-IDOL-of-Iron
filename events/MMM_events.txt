@@ -1,0 +1,133 @@
+add_namespace = MMM_tmp
+
+country_event = {
+	id = MMM_tmp.1
+	title = MMM_tmp.1.t
+	desc = MMM_tmp.1.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Support Nationalists
+		name = MMM_tmp.1.a
+		ai_chance = { 
+			base = 99
+			modifier = {
+				add = -99
+				is_historical_focus_on = no
+			}
+		}
+		hidden_effect = {
+			set_capital = { state = 176 }
+			start_civil_war = {
+				ruling_party = militarytotalism
+				ideology = liberalism_mod
+				size = 0.5
+				capital = 41
+				states = { 41 165 167 168 173 175 790 792 793 794 }
+			}
+			random_other_country = {
+				limit = {
+					original_tag = MMM
+					has_government = liberalism_mod
+				}
+				load_oob = "tmp_MMM_walpurgisnacht"
+				set_equipment_fraction = 0.5
+				set_stability = 0.9
+				set_war_support = 0.8
+				add_popularity = {
+					ideology = authoritariancommunism
+					popularity = 0.35
+				}
+			}
+			set_global_flag = walpurgisnacht
+			set_country_flag = tmp_wnw_witches
+			load_oob = "tmp_MMA_walpurgisnacht"
+			set_equipment_fraction = 0.5
+			set_stability = 0.9
+			set_war_support = 0.8
+
+			add_popularity = {
+				ideology = militarytotalism
+				popularity = 1
+			}
+
+			random_other_country = {
+				limit = {
+					original_tag = MMM
+					has_government = liberalism_mod
+				}
+				set_cosmetic_tag = MMM_civil_war
+				set_country_flag = tmp_wnw_magicians
+			}
+			news_event = { id = ioi_news.3 hours = 6 }
+			add_ideas = hidden_buff
+		}
+		custom_effect_tooltip = tmp_witches_chosen
+	}
+	option = { # Support Republicans
+		name = MMM_tmp.1.b
+		ai_chance = { 
+			base = 1
+			modifier = {
+				add = 99
+				is_historical_focus_on = no
+			}
+		}
+		hidden_effect = {
+			start_civil_war = {
+				ideology = militarytotalism
+				size = 0.5
+				capital = 176
+				states = { 166 169 170 171 172 174 176 177 178 290 297 699 788 789 791 }
+			}
+			random_other_country = {
+				limit = {
+					original_tag = MMM
+					has_government = militarytotalism
+				}
+				set_equipment_fraction = 0.5
+				set_stability = 0.9
+				set_war_support = 0.8
+				load_oob = "tmp_MMA_walpurgisnacht"
+			}
+			set_global_flag = walpurgisnacht
+			set_country_flag = tmp_wnw_magicians
+			set_politics = {
+				ruling_party = liberalism_mod
+				elections_allowed = no
+			}
+
+			add_popularity = {
+				ideology = liberalism_mod
+				popularity = 0.3
+			}
+
+			add_popularity = {
+				ideology = authoritariancommunism
+				popularity = 0.4
+			}
+
+			add_popularity = {
+				ideology = militarytotalism
+				popularity = -1
+			}
+			random_other_country = {
+				limit = {
+					original_tag = MMM
+					has_government = militarytotalism
+				}
+				set_cosmetic_tag = MMA_civil_war
+				set_country_flag = tmp_wnw_witches
+			}
+			load_oob = "tmp_MMM_walpurgisnacht"
+			set_equipment_fraction = 0.5
+			set_stability = 0.9
+			set_war_support = 0.8
+			news_event = { id = ioi_news.3 hours = 6 }
+			add_ideas = hidden_buff
+		}
+		custom_effect_tooltip = tmp_magicians_chosen
+	}
+}

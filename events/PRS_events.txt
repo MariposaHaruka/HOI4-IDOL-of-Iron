@@ -1,0 +1,2877 @@
+add_namespace = PRS_amerikabomber
+
+#### INNER CIRCLE ###
+add_namespace = PRS_inner_circle
+add_namespace = PRS_inner_circle_emu
+add_namespace = PRS_inner_circle_rui
+add_namespace = PRS_inner_circle_tsukasa
+add_namespace = PRS_inner_circle_kanade
+add_namespace = PRS_inner_circle_saki
+add_namespace = PRS_inner_circle_honami
+add_namespace = PRS_inner_circle_shiho
+
+#PRS_amerikabomber
+country_event = {
+	id = PRS_amerikabomber.01
+	title = PRS_amerikabomber.01.t
+	desc = PRS_amerikabomber.01.desc
+	picture =  GFX_report_event_airplane_factory
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+	trigger = {
+		NOT = { is_special_project_completed = sp:sp_air_intercontinental_bomber }
+	}
+
+	option = { #Focke-Wulf
+		name = PRS_amerikabomber.01.a
+		
+		if = {
+			limit = { has_WUW = yes }
+			if = {
+				limit = { has_AAT = yes }
+				mio:PRS_focke_wulf_organization = {
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = -0.15 #Represents the MIO focused on Amerikabomber and not in boring regular planes. WWARNING! Any change on this penalty needs to be applied to the bonus coming after project completion (in scripted effect below)
+					add_mio_size = 1
+				}
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = when_intercontinental_bomber_project_is_completed_tt
+			effect_tooltip = {
+				PRS_amerika_bomber_focke_wulf_completion_SP_effects = yes
+				if = {
+					limit = { has_AAT = yes }
+					mio:PRS_focke_wulf_organization = {
+						PRS_amerika_bomber_focke_wulf_completion_MIO_effects = yes
+					}
+				}
+			}
+		}
+		else = {
+			add_equipment_bonus = {
+				name = PRS_22304
+				bonus = {
+					large_plane_airframe = { #Valid for BBA and not BBA
+						air_range = 0.15
+						air_bombing = 0.1
+						instant = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { has_AAT = yes }
+				mio:PRS_focke_wulf_organization = {
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.05
+					complete_mio_trait = GER_mio_trait_amerikabomber_learnings
+				}
+			}
+		}
+		set_country_flag = PRS_amerikabomber_focke_wulf_flag
+	}
+
+	option = { #Heinkel
+		name = PRS_amerikabomber.01.b
+		
+		if = {
+			limit = { has_WUW = yes }
+			if = {
+				limit = { has_AAT = yes }
+				mio:PRS_heinkel_organization = {
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = -0.15 #Represents the MIO focused on Amerikabomber and not in boring regular planes. WWARNING! Any change on this penalty needs to be applied to the bonus coming after project completion (in scripted effect below)
+					add_mio_size = 1
+				}
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = when_intercontinental_bomber_project_is_completed_tt
+			effect_tooltip = {
+				PRS_amerika_bomber_heinkel_completion_SP_effects = yes
+				if = {
+					limit = { has_AAT = yes }
+					mio:PRS_heinkel_organization = {
+						PRS_amerika_bomber_heinkel_completion_MIO_effects = yes
+					}
+				}
+			}
+		}
+		else = {
+			add_equipment_bonus = {
+				name = PRS_22304
+				bonus = {
+					large_plane_airframe = { #Valid for BBA and not BBA
+						air_range = 0.15
+						air_bombing = 0.1
+						instant = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { has_AAT = yes }
+				mio:PRS_heinkel_organization = {
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.05
+					complete_mio_trait = GER_mio_trait_amerikabomber_learnings
+				}
+			}
+		}
+		set_country_flag = PRS_amerikabomber_heinkel_flag
+	}
+
+	option = { #Junkers
+		name = PRS_amerikabomber.01.c
+		if = {
+			limit = { has_WUW = yes }
+			if = {
+				limit = { has_AAT = yes }
+				mio:PRS_junkers_organization = {
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = -0.15 #Represents the MIO focused on Amerikabomber and not in boring regular planes. WWARNING! Any change on this penalty needs to be applied to the bonus coming after project completion (in scripted effect below)
+					add_mio_size = 1
+				}
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = when_intercontinental_bomber_project_is_completed_tt
+			effect_tooltip = {
+				PRS_amerika_bomber_junkers_completion_SP_effects = yes
+				if = {
+					limit = { has_AAT = yes }
+					mio:PRS_junkers_organization = {
+						PRS_amerika_bomber_junkers_completion_MIO_effects = yes
+					}
+				}
+			}
+		}
+		else = {
+			add_equipment_bonus = {
+				name = PRS_22304
+				bonus = {
+					large_plane_airframe = { #Valid for BBA and not BBA
+						air_range = 0.15
+						air_bombing = 0.1
+						instant = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { has_AAT = yes }
+				mio:PRS_junkers_organization = {
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.05
+					complete_mio_trait = GER_mio_trait_amerikabomber_learnings
+				}
+			}
+		}
+		set_country_flag = PRS_amerikabomber_junkers_flag
+	}
+
+	option = { #Messerschmitt
+		name = PRS_amerikabomber.01.d
+		
+		if = {
+			limit = { has_WUW = yes }
+			if = {
+				limit = { has_AAT = yes }
+				mio:PRS_messerschmitt_organization = {
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = -0.15 #Represents the MIO focused on Amerikabomber and not in boring regular planes. WWARNING! Any change on this penalty needs to be applied to the bonus coming after project completion (in scripted effect below)
+					add_mio_size = 1
+				}
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = when_intercontinental_bomber_project_is_completed_tt
+			effect_tooltip = {
+				PRS_amerika_bomber_messerschmitt_completion_SP_effects = yes
+				if = {
+					limit = { has_AAT = yes }
+					mio:PRS_messerschmitt_organization = {
+						PRS_amerika_bomber_messerschmitt_completion_MIO_effects = yes
+					}
+				}
+			}
+		}
+		else = {
+			add_equipment_bonus = {
+				name = PRS_22304
+				bonus = {
+					large_plane_airframe = { #Valid for BBA and not BBA
+						air_range = 0.15
+						air_bombing = 0.1
+						instant = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { has_AAT = yes }
+				mio:PRS_messerschmitt_organization = {
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.05
+					complete_mio_trait = GER_mio_trait_amerikabomber_learnings
+				}
+			}
+		}
+		set_country_flag = PRS_amerikabomber_messerschmitt_flag
+	}
+}
+
+#PRS_inner_circle
+# New Character replaces an Ascended Advisor
+country_event = {
+	id = PRS_inner_circle.01
+	title = PRS_inner_circle.01.t
+	desc = PRS_inner_circle.01.desc
+	picture = "[GetAscendingAdvisorPortrait]"
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+
+	option = { #Replace Ascended Advisor 1
+		name = PRS_inner_circle.01.a
+
+		ai_chance = {
+			base = 1
+			modifier = { #Kanade should replace Shiho on Historical when he ascends
+				factor = 100
+				GER_is_historical_ai = yes
+				check_variable = { PRS_ascending_advisor = 4 } #Kanade Ascending
+				check_variable = { PRS_ascended_advisor_1 = 7 } #Shiho ascended in this slot
+			}
+		}
+		
+		GER_remove_replaced_advisor_1_effects = yes
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		set_variable = { PRS_ascended_advisor_1 = PRS_ascending_advisor }
+		GER_add_replacing_advisor_effects = yes
+
+		hidden_effect = {
+			#Cleaning vars / flags / etc
+			clear_variable = PRS_ascending_advisor
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+
+	option = { #Replace Ascended Advisor 2
+		name = PRS_inner_circle.01.b
+
+		ai_chance = {
+			base = 1
+			modifier = { #Kanade should replace Shiho on Historical when he ascends
+				factor = 100
+				GER_is_historical_ai = yes
+				check_variable = { PRS_ascending_advisor = 4 } #Kanade Ascending
+				check_variable = { PRS_ascended_advisor_2 = 7 } #Shiho ascended in this slot
+			}
+		}
+
+		GER_remove_replaced_advisor_2_effects = yes
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		set_variable = { PRS_ascended_advisor_2 = PRS_ascending_advisor }
+		GER_add_replacing_advisor_effects = yes
+
+		hidden_effect = {
+			#Cleaning vars / flags / etc
+			clear_variable = PRS_ascending_advisor
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+
+	option = { #Replace Ascended Advisor 3
+		name = PRS_inner_circle.01.c
+
+		ai_chance = {
+			base = 1
+			modifier = { #Kanade should replace Shiho on Historical when he ascends
+				factor = 100
+				GER_is_historical_ai = yes
+				check_variable = { PRS_ascending_advisor = 4 } #Kanade Ascending
+				check_variable = { PRS_ascended_advisor_3 = 7 } #Shiho ascended in this slot
+			}
+		}
+
+		GER_remove_replaced_advisor_3_effects = yes
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		set_variable = { PRS_ascended_advisor_3 = PRS_ascending_advisor }
+		GER_add_replacing_advisor_effects = yes
+
+		hidden_effect = {
+			#Cleaning vars / flags / etc
+			clear_variable = PRS_ascending_advisor
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+
+	option = { # Abort - Ditch this advisor
+		name = PRS_inner_circle.01.d
+
+		ai_chance = { #AI "knows" what its doing (pffff)
+			base = 0
+		}
+
+		if = {
+			limit = {
+				check_variable = { PRS_ascending_advisor = 1 }
+			}
+			uncomplete_national_focus = {
+				focus = PRS_31015
+				uncomplete_children = no
+				refund_political_power = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascending_advisor = 2 }
+			}
+			uncomplete_national_focus = {
+				focus = PRS_31013
+				uncomplete_children = no
+				refund_political_power = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascending_advisor = 3 }
+			}
+			uncomplete_national_focus = {
+				focus = PRS_31020
+				uncomplete_children = no
+				refund_political_power = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascending_advisor = 4 }
+			}
+			uncomplete_national_focus = {
+				focus = PRS_31024
+				uncomplete_children = no
+				refund_political_power = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascending_advisor = 5 }
+			}
+			uncomplete_national_focus = {
+				focus = PRS_31029
+				uncomplete_children = no
+				refund_political_power = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascending_advisor = 6 }
+			}
+			uncomplete_national_focus = {
+				focus = PRS_31033
+				uncomplete_children = no
+				refund_political_power = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascending_advisor = 7 }
+			}
+			uncomplete_national_focus = {
+				focus = PRS_31034
+				uncomplete_children = no
+				refund_political_power = yes
+			}
+		}
+		else = {
+			log = "Something went terribly wrong with your nazis (no wonder)"
+		}
+
+		hidden_effect = {
+			#Cleaning vars / flags / etc
+			clear_variable = PRS_ascending_advisor
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+			clr_country_flag = PRS_inner_circle_cd_flag
+		}
+	}
+}
+
+# A Strong Successor - Ascended Advisor can replace Hitler
+country_event = {
+	id = PRS_inner_circle.02
+	title = PRS_inner_circle.02.t
+	desc = PRS_inner_circle.02.desc
+	picture = "[GetFuhrerEventPortrait]"
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+
+	option = { # Ascended Advisor 1 becomes Country Leader
+		name = PRS_inner_circle.02.a
+
+		ai_chance = {
+			base = 1
+			modifier = { #Kanade & Göring are more likely to replace Hitler
+				add = 2
+				OR = {
+					check_variable = { PRS_ascended_advisor_1 = 3 } #Göring
+					check_variable = { PRS_ascended_advisor_1 = 4 } #Kanade
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 1 }
+			}
+			add_country_leader_role = {
+				character =  PRS_ootori_emu
+				country_leader = {
+					ideology = fascism_subtype
+					expire = 1965.1.1
+					traits = { PRS_emu_fuhrer } 
+				}
+				promote_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 2 }
+			}
+			add_country_leader_role = {
+				character =  PRS_kamishiro_rui
+				country_leader = {
+					ideology = fascism_subtype
+					expire = 1965.1.1
+					traits = { PRS_rui_fuhrer } 
+				}
+				promote_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 3 }
+			}
+			add_country_leader_role = {
+				character =  PRS_tenma_tsukasa
+				country_leader = {
+					ideology = fascism_subtype
+					expire = 1965.1.1
+					traits = { PRS_tsukasa_fuhrer } 
+				}
+				promote_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 4 }
+			}
+			if = {
+				limit = {
+					has_idea = PRS_kanade_director_reich_security
+				}
+				add_country_leader_role = {
+					character =  PRS_yoisaki_kanade
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { PRS_kanade_fuhrer_abwehr } 
+					}
+					promote_leader = yes
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character =  PRS_yoisaki_kanade
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { PRS_kanade_fuhrer_ss } 
+					}
+					promote_leader = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 5 }
+			}
+			if = {
+				limit = {
+					has_idea = PRS_saki_reich_minister_of_propaganda_master_no_lar
+				}
+				add_country_leader_role = {
+					character =  PRS_tenma_saki
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { PRS_saki_fuhrer_no_lar } 
+					}
+					promote_leader = yes
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character =  PRS_tenma_saki
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { PRS_saki_fuhrer } 
+					}
+					promote_leader = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 6 }
+			}
+			if = {
+				limit = {
+					has_idea = GER_hess_first_among_equals_no_aat
+				}
+				add_country_leader_role = {
+					character =  GER_rudolf_hess
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { GER_hess_fuhrer_no_aat } 
+					}
+					promote_leader = yes
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character =  GER_rudolf_hess
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { GER_hess_fuhrer } 
+					}
+					promote_leader = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = 7 }
+			}
+			add_country_leader_role = {
+				character =  PRS_hinomori_shiho
+				country_leader = {
+					ideology = fascism_subtype
+					expire = 1965.1.1
+					traits = { PRS_shiho_fuhrer } 
+				}
+				promote_leader = yes
+			}
+		}
+		else = {
+			log = "Couldn't find a valid Ascended Advisor (1) to Promote"
+		}
+
+		hidden_effect = {
+			GER_remove_replaced_advisor_1_effects = yes
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+			#Cleaning vars / flags / etc
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+
+	option = { # Ascended Advisor 2 becomes Country Leader
+		name = PRS_inner_circle.02.b
+
+		ai_chance = {
+			base = 1
+			modifier = { #Kanade & Göring are more likely to replace Hitler
+				add = 2
+				OR = {
+					check_variable = { PRS_ascended_advisor_2 = 3 } #Göring
+					check_variable = { PRS_ascended_advisor_2 = 4 } #Kanade
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 1 }
+			}
+			add_country_leader_role = {
+				character =  PRS_ootori_emu
+				country_leader = {
+					ideology = fascism_subtype
+					expire = 1965.1.1
+					traits = { PRS_emu_fuhrer } 
+				}
+				promote_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 2 }
+			}
+			add_country_leader_role = {
+				character =  PRS_kamishiro_rui
+				country_leader = {
+					ideology = fascism_subtype
+					expire = 1965.1.1
+					traits = { PRS_rui_fuhrer } 
+				}
+				promote_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 3 }
+			}
+			add_country_leader_role = {
+				character =  PRS_tenma_tsukasa
+				country_leader = {
+					ideology = fascism_subtype
+					expire = 1965.1.1
+					traits = { PRS_tsukasa_fuhrer } 
+				}
+				promote_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 4 }
+			}
+			if = {
+				limit = {
+					has_idea = PRS_kanade_director_reich_security
+				}
+				add_country_leader_role = {
+					character =  PRS_yoisaki_kanade
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { PRS_kanade_fuhrer_abwehr } 
+					}
+					promote_leader = yes
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character =  PRS_yoisaki_kanade
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { PRS_kanade_fuhrer_ss } 
+					}
+					promote_leader = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 5 }
+			}
+			if = {
+				limit = {
+					has_idea = PRS_saki_reich_minister_of_propaganda_master_no_lar
+				}
+				add_country_leader_role = {
+					character =  PRS_tenma_saki
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { PRS_saki_fuhrer_no_lar } 
+					}
+					promote_leader = yes
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character =  PRS_tenma_saki
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { PRS_saki_fuhrer } 
+					}
+					promote_leader = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 6 }
+			}
+			if = {
+				limit = {
+					has_idea = GER_hess_first_among_equals_no_aat
+				}
+				add_country_leader_role = {
+					character =  GER_rudolf_hess
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { GER_hess_fuhrer_no_aat } 
+					}
+					promote_leader = yes
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character =  GER_rudolf_hess
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { GER_hess_fuhrer } 
+					}
+					promote_leader = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = 7 }
+			}
+			add_country_leader_role = {
+				character =  PRS_hinomori_shiho
+				country_leader = {
+					ideology = fascism_subtype
+					expire = 1965.1.1
+					traits = { PRS_shiho_fuhrer } 
+				}
+				promote_leader = yes
+			}
+		}
+		else = {
+			log = "Couldn't find a valid Ascended Advisor (2) to Promote"
+		}
+
+		hidden_effect = {
+			GER_remove_replaced_advisor_2_effects = yes
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+			#Cleaning vars / flags / etc
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+
+	option = { # Ascended Advisor 3 becomes Country Leader
+		name = PRS_inner_circle.02.c
+
+		ai_chance = {
+			base = 1
+			modifier = { #Kanade & Göring are more likely to replace Hitler
+				add = 2
+				OR = {
+					check_variable = { PRS_ascended_advisor_3 = 3 } #Göring
+					check_variable = { PRS_ascended_advisor_3 = 4 } #Kanade
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 1 }
+			}
+			add_country_leader_role = {
+				character =  PRS_ootori_emu
+				country_leader = {
+					ideology = fascism_subtype
+					expire = 1965.1.1
+					traits = { PRS_emu_fuhrer } 
+				}
+				promote_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 2 }
+			}
+			add_country_leader_role = {
+				character =  PRS_kamishiro_rui
+				country_leader = {
+					ideology = fascism_subtype
+					expire = 1965.1.1
+					traits = { PRS_rui_fuhrer } 
+				}
+				promote_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 3 }
+			}
+			add_country_leader_role = {
+				character =  PRS_tenma_tsukasa
+				country_leader = {
+					ideology = fascism_subtype
+					expire = 1965.1.1
+					traits = { PRS_tsukasa_fuhrer } 
+				}
+				promote_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 4 }
+			}
+			if = {
+				limit = {
+					has_idea = PRS_kanade_director_reich_security
+				}
+				add_country_leader_role = {
+					character =  PRS_yoisaki_kanade
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { PRS_kanade_fuhrer_abwehr } 
+					}
+					promote_leader = yes
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character =  PRS_yoisaki_kanade
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { PRS_kanade_fuhrer_ss } 
+					}
+					promote_leader = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 5 }
+			}
+			if = {
+				limit = {
+					has_idea = PRS_saki_reich_minister_of_propaganda_master_no_lar
+				}
+				add_country_leader_role = {
+					character =  PRS_tenma_saki
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { PRS_saki_fuhrer_no_lar } 
+					}
+					promote_leader = yes
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character =  PRS_tenma_saki
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { PRS_saki_fuhrer } 
+					}
+					promote_leader = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 6 }
+			}
+			if = {
+				limit = {
+					has_idea = GER_hess_first_among_equals_no_aat
+				}
+				add_country_leader_role = {
+					character =  GER_rudolf_hess
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { GER_hess_fuhrer_no_aat } 
+					}
+					promote_leader = yes
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character =  GER_rudolf_hess
+					country_leader = {
+						ideology = fascism_subtype
+						expire = 1965.1.1
+						traits = { GER_hess_fuhrer } 
+					}
+					promote_leader = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = 7 }
+			}
+			add_country_leader_role = {
+				character =  PRS_hinomori_shiho
+				country_leader = {
+					ideology = fascism_subtype
+					expire = 1965.1.1
+					traits = { PRS_shiho_fuhrer } 
+				}
+				promote_leader = yes
+			}
+		}
+		else = {
+			log = "Couldn't find a valid Ascended Advisor (3) to Promote"
+		}
+
+		hidden_effect = {
+			GER_remove_replaced_advisor_3_effects = yes
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+			#Cleaning vars / flags / etc
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+
+	option = { # Abort!
+		name = PRS_inner_circle.02.d
+
+		ai_chance = {
+			base = 0
+		}
+
+		uncomplete_national_focus = {
+			focus = GER_a_strong_successor
+			uncomplete_children = no
+			refund_political_power = yes
+		}
+
+		hidden_effect = {
+			#Cleaning vars / flags / etc
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+}
+
+# INTRIGUE - Todt-Speer-Göring ME focuses
+country_event = {
+	id = PRS_inner_circle.03
+	title = PRS_inner_circle.03.t
+	desc = PRS_inner_circle.03.desc
+	picture = "[GetIndustrialIntrigueEventPortrait]"
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			has_shine_effect_on_focus = PRS_31017
+			has_shine_effect_on_focus = PRS_31017
+			has_shine_effect_on_focus = GER_plenipotentiary_of_the_four_year_plan
+		}
+		NOT = {
+			has_completed_focus = PRS_31017
+			has_completed_focus = PRS_31017
+			has_completed_focus = GER_plenipotentiary_of_the_four_year_plan
+		}
+	}
+
+	mean_time_to_happen	= {
+		days = 10
+		modifier = {
+			factor = 0.1
+			count_triggers = {
+				amount = 2
+				has_shine_effect_on_focus = PRS_31017
+				has_shine_effect_on_focus = PRS_31017
+				has_shine_effect_on_focus = GER_plenipotentiary_of_the_four_year_plan
+			}
+		}
+	}
+
+	#ASSIGN CHARACTER THAT "TRIGGERED" THE EVENT
+	immediate = {
+		hidden_effect = {
+			set_country_flag = PRS_inner_circle_event_pending_flag
+			if = { #Göring prevails
+				limit = {
+					has_shine_effect_on_focus = GER_plenipotentiary_of_the_four_year_plan
+				}
+				set_variable = { GER_intrigue_character = 3 }
+			}			
+			else_if = { #Then Speer
+				limit = {
+					has_shine_effect_on_focus = PRS_31017
+				}
+				set_variable = { GER_intrigue_character = 2 }
+			}			
+			else_if = { #Last Todt
+				limit = {
+					has_shine_effect_on_focus = PRS_31017
+				}
+				set_variable = { GER_intrigue_character = 1 }
+			}
+		}
+	}
+
+	option = { # Current Advisor is fine
+		name = PRS_inner_circle.03.a
+
+		ai_chance = {
+			base = 0
+			modifier = { #Speer is preferred for Historical plan
+				add = 100
+				check_variable = { GER_intrigue_character = 2 } #Speer
+				GER_is_historical_ai = yes
+			}
+			modifier = { #Göring is preferred for Alt-Fascist plan
+				add = 100
+				check_variable = { GER_intrigue_character = 3 } #Göring
+				GER_is_alt_fascist_ai = yes
+			}
+		}
+		
+		if = {
+			limit = {
+				check_variable = { GER_intrigue_character = 1 }
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_advisor_will_continue_focus_tt
+				CHARACTER = PRS_ootori_emu
+				FOCUS = PRS_31017
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { GER_intrigue_character = 2 }
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_advisor_will_continue_focus_tt
+				CHARACTER = PRS_kamishiro_rui
+				FOCUS = PRS_31017
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { GER_intrigue_character = 3 }
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_advisor_will_continue_focus_tt
+				CHARACTER = PRS_tenma_tsukasa
+				FOCUS = GER_plenipotentiary_of_the_four_year_plan
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		if = {
+			limit = {
+				has_shine_effect_on_focus = PRS_31017
+				NOT = { check_variable = { GER_intrigue_character = 1 } }
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_stop_progress_on_advisor_focus_tt
+				CHARACTER = PRS_ootori_emu
+				FOCUS = PRS_31017
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			hidden_effect = {
+				deactivate_shine_on_focus = PRS_31017
+				clr_country_flag = PRS_31017_in_progress_flag
+			}
+		}
+		if = {
+			limit = {
+				has_shine_effect_on_focus = PRS_31017
+				NOT = { check_variable = { GER_intrigue_character = 2 } }
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_stop_progress_on_advisor_focus_tt
+				CHARACTER = PRS_kamishiro_rui
+				FOCUS = PRS_31017
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			hidden_effect = {
+				deactivate_shine_on_focus = PRS_31017
+				clr_country_flag = PRS_31017_in_progress_flag
+			}
+		}
+		if = {
+			limit = {
+				has_shine_effect_on_focus = GER_plenipotentiary_of_the_four_year_plan
+				NOT = { check_variable = { GER_intrigue_character = 3 } }
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_stop_progress_on_advisor_focus_tt
+				CHARACTER = PRS_tenma_tsukasa
+				FOCUS = GER_plenipotentiary_of_the_four_year_plan
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			hidden_effect = {
+				deactivate_shine_on_focus = GER_plenipotentiary_of_the_four_year_plan
+				clr_country_flag = GER_plenipotentiary_of_the_four_year_plan_in_progress_flag
+			}
+		}
+
+		set_variable = { GER_industrialist_prevailed = GER_intrigue_character }
+
+		hidden_effect = {
+			#Cleaning vars / flags / etc
+			clear_variable = GER_intrigue_character
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+
+	option = { # Favor Todt
+		name = PRS_inner_circle.03.b
+
+		ai_chance = {
+			base = 1
+			modifier = { #Göring is preferred for Alt-Fascist plan - Choosing someone else only delays the country leader change
+				factor = 0.1 #Leaving non-0 so that there's fallback if for some reason Göring is not there
+				GER_is_alt_fascist_ai = yes
+			}
+		}
+
+		trigger = {
+			NOT = {
+				check_variable = { GER_intrigue_character = 1 }
+			}
+		}
+
+		if = { #Intrigue Character (that triggered the event) is in SLOT 1
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = GER_intrigue_character }
+			}
+			if = { #Todt is already an ascended advisor (no need to replace or ascend anyone)
+				limit = {
+					OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+						check_variable = { PRS_ascended_advisor_1 = 1 }
+						check_variable = { PRS_ascended_advisor_2 = 1 }
+						check_variable = { PRS_ascended_advisor_3 = 1 }
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_already_ascended_tt
+					CHARACTER = PRS_ootori_emu
+					FOCUS = PRS_31017
+					CHARACTER_2 = PRS_kamishiro_rui
+					CHARACTER_3 = PRS_tenma_tsukasa
+				}
+			}
+			else = { #Todt is not ascended (search for an open slot or replace Intrigue Character)
+				if = { #There is an open slot for Ascending Advisor, seize it!
+					limit = {
+						OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+							check_variable = { PRS_ascended_advisor_3 = 0 }
+						}
+					}
+					if = { #This is done like this because I'll have to copy-paste this thousands of times and I'd like to preserve what little is left of my brain, so safer to copy-paste the same stuff all the time.
+						limit = {
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_1 = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_2 = 1 }
+					}
+					else = {
+						set_variable = { PRS_ascended_advisor_3 = 1 }
+					}
+				}
+				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
+					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
+					GER_remove_replaced_advisor_1_effects = yes
+					custom_effect_tooltip = generic_skip_one_line_tt
+
+					#Set the new advisor
+					set_variable = { PRS_ascended_advisor_1 = 1 }
+				}
+				
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_new_ascending_tt
+					CHARACTER = PRS_ootori_emu
+					FOCUS = PRS_31017
+					CHARACTER_2 = PRS_kamishiro_rui
+					CHARACTER_3 = PRS_tenma_tsukasa
+					FOCUS_COMPLETED = PRS_31015
+					IDEA = idea_desc|GER_emu_reich_engineer
+				}
+
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { has_completed_focus = PRS_31015 }
+						}
+						unlock_national_focus = PRS_31015
+					}
+					GER_add_emu_effects = yes
+					country_event = { id = PRS_inner_circle_emu.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+				}
+			}
+		}
+		else_if = { #Intrigue Character (that triggered the event) is in SLOT 2
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = GER_intrigue_character }
+			}
+			if = {
+				limit = {
+					OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+						check_variable = { PRS_ascended_advisor_1 = 1 }
+						check_variable = { PRS_ascended_advisor_2 = 1 }
+						check_variable = { PRS_ascended_advisor_3 = 1 }
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_already_ascended_tt
+					CHARACTER = PRS_ootori_emu
+					FOCUS = PRS_31017
+					CHARACTER_2 = PRS_kamishiro_rui
+					CHARACTER_3 = PRS_tenma_tsukasa
+				}
+			}
+			else = { #Todt is not ascended (search for an open slot or replace Intrigue Character)
+				if = { #There is an open slot for Ascending Advisor, seize it!
+					limit = {
+						OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+							check_variable = { PRS_ascended_advisor_3 = 0 }
+						}
+					}
+					if = { #This is done like this because I'll have to copy-paste this thousands of times and I'd like to preserve what little is left of my brain, so safer to copy-paste the same stuff all the time.
+						limit = {
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_1 = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_2 = 1 }
+					}
+					else = {
+						set_variable = { PRS_ascended_advisor_3 = 1 }
+					}
+				}
+				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
+					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
+					GER_remove_replaced_advisor_2_effects = yes
+					custom_effect_tooltip = generic_skip_one_line_tt
+
+					#Set the new advisor
+					set_variable = { PRS_ascended_advisor_2 = 1 }
+				}
+				
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_new_ascending_tt
+					CHARACTER = PRS_ootori_emu
+					FOCUS = PRS_31017
+					CHARACTER_2 = PRS_kamishiro_rui
+					CHARACTER_3 = PRS_tenma_tsukasa
+					FOCUS_COMPLETED = PRS_31015
+					IDEA = idea_desc|GER_emu_reich_engineer
+				}
+
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { has_completed_focus = PRS_31015 }
+						}
+						unlock_national_focus = PRS_31015
+					}
+					GER_add_emu_effects = yes
+					country_event = { id = PRS_inner_circle_emu.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+				}
+			}
+		}
+		else_if = { #Intrigue Character (that triggered the event) is in SLOT 3
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = GER_intrigue_character }
+			}
+			if = {
+				limit = {
+					OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+						check_variable = { PRS_ascended_advisor_1 = 1 }
+						check_variable = { PRS_ascended_advisor_2 = 1 }
+						check_variable = { PRS_ascended_advisor_3 = 1 }
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_already_ascended_tt
+					CHARACTER = PRS_ootori_emu
+					FOCUS = PRS_31017
+					CHARACTER_2 = PRS_kamishiro_rui
+					CHARACTER_3 = PRS_tenma_tsukasa
+				}
+			}
+			else = { #Todt is not ascended (search for an open slot or replace Intrigue Character)
+				if = { #There is an open slot for Ascending Advisor, seize it!
+					limit = {
+						OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+							check_variable = { PRS_ascended_advisor_3 = 0 }
+						}
+					}
+					if = { #This is done like this because I'll have to copy-paste this thousands of times and I'd like to preserve what little is left of my brain, so safer to copy-paste the same stuff all the time.
+						limit = {
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_1 = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_2 = 1 }
+					}
+					else = {
+						set_variable = { PRS_ascended_advisor_3 = 1 }
+					}
+				}
+				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
+					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
+					GER_remove_replaced_advisor_3_effects = yes
+					custom_effect_tooltip = generic_skip_one_line_tt
+
+					#Set the new advisor
+					set_variable = { PRS_ascended_advisor_3 = 1 }
+				}
+				
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_new_ascending_tt
+					CHARACTER = PRS_ootori_emu
+					FOCUS = PRS_31017
+					CHARACTER_2 = PRS_kamishiro_rui
+					CHARACTER_3 = PRS_tenma_tsukasa
+					FOCUS_COMPLETED = PRS_31015
+					IDEA = idea_desc|GER_emu_reich_engineer
+				}
+
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { has_completed_focus = PRS_31015 }
+						}
+						unlock_national_focus = PRS_31015
+					}
+					GER_add_emu_effects = yes
+					country_event = { id = PRS_inner_circle_emu.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+				}
+			}
+		}
+		else = {
+			log = "Intrigue Character index in variable seems to not match any ascended advisor."
+		}
+
+		# SET ADVISOR PREVAILING AND STOP THE OTHER ME FOCUSES
+		hidden_effect = {
+			set_variable = { GER_industrialist_prevailed = 1 }
+			if = {
+				limit = {
+					has_shine_effect_on_focus = PRS_31017
+				}
+				deactivate_shine_on_focus = PRS_31017
+				clr_country_flag = PRS_31017_in_progress_flag
+			}
+			if = {
+				limit = {
+					has_shine_effect_on_focus = GER_plenipotentiary_of_the_four_year_plan
+				}
+				deactivate_shine_on_focus = GER_plenipotentiary_of_the_four_year_plan
+				clr_country_flag = GER_plenipotentiary_of_the_four_year_plan_in_progress_flag
+			}
+		}
+
+		hidden_effect = {
+			#Cleaning vars / flags / etc
+			clear_variable = GER_intrigue_character
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+
+	option = { # Favor Speer
+		name = PRS_inner_circle.03.c
+
+		ai_chance = {
+			base = 1
+			modifier = { #Speer is preferred for Historical plan
+				add = 100
+				GER_is_historical_ai = yes
+			}
+			modifier = { #Göring is preferred for Alt-Fascist plan - Choosing someone else only delays the country leader change
+				factor = 0.1 #Leaving non-0 so that there's fallback if for some reason Göring is not there
+				GER_is_alt_fascist_ai = yes
+			}
+		}
+
+		trigger = {
+			NOT = {
+				check_variable = { GER_intrigue_character = 2 }
+			}
+		}
+
+		if = { #Intrigue Character (that triggered the event) is in SLOT 1
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = GER_intrigue_character }
+			}
+			if = {
+				limit = {
+					OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+						check_variable = { PRS_ascended_advisor_1 = 2 }
+						check_variable = { PRS_ascended_advisor_2 = 2 }
+						check_variable = { PRS_ascended_advisor_3 = 2 }
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_already_ascended_tt
+					CHARACTER = PRS_kamishiro_rui
+					FOCUS = PRS_31017
+					CHARACTER_2 = PRS_ootori_emu
+					CHARACTER_3 = PRS_tenma_tsukasa
+				}
+			}
+			else = { #Speer is not ascended (search for an open slot or replace Intrigue Character)
+				if = { #There is an open slot for Ascending Advisor, seize it!
+					limit = {
+						OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+							check_variable = { PRS_ascended_advisor_3 = 0 }
+						}
+					}
+					if = { #This is done like this because I'll have to copy-paste this thousands of times and I'd like to preserve what little is left of my brain, so safer to copy-paste the same stuff all the time.
+						limit = {
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_1 = 2 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_2 = 2 }
+					}
+					else = {
+						set_variable = { PRS_ascended_advisor_3 = 2 }
+					}
+				}
+				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
+					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
+					GER_remove_replaced_advisor_1_effects = yes
+					custom_effect_tooltip = generic_skip_one_line_tt
+
+					#Set the new advisor
+					set_variable = { PRS_ascended_advisor_1 = 2 }
+				}
+				
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_new_ascending_tt
+					CHARACTER = PRS_kamishiro_rui
+					FOCUS = PRS_31017
+					CHARACTER_2 = PRS_ootori_emu
+					CHARACTER_3 = PRS_tenma_tsukasa
+					FOCUS_COMPLETED = PRS_31013
+					IDEA = idea_desc|GER_rui_reich_architect
+				}
+
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { has_completed_focus = PRS_31013 }
+						}
+						unlock_national_focus = PRS_31013
+					}
+					GER_add_rui_effects = yes
+					country_event = { id = PRS_inner_circle_rui.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+				}
+			}
+		}
+		else_if = { #Intrigue Character (that triggered the event) is in SLOT 2
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = GER_intrigue_character }
+			}
+			if = {
+				limit = {
+					OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+						check_variable = { PRS_ascended_advisor_1 = 2 }
+						check_variable = { PRS_ascended_advisor_2 = 2 }
+						check_variable = { PRS_ascended_advisor_3 = 2 }
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_already_ascended_tt
+					CHARACTER = PRS_kamishiro_rui
+					FOCUS = PRS_31017
+					CHARACTER_2 = PRS_ootori_emu
+					CHARACTER_3 = PRS_tenma_tsukasa
+				}
+			}
+			else = { #Speer is not ascended (search for an open slot or replace Intrigue Character)
+				if = { #There is an open slot for Ascending Advisor, seize it!
+					limit = {
+						OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+							check_variable = { PRS_ascended_advisor_3 = 0 }
+						}
+					}
+					if = { #This is done like this because I'll have to copy-paste this thousands of times and I'd like to preserve what little is left of my brain, so safer to copy-paste the same stuff all the time.
+						limit = {
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_1 = 2 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_2 = 2 }
+					}
+					else = {
+						set_variable = { PRS_ascended_advisor_3 = 2 }
+					}
+				}
+				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
+					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
+					GER_remove_replaced_advisor_2_effects = yes
+					custom_effect_tooltip = generic_skip_one_line_tt
+
+					#Set the new advisor
+					set_variable = { PRS_ascended_advisor_2 = 2 }
+				}
+				
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_new_ascending_tt
+					CHARACTER = PRS_kamishiro_rui
+					FOCUS = PRS_31017
+					CHARACTER_2 = PRS_ootori_emu
+					CHARACTER_3 = PRS_tenma_tsukasa
+					FOCUS_COMPLETED = PRS_31013
+					IDEA = idea_desc|GER_rui_reich_architect
+				}
+
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { has_completed_focus = PRS_31013 }
+						}
+						unlock_national_focus = PRS_31013
+					}
+					GER_add_rui_effects = yes
+					country_event = { id = PRS_inner_circle_rui.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+				}
+			}
+		}
+		else_if = { #Intrigue Character (that triggered the event) is in SLOT 3
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = GER_intrigue_character }
+			}
+			if = {
+				limit = {
+					OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+						check_variable = { PRS_ascended_advisor_1 = 2 }
+						check_variable = { PRS_ascended_advisor_2 = 2 }
+						check_variable = { PRS_ascended_advisor_3 = 2 }
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_already_ascended_tt
+					CHARACTER = PRS_kamishiro_rui
+					FOCUS = PRS_31017
+					CHARACTER_2 = PRS_ootori_emu
+					CHARACTER_3 = PRS_tenma_tsukasa
+				}
+			}
+			else = { #Speer is not ascended (search for an open slot or replace Intrigue Character)
+				if = { #There is an open slot for Ascending Advisor, seize it!
+					limit = {
+						OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+							check_variable = { PRS_ascended_advisor_3 = 0 }
+						}
+					}
+					if = { #This is done like this because I'll have to copy-paste this thousands of times and I'd like to preserve what little is left of my brain, so safer to copy-paste the same stuff all the time.
+						limit = {
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_1 = 2 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_2 = 2 }
+					}
+					else = {
+						set_variable = { PRS_ascended_advisor_3 = 2 }
+					}
+				}
+				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
+					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
+					GER_remove_replaced_advisor_3_effects = yes
+					custom_effect_tooltip = generic_skip_one_line_tt
+
+					#Set the new advisor
+					set_variable = { PRS_ascended_advisor_3 = 2 }
+				}
+				
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_new_ascending_tt
+					CHARACTER = PRS_kamishiro_rui
+					FOCUS = PRS_31017
+					CHARACTER_2 = PRS_ootori_emu
+					CHARACTER_3 = PRS_tenma_tsukasa
+					FOCUS_COMPLETED = PRS_31013
+					IDEA = idea_desc|GER_rui_reich_architect
+				}
+
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { has_completed_focus = PRS_31013 }
+						}
+						unlock_national_focus = PRS_31013
+					}
+					GER_add_rui_effects = yes
+					country_event = { id = PRS_inner_circle_rui.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+				}
+			}
+		}
+		else = {
+			log = "Intrigue Character index in variable seems to not match any ascended advisor."
+		}
+
+		# SET ADVISOR PREVAILING AND STOP THE OTHER ME FOCUSES
+		hidden_effect = {
+			set_variable = { GER_industrialist_prevailed = 2 }
+			if = {
+				limit = {
+					has_shine_effect_on_focus = PRS_31017
+				}
+				deactivate_shine_on_focus = PRS_31017
+				clr_country_flag = PRS_31017_in_progress_flag
+			}
+			if = {
+				limit = {
+					has_shine_effect_on_focus = GER_plenipotentiary_of_the_four_year_plan
+				}
+				deactivate_shine_on_focus = GER_plenipotentiary_of_the_four_year_plan
+				clr_country_flag = GER_plenipotentiary_of_the_four_year_plan_in_progress_flag
+			}
+		}
+
+		hidden_effect = {
+			#Cleaning vars / flags / etc
+			clear_variable = GER_intrigue_character
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+
+	option = { # Favor Göring
+		name = PRS_inner_circle.03.d
+
+		ai_chance = {
+			base = 1
+			modifier = { #Göring is preferred for Alt-Fascist plan
+				add = 100
+				GER_is_alt_fascist_ai = yes
+			}
+		}
+
+		trigger = {
+			NOT = {
+				check_variable = { GER_intrigue_character = 3 }
+			}
+			has_completed_focus = PRS_31021
+		}
+
+		if = { #Intrigue Character (that triggered the event) is in SLOT 1
+			limit = {
+				check_variable = { PRS_ascended_advisor_1 = GER_intrigue_character }
+			}
+			if = {
+				limit = {
+					OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+						check_variable = { PRS_ascended_advisor_1 = 3 }
+						check_variable = { PRS_ascended_advisor_2 = 3 }
+						check_variable = { PRS_ascended_advisor_3 = 3 }
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_already_ascended_tt
+					CHARACTER = PRS_tenma_tsukasa
+					FOCUS = GER_plenipotentiary_of_the_four_year_plan
+					CHARACTER_2 = PRS_ootori_emu
+					CHARACTER_3 = PRS_kamishiro_rui
+				}
+			}
+			else = { #Göring is not ascended (search for an open slot or replace Intrigue Character)
+				if = { #There is an open slot for Ascending Advisor, seize it!
+					limit = {
+						OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+							check_variable = { PRS_ascended_advisor_3 = 0 }
+						}
+					}
+					if = { #This is done like this because I'll have to copy-paste this thousands of times and I'd like to preserve what little is left of my brain, so safer to copy-paste the same stuff all the time.
+						limit = {
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_1 = 3 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_2 = 3 }
+					}
+					else = {
+						set_variable = { PRS_ascended_advisor_3 = 3 }
+					}
+				}
+				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
+					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
+					GER_remove_replaced_advisor_1_effects = yes
+					custom_effect_tooltip = generic_skip_one_line_tt
+
+					#Set the new advisor
+					set_variable = { PRS_ascended_advisor_1 = 3 }
+				}
+				
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_new_ascending_tt
+					CHARACTER = PRS_tenma_tsukasa
+					FOCUS = GER_plenipotentiary_of_the_four_year_plan
+					CHARACTER_2 = PRS_ootori_emu
+					CHARACTER_3 = PRS_kamishiro_rui
+					FOCUS_COMPLETED = PRS_31020
+					IDEA = idea_desc|PRS_tsukasa_overseer_four_year_plan
+				}
+
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { has_completed_focus = PRS_31020 }
+						}
+						unlock_national_focus = PRS_31020
+					}
+					GER_add_tsukasa_effects = yes
+					country_event = { id = PRS_inner_circle_tsukasa.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+				}
+			}
+		}
+		else_if = { #Intrigue Character (that triggered the event) is in SLOT 2
+			limit = {
+				check_variable = { PRS_ascended_advisor_2 = GER_intrigue_character }
+			}
+			if = {
+				limit = {
+					OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+						check_variable = { PRS_ascended_advisor_1 = 3 }
+						check_variable = { PRS_ascended_advisor_2 = 3 }
+						check_variable = { PRS_ascended_advisor_3 = 3 }
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_already_ascended_tt
+					CHARACTER = PRS_tenma_tsukasa
+					FOCUS = GER_plenipotentiary_of_the_four_year_plan
+					CHARACTER_2 = PRS_ootori_emu
+					CHARACTER_3 = PRS_kamishiro_rui
+				}
+			}
+			else = { #Göring is not ascended (search for an open slot or replace Intrigue Character)
+				if = { #There is an open slot for Ascending Advisor, seize it!
+					limit = {
+						OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+							check_variable = { PRS_ascended_advisor_3 = 0 }
+						}
+					}
+					if = { #This is done like this because I'll have to copy-paste this thousands of times and I'd like to preserve what little is left of my brain, so safer to copy-paste the same stuff all the time.
+						limit = {
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_1 = 3 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_2 = 3 }
+					}
+					else = {
+						set_variable = { PRS_ascended_advisor_3 = 3 }
+					}
+				}
+				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
+					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
+					GER_remove_replaced_advisor_2_effects = yes
+					custom_effect_tooltip = generic_skip_one_line_tt
+
+					#Set the new advisor
+					set_variable = { PRS_ascended_advisor_2 = 3 }
+				}
+				
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_new_ascending_tt
+					CHARACTER = PRS_tenma_tsukasa
+					FOCUS = GER_plenipotentiary_of_the_four_year_plan
+					CHARACTER_2 = PRS_ootori_emu
+					CHARACTER_3 = PRS_kamishiro_rui
+					FOCUS_COMPLETED = PRS_31020
+					IDEA = idea_desc|PRS_tsukasa_overseer_four_year_plan
+				}
+
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { has_completed_focus = PRS_31020 }
+						}
+						unlock_national_focus = PRS_31020
+					}
+					GER_add_tsukasa_effects = yes
+					country_event = { id = PRS_inner_circle_tsukasa.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+				}
+			}
+		}
+		else_if = { #Intrigue Character (that triggered the event) is in SLOT 3
+			limit = {
+				check_variable = { PRS_ascended_advisor_3 = GER_intrigue_character }
+			}
+			if = {
+				limit = {
+					OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+						check_variable = { PRS_ascended_advisor_1 = 3 }
+						check_variable = { PRS_ascended_advisor_2 = 3 }
+						check_variable = { PRS_ascended_advisor_3 = 3 }
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_already_ascended_tt
+					CHARACTER = PRS_tenma_tsukasa
+					FOCUS = GER_plenipotentiary_of_the_four_year_plan
+					CHARACTER_2 = PRS_ootori_emu
+					CHARACTER_3 = PRS_kamishiro_rui
+				}
+			}
+			else = { #Göring is not ascended (search for an open slot or replace Intrigue Character)
+				if = { #There is an open slot for Ascending Advisor, seize it!
+					limit = {
+						OR = { #Only need to check for two positions but this way is the same trigger in all places in this event
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+							check_variable = { PRS_ascended_advisor_3 = 0 }
+						}
+					}
+					if = { #This is done like this because I'll have to copy-paste this thousands of times and I'd like to preserve what little is left of my brain, so safer to copy-paste the same stuff all the time.
+						limit = {
+							check_variable = { PRS_ascended_advisor_1 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_1 = 3 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { PRS_ascended_advisor_2 = 0 }
+						}
+						set_variable = { PRS_ascended_advisor_2 = 3 }
+					}
+					else = {
+						set_variable = { PRS_ascended_advisor_3 = 3 }
+					}
+				}
+				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
+					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
+					GER_remove_replaced_advisor_3_effects = yes
+					custom_effect_tooltip = generic_skip_one_line_tt
+
+					#Set the new advisor
+					set_variable = { PRS_ascended_advisor_3 = 3 }
+				}
+				
+				custom_effect_tooltip = {
+					localization_key = GER_intrigue_replacing_advisor_new_ascending_tt
+					CHARACTER = PRS_tenma_tsukasa
+					FOCUS = GER_plenipotentiary_of_the_four_year_plan
+					CHARACTER_2 = PRS_ootori_emu
+					CHARACTER_3 = PRS_kamishiro_rui
+					FOCUS_COMPLETED = PRS_31020
+					IDEA = idea_desc|PRS_tsukasa_overseer_four_year_plan
+				}
+
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { has_completed_focus = PRS_31020 }
+						}
+						unlock_national_focus = PRS_31020
+					}
+					GER_add_tsukasa_effects = yes
+					country_event = { id = PRS_inner_circle_tsukasa.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+				}
+			}
+		}
+		else = {
+			log = "Intrigue Character index in variable seems to not match any ascended advisor."
+		}
+
+		# SET ADVISOR PREVAILING AND STOP THE OTHER ME FOCUSES
+		hidden_effect = {
+			set_variable = { GER_industrialist_prevailed = 3 }
+			if = {
+				limit = {
+					has_shine_effect_on_focus = PRS_31017
+				}
+				deactivate_shine_on_focus = PRS_31017
+				clr_country_flag = PRS_31017_in_progress_flag
+			}
+			if = {
+				limit = {
+					has_shine_effect_on_focus = PRS_31017
+				}
+				deactivate_shine_on_focus = PRS_31017
+				clr_country_flag = PRS_31017_in_progress_flag
+			}
+		}
+
+		hidden_effect = {
+			#Cleaning vars / flags / etc
+			clear_variable = GER_intrigue_character
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+}
+
+
+
+# EMU - Start work on Focus
+country_event = {
+	id = PRS_inner_circle_emu.01
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31015
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 1 }
+			check_variable = { PRS_ascended_advisor_2 = 1 }
+			check_variable = { PRS_ascended_advisor_3 = 1 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = PRS_31016 }
+			}
+			activate_shine_on_focus = PRS_31016
+			set_country_flag = { flag = PRS_31016_in_progress_flag days = @inner_circle_time_tier_1_flag value = 1 }
+			country_event = { id = PRS_inner_circle_emu.02 days = @inner_circle_time_tier_1 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = PRS_31017 }
+				NOT = { check_variable = { GER_industrialist_prevailed = 2 } } #Speer Prevailed in the Industrialist Intrigue
+				NOT = { check_variable = { GER_industrialist_prevailed = 3 } } #Göring Prevailed in the Industrialist Intrigue
+			}
+			activate_shine_on_focus = PRS_31017
+			set_country_flag = { flag = PRS_31017_in_progress_flag days = @inner_circle_time_tier_2_flag value = 1 }
+			country_event = { id = PRS_inner_circle_emu.02 days = @inner_circle_time_tier_2 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = PRS_31019 }
+				NOT = { has_shine_effect_on_focus = PRS_31019 } #Speer is working on this already
+				NOT = { check_variable = { GER_industrialist_prevailed = 2 } } #Speer Prevailed in the Industrialist Intrigue
+				NOT = { check_variable = { GER_industrialist_prevailed = 3 } } #Göring Prevailed in the Industrialist Intrigue
+			}
+			activate_shine_on_focus = PRS_31019
+			set_country_flag = { flag = PRS_31019_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
+			country_event = { id = PRS_inner_circle_emu.02 days = @inner_circle_time_tier_3 }
+			set_variable = { GER_wonder_weapons_focus_advisor = 1 }
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH EMU's FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+
+# EMU - Complete Focus
+country_event = {
+	id = PRS_inner_circle_emu.02
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31015
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 1 }
+			check_variable = { PRS_ascended_advisor_2 = 1 }
+			check_variable = { PRS_ascended_advisor_3 = 1 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = PRS_31016
+			}
+			complete_national_focus = {
+				focus = PRS_31016
+				use_side_message = yes
+				originator_name = PRS_ootori_emu
+			}
+			clr_country_flag = PRS_31016_in_progress_flag
+			country_event = { id = PRS_inner_circle_emu.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = PRS_31017
+			}
+			complete_national_focus = {
+				focus = PRS_31017
+				use_side_message = yes
+				originator_name = PRS_ootori_emu
+			}
+			clr_country_flag = PRS_31017_in_progress_flag
+			country_event = { id = PRS_inner_circle_emu.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = PRS_31019
+				check_variable = { GER_wonder_weapons_focus_advisor = 1 } #It is Todt working on it
+			}
+			complete_national_focus = {
+				focus = PRS_31019
+				use_side_message = yes
+				originator_name = PRS_ootori_emu
+			}
+			clr_country_flag = PRS_31019_in_progress_flag
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH EMU's FOCUS BRANCH - Cannot complete focus"
+		}
+	}
+}
+
+
+# RUI - Start work on Focus
+country_event = {
+	id = PRS_inner_circle_rui.01
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31013
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 2 }
+			check_variable = { PRS_ascended_advisor_2 = 2 }
+			check_variable = { PRS_ascended_advisor_3 = 2 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = PRS_31014 }
+			}
+			activate_shine_on_focus = PRS_31014
+			set_country_flag = { flag = PRS_31014_in_progress_flag days = @inner_circle_time_tier_1_flag value = 1 }
+			country_event = { id = PRS_inner_circle_rui.02 days = @inner_circle_time_tier_1 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = PRS_31017 }
+				NOT = { check_variable = { GER_industrialist_prevailed = 1 } } #Todt Prevailed in the Industrialist Intrigue
+				NOT = { check_variable = { GER_industrialist_prevailed = 3 } } #Göring Prevailed in the Industrialist Intrigue
+			}
+			activate_shine_on_focus = PRS_31017
+			set_country_flag = { flag = PRS_31017_in_progress_flag days = @inner_circle_time_tier_2_flag value = 1 }
+			country_event = { id = PRS_inner_circle_rui.02 days = @inner_circle_time_tier_2 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = PRS_31018 }
+				NOT = { has_shine_effect_on_focus = PRS_31018 } #Todt is working on this already
+				NOT = { check_variable = { GER_industrialist_prevailed = 1 } } #Todt Prevailed in the Industrialist Intrigue
+				NOT = { check_variable = { GER_industrialist_prevailed = 3 } } #Göring Prevailed in the Industrialist Intrigue
+			}
+			activate_shine_on_focus = PRS_31018
+			set_country_flag = { flag = PRS_31018_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
+			country_event = { id = PRS_inner_circle_rui.02 days = @inner_circle_time_tier_3 }
+			set_variable = { GER_wonder_weapons_focus_advisor = 2 }
+
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH RUI's FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+
+# RUI - Complete Focus
+country_event = {
+	id = PRS_inner_circle_rui.02
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31013
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 2 }
+			check_variable = { PRS_ascended_advisor_2 = 2 }
+			check_variable = { PRS_ascended_advisor_3 = 2 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = PRS_31014
+			}
+			complete_national_focus = {
+				focus = PRS_31014
+				use_side_message = yes
+				originator_name = PRS_kamishiro_rui
+			}
+			clr_country_flag = PRS_31014_in_progress_flag
+			country_event = { id = PRS_inner_circle_rui.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = PRS_31017
+			}
+			complete_national_focus = {
+				focus = PRS_31017
+				use_side_message = yes
+				originator_name = PRS_kamishiro_rui
+			}
+			clr_country_flag = PRS_31017_in_progress_flag
+			country_event = { id = PRS_inner_circle_rui.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = PRS_31018
+				check_variable = { GER_wonder_weapons_focus_advisor = 2 } #It is Speer working on it
+			}
+			complete_national_focus = {
+				focus = PRS_31018
+				use_side_message = yes
+				originator_name = PRS_kamishiro_rui
+			}
+			clr_country_flag = PRS_31018_in_progress_flag
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH RUI's FOCUS BRANCH - Cannot complete focus"
+		}
+	}
+}
+
+
+
+# TSUKASA - Start work on Focus
+country_event = {
+	id = PRS_inner_circle_tsukasa.01
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31020
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 3 }
+			check_variable = { PRS_ascended_advisor_2 = 3 }
+			check_variable = { PRS_ascended_advisor_3 = 3 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = PRS_31021 }
+			}
+			activate_shine_on_focus = PRS_31021
+			set_country_flag = { flag = PRS_31021_in_progress_flag days = @inner_circle_time_tier_1_flag value = 1 }
+			country_event = { id = PRS_inner_circle_tsukasa.02 days = @inner_circle_time_tier_1 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = GER_plenipotentiary_of_the_four_year_plan }
+				NOT = { check_variable = { GER_industrialist_prevailed = 1 } } #Todt Prevailed in the Industrialist Intrigue
+				NOT = { check_variable = { GER_industrialist_prevailed = 2 } } #Speer Prevailed in the Industrialist Intrigue
+			}
+			activate_shine_on_focus = GER_plenipotentiary_of_the_four_year_plan
+			set_country_flag = { flag = GER_plenipotentiary_of_the_four_year_plan_in_progress_flag days = @inner_circle_time_tier_2_flag value = 1 }
+			country_event = { id = PRS_inner_circle_tsukasa.02 days = @inner_circle_time_tier_2 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = GER_integration_of_puppet_economies }
+				NOT = { check_variable = { GER_industrialist_prevailed = 1 } } #Todt Prevailed in the Industrialist Intrigue
+				NOT = { check_variable = { GER_industrialist_prevailed = 2 } } #Speer Prevailed in the Industrialist Intrigue
+			}
+			activate_shine_on_focus = GER_integration_of_puppet_economies
+			set_country_flag = { flag = GER_integration_of_puppet_economies_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
+			country_event = { id = PRS_inner_circle_tsukasa.02 days = @inner_circle_time_tier_3 }
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH TSUKASA's FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+
+# TSUKASA - Complete Focus
+country_event = {
+	id = PRS_inner_circle_tsukasa.02
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31020
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 3 }
+			check_variable = { PRS_ascended_advisor_2 = 3 }
+			check_variable = { PRS_ascended_advisor_3 = 3 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = PRS_31020
+			}
+			complete_national_focus = {
+				focus = PRS_31020
+				use_side_message = yes
+				originator_name = PRS_tenma_tsukasa
+			}
+			clr_country_flag = PRS_31020_in_progress_flag
+			country_event = { id = PRS_inner_circle_tsukasa.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GER_plenipotentiary_of_the_four_year_plan
+			}
+			complete_national_focus = {
+				focus = GER_plenipotentiary_of_the_four_year_plan
+				use_side_message = yes
+				originator_name = PRS_tenma_tsukasa
+			}
+			clr_country_flag = GER_plenipotentiary_of_the_four_year_plan_in_progress_flag
+			country_event = { id = PRS_inner_circle_tsukasa.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GER_integration_of_puppet_economies
+			}
+			complete_national_focus = {
+				focus = GER_integration_of_puppet_economies
+				use_side_message = yes
+				originator_name = PRS_tenma_tsukasa
+			}
+			clr_country_flag = GER_integration_of_puppet_economies_in_progress_flag
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH TSUKASA's FOCUS BRANCH - Cannot complete focus"
+		}
+	}
+}
+
+
+# KANADE - Pick branch
+country_event = {
+	id = PRS_inner_circle_kanade.00
+	title = PRS_inner_circle_kanade.00.t
+	desc = PRS_inner_circle_kanade.00.desc
+	picture = GFX_report_event_PRS_kanade
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+
+	option = { #SS
+		name = PRS_inner_circle_kanade.00.a
+		ai_chance = {
+			base = 10
+		}
+		custom_effect_tooltip = PRS_inner_circle_kanade_ss_tt
+
+		hidden_effect = {
+			PRS_yoisaki_kanade = {
+				set_character_flag = PRS_kanade_ss_focus_flag
+			}
+			country_event = { id = PRS_inner_circle_kanade.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+
+	option = { #Gestapo
+		name = PRS_inner_circle_kanade.00.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0.01
+				GER_is_historical_ai = yes
+			}
+		}
+		custom_effect_tooltip = PRS_inner_circle_kanade_gestapo_tt
+
+		hidden_effect = {
+			PRS_yoisaki_kanade = {
+				set_character_flag = PRS_kanade_gestapo_focus_flag
+			}
+			country_event = { id = PRS_inner_circle_kanade.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+
+			clr_country_flag = PRS_inner_circle_event_pending_flag
+		}
+	}
+}
+
+
+# KANADE - Start work on Focus
+country_event = {
+	id = PRS_inner_circle_kanade.01
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31024
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 4 }
+			check_variable = { PRS_ascended_advisor_2 = 4 }
+			check_variable = { PRS_ascended_advisor_3 = 4 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				PRS_yoisaki_kanade = { has_character_flag = PRS_kanade_ss_focus_flag }
+			}
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_expand_ss_security_duties }
+				}
+				activate_shine_on_focus = GER_expand_ss_security_duties
+				set_country_flag = { flag = GER_expand_ss_security_duties_in_progress_flag days = @inner_circle_time_tier_1_flag value = 1 }
+				country_event = { id = PRS_inner_circle_kanade.02 days = @inner_circle_time_tier_1 }
+			}
+			else_if = {
+				limit = {
+					NOT = { has_completed_focus = GER_strengthen_the_waffen_ss }
+				}
+				activate_shine_on_focus = GER_strengthen_the_waffen_ss
+				set_country_flag = { flag = GER_strengthen_the_waffen_ss_in_progress_flag days = @inner_circle_time_tier_2_flag value = 1 }
+				country_event = { id = PRS_inner_circle_kanade.02 days = @inner_circle_time_tier_2 }
+			}
+			else_if = {
+				limit = {
+					NOT = { has_completed_focus = GER_hegemony_of_the_ss }
+				}
+				activate_shine_on_focus = GER_hegemony_of_the_ss
+				set_country_flag = { flag = GER_hegemony_of_the_ss_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
+				country_event = { id = PRS_inner_circle_kanade.02 days = @inner_circle_time_tier_3 }
+			}
+		}
+		else_if = {
+			limit = {
+				PRS_yoisaki_kanade = { has_character_flag = PRS_kanade_gestapo_focus_flag }
+			}
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_expand_gestapo }
+				}
+				activate_shine_on_focus = GER_expand_gestapo
+				set_country_flag = { flag = GER_expand_gestapo_in_progress_flag days = @inner_circle_time_tier_1_flag value = 1 }
+				country_event = { id = PRS_inner_circle_kanade.02 days = @inner_circle_time_tier_1 }
+			}
+			else_if = {
+				limit = {
+					NOT = { has_completed_focus = GER_absorb_the_abwehr }
+				}
+				activate_shine_on_focus = GER_absorb_the_abwehr
+				set_country_flag = { flag = GER_absorb_the_abwehr_in_progress_flag days = @inner_circle_time_tier_2_flag value = 1 }
+				country_event = { id = PRS_inner_circle_kanade.02 days = @inner_circle_time_tier_2 }
+			}
+			else_if = {
+				limit = {
+					NOT = { has_completed_focus = GER_hegemony_of_the_ss }
+				}
+				activate_shine_on_focus = GER_hegemony_of_the_ss
+				set_country_flag = { flag = GER_hegemony_of_the_ss_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
+				country_event = { id = PRS_inner_circle_kanade.02 days = @inner_circle_time_tier_2 }
+			}
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH HIMMLER's FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+
+# HIMMLER - Complete Focus
+country_event = {
+	id = PRS_inner_circle_kanade.02
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31024
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 4 }
+			check_variable = { PRS_ascended_advisor_2 = 4 }
+			check_variable = { PRS_ascended_advisor_3 = 4 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = GER_expand_ss_security_duties
+			}
+			complete_national_focus = {
+				focus = GER_expand_ss_security_duties
+				use_side_message = yes
+				originator_name = PRS_yoisaki_kanade
+			}
+			clr_country_flag = GER_expand_ss_security_duties_in_progress_flag
+			country_event = { id = PRS_inner_circle_kanade.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GER_strengthen_the_waffen_ss
+			}
+			complete_national_focus = {
+				focus = GER_strengthen_the_waffen_ss
+				use_side_message = yes
+				originator_name = PRS_yoisaki_kanade
+			}
+			clr_country_flag = GER_strengthen_the_waffen_ss_in_progress_flag
+			country_event = { id = PRS_inner_circle_kanade.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GER_expand_gestapo
+			}
+			complete_national_focus = {
+				focus = GER_expand_gestapo
+				use_side_message = yes
+				originator_name = PRS_yoisaki_kanade
+			}
+			clr_country_flag = GER_expand_gestapo_in_progress_flag
+			country_event = { id = PRS_inner_circle_kanade.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GER_absorb_the_abwehr
+			}
+			complete_national_focus = {
+				focus = GER_absorb_the_abwehr
+				use_side_message = yes
+				originator_name = PRS_yoisaki_kanade
+			}
+			clr_country_flag = GER_absorb_the_abwehr_in_progress_flag
+			country_event = { id = PRS_inner_circle_kanade.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GER_hegemony_of_the_ss
+			}
+			complete_national_focus = {
+				focus = GER_hegemony_of_the_ss
+				use_side_message = yes
+				originator_name = PRS_yoisaki_kanade
+			}
+			clr_country_flag = GER_hegemony_of_the_ss_in_progress_flag
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH HIMMLER's FOCUS BRANCH - Cannot complete focus"
+		}
+	}
+}
+
+
+
+# SAKI - Start work on Focus
+country_event = {
+	id = PRS_inner_circle_saki.01
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31029
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 5 }
+			check_variable = { PRS_ascended_advisor_2 = 5 }
+			check_variable = { PRS_ascended_advisor_3 = 5 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = GER_ministry_of_public_enlightenment }
+			}
+			activate_shine_on_focus = GER_ministry_of_public_enlightenment
+			set_country_flag = { flag = GER_ministry_of_public_enlightenment_in_progress_flag days = @inner_circle_time_tier_1_flag value = 1 }
+			country_event = { id = PRS_inner_circle_saki.02 days = @inner_circle_time_tier_1 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = GER_fund_the_film_department }
+			}
+			activate_shine_on_focus = GER_fund_the_film_department
+			set_country_flag = { flag = GER_fund_the_film_department_in_progress_flag days = @inner_circle_time_tier_2_flag value = 1 }
+			country_event = { id = PRS_inner_circle_saki.02 days = @inner_circle_time_tier_2 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = GER_propaganda_master }
+			}
+			activate_shine_on_focus = GER_propaganda_master
+			set_country_flag = { flag = GER_propaganda_master_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
+			country_event = { id = PRS_inner_circle_saki.02 days = @inner_circle_time_tier_3 }
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH GOEBBELS's FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+
+# GOEBBELS - Complete Focus
+country_event = {
+	id = PRS_inner_circle_saki.02
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31029
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 5 }
+			check_variable = { PRS_ascended_advisor_2 = 5 }
+			check_variable = { PRS_ascended_advisor_3 = 5 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = GER_ministry_of_public_enlightenment
+			}
+			complete_national_focus = {
+				focus = GER_ministry_of_public_enlightenment
+				use_side_message = yes
+				originator_name = PRS_tenma_saki
+			}
+			clr_country_flag = GER_ministry_of_public_enlightenment_in_progress_flag
+			country_event = { id = PRS_inner_circle_saki.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GER_fund_the_film_department
+			}
+			complete_national_focus = {
+				focus = GER_fund_the_film_department
+				use_side_message = yes
+				originator_name = PRS_tenma_saki
+			}
+			clr_country_flag = GER_fund_the_film_department_in_progress_flag
+			country_event = { id = PRS_inner_circle_saki.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GER_propaganda_master
+			}
+			complete_national_focus = {
+				focus = GER_propaganda_master
+				use_side_message = yes
+				originator_name = PRS_tenma_saki
+			}
+			clr_country_flag = GER_propaganda_master_in_progress_flag
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH GOEBBELS's FOCUS BRANCH - Cannot complete focus"
+		}
+	}
+}
+ 
+
+# HONAMI - Start work on Focus
+country_event = {
+	id = PRS_inner_circle_honami.01
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31033
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 6 }
+			check_variable = { PRS_ascended_advisor_2 = 6 }
+			check_variable = { PRS_ascended_advisor_3 = 6 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = GER_optimize_reich_labour_service }
+				NOT = { has_shine_effect_on_focus = GER_optimize_reich_labour_service } #Shiho is working on this already (Should never happen anyways)
+			}
+			activate_shine_on_focus = GER_optimize_reich_labour_service
+			set_country_flag = { flag = GER_optimize_reich_labour_service_in_progress_flag days = @inner_circle_time_tier_1_flag value = 1 }
+			country_event = { id = PRS_inner_circle_honami.02 days = @inner_circle_time_tier_1 }
+			set_variable = { GER_optimize_reich_service_focus_advisor = 6 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = GER_rally_the_industrialists }
+			}
+			activate_shine_on_focus = GER_rally_the_industrialists
+			set_country_flag = { flag = GER_rally_the_industrialists_in_progress_flag days = @inner_circle_time_tier_2_flag value = 1 }
+			country_event = { id = PRS_inner_circle_honami.02 days = @inner_circle_time_tier_2 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = GER_total_control_over_domestic_affairs }
+				NOT = { has_shine_effect_on_focus = GER_total_control_over_domestic_affairs } #Shiho is working on this already (Should never happen anyways)
+			}
+			activate_shine_on_focus = GER_total_control_over_domestic_affairs
+			set_country_flag = { flag = GER_total_control_over_domestic_affairs_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
+			country_event = { id = PRS_inner_circle_honami.02 days = @inner_circle_time_tier_3 }
+			set_variable = { GER_total_control_over_domestic_affairs_focus_advisor = 6 }
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH HONAMI's FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+
+# HONAMI - Complete Focus
+country_event = {
+	id = PRS_inner_circle_honami.02
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31033
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 6 }
+			check_variable = { PRS_ascended_advisor_2 = 6 }
+			check_variable = { PRS_ascended_advisor_3 = 6 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = GER_optimize_reich_labour_service
+				check_variable = { GER_optimize_reich_service_focus_advisor = 6 } #It is Hess completing it
+			}
+			complete_national_focus = {
+				focus = GER_optimize_reich_labour_service
+				use_side_message = yes
+				originator_name = GER_rudolf_hess
+			}
+			clr_country_flag = GER_optimize_reich_labour_service_in_progress_flag
+			country_event = { id = PRS_inner_circle_honami.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GER_rally_the_industrialists
+			}
+			complete_national_focus = {
+				focus = GER_rally_the_industrialists
+				use_side_message = yes
+				originator_name = GER_rudolf_hess
+			}
+			clr_country_flag = GER_rally_the_industrialists_in_progress_flag
+			country_event = { id = PRS_inner_circle_honami.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GER_total_control_over_domestic_affairs
+				check_variable = { GER_total_control_over_domestic_affairs_focus_advisor = 6 } #It is Hess completing it
+			}
+			complete_national_focus = {
+				focus = GER_total_control_over_domestic_affairs
+				use_side_message = yes
+				originator_name = GER_rudolf_hess
+			}
+			clr_country_flag = GER_total_control_over_domestic_affairs_in_progress_flag
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH HONAMI's FOCUS BRANCH - Cannot complete focus"
+		}
+	}
+}
+
+
+# SHIHO - Start work on Focus
+country_event = {
+	id = PRS_inner_circle_shiho.01
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31034
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 7 }
+			check_variable = { PRS_ascended_advisor_2 = 7 }
+			check_variable = { PRS_ascended_advisor_3 = 7 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = GER_optimize_reich_labour_service }
+				NOT = { has_shine_effect_on_focus = GER_optimize_reich_labour_service } #Hess is working on this already (Should never happen anyways)
+			}
+			activate_shine_on_focus = GER_optimize_reich_labour_service
+			set_country_flag = { flag = GER_optimize_reich_labour_service_in_progress_flag days = @inner_circle_time_tier_1_flag value = 1 }
+			country_event = { id = PRS_inner_circle_shiho.02 days = @inner_circle_time_tier_1 }
+			set_variable = { GER_optimize_reich_service_focus_advisor = 7 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = GER_glorify_party_rallies }
+			}
+			activate_shine_on_focus = GER_glorify_party_rallies
+			set_country_flag = { flag = GER_glorify_party_rallies_in_progress_flag days = @inner_circle_time_tier_2_flag value = 1 }
+			country_event = { id = PRS_inner_circle_shiho.02 days = @inner_circle_time_tier_2 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = GER_total_control_over_domestic_affairs }
+				NOT = { has_shine_effect_on_focus = GER_total_control_over_domestic_affairs } #Hess is working on this already (Should never happen anyways)
+			}
+			activate_shine_on_focus = GER_total_control_over_domestic_affairs
+			set_country_flag = { flag = GER_total_control_over_domestic_affairs_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
+			country_event = { id = PRS_inner_circle_shiho.02 days = @inner_circle_time_tier_3 }
+			set_variable = { GER_total_control_over_domestic_affairs_focus_advisor = 7 }
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH SHIHO's FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+
+# SHIHO - Complete Focus
+country_event = {
+	id = PRS_inner_circle_shiho.02
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = PRS_31034
+		OR = {
+			check_variable = { PRS_ascended_advisor_1 = 7 }
+			check_variable = { PRS_ascended_advisor_2 = 7 }
+			check_variable = { PRS_ascended_advisor_3 = 7 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = GER_optimize_reich_labour_service
+				check_variable = { GER_optimize_reich_service_focus_advisor = 7 } #It is Shiho completing it
+			}
+			complete_national_focus = {
+				focus = GER_optimize_reich_labour_service
+				use_side_message = yes
+				originator_name = PRS_hinomori_shiho
+			}
+			clr_country_flag = GER_optimize_reich_labour_service_in_progress_flag
+			country_event = { id = PRS_inner_circle_shiho.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GER_glorify_party_rallies
+			}
+			complete_national_focus = {
+				focus = GER_glorify_party_rallies
+				use_side_message = yes
+				originator_name = PRS_hinomori_shiho
+			}
+			clr_country_flag = GER_glorify_party_rallies_in_progress_flag
+			country_event = { id = PRS_inner_circle_shiho.01 days = PRS_inner_circle_days_to_start_focus random_days = PRS_inner_circle_random_days }
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = GER_total_control_over_domestic_affairs
+				check_variable = { GER_total_control_over_domestic_affairs_focus_advisor = 7 } #It is Shiho completing it
+			}
+			complete_national_focus = {
+				focus = GER_total_control_over_domestic_affairs
+				use_side_message = yes
+				originator_name = PRS_hinomori_shiho
+			}
+			clr_country_flag = GER_total_control_over_domestic_affairs_in_progress_flag
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH SHIHO's FOCUS BRANCH - Cannot complete focus"
+		}
+	}
+}

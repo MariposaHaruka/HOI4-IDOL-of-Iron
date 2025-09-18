@@ -1,47 +1,185 @@
+BLA_is_student_government = {
+	NOT = {
+		has_country_flag = BLA_criminal_government
+		has_country_flag = BLA_kaiser_government
+		has_country_flag = BLA_atrahasis_government
+		has_country_flag = BLA_phrenapates_government
+		has_country_flag = BLA_gematria_government
+		has_country_flag = BLA_decagrammaton_government
+	}
+}
+
+#학교연락위원회 - 참여 관련
 BLA_shanhaijing_participate = {
-	has_completed_focus = BLA_32002B
-	NOT = { has_country_flag = BLA_shanhaijing_not_participated }
+	custom_trigger_tooltip = {
+		tooltip = BLA_shanhaijing_participate_tt
+		has_completed_focus = BLA_32002B
+		NOT = { has_country_flag = BLA_shanhaijing_not_participated }
+		SHA = { exists = no }
+		BLA_is_student_government = yes
+	}
 }
 
 BLA_redwinter_participate = {
-	has_completed_focus = BLA_32002B
-	NOT = { has_country_flag = BLA_redwinter_not_participated }
+	custom_trigger_tooltip = {
+		tooltip = BLA_redwinter_participate_tt
+		has_completed_focus = BLA_32002B
+		NOT = { has_country_flag = BLA_redwinter_not_participated }
+		RED = { exists = no }
+		BLA_is_student_government = yes
+	}
 }
 
 BLA_gehenna_participate = {
-	has_completed_focus = BLA_32002B
-	NOT = { has_country_flag = BLA_gehenna_not_participated }
+	custom_trigger_tooltip = {
+		tooltip = BLA_gehenna_participate_tt
+		has_completed_focus = BLA_32002B
+		NOT = { has_country_flag = BLA_gehenna_not_participated }
+		GEH = { exists = no }
+		BLA_is_student_government = yes
+	}
 }
 
 BLA_hyakkiyako_participate = {
-	has_completed_focus = BLA_32002B
-	NOT = { has_country_flag = BLA_hyakkiyako_not_participated }
+	custom_trigger_tooltip = {
+		tooltip = BLA_hyakkiyako_participate_tt
+		has_completed_focus = BLA_32002B
+		NOT = { has_country_flag = BLA_hyakkiyako_not_participated }
+		HYA = { exists = no }
+		BLA_is_student_government = yes
+	}
 }
 
 BLA_millenium_participate = {
-	has_completed_focus = BLA_32002B
-	NOT = { has_country_flag = BLA_millenium_not_participated }
+	custom_trigger_tooltip = {
+		tooltip = BLA_millenium_participate_tt
+		has_completed_focus = BLA_32002B
+		NOT = { has_country_flag = BLA_millenium_not_participated }
+		MIL = { exists = no }
+		BLA_is_student_government = yes
+	}
 }
 
 BLA_trinity_participate = {
-	has_completed_focus = BLA_32002B
-	NOT = { has_country_flag = BLA_trinity_not_participated }
+	custom_trigger_tooltip = {
+		tooltip = BLA_trinity_participate_tt
+		has_completed_focus = BLA_32002B
+		NOT = { has_country_flag = BLA_trinity_not_participated }
+		TRN = { exists = no }
+		BLA_is_student_government = yes
+	}
 }
 
 BLA_abydos_participate = {
-	has_completed_focus = BLA_32002B
-	NOT = { has_country_flag = BLA_abydos_not_participated }
+	custom_trigger_tooltip = {
+		tooltip = BLA_abydos_participate_tt
+		has_completed_focus = BLA_32002B
+		NOT = { has_country_flag = BLA_abydos_not_participated }
+		ABY = { exists = no }
+		BLA_is_student_government = yes
+	}
 }
 
 BLA_arius_participate = {
-	has_completed_focus = BLA_32002B
-	NOT = { has_country_flag = BLA_arius_not_participated }
+	custom_trigger_tooltip = {
+		tooltip = BLA_arius_participate_tt
+		has_completed_focus = BLA_32002B
+		NOT = { has_country_flag = BLA_arius_not_participated }
+		ARI = { exists = no }
+		BLA_is_student_government = yes
+	}
 }
 
 BLA_valkyrie_participate = {
-	NOT = { has_country_flag = BLA_valkyrie_not_participated }
+	custom_trigger_tooltip = {
+		tooltip = BLA_valkyrie_participate_tt
+		NOT = { has_country_flag = BLA_valkyrie_not_participated }
+		VAL = { exists = no }
+		BLA_is_student_government = yes
+	}
 }
 
 BLA_srt_participate = {
-	NOT = { has_country_flag = BLA_srt_not_participated }
+	custom_trigger_tooltip = {
+		tooltip = BLA_redwinter_participate_tt
+		NOT = { has_country_flag = BLA_srt_not_participated }
+		SRT = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+
+BLA_highlander_participate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_highlander_participate_tt
+		NOT = { has_country_flag = BLA_highlander_not_participated }
+		HIG = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+
+BLA_wildhunt_participate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_wildhunt_participate_tt
+		has_completed_focus = BLA_32002B
+		NOT = { has_country_flag = BLA_wildhunt_not_participated }
+		WIL = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+
+#학교연락위원회 - 조건 관련
+BLA_shanhaijing_problem = {
+	NOT = { 
+		has_country_flag = BLA_SHA_kai_problem 
+		has_country_flag = BLA_SHA_genryumon_problem 
+		has_country_flag = BLA_SHA_genbu_promenade_problem 
+	}
+}
+
+BLA_redwinter_problem = {
+	NOT = { has_country_flag = BLA_RED_coup_problem }
+}
+
+BLA_gehenna_problem = {
+	NOT = { 
+		has_country_flag = BLA_GEH_prefect_pandemonium_problem
+		has_country_flag = BLA_GEH_gourmet_research_society_problem
+		has_country_flag = BLA_GEH_hot_spring_department_problem
+	}
+}
+
+BLA_trinity_problem = {
+	NOT = { 
+		has_country_flag = BLA_TRN_pater_problem
+		has_country_flag = BLA_TRN_GEH_problem
+	}
+}
+
+BLA_millenium_problem = {
+	NOT = { has_country_flag = BLA_MIL_decagrammaton_problem }
+}
+
+BLA_abydos_problem = {
+	NOT = { 
+		has_country_flag = BLA_ABY_debt_problem
+		has_country_flag = BLA_ABY_desert_problem
+	}
+}
+
+BLA_arius_problem = {
+	NOT = { has_country_flag = BLA_ARI_beatrice_problem }
+}
+
+BLA_srt_problem = {
+	NOT = { has_country_flag = BLA_SRT_resolved }
+}
+
+BLA_scientific_improved = {
+	custom_trigger_tooltip = {
+		OR = {
+			has_idea = BLA_scientific_improvement_4
+			has_idea = BLA_scientific_improvement_5
+		}
+		tooltip = BLA_scientific_improvement_tt
+	}
 }

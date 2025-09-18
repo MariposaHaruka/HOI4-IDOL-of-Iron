@@ -158,6 +158,9 @@ set_convoys = 250
 #국민 정신
 add_ideas = {
 	PRS_sour_loser
+	PRS_reichsarbeitsdienst
+	PRS_wehrmacht_problem
+	PRS_rearmament_plan
 }
 
 add_dynamic_modifier = { modifier = PRS_MEFO_bill }
@@ -197,21 +200,11 @@ ban_autocracy_effect = yes
 ban_communism_effect = yes
 ban_democratic_effect = yes
 
-set_variable = { PRS_ascended_advisor_1 = 0}
-set_variable = { PRS_ascended_advisor_2 = 0}
-set_variable = { PRS_ascended_advisor_3 = 0}
+set_variable = { PRS_ascended_advisor_1 = 0 }
+set_variable = { PRS_ascended_advisor_2 = 0 }
+set_variable = { PRS_ascended_advisor_3 = 0 }
 
 #캐릭터 
-recruit_character = PRS_dummy_CON #더미
-recruit_character = PRS_dummy_LIB #더미
-recruit_character = PRS_dummy_PRO #더미
-recruit_character = PRS_dummy_SOD #더미
-recruit_character = PRS_dummy_SOC #더미
-recruit_character = PRS_dummy_COM #더미
-recruit_character = PRS_dummy_AUC #더미
-recruit_character = PRS_dummy_ANA #더미
-recruit_character = PRS_dummy_AUD #더미
-recruit_character = PRS_dummy_AUT #더미
 recruit_character = PRS_hoshino_ichika
 recruit_character = PRS_tenma_saki
 recruit_character = PRS_mochizuki_honami
@@ -232,6 +225,17 @@ recruit_character = PRS_yoisaki_kanade
 recruit_character = PRS_asahina_mafuyu
 recruit_character = PRS_shinonome_ena
 recruit_character = PRS_akiyama_mizuki
+
+recruit_character = PRS_dummy_CON #더미
+recruit_character = PRS_dummy_LIB #더미
+recruit_character = PRS_dummy_PRO #더미
+recruit_character = PRS_dummy_SOD #더미
+recruit_character = PRS_dummy_SOC #더미
+recruit_character = PRS_dummy_COM #더미
+recruit_character = PRS_dummy_AUC #더미
+recruit_character = PRS_dummy_ANA #더미
+recruit_character = PRS_dummy_AUD #더미
+recruit_character = PRS_dummy_AUT #더미
 
 ### 보컬로이드 흡수시 사용 가능:
 recruit_character = PRS_hatsune_miku

@@ -1,0 +1,229 @@
+add_namespace = ioi_news
+add_namespace = ioi_news_alt
+add_namespace = ioi_news_hidden
+
+news_event = {
+	id = ioi_news.1 #나가세 마나 사망
+	title = ioi_news.1.t
+	desc = ioi_news.1.d
+	picture = GFX_news_event_generic_funeral
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ioi_news.1.a
+	}
+}
+
+news_event = {
+	id = ioi_news.2 #호시노 아이 암살
+	title = ioi_news.2.t
+	desc = ioi_news.2.d
+	picture = GFX_news_event_generic_funeral
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ioi_news.2.a
+	}
+}
+
+news_event = {
+	id = ioi_news.3 #발푸르기스 내전
+	title = ioi_news.3.t
+	desc = ioi_news.3.d
+	picture = GFX_news_event_spr_spanish_civil_war
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ioi_news.3.a
+		trigger = {
+			NOT = { original_tag = MMM }
+		}
+	}
+	option = {
+		name = ioi_news.3.b
+		trigger = { 
+			original_tag = MMM
+		}
+	}
+}
+
+news_event = {
+	id = ioi_news.4
+	title = ioi_news.4.t
+	desc = ioi_news.4.d
+	picture = GFX_news_event_journalists_speech
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = ioi_news.4.a
+		trigger = {
+			OR = {
+				tag = KTC
+				tag = LBB
+				tag = LNH
+				tag = LHH
+				tag = LSS
+			}
+		}
+	}
+	option = {
+		name = ioi_news.4.b
+		trigger = {
+			tag = AZU
+		}
+	}
+	option = {
+		name = ioi_news.4.c
+		trigger = {
+			NOT = {
+				tag = AZU
+				tag = KTC
+				tag = LBB
+				tag = LNH
+				tag = LHH
+				tag = LSS
+			}
+		}
+	}
+}
+
+news_event = { # 1936년 올림픽
+	id = ioi_news.5
+	title = ioi_news.5.t
+	desc = {
+		text = ioi_news.5.d
+		trigger = {
+			NOT = { has_global_flag = PRS_civil_war_end }
+		}
+	}
+	desc = {
+		text = ioi_news.5.d.b
+		trigger = {
+			has_global_flag = PRS_civil_war_end
+		}
+	}
+	picture = GFX_news_event_olympics_1940
+	
+	major = yes
+	
+	trigger = {
+		date > 1936.8.15
+		NOT = { has_global_flag = olympics_1936 }
+		NOT = { has_global_flag = civil_war_olympics }
+		country_exists = PRS
+		country_exists = ICG
+		PRS = { has_war = no }
+		PRS = { has_civil_war = no }
+		BDG = { has_war = no }
+		IMA = { has_war = no }
+		ICG = { has_war = no }
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	immediate = {
+		set_global_flag = olympics_1936 
+	}
+	
+	option = {
+		name = ioi_news.5.a
+		trigger = { 
+			NOT = { tag = PRS }
+		}
+	}
+	option = {
+		name = ioi_news.5.b
+		trigger = { tag = PRS }
+	}
+}
+
+# Hindenburg Trigger (HIDDEN)
+news_event = {
+	id = global_news.51
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1937.5.5
+		date < 1939.5.5
+		country_exists = ICG
+		country_exists = PRS
+		ICG = { has_war = no }
+		PRS = { has_war = no }
+		PRS = { has_civil_war = no }
+		NOT = { has_global_flag = hindenburg_destroyed }
+		NOT = { has_global_flag = hindenburg_event_in_progress }
+	}
+
+	mean_time_to_happen = {
+		days = 240
+	}
+	
+	immediate = {
+		if = {
+			limit = { has_global_flag = PRS_air_safety_regulations_flag }
+			ICG = { news_event = { id = global_news.43 } }
+			else = {
+				random_list = {
+					70 = { ICG = { news_event = { id = global_news.42 } } }
+					30 = { ICG = { news_event = { id = global_news.43 } } }
+				}
+			}
+		}
+	}
+	option = {
+		name = global_news.51.a
+	}
+}
+
+
+# Hindenburg Disaster
+news_event = {
+	id = global_news.42
+	title = global_news.42.t
+	desc = global_news.42.d
+	picture = GFX_news_event_025
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = hindenburg_destroyed
+	}
+	
+	option = {
+		name = global_news.42.a
+	}
+}
+
+# Hindenburg Disaster Averted
+news_event = {
+	id = global_news.43
+	title = global_news.43.t
+	desc = global_news.43.d
+	picture = GFX_news_event_hindenburg_intact
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = hindenburg_survives
+	}
+	
+	option = {
+		name = global_news.43.a
+	}
+}

@@ -69,7 +69,7 @@ guiTypes = {
 			}
 		}
 
-		#TRI
+		#TRN
 		iconType = {
 			name = "trinity_flag_frame"
 			spriteType = "GFX_flag_border"
@@ -79,8 +79,8 @@ guiTypes = {
 			centerPosition = yes
 		}
 		iconType = {
-			name = "TRI_flag"
-			spriteType = "GFX_BLA_TRI_flag"
+			name = "TRN_flag"
+			spriteType = "GFX_BLA_TRN_flag"
 			orientation = upper_left
 			position = { x= 80 y = 220 }
 			scale = 0.7
@@ -96,8 +96,8 @@ guiTypes = {
 			scale = 0.4
 		}
 		iconType = {
-			name = "TRI_leader"
-			spriteType = "GFX_BLA_TRI_notparticipated"
+			name = "TRN_leader"
+			spriteType = "GFX_BLA_TRN_notparticipated"
 			orientation = upper_left
 			position = { x= 170 y = 220 }
 			context_aware_tooltip = TrinityLeader
@@ -110,8 +110,8 @@ guiTypes = {
 			position = { x= 230 y = 205 }
 			font = "hoi_18b"
 			context_aware_text = {
-				localization_key = BLA_school_committee_member_TRI
-				JOIN_TRI = [BLA.BLATrinitySchoolCommitteeMember]
+				localization_key = BLA_school_committee_member_TRN
+				JOIN_TRN = [BLA.BLATrinitySchoolCommitteeMember]
 			}
 		}
 		

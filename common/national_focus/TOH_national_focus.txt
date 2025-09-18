@@ -15,7 +15,7 @@ focus_tree = {
 
 	focus = {
 		id = TOH_00001 #최고위원회 회의
-		icon = GFX_goal_support_communism
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
 		cost = 1
 
 		x = 85
@@ -24,11 +24,11 @@ focus_tree = {
 		ai_will_do = { factor = 30 }
 		cancelable = no
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_00001"
-			custom_effect_tooltip = complete_national_focus_by_event_tt
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_00001"
+			add_political_power = 150
 		}
 	}
 
@@ -48,8 +48,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_10001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10001"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
+			add_political_power = 150
 		}
 	}
 
@@ -67,8 +68,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11001"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
+			remove_ideas = TOH_2nd_5_year_plan
+			hidden_effect = {
+				set_country_flag = TOH_2nd_5year_plan_completed_flag
+			}
 		}
 	}
 
@@ -87,14 +92,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11002"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
+			add_ideas = TOH_3rd_5_year_plan
 		}
 	}
 
 	focus = {
 		id = TOH_10002 #중공업 확장계획/중공업 확장정책
-		icon = GFX_focus_TOH_10002
+		icon = GFX_goal_generic_construct_civ_factory
 		cost = 5
 	
 		relative_position_id = TOH_10001
@@ -107,14 +113,103 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_10002"
-			
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10002"
+			every_state = {
+				limit = { 
+					has_state_flag = SOV_finish_five_year_plan_2IC 
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					all_owned_state = {
+						infrastructure > 2
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes						
+					}
+					set_state_flag = SOV_infrastructure_effort_3Inf
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = SOV_infrastructure_effort_3Inf
+				}				
+			}
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure < 3
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SOV_infrastructure_effort_3Inf	
+			}
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure < 3
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SOV_infrastructure_effort_3Inf	
+			}
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure < 3
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SOV_infrastructure_effort_3Inf	
+			}
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure < 3
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SOV_infrastructure_effort_3Inf	
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_10003 #농업 생산 계획/농업 정책
-		icon = GFX_focus_TOH_10003
+		icon = GFX_focus_generic_farmland
 		cost = 5
 	
 		relative_position_id = TOH_10001
@@ -127,14 +222,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_10003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10003"
 			
 		}
 	}
 
 	focus = {
 		id = TOH_10004 #철도 건설
-		icon = GFX_focus_TOH_10004
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 5
 	
 		relative_position_id = TOH_10002
@@ -147,14 +242,56 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_10004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10004"
+			# Moscow - Rostov on Don
+			build_railway = {
+				path = { 9330 3356 6279 6230 6398 6341 413 3527 11475 11412 6591 3540 3519 11459 11450 11434 9417 }
+			}
+			# Stalingrad-Rostov on Don
+			build_railway = {
+				path = { 3529 9504 533 9516 509 500 11459 } #(Stalingrad - Conjunction near Millerovo)
+			}
+			# Stalingrad-Mikhaylovka 
+			build_railway = {
+				path = { 9504 3582 9436 11485 3539 9564 11408 } #(Conjunction right next to Stalingrad - Conjunction in West Saratov)
+			}
+			# Stalingrad - Astrakhan
+			build_railway = {
+				path = { 3529 11474 520 6516 6486 9455 11429 6620 9753 }
+			}
+			# Tbilisi - Yerevan
+			build_railway = {
+				path = { 1599 9702 12441 3564 12320 }
+			}
+
+			#Supply Hub in Yerevan
+			230 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 12320
+					instant_build = yes
+				}
+			}
+			#Supply Hub in Kandalaksha
+			213 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 6181
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = SOV_soviet_railways
 			
 		}
 	}
 
 	focus = {
 		id = TOH_10005 #도심지 건설
-		icon = GFX_focus_TOH_10005
+		icon = GFX_focus_SWE_hygienic_housing
 		cost = 5
 	
 		relative_position_id = TOH_10002
@@ -167,14 +304,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_10005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10005"
 			
 		}
 	}
 
 	focus = {
 		id = TOH_10006 #조선소 확장
-		icon = GFX_focus_TOH_10006
+		icon = GFX_focus_POL_develop_polish_shipbuilding
 		cost = 5
 	
 		relative_position_id = TOH_10004
@@ -188,14 +325,49 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_10006"
-			
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10006"
+			custom_effect_tooltip = SOV_expand_shipbuilding_plants_tt
+			every_owned_state = {
+				limit = {
+					has_state_flag = SOV_naval_bases_reinforced_flag
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				if = {
+					limit = {
+						state = 195 #LENINGRAD - Gets 2 dockyards instead of 1
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				else = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_10007 #군수공장 투자
-		icon = GFX_focus_TOH_10007
+		icon = GFX_goal_generic_construct_mil_factory
 		cost = 5
 	
 		relative_position_id = TOH_10004
@@ -209,14 +381,18 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_10007"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10007"
 			
 		}
 	}
 
 	focus = {
-		id = TOH_10008 #연방 과학학술원
-		icon = GFX_focus_TOH_10007
+		id = TOH_10011 #사회주의 과학
+		icon = {
+			trigger = { is_communism = yes }
+			value = GFX_focus_generic_soviet_politics
+		}
+		icon = { value = GFX_focus_research }
 		cost = 5
 	
 		relative_position_id = TOH_10005
@@ -230,43 +406,45 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_10008"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10011"
 			
 		}
 	}
 
 	focus = {
 		id = TOH_10009 #국내 전문가 초빙
-		icon = GFX_focus_TOH_10009
+		icon = GFX_goal_generic_consumer_goods
 		cost = 5
 	
 		relative_position_id = TOH_10006
 		x = -1
 		y = 1
 
-		available = { NOT = { has_completed_focus = TOH_11001 } }
 		prerequisite = { focus = TOH_10006 }
 		prerequisite = { focus = TOH_10007 }
 		mutually_exclusive = { focus = TOH_10010 }
 		ai_will_do = { factor = 30 }
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_10009"
-			
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10009"
+			custom_effect_tooltip = SOV_national_specialists_tt
+			SOV_replace_industrial_designer = yes #"National" Industrial Designers get +5% research bonus
+			hidden_effect = {
+				add_ideas = SOV_national_specialists_ns
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_10010 #해외 전문가 초빙
-		icon = GFX_focus_TOH_10010
+		icon = GFX_focus_spa_the_spanish_miracle
 		cost = 5
 	
 		relative_position_id = TOH_10006
 		x = 1
 		y = 1
 
-		available = { NOT = { has_completed_focus = TOH_11001 } }
 		prerequisite = { focus = TOH_10006 }
 		prerequisite = { focus = TOH_10007 }
 		mutually_exclusive = { focus = TOH_10009 }
@@ -274,33 +452,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_10010"
-			
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10010"
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = SOV_gosproyektstroy_1
 		}
 	}
 
 	focus = {
-		id = TOH_10011 #사회주의 과학
-		icon = GFX_focus_TOH_10011
-		cost = 5
-	
-		relative_position_id = TOH_10007
-		x = 1
-		y = 1
-
-		available = { NOT = { has_completed_focus = TOH_11001 } }
-		prerequisite = { focus = TOH_10008 }
-		ai_will_do = { factor = 30 }
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_10011"
-			
-		}
-	}
-
-	focus = {
-		id = TOH_10012 #국내 전문가 초빙
+		id = TOH_10012 #동부 개발
 		icon = GFX_focus_TOH_10012
 		cost = 5
 	
@@ -308,19 +467,18 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		available = { NOT = { has_completed_focus = TOH_11001 } }
 		prerequisite = { focus = TOH_10009 focus = TOH_10010 }
 		ai_will_do = { factor = 30 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_10012"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10012"
 			
 		}
 	}
 
 	focus = {
-		id = TOH_10013 #해외 전문가 초빙
+		id = TOH_10013 #우랄 개발
 		icon = GFX_focus_TOH_10013
 		cost = 5
 	
@@ -328,20 +486,19 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		available = { NOT = { has_completed_focus = TOH_11001 } }
 		prerequisite = { focus = TOH_10009 focus = TOH_10010 }
 		ai_will_do = { factor = 30 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_10013"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10013"
 			
 		}
 	}
 
 	focus = {
 		id = TOH_11003 #중공업 위원회/중공업 정책
-		icon = GFX_focus_TOH_11003
+		icon = GFX_focus_ioi_generic_heavy_industry
 		cost = 5
 
 		relative_position_id = TOH_11002
@@ -350,22 +507,22 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		available = { 
-			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
-			hidden_trigger = { TOH_5year_plan_disturbed = no }
+			TOH_3rd_5year_plan_available = yes
 		}
+		bypass = { has_country_flag = TOH_third_five_year_plan_locked_flag }
 		prerequisite = { focus = TOH_11001 }
 		prerequisite = { focus = TOH_11002 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11003"
 		}
 	}
 
 	focus = {
 		id = TOH_11004 #국방 공업 위원회/국방 공업 정책
-		icon = GFX_focus_TOH_11004
+		icon = GFX_focus_generic_reorient_production
 		cost = 5
 
 		relative_position_id = TOH_11002
@@ -374,22 +531,22 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		available = { 
-			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
-			hidden_trigger = { TOH_5year_plan_disturbed = no }
+			TOH_3rd_5year_plan_available = yes
 		}
+		bypass = { has_country_flag = TOH_third_five_year_plan_locked_flag }
 		prerequisite = { focus = TOH_11001 }
 		prerequisite = { focus = TOH_11002 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11004"
 		}
 	}
 
 	focus = {
 		id = TOH_11005 #우랄 이전 계획
-		icon = GFX_focus_TOH_11005
+		icon = GFX_goal_generic_construct_civilian
 		cost = 5
 
 		relative_position_id = TOH_11004
@@ -397,23 +554,211 @@ focus_tree = {
 		y = 1
 
 		ai_will_do = { factor = 30 }
-		available = { 
-			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
-			hidden_trigger = { TOH_5year_plan_disturbed = no }
-		}
 		prerequisite = { focus = TOH_11003 }
 		prerequisite = { focus = TOH_11004 }
+
+		available = {
+			has_full_control_of_state = 219 #MOSCOW
+			has_equipment = { train_equipment > 119 } #20 trains per factory
+			OR = {
+				threat > 0.85
+				any_enemy_country = {
+					SOV_is_major_not_original_sov = yes
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+			}
+		}
+
+		select_effect = {
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = SOV_industrial_relocation_trains_focus_negative
+				producer = SOV
+			}
+			#Factories are removed immediately to keep consistency with how decisions work
+			219 = { #Moscow
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 195
+				}
+				195 = { #Leningrad
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 202
+				}
+				202 = { #Kiev
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11005"
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 120
+					producer = SOV
+				}
+			}
+			custom_effect_tooltip = SOV_focus_select_effect_tt
+			effect_tooltip = {
+				219 = { #Moscow
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				if = {
+					limit = {
+						has_full_control_of_state = 195
+					}
+					195 = { #Leningrad
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_full_control_of_state = 202
+					}
+					202 = { #Kiev
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = SOV_move_industry_to_the_urals_trains_tt
+			custom_effect_tooltip = SOV_focus_complete_effect_tt
+			#unlock_decision_category_tooltip = SOV_industry_relocation
+			random_controlled_state = {
+				limit = {
+					TOH_is_industrial_relocation_destiny_state = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			
+				hidden_effect = {
+					damage_building = { type = arms_factory damage = 0.5 }
+					damage_building = { type = industrial_complex damage = 0.5 }
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_full_control_of_state = 195 } #Leningrad
+				}
+				random_controlled_state = { #Different State please thanks
+					limit = {
+						NOT = { state = PREV }
+						TOH_is_industrial_relocation_destiny_state = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				
+					hidden_effect = {
+						damage_building = { type = arms_factory damage = 0.5 }
+						damage_building = { type = industrial_complex damage = 0.5 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_full_control_of_state = 202 } #Leningrad
+				}
+				random_controlled_state = { #Different State please thanks
+					limit = {
+						NOT = { state = PREV }
+						TOH_is_industrial_relocation_destiny_state = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				
+					hidden_effect = {
+						damage_building = { type = arms_factory damage = 0.5 }
+						damage_building = { type = industrial_complex damage = 0.5 }
+					}
+				}
+			}
+			custom_effect_tooltip = SOV_relocate_industry_repair_tt
 		}
 	}
 
 	focus = {
 		id = TOH_11006 #전시 생산 위원회
-		icon = GFX_focus_TOH_11006
+		icon = GFX_focus_generic_tank_production
 		cost = 5
 
 		relative_position_id = TOH_11004
@@ -422,8 +767,7 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		available = { 
-			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
-			hidden_trigger = { TOH_5year_plan_disturbed = no }
+			TOH_3rd_5year_plan_available = yes
 		}
 		prerequisite = { focus = TOH_11003 }
 		prerequisite = { focus = TOH_11004 }
@@ -431,12 +775,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11006"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11006"
 		}
 	}
 	focus = {
 		id = TOH_11007 #국립 과학 아카데미
-		icon = GFX_focus_TOH_11007
+		icon = GFX_focus_ioi_generic_national_academy_of_sciences_1
 		cost = 5
 
 		relative_position_id = TOH_11005
@@ -444,23 +788,20 @@ focus_tree = {
 		y = 1
 
 		ai_will_do = { factor = 30 }
-		available = { 
-			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
-			hidden_trigger = { TOH_5year_plan_disturbed = no }
-		}
+		bypass = { has_country_flag = TOH_third_five_year_plan_locked_flag }
 		prerequisite = { focus = TOH_11003 }
 		prerequisite = { focus = TOH_11004 }
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11007"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11007"
 		}
 	}
 
 	focus = {
 		id = TOH_11008 #산업시설 현대화
-		icon = GFX_focus_TOH_11008
+		icon = GFX_focus_AFG_a_modern_economy
 		cost = 5
 
 		relative_position_id = TOH_11006
@@ -469,22 +810,22 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		available = { 
-			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
-			hidden_trigger = { TOH_5year_plan_disturbed = no }
+			TOH_3rd_5year_plan_available = yes
 		}
+		bypass = { has_country_flag = TOH_third_five_year_plan_locked_flag }
 		prerequisite = { focus = TOH_11005 }
 		prerequisite = { focus = TOH_11006 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11008"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11008"
 		}
 	}
 
 	focus = {
 		id = TOH_11009 #공학 인민 위원부/공학 위원회
-		icon = GFX_focus_TOH_11009
+		icon = GFX_goal_generic_production2
 		cost = 5
 
 		relative_position_id = TOH_11006
@@ -493,21 +834,65 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		available = { 
-			custom_trigger_tooltip = { tooltip = TOH_5years_plan_disturbed_tt }
-			hidden_trigger = { TOH_5year_plan_disturbed = no }
+			TOH_3rd_5year_plan_available = yes
 		}
+		bypass = { has_country_flag = TOH_third_five_year_plan_locked_flag }
 		prerequisite = { focus = TOH_11005 }
 		prerequisite = { focus = TOH_11006 }
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11009"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11009"
+			add_to_variable = { SOV_defense_industry_production_factory_max_efficiency_factor = 0.05 }
+			add_to_variable = { SOV_defense_industry_production_factory_efficiency_gain_factor = -0.05 }
+			custom_effect_tooltip = SOV_pc_of_mechanical_engineering_ns_tt
+
+			if = { #DEFAULT COMMIE
+				limit = {
+					has_government = communism
+				}
+				add_tech_bonus = {
+					name = SOV_pc_of_mechanical_engineering_name_default
+					bonus = 1
+					uses = 2
+					category = motorized_equipment
+					category = infantry_weapons
+				}
+			}
+			else = { #ALT IDEOLOGY
+				add_tech_bonus = {
+					name = SOV_pc_of_mechanical_engineering_name_alt
+					bonus = 1
+					uses = 2
+					category = motorized_equipment
+					category = infantry_weapons
+				}
+			}
+			
+			219 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
+
 	focus = {
 		id = TOH_11010 #전시 제철소
-		icon = GFX_focus_TOH_11010
+		icon = GFX_focus_generic_steel
 		cost = 5
 
 		relative_position_id = TOH_11008
@@ -521,13 +906,88 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11010"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11010"
+			custom_effect_tooltip = TOH_industry_tt
+			add_to_variable = { 
+				TOH_industry_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = { 
+				TOH_industry_industrial_capacity_dockyard = 0.05
+				tooltip = industrial_capacity_dockyard_tt
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					has_resources_amount = {
+						resource = steel
+						amount > 0
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+				set_state_flag = TOH_steel_casting_industry_flag
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						has_resources_amount = {
+							resource = steel
+							amount > 0
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						NOT = {	has_state_flag = TOH_steel_casting_industry_flag }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						has_resources_amount = {
+							resource = steel
+							amount > 0
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						NOT = {	has_state_flag = TOH_steel_casting_industry_flag }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = steel
+						amount = 5
+					}
+					set_state_flag = TOH_steel_casting_industry_flag
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_11011 #항공기 생산공장 통합
-		icon = GFX_focus_TOH_11011
+		icon = GFX_focus_ioi_generic_merged_factory_aircraft
 		cost = 5
 
 		relative_position_id = TOH_11009
@@ -541,13 +1001,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11011"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11011"
 		}
 	}
 
 	focus = {
 		id = TOH_11012 #군수품 생산 공장 통합
-		icon = GFX_focus_TOH_11012
+		icon = GFX_focus_SOV_merge_plants
 		cost = 5
 
 		relative_position_id = TOH_11009
@@ -561,13 +1021,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11012"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11012"
 		}
 	}
 
 	focus = {
 		id = TOH_11013 #탄코그라드
-		icon = GFX_focus_TOH_11013
+		icon = GFX_focus_ioi_generic_merged_factory_tank
 		cost = 5
 
 		relative_position_id = TOH_11011
@@ -582,13 +1042,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11013"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11013"
 		}
 	}
 
 	focus = {
 		id = TOH_11014 #조선소 통합
-		icon = GFX_focus_TOH_11014
+		icon = GFX_focus_ioi_generic_merged_factory_ship
 		cost = 5
 
 		relative_position_id = TOH_11011
@@ -603,33 +1063,151 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_11014"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11014"
 		}
 	}
 
 	focus = {
 		id = TOH_13001 #자연과학 투자
-		icon = GFX_focus_TOH_13001
+		icon = {
+			trigger = { is_communism = yes }
+			value = GFX_goal_generic_soviet_construction
+		}
+		icon = { value = GFX_goal_generic_construction2 }
 		cost = 5
 
-		relative_position_id = TOH_10008
+		relative_position_id = TOH_10011
 		x = 1
 		y = 1
 
 		ai_will_do = { factor = 30 }
-		prerequisite = { focus = TOH_10008 }
+		prerequisite = { focus = TOH_10011 }
 		prerequisite = { focus = TOH_11007 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_13001"
+		cancelable = no
+		select_effect = {
+			add_ideas = TOH_mass_construction
 		}
+
+		available = {
+			196 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
+			251 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
+			217 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
+			245 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_13001"
+			hidden_effect = {
+				remove_ideas = TOH_mass_construction
+				IF = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes
+							character = SOV_iosif_stalin
+						}	
+					}
+					set_province_name = {
+						id = 3555
+						name = TOH_reimugrad_hydro_station
+					}
+				}
+				ELSE = {
+					set_province_name = {
+						id = 3555
+						name = SOV_volgograd_hydro_station
+					}
+				}
+				set_province_name = {
+					id = 6275
+					name = SOV_kuybyshev_hydro_station
+				}
+				set_province_name = {
+					id = 737
+					name = SOV_kakhovka_dam
+				}
+				set_province_name = {
+					id = 3478
+					name = SOV_tsimlyanskoye_hydroelectric_station
+				}
+			}
+
+			add_ideas = TOH_transformation_of_nature
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			217 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3555
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+			196 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 737
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+			245 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3478
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+			251 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 6275
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+		}
+
 	}
 
 	focus = {
 		id = TOH_13002 #네크로판타지아 계획
-		icon = GFX_focus_TOH_13002
+		icon = GFX_focus_wonderweapons
 		cost = 5
 
 		relative_position_id = TOH_13001
@@ -639,16 +1217,27 @@ focus_tree = {
 		ai_will_do = { factor = 30 }
 		prerequisite = { focus = TOH_13001 }
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_13002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_13002"
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.75
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = TOH_13002
+				bonus = 0.5
+				uses = 1
+				category = nuclear
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_13003 #탄도 미사일 계획
-		icon = GFX_focus_TOH_13001
+		icon = GFX_focus_rocketry
 		cost = 5
 
 		relative_position_id = TOH_13002
@@ -658,10 +1247,23 @@ focus_tree = {
 		ai_will_do = { factor = 30 }
 		prerequisite = { focus = TOH_13002 }
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_13003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_13003"
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.75
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = TOH_13003
+				bonus = 0.5
+				uses = 1 # was 2
+				category = rocketry
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			#add_ideas = TOH_no_time_for_peace_idea
 		}
 	}
 
@@ -679,14 +1281,15 @@ focus_tree = {
 		prerequisite = { focus = TOH_10001 }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_12001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_12001"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
+			add_ideas = TOH_4th_5_year_plan
 		}
 	}
 
 	focus = {
-		id = TOH_12002 #네크로판타지아 계획
-		icon = GFX_focus_TOH_12002
+		id = TOH_12002 #아카데미 재건
+		icon = GFX_focus_research2
 		cost = 5
 
 		relative_position_id = TOH_12001
@@ -699,13 +1302,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_12002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_12002"
 		}
 	}
 
 	focus = {
-		id = TOH_12003 #탄도 미사일 계획
-		icon = GFX_focus_TOH_12003
+		id = TOH_12003 #산업 재건
+		icon = GFX_goal_generic_production
 		cost = 5
 
 		relative_position_id = TOH_12002
@@ -718,13 +1321,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_12003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_12003"
 		}
 	}
 
 	focus = {
-		id = TOH_12004 #탄도 미사일 계획
-		icon = GFX_focus_TOH_12004
+		id = TOH_12004 #도시 재건
+		icon = GFX_focus_generic_low_cost_housing
 		cost = 5
 
 		relative_position_id = TOH_12002
@@ -737,13 +1340,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_12004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_12004"
 		}
 	}
 
 	focus = {
-		id = TOH_12005 #탄도 미사일 계획
-		icon = GFX_focus_TOH_12005
+		id = TOH_12005 #경제상호원조회의
+		icon = {
+			trigger = { is_communism = yes }
+			value = GFX_focus_SOV_the_comecon
+		}
+		icon = { value = GFX_goal_anschluss }
 		cost = 5
 
 		relative_position_id = TOH_12001
@@ -756,14 +1363,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_12005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_12005"
 		}
 	}
 
 	#외교 중점
 	focus = {
 		id = TOH_20001 #외교 위원회/외교 정책
-		icon = GFX_focus_TOH_20001
+		icon = GFX_focus_ioi_generic_diplomacy_committee
 		cost = 0
 
 		x = 24
@@ -776,18 +1383,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_20001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_20001"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 		}
 	}
 
 	focus = {
 		id = TOH_21001 #개별 안보 정책/대 환상향 주의
-		icon = GFX_focus_TOH_21001
+		icon = GFX_goal_generic_defence
 		cost = 5
 
 		relative_position_id = TOH_20001
-		x = -3
+		x = -5
 		y = 1
 
 		ai_will_do = { factor = 30 }
@@ -797,17 +1404,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21001"
 		}
 	}
 	
 	focus = {
 		id = TOH_22001 #집단 안보 정책/친서방 외교
-		icon = GFX_focus_TOH_22001
+		icon = GFX_goal_anschluss
 		cost = 5
 
 		relative_position_id = TOH_20001
-		x = 3
+		x = 5
 		y = 1
 
 		ai_will_do = { factor = 30 }
@@ -817,17 +1424,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22001"
 		}
 	}
 
 	focus = {
 		id = TOH_21002 #반 자본주의 정책
-		icon = GFX_focus_TOH_21002
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		cost = 5
 
 		relative_position_id = TOH_21001
-		x = -4
+		x = -2
 		y = 1
 
 		ai_will_do = { factor = 30 }
@@ -836,7 +1443,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21001"
 		}
 	}
 
@@ -846,41 +1453,41 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = TOH_21001
-		x = -1
+		x = 1
 		y = 1
 
 		ai_will_do = { factor = 30 }
-		prerequisite = { focus = TOH_21001 }
+		prerequisite = { focus = TOH_21001 focus = TOH_22001 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21003"
 		}
 	}
 
 	focus = {
 		id = TOH_21004 #이스탄불 회담
-		icon = GFX_focus_TOH_21004
+		icon = GFX_focus_ioi_generic_be_friendly_with_GUP
 		cost = 5
 
 		relative_position_id = TOH_21001
-		x = 1
+		x = 3
 		y = 1
 
 		ai_will_do = { factor = 30 }
-		prerequisite = { focus = TOH_21001 }
+		prerequisite = { focus = TOH_21001 focus = TOH_22001 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21004"
 		}
 	}
 
 	focus = {
 		id = TOH_21005 #극동 개방
-		icon = GFX_focus_TOH_21005
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 5
 
 		relative_position_id = TOH_21002
@@ -893,13 +1500,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21005"
 		}
 	}
 
 	focus = {
 		id = TOH_21006 #모스크바-베를린 조약
-		icon = GFX_focus_TOH_21006
+		icon = GFX_focus_ioi_generic_be_friendly_with_PRS
 		cost = 5
 
 		relative_position_id = TOH_21002
@@ -912,7 +1519,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21006"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21006"
 		}
 	}
 
@@ -931,13 +1538,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21007"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21007"
 		}
 	}
 
 	focus = {
 		id = TOH_21008 #반 아이마스 협정
-		icon = GFX_focus_TOH_21008
+		icon = GFX_focus_spr_class_war
 		cost = 5
 
 		relative_position_id = TOH_21005
@@ -950,13 +1557,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21008"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21008"
 		}
 	}
 
 	focus = {
 		id = TOH_21009 #새로운 환상향 영유권
-		icon = GFX_focus_TOH_21006
+		icon = GFX_focus_SOV_third_rome
 		cost = 5
 
 		relative_position_id = TOH_21006
@@ -969,7 +1576,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21009"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21009"
 		}
 	}
 
@@ -988,13 +1595,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21010"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21010"
 		}
 	}
 
 	focus = {
 		id = TOH_21011 #만주 압박
-		icon = GFX_focus_TOH_21011
+		icon = GFX_focus_ioi_generic_attack_LNH
 		cost = 5
 
 		relative_position_id = TOH_21008
@@ -1007,13 +1614,28 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21011"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21011"
+			if = {
+				limit = { country_exists = LNH }
+				declare_war_on = {
+					target = LNH
+					type = annex_everything
+					generator = { 761 714 715 716 717 318 610 }
+				}
+			}
+			custom_effect_tooltip = TOH_21011_tt
+			hidden_effect = {
+				every_state = {
+					limit = { TOH_is_manchuria = yes }
+					add_claim_by = TOH
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_21012 #지중해 남하정책
-		icon = GFX_focus_TOH_21012 
+		icon = GFX_focus_generic_balkans_focus 
 		cost = 5
 
 		relative_position_id = TOH_21010
@@ -1027,13 +1649,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21012"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21012"
 		}
 	}
 
 	focus = {
 		id = TOH_21013 #인도양 남하정책
-		icon = GFX_focus_TOH_21013
+		icon = GFX_focus_ger_great_red_menace
 		cost = 5
 
 		relative_position_id = TOH_21010
@@ -1047,13 +1669,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21013"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21013"
 		}
 	}
 
 	focus = {
 		id = TOH_21014 #신강 영유권
-		icon = GFX_focus_TOH_21014
+		icon = GFX_focus_ioi_generic_attack_KTC
 		cost = 5
 
 		relative_position_id = TOH_21011
@@ -1066,13 +1688,32 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21014"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21014"
+			if = {
+				limit = { country_exists = LNH }
+				declare_war_on = {
+					target = KTC
+					type = annex_everything
+					generator = { 287 617 618 619 }
+				}
+			}
+			custom_effect_tooltip = TOH_21014_tt
+			hidden_effect = {
+				every_state = {
+					limit = { TOH_is_sinkang = yes }
+					add_claim_by = TOH
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_21015 #동쪽으로의 진출
-		icon = GFX_focus_TOH_21015
+		icon = {
+			trigger = { is_communism = yes }
+			value = GFX_focus_SOV_recover_alaska
+		}
+		icon = { value = GFX_focus_AUS_seek_to_purchase_alaska }
 		cost = 5
 
 		relative_position_id = TOH_21014
@@ -1085,17 +1726,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_21015"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_21015"
 		}
 	}
 
 	focus = {
 		id = TOH_22002 #반 파시즘 정책
-		icon = GFX_focus_TOH_22002
+		icon = GFX_focus_generic_anti_fascist_diplomacy
 		cost = 5
 
 		relative_position_id = TOH_22001
-		x = 4
+		x = 2
 		y = 1
 
 		ai_will_do = { factor = 30 }
@@ -1104,51 +1745,51 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22001"
 		}
 	}
 
 	focus = {
 		id = TOH_22003 #발트 압박
-		icon = GFX_focus_TOH_22003
+		icon = GFX_focus_PRS_31309
 		cost = 5
 
 		relative_position_id = TOH_22001
-		x = 1
+		x = -1
 		y = 1
 
 		ai_will_do = { factor = 30 }
-		prerequisite = { focus = TOH_22001 }
+		prerequisite = { focus = TOH_21001 focus = TOH_22001 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22003"
 		}
 	}
 
 	focus = {
 		id = TOH_22004 #밢푸르기스 내전 지원
-		icon = GFX_focus_TOH_22004
+		icon = GFX_focus_ioi_generic_be_friendly_with_MMM
 		cost = 5
 
 		relative_position_id = TOH_22001
-		x = -1
+		x = -3
 		y = 1
 
 		ai_will_do = { factor = 30 }
-		prerequisite = { focus = TOH_22001 }
+		prerequisite = { focus = TOH_21001 focus = TOH_22001 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22004"
 		}
 	}
 
 	focus = {
 		id = TOH_22005 #극동 계획
-		icon = GFX_focus_TOH_22005
+		icon = GFX_goal_generic_position_armies
 		cost = 5
 
 		relative_position_id = TOH_22002
@@ -1161,13 +1802,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22005"
 		}
 	}
 
 	focus = {
 		id = TOH_22006 #파리 조약
-		icon = GFX_focus_TOH_22006
+		icon = GFX_focus_ioi_generic_be_friendly_with_IMA
 		cost = 5
 
 		relative_position_id = TOH_22002
@@ -1180,7 +1821,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22006"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22006"
 		}
 	}
 
@@ -1199,13 +1840,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22007"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22007"
+			declare_war_on = {
+				target = PTD
+				type = puppet_wargoal_focus
+				generator = 146
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_22008 #극동 국경 요새화
-		icon = GFX_focus_TOH_22008
+		icon = GFX_goal_generic_construct_military
 		cost = 5
 
 		relative_position_id = TOH_22005
@@ -1218,7 +1864,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22008"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22008"
 		}
 	}
 
@@ -1235,9 +1881,24 @@ focus_tree = {
 		prerequisite = { focus = TOH_22006 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		bypass = {
+			PRS = {
+				OR = {
+					has_war_with = ROOT
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+					exists = no
+				}
+			}
+		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22009"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22009"
+			declare_war_on = {
+				target = PRS
+				type = puppet_wargoal_focus
+				generator = 64
+			}
 		}
 	}
 
@@ -1256,13 +1917,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22010"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22010"
+			declare_war_on = {
+				target = DFD
+				type = puppet_wargoal_focus
+				generator = 141
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_22011 #이글 유니온 지원
-		icon = GFX_focus_TOH_22011
+		icon = GFX_focus_ioi_generic_be_friendly_with_AZU
 		cost = 5
 
 		relative_position_id = TOH_22008
@@ -1276,13 +1942,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22011"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22011"
 		}
 	}
 
 	focus = {
 		id = TOH_22012 #진수부 지원
-		icon = GFX_focus_TOH_22012 
+		icon = GFX_focus_ioi_generic_be_friendly_with_KTC
 		cost = 5
 
 		relative_position_id = TOH_22008
@@ -1296,7 +1962,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22012"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22012"
 		}
 	}
 
@@ -1315,13 +1981,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22013"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22013"
+			declare_war_on = {
+				target = SZS
+				type = puppet_wargoal_focus
+				generator = 37
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_22014 #장강 전쟁 개입
-		icon = GFX_focus_TOH_22014
+		icon = GFX_focus_usa_focus_on_asia
 		cost = 5
 
 		relative_position_id = TOH_22011
@@ -1334,12 +2005,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22014"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22014"
 		}
 	}
 	focus = {
 		id = TOH_22015 #위협 선제 제거
-		icon = GFX_focus_TOH_22015 
+		icon = GFX_focus_ioi_generic_attack_LLS 
 		cost = 5
 
 		relative_position_id = TOH_22014
@@ -1353,7 +2024,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22012"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22012"
+			declare_war_on = {
+				target = LLS
+				type = puppet_wargoal_focus
+				generator = 282
+			}
 		}
 	}
 
@@ -1373,7 +2049,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_22013"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_22013"
+			LLS = {
+				diplomatic_relation = {
+					country = FROM
+					relation = non_aggression_pact
+				}
+			}
+			FROM = {
+				diplomatic_relation = {
+					country = LLS
+					relation = non_aggression_pact
+				}
+			}
 		}
 	}
 
@@ -1392,13 +2080,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_20002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_20002"
 		}
 	}
 
 	focus = {
 		id = TOH_20003 #남부 압박
-		icon = GFX_focus_TOH_20003
+		icon = GFX_focus_ioi_generic_attack_NPT
 		cost = 5
 
 		relative_position_id = TOH_20002
@@ -1412,13 +2100,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_20003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_20003"
 		}
 	}
 
 	focus = {
 		id = TOH_20004 #중동 공산화
-		icon = GFX_focus_TOH_20004
+		icon = GFX_focus_ioi_generic_be_friendly_with_NPT
 		cost = 5
 
 		relative_position_id = TOH_20002
@@ -1427,12 +2115,12 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		prerequisite = { focus = TOH_20002 }
-		mutually_exclusive = { focus = TOH_20004 }
+		mutually_exclusive = { focus = TOH_20003 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_20004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_20004"
 		}
 	}
 
@@ -1451,7 +2139,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_20005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_20005"
 			declare_war_on = {
 				target = BLA
 				type = annex_everything
@@ -1462,7 +2150,7 @@ focus_tree = {
 	#군사 중점
 	focus = {
 		id = TOH_30001 #군사 위원회/군사 정책
-		icon = GFX_focus_TOH_20001
+		icon = GFX_focus_ioi_generic_army_high_command
 		cost = 0
 
 		x = 41
@@ -1475,14 +2163,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_20001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_20001"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 		}
 	}
 
 	focus = {
-		id = TOH_31001 #방위산업 인민 위원회/방위산업부
-		icon = GFX_focus_TOH_21001
+		id = TOH_31001 #방위산업인민위원회/방위산업부
+		icon = GFX_focus_TOH_31001
 		cost = 5
 
 		relative_position_id = TOH_30001
@@ -1495,13 +2183,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31001"
 		}
 	}
 	
 	focus = {
 		id = TOH_32001 #육군 인민 위원회/육군부
-		icon = GFX_focus_TOH_32001
+		icon = GFX_focus_SOV_mobilization_plan
 		cost = 5
 
 		relative_position_id = TOH_30001
@@ -1511,16 +2199,19 @@ focus_tree = {
 		ai_will_do = { factor = 30 }
 		prerequisite = { focus = TOH_30001 }
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32001"
+			add_to_variable = { SOV_the_red_army_mobilization_speed = 0.05 }
+			add_to_variable = { SOV_the_red_army_conscription_factor = 0.03 }
+			custom_effect_tooltip = SOV_strengthen_the_mobilization_plan_ns_tt
 		}
 	}
 
 	focus = {
 		id = TOH_33001 #공군 인민 위원회/공군부
-		icon = GFX_focus_TOH_33001
+		icon = GFX_focus_ioi_generic_air_command
 		cost = 5
 
 		relative_position_id = TOH_30001
@@ -1533,7 +2224,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33001"
 		}
 	}
 
@@ -1545,20 +2236,20 @@ focus_tree = {
 		relative_position_id = TOH_30001
 		x = 18
 		y = 1
+		prerequisite = { focus = TOH_30001 }
 
 		ai_will_do = { factor = 0 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		available = { always = no }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33001"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 		}
 	}
 	
 	focus = {
 		id = TOH_34001 #해군 인민 위원회/해군부
-		icon = GFX_focus_TOH_34001
+		icon = GFX_focus_ioi_generic_naval_command
 		cost = 5
 
 		relative_position_id = TOH_30001
@@ -1568,16 +2259,16 @@ focus_tree = {
 		ai_will_do = { factor = 30 }
 		prerequisite = { focus = TOH_30001 }
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34001"
 		}
 	}
 
 	focus = {
 		id = TOH_31002 #공병대학교
-		icon = GFX_focus_TOH_31002
+		icon = GFX_focus_generic_military_academy
 		cost = 5
 
 		relative_position_id = TOH_31001
@@ -1589,7 +2280,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31002"
+			add_to_variable = { SOV_defense_industry_production_speed_coastal_bunker_factor = 0.05 }
+			add_to_variable = { SOV_defense_industry_production_speed_bunker_factor = 0.05 }
+			add_to_variable = { SOV_defense_industry_max_dig_in_factor = 0.05 }
+			custom_effect_tooltip = SOV_military_engineering_university_ns_tt
 		}
 	}
 
@@ -1607,13 +2302,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31003"
 		}
 	}
 
 	focus = {
 		id = TOH_31051 #유카리그라드 공학기술원/상트페테르부르크 공학기술원
-		icon = GFX_focus_TOH_31051
+		icon = GFX_focus_research
 		cost = 5
 
 		relative_position_id = TOH_31003
@@ -1622,16 +2317,17 @@ focus_tree = {
 
 		prerequisite = { focus = TOH_31003 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31051"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31051"
+			add_research_slot = 1
 		}
 	}
 
 	focus = {
 		id = TOH_31004 #하쿠레이 선
-		icon = GFX_focus_TOH_31004
+		icon = GFX_goal_fortify_the_westwall
 		cost = 5
 
 		relative_position_id = TOH_31002
@@ -1644,13 +2340,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31004"
 		}
 	}
 
 	focus = {
 		id = TOH_31005 #몰로토프 선
-		icon = GFX_focus_TOH_31003
+		icon = GFX_focus_ioi_generic_build_fortress
 		cost = 5
 
 		relative_position_id = TOH_31002
@@ -1663,13 +2359,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31005"
 		}
 	}
 
 	focus = {
 		id = TOH_31006 #카렐리아 방어선
-		icon = GFX_focus_TOH_31006
+		icon = GFX_focus_generic_provoke_border_clashes
 		cost = 5
 
 		relative_position_id = TOH_31004
@@ -1682,13 +2378,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31006"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31006"
 		}
 	}
 
 	focus = {
 		id = TOH_31007 #모스크바 방어
-		icon = GFX_focus_TOH_31007
+		icon = GFX_focus_SOV_the_defense_of_moscow
 		cost = 5
 
 		relative_position_id = TOH_31004
@@ -1698,16 +2394,132 @@ focus_tree = {
 		prerequisite = { focus = TOH_31004 focus = TOH_31005 }
 		prerequisite = { focus = TOH_31051 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
+		available = {
+			219 = {
+				is_controlled_by = ROOT
+				OR = {
+					any_neighbor_state = {
+						NOT = { is_controlled_by = ROOT }
+					}
+					TOH = { surrender_progress > 0.1 } #Keep an eye on this, might be too cheesy
+				}
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31007"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31007"
+			army_experience = 15
+			219 = {
+				custom_effect_tooltip = SOV_defense_of_moscow_forts
+				hidden_effect = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 3391 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 3391
+							instant_build = yes
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 6414 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6414
+							instant_build = yes
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 9348 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 9348
+							instant_build = yes
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 301 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 301
+							instant_build = yes
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 9378 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 9378
+							instant_build = yes
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 6283 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6283
+							instant_build = yes
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 3259 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 3259
+							instant_build = yes
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 11282 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11282
+							instant_build = yes
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 6380 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 6380
+							instant_build = yes
+						}
+					}				
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_31008 #거점 요새
-		icon = GFX_focus_TOH_31008
+		icon = GFX_goal_generic_fortify_city
 		cost = 5
 
 		relative_position_id = TOH_31005
@@ -1720,7 +2532,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31008"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31008"
 		}
 	}
 
@@ -1734,18 +2546,22 @@ focus_tree = {
 		y = 2
 
 		ai_will_do = { factor = 0 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 		available = { always = no }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_30002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_30002"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = TOH_30002_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_political_power = 150
 		}
 	}
 
 	focus = {
 		id = TOH_30003 #스타프카
-		icon = GFX_focus_TOH_30003
+		icon = GFX_focus_generic_national_security
 		cost = 0
 
 		relative_position_id = TOH_30002
@@ -1753,12 +2569,16 @@ focus_tree = {
 		y = 0
 
 		ai_will_do = { factor = 0 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 		available = { always = no }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_30002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_30002"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			unlock_decision_category_tooltip = TOH_stavka_category
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_command_power = 20
 		}
 	}
 
@@ -1776,13 +2596,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31009"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31009"
 		}
 	}
 
 	focus = {
 		id = TOH_31010 #대조국 총력전
-		icon = GFX_focus_TOH_31010
+		icon = GFX_focus_generic_total_war
 		cost = 5
 
 		relative_position_id = TOH_31009
@@ -1794,13 +2614,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31010"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31010"
 		}
 	}
 
 	focus = {
 		id = TOH_31011 #군수품 품질 개선
-		icon = GFX_focus_TOH_31011
+		icon = GFX_focus_ioi_generic_upgrade_supplies
 		cost = 5
 
 		relative_position_id = TOH_31010
@@ -1812,13 +2632,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31011"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31011"
 		}
 	}
 
 	focus = {
 		id = TOH_31012 #규모의 경제
-		icon = GFX_focus_TOH_31012
+		icon = GFX_focus_ioi_generic_war_production_committee
 		cost = 5
 
 		relative_position_id = TOH_31011
@@ -1830,13 +2650,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31012"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31012"
 		}
 	}
 
 	focus = {
 		id = TOH_31013 #랜드리스
-		icon = GFX_focus_TOH_31013
+		icon = GFX_focus_ioi_generic_landlease_3
 		cost = 5
 
 		relative_position_id = TOH_30002
@@ -1849,7 +2669,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31013"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31013"
 			custom_effect_tooltip = TOH_31013_tt
 			hidden_effect = {
 				unlock_decision_category_tooltip = TOH_landlease_decision
@@ -1910,7 +2730,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31014"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31014"
 			add_timed_idea = {
 				idea = TOH_the_road_of_life
 				days = 730
@@ -1920,7 +2740,7 @@ focus_tree = {
 
 	focus = {
 		id = TOH_31015 #랜드리스 루트 확보
-		icon = GFX_focus_TOH_31015
+		icon = GFX_focus_generic_supply_line
 		cost = 5
 
 		relative_position_id = TOH_31013
@@ -1932,13 +2752,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31015"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31015"
 		}
 	}
 
 	focus = {
 		id = TOH_31016 #보급 개선
-		icon = GFX_focus_TOH_31016
+		icon = GFX_focus_ioi_generic_shipyard
 		cost = 5
 
 		relative_position_id = TOH_31014
@@ -1951,13 +2771,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_31016"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31016"
 		}
 	}
 
 	focus = {
 		id = TOH_32002 #종심돌파이론
-		icon = GFX_focus_TOH_32002
+		icon = GFX_focus_ioi_generic_army_mass_assault
 		cost = 5
 
 		relative_position_id = TOH_32001
@@ -1970,13 +2790,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32002"
 		}
 	}
 
 	focus = {
 		id = TOH_32003 #새로운 화력 이론
-		icon = GFX_focus_TOH_32003
+		icon = GFX_focus_ioi_generic_army_superior_firepower
 		cost = 5
 
 		relative_position_id = TOH_32001
@@ -1989,18 +2809,22 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32003"
 		}
 	}
 
 	focus = {
 		id = TOH_32004 #T-34
-		icon = GFX_focus_TOH_32004
+		icon = GFX_focus_generic_tank_assembly
 		cost = 5
 
 		relative_position_id = TOH_32002
 		x = -2
 		y = 1
+
+		available = {
+			has_tech = basic_medium_tank_chassis
+		}
 
 		prerequisite = { focus = TOH_32002 focus = TOH_32003 }
 		prerequisite = { focus = TOH_31003 }
@@ -2009,13 +2833,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32004"
 		}
 	}
 
 	focus = {
 		id = TOH_32005 #T-34M
-		icon = GFX_focus_TOH_32005
+		icon = GFX_focus_ioi_generic_light_tank_1
 		cost = 5
 
 		relative_position_id = TOH_32002
@@ -2029,13 +2853,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32005"
 		}
 	}
 
 	focus = {
 		id = TOH_32006 #소구경포 생산
-		icon = GFX_focus_TOH_32006
+		icon = GFX_goal_generic_army_artillery2
 		cost = 5
 
 		relative_position_id = TOH_32003
@@ -2049,13 +2873,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32006"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32006"
 		}
 	}
 
 	focus = {
 		id = TOH_32007 #대구경포 생산
-		icon = GFX_focus_TOH_32007
+		icon = GFX_focus_generic_anti_tank_guns
 		cost = 5
 
 		relative_position_id = TOH_32003
@@ -2069,13 +2893,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32007"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32007"
 		}
 	}
 
 	focus = {
 		id = TOH_32008 #차량화 준비
-		icon = GFX_focus_TOH_32008
+		icon = GFX_focus_generic_truck
 		cost = 5
 
 		relative_position_id = TOH_32005
@@ -2087,7 +2911,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32008"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32008"
 		}
 	}
 
@@ -2105,13 +2929,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32009"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32009"
 		}
 	}
 
 	focus = {
-		id = TOH_32010 #차량화 준비
-		icon = GFX_focus_TOH_32010
+		id = TOH_32010 #포병은 신이야
+		icon = GFX_focus_SWE_let_fly_all_guns
 		cost = 5
 
 		relative_position_id = TOH_32007
@@ -2123,7 +2947,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32010"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32010"
 		}
 	}
 
@@ -2141,13 +2965,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32011"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32011"
 		}
 	}
 
 	focus = {
 		id = TOH_32012 #기관단총 개선
-		icon = GFX_focus_TOH_32012
+		icon = GFX_goal_generic_small_arms
 		cost = 5
 
 		relative_position_id = TOH_32006
@@ -2159,13 +2983,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32012"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32012"
+			add_tech_bonus = {
+				name = TOH_32012
+				category = infantry_weapons
+				bonus = 0.5
+				uses = 1
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_32013 #궁여지책
-		icon = GFX_focus_TOH_32013
+		icon = GFX_goal_generic_more_territorial_claims
 		cost = 5
 
 		relative_position_id = TOH_32012
@@ -2174,17 +3004,27 @@ focus_tree = {
 
 		prerequisite = { focus = TOH_32009 focus = TOH_32011 focus = TOH_32012  }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		available = { TOH_the_sacred_war = yes }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		available = { 
+			any_enemy_country = {
+				TOH_is_major_not_original_TOH = yes
+			} 
+		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32013"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32013"
+			add_timed_idea = {
+				idea = TOH_desperate_measures
+				days = 365
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SOV_desperate_measures_decisions_unlocked_tt
 		}
 	}
 
 	focus = {
 		id = TOH_32014 #전쟁의 교훈
-		icon = GFX_focus_TOH_32014
+		icon = GFX_goal_generic_military_sphere
 		cost = 5
 
 		relative_position_id = TOH_32013
@@ -2197,13 +3037,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32014"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32014"
 		}
 	}
 
 	focus = {
 		id = TOH_32015 #군대 재건
-		icon = GFX_focus_TOH_32015
+		icon = GFX_focus_ioi_generic_rebuild_army
 		cost = 5
 
 		relative_position_id = TOH_32014
@@ -2215,13 +3055,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32015"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32015"
 		}
 	}
 
 	focus = {
 		id = TOH_32016 #형벌부대
-		icon = GFX_focus_TOH_32016
+		icon = GFX_focus_SOV_penal_battalions
 		cost = 5
 
 		relative_position_id = TOH_32015
@@ -2233,7 +3073,32 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32016"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32016"
+			#Spawn Penal divisions
+			custom_effect_tooltip = SOV_penal_battalions_spawn_tt
+			hidden_effect = {
+				division_template = {
+					name = "Shtrafnaya Chast"
+					division_names_group = TOH_PEN_01
+					is_locked = yes
+					regiments = {
+						penal_battalion = { x = 0 y = 0 }
+						penal_battalion = { x = 0 y = 1 }
+						penal_battalion = { x = 0 y = 2 }
+						penal_battalion = { x = 1 y = 0 }
+						penal_battalion = { x = 1 y = 1 }
+						penal_battalion = { x = 1 y = 2 }
+						penal_battalion = { x = 2 y = 0 }
+						penal_battalion = { x = 2 y = 1 }
+						penal_battalion = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+
+				TOH_spawn_penal_divisions_effect = yes
+			}
 		}
 	}
 
@@ -2251,13 +3116,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32017"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32017"
 		}
 	}
 
 	focus = {
 		id = TOH_32018 #유연한 군대
-		icon = GFX_focus_TOH_32018
+		icon = GFX_focus_prc_infiltration
 		cost = 5
 
 		relative_position_id = TOH_32015
@@ -2269,13 +3134,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32018"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32018"
 		}
 	}
 
 	focus = {
 		id = TOH_32019 #인민의 군대
-		icon = GFX_focus_TOH_32019
+		icon = GFX_focus_ioi_generic_army_soldiers_2
 		cost = 5
 
 		relative_position_id = TOH_32015
@@ -2287,13 +3152,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32019"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32019"
 		}
 	}
 
 	focus = {
 		id = TOH_32020 #정치 장교 유지
-		icon = GFX_focus_TOH_32020
+		icon = GFX_focus_generic_women_in_military
 		cost = 5
 
 		relative_position_id = TOH_32017
@@ -2306,13 +3171,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32020"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32020"
 		}
 	}
 
 	focus = {
 		id = TOH_32021 #군 정치 고문
-		icon = GFX_focus_TOH_32021
+		icon = GFX_focus_generic_military_mission
 		cost = 5
 
 		relative_position_id = TOH_32017
@@ -2322,16 +3187,18 @@ focus_tree = {
 		prerequisite = { focus = TOH_32017 }
 		mutually_exclusive = { focus = TOH_32020 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		bypass = { has_completed_focus = TOH_43016 }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32021"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32021"
 		}
 	}
 
 	focus = {
 		id = TOH_32022 #파르티잔 조직
-		icon = GFX_focus_TOH_32022
+		icon = GFX_focus_focus_fra_maquis
 		cost = 5
 
 		relative_position_id = TOH_32018
@@ -2343,13 +3210,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32022"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32022"
 		}
 	}
 
 	focus = {
-		id = TOH_32023 #인민의 군대
-		icon = GFX_focus_TOH_32023
+		id = TOH_32023 #스메르시
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 5
 
 		relative_position_id = TOH_32019
@@ -2358,16 +3225,34 @@ focus_tree = {
 		
 		prerequisite = { focus = TOH_32019 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_PROPAGANDA }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32023"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32023"
+			if = {
+				limit = { has_LaR = yes }
+				add_ideas = SOV_smersh
+			}
+			else = {
+				add_ideas = SOV_smersh_no_lar
+			}
+
+			if = {
+				limit = { is_communism = yes }
+				custom_effect_tooltip = unlock_propaganda_campaign_tt
+				if = {
+					limit ={ has_LaR = yes }
+					unlock_decision_tooltip = SOV_propaganda_treacherous_enemy
+				}
+				unlock_decision_tooltip = SOV_propaganda_do_not_blab
+				custom_effect_tooltip = propaganda_campaign_requirement_tt
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_32024 #정치 장교 유지
-		icon = GFX_focus_TOH_32024
+		icon = GFX_goal_generic_position_armies
 		cost = 5
 
 		relative_position_id = TOH_32020
@@ -2379,13 +3264,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32024"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32024"
 		}
 	}
 
 	focus = {
-		id = TOH_32025 #군 정치 고문
-		icon = GFX_focus_TOH_32025
+		id = TOH_32025 #군대 재정비
+		icon = GFX_goal_generic_major_war
 		cost = 5
 
 		relative_position_id = TOH_32021
@@ -2397,13 +3282,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32025"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32025"
 		}
 	}
 
 	focus = {
 		id = TOH_32026 #전술 재정비
-		icon = GFX_focus_TOH_32026
+		icon = GFX_focus_generic_treaty
 		cost = 5
 
 		relative_position_id = TOH_32022
@@ -2415,13 +3300,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32026"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32026"
 		}
 	}
 
 	focus = {
 		id = TOH_32027 #독전대
-		icon = GFX_focus_TOH_32027
+		icon = GFX_focus_generic_manpower
 		cost = 5
 
 		relative_position_id = TOH_32023
@@ -2433,12 +3318,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32027"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32027"
+			add_to_variable = { SOV_the_red_army_army_org_regain = 0.1 }
+			custom_effect_tooltip = SOV_barrier_troops_ns_tt
 		}
 	}
 	focus = {
 		id = TOH_32028 #기계화장비인민위원부/기계화 전환 위원회
-		icon = GFX_focus_TOH_32025
+		icon = GFX_focus_TOH_32028
 		cost = 5
 
 		relative_position_id = TOH_32025
@@ -2450,7 +3337,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32028"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32028"
 		}
 	}
 
@@ -2480,7 +3367,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_32029"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32029"
 			add_to_variable = { TOH_special_forces_cap = 0.1 }
 			add_to_variable = { TOH_land_doctrine_cost_factor = -0.1 }
 			custom_effect_tooltip = SOV_the_glory_of_the_red_army_ns_tt
@@ -2502,7 +3389,7 @@ focus_tree = {
 
 	focus = {
 		id = TOH_33003 #방공군
-		icon = GFX_focus_TOH_33003
+		icon = GFX_focus_ioi_generic_air_defense_4
 		cost = 5
 
 		relative_position_id = TOH_33001
@@ -2514,13 +3401,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33003"
 		}
 	}
 
 	focus = {
 		id = TOH_33004 #중폭격기 개발
-		icon = GFX_focus_TOH_33004
+		icon = GFX_focus_ioi_generic_air_strategic_bomber
 		cost = 5
 
 		relative_position_id = TOH_33001
@@ -2532,13 +3419,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33004"
 		}
 	}
 
 	focus = {
 		id = TOH_33005 #유카리그라드 공군 과학 연구소/상트페테르부르크 공군 과학 연구소
-		icon = GFX_focus_TOH_33005
+		icon = GFX_focus_generic_air_research_boost
 		cost = 5
 
 		relative_position_id = TOH_33001
@@ -2550,13 +3437,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33005"
 		}
 	}
 
 	focus = {
 		id = TOH_33006 #극지 비행
-		icon = GFX_focus_TOH_33006
+		icon = GFX_goal_generic_air_fighter2
 		cost = 5
 
 		relative_position_id = TOH_33002
@@ -2569,13 +3456,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33006"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33006"
 		}
 	}
 
 	focus = {
 		id = TOH_33007 #비행 클럽
-		icon = GFX_focus_TOH_33007
+		icon = GFX_focus_SOV_flying_clubs
 		cost = 5
 
 		relative_position_id = TOH_33002
@@ -2588,13 +3475,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33007"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33007"
 		}
 	}
 
 	focus = {
 		id = TOH_33008 #대공포대 강화
-		icon = GFX_focus_TOH_33008
+		icon = GFX_focus_ioi_generic_air_defense_2
 		cost = 5
 
 		relative_position_id = TOH_33003
@@ -2606,13 +3493,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33008"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33008"
 		}
 	}
 
 	focus = {
 		id = TOH_33009 #항공기 생산시설 확장
-		icon = GFX_focus_TOH_33009
+		icon = GFX_focus_ioi_generic_expand_aircraft_factories
 		cost = 5
 
 		relative_position_id = TOH_33005
@@ -2625,13 +3512,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33009"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33009"
 		}
 	}
 
 	focus = {
 		id = TOH_33010 #조종사 교육 프로그램 강화
-		icon = GFX_focus_TOH_33010
+		icon = GFX_focus_ioi_generic_air_school
 		cost = 5
 
 		relative_position_id = TOH_33006
@@ -2644,13 +3531,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33010"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33010"
 		}
 	}
 
 	focus = {
 		id = TOH_33011 #항공기 생산시설 확장
-		icon = GFX_focus_TOH_33011
+		icon = GFX_focus_generic_aircraft_production
 		cost = 5
 
 		relative_position_id = TOH_33009
@@ -2662,13 +3549,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33011"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33011"
 		}
 	}
 
 	focus = {
 		id = TOH_33012 #여성 조종사 양성
-		icon = GFX_focus_TOH_33012
+		icon = GFX_focus_SOV_women_in_aviation
 		cost = 5
 
 		relative_position_id = TOH_33010
@@ -2680,13 +3567,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33012"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33012"
 		}
 	}
 
 	focus = {
 		id = TOH_33013 #Il-2
-		icon = GFX_focus_TOH_33013
+		icon = GFX_focus_ioi_generic_air_cas_1
 		cost = 5
 
 		relative_position_id = TOH_33011
@@ -2699,13 +3586,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33013"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33013"
 		}
 	}
 
 	focus = {
 		id = TOH_33014 #Tu-2
-		icon = GFX_focus_TOH_33014
+		icon = GFX_focus_ioi_generic_air_bomber_1
 		cost = 5
 
 		relative_position_id = TOH_33011
@@ -2718,13 +3605,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33014"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33014"
 		}
 	}
 
 	focus = {
 		id = TOH_33015 #TB-7
-		icon = GFX_focus_TOH_33015
+		icon = GFX_focus_ioi_generic_air_strategic_bomber
 		cost = 5
 
 		relative_position_id = TOH_33011
@@ -2737,31 +3624,31 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33015"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33015"
 		}
 	}
 
 	focus = {
 		id = TOH_33016 #라스코바 항공대
-		icon = GFX_focus_TOH_33016
+		icon = GFX_goal_generic_CAS
 		cost = 5
 
 		relative_position_id = TOH_33012
 		x = 0
 		y = 1
 		
-		prerequisite = { focus = TOH_33010 }
+		prerequisite = { focus = TOH_33012 }
 		ai_will_do = { factor = 30 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33016"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33016"
 		}
 	}
 
 	focus = {
 		id = TOH_33017 #공군 재편성
-		icon = GFX_focus_TOH_33017
+		icon = GFX_focus_ioi_generic_rebuild_airforce
 		cost = 5
 
 		relative_position_id = TOH_33014
@@ -2773,13 +3660,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33017"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33017"
 		}
 	}
 
 	focus = {
 		id = TOH_33018 #대구경 대공포
-		icon = GFX_focus_TOH_33018
+		icon = GFX_focus_ioi_generic_air_defense_1
 		cost = 5
 
 		relative_position_id = TOH_33008
@@ -2792,13 +3679,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33018"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33018"
 		}
 	}
 
 	focus = {
 		id = TOH_33019 #전투기 요격
-		icon = GFX_focus_TOH_33019
+		icon = GFX_focus_ioi_generic_air_intercept
 		cost = 5
 
 		relative_position_id = TOH_33008
@@ -2811,13 +3698,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33019"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33019"
 		}
 	}
 
 	focus = {
 		id = TOH_33020 #지상 지원
-		icon = GFX_focus_TOH_33020
+		icon = GFX_focus_generic_cas_aircraft
 		cost = 5
 
 		relative_position_id = TOH_33017
@@ -2830,13 +3717,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33020"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33020"
 		}
 	}
 
 	focus = {
-		id = TOH_33021 #장거리 폭격
-		icon = GFX_focus_TOH_33021
+		id = TOH_33021 #공중의 요새
+		icon = GFX_focus_generic_long_range_aircraft
 		cost = 5
 
 		relative_position_id = TOH_33017
@@ -2849,13 +3736,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33021"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33021"
 		}
 	}
 
 	focus = {
 		id = TOH_33022 #즈베노 프로젝트
-		icon = GFX_focus_TOH_33022
+		icon = GFX_focus_GER_amerikabomber
 		cost = 5
 	
 		relative_position_id = TOH_33018
@@ -2867,13 +3754,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33022"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33022"
 		}
 	}
 
 	focus = {
 		id = TOH_33023 #항공기 역설계
-		icon = GFX_focus_TOH_33023
+		icon = GFX_focus_generic_copy_plane_designs
 		cost = 5
 
 		relative_position_id = TOH_33019
@@ -2886,13 +3773,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33023"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33023"
 		}
 	}
 
 	focus = {
-		id = TOH_33024 #지상 지원
-		icon = GFX_focus_TOH_33024
+		id = TOH_33024 #제병 협동 훈련
+		icon = GFX_focus_generic_tank_air_support
+
 		cost = 5
 
 		relative_position_id = TOH_33020
@@ -2904,13 +3792,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33024"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33024"
 		}
 	}
 
 	focus = {
 		id = TOH_33025 #장거리 폭격
-		icon = GFX_focus_TOH_33025
+		icon = GFX_focus_SWE_marauder_bombers
 		cost = 5
 	
 		relative_position_id = TOH_33021
@@ -2922,13 +3810,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33025"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33025"
 		}
 	}
 
 	focus = {
 		id = TOH_33026 #방공구역 재편
-		icon = GFX_focus_TOH_33026
+		icon = GFX_focus_ioi_generic_air_defense_3
 		cost = 5
 
 		relative_position_id = TOH_33019
@@ -2941,13 +3829,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33026"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33026"
 		}
 	}
 
 	focus = {
 		id = TOH_33027 #제트 연구소
-		icon = GFX_focus_TOH_33027
+		icon = GFX_focus_generic_jet_planes
 		cost = 5
 
 		relative_position_id = TOH_33023
@@ -2959,13 +3847,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33027"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33027"
 		}
 	}
 
 	focus = {
 		id = TOH_33028 #현대 공중전
-		icon = GFX_focus_TOH_33028
+		icon = GFX_focus_IMA_31107
 		cost = 5
 	
 		relative_position_id = TOH_33024
@@ -2977,13 +3865,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33025"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33025"
 		}
 	}
 
 	focus = {
 		id = TOH_33029 #방공구역 재편
-		icon = GFX_focus_TOH_33029
+		icon = GFX_goal_generic_defence
 		cost = 5
 
 		relative_position_id = TOH_33026
@@ -2995,13 +3883,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33029"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33029"
 		}
 	}
 
 	focus = {
 		id = TOH_33030 #붉은 공군의 영광/환상향 공군의 영광
-		icon = GFX_focus_TOH_33030
+		icon = {
+			trigger = { is_communism = yes }
+			value = GFX_focus_TOH_33030
+		}
+		icon = { value = GFX_focus_TOH_33030_alt }
 		cost = 5
 	
 		relative_position_id = TOH_33028
@@ -3013,13 +3905,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_33030"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33030"
 		}
 	}
 
 	focus = {
 		id = TOH_34002 #발트 함대
-		icon = GFX_focus_TOH_34002
+		icon = GFX_focus_SOV_reinforce_western_naval_bases
 		cost = 5
 	
 		relative_position_id = TOH_34001
@@ -3028,16 +3920,16 @@ focus_tree = {
 	
 		prerequisite = { focus = TOH_34001 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34002"
 		}
 	}
 
 	focus = {
 		id = TOH_34003 #북극 함대
-		icon = GFX_focus_TOH_34003
+		icon = GFX_focus_SOV_reinforce_northern_naval_bases
 		cost = 5
 	
 		relative_position_id = TOH_34001
@@ -3046,16 +3938,16 @@ focus_tree = {
 	
 		prerequisite = { focus = TOH_34001 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34003"
 		}
 	}
 
 	focus = {
 		id = TOH_34004 #흑해 함대
-		icon = GFX_focus_TOH_34004
+		icon = GFX_focus_SOV_reinforce_southern_naval_bases
 		cost = 5
 	
 		relative_position_id = TOH_34001
@@ -3064,16 +3956,16 @@ focus_tree = {
 	
 		prerequisite = { focus = TOH_34001 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34004"
 		}
 	}
 
 	focus = {
 		id = TOH_34005 #태평양 함대
-		icon = GFX_focus_TOH_34005
+		icon = GFX_focus_SOV_reinforce_eastern_naval_bases
 		cost = 5
 	
 		relative_position_id = TOH_34001
@@ -3082,10 +3974,10 @@ focus_tree = {
 	
 		prerequisite = { focus = TOH_34001 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34005"
 		}
 	}
 
@@ -3101,10 +3993,20 @@ focus_tree = {
 		prerequisite = { focus = TOH_34002 focus = TOH_34003 focus = TOH_34004 focus = TOH_34005 }
 		ai_will_do = { factor = 30 }
 		mutually_exclusive = { focus = TOH_34007 focus = TOH_34008 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34006"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34006"
+			custom_effect_tooltip = TOH_navy_tt
+			add_to_variable = { #툴팁용
+				TOH_navy_build_cost_ic_capital_ship = -0.1
+				tooltip = build_cost_ic_capital_ship_tt
+			}
+			add_to_variable = { #툴팁용
+				TOH_navy_build_cost_ic_carrier = -0.1
+				tooltip = build_cost_ic_carrier_tt
+			}
+			hidden_effect = { add_ideas = TOH_kuznetsov_plan }
 		}
 	}
 
@@ -3120,16 +4022,16 @@ focus_tree = {
 		prerequisite = { focus = TOH_34002 focus = TOH_34003 focus = TOH_34004 focus = TOH_34005 }
 		ai_will_do = { factor = 30 }
 		mutually_exclusive = { focus = TOH_34006 focus = TOH_34008 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34007"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34007"
 		}
 	}
 
 	focus = {
 		id = TOH_34008 #잠수함 계획
-		icon = GFX_focus_TOH_34008
+		icon = GFX_focus_ioi_generic_submarine_fleet
 		cost = 5
 	
 		relative_position_id = TOH_34004
@@ -3139,16 +4041,24 @@ focus_tree = {
 		prerequisite = { focus = TOH_34002 focus = TOH_34003 focus = TOH_34004 focus = TOH_34005 }
 		ai_will_do = { factor = 30 }
 		mutually_exclusive = { focus = TOH_34006 focus = TOH_34007 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34008"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34008"
+			navy_experience = 15
+			add_tech_bonus = {
+				name = SOV_submarine_warfare
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+			custom_effect_tooltip = TOH_34008_tt
 		}
 	}
 
 	focus = {
 		id = TOH_34010 #조선소 확장
-		icon = GFX_focus_TOH_34010
+		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 5
 	
 		relative_position_id = TOH_34002
@@ -3160,13 +4070,50 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34010"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34010"
+			
+			custom_effect_tooltip = SOV_expand_shipbuilding_plants_tt
+			every_owned_state = {
+				limit = {
+					has_state_flag = SOV_naval_bases_reinforced_flag
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				if = {
+					limit = {
+						state = 195 #LENINGRAD - Gets 2 dockyards instead of 1
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				else = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_34011 #해군 기동 훈련
-		icon = GFX_focus_TOH_34011
+		icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
 		cost = 5
 	
 		relative_position_id = TOH_34006
@@ -3178,13 +4125,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34011"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34011"
+			navy_experience = 50
 		}
 	}
 
 	focus = {
 		id = TOH_34009 #해군 보병
-		icon = GFX_focus_TOH_34009
+		icon = GFX_goal_generic_amphibious_assault
 		cost = 5
 	
 		relative_position_id = TOH_34011
@@ -3196,13 +4144,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34009"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34009"
 		}
 	}
 
 	focus = {
 		id = TOH_34012 #해군 항공대 확장
-		icon = GFX_focus_TOH_34012
+		icon = GFX_focus_ioi_generic_sea_and_air
 		cost = 5
 	
 		relative_position_id = TOH_34006
@@ -3215,13 +4163,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34012"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34012"
 		}
 	}
 
 	focus = {
 		id = TOH_34013 #기뢰전
-		icon = GFX_focus_TOH_34013
+		icon = GFX_focus_generic_mine_warfare
 		cost = 5
 	
 		relative_position_id = TOH_34006
@@ -3230,16 +4178,43 @@ focus_tree = {
 	
 		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34013"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34013"
+			if = {
+				limit = { has_MtG = yes }
+				add_ideas = TOH_mine_warfare
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_tech_bonus = {
+					name = TOH_34013
+					bonus = 1.0
+					uses = 2
+					category = naval_mines
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = TOH_34013
+					bonus = 0.5
+					uses = 1
+					category = ss_tech
+					category = dd_tech
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_doctrine_cost_reduction = {
+					name = TOH_34013
+					cost_reduction = 0.75
+					uses = 1
+					category = naval_doctrine
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = TOH_34014 #흑해 상륙훈련
-		icon = GFX_focus_TOH_34014
+		icon = GFX_focus_generic_naval_invasion
 		cost = 5
 
 		relative_position_id = TOH_34009
@@ -3248,16 +4223,17 @@ focus_tree = {
 	
 		prerequisite = { focus = TOH_34009 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34014"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34014"
+			navy_experience = 50
 		}
 	}
 
 	focus = {
 		id = TOH_34015 #항구 방어 준비
-		icon = GFX_focus_TOH_34015
+		icon = GFX_focus_generic_coastal_fort
 		cost = 5
 	
 		relative_position_id = TOH_34009
@@ -3269,13 +4245,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34015"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34015"
 		}
 	}
 
 	focus = {
 		id = TOH_34016 #태평양 상륙훈련
-		icon = GFX_focus_TOH_34016
+		icon = GFX_focus_generic_naval_invasion_tank
 		cost = 5
 
 		relative_position_id = TOH_34014
@@ -3287,13 +4263,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34016"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34016"
 		}
 	}
 
 	focus = {
 		id = TOH_34017 #해안요새 강화
-		icon = GFX_focus_TOH_34017
+		icon = GFX_goal_fortify_the_westwall
 		cost = 5
 	
 		relative_position_id = TOH_34015
@@ -3305,13 +4281,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34017"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34017"
 		}
 	}
 
 	focus = {
 		id = TOH_34018 #해외 라이센스 수입
-		icon = GFX_focus_TOH_34018
+		icon = GFX_focus_SWE_italian_destroyers
 		cost = 5
 
 		relative_position_id = TOH_34010
@@ -3325,13 +4301,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34018"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34018"
 		}
 	}
 
 	focus = {
 		id = TOH_34019 #독자 설계 군함
-		icon = GFX_focus_TOH_34019
+		icon = GFX_focus_generic_navy_research_bonus
 		cost = 5
 	
 		relative_position_id = TOH_34010
@@ -3345,13 +4321,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34019"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34019"
 		}
 	}
 
 	focus = {
 		id = TOH_34020 #21형 전함
-		icon = GFX_focus_TOH_34020
+		icon = GFX_focus_generic_navy_battleship2
 		cost = 5
 
 		relative_position_id = TOH_34007
@@ -3362,16 +4338,17 @@ focus_tree = {
 		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
 		ai_will_do = { factor = 30 }
 		mutually_exclusive = { focus = TOH_34021 }
+		available = { has_basic_ship_heavy = yes }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34020"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34020"
 		}
 	}
 
 	focus = {
 		id = TOH_34021 #23형 전함
-		icon = GFX_focus_TOH_34021
+		icon = GFX_focus_ioi_generic_naval_battleship_3
 		cost = 5
 	
 		relative_position_id = TOH_34007
@@ -3381,17 +4358,18 @@ focus_tree = {
 		prerequisite = { focus = TOH_34010 }
 		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
 		mutually_exclusive = { focus = TOH_34020 }
+		available = { has_basic_ship_heavy = yes }
 		ai_will_do = { factor = 30 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34021"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34021"
 		}
 	}
 
 	focus = {
 		id = TOH_34022 #26형 경순양함
-		icon = GFX_focus_TOH_34022
+		icon = GFX_focus_generic_cruiser2
 		cost = 5
 
 		relative_position_id = TOH_34008
@@ -3400,17 +4378,18 @@ focus_tree = {
 	
 		prerequisite = { focus = TOH_34010 }
 		prerequisite = { focus = TOH_34006 focus = TOH_34007 focus = TOH_34008 }
+		available = { has_basic_ship_cruiser = yes }
 		ai_will_do = { factor = 30 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34022"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34022"
 		}
 	}
 
 	focus = {
 		id = TOH_34023 #7형 구축함
-		icon = GFX_focus_TOH_34020
+		icon = GFX_focus_generic_destroyer
 		cost = 5
 
 		relative_position_id = TOH_34008
@@ -3424,13 +4403,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34023"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34023"
 		}
 	}
 
 	focus = {
 		id = TOH_34024 #20형 구축함
-		icon = GFX_focus_TOH_34021
+		icon = GFX_focus_ioi_generic_naval_destroyer_2
 		cost = 5
 	
 		relative_position_id = TOH_34008
@@ -3444,13 +4423,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34024"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34024"
 		}
 	}
 
 	focus = {
 		id = TOH_34025 #S급 잠수함
-		icon = GFX_focus_TOH_34025
+		icon = GFX_goal_generic_navy_submarine
 		cost = 5
 
 		relative_position_id = TOH_34008
@@ -3463,13 +4442,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34025"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34025"
 		}
 	}
 
 	focus = {
 		id = TOH_34026 #해군 예산 배정
-		icon = GFX_focus_TOH_34026
+		icon = GFX_focus_ioi_generic_buy_ships
 		cost = 5
 
 		relative_position_id = TOH_34018
@@ -3481,13 +4460,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34026"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34026"
 		}
 	}
 
 	focus = {
 		id = TOH_34027 #71형 항공모함
-		icon = GFX_focus_TOH_34027
+		icon = GFX_goal_generic_navy_carrier
 		cost = 5
 
 		relative_position_id = TOH_34020
@@ -3495,17 +4474,18 @@ focus_tree = {
 		y = 1
 
 		prerequisite = { focus = TOH_34020 }
+		available = { has_basic_ship_carrier = yes }
 		ai_will_do = { factor = 30 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34027"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34027"
 		}
 	}
 
 	focus = {
 		id = TOH_34028 #69형 순양전함
-		icon = GFX_focus_TOH_34028
+		icon = GFX_focus_ioi_generic_naval_battleship_4
 		cost = 5
 
 		relative_position_id = TOH_34021
@@ -3514,16 +4494,17 @@ focus_tree = {
 
 		prerequisite = { focus = TOH_34021 }
 		ai_will_do = { factor = 30 }
+		available = { has_improved_ship_heavy = yes }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34028"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34028"
 		}
 	}
 
 	focus = {
 		id = TOH_34029 #X형 중순양함
-		icon = GFX_focus_TOH_34029
+		icon = GFX_focus_ioi_generic_naval_cruiser_1
 		cost = 5
 
 		relative_position_id = TOH_34022
@@ -3532,16 +4513,17 @@ focus_tree = {
 
 		prerequisite = { focus = TOH_34022 }
 		ai_will_do = { factor = 30 }
+		available = { has_improved_ship_cruiser = yes }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34029"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34029"
 		}
 	}
 
 	focus = {
 		id = TOH_34030 #65형 경순양함
-		icon = GFX_focus_TOH_34030
+		icon = GFX_focus_ioi_generic_naval_cruiser_2
 		cost = 5
 
 		relative_position_id = TOH_34022
@@ -3550,16 +4532,17 @@ focus_tree = {
 
 		prerequisite = { focus = TOH_34022 }
 		ai_will_do = { factor = 30 }
+		available = { has_improved_ship_cruiser = yes }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34030"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34030"
 		}
 	}
 
 	focus = {
 		id = TOH_34031 #48형 구축함
-		icon = GFX_focus_TOH_34031
+		icon = GFX_focus_ioi_generic_naval_destroyer_1
 		cost = 5
 
 		relative_position_id = TOH_34023
@@ -3571,13 +4554,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34031"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34031"
 		}
 	}
 
 	focus = {
 		id = TOH_34032 #K급 잠수함
-		icon = GFX_focus_TOH_34032
+		icon = GFX_focus_ioi_generic_naval_submarine_1
 		cost = 5
 
 		relative_position_id = TOH_34025
@@ -3589,13 +4572,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34032"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34032"
 		}
 	}
 
 	focus = {
 		id = TOH_34033 #해군 전투 평가
-		icon = GFX_focus_TOH_34033
+		icon = GFX_focus_ioi_generic_naval_decision
 		cost = 5
 
 		relative_position_id = TOH_34026
@@ -3607,13 +4590,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34033"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34033"
 		}
 	}
 
 	focus = {
 		id = TOH_34034 #새로운 10개년 건조계획
-		icon = GFX_focus_TOH_34034
+		icon = GFX_focus_ioi_generic_design_equipment_standards
 		cost = 5
 
 		relative_position_id = TOH_34033
@@ -3625,13 +4608,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34034"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34034"
 		}
 	}
 
 	focus = {
 		id = TOH_34035 #붉은 해군의 영광/환상향 해군의 영광
-		icon = GFX_focus_TOH_34035
+		icon = {
+			trigger = { is_communism = yes }
+			value = GFX_focus_TOH_34035
+		}
+		icon = { value = GFX_focus_TOH_34035_alt }
 		cost = 5
 
 		relative_position_id = TOH_34034
@@ -3643,13 +4630,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34035"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34035"
 		}
 	}
 
 	focus = {
 		id = TOH_34036 #대양해군 재건
-		icon = GFX_focus_TOH_34036
+		icon = GFX_focus_ioi_generic_naval_fleet_in_being
 		cost = 5
 
 		relative_position_id = TOH_34034
@@ -3661,7 +4648,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_34036"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34036"
 		}
 	}
 
@@ -3681,7 +4668,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_41001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_41001"
 		}
 	}
 
@@ -3700,7 +4687,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_41001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_41001"
 		}
 	}
 
@@ -3719,7 +4706,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_41001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_41001"
 		}
 	}
 
@@ -3738,7 +4725,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44001"
 		}
 	}
 
@@ -3758,14 +4745,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_45001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_45001"
 			custom_effect_tooltip = on_construction_tt
 		}
 	}
 
 	focus = {
 		id = TOH_46001 #쓰러지되 쓰러지지 않았다
-		icon = GFX_focus_TOH_46001
+		icon = GFX_goal_generic_war_with_comintern
 		cost = 5
 
 		relative_position_id = TOH_45001
@@ -3780,14 +4767,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_46001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_46001"
 			custom_effect_tooltip = on_construction_tt
 		}
 	}
 
 	focus = {
 		id = TOH_46002 #반소비에트파 결집
-		icon = GFX_focus_TOH_46002
+		icon = GFX_goal_generic_major_alliance
 		cost = 5
 
 		relative_position_id = TOH_46001
@@ -3800,7 +4787,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_46002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_46002"
+			add_political_power = 75
+			SOV_paranoia_low_increase_effect = yes
+			custom_effect_tooltip = SOV_unification_of_the_exiles_tt
 			custom_effect_tooltip = on_construction_tt
 		}
 	}
@@ -3820,13 +4810,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_41002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_41002"
 		}
 	}
 	
 	focus = {
 		id = TOH_40002 #환상향 소비에트 헌법
-		icon = GFX_focus_TOH_41002
+		icon = GFX_goal_support_communism
 		cost = 5
 
 		relative_position_id = TOH_41001
@@ -3838,7 +4828,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40002"
+			add_to_variable = { SOV_the_politburo_political_power_factor = 0.05 }
+			add_to_variable = { SOV_the_politburo_drift_defence_factor = 0.05 } 
+			custom_effect_tooltip = SOV_the_stalin_constitution_ns_tt
+
+			add_political_power = 50
+			add_stability = 0.05
+
+			SOV_paranoia_low_decrease_effect = yes
 		}
 	}
 	
@@ -3856,7 +4854,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_42002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_42002"
 		}
 	}
 	
@@ -3875,7 +4873,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_41003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_41003"
 		}
 	}
 	
@@ -3894,7 +4892,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_42003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_42003"
 		}
 	}
 	
@@ -3912,7 +4910,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_41004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_41004"
 		}
 	}
 	
@@ -3930,7 +4928,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40003"
 		}
 	}
 	
@@ -3948,7 +4946,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_42004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_42004"
 		}
 	}
 	
@@ -3966,13 +4964,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_41005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_41005"
 		}
 	}
 	
 	focus = {
 		id = TOH_40004 #군부 정리
-		icon = GFX_focus_TOH_40004
+		icon = GFX_focus_SOV_military_purge
 		cost = 5
 
 		relative_position_id = TOH_40003
@@ -3984,7 +4982,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40004"
 		}
 	}
 	
@@ -4002,7 +5000,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_42005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_42005"
 		}
 	}
 	
@@ -4020,13 +5018,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_41006"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_41006"
 		}
 	}
 	
 	focus = {
 		id = TOH_40005 #프톨레타리아 독재
-		icon = GFX_focus_TOH_40004
+		icon = GFX_focus_spr_masters_of_our_own_fate
 		cost = 5
 
 		relative_position_id = TOH_40004
@@ -4038,13 +5036,20 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40005"
+			add_to_variable = { SOV_the_politburo_political_power_factor = 0.05 }
+			add_to_variable = { SOV_the_politburo_max_surrender_limit_offset = 0.05 }
+			custom_effect_tooltip = SOV_the_workers_dictatorship_ns_tt
+
+			add_political_power = 50
+
+			SOV_paranoia_low_decrease_effect = yes
 		}
 	}
 	
 	focus = {
 		id = TOH_42006 #집산화 정책
-		icon = GFX_focus_TOH_42006
+		icon = GFX_focus_prc_agrarian_socialism
 		cost = 5
 
 		relative_position_id = TOH_42005
@@ -4053,10 +5058,126 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		prerequisite = { focus = TOH_42005 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TOH_POLITICAL_PARANOIA }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_42006"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_42006"
+			add_to_variable = { SOV_the_politburo_good_consumer_goods_factor = -0.02 }
+			add_to_variable = { SOV_the_politburo_production_speed_buildings_factor = 0.05 } 
+			add_to_variable = { SOV_the_politburo_global_building_slots_factor = 0.1 } 
+			custom_effect_tooltip = SOV_the_collectivization_process_ns_tt
+
+			add_stability = -0.05
+			add_war_support = -0.05
+
+			if = { #Target a rural state with no civs
+				limit = {
+					any_owned_state = {
+						OR = {
+							has_state_category = town #Developed Rural Region
+							has_state_category = rural #Rural Region
+						}
+						is_fully_controlled_by = ROOT
+						industrial_complex < 1
+						arms_factory < 1
+						dockyard < 1
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						OR = {
+							has_state_category = town #Developed Rural Region
+							has_state_category = rural #Rural Region
+						}
+						is_fully_controlled_by = ROOT
+						industrial_complex < 1
+						arms_factory < 1
+						dockyard < 1
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = { #Failsafe 1: Target a random rural state
+				limit = {
+					any_owned_state = {
+						OR = {
+							has_state_category = town #Developed Rural Region
+							has_state_category = rural #Rural Region
+						}
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						OR = {
+							has_state_category = town #Developed Rural Region
+							has_state_category = rural #Rural Region
+						}
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = { #Failsafe 2: Target a random state
+				limit = {
+					any_owned_state = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+
+			SOV_paranoia_medium_decrease_effect = yes
 		}
 	}
 	
@@ -4075,13 +5196,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40006"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40006"
 		}
 	}
 	
 	focus = {
 		id = TOH_40007 #전위적 혁명의 계승
-		icon = GFX_focus_TOH_40007
+		icon = GFX_focus_generic_army_tanks2
 		cost = 5
 
 		relative_position_id = TOH_40006
@@ -4094,13 +5215,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40007"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40007"
 		}
 	}
 	
 	focus = {
 		id = TOH_40008 #계승자
-		icon = GFX_focus_TOH_40006
+		icon = GFX_focus_generic_support_the_left_right
 		cost = 5
 
 		relative_position_id = TOH_40006
@@ -4113,13 +5234,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40008"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40008"
 		}
 	}
 	
 	focus = {
 		id = TOH_40009 #충복
-		icon = GFX_focus_TOH_40006
+		icon = GFX_goal_generic_neutrality_focus
 		cost = 5
 
 		relative_position_id = TOH_40006
@@ -4132,13 +5253,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40009"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40009"
 		}
 	}
 	
 	focus = {
 		id = TOH_40010 #정치국 장악
-		icon = GFX_focus_TOH_40010
+		icon = GFX_focus_generic_soviet_politics
 		cost = 5
 
 		relative_position_id = TOH_40006
@@ -4151,13 +5272,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40010"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40010"
 		}
 	}
 	
 	focus = {
 		id = TOH_40011 #혁명가
-		icon = GFX_focus_TOH_40011
+		icon = GFX_focus_generic_socialist_science
 		cost = 5
 
 		relative_position_id = TOH_40008
@@ -4166,16 +5287,41 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		prerequisite = { focus = TOH_40008 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_propaganda_campaigns_taken_10_or_greater_tt
+				check_variable = { SOV_propaganda_campaigns_taken = 10 compare = greater_than_or_equals }
+			}
+		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40011"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40011"
+			#Academies of Sciences decisions are 50% cheaper
+			divide_variable = { SOV_national_academy_of_sciences_construction_cost = 2 }
+			custom_effect_tooltip = SOV_brilliant_genius_academies_of_sciences_tt
+
+			if = {
+				limit = {
+					has_completed_focus = SOV_leader_of_the_party_and_the_people
+				}
+				swap_ruler_traits = {
+					remove = stalin_inheritor_of_lenin_leader
+					add = stalin_inheritor_of_lenin_final
+				}
+			}
+			else = {
+				swap_ruler_traits = {
+					remove = stalin_inheritor_of_lenin
+					add = stalin_inheritor_of_lenin_genius
+				}
+			}
 		}
 	}
 	
 	focus = {
 		id = TOH_40012 #새로운 영도자
-		icon = GFX_focus_TOH_40012
+		icon = GFX_focus_YUG_pan_slavic_congress
 		cost = 5
 
 		relative_position_id = TOH_40008
@@ -4184,16 +5330,68 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		prerequisite = { focus = TOH_40008 focus = TOH_40009 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_propaganda_campaigns_taken_10_or_greater_tt
+				check_variable = { SOV_propaganda_campaigns_taken = 10 compare = greater_than_or_equals }
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40012"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40012"
+			add_political_power = 50
+
+			#Swap Stalin's Trait
+			if = { #INHERITOR BRANCH
+				limit = {
+					has_completed_focus = SOV_inheritor_of_the_mantle_of_lenin
+				}
+				if = {
+					limit = {
+						has_completed_focus = SOV_brilliant_genius
+					}
+					swap_ruler_traits = {
+						remove = stalin_inheritor_of_lenin_genius
+						add = stalin_inheritor_of_lenin_final
+					}
+				}
+				else = {
+					swap_ruler_traits = {
+						remove = stalin_inheritor_of_lenin
+						add = stalin_inheritor_of_lenin_leader
+					}
+				}
+			}
+			else_if = { #SERVANT BRANCH
+				limit = {
+					has_completed_focus = SOV_the_faithful_servant_of_lenin
+				}
+				if = {
+					limit = {
+						has_completed_focus = SOV_ban_excessive_hero_worship
+					}
+					swap_ruler_traits = {
+						remove = stalin_servant_of_lenin_worship
+						add = stalin_servant_of_lenin_final
+					}
+				}
+				else = {
+					swap_ruler_traits = {
+						remove = stalin_servant_of_lenin
+						add = stalin_servant_of_lenin_leader
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = SOV_leader_of_the_party_and_the_people_trait_tt
+			}
 		}
 	}
 	
 	focus = {
 		id = TOH_40013 #과도한 영웅 숭배 금지
-		icon = GFX_focus_TOH_40013
+		icon = GFX_focus_renounce_the_treaty_of_trianon
 		cost = 5
 
 		relative_position_id = TOH_40009
@@ -4205,13 +5403,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40013"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40013"
 		}
 	}
 	
 	focus = {
 		id = TOH_40014 #대원수
-		icon = GFX_focus_TOH_40014
+		icon = GFX_focus_generic_military_dictatorship
 		cost = 5
 
 		relative_position_id = TOH_40008
@@ -4224,13 +5422,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40014"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40014"
 		}
 	}
 	
 	focus = {
 		id = TOH_40015 #공산주의의 설계자
-		icon = GFX_focus_TOH_40015
+		icon = GFX_focus_ger_great_red_menace
 		cost = 5
 
 		relative_position_id = TOH_40009
@@ -4243,7 +5441,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40015"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40015"
 		}
 	}
 	
@@ -4261,7 +5459,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40016"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40016"
 		}
 	}
 	
@@ -4279,7 +5477,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40101"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40101"
 		}
 	}
 	
@@ -4297,7 +5495,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40101"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40101"
 		}
 	}
 	
@@ -4315,7 +5513,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40103"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40103"
 		}
 	}
 	
@@ -4333,7 +5531,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40104"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40104"
 		}
 	}
 	
@@ -4352,7 +5550,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40102"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40102"
 		}
 	}
 	
@@ -4371,7 +5569,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40106"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40106"
 		}
 	}
 	
@@ -4390,7 +5588,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40107"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40107"
 		}
 	}
 	
@@ -4408,13 +5606,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40108"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40108"
 		}
 	}
 	
 	focus = {
 		id = TOH_40109 #스타하노프 운동
-		icon = GFX_focus_TOH_40109
+		icon = GFX_goal_generic_construction2
 		cost = 5
 
 		relative_position_id = TOH_40106
@@ -4426,13 +5624,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40109"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40109"
 		}
 	}
 	
 	focus = {
 		id = TOH_40110 #사회주의 경쟁
-		icon = GFX_focus_TOH_40110
+		icon = GFX_goal_generic_soviet_construction
 		cost = 5
 
 		relative_position_id = TOH_40107
@@ -4444,13 +5642,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40110"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40110"
 		}
 	}
 	
 	focus = {
 		id = TOH_40111 #전쟁 영웅
-		icon = GFX_focus_TOH_40111
+		icon = GFX_goal_generic_war_with_comintern
 		cost = 5
 
 		relative_position_id = TOH_40109
@@ -4462,13 +5660,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40111"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40111"
 		}
 	}
 	
 	focus = {
 		id = TOH_40112 #사회주의 리얼리즘
-		icon = GFX_focus_TOH_40112
+		icon = GFX_focus_YUG_pan_slavic_congress
 		cost = 5
 
 		relative_position_id = TOH_40110
@@ -4480,7 +5678,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40112"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40112"
 		}
 	}
 	
@@ -4499,13 +5697,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40113"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40113"
 		}
 	}
 	
 	focus = {
 		id = TOH_40114 #전 환상향의 종교 지도자/무녀
-		icon = GFX_focus_TOH_40114
+		icon = {
+			trigger = { TOH_hakurei_reimu = { is_country_leader = yes } }
+			value = GFX_focus_TOH_40114
+		}
+		icon = { value = GFX_focus_SOV_patriarch_of_all_russia }
 		cost = 5
 
 		relative_position_id = TOH_40112
@@ -4518,7 +5720,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40114"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40114"
 		}
 	}
 	
@@ -4536,13 +5738,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43002"
 		}
 	}
 	
 	focus = {
 		id = TOH_43003 #키리사메주의자들의 귀환
-		icon = GFX_focus_TOH_43003
+		icon = GFX_goal_tripartite_pact
 		cost = 5
 
 		relative_position_id = TOH_43001
@@ -4554,13 +5756,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43003"
 		}
 	}
 	
 	focus = {
 		id = TOH_43004 #망명위원회
-		icon = GFX_focus_TOH_43004
+		icon = GFX_focus_generic_self_management
 		cost = 5
 
 		relative_position_id = TOH_43002
@@ -4573,7 +5775,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43004"
 		}
 	}
 	
@@ -4592,13 +5794,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43005"
 		}
 	}
 	
 	focus = {
 		id = TOH_43006 #투하쳅스키와 접촉
-		icon = GFX_focus_TOH_43004
+		icon = GFX_focus_SOV_approach_tukahchevsky
 		cost = 5
 
 		relative_position_id = TOH_43005
@@ -4610,13 +5812,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43004"
 		}
 	}
 	
 	focus = {
 		id = TOH_43007 #프리마코프와 접촉
-		icon = GFX_focus_TOH_43005
+		icon = GFX_focus_SOV_approach_primakov
 		cost = 5
 
 		relative_position_id = TOH_43005
@@ -4628,7 +5830,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43005"
 		}
 	}
 	
@@ -4647,7 +5849,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43005"
 		}
 	}
 	
@@ -4665,13 +5867,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43009"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43009"
 		}
 	}
 	
 	focus = {
 		id = TOH_43010 #새로운 전위대
-		icon = GFX_focus_TOH_43010
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		cost = 5
 
 		relative_position_id = TOH_43009
@@ -4683,13 +5885,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43010"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43010"
 		}
 	}
 	
 	focus = {
 		id = TOH_43011 #노동자 정부 만세
-		icon = GFX_focus_TOH_43011
+		icon = GFX_focus_generic_join_comintern
 		cost = 5
 
 		relative_position_id = TOH_43009
@@ -4701,7 +5903,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43011"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43011"
 		}
 	}
 	
@@ -4720,13 +5922,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43012"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43012"
 		}
 	}
 	
 	focus = {
 		id = TOH_43013 #혁명 정신 재점화
-		icon = GFX_focus_TOH_43013
+		icon = GFX_focus_SOV_builder_of_the_red_army
 		cost = 5
 
 		relative_position_id = TOH_43011
@@ -4739,13 +5941,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43013"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43013"
 		}
 	}
 	
 	focus = {
 		id = TOH_43014 #붉은 군대의 건설자
-		icon = GFX_focus_TOH_43014
+		icon = GFX_goal_generic_war_with_comintern
 		cost = 5
 
 		relative_position_id = TOH_43011
@@ -4758,13 +5960,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43014"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43014"
 		}
 	}
 	
 	focus = {
 		id = TOH_43015 #영구혁명
-		icon = GFX_focus_TOH_43015
+		icon = GFX_goal_generic_war_with_comintern
 		cost = 5
 
 		relative_position_id = TOH_43012
@@ -4776,13 +5978,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43015"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43015"
 		}
 	}
 	
 	focus = {
 		id = TOH_43016 #군 비정치화
-		icon = GFX_focus_TOH_43013
+		icon = GFX_focus_generic_little_entente
 		cost = 5
 
 		relative_position_id = TOH_43013
@@ -4791,16 +5993,19 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		prerequisite = { focus = TOH_43013 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43013"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43013"
+			#add_to_variable = { SOV_the_red_army_max_command_power_mult = 0.1 }
+			custom_effect_tooltip = SOV_depoliticize_the_military_ns_tt
+			army_experience = 150
 		}
 	}
 	
 	focus = {
 		id = TOH_43017 #키리사메 중공업
-		icon = GFX_focus_TOH_43017
+		icon = GFX_focus_ioi_generic_heavy_industry
 		cost = 5
 
 		relative_position_id = TOH_43014
@@ -4812,7 +6017,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43017"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43017"
 		}
 	}
 	
@@ -4831,13 +6036,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43018"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43018"
 		}
 	}
 	
 	focus = {
 		id = TOH_43019 #반자본주의
-		icon = GFX_focus_TOH_43013
+		icon = GFX_focus_generic_strike_at_democracy2
 		cost = 5
 
 		relative_position_id = TOH_43015
@@ -4850,13 +6055,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43019"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43019"
 		}
 	}
 	
 	focus = {
 		id = TOH_43020 #반파시즘
-		icon = GFX_focus_TOH_43020
+		icon = GFX_focus_generic_anti_fascist_diplomacy
 		cost = 5
 
 		relative_position_id = TOH_43015
@@ -4869,7 +6074,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43020"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43020"
 		}
 	}
 	
@@ -4887,7 +6092,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43021"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43021"
 		}
 	}
 	
@@ -4905,7 +6110,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43022"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43022"
 		}
 	}
 	
@@ -4923,7 +6128,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43023"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43023"
 		}
 	}
 	
@@ -4941,13 +6146,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43024"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43024"
 		}
 	}
 	
 	focus = {
 		id = TOH_43025 #혁명의 승리
-		icon = GFX_focus_TOH_43023
+		icon = GFX_focus_ger_great_red_menace
 		cost = 5
 
 		relative_position_id = TOH_43023
@@ -4959,7 +6164,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43025"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43025"
 		}
 	}
 	
@@ -4978,7 +6183,26 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43026"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43026"
+			custom_effect_tooltip = TOH_43026_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			hidden_effect = {
+				#news_event = { id = rusnews.22 days = 1 }
+				#country_event = russia.321 #Operation Arkhangel
+				every_country = {
+					limit = { 
+						NOT = { has_government = communism }
+						NOT = { has_government = socialism }
+						NOT = { has_war_with = ROOT }
+					}
+					ROOT = {
+						declare_war_on = {
+							target = PREV
+							type = puppet_wargoal_focus
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -4996,7 +6220,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43024"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43024"
 		}
 	}
 	
@@ -5015,7 +6239,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_43028"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43028"
 			add_political_power = 150 
 			every_owned_state = {
 				limit = {
@@ -5091,7 +6315,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44002 #경제정책 재검토
-		icon = GFX_focus_TOH_44002
+		icon = GFX_focus_hol_abandon_the_gold_standard
 		cost = 5
 
 		relative_position_id = TOH_44001
@@ -5103,7 +6327,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44002"
 		}
 	}
 	
@@ -5121,7 +6345,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44003"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44003"
 		}
 	}
 	
@@ -5139,7 +6363,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44004"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44004"
 		}
 	}
 	
@@ -5157,7 +6381,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44005"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44005"
 		}
 	}
 	
@@ -5176,7 +6400,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44006"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44006"
 		}
 	}
 	
@@ -5194,13 +6418,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44007"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44007"
 		}
 	}
 	
 	focus = {
 		id = TOH_44008 #지하조직 결성
-		icon = GFX_focus_TOH_44008
+		icon = GFX_goal_generic_more_territorial_claims
 		cost = 5
 
 		relative_position_id = TOH_44003
@@ -5213,13 +6437,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44008"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44008"
 		}
 	}
 	
 	focus = {
 		id = TOH_44009 #타협적 외교
-		icon = GFX_focus_TOH_44005
+		icon = GFX_goal_generic_dangerous_deal
 		cost = 5
 
 		relative_position_id = TOH_44005
@@ -5232,7 +6456,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44009"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44009"
 		}
 	}
 	
@@ -5251,7 +6475,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44010"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44010"
 		}
 	}
 	
@@ -5270,7 +6494,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44011"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44011"
 		}
 	}
 	
@@ -5288,7 +6512,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44012"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44012"
 		}
 	}
 	
@@ -5306,7 +6530,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44013"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44013"
 		}
 	}
 	
@@ -5324,7 +6548,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44014"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44014"
 		}
 	}
 	
@@ -5342,7 +6566,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44015"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44015"
 		}
 	}
 	
@@ -5361,7 +6585,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44016"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44016"
 		}
 	}
 	
@@ -5379,7 +6603,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44017"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44017"
 		}
 	}
 	
@@ -5397,7 +6621,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44018"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44018"
 		}
 	}
 	
@@ -5415,7 +6639,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44019"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44019"
 		}
 	}
 	
@@ -5433,13 +6657,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44020"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44020"
 		}
 	}
 	
 	focus = {
 		id = TOH_44021 #사회주의 운동
-		icon = GFX_focus_TOH_44021
+		icon = GFX_focus_spr_unify_the_london_bureau
 		cost = 5
 
 		relative_position_id = TOH_44018
@@ -5451,7 +6675,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44021"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44021"
 		}
 	}
 	
@@ -5469,7 +6693,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44022"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44022"
 		}
 	}
 	
@@ -5487,7 +6711,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44023"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44023"
 		}
 	}
 	
@@ -5505,13 +6729,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44024"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44024"
 		}
 	}
 	
 	focus = {
 		id = TOH_44025 #공익 추구
-		icon = GFX_focus_TOH_44025
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 5
 
 		relative_position_id = TOH_44020
@@ -5524,13 +6748,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44025"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44025"
 		}
 	}
 	
 	focus = {
 		id = TOH_44026 #인민의 적
-		icon = GFX_focus_TOH_44026
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
 		cost = 5
 
 		relative_position_id = TOH_44021
@@ -5542,7 +6766,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44026"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44026"
 		}
 	}
 	
@@ -5560,13 +6784,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44027"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44027"
 		}
 	}
 	
 	focus = {
 		id = TOH_44028 #사회주의 휴머니즘
-		icon = GFX_focus_TOH_44025
+		icon = GFX_focus_research
 		cost = 5
 
 		relative_position_id = TOH_44025
@@ -5578,13 +6802,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44028"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44028"
 		}
 	}
 	
 	focus = {
 		id = TOH_44029 #환상향 패권 선언
-		icon = GFX_focus_TOH_44026
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
 		cost = 5
 
 		relative_position_id = TOH_44026
@@ -5593,16 +6817,24 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		prerequisite = { focus = TOH_44026 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+		available = {
+			surrender_progress < 0.01
+		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_44029"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_44029"
+			add_war_support = 0.1
+			add_timed_idea = {
+				idea = TOH_soviet_hegemony_idea
+				days = 730
+			}
 		}
 	}
 	
 	focus = {
 		id = TOH_40201 #노동자 설득
-		icon = GFX_focus_TOH_40201
+		icon = GFX_goal_generic_construction2
 		cost = 5
 
 		relative_position_id = TOH_43001
@@ -5614,7 +6846,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40201"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40201"
 		}
 	}
 	
@@ -5632,13 +6864,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40202"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40202"
 		}
 	}
 	
 	focus = {
 		id = TOH_40203 #당원 지지 확보
-		icon = GFX_focus_TOH_40203
+		icon = GFX_focus_generic_soviet_politics
 		cost = 5
 
 		relative_position_id = TOH_43001
@@ -5650,13 +6882,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40203"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40203"
 		}
 	}
 	
 	focus = {
 		id = TOH_40204 #대 하쿠레이 협력 체제
-		icon = GFX_focus_TOH_40204
+		icon = GFX_goal_generic_national_unity
 		cost = 5
 
 		relative_position_id = TOH_40203
@@ -5669,13 +6901,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40204"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40204"
 		}
 	}
 	
 	focus = {
 		id = TOH_40205 #지노비예프 그룹 설득
-		icon = GFX_focus_TOH_40205
+		icon = GFX_focus_SOV_zinovyevists
 		cost = 5
 
 		relative_position_id = TOH_40204
@@ -5687,13 +6919,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40205"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40205"
 		}
 	}
 	
 	focus = {
 		id = TOH_40206 #비판자들의 해방
-		icon = GFX_focus_TOH_40206
+		icon = GFX_focus_CZE_german_puppet
 		cost = 5
 
 		relative_position_id = TOH_40204
@@ -5705,13 +6937,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40205"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40205"
 		}
 	}
 	
 	focus = {
 		id = TOH_40207 #당 민주주의 회복
-		icon = GFX_focus_TOH_40207
+		icon = GFX_goal_generic_neutrality_focus
 		cost = 5
 
 		relative_position_id = TOH_40204
@@ -5724,13 +6956,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40204"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40204"
 		}
 	}
 	
 	focus = {
 		id = TOH_40208 #군 견제
-		icon = GFX_focus_TOH_40208
+		icon = GFX_focus_SOV_military_purge
 		cost = 5
 
 		relative_position_id = TOH_43001
@@ -5743,13 +6975,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40208"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40208"
 		}
 	}
 	
 	focus = {
 		id = TOH_40209 #군의 지지 확보
-		icon = GFX_focus_TOH_40209
+		icon = GFX_goal_generic_army_doctrines
 		cost = 5
 
 		relative_position_id = TOH_43001
@@ -5762,7 +6994,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40209"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40209"
 		}
 	}
 	
@@ -5781,7 +7013,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40301"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40301"
 			add_political_power = 70
 			if = {
 				limit = { has_completed_focus = TOH_43001 }
@@ -5815,7 +7047,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_40302"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_40302"
 			if = {
 				limit = { has_completed_focus = TOH_43001 }
 				add_popularity = {
@@ -5850,7 +7082,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TOH_45002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_45002"
 			custom_effect_tooltip = on_construction_tt
 		}
 	}

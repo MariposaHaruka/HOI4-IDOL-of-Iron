@@ -1,0 +1,821 @@
+#항공기
+has_interwar_small_airplane = {
+	if = {
+		limit = { has_BBA = yes }
+		has_tech = iw_small_airframe
+		else = {
+			has_tech = early_fighter
+		}
+	}
+}
+
+has_basic_fighter = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = fighter1
+	}
+}
+
+has_basic_cas = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = cas1
+	}
+}
+
+has_basic_naval_bomber = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = naval_bomber1
+	}
+}
+
+has_basic_small_airplane = {	
+	if = {
+		limit = { has_BBA = yes }
+		has_tech = basic_small_airframe
+	}
+}
+
+has_improved_fighter = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = fighter2
+	}
+}
+
+has_improved_cas = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = cas2
+	}
+}
+
+has_improved_naval_bomber = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = naval_bomber2
+	}
+}
+
+has_improved_small_airplane = {	
+	if = {
+		limit = { has_BBA = yes }
+		has_tech = improved_small_airframe
+	}
+}
+
+has_advanced_fighter = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = fighter3
+	}
+}
+
+has_advanced_cas = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = cas3
+	}
+}
+
+has_advanced_naval_bomber = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = naval_bomber3
+	}
+}
+
+has_advanced_small_airplane = {
+	if = {
+		limit = { has_BBA = yes }
+		has_tech = advanced_small_airframe
+
+	}
+}
+
+has_interwar_medium_airplane = {
+	if = {
+		limit = { has_BBA = yes }
+		has_tech = iw_medium_airframe
+		else = {
+			has_tech = early_bomber
+		}
+	}
+}
+
+has_basic_heavy_fighter = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech =  heavy_fighter1
+	}
+}
+
+has_basic_tactical_bomber = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = tactical_bomber1
+	}
+}
+
+has_basic_medium_airplane = {
+	if = {
+		limit = { has_BBA = yes }
+		has_tech = basic_medium_airframe
+	}
+}
+
+has_improved_heavy_fighter = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = heavy_fighter2
+	}
+}
+
+has_improved_tactical_bomber = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = tactical_bomber2
+	}
+}
+
+has_improved_medium_airplane = {
+	if = {
+		limit = { has_BBA = yes }
+		has_tech = improved_medium_airframe
+	}
+}
+
+has_advanced_heavy_fighter = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = heavy_fighter3
+	}
+}
+
+has_advanced_tactical_bomber = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = tactical_bomber3
+	}
+}
+
+has_advanced_medium_airplane = {
+	if = {
+		limit = { has_BBA = yes }
+		has_tech = advanced_medium_airframe
+	}
+}
+
+has_interwar_large_airplane = {
+	if = {
+		limit = { has_BBA = yes }
+		has_tech = iw_large_airframe
+	}
+}
+
+has_basic_strategic_bomber = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = strategic_bomber1
+	}
+}
+
+has_basic_large_airplane = {
+	if = {
+		limit = { has_BBA = yes }
+		has_tech = basic_large_airframe
+	}
+}
+
+has_improved_strategic_bomber = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = strategic_bomber2
+	}
+}
+
+has_improved_large_airplane = {
+	if = {
+		limit = { has_BBA = yes }
+		has_tech = improved_large_airframe
+	}
+}
+
+has_advanced_strategic_bomber = {
+	if = {
+		limit = { has_BBA = no }
+		has_tech = strategic_bomber3
+	}
+}
+
+has_advanced_large_airplane = {
+	if = {
+		limit = { has_BBA = yes }
+		has_tech = advanced_large_airframe
+	}
+}
+
+has_basic_small_airframe = {
+	if = {
+		limit = { has_BBA = yes }
+		custom_trigger_tooltip = {
+			has_basic_small_airplane = yes
+			tooltip = has_basic_small_airframe_BBA_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				OR = {
+					has_basic_fighter = yes
+					has_basic_cas = yes
+					has_basic_naval_bomber = yes
+				}
+				tooltip = has_basic_small_airframe_tt
+			}
+		}
+	}
+}
+
+has_improved_small_airframe = {
+	if = {
+		limit = { has_BBA = yes }
+		custom_trigger_tooltip = {
+			has_improved_small_airplane = yes
+			tooltip = has_improved_small_airframe_BBA_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				OR = {
+					has_improved_fighter = yes
+					has_improved_cas = yes
+					has_improved_naval_bomber = yes
+				}
+				tooltip = has_improved_small_airframe_tt
+			}
+		}
+	}
+}
+
+has_advanced_small_airframe = {
+	if = {
+		limit = { has_BBA = yes }
+		custom_trigger_tooltip = {
+			has_advanced_small_airplane = yes
+			tooltip = has_advanced_small_airframe_BBA_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				OR = {
+					has_advanced_fighter = yes
+					has_advanced_cas = yes
+					has_advanced_naval_bomber = yes
+				}
+				tooltip = has_advanced_small_airframe_tt
+			}
+		}
+	}
+}
+
+has_basic_medium_airframe = {
+	if = {
+		limit = { has_BBA = yes }
+		custom_trigger_tooltip = {
+			has_basic_medium_airplane = yes
+			tooltip = has_basic_medium_airframe_BBA_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				OR = {
+					has_basic_heavy_fighter = yes
+					has_basic_tactical_bomber = yes
+				}
+				tooltip = has_basic_medium_airframe_tt
+			}
+		}
+	}
+}
+
+has_improved_medium_airframe = {
+	if = {
+		limit = { has_BBA = yes }
+		custom_trigger_tooltip = {
+			has_improved_medium_airplane = yes
+			tooltip = has_improved_medium_airframe_BBA_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				OR = {
+					has_improved_heavy_fighter = yes
+					has_improved_tactical_bomber = yes
+				}
+				tooltip = has_improved_medium_airframe_tt
+			}
+		}
+	}
+}
+
+has_advanced_medium_airframe = {
+	if = {
+		limit = { has_BBA = yes }
+		custom_trigger_tooltip = {
+			has_advanced_medium_airplane = yes
+			tooltip = has_advanced_medium_airframe_BBA_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				OR = {
+					has_advanced_heavy_fighter = yes
+					has_advanced_tactical_bomber = yes
+				}
+				tooltip = has_advanced_medium_airframe_tt
+			}
+		}
+	}
+}
+
+has_basic_large_airframe = {
+	if = {
+		limit = { has_BBA = yes }
+		custom_trigger_tooltip = {
+			has_basic_large_airplane = yes
+			tooltip = has_basic_large_airframe_BBA_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				has_basic_strategic_bomber = yes
+				tooltip = has_basic_large_airframe_tt
+			}
+		}
+	}
+}
+
+has_improved_large_airframe = {
+	if = {
+		limit = { has_BBA = yes }
+		custom_trigger_tooltip = {
+			has_improved_large_airplane = yes
+			tooltip = has_improved_large_airframe_BBA_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				has_improved_strategic_bomber = yes
+				tooltip = has_improved_large_airframe_tt
+			}
+		}
+	}
+}
+
+has_advanced_large_airframe = {
+	if = {
+		limit = { has_BBA = yes }
+		custom_trigger_tooltip = {
+			has_advanced_large_airplane = yes
+			tooltip = has_advanced_large_airframe_BBA_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				has_advanced_strategic_bomber = yes
+				tooltip = has_advanced_large_airframe_tt
+			}
+		}
+	}
+}
+
+#전차
+has_gwtank = {
+	if = {
+		limit = { has_NSB = yes }
+		has_tech = gwtank_chassis
+		else = {
+			has_tech = gwtank
+		}
+	}
+}
+
+has_basic_light_tank = {
+	if = {
+		limit = { has_NSB = no }
+		has_tech = basic_light_tank
+	}
+}
+
+has_improved_light_tank = {
+	if = {
+		limit = { has_NSB = no }
+		has_tech = improved_light_tank
+	}
+}
+
+has_advanced_light_tank = {
+	if = {
+		limit = { has_NSB = no }
+		has_tech = advanced_light_tank
+	}
+}
+
+has_basic_light_tank_chassis = {
+	if = {
+		limit = { has_NSB = yes }
+		has_tech = basic_light_tank_chassis
+	}
+}
+
+has_improved_light_tank_chassis = {
+	if = {
+		limit = { has_NSB = yes }
+		has_tech = improved_light_tank_chassis
+	}
+}
+
+has_advanced_light_tank_chassis = {
+	if = {
+		limit = { has_NSB = yes }
+		has_tech = advanced_light_tank_chassis
+	}
+}
+
+has_basic_medium_tank = {
+	if = {
+		limit = { has_NSB = no }
+		has_tech = basic_medium_tank
+	}
+}
+
+has_improved_medium_tank = {
+	if = {
+		limit = { has_NSB = no }
+		has_tech = improved_medium_tank
+	}
+}
+
+has_advanced_medium_tank = {
+	if = {
+		limit = { has_NSB = no }
+		has_tech = advanced_medium_tank
+	}
+}
+
+has_basic_medium_tank_chassis = {
+	if = {
+		limit = { has_NSB = yes }
+		has_tech = basic_medium_tank_chassis
+	}
+}
+
+has_improved_medium_tank_chassis = {
+	if = {
+		limit = { has_NSB = yes }
+		has_tech = improved_medium_tank_chassis
+	}
+}
+
+has_advanced_medium_tank_chassis = {
+	if = {
+		limit = { has_NSB = yes }
+		has_tech = advanced_medium_tank_chassis
+	}
+}
+
+has_basic_heavy_tank = {
+	if = {
+		limit = { has_NSB = no }
+		has_tech = basic_heavy_tank
+	}
+}
+
+has_improved_heavy_tank = {
+	if = {
+		limit = { has_NSB = no }
+		has_tech = improved_heavy_tank
+	}
+}
+
+has_advanced_heavy_tank = {
+	if = {
+		limit = { has_NSB = no }
+		has_tech = advanced_heavy_tank
+	}
+}
+
+has_basic_heavy_tank_chassis = {
+	if = {
+		limit = { has_NSB = yes }
+		has_tech = basic_heavy_tank_chassis
+	}
+}
+
+has_improved_heavy_tank_chassis = {
+	if = {
+		limit = { has_NSB = yes }
+		has_tech = improved_heavy_tank_chassis
+	}
+}
+
+has_advanced_heavy_tank_chassis = {
+	if = {
+		limit = { has_NSB = yes }
+		has_tech = advanced_heavy_tank_chassis
+	}
+}
+
+has_basic_light_tank_frame = {
+	if = {
+		limit = { has_NSB = yes }
+		custom_trigger_tooltip = {
+			has_basic_light_tank_chassis = yes
+			tooltip = has_basic_light_tank_frame_NSB_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				has_basic_light_tank = yes
+				tooltip = has_basic_light_tank_frame_tt
+			}
+		}
+	}
+}
+
+has_improved_light_tank_frame = {
+	if = {
+		limit = { has_NSB = yes }
+		custom_trigger_tooltip = {
+			has_improved_light_tank_chassis = yes
+			tooltip = has_improved_light_tank_frame_NSB_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				has_improved_light_tank = yes
+				tooltip = has_improved_light_tank_frame_tt
+			}
+		}
+	}
+}
+
+has_advanced_light_tank_frame = {
+	if = {
+		limit = { has_NSB = yes }
+		custom_trigger_tooltip = {
+			has_advanced_light_tank_chassis = yes
+			tooltip = has_advanced_light_tank_frame_NSB_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				has_advanced_light_tank = yes
+				tooltip = has_advanced_light_tank_frame_tt
+			}
+		}
+	}
+}
+
+has_basic_medium_tank_frame = {
+	if = {
+		limit = { has_NSB = yes }
+		custom_trigger_tooltip = {
+			has_basic_medium_tank_chassis = yes
+			tooltip = has_basic_medium_tank_frame_NSB_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				has_basic_medium_tank = yes
+				tooltip = has_basic_medium_tank_frame_tt
+			}
+		}
+	}
+}
+
+has_improved_medium_tank_frame = {
+	if = {
+		limit = { has_NSB = yes }
+		custom_trigger_tooltip = {
+			has_improved_medium_tank_chassis = yes
+			tooltip = has_improved_medium_tank_frame_NSB_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				has_improved_medium_tank = yes
+				tooltip = has_improved_medium_tank_frame_tt
+			}
+		}
+	}
+}
+
+has_advanced_medium_tank_frame = {
+	if = {
+		limit = { has_NSB = yes }
+		custom_trigger_tooltip = {
+			has_advanced_medium_tank_chassis = yes
+			tooltip = has_advanced_medium_tank_frame_NSB_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				has_advanced_medium_tank = yes
+				tooltip = has_advanced_medium_tank_frame_tt
+			}
+		}
+	}
+}
+
+has_basic_heavy_tank_frame = {
+	if = {
+		limit = { has_NSB = yes }
+		custom_trigger_tooltip = {
+			has_basic_heavy_tank_chassis = yes
+			tooltip = has_basic_heavy_tank_frame_NSB_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				has_basic_heavy_tank = yes
+				tooltip = has_basic_heavy_tank_frame_tt
+			}
+		}
+	}
+}
+
+has_improved_heavy_tank_frame = {
+	if = {
+		limit = { has_NSB = yes }
+		custom_trigger_tooltip = {
+			has_improved_heavy_tank_chassis = yes
+			tooltip = has_improved_heavy_tank_frame_NSB_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				has_improved_heavy_tank = yes
+				tooltip = has_improved_heavy_tank_frame_tt
+			}
+		}
+	}
+}
+
+has_advanced_heavy_tank_frame = {
+	if = {
+		limit = { has_NSB = yes }
+		custom_trigger_tooltip = {
+			has_advanced_heavy_tank_chassis = yes
+			tooltip = has_advanced_heavy_tank_frame_NSB_tt
+		}
+		else = {
+			custom_trigger_tooltip = {
+				has_advanced_heavy_tank = yes
+				tooltip = has_advanced_heavy_tank_frame_tt
+			}
+		}
+	}
+}
+
+#함선
+has_early_ship_submarine = {
+	custom_trigger_tooltip = {
+		has_tech = early_ship_hull_submarine
+		tooltip = has_early_ship_submarine_tt
+	}
+}
+
+has_basic_ship_submarine = {
+	custom_trigger_tooltip = {
+		has_tech = basic_ship_hull_submarine
+		tooltip = has_basic_ship_submarine_tt
+	}
+}
+
+has_improved_ship_submarine = {
+	custom_trigger_tooltip = {
+		has_tech = improved_ship_hull_submarine
+		tooltip = has_improved_ship_submarine_tt
+	}
+}
+
+has_advanced_ship_submarine = {
+	custom_trigger_tooltip = {
+		has_tech = advanced_ship_hull_submarine
+		tooltip = has_advanced_ship_submarine_tt
+	}
+}
+
+has_early_ship_light = {
+	custom_trigger_tooltip = {
+		has_tech = early_ship_hull_light
+		tooltip = has_early_ship_light_tt
+	}
+}
+
+has_basic_ship_light = {
+	custom_trigger_tooltip = {
+		has_tech = basic_ship_hull_light
+		tooltip = has_basic_ship_light_tt
+	}
+}
+
+has_improved_ship_light = {
+	custom_trigger_tooltip = {
+		has_tech = improved_ship_hull_light
+		tooltip = has_improved_ship_light_tt
+	}
+}
+
+has_advanced_ship_light = {
+	custom_trigger_tooltip = {
+		has_tech = advanced_ship_hull_light
+		tooltip = has_advanced_ship_light_tt
+	}
+}
+
+has_early_ship_cruiser = {
+	custom_trigger_tooltip = {
+		has_tech = early_ship_hull_cruiser
+		tooltip = has_early_ship_cruiser_tt
+	}
+}
+
+has_basic_ship_cruiser = {
+	custom_trigger_tooltip = {
+		has_tech = basic_ship_hull_cruiser
+		tooltip = has_basic_ship_cruiser_tt
+	}
+}
+
+has_improved_ship_cruiser = {
+	custom_trigger_tooltip = {
+		has_tech = improved_ship_hull_cruiser
+		tooltip = has_improved_ship_cruiser_tt
+	}
+}
+
+has_advanced_ship_cruiser = {
+	custom_trigger_tooltip = {
+		has_tech = advanced_ship_hull_cruiser
+		tooltip = has_advanced_ship_cruiser_tt
+	}
+}
+
+has_early_ship_heavy = {
+	custom_trigger_tooltip = {
+		has_tech = early_ship_hull_heavy
+		tooltip = has_early_ship_heavy_tt
+	}
+}
+
+has_basic_ship_heavy = {
+	custom_trigger_tooltip = {
+		has_tech = basic_ship_hull_heavy
+		tooltip = has_basic_ship_heavy_tt
+	}
+}
+
+has_improved_ship_heavy = {
+	custom_trigger_tooltip = {
+		has_tech = improved_ship_hull_heavy
+		tooltip = has_improved_ship_heavy_tt
+	}
+}
+
+has_advanced_ship_heavy = {
+	custom_trigger_tooltip = {
+		has_tech = advanced_ship_hull_heavy
+		tooltip = has_advanced_ship_heavy_tt
+	}
+}
+
+has_early_ship_carrier = {
+	custom_trigger_tooltip = {
+		has_tech = early_ship_hull_carrier
+		tooltip = has_early_ship_carrier_tt
+	}
+}
+
+has_basic_ship_carrier = {
+	custom_trigger_tooltip = {
+		has_tech = basic_ship_hull_carrier
+		tooltip = has_basic_ship_carrier_tt
+	}
+}
+
+has_improved_ship_carrier = {
+	custom_trigger_tooltip = {
+		has_tech = improved_ship_hull_carrier
+		tooltip = has_improved_ship_carrier_tt
+	}
+}
+
+has_advanced_ship_carrier = {
+	custom_trigger_tooltip = {
+		has_tech = advanced_ship_hull_carrier
+		tooltip = has_advanced_ship_carrier_tt
+	}
+}
+
+#주 속성
+is_rural = {
+	custom_trigger_tooltip = {
+		tooltip = is_rural_tt
+		NOT = {
+			has_state_category = large_town
+			has_state_category = city
+			has_state_category = large_city
+			has_state_category = metropolis
+			has_state_category = megalopolis
+
+			has_state_category = small_island
+			has_state_category = tiny_island
+		}
+	}
+}

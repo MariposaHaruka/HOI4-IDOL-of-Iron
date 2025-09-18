@@ -190,3 +190,39 @@ is_federal = {
 		has_idea = local_self_federal_state
 	} 
 }
+
+can_design_tank = {
+	OR = {
+		original_tag = IMA
+		original_tag = ICG
+		original_tag = IML
+		original_tag = TOH
+		original_tag = PRS
+		original_tag = ENS
+		original_tag = BDG
+		original_tag = PRK
+	}
+}
+
+can_design_plane = {
+	OR = {
+		original_tag = IMA
+		original_tag = ICG
+		original_tag = IML
+		original_tag = TOH
+		original_tag = PRS
+		original_tag = BDG
+		original_tag = LLS
+		original_tag = ENS
+	}
+}
+
+can_design_ship = {
+	OR = {
+		original_tag = IMA
+		original_tag = ICG
+		original_tag = IML
+		original_tag = LLS
+		original_tag = ENS
+	}
+}

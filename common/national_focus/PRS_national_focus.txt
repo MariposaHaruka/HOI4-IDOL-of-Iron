@@ -34,6 +34,9 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 
 		available_if_capitulated = yes
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 		mutually_exclusive = { focus = PRS_12001 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -43,7 +46,7 @@ focus_tree = {
 			    ideology = ROOT
 			    popularity = -0.1
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			every_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -61,10 +64,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = PRS_ootori_emu
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			PRS_stop_rearmament = yes
 			unlock_decision_category_tooltip = PRS_wirtschaftswunder
 			hidden_effect = {
@@ -91,6 +94,9 @@ focus_tree = {
 		y = 0
 
 		ai_will_do = { factor = 50 }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = PRS_11001 }
@@ -110,6 +116,7 @@ focus_tree = {
 		relative_position_id = PRS_11001
 		cost = 5
 		available = {
+			PRS_preparing_war_against_sekai = no
 			is_subject = no
 			AND = {
 				country_exists = DFD
@@ -155,6 +162,7 @@ focus_tree = {
 		relative_position_id = PRS_12001
 		cost = 5
 		available = {
+			PRS_preparing_war_against_sekai = no
 			OR = {
 				has_full_control_of_state = 64 #Brandenburg
 				has_full_control_of_state = 59 #Hannover
@@ -377,7 +385,7 @@ focus_tree = {
 					}
 				}
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			51 = {
 				add_building_construction = {
 					type = dam
@@ -566,7 +574,7 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			if = {
 				limit = {
@@ -707,6 +715,9 @@ focus_tree = {
 		id = PRS_11002 #예산 재분배
 		icon = GFX_focus_GER_customs_union
 		prerequisite = { focus = PRS_11001 }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		x = -4
 		y = 1
@@ -736,7 +747,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			#GER_modify_industrial_modifier = yes
 			#add_to_variable = { 
 			#	GER_industrial_consumer_goods_factor = -0.15
@@ -767,7 +778,7 @@ focus_tree = {
 				ideology = ROOT
 				popularity = 0.05
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			random_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -784,7 +795,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			unlock_decision_category_tooltip = PRS_national_land_develpment
 		}
 	}
@@ -811,7 +822,7 @@ focus_tree = {
 				ideology = ROOT
 				popularity = 0.05
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			random_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -828,7 +839,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	
@@ -1465,7 +1476,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_12001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1481,7 +1494,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_12001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1497,7 +1512,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_12001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1506,14 +1523,16 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRS_12301 #세카이 통합 경제제
+		id = PRS_12301 #세카이 통합 경제
 		icon = GFX_focus_GER_realpolitik
 		prerequisite = { focus = PRS_12001 }
 		x = 12
 		y = 1
 		relative_position_id = PRS_12001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1522,7 +1541,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRS_12102 #이치고 제휴
+		id = PRS_12102 #통합
 		icon = GFX_focus_generic_reorient_production
 		prerequisite = { focus = PRS_10005 }
 		x = -1
@@ -1844,7 +1863,7 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			modify_building_resources = {
         	   building = synthetic_refinery
@@ -1852,7 +1871,7 @@ focus_tree = {
         	   amount = 2
         	}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			add_tech_bonus = {
 				name = PRS_establish_buna_werke
@@ -1861,7 +1880,7 @@ focus_tree = {
 				category = synth_resources
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			PRS_modify_industrial_modifier = yes
 			add_to_variable = { 
@@ -2000,7 +2019,7 @@ focus_tree = {
 		completion_reward = {
 			PRS_autarky_achieved_effects = yes
 			
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			if = {
 				limit = { #Notify that you will get an improved version of the Trade Law
 					NOT = { has_idea = autarkic_economy }
@@ -2016,7 +2035,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRS_12302 #이치고고 제휴
+		id = PRS_12302 #이치고 제휴
 		icon = GFX_focus_PRS_12302
 		prerequisite = { focus = PRS_12301 }
 		x = -1
@@ -2068,11 +2087,13 @@ focus_tree = {
 	#육군 중점 1
 	focus = {
 		id = PRS_21001 #전시 배급
-		icon = GFX_focus_generic_tank_assault
+		icon = GFX_focus_GER_army
 		x = 37
 		y = 0
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -2087,7 +2108,9 @@ focus_tree = {
 		x = 56
 		y = 0
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
 
@@ -2162,10 +2185,10 @@ focus_tree = {
 			
 			if = {
 				limit = { has_dlc = "Gotterdammerung" }
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 				custom_effect_tooltip = GER_unlocks_eben_emael_raid_tt
 
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 
 			custom_effect_tooltip = available_chief_of_airforce
@@ -2180,7 +2203,9 @@ focus_tree = {
 		y = 3
 		relative_position_id = PRS_22001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -2197,7 +2222,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_21001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -2208,24 +2235,26 @@ focus_tree = {
 				uses = 2
 				category = cat_fortification
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			add_timed_idea = {
 				idea = PRS_kohane_line
 				days = 730
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			unlock_decision_category_tooltip = PRS_kohane_line_construction
 		}
 	}
 	focus = {
 		id = PRS_21003 #임무형 전술
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_generic_national_security
 		prerequisite = { focus = PRS_21001 }
 		x = 0
 		y = 1
 		relative_position_id = PRS_21001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
@@ -2238,7 +2267,7 @@ focus_tree = {
 				category = land_doctrine
 			}
 			
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			GER_modify_army_modifier = yes
 			add_to_variable = { 
@@ -2246,7 +2275,7 @@ focus_tree = {
 				tooltip = initiative_factor_tt
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = franz_halder
 
@@ -2257,7 +2286,7 @@ focus_tree = {
 						is_field_marshal = no
 					}
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 				GER_gerd_von_rundstedt = {
 					promote_leader = yes
 				}
@@ -2270,7 +2299,7 @@ focus_tree = {
 						is_field_marshal = no
 					}
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 				GER_gunther_von_kluge = {
 					promote_leader = yes
 				}
@@ -2285,7 +2314,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_21001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -2364,7 +2395,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PRS_21101 #기존 교리의 수정정
+		id = PRS_21101 #기존 교리의 수정
 		icon = GFX_focus_GER_prussian_legacy
 		prerequisite = { focus = PRS_21003 }
 		x = -4
@@ -2380,7 +2411,7 @@ focus_tree = {
 			add_command_power = 25
 			army_experience = 15
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			add_doctrine_cost_reduction = {
 				name = PRS_the_prussian_legacy
@@ -2389,7 +2420,7 @@ focus_tree = {
 				category = cat_grand_battle_plan
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			custom_effect_tooltip = PRS_unlock_operational_planning_bewegungskrieg_tt
 			effect_tooltip = { #This is done for tooltip purposes
@@ -2399,8 +2430,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = PRS_21201 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21201 #돌격포
+		icon = GFX_focus_generic_self_propelled_gun
 		prerequisite = { focus = PRS_21003 }
 		x = 0
 		y = 1
@@ -2419,13 +2450,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	
 	focus = {
 		id = PRS_21301 #새로운 기갑교리 채택
-		icon = GFX_focus_generic_tank_assault
+		icon = GFX_focus_ioi_generic_doctrine_tank_warfare
 		prerequisite = { focus = PRS_21003 }
 		x = 4
 		y = 1
@@ -2440,7 +2471,7 @@ focus_tree = {
 			add_command_power = 25
 			army_experience = 15
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			add_doctrine_cost_reduction = {
 				name = PRS_adopt_new_panzer_doctrine
@@ -2449,7 +2480,7 @@ focus_tree = {
 				category = cat_mobile_warfare
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			show_unit_leaders_tooltip = PRS_heinz_guderian
 			custom_effect_tooltip = available_theorist
@@ -2458,7 +2489,7 @@ focus_tree = {
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = erwin_rommel
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			custom_effect_tooltip = PRS_unlock_operational_planning_blitzkrieg_tt
 			effect_tooltip = { #This is done for tooltip purposes
@@ -2469,7 +2500,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_21102 #대전쟁의 교훈
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_focus_ioi_generic_army_grand_battleplan
 		prerequisite = { focus = PRS_21101 }
 		x = -1
 		y = 1
@@ -2488,13 +2519,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21151 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21151 #포격 활용
+		icon = GFX_focus_RAJ_mountain_guns
 		prerequisite = { focus = PRS_21101 focus = PRS_21201 }
 		x = 2
 		y = 1
@@ -2513,13 +2544,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21202 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21202 #보병 기갑
+		icon = GFX_focus_ioi_generic_army_mass_assault
 		prerequisite = { focus = PRS_21201 }
 		x = 1
 		y = 1
@@ -2538,13 +2569,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21103 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21103 #대규모 보병
+		icon = GFX_focus_ioi_generic_mass_concentration_of_army
 		prerequisite = { focus = PRS_21102 }
 		x = -1
 		y = 1
@@ -2562,13 +2593,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21104 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21104 #포병 포격
+		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = PRS_21102 focus = PRS_21151 }
 		x = 1
 		y = 1
@@ -2586,7 +2617,7 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -2606,7 +2637,7 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 15
 			
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			add_doctrine_cost_reduction = {
 				name = GER_stormtroopers
@@ -2621,7 +2652,7 @@ focus_tree = {
 				category = infantry_weapons
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			custom_effect_tooltip = GER_modify_bewegungskrieg_modifier_tt
 			effect_tooltip = {
@@ -2635,14 +2666,14 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			custom_effect_tooltip = GER_sturmtruppe_battalion_tt
 			hidden_effect = {
 				set_technology = { sturmtruppe_battalion_tech = 1 popup = no }
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			if = {
 				limit = {
@@ -2683,7 +2714,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_21106 #대규모 돌파
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_army_soldiers_2
 		prerequisite = { focus = PRS_21105 }
 		x = 0
 		y = 1
@@ -2696,7 +2727,7 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 15
 			
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			add_doctrine_cost_reduction = {
 				name = PRS_stormtroopers
@@ -2711,7 +2742,7 @@ focus_tree = {
 				category = infantry_weapons
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			custom_effect_tooltip = PRS_modify_bewegungskrieg_modifier_tt
 			effect_tooltip = {
@@ -2725,14 +2756,14 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			custom_effect_tooltip = PRS_sturmtruppe_battalion_tt
 			hidden_effect = {
 				set_technology = { sturmtruppe_battalion_tech = 1 popup = no }
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			if = {
 				limit = {
@@ -2773,7 +2804,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_21302 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_armor_school
 		prerequisite = { focus = PRS_21301 }
 		x = -1
 		y = 1
@@ -2791,13 +2822,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21203 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21203 #보병-기갑 제병협동
+		icon = GFX_focus_ioi_generic_combined_arms_training_infantry_armor
 		prerequisite = { focus = PRS_21202 focus = PRS_21151 }
 		x = -1
 		y = 1
@@ -2815,13 +2846,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21204 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21204 #보병 전차
+		icon = GFX_focus_ioi_generic_heavy_tank_3
 		prerequisite = { focus = PRS_21202 focus = PRS_21302 }
 		x = 1
 		y = 1
@@ -2839,13 +2870,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21205 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21205 #3호 돌격포
+		icon = GFX_focus_ioi_generic_tank_destroyer_1
 		prerequisite = { focus = PRS_21203 }
 		prerequisite = { focus = PRS_21204 }
 		x = 1
@@ -2864,13 +2895,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21206 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21206 #4호 구축전차
+		icon = GFX_focus_ioi_generic_tank_destroyer_2
 		prerequisite = { focus = PRS_21205 }
 		x = -1
 		y = 1
@@ -2889,13 +2920,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21207 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21207 #헤처
+		icon = GFX_focus_ioi_generic_heavy_tank_6
 		prerequisite = { focus = PRS_21205 }
 		x = 1
 		y = 1
@@ -2914,7 +2945,7 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -2945,7 +2976,7 @@ focus_tree = {
 					add_mio_size = 1
 					add_mio_funds_gain_factor = 0.1
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 
 			add_tech_bonus = {
@@ -2970,7 +3001,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 
 				create_equipment_variant = {
 					name = "Sturmpanzer"
@@ -3011,7 +3042,7 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			GER_modify_army_modifier = yes
 			add_to_variable = { 
@@ -3019,7 +3050,7 @@ focus_tree = {
 				tooltip = army_artillery_defence_factor_tt
 			}
 			
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			if = {
 				limit = {
@@ -3033,7 +3064,7 @@ focus_tree = {
 					GER_wunderwaffen_sp_tag_artillery_speed_factor = GER_wunderwaffe_research_speed_bonus
 					tooltip = sp_tag_artillery_speed_factor_tt
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 
 			custom_effect_tooltip = GER_modify_bewegungskrieg_modifier_tt
@@ -3047,8 +3078,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PRS_21153 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21153 #구스타프 프로젝트
+		icon = GFX_focus_generic_railway_gun
 		prerequisite = { focus = PRS_21152 }
 		prerequisite = { focus = PRS_21104 }
 		x = -1
@@ -3067,13 +3098,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_21154 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_PRS_21154
 		prerequisite = { focus = PRS_21152 }
 		prerequisite = { focus = PRS_21203 }
 		x = 1
@@ -3092,13 +3123,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21155 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21155 #화력 전술
+		icon = GFX_focus_ioi_generic_army_superior_firepower
 		prerequisite = { focus = PRS_21152 }
 		x = 0
 		y = 2
@@ -3116,19 +3147,21 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21401 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21401 #더 빨리! 더 빨리!
+		icon = GFX_focus_generic_tankette
 		prerequisite = { focus = PRS_21001 }
 		x = 7
 		y = 1
 		relative_position_id = PRS_21001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -3140,13 +3173,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_21402 #육군 병기국
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_war_production_committee
 		prerequisite = { focus = PRS_21401 }
 		x = -1
 		y = 1
@@ -3164,7 +3197,7 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -3189,13 +3222,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21304 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21304 #기갑 연구
+		icon = GFX_focus_ioi_generic_research_army
 		prerequisite = { focus = PRS_21302 }
 		prerequisite = { focus = PRS_21303 }
 		x = 1
@@ -3214,13 +3247,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21305 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21305 #4호 전차
+		icon = GFX_focus_ioi_generic_army_tanks_2
 		prerequisite = { focus = PRS_21303 }
 		x = 1
 		y = 1
@@ -3238,13 +3271,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21306 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21306 #전차 대량 생산
+		icon = GFX_focus_generic_mass_production
 		prerequisite = { focus = PRS_21304 }
 		prerequisite = { focus = PRS_21305 }
 		x = 1
@@ -3263,13 +3296,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21307 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21307 #판터
+		icon = GFX_focus_generic_heavy_tank
 		prerequisite = { focus = PRS_21306 }
 		x = -1
 		y = 1
@@ -3287,13 +3320,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21308 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21308 #티거
+		icon = GFX_focus_ioi_generic_heavy_tank_1
 		prerequisite = { focus = PRS_21306 }
 		x = 1
 		y = 1
@@ -3311,13 +3344,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_21403 #기갑 부대 훈련소
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_armor_school
 		prerequisite = { focus = PRS_21401 }
 		x = 1
 		y = 1
@@ -3335,13 +3368,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_21404 #기갑 사단
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_generic_tank_assault
 		prerequisite = { focus = PRS_21402 }
 		prerequisite = { focus = PRS_21403 }
 		x = 1
@@ -3360,7 +3393,7 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -3406,7 +3439,7 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			PRS_modify_army_modifier = yes			
 			add_to_variable = { 
@@ -3414,7 +3447,7 @@ focus_tree = {
 				tooltip = org_loss_when_moving_tt
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			if = {
 				limit = {
@@ -3473,7 +3506,7 @@ focus_tree = {
 				category = cat_mechanized_equipment
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			if = {
 				limit = {
@@ -3542,7 +3575,7 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			if = {
 				limit = {
@@ -3581,7 +3614,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_21407 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_generic_radio_communication
 		prerequisite = { focus = PRS_21401 }
 		x = 1
 		y = 1
@@ -3599,13 +3632,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_22101 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_22101 #융커스
+		icon = GFX_focus_PRS_22101
 		prerequisite = { focus = PRS_22002 }
 		x = 3
 		y = 1
@@ -3623,13 +3656,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21409 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_21409 #보급은 중대사항
+		icon = GFX_focus_ioi_generic_truck_1
 		prerequisite = { focus = PRS_21405 }
 		x = 1
 		y = 1
@@ -3647,7 +3680,7 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -3673,12 +3706,12 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_21411 #전시 배급
+		id = PRS_21411 #전쟁 기관차
 		icon = GFX_focus_GER_kriegslokomotive
 		prerequisite = { focus = PRS_21409 }
 		x = 1
@@ -3719,7 +3752,7 @@ focus_tree = {
 				}
 			}
 			
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			add_tech_bonus = {
 				name = GER_kriegslokomotiven
@@ -3728,14 +3761,14 @@ focus_tree = {
 				category = train_tech
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			add_equipment_to_stockpile = {
 				type = train_equipment
 				amount = 15
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			if = {
 				limit = {
@@ -3835,7 +3868,7 @@ focus_tree = {
 				tooltip = acclimatization_hot_climate_gain_factor_tt
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			custom_effect_tooltip = PRS_unlock_operational_planning_in_africa_tt
 		}
@@ -3849,7 +3882,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_21403
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH }
 
@@ -3868,7 +3903,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 				add_doctrine_cost_reduction = {
 					name = PRS_establish_the_skijager
 					cost_reduction = 0.25
@@ -3887,7 +3922,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_21501 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = PRS_21001 }
 		x = 13
 		y = 1
@@ -3905,13 +3940,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_21502 #대서양 방벽
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_generic_coastal_fort
 		prerequisite = { focus = PRS_21501 }
 		x = -1
 		y = 1
@@ -3929,13 +3964,13 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_21503 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_fortify_the_westwall
 		prerequisite = { focus = PRS_21501 }
 		x = 1
 		y = 1
@@ -3953,7 +3988,7 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -3978,7 +4013,7 @@ focus_tree = {
 				days = 545
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			if = {
 				limit = {
@@ -4144,12 +4179,12 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = PRS_alfred_becker
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			PRS_modify_army_modifier = yes
 			add_to_variable = { 
@@ -4157,7 +4192,7 @@ focus_tree = {
 				tooltip = equipment_capture_tt
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			PRS_modify_industrial_modifier = yes
 			add_to_variable = { 
@@ -4165,7 +4200,7 @@ focus_tree = {
 				tooltip = equipment_conversion_speed_tt
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			every_army_leader = {
 				limit = {
@@ -4180,7 +4215,7 @@ focus_tree = {
 	#공군 중점 2
 	focus = {
 		id = PRS_22003 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_SWE_marauder_bombers
 		prerequisite = { focus = PRS_22002 }
 		x = -3
 		y = 1
@@ -4198,7 +4233,7 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -4229,7 +4264,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRS_22103 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_air_cas_1
 		prerequisite = { focus = PRS_22101 }
 		x = 1
 		y = 1
@@ -4248,12 +4283,12 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_22201 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_22201 #하인켈
+		icon = GFX_focus_PRS_22201
 		prerequisite = { focus = PRS_22002 }
 		x = -1
 		y = 1
@@ -4264,12 +4299,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
 		id = PRS_22202 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_generic_cas_aircraft
 		prerequisite = { focus = PRS_22201 }
 		mutually_exclusive = { focus = PRS_22103 }
 		x = -1
@@ -4281,12 +4316,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
 		id = PRS_22104 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = PRS_22103 focus = PRS_22202 }
 		x = 3
 		y = 1
@@ -4297,12 +4332,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
 		id = PRS_22203 #He111
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_air_bomber_1
 		prerequisite = { focus = PRS_22201 }
 		x = 1
 		y = 1
@@ -4313,12 +4348,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
 		id = PRS_22204 #He177
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_air_tactical_bomber_1
 		prerequisite = { focus = PRS_22203 }
 		x = 1
 		y = 1
@@ -4329,12 +4364,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
 		id = PRS_22105 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_air_cas_2
 		prerequisite = { focus = PRS_22103 }
 		x = 1
 		y = 1
@@ -4345,12 +4380,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_22301 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_22301 #우랄 폭격기 계획
+		icon = GFX_focus_generic_long_range_aircraft
 		prerequisite = { focus = PRS_22002 }
 		x = 2
 		y = 1
@@ -4361,12 +4396,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
 		id = PRS_22302 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_air_bomber_2
 		prerequisite = { focus = PRS_22301 }
 		x = 0
 		y = 1
@@ -4377,12 +4412,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
 		id = PRS_22303 #전시 배급
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_air_bomber_3
 		prerequisite = { focus = PRS_22302 focus = PRS_22203 }
 		x = 1
 		y = 1
@@ -4393,7 +4428,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
@@ -4418,26 +4453,42 @@ focus_tree = {
 			}
 		}
 
+		select_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_WUW = no
+						NOT = {
+							is_special_project_being_researched = sp:sp_air_intercontinental_bomber
+						}
+					}
+				}
+				country_event = { id = PRS_amerikabomber.01 days = 14 random_days = 7 }
+			}
+		}
+
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_22005 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_22005 #공수부대 훈련
+		icon = GFX_focus_generic_paratrooper
 		prerequisite = { focus = PRS_22001 }
 		x = 0
 		y = 2
 		relative_position_id = PRS_22001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
@@ -4448,27 +4499,27 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_22001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			air_experience = 25
 			add_doctrine_cost_reduction = {
-				name = PRS_form_the_jagdwaffe
+				name = PRS_22401
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
-
-
-			PRS_modify_airforce_modifier = yes
+			custom_effect_tooltip = PRS_air_force_tt
 			add_to_variable = { 
-				PRS_military_air_ace_generation_chance_factor = 0.25
+				PRS_air_force_air_ace_generation_chance_factor = 0.25
 				tooltip = air_ace_generation_chance_factor_tt
 			}
 			add_to_variable = { 
-				PRS_military_air_agility_factor = 0.05
+				PRS_air_force_air_agility_factor = 0.05
 				tooltip = air_agility_factor_tt
 			}
 
@@ -4477,7 +4528,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "By Blood Alone"
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 				create_equipment_variant = { 
 					name = "FW 190" 
 					type = small_plane_airframe_2
@@ -4495,7 +4546,7 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			add_ace = {
 				name = Erich
@@ -4518,7 +4569,7 @@ focus_tree = {
 				type = fighter_genius
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			if = {
 				limit = { has_AAT = no }
@@ -4552,7 +4603,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRS_22402 #Bf110
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_air_heavy_fighter_1
 		prerequisite = { focus = PRS_22401 }
 		x = -1
 		y = 2
@@ -4563,12 +4614,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
 		id = PRS_22403 #Bf109 개량
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_air_fighter_2
 		prerequisite = { focus = PRS_22401 }
 		x = 1
 		y = 2
@@ -4579,12 +4630,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
 		id = PRS_22404 #Me410
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_air_heavy_fighter_2
 		prerequisite = { focus = PRS_22402 }
 		x = 0
 		y = 1
@@ -4595,12 +4646,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
 		id = PRS_22405 #Fw190
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_air_fighter_3
 		prerequisite = { focus = PRS_22403 }
 		x = 0
 		y = 1
@@ -4611,7 +4662,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
@@ -4634,7 +4685,7 @@ focus_tree = {
 				value = 0.5
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			if = {
 				limit = {
@@ -4645,14 +4696,14 @@ focus_tree = {
 					PRS_wunderwaffen_sp_air_helicopter_speed_factor = PRS_wunderwaffe_research_speed_bonus
 					tooltip = sp_air_helicopter_speed_factor_tt
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 
 			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 				mio:PRS_focke_achgelis_organization = {
 					add_mio_size = 1
 					add_mio_funds_gain_factor = 0.25
@@ -4665,8 +4716,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRS_22411 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_22411 #루프트바페 재편
+		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = PRS_22401 }
 		x = 2
 		y = 1
@@ -4677,12 +4728,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_22412 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_22412 #크니케바인 개발
+		icon = GFX_goal_generic_radar
 		prerequisite = { focus = PRS_22401 }
 		x = 4
 		y = 1
@@ -4693,12 +4744,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
 		id = PRS_22413 #영공 방어 계획
-		icon = GFX_goal_generic_CAS
+		icon = GFX_focus_ioi_generic_fighter_squadron
 		prerequisite = { focus = PRS_22411 }
 		prerequisite = { focus = PRS_22412 }
 		x = 1
@@ -4804,7 +4855,7 @@ focus_tree = {
 			#	idea = PRS_the_kammhuber_line
 			#	days = 365
 			#}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = PRS_controls_atlantic_coast_brittany_finnmark_effects_tt
 			every_state = {
 				limit = { 
@@ -4850,7 +4901,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRS_22415 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = PRS_22413 }
 		x = 1
 		y = 1
@@ -4861,7 +4912,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
@@ -4873,22 +4924,26 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_22001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	#해군 중점 1
 	focus = {
 		id = PRS_23001 #Z계획 수립
-		icon = GFX_focus_generic_air_carrier
+		icon = GFX_focus_GER_navy
 		x = 79
 		y = 0
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
@@ -4911,8 +4966,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRS_23002 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23002 #해군 항공대 독립
+		icon = GFX_focus_ioi_generic_sea_and_air
 		prerequisite = { focus = PRS_23001 }
 		mutually_exclusive = { focus = PRS_22501 }
 		x = -10
@@ -4924,13 +4979,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	#공군 중점 3
 	focus = {
 		id = PRS_22502 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_air_fighter_1
 		prerequisite = { focus = PRS_22501 }
 		x = 0
 		y = 1
@@ -4941,12 +4996,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_22503 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_22503 #Do22
+		icon = GFX_focus_ioi_generic_air_naval_bomber_1
 		prerequisite = { focus = PRS_22501 focus = PRS_23002 }
 		prerequisite = { focus = PRS_22412 }
 		x = -2
@@ -4958,12 +5013,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_22504 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_22504 #Ar196
+		icon = GFX_focus_ioi_generic_air_naval_bomber_2
 		prerequisite = { focus = PRS_22503 }
 		x = 0
 		y = 1
@@ -4974,7 +5029,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	#해군 중점 2
@@ -4987,12 +5042,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_23001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
@@ -5004,17 +5061,19 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_23001
 		cost = 5
-		available = { }
+		available = { 
+			PRS_preparing_war_against_sekai = no
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23003 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23003 #새로운 함대 전술
+		icon = GFX_focus_ioi_generic_sea_focused_navy_1
 		prerequisite = { focus = PRS_23002 focus = PRS_22501 }
 		x = -1
 		y = 1
@@ -5025,7 +5084,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
@@ -5041,12 +5100,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23102 #잠수함 300척
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23102 #대양함대 재건
+		icon = GFX_focus_SMB_blue_water_fleet
 		prerequisite = { focus = PRS_23101 }
 		x = 0
 		y = 1
@@ -5054,14 +5113,63 @@ focus_tree = {
 		cost = 5
 		available = { }
 
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_trade_interdiction }
+				}
+				custom_effect_tooltip = GER_unlock_trade_interdiction_tt
+			}
+
+			custom_effect_tooltip = generic_line_break_tt
+
+			GER_modify_navy_modifier = yes
+			add_to_variable = { 
+				GER_military_naval_defense_factor = 0.05
+				tooltip = naval_defense_factor_tt
+			}
+			add_to_variable = { 
+				GER_military_naval_hit_chance = 0.05
+				tooltip = naval_hit_chance_tt
+			}
+			add_to_variable = { 
+				GER_military_screening_efficiency = 0.1
+				tooltip = screening_efficiency_tt
+			}
+
+			custom_effect_tooltip = generic_line_break_tt
+
+			if = {
+				limit = { has_AAT = yes }
+				mio:PRS_deschimag_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.05
+				}
+				else = {
+					if = {
+						limit = { has_idea = PRS_deschimag }
+						swap_ideas = {
+							remove_idea = PRS_deschimag
+							add_idea = PRS_deschimag_improved
+						}
+					}
+					else = {
+						effect_tooltip = {
+							swap_ideas = {
+								remove_idea = PRS_deschimag
+								add_idea = PRS_deschimag_improved
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	focus = {
-		id = PRS_23202 #무차별 공습
+		id = PRS_23202 #잠수함 300척
 		icon = GFX_focus_ioi_generic_submarine_fleet
 		prerequisite = { focus = PRS_23201 }
 		x = 0
@@ -5073,45 +5181,25 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
 		id = PRS_23103 #그라프 체펠린급 항공모함
-		icon = GFX_goal_generic_navy_carrier
+		icon = GFX_focus_GER_graf_zeppelin
 		prerequisite = { focus = PRS_23003 }
 		prerequisite = { focus = PRS_23102 }
 		x = -1
 		y = 1
 		relative_position_id = PRS_23003
 		cost = 5
-		available = {
-			if = {
-				limit = { has_MtG = yes }
-				has_tech = early_ship_hull_carrier
-			}
-			else = { has_tech = early_carrier }
-		}
+		available = { }
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			if = { 
-				limit = { has_MtG = yes }
-				if = {
-					limit = { NOT = { has_tech = basic_ship_hull_carrier } }
-					set_technology = { basic_ship_hull_carrier = 1 }
-				}
-			}
-			if = { 
-				limit = { has_MtG = no }
-				if = {
-					limit = { NOT = { has_tech = basic_carrier } }
-					set_technology = { basic_carrier = 1 }
-				}
-			}
 			#PRS_add_1936_carrier_production_line = yes
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			navy_experience = 15
 			add_tech_bonus = {
 				name = PRS_graf_zeppelin_cv
@@ -5122,8 +5210,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRS_23104 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23104 #카이저 미쿠급 순양전함
+		icon = GFX_focus_generic_navy_battleship2
 		prerequisite = { focus = PRS_23102 }
 		mutually_exclusive = { focus = PRS_23105 }
 		x = -1
@@ -5135,12 +5223,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23105 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23105 #샤른호르스트급 전함
+		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = PRS_23102 }
 		mutually_exclusive = { focus = PRS_23104 }
 		x = 1
@@ -5152,12 +5240,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23106 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23106 #어드미랄 히퍼급 중순양함
+		icon = GFX_focus_ioi_generic_naval_cruiser_2
 		prerequisite = { focus = PRS_23102 }
 		x = 0
 		y = 1
@@ -5168,7 +5256,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
@@ -5179,39 +5267,19 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_23103
 		cost = 5
-		available = {
-			if = {
-				limit = { has_MtG = yes }
-				has_tech = basic_ship_hull_carrier
-			}
-			else = { has_tech = basic_carrier }
-		}
+		available = { }
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			if = { 
-				limit = { has_MtG = yes }
-				if = {
-					limit = { NOT = { has_tech = basic_ship_hull_carrier } }
-					set_technology = { basic_ship_hull_carrier = 1 }
-				}
-			}
-			if = { 
-				limit = { has_MtG = no }
-				if = {
-					limit = { NOT = { has_tech = basic_carrier } }
-					set_technology = { basic_carrier = 1 }
-				}
-			}
 			#PRS_add_1940_carrier_production_line = yes
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			navy_experience = 15
 		}
 	}
 	focus = {
-		id = PRS_23108 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23108 #힌덴부르크급 고속전함
+		icon = GFX_focus_ioi_generic_naval_battleship_3
 		prerequisite = { focus = PRS_23104 }
 		x = -1
 		y = 1
@@ -5222,12 +5290,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
 		id = PRS_23109 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ioi_generic_naval_battleship_2
 		prerequisite = { focus = PRS_23105 }
 		x = -1
 		y = 1
@@ -5238,12 +5306,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23110 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23110 #프린츠 하인리히급 중순양함
+		icon = GFX_focus_generic_cruiser2
 		prerequisite = { focus = PRS_23106 }
 		mutually_exclusive = { focus = PRS_23111 }
 		x = -1
@@ -5255,12 +5323,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23111 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23111 #프린츠 아달베르트급 장갑함
+		icon = GFX_focus_GER_panzerschiff
 		prerequisite = { focus = PRS_23106 }
 		mutually_exclusive = { focus = PRS_23110 }
 		x = 1
@@ -5272,12 +5340,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23112 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23112 #세카이 항공함대
+		icon = GFX_goal_generic_navy_carrier
 		prerequisite = { focus = PRS_23107 }
 		prerequisite = { focus = PRS_23108 }
 		x = 0
@@ -5289,12 +5357,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23113 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23113 #세카이 전투 함대
+		icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
 		prerequisite = { focus = PRS_23109 }
 		prerequisite = { focus = PRS_23110 }
 		x = 1
@@ -5306,12 +5374,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23114 #무차별 공습
-		icon = GFX_focus_GER_panzerschiff
+		id = PRS_23114 #장갑함 습격함대
+		icon = GFX_focus_generic_trade_interdiction
 		prerequisite = { focus = PRS_23111 }
 		x = 0
 		y = 1
@@ -5322,12 +5390,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23115 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23115 #대양함대
+		icon = GFX_focus_GER_high_seas_fleet
 		prerequisite = { focus = PRS_23112 focus = PRS_23113 focus = PRS_23114 }
 		x = -1
 		y = 1
@@ -5338,12 +5406,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
+
 	focus = {
-		id = PRS_23005 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23005 #해전 사령부
+		icon = GFX_focus_ioi_generic_naval_command
 		prerequisite = { focus = PRS_23101 focus = PRS_23201 }
 		x = 3
 		y = 1
@@ -5351,15 +5420,32 @@ focus_tree = {
 		cost = 5
 		available = { }
 
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			add_command_power = 25
+			custom_effect_tooltip = generic_line_break_tt
+			#GER_modify_navy_modifier = yes
+			#add_to_variable = { 
+			#	GER_military_navy_max_range_factor = 0.1
+			#	tooltip = navy_max_range_factor_tt
+			#}
+			custom_effect_tooltip = generic_line_break_tt
+			add_doctrine_cost_reduction = {
+				name = GER_re_establish_the_seekriegsleitung
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = available_chief_of_navy
+			#show_ideas_tooltip = GER_rolf_carls
 		}
 	}
 	focus = {
-		id = PRS_23006 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23006 #조선소 확충
+		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = PRS_23101 focus = PRS_23201 }
 		x = 5
 		y = 1
@@ -5370,12 +5456,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23007 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23007 #함대 협회 부활
+		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = PRS_23101 focus = PRS_23201 }
 		x = 7
 		y = 1
@@ -5386,12 +5472,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23008 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23008 #해상 충격군
+		icon = GFX_goal_generic_amphibious_assault
 		prerequisite = { focus = PRS_23101 focus = PRS_23201 }
 		x = 9
 		y = 1
@@ -5402,12 +5488,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23009 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23009 #조함단
+		icon = GFX_focus_POL_develop_polish_shipbuilding
 		prerequisite = { focus = PRS_23101 focus = PRS_23201 }
 		x = 11
 		y = 1
@@ -5418,12 +5504,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23010 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23010 #라이프치히급 경순양함
+		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = PRS_23102 focus = PRS_23202 }
 		x = 2
 		y = 1
@@ -5434,12 +5520,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23011 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23011 #북해 감시
+		icon = GFX_focus_ioi_generic_north_sea
 		prerequisite = { focus = PRS_23005 focus = PRS_23006 }
 		x = 4
 		y = 1
@@ -5450,28 +5536,102 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
+
 	focus = {
-		id = PRS_23012 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23012 #대서양 해군 기지
+		icon = GFX_focus_generic_atlantic_coast
 		prerequisite = { focus = PRS_23006 focus = PRS_23007 }
 		x = 6
 		y = 1
 		relative_position_id = PRS_23102
 		cost = 5
-		available = { }
+		available = { #These states start out with naval bases in western France
+			14 = { #Brittany
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			23 = { #Poitou
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			19 = { #Aquitaine
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+
+		}
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			log = "[GetDateText]: [Root.GetName]: Focus PRS_23012"
+			custom_effect_tooltip = GER_naval_bases_along_atlantic_coast_tt
+			every_state = {
+				limit = { 
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+					is_coastal = yes 
+					naval_base < 10
+					OR = { #Atlantic Coast from Brittany to Sevilla
+						state = 14
+						state = 30
+						state = 23
+						state = 19
+						state = 806
+						state = 792
+						state = 790
+						state = 171
+						state = 180
+						state = 112
+						state = 179
+						state = 169
+					}
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+				    }
+				}
+			}
+			every_state = {
+				limit = { 
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+					is_coastal = yes 
+					coastal_bunker < 10
+					OR = { #Atlantic Coast from Brittany to Sevilla
+						state = 14
+						state = 30
+						state = 23
+						state = 19
+						state = 806
+						state = 792
+						state = 790
+						state = 171
+						state = 180
+						state = 112
+						state = 179
+						state = 169
+					}
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+				    }
+				}
+			}
 		}
 	}
+
 	focus = {
-		id = PRS_23013 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23013 #1936년형 원양 구축함
+		icon = GFX_focus_generic_destroyer
 		prerequisite = { focus = PRS_23102 focus = PRS_23202 }
 		mutually_exclusive = { focus = PRS_23014 }
 		x = 8
@@ -5483,12 +5643,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
+
 	focus = {
-		id = PRS_23014 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23014 #936년형 연안 구축함
+		icon = GFX_focus_ioi_generic_naval_destroyer_2
 		prerequisite = { focus = PRS_23102 focus = PRS_23202 }
 		mutually_exclusive = { focus = PRS_23013 }
 		x = 10
@@ -5500,12 +5661,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
+
 	focus = {
-		id = PRS_23015 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23015 #마그데부르크급 경순양함
+		icon = GFX_focus_ioi_generic_naval_cruiser_1
 		prerequisite = { focus = PRS_23010 }
 		x = 1
 		y = 1
@@ -5516,29 +5678,145 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23016 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23016 #대서양 해상 지배
+		icon = GFX_focus_generic_north_atlantic_fleet
 		prerequisite = { focus = PRS_23011 }
 		prerequisite = { focus = PRS_23012 }
 		x = 1
 		y = 1
 		relative_position_id = PRS_23011
 		cost = 5
-		available = { }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_controls_an_atantic_island_tt
+				OR = {
+					914 = { #Jan Mayen
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					100 = { #Iceland
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					101 = { #Greenland
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					337 = { #Faroes
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					933 = { #Shetlands
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					134 = { #Ireland
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					119 = { #North Ireland
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					178 = { #The Canaries
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					698 = { #The Azores
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					696 = { #Bermuda
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					697 = { #Madeira
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					702 = { #Cape Verde
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			log = "[GetDateText]: [Root.GetName]: Focus PRS_23016"
+			#GER_modify_navy_modifier = yes
+			#add_to_variable = { 
+			#	GER_military_navy_max_range_factor = 0.1
+			#	tooltip = navy_max_range_factor_tt
+			#}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = GER_naval_bases_on_atlantic_islands_tt
+			every_state = {
+				limit = { 
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+					is_coastal = yes 
+					naval_base < 10
+					OR = { #Atlantic Islands from Greenland to Cape Verde
+						state = 914
+						state = 101
+						state = 100
+						state = 337
+						state = 933
+						state = 134
+						state = 119
+						state = 178
+						state = 698
+						state = 696
+						state = 697
+						state = 702
+					}
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+				    }
+				}
+			}
+			every_state = {
+				limit = { 
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+					is_coastal = yes 
+					coastal_bunker < 10
+					OR = { #Atlantic Islands from Greenland to the Falklands
+						state = 101
+						#state = 914 #Not you Jan Mayen
+						state = 100
+						state = 337
+						state = 933
+						state = 134
+						state = 119
+						state = 178
+						state = 698
+						state = 696
+						state = 697
+						state = 702
+						state = 703
+						state = 704
+						state = 297
+						state = 705
+						state = 697
+						state = 720
+						state = 299
+					}
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+				    }
+				}
+			}
 		}
 	}
 	focus = {
-		id = PRS_23017 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23017 #1938년형 구축함
+		icon = GFX_focus_ioi_generic_naval_destroyer_1
 		prerequisite = { focus = PRS_23013 focus = PRS_23014 }
 		x = 1
 		y = 1
@@ -5549,12 +5827,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23018 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23018 #슈넬보트
+		icon = GFX_focus_ioi_generic_gunboat
 		prerequisite = { focus = PRS_23017 }
 		x = -1
 		y = 1
@@ -5565,12 +5843,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23019 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23019 #장기 지속 작전 지원
+		icon = GFX_focus_ioi_generic_shipyard
 		prerequisite = { focus = PRS_23017 }
 		x = 1
 		y = 1
@@ -5581,12 +5859,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23203 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23203 #울프팩 전술
+		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = PRS_23202 }
 		x = -2
 		y = 1
@@ -5594,15 +5872,60 @@ focus_tree = {
 		cost = 5
 		available = { }
 
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			add_doctrine_cost_reduction = {
+				name = GER_wolfpack_tactics
+				cost_reduction = 0.25
+				uses = 1
+				category = trade_interdiction_tree	
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			#if = {
+			#	limit = {
+			#		has_character = GER_karl_donitz
+			#		GER_karl_donitz = {
+			#			is_unit_leader = yes
+			#		}
+			#
+			#	}
+			#	if = {
+			#		limit = {
+			#			GER_karl_donitz = {
+			#				NOT = { has_trait = bold }
+			#			}
+			#		}
+			#		add_trait = {
+			#		    character = GER_karl_donitz
+			#		    trait = bold
+			#		}
+			#	}
+			#	else_if = {
+			#		limit = {
+			#			GER_karl_donitz = {
+			#				NOT = { has_trait = spotter }
+			#			}
+			#		}
+			#		add_trait = {
+			#		    character = GER_karl_donitz
+			#		    trait = spotter
+			#		}
+			#	}
+			#}
+
+			#add_timed_idea = {
+			#	idea = GER_rudeltaktik_ns
+			#	days = 365
+			#}
+			custom_effect_tooltip = generic_line_break_tt
+			#custom_effect_tooltip = available_theorist
+			#show_ideas_tooltip = alfred_saalwachter
 		}
 	}
 	focus = {
-		id = PRS_23204 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23204 #7형 유보트
+		icon = GFX_goal_generic_navy_submarine
 		prerequisite = { focus = PRS_23202 }
 		x = 0
 		y = 1
@@ -5613,12 +5936,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23205 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23205 #9형 유보트
+		icon = GFX_focus_generic_baltic_sea_fleet
 		prerequisite = { focus = PRS_23202 }
 		x = 2
 		y = 1
@@ -5629,12 +5952,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23206 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23206 #9형 유보트
+		icon = GFX_focus_ioi_generic_naval_submarine_1
 		prerequisite = { focus = PRS_23204 }
 		x = 0
 		y = 1
@@ -5645,12 +5968,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23207 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23207 #궁극의 유보트
+		icon = GFX_focus_generic_cruiser_submarines
 		prerequisite = { focus = PRS_23206 }
 		x = 0
 		y = 1
@@ -5661,12 +5984,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 	focus = {
-		id = PRS_23208 #무차별 공습
-		icon = GFX_goal_generic_axis_build_infantry
+		id = PRS_23208 #무제한적 수송선 습격
+		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = PRS_23207 }
 		x = -1
 		y = 1
@@ -5677,7 +6000,26 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			#GER_modify_navy_modifier = yes
+			#add_to_variable = { 
+			#	GER_military_naval_defense_factor = 0.05
+			#	tooltip = naval_defense_factor_tt
+			#}
+			#add_to_variable = { 
+			#	GER_military_convoy_raiding_efficiency_factor = 0.05
+			#	tooltip = convoy_raiding_efficiency_factor_tt
+			#}
+			custom_effect_tooltip = GER_submarine_max_speed_small_tt
+			hidden_effect = {
+				add_equipment_bonus = {
+					name = GER_unrestricted_convoy_raiding
+					bonus = {
+						ship_hull_submarine = {
+							naval_speed = 0.05 #WARNING! If you change this value, you need to update GER_submarine_max_speed_small_tt
+						}
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -5693,7 +6035,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -5710,7 +6052,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -5729,7 +6071,7 @@ focus_tree = {
 		completion_reward = {
 			#GER_modify_army_modifier = yes
 			#add_to_variable = { GER_military_unit_leader_as_advisor_cp_cost_factor = -0.15 tooltip = unit_leader_as_advisor_cp_cost_factor_tt }
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			if = {
 				limit = { has_character = PRS_gunther_von_kluge }
 				if = {
@@ -5770,7 +6112,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -5787,7 +6129,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -5804,7 +6146,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -5840,7 +6182,7 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			#GER_modify_army_modifier = yes
 			#add_to_variable = { GER_military_land_doctrine_cost_factor = -0.15 tooltip = land_doctrine_cost_factor_tt }
 		}
@@ -5872,7 +6214,7 @@ focus_tree = {
 				category = naval_equipment
 				category = air_equipment
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			#GER_add_or_modify_wunderwaffen = yes
 			#add_to_variable = { 
 			#	GER_wunderwaffen_special_project_speed_factor = 0.05
@@ -5898,7 +6240,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -5915,7 +6257,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -5956,7 +6298,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6039,7 +6381,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6056,7 +6398,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6073,7 +6415,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6090,7 +6432,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6107,7 +6449,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6124,7 +6466,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6141,7 +6483,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6159,7 +6501,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6177,7 +6519,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6194,7 +6536,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6211,7 +6553,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6228,7 +6570,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6245,7 +6587,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6262,7 +6604,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6279,7 +6621,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6297,7 +6639,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6315,7 +6657,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6332,7 +6674,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6349,7 +6691,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6366,7 +6708,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6383,7 +6725,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6400,7 +6742,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6417,7 +6759,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6434,7 +6776,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6451,7 +6793,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6469,7 +6811,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6487,7 +6829,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6504,7 +6846,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6522,7 +6864,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6540,13 +6882,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31101 #발톱 숨기기
-		icon = GFX_focus_PRS_31101
+		icon = GFX_focus_ioi_generic_be_friendly_with_PRS
 		x = -5
 		y = 1
 		relative_position_id = PRS_31001
@@ -6558,13 +6900,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31201 #국방군 재편
-		icon = GFX_focus_PRS_31201
+		icon = GFX_focus_ger_oppose_hitler
 		x = 18
 		y = 1
 		relative_position_id = PRS_31001
@@ -6576,7 +6918,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6593,7 +6935,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6610,7 +6952,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6628,7 +6970,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6645,7 +6987,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6662,7 +7004,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6675,17 +7017,19 @@ focus_tree = {
 		prerequisite = { focus = PRS_31104 }
 		cost = 5
 		available = { }
+		will_lead_to_war_with = NNN
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
+			
 		}
 	}
 
 	focus = {
 		id = PRS_31108 #착한 이웃 행세
-		icon = GFX_focus_PRS_31108
+		icon = GFX_focus_ioi_generic_be_friendly_with_PRS
 		x = 0
 		y = 2
 		relative_position_id = PRS_31105
@@ -6697,7 +7041,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6714,7 +7058,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6728,11 +7072,12 @@ focus_tree = {
 		mutually_exclusive = { focus = PRS_31104 }
 		cost = 5
 		available = { }
+		will_lead_to_war_with = NNN
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6749,7 +7094,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6766,7 +7111,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6794,7 +7139,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_war_support = 0.05
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			add_country_leader_trait = PRS_loyalty_of_wehrmacht
 		}
 	}
@@ -6916,7 +7261,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6934,7 +7279,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6952,7 +7297,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -6969,13 +7314,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31312 #의지의 승리
-		icon = GFX_focus_PRS_31312
+		icon = GFX_goal_support_fascism
 		x = 0
 		y = 1
 		relative_position_id = PRS_31311
@@ -6986,7 +7331,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7003,7 +7348,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7020,7 +7365,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7037,7 +7382,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7055,7 +7400,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7073,7 +7418,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7090,13 +7435,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31319 #남미 정책
-		icon = GFX_focus_PRS_31319
+		icon = GFX_focus_generic_south_america
 		x = 18
 		y = 1
 		relative_position_id = PRS_31101
@@ -7107,7 +7452,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7125,7 +7470,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7136,14 +7481,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_31319
 		prerequisite = { focus = PRS_31319 }
-		mutually_exclusive = { focus = PRS_31321 }
+		mutually_exclusive = { focus = PRS_31320 }
 		cost = 5
 		available = { }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7160,13 +7505,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31323 #남미의 동맹
-		icon = GFX_focus_PRS_31323
+		icon = GFX_focus_ARG_pan_american_cooperation
 		x = 1
 		y = 1
 		relative_position_id = PRS_31320
@@ -7177,7 +7522,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7194,7 +7539,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7212,13 +7557,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31326 #동맹 확대
-		icon = GFX_focus_PRS_31326
+		icon = GFX_goal_generic_alliance
 		x = 1
 		y = 1
 		relative_position_id = PRS_31323
@@ -7230,7 +7575,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7373,7 +7718,7 @@ focus_tree = {
 						category = armor
 					}
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 			else = {
 				effect_tooltip = {
@@ -7389,7 +7734,7 @@ focus_tree = {
 						category = armor
 					}
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 
 			add_breakthrough_progress = {
@@ -7419,7 +7764,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7437,7 +7782,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7455,7 +7800,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7478,7 +7823,7 @@ focus_tree = {
 				type = annex_everything
 				generator = { 219 202 217 195 249 408 }
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7496,7 +7841,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7524,7 +7869,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_31207 #중동 영향력 행사
-		icon = GFX_focus_PRS_31207
+		icon = GFX_focus_PER_middle_east_protectorate
 		x = 1
 		y = 1
 		relative_position_id = PRS_31206
@@ -7536,7 +7881,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7554,7 +7899,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7577,7 +7922,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = PRS_31404_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			hidden_effect = {
 				#news_event = { id = rusnews.22 days = 1 }
 				#country_event = russia.321 #Operation Arkhangel
@@ -7601,7 +7946,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_31501 #웅가른-주데텐란트 교환
-		icon = GFX_focus_PRS_31501
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 1
 		relative_position_id = PRS_31304
@@ -7797,7 +8142,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7815,7 +8160,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7833,7 +8178,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7852,7 +8197,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7871,7 +8216,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7889,7 +8234,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7907,7 +8252,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7925,7 +8270,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7943,7 +8288,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -7992,7 +8337,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8010,7 +8355,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8028,7 +8373,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8105,7 +8450,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8144,7 +8489,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8195,7 +8540,7 @@ focus_tree = {
 				add_state_claim = 846
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			add_timed_idea = {
 				idea = GER_operation_tannenbaum_ns
@@ -8206,7 +8551,7 @@ focus_tree = {
 
 	focus = {
 		id = PRS_31521 #금 교환 거래
-		icon = GFX_focus_usa_reestablish_the_gold_standard
+		icon = GFX_focus_PRS_31521
 		x = 3
 		y = 1
 		relative_position_id = PRS_31512
@@ -8218,7 +8563,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8236,7 +8581,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8253,13 +8598,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31524 #브라이트스푸어반
-		icon = GFX_focus_generic_railroad
+		icon = GFX_focus_BEL_engine_of_the_economy
 		x = 0
 		y = 1
 		relative_position_id = PRS_31523
@@ -8270,7 +8615,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8292,13 +8637,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31526 #아메리카 개발계획
-		icon = GFX_focus_PRS_31526
+		icon = GFX_focus_BRA_north_and_south_america
 		x = 6
 		y = 0
 		relative_position_id = PRS_31524
@@ -8316,13 +8661,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31527 #북미 패권에 도전
-		icon = GFX_focus_PRS_31527
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		x = -3
 		y = 1
 		relative_position_id = PRS_31526
@@ -8333,7 +8678,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8350,7 +8695,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8367,7 +8712,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8385,43 +8730,43 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_31621 #이글 유니온과의 친선
+		id = PRS_31621 #세라프 공화국과의 친선
 		icon = GFX_focus_ioi_generic_be_friendly_with_HBR
 		x = 9
 		y = 1
 		relative_position_id = PRS_31401
 		prerequisite = { focus = PRS_31401 }
-		mutually_exclusive = { focus = PRS_31621 focus = PRS_31631 }
+		mutually_exclusive = { focus = PRS_31611 focus = PRS_31631 }
 		cost = 5
 		available = { }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
-		id = PRS_31631 #이글 유니온과의 친선
+		id = PRS_31631 #오토노키자카 공화국과의 친선
 		icon = GFX_focus_ioi_generic_be_friendly_with_LLS
 		x = 12
 		y = 1
 		relative_position_id = PRS_31401
 		prerequisite = { focus = PRS_31401 }
-		mutually_exclusive = { focus = PRS_31621 focus = PRS_31631 }
+		mutually_exclusive = { focus = PRS_31611 focus = PRS_31621 }
 		cost = 5
 		available = { }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8439,13 +8784,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31613 #칭다오 통제권 회복
-		icon = GFX_focus_PRS_31613
+		icon = GFX_focus_GER_request_the_return_of_qingdao
 		x = 1
 		y = 1
 		relative_position_id = PRS_31611
@@ -8457,13 +8802,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31614 #상하이 조약
-		icon = GFX_focus_PRS_31614
+		icon = GFX_focus_GER_our_place_in_the_sun
 		x = 1
 		y = 1
 		relative_position_id = PRS_31612
@@ -8474,7 +8819,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8491,13 +8836,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31602 #아시아 분할 협정
-		icon = GFX_focus_PRS_31602
+		icon = GFX_focus_GER_divide_and_conquer
 		x = -1
 		y = 1
 		relative_position_id = PRS_31601
@@ -8508,13 +8853,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31603 #아프리카 식민지 수복
-		icon = GFX_focus_PRS_31603
+		icon = GFX_focus_GER_realize_mittelafrika
 		x = 1
 		y = 1
 		relative_position_id = PRS_31601
@@ -8525,7 +8870,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8537,12 +8882,14 @@ focus_tree = {
 		relative_position_id = PRS_31614
 		prerequisite = { focus = PRS_31614 focus = PRS_31602 }
 		cost = 5
-		available = { }
+		available = { 
+			NOT = { has_completed_focus = PRS_31631 }
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8559,7 +8906,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8576,7 +8923,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8593,13 +8940,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31623 #말라야 거래
-		icon = GFX_focus_PRS_31623
+		icon = GFX_focus_usa_focus_on_asia
 		x = 1
 		y = 1
 		relative_position_id = PRS_31621
@@ -8610,13 +8957,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
 	focus = {
 		id = PRS_31632 #마리아나 협상
-		icon = GFX_focus_PRS_31622
+		icon = GFX_focus_GER_expand_pacific_holdings
 		x = 0
 		y = 1
 		relative_position_id = PRS_31631
@@ -8627,7 +8974,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8644,7 +8991,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8661,7 +9008,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8697,7 +9044,7 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 35
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			if = { #singapore
 				limit = { 336 = { is_fully_controlled_by = ROOT} }
 				336 = {
@@ -8706,7 +9053,7 @@ focus_tree = {
 						days = 180
 					}
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 
 
@@ -8718,7 +9065,7 @@ focus_tree = {
 						days = 180
 					}
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 
 
@@ -8730,7 +9077,7 @@ focus_tree = {
 						days = 180
 					}
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 
 
@@ -8742,7 +9089,7 @@ focus_tree = {
 						days = 180
 					}
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 
 
@@ -8831,7 +9178,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8848,7 +9195,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
 
@@ -8887,7 +9234,7 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 25
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			#if = {
 			#	limit = { has_LaR = yes }
 			#	random_other_country = {
@@ -8920,13 +9267,14 @@ focus_tree = {
 		cost = 5
 		available = { 
 			always = no #다음 업뎃때 중점 추가함
+			date < 1936.03.01
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
@@ -8948,7 +9296,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
@@ -8969,14 +9317,14 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
 
 	focus = {
 		id = PRS_32004 #민중 봉기 준비
-		icon = GFX_focus_PRS_32004
+		icon = GFX_focus_GER_the_peoples_victory
 		x = -1
 		y = 1
 		relative_position_id = PRS_32002
@@ -8990,14 +9338,14 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
 
 	focus = {
 		id = PRS_32005 #군부와의 결탁
-		icon = GFX_focus_PRS_32005
+		icon = GFX_focus_GER_integration_of_puppet_economies
 		x = -1
 		y = 1
 		relative_position_id = PRS_32003
@@ -9012,14 +9360,14 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
 
 	focus = {
 		id = PRS_32006 #반 세카이 운동 조직
-		icon = GFX_focus_PRS_32006
+		icon = GFX_focus_generic_industrialists
 		x = 1
 		y = 1
 		relative_position_id = PRS_32003
@@ -9033,14 +9381,14 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
 
 	focus = {
 		id = PRS_32007 #붉은 오케스트라
-		icon = GFX_focus_PRS_32007
+		icon = GFX_focus_SWI_embrace_rote_drei
 		x = -2
 		y = 1
 		relative_position_id = PRS_32004
@@ -9056,14 +9404,14 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
 
 	focus = {
 		id = PRS_32008 #반 이치카주의 연합
-		icon = GFX_focus_PRS_32008
+		icon = GFX_goal_generic_major_alliance
 		x = 0
 		y = 1
 		relative_position_id = PRS_32005
@@ -9079,14 +9427,14 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
 
 	focus = {
 		id = PRS_32009 #검은 오케스트라
-		icon = GFX_focus_PRS_32009
+		icon = GFX_focus_generic_monarchist_sentiment
 		x = 2
 		y = 1
 		relative_position_id = PRS_32006
@@ -9102,14 +9450,14 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
 
 	focus = {
 		id = PRS_32010 #탈 세카이 운동
-		icon = GFX_focus_PRS_32010
+		icon = GFX_focus_generic_anti_fascist_diplomacy
 		x = -1
 		y = 1
 		relative_position_id = PRS_32008
@@ -9123,7 +9471,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
@@ -9144,14 +9492,14 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
 
 	focus = {
 		id = PRS_32012 #국가 소생
-		icon = GFX_focus_PRS_32012
+		icon = GFX_focus_generic_public_works
 		x = 1
 		y = 1
 		relative_position_id = PRS_32010
@@ -9165,14 +9513,14 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
 
 	focus = {
 		id = PRS_32013 #국가 재건
-		icon = GFX_focus_PRS_32013
+		icon = GFX_goal_generic_construction2
 		x = -1
 		y = 1
 		relative_position_id = PRS_32012
@@ -9186,7 +9534,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
@@ -9207,7 +9555,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
@@ -9229,7 +9577,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}
@@ -9251,7 +9599,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = on_construction_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = plan_deus_ex_machina_tt
 		}
 	}

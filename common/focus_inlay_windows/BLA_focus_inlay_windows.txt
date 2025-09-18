@@ -1,12 +1,12 @@
 BLA_school_committee = {
     window_name = BLA_school_committee_ui_window
     internal = yes
-    visible = { NOT = { has_country_flag = BLA_underconstruction_flag } }
+    visible = { NOT = { has_completed_focus = BLA_31106 } }
 
     scripted_images = {
         #학교 깃발
         GEH_flag = { GFX_BLA_GEH_flag = yes }
-        TRI_flag = { GFX_BLA_TRI_flag = yes }
+        TRN_flag = { GFX_BLA_TRN_flag = yes }
         MIL_flag = { GFX_BLA_MIL_flag = yes }
         HYA_flag = { GFX_BLA_HYA_flag = yes }
         ABY_flag = { GFX_BLA_ABY_flag = yes }
@@ -45,34 +45,34 @@ BLA_school_committee = {
             GFX_portrait_BLA_hatami_erika = { check_variable = { BLA_GEH_leader = 24 } }
             GFX_portrait_BLA_yozakura_kirara = { check_variable = { BLA_GEH_leader = 25 } }
         }
-        TRI_leader = {
-            GFX_BLA_TRI_notparticipated = { check_variable = { BLA_TRI_leader = 0 } }
-            GFX_BLA_TRI_emptyleader = { check_variable = { BLA_TRI_leader = 1 } }
-            GFX_portrait_BLA_kirifuji_nagisa = { check_variable = { BLA_TRI_leader = 2 } }
-            GFX_portrait_BLA_misono_mika = { check_variable = { BLA_TRI_leader = 3 } }
-            GFX_portrait_BLA_yurizono_seia = { check_variable = { BLA_TRI_leader = 4 } }
-            GFX_portrait_BLA_ajitani_hifumi = { check_variable = { BLA_TRI_leader = 5 } }
-            GFX_portrait_BLA_urawa_hanako = { check_variable = { BLA_TRI_leader = 6 } }
-            GFX_portrait_BLA_shirasu_azusa = { check_variable = { BLA_TRI_leader = 7 } }
-            GFX_portrait_BLA_shimoe_koharu = { check_variable = { BLA_TRI_leader = 8 } }
-            GFX_portrait_BLA_morizuki_suzumi = { check_variable = { BLA_TRI_leader = 9 } }
-            GFX_portrait_BLA_uzawa_reisa = { check_variable = { BLA_TRI_leader = 10 } }
-            GFX_portrait_BLA_kozeki_ui = { check_variable = { BLA_TRI_leader = 11 } }
-            GFX_portrait_BLA_endo_shimiko = { check_variable = { BLA_TRI_leader = 12 } }
-            GFX_portrait_BLA_ibaragi_yoshimi = { check_variable = { BLA_TRI_leader = 13 } }
-            GFX_portrait_BLA_kurimura_airi = { check_variable = { BLA_TRI_leader = 14 } }
-            GFX_portrait_BLA_kyouyama_kazusa = { check_variable = { BLA_TRI_leader = 15 } }
-            GFX_portrait_BLA_yutori_natsu = { check_variable = { BLA_TRI_leader = 16 } }
-            GFX_portrait_BLA_aomori_mine = { check_variable = { BLA_TRI_leader = 17 } }
-            GFX_portrait_BLA_sumi_serina = { check_variable = { BLA_TRI_leader = 18 } }
-            GFX_portrait_BLA_asagao_hanae = { check_variable = { BLA_TRI_leader = 19 } }
-            GFX_portrait_BLA_kenzaki_tsurugi = { check_variable = { BLA_TRI_leader = 20 } }
-            GFX_portrait_BLA_hanekawa_hasumi = { check_variable = { BLA_TRI_leader = 21 } }
-            GFX_portrait_BLA_shizuyama_mashiro = { check_variable = { BLA_TRI_leader = 22 } }
-            GFX_portrait_BLA_nakamasa_ichika = { check_variable = { BLA_TRI_leader = 23 } }
-            GFX_portrait_BLA_utazumi_sakurako = { check_variable = { BLA_TRI_leader = 24 } }
-            GFX_portrait_BLA_wakaba_hinata = { check_variable = { BLA_TRI_leader = 25 } }
-            GFX_portrait_BLA_iochi_mari = { check_variable = { BLA_TRI_leader = 26 } }
+        TRN_leader = {
+            GFX_BLA_TRN_notparticipated = { check_variable = { BLA_TRN_leader = 0 } }
+            GFX_BLA_TRN_emptyleader = { check_variable = { BLA_TRN_leader = 1 } }
+            GFX_portrait_BLA_kirifuji_nagisa = { check_variable = { BLA_TRN_leader = 2 } }
+            GFX_portrait_BLA_misono_mika = { check_variable = { BLA_TRN_leader = 3 } }
+            GFX_portrait_BLA_yurizono_seia = { check_variable = { BLA_TRN_leader = 4 } }
+            GFX_portrait_BLA_ajitani_hifumi = { check_variable = { BLA_TRN_leader = 5 } }
+            GFX_portrait_BLA_urawa_hanako = { check_variable = { BLA_TRN_leader = 6 } }
+            GFX_portrait_BLA_shirasu_azusa = { check_variable = { BLA_TRN_leader = 7 } }
+            GFX_portrait_BLA_shimoe_koharu = { check_variable = { BLA_TRN_leader = 8 } }
+            GFX_portrait_BLA_morizuki_suzumi = { check_variable = { BLA_TRN_leader = 9 } }
+            GFX_portrait_BLA_uzawa_reisa = { check_variable = { BLA_TRN_leader = 10 } }
+            GFX_portrait_BLA_kozeki_ui = { check_variable = { BLA_TRN_leader = 11 } }
+            GFX_portrait_BLA_endo_shimiko = { check_variable = { BLA_TRN_leader = 12 } }
+            GFX_portrait_BLA_ibaragi_yoshimi = { check_variable = { BLA_TRN_leader = 13 } }
+            GFX_portrait_BLA_kurimura_airi = { check_variable = { BLA_TRN_leader = 14 } }
+            GFX_portrait_BLA_kyouyama_kazusa = { check_variable = { BLA_TRN_leader = 15 } }
+            GFX_portrait_BLA_yutori_natsu = { check_variable = { BLA_TRN_leader = 16 } }
+            GFX_portrait_BLA_aomori_mine = { check_variable = { BLA_TRN_leader = 17 } }
+            GFX_portrait_BLA_sumi_serina = { check_variable = { BLA_TRN_leader = 18 } }
+            GFX_portrait_BLA_asagao_hanae = { check_variable = { BLA_TRN_leader = 19 } }
+            GFX_portrait_BLA_kenzaki_tsurugi = { check_variable = { BLA_TRN_leader = 20 } }
+            GFX_portrait_BLA_hanekawa_hasumi = { check_variable = { BLA_TRN_leader = 21 } }
+            GFX_portrait_BLA_shizuyama_mashiro = { check_variable = { BLA_TRN_leader = 22 } }
+            GFX_portrait_BLA_nakamasa_ichika = { check_variable = { BLA_TRN_leader = 23 } }
+            GFX_portrait_BLA_utazumi_sakurako = { check_variable = { BLA_TRN_leader = 24 } }
+            GFX_portrait_BLA_wakaba_hinata = { check_variable = { BLA_TRN_leader = 25 } }
+            GFX_portrait_BLA_iochi_mari = { check_variable = { BLA_TRN_leader = 26 } }
         }
         MIL_leader = {
             GFX_BLA_MIL_notparticipated = { check_variable = { BLA_MIL_leader = 0 } }

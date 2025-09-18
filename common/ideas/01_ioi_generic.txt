@@ -356,7 +356,7 @@ ideas = {
 		#이념 관련 
 		democratic_hidden = {
 			allowed = { is_democratic = yes }
-			allowed_civil_war = { always = yes }
+			allowed_civil_war = { always = no }
 			removal_cost = -1
 			modifier = {
 				conservatism_acceptance = 1000
@@ -402,7 +402,12 @@ ideas = {
 					has_government = socialism
 				}
 			}
-			allowed_civil_war = { always = yes }
+			allowed_civil_war = { 
+				OR = {
+					has_government = communism
+					has_government = socialism
+				} 
+			}
 			removal_cost = -1
 			modifier = {
 				communism_acceptance = 500
@@ -442,9 +447,27 @@ ideas = {
 		}
 		great_depression_hidden = { #이벤트로 자동 제거
 			allowed = { always = no }
-			allowed_civil_war = { always = yes }
+			allowed_civil_war = { always = no }
 			removal_cost = -1
 			modifier = { }
+		}
+
+		hidden_buff = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.5
+				production_factory_max_efficiency_factor = 0.5
+				production_factory_efficiency_gain_factor = 0.5
+				army_attack_factor = 0.3
+				army_defence_factor = 0.3
+				army_speed_factor = 0.3
+			}
 		}
 	}
 
@@ -605,34 +628,6 @@ ideas = {
 			modifier = {
 				operative_slot = 1
 				communism_acceptance = -15
-			}
-		}
-		
-		nationalism_movement = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				has_government = fascism
-			}
-			removal_cost = -1
-			picture = generic_infantry_bonus
-			modifier = {
-				fascism_drift = 0.1
-			}
-		}
-		
-		militarism_movement = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				has_government = militarytotalism
-			}
-			removal_cost = -1
-			picture = generic_infantry_bonus
-			modifier = {
-				militarytotalism_drift = 0.1
 			}
 		}
 
@@ -1739,9 +1734,7 @@ ideas = {
 
 			picture = generic_tank_manufacturer_1
 			
-			allowed = {
-				has_unique_national_focus = no
-			}
+			allowed = { has_unique_national_focus = no }
 			
 			cost = 150
 			removal_cost = 10
@@ -1754,16 +1747,12 @@ ideas = {
 		}
 	}
 	naval_manufacturer = { 
-	
 		designer = yes
-	
 		generic_naval_manufacturer = {
 			
 			picture = generic_naval_manufacturer_1
 
-			allowed = {
-				has_unique_national_focus = no
-			}
+			allowed = { has_unique_national_focus = no }
 			
 			cost = 150
 			removal_cost = 10
@@ -1782,8 +1771,7 @@ ideas = {
 		generic_light_aircraft_manufacturer = {
 			
 			picture = generic_air_manufacturer_1
-
-			allowed = { }
+			allowed = { has_unique_national_focus = no }
 			
 			cost = 150
 			removal_cost = 10
@@ -1798,8 +1786,7 @@ ideas = {
 		generic_medium_aircraft_manufacturer = {
 			
 			picture = generic_air_manufacturer_3
-
-			allowed = { }
+			allowed = { has_unique_national_focus = no }
 			
 			cost = 150
 			removal_cost = 10
@@ -1814,8 +1801,7 @@ ideas = {
 		generic_heavy_aircraft_manufacturer = {
 
 			picture = generic_air_manufacturer_2
-			
-			allowed = { }
+			allowed = { has_unique_national_focus = no }
 			
 			cost = 150
 			removal_cost = 10
@@ -1830,8 +1816,7 @@ ideas = {
 		generic_naval_aircraft_manufacturer = {
 			
 			picture = generic_naval_manufacturer_2
-
-			allowed = { }
+			allowed = { has_unique_national_focus = no }
 			
 			cost = 150
 			removal_cost = 10
@@ -1846,7 +1831,7 @@ ideas = {
 	industrial_concern = {
 		generic_industrial_concern = {
 			picture = generic_industrial_concern_1
-			allowed = { }
+			allowed = { has_unique_national_focus = no }
 			
 			cost = 150
 			removal_cost = 10
@@ -1860,7 +1845,7 @@ ideas = {
 
 		generic_electronics_concern = {
 			picture = generic_electronics_concern_1
-			allowed = { }
+			allowed = { has_unique_national_focus = no }
 			
 			cost = 150
 			removal_cost = 10
@@ -1876,7 +1861,7 @@ ideas = {
 		designer = yes
 		generic_motorized_equipment_manufacturer = {
 			picture = generic_motorized_equipment_manufacturer_3
-			allowed = { }
+			allowed = { has_unique_national_focus = no }
 			
 			cost = 150
 			removal_cost = 10
@@ -1890,7 +1875,7 @@ ideas = {
 		
 		generic_infantry_equipment_manufacturer = {
 			picture = generic_infantry_equipment_manufacturer_2
-			allowed = { }
+			allowed = { has_unique_national_focus = no }
 			
 			cost = 150
 			removal_cost = 10
@@ -1905,8 +1890,7 @@ ideas = {
 		generic_artillery_manufacturer = {
 			
 			picture = generic_artillery_manufacturer_2
-
-			allowed = { }
+			allowed = { has_unique_national_focus = no }
 			
 			cost = 150
 			removal_cost = 10

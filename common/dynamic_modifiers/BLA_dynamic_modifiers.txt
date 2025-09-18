@@ -6,14 +6,214 @@ BLA_industry = {
 BLA_army = {
 	enable = { always = yes }
 	icon = GFX_idea_BLA_dynamic_army
+
+	land_doctrine_cost_factor = BLA_army_land_doctrine_cost_factor
+
+	#더미 변수
+	#build_cost_ic_anti_air = BLA_army_build_cost_ic_anti_air
+	#build_cost_ic_anti_tank = BLA_army_build_cost_ic_anti_tank
+	#build_cost_ic_armor = BLA_army_build_cost_ic_armor
+	#build_cost_ic_artillery = BLA_army_build_cost_ic_artillery
+	#build_cost_ic_heavy_tank_chassis = BLA_army_build_cost_ic_heavy_tank_chassis
+	#build_cost_ic_infantry = BLA_army_build_cost_ic_infantry
+	#build_cost_ic_light_tank_chassis = BLA_army_build_cost_ic_light_tank_chassis
+	#build_cost_ic_mechanized = BLA_army_build_cost_ic_mechanized
+	#build_cost_ic_medium_tank_chassis = BLA_army_build_cost_ic_medium_tank_chassis
+	#build_cost_ic_motorized = BLA_army_build_cost_ic_motorized
+	#build_cost_ic_rocket = BLA_army_build_cost_ic_rocket
+	#build_cost_ic_support_equipment = BLA_army_build_cost_ic_support_equipment
 }
 
 BLA_navy = {
 	enable = { NOT = { has_country_flag = no_naval_academy } }
 	icon = GFX_idea_BLA_dynamic_naval
+
+	naval_doctrine_cost_factor = BLA_navy_naval_doctrine_cost_factor
+
+	#더미 변수
+	#build_cost_ic_capital_ship = BLA_navy_build_cost_ic_capital_ship
+	#build_cost_ic_carrier = BLA_navy_build_cost_ic_carrier
+	#build_cost_ic_convoy = BLA_navy_build_cost_ic_convoy
+	#build_cost_ic_screen_ship = BLA_navy_build_cost_ic_screen_ship
+	#build_cost_ic_submarine = BLA_navy_build_cost_ic_submarine
 }
 
 BLA_air_force = {
 	enable = { NOT = { has_country_flag = no_air_academy } }
 	icon = GFX_idea_BLA_dynamic_airforce
+	
+	air_doctrine_cost_factor = BLA_air_force_air_doctrine_cost_factor
+
+	#더미 변수
+	#build_cost_ic_air_transport = BLA_air_force_build_cost_ic_air_transport
+	#build_cost_ic_cas = BLA_air_force_build_cost_ic_cas
+	#build_cost_ic_fighter = BLA_air_force_build_cost_ic_fighter
+	#build_cost_ic_interceptor = BLA_air_force_build_cost_ic_interceptor
+	#build_cost_ic_tactical_bomber = BLA_air_force_build_cost_ic_tactical_bomber
+	#build_cost_ic_missile = BLA_air_force_build_cost_ic_missile
+	#build_cost_ic_naval_bomber = BLA_air_force_build_cost_ic_naval_bomber
+	#build_cost_ic_strat_bomber = BLA_air_force_build_cost_ic_strat_bomber
+	#build_cost_ic_suicide = BLA_air_force_build_cost_ic_suicide
+}
+
+BLA_ABY_modifiers = {
+	enable = { always = yes }
+	icon = GFX_BLA_ABY_modifiers
+
+	recruitable_population_factor = BLA_ABY_recruitable_population_factor
+	local_building_slots_factor = BLA_ABY_local_building_slots_factor
+	state_resources_factor = BLA_ABY_state_resources_factor
+	state_production_speed_buildings_factor = BLA_ABY_state_production_speed_buildings_factor
+}
+
+BLA_ARI_modifiers = {
+	enable = { always = yes }
+	icon = GFX_BLA_ARI_modifiers
+
+	recruitable_population_factor = BLA_ARI_recruitable_population_factor
+	local_building_slots_factor = BLA_ARI_local_building_slots_factor
+	state_resources_factor = BLA_ARI_state_resources_factor
+	state_production_speed_buildings_factor = BLA_ARI_state_production_speed_buildings_factor
+}
+
+BLA_GEH_modifiers = {
+	enable = { always = yes }
+	icon = GFX_BLA_GEH_modifiers
+
+	recruitable_population_factor = BLA_GEH_recruitable_population_factor
+	local_building_slots_factor = BLA_GEH_local_building_slots_factor
+	state_resources_factor = BLA_GEH_state_resources_factor
+	state_production_speed_buildings_factor = BLA_GEH_state_production_speed_buildings_factor
+}
+
+BLA_HIG_modifiers = {
+	enable = { always = yes }
+	icon = GFX_BLA_HIG_modifiers
+
+	recruitable_population_factor = BLA_HIG_recruitable_population_factor
+	local_building_slots_factor = BLA_HIG_local_building_slots_factor
+	state_resources_factor = BLA_HIG_state_resources_factor
+	state_production_speed_buildings_factor = BLA_HIG_state_production_speed_buildings_factor
+}
+
+BLA_HYA_modifiers = {
+	enable = { always = yes }
+	icon = GFX_BLA_HYA_modifiers
+
+	recruitable_population_factor = BLA_HYA_recruitable_population_factor
+	local_building_slots_factor = BLA_HYA_local_building_slots_factor
+	state_resources_factor = BLA_HYA_state_resources_factor
+	state_production_speed_buildings_factor = BLA_HYA_state_production_speed_buildings_factor
+}
+
+BLA_MIL_modifiers = {
+	enable = { always = yes }
+	icon = GFX_BLA_MIL_modifiers
+
+	recruitable_population_factor = BLA_MIL_recruitable_population_factor
+	local_building_slots_factor = BLA_MIL_local_building_slots_factor
+	state_resources_factor = BLA_MIL_state_resources_factor
+	state_production_speed_buildings_factor = BLA_MIL_state_production_speed_buildings_factor
+}
+
+BLA_RED_modifiers = {
+	enable = { always = yes }
+	icon = GFX_BLA_RED_modifiers
+
+	recruitable_population_factor = BLA_RED_recruitable_population_factor
+	local_building_slots_factor = BLA_RED_local_building_slots_factor
+	state_resources_factor = BLA_RED_state_resources_factor
+	state_production_speed_buildings_factor = BLA_RED_state_production_speed_buildings_factor
+}
+
+BLA_SHA_modifiers = {
+	enable = { always = yes }
+	icon = GFX_BLA_SHA_modifiers
+
+	recruitable_population_factor = BLA_SHA_recruitable_population_factor
+	local_building_slots_factor = BLA_SHA_local_building_slots_factor
+	state_resources_factor = BLA_SHA_state_resources_factor
+	state_production_speed_buildings_factor = BLA_SHA_state_production_speed_buildings_factor
+}
+
+BLA_SRT_modifiers = {
+	enable = { always = yes }
+	icon = GFX_BLA_SRT_modifiers
+
+	recruitable_population_factor = BLA_SRT_recruitable_population_factor
+	local_building_slots_factor = BLA_SRT_local_building_slots_factor
+	state_resources_factor = BLA_SRT_state_resources_factor
+	state_production_speed_buildings_factor = BLA_SRT_state_production_speed_buildings_factor
+}
+
+BLA_TRN_modifiers = {
+	enable = { always = yes }
+	icon = GFX_BLA_TRN_modifiers
+
+	recruitable_population_factor = BLA_TRN_recruitable_population_factor
+	local_building_slots_factor = BLA_TRN_local_building_slots_factor
+	state_resources_factor = BLA_TRN_state_resources_factor
+	state_production_speed_buildings_factor = BLA_TRN_state_production_speed_buildings_factor
+}
+
+BLA_VAL_modifiers = {
+	enable = { always = yes }
+	icon = GFX_BLA_VAL_modifiers
+
+	recruitable_population_factor = BLA_VAL_recruitable_population_factor
+	local_building_slots_factor = BLA_VAL_local_building_slots_factor
+	state_resources_factor = BLA_VAL_state_resources_factor
+	state_production_speed_buildings_factor = BLA_VAL_state_production_speed_buildings_factor
+}
+
+BLA_KIV_modifiers = {
+	enable = { always = yes }
+	icon = GFX_BLA_KIV_modifiers
+}
+
+BLA_Schalle_modifiers = {
+	enable = { always = yes }
+	icon = GFX_BLA_Schalle_modifiers
+}
+
+BLA_bad_administrative = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_disjointed_gov
+
+	political_power_gain = BLA_bad_administrative_political_power_gain
+	conscription_factor = BLA_bad_administrative_conscription_factor
+	mobilization_speed = BLA_bad_administrative_mobilization_speed
+	political_advisor_cost_factor = BLA_bad_administrative_political_advisor_cost_factor
+	economic_advisor_cost_factor = BLA_bad_administrative_economic_advisor_cost_factor
+	internal_advisor_cost_factor = BLA_bad_administrative_internal_advisor_cost_factor
+	army_chief_cost_factor = BLA_bad_administrative_army_chief_cost_factor
+	air_chief_cost_factor = BLA_bad_administrative_air_chief_cost_factor
+	navy_chief_cost_factor = BLA_bad_administrative_navy_chief_cost_factor
+	theorist_cost_factor = BLA_bad_administrative_theorist_cost_factor
+	high_command_cost_factor = BLA_bad_administrative_high_command_cost_factor
+	is_press_policy_cost_factor = BLA_bad_administrative_press_policy_cost_factor
+	is_minors_policy_cost_factor = BLA_bad_administrative_minors_policy_cost_factor
+	is_woman_policy_cost_factor = BLA_bad_administrative_woman_policy_cost_factor
+	is_local_autonomy_policy_cost_factor = BLA_bad_administrative_local_autonomy_policy_cost_factor
+	is_education_policy_cost_factor = BLA_bad_administrative_education_policy_cost_factor
+	is_welfare_policy_cost_factor = BLA_bad_administrative_welfare_policy_cost_factor
+	industrial_concern_cost_factor = BLA_bad_administrative_industrial_concern_cost_factor
+	is_economy_model_cost_factor = BLA_bad_administrative_economy_model_cost_factor
+	is_mobilization_economy_cost_factor = BLA_bad_administrative_mobilization_economy_cost_factor
+	is_taxation_cost_factor = BLA_bad_administrative_taxation_cost_factor
+	is_tarrif_cost_factor = BLA_bad_administrative_tarrif_cost_factor
+	is_military_budget_cost_factor = BLA_bad_administrative_military_budget_cost_factor
+	is_construction_cost_factor = BLA_bad_administrative_construction_cost_factor
+	is_high_command_order_cost_factor = BLA_bad_administrative_high_command_order_cost_factor
+	is_army_navy_balance_cost_factor = BLA_bad_administrative_army_navy_balance_cost_factor
+	is_logistic_cost_factor = BLA_bad_administrative_logistic_cost_factor
+	is_training_quality_cost_factor = BLA_bad_administrative_training_quality_cost_factor
+	is_female_service_cost_factor = BLA_bad_administrative_female_service_cost_factor
+	is_officer_training_cost_factor = BLA_bad_administrative_officer_training_cost_factor
+	is_mobilization_law_cost_factor = BLA_bad_administrative_mobilization_law_cost_factor
+	is_non_core_mobilization_law_cost_factor = BLA_bad_administrative_non_core_mobilization_law_cost_factor
+	is_resource_cost_factor = BLA_bad_administrative_resource_cost_factor
+	is_industry_base_cost_factor = BLA_bad_administrative_industry_base_cost_factor
+	is_labours_union_cost_factor = BLA_bad_administrative_labours_union_cost_factor
+	is_research_cost_factor = BLA_bad_administrative_research_cost_factor
 }

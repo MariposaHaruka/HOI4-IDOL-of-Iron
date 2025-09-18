@@ -1973,3 +1973,612 @@ BLA_balance_of_power_category = {
 #		}
 #	}
 }
+
+BLA_school_committee_category = {
+	BLA_invite_GEH = {
+		priority = 1
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = GEH
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = { 
+			custom_trigger_tooltip = {
+				BLA_gehenna_participate = no
+				tooltip = BLA_gehenna_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_gehenna_problem = yes
+				tooltip = BLA_gehenna_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = GEH }
+			BLA_gehenna_participate = no
+		}
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_gehenna_not_participated
+				set_variable = { BLA_GEH_leader = 2 }
+				country_event = { id = BLA_GEH.1 }
+			}
+		}
+	}
+	BLA_invite_MIL = {
+		priority = 1
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = MIL
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_millenium_participate = no
+				tooltip = BLA_millenium_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_millenium_problem = yes
+				tooltip = BLA_millenium_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = MIL }
+			BLA_millenium_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_millenium_not_participated
+				set_variable = { BLA_MIL_leader = 2 }
+				country_event = { id = BLA_MIL.1 }
+			}
+		}
+	}
+	BLA_invite_TRN = {
+		priority = 1
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = TRN
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_trinity_participate = no
+				tooltip = BLA_trinity_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_trinity_problem = yes
+				tooltip = BLA_trinity_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = TRN }
+			BLA_trinity_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_trinity_not_participated
+				set_variable = { BLA_TRN_leader = 4 }
+				country_event = { id = BLA_TRN.1 }
+			}
+		}
+	}
+	BLA_invite_HYA = {
+		priority = 1
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = HYA
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_hyakkiyako_participate = no
+				tooltip = BLA_hyakkiyako_participate_tt_NOT
+			}
+		}
+		visible = { 
+			NOT = { country_exists = HYA }
+			BLA_hyakkiyako_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_hyakkiyako_not_participated
+				set_variable = { BLA_HYA_leader = 2 }
+				country_event = { id = BLA_HYA.1 }
+			}
+		}
+	}
+	BLA_invite_ABY = {
+		priority = 1
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = ABY
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_abydos_participate = no
+				tooltip = BLA_abydos_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_abydos_problem = yes
+				tooltip = BLA_abydos_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = ABY }
+			BLA_abydos_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_abydos_not_participated
+				if = {
+					limit = { has_country_flag = BLA_yume_accident }
+					set_variable = { BLA_ABY_leader = 3 }
+					else = { set_variable = { BLA_ABY_leader = 2 }}
+				}
+				country_event = { id = BLA_ABY.1 }
+			}
+		}
+	}
+	BLA_invite_RED = {
+		priority = 1
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = RED
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_redwinter_participate = no
+				tooltip = BLA_redwinter_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_redwinter_problem = yes
+				tooltip = BLA_redwinter_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = RED }
+			BLA_redwinter_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_redwinter_not_participated
+				set_variable = { BLA_RED_leader = 2 }
+				country_event = { id = BLA_RED.1 }
+			}
+		}
+	}
+	BLA_invite_SHA = {
+		priority = 1
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = SHA
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_shanhaijing_participate = no
+				tooltip = BLA_shanhaijing_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_shanhaijing_problem = yes
+				tooltip = BLA_shanhaijing_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = SHA }
+			BLA_shanhaijing_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_shanhaijing_not_participated
+				set_variable = { BLA_SHA_leader = 2 }
+				country_event = { id = BLA_SHA.1 }
+			}
+		}
+	}
+	BLA_invite_ARI = {
+		priority = 1
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = ARI
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_arius_participate = no
+				tooltip = BLA_arius_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_arius_problem = yes
+				tooltip = BLA_arius_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = ARI }
+			BLA_arius_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_arius_not_participated
+				set_variable = { BLA_ARI_leader = 2 }
+				country_event = { id = BLA_ARI.1 }
+			}
+		}
+	}
+	BLA_invite_VAL = {
+		priority = 1
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = VAL
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_valkyrie_participate = no
+				tooltip = BLA_valkyrie_participate_tt_NOT
+			}
+		}
+		visible = { 
+			NOT = { country_exists = VAL }
+			BLA_valkyrie_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_valkyrie_not_participated
+				set_variable = { BLA_VAL_leader = 2 }
+				country_event = { id = BLA_VAL.1 }
+			}
+		}
+	}
+	BLA_invite_SRT = {
+		priority = 1
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = SRT
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_srt_participate = no
+				tooltip = BLA_srt_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_srt_problem = yes
+				tooltip = BLA_srt_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = SRT }
+			BLA_srt_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_srt_not_participated
+				set_variable = { BLA_SRT_leader = 2 }
+				country_event = { id = BLA_SRT.1 }
+			}
+		}
+	}
+	BLA_invite_HIG = {
+		priority = 1
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = HIG
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_highlander_participate = no
+				tooltip = BLA_highlander_participate_tt_NOT
+			}
+		}
+		visible = { 
+			NOT = { country_exists = HIG }
+			BLA_highlander_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_highlander_not_participated
+				#set_variable = { BLA_HIG_leader = 2 }
+				country_event = { id = BLA_HIG.1 }
+			}
+		}
+	}
+	#BLA_invite_WIL = {
+	#	priority = 1
+	#	icon = hol_attract_foreign_investors
+	#	ai_will_do = { 
+	#		base = 5
+	#	}
+	#
+	#	cosmetic_tag = WIL
+	#	cosmetic_ideology = authoritariandemocracy
+	#
+	#	allowed = { original_tag = BLA }
+	#	available = {
+	#		custom_trigger_tooltip = {
+	#			BLA_wildhunt_participate = no
+	#			tooltip = BLA_wildhunt_participate_tt_NOT
+	#		}
+	#	}
+	#	visible = { 
+	#		NOT = { country_exists = WIL }
+	#		BLA_highlander_participate = no
+	#	}
+	#
+	#	cost = 10
+	#	days_remove = 30
+	#
+	#	remove_effect = {
+	#		hidden_effect = {
+	#			clr_country_flag = BLA_wildhunt_not_participated
+	#			#set_variable = { BLA_HIG_leader = 2 }
+	#			country_event = { id = BLA_WIL.1 }
+	#		}
+	#	}
+	#}
+}
+
+BLA_military_committee_category = { #군사 위원회
+	BLA_military_committee_category_eimi_fleet_plan = {
+		priority = 1
+		icon = SWE_set_navy_budget
+		ai_will_do = { 
+			base = 5
+		}
+		
+		allowed = { original_tag = BLA }
+		visible = { has_completed_focus = BLA_10004 }
+		available = {
+			BLA_millenium_participate = yes
+		}
+		cost = 50
+		fire_only_once = yes
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = BLA_eimi_fleet_plan_idea
+				days = 730
+			}
+		}
+	}
+	BLA_military_committee_category_airplane_production_plan = {
+		priority = 1
+		icon = SWE_set_air_budget
+		ai_will_do = { 
+			base = 5
+		}
+		
+		allowed = { original_tag = BLA }
+		visible = { has_completed_focus = BLA_10003 }
+		cost = 50
+		fire_only_once = yes
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = BLA_airplane_production_plan_idea
+				days = 730
+			}
+		}
+	}
+	BLA_military_committee_category_air_license = { 
+		priority = 1
+		icon = SWE_set_air_budget
+		ai_will_do = { 
+			base = 5
+		}
+		
+		allowed = { original_tag = BLA }
+		visible = { has_completed_focus = BLA_11007 }
+		available = {
+			FROM = {
+				NOT = {
+					OR = {
+						is_embargoing = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+		targets = { IMA ICG IML TOH PRS BDG LLS ENS }
+
+		cost = 50
+		fire_only_once = yes
+
+		remove_effect = {
+			FROM = { 
+				country_event = {
+					id = BLA_diplomacy.1
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+BLA_famine_problem_category = { #기근 문제 해결
+	BLA_solve_famine_problem = { 
+		priority = 90 
+		icon = {
+			key = GFX_decision_BLA_famine_problem_state_0
+			trigger = {
+				FROM ={
+					check_variable = { NOR_state_preparation = 1 }
+				}
+			}
+		} 
+		icon = {
+			key = GFX_decision_BLA_famine_problem_state_1
+			trigger = {
+				FROM = {
+					check_variable = { NOR_state_preparation = 2 }
+				} 
+			}
+		}
+		icon = {
+			key = GFX_decision_BLA_famine_problem_state_2
+			trigger = {
+				FROM = {
+					check_variable = { NOR_state_preparation = 3 }
+				}
+			}
+		}
+
+		visible = {
+			ROOT = {
+				has_completed_focus = BLA_51004
+				has_country_flag = BLA_famine_problem_flag
+			}
+		}
+
+		available = {
+			has_equipment = {
+				convoy > NOR_prep_his_cost_convoys
+			}
+		}
+
+		state_target = yes 
+
+		targets = {
+			state = 110 # Oslofjord
+			state = 921 # Telemark
+			state = 922 # Agder
+			state = 142 # Vestlandet
+			state = 920 # Opplandene 
+			state = 143 # Trondelag
+			state = 923 # Helgeland
+			state = 144 # Nordland 
+			state = 924 # Troms 
+			state = 925 # Finnmark
+		}
+
+		target_root_trigger = {
+			has_completed_focus = NOR_broken_gun_policies
+			has_country_flag = NOR_going_dem_historical
+			has_defensive_war = yes
+			OR = {
+				NOT = { has_country_flag = NOR_state_prep_deployment_in_progress } 
+				FROM = { has_state_flag = NOR_deploying_prep_in_state } 
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT 
+				is_controlled_by = ROOT
+				OR = {
+					has_variable = NOR_state_preparation
+					has_state_flag = NOR_deploying_prep_in_state
+				}
+			}
+		}
+
+		custom_cost_text = decision_cost_his_prepare_convoy_pp
+
+		custom_cost_trigger = {
+			has_equipment = {
+				convoy > NOR_prep_his_cost_convoys_trigger
+			}
+			has_political_power > NOR_prep_his_cost_pp_trigger
+		}
+
+		days_remove = 7
+
+		complete_effect = {
+			FROM = { start_deploying_prep = yes }
+		}
+
+		remove_effect = {
+			FROM = { NOR_deploy_prep_dem = yes } 
+		}
+	}
+}

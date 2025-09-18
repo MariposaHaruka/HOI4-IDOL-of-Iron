@@ -149,7 +149,7 @@ set_convoys = 900
 
 #국민 정신
 add_ideas = {
-	IMA_great_depression
+	IMA_great_depression_1
 	IMA_winner_of_great_war
 	IMA_widespread_strikes
 	IMA_home_of_idol_democracy
@@ -224,8 +224,8 @@ set_stability = 0.4
 set_war_support = 0.05
 set_politics = {
 	ruling_party = conservatism
-	last_election = "1932.11.14"
-	election_frequency = 48
+	last_election = "1935.11.14"
+	election_frequency = 60
 	elections_allowed = yes
 }
 set_popularities = {
@@ -244,6 +244,8 @@ set_popularities = {
 }
 set_country_flag = IMA_haruka_crisis
 set_country_flag = IMA_haruka_exist #하루카 실각하면 다시 못 돌아오니 주의
+
+set_variable = { IMA_debt = 150 }
 
 #의회
 set_variable = { IMA_communist_seats = 8 }
@@ -1183,3 +1185,10 @@ if = {
 
 #이벤트
 country_event = { id = IMA_haruka_crisis.1 days = 5 } #리버풀 신년 시위
+country_event = { id = IMA_haruka_crisis.2 days = 105 } #케이블가 행진
+set_variable = { IMA_left_anger = 2 }
+set_variable = { IMA_right_anger = 2 }
+
+country_event = { id = IMA_haruka_crisis.3 days = 132 } #국민노동당 문제
+country_event = { id = IMA_haruka_crisis.4 days = 167 } #국민노동당 문제
+country_event = { id = IMA_haruka_crisis.5 days = 182 } #국민노동당 문제

@@ -1391,3 +1391,55 @@ calc_parliament_support_IMA = {
 	add_to_variable = { IMA.support_seats = IMA.autocracy_support }
 	divide_variable = { IMA.support_seats = IMA_total_seats }
 }
+
+IMA_reduce_depression = {
+	if = {
+		limit = { has_idea = IMA_great_depression_1 }
+		swap_ideas = {
+			remove_idea = IMA_great_depression_1
+			add_idea = IMA_great_depression_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = IMA_great_depression_2 }
+		swap_ideas = {
+			remove_idea = IMA_great_depression_2
+			add_idea = IMA_great_depression_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = IMA_great_depression_3 }
+		remove_ideas = IMA_great_depression_3
+	}
+	else = {
+		add_timed_idea = {
+			idea = IMA_minor_economic_boom
+			days = 200
+		}
+	}
+	set_country_flag = {
+		flag = IMA_reduce_depression_flag
+		days = 200
+	}
+}
+
+IMA_upgrade_minase_fund = {
+	custom_effect_tooltip = IMA_upgrade_minase_fund_tt
+	hidden_effect = {
+		if = {
+			limit = { has_country_flag = IMA_iori_plan_minase_fund_flag_1 }
+			clr_country_flag = IMA_iori_plan_minase_fund_flag_1
+			set_country_flag = IMA_iori_plan_minase_fund_flag_2
+			remove_mission = IMA_iori_plan_minase_fund_1
+			activate_mission = IMA_iori_plan_minase_fund_2
+			set_country_flag = IMA_iori_plan_minase_fund_flag_2
+		}
+		else_if = {
+			limit = { has_country_flag = IMA_iori_plan_minase_fund_flag_2 }
+			clr_country_flag = IMA_iori_plan_minase_fund_flag_2
+			set_country_flag = IMA_iori_plan_minase_fund_flag_3
+			remove_mission = IMA_iori_plan_minase_fund_2
+			activate_mission = IMA_iori_plan_minase_fund_3
+		}
+	}
+}

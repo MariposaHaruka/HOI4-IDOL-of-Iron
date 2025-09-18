@@ -1,5 +1,182 @@
 ideas = {
-	country = { }
+	country = { 
+		TOH_2nd_5_year_plan_ns = { #북마크용
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = TOH_2nd_5_year_plan
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = 0.10
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+
+		TOH_2nd_5_year_plan = { #인 게임에서 경제개발 5개년 몇회차인지의 상태를 나타내는 용
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = TOH_2nd_5_year_plan
+			modifier = { }
+		}
+
+		TOH_3rd_5_year_plan = { #인 게임에서 경제개발 5개년 몇회차인지의 상태를 나타내는 용
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = TOH_3rd_5_year_plan
+			modifier = { }
+		}
+
+		TOH_4th_5_year_plan = { #인 게임에서 경제개발 5개년 몇회차인지의 상태를 나타내는 용
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = TOH_4th_5_year_plan
+			modifier = { }
+		}
+		
+		TOH_legacy_of_february_revolution = {
+			picture = home_of_revolution
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				is_communism = yes
+				NOT = { has_government = anarchosyndicalism }
+			}
+			modifier = {
+				drift_defence_factor = 0.5
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+		TOH_disjointed_faction = {
+			removal_cost = -1
+			picture = generic_disjointed_gov
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					SOV_is_right_opposition = yes
+					NOT = { tag = SOV } #Stalin/Beriya
+				}
+			}
+
+			modifier = {
+				stability_factor = -0.2
+				political_power_factor = -0.15
+			}
+		}
+
+		TOH_underdeveloped_army = {
+			removal_cost = -1
+			picture = generic_army_problems
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					SOV_is_right_opposition = yes
+					NOT = { tag = SOV } #Stalin/Beriya
+				}
+			}
+
+			modifier = {
+				army_org_factor = -0.15
+				experience_gain_army_factor = -0.1
+				experience_loss_factor = 0.25
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
+
+		TOH_mass_construction = { #Comes from focus
+			removal_cost = -1
+			allowed = {
+				always = no # Added via event
+			}
+			allowed_civil_war = {
+				tag = SOV
+			}
+			picture = ARG_construction_guilds
+			modifier = {
+				civilian_factory_use = 5
+			}
+		}
+
+		TOH_transformation_of_nature = { #Comes from focus
+			removal_cost = -1
+			allowed = {
+				always = no # Added via event
+			}
+			allowed_civil_war = {
+				tag = SOV
+			}
+			picture = SOV_transformation_of_nature
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.06
+				global_building_slots = 1
+			}
+		}
+
+		TOH_mine_warfare = {
+			name = SOV_mine_warfare
+			picture = SOV_mine_warfare
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				mines_planting_by_fleets_factor = 0.1
+				mines_sweeping_by_fleets_factor = 0.1
+				naval_mine_hit_chance = -0.05
+				naval_mines_damage_factor = 0.05
+			}
+		}
+
+		TOH_desperate_measures = {
+			name = TOH_desperate_measures
+			picture = tfv_can_conscription_crisis
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = { tag = SOV }
+			modifier = {
+				mobilization_speed = 0.25
+				minimum_training_level = -0.05
+				training_time_factor = -0.1
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

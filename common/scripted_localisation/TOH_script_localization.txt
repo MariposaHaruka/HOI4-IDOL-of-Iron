@@ -32,6 +32,16 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = GetSciencePolicyName
+	text = {
+		trigger = { TOH = { is_communism = yes } }
+		localization_key = TOH_Science_Policy_Com
+	}
+	text = {
+		localization_key = TOH_Science_Policy_Non_Com 
+	}
+}
+defined_text = {
 	name = GetEconomyPolicyName
 	text = {
 		trigger = { TOH = { is_communism = yes } }

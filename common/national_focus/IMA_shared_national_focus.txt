@@ -55,7 +55,10 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00001"
-			IMA = { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			IMA = { 
+				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+				add_political_power = 50
+			}
 			custom_effect_tooltip = commonwealth_effect_tt
 			hidden_effect = {
 				if = {
@@ -98,7 +101,10 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00002"
-			ISC = { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			ISC = { 
+				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+				add_political_power = 50
+			}
 			custom_effect_tooltip = commonwealth_effect_tt
 			hidden_effect = {
 				if = {
@@ -141,7 +147,10 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00003"
-			ISM = { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			ISM = { 
+				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+				add_political_power = 50
+			}
 			custom_effect_tooltip = commonwealth_effect_tt
 			hidden_effect = {
 				if = {
@@ -184,7 +193,10 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00004"
-			IML = { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			IML = { 
+				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+				add_political_power = 50
+			}
 			custom_effect_tooltip = commonwealth_effect_tt
 			hidden_effect = {
 				if = {
@@ -227,7 +239,10 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00005"
-			ICG = { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			ICG = { 
+				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+				add_political_power = 50
+			}
 			custom_effect_tooltip = commonwealth_effect_tt
 			hidden_effect = {
 				if = {
@@ -270,7 +285,10 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00006"
-			IDS = { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			IDS = { 
+				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+				add_political_power = 50
+			}
 			custom_effect_tooltip = commonwealth_effect_tt
 			hidden_effect = {
 				if = {
@@ -313,7 +331,10 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00007"
-			IGM= { add_dynamic_modifier = { modifier = IMA_commonwealth } }
+			IGM = { 
+				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+				add_political_power = 50
+			}
 			custom_effect_tooltip = commonwealth_effect_tt
 			hidden_effect = {
 				if = {
@@ -347,7 +368,7 @@
 
 	joint_focus = {
 		id = IMA_shared_11001 #연합 공군 사령부
-		icon = GFX_focus_IMA_shared_11001
+		icon = GFX_focus_ioi_generic_air_command
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -367,7 +388,7 @@
 
 	joint_focus = {
 		id = IMA_shared_12001 #연합 해군 사령부
-		icon = GFX_focus_IMA_shared_12001
+		icon = GFX_focus_ioi_generic_naval_command
 		cost = 5
 
 		x =2
@@ -386,7 +407,7 @@
 
 	joint_focus = {
 		id = IMA_shared_13001 #연합 특수전 사령부
-		icon = GFX_focus_IMA_shared_13001
+		icon = GFX_focus_ioi_generic_special_force_command
 		cost = 5
 		text_icon = joint_focus_style
 
@@ -406,7 +427,7 @@
 
 	joint_focus = {
 		id = IMA_shared_14001 #연합 육군 사령부
-		icon = GFX_focus_IMA_shared_14001
+		icon = GFX_focus_ioi_generic_army_high_command
 		cost = 5
 		text_icon = joint_focus_style
 
@@ -426,7 +447,7 @@
 
 	joint_focus = {
 		id = IMA_shared_11002 #합동 공군 훈련
-		icon = GFX_focus_IMA_shared_11001
+		icon = GFX_goal_generic_air_fighter2
 		cost = 5
 	
 		x = -1
@@ -610,7 +631,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_12051 #연합 해군항공대 창설
-		icon = GFX_focus_IMA_shared_12051
+		icon = GFX_focus_ioi_generic_sea_and_air
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -631,7 +652,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_12052 #연합 항모전단
-		icon = GFX_focus_IMA_shared_12052
+		icon = GFX_goal_generic_navy_carrier
 		cost = 5
 		text_icon = Commonwealth_IMA_ICG_style
 	
@@ -686,7 +707,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_12003 #태평양 제해권 확보
-		icon = GFX_focus_IMA_shared_12003
+		icon = GFX_focus_ioi_generic_pacific_fleet
 		cost = 5
 		text_icon = Commonwealth_ICG_ISC_style
 	
@@ -721,7 +742,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_12004 #대서양 제해권 확보
-		icon = GFX_focus_IMA_shared_12004
+		icon = 	GFX_focus_ioi_generic_atlantic_fleet
 		cost = 5
 		text_icon = Commonwealth_IMA_IML_style
 	
@@ -756,7 +777,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_12005 #인도양 제해권 확보
-		icon = GFX_focus_IMA_shared_12005
+		icon = GFX_focus_ioi_generic_indian_fleet
 		cost = 5
 		text_icon = Commonwealth_ISM_IGM_style
 	
@@ -826,7 +847,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_13012 #연합 공수전 사령부
-		icon = GFX_focus_IMA_shared_13002
+		icon = GFX_focus_eng_special_air_service
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -846,7 +867,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_13013 #제1 연합공수군
-		icon = GFX_focus_IMA
+		icon = GFX_focus_generic_paratrooper
 		cost = 5
 		text_icon = Commonwealth_IMA_IML_style
 	
@@ -881,7 +902,8 @@
 	
 	joint_focus = {
 		id = IMA_shared_13022 #연합 해병대 사령부
-		icon = GFX_focus_IMA
+		icon = GFX_goal_generic_amphibious_assault
+
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -901,7 +923,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_13023 #갈리폴리의 반성
-		icon = GFX_focus_IMA_shared_13023
+		icon = GFX_focus_generic_naval_invasion_tank
 		cost = 5
 		text_icon = Commonwealth_ICG_ISC_style
 	
@@ -936,7 +958,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_14002 #합동 작전 훈련
-		icon = GFX_focus_IMA_shared_14002
+		icon = GFX_focus_ioi_generic_combined_arms_training_infantry_armor
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -956,7 +978,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_14003 #합동 기동 훈련
-		icon = GFX_focus_IMA_shared_14003
+		icon = GFX_focus_generic_tankette
 		cost = 5
 		text_icon = Commonwealth_ICG_IML_style
 	
@@ -991,7 +1013,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_14004 #제15 집단군
-		icon = GFX_focus_IMA_shared_14004
+		icon = GFX_focus_ioi_generic_mass_concentration_of_army
 		cost = 5
 		text_icon = Commonwealth_IMA_style
 	
@@ -1017,7 +1039,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_14005 #연합 기갑군
-		icon = GFX_focus_IMA_shared_14005
+		icon = GFX_focus_generic_tank_assault
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -1146,7 +1168,7 @@
 
 	joint_focus = {
 		id = IMA_shared_20003 #커먼웰스 장관위원회
-		icon = GFX_focus_IMA_shared_20003
+		icon = GFX_focus_ioi_generic_agency
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -1166,7 +1188,7 @@
 
 	joint_focus = {
 		id = IMA_shared_20004 #커먼웰스 총리회의
-		icon = GFX_focus_IMA_shared_20004
+		icon = GFX_focus_POL_complete_april_constitution
 		cost = 5
 		text_icon = Commonwealth_IMA_style
 	
@@ -1475,7 +1497,7 @@
 
 	joint_focus = {
 		id = IMA_shared_33001 #표준 군수품 설계
-		icon = GFX_focus_IMA_shared_33001
+		icon = GFX_focus_ioi_generic_design_equipment_standards
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -1495,7 +1517,7 @@
 
 	joint_focus = {
 		id = IMA_shared_40001 #커먼웰스 합동 연구 계획
-		icon = GFX_focus_IMA_shared_40001
+		icon = GFX_focus_ioi_generic_national_academy_of_sciences_2
 		text_icon = joint_focus_style
 		cost = 5
 	
@@ -1515,7 +1537,7 @@
 
 	joint_focus = {
 		id = IMA_shared_41001 #공작기계 연구
-		icon = GFX_focus_IMA_shared_41001
+		icon = GFX_focus_ioi_generic_research_craft_machine
 		text_icon = joint_focus_style
 		cost = 5
 	
@@ -1535,7 +1557,7 @@
 
 	joint_focus = {
 		id = IMA_shared_33002 #대량생산
-		icon = GFX_focus_IMA_shared_33002
+		icon = GFX_focus_ioi_generic_ration
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -1557,7 +1579,7 @@
 
 	joint_focus = {
 		id = IMA_shared_33003 #중공업단지
-		icon = GFX_focus_IMA_shared_33003
+		icon = GFX_focus_ioi_generic_heavy_industry
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -1579,7 +1601,7 @@
 
 	joint_focus = {
 		id = IMA_shared_33004 #군수산업단지
-		icon = GFX_focus_IMA_shared_33004
+		icon = GFX_goal_generic_construct_mil_factory
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -1601,7 +1623,7 @@
 
 	joint_focus = {
 		id = IMA_shared_33005 #더 많은 공업단지
-		icon = GFX_focus_IMA_shared_33005
+		icon = GFX_focus_ioi_generic_factory_complex
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -1622,7 +1644,7 @@
 
 	joint_focus = {
 		id = IMA_shared_41002 #군수품 품질 개선
-		icon = GFX_focus_IMA_shared_41002
+		icon = GFX_focus_ioi_generic_upgrade_supplies
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -1662,7 +1684,7 @@
 
 	joint_focus = {
 		id = IMA_shared_42002 #합동 공군연구
-		icon = GFX_focus_IMA_shared_42002
+		icon = GFX_focus_ioi_generic_research_airforce
 		cost = 5
 		text_icon = Commonwealth_IMA_ISC_style
 
@@ -1697,7 +1719,7 @@
 
 	joint_focus = {
 		id = IMA_shared_42003 #합동 기갑연구
-		icon = GFX_focus_IMA_shared_42003
+		icon = GFX_focus_ioi_generic_research_army
 		cost = 5
 		text_icon = Commonwealth_ICG_IML_style
 	
@@ -1732,7 +1754,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_42004 #합동 함선연구
-		icon = GFX_focus_IMA_shared_42004
+		icon = GFX_focus_ioi_generic_research_navy
 		cost = 5
 		text_icon = Commonwealth_IMA_ICG_style
 	
@@ -1767,7 +1789,7 @@
 	
 	joint_focus = {
 		id = IMA_shared_42005 #합동 산업연구
-		icon = GFX_focus_IMA_shared_42005
+		icon = GFX_focus_ioi_generic_research_industry
 		cost = 5
 		text_icon = joint_focus_style
 	
@@ -1787,7 +1809,7 @@
 
 	joint_focus = {
 		id = IMA_shared_43001 #고등연구소
-		icon = GFX_focus_IMA_shared_43001
+		icon = GFX_focus_generic_university_3
 		cost = 5
 		text_icon = Commonwealth_IMA_ICG_IML_style
 	

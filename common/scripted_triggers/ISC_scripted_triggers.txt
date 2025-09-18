@@ -1,2 +1,206 @@
+#의회
+ISC_conservatism_is_in_parliament = {
+	custom_trigger_tooltip = {
+		tooltip = conservatism_is_in_parliament_tt
+	}
+	hidden_trigger = {
+		NOT = { check_variable = { ISC.parliament_seat_array^0 = 0 } }
+	}
+}
+ISC_liberalism_is_in_parliament = {
+	custom_trigger_tooltip = {
+		tooltip = liberalism_is_in_parliament_tt
+	}
+	hidden_trigger = {
+		NOT = { check_variable = { ISC.parliament_seat_array^1 = 0 } }
+	}
+}
+ISC_progressivism_is_in_parliament = {
+	custom_trigger_tooltip = {
+		tooltip = progressivism_is_in_parliament_tt
+	}
+	hidden_trigger = {
+		NOT = { check_variable = { ISC.parliament_seat_array^2 = 0 } }
+	}
+}
+ISC_socialdemocracy_is_in_parliament = {
+	custom_trigger_tooltip = {
+		tooltip = socialdemocracy_is_in_parliament_tt
+	}
+	hidden_trigger = {
+		NOT = { check_variable = { ISC.parliament_seat_array^3 = 0 } }
+	}
+}
+ISC_socialism_is_in_parliament = {
+	custom_trigger_tooltip = {
+		tooltip = socialism_is_in_parliament_tt
+	}
+	hidden_trigger = {
+		NOT = { check_variable = { ISC.parliament_seat_array^4 = 0 } }
+	}
+}
+ISC_communism_is_in_parliament = {
+	custom_trigger_tooltip = {
+		tooltip = communism_is_in_parliament_tt
+	}
+	hidden_trigger = {
+		NOT = { check_variable = { ISC.parliament_seat_array^5 = 0 } }
+	}
+}
+ISC_authoritariancommunism_is_in_parliament = {
+	custom_trigger_tooltip = {
+		tooltip = authoritariancommunism_is_in_parliament_tt
+	}
+	hidden_trigger = {
+		NOT = { check_variable = { ISC.parliament_seat_array^6 = 0 } }
+	}
+}
+ISC_anarchosyndicalism_is_in_parliament = {
+	custom_trigger_tooltip = {
+		tooltip = anarchosyndicalism_is_in_parliament_tt
+	}
+	hidden_trigger = {
+		NOT = { check_variable = { ISC.parliament_seat_array^7 = 0 } }
+	}
+}
+ISC_fascism_is_in_parliament = {
+	custom_trigger_tooltip = {
+		tooltip = fascism_is_in_parliament_tt
+	}
+	hidden_trigger = {
+		NOT = { check_variable = { ISC.parliament_seat_array^8 = 0 } }
+	}
+}
+ISC_militarytotalism_is_in_parliament = {
+	custom_trigger_tooltip = {
+		tooltip = militarytotalism_is_in_parliament_tt
+	}
+	hidden_trigger = {
+		NOT = { check_variable = { ISC.parliament_seat_array^9 = 0 } }
+	}
+}
+ISC_authoritariandemocracy_is_in_parliament = {
+	custom_trigger_tooltip = {
+		tooltip = authoritariandemocracy_is_in_parliament_tt
+	}
+	hidden_trigger = {
+		NOT = { check_variable = { ISC.parliament_seat_array^10 = 0 } }
+	}
+}
+ISC_autocracy_is_in_parliament = {
+	custom_trigger_tooltip = {
+		tooltip = autocracy_is_in_parliament_tt
+	}
+	hidden_trigger = {
+		NOT = { check_variable = { ISC.parliament_seat_array^11 = 0 } }
+	}
+}
+
+
+parliament_seek_cooperation_1_visible = { 
+	has_political_power > 19.9
+	ISC_conservatism_is_in_parliament = yes
+}
+parliament_persuasion_1_visible= { 
+	has_political_power > 24.9
+	ISC_conservatism_is_in_parliament = yes
+}
+parliament_relation_1_visible= { 
+	has_political_power > 34.9
+	ISC_conservatism_is_in_parliament = yes
+}
+parliament_patronage_1_visible = { 
+	has_political_power > 19.9
+	ISC_conservatism_is_in_parliament = yes
+}
+parliament_ask_to_join_coalition_1_visible = { always = no } 
+parliament_seek_cooperation_2_visible = { 
+	has_political_power > 19.9
+	ISC_liberalism_is_in_parliament = yes
+} 
+parliament_persuasion_2_visible = { always = no } 
+parliament_relation_2_visible = { always = no } 
+parliament_patronage_2_visible = { always = no } 
+parliament_ask_to_join_coalition_2_visible = { always = no } 
+parliament_seek_cooperation_3_visible = { 
+	has_political_power > 19.9
+	ISC_progressivism_is_in_parliament = yes
+} 
+parliament_persuasion_3_visible = { always = no } 
+parliament_relation_3_visible = { always = no } 
+parliament_patronage_3_visible = { always = no } 
+parliament_ask_to_join_coalition_3_visible = { always = no } 
+parliament_seek_cooperation_4_visible = { 
+	has_political_power > 19.9
+	ISC_socialdemocracy_is_in_parliament = yes
+} 
+parliament_persuasion_4_visible = { always = no } 
+parliament_relation_4_visible = { always = no } 
+parliament_patronage_4_visible = { always = no } 
+parliament_ask_to_join_coalition_4_visible = { always = no } 
+parliament_seek_cooperation_5_visible = { 
+	has_political_power > 19.9
+	ISC_socialism_is_in_parliament = yes
+} 
+parliament_persuasion_5_visible = { always = no } 
+parliament_relation_5_visible = { always = no } 
+parliament_patronage_5_visible = { always = no } 
+parliament_ask_to_join_coalition_5_visible = { always = no } 
+parliament_seek_cooperation_6_visible = { 
+	has_political_power > 19.9
+	ISC_communism_is_in_parliament = yes
+} 
+parliament_persuasion_6_visible = { always = no } 
+parliament_relation_6_visible = { always = no } 
+parliament_patronage_6_visible = { always = no } 
+parliament_ask_to_join_coalition_6_visible = { always = no } 
+parliament_seek_cooperation_7_visible = { 
+	has_political_power > 19.9
+	ISC_authoritariancommunism_is_in_parliament = yes
+} 
+parliament_persuasion_7_visible = { always = no } 
+parliament_relation_7_visible = { always = no } 
+parliament_patronage_7_visible = { always = no } 
+parliament_ask_to_join_coalition_7_visible = { always = no } 
+parliament_seek_cooperation_8_visible = { 
+	has_political_power > 19.9
+	ISC_anarchosyndicalism_is_in_parliament = yes
+} 
+parliament_persuasion_8_visible = { always = no } 
+parliament_relation_8_visible = { always = no } 
+parliament_patronage_8_visible = { always = no } 
+parliament_ask_to_join_coalition_8_visible = { always = no } 
+parliament_seek_cooperation_9_visible = { 
+	has_political_power > 19.9
+	ISC_fascism_is_in_parliament = yes
+} 
+parliament_persuasion_9_visible = { always = no } 
+parliament_relation_9_visible = { always = no } 
+parliament_patronage_9_visible = { always = no } 
+parliament_ask_to_join_coalition_9_visible = { always = no } 
+parliament_seek_cooperation_10_visible = { 
+	has_political_power > 19.9
+	ISC_militarytotalism_is_in_parliament = yes
+} 
+parliament_persuasion_10_visible = { always = no } 
+parliament_relation_10_visible = { always = no } 
+parliament_patronage_10_visible = { always = no } 
+parliament_ask_to_join_coalition_10_visible = { always = no } 
+parliament_seek_cooperation_11_visible = { 
+	has_political_power > 19.9
+	ISC_authoritariandemocracy_is_in_parliament = yes
+} 
+parliament_persuasion_11_visible = { always = no } 
+parliament_relation_11_visible = { always = no } 
+parliament_patronage_11_visible = { always = no } 
+parliament_ask_to_join_coalition_11_visible = { always = no } 
+parliament_seek_cooperation_12_visible = { 
+	has_political_power > 19.9
+	ISC_autocracy_is_in_parliament = yes
+} 
+parliament_persuasion_12_visible = { always = no } 
+parliament_relation_12_visible = { always = no } 
+parliament_patronage_12_visible = { always = no } 
+parliament_ask_to_join_coalition_12_visible = { always = no }
 #중점
 #AI

@@ -36,6 +36,23 @@ ideas = {
 				state_resources_factor = 0.1
 			}
 		}
+		IML_national_research_committee = {
+			allowed = {
+				original_tag = IML
+			}
+			allowed_civil_war = {
+				always = no
+			}	
+			removal_cost = -1
+			picture = BLA_scientific_improvement
+			modifier = {
+				stability_factor = -0.1
+				war_stability_factor = -0.1
+				consumer_goods_factor = 0.1
+				conscription_factor = 0.02
+				production_speed_buildings_factor = 0.05
+			}
+		}
 	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }

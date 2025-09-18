@@ -21,6 +21,8 @@ is_01_lachryma_requiem_updated = {
 }
 
 has_unique_national_focus = {
-	is_00_crystalia_updated = no
-	#is_01_lachryma_requiem_updated = no
+	OR = {
+		is_00_crystalia_updated = yes
+		#is_01_lachryma_requiem_updated = yes
+	}
 }

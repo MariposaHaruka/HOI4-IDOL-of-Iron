@@ -1,9 +1,9 @@
 BLA_student_council_todolist_category = { #총학생회 업무 처리사항
 	icon = generic_political_actions
 	priority = 98
-	allowed = { original_tag = IMA }
+	allowed = { original_tag = BLA }
 	visible = {
-		has_country_flag = IMA_haruka_crisis
+		NOT = { has_completed_focus = BLA_32002C }
 	}
 	visible_when_empty = yes
 }
@@ -11,9 +11,9 @@ BLA_student_council_todolist_category = { #총학생회 업무 처리사항
 BLA_schalle_todolist_category = { #샬레 업무 처리사항
 	icon = generic_political_actions
 	priority = 97
-	allowed = { original_tag = IMA }
+	allowed = { original_tag = BLA }
 	visible = {
-		has_completed_focus = IMA_11001
+		has_completed_focus = BLA_32002A
 	}
 	visible_when_empty = yes
 }
@@ -21,9 +21,9 @@ BLA_schalle_todolist_category = { #샬레 업무 처리사항
 BLA_diplomacy_committee_category = { #외교 위원회
 	icon = generic_political_actions
 	priority = 97
-	allowed = { original_tag = IMA }
+	allowed = { original_tag = BLA }
 	visible = {
-		has_completed_focus = IMA_12001
+		has_completed_focus = BLA_20001
 	}
 	visible_when_empty = yes
 }
@@ -31,87 +31,55 @@ BLA_diplomacy_committee_category = { #외교 위원회
 BLA_kivotos_union_committee_category = { #키보토스 연방 준비 위원회
 	icon = generic_political_actions
 	priority = 96
-	allowed = {
-		IMA = { 
-			NOT = { 
-				has_completed_focus = IMA_41001
-				has_completed_focus = IMA_43001
-			} 
-		}
-		OR = {
-			has_idea = IMA_westminster_statute
-			original_tag = IMA
-		}
-	}
+	allowed = { original_tag = BLA }
 	visible = {
-		IMA = { 
-			NOT = { 
-				has_completed_focus = IMA_41001
-				has_completed_focus = IMA_43001
-			} 
-		}
-		OR = {
-			has_idea = IMA_westminster_statute
-			original_tag = IMA
-		}
+		has_completed_focus = BLA_32003
 	}
 	visible_when_empty = yes
 }
 
-IMA_thames_plan_category = { #템즈 계획
-	icon = generic_foreign_policy
+BLA_school_committee_category = { #학교 연락 위원회
+	icon = generic_political_actions
 	priority = 96
-	allowed = {
-		has_completed_focus = IMA_43001
-		original_tag = IMA
-	}
+	allowed = { original_tag = BLA }
 	visible = {
-		has_completed_focus = IMA_43001
-		original_tag = IMA
+		has_completed_focus = BLA_32002B
 	}
 	visible_when_empty = yes
 }
 
-IMA_homeland_defence_category = { #본토 방어 계획
-	icon = generic_fortification
+BLA_military_committee_category = { #군사 위원회
+	icon = military_operation
+	priority = 96
+	allowed = { original_tag = BLA }
+	visible = {
+		has_completed_focus = BLA_10001
+	}
+	visible_when_empty = yes
+}
+
+BLA_technology_n_research_committee = { #기술 연구 위원회
+	icon = generic
 	priority = 95
-	allowed = {
-		threat > 0.25
-		original_tag = IMA
-	}
+	allowed = { original_tag = BLA }
 	visible = {
-		threat > 0.25
-		original_tag = IMA
+		has_completed_focus = BLA_MIL_10001
 	}
 	visible_when_empty = yes
 }
 
-IMA_intervension_plan_category = { #개입 계획
-	icon = generic_foreign_policy
-	priority = 96
-	allowed = {
-		original_tag = IMA
-	}
+BLA_famine_problem_category = { #기근 문제 해결
+	icon = GFX_decision_cat_BLA_famine_problem
+	priority = 100
+	allowed = { original_tag = BLA }
 	visible = {
-		OR = {
-			has_completed_focus = IMA_51101
-			has_completed_focus = IMA_51201
-		}
+		has_completed_focus = BLA_50004
 	}
 	visible_when_empty = yes
-}
-
-IMA_idolmaster_conference_category = { #아이돌 마스터 회의
-	icon = SWI_federal_council
-	priority = 94
-	allowed = {
-		has_country_flag = IMA_idolmaster_conference
-		original_tag = IMA
+	on_map_area = {
+		state = 436
+		name = BLA_famine_problem_category_name
+		zoom = 250
 	}
-	visible = {
-		has_country_flag = IMA_idolmaster_conference
-		original_tag = IMA
-	}
-	visible_when_empty = yes
 }
 

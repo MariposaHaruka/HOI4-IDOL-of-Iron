@@ -65,10 +65,16 @@ on_actions = {
 				calc_parliament_support_IMA = yes
 			}
         }
-		#보수당-자유당 연정
+		#보수당-자유당-국민노동당 연정
 	    effect = {
 			IMA = {
 				set_temp_variable = { coalition_partner_var = token:liberalism_mod }
+				add_to_coalition = yes
+			}
+        }
+		effect = {
+			IMA = {
+				set_temp_variable = { coalition_partner_var = token:progressivism }
 				add_to_coalition = yes
 			}
         }
@@ -81,6 +87,101 @@ on_actions = {
 					limit = { IMA = { NOT = { has_idea = no_parliament } } }
 					calc_parliament_support_IMA = yes
 				}
+			}
+		}
+	}
+	on_startup = {
+		effect = {
+			#웨일스
+			122 = { set_state_flag = IMA_welsh_state }
+
+			#아일랜드
+			113 = { set_state_flag = IMA_ireland_state }
+			119 = { set_state_flag = IMA_ireland_state }
+			134 = { set_state_flag = IMA_ireland_state }
+			135 = { set_state_flag = IMA_ireland_state }
+
+			#스코틀랜드
+			120 = { set_state_flag = IMA_scottish_state }
+			121 = { set_state_flag = IMA_scottish_state }
+			133 = { set_state_flag = IMA_scottish_state }
+			136 = { set_state_flag = IMA_scottish_state }
+
+			#잉글랜드
+			123 = { set_state_flag = IMA_english_state }
+			125 = { set_state_flag = IMA_english_state }
+			126 = { set_state_flag = IMA_english_state }
+			127 = { set_state_flag = IMA_english_state }
+			128 = { set_state_flag = IMA_english_state }
+			129 = { set_state_flag = IMA_english_state }
+			130 = { set_state_flag = IMA_english_state }
+			131 = { set_state_flag = IMA_english_state }
+			132 = { set_state_flag = IMA_english_state }
+			338 = { set_state_flag = IMA_english_state }
+			931 = { set_state_flag = IMA_english_state }
+		}
+	}
+
+	on_war_relation_added = { 
+		effect = {
+			if = { 
+				limit = {
+					OR = {
+						AND = {
+							ROOT = { original_tag = IMA }
+							FROM = {
+								is_major = yes
+								NOT = { original_tag = IMA }
+							}
+						}
+						AND = {
+							FROM = { original_tag = IMA }
+							ROOT = {
+								is_major = yes
+								NOT = { original_tag = IMA }
+							}
+						}
+					}
+				}
+				if = {
+					limit = { has_completed_focus = IMA_51014 }
+					country_event = IMA_global.11
+				}
+				else = {
+					country_event = IMA_global.12
+				}
+			}
+		}
+	}
+
+	on_weekly_IMA = {
+		effect = {
+			if = {
+				limit = { 
+					NOT = { has_country_flag = IMA_bankrupt_flag }
+					check_variable = { IMA_debt > 199.9 }
+					NOT = { has_completed_focus = IMA_51013 } 
+					NOT = { has_completed_focus = IMA_51014 } 
+					OR = {
+						has_idea = IMA_great_depression_1
+						has_idea = IMA_great_depression_2
+						has_idea = IMA_great_depression_3
+					}
+				}
+				country_event = { id = IMA_bankrupt.1 }
+			}
+		}
+	}
+	on_monthly_IMA = {
+		effect = {
+			if = {
+				limit = { 
+					num_of_available_civilian_factories > 60 
+					NOT = { has_country_flag = IMA_depression_overcomed }
+					NOT = { has_country_flag = IMA_bankrupt_flag }
+					has_idea = IMA_great_depression_3
+				}
+				country_event = IMA_great_depression.1
 			}
 		}
 	}

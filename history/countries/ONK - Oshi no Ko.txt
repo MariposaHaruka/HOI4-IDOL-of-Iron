@@ -65,7 +65,7 @@ add_dynamic_modifier = { modifier = ONK_air_force }
 
 #정치 
 set_politics = {
-	ruling_party = authoritariandemocracy
+	ruling_party = autocracy
 	last_election = "1931.6.21"
 	election_frequency = 48
 	elections_allowed = no
@@ -81,8 +81,8 @@ set_popularities = {
 	anarchosyndicalism = 0
 	fascism = 25
 	militarytotalism = 0
-	authoritariandemocracy = 46
-	autocracy = 8
+	authoritariandemocracy = 8
+	autocracy = 46
 }
 
 #의회
@@ -109,9 +109,15 @@ recruit_character = ONK_samejima_abiko
 recruit_character = ONK_tsukuyomi
 
 #장관진
+add_ideas = {
+	ONK_saito_ichigo
+}
 
 #무기 프리셋
 #create_equipment_variant = {
 #	name = ""
 #	type = amphibious_tank_equipment_2
 #}
+
+#이벤트
+country_event = { id = ONK_ai.1 days = 61 } #미심쩍은 첩보 - 호시노 아이 암살사건 발단
