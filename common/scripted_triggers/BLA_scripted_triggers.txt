@@ -19,7 +19,6 @@ BLA_shanhaijing_participate = {
 		BLA_is_student_government = yes
 	}
 }
-
 BLA_redwinter_participate = {
 	custom_trigger_tooltip = {
 		tooltip = BLA_redwinter_participate_tt
@@ -29,7 +28,6 @@ BLA_redwinter_participate = {
 		BLA_is_student_government = yes
 	}
 }
-
 BLA_gehenna_participate = {
 	custom_trigger_tooltip = {
 		tooltip = BLA_gehenna_participate_tt
@@ -39,7 +37,6 @@ BLA_gehenna_participate = {
 		BLA_is_student_government = yes
 	}
 }
-
 BLA_hyakkiyako_participate = {
 	custom_trigger_tooltip = {
 		tooltip = BLA_hyakkiyako_participate_tt
@@ -49,7 +46,6 @@ BLA_hyakkiyako_participate = {
 		BLA_is_student_government = yes
 	}
 }
-
 BLA_millenium_participate = {
 	custom_trigger_tooltip = {
 		tooltip = BLA_millenium_participate_tt
@@ -59,7 +55,6 @@ BLA_millenium_participate = {
 		BLA_is_student_government = yes
 	}
 }
-
 BLA_trinity_participate = {
 	custom_trigger_tooltip = {
 		tooltip = BLA_trinity_participate_tt
@@ -69,7 +64,6 @@ BLA_trinity_participate = {
 		BLA_is_student_government = yes
 	}
 }
-
 BLA_abydos_participate = {
 	custom_trigger_tooltip = {
 		tooltip = BLA_abydos_participate_tt
@@ -79,7 +73,6 @@ BLA_abydos_participate = {
 		BLA_is_student_government = yes
 	}
 }
-
 BLA_arius_participate = {
 	custom_trigger_tooltip = {
 		tooltip = BLA_arius_participate_tt
@@ -89,7 +82,6 @@ BLA_arius_participate = {
 		BLA_is_student_government = yes
 	}
 }
-
 BLA_valkyrie_participate = {
 	custom_trigger_tooltip = {
 		tooltip = BLA_valkyrie_participate_tt
@@ -98,7 +90,6 @@ BLA_valkyrie_participate = {
 		BLA_is_student_government = yes
 	}
 }
-
 BLA_srt_participate = {
 	custom_trigger_tooltip = {
 		tooltip = BLA_redwinter_participate_tt
@@ -107,7 +98,6 @@ BLA_srt_participate = {
 		BLA_is_student_government = yes
 	}
 }
-
 BLA_highlander_participate = {
 	custom_trigger_tooltip = {
 		tooltip = BLA_highlander_participate_tt
@@ -116,7 +106,6 @@ BLA_highlander_participate = {
 		BLA_is_student_government = yes
 	}
 }
-
 BLA_wildhunt_participate = {
 	custom_trigger_tooltip = {
 		tooltip = BLA_wildhunt_participate_tt
@@ -135,11 +124,9 @@ BLA_shanhaijing_problem = {
 		has_country_flag = BLA_SHA_genbu_promenade_problem 
 	}
 }
-
 BLA_redwinter_problem = {
 	NOT = { has_country_flag = BLA_RED_coup_problem }
 }
-
 BLA_gehenna_problem = {
 	NOT = { 
 		has_country_flag = BLA_GEH_prefect_pandemonium_problem
@@ -147,29 +134,24 @@ BLA_gehenna_problem = {
 		has_country_flag = BLA_GEH_hot_spring_department_problem
 	}
 }
-
 BLA_trinity_problem = {
 	NOT = { 
 		has_country_flag = BLA_TRN_pater_problem
 		has_country_flag = BLA_TRN_GEH_problem
 	}
 }
-
 BLA_millenium_problem = {
 	NOT = { has_country_flag = BLA_MIL_decagrammaton_problem }
 }
-
 BLA_abydos_problem = {
 	NOT = { 
 		has_country_flag = BLA_ABY_debt_problem
 		has_country_flag = BLA_ABY_desert_problem
 	}
 }
-
 BLA_arius_problem = {
 	NOT = { has_country_flag = BLA_ARI_beatrice_problem }
 }
-
 BLA_srt_problem = {
 	NOT = { has_country_flag = BLA_SRT_resolved }
 }
@@ -181,5 +163,22 @@ BLA_scientific_improved = {
 			has_idea = BLA_scientific_improvement_5
 		}
 		tooltip = BLA_scientific_improvement_tt
+	}
+}
+
+BLA_robot_problem = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_robot_problem_tt
+		NOT = { has_country_flag = BLA_arisu_problem }
+		NOT = { has_country_flag = BLA_MIL_decagrammaton_problem }
+	}
+}
+
+BLA_school_is_controled_by_central_government = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_school_is_controled_by_central_government_tt
+		OR = {
+			has_completed_focus = BLA_31101
+		}
 	}
 }

@@ -1,80 +1,70 @@
+#BOP
 BLA_bop_absurdly_high_increase_effect = {
 	add_power_balance_value = {
 		id = BLA_schalle_sc_balance
 		value = 1
 	}
 }
-
 BLA_bop_very_high_increase_effect = {
 	add_power_balance_value = {
 		id = BLA_schalle_sc_balance
 		value = 0.25
 	}
 }
-
 BLA_bop_high_increase_effect = {
 	add_power_balance_value = {
 		id = BLA_schalle_sc_balance
 		value = 0.2
 	}
 }
-
 BLA_bop_medium_increase_effect = {
 	add_power_balance_value = {
 		id = BLA_schalle_sc_balance
 		value = 0.15
 	}
 }
-
 BLA_bop_low_increase_effect = {
 	add_power_balance_value = {
 		id = BLA_schalle_sc_balance
 		value = 0.1
 	}
 }
-
 BLA_bop_very_low_increase_effect = {
 	add_power_balance_value = {
 		id = BLA_schalle_sc_balance
 		value = 0.05
 	}
 }
-
 BLA_bop_absurdly_high_decrease_effect = {
 	add_power_balance_value = {
 		id = BLA_schalle_sc_balance
 		value = -1
 	}
 }
-
 BLA_bop_very_high_decrease_effect = {
 	add_power_balance_value = {
 		id = BLA_schalle_sc_balance
 		value = -0.25
 	}
 }
-
 BLA_bop_high_decrease_effect = {
 	add_power_balance_value = {
 		id = BLA_schalle_sc_balance
 		value = -0.2
 	}
 }
-
 BLA_bop_medium_decrease_effect = {
 	add_power_balance_value = {
 		id = BLA_schalle_sc_balance
 		value = -0.15
 	}
 }
-
 BLA_bop_low_decrease_effect = {
 	add_power_balance_value = {
 		id = BLA_schalle_sc_balance
 		value = -0.1
 	}
 }
-
 BLA_bop_very_low_decrease_effect = {
 	add_power_balance_value = {
 		id = BLA_schalle_sc_balance
@@ -82,6 +72,7 @@ BLA_bop_very_low_decrease_effect = {
 	}
 }
 
+#idea
 BLA_scientific_improve = {
 	if = {
 		limit = { has_idea = BLA_scientific_improvement_1 }
@@ -118,7 +109,30 @@ BLA_scientific_improve = {
 		}
 	}
 }
-
+BLA_robotics_improve = {
+	if = {
+		limit = { has_idea = BLA_robot_technology_1 }
+		swap_ideas = {
+			remove_idea = BLA_robot_technology_1
+			add_idea = BLA_robot_technology_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = BLA_robot_technology_2 }
+		swap_ideas = {
+			remove_idea = BLA_robot_technology_2
+			add_idea = BLA_robot_technology_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = BLA_robot_technology_3 }
+		add_timed_idea = {
+			idea = BLA_robot_technology_max
+			days = 100
+		}
+	}
+	else = { add_ideas = BLA_robot_technology_1 }
+}
 BLA_agriculture_society_relieve = {
 	if = {
 		limit = { has_dynamic_modifier = { modifier = agriculture_society_state_7 } }
@@ -135,3 +149,48 @@ BLA_agriculture_society_relieve = {
 		remove_dynamic_modifier = { modifier = agriculture_society_state_3 }
 	}
 }
+
+#technology
+BLA_design_track_crasher = { #트랙 크래셔 - 전략폭격기
+	create_equipment_variant = {
+		name = "Track Crasher"
+		type = large_plane_airframe_2
+		parent_version = 0
+		modules = {
+			fixed_main_weapon_slot = large_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = large_bomb_bay
+			engine_type_slot = engine_3_4x
+		}
+		icon = "GFX_ENG_strategic_bomber1_medium"
+	}
+}
+BLA_design_thundergun = { #천둥이 - 전술폭격기
+	create_equipment_variant = {
+		name = "Thundergun"
+		type = medium_plane_airframe_2
+		parent_version = 0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+			engine_type_slot = engine_3_2x
+		}
+		icon = "GFX_ENG_tactical_bomber1_medium"
+	}
+}
+BLA_design_trick_or_treat = { #트릭 오어 트릿 - 다목적기
+	create_equipment_variant = {
+		name = "Trick or Treat"
+		type = medium_plane_airframe_2
+		parent_version = 0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_3 = heavy_mg_4x
+			engine_type_slot = engine_3_2x
+		}
+		icon = "GFX_ENG_tactical_bomber2_medium"
+	}
+}
+BLA_design_chabasco
+BLA_design_supernova

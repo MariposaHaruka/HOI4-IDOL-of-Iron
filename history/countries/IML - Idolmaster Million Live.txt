@@ -9,13 +9,7 @@ if = {
 		set_oob = "IML_ar"
 	}
 }
-if = {
-	limit = { has_MtG = yes }
-	set_naval_oob = "IML_na_MtG"
-	else = {
-		set_naval_oob = "IML_na"
-	}
-}
+set_naval_oob = "IML_na_MtG"
 if = {
 	limit = { has_BBA = yes }
 	set_air_oob = "IML_ai_BBA"
@@ -28,7 +22,6 @@ add_command_power = 20
 set_fuel_ratio = 1
 
 #기술
-set_research_slots = 3
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -42,26 +35,16 @@ set_technology = {
 	fleet_in_being = 1
 	basic_train = 1
 }
-if = {
-	limit = { has_MtG = yes }
-	set_technology = {
-		basic_naval_mines = 1
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_cruiser = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-		mtg_transport = 1
-	}
-	else = {
-		set_technology = {
-			early_destroyer = 1
-			early_light_cruiser = 1
-			transport = 1
-		}
-	}
+set_technology = {
+	basic_naval_mines = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_cruiser = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_torpedo = 1
+	basic_depth_charges = 1
+	mtg_transport = 1
 }
 if = {
 	limit = { has_NSB = yes } 
@@ -111,7 +94,7 @@ add_dynamic_modifier = { modifier = IML_air_force }
 add_dynamic_modifier = { modifier = IMA_colonial_economy }
 
 #외교
-set_cosmetic_tag = IML_IMA
+set_cosmetic_tag = IML_IML
 add_to_tech_sharing_group = bandainamco_research
 
 #정치 상황
@@ -163,7 +146,7 @@ recruit_character = IML_kasuga_mirai
 recruit_character = IML_mogami_shizuka
 recruit_character = IML_ibuki_tsubasa
 recruit_character = IML_tanaka_kotoha
-recruit_character = IML_shimabara_elena
+recruit_character = IML_shIMLbara_elena
 recruit_character = IML_satake_minako
 recruit_character = IML_tokoro_megumi
 recruit_character = IML_tokugawa_matsuri
@@ -204,7 +187,142 @@ recruit_character = IML_gen_P
 #장관진
 
 #무기 프리셋
-#create_equipment_variant = {
-#	name = ""
-#	type = amphibious_tank_equipment_2
-#}
+### Ship Variants ###
+# Destroyers #
+create_equipment_variant = {
+	name = "S Class"
+	type = ship_hull_light_1
+	name_group = CAN_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "River Class"
+	type = ship_hull_light_1
+	name_group = CAN_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_2
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = empty
+	}
+}
+create_equipment_variant = {
+	name = "E/F Class"
+	type = ship_hull_light_2
+	name_group = IML_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = dp_light_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = ship_sonar_1
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+}
+
+create_equipment_variant = {
+	name = "O Class"
+	type = ship_hull_submarine_2
+	name_group = IML_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_2
+		rear_1_custom_slot = empty
+	}
+}
+#CL
+create_equipment_variant = {
+	name = "Ottawa Class"
+	type = ship_hull_cruiser_2
+	name_group = IML_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = ship_armor_cruiser_2
+		fixed_ship_secondaries_slot = dp_ship_secondaries_2
+		front_1_custom_slot = ship_anti_air_2
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_secondaries_2
+		rear_1_custom_slot = ship_light_medium_battery_2
+	}
+}
+#CA
+create_equipment_variant = {
+	name = "Ontario Class"
+	type = ship_hull_cruiser_2
+	name_group = IML_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		mid_2_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Canada Class"
+	type = ship_hull_heavy_1
+	name_group = IML_BB_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_bb_1
+		front_1_custom_slot = empty
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = ship_secondaries_1
+		rear_1_custom_slot = ship_heavy_battery_1
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Warrior Class"
+	type = ship_hull_carrier_1
+	name_group = IML_CV_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_deck_slot_1 = ship_deck_space
+		fixed_ship_deck_slot_2 = ship_deck_space
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = carrier_ship_engine_2
+		fixed_ship_secondaries_slot = dp_ship_secondaries_2
+		front_1_custom_slot = ship_deck_space
+	}
+}

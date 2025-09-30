@@ -40,6 +40,7 @@ country_event = {
 					ideology = authoritariancommunism
 					popularity = 0.35
 				}
+				add_ideas = hidden_debuff
 			}
 			set_global_flag = walpurgisnacht
 			set_country_flag = tmp_wnw_witches
@@ -62,7 +63,6 @@ country_event = {
 				set_country_flag = tmp_wnw_magicians
 			}
 			news_event = { id = ioi_news.3 hours = 6 }
-			add_ideas = hidden_buff
 		}
 		custom_effect_tooltip = tmp_witches_chosen
 	}
@@ -91,6 +91,7 @@ country_event = {
 				set_stability = 0.9
 				set_war_support = 0.8
 				load_oob = "tmp_MMA_walpurgisnacht"
+				add_ideas = hidden_debuff
 			}
 			set_global_flag = walpurgisnacht
 			set_country_flag = tmp_wnw_magicians
@@ -126,7 +127,6 @@ country_event = {
 			set_stability = 0.9
 			set_war_support = 0.8
 			news_event = { id = ioi_news.3 hours = 6 }
-			add_ideas = hidden_buff
 		}
 		custom_effect_tooltip = tmp_magicians_chosen
 	}

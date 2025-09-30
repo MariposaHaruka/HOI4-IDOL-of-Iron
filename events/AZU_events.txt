@@ -14,13 +14,15 @@ country_event = {
 				target = KTC
 				type = annex_everything
 			}
+		}
+		KTC = {
 			if = {
 				limit = { 
 					is_historical_focus_on = yes
-					ROOT = { is_ai = yes }
-					KTC = { is_ai = yes } 
+					AZU = { is_ai = yes }
+					ROOT = { is_ai = yes } 
 				}
-				add_ideas = hidden_buff
+				add_ideas = hidden_debuff
 			}
 		}
 		news_event = { id = ioi_news.4 hours = 6 }

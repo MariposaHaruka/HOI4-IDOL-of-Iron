@@ -12,7 +12,45 @@
 
 #최고 사령부 트레잇
 leader_traits = {
-	flame_thrower = {
+	flame_thrower_1 = {
+		sprite = 8
+		random = no
+		equipment_bonus = {
+			flame = {
+				reliability = 0.05
+				maximum_speed  = 0.05
+				soft_attack = 0.05
+				hard_attack = 0.05
+				armor_value = 0.05
+				build_cost_ic = -0.05
+			}
+		}
+		command_cap_increase = @tier1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	flame_thrower_2 = {
+		sprite = 8
+		random = no
+		equipment_bonus = {
+			flame = {
+				reliability = 0.10
+				maximum_speed  = 0.10
+				soft_attack = 0.10
+				hard_attack = 0.10
+				armor_value = 0.10
+				build_cost_ic = -0.10
+			}
+		}
+		command_cap_increase = @tier2
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	flame_thrower_3 = {
 		sprite = 8
 		random = no
 		equipment_bonus = {
@@ -25,7 +63,7 @@ leader_traits = {
 				build_cost_ic = -0.15
 			}
 		}
-		command_cap_increase = @tier1
+		command_cap_increase = @tier3
 		ai_will_do = {
 			factor = 1
 		}

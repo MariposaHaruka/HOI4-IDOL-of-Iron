@@ -40,7 +40,8 @@ focus_tree = {
 		mutually_exclusive = { focus = PRS_12001 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus PRS_11001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11001"
+			add_ideas = civilian_economy
 			add_stability = -0.1
 			add_popularity = {
 			    ideology = ROOT
@@ -64,24 +65,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = generic_line_break_tt
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = PRS_ootori_emu
-			custom_effect_tooltip = generic_line_break_tt
 			PRS_stop_rearmament = yes
 			unlock_decision_category_tooltip = PRS_wirtschaftswunder
-			hidden_effect = {
-				remove_trait = {
-					character = PRS_ootori_emu
-					slot = economic_advisor
-					trait = PRS_ootori_emu_autarky
-				}
-				add_trait = {
-					character = PRS_ootori_emu
-					slot = economic_advisor
-					trait = PRS_ootori_emu_reform
-				}
-			}
 		}
 	}
 
@@ -100,9 +85,9 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = PRS_11001 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus PRS_12001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_12001"
 		}
 	}
 
@@ -357,15 +342,13 @@ focus_tree = {
 		relative_position_id = PRS_10002
 		cost = 5
 		available = {
-			51 = { 
-				is_fully_controlled_by = ROOT
-				is_demilitarized_zone = no 
-			}
+			51 = { is_fully_controlled_by = ROOT }
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_10005"
 			if = {
 				limit = {
 					51 = {
@@ -438,9 +421,7 @@ focus_tree = {
 		mutually_exclusive = { focus = PRS_10008 }
 		cost = 5
 		available = {
-			59 = { 
-				is_fully_controlled_by = ROOT
-			}
+			59 = { is_fully_controlled_by = ROOT }
 			is_fascism = no
 			is_communism = no
 		}
@@ -456,12 +437,16 @@ focus_tree = {
 					level = 1
 				}
 			}
+			#if = {
+			#	limit = { has_dynamic_modifier = PRS_center_of_brain }
+			#	custom_effect_tooltip = PRS_center_of_brain_tt
+			#}
 			add_ideas = PRS_goettingen_university_research_complex
 			add_research_slot = 1
-			if = {
-				limit = { is_democratic = yes }
-				unlock_decision_category_tooltip = PRS_return_brain
-			}
+			#if = {
+			#	limit = { is_democratic = yes }
+			#	unlock_decision_category_tooltip = PRS_return_brain
+			#}
 		}
 	}
 
@@ -730,6 +715,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11002"
 			every_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -748,11 +734,11 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_line_break_tt
-			#GER_modify_industrial_modifier = yes
-			#add_to_variable = { 
-			#	GER_industrial_consumer_goods_factor = -0.15
-			#	tooltip = consumer_goods_factor_tt
-			#}
+			custom_effect_tooltip = PRS_industry_tt
+			add_to_variable = { 
+				PRS_industry_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 	
@@ -773,6 +759,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11004"
 			add_stability = 0.05
 			add_popularity = {
 				ideology = ROOT
@@ -817,6 +804,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11005"
 			add_stability = 0.05
 			add_popularity = {
 				ideology = ROOT
@@ -853,7 +841,10 @@ focus_tree = {
 		relative_position_id = PRS_11004
 		cost = 5
 		available = {
-			NOT = { has_idea = PRS_mefo_bills_ended }
+			OR = {
+				is_fascism = no
+				is_neutrality = no
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -974,13 +965,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_11005
 		cost = 5
-		available = {
-			NOT = { has_idea = PRS_mefo_bills_ended }
-		}
+		available = { is_communism = no }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11001"
 
 		}
 	}
@@ -1103,6 +1093,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11006"
 			every_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -1120,11 +1111,16 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = PRS_industry_tt
+			add_to_variable = { 
+				PRS_industry_consumer_goods_factor = -0.2
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 	
 	focus = {
-		id = PRS_11007 #연금개혁
+		id = PRS_11007 #가격 통제 폐지
 		icon = GFX_focus_ARG_anti_corruption_policies
 		prerequisite = { focus = PRS_11004 }
 
@@ -1132,14 +1128,29 @@ focus_tree = {
 		y = 2
 		relative_position_id = PRS_11004
 		cost = 5
-		available = {
-			NOT = { has_idea = PRS_mefo_bills_ended }
-		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11007"
+			add_stability = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -1173,12 +1184,13 @@ focus_tree = {
 		relative_position_id = PRS_11007
 		cost = 5
 		available = {
-			NOT = { has_idea = PRS_mefo_bills_ended }
+			has_tech = advanced_machine_tools
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11009"
 			
 		}
 	}
@@ -1338,7 +1350,51 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11013"
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = GER_wirtschaftswunder
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = GER_replace_recovering_economy_with_wirtschaftswunder_tt
+			add_to_variable = { 
+				PRS_industry_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = { 
+				PRS_industry_production_speed_buildings_factor = 0.1
+				tooltip = production_speed_buildings_factor_tt
+			}
 			
+			hidden_effect = { 
+				remove_dynamic_modifier = { modifier = GER_recovering_economy_modifier }
+				add_dynamic_modifier = { modifier = GER_wirtschaftswunder_modifier }
+			}
+
 		}
 	}
 	
@@ -1352,13 +1408,35 @@ focus_tree = {
 		relative_position_id = PRS_11011
 		cost = 5
 		available = {
-			NOT = { has_idea = PRS_mefo_bills_ended }
+			OR = {
+				#하노버
+				59 = { is_owned_and_controlled_by = ROOT }
+				#바덴
+				978 = { is_owned_and_controlled_by = ROOT }
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11014"
+			if = {
+				limit = { 59 = { is_owned_and_controlled_by = ROOT } } #하노버
+				59 = { set_state_category = metropolis } 
+			}
+			if = {
+				limit = { 978 = {  is_owned_and_controlled_by = ROOT } } #바덴
+				978 = { set_state_category = metropolis }
+			}
+			custom_effect_tooltip = PRS_industry_tt
+			add_to_variable = { 
+				PRS_industry_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = { 
+				PRS_industry_industrial_capacity_dockyard = 0.05
+				tooltip = industrial_capacity_dockyard_tt
+			}
 		}
 	}
 	
@@ -1372,13 +1450,45 @@ focus_tree = {
 		relative_position_id = PRS_11013
 		cost = 5
 		available = {
-			NOT = { has_idea = PRS_mefo_bills_ended }
+			OR = {
+				has_war = yes
+				threat > 0.15
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11015"
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = PRS_industry_tt
+			add_to_variable = { 
+				PRS_industry_production_lack_of_resource_penalty_factor = -0.05
+				tooltip = production_lack_of_resource_penalty_factor_tt
+			}
+			add_to_variable = { 
+				PRS_industry_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = { 
+				PRS_industry_industrial_capacity_dockyard = 0.05
+				tooltip = industrial_capacity_dockyard_tt
+			}
 		}
 	}
 	
@@ -1442,7 +1552,53 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11018"
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = PRS_industry_tt
+			add_to_variable = { 
+				PRS_industry_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = { 
+				PRS_industry_industrial_capacity_dockyard = 0.05
+				tooltip = industrial_capacity_dockyard_tt
+			}
+			add_to_variable = { 
+				PRS_industry_conversion_cost_civ_to_mil_factor = -0.2
+				tooltip = conversion_cost_civ_to_mil_factor_tt
+			}
+			add_to_variable = { 
+				PRS_industry_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = { 
+				PRS_industry_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = { 
+				PRS_industry_production_factory_start_efficiency_factor = 0.05
+				tooltip = production_factory_start_efficiency_factor_tt
+			}
+			add_to_variable = { 
+				PRS_industry_line_change_production_efficiency_factor = 0.05
+				tooltip = line_change_production_efficiency_factor_tt
+			}
 		}
 	}
 	
@@ -5564,7 +5720,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus PRS_23012"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_23012"
 			custom_effect_tooltip = GER_naval_bases_along_atlantic_coast_tt
 			every_state = {
 				limit = { 
@@ -5737,7 +5893,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus PRS_23016"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_23016"
 			#GER_modify_navy_modifier = yes
 			#add_to_variable = { 
 			#	GER_military_navy_max_range_factor = 0.1

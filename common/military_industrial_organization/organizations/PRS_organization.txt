@@ -106,7 +106,7 @@ PRS_porsche_organization = {
 		special_trait_background = yes
 
 		position = { x=0 y=1 }
-		relative_position_id = GER_mio_trait_hoesch_facilities
+		relative_position_id = PRS_mio_trait_hoesch_facilities
 
 		visible = {
 			FROM = { original_tag = PRS }
@@ -166,7 +166,7 @@ PRS_porsche_organization = {
 
 		all_parents = {
 			generic_mio_trait_one_piece_hull_side_coverings
-			GER_mio_trait_multi_role_tanks
+			PRS_mio_trait_multi_role_tanks
 		}
 
 		position = { x=1 y=1 }
@@ -279,7 +279,7 @@ PRS_henschel_organization = {
 		special_trait_background = yes
 
 		position = { x=0 y=1 }
-		relative_position_id = GER_mio_trait_hoesch_facilities
+		relative_position_id = PRS_mio_trait_hoesch_facilities
 
 		visible = {
 			FROM = { original_tag = PRS }
@@ -651,7 +651,7 @@ PRS_daimler_benz_organization = {
 	override_trait = {
 		token = generic_mio_trait_improved_tooling
 
-		relative_position_id = GER_mio_trait_versatile_chassis
+		relative_position_id = PRS_mio_trait_versatile_chassis
 		
 		all_parents = { generic_mio_trait_improved_tracks generic_mio_trait_command_upgrades GER_mio_trait_versatile_chassis }
 
@@ -692,7 +692,7 @@ PRS_daimler_benz_organization = {
 		special_trait_background = yes
 
 		position = { x=0 y=2 }
-		relative_position_id = GER_mio_trait_hotrolled_armor
+		relative_position_id = PRS_mio_trait_hotrolled_armor
 		
 		any_parent = { GER_mio_trait_hotrolled_armor }
 		
@@ -863,9 +863,9 @@ PRS_deschimag_organization = {
 		icon = GFX_generic_mio_trait_icon_armor_value
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_krupp_contacts
+		relative_position_id = PRS_mio_trait_krupp_contacts
 
-		all_parents = { GER_mio_trait_krupp_contacts }
+		all_parents = { PRS_mio_trait_krupp_contacts }
 
 		position = { x=0 y=1 } 
 
@@ -957,9 +957,9 @@ PRS_germaniawerft_organization = {
 		icon = GFX_generic_mio_department_icon_ship_capital_ship_weapons
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_history_of_battleships
+		relative_position_id = PRS_mio_trait_history_of_battleships
 
-		all_parents = { GER_mio_trait_history_of_battleships }
+		all_parents = { PRS_mio_trait_history_of_battleships }
 		position = { x=0 y=1 }  
 
 		available = { }
@@ -980,9 +980,9 @@ PRS_germaniawerft_organization = {
 		icon = GFX_generic_mio_department_icon_ship_capital_ship_quality
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_krupp_guns
+		relative_position_id = PRS_mio_trait_krupp_guns
 
-		all_parents = { GER_mio_trait_krupp_guns }
+		all_parents = { PRS_mio_trait_krupp_guns }
 
 		position = { x=0 y=1 }  
 
@@ -1053,9 +1053,9 @@ PRS_blohm_und_voss_organization = {
 		icon = GFX_generic_mio_department_icon_ship_screen_ship_engine
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_heavy_raiders
+		relative_position_id = PRS_mio_trait_heavy_raiders
 
-		all_parents = { GER_mio_trait_heavy_raiders }
+		all_parents = { PRS_mio_trait_heavy_raiders }
 
 		position = { x=0 y=1 }  
 
@@ -1106,9 +1106,9 @@ PRS_blohm_und_voss_organization = {
 		icon = GFX_generic_mio_department_icon_ship_submarine_engine
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_u_boat_yards
+		relative_position_id = PRS_mio_trait_u_boat_yards
 
-		all_parents = { GER_mio_trait_u_boat_yards }
+		all_parents = { PRS_mio_trait_u_boat_yards }
 
 		position = { x=0 y=1 }  
 
@@ -1208,9 +1208,9 @@ PRS_hdw_organization = {
 		icon = GFX_generic_mio_department_icon_ship_submarine_survivability
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_saddle_tanks
+		relative_position_id = PRS_mio_trait_saddle_tanks
 
-		all_parents = { GER_mio_trait_saddle_tanks }
+		all_parents = { PRS_mio_trait_saddle_tanks }
 
 		position = { x=0 y=1 } 
 
@@ -1229,9 +1229,9 @@ PRS_hdw_organization = {
 		icon = GFX_generic_mio_department_icon_ship_submarine_engine
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_excellent_diving_performance
+		relative_position_id = PRS_mio_trait_excellent_diving_performance
 
-		all_parents = { GER_mio_trait_excellent_diving_performance }
+		all_parents = { PRS_mio_trait_excellent_diving_performance }
 
 		position = { x=0 y=1 } 
 
@@ -1263,9 +1263,9 @@ PRS_deutsche_werke_organization = {
 	override_trait = {
 		token = generic_mio_trait_splinter_protection
 
-		all_parents = { GER_mio_trait_raider_doctrine }
+		all_parents = { PRS_mio_trait_raider_doctrine }
 
-		relative_position_id = GER_mio_trait_raider_doctrine 
+		relative_position_id = PRS_mio_trait_raider_doctrine 
 		
 		position = { x=0 y=1 }
 	}
@@ -1352,9 +1352,9 @@ PRS_deutsche_werke_organization = {
 		special_trait_background = yes
 
 		position = { x=0 y=1 }
-		relative_position_id = GER_mio_trait_fast_raiders
+		relative_position_id = PRS_mio_trait_fast_raiders
 		
-		all_parents = { GER_mio_trait_fast_raiders }
+		all_parents = { PRS_mio_trait_fast_raiders }
 
 		limit_to_equipment_type = { mio_cat_eq_all_carrier }
 
@@ -1430,9 +1430,9 @@ PRS_kriegsmarinewerft_wilhelmshaven_organization = {
 		icon = GFX_generic_mio_department_icon_ship_capital_ship_engine
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_upgrade_panzerschiffs
+		relative_position_id = PRS_mio_trait_upgrade_panzerschiffs
 		
-		all_parents = { GER_mio_trait_upgrade_panzerschiffs }
+		all_parents = { PRS_mio_trait_upgrade_panzerschiffs }
 
 		position = { x=0 y=1 }
 
@@ -1589,7 +1589,7 @@ PRS_messerschmitt_organization = {
 		special_trait_background = yes
 		
 		position = { x=1 y=4 }
-		relative_position_id = GER_mio_trait_aerodynamic_research_insitute
+		relative_position_id = PRS_mio_trait_aerodynamic_research_insitute
 
 		visible = { has_WUW = yes }
 
@@ -1730,7 +1730,7 @@ PRS_junkers_organization = {
 		special_trait_background = yes
 		
 		position = { x=1 y=3 }
-		relative_position_id = GER_mio_trait_aerodynamic_research_insitute
+		relative_position_id = PRS_mio_trait_aerodynamic_research_insitute
 
 		visible = { has_WUW = yes }
 
@@ -1772,7 +1772,7 @@ PRS_focke_wulf_organization = {
 		special_trait_background = yes
 		
 		position = { x=0 y=1 }
-		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
+		relative_position_id = PRS_mio_trait_hamburger_flugzeugbau
 
 		limit_to_equipment_type = { mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane }
 
@@ -1788,7 +1788,7 @@ PRS_focke_wulf_organization = {
 		icon = GFX_generic_mio_department_icon_facilities
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_work_horse_design_philosophy
+		relative_position_id = PRS_mio_trait_work_horse_design_philosophy
 
 		position = { x = 0 y = 1 }  
 		
@@ -1845,8 +1845,8 @@ PRS_focke_wulf_organization = {
 		special_trait_background = yes
 		
 		position = { x=-0 y=1 }
-		relative_position_id = GER_mio_trait_long_nose_design
-		all_parents = { GER_mio_trait_long_nose_design }
+		relative_position_id = PRS_mio_trait_long_nose_design
+		all_parents = { PRS_mio_trait_long_nose_design }
 
 		limit_to_equipment_type = { mio_cat_eq_all_small_plane }
 
@@ -1920,7 +1920,7 @@ PRS_focke_wulf_organization = {
 		special_trait_background = yes
 		
 		position = { x=0 y=2 }
-		relative_position_id = GER_mio_trait_aerodynamic_research_insitute
+		relative_position_id = PRS_mio_trait_aerodynamic_research_insitute
 
 		visible = { has_WUW = yes }
 
@@ -2102,7 +2102,7 @@ PRS_heinkel_organization = {
 		special_trait_background = yes
 		
 		position = { x=0 y=3 }
-		relative_position_id = GER_mio_trait_aerodynamic_research_insitute
+		relative_position_id = PRS_mio_trait_aerodynamic_research_insitute
 
 		visible = { has_WUW = yes }
 
@@ -2208,7 +2208,7 @@ PRS_dornier_organization = {
 		icon = GFX_generic_mio_department_icon_facilities
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_flying_boat_specialist
+		relative_position_id = PRS_mio_trait_flying_boat_specialist
 
 		position = { x = 2 y = 0 }  
 		
@@ -2255,7 +2255,7 @@ PRS_arado_flugzeugwerke_organization = {
 		special_trait_background = yes
 		
 		position = { x=0 y=1 }
-		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
+		relative_position_id = PRS_mio_trait_hamburger_flugzeugbau
 
 		available = {
 			FROM = {
@@ -2313,7 +2313,7 @@ PRS_arado_flugzeugwerke_organization = {
 		icon = GFX_generic_mio_department_icon_facilities
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
+		relative_position_id = PRS_mio_trait_hamburger_flugzeugbau
 
 		position = { x = -1 y = 0 }  
 		
@@ -2396,7 +2396,7 @@ PRS_fieseler_organization = {
 		icon = GFX_generic_mio_department_icon_facilities
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
+		relative_position_id = PRS_mio_trait_hamburger_flugzeugbau
 
 		position = { x = 0 y = 1 }  
 		
@@ -2481,7 +2481,7 @@ PRS_focke_achgelis_organization = {
 		icon = GFX_generic_mio_department_icon_facilities
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
+		relative_position_id = PRS_mio_trait_hamburger_flugzeugbau
 
 		position = { x = 0 y = 1 }  
 		
@@ -2564,7 +2564,7 @@ PRS_rheinmetall_organization = {
 		special_trait_background = yes
 
 		position = { x = 0 y = 1 }
-		relative_position_id = GER_mio_trait_3_7_cm_pak
+		relative_position_id = PRS_mio_trait_3_7_cm_pak
 
 		any_parent = { GER_mio_trait_3_7_cm_pak }
 
@@ -2842,7 +2842,7 @@ PRS_opel_organization = {
 		special_trait_background = yes
 
 		position = { x=0 y=1 }
-		relative_position_id = GER_mio_trait_ford_facilities
+		relative_position_id = PRS_mio_trait_ford_facilities
 
 		any_parent = { GER_mio_trait_ford_facilities }
 
@@ -2866,7 +2866,7 @@ PRS_opel_organization = {
 		special_trait_background = yes
 
 		position = { x=-1 y=1 }
-		relative_position_id = GER_mio_trait_ford_facilities
+		relative_position_id = PRS_mio_trait_ford_facilities
 
 		any_parent = { GER_mio_trait_ford_facilities }
 
@@ -2980,9 +2980,9 @@ PRS_auto_union_organization = {
 		special_trait_background = yes
 
 		position = { x=0 y=3 }
-		relative_position_id = GER_mio_trait_racing_pedigree
+		relative_position_id = PRS_mio_trait_racing_pedigree
 
-		all_parents = { GER_mio_trait_racing_pedigree generic_mio_trait_improved_tooling }
+		all_parents = { PRS_mio_trait_racing_pedigree generic_mio_trait_improved_tooling }
 
 		production_bonus = {
 			production_efficiency_gain_factor = 0.05

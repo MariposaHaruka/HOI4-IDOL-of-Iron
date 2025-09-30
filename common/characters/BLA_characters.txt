@@ -26,7 +26,7 @@ characters = {
 			logistics_skill = 3
 		}
 	}
-	BLA_empty_president = { #1936 스타팅용
+	BLA_empty_president = { # 1936년 스타팅용
 		name = BLA_empty_president
 		gender = female
 		portraits = {
@@ -54,7 +54,7 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = political_advisor
+			slot = internal_advisor
 			idea_token = BLA_arona
 			ledger = civilian
 			allowed = { }
@@ -151,6 +151,18 @@ characters = {
 			ideology = conservatism_subtype
 			traits = {  }
 			desc = BLA_nanagami_rin_desc
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BLA_nanagami_rin
+			ledger = civilian
+			allowed = { }
+			visible = { BLA_nanagami_rin = { is_country_leader = no } }
+			traits = { trait_bla_arona }
+			cost = 200
+			ai_will_do = {
+				factor = 4
+			}
 		}
 		field_marshal = {
 			visible = { has_country_flag = fascism_national_mobilization_law }
@@ -266,6 +278,18 @@ characters = {
 			ideology = liberalism_subtype
 			traits = {  }
 			desc = BLA_oki_aoi_desc
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BLA_oki_aoi
+			ledger = civilian
+			allowed = { }
+			visible = { BLA_oki_aoi = { is_country_leader = no } }
+			traits = { intervensionist_economist }
+			cost = 200
+			ai_will_do = {
+				factor = 4
+			}
 		}
 		corps_commander = {
 			visible = { has_country_flag = fascism_national_mobilization_law }
@@ -973,7 +997,7 @@ characters = {
 				BLA_gehenna_participate = yes
 				NOT = { has_country_flag = BLA_GEH_hot_spring_department_problem } 
 			}
-			traits = { flame_thrower }
+			traits = { flame_thrower_1 }
 			cost = 200
 			ai_will_do = {
 				factor = 4

@@ -1,6 +1,6 @@
 ideas = {
 	hidden_ideas = {
-		BLA_abydos_construction = { #인트로 소개 부분에만 나올 국민정신
+		BLA_abydos_construction = { #녹화사업용 국민정신
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -8,6 +8,21 @@ ideas = {
 				civilian_factory_use = 10
 			}
 		}
+
+		BLA_test_idea = { #장비 할인 국민정신
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			equipment_bonus = {
+				fighter = {
+					build_cost_ic = -0.1
+				}
+				tactical_bomber = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
 	}
 	
 	country = {
@@ -56,6 +71,7 @@ ideas = {
 		}
 		
 		BLA_robot_technology_1 = { #로봇 기술
+			name = BLA_robot_technology
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -70,6 +86,7 @@ ideas = {
 		}
 		
 		BLA_robot_technology_2 = { #로봇 기술
+			name = BLA_robot_technology
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -82,6 +99,7 @@ ideas = {
 		}
 		
 		BLA_robot_technology_3 = { #로봇 기술
+			name = BLA_robot_technology
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -93,6 +111,21 @@ ideas = {
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
 				army_speed_factor = 0.1
+			}
+		}
+		
+		BLA_robot_technology_max = { #로봇 기술
+			allowed = { original_tag = BLA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = BLA_robot_technology
+			modifier = {
+				industrial_capacity_factory = 0.03
+				industrial_capacity_dockyard = 0.03
+				conscription_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_speed_factor = 0.05
 			}
 		}
 		

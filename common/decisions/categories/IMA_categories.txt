@@ -15,6 +15,7 @@ IMA_haruka_plan_category = { #하루카 계획
 	priority = 97
 	allowed = { original_tag = IMA }
 	visible = {
+		has_country_flag = IMA_depression_flag
 		has_completed_focus = IMA_11001
 		NOT = { has_country_flag = IMA_depression_overcomed }
 	}
@@ -27,6 +28,7 @@ IMA_iori_plan_category = { #이오리 계획
 	priority = 97
 	allowed = { original_tag = IMA }
 	visible = {
+		has_country_flag = IMA_depression_flag
 		has_completed_focus = IMA_12001
 		NOT = { has_country_flag = IMA_depression_overcomed }
 	}
@@ -134,3 +136,13 @@ IMA_idolmaster_conference_category = { #아이돌 마스터 회의
 	visible_when_empty = yes
 }
 
+IMA_idol_committee_category= { #아이돌 마스터 회의
+	icon = SWI_federal_council
+	priority = 94
+	allowed = { original_tag = IMA }
+	visible = {
+		has_completed_focus = IMA_51015
+		NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+	}
+	visible_when_empty = yes
+}

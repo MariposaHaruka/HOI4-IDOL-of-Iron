@@ -80,15 +80,4 @@ on_actions = {
 	#		}
 	#	}
 	#}
-
-	on_peace = { #중원전쟁 버프 제거
-		effect = {
-			AZU = {
-				if = {
-					limit = { has_global_flag = ship_civil_war }
-					remove_ideas = hidden_buff
-				}
-			}
-		}
-	}
 }

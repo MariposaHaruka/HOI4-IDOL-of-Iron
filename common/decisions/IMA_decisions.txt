@@ -87,11 +87,22 @@ IMA_haruka_plan_category = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = generic_line_break_tt
-			add_to_variable = {
-				IMA_debt = 0.3
-				tooltip = IMA_dept_add_tt
+			if = {
+				limit = { check_variable = { IMA_WPA_worked < 5 } }
+				add_to_variable = {
+					IMA_debt = 0.3
+					tooltip = IMA_dept_add_tt
+				}
+				add_to_variable = { IMA_WPA_worked = 1 }
+				else = {
+					subtract_from_variable = {
+						IMA_debt = 2
+						tooltip = IMA_dept_subtract_tt
+					}
+					subtract_from_variable = { IMA_WPA_worked = 5 }
+				}
 			}
+			
 			add_to_variable = { IMA_available_WPA_works = 1 }
 		}
 	}
@@ -1925,5 +1936,869 @@ IMA_intervension_plan_category = {
 
 IMA_idolmaster_conference_category = {
 	
+}
+
+IMA_foreign_defence_plan_category = {
+	IMA_foreign_defence_plan_category_embargo = {
+		priority = 10
+		icon = GFX_decision_generic_construction
+		ai_will_do = {
+			base = 2
+			modifier = {
+				check_variable = { IMA_debt > 180 }
+				factor = 0
+			}
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		target_trigger = {
+			exists = yes
+		}
+		visible = { 
+			has_completed_focus = IMA_51105
+			FROM = { 
+				NOT = { is_in_faction_with = IMA }
+				NOT = { is_embargoed_by = IMA }
+				NOT = { has_government = authoritariandemocracy }
+				is_democratic = no
+			}
+		}
+
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			FROM = { 
+				embargo_FROM = yes 
+				add_war_support = 0.03
+			}
+			IMA = {
+				add_war_support = 0.03
+			}
+		}
+	}
+}
+
+IMA_idol_committee_category = {
+	IMA_idol_committee_category_IMA_amami_haruka = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			IMA_amami_haruka = { is_country_leader = yes } #재복귀 루트는 없으니 있어야 하는 조건
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			add_political_power = 50
+			add_war_support = 0.05
+			add_stability = 0.05
+			set_country_flag = IMA_idol_national_unity_government_flag
+		}
+	} 
+	IMA_idol_committee_category_IMA_kisaragi_chihaya = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { IMA_kisaragi_chihaya = { is_country_leader = yes } }
+				add_political_power = 50
+				add_war_support = 0.05
+				add_stability = 0.05
+				set_country_flag = IMA_idol_national_unity_government_flag
+			}
+			else = {
+				set_politics = { ruling_party = liberalism_mod }
+				promote_character = IMA_kisaragi_chihaya
+			}
+		}
+	} 
+	IMA_idol_committee_category_IMA_hoshii_miki = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { has_government = conservatism }
+				add_country_leader_role = {
+					character = IMA_hoshii_miki
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = liberalism_mod }
+				add_country_leader_role = {
+					character = IMA_hoshii_miki
+					promote_leader = yes
+					country_leader = {
+						ideology = liberalism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = progressivism }
+				add_country_leader_role = {
+					character = IMA_hoshii_miki
+					promote_leader = yes
+					country_leader = {
+						ideology = progressivism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character = IMA_hoshii_miki
+					promote_leader = yes
+					country_leader = {
+						ideology = socialdemocracy_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+		}
+	}
+	IMA_idol_committee_category_IMA_hagiwara_yukiho = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { has_government = conservatism }
+				add_country_leader_role = {
+					character = IMA_hagiwara_yukiho
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = liberalism_mod }
+				add_country_leader_role = {
+					character = IMA_hagiwara_yukiho
+					promote_leader = yes
+					country_leader = {
+						ideology = liberalism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = progressivism }
+				add_country_leader_role = {
+					character = IMA_hagiwara_yukiho
+					promote_leader = yes
+					country_leader = {
+						ideology = progressivism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character = IMA_hagiwara_yukiho
+					promote_leader = yes
+					country_leader = {
+						ideology = socialdemocracy_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+		}
+	}
+	IMA_idol_committee_category_IMA_takatsuki_yayoi = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { IMA_takatsuki_yayoi = { is_country_leader = yes } }
+				add_political_power = 50
+				add_war_support = 0.05
+				add_stability = 0.05
+				set_country_flag = IMA_idol_national_unity_government_flag
+			}
+			else = {
+				set_politics = { ruling_party = socialdemocracy }
+				promote_character = IMA_takatsuki_yayoi
+			}
+		}
+	}
+	IMA_idol_committee_category_IMA_kikuchi_makoto = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { has_government = conservatism }
+				add_country_leader_role = {
+					character = IMA_kikuchi_makoto
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = liberalism_mod }
+				add_country_leader_role = {
+					character = IMA_kikuchi_makoto
+					promote_leader = yes
+					country_leader = {
+						ideology = liberalism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = progressivism }
+				add_country_leader_role = {
+					character = IMA_kikuchi_makoto
+					promote_leader = yes
+					country_leader = {
+						ideology = progressivism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character = IMA_kikuchi_makoto
+					promote_leader = yes
+					country_leader = {
+						ideology = socialdemocracy_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+		}
+	}
+	IMA_idol_committee_category_IMA_minase_iori = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { IMA_minase_iori = { is_country_leader = yes } }
+				add_political_power = 50
+				add_war_support = 0.05
+				add_stability = 0.05
+				set_country_flag = IMA_idol_national_unity_government_flag
+			}
+			else = {
+				set_politics = { ruling_party = liberalism_mod }
+				promote_character = IMA_minase_iori
+			}
+		}
+	}
+	IMA_idol_committee_category_IMA_shijou_takane = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { has_government = conservatism }
+				add_country_leader_role = {
+					character = IMA_shijou_takane
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = liberalism_mod }
+				add_country_leader_role = {
+					character = IMA_shijou_takane
+					promote_leader = yes
+					country_leader = {
+						ideology = liberalism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = progressivism }
+				add_country_leader_role = {
+					character = IMA_shijou_takane
+					promote_leader = yes
+					country_leader = {
+						ideology = progressivism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character = IMA_shijou_takane
+					promote_leader = yes
+					country_leader = {
+						ideology = socialdemocracy_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+		}
+	}
+	IMA_idol_committee_category_IMA_akizuki_ritsuko = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { has_government = conservatism }
+				add_country_leader_role = {
+					character = IMA_akizuki_ritsuko
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = liberalism_mod }
+				add_country_leader_role = {
+					character = IMA_akizuki_ritsuko
+					promote_leader = yes
+					country_leader = {
+						ideology = liberalism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = progressivism }
+				add_country_leader_role = {
+					character = IMA_akizuki_ritsuko
+					promote_leader = yes
+					country_leader = {
+						ideology = progressivism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character = IMA_akizuki_ritsuko
+					promote_leader = yes
+					country_leader = {
+						ideology = socialdemocracy_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+		}
+	}
+	IMA_idol_committee_category_IMA_miura_azusa = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { IMA_miura_azusa = { is_country_leader = yes } }
+				add_political_power = 50
+				add_war_support = 0.05
+				add_stability = 0.05
+				set_country_flag = IMA_idol_national_unity_government_flag
+			}
+			else = {
+				set_politics = { ruling_party = conservatism }
+				promote_character = IMA_miura_azusa
+			}
+		}
+	}
+	IMA_idol_committee_category_IMA_futami_ami = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { IMA_futami_ami = { is_country_leader = yes } }
+				add_political_power = 50
+				add_war_support = 0.05
+				add_stability = 0.05
+				set_country_flag = IMA_idol_national_unity_government_flag
+			}
+			else = {
+				set_politics = { ruling_party = progressivism }
+				promote_character = IMA_futami_ami
+			}
+		}
+	}
+	IMA_idol_committee_category_IMA_futami_mami = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { IMA_futami_mami = { is_country_leader = yes } }
+				add_political_power = 50
+				add_war_support = 0.05
+				add_stability = 0.05
+				set_country_flag = IMA_idol_national_unity_government_flag
+			}
+			else = {
+				set_politics = { ruling_party = socialdemocracy }
+				promote_character = IMA_futami_mami
+			}
+		}
+	}
+	IMA_idol_committee_category_IMA_ganaha_hibiki = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { has_government = conservatism }
+				add_country_leader_role = {
+					character = IMA_ganaha_hibiki
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = liberalism_mod }
+				add_country_leader_role = {
+					character = IMA_ganaha_hibiki
+					promote_leader = yes
+					country_leader = {
+						ideology = liberalism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = progressivism }
+				add_country_leader_role = {
+					character = IMA_ganaha_hibiki
+					promote_leader = yes
+					country_leader = {
+						ideology = progressivism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character = IMA_ganaha_hibiki
+					promote_leader = yes
+					country_leader = {
+						ideology = socialdemocracy_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+		}
+	} 
+	IMA_idol_committee_category_IMA_otonashi_kotori = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { has_government = conservatism }
+				add_country_leader_role = {
+					character = IMA_otonashi_kotori
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = liberalism_mod }
+				add_country_leader_role = {
+					character = IMA_otonashi_kotori
+					promote_leader = yes
+					country_leader = {
+						ideology = liberalism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = progressivism }
+				add_country_leader_role = {
+					character = IMA_otonashi_kotori
+					promote_leader = yes
+					country_leader = {
+						ideology = progressivism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character = IMA_otonashi_kotori
+					promote_leader = yes
+					country_leader = {
+						ideology = socialdemocracy_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+		}
+	}
+	IMA_idol_committee_category_IMA_akabane_p = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { has_government = conservatism }
+				add_country_leader_role = {
+					character = IMA_akabane_p
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = liberalism_mod }
+				add_country_leader_role = {
+					character = IMA_akabane_p
+					promote_leader = yes
+					country_leader = {
+						ideology = liberalism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = progressivism }
+				add_country_leader_role = {
+					character = IMA_akabane_p
+					promote_leader = yes
+					country_leader = {
+						ideology = progressivism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character = IMA_akabane_p
+					promote_leader = yes
+					country_leader = {
+						ideology = socialdemocracy_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+		}
+	}
+	IMA_idol_committee_category_IMA_majima_p = {
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 2
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
+		visible = { 
+			has_completed_focus = IMA_51015
+			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		remove_effect = {
+			if = {
+				limit = { has_government = conservatism }
+				add_country_leader_role = {
+					character = IMA_majima_p
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = liberalism_mod }
+				add_country_leader_role = {
+					character = IMA_majima_p
+					promote_leader = yes
+					country_leader = {
+						ideology = liberalism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = progressivism }
+				add_country_leader_role = {
+					character = IMA_majima_p
+					promote_leader = yes
+					country_leader = {
+						ideology = progressivism_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+			else = {
+				add_country_leader_role = {
+					character = IMA_majima_p
+					promote_leader = yes
+					country_leader = {
+						ideology = socialdemocracy_subtype
+						expire = "2000.1.1.1"
+						traits = { }
+					}
+				}
+			}
+		}
+	}
+	#IMA_idol_committee_category_IMA_leon
+	#IMA_idol_committee_category_IMA_shiika
+	#IMA_idol_committee_category_IMA_okuzora_kohaku
+	#IMA_idol_committee_category_IMA_aya
 }
 

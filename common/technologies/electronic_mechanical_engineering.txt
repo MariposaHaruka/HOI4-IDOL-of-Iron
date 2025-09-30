@@ -1694,6 +1694,13 @@ technologies = {
 			nuclear
 		}
 
+		allow = {
+			OR = {
+				original_tag = BLA
+				has_global_flag = discovery_of_nuclear_fission 
+			}
+		}
+
 		special_project_specialization = { specialization_nuclear }
 		
 		on_research_complete = {
