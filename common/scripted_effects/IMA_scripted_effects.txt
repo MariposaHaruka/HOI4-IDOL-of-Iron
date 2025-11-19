@@ -1325,21 +1325,21 @@ calc_parliament_support_IMA = {
 		set_variable = { IMA.support_seats = 1 }
 		else = { set_variable = { IMA.socialdemocracy_support = 0 } }
 	}
-	#if = {
-	#	limit = { is_in_coalition_with_socialism = yes }
-	#	set_variable = { IMA.socialism_support = 1 }
-	else = { set_variable = { IMA.socialism_support = 0 } }
-	#}
+	if = {
+		limit = { is_in_coalition_with_socialism = yes }
+		set_variable = { IMA.socialism_support = 1 }
+		else = { set_variable = { IMA.socialism_support = 0 } }
+	}
 	if = {
 		limit = { is_in_coalition_with_communism = yes }
 		set_variable = { IMA.communist_support = 1 }
 		else = { set_variable = { IMA.communist_support = 0 } }
 	}
-	#if = {
-	#	limit = { is_in_coalition_with_authoritariancommunism = yes }
-	#	set_variable = { IMA.authoritariancommunism_support = 1 }
-	#	else = { set_variable = { IMA.authoritariancommunism_support = 0 } }
-	#}
+	if = {
+		limit = { is_in_coalition_with_authoritariancommunism = yes }
+		set_variable = { IMA.authoritariancommunism_support = 1 }
+		else = { set_variable = { IMA.authoritariancommunism_support = 0 } }
+	}
 	if = {
 		limit = { is_in_coalition_with_anarchosyndicalism = yes }
 		set_variable = { IMA.anarchosyndicalism_seats = 1 }
@@ -1350,11 +1350,11 @@ calc_parliament_support_IMA = {
 		set_variable = { IMA.fascism_support = 1 }
 		else = { set_variable = { IMA.fascism_support = 0 } }
 	}
-	#if = {
-	#	limit = { is_in_coalition_with_militarytotalism = yes }
-	#	set_variable = { IMA.militarytotalism_support = 1 }
-	#	else = { set_variable = { IMA.militarytotalism_support = 0 } }
-	#}
+	if = {
+		limit = { is_in_coalition_with_militarytotalism = yes }
+		set_variable = { IMA.militarytotalism_support = 1 }
+		else = { set_variable = { IMA.militarytotalism_support = 0 } }
+	}
 	if = {
 		limit = { is_in_coalition_with_authoritariandemocracy = yes }
 		set_variable = { IMA.authoritariandemocracy_support = 1 }
@@ -1369,24 +1369,24 @@ calc_parliament_support_IMA = {
 	multiply_variable = { IMA.liberalism_support = IMA_liberal_seats }
 	multiply_variable = { IMA.progressivism_support = IMA_nationallabour_seats }
 	multiply_variable = { IMA.socialdemocracy_support = IMA_labour_seats }
-	#multiply_variable = { IMA.socialism_support = 0 }
+	multiply_variable = { IMA.socialism_support = 0 }
 	multiply_variable = { IMA.communist_support = IMA_communist_seats }
-	#multiply_variable = { IMA.authoritariancommunism_support = 0 }
+	multiply_variable = { IMA.authoritariancommunism_support = 0 }
 	multiply_variable = { IMA.anarchosyndicalism_support = IMA_producercommunist_seats }
 	multiply_variable = { IMA.fascism_support = IMA_fascist_seats }
-	#multiply_variable = { IMA.militarytotalism_support = 0 }
+	multiply_variable = { IMA.militarytotalism_support = 0 }
 	multiply_variable = { IMA.authoritariandemocracy_support = IMA_republicanpeople_seats }
 	multiply_variable = { IMA.autocracy_support = IMA_kingsparty_seats }
 	add_to_variable = { IMA.support_seats = IMA.conservative_support }
 	add_to_variable = { IMA.support_seats = IMA.liberalism_support }
 	add_to_variable = { IMA.support_seats = IMA.progressivism_support }
 	add_to_variable = { IMA.support_seats = IMA.socialdemocracy_support }
-	#add_to_variable = { IMA.support_seats = IMA.socialism_support }
+	add_to_variable = { IMA.support_seats = IMA.socialism_support }
 	add_to_variable = { IMA.support_seats = IMA.communist_support }
-	#add_to_variable = { IMA.support_seats = IMA.authoritariancommunism_support }
+	add_to_variable = { IMA.support_seats = IMA.authoritariancommunism_support }
 	add_to_variable = { IMA.support_seats = IMA.anarchosyndicalism_support }
 	add_to_variable = { IMA.support_seats = IMA.fascism_support }
-	#add_to_variable = { IMA.support_seats = IMA.militarytotalism_support }
+	add_to_variable = { IMA.support_seats = IMA.militarytotalism_support }
 	add_to_variable = { IMA.support_seats = IMA.authoritariandemocracy_support }
 	add_to_variable = { IMA.support_seats = IMA.autocracy_support }
 	divide_variable = { IMA.support_seats = IMA_total_seats }
@@ -1407,19 +1407,11 @@ IMA_reduce_depression = {
 			add_idea = IMA_great_depression_3
 		}
 	}
-	else_if = {
-		limit = { has_idea = IMA_great_depression_3 }
-		remove_ideas = IMA_great_depression_3
-	}
 	else = {
 		add_timed_idea = {
 			idea = IMA_minor_economic_boom
 			days = 200
 		}
-	}
-	set_country_flag = {
-		flag = IMA_reduce_depression_flag
-		days = 200
 	}
 }
 
@@ -1440,6 +1432,50 @@ IMA_upgrade_minase_fund = {
 			set_country_flag = IMA_iori_plan_minase_fund_flag_3
 			remove_mission = IMA_iori_plan_minase_fund_2
 			activate_mission = IMA_iori_plan_minase_fund_3
+		}
+	}
+}
+
+IMA_create_marine_division = {
+	hidden_effect = {
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"Producer Marine Division\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+				owner = ROOT
+				count = 4
+			}
+		}
+	}
+}
+
+IMA_create_paratroop_division = {
+	hidden_effect = {
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"Producer Paratroop Division\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+				owner = ROOT
+				count = 4
+			}
+		}
+	}
+}
+
+IMA_design_illustrious = {
+	create_equipment_variant = {
+		name = "Illustrious Class"
+		type = ship_hull_carrier_2
+		name_group = IMA_CV_HISTORICAL
+		parent_version = 0
+		design_team = mio:IMA_harland_wolff_organization
+		modules = {
+			fixed_ship_deck_slot_1 = ship_deck_space
+			fixed_ship_deck_slot_2 = ship_deck_space
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = carrier_ship_engine_2
+			fixed_ship_secondaries_slot = dp_ship_secondaries_2
+			front_1_custom_slot = ship_deck_space
+			mid_1_custom_slot = ship_deck_space
 		}
 	}
 }

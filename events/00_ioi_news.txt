@@ -227,3 +227,75 @@ news_event = {
 		name = global_news.43.a
 	}
 }
+
+
+# 핵분열의 발견(트리거)
+news_event = {
+	id = ioi_news.1001
+	hidden = yes
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1936.12.31
+		date < 1939.5.1
+		NOT = { has_global_flag = discovery_of_nuclear_fission }
+	}
+
+	mean_time_to_happen = { days = 365 }
+	immediate = { DFD = { news_event = ioi_news.1002 } }
+	option = {
+		name = ioi_news.1001.a
+	}
+}
+
+# 핵분열의 발견
+news_event = {
+	id = ioi_news.1002
+	title = ioi_news.1002.t
+	desc = ioi_news.1002.d
+	picture = GFX_news_event_discover_of_nuclear_fission
+
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = discovery_of_nuclear_fission
+	}
+	
+	option = { #그래서 이게 세계 정세랑 무슨 상관이 있지?
+		name = ioi_news.1002.a
+		trigger = {
+			is_major = no
+			NOT = { 
+				original_tag = BLA 
+				original_tag = LAS
+				original_tag = IML
+				original_tag = ICG
+			}
+		}
+	}
+	option = { #그래서 이게 세계 정세랑 무슨 상관이 있지?
+		name = ioi_news.1002.b
+		trigger = { 
+			OR = { 
+				is_major = yes
+				original_tag = IML
+				original_tag = ICG
+			}
+			NOT = { original_tag = BLA } # 얘네는 밑 쪽으로 뜸
+		}
+		custom_effect_tooltip = discovery_of_nuclear_fission_tt
+	}
+	option = { #음...
+		name = ioi_news.1002.c
+		trigger = { 
+			OR = { 
+				original_tag = BLA 
+				original_tag = LAS
+			}
+		}
+		custom_effect_tooltip = discovery_of_nuclear_fission_BLA_tt
+	}
+}

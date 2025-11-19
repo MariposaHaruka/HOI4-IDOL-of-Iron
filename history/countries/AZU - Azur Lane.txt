@@ -3,13 +3,7 @@ capital = 613 #난징
 
 #부대
 set_oob = "AZU_ar"
-if = {
-	limit = { has_MtG = yes }
-	set_naval_oob = "AZU_na_MtG"
-	else = {
-		set_naval_oob = "AZU_na"
-	}
-}
+set_naval_oob = "AZU_na_MtG"
 if = {
 	limit = { has_BBA = yes }
 	set_air_oob = "AZU_ai_BBA"
@@ -30,22 +24,13 @@ set_technology = {
 	fleet_in_being = 1
 	basic_train = 1
 }
-if = {
-	limit = { has_MtG = yes }
-	set_technology = {
-		basic_naval_mines = 1
-		early_ship_hull_light = 1
-		early_ship_hull_cruiser = 1
-		basic_battery = 1
-		basic_torpedo = 1
-		coastal_defense_ships = 1
-	}
-	else = {
-		set_technology = {
-			early_destroyer = 1
-			early_light_cruiser = 1
-		}
-	}
+set_technology = {
+	basic_naval_mines = 1
+	early_ship_hull_light = 1
+	early_ship_hull_cruiser = 1
+	basic_battery = 1
+	basic_torpedo = 1
+	coastal_defense_ships = 1
 }
 if = {
 	limit = { has_NSB = yes }
@@ -83,10 +68,101 @@ set_convoys = 40
 add_ideas = {
 	agrarian_society
 }
+
 add_dynamic_modifier = { modifier = AZU_industry }
 add_dynamic_modifier = { modifier = AZU_army }
 add_dynamic_modifier = { modifier = AZU_navy }
 add_dynamic_modifier = { modifier = AZU_air_force }
+
+## AZU_industry
+set_variable = { AZU_industry_production_speed_buildings_factor = -0.10 }
+set_variable = { AZU_industry_industrial_capacity_factory = -0.10 }
+set_variable = { AZU_industry_industrial_capacity_dockyard = -0.10 }
+set_variable = { AZU_industry_research_speed_factor = -0.10 }
+set_variable = { AZU_industry_consumer_goods_factor = 0.05 }
+set_variable = { AZU_industry_state_resources_factor = -0.05 }
+set_variable = { AZU_industry_production_factory_max_efficiency_factor = -0.10 }
+set_variable = { AZU_industry_production_factory_efficiency_gain_factor = -0.10 }
+set_variable = { AZU_industry_license_purchase_cost = 0.20 }
+set_variable = { AZU_industry_political_power_gain = -0.03 }
+set_variable = { AZU_industry_stability_factor = -0.05 }
+set_variable = { AZU_industry_industry_repair_factor = -0.15 }
+
+## AZU_army
+set_variable = { AZU_army_experience_gain_army_factor = -0.30 }
+set_variable = { AZU_army_land_doctrine_cost_factor = 0.25 }
+set_variable = { AZU_army_army_org_factor = -0.15 }
+set_variable = { AZU_army_training_time_factor = 0.20 }
+set_variable = { AZU_army_supply_factor = -0.15 }
+set_variable = { AZU_army_planning_speed = -0.20 }
+set_variable = { AZU_army_army_morale_factor = -0.10 }
+set_variable = { AZU_army_max_planning_factor = -0.15 }
+set_variable = { AZU_army_command_power_gain_mult = -0.10 }
+set_variable = { AZU_army_army_leader_cost_factor = 0.50 }
+set_variable = { AZU_army_equipment_capture_factor = -0.50 }
+set_variable = { AZU_army_special_forces_cap = -0.25 }
+set_variable = { AZU_army_recon_factor = -0.15 }
+set_variable = { AZU_army_supply_consumption_factor = 0.10 }
+set_variable = { AZU_army_winter_attrition_factor = 0.10 }
+set_variable = { AZU_army_heat_attrition_factor = 0.10 }
+
+set_variable = { AZU_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { AZU_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { AZU_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { AZU_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { AZU_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { AZU_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { AZU_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { AZU_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { AZU_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## AZU_navy
+set_variable = { AZU_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { AZU_navy_naval_doctrine_cost_factor = 0.30 }
+set_variable = { AZU_navy_naval_detection = -0.20 }
+set_variable = { AZU_navy_navy_max_range_factor = -0.15 }
+set_variable = { AZU_navy_repair_speed_factor = -0.20 }
+set_variable = { AZU_navy_refit_speed = -0.20 }
+set_variable = { AZU_navy_amphibious_invasion = -0.25 }
+set_variable = { AZU_navy_naval_invasion_capacity = -5 }
+set_variable = { AZU_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { AZU_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { AZU_navy_naval_damage_factor = -0.10 }
+set_variable = { AZU_navy_naval_defense_factor = -0.10 }
+set_variable = { AZU_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { AZU_navy_naval_speed_factor = -0.10 }
+
+set_variable = { AZU_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { AZU_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { AZU_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { AZU_navy_build_cost_ic_screen_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { AZU_navy_build_cost_ic_submarine = 0.30 } ### 별도 국민정신 적용
+
+## AZU_air_force
+set_variable = { AZU_air_force_experience_gain_air_factor = -0.50 }
+set_variable = { AZU_air_force_air_doctrine_cost_factor = 0.40 }
+set_variable = { AZU_air_force_air_accidents_factor = 0.25 }
+set_variable = { AZU_air_force_air_mission_efficiency = -0.15 }
+set_variable = { AZU_air_force_air_training_xp_gain_factor = -0.30 }
+set_variable = { AZU_air_force_air_range_factor = -0.10 }
+set_variable = { AZU_air_force_air_ace_generation_chance_factor = -0.60 }
+set_variable = { AZU_air_force_air_superiority_efficiency = -0.20 }
+set_variable = { AZU_air_force_air_cas_efficiency = -0.25 }
+set_variable = { AZU_air_force_air_strategic_bomber_bombing_factor = -0.30 }
+set_variable = { AZU_air_force_air_intercept_efficiency = -0.15 }
+set_variable = { AZU_air_force_air_nav_efficiency = -0.20 }
+set_variable = { AZU_air_force_air_detection = -0.20 }
+set_variable = { AZU_air_force_air_agility_factor = -0.10 }
+
+set_variable = { AZU_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { AZU_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { AZU_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { AZU_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { AZU_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { AZU_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { AZU_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { AZU_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { AZU_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
 
 600 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
 749 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
@@ -106,7 +182,7 @@ add_dynamic_modifier = { modifier = AZU_air_force }
 
 #외교
 give_guarantee = LAS
-add_opinion_modifier = {
+add_opinion_modifier = { 
 	target = KTC
 	modifier = hostile_status
 }
@@ -796,82 +872,199 @@ recruit_character = AZU_uss_enterprise #스타팅 지도자, 절대 앞에 주�
 #recruit_character = AZU_siren_arbiter_1
 #recruit_character = AZU_siren_arbiter_7
 #recruit_character = AZU_siren_arbiter_17
+#CHI
+#recruit_character = AZU_chiang_kaishek
+#recruit_character = AZU_zhang_guotao
+#recruit_character = AZU_wang_jingwei
+#recruit_character = AZU_weng_wenhao
+#recruit_character = AZU_tu_yuming
+#recruit_character = AZU_hsueh_yueh
+#recruit_character = AZU_tai_anlan
+#recruit_character = AZU_wang_yaowu
+#recruit_character = AZU_sun_li_jen
+#recruit_character = AZU_hu_zongnan
+#recruit_character = AZU_gu_zhutong
+#recruit_character = AZU_wei_lihuang
+#recruit_character = AZU_fu_zuoyi
+#recruit_character = AZU_zhang_xueliang
+#recruit_character = AZU_fang_zeyi
+#recruit_character = AZU_zhu_de
+#recruit_character = AZU_chen_cheng
+#recruit_character = AZU_li_zongren
+#recruit_character = AZU_bo_yibo
+#recruit_character = AZU_huang_shen
+#recruit_character = AZU_chen_jitang
+#recruit_character = AZU_wang_shuming
+#recruit_character = AZU_bai_chongxi
+#recruit_character = AZU_zhou_zhirou
+#recruit_character = AZU_xiao_yisu
+#recruit_character = AZU_chen_shaokuan
+#recruit_character = AZU_xiao_jinguang
+#recruit_character = AZU_yu_hanmou
+#recruit_character = AZU_he_yingqin
+#recruit_character = AZU_gao_zhihang
+#recruit_character = AZU_h_h_kung
+#recruit_character = AZU_chen_guofu
+#recruit_character = AZU_chiang_ching_kuo
+#recruit_character = AZU_chen_yi
+#recruit_character = AZU_soong_mei_ling
+#recruit_character = AZU_lin_sen
+#recruit_character = AZU_wang_ganchang
+#SHX
+#recruit_character = AZU_yan_xishan
+#recruit_character = AZU_wang_jingguo
+#recruit_character = AZU_zhang_shen
+#recruit_character = AZU_luo_zhao
+#recruit_character = AZU_liao_ting
+#recruit_character = AZU_cheng_zhao
+#recruit_character = AZU_ma_tian
+#recruit_character = AZU_zhu_ting
+#recruit_character = AZU_wang_li_sun
+#recruit_character = AZU_min_lan_tung_tin
+#recruit_character = AZU_tan_fang
+#recruit_character = AZU_huang_peng
+#recruit_character = AZU_peng_dong
+#recruit_character = AZU_kong_fang
+#recruit_character = AZU_yang_lu
+#recruit_character = AZU_sun_li
+#recruit_character = AZU_wang_zuanxu
+#recruit_character = AZU_fu_zuoyi
+#recruit_character = AZU_qu_yangke
+#XSM
+#recruit_character = AZU_ma_bufang
+#recruit_character = AZU_ma_hongbin
+#recruit_character = AZU_mao_sun
+#recruit_character = AZU_hsia_sun
+#recruit_character = AZU_hsia_jin
+#recruit_character = AZU_au_yongrui
+#recruit_character = AZU_ho_tengfei
+#recruit_character = AZU_lian_zenguang
+#recruit_character = AZU_chun_minsheng
+#recruit_character = AZU_ma_donghai
+#recruit_character = AZU_ma_hongkui
+#recruit_character = AZU_wu_qi
+#recruit_character = AZU_keng_gui
+#recruit_character = AZU_may_chongan
+#recruit_character = AZU_keng_shoushan
+#recruit_character = AZU_ma_buqing
+#recruit_character = AZU_li_shiqun
+#recruit_character = AZU_fang_jing
+#recruit_character = AZU_zi_shen
+#YUN
+#recruit_character = AZU_long_yun
+#recruit_character = AZU_lu_han
+#recruit_character = AZU_mao_dong
+#recruit_character = AZU_cheng_peng
+#recruit_character = AZU_hsia_wu
+#recruit_character = AZU_liao_fang
+#recruit_character = AZU_luo_sun
+#recruit_character = AZU_huang_dong
+#recruit_character = AZU_zhang_wu
+#recruit_character = AZU_zhu_hu
+#recruit_character = AZU_li_jiang
+#recruit_character = AZU_chen_zhao
+#recruit_character = AZU_hu_wei
+#recruit_character = AZU_liu_zhao
+#recruit_character = AZU_liang_peng
+#recruit_character = AZU_pan_tian
+#recruit_character = AZU_wang_jiang
+#recruit_character = AZU_zhou_zhirou
+#recruit_character = AZU_liu_wenhui
+#recruit_character = AZU_ding_zhipan
+#GXC
+#recruit_character = AZU_li_zongren
+#recruit_character = AZU_chen_jitang
+#recruit_character = AZU_liu_peng
+#recruit_character = AZU_zhang_lu
+#recruit_character = AZU_li_ting
+#recruit_character = AZU_bai_yeung
+#recruit_character = AZU_heng_lo
+#recruit_character = AZU_yu_hanmou
+#recruit_character = AZU_zha_zemin
+#recruit_character = AZU_huo_duyi
+#recruit_character = AZU_niu_keung
+#recruit_character = AZU_bai_chongxi
+#recruit_character = AZU_teng_qingshan
+#recruit_character = AZU_do_liang
+#recruit_character = AZU_huang_shaohong
+#recruit_character = AZU_yang_hulin
+#recruit_character = AZU_wang_shuming
+#recruit_character = AZU_li_jishen
+#recruit_character = AZU_lei_zhong
 
 #장관진
 
 #무기 프리셋
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	# Destroyers #
-	create_equipment_variant = {
-		name = "Jianwei Class"			
-		type = ship_hull_light_1
-		name_group = AZU_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = empty
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = empty
-		}
+### Ship Variants ###
+# Destroyers #
+create_equipment_variant = {
+	name = "Jianwei Class"			
+	type = ship_hull_light_1
+	name_group = AZU_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = empty
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
 	}
-	# Light Cruisers #
-	create_equipment_variant = {
-		name = "Hairong Class"					# Hairong protected cruisers and Zhaohe, Yingrui training cruisers
-		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = AZU_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			mid_1_custom_slot = empty
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
+}
+# Light Cruisers #
+create_equipment_variant = {
+	name = "Hairong Class"					# Hairong protected cruisers and Zhaohe, Yingrui training cruisers
+	type = ship_hull_cruiser_coastal_defense_ship
+	name_group = AZU_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = empty
 	}
-	create_equipment_variant = {
-		name = "Haiqi Class"
-		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = AZU_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_medium_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			mid_1_custom_slot = empty
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Haiqi Class"
+	type = ship_hull_cruiser_coastal_defense_ship
+	name_group = AZU_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = empty
 	}
-	create_equipment_variant = {
-		name = "Ninghai Class"
-		type = ship_hull_cruiser_1
-		name_group = AZU_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = empty
-		}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Ninghai Class"
+	type = ship_hull_cruiser_1
+	name_group = AZU_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = empty
 	}
 }
 

@@ -15,6 +15,7 @@ focus_tree = {
 	shared_focus = IMA_shared_00005
 	shared_focus = IMA_shared_00006
 	shared_focus = IMA_shared_00007
+	shared_focus = IMA_DO001
 
 
 	#경제 중점
@@ -27,6 +28,9 @@ focus_tree = {
 		y = 0
 
 		ai_will_do = { factor = 50 }
+		allow_branch = {
+			always = no
+		}
 
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = IGM_12001 }
@@ -46,6 +50,9 @@ focus_tree = {
 		y = 0
 
 		ai_will_do = { factor = 10 }
+		allow_branch = {
+			always = no
+		}
 
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = IGM_11001 }
@@ -777,6 +784,9 @@ focus_tree = {
 		y = 0
 
 		ai_will_do = { factor = 30 }
+		allow_branch = {
+			always = no
+		}
 
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = IGM_22001 }
@@ -797,6 +807,9 @@ focus_tree = {
 
 		ai_will_do = { factor = 25 }
 		available = { always = no } #사라왁, 사바 나눈 뒤 이벤트 추가할 예정
+		allow_branch = {
+			always = no
+		}
 
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = IGM_21001 }
@@ -1083,6 +1096,9 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		available = { always = no }
+		allow_branch = {
+			always = no
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1269,6 +1285,9 @@ focus_tree = {
 		y = 0
 
 		ai_will_do = { factor = 30 }
+		allow_branch = {
+			always = no
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -1287,6 +1306,9 @@ focus_tree = {
 		y = 0
 
 		ai_will_do = { factor = 30 }
+		allow_branch = {
+			always = no
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -2263,385 +2285,20 @@ focus_tree = {
 
 	#정치 중점
 	focus = {
-		id = IGM_50001 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		x = 60
-		y = 0
-
-		ai_will_do = { factor = 30 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50101 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50001
-		x = -2
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50001 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50102 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50101
-		x = -1
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50101 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50103 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50101
-		x = 1
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50101 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50104 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50102
-		x = 1
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50102 }
-		prerequisite = { focus = IGM_50103 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50201 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50001
-		x = 2
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50001 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50202 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50201
-		x = -1
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50201 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50203 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50201
-		x = 1
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50201 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50204 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50202
-		x = 1
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50202 }
-		prerequisite = { focus = IGM_50203 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50301 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50001
-		x = 6
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50001 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50302 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50301
-		x = -1
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50301 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50303 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50301
-		x = 1
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50301 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50304 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50302
-		x = 1
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50302 }
-		prerequisite = { focus = IGM_50303 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50401 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50001
-		x = 10
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50001 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50402 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50401
-		x = -1
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50401 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50403 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50401
-		x = 1
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50401 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_50404 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 5
-
-		relative_position_id = IGM_50402
-		x = 1
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50402 }
-		prerequisite = { focus = IGM_50403 }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-		}
-	}
-
-	focus = {
-		id = IGM_51001 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 1
-
-		relative_position_id = IGM_50104
-		x = -1
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50104 }
-		mutually_exclusive = { focus = IGM_50002 }
-		available = { always = no }
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_51001"
-			custom_effect_tooltip = complete_national_focus_by_event_tt
-		}
-	}
-
-	focus = {
-		id = IGM_50002 #현대 무기 도입
-		icon = GFX_goal_unknown_underconstruction
-		cost = 1
-
-		relative_position_id = IGM_50104
-		x = 12
-		y = 1
-
-		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50104 }
-		mutually_exclusive = { focus = IGM_51001 }
-
-		available = { always = no }
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IGM_40001"
-			custom_effect_tooltip = complete_national_focus_by_event_tt
-		}
-	}
-
-	focus = {
 		id = IGM_51002 #본국과의 유대 강화
 		icon = GFX_goal_unknown_underconstruction
 		cost = 5
 
-		relative_position_id = IGM_51001
-		x = 0
+		relative_position_id = IMA_DO008
+		x = -2
 		y = 1
 
+		allow_branch = {
+			always = no
+		}
 		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_51001 }
+		prerequisite = { focus = IMA_DO008 }
+		
 		
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2655,12 +2312,15 @@ focus_tree = {
 		icon = GFX_goal_unknown_underconstruction
 		cost = 5
 
-		relative_position_id = IGM_50002
-		x = 0
+		relative_position_id = IMA_DO009
+		x = 8
 		y = 1
 
+		allow_branch = {
+			always = no
+		}
 		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50002 }
+		prerequisite = { focus = IMA_DO009 }
 		mutually_exclusive = { focus = IGM_50004 }
 
 		available_if_capitulated = yes
@@ -2675,12 +2335,15 @@ focus_tree = {
 		icon = GFX_goal_unknown_underconstruction
 		cost = 5
 
-		relative_position_id = IGM_50002
-		x = 5
+		relative_position_id = IMA_DO009
+		x = 11
 		y = 1
-
+		
+		allow_branch = {
+			always = no
+		}
 		ai_will_do = { factor = 30 }
-		prerequisite = { focus = IGM_50002 }
+		prerequisite = { focus = IMA_DO009 }
 		mutually_exclusive = { focus = IGM_50003 }
 
 		available_if_capitulated = yes
@@ -2774,7 +2437,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IGM_51004
-		x = 0
+		x = -1
 		y = 1
 
 		ai_will_do = { factor = 30 }

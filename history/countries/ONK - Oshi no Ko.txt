@@ -27,14 +27,9 @@ set_technology = {
 	tech_mountaineers = 1
 }
 if = {
-	limit = { has_BBA = yes }
+	limit = { has_BBA = no }
 	set_technology = {
-		iw_small_airframe = 1
-	}
-	else = {
-		set_technology = {
-			early_fighter = 1
-		}
+		early_fighter = 1
 	}
 }
 
@@ -60,6 +55,84 @@ add_dynamic_modifier = { modifier = ONK_army }
 add_dynamic_modifier = { modifier = ONK_navy }
 add_dynamic_modifier = { modifier = ONK_air_force }
 
+## ONK_industry
+
+## ONK_army
+set_variable = { ONK_army_experience_gain_army_factor = -0.30 }
+set_variable = { ONK_army_land_doctrine_cost_factor = 0.25 }
+set_variable = { ONK_army_army_org_factor = -0.15 }
+set_variable = { ONK_army_training_time_factor = 0.20 }
+set_variable = { ONK_army_supply_factor = -0.15 }
+set_variable = { ONK_army_planning_speed = -0.20 }
+set_variable = { ONK_army_army_morale_factor = -0.10 }
+set_variable = { ONK_army_max_planning_factor = -0.15 }
+set_variable = { ONK_army_command_power_gain_mult = -0.10 }
+set_variable = { ONK_army_army_leader_cost_factor = 0.50 }
+set_variable = { ONK_army_equipment_capture_factor = -0.50 }
+set_variable = { ONK_army_special_forces_cap = -0.25 }
+set_variable = { ONK_army_recon_factor = -0.15 }
+set_variable = { ONK_army_supply_consumption_factor = 0.10 }
+set_variable = { ONK_army_winter_attrition_factor = 0.10 }
+set_variable = { ONK_army_heat_attrition_factor = 0.10 }
+
+set_variable = { ONK_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { ONK_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { ONK_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { ONK_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { ONK_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { ONK_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { ONK_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { ONK_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { ONK_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## ONK_navy
+set_variable = { ONK_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { ONK_navy_naval_doctrine_cost_factor = 0.30 }
+set_variable = { ONK_navy_naval_detection = -0.20 }
+set_variable = { ONK_navy_navy_max_range_factor = -0.15 }
+set_variable = { ONK_navy_repair_speed_factor = -0.20 }
+set_variable = { ONK_navy_refit_speed = -0.20 }
+set_variable = { ONK_navy_amphibious_invasion = -0.25 }
+set_variable = { ONK_navy_naval_invasion_capacity = -5 }
+set_variable = { ONK_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { ONK_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { ONK_navy_naval_damage_factor = -0.10 }
+set_variable = { ONK_navy_naval_defense_factor = -0.10 }
+set_variable = { ONK_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { ONK_navy_naval_speed_factor = -0.10 }
+
+set_variable = { ONK_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { ONK_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { ONK_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { ONK_navy_build_cost_ic_screen_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { ONK_navy_build_cost_ic_submarine = 0.30 } ### 별도 국민정신 적용
+
+## ONK_air_force
+set_variable = { ONK_air_force_experience_gain_air_factor = -0.50 }
+set_variable = { ONK_air_force_air_doctrine_cost_factor = 0.40 }
+set_variable = { ONK_air_force_air_accidents_factor = 0.25 }
+set_variable = { ONK_air_force_air_mission_efficiency = -0.15 }
+set_variable = { ONK_air_force_air_training_xp_gain_factor = -0.30 }
+set_variable = { ONK_air_force_air_range_factor = -0.10 }
+set_variable = { ONK_air_force_air_ace_generation_chance_factor = -0.60 }
+set_variable = { ONK_air_force_air_superiority_efficiency = -0.20 }
+set_variable = { ONK_air_force_air_cas_efficiency = -0.25 }
+set_variable = { ONK_air_force_air_strategic_bomber_bombing_factor = -0.30 }
+set_variable = { ONK_air_force_air_intercept_efficiency = -0.15 }
+set_variable = { ONK_air_force_air_nav_efficiency = -0.20 }
+set_variable = { ONK_air_force_air_detection = -0.20 }
+set_variable = { ONK_air_force_air_agility_factor = -0.10 }
+
+set_variable = { ONK_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { ONK_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { ONK_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { ONK_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { ONK_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { ONK_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { ONK_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { ONK_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { ONK_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
+
 #외교
 
 #정치 
@@ -83,6 +156,8 @@ set_popularities = {
 	authoritariandemocracy = 8
 	autocracy = 46
 }
+set_rule = { can_not_declare_war = yes }
+country_lock_all_division_template = yes
 
 #의회
 
@@ -106,6 +181,76 @@ recruit_character = ONK_kamiki_hikaru
 recruit_character = ONK_kichijyouji_yoriko
 recruit_character = ONK_samejima_abiko
 recruit_character = ONK_tsukuyomi
+
+#recruit_character = ONK_boris_iii
+#recruit_character = ONK_georgi_dimitrov
+#recruit_character = ONK_nikola_mushanov
+#recruit_character = ONK_hristo_lukov
+#recruit_character = ONK_atanas_shalapatov
+#recruit_character = ONK_nikola_mihov
+#recruit_character = ONK_georgi_popov
+#recruit_character = ONK_vasil_boydev
+#recruit_character = ONK_ivan_markov
+#recruit_character = ONK_georgi_markov
+#recruit_character = ONK_asen_nikolov
+#recruit_character = ONK_konstantin_lukash
+#recruit_character = ONK_nikola_stoychev
+#recruit_character = ONK_damian_velchev
+#recruit_character = ONK_angel_dotsev
+#recruit_character = ONK_theodosi_daskalov
+#recruit_character = ONK_trifon_trifonov
+#recruit_character = ONK_sava_ivanov
+#recruit_character = ONK_vladimir_stoychev
+#recruit_character = ONK_stoyan_stoyanov
+#recruit_character = ONK_zachari_zachariev
+#recruit_character = ONK_stefan_tsanev
+#recruit_character = ONK_kiril_dimitrov_yanchulev
+#recruit_character = ONK_georgi_petsov
+#recruit_character = ONK_ivan_sapundzhiev
+#recruit_character = ONK_atanas_zhilkov
+#recruit_character = ONK_kiril_stanchev
+#recruit_character = ONK_ferdinand_kozovski
+#recruit_character = ONK_georgi_drenikov
+#recruit_character = ONK_stoyan_trendafilov
+#recruit_character = ONK_ivan_variklechkov
+#recruit_character = ONK_gancho_manchev
+#recruit_character = ONK_dimitr_ayryanov
+#recruit_character = ONK_nikola_hadzipetkov
+#recruit_character = ONK_asen_toshev
+#recruit_character = ONK_bogdan_filov_fascism
+#recruit_character = ONK_dobri_bozhilov
+#recruit_character = ONK_dimitrana_ivanova
+#recruit_character = ONK_bogdan_filov
+#recruit_character = ONK_stoycho_mushanov
+#recruit_character = ONK_aleksandar_tsankov
+#recruit_character = ONK_todor_pavlov
+#recruit_character = ONK_kimon_georgiev
+#recruit_character = ONK_ivan_dochev
+#recruit_character = ONK_georgi_ivanov_kyoseivanov
+#recruit_character = ONK_stefan_stefanov
+#recruit_character = ONK_nikola_zhekov
+#recruit_character = ONK_valko_chervenkov
+#recruit_character = ONK_vasil_kolarov
+#recruit_character = ONK_konstantin_muraviev
+#recruit_character = ONK_nikola_petkov
+
+#recruit_character = ONK_ferdinand_i #Starts as empty, can become country leader later
+#recruit_character = ONK_regency_council #Starts as empty, can become country leader later (tons of versions! :D)
+#recruit_character = ONK_nikola_nakov
+
+if = {
+	limit = { has_LaR = yes }
+	create_operative_leader = { #DLC
+		name = "Vladimir Zaimov"
+		GFX = GFX_portrait_bul_vladimir_zaimov
+		traits = { operative_infiltrator operative_commando }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ONK }
+	}
+	#recruit_character = ONK_stefan_nedev
+}
+
 
 #장관진
 add_ideas = {

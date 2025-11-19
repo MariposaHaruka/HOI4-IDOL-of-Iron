@@ -40,17 +40,14 @@ autonomy_state = {
 	}
 
 	allowed = {
-		if = {
-			limit = { has_dlc = "Waking the Tiger" }
-			OVERLORD = { 
-				is_fascism = yes
-			}
-			OVERLORD = { 
-				NOT = {
-					original_tag = ENS
-					original_tag = PRS
-					original_tag = BDG
-				}
+		OVERLORD = { 
+			is_fascism = yes
+		}
+		OVERLORD = { 
+			NOT = {
+				original_tag = ENS
+				original_tag = PRS
+				original_tag = BDG
 			}
 		}
 	}

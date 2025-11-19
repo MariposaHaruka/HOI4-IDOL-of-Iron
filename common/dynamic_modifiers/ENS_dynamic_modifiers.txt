@@ -1,19 +1,61 @@
 ENS_industry = {
 	enable = { always = yes }
 	icon = GFX_idea_ENS_dynamic_industry
-}
 
+	#임시
+	production_speed_buildings_factor = ENS_industry_production_speed_buildings_factor
+	industrial_capacity_factory = ENS_industry_industrial_capacity_factory
+	industrial_capacity_dockyard = ENS_industry_industrial_capacity_dockyard
+	research_speed_factor = ENS_industry_research_speed_factor
+	consumer_goods_factor = ENS_industry_consumer_goods_factor
+	state_resources_factor = ENS_industry_state_resources_factor
+	production_factory_max_efficiency_factor = ENS_industry_production_factory_max_efficiency_factor
+	production_factory_efficiency_gain_factor = ENS_industry_production_factory_efficiency_gain_factor
+	industry_repair_factor = ENS_industry_industry_repair_factor
+}
 ENS_army = {
 	enable = { always = yes }
 	icon = GFX_idea_ENS_dynamic_army
+
+	#더미 변수
+	#build_cost_ic_anti_air = ENS_army_build_cost_ic_anti_air
+	#build_cost_ic_anti_tank = ENS_army_build_cost_ic_anti_tank
+	#build_cost_ic_armor = ENS_army_build_cost_ic_armor
+	#build_cost_ic_artillery = ENS_army_build_cost_ic_artillery
+	#build_cost_ic_heavy_tank_chassis = ENS_army_build_cost_ic_heavy_tank_chassis
+	#build_cost_ic_infantry = ENS_army_build_cost_ic_infantry
+	#build_cost_ic_light_tank_chassis = ENS_army_build_cost_ic_light_tank_chassis
+	#build_cost_ic_mechanized = ENS_army_build_cost_ic_mechanized
+	#build_cost_ic_medium_tank_chassis = ENS_army_build_cost_ic_medium_tank_chassis
+	#build_cost_ic_motorized = ENS_army_build_cost_ic_motorized
+	#build_cost_ic_rocket = ENS_army_build_cost_ic_rocket
+	#build_cost_ic_support_equipment = ENS_army_build_cost_ic_support_equipment
 }
 
 ENS_navy = {
 	enable = { NOT = { has_country_flag = no_naval_academy } }
 	icon = GFX_idea_ENS_dynamic_naval
+
+	#더미 변수
+	#build_cost_ic_capital_ship = ENS_navy_build_cost_ic_capital_ship
+	#build_cost_ic_carrier = ENS_navy_build_cost_ic_carrier
+	#build_cost_ic_convoy = ENS_navy_build_cost_ic_convoy
+	#build_cost_ic_screen_ship = ENS_navy_build_cost_ic_screen_ship
+	#build_cost_ic_submarine = ENS_navy_build_cost_ic_submarine
 }
 
 ENS_air_force = {
 	enable = { NOT = { has_country_flag = no_air_academy } }
 	icon = GFX_idea_ENS_dynamic_airforce
+
+	#더미 변수
+	#build_cost_ic_air_transport = ENS_air_force_build_cost_ic_air_transport
+	#build_cost_ic_cas_bomber = ENS_air_force_build_cost_ic_cas_bomber
+	#build_cost_ic_fighter = ENS_air_force_build_cost_ic_fighter
+	#build_cost_ic_interceptor = ENS_air_force_build_cost_ic_interceptor
+	#build_cost_ic_tactical_bomber = ENS_air_force_build_cost_ic_tactical_bomber
+	#build_cost_ic_missile = ENS_air_force_build_cost_ic_missile
+	#build_cost_ic_naval_bomber = ENS_air_force_build_cost_ic_naval_bomber
+	#build_cost_ic_strat_bomber = ENS_air_force_build_cost_ic_strat_bomber
+	#build_cost_ic_suicide = ENS_air_force_build_cost_ic_suicide
 }

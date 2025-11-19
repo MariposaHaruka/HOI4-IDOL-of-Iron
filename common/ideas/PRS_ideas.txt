@@ -26,10 +26,28 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				drift_defence_factor = 0.5
+				political_power_factor = 0.05
+				conscription_factor = 0.02
+				training_time_army_factor = 0.1
+				production_speed_buildings_factor = 0.05
 			}
 		}
-		PRS_wehrmacht_problem = {
+		PRS_wehrmacht_problem_1 = {
+			name = PRS_wehrmacht_problem
+			picture = german_advisors
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.1
+				command_power_gain_mult = -0.1
+			}
+		}
+		PRS_wehrmacht_problem_2 = {
+			name = PRS_wehrmacht_problem
 			picture = german_advisors
 			allowed = {
 				always = no
@@ -39,7 +57,55 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				drift_defence_factor = 0.5
+				political_power_factor = -0.1
+				command_power_gain_mult = -0.1
+			}
+		}
+		PRS_wehrmacht_problem_3 = {
+			name = PRS_wehrmacht_problem
+			picture = german_advisors
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.1
+				command_power_gain_mult = -0.1
+			}
+		}
+		PRS_wehrmacht_problem_4 = {
+			name = PRS_wehrmacht_problem
+			picture = german_advisors
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.05
+				command_power_gain_mult = -0.1
+				experience_gain_air_factor = -0.1
+				experience_gain_army_factor = -0.1
+				experience_gain_navy_factor = -0.1
+				surrender_limit = -0.1
+				army_org_factor = -0.1
+			}
+		}
+		PRS_wehrmacht_problem_5 = {
+			name = PRS_wehrmacht_problem
+			picture = german_advisors
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.1
+				command_power_gain_mult = -0.1
 			}
 		}
 		PRS_rearmament_plan = {
@@ -52,7 +118,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				drift_defence_factor = 0.5
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				experience_gain_army_factor = 0.05
+				experience_gain_air_factor = 0.05
 			}
 		}
 	}
@@ -1441,7 +1510,7 @@ ideas = {
 				original_tag = PRS
 			}
 			visible = {
-				NOT = { has_completed_focus = GER_kriegslokomotiven }
+				NOT = { has_completed_focus = PRS_21411 }
 			}
 			cost = 150
 			research_bonus = {
@@ -1457,7 +1526,7 @@ ideas = {
 				original_tag = PRS
 			}
 			visible = {
-				has_completed_focus = GER_kriegslokomotiven
+				has_completed_focus = PRS_21411
 			}
 			cost = 150
 			research_bonus = {

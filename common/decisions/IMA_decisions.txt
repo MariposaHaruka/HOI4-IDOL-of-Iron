@@ -63,6 +63,7 @@ IMA_haruka_plan_category = {
 		}
 		available = {
 			check_variable = { IMA_available_WPA_works > 0 }
+			FROM = { check_variable = { IMA_WPA_state_worked < 3 } }
 		}
 		fire_only_once = yes
 		days_remove = 30
@@ -102,12 +103,12 @@ IMA_haruka_plan_category = {
 					subtract_from_variable = { IMA_WPA_worked = 5 }
 				}
 			}
-			
+			FROM = { add_to_variable = { IMA_WPA_state_worked = 1 } }
 			add_to_variable = { IMA_available_WPA_works = 1 }
 		}
 	}
 	IMA_haruka_plan_build_industrial_complex = {
-		priority = 15
+		priority = 14
 		icon = generic_construction
 		state_target = yes
 		on_map_mode = map_and_decisions_view
@@ -159,14 +160,8 @@ IMA_haruka_plan_category = {
 			add_to_variable = { IMA_available_WPA_works = 1 }
 		}
 	}
-	IMA_haruka_plan_build_dockyard = { #더미 디시전
-		priority = 1
-		allowed = { always = no }
-		visible = { always = no }
-		ai_will_do = { base = 0 }
-	}
 	IMA_haruka_plan_build_dockyard_119 = {
-		priority = 8
+		priority = 13
 		icon = generic_naval
 		allowed = { original_tag = IMA }
 		visible = { 
@@ -177,6 +172,7 @@ IMA_haruka_plan_category = {
 			IMA_is_bankrupt = no
 		}
 		fire_only_once = yes
+		days_remove = 30
 
 		ai_will_do = {
 			base = 50
@@ -189,7 +185,7 @@ IMA_haruka_plan_category = {
 			subtract_from_variable = { IMA_available_WPA_works = 1 }
 		}
 		remove_effect = {
-			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_haruka_plan_build_dockyard_119"
+			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_iori_plan_support_harland_wolff"
 			119 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -203,12 +199,15 @@ IMA_haruka_plan_category = {
 				tooltip = IMA_dept_add_tt
 			}
 			add_to_variable = { IMA_available_WPA_works = 1 }
-			custom_effect_tooltip = generic_line_break_tt
-			mio:IMA_harland_wolff_organization = { add_mio_size = 1 }
+			if = {
+				limit = { has_AAT = yes }
+				custom_effect_tooltip = generic_line_break_tt
+				mio:IMA_harland_wolff_organization = { add_mio_size = 1 }
+			}
 		}
 	}
 	IMA_haruka_plan_build_dockyard_121 = {
-		priority = 8
+		priority = 13
 		icon = generic_naval
 		allowed = { original_tag = IMA }
 		visible = { 
@@ -219,6 +218,7 @@ IMA_haruka_plan_category = {
 			IMA_is_bankrupt = no
 		}
 		fire_only_once = yes
+		days_remove = 30
 
 		ai_will_do = {
 			base = 50
@@ -245,12 +245,15 @@ IMA_haruka_plan_category = {
 				tooltip = IMA_dept_add_tt
 			}
 			add_to_variable = { IMA_available_WPA_works = 1 }
-			custom_effect_tooltip = generic_line_break_tt
-			mio:IMA_john_brown_organization = { add_mio_size = 1 }
+			if = {
+				limit = { has_AAT = yes }
+				custom_effect_tooltip = generic_line_break_tt
+				mio:IMA_john_brown_organization = { add_mio_size = 1 }
+			}
 		}
 	}
 	IMA_haruka_plan_build_dockyard_132 = {
-		priority = 8
+		priority = 13
 		icon = generic_naval
 		allowed = { original_tag = IMA }
 		visible = { 
@@ -261,6 +264,7 @@ IMA_haruka_plan_category = {
 			IMA_is_bankrupt = no
 		}
 		fire_only_once = yes
+		days_remove = 30
 
 		ai_will_do = {
 			base = 50
@@ -287,12 +291,15 @@ IMA_haruka_plan_category = {
 				tooltip = IMA_dept_add_tt
 			}
 			add_to_variable = { IMA_available_WPA_works = 1 }
-			custom_effect_tooltip = generic_line_break_tt
-			mio:IMA_cammell_laird_organization = { add_mio_size = 1 }
+			if = {
+				limit = { has_AAT = yes }
+				custom_effect_tooltip = generic_line_break_tt
+				mio:IMA_cammell_laird_organization = { add_mio_size = 1 }
+			}
 		}
 	}
 	IMA_haruka_plan_build_dockyard_931 = {
-		priority = 8
+		priority = 13
 		icon = generic_naval
 		allowed = { original_tag = IMA }
 		visible = { 
@@ -303,6 +310,7 @@ IMA_haruka_plan_category = {
 			IMA_is_bankrupt = no
 		}
 		fire_only_once = yes
+		days_remove = 30
 
 		ai_will_do = {
 			base = 50
@@ -329,289 +337,59 @@ IMA_haruka_plan_category = {
 				tooltip = IMA_dept_add_tt
 			}
 			add_to_variable = { IMA_available_WPA_works = 1 }
+			if = {
+				limit = { has_AAT = yes }
+				custom_effect_tooltip = generic_line_break_tt
+				mio:IMA_yarrow_shipbuilders_organization = { add_mio_size = 1 }
+			}
+		}
+	}
+	IMA_haruka_plan_support_colliery = { 
+		priority = 12
+		icon = generic_factory
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		allowed = { original_tag = IMA }
+		target_array = IMA.core_states
+		target_trigger = { 
+			FROM = { is_fully_controlled_by = ROOT } 
+			FROM = { is_core_of = IMA }
+			FROM = { IMA_support_colliery_required = yes }
+		}
+		visible = { 
+			owns_state = FROM
+			has_completed_focus = IMA_11013
+			NOT = { has_completed_focus = IMA_51013 }
+			NOT = { has_completed_focus = IMA_51014 }
+			IMA_is_bankrupt = no
+		}
+		available = {
+			check_variable = { IMA_available_WPA_works > 0 }
+		}
+		fire_only_once = yes
+		days_remove = 30
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 0
+				check_variable = { IMA_debt > 180 }
+			}
+		}
+		complete_effect = {
+			subtract_from_variable = { IMA_available_WPA_works = 1 }
+		}
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_haruka_plan_support_colliery"
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
 			custom_effect_tooltip = generic_line_break_tt
-			mio:IMA_yarrow_shipbuilders_organization = { add_mio_size = 1 }
-		}
-	}
-	IMA_haruka_plan_support_colliery = { #더미 디시전
-		priority = 1
-		allowed = { always = no }
-		visible = { always = no }
-		ai_will_do = { base = 0 }
-	}
-	IMA_haruka_plan_support_colliery_122 = {
-		priority = 13
-		icon = generic_factory
-		allowed = { original_tag = IMA }
-		visible = { 
-			122 = { is_fully_controlled_by = ROOT }
-			has_completed_focus = IMA_11013
-			NOT = { has_completed_focus = IMA_51013 }
-			NOT = { has_completed_focus = IMA_51014 }
-			IMA_is_bankrupt = no
-		}
-		fire_only_once = yes
-
-		ai_will_do = {
-			base = 50
-			modifier = {
-				factor = 0
-				check_variable = { IMA_debt > 180 }
-			}
-		}
-		complete_effect = {
-			subtract_from_variable = { IMA_available_WPA_works = 1 }
-		}
-		remove_effect = {
-			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_haruka_plan_support_colliery_122"
-			122 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_to_variable = {
-				IMA_debt = 0.2
-				tooltip = IMA_dept_add_tt
-			}
-			add_to_variable = { IMA_available_WPA_works = 1 }
-		}
-	}
-	IMA_haruka_plan_support_colliery_131 = {
-		priority = 13
-		icon = generic_factory
-		allowed = { original_tag = IMA }
-		visible = { 
-			131 = { is_fully_controlled_by = ROOT }
-			has_completed_focus = IMA_11013
-			NOT = { has_completed_focus = IMA_51013 }
-			NOT = { has_completed_focus = IMA_51014 }
-			IMA_is_bankrupt = no
-		}
-		fire_only_once = yes
-
-		ai_will_do = {
-			base = 50
-			modifier = {
-				factor = 0
-				check_variable = { IMA_debt > 180 }
-			}
-		}
-		complete_effect = {
-			subtract_from_variable = { IMA_available_WPA_works = 1 }
-		}
-		remove_effect = {
-			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_haruka_plan_support_colliery_131"
-			131 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_to_variable = {
-				IMA_debt = 0.2
-				tooltip = IMA_dept_add_tt
-			}
-			add_to_variable = { IMA_available_WPA_works = 1 }
-		}
-	}
-	IMA_haruka_plan_support_colliery_129 = {
-		priority = 13
-		icon = generic_factory
-		allowed = { original_tag = IMA }
-		visible = { 
-			129 = { is_fully_controlled_by = ROOT }
-			has_completed_focus = IMA_11013
-			NOT = { has_completed_focus = IMA_51013 }
-			NOT = { has_completed_focus = IMA_51014 }
-			IMA_is_bankrupt = no
-		}
-		fire_only_once = yes
-
-		ai_will_do = {
-			base = 50
-			modifier = {
-				factor = 0
-				check_variable = { IMA_debt > 180 }
-			}
-		}
-		complete_effect = {
-			subtract_from_variable = { IMA_available_WPA_works = 1 }
-		}
-		remove_effect = {
-			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_haruka_plan_support_colliery_129"
-			129 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_to_variable = {
-				IMA_debt = 0.2
-				tooltip = IMA_dept_add_tt
-			}
-			add_to_variable = { IMA_available_WPA_works = 1 }
-		}
-	}
-	IMA_haruka_plan_support_colliery_130 = {
-		priority = 13
-		icon = generic_factory
-		allowed = { original_tag = IMA }
-		visible = { 
-			130 = { is_fully_controlled_by = ROOT }
-			has_completed_focus = IMA_11013
-			NOT = { has_completed_focus = IMA_51013 }
-			NOT = { has_completed_focus = IMA_51014 }
-			IMA_is_bankrupt = no
-		}
-		fire_only_once = yes
-
-		ai_will_do = {
-			base = 50
-			modifier = {
-				factor = 0
-				check_variable = { IMA_debt > 180 }
-			}
-		}
-		complete_effect = {
-			subtract_from_variable = { IMA_available_WPA_works = 1 }
-		}
-		remove_effect = {
-			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_haruka_plan_support_colliery_130"
-			130 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_to_variable = {
-				IMA_debt = 0.2
-				tooltip = IMA_dept_add_tt
-			}
-			add_to_variable = { IMA_available_WPA_works = 1 }
-		}
-	}
-	IMA_haruka_plan_support_colliery_127 = {
-		priority = 13
-		icon = generic_factory
-		allowed = { original_tag = IMA }
-		visible = { 
-			127 = { is_fully_controlled_by = ROOT }
-			has_completed_focus = IMA_11013
-			NOT = { has_completed_focus = IMA_51013 }
-			NOT = { has_completed_focus = IMA_51014 }
-			IMA_is_bankrupt = no
-		}
-		fire_only_once = yes
-
-		ai_will_do = {
-			base = 50
-			modifier = {
-				factor = 0
-				check_variable = { IMA_debt > 180 }
-			}
-		}
-		complete_effect = {
-			subtract_from_variable = { IMA_available_WPA_works = 1 }
-		}
-		remove_effect = {
-			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_haruka_plan_support_colliery_127"
-			127 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_to_variable = {
-				IMA_debt = 0.2
-				tooltip = IMA_dept_add_tt
-			}
-			add_to_variable = { IMA_available_WPA_works = 1 }
-		}
-	}
-	IMA_haruka_plan_support_colliery_931 = {
-		priority = 13
-		icon = generic_factory
-		allowed = { original_tag = IMA }
-		visible = { 
-			931 = { is_fully_controlled_by = ROOT }
-			has_completed_focus = IMA_11013
-			NOT = { has_completed_focus = IMA_51013 } 
-			NOT = { has_completed_focus = IMA_51014 }
-			IMA_is_bankrupt = no 
-		}
-		fire_only_once = yes
-
-		ai_will_do = {
-			base = 50
-			modifier = {
-				factor = 0
-				check_variable = { IMA_debt > 180 }
-			}
-		}
-		complete_effect = {
-			subtract_from_variable = { IMA_available_WPA_works = 1 }
-		}
-		remove_effect = {
-			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_haruka_plan_support_colliery_931"
-			931 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_to_variable = {
-				IMA_debt = 0.2
-				tooltip = IMA_dept_add_tt
-			}
-			add_to_variable = { IMA_available_WPA_works = 1 }
-		}
-	}
-	IMA_haruka_plan_support_colliery_128 = {
-		priority = 13
-		icon = generic_factory
-		allowed = { original_tag = IMA }
-		visible = { 
-			128 = { is_fully_controlled_by = ROOT }
-			has_completed_focus = IMA_11013
-			NOT = { has_completed_focus = IMA_51013 }
-			NOT = { has_completed_focus = IMA_51014 }
-			IMA_is_bankrupt = no
-		}
-		fire_only_once = yes
-
-		ai_will_do = {
-			base = 50
-			modifier = {
-				factor = 0
-				check_variable = { IMA_debt > 180 }
-			}
-		}
-		complete_effect = {
-			subtract_from_variable = { IMA_available_WPA_works = 1 }
-		}
-		remove_effect = {
-			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_haruka_plan_support_colliery_128"
-			128 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
 			add_to_variable = {
 				IMA_debt = 0.2
 				tooltip = IMA_dept_add_tt
@@ -620,7 +398,7 @@ IMA_haruka_plan_category = {
 		}
 	}
 	IMA_haruka_plan_support_farmer_society = {
-		priority = 12
+		priority = 11
 		icon = generic_construction
 		state_target = yes
 		on_map_mode = map_and_decisions_view
@@ -634,7 +412,7 @@ IMA_haruka_plan_category = {
 		}
 		visible = { 
 			owns_state = FROM
-			has_completed_focus = IMA_11004
+			has_completed_focus = IMA_11014
 			NOT = { has_completed_focus = IMA_51013 }
 			NOT = { has_completed_focus = IMA_51014 }
 			IMA_is_bankrupt = no
@@ -675,7 +453,7 @@ IMA_haruka_plan_category = {
 		}
 	}
 	IMA_haruka_plan_taxable_income_investigate  = {
-		priority = 1
+		priority = 10
 		icon = ger_mefo_bills
 		allowed = { original_tag = IMA }
 		visible = { 
@@ -683,8 +461,8 @@ IMA_haruka_plan_category = {
 			NOT = { has_completed_focus = IMA_51013 }
 			NOT = { has_completed_focus = IMA_51014 }
 			IMA_is_bankrupt = no
-			NOT = { has_country_flag = IMA_recent_taxable_income_investigate }
 		}
+		days_remove = 365
 
 		ai_will_do = {
 			base = 50
@@ -693,17 +471,14 @@ IMA_haruka_plan_category = {
 				check_variable = { IMA_debt < 150 }
 			}
 		}
+		complete_effect = {
+			add_stability = -0.05
+		}
 		remove_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_haruka_plan_taxable_income_investigate"
-			add_stability = -0.05
-			custom_effect_tooltip = generic_line_break_tt
 			subtract_from_variable= {
 				IMA_debt = 10
 				tooltip = IMA_dept_subtract_tt
-			}
-			set_country_flag = { 
-				flag = IMA_recent_taxable_income_investigate
-				days = 365
 			}
 		}
 	}
@@ -1067,6 +842,272 @@ IMA_iori_plan_category = {
 		}
 		
 	}
+	IMA_iori_plan_support_harland_wolff = {
+		priority = 13
+		icon = generic_naval
+		allowed = { original_tag = IMA }
+		visible = { 
+			119 = { is_fully_controlled_by = ROOT }
+			has_completed_focus = IMA_12015
+			NOT = { has_completed_focus = IMA_51013 }
+			NOT = { has_completed_focus = IMA_51014 }
+			IMA_is_bankrupt = no
+		}
+		fire_only_once = yes
+		days_remove = 30
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 0
+				check_variable = { IMA_debt > 180 }
+			}
+		}
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_iori_plan_support_harland_wolff"
+			119 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_to_variable = {
+				IMA_debt = 0.2
+				tooltip = IMA_dept_add_tt
+			}
+			if = {
+				limit = { has_AAT = yes }
+				custom_effect_tooltip = generic_line_break_tt
+				mio:IMA_harland_wolff_organization = { add_mio_size = 1 }
+			}
+		}
+	}
+	IMA_iori_plan_support_john_brown = {
+		priority = 13
+		icon = generic_naval
+		allowed = { original_tag = IMA }
+		visible = { 
+			121 = { is_fully_controlled_by = ROOT }
+			has_completed_focus = IMA_12015
+			NOT = { has_completed_focus = IMA_51013 }
+			NOT = { has_completed_focus = IMA_51014 }
+			IMA_is_bankrupt = no
+		}
+		fire_only_once = yes
+		days_remove = 30
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 0
+				check_variable = { IMA_debt > 180 }
+			}
+		}
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_iori_plan_support_john_brown"
+			121 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_to_variable = {
+				IMA_debt = 0.2
+				tooltip = IMA_dept_add_tt
+			}
+			if = {
+				limit = { has_AAT = yes }
+				custom_effect_tooltip = generic_line_break_tt
+				mio:IMA_john_brown_organization = { add_mio_size = 1 }
+			}
+		}
+	}
+	IMA_iori_plan_support_cammell_laird = {
+		priority = 13
+		icon = generic_naval
+		allowed = { original_tag = IMA }
+		visible = { 
+			132 = { is_fully_controlled_by = ROOT }
+			has_completed_focus = IMA_12015
+			NOT = { has_completed_focus = IMA_51013 }
+			NOT = { has_completed_focus = IMA_51014 }
+			IMA_is_bankrupt = no
+		}
+		fire_only_once = yes
+		days_remove = 30
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 0
+				check_variable = { IMA_debt > 180 }
+			}
+		}
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_iori_plan_support_cammell_laird"
+			132 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_to_variable = {
+				IMA_debt = 0.2
+				tooltip = IMA_dept_add_tt
+			}
+			if = {
+				limit = { has_AAT = yes }
+				custom_effect_tooltip = generic_line_break_tt
+				mio:IMA_cammell_laird_organization = { add_mio_size = 1 }
+			}
+		}
+	}
+	IMA_iori_plan_support_yarrow = {
+		priority = 13
+		icon = generic_naval
+		allowed = { original_tag = IMA }
+		visible = { 
+			931 = { is_fully_controlled_by = ROOT }
+			has_completed_focus = IMA_12015
+			NOT = { has_completed_focus = IMA_51013 }
+			NOT = { has_completed_focus = IMA_51014 }
+			IMA_is_bankrupt = no
+		}
+		fire_only_once = yes
+		days_remove = 30
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 0
+				check_variable = { IMA_debt > 180 }
+			}
+		}
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove IMA_iori_plan_support_yarrow"
+			931 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_to_variable = {
+				IMA_debt = 0.2
+				tooltip = IMA_dept_add_tt
+			}
+			if = {
+				limit = { has_AAT = yes }
+				custom_effect_tooltip = generic_line_break_tt
+				mio:IMA_yarrow_shipbuilders_organization = { add_mio_size = 1 }
+			}
+		}
+	}
+}
+
+IMA_imperial_federation_category = {
+	IMA_imperial_federation_abolish_statute = {
+		priority = 9
+		icon = GFX_decision_generic_fundraising
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = { original_tag = IMA }
+		available = { 
+			always = yes
+		}
+		target_trigger = {
+			exists = yes
+		}
+		visible = { 
+			has_completed_focus = IMA_41005
+			FROM = { 
+				is_subject_of = IMA 
+				has_autonomy_state = ima_westminster_dominion
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+
+		remove_effect = {
+			IMA = { 
+				set_autonomy = {
+					target = FROM
+					autonomy_state = ima_dominion
+				}
+				add_autonomy_score = { value = -30 }
+				add_stability = -0.03
+			}
+			FROM = {
+				remove_ideas =  IMA_westminster_statute
+			}
+		}
+	}
+	IMA_imperial_federation_gold_integrate = {
+		priority = 9
+		icon = GFX_decision_generic_fundraising
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = { original_tag = IMA }
+		available = { 
+			NOT = { has_idea = IMA_41005_idea_IMA }
+		}
+		target_trigger = {
+			exists = yes
+		}
+		visible = { 
+			has_completed_focus = IMA_41005
+			FROM = { 
+				is_subject_of = IMA 
+				NOT = { has_autonomy_state = ima_westminster_dominion }
+			}
+		}
+
+		fire_only_once = no
+		cost = 50
+		days_remove = 30
+
+		
+		
+		remove_effect = {
+			FROM = { 
+				add_timed_idea = {
+					idea = IMA_41005_idea_colony
+					days = 100
+				}
+				add_autonomy_score = { value = -30 }
+				add_stability = -0.03
+			}
+			IMA = {
+				add_timed_idea = {
+					idea = IMA_41005_idea_IMA
+					days = 100
+				}
+				custom_effect_tooltip = IMA_industry_tt
+				add_to_variable = {
+					IMA_industry_consumer_goods_factor = -0.03
+					tooltip = consumer_goods_factor_tt
+				}
+				add_to_variable = {
+					IMA_industry_industrial_capacity_factory = 0.01
+					tooltip = industrial_capacity_factory_tt
+				}
+			}
+		}
+	}
+	IMA_imperial_federation_develop_colony
 }
 
 IMA_westminster_statute_category = {
@@ -1087,7 +1128,6 @@ IMA_westminster_statute_category = {
 			exists = yes
 		}
 		visible = { 
-			NOT = { has_completed_focus = IMA_42008 }
 			FROM = { 
 				is_subject_of = IMA
 				any_core_state = {
@@ -1107,7 +1147,7 @@ IMA_westminster_statute_category = {
 
 		fire_only_once = no
 		cost = 0
-		days_remove = 30
+		days_remove = IMA_westminster_statute_var
 
 		remove_effect = {
 			FROM = {
@@ -1156,7 +1196,6 @@ IMA_westminster_statute_category = {
 			exists = yes
 		}
 		visible = { 
-			NOT = { has_completed_focus = IMA_42008 }
 			FROM = { 
 				is_subject_of = IMA
 				any_core_state = {
@@ -1175,7 +1214,7 @@ IMA_westminster_statute_category = {
 
 		fire_only_once = no
 		cost = 0
-		days_remove = 30
+		days_remove = IMA_westminster_statute_var
 
 		remove_effect = {
 			FROM = {
@@ -1224,7 +1263,6 @@ IMA_westminster_statute_category = {
 			exists = yes
 		}
 		visible = { 
-			NOT = { has_completed_focus = IMA_42008 }
 			FROM = { 
 				is_subject_of = IMA
 				any_core_state = {
@@ -1243,7 +1281,7 @@ IMA_westminster_statute_category = {
 
 		fire_only_once = no
 		cost = 0
-		days_remove = 30
+		days_remove = IMA_westminster_statute_var
 
 		remove_effect = {
 			FROM = {
@@ -1292,7 +1330,6 @@ IMA_westminster_statute_category = {
 			exists = yes
 		}
 		visible = { 
-			NOT = { has_completed_focus = IMA_42008 }
 			FROM = { 
 				is_subject_of = IMA
 				any_core_state = {
@@ -1312,7 +1349,7 @@ IMA_westminster_statute_category = {
 
 		fire_only_once = no
 		cost = 0
-		days_remove = 30
+		days_remove = IMA_westminster_statute_var
 
 		remove_effect = {
 			FROM = {
@@ -1335,270 +1372,6 @@ IMA_westminster_statute_category = {
 				}
 				add_autonomy_score = {
 					value = 7
-				}
-			}
-			IMA = {
-				add_to_variable = {
-					IMA_debt = 0.3
-					tooltip = IMA_dept_add_tt
-				}
-			}
-		}
-	}
-	IMA_westminster_statute_construct_infrastructure_improved = {
-		priority = 1
-		icon = GFX_decision_generic_construction
-		ai_will_do = {
-			base = 2
-			modifier = {
-				check_variable = { IMA_debt > 180 }
-				factor = 0
-			}
-		}
-
-		allowed = { original_tag = IMA }
-		available = { always = yes }
-		target_trigger = {
-			exists = yes
-		}
-		visible = { 
-			has_completed_focus = IMA_42008
-			country_exists = FROM
-			FROM = { 
-				is_subject_of = IMA
-				any_core_state = {
-					is_controlled_by = FROM
-					NOT = { 
-						has_state_category = tiny_island
-						has_state_category = small_island
-					}
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-					}
-				} 
-			}
-		}
-
-		fire_only_once = no
-		cost = 0
-		days_remove = 20
-
-		remove_effect = {
-			FROM = {
-				random_core_state = {
-					limit = {
-						is_controlled_by = FROM
-						impassable = no
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 2
-				}
-			}
-			IMA = {
-				add_to_variable = {
-					IMA_debt = 0.2
-					tooltip = IMA_dept_add_tt
-				}
-			}
-		}
-	}
-	IMA_westminster_statute_support_civil_factory_improved = {
-		priority = 1
-		icon = GFX_decision_generic_factory
-		ai_will_do = {
-			base = 2
-			modifier = {
-				check_variable = { IMA_debt > 180 }
-				factor = 0
-			}
-		}
-
-		allowed = { original_tag = IMA }
-		available = { always = yes }
-		target_trigger = {
-			exists = yes
-		}
-		visible = { 
-			has_completed_focus = IMA_42008
-			country_exists = FROM
-			FROM = { 
-				is_subject_of = IMA
-				any_core_state = {
-					is_controlled_by = FROM
-					NOT = { 
-						has_state_category = tiny_island
-						has_state_category = small_island
-					}
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
-				} 
-			}
-		}
-
-		fire_only_once = no
-		cost = 0
-		days_remove = 20
-
-		remove_effect = {
-			FROM = {
-				random_core_state = {
-					limit = {
-						is_controlled_by = FROM
-						impassable = no
-						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			IMA = {
-				add_to_variable = {
-					IMA_debt = 0.2
-					tooltip = IMA_dept_add_tt
-				}
-			}
-		}
-	}
-	IMA_westminster_statute_support_military_factory_improved = {
-		priority = 1
-		icon = GFX_decision_generic_factory
-		ai_will_do = {
-			base = 2
-			modifier = {
-				check_variable = { IMA_debt > 180 }
-				factor = 0
-			}
-		}
-
-		allowed = { original_tag = IMA }
-		available = { always = yes }
-		target_trigger = {
-			exists = yes
-		}
-		visible = { 
-			has_completed_focus = IMA_42008
-			FROM = { 
-				is_subject_of = IMA
-				any_core_state = {
-					is_controlled_by = FROM
-					NOT = { 
-						has_state_category = tiny_island
-						has_state_category = small_island
-					}
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-					}
-				} 
-			}
-		}
-
-		fire_only_once = no
-		cost = 0
-		days_remove = 20
-
-		remove_effect = {
-			FROM = {
-				random_core_state = {
-					limit = {
-						is_controlled_by = FROM
-						impassable = no
-						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			IMA = {
-				add_to_variable = {
-					IMA_debt = 0.2
-					tooltip = IMA_dept_add_tt
-				}
-			}
-		}
-	}
-	IMA_westminster_statute_support_dockyard_improved = {
-		priority = 1
-		icon = GFX_decision_generic_merge_plant_ship
-		ai_will_do = {
-			base = 1.5
-			modifier = {
-				check_variable = { IMA_debt > 180 }
-				factor = 0
-			}
-		}
-
-		allowed = { original_tag = IMA }
-		available = { always = yes }
-		target_trigger = {
-			exists = yes
-		}
-		visible = { 
-			has_completed_focus = IMA_42008
-			FROM = { 
-				is_subject_of = IMA
-				any_core_state = {
-					is_controlled_by = FROM
-					is_coastal = yes
-					NOT = { 
-						has_state_category = tiny_island
-						has_state_category = small_island
-					}
-					free_building_slots = {
-						building = dockyard
-						size > 1
-					}
-				} 
-			}
-		}
-
-		fire_only_once = no
-		cost = 0
-		days_remove = 20
-
-		remove_effect = {
-			FROM = {
-				random_core_state = {
-					limit = {
-						is_controlled_by = FROM
-						impassable = no
-						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
-						is_coastal = yes
-					}
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
 				}
 			}
 			IMA = {
@@ -1670,7 +1443,7 @@ IMA_foreign_defence_plan_category = {
 }
 
 IMA_intervension_plan_category = {
-	IMA_topple_AIN = {
+	IMA_intervension_plan_topple_AIN = {
 		priority = 1
 		icon = generic_tank
 		ai_will_do = { #Integrated republics go after puppets
@@ -1699,7 +1472,7 @@ IMA_intervension_plan_category = {
 			}
 		}
 	}
-	IMA_topple_HND = {
+	IMA_intervension_plan_topple_HND = {
 		priority = 1
 		icon = generic_tank
 		ai_will_do = { #Integrated republics go after puppets
@@ -1729,7 +1502,7 @@ IMA_intervension_plan_category = {
 			}
 		}
 	}
-	IMA_topple_NPT = {
+	IMA_intervension_plan_topple_NPT = {
 		priority = 1
 		icon = generic_tank
 		ai_will_do = { #Integrated republics go after puppets
@@ -1758,7 +1531,7 @@ IMA_intervension_plan_category = {
 			}
 		}
 	}
-	IMA_topple_TSS = {
+	IMA_intervension_plan_topple_TSS = {
 		priority = 1
 		icon = generic_tank
 		ai_will_do = { #Integrated republics go after puppets
@@ -1787,7 +1560,7 @@ IMA_intervension_plan_category = {
 			}
 		}
 	}
-	IMA_topple_DIF = {
+	IMA_intervension_plan_topple_DIF = {
 		priority = 1
 		icon = generic_tank
 		ai_will_do = { #Integrated republics go after puppets
@@ -1816,7 +1589,7 @@ IMA_intervension_plan_category = {
 			}
 		}
 	}
-	IMA_topple_EXT = {
+	IMA_intervension_plan_topple_EXT = {
 		priority = 1
 		icon = generic_tank
 		ai_will_do = { #Integrated republics go after puppets
@@ -1845,7 +1618,7 @@ IMA_intervension_plan_category = {
 			}
 		}
 	}
-	IMA_topple_ONS = {
+	IMA_intervension_plan_topple_ONS = {
 		priority = 1
 		icon = generic_tank
 		ai_will_do = { #Integrated republics go after puppets
@@ -1874,7 +1647,7 @@ IMA_intervension_plan_category = {
 			}
 		}
 	}
-	IMA_topple_SZS = {
+	IMA_intervension_plan_topple_SZS = {
 		priority = 1
 		icon = generic_tank
 		ai_will_do = { #Integrated republics go after puppets
@@ -1903,7 +1676,7 @@ IMA_intervension_plan_category = {
 			}
 		}
 	}
-	IMA_topple_MMM = {
+	IMA_intervension_plan_topple_MMM = {
 		priority = 1
 		icon = generic_tank
 		ai_will_do = { #Integrated republics go after puppets
@@ -1939,7 +1712,7 @@ IMA_idolmaster_conference_category = {
 }
 
 IMA_foreign_defence_plan_category = {
-	IMA_foreign_defence_plan_category_embargo = {
+	IMA_foreign_defence_plan_embargo = {
 		priority = 10
 		icon = GFX_decision_generic_construction
 		ai_will_do = {
@@ -1979,21 +1752,86 @@ IMA_foreign_defence_plan_category = {
 			}
 		}
 	}
-}
-
-IMA_idol_committee_category = {
-	IMA_idol_committee_category_IMA_amami_haruka = {
-		priority = 10
-		icon = GFX_decision_eng_trade_unions_support
+	IMA_foreign_defence_plan_wartime_gold_lease = {
+		priority = 9
+		icon = GFX_decision_generic_fundraising
 		ai_will_do = {
 			base = 10
 		}
 
 		allowed = { original_tag = IMA }
 		available = { always = yes }
+		target_trigger = {
+			exists = yes
+		}
+		visible = { 
+			has_completed_focus = IMA_11019
+			FROM = { 
+				OR = { 
+					is_in_faction_with = IMA
+					is_subject_of = IMA 
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+
+		
+		complete_effect = {
+			FROM = { 
+				add_timed_idea = {
+					idea = IMA_11019_idea
+					days = 200
+				}
+			}
+			IMA = {
+				custom_effect_tooltip = IMA_industry_tt
+				add_to_variable = {
+					IMA_industry_consumer_goods_factor = 0.05
+					tooltip = consumer_goods_factor_tt
+				}
+				add_to_variable = {
+					IMA_industry_industrial_capacity_factory = -0.02
+					tooltip = industrial_capacity_factory_tt
+				}
+			}
+		}
+		remove_effect = {
+			IMA = {
+				custom_effect_tooltip = IMA_industry_tt
+				add_to_variable = {
+					IMA_industry_consumer_goods_factor = -0.03
+					tooltip = consumer_goods_factor_tt
+				}
+				add_to_variable = {
+					IMA_industry_industrial_capacity_factory = 0.01
+					tooltip = industrial_capacity_factory_tt
+				}
+			}
+		}
+	}
+}
+
+IMA_idol_committee_category = {
+	IMA_idol_committee_category_IMA_amami_haruka = { #나올 수 없는 디시전
+		priority = 10
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = no
+			}
+		}
+
+		allowed = { original_tag = IMA }
+		available = { always = yes }
 		visible = { 
 			has_completed_focus = IMA_51015
-			IMA_amami_haruka = { is_country_leader = yes } #재복귀 루트는 없으니 있어야 하는 조건
+			IMA_amami_haruka = { is_country_leader = no }
+			has_country_flag = IMA_haruka_exist #하루카가 실각하면 다시 돌아올 수 없는 이유
 			NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
 		}
 
@@ -2012,6 +1850,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2043,6 +1885,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2110,6 +1956,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2177,6 +2027,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2208,6 +2062,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2275,6 +2133,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2306,6 +2168,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2373,6 +2239,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2440,6 +2310,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2471,6 +2345,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2502,6 +2380,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2533,6 +2415,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2600,6 +2486,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2667,6 +2557,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }
@@ -2734,6 +2628,10 @@ IMA_idol_committee_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 		allowed = { original_tag = IMA }

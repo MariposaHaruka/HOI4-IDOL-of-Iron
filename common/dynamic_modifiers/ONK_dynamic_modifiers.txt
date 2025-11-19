@@ -2,18 +2,99 @@ ONK_industry = {
 	enable = { always = yes }
 	icon = GFX_idea_ONK_dynamic_industry
 }
-
 ONK_army = {
 	enable = { always = yes }
 	icon = GFX_idea_ONK_dynamic_army
+
+	#임시
+	experience_gain_army_factor = ONK_army_experience_gain_army_factor
+	land_doctrine_cost_factor = ONK_army_land_doctrine_cost_factor
+	army_org_factor = ONK_army_army_org_factor
+	training_time_factor = ONK_army_training_time_factor
+	supply_factor = ONK_army_supply_factor
+	planning_speed = ONK_army_planning_speed
+	army_morale_factor = ONK_army_army_morale_factor
+	max_planning_factor = ONK_army_max_planning_factor
+	command_power_gain_mult = ONK_army_command_power_gain_mult
+	army_leader_cost_factor = ONK_army_army_leader_cost_factor
+	equipment_capture_factor = ONK_army_equipment_capture_factor
+	special_forces_cap = ONK_army_special_forces_cap
+	recon_factor = ONK_army_recon_factor
+	supply_consumption_factor = ONK_army_supply_consumption_factor
+	winter_attrition_factor = ONK_army_winter_attrition_factor
+	heat_attrition_factor = ONK_army_heat_attrition_factor
+
+	#더미 변수
+	#build_cost_ic_anti_air = ONK_army_build_cost_ic_anti_air
+	#build_cost_ic_anti_tank = ONK_army_build_cost_ic_anti_tank
+	#build_cost_ic_armor = ONK_army_build_cost_ic_armor
+	#build_cost_ic_artillery = ONK_army_build_cost_ic_artillery
+	#build_cost_ic_heavy_tank_chassis = ONK_army_build_cost_ic_heavy_tank_chassis
+	#build_cost_ic_infantry = ONK_army_build_cost_ic_infantry
+	#build_cost_ic_light_tank_chassis = ONK_army_build_cost_ic_light_tank_chassis
+	#build_cost_ic_mechanized = ONK_army_build_cost_ic_mechanized
+	#build_cost_ic_medium_tank_chassis = ONK_army_build_cost_ic_medium_tank_chassis
+	#build_cost_ic_motorized = ONK_army_build_cost_ic_motorized
+	#build_cost_ic_rocket = ONK_army_build_cost_ic_rocket
+	#build_cost_ic_support_equipment = ONK_army_build_cost_ic_support_equipment
 }
 
 ONK_navy = {
 	enable = { NOT = { has_country_flag = no_naval_academy } }
 	icon = GFX_idea_ONK_dynamic_naval
+
+	#임시
+	experience_gain_navy_factor = ONK_navy_experience_gain_navy_factor
+	naval_doctrine_cost_factor = ONK_navy_naval_doctrine_cost_factor
+	naval_detection = ONK_navy_naval_detection
+	navy_max_range_factor = ONK_navy_navy_max_range_factor
+	repair_speed_factor = ONK_navy_repair_speed_factor
+	refit_speed = ONK_navy_refit_speed
+	amphibious_invasion = ONK_navy_amphibious_invasion
+	naval_invasion_capacity = ONK_navy_naval_invasion_capacity
+	convoy_raiding_efficiency_factor = ONK_navy_convoy_raiding_efficiency_factor
+	convoy_escort_efficiency = ONK_navy_convoy_escort_efficiency
+	naval_damage_factor = ONK_navy_naval_damage_factor
+	naval_defense_factor = ONK_navy_naval_defense_factor
+	navy_submarine_detection_factor = ONK_navy_navy_submarine_detection_factor
+	naval_speed_factor = ONK_navy_naval_speed_factor
+
+	#더미 변수
+	#build_cost_ic_capital_ship = ONK_navy_build_cost_ic_capital_ship
+	#build_cost_ic_carrier = ONK_navy_build_cost_ic_carrier
+	#build_cost_ic_convoy = ONK_navy_build_cost_ic_convoy
+	#build_cost_ic_screen_ship = ONK_navy_build_cost_ic_screen_ship
+	#build_cost_ic_submarine = ONK_navy_build_cost_ic_submarine
 }
 
 ONK_air_force = {
 	enable = { NOT = { has_country_flag = no_air_academy } }
 	icon = GFX_idea_ONK_dynamic_airforce
+
+	#임시
+	experience_gain_air_factor = ONK_air_force_experience_gain_air_factor
+	air_doctrine_cost_factor = ONK_air_force_air_doctrine_cost_factor
+	air_accidents_factor = ONK_air_force_air_accidents_factor
+	air_mission_efficiency = ONK_air_force_air_mission_efficiency
+	air_training_xp_gain_factor = ONK_air_force_air_training_xp_gain_factor
+	air_range_factor = ONK_air_force_air_range_factor
+	air_ace_generation_chance_factor = ONK_air_force_air_ace_generation_chance_factor
+	air_superiority_efficiency = ONK_air_force_air_superiority_efficiency
+	air_cas_efficiency = ONK_air_force_air_cas_efficiency
+	air_strategic_bomber_bombing_factor = ONK_air_force_air_strategic_bomber_bombing_factor
+	air_intercept_efficiency = ONK_air_force_air_intercept_efficiency
+	air_nav_efficiency = ONK_air_force_air_nav_efficiency
+	air_detection = ONK_air_force_air_detection
+	air_agility_factor = ONK_air_force_air_agility_factor
+
+	#더미 변수
+	#build_cost_ic_air_transport = ONK_air_force_build_cost_ic_air_transport
+	#build_cost_ic_cas_bomber = ONK_air_force_build_cost_ic_cas_bomber
+	#build_cost_ic_fighter = ONK_air_force_build_cost_ic_fighter
+	#build_cost_ic_interceptor = ONK_air_force_build_cost_ic_interceptor
+	#build_cost_ic_tactical_bomber = ONK_air_force_build_cost_ic_tactical_bomber
+	#build_cost_ic_missile = ONK_air_force_build_cost_ic_missile
+	#build_cost_ic_naval_bomber = ONK_air_force_build_cost_ic_naval_bomber
+	#build_cost_ic_strat_bomber = ONK_air_force_build_cost_ic_strat_bomber
+	#build_cost_ic_suicide = ONK_air_force_build_cost_ic_suicide
 }

@@ -1,3 +1,4 @@
+add_namespace = PRS_diplomacy
 add_namespace = PRS_amerikabomber
 
 #### INNER CIRCLE ###
@@ -9,6 +10,46 @@ add_namespace = PRS_inner_circle_kanade
 add_namespace = PRS_inner_circle_saki
 add_namespace = PRS_inner_circle_honami
 add_namespace = PRS_inner_circle_shiho
+
+#PRS_diplomacy
+#알자스-로렌 통합 이벤트
+country_event = {
+	id = PRS_diplomacy.63
+	title = PRS_diplomacy.63.t
+	desc = PRS_diplomacy.63.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	is_triggered_only = yes
+	
+	option = {
+		name = PRS_diplomacy.63.a
+		effect_tooltip = {
+			PRS = {
+				add_state_core = 8
+			}
+		}
+	}
+}
+
+# Reintegration notification for Luxemburg
+country_event = {
+	id = PRS_diplomacy.64
+	title = PRS_diplomacy.64.t
+	desc = PRS_diplomacy.63.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	is_triggered_only = yes
+	
+	option = {
+		name = PRS_diplomacy.64.a
+		effect_tooltip = {
+			PRS = { add_state_core = 8 }
+		}
+	}
+}
+
+
+
 
 #PRS_amerikabomber
 country_event = {

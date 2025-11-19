@@ -15,17 +15,23 @@ IMA_is_britain_homeland = {
 	}
 }
 
+IMA_support_colliery_required = {
+	has_state_flag = IMA_support_colliery_plan_state
+}
+
+IMA_is_on_great_depression = {
+	OR = {
+		has_idea = IMA_great_depression_1
+		has_idea = IMA_great_depression_2
+		has_idea = IMA_great_depression_3
+	}
+	NOT = { has_country_flag = IMA_bankrupt_flag }
+}
+
 IMA_is_bankrupt = {
 	custom_trigger_tooltip = {
 		tooltip = IMA_bankrupt_trigger_tt
 		has_country_flag = IMA_bankrupt_flag
-	}
-}
-
-IMA_reduce_depression_ongoing = {
-	custom_trigger_tooltip = {
-		tooltip = IMA_reduce_depression_ongoing_tt
-		NOT = { has_country_flag = IMA_reduce_depression_flag }
 	}
 }
 
@@ -41,6 +47,15 @@ IMA_political_stabilized = {
 			has_completed_focus = IMA_51002f
 			has_completed_focus = IMA_51002g
 		}
+	}
+}
+
+IMA_ready_for_westminster_statute = {
+	custom_trigger_tooltip = {
+		tooltip = IMA_ready_for_westminster_statute_tt
+		has_country_flag = IMA_ready_for_westminster_statute_dominion_law
+		has_country_flag = IMA_ready_for_westminster_statute_dominion_army
+		has_country_flag = IMA_ready_for_westminster_statute_dominion_diplomacy
 	}
 }
 

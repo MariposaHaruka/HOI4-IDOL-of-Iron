@@ -3,7 +3,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 10
 			tag = LAS
 		}
 	}
@@ -19,12 +19,34 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LAS_tmp #마리
+		icon = GFX_goal_unknown
+		x = 0
+		y = 0
+		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		allow_branch = {
+			always = no
+		}
+		available = {
+
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = LAS_disjointed_command
+		}
+	}
+
+	focus = {
 		id = LAS_10001 #마리
 		icon = GFX_focus_LAS_10001
 		x = 28
 		y = 0
 		cost = 5
 		search_filters = { FOCUS_FILTER_ARMY_XP }
+		allow_branch = {
+			always = no
+		}
 		available = {
 
 		}
@@ -45,6 +67,9 @@ focus_tree = {
 		relative_position_id = LAS_10001
 		cost = 5
 		search_filters = { FOCUS_FILTER_ARMY_XP }
+		allow_branch = {
+			always = no
+		}
 		available = {
 			
 		}
@@ -65,6 +90,9 @@ focus_tree = {
 		relative_position_id = LAS_10001
 		cost = 5
 		search_filters = { FOCUS_FILTER_ARMY_XP }
+		allow_branch = {
+			always = no
+		}
 		available = {
 			
 		}
@@ -102,6 +130,9 @@ focus_tree = {
 		cost = 5
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		available = { }
+		allow_branch = {
+			always = no
+		}
 
 		available_if_capitulated = yes
 		completion_reward = {
@@ -117,6 +148,9 @@ focus_tree = {
 		relative_position_id = LAS_20001
 		cost = 5
 		search_filters = { FOCUS_FILTER_NAVY_XP }
+		allow_branch = {
+			always = no
+		}
 
 		available_if_capitulated = yes
 		completion_reward = {
@@ -131,6 +165,9 @@ focus_tree = {
 		y = 0
 		cost = 5
 		search_filters = { FOCUS_FILTER_AIR_XP }
+		allow_branch = {
+			always = no
+		}
 		available = {
 			
 		}
@@ -149,6 +186,9 @@ focus_tree = {
 		cost = 5
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		available_if_capitulated = yes
+		allow_branch = {
+			always = no
+		}
 		completion_reward = {
 			air_experience = 50
 		}

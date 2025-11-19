@@ -41,11 +41,8 @@ autonomy_state = {
 	}
 
 	allowed = {
-		if = {
-			limit = { has_dlc = "Waking the Tiger" }
-			OVERLORD = { original_tag = PRS }
-			OVERLORD = { is_fascism = yes }
-		}
+		OVERLORD = { original_tag = PRS }
+		OVERLORD = { is_fascism = yes }
 	}
 
 	use_for_peace_conference_weight = {

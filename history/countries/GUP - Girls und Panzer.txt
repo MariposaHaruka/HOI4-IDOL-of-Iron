@@ -7,13 +7,7 @@ if = {
 	set_oob = "GUP_ar_NSB"
 	else = { set_oob = "GUP_ar" }
 }
-if = {
-	limit = { has_MtG = yes }
-	set_naval_oob = "GUP_na_MtG"
-	else = {
-		set_naval_oob = "GUP_na"
-	}
-}
+set_naval_oob = "GUP_na_MtG"
 if = {
 	limit = { has_BBA = yes }
 	set_air_oob = "GUP_ai_BBA"
@@ -36,32 +30,19 @@ set_technology = {
 	interwar_antiair = 1
 	basic_train = 1
 }
-if = {
-	limit = { has_MtG = yes }
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		basic_battery = 1
-		basic_torpedo = 1
-		coastal_defense_ships = 1
-		mtg_transport = 1
-	}
-	else = {
-		set_technology = {
-			early_submarine = 1
-			early_destroyer = 1
-			early_light_cruiser = 1
-			early_battleship = 1
-			early_battlecruiser = 1
-			transport = 1
-		}
-	}
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	early_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	basic_battery = 1
+	basic_torpedo = 1
+	coastal_defense_ships = 1
+	mtg_transport = 1
 }
 if = {
 	limit = { has_NSB = yes }
@@ -99,12 +80,104 @@ set_convoys = 20
 
 #국민 정신
 add_ideas = {
-	senshado_project
+	GUP_senshado_project
 }
+
 add_dynamic_modifier = { modifier = GUP_industry }
 add_dynamic_modifier = { modifier = GUP_army }
 add_dynamic_modifier = { modifier = GUP_navy }
 add_dynamic_modifier = { modifier = GUP_air_force }
+
+## GUP_industry
+set_variable = { GUP_industry_production_speed_buildings_factor = -0.25 }
+set_variable = { GUP_industry_industrial_capacity_factory = -0.20 }
+set_variable = { GUP_industry_industrial_capacity_dockyard = -0.20 }
+set_variable = { GUP_industry_research_speed_factor = -0.15 }
+set_variable = { GUP_industry_consumer_goods_factor = 0.10 }
+set_variable = { GUP_industry_state_resources_factor = -0.10 }
+set_variable = { GUP_industry_production_factory_max_efficiency_factor = -0.15 }
+set_variable = { GUP_industry_production_factory_efficiency_gain_factor = -0.20 }
+set_variable = { GUP_industry_license_purchase_cost = 0.50 }
+set_variable = { GUP_industry_political_power_gain = -0.10 }
+set_variable = { GUP_industry_stability_factor = -0.10 }
+set_variable = { GUP_industry_industry_repair_factor = -0.25 }
+
+## GUP_army
+set_variable = { GUP_army_experience_gain_army_factor = -0.30 }
+set_variable = { GUP_army_land_doctrine_cost_factor = 0.25 }
+set_variable = { GUP_army_army_org_factor = -0.15 }
+set_variable = { GUP_army_training_time_factor = 0.20 }
+set_variable = { GUP_army_supply_factor = -0.15 }
+set_variable = { GUP_army_planning_speed = -0.20 }
+set_variable = { GUP_army_army_morale_factor = -0.10 }
+set_variable = { GUP_army_max_planning_factor = -0.15 }
+set_variable = { GUP_army_command_power_gain_mult = -0.10 }
+set_variable = { GUP_army_army_leader_cost_factor = 0.50 }
+set_variable = { GUP_army_equipment_capture_factor = -0.50 }
+set_variable = { GUP_army_special_forces_cap = -0.25 }
+set_variable = { GUP_army_recon_factor = -0.15 }
+set_variable = { GUP_army_supply_consumption_factor = 0.10 }
+set_variable = { GUP_army_winter_attrition_factor = 0.10 }
+set_variable = { GUP_army_heat_attrition_factor = 0.10 }
+
+set_variable = { GUP_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { GUP_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { GUP_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { GUP_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { GUP_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { GUP_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { GUP_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { GUP_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { GUP_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## GUP_navy
+set_variable = { GUP_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { GUP_navy_naval_doctrine_cost_factor = 0.30 }
+set_variable = { GUP_navy_naval_detection = -0.20 }
+set_variable = { GUP_navy_navy_max_range_factor = -0.15 }
+set_variable = { GUP_navy_repair_speed_factor = -0.20 }
+set_variable = { GUP_navy_refit_speed = -0.20 }
+set_variable = { GUP_navy_amphibious_invasion = -0.25 }
+set_variable = { GUP_navy_naval_invasion_capacity = -5 }
+set_variable = { GUP_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { GUP_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { GUP_navy_naval_damage_factor = -0.10 }
+set_variable = { GUP_navy_naval_defense_factor = -0.10 }
+set_variable = { GUP_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { GUP_navy_naval_speed_factor = -0.10 }
+
+set_variable = { GUP_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { GUP_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { GUP_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { GUP_navy_build_cost_ic_screen_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { GUP_navy_build_cost_ic_submarine = 0.30 } ### 별도 국민정신 적용
+
+## GUP_air_force
+set_variable = { GUP_air_force_experience_gain_air_factor = -0.50 }
+set_variable = { GUP_air_force_air_doctrine_cost_factor = 0.40 }
+set_variable = { GUP_air_force_air_accidents_factor = 0.25 }
+set_variable = { GUP_air_force_air_mission_efficiency = -0.15 }
+set_variable = { GUP_air_force_air_training_xp_gain_factor = -0.30 }
+set_variable = { GUP_air_force_air_range_factor = -0.10 }
+set_variable = { GUP_air_force_air_ace_generation_chance_factor = -0.60 }
+set_variable = { GUP_air_force_air_superiority_efficiency = -0.20 }
+set_variable = { GUP_air_force_air_cas_efficiency = -0.25 }
+set_variable = { GUP_air_force_air_strategic_bomber_bombing_factor = -0.30 }
+set_variable = { GUP_air_force_air_intercept_efficiency = -0.15 }
+set_variable = { GUP_air_force_air_nav_efficiency = -0.20 }
+set_variable = { GUP_air_force_air_detection = -0.20 }
+set_variable = { GUP_air_force_air_agility_factor = -0.10 }
+
+set_variable = { GUP_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { GUP_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { GUP_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { GUP_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { GUP_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { GUP_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { GUP_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { GUP_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { GUP_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
+
 
 #외교
 
@@ -137,10 +210,194 @@ set_popularities = {
 recruit_character = GUP_kadotani_anzu
 recruit_character = GUP_nishizumi_miho
 
+#recruit_character = GUP_mustafa_kemal_ataturk
+#recruit_character = GUP_sefik_husnu
+#recruit_character = GUP_celal_bayar
+#recruit_character = GUP_mehmet_recep_peker
+#recruit_character = GUP_fevzi_cakmak
+#recruit_character = GUP_fahrettin_altay
+#recruit_character = GUP_kazim_orbay
+#recruit_character = GUP_cemil_cahit_toydemir
+#recruit_character = GUP_izzettin_chalishlar
+#recruit_character = GUP_kazim_karabekir
+#recruit_character = GUP_mustafa_muglali
+#recruit_character = GUP_mehmet_salih_omurtak
+#recruit_character = GUP_hayrullah_fisek
+#recruit_character = GUP_mehmet_nuri_yamut
+#recruit_character = GUP_sadik_altincan
+#recruit_character = GUP_sukru_okan
+#recruit_character = GUP_mehmet_ali_ulgen
+#recruit_character = GUP_abdurrahman_gurman
+#recruit_character = GUP_fakhri_pasha
+#recruit_character = GUP_refet_bele
+#recruit_character = GUP_zeki_dogan
+#recruit_character = GUP_sabiha_gokcen
+#recruit_character = GUP_ali_fuat_cebesoy
+#recruit_character = GUP_vecihi_hurkus
+#recruit_character = GUP_ali_ihsan_sabis
+#recruit_character = GUP_rauf_orbay
+#recruit_character = GUP_izzettin_calislar
+#recruit_character = GUP_ahmet_ali_celikten
+#recruit_character = GUP_mehmet_fahri_engin
+#recruit_character = GUP_muzaffer_goksenin
+#recruit_character = GUP_halil_kut
+#recruit_character = GUP_mumtaz_okmen
+#recruit_character = GUP_riza_nur
+#recruit_character = GUP_nejdet_sancar
+#recruit_character = GUP_kazim_ozalp
+#recruit_character = GUP_sukru_saracoglu_prime_minister
+#recruit_character = GUP_adnan_menderes
+#recruit_character = GUP_nuri_demirag_prime_minister
+#recruit_character = GUP_hasan_saka
+#recruit_character = GUP_hilmi_uran
+#recruit_character = GUP_fethi_okyar
+#recruit_character = GUP_sukru_saracoglu
+#recruit_character = GUP_halide_edib_adivar
+#recruit_character = GUP_sevket_sureyya_aydemir
+#recruit_character = GUP_mehmet_emin_yurdakul
+#recruit_character = GUP_nuri_demirag
+#recruit_character = GUP_nuri_killigil
+#recruit_character = GUP_said_i_nursi
+#recruit_character = GUP_ismet_inonu
+#recruit_character = GUP_nihal_atsiz
+#recruit_character = GUP_zeki_velidi_togan
+#recruit_character = GUP_nazim_hikmet
+
+#recruit_character = GUP_ahmet_fevzi_pasha # Ottoman Sultanate general. Not available at game start
+#recruit_character = GUP_refet_pasha # Ottoman Sultanate general. Not available at game start
+#recruit_character = GUP_mehmet_esat_pasha # Ottoman Sultanate general. Not available at game start
+#recruit_character = GUP_halife_abdulmecid_efendi #Empty Character that can become Country Leader via event.
+
+#recruit_character = PRS_hans_von_luck #Foreign General. Not available at game start
+#recruit_character = PRS_wilhelm_ritter_von_thoma #Foreign General. Not available at game start
+#recruit_character = ENS_ferdinando_umberto_filippo_adalberto #Foreign Admiral. Not available at game start
+
+#recruit_character = GUP_durrushehvar_i #Empty char. Can become country leader later
+#recruit_character = GUP_abdulmejid_ii #Empty char. Can become country leader later
+#recruit_character = GUP_hazi_aslanov #Empty Char. Can become unit leader later
+
+if = {
+	limit = { has_LaR = yes }
+	#recruit_character = GUP_elyesa_bazna
+	create_operative_leader = {
+		name = "Ruzi Nazar"
+		GFX = "GFX_portrait_tur_ruzi_nazar"
+		traits = { operative_tough operative_commando }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = no
+		nationalities = { TOH GUP }
+	}
+}
 #장관진
 
 #무기 프리셋
-#create_equipment_variant = {
-#	name = ""
-#	type = amphibious_tank_equipment_2
-#}
+### Ship Variants ###
+# Submarines #
+create_equipment_variant = {
+	name = "Birinci Inönü Class"				
+	type = ship_hull_submarine_1
+	name_group = GUP_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Dumlupinar Class"				
+	type = ship_hull_submarine_2
+	name_group = GUP_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_2
+		rear_1_custom_slot = ship_mine_layer_sub
+	}
+}
+create_equipment_variant = {
+	name = "Sakarya Class"								# represents Sakarya and Gur classes
+	type = ship_hull_submarine_1
+	name_group = GUP_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_2
+		fixed_ship_engine_slot = sub_ship_engine_2
+		rear_1_custom_slot = empty
+	}
+}
+# Destroyers #
+create_equipment_variant = {
+	name = "Peyk Class"									# large torpedo boats		
+	type = ship_hull_light_1
+	name_group = GUP_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Kocatepe Class"								# represents Kocatepe and Zafer classes
+	type = ship_hull_light_1
+	name_group = GUP_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+}
+# Cruisers #
+create_equipment_variant = {
+	name = "Mecidiye Class"								# represents Mecidiye and Hamidiye protected cruisers		
+	type = ship_hull_cruiser_coastal_defense_ship
+	name_group = GUP_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = empty
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = ship_torpedo_1
+	}
+}
+# Battlecruiser #
+create_equipment_variant = {
+	name = "Yavuz Class"	
+	type = ship_hull_heavy_1
+	name_group = GUP_BC_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_bc_1
+		front_1_custom_slot = ship_heavy_battery_1
+		mid_1_custom_slot = ship_secondaries_1
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+}

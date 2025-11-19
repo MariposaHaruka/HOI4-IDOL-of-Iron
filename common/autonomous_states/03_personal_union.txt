@@ -43,16 +43,13 @@ autonomy_state = {
 	}
 
 	allowed = {
-		if = {
-			limit = { has_dlc = "Waking the Tiger" }
-			OVERLORD = { 
-				has_government = autocracy
-			}
-			OVERLORD = {
-				NOT = { 
-					original_tag = ENS
-					original_tag = BDG
-				}
+		OVERLORD = { 
+			has_government = autocracy
+		}
+		OVERLORD = {
+			NOT = { 
+				original_tag = ENS
+				original_tag = BDG
 			}
 		}
 	}

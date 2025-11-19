@@ -143,10 +143,7 @@ demobilization = {
 	icon = generic_crisis
 	priority = 100
 	
-	visible = {
-		has_war = no
-		has_idea = dfg
-	}
+	visible = { has_war = no }
 }
 
 #경제 디시전
@@ -159,18 +156,14 @@ economy_decisions = {
 prospect_for_resources = {
 	icon = generic_prospect_for_resources
 
-	allowed = {
-		has_dlc = "Waking the Tiger"
-	}
+	allowed = { always = yes }
 }
 
 #특별 계획
 special_projects = {
 	icon = generic_prospect_for_resources
 
-	allowed = {
-		has_dlc = "Waking the Tiger"
-	}
+	allowed = { always = yes }
 }
 
 #망명정부
@@ -179,8 +172,8 @@ governments_in_exile = {
 	picture = GFX_decision_cat_picture_government_in_exile
 	allowed = {
 		OR = {
-			has_dlc = "Man the Guns"
-			has_dlc = "By Blood Alone"
+			is_democratic = yes
+			has_BBA = yes
 		}
 	}
 
@@ -196,8 +189,8 @@ category_exile_forces = {
 	picture = GFX_decision_cat_picture_government_in_exile
 	allowed = {
 		OR = {
-			has_dlc = "Man the Guns"
-			has_dlc = "By Blood Alone"
+			is_democratic = yes
+			has_BBA = yes
 		}
 	}
 	priority = 6
@@ -213,7 +206,7 @@ category_test_decisions = {
 
 #현지 정보원 고용
 lar_local_recruitment = {
-	allowed = { has_dlc = "La Resistance" }
+	allowed = { has_LaR = yes }
 	visible = { has_done_agency_upgrade = upgrade_training_centers }
 	visibility_type = map_and_decisions_view
 	
@@ -344,7 +337,7 @@ generic_refit_civilian_ships_category = {
 		has_unique_national_focus = no
 	}
 	visible = {
-		has_country_flag = refit_convoy_ships_flag
+		has_country_flag = navy_convoy_decision_flag
 	}
 	priority = {
 		base = 8

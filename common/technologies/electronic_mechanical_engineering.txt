@@ -963,10 +963,6 @@ technologies = {
 
 	basic_fire_control_system = {
 
-		allow_branch = {
-			has_dlc = "Man the Guns"
-		}
-
 		enable_equipment_modules = { 
 			ship_fire_control_system_1
 		}
@@ -1012,9 +1008,7 @@ technologies = {
 		}
 		
 		research_cost = 1
-		allow_branch = {
-			has_dlc = "Man the Guns"
-		}
+		
 		folder = {
 			name = electronics_folder
 			position = { x = @firecontrol y = 8 }
@@ -1051,9 +1045,6 @@ technologies = {
 
 		enable_equipment_modules = { 
 			ship_fire_control_system_3
-		}
-		allow_branch = {
-			has_dlc = "Man the Guns"
 		}
 		
 		research_cost = 1
@@ -1697,6 +1688,7 @@ technologies = {
 		allow = {
 			OR = {
 				original_tag = BLA
+				original_tag = LAS
 				has_global_flag = discovery_of_nuclear_fission 
 			}
 		}

@@ -8,6 +8,60 @@ focus_tree = {
 		}
 	}
 	default = no
+
+	#Focus Path shortcuts	
+	shortcut = {
+		name = IMA_history_sc
+		target = IMA_51001
+		scroll_wheel_factor = 0.469
+	}
+
+	shortcut = {
+		name = IMA_althistory_left_sc
+		target = IMA_51001
+		scroll_wheel_factor = 0.485
+		trigger = { always = no }
+	}
+
+	shortcut = {
+		name = IMA_althistory_right_sc
+		target = IMA_51001
+		scroll_wheel_factor = 0.485
+		trigger = { always = no }
+	}
+
+	shortcut = {
+		name = IMA_economy_sc
+		target = IMA_11001 
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = IMA_commonwealth_sc
+		target = IMA_42001 
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = IMA_army_sc
+		target = IMA_32001
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = IMA_navy_sc
+		target = IMA_33101
+		scroll_wheel_factor = 1.0
+	}
+	
+	shortcut = {
+		name = IMA_airforce_sc
+		target = IMA_31001
+		scroll_wheel_factor = 1.0
+	}
+
+
+
 	shared_focus = IMA_shared_00001
 	shared_focus = IMA_shared_00002
 	shared_focus = IMA_shared_00003
@@ -35,9 +89,12 @@ focus_tree = {
 			add_political_power = 150
 			custom_effect_tooltip = generic_line_break_tt
 			unlock_decision_category_tooltip = IMA_haruka_plan_category
-			subtract_from_variable = {
-				IMA_left_anger = 1
-				tooltip = IMA_left_anger_subtract_tt
+			if = {
+				limit = { has_country_flag = IMA_haruka_crisis }
+				subtract_from_variable = {
+					IMA_left_anger = 1
+					tooltip = IMA_left_anger_subtract_tt
+				}
 			}
 		}
 	}
@@ -86,14 +143,23 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11002"
-			subtract_from_variable = {
-				IMA_left_anger = 1
-				tooltip = IMA_left_anger_subtract_tt
-			}			
-			add_to_variable = {
-				IMA_debt = 10
-				tooltip = IMA_dept_add_tt
+			if = {
+				limit = { has_country_flag = IMA_haruka_crisis }
+				subtract_from_variable = {
+					IMA_left_anger = 1
+					tooltip = IMA_left_anger_subtract_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				add_to_variable = {
+					IMA_debt = 10
+					tooltip = IMA_dept_add_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
+			}
+			add_stability = 0.05
 		}
 	}
 
@@ -113,10 +179,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11003"
-			custom_effect_tooltip = generic_line_break_tt
-			subtract_from_variable= {
-				IMA_debt = 20
-				tooltip = IMA_dept_subtract_tt
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				subtract_from_variable = {
+					IMA_debt = 20
+					tooltip = IMA_dept_subtract_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
+			}
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_political_power_gain = 0.1
+				tooltip = political_power_gain_tt
 			}
 		}
 	}
@@ -184,10 +258,19 @@ focus_tree = {
 					tooltip = IMA_left_anger_subtract_tt
 				}
 				custom_effect_tooltip = generic_line_break_tt
+			}			
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				add_to_variable = {
+					IMA_debt = 10
+					tooltip = IMA_dept_add_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
+			custom_effect_tooltip = IMA_industry_tt
 			add_to_variable = {
-				IMA_debt = 10
-				tooltip = IMA_dept_add_tt
+				IMA_industry_weekly_manpower = 0.001
+				tooltip = weekly_manpower_tt
 			}
 		}
 	}
@@ -210,9 +293,13 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11006"
 			unlock_decision_tooltip = IMA_haruka_plan_taxable_income_investigate
 			custom_effect_tooltip = IMA_11006_tt
-			subtract_from_variable= {
-				IMA_debt = 20
-				tooltip = IMA_dept_subtract_tt
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				subtract_from_variable = {
+					IMA_debt = 20
+					tooltip = IMA_dept_subtract_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
 		}
 	}
@@ -242,13 +329,22 @@ focus_tree = {
 				IMA_industry_production_speed_air_base_factor_tt = 0.1
 				tooltip = production_speed_air_base_factor_tt
 			}
-			add_to_variable = {
-				IMA_debt = 15
-				tooltip = IMA_dept_add_tt
+			custom_effect_tooltip = generic_line_break_tt
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				add_to_variable = {
+					IMA_debt = 15
+					tooltip = IMA_dept_add_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
-			add_to_variable = {
-				IMA_right_anger = 1
-				tooltip = IMA_right_anger_add_tt
+			if = {
+				limit = { has_country_flag = IMA_haruka_crisis }
+				add_to_variable = {
+					IMA_right_anger = 1
+					tooltip = IMA_right_anger_add_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
 			#unlock_decision_tooltip = { decision = ddd }
 			custom_effect_tooltip = IMA_11007_tt
@@ -280,10 +376,16 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_line_break_tt
 			}
-			add_to_variable = {
-				IMA_debt = 10
-				tooltip = IMA_dept_add_tt
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				add_to_variable = {
+					IMA_debt = 10
+					tooltip = IMA_dept_add_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
+			add_stability = 0.05
+			add_war_support = -0.05
 		}
 	}
 
@@ -304,10 +406,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11009"
 			custom_effect_tooltip = generic_line_break_tt
-			subtract_from_variable= {
-				IMA_debt = 20
-				tooltip = IMA_dept_subtract_tt
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				subtract_from_variable = {
+					IMA_debt = 20
+					tooltip = IMA_dept_subtract_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
+			#unlock_decision_tooltip = { decision = ddd }
 			#add_timed_idea = {
 			#	idea = IMA_bond_affect
 			#	days = 250
@@ -331,12 +438,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11010"
-			add_stability = 0.1
-			custom_effect_tooltip = generic_line_break_tt
-			add_to_variable = {
-				IMA_debt = 5
-				tooltip = IMA_dept_add_tt
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				add_to_variable = {
+					IMA_debt = 5
+					tooltip = IMA_dept_add_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
+			add_stability = 0.1
 		}
 	}
 
@@ -366,10 +476,15 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_line_break_tt
 			}
-			add_to_variable = {
-				IMA_debt = 15
-				tooltip = IMA_dept_add_tt
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				add_to_variable = {
+					IMA_debt = 15
+					tooltip = IMA_dept_add_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
+			add_stability = 0.05
 		}
 	}
 
@@ -384,7 +499,6 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_11001 }
-		available = { IMA_reduce_depression_ongoing = yes }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -392,9 +506,22 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11012"
 			IMA_reduce_depression = yes
 			#unlock_decision_tooltip = { decision = ddd }
-			add_to_variable = {
-				IMA_debt = 10
-				tooltip = IMA_dept_add_tt
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				add_to_variable = {
+					IMA_debt = 10
+					tooltip = IMA_dept_add_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
+			}
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = { 
+				IMA_industry_trade_opinion_factor = 0.15 
+				tooltip = trade_opinion_factor_tt
+			}
+			add_to_variable = { 
+				IMA_industry_faction_trade_opinion_factor = -0.15 
+				tooltip = faction_trade_opinion_factor_negative_tt
 			}
 		}
 	}
@@ -415,13 +542,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11013"
-			unlock_decision_tooltip = { decision = IMA_haruka_plan_support_colliery }
+			unlock_decision_tooltip = IMA_haruka_plan_support_colliery
 			132 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
+			}
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = { 
+				IMA_industry_local_resources_factor = 0.20
+				tooltip = local_resources_factor_tt
 			}
 		}
 	}
@@ -447,11 +579,15 @@ focus_tree = {
 				IMA_industry_consumer_goods_factor = -0.04
 				tooltip = consumer_goods_factor_tt
 			}
-			add_to_variable = {
-				IMA_debt = 5
-				tooltip = IMA_dept_add_tt
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				add_to_variable = {
+					IMA_debt = 5
+					tooltip = IMA_dept_add_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
-			unlock_decision_tooltip = { decision = IMA_haruka_plan_support_farmer_society }
+			unlock_decision_tooltip = IMA_haruka_plan_support_farmer_society 
 		}
 	}
 
@@ -471,28 +607,24 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11015"
-			unlock_decision_tooltip = IMA_haruka_plan_build_dockyard
+			unlock_decision_tooltip = IMA_haruka_plan_build_dockyard_119
+			unlock_decision_tooltip = IMA_haruka_plan_build_dockyard_121
+			unlock_decision_tooltip = IMA_haruka_plan_build_dockyard_132
+			unlock_decision_tooltip = IMA_haruka_plan_build_dockyard_931
 			if = {
 				limit = { has_AAT = yes }
+				if = {
+					limit = { IMA_is_on_great_depression = yes }
+					add_to_variable = {
+						IMA_debt = 10
+						tooltip = IMA_dept_add_tt
+					}
+					custom_effect_tooltip = generic_line_break_tt
+				}
 				mio:IMA_john_brown_organization = { add_mio_funds = 3000 }
 				mio:IMA_harland_wolff_organization = { add_mio_funds = 3000 }
 				mio:IMA_yarrow_shipbuilders_organization = { add_mio_funds = 3000 }
 				mio:IMA_cammell_laird_organization = { add_mio_funds = 3000 }
-				custom_effect_tooltip = generic_line_break_tt
-				add_to_variable = {
-					IMA_debt = 10
-					tooltip = IMA_dept_add_tt
-				}
-				else = {
-					custom_effect_tooltip = available_designer
-					show_ideas_tooltip = IMA_john_brown
-					custom_effect_tooltip = available_designer
-					show_ideas_tooltip = IMA_harland_wolff
-					custom_effect_tooltip = available_designer
-					show_ideas_tooltip = IMA_yarrow_shipbuilders
-					custom_effect_tooltip = available_designer
-					show_ideas_tooltip = IMA_cammell_laird
-				}
 			}
 		}
 	}
@@ -515,13 +647,21 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11016"
 			#unlock_decision_tooltip = { decision = ddd }
 			custom_effect_tooltip = IMA_11016_tt
-			add_to_variable = {
-				IMA_debt = 25
-				tooltip = IMA_dept_add_tt
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				add_to_variable = {
+					IMA_debt = 25
+					tooltip = IMA_dept_add_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
-			subtract_from_variable = {
-				IMA_right_anger = 1
-				tooltip = IMA_right_anger_subtract_tt
+			if = {
+				limit = { has_country_flag = IMA_haruka_crisis }
+				subtract_from_variable = {
+					IMA_right_anger = 1
+					tooltip = IMA_right_anger_subtract_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
 		}
 	}
@@ -542,14 +682,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11017"
-			#unlock_decision_tooltip = { decision = ddd }	
-			custom_effect_tooltip = generic_line_break_tt
-			subtract_from_variable= {
-				IMA_debt = 40
-				tooltip = IMA_dept_subtract_tt
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				subtract_from_variable = {
+					IMA_debt = 40
+					tooltip = IMA_dept_subtract_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
 			add_timed_idea = {
-				idea = IMA_debt_negotiations
+				idea = IMA_11017_idea
 				days = 60
 			}
 		}
@@ -578,7 +720,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11017"
-			
+			add_stability = 0.10
+			add_war_support = -0.05
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_political_power_gain = 0.15
+				tooltip = political_power_gain_tt
+			}
 		}
 	}
 
@@ -591,6 +739,12 @@ focus_tree = {
 		x = -1
 		y = 1
 
+		available = { 
+			OR = {
+				has_completed_focus = IMA_51013
+				has_completed_focus = IMA_51014
+			}
+		}
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_11016 }
 		prerequisite = { focus = IMA_11017 }
@@ -599,7 +753,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11019"
-			
+			unlock_decision_tooltip = IMA_foreign_defence_plan_wartime_gold_lease
+			add_political_power = 100
+			add_war_support = 0.05
 		}
 	}
 
@@ -629,20 +785,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11020"
 			remove_ideas = IMA_widespread_strikes
 			add_timed_idea = {
-				idea = IMA_kenshington_agree
+				idea = IMA_11020_idea
 				days = 200
 			}
-			custom_effect_tooltip = generic_line_break_tt
-			custom_effect_tooltip = IMA_11020_tt
-			hidden_effect = {
-				if = {
-					limit = { is_in_coalition_with_socialdemocracy = no }
-					set_temp_variable = { coalition_partner_var = token:socialdemocracy }
-					add_to_coalition = yes
-					calc_parliament_support_IMA = yes
-				}
-				set_country_flag = IMA_ready_for_new_union_law
-			}
+			add_stability = 0.05
 		}
 	}
 
@@ -897,12 +1043,17 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = { IMA_reduce_depression_ongoing = yes }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12012"
 			IMA_reduce_depression = yes
-			add_to_variable= {
-				IMA_debt = 5
-				tooltip = IMA_dept_add_tt
+			if = {
+				limit = { IMA_is_on_great_depression = yes }
+				add_to_variable = {
+					IMA_debt = 5
+					tooltip = IMA_dept_add_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
 			if = {
 				limit = { has_country_flag = IMA_haruka_crisis }
@@ -910,6 +1061,7 @@ focus_tree = {
 					IMA_right_anger = 1
 					tooltip = IMA_right_anger_subtract_tt
 				}
+				custom_effect_tooltip = generic_line_break_tt
 			}
 			
 		}
@@ -981,6 +1133,35 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12015"
 			IMA_upgrade_minase_fund = yes
+			if = {
+				limit = { has_AAT = yes }
+				if = {
+					limit = { IMA_is_on_great_depression = yes }
+					add_to_variable = {
+						IMA_debt = 10
+						tooltip = IMA_dept_add_tt
+					}
+					custom_effect_tooltip = generic_line_break_tt
+				}
+				mio:IMA_john_brown_organization = { add_mio_funds = 1500 }
+				mio:IMA_harland_wolff_organization = { add_mio_funds = 1500 }
+				mio:IMA_yarrow_shipbuilders_organization = { add_mio_funds = 1500 }
+				mio:IMA_cammell_laird_organization = { add_mio_funds = 1500 }
+				else = {
+					if = {
+						limit = { IMA_is_on_great_depression = yes }
+						add_to_variable = {
+							IMA_debt = 10
+							tooltip = IMA_dept_add_tt
+						}
+						custom_effect_tooltip = generic_line_break_tt
+					}
+				}
+				unlock_decision_tooltip = IMA_iori_plan_support_harland_wolff
+				unlock_decision_tooltip = IMA_iori_plan_support_john_brown
+				unlock_decision_tooltip = IMA_iori_plan_support_cammell_laird
+				unlock_decision_tooltip = IMA_iori_plan_support_yarrow
+			}
 		}
 	}
 
@@ -1107,6 +1288,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_11001 focus = IMA_12001 }
 
+		available = { IMA_reduce_depression_ongoing = yes }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -1136,7 +1318,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10002"
-			
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = { 
+				IMA_industry_consumer_goods_factor = -0.05 
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 
@@ -1279,13 +1465,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10005"
-			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = IMA_industry_tt
 			add_to_variable = {
 				IMA_industry_consumer_goods_factor = -0.03
 				tooltip = consumer_goods_factor_tt
 			}
-			custom_effect_tooltip = generic_line_break_tt
 			126 = {
 				add_building_construction = {
 					type = industrial_complex
@@ -1319,13 +1503,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10006"
-			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = IMA_industry_tt
 			add_to_variable = {
 				IMA_industry_consumer_goods_factor = -0.03
 				tooltip = consumer_goods_factor_tt
 			}
-			custom_effect_tooltip = generic_line_break_tt
 			131 = {
 				add_building_construction = {
 					type = industrial_complex
@@ -1369,7 +1551,7 @@ focus_tree = {
 				tooltip = build_cost_ic_armor_tt
 			}
 			hidden_effect = {
-				add_ideas = IMA_tank_manufacturer_committee
+				add_ideas = IMA_10007_idea
 			}
 		}
 	}
@@ -1403,7 +1585,7 @@ focus_tree = {
 				tooltip = build_cost_ic_fighter_tt
 			}
 			hidden_effect = {
-				add_ideas = IMA_plane_manufacturer_committee
+				add_ideas = IMA_10008_idea
 			}
 		}
 	}
@@ -1592,7 +1774,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20002"
 			add_research_slot = 1
-			#add_ideas = IMA_oxford_research
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_research_speed_factor = 0.1
+				tooltip = research_speed_factor_tt
+			}
 		}
 	}
 
@@ -1613,7 +1799,17 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20003"
 			add_research_slot = 1
-			#add_ideas = IMA_cambridge_research
+			add_tech_bonus = {
+				name = IMA_20003
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_research_speed_factor = 0.05
+				tooltip = research_speed_factor_tt
+			}
 		}
 	}
 
@@ -1630,6 +1826,11 @@ focus_tree = {
 		prerequisite = { focus = IMA_20002 focus = IMA_20003 }
 		available = {
 			has_war_with_major = yes
+			if = {
+				limit = { has_LaR = yes }
+				has_intelligence_agency = yes 
+				has_done_agency_upgrade = upgrade_form_department 
+			}
 		}
 		
 		available_if_capitulated = yes
@@ -1637,6 +1838,27 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20004"
 			#add_ideas = IMA_bletley_park_1
+			if = {
+				limit = { has_LaR = no }
+				add_tech_bonus = {
+					name = codebreaking_bonus
+					bonus = 1.0
+					uses = 1
+					category = decryption_tech
+					category = computing_tech
+				}
+			}
+			else = {
+				hidden_effect = {
+					set_technology = { lar_decryption_bonus_tech = 1 }
+				}
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = IMA_alan_turing
+				custom_effect_tooltip = lar_decryption_bonus_tt
+				add_dynamic_modifier = {
+					modifier = IMA_bletchley_park
+				}
+			}
 		}
 	}
 	
@@ -1656,10 +1878,27 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20005"
-			#swap_ideas = {
-			#	remove_idea = IMA_bletley_park_1
-			#	add_idea = IMA_bletley_park_2
-			#}
+			if = {
+				limit = { has_LaR = no }
+				add_tech_bonus = {
+					name = codebreaking_bonus
+					bonus = 1.0
+					uses = 1
+					category = decryption_tech
+					category = computing_tech
+				}
+			}
+			else = {
+				custom_effect_tooltip = IMA_bletchley_park_tt
+				add_to_variable = {
+					IMA_bletchley_park_decryption_power_factor = 0.1
+					tooltip = decryption_power_factor_tt
+				}
+				add_to_variable = {
+					IMA_bletchley_park_decryption_power = 10
+					tooltip = decryption_power_tt
+				}
+			}
 		}
 	}
 	
@@ -1679,10 +1918,31 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20006"
-			#swap_ideas = {
-			#	remove_idea = IMA_bletley_park_2
-			#	add_idea = IMA_bletley_park_3
-			#}
+			if = {
+				limit = { has_LaR = no }
+				add_tech_bonus = {
+					name = codebreaking_bonus
+					bonus = 1.0
+					uses = 1
+					category = decryption_tech
+					category = computing_tech
+				}
+			}
+			else = {
+				custom_effect_tooltip = IMA_bletchley_park_tt
+				add_to_variable = {
+					IMA_bletchley_park_decryption_power_factor = 0.1
+					tooltip = decryption_power_factor_tt
+				}
+				add_to_variable = {
+					IMA_bletchley_park_operative_slot = 1
+					tooltip = operative_slot_tt
+				}
+				add_to_variable = {
+					IMA_bletchley_park_intel_network_gain_factor = 0.05
+					tooltip = intel_network_gain_factor_tt
+				}
+			}
 		}
 	}
 	
@@ -1702,10 +1962,27 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20007"
-			#swap_ideas = {
-			#	remove_idea = IMA_bletley_park_3
-			#	add_idea = IMA_bletley_park_4
-			#}		
+			if = {
+				limit = { has_LaR = no }
+				add_tech_bonus = {
+					name = codebreaking_bonus
+					bonus = 1.0
+					uses = 1
+					category = decryption_tech
+					category = computing_tech
+				}
+			}
+			else = {
+				custom_effect_tooltip = IMA_bletchley_park_tt
+				add_to_variable = {
+					IMA_bletchley_park_decryption_power_factor = 0.1
+					tooltip = decryption_power_factor_tt
+				}
+				add_to_variable = {
+					IMA_bletchley_park_intel_network_gain_factor = 0.05
+					tooltip = intel_network_gain_factor_tt
+				}
+			}
 		}
 	}
 	
@@ -1725,7 +2002,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20008"
-			#add_ideas = IMA_scientific_education
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_research_speed_factor = 0.03
+				tooltip = research_speed_factor_tt
+			}
 		}
 	}
 	
@@ -1770,7 +2051,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20010"
 			add_research_slot = 1
 			add_tech_bonus = {
-				name = IMA_radar_project
+				name = IMA_20010
 				bonus = 1.0
 				uses = 2
 				category = radar_tech
@@ -1792,6 +2073,7 @@ focus_tree = {
 		prerequisite = { focus = IMA_20009 }
 		available = {
 			has_global_flag = discovery_of_nuclear_fission
+			owns_state = 125
 		}
 
 		available_if_capitulated = yes
@@ -1799,10 +2081,18 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20010"
 			add_tech_bonus = {
-				name = IMA_project_MAUD
+				name = IMA_20011
 				bonus = 1.0
 				uses = 1
 				category = nuclear
+			}
+			125 = {
+				add_building_construction = {
+					type = nuclear_facility
+					province = { id = 11253 }
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -1838,226 +2128,32 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20012"
-			if = {
-				limit = { has_TfV = yes }
-				add_to_tech_sharing_group = IMA_tizard_mission
-#				hidden_effect = {
-#					if = {
-#						limit = {
-#							ICG = { 
-#								OR = {
-#									is_in_faction_with = IMA
-#									has_idea = IMA_westminster_statute 
-#								}
-#							}
-#							ICG = { country_event = IMA.1 }
-#						}
-#					}
-#					if = {
-#						limit = {
-#							IML = { 
-#								OR = {
-#									is_in_faction_with = IMA
-#									has_idea = IMA_westminster_statute 
-#								}
-#							}
-#							IML = { country_event = IMA.1 }
-#						}
-#					}
-#					if = {
-#						limit = {
-#							ISC = { 
-#								OR = {
-#									is_in_faction_with = IMA
-#									has_idea = IMA_westminster_statute 
-#								}
-#							}
-#							ISC = { country_event = IMA.1 }
-#						}
-#					}
-#					if = {
-#						limit = {
-#							ISM = { 
-#								OR = {
-#									is_in_faction_with = IMA
-#									has_idea = IMA_westminster_statute 
-#								}
-#							}
-#							ISM = { country_event = IMA.1 }
-#						}
-#					}
-#					if = {
-#						limit = {
-#							IDS = { 
-#								OR = {
-#									is_in_faction_with = IMA
-#									has_idea = IMA_westminster_statute 
-#								}
-#							}
-#							IDS = { country_event = IMA.1 }
-#						}
-#					}
-#					if = {
-#						limit = {
-#							IGM = { 
-#								OR = {
-#									is_in_faction_with = IMA
-#									has_idea = IMA_westminster_statute 
-#								}
-#							}
-#							IGM = { country_event = IMA.1 }
-#						}
-#					}
-#				}
-#				unlock_decision_category_tooltip = IMA_tizard_mission_expand
-				else = {
-					if = {
-						limit = {
-							ICG = { 
-								OR = {
-									is_in_faction_with = IMA
-									has_idea = IMA_westminster_statute 
-								}
-							}
-						}
+			add_to_tech_sharing_group = IMA_tizard_mission
+			hidden_effect = {
+				if = {
+					limit = {
 						ICG = {
-							add_tech_bonus = {
-								name = IMA_tizard_mission_nuke
-								bonus = 1.0
-								uses = 2
-								category = nuclear
-							}
-							add_tech_bonus = {
-								name = IMA_tizard_mission_radar
-								bonus = 2.0
-								uses = 2
-								category = radar_tech
+							OR = {
+								is_in_faction_with = IMA
+								has_idea = IMA_westminster_statute 
 							}
 						}
 					}
-					if = {
-						limit = {
-							IML = { 
-								OR = {
-									is_in_faction_with = IMA
-									has_idea = IMA_westminster_statute 
-								}
-							}
-						}
-						IML = {
-							add_tech_bonus = {
-								name = IMA_tizard_mission_nuke
-								bonus = 1.0
-								uses = 2
-								category = nuclear
-							}
-							add_tech_bonus = {
-								name = IMA_tizard_mission_radar
-								bonus = 2.0
-								uses = 2
-								category = radar_tech
+					ICG = { country_event = IMA_westminster_diplomacy.1 }
+				}
+				if = {
+					limit = {
+						IML = { 
+							OR = {
+								is_in_faction_with = IMA
+								has_idea = IMA_westminster_statute 
 							}
 						}
 					}
-					if = {
-						limit = {
-							ISC = { 
-								OR = {
-									is_in_faction_with = IMA
-									has_idea = IMA_westminster_statute 
-								}
-							}
-						}
-						ISC = {
-							add_tech_bonus = {
-								name = IMA_tizard_mission_nuke
-								bonus = 1.0
-								uses = 2
-								category = nuclear
-							}
-							add_tech_bonus = {
-								name = IMA_tizard_mission_radar
-								bonus = 2.0
-								uses = 2
-								category = radar_tech
-							}
-						}
-					}
-					if = {
-						limit = {
-							ISM = { 
-								OR = {
-									is_in_faction_with = IMA
-									has_idea = IMA_westminster_statute 
-								}
-							}
-						}
-						ISM = {
-							add_tech_bonus = {
-								name = IMA_tizard_mission_nuke
-								bonus = 1.0
-								uses = 2
-								category = nuclear
-							}
-							add_tech_bonus = {
-								name = IMA_tizard_mission_radar
-								bonus = 2.0
-								uses = 2
-								category = radar_tech
-							}
-						}
-					}
-					if = {
-						limit = {
-							IDS = { 
-								OR = {
-									is_in_faction_with = IMA
-									has_idea = IMA_westminster_statute 
-								}
-							}
-						}
-						IDS = {
-							add_tech_bonus = {
-								name = IMA_tizard_mission_nuke
-								bonus = 1.0
-								uses = 2
-								category = nuclear
-							}
-							add_tech_bonus = {
-								name = IMA_tizard_mission_radar
-								bonus = 2.0
-								uses = 2
-								category = radar_tech
-							}
-						}
-					}
-					if = {
-						limit = {
-							IGM = { 
-								OR = {
-									is_in_faction_with = IMA
-									has_idea = IMA_westminster_statute 
-								}
-							}
-						}
-						IGM = {
-							add_tech_bonus = {
-								name = IMA_tizard_mission_nuke
-								bonus = 1.0
-								uses = 2
-								category = nuclear
-							}
-							add_tech_bonus = {
-								name = IMA_tizard_mission_radar
-								bonus = 2.0
-								uses = 2
-								category = radar_tech
-							}
-						}
-					}
+					IML = { country_event = IMA_westminster_diplomacy.1 }
 				}
 			}
-			
+			unlock_decision_category_tooltip = IMA_tizard_mission_expand
 			custom_effect_tooltip = IMA_20012_tt
 		}
 	}
@@ -2079,7 +2175,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20013"
 			add_tech_bonus = {
-				name = tube_alloys
+				name = IMA_20013
 				bonus = 3.0
 				uses = 1
 				category = nuclear
@@ -2111,18 +2207,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
-		complete_tooltip = {
-			every_state = {
-				limit = { has_state_flag = IMA_limited_rearmament_focus_2IC }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_30001"
 			random_core_state = {
@@ -2204,22 +2288,11 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_30001 }
 		available = {
-			if = {
-				limit = { has_MtG = yes }
-				OR = {
-					threat > 0.1 
-					has_war = yes
-					has_idea = IMA_no_further_appeasement_idea
-					is_democratic = no
-				}
-			}
-			if = {
-				limit = { has_MtG = no }
-				OR = {
-					threat > 0.1 
-					has_war = yes
-					is_democratic = no
-				}
+			OR = {
+				threat > 0.1
+				has_war = yes
+				has_completed_focus = IMA_51201
+				is_democratic = no
 			}
 		}
 
@@ -2228,7 +2301,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_30003"
-			add_ideas = british_austerity_idea
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 	
@@ -2367,6 +2444,14 @@ focus_tree = {
 				category = air_equipment
 			}
 			custom_effect_tooltip = generic_line_break_tt
+			338 = {
+				add_building_construction = {
+					type = air_facility
+					province = { id = 3369 }
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -2587,6 +2672,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_31108 }
 		prerequisite = { focus = IMA_31106 }
+		available = { has_tech = jet_engines }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -2653,7 +2739,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31011"
-			
+			add_ideas = IMA_31011_idea
+			custom_effect_tooltip = IMA_air_force_tt
+			add_to_variable = {
+				IMA_air_force_build_cost_ic_heavy_fighter = -0.1
+				tooltip = build_cost_ic_heavy_fighter_tt
+			}
+			hidden_effect = {
+				add_ideas = IMA_31011_idea_hidden
+			}
 		}
 	}
 
@@ -2673,7 +2767,27 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31007"
-			
+			custom_effect_tooltip = IMA_air_force_tt
+			add_to_variable = {
+				IMA_air_force_air_range_factor = 0.05
+				tooltip = air_range_factor_tt
+			}
+			add_to_variable = {
+				IMA_air_force_air_nav_efficiency = 0.1
+				tooltip = air_nav_efficiency_tt
+			}
+			add_to_variable = {
+				IMA_air_force_naval_strike_attack_factor = 0.1
+				tooltip = naval_strike_attack_factor_tt
+			}
+			add_to_variable = {
+				IMA_air_force_naval_strike_targetting_factor = 0.1
+				tooltip = naval_strike_targetting_factor_tt
+			}
+			add_to_variable = {
+				IMA_air_force_naval_strike_agility_factor = 0.05
+				tooltip = naval_strike_agility_factor_tt
+			}
 		}
 	}
 
@@ -2769,12 +2883,17 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_31201 }
 		prerequisite = { focus = IMA_31202 }
+		available = { has_war_with_major = yes }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31205"
-			
+			custom_effect_tooltip = IMA_air_force_tt
+			add_to_variable = {
+				IMA_air_force_air_mission_xp_gain_factor = 0.1
+				tooltip = air_mission_xp_gain_factor_tt
+			}
 		}
 	}
 
@@ -2880,6 +2999,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31012"
+			custom_effect_tooltip = IMA_army_tt
+			add_to_variable = { 
+				IMA_army_special_forces_cap = 0.03
+				tooltip = special_forces_cap_tt
+			}
+			add_to_variable = { 
+				IMA_army_paradrop_organization_factor = 0.1
+				tooltip = paradrop_organization_factor_tt
+			}
+			add_to_variable = { 
+				IMA_army_paratrooper_aa_defense = 0.05
+				tooltip = paratrooper_aa_defense_tt
+			}
 		}
 	}
 
@@ -2899,7 +3031,39 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31013"
-			
+			custom_effect_tooltip = IMA_army_tt
+			add_to_variable = { 
+				IMA_army_special_forces_training_time_factor = -0.1
+				tooltip = special_forces_training_time_factor_tt
+			}
+			add_to_variable = { 
+				IMA_army_special_forces_no_supply_grace = -0.05 
+				tooltip = special_forces_no_supply_grace_tt
+			}
+			add_to_variable = { 
+				IMA_army_special_forces_out_of_supply_factore = -0.05
+				tooltip = special_forces_out_of_supply_factor_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = IMA_31013_tt
+			hidden_effect = {
+				division_template = {
+					name = "Producer Paratroop Division"
+					division_names_group = IMA_PAR_01
+					regiments = { 
+						paratrooper = { x = 0 y = 0 }
+						paratrooper = { x = 0 y = 1 }
+						paratrooper = { x = 0 y = 2 }
+						paratrooper = { x = 1 y = 0 }
+						paratrooper = { x = 1 y = 1 }
+						paratrooper = { x = 1 y = 2 }
+						paratrooper = { x = 2 y = 0 }
+						paratrooper = { x = 2 y = 1 }
+						paratrooper = { x = 2 y = 2 }
+					}
+				}
+				IMA_create_paratroop_division = yes
+			}
 		}
 	}
 
@@ -3325,6 +3489,7 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_32104 focus = IMA_32204 focus = IMA_32304 focus = IMA_32404 }
+		available = { has_war_with_major = yes }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3567,7 +3732,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_30004"
-			
+			custom_effect_tooltip = IMA_army_tt
+			add_to_variable = { 
+				IMA_army_special_forces_cap = 0.03
+				tooltip = special_forces_cap_tt
+			}
+			add_to_variable = { 
+				IMA_army_special_forces_training_time_factor = -0.1
+				tooltip = special_forces_training_time_factor_tt
+			}
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = IMA_david_stirling
 		}
 	}
 
@@ -3592,7 +3767,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32016"
-
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = { 
+				IMA_navy_naval_invasion_prep_speed = 0.25
+				tooltip = naval_invasion_prep_speed_tt
+			}
+			add_to_variable = { 
+				IMA_navy_naval_invasion_capacity = 10
+				tooltip = naval_invasion_capacity_tt
+			}
+			add_to_variable = { 
+				IMA_navy_naval_invasion_penalty = -0.15
+				tooltip = naval_invasion_penalty_tt
+			}
 		}
 	}
 
@@ -3615,7 +3802,36 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32017"
-			
+			custom_effect_tooltip = IMA_army_tt
+			add_to_variable = { 
+				IMA_army_special_forces_cap = 0.03
+				tooltip = special_forces_cap_tt
+			}
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = { 
+				IMA_navy_naval_invasion_capacity = 5
+				tooltip = naval_invasion_capacity_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = IMA_32017_tt
+			hidden_effect = {
+				division_template = {
+					name = "Producer Marine Division"
+					division_names_group = IMA_MAR_01
+					regiments = { 
+						marine = { x = 0 y = 0 }
+						marine = { x = 0 y = 1 }
+						marine = { x = 0 y = 2 }
+						marine = { x = 1 y = 0 }
+						marine = { x = 1 y = 1 }
+						marine = { x = 1 y = 2 }
+						marine = { x = 2 y = 0 }
+						marine = { x = 2 y = 1 }
+						marine = { x = 2 y = 2 }
+					}
+				}
+				IMA_create_marine_division = yes
+			}
 		}
 	}
 
@@ -3638,7 +3854,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33101"
-			
+			navy_experience = 50
+			add_tech_bonus = {
+				name = IMA_33101
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.15
+				name = IMA_33101
+				uses = 2
+				category = naval_doctrine
+			}
 		}
 	}
 
@@ -3660,7 +3888,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33201"
-			
+			navy_experience = 50
+			add_tech_bonus = {
+				name = IMA_33201
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.15
+				name = IMA_33101
+				uses = 2
+				category = naval_doctrine
+			}
 		}
 	}
 
@@ -3675,12 +3915,21 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_33101 focus = IMA_33201 }
+		available = { has_tech = improved_ship_hull_carrier }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33102"
-			
+			IMA_design_illustrious = yes
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = { 
+				IMA_navy_build_cost_ic_carrier = -0.05
+				tooltip = build_cost_ic_carrier_tt
+			}
+			hidden_effect = {
+				add_ideas = IMA_33102_idea
+			}
 		}
 	}
 
@@ -3700,7 +3949,45 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33001"
-			
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_production_speed_dockyard_factor = 0.05
+				tooltip = production_speed_dockyard_factor_tt
+			}
 		}
 	}
 
@@ -3715,12 +4002,21 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_33101 focus = IMA_33201 }
+		available = { has_tech = improved_ship_hull_heavy }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33202"
-			
+			IMA_design_takagi_junichiro = yes
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = { 
+				IMA_navy_build_cost_ic_capital_ship = -0.05
+				tooltip = build_cost_ic_capital_ship_tt
+			}
+			hidden_effect = {
+				add_ideas = IMA_33202_idea
+			}
 		}
 	}
 	
@@ -3741,7 +4037,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33103"
-			
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_naval_detection = 0.10
+				tooltip = naval_detection_tt
+			}
+			add_to_variable = {
+				IMA_navy_spotting_chance = 0.10
+				tooltip = spotting_chance_tt
+			}
+			add_to_variable = {
+				IMA_navy_positioning = 0.10
+				tooltip = positioning_tt
+			}
 		}
 	}
 
@@ -3762,7 +4070,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33203"
-			
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_naval_speed_factor = 0.10
+				tooltip = naval_speed_factor_tt
+			}
+			add_to_variable = {
+				IMA_navy_naval_coordination = 0.10
+				tooltip = naval_coordination_tt
+			}
+			add_to_variable = {
+				IMA_navy_naval_defense_factor = 0.10
+				tooltip = naval_defense_factor_tt
+			}
 		}
 	}
 
@@ -3782,7 +4102,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			
+			navy_experience = 50
+			air_experience = 50
+			IMA_design_seagladiator = yes
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_navy_carrier_air_agility_factor = 0.05
+				tooltip = navy_carrier_air_agility_factor_tt
+			}
 		}
 	}
 
@@ -3802,13 +4129,24 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33204"
-			
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				category = naval_doctrine
+				cost_reduction = 0.25
+				uses = 1
+				name = IMA_33204
+			}
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_experience_gain_navy_factor = 0.1
+				tooltip = experience_gain_navy_factor_tt 
+			}
 		}
 	}
 
 	focus = {
 		id = IMA_33205 #본토 함대
-		icon = GFX_SOV_surface_warfare_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_destroyer
 		cost = 5
 
 		relative_position_id = IMA_33204
@@ -3823,7 +4161,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33205"
-			
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_navy_capital_ship_attack_factor = 0.1
+				tooltip = navy_capital_ship_attack_factor_tt 
+			}
+			add_to_variable = {
+				IMA_navy_navy_capital_ship_defence_factor = 0.1
+				tooltip = navy_capital_ship_defence_factor_tt 
+			}
 		}
 	}
 
@@ -3844,7 +4190,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33206"
-			
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_navy_max_range_factor = 0.10
+				tooltip = navy_max_range_factor_tt
+			}
+			add_to_variable = {
+				IMA_navy_navy_org_factor = 0.05
+				tooltip = navy_org_factor_tt
+			}
 		}
 	}
 
@@ -3864,7 +4218,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33207"
-			
+			IMA_design_invincible = yes
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = { 
+				IMA_navy_naval_critical_score_chance_factor = 0.15
+				tooltip = naval_critical_score_chance_factor_tt
+			}
 		}
 	}
 
@@ -3884,7 +4243,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33004"
-			
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = { 
+				IMA_navy_navy_submarine_detection_factor = 0.2
+				tooltip = navy_submarine_detection_factor_tt
+			}
+			add_to_variable = { 
+				IMA_navy_experience_gain_destroyer_combat_factor = 0.1
+				tooltip = experience_gain_destroyer_combat_factor_tt
+			}
+			add_to_variable = { 
+				IMA_navy_experience_gain_destroyer_training_factor = 0.1
+				tooltip = experience_gain_destroyer_training_factor_tt
+			}
 		}
 	}
 
@@ -3904,6 +4275,23 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33005"
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_naval_damage_factor = 0.3
+				tooltip = naval_damage_factor_tt
+			}
+			add_to_variable = {
+				IMA_navy_naval_defense_factor = 0.3
+				tooltip = naval_defense_factor_tt
+			}
+			add_to_variable = {
+				IMA_navy_experience_gain_navy_factor = 0.2
+				tooltip = experience_gain_navy_factor_tt 
+			}
+			add_to_variable = {
+				IMA_navy_naval_doctrine_cost_factor = -0.1
+				tooltip = naval_doctrine_cost_factor_tt
+			}
 			
 		}
 	}
@@ -3924,7 +4312,45 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33006"
-			
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_repair_speed_factor = 0.1
+				tooltip = repair_speed_factor_tt
+			}
 		}
 	}
 
@@ -3944,7 +4370,27 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33007"
-			
+			add_tech_bonus = {
+				name = IMA_33007
+				bonus = 1.0
+				uses = 1
+				category = naval_minelaying
+			}
+			add_tech_bonus = {
+				name = IMA_33007
+				bonus = 1.0
+				uses = 2
+				category = naval_minesweeping
+			}
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = { 
+				IMA_navy_mines_planting_by_fleets_factor = 0.1
+				tooltip = mines_planting_by_fleets_factor_tt
+			}
+			add_to_variable = { 
+				IMA_navy_mines_sweeping_by_fleets_factor = 0.1
+				tooltip = mines_sweeping_by_fleets_factor_tt
+			}
 		}
 	}
 
@@ -3964,7 +4410,51 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			
+			if = {
+				limit = { has_AAT = no }
+				if = {
+					limit = { has_idea = IMA_cammell_laird }
+					swap_ideas = {
+						remove_idea = IMA_cammell_laird
+						add_idea = IMA_cammell_laird_improved
+					}
+				}
+				else = {
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = IMA_cammell_laird
+							add_idea = IMA_cammell_laird_improved
+						}
+					}
+				}
+			}
+			else = {
+				mio:IMA_cammell_laird_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.05
+				}
+			}
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = { 
+				IMA_navy_build_cost_ic_carrier = -0.1
+				tooltip = build_cost_ic_carrier_tt
+			}
+			add_to_variable = { 
+				IMA_navy_carrier_capacity_penalty_reduction = -0.1
+				tooltip = carrier_capacity_penalty_reduction_tt
+			}
+			add_to_variable = { 
+				IMA_navy_carrier_traffic = 0.1
+				tooltip = carrier_traffic_tt
+			}
+			add_to_variable = {
+				IMA_navy_navy_max_range_factor = 0.10
+				tooltip = navy_max_range_factor_tt
+			}
+			hidden_effect = {
+				add_ideas = IMA_33008_idea
+			}
 		}
 	}
 
@@ -3984,12 +4474,41 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			
+			if = {
+				limit = { has_AAT = no }
+				if = {
+					limit = { has_idea = IMA_harland_wolff }
+					swap_ideas = {
+						remove_idea = IMA_harland_wolff
+						add_idea = IMA_harland_wolff_improved
+					}
+				}
+				else = {
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = IMA_harland_wolff
+							add_idea = IMA_harland_wolff_improved
+						}
+					}
+				}
+			}
+			else = {
+				mio:IMA_harland_wolff_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.05
+				}
+			}
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_experience_gain_navy_factor = 0.1
+				tooltip = experience_gain_navy_factor_tt 
+			}
 		}
 	}
 
 	focus = {
-		id = IMA_33012 #노후함 개장
+		id = IMA_33012 #선박 긴급 징발
 		icon = GFX_focus_POL_develop_polish_shipbuilding
 		cost = 5
 
@@ -4004,7 +4523,44 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			unlock_decision_category_tooltip = navy_convoy_decision_category
+			hidden_effect = {
+				set_country_flag = navy_convoy_decision_flag
+			}
 		}
 	}
 
@@ -4024,7 +4580,49 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			
+			custom_effect_tooltip = IMA_navy_tt
+			if = {
+				limit = { has_AAT = no }
+				if = {
+					limit = { has_idea = IMA_yarrow_shipbuilders }
+					swap_ideas = {
+						remove_idea = IMA_yarrow_shipbuilders
+						add_idea = IMA_yarrow_shipbuilders_improved
+					}
+				}
+				else = {
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = IMA_yarrow_shipbuilders
+							add_idea = IMA_yarrow_shipbuilders_improved
+						}
+					}
+				}
+			}
+			else = {
+				mio:IMA_yarrow_shipbuilders_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.05
+				}
+			}
+			IMA_design_battle = yes
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = { 
+				IMA_navy_build_cost_ic_screen_ship = -0.1
+				tooltip = build_cost_ic_screen_ship_tt
+			}
+			add_to_variable = { 
+				IMA_navy_build_cost_ic_convoy = -0.1
+				tooltip = build_cost_ic_convoy_tt
+			}
+			add_to_variable = { 
+				IMA_navy_screening_efficiency = 0.1
+				tooltip = screening_efficiency_tt
+			}
+			hidden_effect = {
+				add_ideas = IMA_33014_idea
+			}
 		}
 	}
 
@@ -4044,7 +4642,45 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
+			if = {
+				limit = { has_AAT = no }
+				if = {
+					limit = { has_idea = IMA_john_brown }
+					swap_ideas = {
+						remove_idea = IMA_john_brown
+						add_idea = IMA_john_brown_improved
+					}
+				}
+				else = {
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = IMA_john_brown
+							add_idea = IMA_john_brown_improved
+						}
+					}
+				}
+			}
+			else = {
+				mio:IMA_john_brown_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.05
+				}
 			
+			}
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_naval_mine_hit_chance = -0.05
+				tooltip = naval_mine_hit_chance_tt
+			}
+			add_to_variable = {
+				IMA_navy_naval_mines_effect_reduction = 0.05
+				tooltip = naval_mines_effect_reduction_tt
+			}
+			add_to_variable = {
+				IMA_navy_mines_planting_by_fleets_factor = 0.05
+				tooltip = mines_planting_by_fleets_factor_tt
+			}
 		}
 	}
 
@@ -4064,7 +4700,47 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			
+			navy_experience = 50
+			air_experience = 50
+			IMA_design_fulmar = yes
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_navy_carrier_air_attack_factor = 0.05
+				tooltip = navy_carrier_air_attack_factor_tt
+			}
+			custom_effect_tooltip = IMA_air_force_tt
+			add_to_variable = {
+				IMA_air_force_naval_strike_targetting_factor = 0.15
+				tooltip = naval_strike_targetting_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = IMA_33009 #대서양을 넘어서
+		icon = GFX_goal_generic_build_navy
+		cost = 5
+
+		relative_position_id = IMA_33008
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		prerequisite = { focus = IMA_33008 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
+			IMA_design_implacable = yes
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_navy_max_range_factor = 0.20
+				tooltip = navy_max_range_factor_tt
+			}
+			add_to_variable = {
+				IMA_navy_naval_attrition = -0.10
+				tooltip = naval_attrition_tt
+			}
 		}
 	}
 
@@ -4083,12 +4759,25 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			
+			IMA_design_churchil = yes
+			IMA_design_minotaur = yes
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_build_cost_ic_screen_ship = -0.05
+				tooltip = build_cost_ic_screen_ship_tt
+			}
+			add_to_variable = {
+				IMA_navy_build_cost_ic_capital_ship = -0.05
+				tooltip = build_cost_ic_screen_ship_tt
+			}
+			hidden_effect = {
+				add_ideas = IMA_33011_idea
+			}
 		}
 	}
 
 	focus = {
-		id = IMA_33013 #선박 긴급 징발
+		id = IMA_33013 #노후함 개장
 		icon = GFX_focus_generic_merchant_fleet
 		cost = 5
 
@@ -4102,7 +4791,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = { 
+				IMA_navy_refit_speed = 0.15
+				tooltip = refit_speed_tt
+			}
+			add_to_variable = { 
+				IMA_navy_refit_ic_cost = -0.2
+				tooltip = refit_ic_cost_tt
+			}
+			add_to_variable = {
+				IMA_navy_repair_speed_factor = 0.1
+				tooltip = repair_speed_factor_tt
+			}
 		}
 	}
 
@@ -4115,7 +4816,12 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		bypass = { NOT = { is_in_faction_with = ICG } }
+		bypass = { 
+			OR = { 
+				NOT = { is_in_faction_with = ICG } 
+				ICG = { is_democratic = no }
+			}
+		}
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_33014 }
 
@@ -4123,7 +4829,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			
+			custom_effect_tooltip = IMA_33015_tt
+			hidden_effect = {
+				ICG = { country_event = { id = IMA_diplomacy.291 days = 1 } }
+			}
+			unlock_decision_tooltip = IMA_homeland_defence_base_for_destroyers
 		}
 	}
 
@@ -4142,26 +4852,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			
-		}
-	}
-
-	focus = {
-		id = IMA_33009 #대서양을 넘어서
-		icon = GFX_SOV_expand_the_red_fleet_ccp_2d_sov_compatibility
-		cost = 5
-
-		relative_position_id = IMA_33008
-		x = 0
-		y = 1
-
-		ai_will_do = { factor = 50 }
-		prerequisite = { focus = IMA_33008 }
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = {
+				IMA_navy_naval_speed_factor = 0.1
+				tooltip = naval_speed_factor_tt
+			}
+			add_to_variable = {
+				IMA_navy_naval_enemy_fleet_size_ratio_penalty_factor = 0.1
+				tooltip = naval_enemy_fleet_size_ratio_penalty_factor_tt
+			}
 		}
 	}
 
@@ -4184,7 +4883,42 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			
+			custom_effect_tooltip = IMA_navy_tt
+			add_to_variable = { 
+				IMA_navy_build_cost_ic_capital_ship = -0.1
+				tooltip = build_cost_ic_capital_ship_tt
+			}
+			add_to_variable = { 
+				IMA_navy_build_cost_ic_carrier = -0.1
+				tooltip = build_cost_ic_carrier_tt
+			}
+			add_to_variable = { 
+				IMA_navy_build_cost_ic_convoy = -0.1
+				tooltip = build_cost_ic_convoy_tt
+			}
+			add_to_variable = { 
+				IMA_navy_build_cost_ic_screen_ship = -0.1
+				tooltip = build_cost_ic_screen_ship_tt
+			}
+			add_to_variable = { 
+				IMA_navy_build_cost_ic_submarine = -0.1
+				tooltip = build_cost_ic_submarine_tt
+			}
+			add_to_variable = { 
+				IMA_navy_build_cost_ic_submarine = -0.1
+				tooltip = build_cost_ic_submarine_tt
+			}
+			add_to_variable = {
+				IMA_navy_naval_doctrine_cost_factor = -0.1
+				tooltip = naval_doctrine_cost_factor_tt
+			}
+			add_to_variable = {
+				IMA_navy_experience_gain_navy_factor = 0.1
+				tooltip = experience_gain_navy_factor_tt 
+			}
+			hidden_effect = {
+				add_ideas = IMA_33018_idea_hidden
+			}
 		}
 	}
 
@@ -4196,6 +4930,16 @@ focus_tree = {
 		relative_position_id = IMA_33105
 		x = 0
 		y = 1
+		available = {
+			has_tech = jet_engines
+			if = {
+				limit = { has_BBA = yes }
+				has_tech = modern_small_airframe
+				else = {
+					has_tech = jet_fighter1
+				}
+			}
+		}
 
 		ai_will_do = { factor = 0 } #전후 나온 함재기라 실제로 AI는 이거 안 찍음
 		prerequisite = { focus = IMA_33105 }
@@ -4203,7 +4947,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			
+			IMA_design_attacker = yes
 		}
 	}
 
@@ -4224,7 +4968,20 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_41001"
-			
+			add_stability = 0.1
+			if = {
+				limit = { has_country_flag = IMA_haruka_crisis }
+				add_to_variable = {
+					IMA_left_anger = 1
+					tooltip = IMA_left_anger_add_tt
+				}
+				subtract_from_variable = {
+					IMA_right_anger = 1
+					tooltip = IMA_right_anger_subtract_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
+			}
+			unlock_decision_category_tooltip = IMA_imperial_federation_category
 		}
 	}
 
@@ -4265,7 +5022,36 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43001"
-			
+			add_stability = -0.05
+			add_popularity = { 
+				ideology = communism 
+				popularity = 0.05 
+			}
+			add_popularity = { 
+				ideology = authoritariancommunism 
+				popularity = 0.05 
+			}
+			add_popularity = { 
+				ideology = socialism 
+				popularity = 0.05 
+			}
+			add_popularity = { 
+				ideology = anarchosyndicalism 
+				popularity = 0.05 
+			}
+			add_political_power = 80
+			if = {
+				limit = { has_country_flag = IMA_haruka_crisis }
+				add_to_variable = {
+					IMA_right_anger = 1
+					tooltip = IMA_right_anger_add_tt
+				}
+				subtract_from_variable = {
+					IMA_left_anger = 1
+					tooltip = IMA_left_anger_subtract_tt
+				}
+				custom_effect_tooltip = generic_line_break_tt
+			}
 		}
 	}
 
@@ -4282,13 +5068,21 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_41001 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_41002"
 			army_experience = 5
 			navy_experience = 25
 			air_experience = 25
-			#add_ideas = IMA_service_oerseas_idea
+			custom_effect_tooltip = IMA_army_tt
+			add_to_variable = {
+				IMA_army_acclimatization_hot_climate_gain_factor = 0.07
+				tooltip = acclimatization_hot_climate_gain_factor_tt
+			}
+			add_to_variable = {
+				IMA_army_acclimatization_cold_climate_gain_factor = 0.07
+				tooltip = acclimatization_cold_climate_gain_factor_tt
+			}
 		}
 	}
 
@@ -4305,10 +5099,14 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_41002 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_41003"
-			#add_ideas = IMA_service_oerseas_elite
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_research_speed_factor = 0.07
+				tooltip = research_speed_factor_tt
+			}
 		}
 	}
 
@@ -4325,10 +5123,10 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_41003 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_41004"
-			#unlock_decision_category_tooltip = IMA_colony_development_category
+			unlock_decision_category_tooltip = IMA_imperial_federation_develop_colony
 		}
 	}
 
@@ -4345,10 +5143,11 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_41003 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_41004"
-			#unlock_decision_category_tooltip = IMA_colony_development_category
+			unlock_decision_tooltip = IMA_imperial_federation_abolish_statute
+			unlock_decision_tooltip = IMA_imperial_federation_gold_integrate
 		}
 	}
 
@@ -4362,6 +5161,14 @@ focus_tree = {
 		relative_position_id = IMA_41004
 
 		ai_will_do = { factor = 50 } 
+		available = {
+			every_country = {
+				limit = { is_subject_of = IMA }
+				NOT = { has_autonomy_state = ima_westminster_dominion }
+				NOT = { has_autonomy_state = ima_dominion }
+				NOT = { has_autonomy_state = ima_colony }
+			}
+		}
 		prerequisite = { focus = IMA_41004 }
 		prerequisite = { focus = IMA_41005 }
 		available_if_capitulated = yes
@@ -4438,7 +5245,7 @@ focus_tree = {
 		relative_position_id = IMA_41001
 
 		ai_will_do = { factor = 50 } 
-		prerequisite = { focus = IMA_41001 focus = IMA_42001 }
+		prerequisite = { focus = IMA_41001 focus = IMA_42001 focus = IMA_43001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
@@ -4462,6 +5269,26 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40002"
+			326 = {
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = {
+						326 = {
+							free_building_slots = {
+								building = coastal_bunker
+								size > 2
+								province = 10062
+							}
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 10062
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -4611,6 +5438,7 @@ focus_tree = {
 						}
 					}
 				}
+				ICG = { NOT = { is_subject_of = IMA } }
 			}
 		}
 
@@ -4625,10 +5453,7 @@ focus_tree = {
 					limit = {
 						impassable = no
 						is_core_of = ICG
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -4641,10 +5466,7 @@ focus_tree = {
 					limit = {
 						impassable = no
 						is_core_of = ICG
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = arms_factory
@@ -4660,10 +5482,7 @@ focus_tree = {
 						is_controlled_by = FROM
 						impassable = no
 						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -4677,14 +5496,11 @@ focus_tree = {
 						is_controlled_by = FROM
 						impassable = no
 						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 					add_extra_state_shared_building_slots = 1
@@ -4736,6 +5552,7 @@ focus_tree = {
 						}
 					}
 				}
+				IML = { NOT = { is_subject_of = IMA } }
 			}
 		}
 		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
@@ -4746,10 +5563,7 @@ focus_tree = {
 					limit = {
 						impassable = no
 						is_core_of = IML
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -4762,10 +5576,7 @@ focus_tree = {
 					limit = {
 						impassable = no
 						is_core_of = IML
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = arms_factory
@@ -4781,10 +5592,7 @@ focus_tree = {
 						is_controlled_by = FROM
 						impassable = no
 						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -4798,10 +5606,7 @@ focus_tree = {
 						is_controlled_by = FROM
 						impassable = no
 						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = arms_factory
@@ -4856,6 +5661,7 @@ focus_tree = {
 						}
 					}
 				}
+				ISM = { NOT = { is_subject_of = IMA } }
 			}
 		}
 		available_if_capitulated = yes
@@ -4867,10 +5673,7 @@ focus_tree = {
 					limit = {
 						impassable = no
 						is_core_of = ISM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -4883,10 +5686,7 @@ focus_tree = {
 					limit = {
 						impassable = no
 						is_core_of = ISM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = arms_factory
@@ -4902,10 +5702,7 @@ focus_tree = {
 						is_controlled_by = FROM
 						impassable = no
 						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -4919,10 +5716,7 @@ focus_tree = {
 						is_controlled_by = FROM
 						impassable = no
 						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = arms_factory
@@ -4977,6 +5771,7 @@ focus_tree = {
 						}
 					}
 				}
+				ISC = { NOT = { is_subject_of = IMA } }
 			}
 		}
 		available_if_capitulated = yes
@@ -4988,10 +5783,7 @@ focus_tree = {
 					limit = {
 						impassable = no
 						is_core_of = ISC
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -5004,10 +5796,7 @@ focus_tree = {
 					limit = {
 						impassable = no
 						is_core_of = ISC
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = arms_factory
@@ -5023,10 +5812,7 @@ focus_tree = {
 						is_controlled_by = FROM
 						impassable = no
 						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -5040,10 +5826,7 @@ focus_tree = {
 						is_controlled_by = FROM
 						impassable = no
 						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = arms_factory
@@ -5098,6 +5881,7 @@ focus_tree = {
 						}
 					}
 				}
+				IDS = { NOT = { is_subject_of = IMA } }
 			}
 		}
 		available_if_capitulated = yes
@@ -5109,10 +5893,7 @@ focus_tree = {
 					limit = {
 						impassable = no
 						is_core_of = IDS
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -5125,10 +5906,7 @@ focus_tree = {
 					limit = {
 						impassable = no
 						is_core_of = IDS
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = arms_factory
@@ -5144,10 +5922,7 @@ focus_tree = {
 						is_controlled_by = FROM
 						impassable = no
 						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -5161,10 +5936,7 @@ focus_tree = {
 						is_controlled_by = FROM
 						impassable = no
 						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = arms_factory
@@ -5219,6 +5991,7 @@ focus_tree = {
 						}
 					}
 				}
+				IGM = { NOT = { is_subject_of = IMA } }
 			}
 		}
 		available_if_capitulated = yes
@@ -5230,10 +6003,7 @@ focus_tree = {
 					limit = {
 						impassable = no
 						is_core_of = IGM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -5246,10 +6016,7 @@ focus_tree = {
 					limit = {
 						impassable = no
 						is_core_of = IGM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = arms_factory
@@ -5265,10 +6032,7 @@ focus_tree = {
 						is_controlled_by = FROM
 						impassable = no
 						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -5282,10 +6046,7 @@ focus_tree = {
 						is_controlled_by = FROM
 						impassable = no
 						is_core_of = FROM
-						NOT = { 
-							has_state_category = tiny_island
-							has_state_category = small_island
-						}
+						is_island = no
 					}
 					add_building_construction = {
 						type = arms_factory
@@ -5316,11 +6077,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_42007"
 			add_political_power = 150
-			unlock_decision_tooltip = IMA_westminster_statute_construct_infrastructure_improved
-			unlock_decision_tooltip = IMA_westminster_statute_support_civil_factory_improved
-			unlock_decision_tooltip = IMA_westminster_statute_support_military_factory_improved
-			unlock_decision_tooltip = IMA_westminster_statute_support_dockyard_improved
 			set_country_flag = commonwealth_leader_possible
+			add_to_variable = { IMA_westminster_statute_var = -10 }
 		}
 	}
 
@@ -5830,6 +6588,7 @@ focus_tree = {
 		prerequisite = { focus = IMA_51002a focus = IMA_51002b focus = IMA_51002c focus = IMA_51002d focus = IMA_51002e focus = IMA_51002f focus = IMA_51002g }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51101"
+			custom_effect_tooltip = historical_tt
 			add_war_support = 0.05
 			# East Anglia
 			125 = {
@@ -6123,9 +6882,32 @@ focus_tree = {
 				has_completed_focus = IMA_51013
 				has_completed_focus = IMA_51014
 			} 
+			has_tech = wartime_train
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51006"
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 150
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment_2
+				amount = 150
+			}
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 150
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = IMA_industry_tt
+			add_to_variable = {
+				IMA_industry_transport_capacity = -0.2
+				tooltip = transport_capacity_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			unlock_decision_tooltip = IMA_homeland_defence_wartime_train_timetable
+			unlock_decision_tooltip = IMA_homeland_defence_wartime_truck_movement_plan
+			unlock_decision_tooltip = IMA_homeland_defence_wartime_convoy_movement_plan
 		}
 	}
 
@@ -6147,8 +6929,8 @@ focus_tree = {
 				type = topple_government
 				generator = { 461 290 }
 			}
-			unlock_decision_tooltip = IMA_topple_AIN
-			unlock_decision_tooltip = IMA_topple_HND
+			unlock_decision_tooltip = IMA_intervension_plan_topple_AIN
+			unlock_decision_tooltip = IMA_intervension_plan_topple_HND
 		}
 	}
 
@@ -6173,11 +6955,11 @@ focus_tree = {
 				type = topple_government
 				generator = { 656 1011 291 }
 			}
-			unlock_decision_tooltip = IMA_topple_NPT
-			unlock_decision_tooltip = IMA_topple_TSS
-			unlock_decision_tooltip = IMA_topple_DIF
-			unlock_decision_tooltip = IMA_topple_EXT
-			unlock_decision_tooltip = IMA_topple_ONS
+			unlock_decision_tooltip = IMA_intervension_plan_topple_NPT
+			unlock_decision_tooltip = IMA_intervension_plan_topple_TSS
+			unlock_decision_tooltip = IMA_intervension_plan_topple_DIF
+			unlock_decision_tooltip = IMA_intervension_plan_topple_EXT
+			unlock_decision_tooltip = IMA_intervension_plan_topple_ONS
 		}
 	}
 
@@ -6199,7 +6981,7 @@ focus_tree = {
 				type = topple_government
 				generator = { 922 110 140 138 141 }
 			}
-			unlock_decision_tooltip = IMA_topple_SZS 
+			unlock_decision_tooltip = IMA_intervension_plan_topple_SZS 
 		}
 	}
 
@@ -6242,7 +7024,7 @@ focus_tree = {
 				type = topple_government
 				generator = { 112 180 697 698 }
 			}
-			unlock_decision_tooltip = IMA_topple_MMM
+			unlock_decision_tooltip = IMA_intervension_plan_topple_MMM
 		}
 	}
 
@@ -6317,6 +7099,13 @@ focus_tree = {
 			if = {
 				limit = { has_LaR = yes }
 				create_intelligence_agency = yes
+				add_war_support = 0.1
+				add_stability = 0.05
+			}
+			if = {
+				limit = { has_LaR = no }
+				add_war_support = 0.15
+				add_stability = 0.1
 			}
 		}
 	}
@@ -6374,7 +7163,7 @@ focus_tree = {
 				limit = { KJI = { has_added_tension_amount > 0.15 } }
 				KJI = { embargo_FROM = yes }
 			}
-			unlock_decision_tooltip = IMA_foreign_defence_plan_category_embargo
+			unlock_decision_tooltip = IMA_foreign_defence_plan_embargo
 		}
 	}
 
@@ -6531,20 +7320,18 @@ focus_tree = {
 					target = PREV
 					type = topple_government
 				}
-					
 			}
 		}
 	}
 
 	focus = {
-		id = IMA_51015 #아이돌 위원회
+		id = IMA_51015 #거국내각
 		icon = GFX_focus_IMA_51015
 		cost = 0
 
 		relative_position_id = IMA_51013
-		x = 0
+		x = 1
 		y = 1
-		mutually_exclusive = { focus = IMA_51016 }
 		available = { always = no }
 
 		ai_will_do = { factor = 50 }
@@ -6557,37 +7344,16 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IMA_51016 #비상권한 체제
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		cost = 0
-
-		relative_position_id = IMA_51014
-		x = 0
-		y = 1
-		mutually_exclusive = { focus = IMA_51015 }
-		available = { always = no }
-
-		ai_will_do = { factor = 50 }
-		prerequisite = { focus = IMA_51013 focus = IMA_51014 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51016"
-			custom_effect_tooltip = complete_national_focus_by_event_tt
-			add_political_power = 150
-			add_stability = -0.03
-		}
-	}
-
-	focus = {
 		id = IMA_51017 #전시 첩보망 확대
 		icon = GFX_focus_ioi_generic_secret_police
 		cost = 5
 
 		relative_position_id = IMA_51015
-		x = -5
+		x = -6
 		y = 1
 
 		ai_will_do = { factor = 50 }
-		prerequisite = { focus = IMA_51015 focus = IMA_51016 }
+		prerequisite = { focus = IMA_51015 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51017"
 		}
@@ -6638,11 +7404,11 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IMA_51015
-		x = -2
+		x = -1
 		y = 1
 
 		ai_will_do = { factor = 50 }
-		prerequisite = { focus = IMA_51015 focus = IMA_51016 }
+		prerequisite = { focus = IMA_51015 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51020"
 		}
@@ -6654,11 +7420,11 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IMA_51015
-		x = 0
+		x = 1
 		y = 1
 
 		ai_will_do = { factor = 50 }
-		prerequisite = { focus = IMA_51015 focus = IMA_51016 }
+		prerequisite = { focus = IMA_51015 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51021"
 		}
@@ -6670,11 +7436,11 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IMA_51015
-		x = 2
+		x = -3
 		y = 1
 
 		ai_will_do = { factor = 50 }
-		prerequisite = { focus = IMA_51015 focus = IMA_51016 }
+		prerequisite = { focus = IMA_51015 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51022"
 		}
@@ -6686,11 +7452,11 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IMA_51015
-		x = 4
+		x = 3
 		y = 1
 
 		ai_will_do = { factor = 50 }
-		prerequisite = { focus = IMA_51015 focus = IMA_51016 }
+		prerequisite = { focus = IMA_51015 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51023"
 		}
@@ -6777,7 +7543,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = IMA_51025
-		x = 1
+		x = -1
 		y = 1
 
 		ai_will_do = { factor = 50 }
@@ -6801,12 +7567,29 @@ focus_tree = {
 				has_completed_focus = IMA_51024 
 				has_completed_focus = IMA_51025
 			}
+			OR = {
+				RST = { is_in_faction = no }
+				SEL = { is_in_faction = no }
+				PTK = { is_in_faction = no } 
+			}
 		}
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51028 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51024"
+			if = {
+				limit = { RST = { is_in_faction = no } }
+				RST = { country_event = { id = IMA_diplomacy.301 } }
+			}
+			if = {
+				limit = { SEL = { is_in_faction = no } }
+				SEL = { country_event = { id = IMA_diplomacy.301 } }
+			}
+			if = {
+				limit = { PTK = { is_in_faction = no } }
+				PTK = { country_event = { id = IMA_diplomacy.301 } }
+			}
 		}
 	}
 
@@ -6834,6 +7617,8 @@ focus_tree = {
 				target = RST
 				type = puppet_wargoal_focus
 			}
+			unlock_decision_tooltip = IMA_foreign_defence_plan_attack_PTK
+			unlock_decision_tooltip = IMA_foreign_defence_plan_attack_SEL
 		}
 	}
 
@@ -6870,6 +7655,11 @@ focus_tree = {
 		prerequisite = { focus = IMA_51028 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51032"
+			declare_war_on = {
+				target = FGO
+				type = topple_government
+				generator = { 496 500 501 }
+			}
 		}
 	}
 
@@ -6914,14 +7704,20 @@ focus_tree = {
 		icon = GFX_focus_IMA_51035
 		cost = 5
 
-		relative_position_id = IMA_51016
-		x = 6
+		relative_position_id = IMA_51015
+		x = 7
 		y = 1
+		available = {
+			date > 1940.1.1
+			has_war = no
+			always = no #임시
+		}
 
 		ai_will_do = { factor = 50 }
-		prerequisite = { focus = IMA_51015 focus = IMA_51016 }
+		prerequisite = { focus = IMA_51015 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51035"
+			custom_effect_tooltip = on_construction_tt
 		}
 	}
 
@@ -6936,6 +7732,11 @@ focus_tree = {
 		available = {
 			date > 1940.1.1
 			has_war = no
+			has_country_leader = { 
+				character = IMA_amami_haruka
+				ruling_only = yes
+			}
+			always = no #임시
 		}
 		mutually_exclusive = { focus = IMA_51037 focus = IMA_51038 }
 
@@ -6943,6 +7744,7 @@ focus_tree = {
 		prerequisite = { focus = IMA_51035 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51036"
+			custom_effect_tooltip = on_construction_tt
 		}
 	}
 
@@ -6957,6 +7759,7 @@ focus_tree = {
 		available = {
 			date > 1940.1.1
 			has_war = no
+			always = no #임시
 		}
 		mutually_exclusive = { focus = IMA_51036 focus = IMA_51038 }
 
@@ -6965,6 +7768,7 @@ focus_tree = {
 		prerequisite = { focus = IMA_51035 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51037"
+			custom_effect_tooltip = on_construction_tt
 		}
 	}
 
@@ -6979,6 +7783,7 @@ focus_tree = {
 		available = {
 			date > 1940.1.1
 			has_war = no
+			always = no #임시
 		}
 		mutually_exclusive = { focus = IMA_51036 focus = IMA_51037 }
 
@@ -6986,6 +7791,7 @@ focus_tree = {
 		prerequisite = { focus = IMA_51035 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51038"
+			custom_effect_tooltip = on_construction_tt
 		}
 	}
 }

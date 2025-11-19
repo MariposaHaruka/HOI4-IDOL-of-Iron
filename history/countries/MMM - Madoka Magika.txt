@@ -3,13 +3,7 @@ capital = 41 #마드리드
 
 #부대
 set_oob = "MMM_ar"
-if = {
-	limit = { has_MtG = yes }
-	set_naval_oob = "MMM_na_MtG"
-	else = {
-		set_naval_oob = "MMM_na"
-	}
-}
+set_naval_oob = "MMM_na_MtG"
 if = {
 	limit = { has_BBA = yes }
 	set_air_oob = "MMM_ai_BBA"
@@ -35,36 +29,21 @@ set_technology = {
 	interwar_antiair = 1
 	basic_train = 1
 }
-if = {
-	limit = { has_MtG = yes }
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		basic_battery = 1
-		basic_medium_battery = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-		mtg_transport = 1
-	}
-	else = {
-		set_technology = {
-			early_submarine = 1
-			early_destroyer = 1
-			basic_destroyer = 1
-			early_light_cruiser = 1
-			early_heavy_cruiser = 1
-			basic_heavy_cruiser = 1
-			early_battleship = 1
-			transport = 1
-		}
-	}
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	basic_battery = 1
+	basic_medium_battery = 1
+	basic_torpedo = 1
+	basic_depth_charges = 1
+	mtg_transport = 1
 }
 if = {
 	limit = {
@@ -101,6 +80,40 @@ add_dynamic_modifier = { modifier = MMM_army }
 add_dynamic_modifier = { modifier = MMM_navy }
 add_dynamic_modifier = { modifier = MMM_air_force }
 
+## MMM_industry
+
+## MMM_army
+
+set_variable = { MMM_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { MMM_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { MMM_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { MMM_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { MMM_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { MMM_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { MMM_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { MMM_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { MMM_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## MMM_navy
+
+set_variable = { MMM_navy_build_cost_ic_capital_ship = 0.20 } ### 별도 국민정신 적용
+set_variable = { MMM_navy_build_cost_ic_carrier = 0.20 } ### 별도 국민정신 적용
+set_variable = { MMM_navy_build_cost_ic_convoy = 0.05 } ### 별도 국민정신 적용
+set_variable = { MMM_navy_build_cost_ic_screen_ship = 0.20 } ### 별도 국민정신 적용
+set_variable = { MMM_navy_build_cost_ic_submarine = 0.20 } ### 별도 국민정신 적용
+
+## MMM_air_force
+
+set_variable = { MMM_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { MMM_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { MMM_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { MMM_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { MMM_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { MMM_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { MMM_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { MMM_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { MMM_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
+
 #외교
 
 #정치 상황
@@ -126,6 +139,32 @@ set_popularities = {
 	autocracy = 4
 }
 
+## 발푸르기스의 밤
+#create_dynamic_country = {
+#	original_tag = MMM
+#	set_country_flag = MMM_witch_flag
+#	set_politics = { ruling_party = neutrality }
+#	set_cosmetic_tag = MMM_witch
+#	set_research_slots = 3
+#	reserve_dynamic_country = yes
+#}
+#create_dynamic_country = {
+#	original_tag = MMM
+#	set_country_flag = MMM_wraith_flag
+#	set_politics = { ruling_party = neutrality }
+#	set_cosmetic_tag = MMM_wraith
+#	set_research_slots = 3
+#	reserve_dynamic_country = yes
+#}
+#create_dynamic_country = {
+#	original_tag = MMM
+#	set_country_flag = MMM_sayaka_flag
+#	set_politics = { ruling_party = neutrality }
+#	set_cosmetic_tag = MMM_sayaka
+#	set_research_slots = 3
+#	reserve_dynamic_country = yes
+#}
+
 #의회
 
 #캐릭터 
@@ -133,13 +172,269 @@ recruit_character = MMM_kaname_madoka
 recruit_character = MMM_walpurgisnacht
 recruit_character = MMM_candeloro
 
+#recruit_character = MMM_niceto_alcala_zamora
+#recruit_character = MMM_jose_diaz
+#recruit_character = MMA_jose_antonio_primo_de_rivera
+#recruit_character = MMM_manuel_fal_conde
+#recruit_character = MMM_vicente_rojo_lluch
+#recruit_character = MMM_jose_miaja
+#recruit_character = MMM_jose_asensio_torrado
+#recruit_character = MMM_valentin_gonzalez
+#recruit_character = MMM_enrique_lister
+#recruit_character = MMM_juan_modesto
+#recruit_character = MMM_antonio_cordon_garcia
+#recruit_character = MMM_janos_galicz
+#recruit_character = MMA_francisco_franco
+#recruit_character = MMM_mohamed_meziane
+#recruit_character = MMM_gonzalo_queipo_de_llano
+#recruit_character = MMA_emilio_mola
+#recruit_character = MMA_juan_yague
+#recruit_character = MMA_agustin_munoz_grandes
+#recruit_character = MMA_jose_enrique_varela
+#recruit_character = MMA_miguel_cabanellas
+#recruit_character = MMM_jose_millan_astray
+#recruit_character = MMM_miguel_buiza_fernandez_palacios
+#recruit_character = MMA_luis_carrero_blanco
+#recruit_character = MMA_rafael_garcia_valino
+#recruit_character = MMA_heli_rolando_de_tella
+#recruit_character = MMA_miguel_ponte
+#recruit_character = MMA_joaquin_garcia_morato
+#recruit_character = MMA_juan_vigon_suero_diaz
+#recruit_character = MMA_wilhelm_ritter_von_thoma
+#recruit_character = MMA_enrique_canovas_lacruz
+#recruit_character = MMA_ricardo_rada
+#recruit_character = MMM_nicolas_molero
+#recruit_character = MMM_felipe_diaz_sandino
+#recruit_character = MMM_andres_nin
+#recruit_character = MMM_council_of_theorists
+#recruit_character = MMM_domenec_batet
+#recruit_character = MMM_etelvino_vega
+#recruit_character = MMM_mate_zalka
+#recruit_character = MMM_defensive_military_council
+#recruit_character = MMM_offensive_military_council
+#recruit_character = MMM_organizational_military_council
+#recruit_character = MMM_ignacio_hidalgo_de_cisneros
+#recruit_character = MMM_andres_garcia_la_calle
+#recruit_character = MMM_alberto_bayo
+#recruit_character = MMM_air_safety_aviation_council
+#recruit_character = MMM_all_weather_aviation_council
+#recruit_character = MMM_luis_gonzalez_de_ubieta
+#recruit_character = MMM_joakin_egia_unzueta
+#recruit_character = MMM_commerce_raiding_naval_council
+#recruit_character = MMM_reform_naval_council
+#recruit_character = MMM_toribio_martinez_cabrera
+#recruit_character = MMM_francisco_ciutat_de_miguel
+#recruit_character = MMM_antonio_ortega_gutierrez
+#recruit_character = MMM_antonio_azarola_y_gresillon
+#recruit_character = MMM_jose_rovira
+#recruit_character = MMM_carmel_rosa_baserba
+#recruit_character = MMM_wilhelm_zaisser
+#recruit_character = MMM_antonio_escobar_huerta
+#recruit_character = MMM_infantry_military_council
+#recruit_character = MMM_army_regrouping_military_council
+#recruit_character = MMM_concealment_military_council
+#recruit_character = MMM_naval_strike_aviation_council
+#recruit_character = MMM_close_air_support_aviation_council
+#recruit_character = MMM_logistics_naval_council
+#recruit_character = MMM_anti_submarine_naval_council
+#recruit_character = MMM_juan_negrin
+#recruit_character = MMM_juan_lopez_sanchez
+#recruit_character = MMM_juan_garcia_oliver
+#recruit_character = MMM_federica_montseny
+#recruit_character = MMM_juan_andrade
+#recruit_character = MMM_antonia_adroher_i_pascual
+#recruit_character = MMM_jesus_hernandez_tomas
+#recruit_character = MMM_alexander_orlov
+#recruit_character = MMM_indalecio_prieto
+#recruit_character = MMM_dolores_ibarruri
+#recruit_character = MMM_diego_martinez_barrio
+#recruit_character = MMM_augusto_barcia_trelles
+#recruit_character = MMM_francisco_largo_caballero
+#recruit_character = MMA_luis_valdes_cavanillas
+#recruit_character = MMA_tomas_garciano_goni
+#recruit_character = MMA_fidel_davila_arrondo
+#recruit_character = MMA_jose_antonio_giron
+#recruit_character = MMA_manuel_hedilla
+#recruit_character = MMA_raimundo_fernandez_cuesta
+#recruit_character = MMA_tomas_dominguez_arevalo
+#recruit_character = MMA_diego_hidalgo_y_duran
+#recruit_character = MMA_ramon_serrano_suner
+#recruit_character = MMA_luis_hernando_de_larramendi
+#recruit_character = MMA_martin_de_riquer
+#recruit_character = MMA_mauricio_de_sivatte
+#recruit_character = MMA_karl_pius_von_habsburg
+#recruit_character = MMM_manuel_azana
+
 #장관진
 
 #무기 프리셋
-#create_equipment_variant = {
-#	name = ""
-#	type = amphibious_tank_equipment_2
-#}
+### Ship Variants ###
+# Submarines #
+create_equipment_variant = {
+	name = "B Class"				
+	type = ship_hull_submarine_1
+	parent_version = 0
+	name_group = MMM_SS_HISTORICAL
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "C Class"				
+	type = ship_hull_submarine_2
+	name_group = MMM_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_2
+		rear_1_custom_slot = empty
+	}
+}
+# Destroyers #
+create_equipment_variant = {
+	name = "Alsedo Class"				
+	type = ship_hull_light_1
+	name_group = MMM_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_mine_layer_1
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Churucca Class"	
+	type = ship_hull_light_2
+	name_group = MMM_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+}
+create_equipment_variant = {
+	name = "Júpiter Class"					# minelayers
+	type = ship_hull_light_2
+	name_group = MMM_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = empty
+		mid_1_custom_slot = ship_mine_layer_1
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+}
+# Light Cruisers #
+create_equipment_variant = {
+	name = "República Class"
+	type = ship_hull_cruiser_1
+	name_group = MMM_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_light_medium_battery_1
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Méndez Núñes Class"
+	type = ship_hull_cruiser_1
+	name_group = MMM_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Príncipe Alfonso Class"
+	type = ship_hull_cruiser_2
+	name_group = MMM_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		front_1_custom_slot = empty
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_light_medium_battery_1
+	}
+}
+# Heavy Cruisers #
+create_equipment_variant = {
+	name = "Canarias Class"				
+	type = ship_hull_cruiser_2
+	name_group = MMM_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = empty
+		mid_1_custom_slot = ship_medium_battery_2
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+}
+# Battleships #
+create_equipment_variant = {
+	name = "España Class"	
+	type = ship_hull_heavy_1
+	name_group = MMM_BB_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_bb_1
+		front_1_custom_slot = ship_heavy_battery_1
+		mid_1_custom_slot = ship_secondaries_1
+		mid_2_custom_slot = ship_secondaries_1
+		rear_1_custom_slot = empty
+	}
+}
 
 #이벤트
-country_event = { id = MMM_tmp.1 days = 199 } # 정식 중점 추가시 해당 이벤트를 제거할 것
+country_event = { id = MMM_tmp.1 days = 199 } #임시

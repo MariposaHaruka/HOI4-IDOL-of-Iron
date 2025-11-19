@@ -180,6 +180,38 @@ ideas = {
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }
-	industrial_concern = { }
+	industrial_concern = { 
+		TOH_soviet_railways = { #NSB
+			name = SOV_soviet_railways
+			picture = SOV_soviet_railways
+			allowed = { original_tag = TOH }
+			visible = { NOT = { has_completed_focus = TOH_10009 } }
+			available = { has_completed_focus = TOH_10004 }
+			cost = 75
+			research_bonus = {
+				train_tech = 0.1
+			}
+			traits = { railway_company }
+			modifier = {
+				custom_modifier_tooltip = SOV_industrial_concern_upgrade_tt
+			}
+		}
+
+		TOH_soviet_railways_improved = { #NSB
+			name = SOV_soviet_railways
+			picture = SOV_soviet_railways
+			allowed = { original_tag = TOH }
+			visible = { has_completed_focus = TOH_10009 }
+			available = { has_completed_focus = TOH_10004 }
+			cost = 75
+			research_bonus = {
+				train_tech = 0.2
+			}
+			traits = { railway_company }
+			modifier = {
+				mobilization_speed = 0.02
+			}
+		}
+	}
 	materiel_manufacturer = { }
 }

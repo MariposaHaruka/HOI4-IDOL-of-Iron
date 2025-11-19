@@ -2279,10 +2279,34 @@ defined_text = {
 
 
 #국가판무관부
-
 defined_text = { #MM: This is a necessary step for the RK SCRIPTED GUI tooltip since $loc$ won't work unless it goes through scripted loc first
 	name = GetNeneModifiers
 	text = {
 		localization_key = PRS_rk_Nene_tt
+	}
+}
+
+#메포 어음
+defined_text = {
+	name = GetCGLevelText
+	text = {
+		trigger = {
+			OR = {
+				has_dynamic_modifier = { modifier = PRS_mefo_bills_modifier }
+				#has_dynamic_modifier = { modifier = PRS_economy_of_conquest_modifier }
+			}
+			check_variable = { var = PRS_mefo_bills_consumer_goods_factor value = 1 compare = greater_than_or_equals }
+		}
+		localization_key = GER_max_CG_tt
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_dynamic_modifier = { modifier = PRS_mefo_bills_modifier }
+				has_dynamic_modifier = { modifier = PRS_economy_of_conquest_modifier }
+			}
+			check_variable = { GER_industrial_consumer_goods_factor < 1 }
+		}
+		localization_key = GER_increasing_cg_tt 
 	}
 }

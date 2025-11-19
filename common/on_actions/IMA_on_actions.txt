@@ -93,17 +93,26 @@ on_actions = {
 	on_startup = {
 		effect = {
 			#웨일스
-			122 = { set_state_flag = IMA_welsh_state }
+			122 = { 
+				set_state_flag = IMA_welsh_state
+				set_state_flag = IMA_support_colliery_plan_state
+			}
 
 			#아일랜드
 			113 = { set_state_flag = IMA_ireland_state }
-			119 = { set_state_flag = IMA_ireland_state }
+			119 = { 
+				set_state_flag = IMA_ireland_state 
+				set_state_flag = IMA_dockyard_plan_state
+			}
 			134 = { set_state_flag = IMA_ireland_state }
 			135 = { set_state_flag = IMA_ireland_state }
 
 			#스코틀랜드
 			120 = { set_state_flag = IMA_scottish_state }
-			121 = { set_state_flag = IMA_scottish_state }
+			121 = { 
+				set_state_flag = IMA_scottish_state 
+				set_state_flag = IMA_dockyard_plan_state
+			}
 			133 = { set_state_flag = IMA_scottish_state }
 			136 = { set_state_flag = IMA_scottish_state }
 
@@ -111,14 +120,35 @@ on_actions = {
 			123 = { set_state_flag = IMA_english_state }
 			125 = { set_state_flag = IMA_english_state }
 			126 = { set_state_flag = IMA_english_state }
-			127 = { set_state_flag = IMA_english_state }
-			128 = { set_state_flag = IMA_english_state }
-			129 = { set_state_flag = IMA_english_state }
-			130 = { set_state_flag = IMA_english_state }
-			131 = { set_state_flag = IMA_english_state }
-			132 = { set_state_flag = IMA_english_state }
+			127 = { 
+				set_state_flag = IMA_english_state
+				set_state_flag = IMA_support_colliery_plan_state
+			}
+			128 = { 
+				set_state_flag = IMA_english_state
+				set_state_flag = IMA_support_colliery_plan_state
+			}
+			129 = { 
+				set_state_flag = IMA_english_state
+				set_state_flag = IMA_support_colliery_plan_state
+			}
+			130 = { 
+				set_state_flag = IMA_english_state
+				set_state_flag = IMA_support_colliery_plan_state
+			}
+			131 = { 
+				set_state_flag = IMA_english_state
+				set_state_flag = IMA_support_colliery_plan_state
+			}
+			132 = { 
+				set_state_flag = IMA_english_state 
+				set_state_flag = IMA_dockyard_plan_state
+			}
 			338 = { set_state_flag = IMA_english_state }
-			931 = { set_state_flag = IMA_english_state }
+			931 = { 
+				set_state_flag = IMA_english_state 
+				set_state_flag = IMA_dockyard_plan_state
+			}
 		}
 	}
 
@@ -172,16 +202,16 @@ on_actions = {
 			}
 		}
 	}
-	on_monthly_IMA = {
+	on_weekly_IMA = {
 		effect = {
 			if = {
-				limit = { 
-					num_of_available_civilian_factories > 59 
+				limit = {
+					num_of_civilian_factories > 99
 					NOT = { has_country_flag = IMA_depression_overcomed }
 					NOT = { has_country_flag = IMA_bankrupt_flag }
 					has_idea = IMA_great_depression_3
 				}
-				country_event = IMA_great_depression.1
+				country_event = { id = IMA_great_depression.1 }
 			}
 		}
 	}

@@ -2,6 +2,9 @@ add_namespace = IMA_haruka_crisis
 add_namespace = IMA_great_depression
 add_namespace = IMA_global
 add_namespace = IMA_bankrupt
+add_namespace = IMA_westminster_diplomacy
+add_namespace = IMA_dominion
+add_namespace = IMA_diplomacy
 
 ### 하루카 위기 이벤트
 country_event = {
@@ -627,5 +630,343 @@ country_event = {
 		ai_chance = { 
 			base = 99
 		}
+	}
+}
+
+#티저드 미션 이벤트
+country_event = {
+	id = IMA_westminster_diplomacy.1
+	title = IMA_westminster_diplomacy.1.t
+	desc = IMA_westminster_diplomacy.1.d
+	picture = GFX_report_event_physics_lab_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_westminster_diplomacy.1.a	#sounds good
+		ai_chance = { base = 90 }
+		add_political_power = -10
+		IMA = {
+			country_event = { days = 1 id = IMA_westminster_diplomacy.2 }
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = tizard_relations
+			}
+		}
+		add_breakthrough_progress = {
+			specialization = specialization_air
+			value = 0.75
+		}
+		add_tech_bonus = {
+			name = tizard_mission_focus
+			uses = 1
+			bonus = 1
+			category = light_fighter
+		}
+	}
+	
+	option = {
+		name = IMA_westminster_diplomacy.1.b	#no way 
+		ai_chance = { base = 10 }
+		#
+		IMA = {
+			country_event = { days = 1 id = IMA_westminster_diplomacy.3 }
+			add_opinion_modifier = { 
+				target = ROOT 
+				modifier = tizard_refused 
+			}
+		}
+	}
+
+	option = {
+		name = IMA_westminster_diplomacy.1.c	#tech_sharing
+		ai_chance = { base = 90 }
+		add_political_power = -10
+		IMA = {
+			country_event = { days = 1 id = IMA_westminster_diplomacy.4 }
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = tizard_relations
+			}
+		}
+		add_to_tech_sharing_group = tizard_mission
+	}
+}
+
+# USA helps
+country_event = {
+	id = IMA_westminster_diplomacy.2
+	title = IMA_westminster_diplomacy.2.t
+	desc = IMA_westminster_diplomacy.2.d
+	picture = GFX_report_event_physics_lab_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_westminster_diplomacy.2.a
+		add_breakthrough_progress = {
+			specialization = specialization_air
+			value = 0.75
+		}
+		add_tech_bonus = {
+			name = tizard_mission_focus
+			bonus = 0.5 # was 1
+			category = light_fighter
+		}
+		add_tech_bonus = {
+			name = tizard_mission_focus
+			bonus = 0.5 # was 1
+			uses = 1 # was 2
+			category = radar_tech
+		}
+		FROM = {
+			add_opinion_modifier = { 
+				target = IMA 
+				modifier = tizard_relations 
+			}
+		}
+	}
+}
+
+# USA says no
+country_event = {
+	id = IMA_westminster_diplomacy.3
+	title = IMA_westminster_diplomacy.3.t
+	desc = IMA_westminster_diplomacy.3.d
+	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_westminster_diplomacy.3.a
+		FROM = {
+			add_opinion_modifier = { 
+				target = IMA 
+				modifier = tizard_refused 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IMA_westminster_diplomacy.4
+	title = IMA_westminster_diplomacy.4.t
+	desc = IMA_westminster_diplomacy.4.d
+	picture = GFX_report_event_physics_lab_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_westminster_diplomacy.4.a
+		add_to_tech_sharing_group = tizard_mission
+		FROM = {
+			add_opinion_modifier = { 
+				target = IMA 
+				modifier = tizard_relations 
+			}
+		}
+	}
+}
+
+### 해외 자치령 논의 이벤트
+country_event = {
+	id = IMA_dominion.1 #정치 논의
+	title = IMA_dominion.1.t
+	desc = IMA_dominion.1.d
+	picture = GFX_report_event_canada_treaty
+
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_dominion.1.a
+		add_autonomy_ratio = { 
+			value = 0.5
+			localization = IMA_DO002
+		}
+	}
+}
+
+country_event = {
+	id = IMA_dominion.2 #정치 논의
+	title = IMA_dominion.2.t
+	desc = IMA_dominion.2.d
+	picture = GFX_report_event_canada_treaty
+
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_dominion.2.a
+		add_autonomy_ratio = { 
+			value = 0.5
+			localization = IMA_DO003
+		}
+	}
+}
+
+country_event = {
+	id = IMA_dominion.3 #정치 논의
+	title = IMA_dominion.3.t
+	desc = IMA_dominion.3.d
+	picture = GFX_report_event_canada_treaty
+
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_dominion.3.a
+		add_autonomy_ratio = { 
+			value = 0.5
+			localization = IMA_DO004
+		}
+	}
+}
+
+country_event = {
+	id = IMA_dominion.4 #정치 논의
+	title = IMA_dominion.4.t
+	desc = IMA_dominion.4.d
+	picture = GFX_report_event_canada_treaty
+
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_dominion.4.a
+		add_autonomy_ratio = { 
+			value = 0.5
+			localization = IMA_DO005
+		}
+	}
+}
+
+country_event = {
+	id = IMA_dominion.5 #정치 논의
+	title = IMA_dominion.5.t
+	desc = IMA_dominion.5.d
+	picture = GFX_report_event_canada_treaty
+
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_dominion.5.a
+		add_autonomy_ratio = { 
+			value = 0.5
+			localization = IMA_DO006
+		}
+	}
+}
+
+country_event = {
+	id = IMA_dominion.6 #정치 논의
+	title = IMA_dominion.6.t
+	desc = IMA_dominion.6.d
+	picture = GFX_report_event_canada_treaty
+
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_dominion.6.a
+		add_autonomy_ratio = { 
+			value = 0.5
+			localization = IMA_DO007
+		}
+	}
+}
+
+
+#기지를 위한 구축함
+country_event = {
+	id = IMA_diplomacy.291
+	title = IMA_diplomacy.291.t
+	desc = IMA_diplomacy.291.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = IMA_diplomacy.291.a
+		custom_effect_tooltip = IMA_diplomacy.291.a.tt
+		hidden_effect = {
+			ENG = {	load_oob = "ENG_destroyers_for_bases_mtg" }
+			CAN = { load_oob = "CAN_destroyers_for_bases_mtg" }
+			ENG = {
+				if = { limit = { 696 = { is_controlled_by = ENG } }
+					remove_state_core = 696
+				}
+				if = { limit = { 331 = { is_controlled_by = ENG } }
+					remove_state_core = 331
+				}
+				if = { limit = { 308 = { is_controlled_by = ENG } } 
+					remove_state_core = 308
+				}
+				if = { limit = { 693 = { is_controlled_by = ENG } } 
+					remove_state_core = 693
+				}
+				if = { limit = { 689 = { is_controlled_by = ENG } } 
+					remove_state_core = 689
+				}
+				if = { limit = { 691 = { is_controlled_by = ENG } } 
+					remove_state_core = 691
+				}
+			}
+		}
+		USA = {
+			if = { limit = { 696 = { is_controlled_by = ENG } }
+				transfer_state = 696
+			}
+			if = { limit = { 331 = { is_controlled_by = ENG } }
+				transfer_state = 331
+			}
+			if = { limit = { 308 = { is_controlled_by = ENG } } 
+				transfer_state = 308
+			}
+			if = { limit = { 693 = { is_controlled_by = ENG } } 
+				transfer_state = 693
+			}
+			if = { limit = { 689 = { is_controlled_by = ENG } } 
+				transfer_state = 689
+			}
+			if = { limit = { 691 = { is_controlled_by = ENG } } 
+				transfer_state = 691
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = destroyers_for_bases_opinion
+			}
+			country_event = { id = IMA_diplomacy.292 days = 3 }
+		}
+	}
+
+	option = {
+		name = IMA_diplomacy.291.b
+		USA = { country_event = { id = IMA_diplomacy.293 days = 1 } }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+# Britain accepts offer
+country_event = {
+	id = IMA_diplomacy.292
+	title = IMA_diplomacy.292.t
+	desc = IMA_diplomacy.292.desc
+	picture = GFX_report_event_usa_destroyers
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = IMA_diplomacy.292.a
+	}
+}
+
+# Britain refuses offer
+country_event = {
+	id = IMA_diplomacy.293
+	title = IMA_diplomacy.293.t
+	desc = IMA_diplomacy.293.d
+	picture = GFX_report_event_usa_destroyers
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = IMA_diplomacy.293.a
 	}
 }

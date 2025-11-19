@@ -39,26 +39,23 @@ autonomy_state = {
 	}
 
 	allowed = {
-		if = {
-			limit = { has_dlc = "Waking the Tiger" }
-			OVERLORD = { 
-				OR = {
-					is_democratic = yes
-					has_government = authoritariandemocracy
-				}
+		OVERLORD = { 
+			OR = {
+				is_democratic = yes
+				has_government = authoritariandemocracy
 			}
-			OVERLORD = { 
-				NOT = {
-					original_tag = IMA
-					original_tag = BDG
-					original_tag = LLS
-				}
+		}
+		OVERLORD = { 
+			NOT = {
+				original_tag = IMA
+				original_tag = BDG
+				original_tag = LLS
 			}
-			OVERLORD = { 
-				NOT = {
-					has_idea = federal_state
-					has_idea = local_self_federal_state
-				}
+		}
+		OVERLORD = { 
+			NOT = {
+				has_idea = federal_state
+				has_idea = local_self_federal_state
 			}
 		}
 	}

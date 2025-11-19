@@ -1,5 +1,42 @@
 ideas = {
 	country = { 
+		LLS_peace_preservation_law = {
+			picture = vittoria_mutilata
+			allowed = {
+				OR = {
+					AND = {
+						OR = {
+							original_tag = LLS
+							is_subject_of = LLS
+						}
+						is_democratic = no
+						is_communism = no
+					}
+				}
+			}
+			allowed_civil_war = {
+				OR = {
+					is_democratic = no
+					is_communism = no
+				}
+			}	
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.10
+				conservatism_drift = -0.01
+				liberalism_mod_drift = -0.03
+				progressivism_drift = -0.03
+				socialdemocracy_drift = -0.03
+				socialism_drift = -0.03
+				anarchosyndicalism_drift = -0.03
+				communism_drift = -0.05
+				authoritariancommunism_drift = -0.05
+				fascism_drift = 0.05
+				militarytotalism_drift = 0.05
+				autocracy_drift = 0.01
+				authoritariandemocracy_drift = 0.03
+			}
+		}
 		LLS_narrow_gauge_railway = {
 			picture = generic_railroads
 			allowed = {

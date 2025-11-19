@@ -38,11 +38,8 @@ autonomy_state = {
 	}
 
 	allowed = {
-		if = {
-			limit = { has_TfV = yes }
-			OVERLORD = { original_tag = BDG }
-			OVERLORD = { is_communism = no }
-		}
+		OVERLORD = { original_tag = BDG }
+		OVERLORD = { is_communism = no }
 	}
 
 	can_take_level = {

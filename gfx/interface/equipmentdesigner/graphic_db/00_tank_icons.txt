@@ -377,7 +377,6 @@ PRS = {
 			}
 		}
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = { 
 				GFX_GER_basic_light_td #7.5cm PaK 40 auf Fahrgestell Marder II
@@ -394,7 +393,6 @@ PRS = {
 			}
 		}
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = { 
 				GFX_GER_basic_light_td #7.5cm PaK 40 auf Fahrgestell Marder II -> Take oldest tank
@@ -410,7 +408,6 @@ PRS = {
 			}
 		}
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = { 
 				GFX_GER_basic_light_td #7.5cm PaK 40 auf Fahrgestell Marder II
@@ -426,7 +423,6 @@ PRS = {
 			}
 		}
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = { 
 				GFX_GER_improved_light_td #Marder III
@@ -445,7 +441,6 @@ PRS = {
 
 	light_tank_artillery_chassis = {
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = { 
 				GFX_GER_improved_light_art #Sd. Kfz. 123 Wespe
@@ -454,7 +449,6 @@ PRS = {
 	}
 	light_tank_artillery_chassis_2 = {
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = { 
 				GFX_GER_improved_light_art #Sd. Kfz. 123 Wespe
@@ -632,7 +626,6 @@ PRS = {
 			}
 		}
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = {
 				GFX_GER_improved_medium_spaa_medium
@@ -655,7 +648,6 @@ PRS = {
 	}
 	medium_tank_aa_chassis_2 = {
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = {
 				GFX_GER_improved_medium_spaa_medium
@@ -677,7 +669,6 @@ PRS = {
 
 	medium_tank_destroyer_chassis = {
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = {
 				GFX_GER_basic_medium_td
@@ -689,7 +680,6 @@ PRS = {
 	medium_tank_destroyer_chassis_0 = {
 		
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = {
 				GFX_GER_basic_medium_td # Pick oldest tank
@@ -699,7 +689,6 @@ PRS = {
 	medium_tank_destroyer_chassis_1 = {
 		
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = {
 				GFX_GER_basic_medium_td
@@ -708,7 +697,6 @@ PRS = {
 	}
 	medium_tank_destroyer_chassis_2 = {
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = {
 				GFX_GER_improved_medium_td
@@ -717,7 +705,6 @@ PRS = {
 	}
 	medium_tank_destroyer_chassis_3 = {
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = {
 				GFX_GER_advanced_medium_td
@@ -727,7 +714,6 @@ PRS = {
 
 	medium_tank_artillery_chassis = {
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = { 
 				GFX_GER_basic_medium_art
@@ -737,7 +723,6 @@ PRS = {
 	}
 	medium_tank_artillery_chassis_0 = {
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = { 
 				GFX_GER_basic_medium_art # Pick oldest tank
@@ -746,7 +731,6 @@ PRS = {
 	}
 	medium_tank_artillery_chassis_1 = {
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = { 
 				GFX_GER_basic_medium_art
@@ -755,7 +739,6 @@ PRS = {
 	}
 	medium_tank_artillery_chassis_2 = {
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = { 
 				GFX_GER_improved_medium_art
@@ -928,7 +911,6 @@ PRS = {
 			}
 		}
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = { 
 				GFX_GER_improved_heavy_td
@@ -963,7 +945,6 @@ PRS = {
 			}
 		}
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = { 
 				GFX_GER_improved_heavy_td
@@ -979,7 +960,6 @@ PRS = {
 			}
 		}
 		pool = {
-			limit = { has_dlc = "Death or Dishonor" }
 			weight = 2
 			icons = { 
 				GFX_GER_advanced_heavy_td
@@ -1005,7 +985,6 @@ PRS = {
 
 	amphibious_tank_chassis = { # No need to check for MTG, these chassis  won't show up without the DLC, (But it throws errors, so please still do or the error log will be sad!)
 		pool = {
-			limit = { has_dlc = "Man the Guns"}
 			icons = {
 				GFX_GER_amphibious_tank_2_medium #Tauchpanzer III (Amphibious Tank II) #Sorted like this so that by default 2D icon and 3D model match (Amphibious Tank I)
 				GFX_GER_amphibious_tank_medium #Schwimmpanzer II (Amphibious Tank I)
@@ -1531,7 +1510,6 @@ TOH = {
 
 	amphibious_tank_chassis = {
 		pool = {
-			limit = {has_dlc = "Man the Guns"}
 			icons = {
 				GFX_SOV_amphibious_tank_2_medium #PT-76 (Amphibious Tank II) #Sorted like this so that by default 2D icon and 3D model match (Amphibious Tank I)
 				GFX_SOV_amphibious_tank_medium #T-40 (Amphibious Tank I)
@@ -3354,9 +3332,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_basic_light_tank_medium
 				GFX_AST_improved_light_tank_medium
@@ -3397,9 +3372,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_improved_light_tank_medium
 				GFX_AST_advanced_light_tank_medium
@@ -3446,9 +3418,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_improved_light_tank_medium
 				GFX_AST_advanced_light_tank_medium
@@ -3489,9 +3458,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_basic_light_tank_medium
 				GFX_AST_advanced_light_tank_medium
@@ -3532,9 +3498,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_basic_light_tank_medium
 				GFX_AST_improved_light_tank_medium
@@ -3555,9 +3518,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_basic_medium_tank_medium
 				GFX_AST_improved_medium_tank_medium
@@ -3598,9 +3558,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_improved_medium_tank_medium
 				GFX_AST_advanced_medium_tank_medium
@@ -3646,9 +3603,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_improved_medium_tank_medium
 				GFX_AST_advanced_medium_tank_medium
@@ -3689,9 +3643,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_basic_medium_tank_medium
 				GFX_AST_advanced_medium_tank_medium
@@ -3732,9 +3683,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_basic_medium_tank_medium
 				GFX_AST_improved_medium_tank_medium
@@ -3755,9 +3703,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_basic_heavy_tank_medium
 				GFX_AST_improved_heavy_tank_medium
@@ -3798,9 +3743,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_improved_heavy_tank_medium
 				GFX_AST_advanced_heavy_tank_medium
@@ -3846,9 +3788,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_improved_heavy_tank_medium
 				GFX_AST_advanced_heavy_tank_medium
@@ -3889,9 +3828,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_basic_heavy_tank_medium
 				GFX_AST_advanced_heavy_tank_medium
@@ -3932,9 +3868,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_basic_heavy_tank_medium
 				GFX_AST_improved_heavy_tank_medium
@@ -3953,9 +3886,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_super_heavy_tank_medium
 				GFX_NZL_super_heavy_tank_medium
@@ -3970,9 +3900,6 @@ ISC = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_AST_main_battle_tank_medium
 				GFX_NZL_main_battle_tank_medium
@@ -3991,9 +3918,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_basic_light_tank_medium
 				GFX_RAJ_improved_light_tank_medium
@@ -4031,9 +3955,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_improved_light_tank_medium
 				GFX_RAJ_advanced_light_tank_medium
@@ -4077,9 +3998,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_improved_light_tank_medium
 				GFX_RAJ_advanced_light_tank_medium
@@ -4117,9 +4035,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_basic_light_tank_medium
 				GFX_RAJ_advanced_light_tank_medium
@@ -4157,9 +4072,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_basic_light_tank_medium
 				GFX_RAJ_improved_light_tank_medium
@@ -4177,9 +4089,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_basic_medium_tank_medium
 				GFX_RAJ_improved_medium_tank_medium
@@ -4217,9 +4126,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_improved_medium_tank_medium
 				GFX_RAJ_advanced_medium_tank_medium
@@ -4262,9 +4168,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_improved_medium_tank_medium
 				GFX_RAJ_advanced_medium_tank_medium
@@ -4302,9 +4205,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_basic_medium_tank_medium
 				GFX_RAJ_advanced_medium_tank_medium
@@ -4342,9 +4242,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_basic_medium_tank_medium
 				GFX_RAJ_improved_medium_tank_medium
@@ -4362,9 +4259,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_basic_heavy_tank_medium
 				GFX_RAJ_improved_heavy_tank_medium
@@ -4402,9 +4296,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_improved_heavy_tank_medium
 				GFX_RAJ_advanced_heavy_tank_medium
@@ -4447,9 +4338,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_improved_heavy_tank_medium
 				GFX_RAJ_advanced_heavy_tank_medium
@@ -4487,9 +4375,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_basic_heavy_tank_medium
 				GFX_RAJ_advanced_heavy_tank_medium
@@ -4527,9 +4412,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_basic_heavy_tank_medium
 				GFX_RAJ_improved_heavy_tank_medium
@@ -4545,9 +4427,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_super_heavy_tank_medium
 			}
@@ -4561,9 +4440,6 @@ IGM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_RAJ_main_battle_tank_medium
 			}
@@ -4581,9 +4457,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_basic_light_tank_medium
 				GFX_CAN_improved_light_tank_medium
@@ -4621,9 +4494,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_improved_light_tank_medium
 				GFX_CAN_advanced_light_tank_medium
@@ -4667,9 +4537,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_improved_light_tank_medium
 				GFX_CAN_advanced_light_tank_medium
@@ -4707,9 +4574,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_basic_light_tank_medium
 				GFX_CAN_advanced_light_tank_medium
@@ -4747,9 +4611,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_basic_light_tank_medium
 				GFX_CAN_improved_light_tank_medium
@@ -4767,9 +4628,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_basic_medium_tank_medium
 				GFX_CAN_improved_medium_tank_medium
@@ -4807,9 +4665,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_improved_medium_tank_medium
 				GFX_CAN_advanced_medium_tank_medium
@@ -4852,9 +4707,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_improved_medium_tank_medium
 				GFX_CAN_advanced_medium_tank_medium
@@ -4892,9 +4744,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_basic_medium_tank_medium
 				GFX_CAN_advanced_medium_tank_medium
@@ -4932,9 +4781,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_basic_medium_tank_medium
 				GFX_CAN_improved_medium_tank_medium
@@ -4952,9 +4798,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_basic_heavy_tank_medium
 				GFX_CAN_improved_heavy_tank_medium
@@ -4992,9 +4835,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_improved_heavy_tank_medium
 				GFX_CAN_advanced_heavy_tank_medium
@@ -5037,9 +4877,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_improved_heavy_tank_medium
 				GFX_CAN_advanced_heavy_tank_medium
@@ -5077,9 +4914,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_basic_heavy_tank_medium
 				GFX_CAN_advanced_heavy_tank_medium
@@ -5117,9 +4951,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_basic_heavy_tank_medium
 				GFX_CAN_improved_heavy_tank_medium
@@ -5135,9 +4966,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_super_heavy_tank_medium
 			}
@@ -5151,9 +4979,6 @@ IML = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_CAN_main_battle_tank_medium
 			}
@@ -5171,9 +4996,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_basic_light_tank_medium
 				GFX_SAF_improved_light_tank_medium
@@ -5211,9 +5033,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_improved_light_tank_medium
 				GFX_SAF_advanced_light_tank_medium
@@ -5257,9 +5076,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_improved_light_tank_medium
 				GFX_SAF_advanced_light_tank_medium
@@ -5297,9 +5113,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_basic_light_tank_medium
 				GFX_SAF_advanced_light_tank_medium
@@ -5337,9 +5150,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_basic_light_tank_medium
 				GFX_SAF_improved_light_tank_medium
@@ -5357,9 +5167,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_basic_medium_tank_medium
 				GFX_SAF_improved_medium_tank_medium
@@ -5397,9 +5204,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_improved_medium_tank_medium
 				GFX_SAF_advanced_medium_tank_medium
@@ -5442,9 +5246,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_improved_medium_tank_medium
 				GFX_SAF_advanced_medium_tank_medium
@@ -5482,9 +5283,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_basic_medium_tank_medium
 				GFX_SAF_advanced_medium_tank_medium
@@ -5522,9 +5320,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_basic_medium_tank_medium
 				GFX_SAF_improved_medium_tank_medium
@@ -5542,9 +5337,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_basic_heavy_tank_medium
 				GFX_SAF_improved_heavy_tank_medium
@@ -5582,9 +5374,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_improved_heavy_tank_medium
 				GFX_SAF_advanced_heavy_tank_medium
@@ -5627,9 +5416,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_improved_heavy_tank_medium
 				GFX_SAF_advanced_heavy_tank_medium
@@ -5667,9 +5453,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_basic_heavy_tank_medium
 				GFX_SAF_advanced_heavy_tank_medium
@@ -5707,9 +5490,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_basic_heavy_tank_medium
 				GFX_SAF_improved_heavy_tank_medium
@@ -5725,9 +5505,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_super_heavy_tank_medium
 			}
@@ -5741,9 +5518,6 @@ ISM = {
 			}
 		}
 		pool = {
-			limit = {
-				has_dlc = "Together for Victory"
-			}
 			icons = { 
 				GFX_SAF_main_battle_tank_medium
 			}
@@ -5936,9 +5710,6 @@ UMA = {
 NNN = {
 	light_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				#GFX_HUN_gwtank_medium #Don't show GW tank in modern techs
  				GFX_HUN_basic_light_tank_medium
@@ -5950,9 +5721,6 @@ NNN = {
 
 	light_tank_chassis_0 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			weight = 2
 			icons = { 
 				GFX_HUN_gwtank_medium
@@ -5963,9 +5731,6 @@ NNN = {
 
 	light_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_HUN_basic_light_tank_medium
 			}
@@ -5974,9 +5739,6 @@ NNN = {
 
 	light_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_HUN_improved_light_tank_medium
 			}
@@ -5985,9 +5747,6 @@ NNN = {
 
 	light_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_HUN_advanced_light_tank_medium
 			}
@@ -5996,9 +5755,6 @@ NNN = {
 
 	medium_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_HUN_basic_medium_tank_medium
  				GFX_HUN_improved_medium_tank_medium
@@ -6009,9 +5765,6 @@ NNN = {
 
 	medium_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_HUN_basic_medium_tank_medium
 			}
@@ -6020,9 +5773,6 @@ NNN = {
 
 	medium_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_HUN_improved_medium_tank_medium
 			}
@@ -6031,9 +5781,6 @@ NNN = {
 
 	medium_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_HUN_advanced_medium_tank_medium
 			}
@@ -6042,9 +5789,6 @@ NNN = {
 
 	heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_HUN_basic_heavy_tank_medium
  				GFX_HUN_improved_heavy_tank_medium
@@ -6055,9 +5799,6 @@ NNN = {
 
 	heavy_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_HUN_basic_heavy_tank_medium
 			}
@@ -6066,9 +5807,6 @@ NNN = {
 
 	heavy_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_HUN_improved_heavy_tank_medium
 			}
@@ -6077,9 +5815,6 @@ NNN = {
 
 	heavy_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_HUN_advanced_heavy_tank_medium
 			}
@@ -6088,9 +5823,6 @@ NNN = {
 
 	super_heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_HUN_super_heavy_tank_medium
 			}
@@ -6099,9 +5831,6 @@ NNN = {
 
 	modern_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_HUN_main_battle_tank_medium
 			}
@@ -6112,9 +5841,6 @@ NNN = {
 PRK = {
 	light_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				#GFX_CZE_gwtank_medium #Don't show GW tank in modern techs
  				GFX_CZE_basic_light_tank_medium
@@ -6126,9 +5852,6 @@ PRK = {
 
 	light_tank_chassis_0 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			weight = 2
 			icons = {
 				GFX_CZE_gwtank_medium
@@ -6139,9 +5862,6 @@ PRK = {
 
 	light_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_CZE_basic_light_tank_medium
 			}
@@ -6150,9 +5870,6 @@ PRK = {
 
 	light_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_CZE_improved_light_tank_medium
 			}
@@ -6161,9 +5878,6 @@ PRK = {
 
 	light_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_CZE_advanced_light_tank_medium
 			}
@@ -6172,9 +5886,6 @@ PRK = {
 
 	medium_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_CZE_basic_medium_tank_medium
  				GFX_CZE_improved_medium_tank_medium
@@ -6185,9 +5896,6 @@ PRK = {
 
 	medium_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_CZE_basic_medium_tank_medium
 			}
@@ -6196,9 +5904,6 @@ PRK = {
 
 	medium_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_CZE_improved_medium_tank_medium
 			}
@@ -6207,9 +5912,6 @@ PRK = {
 
 	medium_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_CZE_advanced_medium_tank_medium
 			}
@@ -6218,9 +5920,6 @@ PRK = {
 
 	heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_CZE_basic_heavy_tank_medium
  				GFX_CZE_improved_heavy_tank_medium
@@ -6231,9 +5930,6 @@ PRK = {
 
 	heavy_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_CZE_basic_heavy_tank_medium
 			}
@@ -6242,9 +5938,6 @@ PRK = {
 
 	heavy_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_CZE_improved_heavy_tank_medium
 			}
@@ -6253,9 +5946,6 @@ PRK = {
 
 	heavy_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_CZE_advanced_heavy_tank_medium
 			}
@@ -6264,9 +5954,6 @@ PRK = {
 
 	super_heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_CZE_super_heavy_tank_medium
 			}
@@ -6275,9 +5962,6 @@ PRK = {
 
 	modern_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_CZE_main_battle_tank_medium
 			}
@@ -6288,9 +5972,6 @@ PRK = {
 AIK = {
 	light_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				#GFX_ROM_gwtank_medium #Don't show GW tank in modern techs
  				GFX_ROM_basic_light_tank_medium
@@ -6302,9 +5983,6 @@ AIK = {
 
 	light_tank_chassis_0 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			weight = 2
 			icons = {
 				GFX_ROM_gwtank_medium
@@ -6315,9 +5993,6 @@ AIK = {
 
 	light_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_ROM_basic_light_tank_medium
 			}
@@ -6326,9 +6001,6 @@ AIK = {
 
 	light_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_ROM_improved_light_tank_medium
 			}
@@ -6337,9 +6009,6 @@ AIK = {
 
 	light_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_ROM_advanced_light_tank_medium
 			}
@@ -6348,9 +6017,6 @@ AIK = {
 
 	medium_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_ROM_basic_medium_tank_medium
  				GFX_ROM_improved_medium_tank_medium
@@ -6361,9 +6027,6 @@ AIK = {
 
 	medium_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_ROM_basic_medium_tank_medium
 			}
@@ -6372,9 +6035,6 @@ AIK = {
 
 	medium_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_ROM_improved_medium_tank_medium
 			}
@@ -6383,9 +6043,6 @@ AIK = {
 
 	medium_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_ROM_advanced_medium_tank_medium
 			}
@@ -6394,9 +6051,6 @@ AIK = {
 
 	heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_ROM_basic_heavy_tank_medium
  				GFX_ROM_improved_heavy_tank_medium
@@ -6407,9 +6061,6 @@ AIK = {
 
 	heavy_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_ROM_basic_heavy_tank_medium
 			}
@@ -6418,9 +6069,6 @@ AIK = {
 
 	heavy_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_ROM_improved_heavy_tank_medium
 			}
@@ -6429,9 +6077,6 @@ AIK = {
 
 	heavy_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_ROM_advanced_heavy_tank_medium
 			}
@@ -6440,9 +6085,6 @@ AIK = {
 
 	super_heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_ROM_super_heavy_tank_medium
 			}
@@ -6451,9 +6093,6 @@ AIK = {
 
 	modern_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_ROM_main_battle_tank_medium
 			}
@@ -6464,9 +6103,6 @@ AIK = {
 PRP = {
 	light_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				#GFX_YUG_gwtank_medium #Don't show GW tank in modern techs
  				GFX_YUG_basic_light_tank_medium
@@ -6478,9 +6114,6 @@ PRP = {
 
 	light_tank_chassis_0 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			weight = 2
 			icons = {
 				GFX_YUG_gwtank_medium
@@ -6491,9 +6124,6 @@ PRP = {
 
 	light_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_YUG_basic_light_tank_medium
 			}
@@ -6502,9 +6132,6 @@ PRP = {
 
 	light_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_YUG_improved_light_tank_medium
 			}
@@ -6513,9 +6140,6 @@ PRP = {
 
 	light_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_YUG_advanced_light_tank_medium
 			}
@@ -6524,9 +6148,6 @@ PRP = {
 
 	medium_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_YUG_basic_medium_tank_medium
  				GFX_YUG_improved_medium_tank_medium
@@ -6537,9 +6158,6 @@ PRP = {
 
 	medium_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_YUG_basic_medium_tank_medium
 			}
@@ -6548,9 +6166,6 @@ PRP = {
 
 	medium_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_YUG_improved_medium_tank_medium
 			}
@@ -6559,9 +6174,6 @@ PRP = {
 
 	medium_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_YUG_advanced_medium_tank_medium
 			}
@@ -6570,9 +6182,6 @@ PRP = {
 
 	heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_YUG_basic_heavy_tank_medium
  				GFX_YUG_improved_heavy_tank_medium
@@ -6583,9 +6192,6 @@ PRP = {
 
 	heavy_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_YUG_basic_heavy_tank_medium
 			}
@@ -6594,9 +6200,6 @@ PRP = {
 
 	heavy_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_YUG_improved_heavy_tank_medium
 			}
@@ -6605,9 +6208,6 @@ PRP = {
 
 	heavy_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_YUG_advanced_heavy_tank_medium
 			}
@@ -6616,9 +6216,6 @@ PRP = {
 
 	super_heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_YUG_super_heavy_tank_medium
 			}
@@ -6627,9 +6224,6 @@ PRP = {
 
 	modern_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
 			icons = { 
 				GFX_YUG_main_battle_tank_medium
 			}
@@ -6645,9 +6239,6 @@ PRP = {
 AZU = {
 	light_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				#GFX_CHI_gwtank_medium #Don't show GW tank in modern techs
 				GFX_CHI_basic_light_tank_medium
@@ -6659,9 +6250,6 @@ AZU = {
 
 	light_tank_chassis_0 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			weight = 2
 			icons = {
 				GFX_CHI_gwtank_medium
@@ -6672,9 +6260,6 @@ AZU = {
 
 	light_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_CHI_basic_light_tank_medium
 			}
@@ -6683,9 +6268,6 @@ AZU = {
 
 	light_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_CHI_improved_light_tank_medium
 			}
@@ -6694,9 +6276,6 @@ AZU = {
 
 	light_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_CHI_advanced_light_tank_medium
 			}
@@ -6705,9 +6284,6 @@ AZU = {
 
 	medium_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_CHI_basic_medium_tank_medium
 				GFX_CHI_improved_medium_tank_medium
@@ -6718,9 +6294,6 @@ AZU = {
 
 	medium_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_CHI_basic_medium_tank_medium
 			}
@@ -6729,9 +6302,6 @@ AZU = {
 
 	medium_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_CHI_improved_medium_tank_medium
 			}
@@ -6740,9 +6310,6 @@ AZU = {
 
 	medium_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_CHI_advanced_medium_tank_medium
 			}
@@ -6751,9 +6318,6 @@ AZU = {
 
 	heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_CHI_basic_heavy_tank_medium
 				GFX_CHI_improved_heavy_tank_medium
@@ -6764,9 +6328,6 @@ AZU = {
 
 	heavy_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_CHI_basic_heavy_tank_medium
 			}
@@ -6775,9 +6336,6 @@ AZU = {
 
 	heavy_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_CHI_improved_heavy_tank_medium
 			}
@@ -6786,9 +6344,6 @@ AZU = {
 
 	heavy_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_CHI_advanced_heavy_tank_medium
 			}
@@ -6797,9 +6352,6 @@ AZU = {
 
 	super_heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_CHI_super_heavy_tank_medium
 			}
@@ -6808,9 +6360,6 @@ AZU = {
 
 	modern_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_CHI_main_battle_tank_medium
 			}
@@ -6821,9 +6370,6 @@ AZU = {
 KTC = {
 	light_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				#GFX_CHI_gwtank_medium #Don't show GW tank in modern techs
 				GFX_PRC_basic_light_tank_medium
@@ -6835,9 +6381,6 @@ KTC = {
 
 	light_tank_chassis_0 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			weight = 2
 			icons = {
 				GFX_CHI_gwtank_medium
@@ -6848,9 +6391,6 @@ KTC = {
 
 	light_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_PRC_basic_light_tank_medium
 			}
@@ -6859,9 +6399,6 @@ KTC = {
 
 	light_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_PRC_improved_light_tank_medium
 			}
@@ -6870,9 +6407,6 @@ KTC = {
 
 	light_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_PRC_advanced_light_tank_medium
 			}
@@ -6881,9 +6415,6 @@ KTC = {
 
 	medium_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_PRC_basic_medium_tank_medium
 				GFX_PRC_improved_medium_tank_medium
@@ -6894,9 +6425,6 @@ KTC = {
 
 	medium_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_PRC_basic_medium_tank_medium
 			}
@@ -6905,9 +6433,6 @@ KTC = {
 
 	medium_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_PRC_improved_medium_tank_medium
 			}
@@ -6916,9 +6441,6 @@ KTC = {
 
 	medium_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_PRC_advanced_medium_tank_medium
 			}
@@ -6927,9 +6449,6 @@ KTC = {
 
 	heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_PRC_basic_heavy_tank_medium
 				GFX_PRC_improved_heavy_tank_medium
@@ -6940,9 +6459,6 @@ KTC = {
 
 	heavy_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_PRC_basic_heavy_tank_medium
 			}
@@ -6951,9 +6467,6 @@ KTC = {
 
 	heavy_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_PRC_improved_heavy_tank_medium
 			}
@@ -6962,9 +6475,6 @@ KTC = {
 
 	heavy_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_PRC_advanced_heavy_tank_medium
 			}
@@ -6973,9 +6483,6 @@ KTC = {
 
 	super_heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_PRC_super_heavy_tank_medium
 			}
@@ -6984,9 +6491,6 @@ KTC = {
 
 	modern_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-			}
 			icons = { 
 				GFX_PRC_main_battle_tank_medium
 			}
@@ -7001,9 +6505,6 @@ KTC = {
 STR = {
 	light_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				#GFX_gwtank_chassis_medium #Don't show GW tank in modern techs
 				GFX_HOL_basic_light_tank_medium
@@ -7015,9 +6516,6 @@ STR = {
 
 	light_tank_chassis_0 = { #HOL has no GW Tank
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_gwtank_chassis_medium #French Renault -> HOL had one
 			}
@@ -7026,9 +6524,6 @@ STR = {
 	
 	light_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_HOL_basic_light_tank_medium
 			}
@@ -7037,9 +6532,6 @@ STR = {
 
 	light_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_HOL_improved_light_tank_medium
 			}
@@ -7048,9 +6540,6 @@ STR = {
 
 	light_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_HOL_advanced_light_tank_medium
 			}
@@ -7059,9 +6548,6 @@ STR = {
 
 	medium_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_HOL_basic_medium_tank_medium
 				GFX_HOL_improved_medium_tank_medium
@@ -7072,9 +6558,6 @@ STR = {
 
 	medium_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_HOL_basic_medium_tank_medium
 			}
@@ -7083,9 +6566,6 @@ STR = {
 
 	medium_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_HOL_improved_medium_tank_medium
 			}
@@ -7094,9 +6574,6 @@ STR = {
 
 	medium_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_HOL_advanced_medium_tank_medium
 			}
@@ -7105,9 +6582,6 @@ STR = {
 
 	heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_HOL_basic_heavy_tank_medium
 				GFX_HOL_improved_heavy_tank_medium
@@ -7118,9 +6592,6 @@ STR = {
 
 	heavy_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_HOL_basic_heavy_tank_medium
 			}
@@ -7129,9 +6600,6 @@ STR = {
 
 	heavy_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_HOL_improved_heavy_tank_medium
 			}
@@ -7140,9 +6608,6 @@ STR = {
 
 	heavy_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_HOL_advanced_heavy_tank_medium
 			}
@@ -7151,9 +6616,6 @@ STR = {
 
 	super_heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_HOL_super_heavy_tank_medium
 			}
@@ -7162,9 +6624,6 @@ STR = {
 
 	modern_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_HOL_main_battle_tank_medium
 			}
@@ -7175,9 +6634,6 @@ STR = {
 DOB = {
 	light_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				#GFX_MEX_gwtank_medium #Don't show GW tank in modern techs
 				GFX_MEX_basic_light_tank_medium
@@ -7189,9 +6645,6 @@ DOB = {
 
 	light_tank_chassis_0 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			weight = 2
 			icons = {
 				GFX_MEX_gwtank_medium
@@ -7202,9 +6655,6 @@ DOB = {
 
 	light_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_MEX_basic_light_tank_medium
 			}
@@ -7213,9 +6663,6 @@ DOB = {
 
 	light_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_MEX_improved_light_tank_medium
 			}
@@ -7224,9 +6671,6 @@ DOB = {
 
 	light_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_MEX_advanced_light_tank_medium
 			}
@@ -7235,9 +6679,6 @@ DOB = {
 
 	medium_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_MEX_basic_medium_tank_medium
 				GFX_MEX_improved_medium_tank_medium
@@ -7248,9 +6689,6 @@ DOB = {
 
 	medium_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_MEX_basic_medium_tank_medium
 			}
@@ -7259,9 +6697,6 @@ DOB = {
 
 	medium_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_MEX_improved_medium_tank_medium
 			}
@@ -7270,9 +6705,6 @@ DOB = {
 
 	medium_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_MEX_advanced_medium_tank_medium
 			}
@@ -7281,9 +6713,6 @@ DOB = {
 
 	heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_MEX_basic_heavy_tank_medium
 				GFX_MEX_improved_heavy_tank_medium
@@ -7294,9 +6723,6 @@ DOB = {
 
 	heavy_tank_chassis_1 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_MEX_basic_heavy_tank_medium
 			}
@@ -7305,9 +6731,6 @@ DOB = {
 
 	heavy_tank_chassis_2 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_MEX_improved_heavy_tank_medium
 			}
@@ -7316,9 +6739,6 @@ DOB = {
 
 	heavy_tank_chassis_3 = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_MEX_advanced_heavy_tank_medium
 			}
@@ -7327,9 +6747,6 @@ DOB = {
 
 	super_heavy_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_MEX_super_heavy_tank_medium
 			}
@@ -7338,9 +6755,6 @@ DOB = {
 
 	modern_tank_chassis = {
 		pool = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
 			icons = { 
 				GFX_MEX_main_battle_tank_medium
 			}

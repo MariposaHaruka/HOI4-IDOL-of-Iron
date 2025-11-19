@@ -11,6 +11,51 @@ focus_tree = {
 			tag = PRS
 		}
 	}
+
+	#Focus Path shortcuts	
+	shortcut = {
+		name = PRS_history_sc
+		target = PRS_31001
+		scroll_wheel_factor = 0.469
+	}	
+
+	shortcut = {
+		name = PRS_innercircle_sc
+		target = PRS_31008
+		scroll_wheel_factor = 0.469
+	}
+
+	shortcut = {
+		name = PRS_althistory_sc
+		target = PRS_32001
+		scroll_wheel_factor = 0.485
+		trigger = { always = no }
+	}
+
+	shortcut = {
+		name = PRS_economy_sc
+		target = PRS_10002 
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = PRS_navy_sc
+		target = PRS_23001
+		scroll_wheel_factor = 1.0
+	}
+	
+	shortcut = {
+		name = PRS_airforce_sc
+		target = PRS_22001
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = PRS_army_sc
+		target = PRS_21001
+		scroll_wheel_factor = 1.0
+	}
+
 	default = no
 	continuous_focus_position = {
 		x = 0
@@ -226,7 +271,51 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			#카라 독일 노동 봉사단 참고
+			if = {
+				limit = { has_dynamic_modifier = PRS_mefo_bills_modifier }
+				custom_effect_tooltip = PRS_mefo_bills_modifier_tt
+				add_to_variable = {
+					PRS_mefo_bills_consumer_goods_factor = -0.05
+					tooltip = consumer_goods_factor_tt
+				}
+				add_to_variable = {
+					PRS_mefo_bills_production_speed_buildings_factor = 0.10
+					tooltip = production_speed_buildings_factor_tt
+				}
+				add_to_variable = {
+					PRS_mefo_bills_industrial_capacity_factory = 0.10
+					tooltip = industrial_capacity_factory_tt
+				}
+				add_to_variable = {
+					PRS_mefo_bills_production_factory_max_efficiency_factor = 0.05
+					tooltip = production_factory_max_efficiency_factor_tt
+				}
+			}
+			if = {
+				limit = { has_dynamic_modifier = PRS_recovering_economy_modifier }
+				custom_effect_tooltip = PRS_recovering_economy_modifier_tt
+				add_to_variable = {
+					PRS_recovering_economy_consumer_goods_factor = -0.1
+					tooltip = consumer_goods_factor_tt
+				}
+				add_to_variable = {
+					PRS_recovering_economy_production_speed_buildings_factor = 0.10
+					tooltip = production_speed_buildings_factor_tt
+				}
+				add_to_variable = {
+					PRS_recovering_economy_industrial_capacity_factory = 0.10
+					tooltip = industrial_capacity_factory_tt
+				}
+				add_to_variable = {
+					PRS_recovering_economy_production_factory_max_efficiency_factor = 0.05
+					tooltip = production_factory_max_efficiency_factor_tt
+				}
+			}
+			custom_effect_tooltip = PRS_army_tt
+			add_to_variable = {
+				PRS_army_consumer_goods_factor = -0.1
+				tooltip = conscription_factor_tt
+			}
 		}
 	}
 
@@ -247,9 +336,7 @@ focus_tree = {
 		completion_reward = {
 			
 			if = {
-				limit = {
-					has_war = yes
-				}
+				limit = { has_war = yes }
 				if = {
 					limit = {
 						59 = {
@@ -3928,18 +4015,18 @@ focus_tree = {
 
 			if = {
 				limit = {
-					has_idea = GER_deutsche_reichsbahn
+					has_idea = PRS_deutsche_reichsbahn
 				}
 				swap_ideas = {
-					remove_idea = GER_deutsche_reichsbahn
-					add_idea = GER_deutsche_reichsbahn_improved
+					remove_idea = PRS_deutsche_reichsbahn
+					add_idea = PRS_deutsche_reichsbahn_improved
 				}
 			}
 			else = {
 				effect_tooltip = {
 					swap_ideas = {
-						remove_idea = GER_deutsche_reichsbahn
-						add_idea = GER_deutsche_reichsbahn_improved
+						remove_idea = PRS_deutsche_reichsbahn
+						add_idea = PRS_deutsche_reichsbahn_improved
 					}
 				}
 			}
@@ -8749,12 +8836,65 @@ focus_tree = {
 		relative_position_id = PRS_31512
 		prerequisite = { focus = PRS_31512 }
 		cost = 5
-		available = { }
+		available = {
+			is_subject = no
+			has_full_control_of_state = 8
+			has_full_control_of_state = 28
+			OR = {
+				BDG = { has_capitulated = yes }
+				BDG = { is_subject_of = ROOT }
+				all_country_with_original_tag = {
+					original_tag_to_check = BDG
+					exists = no
+				}
+			}
+			OR = {
+				STR = { has_capitulated = yes }
+				STR = { is_subject_of = ROOT }
+				all_country_with_original_tag = {
+					original_tag_to_check = STR
+					exists = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
 			custom_effect_tooltip = generic_line_break_tt
+			add_state_core = 8
+			add_state_core = 28
+			# Currently these names will now instead be dynamically renamed upon becoming owned by Germany
+			28 = { set_state_name = PRS_statename_28 }
+			set_province_name = { id = 9503 name = "Strassburg" }
+			set_province_name = { id = 678 name = "Mulhausen" }
+			if = {
+				limit = { has_global_flag = flag_bangdream_idolmaster_union }
+				IMA = {
+					country_event = { id = PRS_diplomacy.63 }
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = {
+						original_tag = BDG
+						exists = yes
+					}
+				}
+				BDG = { country_event = { id = PRS_diplomacy.63 } }
+			}
+			if = {
+				limit = {
+					any_country = {
+						original_tag = STR
+						exists = yes
+					}
+				}
+				STR = { country_event = { id = PRS_diplomacy.64 } }
+			}
 		}
 	}
 
@@ -8771,7 +8911,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = PRS_industry_tt
+			add_to_variable = {
+				PRS_industry_production_speed_rail_way_factor = 0.05
+				tooltip = production_speed_rail_way_factor_tt
+			}
 		}
 	}
 
@@ -8786,14 +8930,40 @@ focus_tree = {
 		available = { }
 
 		bypass = {
-			ICG = { exist = no }
-			IML = { exist = no }
+			ICG = { 
+				OR = {
+					exists = no
+					is_puppet_of = PRS
+				}
+			}
+			IML = {  
+				OR = {
+					exists = no
+					is_puppet_of = PRS
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			custom_effect_tooltip = generic_line_break_tt
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = marine_tech
+				name = PRS_31525
+			}
+			if = {
+				limit = { has_AAT = yes }
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					uses = 2
+					category = cat_marines_doctrine
+					name = PRS_31525
+				}
+			}
+
 		}
 	}
 
@@ -8846,7 +9016,24 @@ focus_tree = {
 		relative_position_id = PRS_31526
 		prerequisite = { focus = PRS_31525 focus = PRS_31526 }
 		cost = 5
-		available = { }
+		available = {
+			NOT = {
+				has_war_with = ICG
+				is_in_faction_with = ICG
+			}
+			is_subject = no
+			is_fascism = yes
+			ICG = {
+				is_fascism = no
+				is_neutrality = no
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = GER_challenge_the_monroe_doctrine_tt_2
+				check_variable = { global.monroe_doctrine_countries_to_destabilize^num > 6}
+			}
+			
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8865,10 +9052,41 @@ focus_tree = {
 		cost = 5
 		available = { }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					is_democratic = yes
+					is_communism = yes
+				}
+			}
+		}
 
 		completion_reward = {
+			every_state = {
+				limit = {
+					is_on_continent = south_america 
+					OWNER = {
+						capital_scope = {
+							NOT = { is_on_continent = south_america }
+						}
+					}
+					OR = {
+						NOT = { is_claimed_by = ROOT }
+						NOT = { is_core_of = ROOT }
+						NOT = { is_owned_by = ROOT }
+					}
+				}
+				add_claim_by = ROOT
+			}
 			custom_effect_tooltip = generic_line_break_tt
+			unlock_decision_tooltip = PRS_reichskommissariat_klein_venedig
+			unlock_decision_tooltip = PRS_reichskommissariat_anden
+			unlock_decision_tooltip = PRS_reichskommissariat_kolumbus
+			unlock_decision_tooltip = PRS_reichskommissariat_nordamerika
+
 		}
 	}
 
@@ -8881,12 +9099,108 @@ focus_tree = {
 		prerequisite = { focus = PRS_31401 }
 		mutually_exclusive = { focus = PRS_31621 focus = PRS_31631 }
 		cost = 5
-		available = { }
+		available = {
+			is_subject = no
+			AND = {
+				country_exists = AZU
+				AZU = { is_subject = no }
+				NOT = { has_war_with = AZU }
+				AZU = {
+					custom_trigger_tooltip = {
+						tooltip = GER_alone_or_peace_faction_tt
+						is_alone_or_in_faction_at_peace_with_PRS = yes
+					}
+				}
+			}
+		}
 
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				is_in_faction_with = LLS
+				factor = 0
+			}
+		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_line_break_tt
+
+			event_target:WTT_current_china_leader = {
+				set_country_flag = GER_befriended_by_germany_flag
+				country_event = { id = wuw_GER_diplomacy.29 hours = 6 }
+			}
+
+			effect_tooltip = {
+				event_target:WTT_current_china_leader = {
+					add_offsite_building = { type = arms_factory level = 2 }
+					add_opinion_modifier = { target = PRS modifier = ger_chi_diplomacy_focus }
+				}
+			}
+			LLS = {
+				add_opinion_modifier = { target = PRS modifier = supported_the_ships }
+			}
+
+			hidden_effect = {
+				delete_unit_template_and_units = {
+					division_template = "Afrikanische Schutztruppe"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
+
+				division_template = {
+					name = "Afrikanische Schutztruppe"	
+					division_names_group = PRS_MIL_02
+					template_counter = 98
+					is_locked = yes
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 0 y = 2 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+					}
+					override_model = GER_infantry_alt_1_entity
+				}
+
+				delete_unit_template_and_units = {
+					division_template = "Askari Schutztruppe"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
+
+				division_template = {
+					name = "Askari Schutztruppe"	
+					division_names_group = PRS_MIL_02
+					template_counter = 67
+					is_locked = yes
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+					}
+					override_model = GER_infantry_alt_2_entity
+				}
+
+				delete_unit_template_and_units = {
+					division_template = "Asiatische Schutztruppe"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
+
+				division_template = {
+					name = "Asiatische Schutztruppe"	
+					division_names_group = PRS_MIL_02
+					template_counter = 99
+					is_locked = yes
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 0 y = 2 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+					}
+					override_model = GER_infantry_alt_3_entity
+				}
+			}
+
 		}
 	}
 
@@ -9304,7 +9618,7 @@ focus_tree = {
 
 					division_template = {
 						name = "Asiatische Schutztruppe"	
-						division_names_group = GER_MIL_02
+						division_names_group = PRS_MIL_02
 						template_counter = 99
 						is_locked = yes
 						regiments = {

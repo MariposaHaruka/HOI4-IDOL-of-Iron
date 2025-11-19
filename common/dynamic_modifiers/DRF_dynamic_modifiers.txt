@@ -1,19 +1,114 @@
 DRF_industry = {
 	enable = { always = yes }
 	icon = GFX_idea_DRF_dynamic_industry
-}
 
+	#임시
+	production_speed_buildings_factor = DRF_industry_production_speed_buildings_factor
+	industrial_capacity_factory = DRF_industry_industrial_capacity_factory
+	industrial_capacity_dockyard = DRF_industry_industrial_capacity_dockyard
+	research_speed_factor = DRF_industry_research_speed_factor
+	consumer_goods_factor = DRF_industry_consumer_goods_factor
+	state_resources_factor = DRF_industry_state_resources_factor
+	production_factory_max_efficiency_factor = DRF_industry_production_factory_max_efficiency_factor
+	production_factory_efficiency_gain_factor = DRF_industry_production_factory_efficiency_gain_factor
+	license_purchase_cost = DRF_industry_license_purchase_cost
+	political_power_gain = DRF_industry_political_power_gain
+	stability_factor = DRF_industry_stability_factor
+	industry_repair_factor = DRF_industry_industry_repair_factor
+}
 DRF_army = {
 	enable = { always = yes }
 	icon = GFX_idea_DRF_dynamic_army
+
+	#임시
+	experience_gain_army_factor = DRF_army_experience_gain_army_factor
+	land_doctrine_cost_factor = DRF_army_land_doctrine_cost_factor
+	army_org_factor = DRF_army_army_org_factor
+	training_time_factor = DRF_army_training_time_factor
+	supply_factor = DRF_army_supply_factor
+	planning_speed = DRF_army_planning_speed
+	army_morale_factor = DRF_army_army_morale_factor
+	max_planning_factor = DRF_army_max_planning_factor
+	command_power_gain_mult = DRF_army_command_power_gain_mult
+	army_leader_cost_factor = DRF_army_army_leader_cost_factor
+	equipment_capture_factor = DRF_army_equipment_capture_factor
+	special_forces_cap = DRF_army_special_forces_cap
+	recon_factor = DRF_army_recon_factor
+	supply_consumption_factor = DRF_army_supply_consumption_factor
+	winter_attrition_factor = DRF_army_winter_attrition_factor
+	heat_attrition_factor = DRF_army_heat_attrition_factor
+
+	#더미 변수
+	#build_cost_ic_anti_air = DRF_army_build_cost_ic_anti_air
+	#build_cost_ic_anti_tank = DRF_army_build_cost_ic_anti_tank
+	#build_cost_ic_armor = DRF_army_build_cost_ic_armor
+	#build_cost_ic_artillery = DRF_army_build_cost_ic_artillery
+	#build_cost_ic_heavy_tank_chassis = DRF_army_build_cost_ic_heavy_tank_chassis
+	#build_cost_ic_infantry = DRF_army_build_cost_ic_infantry
+	#build_cost_ic_light_tank_chassis = DRF_army_build_cost_ic_light_tank_chassis
+	#build_cost_ic_mechanized = DRF_army_build_cost_ic_mechanized
+	#build_cost_ic_medium_tank_chassis = DRF_army_build_cost_ic_medium_tank_chassis
+	#build_cost_ic_motorized = DRF_army_build_cost_ic_motorized
+	#build_cost_ic_rocket = DRF_army_build_cost_ic_rocket
+	#build_cost_ic_support_equipment = DRF_army_build_cost_ic_support_equipment
 }
 
 DRF_navy = {
 	enable = { NOT = { has_country_flag = no_naval_academy } }
 	icon = GFX_idea_DRF_dynamic_naval
+
+	#임시
+	experience_gain_navy_factor = DRF_navy_experience_gain_navy_factor
+	naval_doctrine_cost_factor = DRF_navy_naval_doctrine_cost_factor
+	naval_detection = DRF_navy_naval_detection
+	navy_max_range_factor = DRF_navy_navy_max_range_factor
+	repair_speed_factor = DRF_navy_repair_speed_factor
+	refit_speed = DRF_navy_refit_speed
+	amphibious_invasion = DRF_navy_amphibious_invasion
+	naval_invasion_capacity = DRF_navy_naval_invasion_capacity
+	convoy_raiding_efficiency_factor = DRF_navy_convoy_raiding_efficiency_factor
+	convoy_escort_efficiency = DRF_navy_convoy_escort_efficiency
+	naval_damage_factor = DRF_navy_naval_damage_factor
+	naval_defense_factor = DRF_navy_naval_defense_factor
+	navy_submarine_detection_factor = DRF_navy_navy_submarine_detection_factor
+	naval_speed_factor = DRF_navy_naval_speed_factor
+
+	#더미 변수
+	#build_cost_ic_capital_ship = DRF_navy_build_cost_ic_capital_ship
+	#build_cost_ic_carrier = DRF_navy_build_cost_ic_carrier
+	#build_cost_ic_convoy = DRF_navy_build_cost_ic_convoy
+	#build_cost_ic_screen_ship = DRF_navy_build_cost_ic_screen_ship
+	#build_cost_ic_submarine = DRF_navy_build_cost_ic_submarine
 }
 
 DRF_air_force = {
 	enable = { NOT = { has_country_flag = no_air_academy } }
 	icon = GFX_idea_DRF_dynamic_airforce
+
+	#임시
+	experience_gain_air_factor = DRF_air_force_experience_gain_air_factor
+	air_doctrine_cost_factor = DRF_air_force_air_doctrine_cost_factor
+	air_accidents_factor = DRF_air_force_air_accidents_factor
+	air_mission_efficiency = DRF_air_force_air_mission_efficiency
+	air_training_xp_gain_factor = DRF_air_force_air_training_xp_gain_factor
+	air_range_factor = DRF_air_force_air_range_factor
+	air_ace_generation_chance_factor = DRF_air_force_air_ace_generation_chance_factor
+	air_superiority_efficiency = DRF_air_force_air_superiority_efficiency
+	air_cas_efficiency = DRF_air_force_air_cas_efficiency
+	air_strategic_bomber_bombing_factor = DRF_air_force_air_strategic_bomber_bombing_factor
+	air_intercept_efficiency = DRF_air_force_air_intercept_efficiency
+	air_nav_efficiency = DRF_air_force_air_nav_efficiency
+	air_detection = DRF_air_force_air_detection
+	air_agility_factor = DRF_air_force_air_agility_factor
+
+	#더미 변수
+	#build_cost_ic_air_transport = DRF_air_force_build_cost_ic_air_transport
+	#build_cost_ic_cas_bomber = DRF_air_force_build_cost_ic_cas_bomber
+	#build_cost_ic_fighter = DRF_air_force_build_cost_ic_fighter
+	#build_cost_ic_interceptor = DRF_air_force_build_cost_ic_interceptor
+	#build_cost_ic_tactical_bomber = DRF_air_force_build_cost_ic_tactical_bomber
+	#build_cost_ic_missile = DRF_air_force_build_cost_ic_missile
+	#build_cost_ic_naval_bomber = DRF_air_force_build_cost_ic_naval_bomber
+	#build_cost_ic_strat_bomber = DRF_air_force_build_cost_ic_strat_bomber
+	#build_cost_ic_suicide = DRF_air_force_build_cost_ic_suicide
 }

@@ -1,6 +1,8 @@
-IMA_industry = {
+IMA_industry_modifier = {
 	enable = { always = yes }
 	icon = GFX_idea_IMA_dynamic_industry
+
+	industrial_capacity_dockyard = IMA_industry_industrial_capacity_dockyard
 }
 
 IMA_army = {
@@ -11,6 +13,51 @@ IMA_army = {
 IMA_navy = {
 	enable = { NOT = { has_country_flag = no_naval_academy } }
 	icon = GFX_idea_IMA_dynamic_naval
+
+	naval_doctrine_cost_factor = IMA_navy_naval_doctrine_cost_factor
+	experience_gain_navy_factor = IMA_navy_experience_gain_navy_factor
+	refit_speed = IMA_navy_refit_speed
+	refit_ic_cost = IMA_navy_refit_ic_cost
+	repair_speed_factor = IMA_navy_repair_speed_factor
+	naval_damage_factor = IMA_navy_naval_damage_factor
+	naval_defense_factor = IMA_navy_naval_defense_factor
+	navy_max_range_factor = IMA_navy_navy_max_range_factor
+	navy_visibility = IMA_navy_navy_visibility
+
+	#해병대
+	naval_invasion_prep_speed = IMA_navy_naval_invasion_prep_speed
+	naval_invasion_capacity = IMA_navy_naval_invasion_capacity
+	naval_invasion_penalty = IMA_navy_naval_invasion_penalty
+	naval_detection = IMA_navy_naval_detection
+	spotting_chance = IMA_navy_spotting_chance
+	positioning = IMA_navy_positioning
+	naval_speed_factor = IMA_navy_naval_speed_factor
+	naval_coordination = IMA_navy_naval_coordination
+	navy_carrier_air_agility_factor = IMA_navy_navy_carrier_air_agility_factor
+	navy_capital_ship_attack_factor = IMA_navy_navy_capital_ship_attack_factor
+	navy_capital_ship_defence_factor = IMA_navy_navy_capital_ship_defence_factor
+	navy_max_range_factor = IMA_navy_navy_max_range_factor
+	navy_org_factor = IMA_navy_navy_org_factor
+	naval_critical_score_chance_factor = IMA_navy_naval_critical_score_chance_factor
+	navy_submarine_detection_factor = IMA_navy_navy_submarine_detection_factor
+	experience_gain_destroyer_combat_factor = IMA_navy_experience_gain_destroyer_combat_factor
+	experience_gain_destroyer_training_factor = IMA_navy_experience_gain_destroyer_training_factor
+	mines_planting_by_fleets_factor = IMA_navy_mines_planting_by_fleets_factor
+	mines_sweeping_by_fleets_factor = IMA_navy_mines_sweeping_by_fleets_factor
+	carrier_capacity_penalty_reduction = IMA_navy_carrier_capacity_penalty_reduction
+	carrier_traffic = IMA_navy_carrier_traffic
+	screening_efficiency = IMA_navy_screening_efficiency
+	naval_mine_hit_chance = IMA_navy_naval_mine_hit_chance
+	naval_mines_effect_reduction = IMA_navy_naval_mines_effect_reduction
+	naval_enemy_fleet_size_ratio_penalty_factor = IMA_navy_naval_enemy_fleet_size_ratio_penalty_factor
+	navy_carrier_air_attack_factor = IMA_navy_navy_carrier_air_attack_factor
+	naval_attrition = IMA_navy_naval_attrition
+
+	#build_cost_ic_capital_ship = IMA_navy_build_cost_ic_capital_ship
+	#build_cost_ic_carrier = IMA_navy_build_cost_ic_carrier
+	#build_cost_ic_convoy = IMA_navy_build_cost_ic_convoy
+	#build_cost_ic_screen_ship = IMA_navy_build_cost_ic_screen_ship
+	#build_cost_ic_submarine = IMA_navy_build_cost_ic_submarine
 }
 
 IMA_air_force = {
@@ -19,8 +66,26 @@ IMA_air_force = {
 }
 
 IMA_colonial_economy = {
-	enable = { always = yes }
+	enable = { 
+		OR = {
+			original_tag = IMA
+			AND = {
+				is_subject_of = IMA
+				has_autonomy_state = ima_westminster_dominion
+			}
+		}
+	}
 	icon = GFX_idea_POL_succesful_four_year_plan
+}
+
+IMA_bletchley_park = {
+	enable = { has_LaR = yes }
+	icon = GFX_idea_generic_spy_intel
+
+	decryption_power = IMA_bletchley_park_decryption_power
+	decryption_power_factor = IMA_bletchley_park_decryption_power_factor
+	operative_slot = IMA_bletchley_park_operative_slot
+	intel_network_gain_factor = IMA_bletchley_park_intel_network_gain_factor
 }
 
 IMA_commonwealth = {

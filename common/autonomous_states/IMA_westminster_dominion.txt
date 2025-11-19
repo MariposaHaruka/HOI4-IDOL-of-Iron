@@ -32,14 +32,11 @@ autonomy_state = {
 	}
 
 	allowed = {
-		if = {
-			limit = { has_TfV = yes }
-			OVERLORD = { original_tag = IMA }
-			OVERLORD = { 
-				OR = { 
-					is_democratic = yes
-					has_government = authoritariandemocracy 
-				}
+		OVERLORD = { original_tag = IMA }
+		OVERLORD = { 
+			OR = { 
+				is_democratic = yes
+				has_government = authoritariandemocracy 
 			}
 		}
 	}
@@ -56,8 +53,6 @@ autonomy_state = {
 	}
 
 	can_lose_level = {
-		if = {
-			limit = { ROOT = { NOT = { has_idea = IMA_westminster_statute } } }
-		}
+		always = no #제국 연방의 경우 제외하고 내려감 방지용
 	}
 }

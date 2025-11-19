@@ -39,14 +39,11 @@ autonomy_state = {
 	}
 
 	allowed = {
-		if = {
-			limit = { has_TfV = yes }
-			OVERLORD = { original_tag = IMA }
-			OVERLORD = { 
-				OR = { 
-					is_democratic = yes
-					has_government = authoritariandemocracy 
-				}
+		OVERLORD = { original_tag = IMA }
+		OVERLORD = { 
+			OR = { 
+				is_democratic = yes
+				has_government = authoritariandemocracy 
 			}
 		}
 	}

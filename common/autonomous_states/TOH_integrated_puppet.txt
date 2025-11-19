@@ -40,13 +40,10 @@ autonomy_state = {
 	}
 
 	allowed = {
-		if = {
-			limit = { has_dlc = "Waking the Tiger" }
-			OVERLORD = { original_tag = TOH }
-			OVERLORD = { 
-				is_communism = yes
-				NOT = { has_government = anarchosyndicalism }
-			}	
+		OVERLORD = { original_tag = TOH }
+		OVERLORD = { 
+			is_communism = yes
+			NOT = { has_government = anarchosyndicalism }
 		}
 	}
 

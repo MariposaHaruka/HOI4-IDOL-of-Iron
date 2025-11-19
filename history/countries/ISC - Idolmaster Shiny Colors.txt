@@ -3,13 +3,7 @@ capital = 285 #캔버라
 
 #부대
 oob = "ISC_ar"
-if = {
-	limit = { has_MtG = yes }
-	set_naval_oob = "ISC_na_MtG"
-	else = {
-		set_naval_oob = "ISC_na"
-	}
-}
+set_naval_oob = "ISC_na_MtG"
 if = {
 	limit = { has_BBA = yes }
 	set_air_oob = "ISC_ai_BBA"
@@ -36,32 +30,19 @@ set_technology = {
 	fuel_silos = 1
 	fleet_in_being = 1
 }
-if = {
-	limit = {  has_MtG = yes }
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		early_ship_hull_submarine = 1
-		basic_battery = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-		basic_cruiser_armor_scheme = 1
-		mtg_transport = 1
-	}
-	else = {
-		set_technology = {
-			early_destroyer = 1
-			early_light_cruiser = 1
-			early_heavy_cruiser = 1
-			early_submarine = 1
-			transport = 1
-		}
-	}
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_light = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	early_ship_hull_submarine = 1
+	basic_battery = 1
+	basic_torpedo = 1
+	basic_depth_charges = 1
+	basic_cruiser_armor_scheme = 1
+	mtg_transport = 1
 }
-
 if = {
 	limit = { has_NSB = yes }
 	set_technology = {
@@ -109,6 +90,40 @@ add_dynamic_modifier = { modifier = ISC_army }
 add_dynamic_modifier = { modifier = ISC_navy }
 add_dynamic_modifier = { modifier = ISC_air_force }
 add_dynamic_modifier = { modifier = IMA_colonial_economy }
+
+## ISC_industry
+
+## ISC_army
+
+set_variable = { ISC_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { ISC_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { ISC_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { ISC_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { ISC_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { ISC_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { ISC_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { ISC_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { ISC_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## ISC_navy
+
+set_variable = { ISC_navy_build_cost_ic_capital_ship = 0.20 } ### 별도 국민정신 적용
+set_variable = { ISC_navy_build_cost_ic_carrier = 0.20 } ### 별도 국민정신 적용
+set_variable = { ISC_navy_build_cost_ic_convoy = 0.05 } ### 별도 국민정신 적용
+set_variable = { ISC_navy_build_cost_ic_screen_ship = 0.20 } ### 별도 국민정신 적용
+set_variable = { ISC_navy_build_cost_ic_submarine = 0.20 } ### 별도 국민정신 적용
+
+## ISC_air_force
+
+set_variable = { ISC_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { ISC_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { ISC_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { ISC_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { ISC_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { ISC_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { ISC_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { ISC_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { ISC_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
 
 #외교
 set_cosmetic_tag = ISC_IMA
@@ -182,6 +197,75 @@ recruit_character = ISC_ikuta_haruki
 recruit_character = ISC_nanakusa_hazuki
 recruit_character = ISC_amai_tsutomu
 recruit_character = ISC_natsume_p
+
+#AST
+#recruit_character = ISC_john_curtin
+#recruit_character = ISC_eric_campbell
+#recruit_character = ISC_richard_dixon
+#recruit_character = ISC_earle_page
+#recruit_character = ISC_rod_hull
+#recruit_character = ISC_leslie_morshead
+#recruit_character = ISC_thomas_blamey
+#recruit_character = ISC_henry_wynter
+#recruit_character = ISC_alan_vasey
+#recruit_character = ISC_horace_robertson
+#recruit_character = ISC_john_northcott
+#recruit_character = ISC_harold_farncomb
+#recruit_character = ISC_victor_crutchley
+#recruit_character = ISC_clive_caldwell
+#recruit_character = ISC_sydney_rowell
+#recruit_character = ISC_richard_williams
+#recruit_character = ISC_ragnar_colvin
+#recruit_character = ISC_norman_makin
+#recruit_character = ISC_james_fairbairn
+#recruit_character = ISC_john_collins
+#recruit_character = ISC_arthur_allen
+#recruit_character = ISC_vernon_sturdee
+#recruit_character = ISC_jack_crace
+#recruit_character = ISC_cederic_hicks
+#recruit_character = ISC_charles_burnett
+#recruit_character = ISC_edmund_herring
+#recruit_character = ISC_arthur_drakeford
+#recruit_character = ISC_john_lavarack
+#recruit_character = ISC_robert_g_menzies
+#recruit_character = ISC_ben_chifley
+#recruit_character = ISC_frank_forde
+#recruit_character = ISC_alexander_hore_ruthven
+#recruit_character = ISC_jack_beasley
+#recruit_character = ISC_lance_sharkey
+#recruit_character = ISC_herbert_v_evatt
+#recruit_character = ISC_arthur_calwell
+#recruit_character = ISC_iven_mackay
+#NZL
+#recruit_character = ISC_michael_joseph_savage
+#recruit_character = ISC_sidney_holland
+#recruit_character = ISC_john_ormond
+#recruit_character = ISC_elsie_farrelly
+#recruit_character = ISC_bernard_freyberg
+#recruit_character = ISC_robert_row
+#recruit_character = ISC_william_stevens
+#recruit_character = ISC_edmund_rupert_drummond
+#recruit_character = ISC_peter_phipps
+#recruit_character = ISC_r_a_cochrane
+#recruit_character = ISC_l_p_peterson
+#recruit_character = ISC_j_c_nichols
+#recruit_character = ISC_n_weir
+#recruit_character = ISC_j_e_duigan
+#recruit_character = ISC_edward_puttick
+#recruit_character = ISC_norris_stephen_falla
+#recruit_character = ISC_trevor_handley
+#recruit_character = ISC_keith_j_holyoake
+#recruit_character = ISC_a_j_stallworthy
+#recruit_character = ISC_eric_prendergast
+#recruit_character = ISC_arthur_dawes
+#recruit_character = ISC_william_sinclair_burgess
+#recruit_character = ISC_h_e_horan
+#recruit_character = ISC_h_d_mcgregor
+#recruit_character = ISC_w_h_stratton
+#recruit_character = ISC_a_e_davy
+#recruit_character = ISC_walter_nash
+#recruit_character = ISC_w_a_veitch_milne
+#recruit_character = ISC_peter_fraser
 
 ##의회 시스템용
 recruit_character = ISC_parliament_seek_cooperation_1
@@ -670,120 +754,112 @@ parliament_ask_to_join_coalition_12 = {
 #장관진
 
 #무기 프리셋
-if = {
-	limit = { has_dlc = "Man the Guns" } 
-	### Ship Variants ###
-	# Light Cruisers #
-	create_equipment_variant = {
-		name = "Sydney Class"
-		type = ship_hull_cruiser_2
-		name_group = ISC_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_2
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_2
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			front_1_custom_slot = empty
-			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = ship_airplane_launcher_1
-			rear_1_custom_slot = ship_light_medium_battery_2
-		}
+### Ship Variants ###
+# Light Cruisers #
+create_equipment_variant = {
+	name = "Sydney Class"
+	type = ship_hull_cruiser_2
+	name_group = ISC_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		front_1_custom_slot = empty
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_airplane_launcher_1
+		rear_1_custom_slot = ship_light_medium_battery_2
 	}
-	create_equipment_variant = {
-		name = "Town Class"
-		type = ship_hull_cruiser_1
-		name_group = ISC_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			mid_1_custom_slot = empty
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
+}
+create_equipment_variant = {
+	name = "Town Class"
+	type = ship_hull_cruiser_1
+	name_group = ISC_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = empty
 	}
-	# Heavy Cruisers #
-	create_equipment_variant = {
-		name = "Canberra Class"
-		type = ship_hull_cruiser_1
-		name_group = ISC_CA_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_medium_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_2
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			mid_1_custom_slot = ship_airplane_launcher_1
-			mid_2_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_medium_battery_2
-		}
+	obsolete = yes
+}
+# Heavy Cruisers #
+create_equipment_variant = {
+	name = "Canberra Class"
+	type = ship_hull_cruiser_1
+	name_group = ISC_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_2
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		mid_1_custom_slot = ship_airplane_launcher_1
+		mid_2_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_medium_battery_2
 	}
-	# Destroyers #
-	create_equipment_variant = {
-		name = "V/W Class"
-		type = ship_hull_light_1
-		name_group = ISC_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = ship_depth_charge_1
-		}
+}
+# Destroyers #
+create_equipment_variant = {
+	name = "V/W Class"
+	type = ship_hull_light_1
+	name_group = ISC_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = ship_depth_charge_1
 	}
-	create_equipment_variant = {
-		name = "S Class"
-		type = ship_hull_light_1
-		name_group = ISC_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-		obsolete = yes
+}
+create_equipment_variant = {
+	name = "S Class"
+	type = ship_hull_light_1
+	name_group = ISC_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = ship_depth_charge_1
 	}
-	else = {
-		create_equipment_variant = {
-			name = "Sydney Class"
-			type = light_cruiser_1
-			upgrades = {
-				ship_reliability_upgrade = 2
-				ship_engine_upgrade = 2
-				ship_gun_upgrade = 2
-				ship_anti_air_upgrade = 2
-			}
-		}
-		
-		create_equipment_variant = {
-			name = "Canberra Class"
-			type = heavy_cruiser_1
-			upgrades = {
-				ship_reliability_upgrade = 2
-				ship_engine_upgrade = 2
-				ship_armor_upgrade = 2
-				ship_gun_upgrade = 2
-			}
-		}
+	obsolete = yes
+}
+
+# Light Cruisers #
+create_equipment_variant = {
+	name = "Danae Class"
+	type = ship_hull_cruiser_1
+	name_group = ISC_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = empty
 	}
 }

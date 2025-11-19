@@ -1,7 +1,7 @@
 mio_policy_general_ruthless_contracts = {
 	icon = GFX_mio_policy_ruthless_contracts
-	allowed = { always = yes  }
-	available = { has_mio_size > 5}
+	allowed = { always = yes }
+	available = { has_mio_size > 5 }
 	organization_modifier = {
 		military_industrial_organization_funds_gain = 0.1
 	}
@@ -23,10 +23,10 @@ mio_policy_general_assembly_line_optimisers = {
 			has_mio_equipment_type = motorized_equipment
 			has_mio_equipment_type = mechanized_equipment
 			has_mio_equipment_type = anti_tank_equipment
-			has_mio_equipment_type = flame_equipment
+			has_mio_equipment_type = flame
 			has_mio_equipment_type = anti_air_equipment
 			has_mio_equipment_type = artillery_equipment
-			has_mio_equipment_type = rocket_equipment
+			has_mio_equipment_type = rocket
 			has_mio_equipment_type = infantry_equipment
 			has_mio_equipment_type = railway_gun_equipment
 			has_mio_equipment_type = train_equipment

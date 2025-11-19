@@ -1,0 +1,52 @@
+defined_text = {
+	name = IOIGetStateCoreTooltip
+	text = {
+		trigger = {
+			FROM = { 
+				is_core_of = ROOT 
+				is_owned_by = ROOT
+			}
+		}
+		localization_key = IOIStateOwnCore
+	}
+	text = {
+		trigger = {
+			FROM = { 
+				is_core_of = ROOT 
+				NOT = { is_owned_by = ROOT }
+			}
+		}
+		localization_key = IOIStateNotOwnCore
+	}
+	text = {
+		trigger = {
+			FROM = { 
+				is_claimed_by = ROOT 
+				is_owned_by = ROOT
+			}
+		}
+		localization_key = IOIStateOwnClaim
+	}
+	text = {
+		trigger = {
+			FROM = { 
+				is_claimed_by = ROOT 
+				NOT = { is_owned_by = ROOT }
+			}
+		}
+		localization_key = IOIStateNotOwnClaim
+	}
+	text = {
+		trigger = {
+			FROM = { 
+				NOT = { is_core_of = ROOT }
+				NOT = { is_claimed_by = ROOT  }
+				is_owned_by = ROOT
+			}
+		}
+		localization_key = IOIStateOwnColony
+	}
+	text = {
+		localization_key = IOIStateNone
+	}
+}

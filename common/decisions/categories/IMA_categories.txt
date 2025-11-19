@@ -36,6 +36,20 @@ IMA_iori_plan_category = { #이오리 계획
 	scripted_gui = IMA_iori_plan_gui
 }
 
+IMA_imperial_federation_category = { #제국 연방 계획
+	icon = generic_political_actions
+	priority = 96
+	allowed = {
+		has_completed_focus = IMA_41001
+		original_tag = IMA
+	}
+	visible = {
+		has_completed_focus = IMA_41001
+		original_tag = IMA
+	}
+	visible_when_empty = yes
+}
+
 IMA_westminster_statute_category = { #웨스트민스터 헌장
 	icon = generic_political_actions
 	priority = 96
@@ -120,6 +134,16 @@ IMA_intervension_plan_category = { #개입 계획
 	}
 	visible_when_empty = yes
 }
+
+IMA_tizard_mission_expand = { #티저드 작전 확장
+	icon = generic_foreign_policy
+	priority = 94
+	allowed = { original_tag = IMA }
+	visible = { has_completed_focus = IMA_20012 }
+	visible_when_empty = yes
+}
+
+
 
 IMA_idolmaster_conference_category = { #아이돌 마스터 회의
 	icon = SWI_federal_council

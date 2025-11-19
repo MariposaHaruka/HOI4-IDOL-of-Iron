@@ -445,6 +445,10 @@ demobilization = {
 			has_war = no
 			has_unsupported_economic_law = yes
 		}
+		visible = {
+			has_war = no
+			has_unsupported_economic_law = yes
+		}
 		allowed = { always = yes }
 		cost = 50
 		complete_effect = {
@@ -587,6 +591,10 @@ demobilization = {
 	demobilization_manpower = {
 		icon = revolt
 		available = {
+			has_unsupported_manpower_law = yes
+			has_war = no
+		}
+		visible = {
 			has_unsupported_manpower_law = yes
 			has_war = no
 		}

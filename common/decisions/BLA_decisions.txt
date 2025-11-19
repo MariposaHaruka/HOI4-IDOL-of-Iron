@@ -1975,8 +1975,22 @@ BLA_balance_of_power_category = {
 }
 
 BLA_school_committee_category = {
-	BLA_invite_GEH = {
-		priority = 1
+	BLA_school_committee_invite = { #더미 디시전
+		priority = 10
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		allowed = { original_tag = BLA }
+		available = { always = no }
+		visible  = { always = no }
+		cost = 10
+		days_remove = 30
+		remove_effect = { }
+	}
+	BLA_school_committee_invite_GEH = {
+		priority = 10
 		icon = hol_attract_foreign_investors
 		ai_will_do = { 
 			base = 5
@@ -2011,8 +2025,8 @@ BLA_school_committee_category = {
 			}
 		}
 	}
-	BLA_invite_MIL = {
-		priority = 1
+	BLA_school_committee_invite_MIL = {
+		priority = 10
 		icon = hol_attract_foreign_investors
 		ai_will_do = { 
 			base = 5
@@ -2048,8 +2062,8 @@ BLA_school_committee_category = {
 			}
 		}
 	}
-	BLA_invite_TRN = {
-		priority = 1
+	BLA_school_committee_invite_TRN = {
+		priority = 10
 		icon = hol_attract_foreign_investors
 		ai_will_do = { 
 			base = 5
@@ -2085,8 +2099,8 @@ BLA_school_committee_category = {
 			}
 		}
 	}
-	BLA_invite_HYA = {
-		priority = 1
+	BLA_school_committee_invite_HYA = {
+		priority = 10
 		icon = hol_attract_foreign_investors
 		ai_will_do = { 
 			base = 5
@@ -2118,8 +2132,8 @@ BLA_school_committee_category = {
 			}
 		}
 	}
-	BLA_invite_ABY = {
-		priority = 1
+	BLA_school_committee_invite_ABY = {
+		priority = 10
 		icon = hol_attract_foreign_investors
 		ai_will_do = { 
 			base = 5
@@ -2159,8 +2173,8 @@ BLA_school_committee_category = {
 			}
 		}
 	}
-	BLA_invite_RED = {
-		priority = 1
+	BLA_school_committee_invite_RED = {
+		priority = 10
 		icon = hol_attract_foreign_investors
 		ai_will_do = { 
 			base = 5
@@ -2196,8 +2210,8 @@ BLA_school_committee_category = {
 			}
 		}
 	}
-	BLA_invite_SHA = {
-		priority = 1
+	BLA_school_committee_invite_SHA = {
+		priority = 10
 		icon = hol_attract_foreign_investors
 		ai_will_do = { 
 			base = 5
@@ -2233,8 +2247,8 @@ BLA_school_committee_category = {
 			}
 		}
 	}
-	BLA_invite_ARI = {
-		priority = 1
+	BLA_school_committee_invite_ARI = {
+		priority = 10
 		icon = hol_attract_foreign_investors
 		ai_will_do = { 
 			base = 5
@@ -2270,8 +2284,8 @@ BLA_school_committee_category = {
 			}
 		}
 	}
-	BLA_invite_VAL = {
-		priority = 1
+	BLA_school_committee_invite_VAL = {
+		priority = 10
 		icon = hol_attract_foreign_investors
 		ai_will_do = { 
 			base = 5
@@ -2303,8 +2317,8 @@ BLA_school_committee_category = {
 			}
 		}
 	}
-	BLA_invite_SRT = {
-		priority = 1
+	BLA_school_committee_invite_SRT = {
+		priority = 10
 		icon = hol_attract_foreign_investors
 		ai_will_do = { 
 			base = 5
@@ -2340,8 +2354,8 @@ BLA_school_committee_category = {
 			}
 		}
 	}
-	BLA_invite_HIG = {
-		priority = 1
+	BLA_school_committee_invite_HIG = {
+		priority = 10
 		icon = hol_attract_foreign_investors
 		ai_will_do = { 
 			base = 5
@@ -2373,44 +2387,495 @@ BLA_school_committee_category = {
 			}
 		}
 	}
-	#BLA_invite_WIL = {
-	#	priority = 1
-	#	icon = hol_attract_foreign_investors
-	#	ai_will_do = { 
-	#		base = 5
-	#	}
-	#
-	#	cosmetic_tag = WIL
-	#	cosmetic_ideology = authoritariandemocracy
-	#
-	#	allowed = { original_tag = BLA }
-	#	available = {
-	#		custom_trigger_tooltip = {
-	#			BLA_wildhunt_participate = no
-	#			tooltip = BLA_wildhunt_participate_tt_NOT
-	#		}
-	#	}
-	#	visible = { 
-	#		NOT = { country_exists = WIL }
-	#		BLA_highlander_participate = no
-	#	}
-	#
-	#	cost = 10
-	#	days_remove = 30
-	#
-	#	remove_effect = {
-	#		hidden_effect = {
-	#			clr_country_flag = BLA_wildhunt_not_participated
-	#			#set_variable = { BLA_HIG_leader = 2 }
-	#			country_event = { id = BLA_WIL.1 }
-	#		}
-	#	}
-	#}
+	BLA_school_committee_invite_WIL = {
+		priority = 10
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+	
+		cosmetic_tag = WIL
+		cosmetic_ideology = authoritariandemocracy
+	
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_wildhunt_participate = no
+				tooltip = BLA_wildhunt_participate_tt_NOT
+			}
+		}
+		visible = { 
+			NOT = { country_exists = WIL }
+			BLA_highlander_participate = no
+			always = no
+		}
+	
+		cost = 10
+		days_remove = 30
+	
+		remove_effect = {
+			hidden_effect = {
+				#clr_country_flag = BLA_wildhunt_not_participated
+				#set_variable = { BLA_WIL_leader = 2 }
+				#country_event = { id = BLA_WIL.1 }
+			}
+		}
+	}
+
+	BLA_school_committee_integrate_school = { #더미 디시전
+		priority = 5
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		allowed = { original_tag = BLA }
+		available = { always = no }
+		visible  = { always = no }
+		cost = 10
+		days_remove = 30
+		remove_effect = { }
+	}
+	BLA_school_committee_integrate_school_GEH = {
+		priority = 5
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = GEH
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = { 
+			custom_trigger_tooltip = {
+				BLA_gehenna_participate = yes
+				tooltip = BLA_gehenna_participate_tt
+			}
+			custom_trigger_tooltip = {
+				OR = {
+					BLA_gehenna_get_core = yes
+					BLA_gehenna_get_modifier = yes
+				}
+				tooltip = BLA_gehenna_integrate_tt_NOT
+			}
+		}
+		visible = { 
+			NOT = { country_exists = GEH }
+			BLA_gehenna_participate = no
+		}
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_gehenna_not_participated
+				set_variable = { BLA_GEH_leader = 2 }
+				country_event = { id = BLA_GEH.1 }
+			}
+		}
+	}
+	BLA_school_committee_integrate_school_MIL = {
+		priority = 5
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = MIL
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_millenium_participate = no
+				tooltip = BLA_millenium_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_millenium_problem = yes
+				tooltip = BLA_millenium_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = MIL }
+			BLA_millenium_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_millenium_not_participated
+				set_variable = { BLA_MIL_leader = 2 }
+				country_event = { id = BLA_MIL.1 }
+			}
+		}
+	}
+	BLA_school_committee_integrate_school_TRN = {
+		priority = 5
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = TRN
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_trinity_participate = no
+				tooltip = BLA_trinity_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_trinity_problem = yes
+				tooltip = BLA_trinity_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = TRN }
+			BLA_trinity_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_trinity_not_participated
+				set_variable = { BLA_TRN_leader = 4 }
+				country_event = { id = BLA_TRN.1 }
+			}
+		}
+	}
+	BLA_school_committee_integrate_school_HYA = {
+		priority = 5
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = HYA
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_hyakkiyako_participate = no
+				tooltip = BLA_hyakkiyako_participate_tt_NOT
+			}
+		}
+		visible = { 
+			NOT = { country_exists = HYA }
+			BLA_hyakkiyako_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_hyakkiyako_not_participated
+				set_variable = { BLA_HYA_leader = 2 }
+				country_event = { id = BLA_HYA.1 }
+			}
+		}
+	}
+	BLA_school_committee_integrate_school_ABY = {
+		priority = 5
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = ABY
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_abydos_participate = no
+				tooltip = BLA_abydos_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_abydos_problem = yes
+				tooltip = BLA_abydos_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = ABY }
+			BLA_abydos_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_abydos_not_participated
+				if = {
+					limit = { has_country_flag = BLA_yume_accident }
+					set_variable = { BLA_ABY_leader = 3 }
+					else = { set_variable = { BLA_ABY_leader = 2 }}
+				}
+				country_event = { id = BLA_ABY.1 }
+			}
+		}
+	}
+	BLA_school_committee_integrate_school_RED = {
+		priority = 5
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = RED
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_redwinter_participate = no
+				tooltip = BLA_redwinter_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_redwinter_problem = yes
+				tooltip = BLA_redwinter_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = RED }
+			BLA_redwinter_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_redwinter_not_participated
+				set_variable = { BLA_RED_leader = 2 }
+				country_event = { id = BLA_RED.1 }
+			}
+		}
+	}
+	BLA_school_committee_integrate_school_SHA = {
+		priority = 5
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = SHA
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_shanhaijing_participate = no
+				tooltip = BLA_shanhaijing_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_shanhaijing_problem = yes
+				tooltip = BLA_shanhaijing_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = SHA }
+			BLA_shanhaijing_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_shanhaijing_not_participated
+				set_variable = { BLA_SHA_leader = 2 }
+				country_event = { id = BLA_SHA.1 }
+			}
+		}
+	}
+	BLA_school_committee_integrate_school_ARI = {
+		priority = 5
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = ARI
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_arius_participate = no
+				tooltip = BLA_arius_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_arius_problem = yes
+				tooltip = BLA_arius_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = ARI }
+			BLA_arius_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_arius_not_participated
+				set_variable = { BLA_ARI_leader = 2 }
+				country_event = { id = BLA_ARI.1 }
+			}
+		}
+	}
+	BLA_school_committee_integrate_school_VAL = {
+		priority = 5
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = VAL
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_valkyrie_participate = no
+				tooltip = BLA_valkyrie_participate_tt_NOT
+			}
+		}
+		visible = { 
+			NOT = { country_exists = VAL }
+			BLA_valkyrie_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_valkyrie_not_participated
+				set_variable = { BLA_VAL_leader = 2 }
+				country_event = { id = BLA_VAL.1 }
+			}
+		}
+	}
+	BLA_school_committee_integrate_school_SRT = {
+		priority = 5
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = SRT
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_srt_participate = no
+				tooltip = BLA_srt_participate_tt_NOT
+			}
+			custom_trigger_tooltip = {
+				BLA_srt_problem = yes
+				tooltip = BLA_srt_problem_tt
+			}
+		}
+		visible = { 
+			NOT = { country_exists = SRT }
+			BLA_srt_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_srt_not_participated
+				set_variable = { BLA_SRT_leader = 2 }
+				country_event = { id = BLA_SRT.1 }
+			}
+		}
+	}
+	BLA_school_committee_integrate_school_HIG = {
+		priority = 5
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+
+		cosmetic_tag = HIG
+		cosmetic_ideology = authoritariandemocracy
+
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_highlander_participate = no
+				tooltip = BLA_highlander_participate_tt_NOT
+			}
+		}
+		visible = { 
+			NOT = { country_exists = HIG }
+			BLA_highlander_participate = no
+		}
+
+		cost = 10
+		days_remove = 30
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = BLA_highlander_not_participated
+				#set_variable = { BLA_HIG_leader = 2 }
+				country_event = { id = BLA_HIG.1 }
+			}
+		}
+	}
+	BLA_school_committee_integrate_school_WIL = {
+		priority = 5
+		icon = hol_attract_foreign_investors
+		ai_will_do = { 
+			base = 5
+		}
+	
+		cosmetic_tag = WIL
+		cosmetic_ideology = authoritariandemocracy
+	
+		allowed = { original_tag = BLA }
+		available = {
+			custom_trigger_tooltip = {
+				BLA_wildhunt_participate = no
+				tooltip = BLA_wildhunt_participate_tt_NOT
+			}
+		}
+		visible = { 
+			NOT = { country_exists = WIL }
+			BLA_highlander_participate = no
+			always = no
+		}
+	
+		cost = 10
+		days_remove = 30
+	
+		remove_effect = {
+			hidden_effect = {
+				#clr_country_flag = BLA_wildhunt_not_participated
+				#set_variable = { BLA_WIL_leader = 2 }
+				#country_event = { id = BLA_WIL.1 }
+			}
+		}
+	}
 }
 
 BLA_military_committee_category = { #군사 위원회
 	BLA_military_committee_category_eimi_fleet_plan = {
-		priority = 1
+		priority = 5
 		icon = SWE_set_navy_budget
 		ai_will_do = { 
 			base = 5
@@ -2432,7 +2897,7 @@ BLA_military_committee_category = { #군사 위원회
 		}
 	}
 	BLA_military_committee_category_airplane_production_plan = {
-		priority = 1
+		priority = 5
 		icon = SWE_set_air_budget
 		ai_will_do = { 
 			base = 5
@@ -2451,7 +2916,7 @@ BLA_military_committee_category = { #군사 위원회
 		}
 	}
 	BLA_military_committee_category_air_license = { 
-		priority = 1
+		priority = 5
 		icon = SWE_set_air_budget
 		ai_will_do = { 
 			base = 5

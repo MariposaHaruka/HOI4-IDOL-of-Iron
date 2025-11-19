@@ -510,7 +510,7 @@ propaganda_efforts = {
 operations = {
 	blow_suez_canal = {
 		icon = GFX_decision_generic_ignite_civil_war
-		allowed = { has_WtT = yes }
+		allowed = { always = yes }
 		available = {
 			controls_state = 446
 			controls_state = 453
@@ -636,7 +636,7 @@ operations = {
 
 	blow_panama_canal = {
 		icon = GFX_decision_generic_ignite_civil_war
-		allowed = { has_WtT = yes }
+		allowed = { always = yes }
 		available = {
 			has_full_control_of_state = 685
 		}
@@ -1117,7 +1117,7 @@ war_measures = {
 
 foreign_politics = {
 	object_to_attaches = {
-		allowed = { has_WtT = yes }
+		allowed = { always = yes }
         cost = 50
         fire_only_once = no
         days_re_enable = 30
@@ -1227,10 +1227,8 @@ economy_decisions = {
         available = {
 			if = { 
 				limit = { 
-					OR = { 
-						has_MtG = yes
-						has_BBA = yes
-					}
+					is_democratic = yes #MtG의 경우
+					has_BBA = yes
 				}
 				has_war_with_non_exiled_country = yes   
 			}

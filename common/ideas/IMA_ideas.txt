@@ -1,4 +1,123 @@
 ideas = {
+	hidden_ideas = {
+		IMA_navy_start_setting = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				capital_ship = { build_cost_ic = 0.15 }
+				carrier = { build_cost_ic = 0.15 }
+				screen_ship = { build_cost_ic = 0.15 }
+				submarine = { build_cost_ic = 0.15 }
+			}
+		}
+		IMA_10007_idea = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				armor = { build_cost_ic = -0.1 }
+			}
+		}
+		IMA_10008_idea = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				fighter = { build_cost_ic = -0.1 }
+			}
+		}
+		IMA_31011_idea_hidden = {
+			name = IMA_31011_idea
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				heavy_fighter = { build_cost_ic = -0.1 }
+			}
+		}
+		IMA_33008_idea = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				carrier = { build_cost_ic = -0.1 }
+			}
+		}
+		IMA_33014_idea = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				screen_ship = { build_cost_ic = -0.1 }
+				convoy = { build_cost_ic = -0.1 }
+			}
+		}
+		IMA_33018_idea_hidden = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				capital_ship = { build_cost_ic = -0.1 }
+				carrier = { build_cost_ic = -0.1 }
+				screen_ship = { build_cost_ic = -0.1 }
+				convoy = { build_cost_ic = -0.1 }
+				submarine = { build_cost_ic = -0.1 }
+			}
+		}
+		IMA_33102_idea = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				carrier = { build_cost_ic = -0.05 }
+			}
+		}
+		IMA_33202_idea = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				capital_ship = { build_cost_ic = -0.05 }
+			}
+		}
+	}
 	country = {
 		#시작 중점
 		IMA_great_depression_1 = {
@@ -146,8 +265,43 @@ ideas = {
 			}
 		}
 
+		#부채 재조정
+		IMA_11017_idea = {
+			picture = foreign_capital
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				stability_factor = -0.2
+				consumer_goods_factor = 0.20
+			}
+		}
+
+		#전시 금 공여
+		IMA_11019_idea = {
+			picture = SPR_seize_the_gold_reserves
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}	
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.05
+			}
+		}
+
 		#켄싱턴 협정
-		IMA_kenshington_agree = {
+		IMA_11020_idea = {
 			picture = generic_production_bonus
 			allowed = {
 				always = no
@@ -164,6 +318,44 @@ ideas = {
 				consumer_goods_factor = 0.10
 			}
 		}
+
+		#제국 해군의 영광 
+		IMA_33018_idea = {
+			picture = generic_naval
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				capital_ship = { 
+					hg_attack = 0.10
+					hg_armor_piercing = 0.10 
+				}
+			}
+		}
+
+		#모스키토
+		IMA_31011_idea = {
+			picture = generic_air_fighter
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				is_fascism = no
+			}
+
+			equipment_bonus = {
+				heavy_fighter = { 
+					air_attack = 0.05
+					air_agility = 0.10 
+				}
+			}
+		}
 	}
 	naval_manufacturer = {
 		designer = yes
@@ -172,6 +364,9 @@ ideas = {
 			picture = yarrow_shipbuilders
 			allowed = {
 				original_tag = IMA
+			}
+			visible = {
+				NOT = { has_completed_focus = IMA_33014 }
 			}
 			research_bonus = {
 				naval_equipment = 0.15
@@ -184,6 +379,9 @@ ideas = {
 			allowed = {
 				original_tag = IMA
 			}
+			visible = {
+				NOT = { has_completed_focus = IMA_33010  }
+			}
 			research_bonus = {
 				naval_equipment = 0.15
 			}
@@ -195,20 +393,119 @@ ideas = {
 			allowed = {
 				original_tag = IMA
 			}
+			visible = {
+				NOT = { 
+					has_completed_focus = IMA_11015 
+					has_completed_focus = IMA_12015 
+				}
+			}
 			research_bonus = {
 				naval_equipment = 0.15
 			}
 			traits = { atlantic_fleet_naval_manufacturer }
-		}
-		
+		}	
 		IMA_john_brown = {
 			name = john_brown_company
 			picture = john_brown_company
 			allowed = {
 				original_tag = IMA
 			}
+			visible = {
+				NOT = { 
+					has_completed_focus = IMA_11015 
+					has_completed_focus = IMA_12015 
+				}
+			}
 			research_bonus = {
 				naval_equipment = 0.15
+			}
+			traits = { coastal_defence_naval_manufacturer }
+		}	
+		IMA_yarrow_shipbuilders_improved = {
+			name = yarrow_shipbuilders
+			picture = yarrow_shipbuilders
+			allowed = {
+				original_tag = IMA
+			}
+			visible = { 
+				has_completed_focus = IMA_33014
+			}
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			modifier = {
+				air_escort_efficiency = 0.1
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+		IMA_harland_wolff_improved = {
+			name = harland_wolff
+			picture = harland_wolff
+			allowed = {
+				original_tag = IMA
+			}
+			visible = {
+				has_completed_focus = IMA_33010
+			}
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			equipment_bonus = {
+				carrier = {
+					naval_range = 0.1
+				}
+				capital_ship = {
+					naval_range = 0.1
+				}
+				screen_ship = {
+					naval_range = 0.1
+				}
+				submarine = {
+					naval_range = 0.1
+				}
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+		IMA_cammell_laird_improved = {
+			name = cammell_laird
+			picture = cammell_laird
+			allowed = {
+				original_tag = IMA
+			}
+			visible = {
+				OR = {
+					has_completed_focus = IMA_11015
+					has_completed_focus = IMA_12015
+				}
+			}
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			modifier = {
+				naval_critical_score_chance_factor = 0.1
+			}
+			traits = { atlantic_fleet_naval_manufacturer }
+		}	
+		IMA_john_brown_improved = {
+			name = john_brown_company
+			picture = john_brown_company
+			allowed = {
+				original_tag = IMA
+			}
+			visible = {
+				OR = {
+					has_completed_focus = IMA_11015
+					has_completed_focus = IMA_12015
+				}
+			}
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			modifier = {
+				spotting_chance = 0.1
+				navy_visibility = -0.05
+				naval_detection = 0.05
+				positioning = 0.05
 			}
 			traits = { coastal_defence_naval_manufacturer }
 		}	

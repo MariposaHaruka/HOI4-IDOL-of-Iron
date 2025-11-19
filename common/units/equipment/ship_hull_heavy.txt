@@ -11,13 +11,6 @@ equipments = {
 		interface_category = interface_category_capital_ships
 		priority = 1500
 
-		upgrades = {
-			ship_reliability_upgrade
-			ship_engine_upgrade
-			ship_armor_upgrade
-			ship_gun_upgrade
-		}
-
 		module_slots = {
 			fixed_ship_battery_slot = {
 				required = yes
@@ -485,6 +478,7 @@ equipments = {
 
 		manpower = 6000
 	}
+
 	ship_hull_heavy_modern = {
 		abbreviation = "hcf"
 		year = 1954
@@ -648,6 +642,103 @@ equipments = {
 		fuel_consumption = 75
 		reliability = 0.80
 		build_cost_ic = 5500
+		resources = {
+			steel = 1
+			chromium = 1
+		}
+		manpower = 9000
+	}
+
+	ship_hull_super_heavy_2 = {
+		abbreviation = "hcg"
+		year = 1944
+
+		archetype = ship_hull_heavy
+		model = super_heavy_battleship
+		visual_level = 1
+		priority = 1400
+		module_slots = {
+			fixed_ship_battery_slot = {
+				required = yes
+				allowed_module_categories = { ship_super_heavy_battery }
+			}
+			fixed_ship_anti_air_slot = {
+				required = no
+				allowed_module_categories = { ship_anti_air }
+			}
+			fixed_ship_fire_control_system_slot = {
+				required = yes
+				allowed_module_categories = { ship_fire_control_system }
+			}
+			fixed_ship_radar_slot = {
+				required = no
+				allowed_module_categories = { ship_radar }
+			}
+			fixed_ship_engine_slot = {
+				required = yes
+				allowed_module_categories = { heavy_ship_engine }
+			}
+			fixed_ship_secondaries_slot = {
+				required = no
+				allowed_module_categories = { ship_secondaries ship_dp_secondaries }
+			}
+			fixed_ship_armor_slot = {
+				required = yes
+				allowed_module_categories = { ship_heavy_armor }	
+			}
+			front_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_anti_air
+					ship_super_heavy_battery
+				}
+			}
+			front_2_custom_slot = front_1_custom_slot
+			mid_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_anti_air
+					ship_secondaries
+					ship_dp_secondaries
+				}
+			}
+			mid_2_custom_slot = mid_1_custom_slot
+			mid_3_custom_slot = mid_1_custom_slot
+			rear_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_anti_air
+					ship_secondaries
+					ship_dp_secondaries
+					ship_super_heavy_battery
+					ship_airplane_launcher
+				}
+			}
+			rear_2_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_anti_air
+					ship_secondaries
+					ship_dp_secondaries
+					ship_super_heavy_battery
+					ship_airplane_launcher
+				}
+			}
+		}
+
+		default_modules = {
+			fixed_ship_armor_slot = ship_armor_shbb
+			fixed_ship_battery_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			front_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		naval_range = 4500
+		naval_speed = 24
+		max_strength = 800
+		fuel_consumption = 75
+		reliability = 0.90
+		build_cost_ic = 5700
 		resources = {
 			steel = 1
 			chromium = 1
@@ -927,7 +1018,6 @@ equipments = {
 		
 	}
 
-
 	SH_battleship_1 = {
 		year = 1936
 		visual_level = 0
@@ -1124,6 +1214,7 @@ equipments = {
 				}
 			}
 		}
+
 		default_modules = {
 			fixed_ship_battery_slot = ship_super_heavy_battery_1
 			fixed_ship_anti_air_slot = ship_anti_air_4
@@ -1172,6 +1263,7 @@ equipments = {
 		manpower = 10000
 		
 	}
+
 	battle_cruiser_1 = {
 		year = 1922
 		visual_level = 0
@@ -1286,12 +1378,6 @@ equipments = {
 		visual_level = 1
 		archetype = ship_hull_heavy
 		model = ship_hull_modern_super_battleship
-			upgrades = {
-			ship_reliability_upgrade
-			ship_engine_upgrade
-			ship_armor_upgrade
-			ship_gun_upgrade
-		}	
 		module_slots = {
 			fixed_ship_battery_slot = {
 				required = yes
@@ -1401,8 +1487,4 @@ equipments = {
 		manpower = 8000
 
 	}
-
-
-	
-	
 }

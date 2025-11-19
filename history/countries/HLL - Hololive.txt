@@ -56,10 +56,102 @@ set_convoys = 10
 add_ideas = {
 	HLL_5th_4_years_plan
 }
+
 add_dynamic_modifier = { modifier = HLL_industry }
 add_dynamic_modifier = { modifier = HLL_army }
 add_dynamic_modifier = { modifier = HLL_navy }
 add_dynamic_modifier = { modifier = HLL_air_force }
+
+## HLL_industry
+set_variable = { HLL_industry_production_speed_buildings_factor = -0.10 }
+set_variable = { HLL_industry_industrial_capacity_factory = -0.10 }
+set_variable = { HLL_industry_industrial_capacity_dockyard = -0.10 }
+set_variable = { HLL_industry_research_speed_factor = -0.10 }
+set_variable = { HLL_industry_consumer_goods_factor = 0.05 }
+set_variable = { HLL_industry_state_resources_factor = -0.05 }
+set_variable = { HLL_industry_production_factory_max_efficiency_factor = -0.10 }
+set_variable = { HLL_industry_production_factory_efficiency_gain_factor = -0.10 }
+set_variable = { HLL_industry_license_purchase_cost = 0.20 }
+set_variable = { HLL_industry_political_power_gain = -0.03 }
+set_variable = { HLL_industry_stability_factor = -0.05 }
+set_variable = { HLL_industry_industry_repair_factor = -0.15 }
+
+## HLL_army
+set_variable = { HLL_army_experience_gain_army_factor = -0.15 }
+set_variable = { HLL_army_land_doctrine_cost_factor = 0.15 }
+set_variable = { HLL_army_army_org_factor = -0.05 }
+set_variable = { HLL_army_training_time_factor = 0.10 }
+set_variable = { HLL_army_supply_factor = -0.10 }
+set_variable = { HLL_army_planning_speed = -0.10 }
+set_variable = { HLL_army_army_morale_factor = -0.05 }
+set_variable = { HLL_army_max_planning_factor = -0.10 }
+set_variable = { HLL_army_command_power_gain_mult = -0.05 }
+set_variable = { HLL_army_army_leader_cost_factor = 0.20 }
+set_variable = { HLL_army_equipment_capture_factor = -0.20 }
+set_variable = { HLL_army_special_forces_cap = -0.15 }
+set_variable = { HLL_army_recon_factor = -0.05 }
+set_variable = { HLL_army_supply_consumption_factor = 0.05 }
+set_variable = { HLL_army_winter_attrition_factor = 0.05 }
+set_variable = { HLL_army_heat_attrition_factor = 0.05 }
+
+set_variable = { HLL_army_build_cost_ic_anti_air = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_army_build_cost_ic_anti_tank = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_army_build_cost_ic_armor = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_army_build_cost_ic_artillery = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_army_build_cost_ic_infantry = 0.05 } ### 별도 국민정신 적용
+set_variable = { HLL_army_build_cost_ic_mechanized = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_army_build_cost_ic_motorized = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_army_build_cost_ic_rocket = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_army_build_cost_ic_support_equipment = 0.20 } ### 별도 국민정신 적용
+
+## HLL_navy
+set_variable = { HLL_navy_experience_gain_navy_factor = -0.25 }
+set_variable = { HLL_navy_naval_doctrine_cost_factor = 0.10 }
+set_variable = { HLL_navy_naval_detection = -0.10 }
+set_variable = { HLL_navy_navy_max_range_factor = -0.10 }
+set_variable = { HLL_navy_repair_speed_factor = -0.10 }
+set_variable = { HLL_navy_refit_speed = -0.10 }
+set_variable = { HLL_navy_amphibious_invasion = -0.15 }
+set_variable = { HLL_navy_naval_invasion_capacity = -2 }
+set_variable = { HLL_navy_convoy_raiding_efficiency_factor = -0.15 }
+set_variable = { HLL_navy_convoy_escort_efficiency = -0.15 }
+set_variable = { HLL_navy_naval_damage_factor = -0.05 }
+set_variable = { HLL_navy_naval_defense_factor = -0.05 }
+set_variable = { HLL_navy_navy_submarine_detection_factor = -0.20 }
+set_variable = { HLL_navy_naval_speed_factor = -0.05 }
+
+set_variable = { HLL_navy_build_cost_ic_capital_ship = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_navy_build_cost_ic_carrier = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_navy_build_cost_ic_convoy = 0.05 } ### 별도 국민정신 적용
+set_variable = { HLL_navy_build_cost_ic_screen_ship = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_navy_build_cost_ic_submarine = 0.20 } ### 별도 국민정신 적용
+
+## HLL_air_force
+set_variable = { HLL_air_force_experience_gain_air_factor = -0.25 }
+set_variable = { HLL_air_force_air_doctrine_cost_factor = 0.20 }
+set_variable = { HLL_air_force_air_accidents_factor = 0.15 }
+set_variable = { HLL_air_force_air_mission_efficiency = -0.10 }
+set_variable = { HLL_air_force_air_training_xp_gain_factor = -0.15 }
+set_variable = { HLL_air_force_air_range_factor = -0.05 }
+set_variable = { HLL_air_force_air_ace_generation_chance_factor = -0.20 }
+set_variable = { HLL_air_force_air_superiority_efficiency = -0.10 }
+set_variable = { HLL_air_force_air_cas_efficiency = -0.15 }
+set_variable = { HLL_air_force_air_strategic_bomber_bombing_factor = -0.15 }
+set_variable = { HLL_air_force_air_intercept_efficiency = -0.10 }
+set_variable = { HLL_air_force_air_nav_efficiency = -0.10 }
+set_variable = { HLL_air_force_air_detection = -0.10 }
+set_variable = { HLL_air_force_air_agility_factor = -0.05 }
+
+set_variable = { HLL_air_force_build_cost_ic_air_transport = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_air_force_build_cost_ic_cas_bomber = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_air_force_build_cost_ic_fighter = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_air_force_build_cost_ic_interceptor = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_air_force_build_cost_ic_tactical_bomber = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_air_force_build_cost_ic_missile = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_air_force_build_cost_ic_naval_bomber = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_air_force_build_cost_ic_strat_bomber = 0.20 } ### 별도 국민정신 적용
+set_variable = { HLL_air_force_build_cost_ic_suicide = 0.20 } ### 별도 국민정신 적용
+
 
 #외교
 
@@ -173,9 +265,82 @@ recruit_character = HLL_todoroki_hajime
 recruit_character = HLL_friend_a
 recruit_character = HLL_harusaki_nodoka
 
+#COL
+#recruit_character = HLL_alfonso_lópez_pumarejo
+#recruit_character = HLL_mariano_ospina_pérez
+#recruit_character = HLL_gustavo_rojas_pinilla
+#recruit_character = HLL_david_de_vidal
+#recruit_character = HLL_isidoro_sotomayor
+#recruit_character = HLL_eduardo_poirier_escobar
+#recruit_character = HLL_luis_bernardo_andrade
+#recruit_character = HLL_luis_rodriguez
+#recruit_character = HLL_luis_acevedo
+#recruit_character = HLL_enrico_diaz_carias
+#recruit_character = HLL_guillermo_padilla_manrique
+#recruit_character = HLL_gabriel_paris_gordillo
+#recruit_character = HLL_mauricio_soto_gomez
+#recruit_character = HLL_salvador_tiaga_gonzalez
+#recruit_character = HLL_querista_sellor
+#recruit_character = HLL_camilo_daza_alvarez
+#recruit_character = HLL_manuel_quinones
+#recruit_character = HLL_german_olano_moreno
+#recruit_character = HLL_ruben_piedrahita_arango
+#recruit_character = HLL_jose_ellis_quinsado
+#recruit_character = HLL_m_e_rojas_de_moreno
+#recruit_character = HLL_raphael_hollmann
+#recruit_character = HLL_jorge_lopez_suyo
+#ECU
+#recruit_character = HLL_federico_páez
+#recruit_character = HLL_juan_toro
+#recruit_character = HLL_andrés_guilarte
+#recruit_character = HLL_josé_la_mar
+#recruit_character = HLL_cosme_renella_barbatto
+#recruit_character = HLL_benigno_andrade_flores
+#recruit_character = HLL_uriarte_fanquil_del_ponte
+#recruit_character = HLL_julio_salem_gallegos
+#recruit_character = HLL_jorge_escobedo_duarte
+#recruit_character = HLL_carlos_hidalgo_garcia
+#recruit_character = HLL_luis_cabrera_sevilla
+#recruit_character = HLL_ramon_baquerizo_davila
+#recruit_character = HLL_federico_paez_chiriboaga
+#recruit_character = HLL_gustavo_becerra_paz
+#recruit_character = HLL_juan_bayardo_tobar
+#recruit_character = HLL_ramon_moran_valverde
+#recruit_character = HLL_ramon_castro_jijon
+#recruit_character = HLL_juan_pablo_martinez_iguarte
+#recruit_character = HLL_hugo_endara_penaherrera
+#recruit_character = HLL_juan_ramon_castro
+#recruit_character = HLL_gilberto_enriquez_gallo
+#recruit_character = HLL_davide_flores
+#recruit_character = HLL_carlos_arosemena_tola
+#recruit_character = HLL_carlos_arroyo_del_rio
+#VEN
+#recruit_character = HLL_eleazar_lópez_contreras
+#recruit_character = HLL_juan_bautista_fuenmayor
+#recruit_character = HLL_luis_figueroa
+#recruit_character = HLL_patricio_franco
+#recruit_character = HLL_isaias_medina_angarita
+#recruit_character = HLL_humberto_santabria_villa
+#recruit_character = HLL_carlos_molina_talavayo
+#recruit_character = HLL_roberto_de_luca_varesano
+#recruit_character = HLL_carlos_garcia_mendoza
+#recruit_character = HLL_miguel_diaz_fraile
+#recruit_character = HLL_victor_sanchez_croes
+#recruit_character = HLL_antonio_casas_gonzalez
+#recruit_character = HLL_carlos_ramos_diaz
+#recruit_character = HLL_david_lopez_henriques
+#recruit_character = HLL_jose_polares_pavon
+#recruit_character = HLL_tomas_contreras_villalobos
+#recruit_character = HLL_carlos_delgado_chalbaud
+#recruit_character = HLL_manuel_diaz_rodriguez
+#recruit_character = HLL_romulo_gallegos_freire
+#recruit_character = HLL_isidoro_ruiz_tuerro
+
+
 #장관진
 
 #무기 프리셋
+### Ship Variants ###
 create_equipment_variant = {
 	name = "YAGOO Class"
 	type = ship_hull_heavy_1

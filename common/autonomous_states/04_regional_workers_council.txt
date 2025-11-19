@@ -35,12 +35,9 @@ autonomy_state = {
 		autonomy_regional_worker_council
 	}
 
-	allowed = {
-		if = {
-			limit = { has_dlc = "Waking the Tiger" }
-			OVERLORD = { 
-				has_government = anarchosyndicalism
-			}	
+	allowed = { 
+		OVERLORD = { 
+			has_government = anarchosyndicalism	
 		}
 	}
 

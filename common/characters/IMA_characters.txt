@@ -2062,7 +2062,6 @@ characters = {
 			available = { is_fascism = yes }
 			allowed = {
 				original_tag = IMA
-				has_dlc = "Man the Guns"
 			}
 			traits = {
 				princess_of_terror 
@@ -2086,7 +2085,6 @@ characters = {
 			available = { is_communism = yes }
 			allowed = {
 				original_tag = IMA
-				has_dlc = "Man the Guns"
 			}
 			traits = {
 				socialist_novelist 
@@ -2173,7 +2171,7 @@ characters = {
 		}
 		advisor = {
 			slot = internal_advisor
-			idea_token = eng_alan_turing
+			idea_token = IMA_alan_turing
 			available = {
 				has_intelligence_agency = yes 
 				custom_trigger_tooltip = {
@@ -2190,11 +2188,9 @@ characters = {
 			}
 			allowed = {
 				original_tag = IMA
-				has_dlc = "La Resistance"
+				has_LaR = yes
 			}
-			traits = {
-				mastermind_code_cracker 
-			}
+			traits = { mastermind_code_cracker }
 		}
 	}
 

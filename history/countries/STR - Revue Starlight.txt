@@ -9,13 +9,7 @@ if = {
 		set_oob = "STR_ar"
 	}
 }
-if = {
-	limit = { has_MtG = yes }
-	set_naval_oob = "STR_na_MtG"
-	else = {
-		set_naval_oob = "STR_na"
-	}
-}
+set_naval_oob = "STR_na_MtG"
 if = {
 	limit = { has_BBA = yes }
 	set_air_oob = "STR_ai_BBA"
@@ -42,36 +36,22 @@ set_technology = {
 	marines = 1
 	basic_train = 1
 }
-if = {
-	limit = { has_MtG = yes }
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		basic_battery = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-		basic_cruiser_armor_scheme = 1
-		coastal_defense_ships = 1
-		mtg_transport = 1
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	basic_battery = 1
+	basic_torpedo = 1
+	basic_depth_charges = 1
+	basic_cruiser_armor_scheme = 1
+	coastal_defense_ships = 1
+	mtg_transport = 1
 
-		bicycle_infantry = 1
-	}
-	else = {
-		set_technology = {
-			early_submarine = 1
-			basic_destroyer = 1
-			early_destroyer = 1
-			early_light_cruiser = 1
-			basic_light_cruiser = 1
-			early_heavy_cruiser = 1
-			transport = 1
-		}
-	}
+	bicycle_infantry = 1
 }
 if = {
 	limit = { has_BBA = yes }
@@ -105,6 +85,84 @@ add_dynamic_modifier = { modifier = STR_industry }
 add_dynamic_modifier = { modifier = STR_army }
 add_dynamic_modifier = { modifier = STR_navy }
 add_dynamic_modifier = { modifier = STR_air_force }
+
+## STR_industry
+
+## STR_army
+set_variable = { STR_army_experience_gain_army_factor = -0.30 }
+set_variable = { STR_army_land_doctrine_cost_factor = 0.25 }
+set_variable = { STR_army_army_org_factor = -0.15 }
+set_variable = { STR_army_training_time_factor = 0.20 }
+set_variable = { STR_army_supply_factor = -0.15 }
+set_variable = { STR_army_planning_speed = -0.20 }
+set_variable = { STR_army_army_morale_factor = -0.10 }
+set_variable = { STR_army_max_planning_factor = -0.15 }
+set_variable = { STR_army_command_power_gain_mult = -0.10 }
+set_variable = { STR_army_army_leader_cost_factor = 0.50 }
+set_variable = { STR_army_equipment_capture_factor = -0.50 }
+set_variable = { STR_army_special_forces_cap = -0.25 }
+set_variable = { STR_army_recon_factor = -0.15 }
+set_variable = { STR_army_supply_consumption_factor = 0.10 }
+set_variable = { STR_army_winter_attrition_factor = 0.10 }
+set_variable = { STR_army_heat_attrition_factor = 0.10 }
+
+set_variable = { STR_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { STR_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { STR_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { STR_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { STR_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { STR_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { STR_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { STR_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { STR_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## STR_navy
+set_variable = { STR_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { STR_navy_naval_doctrine_cost_factor = 0.30 }
+set_variable = { STR_navy_naval_detection = -0.20 }
+set_variable = { STR_navy_navy_max_range_factor = -0.15 }
+set_variable = { STR_navy_repair_speed_factor = -0.20 }
+set_variable = { STR_navy_refit_speed = -0.20 }
+set_variable = { STR_navy_amphibious_invasion = -0.25 }
+set_variable = { STR_navy_naval_invasion_capacity = -5 }
+set_variable = { STR_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { STR_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { STR_navy_naval_damage_factor = -0.10 }
+set_variable = { STR_navy_naval_defense_factor = -0.10 }
+set_variable = { STR_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { STR_navy_naval_speed_factor = -0.10 }
+
+set_variable = { STR_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { STR_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { STR_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { STR_navy_build_cost_ic_screen_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { STR_navy_build_cost_ic_submarine = 0.30 } ### 별도 국민정신 적용
+
+## STR_air_force
+set_variable = { STR_air_force_experience_gain_air_factor = -0.50 }
+set_variable = { STR_air_force_air_doctrine_cost_factor = 0.40 }
+set_variable = { STR_air_force_air_accidents_factor = 0.25 }
+set_variable = { STR_air_force_air_mission_efficiency = -0.15 }
+set_variable = { STR_air_force_air_training_xp_gain_factor = -0.30 }
+set_variable = { STR_air_force_air_range_factor = -0.10 }
+set_variable = { STR_air_force_air_ace_generation_chance_factor = -0.60 }
+set_variable = { STR_air_force_air_superiority_efficiency = -0.20 }
+set_variable = { STR_air_force_air_cas_efficiency = -0.25 }
+set_variable = { STR_air_force_air_strategic_bomber_bombing_factor = -0.30 }
+set_variable = { STR_air_force_air_intercept_efficiency = -0.15 }
+set_variable = { STR_air_force_air_nav_efficiency = -0.20 }
+set_variable = { STR_air_force_air_detection = -0.20 }
+set_variable = { STR_air_force_air_agility_factor = -0.10 }
+
+set_variable = { STR_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { STR_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { STR_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { STR_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { STR_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { STR_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { STR_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { STR_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { STR_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
 
 #외교
 
@@ -171,10 +229,296 @@ recruit_character = STR_aijo_karen
 #recruit_character = STR_giraffe
 #recruit_character = STR_andrew
 
+#HOL
+#recruit_character = STR_hendrikus_colijn
+#recruit_character = STR_anton_mussert
+#recruit_character = STR_lou_de_visser
+#recruit_character = STR_willem_schermerhorn
+#recruit_character = STR_izaak_reijnders
+#recruit_character = STR_petrus_wilhelmus_best
+#recruit_character = STR_godfried_van_voorst_tot_voorst
+#recruit_character = STR_johannes_theodorus_furstner
+#recruit_character = STR_conrad_helfrich
+#recruit_character = STR_karel_doorman
+#recruit_character = STR_charles_douw_van_der_krap
+#recruit_character = STR_nico_van_straten
+#recruit_character = STR_hein_ter_poorten
+#recruit_character = STR_adrianus_rudolphus_van_den_bent
+#recruit_character = STR_hendrik_van_oyen
+#recruit_character = STR_hendrik_seyffardt
+#recruit_character = STR_henri_winkelman
+#recruit_character = STR_maarten_belzer
+#recruit_character = STR_marius_raaijmakers
+#recruit_character = STR_saul_de_groot
+#recruit_character = STR_antonie_pannekoek
+#recruit_character = STR_walraven_van_hall
+#recruit_character = STR_jacob_adriaan_de_wilde
+#recruit_character = STR_anton_de_kom
+#recruit_character = STR_jan_goudriaan
+#recruit_character = STR_adriaan_dijxhoorn
+#recruit_character = STR_prince_bernhard
+#recruit_character = STR_cornelis_van_geelkerken
+#recruit_character = STR_meinout_rost_van_tonningen
+#recruit_character = STR_dirk_jan_de_geer
+#recruit_character = STR_pieter_sjoerds_gerbrandy
+#recruit_character = STR_wilhelmina
+#recruit_character = STR_fanny_schoonheyt
+#recruit_character = STR_anthony_fokker
+#BEL
+#recruit_character = STR_hubert_pierlot
+#recruit_character = STR_paul_van_zeeland
+#recruit_character = STR_paul_emile_janson
+#recruit_character = STR_paul_henri_spaak
+#recruit_character = STR_emile_vanderveld
+#recruit_character = STR_leon_degrelle
+#recruit_character = STR_henri_de_man
+#recruit_character = STR_achille_van_acker
+#recruit_character = STR_king_leopold_iii
+#recruit_character = STR_raoul_van_overstraeten
+#recruit_character = STR_oscar_michiels
+#recruit_character = STR_victor_van_strydonck_de_burkel
+#recruit_character = STR_jules_pire
+#recruit_character = STR_raoul_daufresne_de_la_chevalerie
+#recruit_character = STR_maurice_keyaerts
+#recruit_character = STR_yvan_gerard
+#recruit_character = STR_lucien_lippert
+#recruit_character = STR_jean_baptise_piron
+#recruit_character = STR_victor_descamps
+#recruit_character = STR_lambert_chardome
+#recruit_character = STR_eddy_blondeel
+#recruit_character = STR_georges_timmermans
+#recruit_character = STR_willy_coppens
+#recruit_character = STR_remy_van_lierde
+#recruit_character = STR_jean_offenburg
+#recruit_character = STR_raymond_lallemant
+#recruit_character = STR_dieudonne_salve
+#recruit_character = STR_prudent_nuyten
+#recruit_character = STR_albert_deveze
+#recruit_character = STR_edouard_van_den_burgen
+#recruit_character = STR_camille_gutt
+#recruit_character = STR_camille_huysmans
+#recruit_character = STR_julien_lahaut
+#recruit_character = STR_emile_de_cartier_de_marchienne
+#recruit_character = STR_edgar_sengier
+#recruit_character = STR_walthere_dewe
+#recruit_character = STR_august_borms
+#recruit_character = STR_charles_count_of_flanders_person
+#recruit_character = STR_fernand_verstraete
+#recruit_character = STR_nicolas_florine
+#recruit_character = STR_karel_bossart
+#recruit_character = STR_georges_lemaitre
+#recruit_character = STR_alfred_renard
+#recruit_character = STR_mike_donnet
+#recruit_character = STR_auguste_piccard
+#LUX
+#recruit_character = STR_joseph_bech
+#recruit_character = STR_charles_marx
+#recruit_character = STR_damian_kratzenberg
+#recruit_character = STR_charlotte
+#recruit_character = STR_damien_roeser
+#recruit_character = STR_florent_destriveaux
+#recruit_character = STR_pierre_fischbach
+#recruit_character = STR_guillaume_soisson
+#recruit_character = STR_alex_federspiel
+#recruit_character = STR_henri_ahnen
+#recruit_character = STR_emile_speller
+#recruit_character = STR_francois_schammel
+#recruit_character = STR_aloyse_glodt
+#recruit_character = STR_nicolas_de_dixmude
+#recruit_character = STR_paul_medinger
+#recruit_character = STR_nicholas_diedrich
+#recruit_character = STR_pierre_dupong
+#recruit_character = STR_pierre_krier
+#recruit_character = STR_martin_karp
+#recruit_character = STR_guillaume_konsbruck
+#recruit_character = STR_felix_of_luxembourg
+
 #장관진
 
 #무기 프리셋
-#create_equipment_variant = {
-#	name = ""
-#	type = amphibious_tank_equipment_2
-#}
+### Ship Variants ###
+# Submarines #
+create_equipment_variant = {			# represents K II-X, O8 subs
+	name = "K-III Class"
+	type = ship_hull_submarine_1
+	name_group = STR_SS_KCLASS
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "O9 Class"					# represents O9-15, K XI-XIII subs
+	type = ship_hull_submarine_1
+	name_group = STR_SS_OCLASS
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_2
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "K-XIV Class"				# represents K XIV-XVIII, O16 subs
+	type = ship_hull_submarine_2
+	name_group = STR_SS_KCLASS
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_2
+		fixed_ship_engine_slot = sub_ship_engine_2
+		rear_1_custom_slot = ship_torpedo_sub_2
+	}
+}
+# Destroyers #
+create_equipment_variant = {
+	name = "Van Ghent Class"			
+	type = ship_hull_light_1
+	name_group = STR_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_mine_layer_1
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Van Galen Class"				
+	type = ship_hull_light_1
+	name_group = STR_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+}
+# Light Cruisers #
+create_equipment_variant = {
+	name = "Java Class"
+	type = ship_hull_cruiser_1
+	name_group = STR_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = ship_light_medium_battery_1
+		rear_1_custom_slot = ship_airplane_launcher_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "De Ruyter Class"
+	type = ship_hull_cruiser_1
+	name_group = STR_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = ship_airplane_launcher_1
+	}
+}
+# Heavy Cruisers #
+create_equipment_variant = {
+	name = "Hertog Hendrik Class"			
+	type = ship_hull_cruiser_coastal_defense_ship
+	name_group = STR_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_2
+		mid_1_custom_slot = ship_airplane_launcher_1
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = ship_torpedo_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Soerabaja Class"				# represents Soerabaja (De Zeven Provinciën) and Jacob van Heemskerck 
+	type = ship_hull_cruiser_coastal_defense_ship
+	name_group = STR_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_2
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	create_equipment_variant = {
+		name = "Fokker C.X" #also represents Fokker C.V
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Fokker T.IV"
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = flying_boat_medium
+		}
+	}
+}
+if = {
+	limit = { has_NSB = yes }
+	create_equipment_variant = {
+		name = "T13 B1"
+		type = light_tank_destroyer_chassis_1
+		parent_version = 1
+		#design_team = mio:BEL_vickers_armstrong_bel_organization
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		icon = "GFX_BEL_basic_light_td_tank_medium"
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+}

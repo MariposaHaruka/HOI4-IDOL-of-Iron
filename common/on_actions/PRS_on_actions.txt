@@ -1,4 +1,10 @@
 on_actions = {
+	#시작 국민정신 설정
+	on_war = {
+		effect = {
+			remove_ideas = PRS_rearmament_plan
+		}
+	}
 	on_state_control_changed = {
 		effect = { #Check how many occupied states Germany has
 			if = {

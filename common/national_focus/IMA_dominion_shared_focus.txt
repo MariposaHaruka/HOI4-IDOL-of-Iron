@@ -1,0 +1,378 @@
+shared_focus = {
+	id = IMA_DO001	#(나라 이름) 최고 의원 소집
+	icon = GFX_focus_AFG_parliamentary_democracy
+
+	#이대로면 해당 중점은 샤이니 자치령 중점 (3,0) 에서 중점이 나옵니다
+	x = 3
+	y = 0
+	offset = { #이대로면 해당 중점은 디어리 자치령 중점 (3,0) 에서 중점이 나옵니다
+		x = 0
+		y = 0
+		trigger = { has_focus_tree = IDS_focus }
+	}
+
+	offset = { #이대로면 해당 중점은 하츠보시 자치령 중점 (60,0) 에서 중점이 나옵니다
+		x = 57
+		y = 0
+		trigger = { has_focus_tree = IGM_focus }
+	}
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 50
+	}
+	available = { }
+	bypass = {
+		OR = {
+			IMA = { has_completed_focus = IMA_41001 }
+			IMA = { is_democratic = no }
+			ROOT = { is_subject = no }
+			ROOT = { is_democratic = no }
+			ROOT = { 
+				is_subject_of = IMA
+				has_autonomy_state = ima_westminster_dominion
+			}
+		}
+	}
+
+	cancel_if_invalid = yes
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_DO001"
+		add_political_power = 150
+		add_stability = 0.05
+	}
+}
+
+shared_focus = {
+	id = IMA_DO002	#정치 논의
+	icon = GFX_focus_generic_self_management
+	dynamic = yes
+	prerequisite = { focus = IMA_DO001 }
+	x = -2
+	y = 1
+	relative_position_id = IMA_DO001 
+	cost = 5
+
+	ai_will_do = {
+		factor = 50
+	}
+	available = { }
+	bypass = {
+		OR = {
+			IMA = { has_completed_focus = IMA_41001 }
+			IMA = { is_democratic = no }
+			ROOT = { is_subject = no }
+			ROOT = { is_democratic = no }
+			ROOT = { 
+				is_subject_of = IMA
+				has_autonomy_state = ima_westminster_dominion
+			}
+		}
+	}
+
+	cancel_if_invalid = yes
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_DO002"
+		country_event = { id = IMA_dominion.1 }
+	}
+}
+
+shared_focus = {
+	id = IMA_DO003	#국방 논의
+	icon = GFX_focus_generic_commonwealth_build_infantry
+	dynamic = yes
+	prerequisite = { focus = IMA_DO001 }
+	x = 0
+	y = 1
+	relative_position_id = IMA_DO001 
+	cost = 5
+
+	ai_will_do = {
+		factor = 50
+	}
+	available = { }
+	bypass = {
+		OR = {
+			IMA = { has_completed_focus = IMA_41001 }
+			IMA = { is_democratic = no }
+			ROOT = { is_subject = no }
+			ROOT = { is_democratic = no }
+			ROOT = { 
+				is_subject_of = IMA
+				has_autonomy_state = ima_westminster_dominion
+			}
+		}
+	}
+
+	cancel_if_invalid = yes
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_DO003"
+		country_event = { id = IMA_dominion.2 }
+	}
+}
+
+shared_focus = {
+	id = IMA_DO004	#외교 논의
+	icon = GFX_focus_generic_treaty
+	dynamic = yes
+	prerequisite = { focus = IMA_DO001 }
+	x = 2
+	y = 1
+	relative_position_id = IMA_DO001 
+	cost = 5
+
+	ai_will_do = {
+		factor = 50
+	}
+	available = { }
+	bypass = {
+		OR = {
+			IMA = { has_completed_focus = IMA_41001 }
+			IMA = { is_democratic = no }
+			ROOT = { is_subject = no }
+			ROOT = { is_democratic = no }
+			ROOT = { 
+				is_subject_of = IMA
+				has_autonomy_state = ima_westminster_dominion
+			}
+		}
+	}
+
+	cancel_if_invalid = yes
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_DO004"
+		country_event = { id = IMA_dominion.3 }
+	}
+}
+
+shared_focus = {
+	id = IMA_DO005	#자치령 헌법
+	icon = GFX_focus_AUS_lawmaking_leniency
+	dynamic = yes
+	prerequisite = { focus = IMA_DO002 }
+	x = -1
+	y = 1
+	relative_position_id = IMA_DO002 
+	cost = 5
+
+	ai_will_do = {
+		factor = 50
+	}
+	available = {
+		OR = {
+			ROOT = { has_autonomy_state = ima_colony }
+			ROOT = { has_autonomy_state = ima_dominion }
+		}
+	 }
+	bypass = {
+		OR = {
+			IMA = { has_completed_focus = IMA_41001 }
+			ROOT = { has_autonomy_state = ima_westminster_dominion }
+			ROOT = { NOT = { is_subject_of = IMA } }
+			ROOT = { is_subject = no }
+		}
+	}
+
+	cancel_if_invalid = yes
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_DO005"
+		country_event = { id = IMA_dominion.4 }
+		add_political_power = 150
+		if = {
+			limit = { ROOT = { NOT = { has_autonomy_state = ima_dominion } } }
+			set_autonomy = {
+				target = THIS
+				autonomy_state = ima_dominion
+			}
+		}
+		hidden_effect = {
+			set_country_flag = IMA_ready_for_westminster_statute_dominion_law
+		}
+	}
+}
+
+shared_focus = {
+	id = IMA_DO006	#자치령 부대 창설
+	icon = GFX_focus_generic_advanced_military_studies
+	dynamic = yes
+	prerequisite = { focus = IMA_DO003 }
+	x = 0
+	y = 1
+	relative_position_id = IMA_DO003 
+	cost = 5
+
+	ai_will_do = {
+		factor = 50
+	}
+	available = {
+		ROOT = { has_autonomy_state = ima_dominion }
+	}
+	bypass = {
+		OR = {
+			IMA = { has_completed_focus = IMA_41001 }
+			ROOT = { has_autonomy_state = ima_westminster_dominion }
+			ROOT = { NOT = { is_subject_of = IMA } }
+			ROOT = { is_subject = no }
+		}
+	}
+
+	cancel_if_invalid = yes
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_DO006"
+		country_event = { id = IMA_dominion.5 }
+		hidden_effect = {
+			set_country_flag = IMA_ready_for_westminster_statute_dominion_army
+		}
+	}
+}
+
+shared_focus = {
+	id = IMA_DO007	#외교적 인정
+	icon = GFX_goal_tripartite_pact
+	dynamic = yes
+	prerequisite = { focus = IMA_DO004 }
+	x = 1
+	y = 1
+	relative_position_id = IMA_DO004 
+	cost = 5
+
+	ai_will_do = {
+		factor = 50
+	}
+	available = {
+		ROOT = { has_autonomy_state = ima_dominion }
+	}
+	bypass = {
+		OR = {
+			IMA = { has_completed_focus = IMA_41001 }
+			ROOT = { has_autonomy_state = ima_westminster_dominion }
+			ROOT = { NOT = { is_subject_of = IMA } }
+			ROOT = { is_subject = no }
+		}
+	}
+
+	cancel_if_invalid = yes
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_DO007"
+		country_event = { id = IMA_dominion.6 }
+		hidden_effect = {
+			set_country_flag = IMA_ready_for_westminster_statute_dominion_diplomacy
+		}
+	}
+}
+
+shared_focus = {
+	id = IMA_DO008	#헌장 비준
+	icon = GFX_focus_IMA_42001
+	dynamic = yes
+	prerequisite = { focus = IMA_DO002 }
+	prerequisite = { focus = IMA_DO003 }
+	prerequisite = { focus = IMA_DO004 }
+	x = 1
+	y = 2
+	relative_position_id = IMA_DO002
+	mutually_exclusive = { focus = IMA_DO009 }
+	cost = 5
+
+	ai_will_do = {
+		factor = 50
+	}
+	available = { 
+		ROOT = { has_autonomy_state = ima_dominion }
+		ROOT = { IMA_ready_for_westminster_statute = yes }
+		NOT = { IMA = { has_completed_focus = IMA_41001 } }
+	}
+	bypass = {
+		IMA = { is_democratic = yes }
+		ROOT = { is_democratic = yes }
+		OR = {
+			ROOT = { is_subject = no }
+			ROOT = { 
+				is_subject_of = IMA
+				has_autonomy_state = ima_westminster_dominion
+			}
+		}
+	}
+
+	cancel_if_invalid = yes
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_DO008"
+		IMA = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = ima_westminster_dominion
+			}
+		}
+		add_ideas = IMA_westminster_statute
+	}
+}
+
+shared_focus = {
+	id = IMA_DO009	#결별
+	icon = GFX_focus_IMA_43007
+	dynamic = yes
+	prerequisite = { focus = IMA_DO002 }
+	prerequisite = { focus = IMA_DO003 }
+	prerequisite = { focus = IMA_DO004 }
+	x = -1
+	y = 2
+	relative_position_id = IMA_DO004
+	mutually_exclusive = { focus = IMA_DO008 }
+	cost = 5
+
+	ai_will_do = {
+		factor = 50
+	}
+	available = {  }
+	bypass = {
+		ROOT = { is_subject = no }
+	}
+
+	cancel_if_invalid = yes
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_DO009"
+		IMA = {
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_free
+			}
+		}
+		leave_faction = yes
+	}
+}
+
+shared_focus = {
+	id = IMA_DO010 #제헌 선거
+	icon = GFX_focus_NOR_restore_public_trust_in_the_storting
+	dynamic = yes
+	prerequisite = { focus = IMA_DO008 focus = IMA_DO009 }
+	x = 1
+	y = 1
+	relative_position_id = IMA_DO008
+	cost = 5
+
+	ai_will_do = {
+		factor = 50
+	}
+	available = { }
+	bypass = { 
+		original_tag = ISC #얘넨 이거 필요 없음
+	}
+
+	cancel_if_invalid = yes
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_DO001"
+		custom_effect_tooltip = IMA_DO010_tt
+	}
+}

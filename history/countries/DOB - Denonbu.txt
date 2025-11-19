@@ -3,13 +3,7 @@ capital = 277
 
 #부대
 set_oob = "DOB_ar"
-if = {
-	limit = { has_MtG = yes }
-	set_naval_oob = "DOB_na_MtG"
-	else = {
-		set_naval_oob = "DOB_na"
-	}
-}
+set_naval_oob = "DOB_na_MtG"
 if = {
 	limit = { has_BBA = yes }
 	set_air_oob = "DOB_ai_BBA"
@@ -31,26 +25,15 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 }
-if = {
-	limit = { not = { has_MtG = yes } }
-	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_heavy_cruiser = 1
-	}
-	else = {
-		set_technology = {
-			basic_naval_mines = 1
-			early_ship_hull_light = 1
-			early_ship_hull_submarine = 1
-			basic_battery = 1
-			coastal_defense_ships = 1
-		}
-	}
+set_technology = {
+	basic_naval_mines = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	basic_battery = 1
+	coastal_defense_ships = 1
 }
 if = {
-	limit = { has_NSB = yes}
+	limit = { has_NSB = yes }
 	set_technology = {
 		gwtank_chassis = 1
 	}
@@ -86,8 +69,7 @@ set_convoys = 45
 
 #국민 정신
 add_ideas = {
-	sotokanda_regime
-
+	DOB_sotokanda_regime
 	agrarian_society
 }
 
@@ -95,6 +77,84 @@ add_dynamic_modifier = { modifier = DOB_industry }
 add_dynamic_modifier = { modifier = DOB_army }
 add_dynamic_modifier = { modifier = DOB_navy }
 add_dynamic_modifier = { modifier = DOB_air_force }
+
+## DOB_industry
+
+## DOB_army
+set_variable = { DOB_army_experience_gain_army_factor = -0.30 }
+set_variable = { DOB_army_land_doctrine_cost_factor = 0.25 }
+set_variable = { DOB_army_army_org_factor = -0.15 }
+set_variable = { DOB_army_training_time_factor = 0.20 }
+set_variable = { DOB_army_supply_factor = -0.15 }
+set_variable = { DOB_army_planning_speed = -0.20 }
+set_variable = { DOB_army_army_morale_factor = -0.10 }
+set_variable = { DOB_army_max_planning_factor = -0.15 }
+set_variable = { DOB_army_command_power_gain_mult = -0.10 }
+set_variable = { DOB_army_army_leader_cost_factor = 0.50 }
+set_variable = { DOB_army_equipment_capture_factor = -0.50 }
+set_variable = { DOB_army_special_forces_cap = -0.25 }
+set_variable = { DOB_army_recon_factor = -0.15 }
+set_variable = { DOB_army_supply_consumption_factor = 0.10 }
+set_variable = { DOB_army_winter_attrition_factor = 0.10 }
+set_variable = { DOB_army_heat_attrition_factor = 0.10 }
+
+set_variable = { DOB_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { DOB_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { DOB_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { DOB_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { DOB_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { DOB_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { DOB_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { DOB_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { DOB_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## DOB_navy
+set_variable = { DOB_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { DOB_navy_naval_doctrine_cost_factor = 0.30 }
+set_variable = { DOB_navy_naval_detection = -0.20 }
+set_variable = { DOB_navy_navy_max_range_factor = -0.15 }
+set_variable = { DOB_navy_repair_speed_factor = -0.20 }
+set_variable = { DOB_navy_refit_speed = -0.20 }
+set_variable = { DOB_navy_amphibious_invasion = -0.25 }
+set_variable = { DOB_navy_naval_invasion_capacity = -5 }
+set_variable = { DOB_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { DOB_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { DOB_navy_naval_damage_factor = -0.10 }
+set_variable = { DOB_navy_naval_defense_factor = -0.10 }
+set_variable = { DOB_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { DOB_navy_naval_speed_factor = -0.10 }
+
+set_variable = { DOB_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { DOB_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { DOB_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { DOB_navy_build_cost_ic_screen_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { DOB_navy_build_cost_ic_submarine = 0.30 } ### 별도 국민정신 적용
+
+## DOB_air_force
+set_variable = { DOB_air_force_experience_gain_air_factor = -0.50 }
+set_variable = { DOB_air_force_air_doctrine_cost_factor = 0.40 }
+set_variable = { DOB_air_force_air_accidents_factor = 0.25 }
+set_variable = { DOB_air_force_air_mission_efficiency = -0.15 }
+set_variable = { DOB_air_force_air_training_xp_gain_factor = -0.30 }
+set_variable = { DOB_air_force_air_range_factor = -0.10 }
+set_variable = { DOB_air_force_air_ace_generation_chance_factor = -0.60 }
+set_variable = { DOB_air_force_air_superiority_efficiency = -0.20 }
+set_variable = { DOB_air_force_air_cas_efficiency = -0.25 }
+set_variable = { DOB_air_force_air_strategic_bomber_bombing_factor = -0.30 }
+set_variable = { DOB_air_force_air_intercept_efficiency = -0.15 }
+set_variable = { DOB_air_force_air_nav_efficiency = -0.20 }
+set_variable = { DOB_air_force_air_detection = -0.20 }
+set_variable = { DOB_air_force_air_agility_factor = -0.10 }
+
+set_variable = { DOB_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { DOB_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { DOB_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { DOB_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { DOB_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { DOB_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { DOB_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { DOB_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { DOB_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
 
 #정치 상황
 set_stability = 0.2
@@ -152,10 +212,121 @@ recruit_character = DOB_hidaka_reina
 #recruit_character = DOB_yanami_rain
 #recruit_character = DOB_kanou_hikari
 
+#MEX
+#recruit_character = DOB_lazaro_cardenas
+#recruit_character = DOB_salvador_abascal
+#recruit_character = DOB_adolfo_de_la_huerta
+#recruit_character = DOB_dionisio_encina
+#recruit_character = DOB_hernan_laborde
+#recruit_character = DOB_heliodoro_charis
+#recruit_character = DOB_luis_farell
+#recruit_character = DOB_gildardo_magana
+#recruit_character = DOB_manuel_perez_trevino
+#recruit_character = DOB_abelardo_rodriguez
+#recruit_character = DOB_manuel_avila_camacho
+#recruit_character = DOB_othon_blanco
+#recruit_character = DOB_heriberto_corona
+#recruit_character = DOB_antonio_cardenas_rodriguez
+#recruit_character = DOB_jesus_garza_siller
+#recruit_character = DOB_gilberto_limon
+#recruit_character = DOB_pablo_macias
+#recruit_character = DOB_jose_gonzalo_escobar
+#recruit_character = DOB_agustin_olachea
+#recruit_character = DOB_leon_trotsky
+#recruit_character = DOB_saturnino_cedillo
+#recruit_character = DOB_hector_meixueiro
+#recruit_character = DOB_matias_santos_ramos
+#recruit_character = DOB_enrique_estrada
+#recruit_character = DOB_jose_vasconcelos
+#recruit_character = DOB_pablo_gonzalez
+#recruit_character = DOB_bartolome_garcia_correa
+#recruit_character = DOB_luis_montes_de_oca
+#recruit_character = DOB_aaron_saenz
+#recruit_character = DOB_vicente_lombardo
+#recruit_character = DOB_eduardo_hay
+#recruit_character = DOB_alberto_pani
+#recruit_character = DOB_juan_andreu
+#recruit_character = DOB_plutarco_calles
+#recruit_character = DOB_francisco_mugica
+#recruit_character = DOB_jesus_degollado_guizar
+#recruit_character = DOB_valentin_campa
+#recruit_character = DOB_luis_maria_martinez
+#recruit_character = DOB_indigenous_council
+#recruit_character = DOB_maria_de_iturbide
+
+#GUA
+#recruit_character = DOB_jorge_ubico
+#recruit_character = DOB_justo_arbenz
+#recruit_character = DOB_máximo_arbenz
+#recruit_character = DOB_diego_barahona
+#recruit_character = DOB_jorge_torriello_garrido
+#recruit_character = DOB_carlos_diaz_de_leon
+#recruit_character = DOB_jacopo_arbenz_guzman
+#recruit_character = DOB_w_tesch_orlando
+#recruit_character = DOB_r_buenaventure_pineda
+#recruit_character = DOB_tomas_mendoza_urribe
+#recruit_character = DOB_miguel_garcia_granados
+#recruit_character = DOB_jose_ezuira_abel
+#recruit_character = DOB_m_ydigaras_fuentes
+#recruit_character = DOB_federico_ponce_vaides
+#recruit_character = DOB_manuel_orellana
+#recruit_character = DOB_francisco_javier_arana
+#recruit_character = DOB_juan_arevalo_bermejo
+#recruit_character = DOB_eduardo_villagran_ariza
+#recruit_character = DOB_manuel_arroyo
+
 #장관진
 
 #무기 프리셋
-#create_equipment_variant = {
-#	name = ""
-#	type = amphibious_tank_equipment_2
-#}
+### Ship Variants ###
+# Destroyers #
+create_equipment_variant = {
+	name = "Nicolás Bravo Class"			
+	type = ship_hull_light_1
+	name_group = DOB_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = empty
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Durango Class"			# represents both Guanajuato and Durango classes (gunboats)
+	type = ship_hull_light_1
+	name_group = DOB_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = empty
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+}
+create_equipment_variant = {
+	name = "Anahuac Class"			
+	type = ship_hull_cruiser_coastal_defense_ship
+	name_group = DOB_BB_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+}

@@ -1,11 +1,11 @@
-navy_convoy_refit = {
+navy_convoy_decision_category = {
 	icon = GFX_decision_generic_merge_plant_ship
 	picture = GFX_decision_cat_picture_generic_shipbuilding
 	allowed = {
 		always = yes
 	}
 	visible = {
-		has_country_flag = refit_convoy_ships_flag
+		has_country_flag = navy_convoy_decision_flag
 	}
 	priority = {
 		base = 8

@@ -1,3 +1,249 @@
+PRS_pay_back_mefo_bills = { #TODO_Danne see if this can be simplified!
+	if = {
+		limit = {
+			check_variable = { var = PRS_mefo_bill_counter value = 15 compare = less_than }
+		}
+		add_political_power = -20
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 60 }
+	}
+	#2
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 20 compare = equals }
+		}
+		add_political_power = -40
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 80 }
+	}
+	#3
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 30 compare = equals }
+		}
+		add_political_power = -60
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 100 }
+	}
+	#4
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 40 compare = equals }
+		}
+		add_political_power = -80
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 120 }
+	}
+	#5
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 50 compare = equals }
+		}
+		add_political_power = -100
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 140 }
+	}
+	#6
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 60 compare = equals }
+		}
+		add_political_power = -120
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 160 }
+	}
+	#7
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 70 compare = equals }
+		}
+		add_political_power = -140
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 180 }
+	}
+	#8
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 80 compare = equals }
+		}
+		add_political_power = -160
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 200 }
+	}
+	#9
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 90 compare = equals }
+		}
+		add_political_power = -180
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 220 }
+	}
+	#10
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 100 compare = equals }
+		}
+		add_political_power = -200
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 240 }
+	}
+	#11
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 110 compare = equals }
+		}
+		add_political_power = -220
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 260 }
+	}
+	#12
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 120 compare = equals }
+		}
+		add_political_power = -240
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 280 }
+	}
+	#13
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 130 compare = equals }
+		}
+		add_political_power = -260
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 300 }
+	}
+	#14
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 140 compare = equals }
+		}
+		add_political_power = -280
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 320 }
+	}
+	#15
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 150 compare = equals }
+		}
+		add_political_power = -300
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 340 }
+	}
+	#16
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 160 compare = equals }
+		}
+		add_political_power = -320
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 360 }
+	}
+	#17
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 170 compare = equals }
+		}
+		add_political_power = -340
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 380 }
+	}
+	#18
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 180 compare = equals }
+		}
+		add_political_power = -360
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 400 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = GER_mefo_bill_counter value = 180 compare = greater_than }
+		}
+		add_political_power = -380
+		add_timed_idea = { idea = GER_mefo_bills_ended days = 420 }
+	}
+}
+
+PRS_stop_rearmament = {
+	if = { 
+		limit = { has_dynamic_modifier = { modifier = PRS_mefo_bills_modifier } }
+		hidden_effect = { #The rearmament program has cost Germany dearly
+			remove_dynamic_modifier = { modifier = PRS_mefo_bills_modifier }
+			add_dynamic_modifier = { modifier = PRS_recovering_economy_modifier }
+			set_variable = { #Reset CG to 0 so that you don't suffer doubly when paying back the MEFO Bills
+				PRS_recovering_economy_consumer_goods_factor = 0
+			}
+		}
+		PRS_pay_back_mefo_bills = yes
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = PRS_replace_mefo_bills_with_recovering_economy_tt
+		add_to_variable = {
+			GER_mefo_bills_civilian_intel_to_others = 0.25
+			tooltip = civilian_intel_to_others_tt
+		}
+		add_to_variable = {
+			GER_mefo_bills_army_intel_to_others = 0.25
+			tooltip = army_intel_to_others_tt
+		}
+		add_to_variable = {
+			GER_mefo_bills_navy_intel_to_others = 0.25
+			tooltip = navy_intel_to_others_tt
+		}
+		add_to_variable = {
+			GER_mefo_bills_airforce_intel_to_others = 0.25
+			tooltip = airforce_intel_to_others_tt
+		}
+		add_to_variable = {
+			GER_industrial_production_speed_arms_factory_factor = -0.1
+			tooltip = production_speed_arms_factory_factor_tt
+		}
+		add_to_variable = {
+			GER_industrial_production_speed_dockyard_factor = -0.1
+			tooltip = production_speed_dockyard_factor_tt
+		}
+		add_to_variable = {
+			GER_industrial_industrial_capacity_factory = -0.1
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = {
+			GER_industrial_industrial_capacity_dockyard = -0.1
+			tooltip = industrial_capacity_dockyard_tt
+		}
+		effect_tooltip = { #Show the consequences once the MEFO Bills have been paid
+			custom_effect_tooltip = GER_after_mefo_bills_payment_tt
+			add_to_variable = { #These numbers must match the once set in GER_mefo_bills_ended idea 
+				GER_industrial_consumer_goods_factor = GER_economic_crash_consumer_goods
+				tooltip = consumer_goods_factor_tt
+			}
+		}
+	}
+	else_if = { #In case you have Economy of Conquest and wanna do "Prioritize Economic Growth" more or less
+		limit = {
+			has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+		}
+		hidden_effect = { #The rearmament program has cost Germany dearly
+			remove_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+			add_dynamic_modifier = { modifier = GER_recovering_economy_modifier }
+			set_variable = { #Reset CG to 0 so that you don't suffer doubly when paying back the MEFO Bills
+				GER_industrial_consumer_goods_factor = 0
+			}
+		}
+		custom_effect_tooltip = GER_replace_economy_of_conquest_with_recovering_economy_tt
+		add_to_variable = {
+			GER_industrial_production_speed_arms_factory_factor = -0.1
+			tooltip = production_speed_arms_factory_factor_tt
+		}
+		add_to_variable = {
+			GER_industrial_production_speed_dockyard_factor = -0.1
+			tooltip = production_speed_dockyard_factor_tt
+		}
+		add_to_variable = {
+			GER_industrial_industrial_capacity_factory = -0.1
+			tooltip = industrial_capacity_factory_tt
+		}
+		add_to_variable = {
+			GER_industrial_industrial_capacity_dockyard = -0.1
+			tooltip = industrial_capacity_dockyard_tt
+		}
+		effect_tooltip = { #Show the consequences once the MEFO Bills have been paid
+			custom_effect_tooltip = GER_after_mefo_bills_payment_tt
+			add_to_variable = { #These numbers must match the once set in GER_mefo_bills_ended idea 
+				GER_industrial_consumer_goods_factor = GER_economic_crash_consumer_goods
+				tooltip = consumer_goods_factor_tt
+			}
+		}
+	}
+}
+
+
+
 PRS_amerika_bomber_focke_wulf_completion_MIO_effects = { #SCOPE IS MIO
 	add_mio_research_bonus = 0.15 #After project completion, MIO research goes back to normal #WARNING! Any change in this bonus needs to be applied on the penalty applied in the event GOT_PRS_amerikabomber.01 
 	complete_mio_trait = PRS_mio_trait_amerikabomber_learnings

@@ -140,6 +140,7 @@ BLA_trinity_problem = {
 		has_country_flag = BLA_TRN_GEH_problem
 	}
 }
+
 BLA_millenium_problem = {
 	NOT = { has_country_flag = BLA_MIL_decagrammaton_problem }
 }
@@ -179,6 +180,28 @@ BLA_school_is_controled_by_central_government = {
 		tooltip = BLA_school_is_controled_by_central_government_tt
 		OR = {
 			has_completed_focus = BLA_31101
+			has_completed_focus = BLA_31201
 		}
 	}
+}
+
+# 통합문제
+BLA_gehenna_get_core = {
+	442 = { NOT = { is_core_of = BLA } }
+	443 = { NOT = { is_core_of = BLA } }
+	444 = { NOT = { is_core_of = BLA } }
+	445 = { NOT = { is_core_of = BLA } }
+	988 = { NOT = { is_core_of = BLA } }
+	987 = { NOT = { is_core_of = BLA } }
+	1012 = { NOT = { is_core_of = BLA } }
+}
+
+BLA_gehenna_get_modifier = {
+	442 = { has_dynamic_modifier = { modifier = BLA_GEH_modifiers } }
+	443 = { has_dynamic_modifier = { modifier = BLA_GEH_modifiers } }
+	444 = { has_dynamic_modifier = { modifier = BLA_GEH_modifiers } }
+	445 = { has_dynamic_modifier = { modifier = BLA_GEH_modifiers } }
+	988 = { has_dynamic_modifier = { modifier = BLA_GEH_modifiers } }
+	987 = { has_dynamic_modifier = { modifier = BLA_GEH_modifiers } }
+	1012 = { has_dynamic_modifier = { modifier = BLA_GEH_modifiers } }
 }

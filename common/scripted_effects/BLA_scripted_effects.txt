@@ -192,5 +192,20 @@ BLA_design_trick_or_treat = { #트릭 오어 트릿 - 다목적기
 		icon = "GFX_ENG_tactical_bomber2_medium"
 	}
 }
+BLA_design_fancy_light = { #팬시라이트 - 대형화된 근접지원항공기
+	create_equipment_variant = {
+		name = "Trick or Treat"
+		type = medium_plane_airframe_2
+		parent_version = 0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_3 = heavy_mg_4x
+			engine_type_slot = engine_3_4x
+		}
+		icon = "GFX_ENG_tactical_bomber2_medium"
+	}
+}
 BLA_design_chabasco
 BLA_design_supernova

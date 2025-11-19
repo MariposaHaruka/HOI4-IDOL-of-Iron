@@ -1,16 +1,30 @@
-characters={
+characters = {
+	GUP_kadotani_anzu = {
+		name = GUP_kadotani_anzu
+		gender = female
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_GUP_kadotani_anzu"
+			}
+		}
+		country_leader = {
+			ideology = authoritariandemocracy_subtype
+			traits = { popular_queen }
+			desc = GUP_kadotani_anzu_desc
+		}
+	}
 	GUP_nishizumi_miho = {
-        name = GUP_nishizumi_miho
-        gender = female
-        portraits = {
-            civilian = {
-                large = "GFX_portrait_GUP_nishizumi_miho"
-            }
-        }
-        country_leader = {
-            ideology = authoritariandemocracy_subtype
-            traits = { popular_queen }
-            desc = GUP_nishizumi_miho_desc
-        }
-    }
+		name = GUP_nishizumi_miho
+		gender = female
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_GUP_nishizumi_miho"
+			}
+		}
+		country_leader = {
+			ideology = authoritariandemocracy_subtype
+			traits = { popular_queen }
+			desc = GUP_nishizumi_miho_desc
+		}
+	}
 }

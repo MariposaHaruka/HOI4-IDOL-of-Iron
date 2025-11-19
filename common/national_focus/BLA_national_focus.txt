@@ -7,6 +7,60 @@ focus_tree = {
 			tag = BLA
 		}
 	}
+
+	#Focus Path shortcuts	
+	shortcut = {
+		name = BLA_history_sc
+		target = BLA_32003
+		scroll_wheel_factor = 0.469
+	}
+
+	shortcut = {
+		name = BLA_althistory_sc
+		target = BLA_32003
+		scroll_wheel_factor = 0.485
+		trigger = { always = no }
+	}
+
+	shortcut = {
+		name = BLA_kivotosunion_sc
+		target = BLA_40001 
+		scroll_wheel_factor = 0.75
+		trigger = { 
+			has_cosmetic_tag = BLA_kivotos_union
+		}
+	}
+
+	shortcut = {
+		name = BLA_bharatproblem_sc
+		target = BLA_50001
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = BLA_diplomacy_sc
+		target = BLA_20001
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = BLA_school_sc
+		target = BLA_MIL_10001
+		scroll_wheel_factor = 1.0
+	}
+	
+	shortcut = {
+		name = BLA_navy_sc
+		target = BLA_12001
+		scroll_wheel_factor = 1.0
+	}
+	
+	shortcut = {
+		name = BLA_airforce_sc
+		target = BLA_11001
+		scroll_wheel_factor = 1.0
+	}
+
 	default = no
 	continuous_focus_position = {
 		x = 0
@@ -1337,7 +1391,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11018"
 			air_experience = 25
-			BLA_design_trick_or_treat = yes
+			BLA_design_fancy_light = yes
 		}
 	}
 
@@ -1601,7 +1655,45 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12006"
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			unlock_decision_category_tooltip = navy_convoy_decision_category
+			hidden_effect = {
+				set_country_flag = navy_convoy_decision_flag
+			}
 		}
 	}
 	
@@ -1664,6 +1756,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12101"
+			add_tech_bonus = {
+				name = BLA_12201
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+				category = cl_tech
+			}
 		}
 	}
 
@@ -1686,6 +1785,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12102"
+			BLA_design_abydos_BB = yes
 		}
 	}
 
@@ -1708,6 +1808,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12102"
+			BLA_design_kivotos_CV = yes
 		}
 	}
 
@@ -1862,7 +1963,7 @@ focus_tree = {
 					BLA_navy_build_cost_ic_submarine = -0.05
 					tooltip = build_cost_ic_submarine_tt
 				}
-				hidden_effect = { add_ideas = BLA_submarine_fleet }
+				hidden_effect = { add_ideas = BLA_12202_idea }
 			}
 			else_if = {
 				limit = { has_completed_focus = BLA_12203 }
@@ -1871,7 +1972,7 @@ focus_tree = {
 					BLA_navy_build_cost_ic_screen_ship = -0.05
 					tooltip = build_cost_ic_screen_ship_tt
 				}
-				hidden_effect = { add_ideas = BLA_destroyer_fleet }
+				hidden_effect = { add_ideas = BLA_12203_idea }
 			}
 			else = {
 				custom_effect_tooltip = BLA_12X04_tt
@@ -2486,6 +2587,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_20002"
 			set_rule = { can_create_factions = yes }
+			create_faction = "아시아 동맹"
 		}
 	}
 	
@@ -3558,6 +3660,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_31233"
+			unlock_decision_tooltip = BLA_school_committee_integrate_school
+			add_political_power = 150
 		}
 	}
 	
@@ -4501,6 +4605,7 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = on_construction_tt
 		}
 	}
 	
@@ -4532,6 +4637,7 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = on_construction_tt
 		}
 	}
 	
@@ -4557,7 +4663,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33103 #총학생회 재편
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_focus_BLA_32003
 		cost = 5
 
 		x = 1
@@ -4575,8 +4681,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BLA_33104 #키보토스 학생 평의회
-		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		id = BLA_33104 #키보토스 학생 평의회 
+		icon = GFX_focus_BLA_31405
 		cost = 5
 
 		x = 3
@@ -4594,7 +4700,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33131 #각 학교 재편
-		icon = GFX_focus_BLA_33131
+		icon = GFX_focus_SWE_socialist_reforms
 		cost = 5
 
 		x = 5
@@ -4630,7 +4736,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33105 #학생 계획 경제
-		icon = GFX_goal_unknown_underconstruction
+		icon = GFX_focus_BLA_33105
 		cost = 5
 
 		x = 0
@@ -4648,7 +4754,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33106 #학생조합 생산위원회
-		icon = GFX_goal_unknown_underconstruction
+		icon = GFX_focus_BLA_31221
 		cost = 5
 
 		x = 0
@@ -4666,7 +4772,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33107 #방위실 재편
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_focus_BLA_32017
 		cost = 5
 
 		x = -1
@@ -4685,7 +4791,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33108 #학생조합 자주운영 체제
-		icon = GFX_goal_unknown_underconstruction
+		icon = GFX_focus_BLA_33108
 		cost = 5
 
 		x = -1
@@ -4722,7 +4828,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33110 #학생조합 교통위원회
-		icon = GFX_goal_unknown_underconstruction
+		icon = GFX_focus_BLA_33110
 		cost = 5
 
 		x = 1
@@ -4741,7 +4847,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33111 #집단농장
-		icon = GFX_goal_unknown_underconstruction
+		icon = GFX_focus_generic_workers_and_farmers_rise
 		cost = 5
 
 		x = 1
@@ -4759,7 +4865,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33112 #자유로운 학생
-		icon = GFX_goal_unknown_underconstruction
+		icon = GFX_focus_BLA_33112
 		cost = 5
 
 		x = -1
@@ -4778,7 +4884,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33113 #모든 학생은 평등하다
-		icon = GFX_goal_unknown_underconstruction
+		icon = GFX_focus_BLA_33113
 		cost = 5
 
 		x = 1
@@ -4835,7 +4941,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33117 #혁명의 불꽃은 유지되어야 한다
-		icon = GFX_focus_focus_fra_revolution_utmost
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		cost = 5
 
 		x = 4
@@ -5043,7 +5149,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33127 #사상의 자유
-		icon = GFX_goal_unknown_underconstruction
+		icon = GFX_focus_focus_fra_revolution_utmost
 		cost = 5
 
 		x = 0
@@ -5060,7 +5166,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33128 #내일의 횃불
-		icon = GFX_goal_unknown_underconstruction
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		cost = 5
 
 		x = 0
@@ -5077,7 +5183,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_33129 #혁명 대의의 믿음
-		icon = GFX_goal_unknown_underconstruction
+		icon = GFX_focus_CHL_union_of_hispanic_republics
 		cost = 5
 
 		x = 0
@@ -5319,6 +5425,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_40001"
+			set_cosmetic_tag = BLA_kivotos_union
 		}
 	}
 	
@@ -8715,9 +8822,12 @@ focus_tree = {
 				BLA_bad_administrative_political_power_gain = 0.08
 				tooltip = political_power_gain_tt
 			}
-			every_state = {
-				limit = { has_state_flag = BLA_millenium_state_flag }
-				add_core_of = BLA
+			if = {
+				limit = { 425 = { NOT = { is_core_of = BLA } } }
+				every_state = {
+					limit = { has_state_flag = BLA_millenium_state_flag }
+					add_core_of = BLA
+				}
 			}
 			unlock_decision_category_tooltip = BLA_technology_n_research_committee
 		}
@@ -10296,7 +10406,7 @@ focus_tree = {
 
 	focus = {
 		id = BLA_HYA_12003 #백귀야행 협동조합
-		icon = GFX_focus_BLA_HYA_12003
+		icon = GFX_focus_generic_workers
 		cost = 5
 		text_icon = BLA_HYA_style
 

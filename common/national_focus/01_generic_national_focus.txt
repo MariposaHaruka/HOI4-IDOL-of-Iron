@@ -1249,9 +1249,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NAVY_XP }
 		available_if_capitulated = yes
 		completion_reward = {
-			unlock_decision_category_tooltip = navy_convoy_refit
+			unlock_decision_category_tooltip = navy_convoy_decision_category
 			hidden_effect = {
-				set_country_flag = refit_convoy_ships_flag
+				set_country_flag = navy_convoy_decision_flag
 			}
 		}
 	}

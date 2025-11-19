@@ -592,9 +592,6 @@
 		}
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
-		bypass = {
-			IMA = { commomwealth_joined = no }
-		}
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11006"
@@ -1862,30 +1859,21 @@
 					limit = { IMA = { commomwealth_joined = yes } }
 					IMA = { 
 						set_country_flag = IAS_installed 
-						swap_ideas = {
-							remove_idea = university_research_complex
-							add_idea = institute_for_advanced_study
-						}
+						add_ideas = institute_for_advanced_study
 					}
 				}
 				if = {
 					limit = { ICG = { commomwealth_joined = yes } }
 					ICG = { 
 						set_country_flag = IAS_installed 
-						swap_ideas = {
-							remove_idea = university_research_complex
-							add_idea = institute_for_advanced_study
-						}
+						add_ideas = institute_for_advanced_study
 					}
 				}
 				if = {
 					limit = { IML = { commomwealth_joined = yes } }
 					IML = { 
 						set_country_flag = IAS_installed 
-						swap_ideas = {
-							remove_idea = university_research_complex
-							add_idea = institute_for_advanced_study
-						}
+						add_ideas = institute_for_advanced_study
 					}
 				}
 			}

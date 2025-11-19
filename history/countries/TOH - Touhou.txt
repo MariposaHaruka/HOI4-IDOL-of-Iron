@@ -7,13 +7,7 @@ if = {
 	set_oob = "TOH_ar_NSB"
 	else = { set_oob = "TOH_ar" }
 }
-if = {
-	limit = { has_MtG = yes }
-	set_naval_oob = "TOH_na_MtG"
-	else = {
-		set_naval_oob = "TOH_na"
-	}
-}
+set_naval_oob = "TOH_na_MtG"
 if = {
 	limit = { has_BBA = yes }
 	set_air_oob = "TOH_ai_BBA"
@@ -47,36 +41,21 @@ set_technology = {
 	basic_train = 1
 	synth_oil_experiments = 1
 }
-if = {
-	limit = { has_MtG = yes }
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-		mtg_transport = 1
-	}
-	else = {
-		set_technology = {
-			early_submarine = 1
-			basic_submarine = 1
-			early_destroyer = 1
-			early_light_cruiser = 1
-			early_heavy_cruiser = 1
-			early_battleship = 1
-			early_battlecruiser = 1
-			transport = 1
-		}
-	}
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_torpedo = 1
+	basic_depth_charges = 1
+	mtg_transport = 1
 }
 if = {
 	limit = { has_LaR = yes }
@@ -150,10 +129,7 @@ add_dynamic_modifier = { modifier = TOH_air_force }
 create_faction = touhoumintern
 add_to_faction = TOH
 
-if = {
-	limit = { has_TfV = yes }
-	add_to_tech_sharing_group = Touhou_comin_research
-}
+add_to_tech_sharing_group = Touhou_comin_research
 
 #정치 상황
 set_stability = 0.5
@@ -316,611 +292,473 @@ recruit_character = TOH_dummy_AUD #더미
 recruit_character = TOH_dummy_AUT #더미
 
 #바닐라
-recruit_character = TOH_iosif_stalin
-recruit_character = TOH_supreme_soviet #This is a fake character! Proper country leader role is added via focus
-if = {
-	limit = { has_NSB = yes }
-	recruit_character = TOH_provisional_government # United Exiles
-	set_country_flag = vlasov_owner_flag
-}
+#recruit_character = TOH_iosif_stalin
+#recruit_character = TOH_supreme_soviet #This is a fake character! Proper country leader role is added via focus
+#recruit_character = TOH_provisional_government # United Exiles
+set_country_flag = vlasov_owner_flag
 
-#POLITICAL ADVISORS
-recruit_character = TOH_mikhail_kalinin
-recruit_character = TOH_nikita_khrushchyov
-recruit_character = TOH_nikolay_voznesensky
-recruit_character = TOH_lazar_kaganovich
-recruit_character = TOH_genrikh_yagoda
-recruit_character = TOH_nikolay_yezhov
-recruit_character = TOH_lavrenty_beriya
-recruit_character = TOH_vsevolod_merkulov
-recruit_character = TOH_vyacheslav_molotov
-recruit_character = TOH_maksim_litvinov
+#recruit_character = TOH_mikhail_kalinin
+#recruit_character = TOH_nikita_khrushchyov
+#recruit_character = TOH_nikolay_voznesensky
+#recruit_character = TOH_lazar_kaganovich
+#recruit_character = TOH_genrikh_yagoda
+#recruit_character = TOH_nikolay_yezhov
+#recruit_character = TOH_lavrenty_beriya
+#recruit_character = TOH_vsevolod_merkulov
+#recruit_character = TOH_vyacheslav_molotov
+#recruit_character = TOH_maksim_litvinov
 
-recruit_character = TOH_lev_trotsky
-recruit_character = TOH_ivan_smirnov
-recruit_character = TOH_ivar_smilga
-recruit_character = TOH_karl_radek
-recruit_character = TOH_yevgeny_preobrazhensky
-recruit_character = TOH_aleksandr_shlyapnikov
-recruit_character = TOH_nikolay_bukharin
-recruit_character = TOH_aleksey_rykov
-recruit_character = TOH_mikhail_tomsky
-recruit_character = TOH_grigory_sokolnikov
-recruit_character = TOH_grigory_zinovyev
-recruit_character = TOH_lev_kamenev
-recruit_character = TOH_martemyan_ryutin
-recruit_character = TOH_patriarch_sergy
-recruit_character = TOH_aleksandr_kerensky
-recruit_character = TOH_konstantin_rodzayevsky
+#recruit_character = TOH_lev_trotsky
+#recruit_character = TOH_ivan_smirnov
+#recruit_character = TOH_ivar_smilga
+#recruit_character = TOH_karl_radek
+#recruit_character = TOH_yevgeny_preobrazhensky
+#recruit_character = TOH_aleksandr_shlyapnikov
+#recruit_character = TOH_nikolay_bukharin
+#recruit_character = TOH_aleksey_rykov
+#recruit_character = TOH_mikhail_tomsky
+#recruit_character = TOH_grigory_sokolnikov
+#recruit_character = TOH_grigory_zinovyev
+#recruit_character = TOH_lev_kamenev
+#recruit_character = TOH_martemyan_ryutin
+#recruit_character = TOH_patriarch_sergy
+#recruit_character = TOH_aleksandr_kerensky
+#recruit_character = TOH_konstantin_rodzayevsky
 
-recruit_character = TOH_aleksandr_vasilevsky
-recruit_character = TOH_aleksandr_golovanov
-recruit_character = TOH_aleksandr_gorbatov
-recruit_character = TOH_aleksandr_novikov
-recruit_character = TOH_aleksandr_yegorov
-recruit_character = TOH_andrey_grechko
-recruit_character = TOH_andrey_vlasov
-recruit_character = TOH_andrey_yeryomenko
-recruit_character = TOH_arseny_golovko
-recruit_character = TOH_boris_shaposhnikov
-recruit_character = TOH_dmitry_lelyushenko
-recruit_character = TOH_filipp_golikov
-recruit_character = TOH_filipp_oktyabrsky
+#recruit_character = TOH_aleksandr_vasilevsky
+#recruit_character = TOH_aleksandr_golovanov
+#recruit_character = TOH_aleksandr_gorbatov
+#recruit_character = TOH_aleksandr_novikov
+#recruit_character = TOH_aleksandr_yegorov
+#recruit_character = TOH_andrey_grechko
+#recruit_character = TOH_andrey_vlasov
+#recruit_character = TOH_andrey_yeryomenko
+#recruit_character = TOH_arseny_golovko
+#recruit_character = TOH_boris_shaposhnikov
+#recruit_character = TOH_dmitry_lelyushenko
+#recruit_character = TOH_filipp_golikov
+#recruit_character = TOH_filipp_oktyabrsky
 
-recruit_character = TOH_georgy_zakharov
-recruit_character = TOH_georgy_zhukov
-recruit_character = TOH_gordey_levchenko
-recruit_character = TOH_grigory_kulik
-recruit_character = TOH_igor_kurchatov
-recruit_character = TOH_issa_pliyev
-recruit_character = TOH_ivan_chernyakhovsky
-recruit_character = TOH_ivan_fedyuninsky
-recruit_character = TOH_ivan_konev
-recruit_character = TOH_ivan_yumashev
-recruit_character = TOH_kirill_meretskov
-recruit_character = TOH_kirill_moskalenko
-recruit_character = TOH_kliment_voroshilov
-recruit_character = TOH_konstantin_rokossovsky
-recruit_character = TOH_konstantin_vershinin
-recruit_character = TOH_kuzma_galitsky
-recruit_character = TOH_leonid_govorov
-recruit_character = TOH_maksim_purkayev
-recruit_character = TOH_markian_popov
-recruit_character = TOH_maks_reyter
-recruit_character = TOH_mikhail_frinovsky
+#recruit_character = TOH_georgy_zakharov
+#recruit_character = TOH_georgy_zhukov
+#recruit_character = TOH_gordey_levchenko
+#recruit_character = TOH_grigory_kulik
+#recruit_character = TOH_igor_kurchatov
+#recruit_character = TOH_issa_pliyev
+#recruit_character = TOH_ivan_chernyakhovsky
+#recruit_character = TOH_ivan_fedyuninsky
+#recruit_character = TOH_ivan_konev
+#recruit_character = TOH_ivan_yumashev
+#recruit_character = TOH_kirill_meretskov
+#recruit_character = TOH_kirill_moskalenko
+#recruit_character = TOH_kliment_voroshilov
+#recruit_character = TOH_konstantin_rokossovsky
+#recruit_character = TOH_konstantin_vershinin
+#recruit_character = TOH_kuzma_galitsky
+#recruit_character = TOH_leonid_govorov
+#recruit_character = TOH_maksim_purkayev
+#recruit_character = TOH_markian_popov
+#recruit_character = TOH_maks_reyter
+#recruit_character = TOH_mikhail_frinovsky
 
-recruit_character = TOH_mikhail_tukhachevsky
-recruit_character = TOH_nikandr_chibisov
+#recruit_character = TOH_mikhail_tukhachevsky
+#recruit_character = TOH_nikandr_chibisov
 
-recruit_character = TOH_nikolay_berzarin
-recruit_character = TOH_nikolay_vatutin
+#recruit_character = TOH_nikolay_berzarin
+#recruit_character = TOH_nikolay_vatutin
 
-recruit_character = TOH_nikolay_kuznetsov
+#recruit_character = TOH_nikolay_kuznetsov
 
-recruit_character = TOH_pavel_rychagov
-recruit_character = TOH_pavel_zhigarev
-recruit_character = TOH_pyotr_smirnov
-recruit_character = TOH_rodion_malinovsky
-recruit_character = TOH_semyon_budyonny
-recruit_character = TOH_semyon_timoshenko
-recruit_character = TOH_sergey_khudyakov
-recruit_character = TOH_sergey_korolyov
-recruit_character = TOH_sergey_rudenko
-recruit_character = TOH_sergey_gorshkov
-recruit_character = TOH_stepan_krasovsky
-recruit_character = TOH_vasily_blyukher
-recruit_character = TOH_vasily_chuykov
-recruit_character = TOH_vasily_kuznetsov
-recruit_character = TOH_vladimir_kasatonov
-recruit_character = TOH_vladimir_tributs
+#recruit_character = TOH_pavel_rychagov
+#recruit_character = TOH_pavel_zhigarev
+#recruit_character = TOH_pyotr_smirnov
+#recruit_character = TOH_rodion_malinovsky
+#recruit_character = TOH_semyon_budyonny
+#recruit_character = TOH_semyon_timoshenko
+#recruit_character = TOH_sergey_khudyakov
+#recruit_character = TOH_sergey_korolyov
+#recruit_character = TOH_sergey_rudenko
+#recruit_character = TOH_sergey_gorshkov
+#recruit_character = TOH_stepan_krasovsky
+#recruit_character = TOH_vasily_blyukher
+#recruit_character = TOH_vasily_chuykov
+#recruit_character = TOH_vasily_kuznetsov
+#recruit_character = TOH_vladimir_kasatonov
+#recruit_character = TOH_vladimir_tributs
 
-recruit_character = TOH_yakov_cherevichenko
-recruit_character = TOH_yakov_smushkevich
+#recruit_character = TOH_yakov_cherevichenko
+#recruit_character = TOH_yakov_smushkevich
 
-recruit_character = TOH_vitaly_primakov
+#recruit_character = TOH_vitaly_primakov
 
 #Not available at game start
-recruit_character = TOH_vasily_korzh
-recruit_character = TOH_sidor_kovpak
-recruit_character = TOH_lev_dovator
-recruit_character = TOH_pavel_rybalko
-recruit_character = TOH_abram_ioffe
-recruit_character = TOH_boris_stechkin
-recruit_character = TOH_arkady_nazarov
-recruit_character = TOH_vladimir_kotelnikov
+#recruit_character = TOH_vasily_korzh
+#recruit_character = TOH_sidor_kovpak
+#recruit_character = TOH_lev_dovator
+#recruit_character = TOH_pavel_rybalko
+#recruit_character = TOH_abram_ioffe
+#recruit_character = TOH_boris_stechkin
+#recruit_character = TOH_arkady_nazarov
+#recruit_character = TOH_vladimir_kotelnikov
 
 # Lokot Autonomy Characters
-recruit_character = TOH_konstantin_voskoboinik
-recruit_character = TOH_bronislav_kaminski
+#recruit_character = TOH_konstantin_voskoboinik
+#recruit_character = TOH_bronislav_kaminski
 
 # Even without NSB so Germany can access them on historical
-recruit_character = TOH_pyotr_krasnov
-recruit_character = TOH_konstantin_nechayev
+#recruit_character = TOH_pyotr_krasnov
+#recruit_character = TOH_konstantin_nechayev
 
-if = {
-	limit = { has_NSB = yes }
-	recruit_character = TOH_anastasy_vonsyatsky
-	# recruit_character = TOH_grigory_semyonov # starts as an advisor to Puyi
-	recruit_character = TOH_metropolitan_anastasy
-	recruit_character = TOH_metropolitan_nikolay
-	recruit_character = TOH_nikolay_ustryalov
-	recruit_character = TOH_aleksandr_kazembek
-	recruit_character = TOH_metropolitan_aleksy
-	recruit_character = TOH_metropolitan_meletius
-	recruit_character = TOH_aleksandr_prokofyev_seversky
-	recruit_character = TOH_vyacheslav_tkachyov
-	recruit_character = TOH_yan_nagursky
-	recruit_character = TOH_vasily_yanchenko
-	recruit_character = TOH_tsar_vladimir_kirillovich
-	recruit_character = TOH_aleksandr_rodzyanko
-	recruit_character = TOH_vladimir_kosmin
-	recruit_character = TOH_andrey_shkuro
-	recruit_character = TOH_anton_denikin
-}
-
+#recruit_character = TOH_anastasy_vonsyatsky
+###recruit_character = TOH_grigory_semyonov # starts as an advisor to Puyi
+#recruit_character = TOH_metropolitan_anastasy
+#recruit_character = TOH_metropolitan_nikolay
+#recruit_character = TOH_nikolay_ustryalov
+#recruit_character = TOH_aleksandr_kazembek
+#recruit_character = TOH_metropolitan_aleksy
+#recruit_character = TOH_metropolitan_meletius
+#recruit_character = TOH_aleksandr_prokofyev_seversky
+#recruit_character = TOH_vyacheslav_tkachyov
+#recruit_character = TOH_yan_nagursky
+#recruit_character = TOH_vasily_yanchenko
+#recruit_character = TOH_tsar_vladimir_kirillovich
+#recruit_character = TOH_aleksandr_rodzyanko
+#recruit_character = TOH_vladimir_kosmin
+#recruit_character = TOH_andrey_shkuro
+#recruit_character = TOH_anton_denikin
 
 #대숙청 관련
-TOH_mikhail_kalinin = {
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_nikita_khrushchyov = {
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_lazar_kaganovich = {
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_genrikh_yagoda = { #NKVD Chiefs are always safe from regular purges, they'll be handled by a special purge event
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_nikolay_yezhov = { #NKVD Chiefs are always safe from regular purges, they'll be handled by a special purge event
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_lavrenty_beriya = { #NKVD Chiefs are always safe from regular purges, they'll be handled by a special purge event. Beriya will always be safe.
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_vsevolod_merkulov = {
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_vyacheslav_molotov = {
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_patriarch_sergy = { #Priests are not political enemies at this point
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_boris_shaposhnikov = { #중요
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_semyon_timoshenko = { #중요
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_kliment_voroshilov = { #중요
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_georgy_zhukov = {
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_semyon_budyonny = {
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_grigory_kulik = {
-	set_character_flag = TOH_safe_from_purge_flag
-}
-TOH_konstantin_rodzayevsky = { #Not in the country
-	set_character_flag = TOH_exiled_flag
-}
-TOH_aleksandr_kerensky = { #Not in the country
-	set_character_flag = TOH_exiled_flag
-}
-TOH_lev_trotsky = { #Not in the country
-	set_character_flag = TOH_exiled_flag
-}
+#TOH_mikhail_kalinin = { set_character_flag = TOH_safe_from_purge_flag }
+#TOH_nikita_khrushchyov = { set_character_flag = TOH_safe_from_purge_flag }
+#TOH_lazar_kaganovich = { set_character_flag = TOH_safe_from_purge_flag }
+#TOH_genrikh_yagoda = { set_character_flag = TOH_safe_from_purge_flag } #NKVD Chief
+#TOH_nikolay_yezhov = { set_character_flag = TOH_safe_from_purge_flag }
+#TOH_lavrenty_beriya = { set_character_flag = TOH_safe_from_purge_flag }
+#TOH_vsevolod_merkulov = { set_character_flag = TOH_safe_from_purge_flag }
+#TOH_vyacheslav_molotov = { set_character_flag = TOH_safe_from_purge_flag }
+#TOH_patriarch_sergy= { set_character_flag = TOH_safe_from_purge_flag } #성직자는 해당 안됨
+#TOH_boris_shaposhnikov = { set_character_flag = TOH_safe_from_purge_flag } #중요 인원
+#TOH_semyon_timoshenko = { set_character_flag = TOH_safe_from_purge_flag } #중요 인원
+#TOH_kliment_voroshilov = { set_character_flag = TOH_safe_from_purge_flag } #중요 인원
+#TOH_georgy_zhukov = { set_character_flag = TOH_safe_from_purge_flag }
+#TOH_semyon_budyonny = { set_character_flag = TOH_safe_from_purge_flag }
+#TOH_grigory_kulik = { set_character_flag = TOH_safe_from_purge_flag }
+#TOH_konstantin_rodzayevsky = { set_character_flag = TOH_safe_from_purge_flag }
+#TOH_aleksandr_kerensky = { set_character_flag = TOH_safe_from_purge_flag } #망명중
+#TOH_lev_trotsky = { set_character_flag = TOH_safe_from_purge_flag } #망명중
 
-if = {
-	limit = { has_NSB = yes }
-	TOH_metropolitan_anastasy = { #Priests are not political enemies at this point
-		set_character_flag = TOH_safe_from_purge_flag
-	}
-	TOH_metropolitan_nikolay = { #Priests are not political enemies at this point
-		set_character_flag = TOH_safe_from_purge_flag
-	}
-	TOH_metropolitan_aleksy = { #Priests are not political enemies at this point
-		set_character_flag = TOH_safe_from_purge_flag
-	}
-	TOH_metropolitan_meletius = { #Priests are not political enemies at this point (Also exiled)
-		set_character_flag = TOH_safe_from_purge_flag
-	}
-	TOH_anastasy_vonsyatsky = { #Not in the country
-		set_character_flag = TOH_exiled_flag
-	}
-	TOH_aleksandr_kazembek = { #Not in the country
-		set_character_flag = TOH_exiled_flag
-	}
-	TOH_aleksandr_prokofyev_seversky = { #Not in the country
-		set_character_flag = TOH_exiled_flag
-	}
-	TOH_vyacheslav_tkachyov = { #Not in the country
-		set_character_flag = TOH_exiled_flag
-	}
-	TOH_yan_nagursky = { #Not in the country
-		set_character_flag = TOH_exiled_flag
-	}
-	TOH_vasily_yanchenko = { #Not in the country
-		set_character_flag = TOH_exiled_flag
-	}
-	TOH_anton_denikin = { #Not in the country
-		set_character_flag = TOH_exiled_flag
-		set_character_flag = TOH_exiled_army_leader
-	}
-	TOH_pyotr_krasnov = { #Not in the country
-		set_character_flag = TOH_exiled_flag
-		set_character_flag = TOH_exiled_army_leader
-	}
-	TOH_konstantin_nechayev = { #Not in the country
-		set_character_flag = TOH_exiled_flag
-		set_character_flag = TOH_exiled_army_leader
-	}
-	TOH_vladimir_kosmin = { #Not in the country
-		set_character_flag = TOH_exiled_flag
-		set_character_flag = TOH_exiled_army_leader
-	}
-	TOH_aleksandr_rodzyanko = { #Not in the country
-		set_character_flag = TOH_exiled_flag
-		set_character_flag = TOH_exiled_army_leader
-	}
-	TOH_andrey_shkuro = { #Not in the country
-		set_character_flag = TOH_exiled_flag
-		set_character_flag = TOH_exiled_army_leader
-	}
-}
+#TOH_metropolitan_anastasy = { set_character_flag = TOH_safe_from_purge_flag } #성직자는 해당 안됨
+#TOH_metropolitan_nikolay = { set_character_flag = TOH_safe_from_purge_flag } #성직자는 해당 안됨
+#TOH_metropolitan_aleksy = { set_character_flag = TOH_safe_from_purge_flag } #성직자는 해당 안됨
+#TOH_metropolitan_meletius = { set_character_flag = TOH_safe_from_purge_flag } #성직자는 해당 안됨
+
+#TOH_anastasy_vonsyatsky = { set_character_flag = TOH_exiled_flag } #망명중
+#TOH_aleksandr_kazembek  = { set_character_flag = TOH_exiled_flag } #망명중
+#TOH_aleksandr_prokofyev_seversky = { set_character_flag = TOH_exiled_flag } #망명중
+#TOH_vyacheslav_tkachyov = { set_character_flag = TOH_exiled_flag } #망명중
+#TOH_yan_nagursky = { set_character_flag = TOH_exiled_flag } #망명중
+#TOH_vasily_yanchenko = { set_character_flag = TOH_exiled_flag } #망명중
+#TOH_anton_denikin = { #Not in the country
+#		set_character_flag = TOH_exiled_flag
+#		set_character_flag = TOH_exiled_army_leader
+#}
+#TOH_pyotr_krasnov = { #Not in the country
+#		set_character_flag = TOH_exiled_flag
+#		set_character_flag = TOH_exiled_army_leader
+#}
+#TOH_konstantin_nechayev = { #Not in the country
+#		set_character_flag = TOH_exiled_flag
+#		set_character_flag = TOH_exiled_army_leader
+#}
+#TOH_vladimir_kosmin = { #Not in the country
+#		set_character_flag = TOH_exiled_flag
+#		set_character_flag = TOH_exiled_army_leader
+#}
+#TOH_aleksandr_rodzyanko = { #Not in the country
+#		set_character_flag = TOH_exiled_flag
+#		set_character_flag = TOH_exiled_army_leader
+#}
+#TOH_andrey_shkuro = { #Not in the country
+#		set_character_flag = TOH_exiled_flag
+#		set_character_flag = TOH_exiled_army_leader
+#}
 
 
 #Initialize character flags Part II (aka who's what)
-TOH_lev_trotsky = {
-	set_character_flag = TOH_aligned_left_opposition_flag #Probably not needed, but just in case ;)
-}
-TOH_ivan_smirnov = {
-	set_character_flag = TOH_aligned_left_opposition_flag
-}
-TOH_ivar_smilga = {
-	set_character_flag = TOH_aligned_left_opposition_flag
-}
-TOH_karl_radek = {
-	set_character_flag = TOH_aligned_left_opposition_flag
-}
-TOH_yevgeny_preobrazhensky = {
-	set_character_flag = TOH_aligned_left_opposition_flag
-}
-TOH_aleksandr_shlyapnikov = {
-	set_character_flag = TOH_aligned_left_opposition_flag
-}
-TOH_nikolay_bukharin = {
-	set_character_flag = TOH_aligned_right_opposition_flag
-}
-TOH_aleksey_rykov = {
-	set_character_flag = TOH_aligned_right_opposition_flag
-}
-TOH_mikhail_tomsky = {
-	set_character_flag = TOH_aligned_right_opposition_flag
-}
-TOH_grigory_sokolnikov = {
-	set_character_flag = TOH_aligned_right_opposition_flag
-}
-#SOV_grigory_zinovyev -> Will be aligned with either left or right opposition via focus
-#SOV_lev_kamenev -> Will be aligned with either left or right opposition via focus
-#SOV_martemyan_ryutin -> Will be aligned with either left or right opposition via focus
-if = {
-	limit = { has_NSB = yes }
-	TOH_anastasy_vonsyatsky = {
-		set_character_flag = TOH_aligned_the_exiles_flag
-		set_character_flag = TOH_exiled_flag
-	}
-	 
-	TOH_nikolay_ustryalov = {
-		set_character_flag = TOH_aligned_the_exiles_flag
-	}
-	TOH_aleksandr_kazembek = {
-		set_character_flag = TOH_aligned_the_exiles_flag
-	}
-	TOH_aleksandr_prokofyev_seversky = {
-		set_character_flag = TOH_aligned_the_exiles_flag
-		set_character_flag = TOH_exiled_military_advisor_flag
-	}
-	TOH_vyacheslav_tkachyov = {
-		set_character_flag = TOH_aligned_the_exiles_flag
-		set_character_flag = TOH_exiled_military_advisor_flag
-	}
-	TOH_yan_nagursky = {
-		set_character_flag = TOH_aligned_the_exiles_flag
-		set_character_flag = TOH_exiled_military_advisor_flag
-	}
-	TOH_vasily_yanchenko = {
-		set_character_flag = TOH_aligned_the_exiles_flag
-		set_character_flag = TOH_exiled_military_advisor_flag
-	}
-}
+#TOH_lev_trotsky = { set_character_flag = TOH_aligned_left_opposition_flag }
+#TOH_ivan_smirnov = { set_character_flag = TOH_aligned_left_opposition_flag }
+#TOH_ivar_smilga = { set_character_flag = TOH_aligned_left_opposition_flag }
+#TOH_karl_radek = { set_character_flag = TOH_aligned_left_opposition_flag }
+#TOH_yevgeny_preobrazhensky = { set_character_flag = TOH_aligned_left_opposition_flag }
+#TOH_aleksandr_shlyapnikov = { set_character_flag = TOH_aligned_left_opposition_flag }
 
-TOH_ivan_smirnov = {
-	set_character_flag = TOH_imprisoned_flag
-}
-TOH_ivar_smilga = {
-	set_character_flag = TOH_imprisoned_flag
-}
-TOH_aleksandr_shlyapnikov = {
-	set_character_flag = TOH_imprisoned_flag
-}
-TOH_grigory_zinovyev = {
-	set_character_flag = TOH_imprisoned_flag
-}
-TOH_lev_kamenev = {
-	set_character_flag = TOH_imprisoned_flag
-}
-TOH_martemyan_ryutin = {
-	set_character_flag = TOH_imprisoned_flag
-}
+#TOH_nikolay_bukharin = { set_character_flag = TOH_aligned_right_opposition_flag }
+#TOH_aleksey_rykov = { set_character_flag = TOH_aligned_right_opposition_flag }
+#TOH_mikhail_tomsky = { set_character_flag = TOH_aligned_right_opposition_flag }
+#TOH_grigory_sokolnikov = { set_character_flag = TOH_aligned_right_opposition_flag }
+
+#TOH_grigory_zinovyev -> Will be aligned with either left or right opposition via focus
+#TOH_lev_kamenev -> Will be aligned with either left or right opposition via focus
+#TOH_martemyan_ryutin -> Will be aligned with either left or right opposition via focus
+
+#TOH_anastasy_vonsyatsky = {
+#	set_character_flag = TOH_aligned_the_exiles_flag
+#	set_character_flag = TOH_exiled_flag
+#}	 
+#TOH_nikolay_ustryalov = { set_character_flag = TOH_aligned_the_exiles_flag }
+#TOH_aleksandr_kazembek = { set_character_flag = TOH_aligned_the_exiles_flag }
+#TOH_aleksandr_prokofyev_seversky = {
+#	set_character_flag = TOH_aligned_the_exiles_flag
+#	set_character_flag = TOH_exiled_military_advisor_flag
+#}
+#TOH_vyacheslav_tkachyov = {
+#	set_character_flag = TOH_aligned_the_exiles_flag
+#	set_character_flag = TOH_exiled_military_advisor_flag
+#}
+#TOH_yan_nagursky = {
+#	set_character_flag = TOH_aligned_the_exiles_flag
+#	set_character_flag = TOH_exiled_military_advisor_flag
+#}
+#TOH_vasily_yanchenko = {
+#	set_character_flag = TOH_aligned_the_exiles_flag
+#	set_character_flag = TOH_exiled_military_advisor_flag
+#}
+
+#TOH_ivan_smirnov = { set_character_flag = TOH_imprisoned_flag } #수감자
+#TOH_ivar_smilga = { set_character_flag = TOH_imprisoned_flag } #수감자
+#TOH_aleksandr_shlyapnikov = { set_character_flag = TOH_imprisoned_flag } #수감자
+#TOH_grigory_zinovyev = { set_character_flag = TOH_imprisoned_flag } #수감자
+#TOH_lev_kamenev = { set_character_flag = TOH_imprisoned_flag } #수감자
+#TOH_martemyan_ryutin = { set_character_flag = TOH_imprisoned_flag } #수감자
 
 #장관진
 
 #무기 프리셋
-if = {
-	limit = { has_MtG = yes }
-	# Submarines #
-	create_equipment_variant = {			
-		name = "AG Class"
-		type = ship_hull_submarine_1
-		name_group = TOH_SS_SHCHUKA
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
+### Ship Variants ###
+# Submarines #
+create_equipment_variant = {			
+	name = "AG Class"
+	type = ship_hull_submarine_1
+	name_group = TOH_SS_SHCHUKA
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
 	}
-	create_equipment_variant = {
-		name = "Series I Debakrist"			# represents Debakrist, B class, L-55 sub
-		type = ship_hull_submarine_1
-		name_group = TOH_SS_SHCHUKA
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = ship_torpedo_sub_1
-		}
-		obsolete = yes
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Series I Debakrist"			# represents Debakrist, B class, L-55 sub
+	type = ship_hull_submarine_1
+	name_group = TOH_SS_SHCHUKA
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = ship_torpedo_sub_1
 	}
-	create_equipment_variant = {
-		name = "Series II Leninets"				# represents Leninets series II, XI
-		type = ship_hull_submarine_2
-		name_group = TOH_SS_LENINETS
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = ship_mine_layer_sub
-		}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Series II Leninets"				# represents Leninets series II, XI
+	type = ship_hull_submarine_2
+	name_group = TOH_SS_LENINETS
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = ship_mine_layer_sub
 	}
-	create_equipment_variant = {
-		name = "Series V Shchuka"				# represents Shchuka series III, V, V-bis, V-bis-2
-		type = ship_hull_submarine_1
-		name_group = TOH_SS_SHCHUKA
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_2
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
+}
+create_equipment_variant = {
+	name = "Series V Shchuka"				# represents Shchuka series III, V, V-bis, V-bis-2
+	type = ship_hull_submarine_1
+	name_group = TOH_SS_SHCHUKA
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_2
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
 	}
-	create_equipment_variant = {
-		name = "Series IX Srednyaya"				# 'Stalinets', series IX, IX-bis, IX-bis-2 and P-class
-		type = ship_hull_submarine_2
-		name_group = TOH_SS_STALINETS
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_2
-			fixed_ship_engine_slot = sub_ship_engine_2
-			rear_1_custom_slot = empty
-		}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Series IX Srednyaya"				# 'Stalinets', series IX, IX-bis, IX-bis-2 and P-class
+	type = ship_hull_submarine_2
+	name_group = TOH_SS_STALINETS
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_2
+		fixed_ship_engine_slot = sub_ship_engine_2
+		rear_1_custom_slot = empty
 	}
-	create_equipment_variant = {
-		name = "Series X Shchuka"				
-		type = ship_hull_submarine_1
-		name_group = TOH_SS_SHCHUKA
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_2
-			fixed_ship_engine_slot = sub_ship_engine_2
-			rear_1_custom_slot = empty
-		}
+}
+create_equipment_variant = {
+	name = "Series X Shchuka"				
+	type = ship_hull_submarine_1
+	name_group = TOH_SS_SHCHUKA
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_2
+		fixed_ship_engine_slot = sub_ship_engine_2
+		rear_1_custom_slot = empty
 	}
-	# Destroyers #
-	create_equipment_variant = {
-		name = "Orfey Class"						# represents Yakov Sverdlov, Frunze, and Orfey classes
-		type = ship_hull_light_1
-		name_group = TOH_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
+}
+# Destroyers #
+create_equipment_variant = {
+	name = "Orfey Class"						# represents Yakov Sverdlov, Frunze, and Orfey classes
+	type = ship_hull_light_1
+	name_group = TOH_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = empty
 	}
-	create_equipment_variant = {
-		name = "Fidonisi Class"						# represents Fidonisi and Izyaslav classes
-		type = ship_hull_light_1
-		name_group = TOH_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-		obsolete = yes
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Fidonisi Class"						# represents Fidonisi and Izyaslav classes
+	type = ship_hull_light_1
+	name_group = TOH_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_depth_charge_1
 	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Leningrad & Minsk Class"				
+	type = ship_hull_light_2
+	name_group = TOH_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+}
+create_equipment_variant = {
+	name = "Bug Class"					# minelayer
+	type = ship_hull_light_1
+	name_group = TOH_MINELAYERS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = empty
+		mid_1_custom_slot = ship_mine_layer_1
+		rear_1_custom_slot = ship_mine_layer_1
+	}
+}
+# Light Cruisers #
+create_equipment_variant = {
+	name = "Komintern Class"
+	type = ship_hull_cruiser_1
+	name_group = TOH_MINELAYERS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		mid_1_custom_slot = ship_light_medium_battery_1
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = ship_mine_layer_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Chervona Ukraina Class"
+	type = ship_hull_cruiser_1
+	name_group = TOH_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		mid_1_custom_slot = ship_light_medium_battery_1
+		mid_2_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_mine_layer_1
+	}
+}
+create_equipment_variant = {
+	name = "Marti Class"
+	type = ship_hull_cruiser_1				# minelayer
+	name_group = TOH_MINELAYERS_HISTORICAL
+	parent_version = 0
+	role_icon_index = 4
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = ship_mine_layer_1
+	}
+}
+# Heavy Cruisers #
 	create_equipment_variant = {
-		name = "Leningrad & Minsk Class"				
-		type = ship_hull_light_2
-		name_group = TOH_DD_HISTORICAL
+		name = "Kirov Class"
+		type = ship_hull_cruiser_2
+		name_group = TOH_CA_HISTORICAL
 		parent_version = 0
 		modules = {
-			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_battery_slot = ship_medium_battery_1
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_2
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = ship_depth_charge_1
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = ship_medium_battery_1
 		}
 	}
-	create_equipment_variant = {
-		name = "Bug Class"					# minelayer
-		type = ship_hull_light_1
-		name_group = TOH_MINELAYERS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_2
-			fixed_ship_torpedo_slot = empty
-			mid_1_custom_slot = ship_mine_layer_1
-			rear_1_custom_slot = ship_mine_layer_1
-		}
-	}
-	# Light Cruisers #
-	create_equipment_variant = {
-		name = "Komintern Class"
-		type = ship_hull_cruiser_1
-		name_group = TOH_MINELAYERS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			mid_1_custom_slot = ship_light_medium_battery_1
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = ship_mine_layer_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Chervona Ukraina Class"
-		type = ship_hull_cruiser_1
-		name_group = TOH_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			mid_1_custom_slot = ship_light_medium_battery_1
-			mid_2_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_mine_layer_1
-		}
-	}
-	create_equipment_variant = {
-		name = "Marti Class"
-		type = ship_hull_cruiser_1				# minelayer
-		name_group = TOH_MINELAYERS_HISTORICAL
-		parent_version = 0
-		role_icon_index = 4
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			mid_1_custom_slot = empty
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = ship_mine_layer_1
-		}
-	}
-	# Heavy Cruisers #
-		create_equipment_variant = {
-			name = "Kirov Class"
-			type = ship_hull_cruiser_2
-			name_group = TOH_CA_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = ship_medium_battery_1
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = cruiser_ship_engine_2
-				fixed_ship_armor_slot = ship_armor_cruiser_1
-				mid_1_custom_slot = ship_airplane_launcher_1
-				mid_2_custom_slot = ship_anti_air_1
-				rear_1_custom_slot = ship_medium_battery_1
-			}
-		}
-	# Battleships #
-	create_equipment_variant = {
-		name = "Marat Class"					
-		type = ship_hull_heavy_1
-		name_group = TOH_BB_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_bb_1
-			front_1_custom_slot = ship_heavy_battery_1
-			mid_1_custom_slot = empty
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = empty
-		}
-	}
-	else = {
-		create_equipment_variant = {
-			name = "Series I Debakrist"
-			type = submarine_1
-			upgrades = {
-				ship_reliability_upgrade = 1
-				sub_engine_upgrade = 1
-				sub_stealth_upgrade = 1
-				sub_torpedo_upgrade = 1
-			}
-			obsolete = yes
-		}
-		create_equipment_variant = {
-			name = "Series IX Srednyaya"
-			type = submarine_2
-			upgrades = {
-				ship_reliability_upgrade = 1
-				sub_engine_upgrade = 1
-				sub_stealth_upgrade = 1
-				sub_torpedo_upgrade = 1
-			}
-		}
-		create_equipment_variant = {
-			name = "Leningrad & Minsk Class"
-			type = destroyer_1
-			upgrades = {
-				ship_torpedo_upgrade = 3
-				destroyer_engine_upgrade = 3
-				ship_ASW_upgrade = 3
-				ship_anti_air_upgrade = 3
-			}
-		}
+# Battleships #
+create_equipment_variant = {
+	name = "Marat Class"					
+	type = ship_hull_heavy_1
+	name_group = TOH_BB_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_bb_1
+		front_1_custom_slot = ship_heavy_battery_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = empty
 	}
 }
 if = {
@@ -1070,7 +908,7 @@ if = {
 	create_equipment_variant = {
 		name = "DB-3" #
 		type = medium_plane_airframe_0
-		design_team = mio:SOV_ilyushin_design_bureau_organization
+		design_team = mio:TOH_ilyushin_design_bureau_organization
 		modules = {
 			fixed_main_weapon_slot = medium_bomb_bay
 			fixed_auxiliary_weapon_slot_1 = bomb_locks

@@ -2,18 +2,99 @@ SOE_industry = {
 	enable = { always = yes }
 	icon = GFX_idea_SOE_dynamic_industry
 }
-
 SOE_army = {
 	enable = { always = yes }
 	icon = GFX_idea_SOE_dynamic_army
+
+	#임시
+	experience_gain_army_factor = SOE_army_experience_gain_army_factor
+	land_doctrine_cost_factor = SOE_army_land_doctrine_cost_factor
+	army_org_factor = SOE_army_army_org_factor
+	training_time_factor = SOE_army_training_time_factor
+	supply_factor = SOE_army_supply_factor
+	planning_speed = SOE_army_planning_speed
+	army_morale_factor = SOE_army_army_morale_factor
+	max_planning_factor = SOE_army_max_planning_factor
+	command_power_gain_mult = SOE_army_command_power_gain_mult
+	army_leader_cost_factor = SOE_army_army_leader_cost_factor
+	equipment_capture_factor = SOE_army_equipment_capture_factor
+	special_forces_cap = SOE_army_special_forces_cap
+	recon_factor = SOE_army_recon_factor
+	supply_consumption_factor = SOE_army_supply_consumption_factor
+	winter_attrition_factor = SOE_army_winter_attrition_factor
+	heat_attrition_factor = SOE_army_heat_attrition_factor
+
+	#더미 변수
+	#build_cost_ic_anti_air = SOE_army_build_cost_ic_anti_air
+	#build_cost_ic_anti_tank = SOE_army_build_cost_ic_anti_tank
+	#build_cost_ic_armor = SOE_army_build_cost_ic_armor
+	#build_cost_ic_artillery = SOE_army_build_cost_ic_artillery
+	#build_cost_ic_heavy_tank_chassis = SOE_army_build_cost_ic_heavy_tank_chassis
+	#build_cost_ic_infantry = SOE_army_build_cost_ic_infantry
+	#build_cost_ic_light_tank_chassis = SOE_army_build_cost_ic_light_tank_chassis
+	#build_cost_ic_mechanized = SOE_army_build_cost_ic_mechanized
+	#build_cost_ic_medium_tank_chassis = SOE_army_build_cost_ic_medium_tank_chassis
+	#build_cost_ic_motorized = SOE_army_build_cost_ic_motorized
+	#build_cost_ic_rocket = SOE_army_build_cost_ic_rocket
+	#build_cost_ic_support_equipment = SOE_army_build_cost_ic_support_equipment
 }
 
 SOE_navy = {
 	enable = { NOT = { has_country_flag = no_naval_academy } }
 	icon = GFX_idea_SOE_dynamic_naval
+
+	#임시
+	experience_gain_navy_factor = SOE_navy_experience_gain_navy_factor
+	naval_doctrine_cost_factor = SOE_navy_naval_doctrine_cost_factor
+	naval_detection = SOE_navy_naval_detection
+	navy_max_range_factor = SOE_navy_navy_max_range_factor
+	repair_speed_factor = SOE_navy_repair_speed_factor
+	refit_speed = SOE_navy_refit_speed
+	amphibious_invasion = SOE_navy_amphibious_invasion
+	naval_invasion_capacity = SOE_navy_naval_invasion_capacity
+	convoy_raiding_efficiency_factor = SOE_navy_convoy_raiding_efficiency_factor
+	convoy_escort_efficiency = SOE_navy_convoy_escort_efficiency
+	naval_damage_factor = SOE_navy_naval_damage_factor
+	naval_defense_factor = SOE_navy_naval_defense_factor
+	navy_submarine_detection_factor = SOE_navy_navy_submarine_detection_factor
+	naval_speed_factor = SOE_navy_naval_speed_factor
+
+	#더미 변수
+	#build_cost_ic_capital_ship = SOE_navy_build_cost_ic_capital_ship
+	#build_cost_ic_carrier = SOE_navy_build_cost_ic_carrier
+	#build_cost_ic_convoy = SOE_navy_build_cost_ic_convoy
+	#build_cost_ic_screen_ship = SOE_navy_build_cost_ic_screen_ship
+	#build_cost_ic_submarine = SOE_navy_build_cost_ic_submarine
 }
 
 SOE_air_force = {
 	enable = { NOT = { has_country_flag = no_air_academy } }
 	icon = GFX_idea_SOE_dynamic_airforce
+
+	#임시
+	experience_gain_air_factor = SOE_air_force_experience_gain_air_factor
+	air_doctrine_cost_factor = SOE_air_force_air_doctrine_cost_factor
+	air_accidents_factor = SOE_air_force_air_accidents_factor
+	air_mission_efficiency = SOE_air_force_air_mission_efficiency
+	air_training_xp_gain_factor = SOE_air_force_air_training_xp_gain_factor
+	air_range_factor = SOE_air_force_air_range_factor
+	air_ace_generation_chance_factor = SOE_air_force_air_ace_generation_chance_factor
+	air_superiority_efficiency = SOE_air_force_air_superiority_efficiency
+	air_cas_efficiency = SOE_air_force_air_cas_efficiency
+	air_strategic_bomber_bombing_factor = SOE_air_force_air_strategic_bomber_bombing_factor
+	air_intercept_efficiency = SOE_air_force_air_intercept_efficiency
+	air_nav_efficiency = SOE_air_force_air_nav_efficiency
+	air_detection = SOE_air_force_air_detection
+	air_agility_factor = SOE_air_force_air_agility_factor
+
+	#더미 변수
+	#build_cost_ic_air_transport = SOE_air_force_build_cost_ic_air_transport
+	#build_cost_ic_cas_bomber = SOE_air_force_build_cost_ic_cas_bomber
+	#build_cost_ic_fighter = SOE_air_force_build_cost_ic_fighter
+	#build_cost_ic_interceptor = SOE_air_force_build_cost_ic_interceptor
+	#build_cost_ic_tactical_bomber = SOE_air_force_build_cost_ic_tactical_bomber
+	#build_cost_ic_missile = SOE_air_force_build_cost_ic_missile
+	#build_cost_ic_naval_bomber = SOE_air_force_build_cost_ic_naval_bomber
+	#build_cost_ic_strat_bomber = SOE_air_force_build_cost_ic_strat_bomber
+	#build_cost_ic_suicide = SOE_air_force_build_cost_ic_suicide
 }

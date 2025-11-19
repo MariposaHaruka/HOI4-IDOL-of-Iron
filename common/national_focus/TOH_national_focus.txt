@@ -13,6 +13,56 @@ focus_tree = {
 		y = 1200
 	}
 
+	#Focus Path shortcuts	
+	shortcut = {
+		name = TOH_history_sc
+		target = TOH_42001
+		scroll_wheel_factor = 0.469
+	}
+
+	shortcut = {
+		name = TOH_althistory_com_sc
+		target = TOH_40203
+		scroll_wheel_factor = 0.485
+	}
+
+	shortcut = {
+		name = TOH_althistory_rus_sc
+		target = TOH_46001
+		scroll_wheel_factor = 0.485
+		trigger = { always = no }
+	}
+
+	shortcut = {
+		name = TOH_economy_sc
+		target = TOH_10001 
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TOH_diplomacy_sc
+		target = TOH_20001 
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TOH_army_sc
+		target = TOH_30001
+		scroll_wheel_factor = 1.0
+	}
+
+	shortcut = {
+		name = TOH_navy_sc
+		target = TOH_34001
+		scroll_wheel_factor = 1.0
+	}
+	
+	shortcut = {
+		name = TOH_airforce_sc
+		target = TOH_33001
+		scroll_wheel_factor = 1.0
+	}
+
 	focus = {
 		id = TOH_00001 #최고위원회 회의
 		icon = GFX_focus_SOV_the_path_of_marxism_leninism
@@ -143,7 +193,6 @@ focus_tree = {
 						level = 2
 						instant_build = yes						
 					}
-					set_state_flag = SOV_infrastructure_effort_3Inf
 				}
 				random_owned_controlled_state = {
 					limit = {
@@ -157,7 +206,6 @@ focus_tree = {
 						level = 2
 						instant_build = yes
 					}
-					set_state_flag = SOV_infrastructure_effort_3Inf
 				}				
 			}
 			random_owned_controlled_state = {
@@ -169,7 +217,6 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = SOV_infrastructure_effort_3Inf	
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -180,7 +227,6 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = SOV_infrastructure_effort_3Inf	
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -191,7 +237,6 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = SOV_infrastructure_effort_3Inf	
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -201,8 +246,7 @@ focus_tree = {
 					type = infrastructure
 					level = 2
 					instant_build = yes
-				}
-				set_state_flag = SOV_infrastructure_effort_3Inf	
+				}	
 			}
 		}
 	}
@@ -223,7 +267,56 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10003"
-			
+			random_owned_state = {
+				limit = { is_rural = yes }
+				increase_state_category_by_two_levels = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { is_rural = yes }
+				increase_state_category_by_two_levels = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { is_rural = yes }
+				increase_state_category_by_two_levels = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { is_rural = yes }
+				increase_state_category_by_two_levels = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { is_rural = yes }
+				increase_state_category_by_two_levels = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -282,9 +375,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = SOV_soviet_railways
+			show_ideas_tooltip = TOH_soviet_railways
 			
 		}
 	}
@@ -305,7 +397,44 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10005"
-			
+			random_owned_state = {
+				limit = { 
+					is_rural = no 
+					NOT = { has_state_category = tiny_island }
+					NOT = { has_state_category = small_island }
+				}
+				increase_state_category_by_one_level = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { 
+					is_rural = no 
+					NOT = { has_state_category = tiny_island }
+					NOT = { has_state_category = small_island }
+				}
+				increase_state_category_by_one_level = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -407,7 +536,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10011"
-			
+			add_research_slot = 1
 		}
 	}
 
@@ -469,11 +598,182 @@ focus_tree = {
 
 		prerequisite = { focus = TOH_10009 focus = TOH_10010 }
 		ai_will_do = { factor = 30 }
+		bypass = {
+			408 = { #VLADIVOSTOK
+				is_fully_controlled_by = ROOT
+				NOT = {
+					infrastructure < 5
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+			}
+			409 = { #KHABAROVSK
+				is_fully_controlled_by = ROOT
+				NOT = {
+					infrastructure < 5
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+			}
+			566 = { #IRKUTSK
+				is_fully_controlled_by = ROOT
+				NOT = {
+					infrastructure < 5
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+			}
+			564 = { #ULAN UDE
+				is_fully_controlled_by = ROOT
+				NOT = {
+					infrastructure < 5
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+			}
+		}
+		available = {
+			OR = {
+				408 = { #VLADIVOSTOK
+					is_fully_controlled_by = ROOT
+				}
+				409 = { #KHABAROVSK
+					is_fully_controlled_by = ROOT
+				}
+				566 = { #IRKUTSK
+					is_fully_controlled_by = ROOT
+				}
+				564 = { #ULAN UDE
+					is_fully_controlled_by = ROOT
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10012"
-			
+			set_temp_variable = { TOH_states_targeted_eastern_development = 0 } #Used this way to prioritize between desirable states
+			if = {
+				limit = {
+					408 = { #VLADIVOSTOK
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				408 = { #VLADIVOSTOK
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_to_temp_variable = { TOH_states_targeted_eastern_development = 1 }
+			}
+			else_if = { #Irkutsk replaces Vladivostok if necessary
+				limit = {
+					check_variable = { TOH_states_targeted_eastern_development = 2 compare = less_than_or_equals }
+					566 = { #IRKUTSK
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				566 = { #IRKUTSK
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					409 = { #KHABAROVSK
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				409 = { #KHABAROVSK
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_to_temp_variable = { TOH_states_targeted_eastern_development = 1 }
+			}
+			else_if = { #Ulan Ude replaces Khabarovsk if necessary
+				limit = {
+					check_variable = { TOH_states_targeted_eastern_development = 2 compare = less_than_or_equals }
+					564 = { #ULAN UDE
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				564 = { #ULAN UDE
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -488,10 +788,182 @@ focus_tree = {
 
 		prerequisite = { focus = TOH_10009 focus = TOH_10010 }
 		ai_will_do = { factor = 30 }
+		bypass = {
+			572 = { #CHELYABISNK
+				is_fully_controlled_by = ROOT
+				NOT = {
+					infrastructure < 5
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+			}
+			573 = { #ZLATOUST
+				is_fully_controlled_by = ROOT
+				NOT = {
+					infrastructure < 5
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+			}
+			582 = { #MAGNITOGORSK
+				is_fully_controlled_by = ROOT
+				NOT = {
+					infrastructure < 5
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+			}
+			653 = { #SVERDLOVSK
+				is_fully_controlled_by = ROOT
+				NOT = {
+					infrastructure < 5
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+			}
+		}
+		available = {
+			OR = {
+				572 = { #CHELYABISNK
+					is_fully_controlled_by = ROOT
+				}
+				573 = { #ZLATOUST
+					is_fully_controlled_by = ROOT
+				}
+				582 = { #MAGNITOGORSK
+					is_fully_controlled_by = ROOT
+				}
+				653 = { #SVERDLOVSK
+					is_fully_controlled_by = ROOT
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10013"
+			set_temp_variable = { TOH_states_targeted_eastern_development = 0 } #Used this way to prioritize between desirable states
+			if = {
+				limit = {
+					572 = { #CHELYABISNK
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				572 = { #CHELYABISNK
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_to_temp_variable = { TOH_states_targeted_eastern_development = 1 }
+			}
+			else_if = { #Magnitogorsk replaces Chelyabinsk if necessary
+				limit = {
+					check_variable = { TOH_states_targeted_eastern_development = 2 compare = less_than_or_equals }
+					582 = { #MAGNITOGORSK
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				582 = { #MAGNITOGORSK
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					573 = { #ZLATOUST
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				573 = { #ZLATOUST
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_to_temp_variable = { TOH_states_targeted_eastern_development = 1 }
+			}
+			else_if = { #Sverdlovsk replaces Zlatoust if necessary
+				limit = {
+					check_variable = { TOH_states_targeted_eastern_development = 2 compare = less_than_or_equals }
+					653 = { #SVERDLOVSK
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				653 = { #SVERDLOVSK
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 			
 		}
 	}
@@ -3718,6 +4190,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33020"
+			custom_effect_tooltip = TOH_air_force_tt
+			add_to_variable = {
+				TOH_air_force_air_cas_efficiency = 0.05
+				tooltip = air_cas_efficiency_tt
+			}
 		}
 	}
 
@@ -3997,6 +4474,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34006"
+			navy_experience = 15
 			custom_effect_tooltip = TOH_navy_tt
 			add_to_variable = { #툴팁용
 				TOH_navy_build_cost_ic_capital_ship = -0.1
@@ -4006,7 +4484,7 @@ focus_tree = {
 				TOH_navy_build_cost_ic_carrier = -0.1
 				tooltip = build_cost_ic_carrier_tt
 			}
-			hidden_effect = { add_ideas = TOH_kuznetsov_plan }
+			hidden_effect = { add_ideas = TOH_34006 }
 		}
 	}
 
@@ -4026,6 +4504,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34007"
+			navy_experience = 15
+			custom_effect_tooltip = TOH_navy_tt
+			add_to_variable = { #툴팁용
+				TOH_navy_build_cost_ic_screen_ship = -0.1
+				tooltip = build_cost_ic_screen_ship_tt
+			}
+			hidden_effect = { add_ideas = TOH_34007 }
 		}
 	}
 
@@ -4182,32 +4667,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34013"
-			if = {
-				limit = { has_MtG = yes }
-				add_ideas = TOH_mine_warfare
-				custom_effect_tooltip = generic_skip_one_line_tt
-				add_tech_bonus = {
-					name = TOH_34013
-					bonus = 1.0
-					uses = 2
-					category = naval_mines
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = TOH_34013
-					bonus = 0.5
-					uses = 1
-					category = ss_tech
-					category = dd_tech
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				add_doctrine_cost_reduction = {
-					name = TOH_34013
-					cost_reduction = 0.75
-					uses = 1
-					category = naval_doctrine
-				}
+			add_ideas = TOH_mine_warfare
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = TOH_34013
+				bonus = 1.0
+				uses = 2
+				category = naval_mines
 			}
 		}
 	}
@@ -4816,7 +5282,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_40002 #환상향 소비에트 헌법
-		icon = GFX_goal_support_communism
+		icon = GFX_focus_SWE_socialist_reforms
 		cost = 5
 
 		relative_position_id = TOH_41001
@@ -4842,7 +5308,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_42002 #일국사회주의 유지
-		icon = GFX_focus_TOH_42002
+		icon = GFX_goal_support_communism
 		cost = 5
 
 		relative_position_id = TOH_42001
@@ -4860,7 +5326,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_41003 #권력 분산 체제
-		icon = GFX_focus_TOH_41003
+		icon = GFX_goal_generic_neutrality_focus
 		cost = 5
 
 		relative_position_id = TOH_41002
@@ -4898,7 +5364,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_41004 #민주적 체제
-		icon = GFX_focus_TOH_41004
+		icon = GFX_focus_generic_social_democracy
 		cost = 5
 
 		relative_position_id = TOH_41003
@@ -4952,7 +5418,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_41005 #사회주의적 애국주의
-		icon = GFX_focus_TOH_41005
+		icon = GFX_focus_FIN_socialist_welfare
 		cost = 5
 
 		relative_position_id = TOH_41004
@@ -5006,7 +5472,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_41006 #단계적 집산화
-		icon = GFX_focus_TOH_41005
+		icon = GFX_focus_generic_workers_and_farmers_rise
 		cost = 5
 
 		relative_position_id = TOH_41005
@@ -5049,7 +5515,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_42006 #집산화 정책
-		icon = GFX_focus_prc_agrarian_socialism
+		icon = GFX_focus_ioi_generic_agriculture_farmers
 		cost = 5
 
 		relative_position_id = TOH_42005
@@ -5220,8 +5686,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = TOH_40008 #계승자
-		icon = GFX_focus_generic_support_the_left_right
+		id = TOH_40008 #계승자 
+		icon = GFX_focus_TOH_40008
 		cost = 5
 
 		relative_position_id = TOH_40006
@@ -5240,7 +5706,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_40009 #충복
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_focus_TOH_40009
 		cost = 5
 
 		relative_position_id = TOH_40006
@@ -5465,7 +5931,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_40101 #내부 문제
-		icon = GFX_focus_TOH_40101
+		icon = GFX_focus_generic_join_comintern
 		cost = 5
 
 		relative_position_id = TOH_42001
@@ -5483,7 +5949,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_40102 #내무인민위원부
-		icon = GFX_focus_TOH_40102
+		icon = GFX_focus_GER_strengthen_the_proletarian_international
 		cost = 5
 
 		relative_position_id = TOH_40101
@@ -5501,7 +5967,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_40103 #선전선동국
-		icon = GFX_focus_TOH_40103
+		icon = GFX_focus_generic_soviet_politics
 		cost = 5
 
 		relative_position_id = TOH_40101
@@ -5519,7 +5985,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_40104 #신여성
-		icon = GFX_focus_TOH_4014
+		icon = GFX_focus_generic_population_growth
 		cost = 5
 
 		relative_position_id = TOH_40101
@@ -5537,7 +6003,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_40105 #환상향 내무위원회 사단
-		icon = GFX_focus_TOH_40105
+		icon = GFX_goal_generic_allies_build_infantry
 		cost = 5
 
 		relative_position_id = TOH_40102
@@ -5555,8 +6021,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = TOH_40106 #내부 문제
-		icon = GFX_focus_TOH_40106
+		id = TOH_40106 ##영웅주의 선전
+		icon = GFX_goal_generic_cavalry
 		cost = 5
 
 		relative_position_id = TOH_40103
@@ -5574,8 +6040,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = TOH_40107 #영웅주의 선전
-		icon = GFX_focus_TOH_40107
+		id = TOH_40107 #집산주의 선전
+		icon = GFX_goal_generic_propaganda
 		cost = 5
 
 		relative_position_id = TOH_40103
@@ -5593,8 +6059,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = TOH_40108 #집산주의 선전
-		icon = GFX_focus_TOH_40108
+		id = TOH_40108 #청년 공산주의자 동맹
+		icon = GFX_focus_generic_spur_communist_revolutions
 		cost = 5
 
 		relative_position_id = TOH_40104
@@ -5684,7 +6150,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_40113 #과학의 전파자
-		icon = GFX_focus_TOH_40113
+		icon = GFX_focus_generic_university_3
 		cost = 5
 
 		relative_position_id = TOH_40111
@@ -5726,7 +6192,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_43002 #키리사메 인터내셔널
-		icon = GFX_focus_TOH_43002
+		icon = GFX_goal_support_communism
 		cost = 5
 
 		relative_position_id = TOH_43001
@@ -5781,7 +6247,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_43005 #키리사메주의자 석방
-		icon = GFX_focus_TOH_43005
+		icon = GFX_focus_ioi_generic_release
 		cost = 5
 
 		relative_position_id = TOH_43002
@@ -5836,7 +6302,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_43008 #코치야 그룹 제거
-		icon = GFX_focus_TOH_43005
+		icon = GFX_focus_TOH_40003
 		cost = 5
 
 		relative_position_id = TOH_43005
@@ -5909,7 +6375,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_43012 #연속혁명론
-		icon = GFX_focus_TOH_43012
+		icon = GFX_goal_generic_war_with_comintern
 		cost = 5
 
 		relative_position_id = TOH_43010
@@ -5966,7 +6432,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_43015 #영구혁명
-		icon = GFX_goal_generic_war_with_comintern
+		icon = GFX_focus_generic_workers_and_farmers_rise
 		cost = 5
 
 		relative_position_id = TOH_43012
@@ -6023,7 +6489,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_43018 #파벌 정리
-		icon = GFX_focus_TOH_43018
+		icon = GFX_focus_SOV_the_last_purge
 		cost = 5
 
 		relative_position_id = TOH_43014
@@ -6080,7 +6546,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_43021 #탈중앙화 체제
-		icon = GFX_focus_TOH_43021
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 5
 
 		relative_position_id = TOH_43017
@@ -6116,7 +6582,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_43023 #궁극의 마스터 스파크
-		icon = GFX_focus_TOH_43023
+		icon = GFX_focus_ETH_callout_to_the_world
 		cost = 5
 
 		relative_position_id = TOH_43022
@@ -6134,7 +6600,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_43024 #영구혁명의 지도자
-		icon = GFX_focus_TOH_43023
+		icon = GFX_focus_TOH_43024
 		cost = 5
 
 		relative_position_id = TOH_43022
@@ -6170,7 +6636,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_43026 #세번째 유성
-		icon = GFX_focus_TOH_43023
+		icon = GFX_focus_TOH_43026
 		cost = 5
 
 		relative_position_id = TOH_43023
@@ -6208,7 +6674,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_43027 #소비에트 노동자
-		icon = GFX_focus_TOH_43023
+		icon = GFX_focus_YUG_pan_slavic_congress
 		cost = 5
 
 		relative_position_id = TOH_43024
@@ -6333,7 +6799,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44003 #농민 봉기 조직
-		icon = GFX_focus_TOH_44003
+		icon = GFX_focus_generic_workers_and_farmers_rise
 		cost = 5
 
 		relative_position_id = TOH_44002
@@ -6351,7 +6817,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44004 #레이무 반대파 결집
-		icon = GFX_focus_TOH_44004
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 5
 
 		relative_position_id = TOH_44002
@@ -6369,7 +6835,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44005 #집산화 폐지
-		icon = GFX_focus_TOH_44005
+		icon = GFX_focus_renounce_the_treaty_of_trianon
 		cost = 5
 
 		relative_position_id = TOH_44002
@@ -6387,7 +6853,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44006 #키리사메 그룹 제거
-		icon = GFX_focus_TOH_44006
+		icon = GFX_focus_TOH_42004
 		cost = 5
 
 		relative_position_id = TOH_44003
@@ -6406,7 +6872,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44007 #반 하쿠레이 운동
-		icon = GFX_focus_TOH_44007
+		icon = GFX_focus_spr_masters_of_our_own_fate
 		cost = 5
 
 		relative_position_id = TOH_44003
@@ -6462,7 +6928,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44010 #사회주의의 본산
-		icon = GFX_focus_TOH_44010
+		icon = GFX_goal_support_communism
 		cost = 5
 
 		relative_position_id = TOH_44005
@@ -6481,7 +6947,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44011 #쿠데타 계획
-		icon = GFX_focus_TOH_44011
+		icon = GFX_goal_generic_major_war
 		cost = 5
 
 		relative_position_id = TOH_44007
@@ -6518,7 +6984,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44013 #사회주의 군대
-		icon = GFX_focus_TOH_44013
+		icon = GFX_focus_SOV_builder_of_the_red_army
 		cost = 5
 
 		relative_position_id = TOH_44012
@@ -6535,8 +7001,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = TOH_44014 #사회주의 군대
-		icon = GFX_focus_TOH_44014
+		id = TOH_44014 #농민의 힘
+		icon = GFX_focus_SOV_breadbasket_of_the_union
 		cost = 5
 
 		relative_position_id = TOH_44012
@@ -6553,8 +7019,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = TOH_44015 #사회주의 군대
-		icon = GFX_focus_TOH_44013
+		id = TOH_44015 #집단농장 축소
+		icon = GFX_focus_renounce_the_treaty_of_trianon
 		cost = 5
 
 		relative_position_id = TOH_44012
@@ -6572,7 +7038,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44016 #반사회주의 장교 숙군
-		icon = GFX_focus_TOH_44016
+		icon = GFX_focus_SOV_the_last_purge
 		cost = 5
 
 		relative_position_id = TOH_44013
@@ -6591,7 +7057,8 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44017 #행정 개혁
-		icon = GFX_focus_TOH_44017
+		icon = GFX_focus_generic_soviet_politics
+
 		cost = 5
 
 		relative_position_id = TOH_44014
@@ -6627,7 +7094,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44019 #신경제정책 부활
-		icon = GFX_focus_TOH_44019
+		icon = GFX_focus_generic_treaty
 		cost = 5
 
 		relative_position_id = TOH_44015
@@ -6645,7 +7112,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44020 #지방조직 통합
-		icon = GFX_focus_TOH_44020
+		icon = GFX_goal_generic_major_alliance
 		cost = 5
 
 		relative_position_id = TOH_44017
@@ -6681,7 +7148,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44022 #계획경제
-		icon = GFX_focus_TOH_44022
+		icon = GFX_goal_generic_positive_trade_relations
 		cost = 5
 
 		relative_position_id = TOH_44019
@@ -6699,7 +7166,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44023 #단계적 산업화
-		icon = GFX_focus_TOH_44023
+		icon = GFX_goal_generic_soviet_construction
 		cost = 5
 
 		relative_position_id = TOH_44019
@@ -6717,7 +7184,8 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44024 #노동자들의 노동조합
-		icon = GFX_focus_TOH_44024
+		icon = GFX_focus_YUG_pan_slavic_congress
+
 		cost = 5
 
 		relative_position_id = TOH_44019
@@ -6754,7 +7222,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44026 #인민의 적
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		icon = GFX_focus_SWE_undermine_fascism
 		cost = 5
 
 		relative_position_id = TOH_44021
@@ -6772,7 +7240,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_44027 #지속 가능한 경제
-		icon = GFX_focus_TOH_44027
+		icon = GFX_focus_prc_agrarian_socialism
 		cost = 5
 
 		relative_position_id = TOH_44023
@@ -6852,7 +7320,7 @@ focus_tree = {
 	
 	focus = {
 		id = TOH_40202 #내무인민위원부 잠입
-		icon = GFX_focus_TOH_40201
+		icon = GFX_goal_generic_intelligence_exchange
 		cost = 5
 
 		relative_position_id = TOH_43001

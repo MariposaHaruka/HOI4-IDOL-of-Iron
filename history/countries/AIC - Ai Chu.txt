@@ -30,6 +30,97 @@ add_ideas = {
 
 add_dynamic_modifier = { modifier = AIC_industry }
 add_dynamic_modifier = { modifier = AIC_army }
+add_dynamic_modifier = { modifier = AIC_navy }
+
+## AIC_industry
+set_variable = { AIC_industry_production_speed_buildings_factor = -0.25 }
+set_variable = { AIC_industry_industrial_capacity_factory = -0.20 }
+set_variable = { AIC_industry_industrial_capacity_dockyard = -0.20 }
+set_variable = { AIC_industry_research_speed_factor = -0.15 }
+set_variable = { AIC_industry_consumer_goods_factor = 0.10 }
+set_variable = { AIC_industry_state_resources_factor = -0.10 }
+set_variable = { AIC_industry_production_factory_max_efficiency_factor = -0.15 }
+set_variable = { AIC_industry_production_factory_efficiency_gain_factor = -0.20 }
+set_variable = { AIC_industry_license_purchase_cost = 0.50 }
+set_variable = { AIC_industry_political_power_gain = -0.10 }
+set_variable = { AIC_industry_stability_factor = -0.10 }
+set_variable = { AIC_industry_industry_repair_factor = -0.25 }
+
+## AIC_army
+set_variable = { AIC_army_experience_gain_army_factor = -0.30 }
+set_variable = { AIC_army_land_doctrine_cost_factor = 0.25 }
+set_variable = { AIC_army_army_org_factor = -0.15 }
+set_variable = { AIC_army_training_time_factor = 0.20 }
+set_variable = { AIC_army_supply_factor = -0.15 }
+set_variable = { AIC_army_planning_speed = -0.20 }
+set_variable = { AIC_army_army_morale_factor = -0.10 }
+set_variable = { AIC_army_max_planning_factor = -0.15 }
+set_variable = { AIC_army_command_power_gain_mult = -0.10 }
+set_variable = { AIC_army_army_leader_cost_factor = 0.50 }
+set_variable = { AIC_army_equipment_capture_factor = -0.50 }
+set_variable = { AIC_army_special_forces_cap = -0.25 }
+set_variable = { AIC_army_recon_factor = -0.15 }
+set_variable = { AIC_army_supply_consumption_factor = 0.10 }
+set_variable = { AIC_army_winter_attrition_factor = 0.10 }
+set_variable = { AIC_army_heat_attrition_factor = 0.10 }
+
+set_variable = { AIC_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { AIC_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { AIC_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { AIC_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { AIC_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { AIC_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { AIC_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { AIC_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { AIC_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## AIC_navy
+set_variable = { AIC_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { AIC_navy_naval_doctrine_cost_factor = 0.30 }
+set_variable = { AIC_navy_naval_detection = -0.20 }
+set_variable = { AIC_navy_navy_max_range_factor = -0.15 }
+set_variable = { AIC_navy_repair_speed_factor = -0.20 }
+set_variable = { AIC_navy_refit_speed = -0.20 }
+set_variable = { AIC_navy_amphibious_invasion = -0.25 }
+set_variable = { AIC_navy_naval_invasion_capacity = -5 }
+set_variable = { AIC_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { AIC_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { AIC_navy_naval_damage_factor = -0.10 }
+set_variable = { AIC_navy_naval_defense_factor = -0.10 }
+set_variable = { AIC_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { AIC_navy_naval_speed_factor = -0.10 }
+
+set_variable = { AIC_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { AIC_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { AIC_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { AIC_navy_build_cost_ic_screen_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { AIC_navy_build_cost_ic_submarine = 0.30 } ### 별도 국민정신 적용
+
+## AIC_air_force
+set_variable = { AIC_air_force_experience_gain_air_factor = -0.50 }
+set_variable = { AIC_air_force_air_doctrine_cost_factor = 0.40 }
+set_variable = { AIC_air_force_air_accidents_factor = 0.25 }
+set_variable = { AIC_air_force_air_mission_efficiency = -0.15 }
+set_variable = { AIC_air_force_air_training_xp_gain_factor = -0.30 }
+set_variable = { AIC_air_force_air_range_factor = -0.10 }
+set_variable = { AIC_air_force_air_ace_generation_chance_factor = -0.60 }
+set_variable = { AIC_air_force_air_superiority_efficiency = -0.20 }
+set_variable = { AIC_air_force_air_cas_efficiency = -0.25 }
+set_variable = { AIC_air_force_air_strategic_bomber_bombing_factor = -0.30 }
+set_variable = { AIC_air_force_air_intercept_efficiency = -0.15 }
+set_variable = { AIC_air_force_air_nav_efficiency = -0.20 }
+set_variable = { AIC_air_force_air_detection = -0.20 }
+set_variable = { AIC_air_force_air_agility_factor = -0.10 }
+
+set_variable = { AIC_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { AIC_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { AIC_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { AIC_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { AIC_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { AIC_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { AIC_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { AIC_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { AIC_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
 
 #외교
 
@@ -62,48 +153,48 @@ set_popularities = {
 
 #캐릭터
 recruit_character = AIC_aido_seiya
-recruit_character = AIC_minato_kanata
-recruit_character = AIC_mitsurugi_akira
-recruit_character = AIC_kururugi_satsuki
-recruit_character = AIC_kururugi_mutsuki
-recruit_character = AIC_noa
-recruit_character = AIC_leon
-recruit_character = AIC_li_chaoyang
-recruit_character = AIC_rabi
-recruit_character = AIC_lucas
-recruit_character = AIC_kusakabe_torahiko
-recruit_character = AIC_momoi_kyosuke
-recruit_character = AIC_tobikura_akio
-recruit_character = AIC_amabe_shiki
-recruit_character = AIC_orihara_hikaru
-recruit_character = AIC_wakaouji_raku
-recruit_character = AIC_hanabusa_kokoro
-recruit_character = AIC_kagurazaka_runa
-recruit_character = AIC_oikawa_momosuke
-recruit_character = AIC_todoroki_issei
-recruit_character = AIC_akabane_futami
-recruit_character = AIC_sanzenin_takamichi
-recruit_character = AIC_eva_armstrong
-recruit_character = AIC_yamanobe_mio
-recruit_character = AIC_jumonji_ban
-recruit_character = AIC_rindo_tsubaki
-recruit_character = AIC_honoki_toya
-recruit_character = AIC_madarao_tatsumi
-recruit_character = AIC_kakitsubata_aoi
-recruit_character = AIC_yakaku_kuro
-recruit_character = AIC_baber
-recruit_character = AIC_uruha_saku
-recruit_character = AIC_kizaki_rintaro
-recruit_character = AIC_kisaragi_mashiro
-recruit_character = AIC_hayami_go
-recruit_character = AIC_utakata_airu
-recruit_character = AIC_takara_onimaru
-recruit_character = AIC_arayashiki_junta
-recruit_character = AIC_christopher
-recruit_character = AIC_munakata_atsushi
-recruit_character = AIC_uj
-recruit_character = AIC_kumakocho
-recruit_character = AIC_producer
+#recruit_character = AIC_minato_kanata
+#recruit_character = AIC_mitsurugi_akira
+#recruit_character = AIC_kururugi_satsuki
+#recruit_character = AIC_kururugi_mutsuki
+#recruit_character = AIC_noa
+#recruit_character = AIC_leon
+#recruit_character = AIC_li_chaoyang
+#recruit_character = AIC_rabi
+#recruit_character = AIC_lucas
+#recruit_character = AIC_kusakabe_torahiko
+#recruit_character = AIC_momoi_kyosuke
+#recruit_character = AIC_tobikura_akio
+#recruit_character = AIC_amabe_shiki
+#recruit_character = AIC_orihara_hikaru
+#recruit_character = AIC_wakaouji_raku
+#recruit_character = AIC_hanabusa_kokoro
+#recruit_character = AIC_kagurazaka_runa
+#recruit_character = AIC_oikawa_momosuke
+#recruit_character = AIC_todoroki_issei
+#recruit_character = AIC_akabane_futami
+#recruit_character = AIC_sanzenin_takamichi
+#recruit_character = AIC_eva_armstrong
+#recruit_character = AIC_yamanobe_mio
+#recruit_character = AIC_jumonji_ban
+#recruit_character = AIC_rindo_tsubaki
+#recruit_character = AIC_honoki_toya
+#recruit_character = AIC_madarao_tatsumi
+#recruit_character = AIC_kakitsubata_aoi
+#recruit_character = AIC_yakaku_kuro
+#recruit_character = AIC_baber
+#recruit_character = AIC_uruha_saku
+#recruit_character = AIC_kizaki_rintaro
+#recruit_character = AIC_kisaragi_mashiro
+#recruit_character = AIC_hayami_go
+#recruit_character = AIC_utakata_airu
+#recruit_character = AIC_takara_onimaru
+#recruit_character = AIC_arayashiki_junta
+#recruit_character = AIC_christopher
+#recruit_character = AIC_munakata_atsushi
+#recruit_character = AIC_uj
+#recruit_character = AIC_kumakocho
+#recruit_character = AIC_producer
 
 #장관진
 

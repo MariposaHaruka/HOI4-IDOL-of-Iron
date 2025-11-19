@@ -14,13 +14,6 @@ equipments = {
 
 		interface_category = interface_category_capital_ships
 
-		upgrades = {
-			ship_deckspace_upgrade
-			carrier_armor_upgrade
-			ship_engine_upgrade
-			ship_reliability_upgrade
-		}
-
 		module_slots = {
 			fixed_ship_deck_slot_1 = {
 				required = yes
@@ -817,12 +810,6 @@ equipments = {
 		archetype = ship_hull_carrier
 		model = ship_hull_super_carrier
 		priority = 1000
-		upgrades = {
-			ship_deckspace_upgrade
-			carrier_armor_upgrade
-			ship_engine_upgrade
-			ship_reliability_upgrade
-		}
 		module_slots = {
 			fixed_ship_deck_slot_1 = {
 				required = yes
@@ -941,12 +928,6 @@ equipments = {
 		archetype = ship_hull_carrier
 		priority = 1000
 		model = ship_hull_ice_carrier
-		upgrades = {
-			ship_deckspace_upgrade
-			carrier_armor_upgrade
-			ship_engine_upgrade
-			ship_reliability_upgrade
-		}
 		module_slots = {
 			fixed_ship_deck_slot_1 = {
 				required = yes

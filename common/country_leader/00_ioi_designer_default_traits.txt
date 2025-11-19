@@ -311,6 +311,62 @@ leader_traits = {
 		}
 	}
 
+	# 수륙양용전차 설계사
+	amphibious_tank_manufacturer = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				reliability = 0.05
+				breakthrough = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 자주포 설계사
+	artillery_tank_manufacturer = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				hard_attack = 0.05
+				breakthrough = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 대공전차 설계사
+	anti_air_tank_manufacturer = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				air_attack = 0.05
+				soft_attack = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 돌격포 설계사
+	assault_guns_manufacturer = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				armor_value = 0.05
+				hardness = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	### 함선 설계사
 	# 흑해함대 설계사
 	black_sea_naval_manufacturer = { #NSB - Screen Ships and Submarines

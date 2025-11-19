@@ -970,3 +970,23 @@ has_IAS = {
 	has_country_flag = IAS_installed
 	has_idea = higher_education
 }
+
+is_rural = {
+	OR = {
+		has_state_category = wasteland
+		has_state_category = enclave
+		has_state_category = pastoral
+		has_state_category = rural
+		has_state_category = town
+	}
+}
+
+is_city = {
+	OR = {
+		has_state_category = large_town
+		has_state_category = city
+		has_state_category = large_city
+		has_state_category = metropolis
+		has_state_category = megalopolis
+	}
+}
