@@ -1,0 +1,36 @@
+PRS_dominance_fleet_1 = {
+	required_taskforces = {
+		PRS_StrikeForce_1 = 1
+		PRS_PatrolDominanceForce_1 = 3
+		PRS_PatrolReconForce_1 = 3
+	}	
+	optional_taskforces = {
+		PRS_StrikeForce_1 = 1
+		PRS_PatrolReconForce_1 = 3
+		PRS_PatrolDominanceForce_1 = 3
+	}
+}
+
+PRS_raiding_fleet_2 = {
+	required_taskforces = {
+		PRS_ConvoyRaiding_1 = 4
+	}	
+	optional_taskforces = {
+		PRS_ConvoyRaiding_1 = 2
+	}
+}
+
+PRS_escort_fleet_3 = {
+	required_taskforces = {
+		PRS_ConvoyEscort_1 = 1
+	}
+	optional_taskforces = {
+		PRS_ConvoyEscort_1 = 1
+	}
+}
+
+PRS_minelaying_fleet_4 = {
+	required_taskforces = {
+		PRS_MineLaying_1 = 1
+	}
+}

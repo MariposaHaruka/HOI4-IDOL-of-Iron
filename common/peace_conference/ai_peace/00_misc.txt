@@ -130,7 +130,7 @@ peace_ai_desires = {
         enable = {
             ROOT = { 
                 is_major = yes                #We are big
-                has_government = fascism    #We are the baddies
+                is_fascism = yes    #We are the baddies
                 tag = ROOT.FROM                #We are acting for ourselves
             }
         }
@@ -143,7 +143,7 @@ peace_ai_desires = {
         enable = {
             ROOT = {
                 is_major = yes                #We are big
-                has_government = fascism    #We are the baddies
+                is_fascism = yes    #We are the baddies
             }
         }
 
@@ -155,10 +155,10 @@ peace_ai_desires = {
         enable = {
             ROOT = {
                 is_major = yes                #We are big
-                has_government = fascism    #We are the baddies
+                is_fascism = yes    #We are the baddies
                 tag = ROOT.FROM                #We are acting for ourselves
             }
-            ROOT.FROM.FROM = { NOT = { has_government = fascism } }
+            ROOT.FROM.FROM = { NOT = { is_fascism = yes } }
         }
 
         ai_desire = -75
@@ -201,7 +201,7 @@ peace_ai_desires = {
         enable = {
             ROOT = {
                 NOT = { is_democratic = yes }
-                NOT = { has_government = fascism }
+                NOT = { is_fascism = yes }
                 NOT = {
                     tag = ROOT.FROM
                 }
@@ -305,7 +305,7 @@ peace_ai_desires = {
             ROOT = { is_democratic = yes }
             ROOT.FROM = {
                 OR = {
-                    has_government = fascism
+                    is_fascism = yes
                     is_communism = yes
                 }
             }
@@ -407,11 +407,11 @@ peace_ai_desires = {
     fascism_dont_liberate_the_wrong_ideology = {
         peace_action_type = liberate
         enable = {
-            ROOT = { has_government = fascism }
+            ROOT = { is_fascism = yes }
             ROOT.FROM = {
                 NOT = {
                     OR = {
-                        has_government = fascism
+                        is_fascism = yes
                         is_neutrality = yes
                     }
                 }
@@ -604,7 +604,7 @@ peace_ai_desires = {
         enable = {
             ROOT.FROM = {
                 original_tag = PRS
-                has_government = fascism
+                is_fascism = yes
             }
         }
         ai_desire = -100

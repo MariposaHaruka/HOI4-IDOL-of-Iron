@@ -10,6 +10,16 @@ is_democratic = {
 	}
 }
 
+is_democratic_expanded = {
+	OR = {
+		is_democratic = yes
+		AND = {
+			has_government = authoritariandemocracy
+			NOT = { has_idea = no_parliament }
+		}
+	}
+}
+
 is_communism = {
 	custom_trigger_tooltip = {
 		tooltip = is_communism_tt

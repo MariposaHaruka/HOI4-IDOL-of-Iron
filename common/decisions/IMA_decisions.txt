@@ -388,6 +388,10 @@ IMA_haruka_plan_category = {
 					level = 2
 					instant_build = yes
 				}
+				add_resource = {
+					type = coal
+					amount = 15
+				}
 			}
 			custom_effect_tooltip = generic_line_break_tt
 			add_to_variable = {
@@ -452,7 +456,7 @@ IMA_haruka_plan_category = {
 			add_to_variable = { IMA_available_WPA_works = 1 }
 		}
 	}
-	IMA_haruka_plan_taxable_income_investigate  = {
+	IMA_haruka_plan_taxable_income_investigate = {
 		priority = 10
 		icon = ger_mefo_bills
 		allowed = { original_tag = IMA }
@@ -485,7 +489,7 @@ IMA_haruka_plan_category = {
 }
 
 IMA_iori_plan_category = {
-	IMA_iori_plan_minase_fund_1  = {
+	IMA_iori_plan_minase_fund_1 = {
 		icon = GFX_decision_gre_paying_ifc_debt
 		allowed = { original_tag = IMA }
 		visible = { has_country_flag = IMA_iori_plan_minase_fund_flag_1 }
@@ -723,7 +727,7 @@ IMA_iori_plan_category = {
 		}
 		
 	}
-	IMA_iori_plan_minase_fund_3  = {
+	IMA_iori_plan_minase_fund_3 = {
 		icon = GFX_decision_gre_paying_ifc_debt
 		allowed = { original_tag = IMA }
 		visible = { has_country_flag = IMA_iori_plan_minase_fund_flag_3 }

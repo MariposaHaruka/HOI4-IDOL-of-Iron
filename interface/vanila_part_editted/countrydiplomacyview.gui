@@ -412,11 +412,20 @@ guiTypes = {
 				}
 
 
+				instantTextBoxType = {
+					name = "spirit_title"
+					position = { x = 0 y = 0 }
+					font = "hoi_18mbs"
+					borderSize = {x = 0 y = 0}
+					text = "FE_COUNTRY_SPIRIT"
+					maxWidth = 240
+					maxHeight = 30
+				}
 
 				containerWindowType = {
 					name = "national_spirit_container"
-					position = { x = -530 y = -5 }
-					size = { width = 520 height = 74 }
+					position = {  x = -400 y = 0 }
+					size = { width = 375 height = 74 }
 					verticalScrollbar = "right_vertical_slider"
 					orientation = upper_right
 					margin = { top = 0 bottom = 5 }
@@ -431,7 +440,7 @@ guiTypes = {
 						position = { x = 10 y = 2 }
 						size = { width = 360 height = 68 }
 						slotsize = { width = 60 height = 68 }
-						max_slots = { x = 6 y = 1 }
+						max_slots = { x = 5 y = 1 }
 						format = "UPPER_LEFT"
 					}
 					gridboxtype = {
@@ -439,7 +448,7 @@ guiTypes = {
 						position = { x = 10 y = 2 }
 						size = { width = 360 height = 68 }
 						slotsize = { width = 60 height = 68 }
-						max_slots_horizontal = 8
+						max_slots_horizontal = 5
 						format = "UPPER_LEFT"
 					}
 				}
@@ -2038,6 +2047,63 @@ guiTypes = {
 				maxHeight = 20
 			}
 
+			buttonType = {
+				name = "send_button"
+				position = { x = 350 y = -60 }
+
+				quadTextureSprite ="GFX_button_123x34"
+				buttonFont = "hoi_16mbs"
+				Orientation = "LOWER_LEFT"
+				buttonText = "DIPLOMACY_SEND"
+				pdx_tooltip = "DIPLOMACY_SEND"
+				clicksound = click_send
+			}
+
+			buttonType = {
+				name = "cancel_button"
+				position = { x = 70 y = -60 }
+				shortcut = "ESCAPE"
+				quadTextureSprite ="GFX_button_123x34"
+				buttonFont = "hoi_16mbs"
+				Orientation = "LOWER_LEFT"
+				buttonText = "DIPLOMACY_CANCEL"
+				pdx_tooltip = "DIPLOMACY_CANCEL"
+				clicksound = click_close
+			}
+		}
+		
+		containerWindowType = {
+			name = "naval_blockade"
+			position = { x = -263 y = -157}
+			size = { width = 527 height = 360 }
+			moveable = yes
+			click_to_front = yes
+			orientation= center
+
+			background = {
+				name = "Background"
+				spriteType ="GFX_diplo_action_guarantee_independence_bg"
+			}
+
+			instantTextboxType = {
+				name = "title"
+				position = { x = 0 y = 29 }
+				font = "hoi_24header"
+				text = "Maus"
+				maxWidth = 530
+				maxHeight = 20
+				format = center
+			}
+
+			instantTextboxType = {
+				name = "description"
+				position = { x = 31 y = 90 }
+				font = "hoi_16mbs"
+				text = "Maus"
+				maxWidth = 470
+				maxHeight = 300
+			}
+			
 			buttonType = {
 				name = "send_button"
 				position = { x = 350 y = -60 }

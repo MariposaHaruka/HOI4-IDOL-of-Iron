@@ -9,6 +9,8 @@ equipments = {
 		is_archetype = yes
 		is_buildable = no
 
+		can_be_produced = { }
+
 		picture = archetype_light_tank_equipment
 		type = armor
 		group_by = archetype
@@ -238,7 +240,7 @@ equipments = {
 		year = 1922
 		is_archetype = yes
 		is_buildable = no
-		
+		can_be_produced = { }
 		picture = archetype_medium_tank_equipment
 		type = armor
 		group_by = archetype
@@ -466,7 +468,7 @@ equipments = {
 		year = 1922
 		is_archetype = yes
 		is_buildable = no
-		
+		can_be_produced = { }
 		picture = archetype_heavy_tank_equipment
 		type = armor
 		group_by = archetype
@@ -1032,7 +1034,21 @@ equipments = {
 		year = 1936
 		is_archetype = yes
 		is_buildable = no
-		can_be_produced = { }
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+		}
 		picture = archetype_amphibious_tank_equipment
 		type = armor
 		group_by = archetype
@@ -1206,7 +1222,7 @@ equipments = {
 		is_archetype = yes
 		is_buildable = no
 		can_be_produced = { }
-		picture = archetype_super_heavy_tank_equipment #TODO_Manu: Check if new one
+		picture = archetype_super_heavy_tank_equipment
 		type = armor
 		group_by = archetype
 		interface_category = interface_category_armor
@@ -1319,12 +1335,7 @@ equipments = {
 		}
 
 		module_count_limit = {
-			module = lc_aircraft_catapult
-			count < 2
-		}
-
-		module_count_limit = {
-			module = lc_helipad
+			category = lc_aerial_deployment
 			count < 2
 		}
 		
@@ -1354,17 +1365,17 @@ equipments = {
 		}	
 
 		default_modules = {
-			lc_main_armament_slot = lc_heavy_naval_guns
-			lc_secondary_armament_slot = lc_medium_naval_guns
+			#lc_main_armament_slot = lc_heavy_naval_guns
+			#lc_secondary_armament_slot = lc_medium_naval_guns
 		}
 
 		fuel_consumption = 12
 		maximum_speed = 5 #shouldn't be slower than infantry, or we ran into problems
-		build_cost_ic = 250
+		build_cost_ic = 330
 		reliability = 1
 		armor_value = 150
 		defense = 12
-		hardness = 0 #Hardness doesn't apply to support comapnies, this must be changed if they every become a line battalion. #Was 10
+		hardness = 0 #Hardness doesn't apply to support companies, this must be changed if they every become a line battalion. #Was 10
 		
 		resources = {
 			steel = 8

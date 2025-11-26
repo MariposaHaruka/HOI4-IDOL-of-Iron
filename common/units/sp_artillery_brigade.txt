@@ -21,10 +21,10 @@ sub_units = {
 			category_self_propelled_artillery
 		}		
 
-		combat_width = 3
+		combat_width = 2
 
 		need = {
-			light_tank_artillery_chassis = 50
+			light_tank_artillery_chassis = 40
 		}
 		manpower = 500
 		max_organisation = 0
@@ -35,7 +35,7 @@ sub_units = {
 		supply_consumption = 0.42
 
 		breakthrough = -0.42
-
+		soft_attack = 0.15
 		suppression = 1.25
 
 		forest = {
@@ -86,10 +86,10 @@ sub_units = {
 			category_army
 			category_self_propelled_artillery
 		}		
-		combat_width = 3
+		combat_width = 2
 
 		need = {
-			medium_tank_artillery_chassis = 50
+			medium_tank_artillery_chassis = 40
 		}
 		manpower = 500
 		max_organisation = 0
@@ -100,7 +100,7 @@ sub_units = {
 		supply_consumption = 0.46
 
 		breakthrough = -0.25
-
+		soft_attack = 0.15
 		suppression = 1.5
 
 		forest = {
@@ -156,7 +156,7 @@ sub_units = {
 			category_self_propelled_artillery
 		}
 
-		combat_width = 3
+		combat_width = 2
 
 		need = {
 			heavy_tank_artillery_chassis = 40
@@ -169,7 +169,7 @@ sub_units = {
 		supply_consumption = 0.6
 
 		breakthrough = -0.25
-
+		soft_attack = 0.15
 		suppression = 1.5
 
 		forest = {
@@ -226,7 +226,7 @@ sub_units = {
 		}
 		
 
-		combat_width = 0
+		combat_width = 2
 
 		need = {
 			super_heavy_tank_artillery_chassis = 20
@@ -240,7 +240,7 @@ sub_units = {
 		supply_consumption = 0.8
 
 		breakthrough = -0.25
-
+		soft_attack = 0.15
 		suppression = 1.25
 
 		forest = {
@@ -295,10 +295,10 @@ sub_units = {
 			category_self_propelled_artillery
 		}
 
-		combat_width = 3
+		combat_width = 2
 
 		need = {
-			modern_tank_artillery_chassis = 50
+			modern_tank_artillery_chassis = 40
 		}
 		manpower = 500
 		max_organisation = 0
@@ -309,7 +309,7 @@ sub_units = {
 		supply_consumption = 0.5
 		
 		breakthrough = -0.25
-
+		soft_attack = 0.15
 		suppression = 1.5
 
 		forest = {
@@ -364,7 +364,7 @@ sub_units = {
 #	#		category_army
 #	#	}		
 #
-#	#	combat_width = 3
+#	#	combat_width = 2
 #
 #	#	need = {
 #	#		light_tank_artillery_chassis = 36
@@ -425,7 +425,7 @@ sub_units = {
 #	#		category_all_armor
 	#		category_army
 #		}		
-#		combat_width = 3
+#		combat_width = 2
 #
 #		need = {
 #			medium_tank_artillery_chassis = 36
@@ -491,7 +491,7 @@ sub_units = {
 #			category_army
 #		}
 #
-#		combat_width = 3
+#		combat_width = 2
 #
 #		need = {
 #			heavy_tank_artillery_chassis = 24

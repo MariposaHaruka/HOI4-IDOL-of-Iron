@@ -41,7 +41,7 @@ guiTypes = {
 		}
 	}
 
-	ccontainerWindowType = {
+	containerWindowType = {
 		name = "spirit_idea_entry"
 		size = { width=60 height=68 }
 		clipping = no
@@ -148,6 +148,13 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 			clicksound = click_checkbox
 		}
+		
+		buttonType = {
+			name = "country_shine"
+			quadTextureSprite = "GFX_country_selection_entry_shine"
+			position = { x=0 y =0 }
+			clicksound = click_checkbox
+		}
 
 		instantTextBoxType = {
 			name = "country_name"
@@ -181,6 +188,13 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 			clicksound = click_checkbox
 		}
+
+		buttonType = {
+			name = "country_shine"
+			quadTextureSprite = "GFX_minor_country_selector_shine"
+			position = { x=0 y =0 }
+			clicksound = click_checkbox
+		}
 	}
 
 	### country entry
@@ -199,6 +213,13 @@ guiTypes = {
 			name = "country"
 			quadTextureSprite = "GFX_mini_country_selector"
 			position = { x = 0 y = 0 }
+			clicksound = click_checkbox
+		}
+		
+		buttonType = {
+			name = "country_shine"
+			quadTextureSprite = "GFX_mini_country_selector_shine"
+			position = { x=0 y =0 }
 			clicksound = click_checkbox
 		}
 	}

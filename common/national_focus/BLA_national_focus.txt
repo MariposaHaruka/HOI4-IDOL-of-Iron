@@ -239,8 +239,8 @@ focus_tree = {
 				tooltip = build_cost_ic_infantry_tt
 			}
 			add_to_variable = {
-				BLA_army_supply_consumption_factor = -0.05
-				tooltip = supply_consumption_factor_tt
+				BLA_army_supply_factor = -0.05
+				tooltip = supply_factor_tt
 			}
 			add_to_variable = {
 				BLA_army_army_leader_cost_factor = -0.05
@@ -1761,7 +1761,7 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				category = dd_tech
-				category = cl_tech
+				category = ca_tech
 			}
 		}
 	}

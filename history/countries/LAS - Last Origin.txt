@@ -42,7 +42,6 @@ set_technology = {
 	early_ship_hull_carrier = 1
 	basic_battery = 1
 	basic_light_battery = 1
-	basic_medium_battery = 1
 	basic_heavy_battery = 1
 	basic_torpedo = 1
 	sonar = 1
@@ -106,7 +105,7 @@ add_dynamic_modifier = { modifier = LAS_human }
 ## LAS_industry
 
 ## LAS_army
-set_variable = { LAS_army_mobilization_laws_cost_factor = -0.1 }
+set_variable = { LAS_army_mobilization_law_cost_factor = -0.1 }
 set_variable = { LAS_army_army_org_factor = -0.5 }
 set_variable = { LAS_army_experience_gain_army_factor = -0.5 }
 set_variable = { LAS_army_experience_loss_factor = 0.5 }
@@ -196,7 +195,7 @@ set_variable = { LAS_defensive_war_stability_factor = 0 } # -> Socialism in One 
 set_variable = { LAS_political_power_factor = 0 } #0.05 -> The Stalin Constitution
 set_variable = { LAS_is_mobilization_economy_cost_factor  = 0 } # -> Secure the Administration
 set_variable = { LAS_trade_laws_cost_factor = 0 } # -> Secure the Administration
-set_variable = { LAS_mobilization_laws_cost_factor = 0 } # -> Secure the Administration
+set_variable = { LAS_mobilization_law_cost_factor = 0 } # -> Secure the Administration
 set_variable = { LAS_good_consumer_goods_factor = 0 } # -> Collectivization Process
 set_variable = { LAS_production_speed_buildings_factor = 0 } # -> Collectivization Process
 set_variable = { LAS_global_building_slots_factor = 0 } # -> Collectivization Process

@@ -2,7 +2,7 @@ ideas = {
 	air_force_academy_spirit = {
 		aggressive_fighter_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = { NOT = { has_country_flag = no_air_academy } }
 			modifier = {
 				air_attack_factor = 0.05
 			}
@@ -14,9 +14,10 @@ ideas = {
 				}
 			}
 		}
+		
 		agility_flight_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = { NOT = { has_country_flag = no_air_academy } }
 			modifier = {
 				air_agility_factor = 0.05
 			}
@@ -28,9 +29,10 @@ ideas = {
 				}
 			}
 		}
+
 		harsh_training_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = { NOT = { has_country_flag = no_air_academy } }
 			modifier = {
 				air_strategic_bomber_defence_factor = 0.05
 				air_strategic_bomber_bombing_factor = 0.05
@@ -46,9 +48,10 @@ ideas = {
 				}
 			}
 		}
+
 		ground_support_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = { NOT = { has_country_flag = no_air_academy } }
 			modifier = {
 				ground_attack_factor = 0.05
 			}
@@ -60,9 +63,10 @@ ideas = {
 				}
 			}
 		}
+
 		for_future_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = { NOT = { has_country_flag = no_air_academy } }
 			modifier = {
 				air_training_xp_gain_factor = 0.25
 			}
@@ -77,7 +81,7 @@ ideas = {
 		
 		the_few_greats_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = { NOT = { has_country_flag = no_air_academy } }
 			visible = { is_fascism = yes }
 			modifier = {
 				air_ace_bonuses_factor = 0.15
@@ -94,9 +98,10 @@ ideas = {
 				}
 			}
 		}
+
 		integrated_training_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = { NOT = { has_country_flag = no_air_academy } }
 			visible = { is_communism = yes }
 			modifier = {
 				air_untrained_pilots_penalty_factor = 0.15
@@ -113,9 +118,10 @@ ideas = {
 				}
 			}
 		}
+
 		the_sky_knights_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = { NOT = { has_country_flag = no_air_academy } }
 			visible = { 
 				is_communism = no 
 				is_fascism = no
@@ -140,7 +146,7 @@ ideas = {
 	air_force_spirit = {
 		independent_air_force_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = { }
 			modifier = {
 				air_advisor_cost_factor = -0.75
 			}
@@ -152,10 +158,12 @@ ideas = {
 				}
 			}
 		}
+
 		industrial_destruction_spirit = {
 			ledger = air
-			visible = { has_tech = air_superiority }
-			available = { has_air_academy = yes }
+			available = { 
+				has_doctrine = new_strategic_destruction
+			}
 			research_bonus = {
 				heavy_air = 0.05
 			}
@@ -172,10 +180,12 @@ ideas = {
 				}
 			}
 		}
+
 		dive_bombing_spirit = {
 			ledger = air
-			visible = { has_tech = formation_flying }
-			available = { has_air_academy = yes }
+			available = {
+				has_doctrine = new_battlefield_support
+			}
 			research_bonus = {
 				cas_bomber = 0.05
 			}
@@ -193,10 +203,12 @@ ideas = {
 				}
 			}
 		}
+
 		material_destruction_spirit = {
 			ledger = air
-			visible = { has_tech = force_rotation }
-			available = { has_air_academy = yes }
+			available = { 
+				has_doctrine = new_operational_integrity
+			}
 			research_bonus = {
 				tactical_bomber = 0.05
 			}
@@ -213,9 +225,9 @@ ideas = {
 				}
 			}
 		}
+
 		industry_liasons_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
 			research_bonus = {
 				light_air = 0.15
 				medium_air = 0.15
@@ -232,7 +244,6 @@ ideas = {
 		
 		effective_training_programs_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
 			modifier = {
 				air_training_xp_gain_factor = 0.25
 			}
@@ -244,9 +255,9 @@ ideas = {
 				}
 			}
 		}
+
 		branch_independence_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
 			modifier = {
 				experience_gain_air = 0.1
 				airforce_intel_to_others = -5
@@ -259,9 +270,9 @@ ideas = {
 				}
 			}
 		}
+
 		air_crew_surveys_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
 			modifier = {
 				air_doctrine_cost_factor = -0.15
 				air_accidents_factor = -0.25
@@ -279,7 +290,6 @@ ideas = {
 	air_force_command_spirit = {
 		battlefield_air_interdiction_spirit = {
 			ledger = air
-			available = { has_air_force_command = yes }
 			modifier = {
 				ground_attack_factor = 0.05
 				air_escort_efficiency = 0.05
@@ -292,6 +302,7 @@ ideas = {
 				}
 			}
 		}
+
 		cag_night_fighting_spirit = {
 			ledger = air
 			visible = { tag = IMA }
@@ -307,9 +318,9 @@ ideas = {
 				}
 			}
 		}
+
 		veteran_air_instructors_spirit = {
 			ledger = air
-			available = { has_air_force_command = yes }
 			modifier = {
 				air_wing_xp_loss_when_killed_factor = -0.25
 			}
@@ -321,9 +332,9 @@ ideas = {
 				}
 			}
 		}
+
 		centralized_control_spirit = {
 			ledger = air
-			available = { has_air_force_command = yes }
 			modifier = {
 				air_superiority_detect_factor = 0.1
 				air_mission_efficiency = 0.1
@@ -336,10 +347,10 @@ ideas = {
 				}
 			}
 		}
+
 		steel_wings_steel_hearts_spirit = {
 			ledger = air
 			visible = { is_communism = yes }
-			available = { has_air_force_command = yes }
 			modifier = {
 				air_untrained_pilots_penalty_factor = -0.33
 			}
@@ -347,13 +358,16 @@ ideas = {
 				factor = 1
 				modifier = {
 					factor = 0
-					has_NSB = no
+					OR = {
+						has_NSB = no
+						is_communism = no
+					}
 				}
 			}
 		}
+
 		home_defence_spirit = {
 			ledger = air
-			available = { has_air_force_command = yes }
 			modifier = {
 				ace_effectiveness_factor = 0.5
 			}
@@ -365,9 +379,9 @@ ideas = {
 				}
 			}
 		}
+
 		air_power_projection_spirit = {
 			ledger = air
-			available = { has_air_force_command = yes }
 			modifier = {
 				air_power_projection_factor = 0.1
 			}
@@ -379,10 +393,10 @@ ideas = {
 				}
 			}
 		}
+
 		massed_strike_spirit = {
 			ledger = air
-			available = { has_air_force_command = yes }
-			visible = { has_tech = force_rotation }
+			available = { has_doctrine = new_operational_integrity }
 			modifier = {
 				army_bonus_air_superiority_factor = 0.05
 			}
@@ -394,10 +408,10 @@ ideas = {
 				}
 			}
 		}
+
 		continuous_strike_spirit = {
 			ledger = air
-			available = { has_air_force_command = yes }
-			visible = { has_tech = formation_flying }
+			available = { has_doctrine = new_battlefield_support }
 			modifier = {
 				air_cas_efficiency = 0.25
 			}
@@ -409,10 +423,10 @@ ideas = {
 				}
 			}
 		}
+
 		strategic_strike_spirit = { 
 			ledger = air
-			available = { has_air_force_command = yes }
-			visible = { has_tech = air_superiority }
+			available = { has_doctrine = new_strategic_destruction }
 			modifier = {
 				air_strategic_bomber_bombing_factor = 0.1
 			}

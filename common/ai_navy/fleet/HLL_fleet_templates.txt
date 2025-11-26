@@ -1,0 +1,36 @@
+HLL_dominance_fleet_1 = {
+	required_taskforces = {
+		HLL_KidoButai_1 = 1
+		HLL_PatrolDominanceForce_1 = 3
+		HLL_PatrolReconForce_1 = 3
+	}	
+	optional_taskforces = {
+		HLL_StrikeForce_1 = 1
+		HLL_PatrolReconForce_1 = 3
+		HLL_PatrolDominanceForce_1 = 3
+	}
+}
+
+HLL_raiding_fleet_2 = {
+	required_taskforces = {
+		HLL_ConvoyRaiding_1 = 4
+	}	
+	optional_taskforces = {
+		HLL_ConvoyRaiding_1 = 2
+	}
+}
+
+HLL_escort_fleet_3 = {
+	required_taskforces = {
+		HLL_ConvoyEscort_1 = 2
+	}
+	optional_taskforces = {
+		HLL_ConvoyEscort_1 = 2
+	}
+}
+
+HLL_minelaying_fleet_4 = {
+	required_taskforces = {
+		HLL_MineLaying_1 = 1
+	}
+}

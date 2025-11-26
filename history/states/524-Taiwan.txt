@@ -2,6 +2,9 @@ state = {
 	id = 524
 	name = "STATE_524"
 	manpower = 4592537
+	resources = {
+		coal = 8 #initial distribution
+	}
 	
 	state_category = large_town
 	history = { 
@@ -17,6 +20,7 @@ state = {
 			}
 			12068 = {
 				naval_base = 10
+				naval_supply_hub = 1
 			}
 		}
 		victory_points = {

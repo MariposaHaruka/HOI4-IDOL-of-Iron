@@ -1,0 +1,38 @@
+IMA_dominance_fleet_1 = {
+	required_taskforces = {
+		IMA_StrikeForce_1 = 1
+		IMA_PatrolDominanceForce_CA_1 = 2
+		IMA_PatrolDominanceForce_BC_1 = 1
+		IMA_PatrolReconForce_1 = 3
+	}	
+	optional_taskforces = {
+		IMA_StrikeForce_1 = 1
+		IMA_PatrolReconForce_1 = 3
+		IMA_PatrolDominanceForce_CA_1 = 2
+		IMA_PatrolDominanceForce_BC_1 = 1
+	}
+}
+
+IMA_raiding_fleet_2 = {
+	required_taskforces = {
+		IMA_ConvoyRaiding_1 = 4
+	}	
+	optional_taskforces = {
+		IMA_ConvoyRaiding_1 = 2
+	}
+}
+
+IMA_escort_fleet_3 = {
+	required_taskforces = {
+		IMA_ConvoyEscort_1 = 2
+	}
+	optional_taskforces = {
+		IMA_ConvoyEscort_1 = 2
+	}
+}
+
+IMA_minelaying_fleet_4 = {
+	required_taskforces = {
+		IMA_MineLaying_1 = 1
+	}
+}

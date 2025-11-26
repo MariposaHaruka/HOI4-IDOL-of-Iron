@@ -1,0 +1,192 @@
+IML_StrikeForce_1 = {
+	allowed = {
+		original_tag = IML 
+	}
+	ai_will_do = {
+		factor = 1
+	}	
+	mission = { naval_strike }
+	min_composition = {
+		destroyer = {
+			amount = 8
+		}
+	}
+	
+	optIMLl_composition = {
+		carrier = {
+			amount = 2
+		}
+		battleship = {
+			amount = 4
+		}
+		heavy_cruiser = {
+			amount = 4
+		}
+		light_cruiser = {
+			amount = 4
+		}
+		destroyer = {
+			amount = 28
+
+		}
+	}
+}
+
+IML_PatrolReconForce_1 = {
+	allowed = {
+		original_tag = IML
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	mission = { naval_patrol }
+	min_composition = {
+		light_cruiser = {
+			amount = 1
+		}
+	}	
+	optIMLl_composition = {
+		light_cruiser = {
+			amount = 3
+		}
+	}
+}
+
+IML_PatrolDominanceForce_CA_1 = {
+	allowed = {
+		original_tag = IML
+	}
+	ai_will_do = {
+		factor = 5
+	}	
+	mission = { naval_patrol }
+	min_composition = {
+		destroyer = {
+			amount = 4
+		}
+	}
+	optIMLl_composition = {
+		heavy_cruiser = {
+			amount = 3
+		}
+		destroyer = {
+			amount = 12
+
+		}
+	}
+}
+
+IML_PatrolDominanceForce_BC_1 = {
+	allowed = {
+		original_tag = IML
+	}
+	ai_will_do = {
+		factor = 5
+	}	
+	mission = { naval_patrol }
+	min_composition = {
+		destroyer = {
+			amount = 4
+		}
+	}
+	optIMLl_composition = {
+		battle_cruiser = {
+			amount = 3
+		}
+		destroyer = {
+			amount = 12
+
+		}
+	}
+}
+
+IML_ConvoyRaiding_1 = {
+	allowed = {
+		original_tag = IML
+	}
+	ai_will_do = {
+		factor = 1
+	}	
+	mission = { convoy_raiding }
+	min_composition = {
+		submarine = {
+			amount = 4
+		}
+	}
+
+	optIMLl_composition = {
+		submarine = {
+			amount = 12
+		}
+	}
+}
+
+IML_ConvoySurfaceRaiding_1 = {
+	allowed = {
+		original_tag = IML
+	}
+	ai_will_do = {
+		factor = 1
+	}	
+	mission = { convoy_raiding }
+	min_composition = {
+		battle_cruiser = {
+			amount = 1
+		}
+	}
+
+	optIMLl_composition = {
+		battle_cruiser = {
+			amount = 2
+		}
+	}
+}
+
+IML_ConvoyEscort_1 = {
+	allowed = {
+		original_tag = IML
+	}
+	ai_will_do = {
+		factor = 5
+	}	
+	mission = { convoy_escort }
+	min_composition = {
+		destroyer = {
+			amount = 5
+		}
+	}
+	
+	optIMLl_composition = {
+		destroyer = {
+			amount = 10
+		}
+	}
+}
+
+IML_MineLaying_1 = {
+	allowed = {
+		original_tag = IML
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	mission = { mines_planting }
+	min_composition = {
+		destroyer = {
+			amount = 2
+			role = 4
+		}
+	}
+	
+	optIMLl_composition = {
+		destroyer = {
+			amount = 4
+			role = 4
+		}
+		
+		light_cruiser = {
+			amount = 1
+			role = 4
+		}
+	}
+}

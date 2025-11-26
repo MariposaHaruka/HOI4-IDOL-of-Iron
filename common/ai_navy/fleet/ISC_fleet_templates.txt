@@ -1,0 +1,36 @@
+ISC_dominance_fleet_1 = {
+	required_taskforces = {
+		ISC_StrikeForce_1 = 1
+		ISC_PatrolDominanceForce_1 = 3
+		ISC_PatrolReconForce_1 = 3
+	}	
+	optional_taskforces = {
+		ISC_StrikeForce_1 = 1
+		ISC_PatrolDominanceForce_1 = 3
+		ISC_PatrolReconForce_1 = 3		
+	}
+}
+
+ISC_raiding_fleet_1 = {
+	required_taskforces = {
+		ISC_ConvoyRaiding_1 = 4
+	}	
+	optional_taskforces = {
+		ISC_ConvoyRaiding_1 = 2
+	}
+}
+
+ISC_escort_fleet_1 = {
+	required_taskforces = {
+		ISC_ConvoyEscort_1 = 2
+	}
+	optional_taskforces = {
+		ISC_ConvoyEscort_1 = 4
+	}
+}
+
+ISC_minelaying_fleet_4 = {
+	required_taskforces = {
+		ISC_MineLaying_1 = 1
+	}
+}

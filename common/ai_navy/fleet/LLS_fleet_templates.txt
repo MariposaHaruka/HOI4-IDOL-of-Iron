@@ -1,0 +1,36 @@
+LLS_dominance_fleet_1 = {
+	required_taskforces = {
+		LLS_KidoButai_1 = 1
+		LLS_PatrolDominanceForce_1 = 3
+		LLS_PatrolReconForce_1 = 3
+	}	
+	optional_taskforces = {
+		LLS_StrikeForce_1 = 1
+		LLS_PatrolReconForce_1 = 3
+		LLS_PatrolDominanceForce_1 = 3
+	}
+}
+
+LLS_raiding_fleet_2 = {
+	required_taskforces = {
+		LLS_ConvoyRaiding_1 = 4
+	}	
+	optional_taskforces = {
+		LLS_ConvoyRaiding_1 = 2
+	}
+}
+
+LLS_escort_fleet_3 = {
+	required_taskforces = {
+		LLS_ConvoyEscort_1 = 2
+	}
+	optional_taskforces = {
+		LLS_ConvoyEscort_1 = 2
+	}
+}
+
+LLS_minelaying_fleet_4 = {
+	required_taskforces = {
+		LLS_MineLaying_1 = 1
+	}
+}

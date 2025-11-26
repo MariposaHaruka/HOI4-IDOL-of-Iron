@@ -1,0 +1,36 @@
+BDG_dominance_fleet_1 = {
+	required_taskforces = {
+		BDG_StrikeForce_1 = 1
+		BDG_PatrolDominanceForce_1 = 3
+		BDG_PatrolReconForce_1 = 3
+	}	
+	optional_taskforces = {
+		BDG_StrikeForce_1 = 1
+		BDG_PatrolReconForce_1 = 3
+		BDG_PatrolDominanceForce_1 = 3
+	}
+}
+
+BDG_raiding_fleet_2 = {
+	required_taskforces = {
+		BDG_ConvoyRaiding_1 = 4
+	}	
+	optional_taskforces = {
+		BDG_ConvoyRaiding_1 = 2
+	}
+}
+
+BDG_escort_fleet_3 = {
+	required_taskforces = {
+		BDG_ConvoyEscort_1 = 2
+	}
+	optional_taskforces = {
+		BDG_ConvoyEscort_1 = 2
+	}
+}
+
+BDG_minelaying_fleet_4 = {
+	required_taskforces = {
+		BDG_MineLaying_1 = 1
+	}
+}
