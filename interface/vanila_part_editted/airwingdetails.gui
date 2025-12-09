@@ -65,7 +65,7 @@ guiTypes = {
 				
 		editBoxType = {
 			name = "air_wing_name"
-			position = { x = 115 y = 40 }
+			position = { x = 115 y = 40 } # IOI 수정 - 폰트 수정시 다시 조정할 것
 			size = {x=267 y=20}
 			#textureFile = ""
 			font = "name_20b" # IOI 임시조치 - 폰트 수정시 지울 것
@@ -114,7 +114,7 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "equipment_ratio"
-			position = { x = 695 y = 10 }
+			position = { x = 695 y = 10 } # IOI 수정
 			font = "hoi_18mbs"
 			text = "Stuff"
 			maxWidth = 60
@@ -140,13 +140,13 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "base_stats"
-				position = { x=10 y=17 }	
+				position = { x=10 y=17 } # IOI 수정
 				size = { width=165 height=200 }
 				clipping = no
 				
 				instantTextboxType = {
 					name = "base_stats_label"
-					position = { x = 5 y = 17 }
+					position = { x = 5 y = 17 } # IOI 수정
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_BASE_STATS_LABEL"
 					maxWidth = 150
@@ -156,7 +156,7 @@ guiTypes = {
 				
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 5 y = 40 }
+					position = { x = 5 y = 40 } # IOI 수정
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -166,13 +166,13 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "combat_stats"
-				position = { x=179 y=17 }	
+				position = { x=179 y=17 } # IOI 수정
 				size = { width=165 height=200 }
 				clipping = no
 				
 				instantTextboxType = {
 					name = "combat_stats_label"
-					position = { x = 10 y = 17 }
+					position = { x = 10 y = 17 } # IOI 수정
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_COMBAT_STATS_LABEL"
 					maxWidth = 150
@@ -182,7 +182,7 @@ guiTypes = {
 				
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 8 y = 40 }
+					position = { x = 8 y = 40 } # IOI 수정
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -192,14 +192,14 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "misc_stats"
-				position = { x=354 y=17 }	
+				position = { x=354 y=17 } # IOI 수정
 				size = { width=165 height=200 }
 				Orientation = UPPER_LEFT				
 				clipping = no
 				
 				instantTextboxType = {
 					name = "misc_stats_label"
-					position = { x = 10 y = 17 }
+					position = { x = 10 y = 17 } # IOI 수정
 					font = "hoi4_typewriter22"
 					text = "FE_MISC_STATS"
 					maxWidth = 150
@@ -209,7 +209,7 @@ guiTypes = {
 				
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 7 y = 40 }
+					position = { x = 7 y = 40 } # IOI 수정
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
