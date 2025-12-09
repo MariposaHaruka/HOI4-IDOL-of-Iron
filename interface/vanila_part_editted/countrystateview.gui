@@ -23,13 +23,13 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "countrystateview"
-		position = { x = -416 y = -929 }
-		show_position = { x = -6 y = -929 }
+		position = { x = -416 y = -929 } # IOI 수정
+		show_position = { x = -6 y = -929 } # IOI 수정
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
 		orientation = lower_left
-		size = { width = 436 height = 976 }
+		size = { width = 436 height = 976 } # IOI 수정
 		
 		containerWindowType = {
 			name = "state_info_window"
@@ -45,7 +45,7 @@ guiTypes = {
 						
 			instantTextboxType = {
 				name = "state_name"
-				position = { x = 80 y = 8 }
+				position = { x = 80 y = 8 } # IOI 수정
 				textureFile = ""
 				font = "hoi_36header"
 				text = "STATE_NAME_TEST"
@@ -66,7 +66,7 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "shared_slot_count"
-				position = { x = 170 y = 135 }
+				position = { x = 170 y = 135 } # IOI 수정
 				textureFile = ""
 				font = "hoi_18mbs"
 				text = "SLOTS"
@@ -76,12 +76,35 @@ guiTypes = {
 				fixedsize = yes
 			}
 			
+			iconType ={
+				name ="energy_consumption_bg"
+				spriteType = "GFX_victorypoint_stateview_bg"
+				position = { x = 403 y = 129 }
+			}
+			
+			iconType = {
+				name = "energy_icon"
+				spriteType = "GFX_modifiers_energy"
+				position = { x = 418 y = 126 }
+			}
+			
+			instantTextboxType = {
+				name = "energy_text"
+				position = { x = 398 y = 136 } # IOI 수정
+				textureFile = ""
+				font = "hoi_16mbs"
+				text = ""
+				maxWidth = 30
+				maxHeight = 30
+				format = center
+			}
+			
 			gridBoxType = {
 				name = "state_shared_slot_building_entries"
-				position = { x = 155 y = 157 }
+				position = { x = 155 y = 157 } # IOI 수정
 				size = { width = 480 height = 90%% }
 				format = "UPPER_LEFT"
-				slotsize = { width = 60 height = 48 }
+				slotsize = { width = 60 height = 48 } # IOI 수정
 				max_slots_horizontal = 5
 				max_slots_vertical = 10
 			}
@@ -90,11 +113,11 @@ guiTypes = {
 				name ="victory_points_bg"
 				spriteType = "GFX_victorypoint_stateview_bg"
 				position = { x = 15 y = 15 }
-			}
+			} # IOI 수정
 			
 			instantTextboxType = {
 				name = "victory_points"
-				position = { x = -15 y = 20 }
+				position = { x = -15 y = 20 } # IOI 수정
 				textureFile = ""
 				font = "hoi_18mbs"
 				text = ""
@@ -105,7 +128,7 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "claims"
-				position = { x = 15 y = 106 }
+				position = { x = 15 y = 106 } # IOI 수정
 				textureFile = ""
 				font = "hoi_18mbs"
 				text = ""
@@ -117,7 +140,7 @@ guiTypes = {
 			
 			OverlappingElementsBoxType = {
 				name = "state_claims"
-				position = { x = 35 y = 120 }
+				position = { x = 35 y = 120 } # IOI 수정
 				size = { x = 110 y = 40 }
 				format = left
 				spacing = 1.0
@@ -125,7 +148,7 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "owner"
-				position = { x = 15 y = 48 }
+				position = { x = 15 y = 48 } # IOI 수정
 				textureFile = ""
 				font = "hoi_18mbs"
 				text = ""
@@ -156,13 +179,13 @@ guiTypes = {
 			buttonType = {
 				name = "controller_flag"
 				quadTextureSprite = "GFX_flag_small2"
-				position = { x= 75 y = 63 }
+				position = { x= 75 y = 63 } # IOI 수정
 			}	
 			
 			iconType ={
 				name ="controller_flag_border"
 				quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
-				position = { x= 70 y = 59 }
+				position = { x= 70 y = 59 } # IOI 수정
 				alwaystransparent = yes
 			}
 			
@@ -192,13 +215,13 @@ guiTypes = {
 			iconType ={
 				name ="population_icon"
 				spriteType = "GFX_population_icon"
-				position = { x = 20 y = 157 }
+				position = { x = 20 y = 157 } # IOI 수정
 				Orientation = "UPPER_LEFT"
 			}
 			
 			instantTextboxType = {
 				name = "manpower"
-				position = { x = 64 y = 171 }
+				position = { x = 64 y = 171 } # IOI 수정
 				textureFile = ""
 				font = "hoi_18mbs"
 				maxWidth = 80
@@ -281,19 +304,19 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "province_info_window"
-			position = { x = 20 y = 740 }
+			position = { x = 20 y = 740 } # IOI 수정
 			size = { width=480 height=29%% }
 			
 			iconType = {
 				name = "terrain_picture"
-				position = { x = 10 y= -27 }
+				position = { x = 10 y= -27 } # IOI 수정
 				spriteType = "GFX_terrain_default"
 				Orientation = "UPPER_LEFT"
 			}
 			
 			instantTextboxType = {
 				name = "province"
-				position = { x = 5 y= -48 }
+				position = { x = 5 y= -48 } # IOI 수정
 				font = "hoi_20b"
 				maxWidth = 300
 				maxHeight = 30
@@ -309,7 +332,7 @@ guiTypes = {
 
 			iconType = {
 				name = "building_modifiers_icon"
-				position = { x = 360 y = -100 }
+				position = { x = 360 y = -100 } # IOI 수정
 				spriteType = "GFX_buildings_strip"
 				Orientation = "UPPER_LEFT"
 				frame = 21
@@ -359,7 +382,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "state_modifiers"
 				text = "STATE_MODIFIERS"
-				position = { x = 34 y= -104 }
+				position = { x = 34 y= -104 } # IOI 수정
 				font = "hoi_16mbs"
 				maxWidth = 200
 				maxHeight = 30
@@ -368,7 +391,7 @@ guiTypes = {
 			
 			gridBoxType = {
 				name = "dynamic_modifiers_grid"
-				position = { x = 3 y = -58 }
+				position = { x = 3 y = -58 } # IOI 수정
 				size = { width = 0 height = 0 }
 				format = "LOWER_LEFT"
 				slotsize = { width = 33 height = 33 }
@@ -377,7 +400,7 @@ guiTypes = {
 			
 			gridBoxType = {
 				name = "strategic_locations_grid"
-				position = { x = -5 y = 10 }
+				position = { x = -5 y = 10 } # IOI 수정
 				size = { width = 0 height = 0 }
 				format = "LOWER_LEFT"
 				slotsize = { width = 33 height = 33 }
@@ -422,7 +445,7 @@ guiTypes = {
 			
 			gridBoxType = {
 				name = "province_building_entries"
-				position = { x = 0 y = 28 }
+				position = { x = 0 y = 28 } # IOI 수정
 				size = { width = 480 height = 90%% }
 				format = "UPPER_LEFT"
 				slotsize = { width = 61 height = 84 }
@@ -433,7 +456,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "close_button"
-			position = { x = -4 y = 12 }
+			position = { x = -4 y = 12 } # IOI 수정
 			quadTextureSprite ="GFX_closebutton_small"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
@@ -444,7 +467,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "scorched_earth_state_button"
-			position = { x = -17 y = 640 }
+			position = { x = -17 y = 640 } # IOI 수정
 			quadTextureSprite ="GFX_scorched_earth_state"
 			buttonFont = "Main_14_black"
 			Orientation = "UPPER_RIGHT"
@@ -506,7 +529,7 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "level"
-			position = { x = 3 y = 59 }
+			position = { x = 3 y = 59 } # IOI 수정
 			font = "hoi_20b"
 			maxWidth = 60
 			maxHeight = 20
@@ -530,7 +553,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "state_shared_slot_building_entry"
-		position = { x=0 y=0 }
+		position = { x=0 y=0 } # IOI 수정
 		size = { width=70 height= 70 }
 		clipping = no
 
@@ -587,7 +610,7 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "level"
-			position = { x = -17 y = 56 }
+			position = { x = -17 y = 56 } # IOI 수정
 			font = "hoi_20b"
 			maxWidth = 100
 			maxHeight = 100
@@ -611,8 +634,8 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "province_building_special_icon_entry"
-		position = { x = 1 y = 40 }
-		size = { width = 50 height= 43 }
+		position = { x = 1 y = 40 } # IOI 수정
+		size = { width = 50 height= 43 } # IOI 수정
 		clipping = no
 
 		background = {
@@ -648,13 +671,13 @@ guiTypes = {
 		
 		iconType = {
 			name = "resource"
-			position = { x=53 y=8 }	
+			position = { x=53 y=8 }	 # IOI 수정
 			spriteType = "GFX_resources_strip"
 		}
 		
 		instantTextboxType = {
 			name = "amount"
-			position = { x = 70 y = 11 }
+			position = { x = 70 y = 16 } # IOI 수정
 			font = "hoi_20b"
 			maxWidth = 37
 			maxHeight = 18
@@ -683,7 +706,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name ="progress_text"
-			position = { x = 4 y = 4 }
+			position = { x = 4 y = 4 } # IOI 수정
 			font = "hoi_18mbs"
 			text = "100%"
 			maxWidth = 80
@@ -733,9 +756,22 @@ guiTypes = {
 		
 		iconType = {
 			name = "flag"
-			position = { x = 25 y = 25 }
+			position = { x = 25 y = 25 } # IOI 수정
 			quadTextureSprite ="GFX_mapicon_unit_flag_stripe"
 			orientation = "UPPER_LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "province_view_strategic_location_entry"
+		size = { width = 40 height = 47 }
+		position = { x = 4 y = 2 }
+		clipping = no
+		
+		iconType = {
+			name = "icon"
+			quadTextureSprite ="GFX_idea_unknown"
+			scale = 0.8
 		}
 	}
 }

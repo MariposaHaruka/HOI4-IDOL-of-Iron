@@ -390,7 +390,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "count"
-			position = {x=122 y=9}
+			position = {x=122 y=9} # IOI 수정
 			font = "hoi_18mbs"
 			maxWidth = 450
 			maxHeight = 23
@@ -400,8 +400,8 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "unit_name"
-			position = {x=233 y=5}
-			font = "name_16mbs"
+			position = {x=233 y=5} # IOI 수정 - 폰트 변경시 추가수정할 것
+			font = "name_16mbs" # IOI 임시조치 - 폰트 수정시 지울 것
 			maxWidth = 120
 			maxHeight = 23
 			text = "Super Maga Wing 1"
@@ -467,8 +467,8 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "mission_state"
-			position = {x=233 y=21}
-			font = "name_16mbs"
+			position = {x=233 y=21} # IOI 수정 - 폰트 변경시 추가수정할 것
+			font = "name_16mbs" # IOI 임시조치 - 폰트 수정시 지울 것
 			maxWidth = 120
 			maxHeight = 23
 			text = "Standing by"
@@ -650,8 +650,8 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "unit_name"
-			position = {x=133 y=5}
-			font = "name_16mbs"
+			position = {x=133 y=5} # IOI 수정 - 폰트 변경시 추가수정할 것
+			font = "name_16mbs" # IOI 임시조치 - 폰트 수정시 지울 것
 			maxWidth = 200
 			maxHeight = 23
 			text = "Super Maga Wing 1"
@@ -669,8 +669,8 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "mission_state"
-			position = {x=133 y=21}
-			font = "name_16mbs"
+			position = {x=133 y=21} # IOI 수정 - 폰트 변경시 추가수정할 것
+			font = "name_16mbs" # IOI 임시조치 - 폰트 수정시 지울 것
 			maxWidth = 120
 			maxHeight = 23
 			text = "Standing by"
@@ -1772,7 +1772,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = {x=36 y=5}
-			font = "name_18mbs"
+			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
 			format = left
 			maxWidth = 140
 			alwaystransparent = yes
