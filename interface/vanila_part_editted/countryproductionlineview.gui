@@ -1073,16 +1073,16 @@ guiTypes = {
 			iconType = {
 				name ="MIO_icon"
 				spriteType = "GFX_industrial_manufacturer_icon"
-				position = { x= 7 y = 7 }
+				position = { x= 7 y = 7 } # IOI 수정
 				Orientation = "UPPER_LEFT"
 			}
 		
 			instantTextBoxType = {
 				name ="available_MIOs"
 				position = { x= 30 y = 8 }
-				font = "hoi_16mbs"
+				font = "hoi_16mbs" # IOI 수정
 				text = "999"
-				format = left
+				format = left # IOI 수정
 				maxWidth = 30
 				maxHeight = 24
 				fixedsize = yes
@@ -1271,7 +1271,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "equipments"
-			position = { x=0 y=112 }
+			position = { x=0 y=112 } # IOI 수정
 			size = { width=100%% height=100%% }
 			verticalScrollbar = "right_vertical_slider"
 			vertical_scroll_step = 41
@@ -1310,16 +1310,16 @@ guiTypes = {
 			iconType = {
 				name ="MIO_icon"
 				spriteType = "GFX_industrial_manufacturer_icon"
-				position = { x= 5 y = 3 }
+				position = { x= 5 y = 3 } # IOI 수정
 				Orientation = "UPPER_LEFT"
 			}
 		
 			instantTextBoxType = {
 				name ="available_MIOs"
-				position = { x= 40 y = 8 }
-				font = "hoi_16mbs"
+				position = { x= 40 y = 8 } # IOI 수정
+				font = "hoi_16mbs" # IOI 수정
 				text = "999"
-				format = left
+				format = left # IOI 수정
 				maxWidth = 30
 				maxHeight = 24
 				fixedsize = yes
@@ -1358,7 +1358,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "ship_filters"
 			position = { x = 12 y = 50 }
-			size = { width = 460 height = 64 }
+			size = { width = 460 height = 64 } # IOI 수정
 			margin = { top = 4 left = 4 bottom = 4 right = 4 }
 			clipping = no
 
@@ -1604,7 +1604,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "speed"
-			position = { x = 155 y = 30 }
+			position = { x = 155 y = 30 } # IOI 수정
 			textureFile = ""
 			font = "hoi_18mbs"
 			text = "--"
@@ -1742,7 +1742,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "factories_used_txt"
-			position = { x=@prod_nof_pos_x y=8 }
+			position = { x=@prod_nof_pos_x y=8 } # IOI 수정
 			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
 			text = ""
@@ -2079,7 +2079,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "factories_used_txt"
-			position = { x=@prod_nof_pos_x y=8 }
+			position = { x=@prod_nof_pos_x y=8 } # IOI 수정
 			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
 			text = ""
@@ -2299,7 +2299,7 @@ guiTypes = {
 			size = { width=100%% height=100%% }
 			verticalScrollbar = "right_vertical_slider"
 			smooth_scrolling = yes
-			margin = { top = 0 top=13 bottom = 12 left = 2}
+			margin = { top = 13 bottom = 12 left = 2} # IOI 수정 - 얘넨 왜 top을 둘이나 집어넣고 개판친거지
 
 			background = {
 				name = "Background"
@@ -2547,7 +2547,6 @@ guiTypes = {
 			position = { x=245 y=50 }
 			quadTextureSprite = "GFX_carrier_airwing_comp_button"
 			clicksound = click_default
-			pdx_tooltip = CARRIER_AIR_WING_COMPOSITION_TITLE
 		}
 
 		instantTextboxType = {
@@ -2589,7 +2588,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "speed"
-			position = { x = 157 y = 34 }
+			position = { x = 157 y = 34 } # IOI 수정
 			textureFile = ""
 			font = "hoi_18mbs"
 			text = "--"
@@ -2664,7 +2663,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "factories_used_txt"
-			position = { x=@prod_nof_pos_x y=7 }
+			position = { x=@prod_nof_pos_x y=7 } # IOI 수정
 			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
 			text = ""
@@ -2754,7 +2753,7 @@ guiTypes = {
 			name = "name_list_btn"
 			position = { x=315 y=81	 }
 			quadTextureSprite = "GFX_naval_name_list_button"
-			buttonFont = "name_16mbs"
+			buttonFont = "name_16mbs" # IOI 임시조치 - 폰트 수정시 지울 것
 			clicksound = click_default
 			buttontext = "HMS William Wallace"
 		}
@@ -3051,7 +3050,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "factories_used_txt"
-			position = { x=@prod_nof_pos_x y=7 }
+			position = { x=@prod_nof_pos_x y=7 } # IOI 수정
 			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
 			text = ""
@@ -3518,8 +3517,8 @@ guiTypes = {
 		iconType = {
 			name ="equipment_icon"
 			spriteType = "GFX_technology_medium"
-			position = { x=158 y=76 }
-			scale=0.8
+			position = { x=102 y=72 }
+			scale=1
 			centerposition = yes
 			alwaystransparent = yes
 		}
@@ -4335,7 +4334,7 @@ guiTypes = {
 		iconType = {
 			name = "prod_line_glow"
 			position = { x = 9 y = 7 }
-			spriteType = "GFX_new_equipment_glow"
+			spriteType = "GFX_new_equipment_glow_large"
 			alwaystransparent = yes
 		}
 
@@ -4408,7 +4407,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "name"
-			position = { x = 20 y = 4 }
+			position = { x = 20 y = 4 } # IOI 수정 - 폰트 수정시 추가 수정할 것
 			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
 			text = "Maus"
 			maxWidth = 308
@@ -4420,7 +4419,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "general_name"
-			position = { x = 20 y = 24 }
+			position = { x = 20 y = 24 } # IOI 수정
 			font = "hoi_16mbs"
 			text = "Perkele-tankki"
 			maxWidth = 308
@@ -4551,7 +4550,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "name"
-			position = { x = 28 y = 4}
+			position = { x = 28 y = 4 } # IOI 수정 - 폰트 수정시 추가 수정할 것
 			textureFile = ""
 			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
 			borderSize = {x = 0 y = 0}
@@ -4565,7 +4564,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "general_name"
-			position = { x = 30 y = 24 }
+			position = { x = 30 y = 24 } # IOI 수정
 			textureFile = ""
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}

@@ -83,8 +83,8 @@ guiTypes = {
 						spriteType = "GFX_tech_bonus"
 						frame = 4
 					}
-
-                    			instantTextBoxType = {
+					
+					instantTextBoxType = {
 						name = "bonus_text"
 						position = { x = -2 y = 0 }
 						textureFile = ""
@@ -115,7 +115,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "grand_doctrine_name"
 					orientation = center
-					position = { x=-194 y= 12}
+					position = { x=-194 y= 14} # IOI 수정
 					font = "hoi_24header"
 					maxWidth = 400
 					maxHeight = 30
