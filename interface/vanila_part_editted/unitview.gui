@@ -756,41 +756,18 @@ guiTypes = {
 		}
 	}
 
-	containerWindowType = {
-		name = "divisions_summary_item"
-		size = { width=31 height=27 }
+	OverlappingElementsBoxType = {
+		name = "divisions_summary"
+		position = { x=79 y=75 }
+		size = { x=192 y=27 }
+		spacing = 0
+	}
 
-		buttonType = { # Resized in code to avoid overlapping button area with its neighbors and to fill the container's full height.
-			name = "button"
-			quadTextureSprite = "GFX_tiled_window_transparent"
-			clicksound = click_default
-		}
-
-		iconType = {
-			name ="selection_marker"
-			spriteType = "GFX_army_badge_division_summary_item_selected"
-			position = { x=0 y=-1 }
-			orientation = center_down
-			centerposition = yes
-			alwaystransparent = yes
-		}
-
-		iconType = {
-			name ="icon"
-			position = { x=1 y=2 }
-			alwaystransparent = yes
-		}
-
-		instantTextBoxType = {
-			name = "count"
-			position = { x=0 y=11 }
-			maxWidth = 31
-			font = "hoi_16mbs"
-			format = center
-			fixedsize = yes
-			truncate = no
-			alwaystransparent = yes
-		}
+	positionType = {
+		name = "divisions_summary_max_item_count"
+		 # x is used to set the max number of items that will be displayed in the divisions_summary. Any items
+		 # beyond that are not displayed.
+		position = { x=11 y=0 }
 	}
 
 	containerWindowType = {
@@ -827,13 +804,13 @@ guiTypes = {
 
 			dropDownBoxType = {
 				name = "divisions"
-				position = { x = 37 y = 9 }
-				size = { width = 200 height = 30 }
+			position = { x = 16 y = 40 }
+			size = { width = 200 height = 30 }
 				#clipping = no
 
 				expandButton = {
 					name = "expand_button"
-					position = { x = 0 y = -2 }
+				position = { x = 2 y = -5 }
 					spriteType = "GFX_change_template_button"
 					clicksound = click_default
 				}
@@ -845,7 +822,7 @@ guiTypes = {
 					show_animation_type = decelerated
 					hide_animation_type = accelerated
 					animation_time = 300
-					size = { width=219 height=270 }
+					size = { width=219 height=300 }
 					verticalScrollbar = "right_vertical_slider"
 					scroll_wheel_factor = 50
 					smooth_scrolling = yes
@@ -1680,7 +1657,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "archetype_name"
-			position = { x = 10 y = 5 }
+			position = { x = 10 y = 7 }
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
@@ -1692,7 +1669,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "archetype_amount"
-			position = { x = 190 y = 5 }
+			position = { x = 190 y = 7 }
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
@@ -1702,21 +1679,18 @@ guiTypes = {
 		}
 	}
 
-	containerWindowType =
-	{
+	containerWindowType = {
 		name = "stat_equipment_entry"
 		position = { x = 0 y = 0 }
 		size = { width = 270 height = 50 }
 
-		iconType =
-		{
+		iconType = {
 			name ="equipment_variant_bg"
 			spriteType = "GFX_transparent_equipment_bg"
 			position = { x= 0 y = 0 }
 		}
 
-		iconType =
-		{
+		iconType = {
 			name ="equipment_icon"
 			spriteType = "GFX_equipment_item"
 			position = { x= 50 y = 30 }
@@ -1735,7 +1709,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "equipment_name"
-			position = { x =104 y = -3 }
+			position = { x =104 y = 0 } # IOI 수정 - 폰트 수정시 추가 수정할 것
 			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
 			borderSize = {x = 0 y = 0}
 			text = ""
@@ -1747,7 +1721,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "equipment_amount"
-			position = { x = 178 y = 0 }
+			position = { x = 170 y = 0 }
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
@@ -1918,15 +1892,14 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "experience"
-			position = { x = 385 y = 41 }
+			position = { x = 400 y = 45 } # IOI 수정
 			font = "hoi_18mbs"
 			text = ""
 			maxWidth = 150
 			maxHeight = 20
 		}
 
-		containerWindowType =
-		{
+		containerWindowType = {
 			name = "commanding_officer_header_list_entry"
 			position = { x = 562 y = 34 }
 			size = { width = 270 height = 30 }
@@ -1940,7 +1913,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "commanding_officer_title_text"
-			position = { x = 574 y = 39 }
+			position = { x = 574 y = 42 } # IOI 수정
 			font = "hoi_18mbs"
 			text = "COMMANDER_TITLE_TEXT_DIVISION"
 			maxWidth = 340
@@ -2073,8 +2046,8 @@ guiTypes = {
 
 			iconType = {
 				name = "unit_template_tab_bg"
-				quadTextureSprite ="GFX_unit_stats_template_tab_bg_mod"
-				position = { x= -109 y = -1 }
+				quadTextureSprite ="GFX_unit_stats_template_tab_bg_mod" # IOI 수정
+				position = { x= -109 y = -1 } # IOI 수정
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}
@@ -2087,7 +2060,7 @@ guiTypes = {
 
 			instantTextboxType = {
 				name = "combat_header_label"
-				position = { x = 100 y = 47 }
+				position = { x = 100 y = 50 } # IOI 수정
 				font = "hoi_18mbs"
 				text = "COMBAT_HEADER"
 				maxWidth = 372
@@ -2098,7 +2071,7 @@ guiTypes = {
 
 			instantTextboxType = {
 				name = "support_header_label"
-				position = { x = 0 y = 47 }
+				position = { x = 0 y = 50 } # IOI 수정
 				font = "hoi_18mbs"
 				text = "SUPPORT_HEADER"
 				maxWidth = 110
@@ -2109,7 +2082,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "support_grid"
-				position = { x = -82 y = 78 }
+				position = { x = -82 y = 78 } # IOI 수정
 				size = { width = 85 height = 100%% }
 				slotsize = { width = 82 height = 51 }
 				format = "UPPER_LEFT"
@@ -2117,7 +2090,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "regiments_grid"
-				position = { x = 99 y = 78 }
+				position = { x = 99 y = 78 } # IOI 수정
 				size = { width = 445 height = 100%% }
 				slotsize = { width = 82 height = 51 }
 				format = "UPPER_LEFT"
@@ -2138,7 +2111,7 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "base_stats_label"
-					position = { x = 5 y = 17 }
+					position = { x = 5 y = 17 } # IOI 수정
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_BASE_STATS_LABEL"
 					maxWidth = 180
@@ -2148,7 +2121,7 @@ guiTypes = {
 
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 5 y = 40 }
+					position = { x = 5 y = 40 } # IOI 수정
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -2164,7 +2137,7 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "combat_stats_label"
-					position = { x = 10 y = 17 }
+					position = { x = 10 y = 17 } # IOI 수정
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_COMBAT_STATS_LABEL"
 					maxWidth = 165
@@ -2174,7 +2147,7 @@ guiTypes = {
 
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 10 y = 40 }
+					position = { x = 10 y = 40 } # IOI 수정
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -2191,7 +2164,7 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "misc_stats_label"
-					position = { x = 10 y = 17 }
+					position = { x = 10 y = 17 } # IOI 수정
 					font = "hoi4_typewriter22"
 					text = "FE_MISC_STATS"
 					maxWidth = 165
@@ -2201,7 +2174,7 @@ guiTypes = {
 
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 7 y = 40 }
+					position = { x = 7 y = 40 } # IOI 수정
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -2277,7 +2250,7 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "base_medals_label"
-					position = { x = 14 y = 59 }
+					position = { x = 14 y = 62 }
 					font = "hoi_18mbs"
 					text = "INSTANCED_MEDALS"
 					maxWidth = 100
@@ -2374,7 +2347,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "current_manpower"
-			position = { x = 643 y = 8 }
+			position = { x = 643 y = 12 } # IOI 수정
 			font = "hoi_18mbs"
 			text = "Stuff"
 			maxWidth = 60
@@ -2390,7 +2363,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "equipment_ratio"
-			position = { x = 768 y = 8 }
+			position = { x = 773 y = 12 } # IOI 수정
 			font = "hoi_18mbs"
 			text = "Stuff"
 			maxWidth = 60
@@ -2437,7 +2410,7 @@ guiTypes = {
 
 			expandButton = {
 				name = "expand_button"
-				position = { x = 2 y = -5 }
+				position = { x = 2 y = -2 }
 				spriteType = "GFX_unitlist_unitinfo_button"
 				clicksound = click_default
 			}
@@ -2503,14 +2476,14 @@ guiTypes = {
 
 			editBoxType = {
 				name = "editbox"
-				position = { x = 6 y = 5 }
+				position = { x = 6 y = 6 }
 				font = "name_16mbs" # IOI 임시조치 - 폰트 수정시 지울 것
-				size = { x=242 y=30 }
+				size = { x=248 y=30 } # IOI 수정
 			}
 
 			expandButton = {
 				name = "expand_button"
-				position = { x = -26 y = 4 }
+				position = { x = -19 y = 6 }
 				quadTextureSprite ="GFX_expand_button"
 				buttonFont = "Main_14_black"
 				Orientation = "UPPER_RIGHT"
@@ -2524,7 +2497,7 @@ guiTypes = {
 				show_animation_type = decelerated
 				hide_animation_type = accelerated
 				animation_time = 300
-				size = { width=250 height=300 }
+				size = { width=276 height=300 }
 				verticalScrollbar = "right_vertical_slider"
 				scroll_wheel_factor = 45
 				smooth_scrolling = yes
@@ -2539,8 +2512,8 @@ guiTypes = {
 				gridBoxType = {
 					name = "grid"
 					position = { x = 8 y = 0 }
-					size = { width = 250 height = 286 }
-					slotsize = { width = 250 height = 30 }
+					size = { width = 280 height = 286 }
+					slotsize = { width = 280 height = 30 }
 					max_slots_horizontal = 1
 					format = "UPPER_LEFT"
 				}
@@ -2550,7 +2523,7 @@ guiTypes = {
 					position = { x = 10 y = 130 }
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y = 0}
-					maxWidth = 210
+					maxWidth = 280
 					maxHeight = 60
 					format = center
 					text = "DEPLOYMENT_LINE_OUT_OF_NAMES"
@@ -2710,7 +2683,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "experience"
-			position = { x = 385 y = 41 }
+			position = { x = 400 y = 45 }
 			font = "hoi_18mbs"
 			text = ""
 			maxWidth = 150
@@ -2720,7 +2693,44 @@ guiTypes = {
 		iconType = {
 			name = "unit_level"
 			spriteType = "GFX_unit_level"
-			position = { x = 496 y = 38 }
+			position = { x = 500 y = 40 }
+		}
+		
+		iconType = {
+			name = "dominance_icon"
+			position = {x=20 y=330}
+			spriteType = "GFX_naval_dominance_texticon"
+		}
+
+		instantTextboxType = {
+			name = "dominance_value"
+			position = { x = 60 y = 335 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "0"
+			maxWidth = 300
+			maxHeight = 20
+			format = left
+		}
+		
+		iconType = {
+			name = "support_icon"
+			position = {x=20 y=300}
+			spriteType = "GFX_naval_dominance_support_strip"
+			frame = 2
+		}
+
+		instantTextboxType = {
+			name = "support_value"
+			position = { x = 50 y = 301 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "0"
+			maxWidth = 300
+			maxHeight = 20
+			format = left
 		}
 
 		iconType = {
@@ -2731,12 +2741,12 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "current_manpower"
-			position = { x = 50 y = 369 }
+			position = { x = 60 y = 372 } # IOI 수정
 			font = "hoi_18mbs"
 			text = "Stuff"
-			maxWidth = 60
+			maxWidth = 300
 			maxHeight = 20
-			format = center
+			format = left # IOI 수정
 		}
 
 		containerWindowType = {
@@ -2794,13 +2804,13 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "base_stats"
-				position = { x=10 y=17 }
+				position = { x=10 y=17 } # IOI 수정
 				size = { width=165 height=200 }
 				clipping = no
 
 				instantTextboxType = {
 					name = "base_stats_label"
-					position = { x = 5 y = 17 }
+					position = { x = 5 y = 17 } # IOI 수정
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_BASE_STATS_LABEL"
 					maxWidth = 170
@@ -2810,7 +2820,7 @@ guiTypes = {
 
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 5 y = 40 }
+					position = { x = 5 y = 40 } # IOI 수정
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -2820,13 +2830,13 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "combat_stats"
-				position = { x=179 y=17 }
+				position = { x=179 y=17 } # IOI 수정
 				size = { width=165 height=200 }
 				clipping = no
 
 				instantTextboxType = {
 					name = "combat_stats_label"
-					position = { x = 10 y = 17 }
+					position = { x = 10 y = 17 } # IOI 수정
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_COMBAT_STATS_LABEL"
 					maxWidth = 170
@@ -2836,7 +2846,7 @@ guiTypes = {
 
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 8 y = 40 }
+					position = { x = 8 y = 40 } # IOI 수정
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -2846,14 +2856,14 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "misc_stats"
-				position = { x=354 y=17 }
+				position = { x=354 y=17 } # IOI 수정
 				size = { width=165 height=200 }
 				Orientation = UPPER_LEFT
 				clipping = no
 
 				instantTextboxType = {
 					name = "misc_stats_label"
-					position = { x = 10 y = 17 }
+					position = { x = 10 y = 17 } # IOI 수정
 					font = "hoi4_typewriter22"
 					text = "FE_MISC_STATS"
 					maxWidth = 150
@@ -2863,7 +2873,7 @@ guiTypes = {
 
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 7 y = 40 }
+					position = { x = 7 y = 40 } # IOI 수정
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -2891,7 +2901,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "air_wings"
-			position = { x=547 y=2}
+			position = { x=547 y=2} # IOI 수정
 			size = { width=300 height=100%% }
 			margin = { bottom = 8 }
 			clipping = no
@@ -2903,7 +2913,7 @@ guiTypes = {
 
 			instantTextboxType = {
 				name = "title"
-				position = { x = 15 y = 7 }
+				position = { x = 15 y = 10 } # IOI 수정
 				textureFile = ""
 				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
@@ -2978,7 +2988,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "count"
-			position = {x=80 y=24}
+			position = {x=80 y=24} # IOI 수정
 			font = "hoi_18mbs"
 			maxWidth = 100
 			maxHeight = 23
@@ -2988,7 +2998,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "name"
-			position = {x=80 y=8}
+			position = {x=80 y=8} # IOI 수정
 			font = "hoi_18mbs"
 			maxWidth = 185
 			maxHeight = 23
