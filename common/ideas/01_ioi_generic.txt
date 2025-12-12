@@ -513,6 +513,19 @@ ideas = {
 			}
 		}
 
+		integration_efforts = {
+			picture = generic_deal_with_the_devil
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				political_power_cost = 0.25
+				conscription_factor = -0.3
+				command_power_gain_mult = -0.2
+			}
+		}
+
 		# 컨텐츠 없음
 		no_content_country = {
 			picture = generic_agrarian_society
@@ -1721,6 +1734,94 @@ ideas = {
 				tag = STR
 				
 				river_crossing_factor_against = -0.25
+			}
+		}
+
+		# PEARL HARBOR IDEAS
+		LLS_day_of_infamy_1 = {
+			name = JAP_day_of_infamy
+			picture = generic_japanese_conflict
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			on_remove = {
+			}
+
+			modifier = {
+				repair_speed_factor = -0.05
+				navy_anti_air_attack_factor = -0.1
+			}
+
+			targeted_modifier = {
+				tag = LLS
+				spotting_chance_against = -0.1
+				navy_capital_ship_attack_factor_against = -0.1	
+			}
+		}
+
+		LLS_day_of_infamy_2 = {
+			name = JAP_day_of_infamy
+			picture = generic_japanese_conflict
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			on_remove = {
+			}
+
+			modifier = {
+				repair_speed_factor = -0.1
+				navy_anti_air_attack_factor = -0.2
+			}
+
+			targeted_modifier = {
+				tag = LLS
+				spotting_chance_against = -0.25
+				navy_capital_ship_attack_factor_against = -0.25		
+			}
+		}
+
+		LLS_day_of_infamy_3 = {
+			name = JAP_day_of_infamy
+			picture = generic_japanese_conflict
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			on_remove = {
+			}
+
+			modifier = {
+				repair_speed_factor = -0.15
+				navy_anti_air_attack_factor = -0.25
+			}
+
+			targeted_modifier = {
+				tag = LLS
+				spotting_chance_against = -0.4
+				navy_capital_ship_attack_factor_against = -0.4		
 			}
 		}
 	}

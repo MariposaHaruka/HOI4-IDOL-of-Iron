@@ -1,3 +1,5 @@
+#!gfx:interface\focus.gfx
+#!gfx:interface\generic_focus.gfx
 @inner_circle_time_tier_1 = 20
 @inner_circle_time_tier_2 = 20
 @inner_circle_time_tier_3 = 40
@@ -3484,13 +3486,46 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 25
-			add_doctrine_cost_reduction = {
-				name = PRS_auftragstaktik
-				cost_reduction = 0.25
+			add_tech_bonus = {
+				name = PRS_21304
+				#ahead_reduction = 1
+				bonus = 1
 				uses = 1
-				category = land_doctrine
+				category = cat_medium_armor
 			}
 			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = PRS_army_tt
+			add_to_variable = { 
+				PRS_army_coordination_bonus = 0.05
+				tooltip = coordination_bonus_tt
+			}
+			add_to_variable = { 
+				PRS_army_armor_speed_factor = 0.05
+				tooltip = army_armor_speed_factor_tt
+			}
+			add_to_variable = { 
+				PRS_army_armor_attack_factor = 0.05
+				tooltip = army_armor_attack_factor_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			if = {
+				limit = { has_AAT = no }
+				if = {
+					limit = { has_idea = PRS_MAN }
+					swap_ideas = {
+						remove_idea = PRS_MAN
+						add_idea = PRS_MAN_improved
+					}
+				}
+				else = {
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = PRS_MAN
+							add_idea = GER_MAN_improved
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -3684,7 +3719,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_line_break_tt
 
-			PRS_modify_army_modifier = yes			
+			custom_effect_tooltip = PRS_army_tt			
 			add_to_variable = { 
 				PRS_military_org_loss_when_moving = -0.1
 				tooltip = org_loss_when_moving_tt
@@ -4105,7 +4140,7 @@ focus_tree = {
 				}
 			}
 
-			PRS_modify_army_modifier = yes
+			custom_effect_tooltip = PRS_army_tt
 			add_to_variable = { 
 				PRS_military_acclimatization_hot_climate_gain_factor = 0.1
 				tooltip = acclimatization_hot_climate_gain_factor_tt
@@ -4132,7 +4167,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			PRS_modify_army_modifier = yes
+			custom_effect_tooltip = PRS_army_tt
 			add_to_variable = { 
 				PRS_military_special_forces_cap = 0.05
 				tooltip = special_forces_cap_tt
@@ -4429,7 +4464,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_line_break_tt
 
-			PRS_modify_army_modifier = yes
+			custom_effect_tooltip = PRS_army_tt
 			add_to_variable = { 
 				PRS_military_equipment_capture = 0.05
 				tooltip = equipment_capture_tt
@@ -4494,7 +4529,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			PRS_modify_army_modifier = yes
+			custom_effect_tooltip = PRS_army_tt
 			add_to_variable = { 
 				PRS_military_air_superiority_bonus_in_combat = 0.1
 				tooltip = air_superiority_bonus_in_combat_tt
@@ -5368,7 +5403,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_line_break_tt
 
-			GER_modify_navy_modifier = yes
+			custom_effect_tooltip = PRS_navy_tt
 			add_to_variable = { 
 				GER_military_naval_defense_factor = 0.05
 				tooltip = naval_defense_factor_tt
@@ -5668,7 +5703,7 @@ focus_tree = {
 		completion_reward = {
 			add_command_power = 25
 			custom_effect_tooltip = generic_line_break_tt
-			#GER_modify_navy_modifier = yes
+			#custom_effect_tooltip = PRS_navy_tt
 			#add_to_variable = { 
 			#	GER_military_navy_max_range_factor = 0.1
 			#	tooltip = navy_max_range_factor_tt
@@ -5981,7 +6016,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_23016"
-			#GER_modify_navy_modifier = yes
+			#custom_effect_tooltip = PRS_navy_tt
 			#add_to_variable = { 
 			#	GER_military_navy_max_range_factor = 0.1
 			#	tooltip = navy_max_range_factor_tt
@@ -6243,7 +6278,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			#GER_modify_navy_modifier = yes
+			#custom_effect_tooltip = PRS_navy_tt
 			#add_to_variable = { 
 			#	GER_military_naval_defense_factor = 0.05
 			#	tooltip = naval_defense_factor_tt
@@ -6427,7 +6462,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_line_break_tt
 			#GER_modify_army_modifier = yes
-			#add_to_variable = { GER_military_land_doctrine_cost_factor = -0.15 tooltip = land_doctrine_cost_factor_tt }
+			#add_to_variable = { GER_military_land_mastery_gain_factor = -0.15 tooltip = land_mastery_gain_factor_tt }
 		}
 	}
 

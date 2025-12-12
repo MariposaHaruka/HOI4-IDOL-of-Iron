@@ -1,3 +1,5 @@
+#!gfx:interface\focus.gfx
+#!gfx:interface\generic_focus.gfx
 focus_tree = {
 	id = IMA_focus
 	country = {
@@ -4289,8 +4291,8 @@ focus_tree = {
 				tooltip = experience_gain_navy_factor_tt 
 			}
 			add_to_variable = {
-				IMA_navy_naval_doctrine_cost_factor = -0.1
-				tooltip = naval_doctrine_cost_factor_tt
+				IMA_navy_naval_mastery_gain_factor = -0.1
+				tooltip = naval_mastery_gain_factor_tt
 			}
 			
 		}
@@ -4909,8 +4911,8 @@ focus_tree = {
 				tooltip = build_cost_ic_submarine_tt
 			}
 			add_to_variable = {
-				IMA_navy_naval_doctrine_cost_factor = -0.1
-				tooltip = naval_doctrine_cost_factor_tt
+				IMA_navy_naval_mastery_gain_factor = -0.1
+				tooltip = naval_mastery_gain_factor_tt
 			}
 			add_to_variable = {
 				IMA_navy_experience_gain_navy_factor = 0.1
@@ -6503,7 +6505,7 @@ focus_tree = {
 
 	focus = {
 		id = IMA_51002f #후타미 아미 수상
-		icon = GFX_focus_IMA_51002a
+		icon = GFX_focus_IMA_51002f
 		cost = 0
 
 		relative_position_id = IMA_51001

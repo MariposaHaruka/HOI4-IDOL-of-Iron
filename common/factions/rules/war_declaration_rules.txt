@@ -1,4 +1,3 @@
-
 war_declaration_rule_any_country = {
 	type = war_declaration_rules
 	ai_will_do = {
@@ -48,6 +47,16 @@ war_declaration_rule_major_only = {
 	modifier = {
 		war_support_factor = -0.05
 		stability_factor = -0.05
+	}
+}
+
+war_declaration_rule_blocked = {
+	type = war_declaration_rules
+	trigger = {
+		always = no
+	}
+	can_remove = {
+		always = no
 	}
 }
 
@@ -134,7 +143,7 @@ generate_wargoal_threat_reduction_20 = {
 		base = 0
 		modifier = {
 			add = 1
-			has_government = neutrality 
+			is_neutrality = yes
 		}
 	}
 	modifier = {
@@ -151,7 +160,7 @@ generate_wargoal_threat_reduction_40 = {
 		base = 0
 		modifier = {
 			add = 1
-			has_government = neutrality 
+			is_neutrality = yes 
 			is_historical_focus_on = no # Don't do this on historical, it might upset too much 
 		}
 	}

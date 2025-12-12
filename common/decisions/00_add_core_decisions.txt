@@ -1,0 +1,92 @@
+add_core_category = {
+	add_core_claim_state = {
+		icon = eng_trade_unions_support	
+		cost = 0
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		ai_will_do = {
+			base = 10
+		}
+		
+		available = {
+			ROOT = { 
+				NOT = { has_idea = integration_efforts }
+			}
+			FROM = { 
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+				is_claimed_by = ROOT
+				compliance > 79
+			}
+		}
+        visible = {
+			FROM = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+				is_claimed_by = ROOT
+				compliance > 59
+			}
+        }
+
+		complete_effect = {
+			FROM = { add_core_of = ROOT }
+			ROOT = {
+				add_timed_idea = {
+					idea = integration_efforts
+					days = 120
+				}
+			}
+		}
+	}
+	add_core_democratic_action = {
+		icon = eng_trade_unions_support	
+		cost = 50
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					has_stability > 0.8
+					conservatism > 0.8
+					liberalism_mod > 0.8
+					progressivism > 0.8
+					socialdemocracy > 0.8
+				}
+			}
+		}
+		
+		available = {
+			ROOT = { 
+				is_democratic = yes 
+				NOT = { has_idea = integration_efforts }
+			}
+			FROM = { 
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+				compliance > 79
+			}
+		}
+        visible = {
+			ROOT = { is_democratic = yes }
+			FROM = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+				compliance > 59
+			}
+        }
+		days_remove = 30
+
+		complete_effect = {
+			FROM = { add_core_of = ROOT }
+			ROOT = {
+				add_timed_idea = {
+					idea = integration_efforts
+					days = 120
+				}
+			}
+		}
+	}
+}
+

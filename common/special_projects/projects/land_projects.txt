@@ -37,7 +37,7 @@ sp_land_flamethrower_tank = {
 	complexity = sp_complexity.small
 	
 	project_output = {
-		country_effects = {
+		country_effects = { # IOI 수정
 			hidden_effect = { #Update tooltip in Italian focus if anything changes here!!! (maybe change focus effects too if Italy starts with Flamethrower Tank)
 				#if = {
 				#	limit = {
@@ -1235,7 +1235,7 @@ sp_land_super_heavy_railway_gun = {
 		country_effects = {
 			if = {
 				limit = {
-					original_tag = PRS
+					original_tag = PRS # IOI 수정
 				}
 				create_railway_gun = {
 					equipment = super_heavy_railway_gun_equipment_1

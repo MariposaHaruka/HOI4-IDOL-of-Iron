@@ -1,6 +1,36 @@
 ideas = {
 	hidden_ideas = {
+		IMA_army_start_setting = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				capital_ship = { build_cost_ic = 0.15 }
+				carrier = { build_cost_ic = 0.15 }
+				screen_ship = { build_cost_ic = 0.15 }
+				submarine = { build_cost_ic = 0.15 }
+			}
+		}
 		IMA_navy_start_setting = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				capital_ship = { build_cost_ic = 0.15 }
+				carrier = { build_cost_ic = 0.15 }
+				screen_ship = { build_cost_ic = 0.15 }
+				submarine = { build_cost_ic = 0.15 }
+			}
+		}
+		IMA_air_force_start_setting = {
 			allowed = {
 				original_tag = IMA
 			}

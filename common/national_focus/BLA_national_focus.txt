@@ -1,3 +1,5 @@
+#!gfx:interface\focus.gfx
+#!gfx:interface\generic_focus.gfx
 focus_tree = {
 	id = BLA_focus
 	country = {
@@ -316,8 +318,8 @@ focus_tree = {
 				tooltip = army_leader_cost_factor_tt
 			}
 			add_to_variable = {
-				BLA_army_land_doctrine_cost_factor = -0.10
-				tooltip = land_doctrine_cost_factor_tt
+				BLA_army_land_mastery_gain_factor = -0.10
+				tooltip = land_mastery_gain_factor_tt
 			}
 			add_to_variable = {
 				BLA_army_promote_cost_factor = -0.1
@@ -404,8 +406,8 @@ focus_tree = {
 			}
 			custom_effect_tooltip = BLA_air_force_tt
 			add_to_variable = { 
-				BLA_air_force_air_doctrine_cost_factor = -0.1
-				tooltip = air_doctrine_cost_factor_tt
+				BLA_air_force_air_mastery_gain_factor = -0.1
+				tooltip = air_mastery_gain_factor_tt
 			}
 			add_to_variable = { 
 				BLA_air_force_air_ace_generation_chance_factor = 0.1
@@ -433,8 +435,8 @@ focus_tree = {
 			air_experience = 50
 			custom_effect_tooltip = BLA_air_force_tt
 			add_to_variable = { 
-				BLA_air_force_air_doctrine_cost_factor = -0.1
-				tooltip = air_doctrine_cost_factor_tt
+				BLA_air_force_air_mastery_gain_factor = -0.1
+				tooltip = air_mastery_gain_factor_tt
 			}
 		}
 	}
@@ -872,8 +874,8 @@ focus_tree = {
 			}
 			custom_effect_tooltip = BLA_air_force_tt
 			add_to_variable = { 
-				BLA_air_force_air_doctrine_cost_factor = -0.1
-				tooltip = air_doctrine_cost_factor_tt
+				BLA_air_force_air_mastery_gain_factor = -0.1
+				tooltip = air_mastery_gain_factor_tt
 			}
 			add_to_variable = { 
 				BLA_air_force_experience_gain_air_factor = 0.1
@@ -1127,8 +1129,8 @@ focus_tree = {
 			}
 			custom_effect_tooltip = BLA_air_force_tt
 			add_to_variable = { 
-				BLA_air_force_air_doctrine_cost_factor = -0.1
-				tooltip = air_doctrine_cost_factor_tt
+				BLA_air_force_air_mastery_gain_factor = -0.1
+				tooltip = air_mastery_gain_factor_tt
 			}
 			add_to_variable = { 
 				BLA_air_force_air_ace_generation_chance_factor = 0.1
@@ -1608,8 +1610,8 @@ focus_tree = {
 			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = BLA_navy_tt
 			add_to_variable = { 
-				BLA_navy_naval_doctrine_cost_factor = -0.1
-				tooltip = naval_doctrine_cost_factor_tt
+				BLA_navy_naval_mastery_gain_factor = -0.1
+				tooltip = naval_mastery_gain_factor_tt
 			}
 			custom_effect_tooltip = BLA_bad_administrative_tt
 			add_to_variable = {
@@ -5422,6 +5424,7 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		available = { has_country_flag = BLA_USKflag }
+		prerequisite = { focus = BLA_31215 focus = BLA_31216 focus = BLA_31227 focus = BLA_31228 focus = BLA_31232 focus = BLA_32012 focus = BLA_32016 focus = BLA_32017 focus = BLA_32018 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_40001"
@@ -6577,14 +6580,42 @@ focus_tree = {
 		prerequisite = { focus = BLA_SHA_11001 }
 		mutually_exclusive = { focus = BLA_SHA_11003 }
 
-		ai_will_do = { factor = 50 }
-		available = { 
-			custom_trigger_tooltip = {
-				BLA_shanhaijing_participate = yes
-				tooltip = BLA_shanhaijing_participate_tt
+		ai_will_do = { factor = 50 }		
+		available = {
+			OR = {
+				if = {
+					limit = { has_country_flag = BLA_shanhaijing_not_integrated }
+					if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+						limit = { has_country_flag = BLA_sunohara_shun_in_progress_1_flag }
+						set_temp_variable = { temp_focus_days = 20 } #For tooltip purposes
+						multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+						custom_override_tooltip = {
+							tooltip = {
+								localization_key = BLA_school_focus_in_progress_tt
+								CHARACTER = BLA_sunohara_shun 
+								FLAG_DAYS = [?BLA_sunohara_shun_in_progress_1_flag:days]
+							}
+							always = no 
+						}
+					}
+					else = { #NOT BEEN WORKED ON (Just Explain)
+						custom_override_tooltip = {
+							tooltip = {
+								localization_key = BLA_focus_can_only_be_completed_by_SHA_maehwawon_tt
+								CHARACTER = BLA_sunohara_shun
+								FOCUS = BLA_SHA_11001
+							}
+							always = no
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					NOT = { has_country_flag = BLA_shanhaijing_not_integrated }
+					tooltip = BLA_shanhaijing_integrate_tt
+				}
 			}
 		}
-		
+
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -7228,7 +7259,7 @@ focus_tree = {
 			}
 			986 = {	
 				add_building_construction = {
-					type = dam
+					type = dam_mountain
 					level = 1
 					instant_build = yes
 					province = {
@@ -7236,7 +7267,7 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = {
-					localization_key = building_state_modifier|dam
+					localization_key = building_state_modifier|dam_mountain
 					INDENT = "    "
 				}
 			}
@@ -7249,6 +7280,11 @@ focus_tree = {
 				every_state = {
 					limit = { has_state_flag = BLA_redwinter_state_flag }
 					BLA_agriculture_society_relieve = yes
+				}
+				add_resource = {
+					type = coal
+					amount = 350
+					state = 986
 				}
 			}
 		}

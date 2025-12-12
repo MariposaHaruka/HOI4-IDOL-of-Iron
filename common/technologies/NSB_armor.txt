@@ -190,7 +190,7 @@ technologies = {
 					load_oob = "unlock_tanks"
 				}
 
-				#if = { #Italian templates
+				#if = { #Italian templates # IOI 임시조치
 				#	limit = {
 				#		original_tag = ENS
 				#		has_completed_focus = ENS_italian_tankettes
@@ -282,25 +282,25 @@ technologies = {
 				is_major = yes
 				NOT = {
 					AND = {
-						tag = LLS
+						tag = LLS # IOI 수정
 						num_of_military_factories < 50
 					}
 				}
 			}
 			modifier = {
 				is_major = yes
-				not = { tag = LLS }
+				not = { tag = LLS } # IOI 수정
 				has_war = yes
 				factor = 10 #you are embarassing yourself
 			}
 			modifier = {
-				tag = TOH
+				tag = TOH # IOI 수정
 				factor = 3
 			}
 			modifier = {
 				factor = 3
 				# Matilda II was designed and entered production in 1937
-				tag = IMA
+				tag = IMA # IOI 수정
 				date > "1936.9.1"
 			}
 
@@ -320,7 +320,7 @@ technologies = {
 			}
 		}
 
-		on_research_complete = {
+		on_research_complete = { # IOI 임시조치
 			#if = { #Italian templates
 			#	limit = {
 			#		original_tag = ENS
@@ -396,13 +396,13 @@ technologies = {
 				factor = 2
 				is_major = yes
 				NOT = {
-					TAG = PRS
+					tag = PRS # IOI 수정
 				}
 			}
 			modifier = {
 				OR = {
-					original_tag = ICG
-					original_tag = LLS
+					original_tag = ICG # IOI 수정
+					original_tag = LLS # IOI 수정
 				}
 				factor = 2
 			}
@@ -464,8 +464,8 @@ technologies = {
 			}
 			modifier = {
 				OR = {
-					original_tag = ICG
-					original_tag = LLS
+					original_tag = ICG # IOI 수정
+					original_tag = LLS # IOI 수정
 				}
 				factor = 2
 			}
@@ -597,14 +597,14 @@ technologies = {
 				is_major = yes
 				NOT = {
 					AND = {
-						tag = LLS
+						tag = LLS # IOI 수정
 						num_of_military_factories < 50
 					}
 				}
 				date > "1938.1.1"
 			}
 			modifier = {
-				tag = TOH
+				tag = TOH # IOI 수정
 				factor = 1.5
 			}
 
@@ -628,21 +628,21 @@ technologies = {
 				date > "1942.1.1"
 			}
 
-			#modifier = {
-			#	factor = 15.0
-			#	tag = PRS
-			#	has_completed_focus = PRS_advanced_panzer_research
-			#	has_tech_bonus = {
-			#	    category = cat_medium_armor
-			#	}
-			#}
-			#modifier = { #Use the research bonus from the focus! 
-			#	factor = 0.5
-			#	tag = PRS
-			#	NOT = {
-			#		has_completed_focus = PRS_advanced_panzer_research
-			#	}	
-			#}
+			modifier = {
+				factor = 15.0
+				tag = PRS # IOI 수정
+				has_completed_focus = PRS_21304 # IOI 수정
+				has_tech_bonus = {
+				    category = cat_medium_armor
+				}
+			}
+			modifier = { #Use the research bonus from the focus! 
+				factor = 0.5
+				tag = PRS # IOI 수정
+				NOT = {
+					has_completed_focus = PRS_21304 # IOI 수정
+				}	
+			}
 		}
 
 		categories = {
@@ -677,7 +677,7 @@ technologies = {
 			position = { x = 2 y = @1940 }
 		}
 
-		on_research_complete = {
+		on_research_complete = { # IOI 임시조치
 			#if = { #Italian templates
 			#	limit = {
 			#		original_tag = ENS
@@ -750,7 +750,7 @@ technologies = {
 				is_major = yes
 				NOT = {
 					AND = {
-						tag = LLS
+						tag = LLS # IOI 수정
 						num_of_military_factories < 50
 					}
 				}
@@ -761,12 +761,12 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 
 			modifier = {
 				factor = 2
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 
 			modifier = {
@@ -965,11 +965,11 @@ technologies = {
 				date > "1939.1.1"
 			}
 			modifier = {
-				tag = BDG
+				tag = BDG # IOI 수정
 				factor = 3
 			}
 			modifier = {
-				tag = LLS
+				tag = LLS # IOI 수정
 				num_of_military_factories < 100
 				factor = 0
 			}
@@ -1016,7 +1016,7 @@ technologies = {
 		ai_will_do = {
 			factor = 0.8
 			modifier = {
-				tag = LLS
+				tag = LLS # IOI 수정
 				num_of_military_factories < 100
 				factor = 0
 			}

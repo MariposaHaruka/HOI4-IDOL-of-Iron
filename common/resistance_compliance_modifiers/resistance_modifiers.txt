@@ -47,7 +47,7 @@ resistance_90 = {
 		local_factories = -0.03
 	}
 	
-	on_enable = {
+	on_enable = { # IOI 수정
 		custom_effect_tooltip = resistance_90_effect_tooltip
 		hidden_effect = {
 			# avoid effects that can effect state controllers here

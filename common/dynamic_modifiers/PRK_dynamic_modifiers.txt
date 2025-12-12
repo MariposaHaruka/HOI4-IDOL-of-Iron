@@ -5,6 +5,8 @@ PRK_industry = {
 PRK_army = {
 	enable = { always = yes }
 	icon = GFX_idea_PRK_dynamic_army
+	
+	land_mastery_gain_factor = AGN_army_land_mastery_gain_factor
 
 	#더미 변수
 	#build_cost_ic_anti_air = PRK_army_build_cost_ic_anti_air
@@ -27,7 +29,7 @@ PRK_navy = {
 
 	#임시
 	experience_gain_navy_factor = PRK_navy_experience_gain_navy_factor
-	naval_doctrine_cost_factor = PRK_navy_naval_doctrine_cost_factor
+	naval_mastery_gain_factor = PRK_navy_naval_mastery_gain_factor
 	naval_detection = PRK_navy_naval_detection
 	navy_max_range_factor = PRK_navy_navy_max_range_factor
 	repair_speed_factor = PRK_navy_repair_speed_factor

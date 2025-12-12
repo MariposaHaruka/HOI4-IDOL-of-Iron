@@ -1,131 +1,50 @@
 ideas = {
-	country = { 
-		PRS_sour_loser = {
-			picture = sour_loser
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			modifier = {
-				drift_defence_factor = 0.5
-			}
-			rule = {
-				can_create_factions = yes
-			}
-		}
-		PRS_reichsarbeitsdienst = {
-			picture = PRS_RAD
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-			removal_cost = -1
-			modifier = {
-				political_power_factor = 0.05
-				conscription_factor = 0.02
-				training_time_army_factor = 0.1
-				production_speed_buildings_factor = 0.05
-			}
-		}
-		PRS_wehrmacht_problem_1 = {
-			name = PRS_wehrmacht_problem
-			picture = german_advisors
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-			modifier = {
-				political_power_factor = -0.1
-				command_power_gain_mult = -0.1
-			}
-		}
-		PRS_wehrmacht_problem_2 = {
-			name = PRS_wehrmacht_problem
-			picture = german_advisors
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-			removal_cost = -1
-			modifier = {
-				political_power_factor = -0.1
-				command_power_gain_mult = -0.1
-			}
-		}
-		PRS_wehrmacht_problem_3 = {
-			name = PRS_wehrmacht_problem
-			picture = german_advisors
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-			modifier = {
-				political_power_factor = -0.1
-				command_power_gain_mult = -0.1
-			}
-		}
-		PRS_wehrmacht_problem_4 = {
-			name = PRS_wehrmacht_problem
-			picture = german_advisors
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-			modifier = {
-				political_power_factor = -0.05
-				command_power_gain_mult = -0.1
-				experience_gain_air_factor = -0.1
-				experience_gain_army_factor = -0.1
-				experience_gain_navy_factor = -0.1
-				surrender_limit = -0.1
-				army_org_factor = -0.1
-			}
-		}
-		PRS_wehrmacht_problem_5 = {
-			name = PRS_wehrmacht_problem
-			picture = german_advisors
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-			modifier = {
-				political_power_factor = -0.1
-				command_power_gain_mult = -0.1
-			}
-		}
-		PRS_rearmament_plan = {
-			picture = generic_armor
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = 0.1
-				industrial_capacity_dockyard = 0.1
-				experience_gain_army_factor = 0.05
-				experience_gain_air_factor = 0.05
-			}
-		}
-	}
 	hidden_ideas = {
+		PRS_army_start_setting = {
+			allowed = {
+				original_tag = PRS
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				capital_ship = { build_cost_ic = 0.15 }
+				carrier = { build_cost_ic = 0.15 }
+				screen_ship = { build_cost_ic = 0.15 }
+				submarine = { build_cost_ic = 0.15 }
+			}
+		}
+		PRS_navy_start_setting = {
+			allowed = {
+				original_tag = PRS
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				capital_ship = { build_cost_ic = 0.15 }
+				carrier = { build_cost_ic = 0.15 }
+				screen_ship = { build_cost_ic = 0.15 }
+				submarine = { build_cost_ic = 0.15 }
+			}
+		}
+		PRS_air_force_start_setting = {
+			allowed = {
+				original_tag = PRS
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				capital_ship = { build_cost_ic = 0.15 }
+				carrier = { build_cost_ic = 0.15 }
+				screen_ship = { build_cost_ic = 0.15 }
+				submarine = { build_cost_ic = 0.15 }
+			}
+		}
 		#지도자원리 용
 		PRS_emu_reich_engineer = {
 			allowed = { always = no }
@@ -387,7 +306,7 @@ ideas = {
 				#New from Total Control
 				conscription_factor = 0.05
 				political_power_factor = 0.15
-				mobilization_law_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
 				trade_laws_cost_factor = -0.25
 				economy_cost_factor = -0.25
 				research_speed_factor = 0.05
@@ -409,7 +328,7 @@ ideas = {
 				#New from Total Control
 				conscription_factor = 0.1
 				political_power_factor = 0.15
-				mobilization_law_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
 				trade_laws_cost_factor = -0.25
 				economy_cost_factor = -0.25
 				research_speed_factor = 0.05
@@ -457,10 +376,136 @@ ideas = {
 				#New from Total Control
 				conscription_factor = 0.05
 				political_power_factor = 0.15
-				mobilization_law_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
 				trade_laws_cost_factor = -0.25
 				economy_cost_factor = -0.25
 				research_speed_factor = 0.05
+			}
+		}
+	}
+	country = { 
+		PRS_sour_loser = {
+			picture = sour_loser
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.5
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		PRS_reichsarbeitsdienst = {
+			picture = PRS_RAD
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				conscription_factor = 0.02
+				training_time_army_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		PRS_wehrmacht_problem_1 = {
+			name = PRS_wehrmacht_problem
+			picture = german_advisors
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.1
+				command_power_gain_mult = -0.1
+			}
+		}
+		PRS_wehrmacht_problem_2 = {
+			name = PRS_wehrmacht_problem
+			picture = german_advisors
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				command_power_gain_mult = -0.1
+			}
+		}
+		PRS_wehrmacht_problem_3 = {
+			name = PRS_wehrmacht_problem
+			picture = german_advisors
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.1
+				command_power_gain_mult = -0.1
+			}
+		}
+		PRS_wehrmacht_problem_4 = {
+			name = PRS_wehrmacht_problem
+			picture = german_advisors
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.05
+				command_power_gain_mult = -0.1
+				experience_gain_air_factor = -0.1
+				experience_gain_army_factor = -0.1
+				experience_gain_navy_factor = -0.1
+				surrender_limit = -0.1
+				army_org_factor = -0.1
+			}
+		}
+		PRS_wehrmacht_problem_5 = {
+			name = PRS_wehrmacht_problem
+			picture = german_advisors
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.1
+				command_power_gain_mult = -0.1
+			}
+		}
+		PRS_rearmament_plan = {
+			picture = generic_armor
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				experience_gain_army_factor = 0.05
+				experience_gain_air_factor = 0.05
 			}
 		}
 	}
@@ -593,7 +638,7 @@ ideas = {
 				armor = 0.15
 			}
 			visible = {
-				NOT = { has_completed_focus = PRS_advanced_panzer_research }
+				NOT = { has_completed_focus = PRS_21304 }
 			}
 			traits = { medium_tank_manufacturer }
 			ai_will_do = {
@@ -610,7 +655,7 @@ ideas = {
 			}
 			
 			visible = {
-				has_completed_focus = PRS_advanced_panzer_research
+				has_completed_focus = PRS_21304
 			}
 
 			research_bonus = {

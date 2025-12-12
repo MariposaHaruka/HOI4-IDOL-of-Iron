@@ -428,22 +428,22 @@ sp_air_intercontinental_bomber = {
 			strat_bomber_intercontinental_equipment_1
 		}
 
-		country_effects = {
-			#if = {
-			#	limit = {
-			#		original_tag = PRS
-			#		has_country_flag = PRS_amerikabomber_focke_wulf_flag
-			#	}
-				#custom_effect_tooltip = PRS_amerikabomber_focke_wulf_name
+		country_effects = { # IOI 수정
+			if = {
+				limit = {
+					original_tag = PRS
+					has_country_flag = PRS_amerikabomber_focke_wulf_flag
+				}
+				custom_effect_tooltip = GER_amerikabomber_focke_wulf_name
 				#SCRIPTED EFFECT BOOSTING AMERIKABOMBER
-				#PRS_amerika_bomber_focke_wulf_completion_SP_effects = yes
+				PRS_amerika_bomber_focke_wulf_completion_SP_effects = yes
 
 				custom_effect_tooltip = generic_skip_one_line_tt
 				#SCRIPTED EFFECT BOOSTING MIO
-				#mio:PRS_focke_wulf_organization = {
-				#	PRS_amerika_bomber_focke_wulf_completion_MIO_effects = yes
-				#}
-			#}
+				mio:PRS_focke_wulf_organization = {
+					PRS_amerika_bomber_focke_wulf_completion_MIO_effects = yes
+				}
+			}
 		}
 	}
 
@@ -699,7 +699,7 @@ sp_air_mothership_aircraft = {
 								name = sp_air_mothership_speed_agility
 								bonus = {
 									mothership_equipment = { #SETUP IN CASE OF HAVING TO BALANCE DIFFERENTLY FOR NON-BBA AND BBA
-										air_agility = 0.1
+								      air_agility = 0.1
 										maximum_speed = 0.1
 										fuel_consumption = 0.15							
 									}
@@ -1391,13 +1391,13 @@ sp_air_supersonic_jet = {
 		country_effects = {
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
+				add_design_template_bonus = {
+					name = sp_air_supersonic_jet_fighter_free_design
+					uses = 1
+					cost_factor = 1
+					equipment = small_plane_airframe_5
+				}
 			}
-			add_design_template_bonus = {
-				name = sp_air_supersonic_jet_fighter_free_design
-				uses = 1
-				cost_factor = 1
-				equipment = small_plane_airframe_5
-			}		
 		}	
 
 		enable_equipments = {
@@ -1680,7 +1680,7 @@ sp_air_helicopter = {
 
 			option = {
 				token = sp_air_helicopter_preference_compromise
-				
+				default = yes
 				iteration_output = {
 					country_effects = {
 						add_equipment_bonus = {

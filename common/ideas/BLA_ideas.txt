@@ -1,5 +1,50 @@
 ideas = {
 	hidden_ideas = {
+		BLA_army_start_setting = {
+			allowed = {
+				original_tag = BLA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				capital_ship = { build_cost_ic = 0.15 }
+				carrier = { build_cost_ic = 0.15 }
+				screen_ship = { build_cost_ic = 0.15 }
+				submarine = { build_cost_ic = 0.15 }
+			}
+		}
+		BLA_navy_start_setting = {
+			allowed = {
+				original_tag = BLA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				capital_ship = { build_cost_ic = 0.15 }
+				carrier = { build_cost_ic = 0.15 }
+				screen_ship = { build_cost_ic = 0.15 }
+				submarine = { build_cost_ic = 0.15 }
+			}
+		}
+		BLA_air_force_start_setting = {
+			allowed = {
+				original_tag = BLA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				capital_ship = { build_cost_ic = 0.15 }
+				carrier = { build_cost_ic = 0.15 }
+				screen_ship = { build_cost_ic = 0.15 }
+				submarine = { build_cost_ic = 0.15 }
+			}
+		}
 		BLA_12202_idea = {
 			allowed = {
 				original_tag = BLA
@@ -75,9 +120,9 @@ ideas = {
 				is_welfare_policy_cost_factor = 1.5
 				industrial_concern_cost_factor = 1.5
 				is_economy_model_cost_factor = 1.5
-				is_mobilization_economy_cost_factor = 1.5
+				economy_cost_factor = 1.5
 				is_taxation_cost_factor = 1.5
-				is_tarrif_cost_factor = 1.5
+				trade_laws_cost_factor = 1.5
 				is_military_budget_cost_factor = 2.5
 				is_construction_cost_factor = 1.5
 				is_high_command_order_cost_factor = 2.5
@@ -86,7 +131,7 @@ ideas = {
 				is_training_quality_cost_factor = 2.5
 				is_female_service_cost_factor = 2.5
 				is_officer_training_cost_factor = 2.5
-				is_mobilization_law_cost_factor = 2.12
+				mobilization_laws_cost_factor = 2.12
 				is_non_core_mobilization_law_cost_factor = 2.12
 				is_resource_cost_factor = 1.5
 				is_industry_base_cost_factor = 1.5

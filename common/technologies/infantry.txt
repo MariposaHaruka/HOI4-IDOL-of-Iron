@@ -82,7 +82,7 @@ technologies = {
 			
 			modifier = {
 				factor = 10
-				tag = AZU
+				tag = AZU # IOI 수정
 				
 				OR = {
 					date > 1937.1.1
@@ -134,8 +134,8 @@ technologies = {
 				factor = 5
 
 				OR = {
-					tag = AZU
-					tag = KTC
+					tag = AZU # IOI 수정
+					tag = KTC # IOI 수정
 				}
 			}
 
@@ -375,7 +375,7 @@ technologies = {
 			
 			
 			modifier = {
-				tag = PRS
+				tag = PRS # IOI 수정
 				factor = 2.5
 			}
 
@@ -496,22 +496,22 @@ technologies = {
 			
 			modifier = {
 				factor = 5
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 2
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			
 			modifier = {
 				factor = 5
-				tag = IMA
+				tag = IMA # IOI 수정
 			}
 
 			modifier = {
 				factor = 5
-				tag = PRS
+				tag = PRS # IOI 수정
 				#TODO_Danne Add Fallschirmsjäger focus here!
 			}
 		}
@@ -546,22 +546,22 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 2
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			
 			modifier = {
 				factor = 2
-				tag = IMA
+				tag = IMA # IOI 수정
 			}
 
 			modifier = {
 				factor = 2
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 		}
 	}
@@ -590,17 +590,17 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 2
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			
 			modifier = {
 				factor = 2
-				tag = IMA
+				tag = IMA # IOI 수정
 			}
 		}
 	}
@@ -645,17 +645,17 @@ technologies = {
 			
 			modifier = {
 				factor = 3
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 3
-				tag = LLS
+				tag = LLS # IOI 수정
 			}
 			
 			modifier = {
 				factor = 5
-				tag = IMA
+				tag = IMA # IOI 수정
 			}
 		}
 	}
@@ -688,12 +688,12 @@ technologies = {
 			
 			modifier = {
 				factor = 3
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 3
-				tag = LLS
+				tag = LLS # IOI 수정
 			}
 		}
 	}
@@ -721,12 +721,12 @@ technologies = {
 			
 			modifier = {
 				factor = 3
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 3
-				tag = LLS
+				tag = LLS # IOI 수정
 			}
 		}
 	}	
@@ -869,22 +869,22 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = USA
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 5
-				tag = JAP
+				tag = LLS # IOI 수정
 			}
 
 			modifier = {
 				factor = 5
-				tag = BRA
+				tag = FGO # IOI 수정
 			}
 			
 			modifier = {
 				factor = 2
-				tag = ENG
+				tag = IMA # IOI 수정
 			}
 		}
 	}
@@ -1558,13 +1558,13 @@ technologies = {
 			modifier = {
 				factor = 15
 				OR = {
-					tag = AZU
-					tag = KTC
-					tag = LLS
-					tag = LSS
-					tag = LNH
-					tag = LST
-					tag = LHH
+					tag = AZU # IOI 수정
+					tag = KTC # IOI 수정
+					tag = LLS # IOI 수정
+					tag = LSS # IOI 수정
+					tag = LNH # IOI 수정
+					tag = LST # IOI 수정
+					tag = LHH # IOI 수정
 				}
 			}
 
@@ -1631,8 +1631,8 @@ technologies = {
 				factor = 5
 
 				OR = {
-					tag = AZU
-					tag = KTC
+					tag = AZU # IOI 수정
+					tag = KTC # IOI 수정
 				}
 			}
 			modifier = {
@@ -1950,7 +1950,7 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 		}
 		
@@ -2268,7 +2268,7 @@ technologies = {
 		ai_will_do = {
 			factor = 2
 			modifier = {
-				tag = ICG
+				tag = ICG # IOI 수정
 				factor = 2
 			}
 		}
@@ -2315,7 +2315,7 @@ technologies = {
 		ai_will_do = {
 			factor = 2
 			modifier = {
-				tag = ICG
+				tag = ICG # IOI 수정
 				factor = 2
 			}
 		}
@@ -2411,7 +2411,7 @@ technologies = {
 		}
 	}
 	
-	######### FROM LLSANESE FOCUS ##########
+	######### FROM JAPANESE FOCUS ##########
 	bicycle_infantry = {
 		
 		allow = {
@@ -2689,7 +2689,7 @@ technologies = {
 		}
 	}
 
-	PRS_heavy_armored_car = {
+	GER_heavy_armored_car = {
  		allow = { always = no }
 		enable_equipments = {
 			#armored_car_at_equipment
@@ -2730,7 +2730,7 @@ technologies = {
 
 
 	##### FROM BELGIAN FOCUS #####
-	PRS_chasseurs_ardennais = { #hidden tech to boost Mountaineers in Forests. Remember to update BEL_chasseurs_ardennais_tt if you change these numbers!
+	BEL_chasseurs_ardennais = { #hidden tech to boost Mountaineers in Forests. Remember to update BEL_chasseurs_ardennais_tt if you change these numbers!
 		
 		allow = {
 			always = no

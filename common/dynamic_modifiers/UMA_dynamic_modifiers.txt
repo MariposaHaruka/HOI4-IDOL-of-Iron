@@ -5,6 +5,8 @@ UMA_industry = {
 UMA_army = {
 	enable = { always = yes }
 	icon = GFX_idea_UMA_dynamic_army
+	
+	land_mastery_gain_factor = AGN_army_land_mastery_gain_factor
 
 	#더미 변수
 	#build_cost_ic_anti_air = UMA_army_build_cost_ic_anti_air
@@ -27,7 +29,7 @@ UMA_navy = {
 
 	#임시
 	experience_gain_navy_factor = UMA_navy_experience_gain_navy_factor
-	naval_doctrine_cost_factor = UMA_navy_naval_doctrine_cost_factor
+	naval_mastery_gain_factor = UMA_navy_naval_mastery_gain_factor
 	naval_detection = UMA_navy_naval_detection
 	navy_max_range_factor = UMA_navy_navy_max_range_factor
 	repair_speed_factor = UMA_navy_repair_speed_factor
@@ -55,7 +57,7 @@ UMA_air_force = {
 
 	#임시
 	experience_gain_air_factor = UMA_air_force_experience_gain_air_factor
-	air_doctrine_cost_factor = UMA_air_force_air_doctrine_cost_factor
+	air_mastery_gain_factor = UMA_air_force_air_mastery_gain_factor
 	air_accidents_factor = UMA_air_force_air_accidents_factor
 	air_mission_efficiency = UMA_air_force_air_mission_efficiency
 	air_training_xp_gain_factor = UMA_air_force_air_training_xp_gain_factor

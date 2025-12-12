@@ -97,9 +97,9 @@ idea_categories = {
 
 	economy_system_budget = {
 		slot = is_economy_model
-		slot = is_mobilization_economy
+		slot = economy
 		slot = is_taxation
-		slot = is_tarrif
+		slot = trade_laws
 		slot = is_military_budget
 		slot = is_construction
 
@@ -122,7 +122,7 @@ idea_categories = {
 	}
 	
 	society_system = {
-		slot = is_mobilization_law
+		slot = mobilization_laws
 		slot = is_non_core_mobilization_law
 		slot = is_resource
 		slot = is_industry_base

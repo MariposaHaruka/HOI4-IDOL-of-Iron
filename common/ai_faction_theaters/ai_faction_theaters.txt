@@ -1,6 +1,6 @@
-# EUROPE 
-IOI_AI_theatre_western_europe_vocaloid_axis = {
-	name = theater_western_europe
+# 추축국
+IOI_AI_theatre_vocaloid_axis_western_europe = { # IOI 수정
+	name = vocaloid_axis_theatre_western_europe
 	regions = {
 		1 	# Southern England 
 		5 	# Benelux
@@ -10,13 +10,16 @@ IOI_AI_theatre_western_europe_vocaloid_axis = {
 		19	# Northern France
 		20	# Southern France
 		21 	# Alpine Region
+		41	# Eastern Iberia
 		42	# Bay of Biscay
 		208	# Western France
+		209	# Western Iberia
+		210	# Southern Iberia
 		275 # Jutland
 	}
 	can_skip_first_region = yes
 	preferred_countries = { #Behaviour a bit bugged - experiment with later
-		PRS ENS 
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
 	}
 	cancel = {
 		OR = {
@@ -46,6 +49,125 @@ IOI_AI_theatre_western_europe_vocaloid_axis = {
 			}
 		}
 		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			KJI = {
+				NOT = { owns_state = 446 }
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			HND = {
+				OR = {
+					NOT = { owns_state = 458 }
+					NOT = { owns_state = 665 }
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			AIN = {
+				OR = {
+					NOT = { owns_state = 459 }
+					NOT = { owns_state = 460 }
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			SBR = {
+				OR = {
+					AND = {
+						NOT = { owns_state = 656 }
+						NOT = { owns_state = 765 }
+						NOT = { owns_state = 1014 }
+					}
+					AND = {
+						has_war_with = TOH
+						NOT = { owns_state = 354 }
+						NOT = { owns_state = 259 }
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			HBR = {
+				OR = {
+					NOT = { owns_state = 327 }
+					NOT = { owns_state = 430 }
+					NOT = { owns_state = 672 }
+					NOT = { owns_state = 1021 }
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			HLL = {
+				OR = {
+					NOT = { owns_state = 310 }
+					NOT = { owns_state = 685 }
+					NOT = { owns_state = 492 }
+					NOT = { owns_state = 938 }
+				}
+			}
+		}
+		modifier = {
 			factor = 0
 			has_war = no 
 		}
@@ -58,8 +180,933 @@ IOI_AI_theatre_western_europe_vocaloid_axis = {
 	} 
 }
 
+IOI_AI_theatre_vocaloid_axis_central_europe = {
+	name = vocaloid_axis_theatre_central_europe
+	regions = {
+		6 	# North West Germany
+		7 	# Western Germany
+		8	# Eastern Germany
+		21 	# Alpine Region
+		23	# Italy
+		24	# Western Balkans
+		27	# Northern Balkans
+		38	# Western Poland
+		168	# Adriatic Sea
+		169	# Tyrrhenian Sea
+		207	# Denish Belts
+		275 # Jutland
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		OR = {
+			AND = {
+				# 서부전선 종결, 동부전선 개시
+				original_tag = PRS
+				OR = {
+					has_war_with = IMA
+					has_war_with = ICG
+					has_war_with = BDG
+				}
+				has_war_with = TOH
+				16 = { is_controlled_by_ROOT_or_ally = yes }
+				219 = { is_controlled_by_ROOT_or_ally = no }
+			}
+			has_war = no 
+		}
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			MMM = {
+				NOT = { owns_state = 118 }
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			KJI = {
+				NOT = { owns_state = 446 }
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			HND = {
+				OR = {
+					NOT = { owns_state = 458 }
+					NOT = { owns_state = 665 }
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			AIN = {
+				OR = {
+					NOT = { owns_state = 459 }
+					NOT = { owns_state = 460 }
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			SBR = {
+				OR = {
+					AND = {
+						NOT = { owns_state = 656 }
+						NOT = { owns_state = 765 }
+						NOT = { owns_state = 1014 }
+					}
+					AND = {
+						has_war_with = TOH
+						NOT = { owns_state = 354 }
+						NOT = { owns_state = 259 }
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			HBR = {
+				OR = {
+					NOT = { owns_state = 327 }
+					NOT = { owns_state = 430 }
+					NOT = { owns_state = 672 }
+					NOT = { owns_state = 1021 }
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			HLL = {
+				OR = {
+					NOT = { owns_state = 310 }
+					NOT = { owns_state = 685 }
+					NOT = { owns_state = 492 }
+					NOT = { owns_state = 938 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+		modifier = {
+			factor = 0
+			original_tag = PRS 
+			OR = {
+				has_war_with = IMA
+				has_war_with = ICG
+				has_war_with = BDG
+			}
+			16 = { is_controlled_by_ROOT_or_ally = yes } # We can focus again on the west if we take Moscow
+		}
+	} 
+}
+
+IOI_AI_theatre_vocaloid_axis_eastern_europe = { 
+	name = vocaloid_axis_theatre_eastern_europe
+	regions = {
+		8	# Eastern Germany
+		9	# Baltic Sea
+		12	# Northern Scandinavia
+		13	# Finland
+		22	# Czechoslovakia
+		26	# Eastern Balkans
+		27	# Northern Balkans
+		30	# Black Sea
+		37	# Baltic States
+		38	# Western Poland
+		39	# Eastern Poland
+		40	# Western Russia
+		130	# Ukraine
+		131	# Belarus
+		132	# Novgorod
+		133	# Central Rusia 
+		134	# Caucasus Region
+		135 # Taman Region
+		137	# Western Steppe
+		150 # Artic Russia
+		206	# Lower Baltic Sea
+		264	# Komi-Nenetsia
+		265 # East Karelia
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		has_war = no 
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			has_war_with = TOH
+		}
+		modifier = { #리가 조약과 전쟁 예정
+			add = 5
+			OR = {
+				has_war_with = GBC
+				has_war_with = SOE
+				has_war_with = KON
+				has_war_with = PTD
+			}
+		}
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_vocaloid_axis_eastern_mediterranean = { 
+	name = vocaloid_axis_theatre_eastern_mediterranean
+	regions = {
+		24	# Western Balkans
+		25	# Greece
+		26	# Eastern Balkans
+		29	# Central Mediterranean Sea
+		69	# Eastern Mediterranean Sea
+		128	# Egypt
+		129	# Asia Minor
+		168	# Adriatic Sea
+		202	# Aegean Sea
+		225	# Tripoli
+		232	# Levant
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		has_war = no 
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			has_war_with = IMA
+		}
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_vocaloid_axis_western_mediterranean = { 
+	name = vocaloid_axis_theatre_eastern_mediterranean
+	regions = {
+		20	# Southern France
+		21	# Alpine Region
+		23	# Italy
+		29	# Central Mediterranean Sea
+		41	# Northeastern Iberia
+		68	# Western Mediterranean Sea
+		169	# Tyrrhenian Sea
+		182	# North West Africa
+		210	# Southern Iberia
+		225	# Tripoli
+
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		has_war = no 
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			OR = {
+				has_war_with = IMA
+				has_war_with = BDG
+			}
+		}
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_vocaloid_axis_middle_east = { 
+	name = vocaloid_axis_theatre_middle_east
+	regions = {
+		28	# Middle East
+		69	# Eastern Mediterranean Sea
+		100	# Red Sea
+		104	# Arabian Sea
+		116	# Iran
+		128	# Egypt
+		129	# Asia Minor
+		134	# CAucasus Region
+		162	# Afghanistan Area
+		196	# Arabian Coast
+		203	# Persian Gulf
+		232	# Levant
+		236	# South Arabia
+		237	# Hejaz
+		238	# East Arabia
+		239	# Alborz
+		240	# Zagros
+		241	# Dasht-e Kavir
+		267	# Transcaspia
+		289	# Southern Afghanistan
+		291	# Baluchistan
+		297	# Eastern Iranian Range
+		298	# Eastern Zagros
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		OR = {
+			NOT = { SBR = { is_in_faction_with = PRS } }
+			has_war = no
+		} 
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			has_war_with = TOH
+		}
+		modifier = { 
+			add = 15
+			has_war_with = IMA
+		}
+		modifier = { 
+			add = 15
+			has_war_with = BLA
+		}
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_vocaloid_axis_southeast_asia = { 
+	name = vocaloid_axis_theatre_southeast_asia
+	regions = {
+		31	# Indian Area
+		71	# East Indian Ocean
+		72	# Straits of Malaca
+		73	# Gulf of Thailand
+		75	# South China Sea
+		80	# Celebes Sea
+		93	# Banda Sea
+		99	# Far Eastern Indian Ocean
+		101	# Bay of Bengal
+		141	# East India
+		142	# South East Asia
+		146	# Himalayas
+		158	# Guinea
+		159	# Borneo
+		160	# Philippines
+		187	# Sumatra
+		188	# Malaya
+		228	# South Indochina
+		229	# Siam
+		230	# Cape Comorin
+		231	# Coromandel Coast
+		248	# Guangxi
+		249	# Yunnan
+		290	# Bengal
+		292	# Shan States
+		293	# Tenasserim
+		294	# Rangoon
+		295	# Mandalay
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		OR = {
+			NOT = { HBR = { is_in_faction_with = PRS } }
+			has_war = no
+		} 
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			has_war_with = BLA
+		}
+		modifier = { 
+			add = 15
+			has_war_with = IMA
+		}
+		modifier = { 
+			add = 15
+			has_war_with = LLS
+		}
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_vocaloid_axis_carribean_colombia = { 
+	name = vocaloid_axis_theatre_carribean_colombia
+	regions = {
+		34	# Central America
+		53	# Caribbean
+		59	# Mid Atlantic 6
+		107 # Western Canal Zone
+		109 # Peruvian Coast
+		124 # Northern South America
+		170	# Florida Coast
+		163 # Amazonas
+		201 # Northern Andes
+		205	# Yucatan Peninsula
+		280 # Guyana
+		285 # Rio Tocantis
+		286	# Rio Grande de Norte
+		287 # Bolivia
+		288	# Central Brazil
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		OR = {
+			NOT = { HLL = { is_in_faction_with = PRS } }
+			has_war = no
+		} 
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			has_war_with = ICG
+		}
+		modifier = { 
+			add = 15
+			has_war_with = FGO
+		}
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 IOI_AI_theatre_western_europe_bandainamco_ally = {
-	name = theater_western_europe
+	name = generic_theatre_western_europe
 	regions = {
 		1 	# Southern England 
 		5 	# Benelux
@@ -131,7 +1178,7 @@ IOI_AI_theatre_western_europe_bandainamco_ally = {
 }
 
 IOI_AI_theatre_eastern_europe = {
-	name = theater_eastern_europe
+	name = generic_theatre_eastern_europe
 	regions = {
 		8 # Eastern Germany
 		38 # Western Poland
@@ -176,7 +1223,7 @@ IOI_AI_theatre_eastern_europe = {
 }
 
 IOI_AI_theatre_barbarossa_north = { 
-	name = theater_barbarossa_north
+	name = generic_theatre_barbarossa_north
 	regions = {
 		37 # Baltic States
 		132 # Novgorod
@@ -215,7 +1262,7 @@ IOI_AI_theatre_barbarossa_north = {
 }
 
 IOI_AI_theatre_barbarossa_center = { 
-	name = theater_barbarossa_center
+	name = generic_theatre_barbarossa_center
 	regions = {
 		8 # Eastern Germany
 		38 # Western Poland
@@ -246,7 +1293,7 @@ IOI_AI_theatre_barbarossa_center = {
 }
 
 IOI_AI_theatre_barbarossa_south = { # For Barbarossas
-	name = theater_barbarossa_south
+	name = generic_theatre_barbarossa_south
 	regions = {
 		130 # Ukraine
 		26 # Eastern Balkans
@@ -278,7 +1325,7 @@ IOI_AI_theatre_barbarossa_south = { # For Barbarossas
 }
 
 IOI_AI_theatre_north_sea_region = {
-	name = theater_north_sea_region
+	name = generic_theatre_north_sea_region
 	regions = {
 		16	# North Sea
 		174	# Norwegian Coast
@@ -321,7 +1368,7 @@ IOI_AI_theatre_north_sea_region = {
 
 
 IOI_AI_theatre_southern_europe = {
-	name = theater_southern_europe
+	name = generic_theatre_southern_europe
 	regions = {
 		23 # Italy
 		169 # Tyrrhenian Sea
@@ -362,7 +1409,7 @@ IOI_AI_theatre_southern_europe = {
 }
 
 IOI_AI_theatre_black_sea_region = {
-	name = theater_black_sea_region
+	name = generic_theatre_black_sea_region
 	regions = {
 		30 # Black Sea
 		129 # Asia Minor
@@ -412,7 +1459,7 @@ IOI_AI_theatre_black_sea_region = {
 }
 
 IOI_AI_theatre_scandinavia = {
-	name = theater_scandinavia
+	name = generic_theatre_scandinavia
 	regions = {
 		10 # Southern Sweden
 		192 # Lower Norrland
@@ -457,7 +1504,7 @@ IOI_AI_theatre_scandinavia = {
 
 # AFRICA AND MIDDLE EAST
 IOI_AI_theatre_north_africa = {
-	name = theater_north_africa
+	name = generic_theatre_north_africa
 	regions = {
 		225 # Tripoli
 		128 # Egypt
@@ -503,7 +1550,7 @@ IOI_AI_theatre_north_africa = {
 }
 
 IOI_AI_theatre_north_africa_uk = {
-	name = theater_north_africa
+	name = generic_theatre_north_africa
 	regions = {
 		128 # Egypt
 		225 # Tripoli
@@ -594,7 +1641,7 @@ IOI_AI_theatre_east_africa = {
 }
 
 IOI_AI_theatre_west_africa = {
-	name = theater_west_africa
+	name = generic_theatre_west_africa
 	regions = {
 		226 # West Africa
 		140 # Sub Saharan Africa
@@ -631,7 +1678,7 @@ IOI_AI_theatre_west_africa = {
 }
 
 IOI_AI_theatre_south_africa = {
-	name = theater_south_africa
+	name = generic_theatre_south_africa
 	regions = {
 		139 # South Africa
 		65 # Cape of Africa
@@ -718,7 +1765,7 @@ IOI_AI_theatre_middle_east = {
 }
 
 IOI_AI_theatre_persia = {
-	name = theater_persia
+	name = generic_theatre_persia
 	regions = {
 		239 # Alborz
 		116 # Central Iranian Range
@@ -757,7 +1804,7 @@ IOI_AI_theatre_persia = {
 
 # ASIA
 IOI_AI_theatre_chinese_coastline = {
-	name = theater_chinese_coastline
+	name = generic_theatre_chinese_coastline
 	regions = {
 		77 # Yellow Sea
 		76 # East China Sea
@@ -796,7 +1843,7 @@ IOI_AI_theatre_chinese_coastline = {
 }
 
 IOI_AI_theatre_chinese_mainland = {
-	name = theater_chinese_mainland
+	name = generic_theatre_chinese_mainland
 	regions = {
 		246  # Central China
 		165 # Southern China
@@ -833,7 +1880,7 @@ IOI_AI_theatre_chinese_mainland = {
 }
 
 IOI_AI_theatre_south_east_asia = {
-	name = theater_south_east_asia
+	name = generic_theatre_south_east_asia
 	regions = {
 		72  # Straits of Malacka
 		188  # Malaya
@@ -880,7 +1927,7 @@ IOI_AI_theatre_south_east_asia = {
 }
 
 IOI_AI_theatre_bengal = {
-	name = theater_bengal
+	name = generic_theatre_bengal
 	regions = {
 		101  # Bay of Bengal
 		290  # Bengal
@@ -925,7 +1972,7 @@ IOI_AI_theatre_bengal = {
 }
 
 IOI_AI_theatre_northern_india = {
-	name = theater_northern_india
+	name = generic_theatre_northern_india
 	regions = {
 		153  # Northern India
 		190  # Pakistan
@@ -970,7 +2017,7 @@ IOI_AI_theatre_northern_india = {
 
 # PACIFIC
 IOI_AI_theatre_central_pacific = {
-	name = theater_central_pacific
+	name = generic_theatre_central_pacific
 	regions = {
 		105 # Hawaii Ridge
 		176 # Central North Pacific
@@ -1021,7 +2068,7 @@ IOI_AI_theatre_central_pacific = {
 }
 
 IOI_AI_theatre_us_west_coast = {
-	name = theater_us_west_coast
+	name = generic_theatre_us_west_coast
 	regions = {
 		89 # Western Seaboard
 		115 # North East Pacific
@@ -1066,7 +2113,7 @@ IOI_AI_theatre_us_west_coast = {
 }
 
 IOI_AI_theatre_south_pacific = {
-	name = theater_south_pacific
+	name = generic_theatre_south_pacific
 	regions = {
 		84 # Bismarck Sea
 		93 # Java Sea
@@ -1119,7 +2166,7 @@ IOI_AI_theatre_south_pacific = {
 }
 
 IOI_AI_theatre_japanese_home_islands = {
-	name = theater_japanese_home_islands
+	name = generic_theatre_japanese_home_islands
 	regions = {
 		154 # Home Islands
 		79 # Sea of Japan
@@ -1171,7 +2218,7 @@ IOI_AI_theatre_japanese_home_islands = {
 
 # AMERICAS
 IOI_AI_theatre_us_east_coast = {
-	name = theater_us_east_coast
+	name = generic_theatre_us_east_coast
 	regions = {
 		54 # Eastern Seaboard
 		170 # Florida Coast
@@ -1224,7 +2271,7 @@ IOI_AI_theatre_us_east_coast = {
 }
 
 IOI_AI_theatre_central_america = {
-	name = theater_central_america
+	name = generic_theatre_central_america
 	regions = {
 		53 # Carribean Sea
 		52 # Gulf of Mexico
@@ -1273,7 +2320,7 @@ IOI_AI_theatre_central_america = {
 }
 
 IOI_AI_theatre_gran_columbia = {
-	name = theater_gran_columbia
+	name = generic_theatre_gran_columbia
 	regions = {
 		124 # Northern South America
 		280 # Guyana
@@ -1316,7 +2363,7 @@ IOI_AI_theatre_gran_columbia = {
 }
 
 IOI_AI_theatre_south_south_america = {
-	name = theater_south_south_america
+	name = generic_theatre_south_south_america
 	regions = {
 		284 # Southern Andes
 		283 # Patagonia
@@ -1362,7 +2409,7 @@ IOI_AI_theatre_south_south_america = {
 }
 
 IOI_AI_theatre_brazil = {
-	name = theater_brazil
+	name = generic_theatre_brazil
 	regions = {
 		125 # Brazil
 		288 # Central Brazil
@@ -1396,6 +2443,1380 @@ IOI_AI_theatre_brazil = {
 				} 
 			}
 			NOT = { 126 = { is_controlled_by_ROOT_or_ally = yes } } # We don't cross the atlantic unless we have conquered the United kingdom
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### generic theater in case
+# EUROPE 
+
+IOI_AI_theatre_generic_western_europe = {
+	name = generic_theatre_western_europe
+	regions = {
+		19	# Northern France
+		5 	# Benelux
+		7 	# Western Germany
+		208	# Western France
+		6 # North West Germany
+		18 # English Channel
+		1 # Southern England 
+		275 # Jutland
+		20	# Southern France
+		42 # Bay of Biscay
+		21 # Alpine Region
+	}
+	cancel = {
+		OR = {
+			AND= {
+				# Germany should stop focusing on the Western Front when Barbarossa starts
+				original_tag = GER
+				has_war_with = SOV
+				219 = { is_controlled_by_ROOT_or_ally = no }
+			}
+			AND = {
+				# UK should not care overly much about the continent while France is Capitulated
+				FRA = {
+					is_in_faction_with = ROOT
+					has_capitulated = yes 
+				}
+			}
+			has_war = no 
+		}
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			capital_scope = { is_on_continent = europe}
+		}
+		modifier = {
+			add = 5
+			OR = {
+				has_war_with = FRA
+				has_war_with = GER
+				has_war_with = HOL
+				has_war_with = BEL
+			}
+		}
+		modifier = {
+			factor = 10
+			is_historical_focus_on = yes
+			original_tag = USA
+			is_in_faction_with = ENG
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+		modifier = {
+			factor = 0
+			original_tag = GER 
+			has_war_with = SOV
+			219 = { is_controlled_by_ROOT_or_ally = no } # We can focus again on the west if we take Moscow
+		}
+		modifier = {
+			factor = 0
+			original_tag = ENG 
+			FRA = {
+				is_in_faction_with = ROOT
+				has_capitulated = yes 
+			}
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_central_europe = {
+	name = generic_theatre_eastern_europe
+	regions = {
+		8 # Eastern Germany
+		38 # Western Poland
+		9 # Czechoslovakia
+		39 # Eastern Poland
+		206 # Lower Baltic Sea
+		37 # Baltic States
+		27 #Northern Balkans
+		132 #Novgorod
+		131 #Belarus
+		130 # Ukraine
+		133 # Central Rusia 
+	}
+	cancel = {
+		has_war = no 
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			capital_scope = { is_on_continent = europe}
+		}
+		modifier = {
+			add = 1
+			OR = {
+				has_war_with = POL
+				has_war_with = CZE
+				has_war_with = SOV
+			}
+		}
+		modifier = {
+			add = 10
+			original_tag = SOV
+			has_war_with = GER
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_eastern_europe = { 
+	name = generic_theatre_barbarossa_north
+	regions = {
+		37 # Baltic States
+		132 # Novgorod
+		206 # Lower Baltic Sea
+		9 # Gulf of Finland  
+		12 # Eastern Finland  
+		265 # Eastern Finland  
+		150 # Archangelsk
+		278 # Western Finland
+		279 # Gulf of Botnia
+		277 # Northern Finland
+		12 # Kola
+		191 # Northern Norway
+		46 # Barents Sea
+
+	}
+
+	cancel = {
+		NOT = { has_war_with = SOV }
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 5
+			original_tag = GER
+			has_war_with = SOV
+		}
+		modifier = {
+			add = 1
+			is_in_faction_with = GER
+			has_war_with = SOV
+		}
+
+	} 
+}
+
+barbarossa_center = { 
+	name = generic_theatre_barbarossa_center
+	regions = {
+		8 # Eastern Germany
+		38 # Western Poland
+		39 # Eastern Poland
+		131 #Belarus
+		133 # Central Russia
+		40 # Transvolga
+		138 # Urals
+		22 # Czeckoslovakia
+		14 # Trans-Urals
+
+	}
+	preferred_countries = {
+		GER SLO
+	}
+	cancel = {
+		NOT = { has_war_with = SOV }
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 10
+			original_tag = GER
+			has_war_with = SOV
+		}
+	} 
+}
+
+barbarossa_south = { # For Barbarossas
+	name = generic_theatre_barbarossa_south
+	regions = {
+		130 # Ukraine
+		26 # Eastern Balkans
+		27 #Northern Balkans
+		30 # Black Sea
+		15 # Kuban Region
+		137 # Western Steppe
+		267 # Transcaspia
+		270 # Syrdania
+		
+	}
+	cancel = {
+		NOT = { has_war_with = SOV }
+	}
+	preferred_countries = {
+		ROM ITA
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 5
+			OR = {
+				original_tag = GER
+				is_in_faction_with = GER 
+			}
+			has_war_with = SOV
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_north_sea_region = {
+	name = generic_theatre_north_sea_region
+	regions = {
+		16	# North Sea
+		174	# Norwegian Coast
+		173	# Eastern North Sea
+		11	# Southern Norway
+		191	# Northern Norway
+		2	# Northern England
+		3	# Scotland
+		4	# Ireland
+		45	# Norwegian Sea
+		161	# Iceland
+		275	# Jutland Peninsula
+		44	# Denmark Strait
+		10	# Southern Sweden 
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			OR = {
+				original_tag = ENG
+				has_war_with = ENG
+				original_tag = NOR
+				has_war_with = NOR
+				original_tag = ICE
+				has_war_with = ICE
+				original_tag = DEN
+				has_war_with = DEN
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+
+IOI_AI_theatre_generic_southern_europe = {
+	name = generic_theatre_southern_europe
+	regions = {
+		23 # Italy
+		169 # Tyrrhenian Sea
+		168 # Adriatic Sea
+		24 # Western Balkans
+		25 # Greece
+		202 # Aegean Sea
+		21 # Alpine Region
+		29 # Central Med
+		68 # Western Med
+		
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			capital_scope = { is_on_continent = europe}
+		}
+		modifier = {
+			add = 2
+			OR = {
+				has_war_with = ITA
+				has_war_with = YUG
+				has_war_with = GRE
+				original_tag = ITA
+				original_tag = YUG
+				original_tag = GRE
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_black_sea_region = {
+	name = generic_theatre_black_sea_region
+	regions = {
+		30 # Black Sea
+		129 # Asia Minor
+		26 # Eastern Balkans
+		25 # Greece
+		130 # Ukraine
+		135 # Kuban Region
+		134 # Caucasus Region
+		202 # Aegean Sea
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			OR = {
+				controls_state = 21 # Edirne
+				controls_state = 211 # Varna
+				controls_state = 971 # Northern Dobrudja
+				controls_state = 137 # Crimea
+				controls_state = 231 # Georgia
+				controls_state = 192 # Odessa
+			}
+			any_enemy_country = {
+				controls_state = 21 # Edirne
+				controls_state = 211 # Varna
+				controls_state = 971 # Northern Dobrudja
+				controls_state = 137 # Crimea
+				controls_state = 231 # Georgia
+				controls_state = 192 # Odessa
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				original_tag = TUR
+				has_war_with = TUR
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_scandinavia = {
+	name = generic_theatre_scandinavia
+	regions = {
+		10 # Southern Sweden
+		192 # Lower Norrland
+		11 # Southern Norway
+		191 # Northern Norway
+		276 # Northern Norrland
+		206 # Lower Baltic Sea
+		275 # Jutland Peninsula
+		173 # Eastern North Sea
+		279 # Gulf of Bothnia
+		277 # Northern Finland
+		278 # Western Finland
+		9 # Gulf of Finland
+		
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			capital_scope = { is_on_continent = europe}
+		}
+		modifier = {
+			add = 2
+			OR = {
+				has_war_with = SWE
+				has_war_with = NOR
+				has_war_with = DEN
+				original_tag = SWE
+				original_tag = NOR
+				original_tag = DEN
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+# AFRICA AND MIDDLE EAST
+IOI_AI_theatre_generic_north_africa = {
+	name = generic_theatre_north_africa
+	regions = {
+		225 # Tripoli
+		128 # Egypt
+		29 # Central Med
+		126 # Eastern Maghreb
+		182 # Western Maghreb
+		48 # African Coast
+		68 # Western Med
+		69 # Eastern Med
+		100 # Red Sea
+		
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			capital_scope = { is_on_continent = africa }
+		}
+		modifier = {
+			add = 2
+				owns_any_state_of = {
+					448 # Tripoli
+					458 # Tunisia
+					907 # Cairo
+					447 # Alexandria
+					459 # Algiers
+					461 # Casablanca
+				}
+		}
+		modifier = {
+			factor = 0
+			is_historical_focus_on = yes 
+			tag = ENG 
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_north_africa_uk = {
+	name = generic_theatre_north_africa
+	regions = {
+		128 # Egypt
+		225 # Tripoli
+		29 # Central Med
+		126 # Eastern Maghreb
+		182 # Western Maghreb
+		48 # African Coast
+		68 # Western Med
+		69 # Eastern Med
+		100 # Red Sea
+	}
+	cancel = {
+		
+	}
+	preferred_countries = {
+		AST SAF 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			original_tag = ENG
+		}
+		modifier = {
+			factor = 2
+				owns_any_state_of = {
+					448 # Tripoli
+					458 # Tunisia
+					907 # Cairo
+					447 # Alexandria
+					459 # Algiers
+					461 # Casablanca
+				}
+		}
+		modifier = {
+			factor = 5
+			is_historical_focus_on = yes 
+			tag = ENG 
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+			date < 1938.1.1
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_east_africa = {
+	name = east_africa
+	regions = {
+		274 # Ogaden
+		273 # Danakil
+		17 # Ethiopian Highlands
+		217 # Victoria
+		102 # East African Coast
+		100 # Red Sea
+		216 # Upper Nile
+		227 # North East Congo
+		60 # West Indian Ocean
+		181 # Madagascar
+		183 # Central Africa
+		
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			capital_scope = { is_on_continent = africa }
+		}
+		modifier = {
+			add = 1
+			owns_any_state_of = {
+				559 # Somaliland
+				217 # Shewa
+				268 # French Somaliland
+				269 # British Somaliland
+				551 # Khartoum
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_west_africa = {
+	name = generic_theatre_west_africa
+	regions = {
+		226 # West Africa
+		140 # Sub Saharan Africa
+		184 # Cameroon
+		272 # West Congo
+		62 # Gulf of Guinea
+		61 # Cap Verde Plain
+		183 # Central Africa
+		271 # South East Congo
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			capital_scope = { is_on_continent = africa }
+		}
+		modifier = {
+			add = 1
+			owns_any_state_of = {
+				779 # ivory Coast
+				298 # Liberia
+				295 # FLéopoldville
+				274 # Ghana
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_south_africa = {
+	name = generic_theatre_south_africa
+	regions = {
+		139 # South Africa
+		65 # Cape of Africa
+		215 # Namibia
+		223 # Zambezi
+		185 # South East Africa
+		224 # Angola
+		103 # Mozambique Channel
+		
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			capital_scope = { is_on_continent = africa }
+		}
+		modifier = {
+			add = 1
+			owns_any_state_of = {
+				779 # ivory Coast
+				298 # Liberia
+				295 # FLéopoldville
+				274 # Ghana
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+
+IOI_AI_theatre_generic_middle_east = {
+	name = middle_east
+	regions = {
+		232 # Levant
+		237 # Hejaz
+		28 # Middle East
+		129 # Asia Minor
+		240 # Western Zagros
+		196 # Central Arabia
+		238 # East Arabia
+		236 # South Arabia
+		239 # Alborz
+		116 # Central Iranian Range
+		298 # Eastern Zagros
+		
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			capital_scope = { is_on_continent = middle_east }
+		}
+		modifier = {
+			add = 1
+			owns_any_state_of = {
+				454 # Palstine
+				554 # Damascus
+				291 # Baghdad
+				292 # Nejd
+				293 # North Yemen
+				294 # Muscat
+			}
+		}
+		modifier = {
+			add = 1
+			any_enemy_country = {
+				capital_scope = { is_on_continent = middle_east }
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_persia = {
+	name = generic_theatre_persia
+	regions = {
+		239 # Alborz
+		116 # Central Iranian Range
+		298 # Eastern Zagros
+		203 # Persian Gulf
+		232 # Levant
+		28 # Middle East
+		241 # Dash-E Kavir
+		297 # Eastern Iranian Range
+		291 # Baluchistan
+		289 # South Afghanistan 
+		134 # Caucasus
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			capital_scope = { is_on_continent = middle_east }
+		}
+		modifier = {
+			add = 1
+			OR = {
+				original_tag = PER
+				has_war_with = PER
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+# ASIA
+IOI_AI_theatre_generic_chinese_coastline = {
+	name = generic_theatre_chinese_coastline
+	regions = {
+		77 # Yellow Sea
+		76 # East China Sea
+		143 # Northern China
+		247 # Yantzee River Region
+		164 # Eastern China
+		155 # Western Manchuria
+		248 # Guangxi
+		75 # South China Sea
+		186 # Korea
+		
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 5
+			OR = {
+				is_literally_china = yes 
+				original_tag = JAP
+			}
+		}
+		modifier = {
+			add = 2
+			any_enemy_country = {
+				is_literally_china = yes 
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_chinese_mainland = {
+	name = generic_theatre_chinese_mainland
+	regions = {
+		246  # Central China
+		165 # Southern China
+		245 # Shanxi Region
+		249 # Yunnan
+		250 # Kham
+		144 # Western China
+		200 # Quinghai
+		244 # Chahar
+		252 # Tien Shan
+		145 # Taklamakan
+		146 # Himalayas		
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			has_war = yes # Don't bother with interior focus if not already at war. 
+			OR = {
+				is_literally_china = yes 
+				any_enemy_country = {
+					is_literally_china = yes 
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+
+
+IOI_AI_theatre_generic_south_east_asia = {
+	name = generic_theatre_south_east_asia
+	regions = {
+		72  # Straits of Malacka
+		188  # Malaya
+		229  # Siam
+		228  # South Indochina
+		142  # North Indochina
+		73  # Gulf of Thailand
+		187  # Sumatra
+		293  # Tenasserim
+		294  # Rangoon
+		101  # Bay of Bengal
+		292  # Shan States
+			
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			OR = {
+				any_enemy_country = {
+					OR = {
+						controls_state = 1021 # Singapore
+						controls_state = 336 # Malaya
+						controls_state = 289 # Siam
+						controls_state = 671 # Tonkin
+						controls_state = 672 # Sumatra
+					}
+				}
+				controls_state = 1021 # Singapore
+				controls_state = 336 # Malaya
+				controls_state = 289 # Siam
+				controls_state = 671 # Tonkin
+				controls_state = 672 # Sumatra
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_bengal = {
+	name = generic_theatre_bengal
+	regions = {
+		101  # Bay of Bengal
+		290  # Bengal
+		231 # East Ghats
+		230 # Cape Comorin
+		294 # Rangoon
+		141 # Eastern India
+		293  # Tenasserim
+		31  # Deccan Plateau
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			OR = {
+				any_enemy_country = {
+					OR = {
+						controls_state = 320 # French India
+						controls_state = 423 # French Madras
+						controls_state = 431 # Calcutta
+						controls_state = 431 # East Bengal
+						controls_state = 995 # Rangoon
+						controls_state = 289 # Siam
+					}
+				}
+				controls_state = 320 # French India
+				controls_state = 423 # French Madras
+				controls_state = 431 # Calcutta
+				controls_state = 431 # East Bengal
+				controls_state = 995 # Rangoon
+				controls_state = 289 # Siam
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_northern_india = {
+	name = generic_theatre_northern_india
+	regions = {
+		153  # Northern India
+		190  # Pakistan
+		162 # North Afghanistan
+		289 # South Afghanistan
+		291 # Baluchistan
+		296 # Gujarat
+		251  # Ngari
+		297  # Eastern Iranian range
+		104  # Arabian Sea
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			OR = {
+				any_enemy_country = {
+					OR = {
+						controls_state = 443 # Sind
+						controls_state = 439 # Dehli
+						controls_state = 440 # West Punjab
+						controls_state = 267 # Kabul
+						# controls_state = 410 # Sistan # Intentionally left out as I don't want the ai to pick this if they attacking Persia, but the other way around is ok.
+					}
+				}
+				controls_state = 443 # Sind
+				controls_state = 439 # Dehli
+				controls_state = 440 # West Punjab
+				controls_state = 267 # Kabul
+				controls_state = 410 # Sistan
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+# PACIFIC
+IOI_AI_theatre_generic_central_pacific = {
+	name = generic_theatre_central_pacific
+	regions = {
+		105 # Hawaii Ridge
+		176 # Central North Pacific
+		172 # Pacific Line Ridge
+		95 # West Emperor Chain
+		180 # Micronesian Gap
+		96 # North Emperor Chain
+		97 # Eastern Micronesia
+		177 # western North Pacific
+		94 # Mariana Region 
+		
+	}
+	cancel = {
+		# IF USA lose control of Pearl harbor, then go for Coastine Defense instead
+		AND = {
+			original_tag = USA
+			any_enemy_country = {
+				controls_state = 629  #Hawaii
+			}
+		}
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			original_tag = USA
+			controls_state = 629 #Hawaii
+		}
+		modifier = {
+			add = 1
+			has_war_with = JAP
+			controls_state = 629  #Hawaii
+		}
+		modifier = {
+			add = 1
+			has_war_with = USA
+			any_enemy_country = {
+				controls_state = 629  #Hawaii
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+
+	
+}
+
+IOI_AI_theatre_generic_us_west_coast = {
+	name = generic_theatre_us_west_coast
+	regions = {
+		89 # Western Seaboard
+		115 # North East Pacific
+		114 # North Pacific
+		171 # North West Coast
+		218 # California
+		118 # Cascades
+		33 # Alaska
+		105 # Hawaii Ridge
+		176 # Central North Pacific
+		88 # Bering Sea
+		235 # British Columbia	
+	}
+	cancel = {
+		# IF USA retake  Pearl harbor, then go for Central Pacific instead
+		AND = {
+			original_tag = USA
+			controls_state = 629  #Hawaii
+		}
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 5
+			original_tag = USA
+			any_enemy_country = {
+				controls_state = 629  #Hawaii
+			}
+		}
+		modifier = {
+			add = 2
+			has_war_with = USA
+			controls_state = 629  #Hawaii
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+
+	
+}
+
+IOI_AI_theatre_generic_south_pacific = {
+	name = generic_theatre_south_pacific
+	regions = {
+		84 # Bismarck Sea
+		93 # Java Sea
+		83 # Solomon Sea
+		81 # Coral Sea
+		167 # New Guinea
+		80 # Celebes Sea
+		159 # Borneo
+		75 # South China Sea
+		194 # Eastern Australia
+		94 # Mariana Region 
+		86 # Tasman Sea
+		
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 2
+			OR = {
+				has_war_with = AST
+				is_in_faction_with = AST
+				original_tag = AST
+			}
+			has_navy_size = {
+				size > 40
+			}
+		}
+		modifier = {
+			add = 1
+			OR = {
+				capital_scope = {
+					is_on_continent = asia
+					is_on_continent = australia
+					is_on_continent = north_america
+					is_on_continent = south_america
+				}
+			}
+			has_navy_size = {
+				size > 150
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_japanese_home_islands = {
+	name = generic_theatre_japanese_home_islands
+	regions = {
+		154 # Home Islands
+		79 # Sea of Japan
+		90 # Coast of Japan
+		76 # East China Sea
+		87 # Sea of Okhotsk
+		94 # Mariana Region 
+		177 # West North Pacific
+		78 # Philippine Sea
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			OR = {
+				has_war_with = JAP
+				original_tag = JAP
+			}
+			has_navy_size = {
+				size > 80
+			}
+		}
+		modifier = {
+			add = 10
+			has_war_with = JAP
+			has_navy_size = {
+				size > 150
+			}
+			controls_state = 648 # Minamitorishima
+			controls_state = 94 # Iwo Jima
+		}
+		modifier = {
+			add = 10
+			original_tag = JAP
+			any_enemy_country = {
+				controls_state = 94 # Iwo Jima
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+
+# AMERICAS
+IOI_AI_theatre_generic_us_east_coast = {
+	name = generic_theatre_us_east_coast
+	regions = {
+		54 # Eastern Seaboard
+		170 # Florida Coast
+		197 # New England
+		117 # East Coast
+		211 # Gulf Coast
+		55 # Newfoundland Sea
+		213 # Maritimes
+		214 # Appalachia
+		198 # Great Lakes
+		119 # South West 
+			
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			OR = {
+				original_tag = USA
+				AND = {
+					has_war_with = USA
+					has_navy_size = {
+						size > 100
+					}
+					OR = {
+						capital_scope = { is_on_continent = europe }
+						capital_scope = { is_on_continent = south_america }
+						capital_scope = { is_on_continent = north_america }
+						capital_scope = { is_on_continent = africa }
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 2
+			has_war_with = USA
+			original_tag = GER
+			126 = { is_controlled_by_ROOT_or_ally = yes } # Greater London Area
+			14 = { is_controlled_by_ROOT_or_ally = yes } # Brittany
+			123 = { is_controlled_by_ROOT_or_ally = yes } # South-West England
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_central_america = {
+	name = generic_theatre_central_america
+	regions = {
+		53 # Carribean Sea
+		52 # Gulf of Mexico
+		205 # Yucatan
+		34 # Central America
+		123 # Transvolcanic Belt
+		107 # Western Canal Zone
+		106 # Mexican Coast
+		204 # Sierra Madre		
+		170 # Florida Coast
+		124 # Northern South America
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			OR = {
+				has_war_with = HON
+				has_war_with = MEX
+				has_war_with = GUA
+				has_war_with = CUB
+				has_war_with = NIC
+				has_war_with = COS
+				has_war_with = PAN
+				has_war_with = HAI
+				has_war_with = DOM
+			}
+		}
+		modifier = {
+			factor = 0
+			is_historical_focus_on = yes 
+			OR = {
+				original_tag = GER
+				original_tag = ITA
+			}
+			NOT = { 126 = { is_controlled_by_ROOT_or_ally = yes } } # We don't cross the atlantic unless we have conquered the United kingdom
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_gran_columbia = {
+	name = generic_theatre_gran_columbia
+	regions = {
+		124 # Northern South America
+		280 # Guyana
+		201 # Northern Andes
+		287 # Bolivia
+		163 # Amazonas
+		107 # Western Canal Zone
+		109 # Peruvian Coast
+		285 # Rio Tocantis
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			OR = {
+				has_war_with = VEN
+				has_war_with = COL
+				has_war_with = ECU
+				has_war_with = PER
+				has_war_with = BOL
+			}
+		}
+		modifier = {
+			factor = 0
+			is_historical_focus_on = yes 
+			OR = {
+				original_tag = GER
+				original_tag = ITA
+			}
+			NOT = { 126 = { is_controlled_by_ROOT_or_ally = yes } } # We don't cross the atlantic unless we have conquered the United kingdom
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_south_south_america = {
+	name = generic_theatre_south_south_america
+	regions = {
+		284 # Southern Andes
+		283 # Patagonia
+		35 # Pampas
+		281 # Gran Chaco
+		282 # Rio Grande do Sul
+		108 # South American Coast
+		63 # Argentine Coast
+		64 # South Georgia Sea
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			OR = {
+				has_war_with = ARG
+				has_war_with = URU
+				has_war_with = PAR
+				has_war_with = CHI
+			}
+		}
+		modifier = {
+			add = 1
+			has_war_with = FGO
+		}
+		modifier = {
+			factor = 0
+			is_historical_focus_on = yes 
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_generic_brazil = {
+	name = generic_theatre_brazil
+	regions = {
+		125 # Brazil
+		288 # Central Brazil
+		286 # Rio Grande Do North
+		282 # Rio Grande do Sul
+		163 # Amazonas
+		287 # Bolivia
+		281 # Gran Chaco
+		280 # Guyana	
+		61 # Cap Verde Plain
+		66 # South Central Atlantic
+	
+	}
+	cancel = {
+		has_war = no 
+	}
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 1
+			has_war_with = FGO
+		}
+		modifier = {
+			factor = 0
+			is_historical_focus_on = yes 
 		}
 		modifier = {
 			factor = 0

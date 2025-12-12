@@ -6,8 +6,8 @@ BLA_industry_modifier = {
 BLA_army = {
 	enable = { always = yes }
 	icon = GFX_idea_BLA_dynamic_army
-
-	land_doctrine_cost_factor = BLA_army_land_doctrine_cost_factor
+	
+	land_mastery_gain_factor = BLA_army_land_mastery_gain_factor
 
 	#더미 변수
 	#build_cost_ic_anti_air = BLA_army_build_cost_ic_anti_air
@@ -29,7 +29,7 @@ BLA_navy = {
 	icon = GFX_idea_BLA_dynamic_naval
 
 	experience_gain_navy_factor = BLA_navy_experience_gain_navy_factor
-	naval_doctrine_cost_factor = BLA_navy_naval_doctrine_cost_factor
+	naval_mastery_gain_factor = BLA_navy_naval_mastery_gain_factor
 	naval_detection = BLA_navy_naval_detection
 	navy_max_range_factor = BLA_navy_navy_max_range_factor
 	repair_speed_factor = BLA_navy_repair_speed_factor
@@ -56,7 +56,7 @@ BLA_air_force = {
 	icon = GFX_idea_BLA_dynamic_airforce
 	
 	experience_gain_air_factor = BLA_air_force_experience_gain_air_factor
-	air_doctrine_cost_factor = BLA_air_force_air_doctrine_cost_factor
+	air_mastery_gain_factor = BLA_air_force_air_mastery_gain_factor
 	air_accidents_factor = BLA_air_force_air_accidents_factor
 	air_mission_efficiency = BLA_air_force_air_mission_efficiency
 	air_training_xp_gain_factor = BLA_air_force_air_training_xp_gain_factor
@@ -225,9 +225,9 @@ BLA_bad_administrative = {
 	is_welfare_policy_cost_factor = BLA_bad_administrative_welfare_policy_cost_factor
 	industrial_concern_cost_factor = BLA_bad_administrative_industrial_concern_cost_factor
 	is_economy_model_cost_factor = BLA_bad_administrative_economy_model_cost_factor
-	is_mobilization_economy_cost_factor = BLA_bad_administrative_mobilization_economy_cost_factor
+	economy_cost_factor = BLA_bad_administrative_mobilization_economy_cost_factor
 	is_taxation_cost_factor = BLA_bad_administrative_taxation_cost_factor
-	is_tarrif_cost_factor = BLA_bad_administrative_tarrif_cost_factor
+	trade_laws_cost_factor = BLA_bad_administrative_tarrif_cost_factor
 	is_military_budget_cost_factor = BLA_bad_administrative_military_budget_cost_factor
 	is_construction_cost_factor = BLA_bad_administrative_construction_cost_factor
 	is_high_command_order_cost_factor = BLA_bad_administrative_high_command_order_cost_factor
@@ -236,7 +236,7 @@ BLA_bad_administrative = {
 	is_training_quality_cost_factor = BLA_bad_administrative_training_quality_cost_factor
 	is_female_service_cost_factor = BLA_bad_administrative_female_service_cost_factor
 	is_officer_training_cost_factor = BLA_bad_administrative_officer_training_cost_factor
-	is_mobilization_law_cost_factor = BLA_bad_administrative_mobilization_law_cost_factor
+	mobilization_laws_cost_factor = BLA_bad_administrative_mobilization_laws_cost_factor
 	is_non_core_mobilization_law_cost_factor = BLA_bad_administrative_non_core_mobilization_law_cost_factor
 	is_resource_cost_factor = BLA_bad_administrative_resource_cost_factor
 	is_industry_base_cost_factor = BLA_bad_administrative_industry_base_cost_factor

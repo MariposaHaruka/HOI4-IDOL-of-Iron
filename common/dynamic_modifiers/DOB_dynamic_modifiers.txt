@@ -5,6 +5,8 @@ DOB_industry = {
 DOB_army = {
 	enable = { always = yes }
 	icon = GFX_idea_DOB_dynamic_army
+	
+	land_mastery_gain_factor = AGN_army_land_mastery_gain_factor
 
 	#더미 변수
 	#build_cost_ic_anti_air = DOB_army_build_cost_ic_anti_air
@@ -27,7 +29,7 @@ DOB_navy = {
 
 	#임시
 	experience_gain_navy_factor = DOB_navy_experience_gain_navy_factor
-	naval_doctrine_cost_factor = DOB_navy_naval_doctrine_cost_factor
+	naval_mastery_gain_factor = DOB_navy_naval_mastery_gain_factor
 	naval_detection = DOB_navy_naval_detection
 	navy_max_range_factor = DOB_navy_navy_max_range_factor
 	repair_speed_factor = DOB_navy_repair_speed_factor
@@ -55,7 +57,7 @@ DOB_air_force = {
 
 	#임시
 	experience_gain_air_factor = DOB_air_force_experience_gain_air_factor
-	air_doctrine_cost_factor = DOB_air_force_air_doctrine_cost_factor
+	air_mastery_gain_factor = DOB_air_force_air_mastery_gain_factor
 	air_accidents_factor = DOB_air_force_air_accidents_factor
 	air_mission_efficiency = DOB_air_force_air_mission_efficiency
 	air_training_xp_gain_factor = DOB_air_force_air_training_xp_gain_factor

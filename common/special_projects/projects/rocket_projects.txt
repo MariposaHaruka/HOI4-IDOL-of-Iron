@@ -32,7 +32,7 @@ sp_rockets_flying_bomb = {
 		base = 1
 		modifier = {
 			factor = 3
-			ROOT = { tag = PRS }
+			ROOT = { tag = PRS } # IOI 수정
 		}
 		modifier = {
 			factor = 0.5
@@ -447,7 +447,7 @@ sp_rockets_ballistic_missile = {
 				base = 10
 				modifier = {
 					factor = 10
-					FROM = { original_tag = PRS }
+					FROM = { original_tag = PRS } # IOI 수정
 				}
 			}
 
@@ -737,7 +737,7 @@ sp_rockets_long_range_ballistic_missile = {
 				modifier = {
 					factor = 2
 					FROM = {
-						original_tag = ICG
+						original_tag = ICG # IOI 수정
 					}
 				}
 			}
@@ -765,7 +765,7 @@ sp_rockets_long_range_ballistic_missile = {
 				base = 10
 				modifier = {
 					factor = 100
-					FROM = { original_tag = TOH }
+					FROM = { original_tag = TOH } # IOI 수정
 				}
 			}
 
@@ -1045,7 +1045,7 @@ sp_rocket_interceptor = {
 		base = 1
 		modifier = {
 			factor = 3
-			ROOT = { tag = PRS }
+			ROOT = { tag = PRS } # IOI 수정
 		}
 		modifier = {
 			factor = 0.5

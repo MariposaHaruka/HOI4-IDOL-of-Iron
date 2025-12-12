@@ -148,13 +148,12 @@ technologies = {
 			# It is imperative to prepare military tech for the war with China
 			modifier = {
 				factor = 5
-				original_tag = LLS
+				original_tag = LLS # IOI 수정
 			}
 
-			# It is imperative to prepare military tech for the war with China
 			modifier = {
 				factor = 5
-				original_tag = HLL
+				original_tag = HLL # IOI 수정
 			}
 		}
 	}
@@ -512,7 +511,7 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 		}
 
@@ -557,7 +556,7 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 		}
 
@@ -602,7 +601,7 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 		}
 
@@ -638,7 +637,7 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 		}
 
@@ -689,8 +688,8 @@ technologies = {
 				factor = 0.5
 
 				OR = {
-					tag = AZU
-					tag = KTC
+					tag = AZU # IOI 수정
+					tag = KTC # IOI 수정
 				}
 			}
 			modifier = {
@@ -749,14 +748,14 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = LLS
-					tag = IMA
-					tag = ICG
+					tag = LLS # IOI 수정
+					tag = IMA # IOI 수정
+					tag = ICG # IOI 수정
 				}
 				OR = {
-					has_war_with = LLS
-					has_war_with = ICG
-					has_war_with = IMA
+					has_war_with = LLS # IOI 수정
+					has_war_with = ICG # IOI 수정
+					has_war_with = IMA # IOI 수정
 				}
 				factor = 5
 			}
@@ -808,14 +807,14 @@ technologies = {
 			factor = 2
 			modifier = {
 				OR = {
-					tag = LLS
-					tag = IMA
-					tag = ICG
+					tag = LLS # IOI 수정
+					tag = IMA # IOI 수정
+					tag = ICG # IOI 수정
 				}
 				OR = {
-					has_war_with = LLS
-					has_war_with = ICG
-					has_war_with = IMA
+					has_war_with = LLS # IOI 수정
+					has_war_with = ICG # IOI 수정
+					has_war_with = IMA # IOI 수정
 				}
 				factor = 5
 			}
@@ -865,14 +864,14 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = LLS
-					tag = IMA
-					tag = ICG
+					tag = LLS # IOI 수정
+					tag = IMA # IOI 수정
+					tag = ICG # IOI 수정
 				}
 				OR = {
-					has_war_with = LLS
-					has_war_with = ICG
-					has_war_with = IMA
+					has_war_with = LLS # IOI 수정
+					has_war_with = ICG # IOI 수정
+					has_war_with = IMA # IOI 수정
 				}
 				factor = 5
 			}
@@ -918,14 +917,14 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = LLS
-					tag = IMA
-					tag = ICG
+					tag = LLS # IOI 수정
+					tag = IMA # IOI 수정
+					tag = ICG # IOI 수정
 				}
 				OR = {
-					has_war_with = LLS
-					has_war_with = ICG
-					has_war_with = IMA
+					has_war_with = LLS # IOI 수정
+					has_war_with = ICG # IOI 수정
+					has_war_with = IMA # IOI 수정
 				}
 				factor = 5
 			}
@@ -968,14 +967,14 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = LLS
-					tag = IMA
-					tag = ICG
+					tag = LLS # IOI 수정
+					tag = IMA # IOI 수정
+					tag = ICG # IOI 수정
 				}
 				OR = {
-					has_war_with = LLS
-					has_war_with = ICG
-					has_war_with = IMA
+					has_war_with = LLS # IOI 수정
+					has_war_with = ICG # IOI 수정
+					has_war_with = IMA # IOI 수정
 				}
 				factor = 5
 			}
@@ -1023,16 +1022,16 @@ technologies = {
 				factor = 0.2
 
 				OR = {
-					tag = AZU
-					tag = KTC
+					tag = AZU # IOI 수정
+					tag = KTC # IOI 수정
 				}
 			}
 			modifier = {
-				tag = LLS
+				tag = LLS # IOI 수정
 				not = {
 					OR = {
-						has_war_with = TOH
-						has_war_with = ICG
+						has_war_with = TOH # IOI 수정
+						has_war_with = ICG # IOI 수정
 					}
 				}
 				factor = 0.5
@@ -1128,11 +1127,11 @@ technologies = {
 				}
 			}
 			modifier = {
-				tag = LLS
+				tag = LLS # IOI 수정
 				not = {
 					OR = {
-						has_War_with = TOH
-						has_war_with = ICG
+						has_War_with = TOH # IOI 수정
+						has_war_with = ICG # IOI 수정
 					}
 				}
 				factor = 0.5
@@ -1192,11 +1191,11 @@ technologies = {
 				date > "1939.1.9"
 			}
 			modifier = {
-				tag = LLS
+				tag = LLS # IOI 수정
 				not = {
 					OR = {
-						has_War_with = TOH
-						has_war_with = ICG
+						has_War_with = TOH # IOI 수정
+						has_war_with = ICG # IOI 수정
 					}
 				}
 				factor = 0.5
@@ -1206,7 +1205,7 @@ technologies = {
 				date > "1940.1.1"
 			}
 			modifier = {
-				tag = ICG
+				tag = ICG # IOI 수정
 				has_War = no
 				factor = 0.5 #this tank nonsense will never catch on
 			}
@@ -1286,11 +1285,11 @@ technologies = {
 				date > "1941.1.6"
 			}
 			modifier = {
-				tag = LLS
+				tag = LLS # IOI 수정
 				not = {
 					OR = {
-						has_War_with = TOH
-						has_war_with = ICG
+						has_War_with = TOH # IOI 수정
+						has_war_with = ICG # IOI 수정
 					}
 				}
 				factor = 0.5
@@ -1361,11 +1360,11 @@ technologies = {
 				date > "1942.1.6"
 			}
 			modifier = {
-				tag = LLS
+				tag = LLS # IOI 수정
 				not = {
 					OR = {
-						has_War_with = TOH
-						has_war_with = ICG
+						has_war_with = TOH # IOI 수정
+						has_war_with = ICG # IOI 수정
 					}
 				}
 				factor = 0.5
@@ -1425,11 +1424,11 @@ technologies = {
 				date > "1942.1.9"
 			}
 			modifier = {
-				tag = LLS
+				tag = LLS # IOI 수정
 				not = {
 					OR = {
-						has_War_with = TOH
-						has_war_with = ICG
+						has_war_with = TOH # IOI 수정
+						has_war_with = ICG # IOI 수정
 					}
 				}
 				factor = 0.5

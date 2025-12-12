@@ -572,6 +572,9 @@ leader_traits = {
 	# 산업 업체
 	industrial_concern = {
 		random = no
+		country_resource_coal = 6
+		local_resources_coal_factor = 0.05
+
 		ai_will_do = {
 			factor = 1
 		}
@@ -615,6 +618,8 @@ leader_traits = {
 	# 전자공학 업체
 	electronics_concern = {
 		random = no
+		factory_energy_consumption = -0.1
+
 		ai_will_do = {
 			factor = 1
 		}
@@ -625,6 +630,7 @@ leader_traits = {
 		random = no
 		local_resources_factor = 0.1
 		production_lack_of_resource_penalty_factor = -0.15
+		local_resources_coal_factor = 0.10
 		ai_will_do = {
 			factor = 1
 		}

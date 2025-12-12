@@ -65,7 +65,7 @@ air_subdoctrine_long_range_escort = {
         base = 1
         modifier = {
             factor = 50
-            original_tag = ICG
+            original_tag = ICG # IOI 수정
         }
         modifier = {
             factor = 0
@@ -118,8 +118,8 @@ air_subdoctrine_operational_air_support = {
         modifier = {
             factor = 50
             OR = {
-            	original_tag = IMA  
-            	original_tag = BDG
+            	original_tag = IMA # IOI 수정  
+            	original_tag = BDG # IOI 수정
             }
         }
         modifier = {
@@ -176,9 +176,9 @@ air_subdoctrine_tactical_battlefield_support = {
         modifier = {
             factor = 50
             OR = {
-            	original_tag = PRS  
-            	original_tag = LLS
-            	original_tag = ENS
+            	original_tag = PRS # IOI 수정  
+            	original_tag = LLS # IOI 수정
+            	original_tag = ENS # IOI 수정
             }
         }
         modifier = {
@@ -232,7 +232,7 @@ air_subdoctrine_theater_interdiction = {
         base = 1
         modifier = {
             factor = 50
-            original_tag = TOH 
+            original_tag = TOH # IOI 수정 
         }
         modifier = {
             factor = 0.5

@@ -3,6 +3,7 @@
 # NOTE: tactics must start with "tactic_" in their name to work with techs.
 ###############################################################################
 
+
 phases = { # phase = no is the standard phase
 	close_combat
 	tactical_withdrawal
@@ -663,9 +664,9 @@ tactic_human_wave_tactics = { #People's army attacker tactic
 }
 
 tactic_banzai_charge = { #Special Japan attacker tactic
+	only_show_for = LLS # IOI 수정
 	is_attacker = yes
 	trigger = {
-		is_lovelive = yes
 		OWNER = { NOT = { has_tactic = tactic_grand_banzai_charge } }
 		is_attacker = yes
 		phase = no
@@ -680,10 +681,10 @@ tactic_banzai_charge = { #Special Japan attacker tactic
 }
 
 tactic_grand_banzai_charge = { #Special Japan attacker tactic
-	only_show_for = LLS
+	only_show_for = LLS # IOI 수정
 	is_attacker = yes
 	trigger = {
-		tag = LLS
+		tag = LLS # IOI 수정
 		is_attacker = yes
 		phase = no
 	}
@@ -787,7 +788,7 @@ tactic_barrage = { #Superior firepower attacker tactic
 }
 
 tactic_masterful_blitz = { #Improved version of Blitz for Soviets
-	only_show_for = TOH
+	only_show_for = TOH # IOI 수정
 	is_attacker = yes
 	trigger = {
 		is_attacker = yes

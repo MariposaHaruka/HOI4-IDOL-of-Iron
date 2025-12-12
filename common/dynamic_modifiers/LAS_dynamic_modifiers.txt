@@ -7,7 +7,10 @@ LAS_industry = {
 LAS_army = {
 	enable = { always = yes }
 	icon = GFX_idea_LAS_dynamic_army
-	#INITIALmobilization_law_cost_factor = LAS_army_mobilization_law_cost_factor #-0.1
+	
+	land_mastery_gain_factor = AGN_army_land_mastery_gain_factor
+	#INITIAL
+	mobilization_laws_cost_factor = LAS_army_mobilization_laws_cost_factor #-0.1
 	army_org_factor = LAS_army_army_org_factor #-0.15 Meant to represent army disgruntledness
 	experience_gain_army_factor = LAS_army_experience_gain_army_factor #-0.1
 	experience_loss_factor = LAS_army_experience_loss_factor #0.25
@@ -26,7 +29,6 @@ LAS_army = {
 	unit_artillery_brigade_design_cost_factor = LAS_army_unit_artillery_brigade_design_cost_factor #-0.1
 	army_org_regain = LAS_army_army_org_regain #0.1 -> Barrier Troops
 	special_forces_cap = LAS_army_special_forces_cap # 0.1 -> The Glory of the Red Army
-	land_doctrine_cost_factor = LAS_army_land_doctrine_cost_factor # -0.1 -> The Glory of the Red Army
 	cas_damage_reduction = LAS_army_cas_damage_reduction #0.05 -> Experts in Camouflage
 	max_dig_in = LAS_army_max_dig_in #5 -> Experts in Camouflage
 	dig_in_speed_factor = LAS_army_dig_in_speed_factor #0.05 -> Experts in Camouflage
@@ -38,11 +40,16 @@ LAS_navy = {
 	enable = { NOT = { has_country_flag = no_naval_academy } }
 	icon = GFX_idea_LAS_dynamic_naval
 	
+	naval_mastery_gain_factor = AGN_navy_naval_mastery_gain_factor
+	
 }
 
 LAS_air_force = {
 	enable = { NOT = { has_country_flag = no_air_academy } }
 	icon = GFX_idea_LAS_dynamic_airforce
+
+	
+	air_mastery_gain_factor = AGN_air_force_air_mastery_gain_factor
 	#INITIAL
 	air_accidents_factor = LAS_airforce_air_accidents_factor #0.75
 	air_ace_generation_chance_factor = LAS_airforce_air_ace_generation_chance_factor #-0.5

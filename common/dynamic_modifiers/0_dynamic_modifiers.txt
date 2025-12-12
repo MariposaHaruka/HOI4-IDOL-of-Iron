@@ -338,3 +338,284 @@ sp_land_stronghold_network_collapse_workers_drafted = {
 	local_resources_factor = -0.5
 	state_production_speed_buildings_factor = -0.5
 }
+
+
+
+
+##### RAIDS #####
+eben_emael_raided_critical_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_BEL_eben_emael_raided
+	max_dig_in_factor = -0.5
+	land_bunker_effectiveness_factor = -0.75
+}
+
+eben_emael_raided_success_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_BEL_eben_emael_raided
+	max_dig_in_factor = -0.25
+	land_bunker_effectiveness_factor = -0.75
+}  
+
+eben_emael_raided_limited_success_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_BEL_eben_emael_raided
+	land_bunker_effectiveness_factor = -0.5
+}
+
+KTC_guerilla_cells_active_1 = {
+	icon = GFX_modifier_generic_guerilla_base
+	enable = { always = yes }
+
+	remove_trigger = {
+		OR = {
+			controller = {
+				NOT = { 
+					has_war_with = KTC 
+					has_war_with = AZU 
+				}
+			}
+			AND = {
+				NOT = {
+					is_core_of = controller
+				}
+				compliance > 60
+			}
+			is_core_of = controller
+		}
+	}
+	custom_modifier_tooltip = PRC_guerilla_cells_active_1_tt
+
+	resistance_decay = -0.1
+	resistance_growth = 0.01
+	local_manpower = -0.1
+}
+
+KTC_guerilla_cells_active_2 = {
+	icon = GFX_modifier_generic_guerilla_base
+	enable = { always = yes }
+
+	remove_trigger = {
+		OR = {
+			controller = {
+				NOT = { 
+					has_war_with = KTC 
+					has_war_with = AZU 
+				}
+			}
+			AND = {
+				NOT = {
+					is_core_of = controller
+				}
+				compliance > 60
+			}
+			is_core_of = controller
+		}
+	}
+	custom_modifier_tooltip = PRC_guerilla_cells_active_2_tt
+
+	resistance_decay = -0.1
+	resistance_growth = 0.02
+	compliance_growth = -0.01
+	local_manpower = -0.2
+}
+
+KTC_anti_japanese_base = {
+	icon = GFX_modifier_generic_sabotage
+	enable = { always = yes }
+
+	remove_trigger = {
+		OR = {
+			controller = {
+				NOT = { has_war_with = KTC }
+			}
+			AND = {
+				NOT = { is_core_of = controller }
+				compliance > 60
+			}
+			KTC = { exists = no }
+		}
+	}
+	repair_speed_rail_way_factor = -0.10
+	repair_speed_infrastructure_factor = -0.1
+	local_supplies_for_controller =  -0.1
+	army_speed_factor_for_controller = -0.1
+	attrition_for_controller = 0.1
+	local_factory_sabotage = 0.1
+}
+
+KTC_infiltrated_state_1 = {
+	icon = GFX_modifiers_PRC_infiltrated_state_1	
+	enable = { always = yes }
+
+	remove_trigger = {
+		OR = {
+			ROOT = { 
+				controller = {
+					original_tag = KTC
+				}
+			}
+			KTC = { exists = no }
+		}
+	}
+
+	out_of_supply_factor = -0.1
+	max_dig_in_factor = 0.1
+
+}
+
+KTC_infiltrated_state_2 = {
+	icon = GFX_modifiers_PRC_infiltrated_state_2	
+	enable = { always = yes }
+
+	remove_trigger = {
+		OR = {
+			ROOT = { 
+				controller = {
+					original_tag = KTC
+				}
+			}
+			KTC = { exists = no }
+		}
+	}
+
+	custom_modifier_tooltip = PRC_infiltrated_state_2_tt
+
+	breakthrough_factor = 0.05
+	army_attack_factor = 0.05
+	out_of_supply_factor = -0.1
+	max_dig_in_factor = 0.1
+}
+
+KTC_infiltrated_state_3 = {
+	icon = GFX_modifiers_PRC_infiltrated_state_3	
+	enable = { always = yes }
+
+	remove_trigger = {
+		OR = {
+			ROOT = { 
+				controller = {
+					original_tag = KTC
+				}
+			}
+			KTC = { exists = no }
+		}
+	}
+
+	breakthrough_factor = 0.05
+	army_attack_factor = 0.05
+	out_of_supply_factor = -0.1
+	max_dig_in_factor = 0.1
+
+	custom_modifier_tooltip = PRC_infiltrated_state_3_tt #This is hardcoded for PRC right now
+}
+
+
+
+KTC_probed_border_defenses = {
+	icon = GFX_modifiers_BEL_eben_emael_raided	
+	enable = { always = yes }
+
+	remove_trigger = {
+		OR = {
+			ROOT = { 
+				controller = {
+					original_tag = KTC
+				}
+			}	
+			KTC = {
+				exists = no
+			}
+		}
+	}
+
+	breakthrough_factor = 0.05
+	army_attack_factor = 0.05
+}
+
+
+KTC_probed_border_defenses_victim = {
+	icon = GFX_modifiers_BEL_eben_emael_raided	
+	enable = { always = yes }
+
+	remove_trigger = {
+		OR = {
+			ROOT = { 
+				controller = {
+					original_tag = KTC
+				}
+			}	
+			KTC = {
+				exists = no
+			}
+		}
+	}
+
+	army_defence_factor = -0.15
+
+}
+
+
+KTC_probed_border_defenses_victim_massive = {
+	icon = GFX_modifiers_BEL_eben_emael_raided	
+	enable = { always = yes }
+
+	remove_trigger = {
+		OR = {
+			ROOT = { 
+				controller = {
+					original_tag = KTC
+				}
+			}	
+			KTC = {
+				exists = no
+			}
+		}
+	}
+
+	army_defence_factor = -0.25
+
+}
+
+KTC_infiltrated_border_defenses = {
+	icon = GFX_modifiers_BEL_eben_emael_raided	
+	enable = { always = yes }
+
+	remove_trigger = {
+		OR = {
+			ROOT = { 
+				controller = {
+					original_tag = KTC
+				}
+			}	
+			KTC = {
+				exists = no
+			}
+		}
+	}
+
+	breakthrough_factor = 0.1
+	army_attack_factor = 0.1
+}
+
+KTC_sabotaged_border_defenses = {
+	icon = GFX_modifiers_BEL_eben_emael_raided	
+	enable = { always = yes }
+
+	remove_trigger = {
+		OR = {
+			ROOT = { 
+				controller = {
+					original_tag = KTC
+				}
+			}	
+			KTC = {
+				exists = no
+			}
+		}
+	}
+
+	breakthrough_factor = 0.1
+	army_attack_factor = 0.1
+	out_of_supply_factor = -0.1
+}

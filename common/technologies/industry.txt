@@ -3,6 +3,8 @@ technologies = {
 	basic_machine_tools = {
 	
 		production_factory_max_efficiency_factor = 0.1
+		equipment_conversion_speed = 0.2
+		factory_energy_consumption = -0.1 # IOI 수정
 
 		
 		path = {
@@ -41,6 +43,8 @@ technologies = {
 	improved_machine_tools = {
 	
 		production_factory_max_efficiency_factor = 0.1
+		equipment_conversion_speed = 0.2
+		factory_energy_consumption = -0.1 # IOI 수정
 
 		path = {
 			leads_to_tech = advanced_machine_tools 
@@ -78,6 +82,8 @@ technologies = {
 	advanced_machine_tools = {
 	
 		production_factory_max_efficiency_factor = 0.1
+		equipment_conversion_speed = 0.2
+		factory_energy_consumption = -0.1 # IOI 수정
 		
 		path = {
 			leads_to_tech = assembly_line_production 
@@ -110,6 +116,8 @@ technologies = {
 	assembly_line_production = {
 	
 		production_factory_max_efficiency_factor = 0.1
+		equipment_conversion_speed = 0.2
+		factory_energy_consumption = -0.1 # IOI 수정
 		
 		#path = {
 		#	leads_to_tech = improved_machine_tools 
@@ -154,6 +162,7 @@ technologies = {
 
 		production_factory_max_efficiency_factor = 0.1
 		line_change_production_efficiency_factor = 0.2
+		factory_energy_consumption = -0.1 # IOI 수정
 		
 		research_cost = 2.5
 		start_year = 1943
@@ -186,6 +195,7 @@ technologies = {
 
 		production_factory_max_efficiency_factor = 0.1
 		production_factory_efficiency_gain_factor = 0.1
+		factory_energy_consumption = -0.1 # IOI 수정
 			
 		research_cost = 2.5
 		start_year = 1943
@@ -217,8 +227,8 @@ technologies = {
 
 	#Conversion branch - Enabled in DoD
 	improved_equipment_conversion = {
-	
-		equipment_conversion_speed = 0.40
+		energy_gain_factor = 0.15
+		#equipment_conversion_speed = 0.40
 
 		path = {
 			leads_to_tech = advanced_equipment_conversion
@@ -243,7 +253,7 @@ technologies = {
 
 			modifier = {
 				factor = 0
-				NOT = { has_government = fascism }
+				is_fascism = no # IOI 수정
 			}
 		}
 		
@@ -254,8 +264,8 @@ technologies = {
 	}
 	
 	advanced_equipment_conversion = {
-		
-		equipment_conversion_speed = 0.40
+		energy_gain_factor = 0.15
+		#equipment_conversion_speed = 0.40
 
 		research_cost = 2
 		start_year = 1939
@@ -291,6 +301,7 @@ technologies = {
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
+		factory_energy_consumption = -0.10 # IOI 수정
 		
 		path = {
 			leads_to_tech = concentrated_industry2 
@@ -313,22 +324,22 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				NOT = { tag = PRS }
+				NOT = { tag = PRS } # IOI 수정
 			}
 			
 			modifier = {
 				factor = 2
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 2
-				tag = IMA
+				tag = IMA # IOI 수정
 			}
 			
 			modifier = {
 				factor = 2
-				tag = LLS
+				tag = LLS # IOI 수정
 			}
 
 			modifier = {
@@ -362,6 +373,7 @@ technologies = {
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
+		factory_energy_consumption = -0.10 # IOI 수정
 		
 		path = {
 			leads_to_tech = concentrated_industry3 
@@ -401,6 +413,7 @@ technologies = {
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
+		factory_energy_consumption = -0.10 # IOI 수정
 		
 		path = {
 			leads_to_tech = concentrated_industry4 
@@ -439,6 +452,7 @@ technologies = {
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
+		factory_energy_consumption = -0.10 # IOI 수정
 		
 		path = {
 			leads_to_tech = concentrated_industry5
@@ -477,6 +491,7 @@ technologies = {
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
+		factory_energy_consumption = -0.10 # IOI 수정
 		
 		research_cost = 2
 		start_year = 1943
@@ -518,6 +533,7 @@ technologies = {
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.15
 		global_building_slots_factor = 0.2
+		factory_energy_consumption = -0.05 # IOI 수정
 		
 		path = {
 			leads_to_tech = dispersed_industry2 
@@ -540,22 +556,22 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			
 			modifier = {
 				factor = 0.25
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 0.25
-				tag = IMA
+				tag = IMA # IOI 수정
 			}
 			
 			modifier = {
 				factor = 0.25
-				tag = LLS
+				tag = LLS # IOI 수정
 			}
 
 			modifier = {
@@ -592,6 +608,7 @@ technologies = {
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.10
 		global_building_slots_factor = 0.2
+		factory_energy_consumption = -0.05 # IOI 수정
 		
 		path = {
 			leads_to_tech = dispersed_industry3 
@@ -633,6 +650,7 @@ technologies = {
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.10
 		global_building_slots_factor = 0.2
+		factory_energy_consumption = -0.05 # IOI 수정
 		
 		path = {
 			leads_to_tech = dispersed_industry4 
@@ -674,6 +692,7 @@ technologies = {
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.10
 		global_building_slots_factor = 0.2
+		factory_energy_consumption = -0.05 # IOI 수정
 		
 		path = {
 			leads_to_tech = dispersed_industry5 
@@ -715,6 +734,7 @@ technologies = {
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.10
 		global_building_slots_factor = 0.2
+		factory_energy_consumption = -0.05
 		
 		
 		research_cost = 2
@@ -866,7 +886,7 @@ technologies = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
-				tag = ICG
+				tag = ICG # IOI 수정
 				factor = 0.5
 			}
 			modifier = {
@@ -931,7 +951,7 @@ technologies = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
-				tag = ICG
+				tag = ICG # IOI 수정
 				factor = 0.5
 			}	
 			modifier = {
@@ -987,7 +1007,7 @@ technologies = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
-				tag = ICG
+				tag = ICG # IOI 수정
 				factor = 0.5
 			}	
 			modifier = {
@@ -1034,7 +1054,7 @@ technologies = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
-				tag = ICG
+				tag = ICG # IOI 수정
 				factor = 0.5
 			}	
 			modifier = {
@@ -1077,7 +1097,7 @@ technologies = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
-				tag = ICG
+				tag = ICG # IOI 수정
 				factor = 0.5
 			}
 			modifier = {
@@ -1129,7 +1149,7 @@ technologies = {
 			cat_synth_oil
 		}
 
-		#on_research_complete = {
+		#on_research_complete = { # IOI 임시조치
 		#	# FIN effect from focus Tire Factory at Nokia
 		#	if = {
 		#		limit = {
@@ -1144,9 +1164,9 @@ technologies = {
 			factor = 5
 			modifier = {
 				OR = {
-					tag = PRS
-					tag = ENS
-					tag = LLS
+					tag = PRS # IOI 수정
+					tag = ENS # IOI 수정
+					tag = LLS # IOI 수정
 				}
 				has_war = yes
 				factor = 5
@@ -1198,9 +1218,9 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = PRS
-					tag = ENS
-					tag = LLS
+					tag = PRS # IOI 수정
+					tag = ENS # IOI 수정
+					tag = LLS # IOI 수정
 				}
 				has_war = yes
 				factor = 25
@@ -1219,7 +1239,7 @@ technologies = {
 			}			
 			modifier = {
 				factor = 25
-				original_tag = PRS	
+				original_tag = PRS # IOI 수정
 				date > "1937.1.1"	
 			}
 		}
@@ -1258,9 +1278,9 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = PRS
-					tag = ENS
-					tag = LLS
+					tag = PRS # IOI 수정
+					tag = ENS # IOI 수정
+					tag = LLS # IOI 수정
 				}
 				has_war = yes
 				factor = 25
@@ -1278,7 +1298,7 @@ technologies = {
 				oil > 30
 			}	
 			modifier = {
-				original_tag = PRS			
+				original_tag = PRS # IOI 수정		
 				has_war = yes
 				factor = 3
 			}		
@@ -1318,9 +1338,9 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = PRS
-					tag = ENS
-					tag = LLS
+					tag = PRS # IOI 수정
+					tag = ENS # IOI 수정
+					tag = LLS # IOI 수정
 				}
 				has_war = yes
 				factor = 25
@@ -1421,8 +1441,8 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = PRS
-					tag = ENS
+					tag = PRS # IOI 수정
+					tag = ENS # IOI 수정
 				}
 				has_war = yes
 				factor = 15
@@ -1441,7 +1461,7 @@ technologies = {
 			}			
 			modifier = {
 				factor = 25
-				original_tag = PRS	
+				original_tag = PRS # IOI 수정
 				date > "1938.1.1"	
 			}
 		}
@@ -1486,8 +1506,8 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = PRS
-					tag = ENS
+					tag = PRS # IOI 수정
+					tag = ENS # IOI 수정
 				}
 				has_war = yes
 				factor = 15
@@ -1546,8 +1566,8 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = PRS
-					tag = ENS
+					tag = PRS # IOI 수정
+					tag = ENS # IOI 수정
 				}
 				has_war = yes
 				factor = 15
@@ -1660,6 +1680,7 @@ technologies = {
 	excavation1 = {
 		
 		local_resources_factor = 0.10
+		local_resources_coal_factor = 0.05
 		
 		path = {
 			research_cost_coeff = 1
@@ -1747,6 +1768,7 @@ technologies = {
 	excavation2 = {
 		
 		local_resources_factor = 0.10
+		local_resources_coal_factor = 0.05
 		
 		path = {
 			research_cost_coeff = 1
@@ -1847,6 +1869,7 @@ technologies = {
 	excavation3 = {
 		
 		local_resources_factor = 0.10
+		local_resources_coal_factor = 0.05
 		
 		path = {
 			research_cost_coeff = 1
@@ -1942,6 +1965,7 @@ technologies = {
 	excavation4 = {
 		
 		local_resources_factor = 0.10
+		local_resources_coal_factor = 0.05
 		
 		path = {
 			research_cost_coeff = 1
@@ -2028,6 +2052,7 @@ technologies = {
 	excavation5 = {
 		
 		local_resources_factor = 0.10
+		local_resources_coal_factor = 0.05
 		
 		path = {
 			research_cost_coeff = 1

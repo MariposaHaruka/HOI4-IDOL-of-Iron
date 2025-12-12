@@ -192,8 +192,8 @@ technologies = {
 			modifier = {
 				factor = 100
 				OR = {
-					tag = PRS
-					tag = TOH
+					tag = PRS # IOI 수정
+					tag = TOH # IOI 수정
 				}
 				has_war = yes
 				any_enemy_country = {
@@ -350,18 +350,18 @@ technologies = {
 				factor = 2
 				is_major = yes
 				not = {
-					tag = LLS
+					tag = LLS # IOI 수정
 					num_of_military_factories < 50
 				}
 			}
 			modifier = {
 				is_major = yes
-				not = { tag = LLS }
+				not = { tag = LLS } # IOI 수정
 				has_war = yes
 				factor = 10 #you are embarassing yourself
 			}
 			modifier = {
-				tag = TOH
+				tag = TOH # IOI 수정
 				factor = 3
 			}
 			
@@ -407,7 +407,7 @@ technologies = {
 				add = 120
 				OR = {
 					#tag = PRS
-					tag = TOH
+					tag = TOH # IOI 수정
 				}
 				has_war = yes
 				any_enemy_country = {
@@ -536,8 +536,8 @@ technologies = {
 			base = 0.5
 			modifier = {
 				OR = {
-					original_tag = ICG
-					original_tag = LLS
+					original_tag = ICG # IOI 수정
+					original_tag = LLS # IOI 수정
 				}
 				factor = 3
 			}
@@ -584,8 +584,8 @@ technologies = {
 			}
 			modifier = {
 				OR = {
-					original_tag = ICG
-					original_tag = LLS
+					original_tag = ICG # IOI 수정
+					original_tag = LLS # IOI 수정
 				}
 				factor = 2
 			}
@@ -677,7 +677,7 @@ technologies = {
 				add = 130
 				OR = {
 					#tag = PRS
-					tag = TOH
+					tag = TOH # IOI 수정
 				}
 				has_war = yes
 				any_enemy_country = {
@@ -780,13 +780,13 @@ technologies = {
 				factor = 2
 				is_major = yes
 				not = {
-					tag = LLS
+					tag = LLS # IOI 수정
 					num_of_military_factories < 50
 				}
 				date > "1938.1.1"
 			}
 			modifier = {
-				tag = TOH
+				tag = TOH # IOI 수정
 				factor = 1.5
 			}
 			modifier = {
@@ -806,9 +806,9 @@ technologies = {
 			
 			modifier = {
 				factor = 15.0
-				tag = PRS
+				tag = PRS # IOI 수정
 				date > 1938.1.1
-				#has_opinion_modifier = sov_ger_treaty
+				has_opinion_modifier = toh_prs_treaty # IOI 수정
 			}
 		}
 		
@@ -842,7 +842,7 @@ technologies = {
 				add = 140
 				OR = {
 					#tag = PRS
-					tag = TOH
+					tag = TOH # IOI 수정
 				}
 				any_enemy_country = {
 					ROOT = {
@@ -929,7 +929,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 100
-				tag = Ger
+				tag = PRS # IOI 수정
 			}
 		}
 		
@@ -968,7 +968,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 0 # we dont use it
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 		}
 		
@@ -1017,7 +1017,7 @@ technologies = {
 				factor = 2
 				is_major = yes
 				not = {
-					tag = LLS
+					tag = LLS # IOI 수정
 					num_of_military_factories < 50
 				}
 			}
@@ -1027,12 +1027,12 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			
 			modifier = {
 				factor = 2
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 			
 			modifier = {
@@ -1076,7 +1076,7 @@ technologies = {
 				add = 150
 				OR = {
 					#tag = PRS
-					tag = TOH
+					tag = TOH # IOI 수정
 				}
 				has_war = yes
 				any_enemy_country = {
@@ -1198,7 +1198,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 0 # we dont use it
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 		}
 		
@@ -1284,8 +1284,8 @@ technologies = {
 			modifier = {
 				add = 160
 				OR = {
-					tag = PRS
-					tag = TOH
+					tag = PRS # IOI 수정
+					tag = TOH # IOI 수정
 				}
 				any_enemy_country = {
 					ROOT = {
@@ -1648,11 +1648,11 @@ technologies = {
 				date > "1939.1.1"
 			}
 			modifier = {
-				tag = BDG
+				tag = BDG # IOI 수정
 				factor = 3
 			}
 			modifier = {
-				tag = LLS
+				tag = LLS # IOI 수정
 				num_of_military_factories < 100
 				factor = 0
 			}
@@ -1816,7 +1816,7 @@ technologies = {
 		ai_will_do = {
 			base = 0.8
 			modifier = {
-				tag = LLS
+				tag = LLS # IOI 수정
 				num_of_military_factories < 100
 				factor = 0
 			}

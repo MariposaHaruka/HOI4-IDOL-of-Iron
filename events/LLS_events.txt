@@ -1,1 +1,48 @@
-add_namespace = news
+add_namespace = LLS_foreign_policy
+
+country_event = {
+	id = LLS_foreign_policy.101
+	title = LLS_foreign_policy.101.t
+	desc = LLS_foreign_policy.101.desc
+	picture = GFX_report_event_usa_pearl_harbor_airphoto
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	# This day will live on in infamy!
+	option = {
+		name = LLS_foreign_policy.101.a
+		add_war_support = 0.05
+		IF = {
+			limit = { has_country_flag = LLS_inflicted_loss_nr_3 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = LLS_day_of_infamy_3 
+					days = 180
+				}	
+			}
+		}
+		ELSE_IF = {
+			limit = { has_country_flag = LLS_inflicted_loss_nr_2 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = LLS_day_of_infamy_2 
+					days = 180
+				}	
+			}
+		}
+		ELSE_IF = {
+			limit = { has_country_flag = LLS_inflicted_loss_nr_1 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = LLS_day_of_infamy_1 
+					days = 180
+				}	
+			}
+		}
+	}
+}

@@ -288,9 +288,9 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = IMA
-					tag = ICG
-					tag = IML
+					tag = IMA # IOI 수정
+					tag = ICG # IOI 수정
+					tag = IML # IOI 수정
 				}
 				factor = 5
 			}
@@ -340,8 +340,8 @@ technologies = {
 	#		factor = 1
 	#		modifier = {
 	#			OR = {
-	#				tag = IMA
-	#				tag = ICG
+	#				tag = IMA # IOI 수정
+	#				tag = ICG # IOI 수정
 	#			}
 	#			factor = 5
 	#		}
@@ -397,9 +397,9 @@ technologies = {
 			modifier = {
 				factor = 4
 				OR = {
-					tag = IMA
-					tag = ICG
-					tag = IML
+					tag = IMA # IOI 수정
+					tag = ICG # IOI 수정
+					tag = IML # IOI 수정
 				}
 			}
 			modifier = {
@@ -453,9 +453,9 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = IMA
-					tag = ICG
-					tag = IML
+					tag = IMA # IOI 수정
+					tag = ICG # IOI 수정
+					tag = IML # IOI 수정
 				}
 				factor = 4
 			}
@@ -505,9 +505,9 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					tag = IMA
-					tag = ICG
-					tag = IML
+					tag = IMA # IOI 수정
+					tag = ICG # IOI 수정
+					tag = IML # IOI 수정
 				}
 				factor = 5
 			}
@@ -657,7 +657,7 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 		}
 		
@@ -743,12 +743,12 @@ technologies = {
 			modifier = {
 				factor = 3
 
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			modifier = {
 				factor = 3
 
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 		}
 		
@@ -786,12 +786,12 @@ technologies = {
 			modifier = {
 				factor = 3
 
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			modifier = {
 				factor = 3
 
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 		}
 		
@@ -829,12 +829,12 @@ technologies = {
 			modifier = {
 				factor = 3
 
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			modifier = {
 				factor = 3
 
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 		}
 		
@@ -868,12 +868,12 @@ technologies = {
 			modifier = {
 				factor = 3
 
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			modifier = {
 				factor = 3
 
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 		}
 		
@@ -907,12 +907,12 @@ technologies = {
 			modifier = {
 				factor = 3
 
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			modifier = {
 				factor = 3
 
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 		}
 		
@@ -946,12 +946,12 @@ technologies = {
 			modifier = {
 				factor = 3
 
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			modifier = {
 				factor = 3
 
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 		}
 		
@@ -978,10 +978,10 @@ technologies = {
 			factor = 0.75
 			modifier = {
 				OR = {
-					tag = IMA
-					tag = ICG
-					tag = IML
-					tag = LLS
+					tag = IMA # IOI 수정
+					tag = ICG # IOI 수정
+					tag = IML # IOI 수정
+					tag = LLS # IOI 수정
 				}
 				factor = 3
 			}
@@ -1018,10 +1018,10 @@ technologies = {
 			factor = 0.75
 			modifier = {
 				OR = {
-					tag = IMA
-					tag = ICG
-					tag = IML
-					tag = LLS
+					tag = IMA # IOI 수정
+					tag = ICG # IOI 수정
+					tag = IML # IOI 수정
+					tag = LLS # IOI 수정
 				}
 				factor = 3
 			}
@@ -1058,10 +1058,10 @@ technologies = {
 			factor = 0.75
 			modifier = {
 				OR = {
-					tag = IMA
-					tag = ICG
-					tag = IML
-					tag = LLS
+					tag = IMA # IOI 수정
+					tag = ICG # IOI 수정
+					tag = IML # IOI 수정
+					tag = LLS # IOI 수정
 				}
 				factor = 3
 			}
@@ -1677,7 +1677,7 @@ technologies = {
 
 			modifier = {
 				factor = 4
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 		}
 		
@@ -1687,8 +1687,8 @@ technologies = {
 
 		allow = {
 			OR = {
-				original_tag = BLA
-				original_tag = LAS
+				original_tag = BLA # IOI 수정
+				original_tag = LAS # IOI 수정
 				has_global_flag = discovery_of_nuclear_fission 
 			}
 		}
@@ -1711,30 +1711,6 @@ technologies = {
 							check_variable = { global.atomic_research_race < 3 }
 						}
 						add_to_variable = { global.atomic_research_race = 1 }
-						if = {
-							limit = {
-								original_tag = ITA
-								NOT = { has_country_flag = ITA_pioneer_in_atomic_research_flag }
-							}
-							set_country_flag = ITA_pioneer_in_atomic_research_flag
-						}
-						else_if = {
-							limit = {
-								check_variable = { global.atomic_research_race = 3 }
-								NOT = {
-									any_country = {
-										original_tag = ITA
-										has_country_flag = ITA_pioneer_in_atomic_research_flag
-									}
-								}
-							}
-							random_country = {
-								limit = {
-									original_tag = ITA
-								}
-								set_country_flag = ITA_late_to_the_atomic_party_flag
-							}
-						}
 					}
 				}
 			}
@@ -1761,7 +1737,7 @@ technologies = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
-				tag = ICG
+				tag = ICG # IOI 수정
 				factor = 2
 			}
 		}
@@ -1829,8 +1805,8 @@ technologies = {
 		on_research_complete = {
 			if = {
 				limit = {
-					tag = ICG
-					has_war_with = LLS
+					tag = ICG # IOI 수정
+					has_war_with = LLS # IOI 수정
 				}
 				play_warning_to_japan_effect = yes
 			}

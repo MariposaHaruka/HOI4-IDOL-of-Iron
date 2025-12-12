@@ -17,10 +17,10 @@ air_subdoctrine_night_bombing = {
         modifier = {
             factor = 25
             OR = {
-            	original_tag = IMA  
-            	original_tag = IML 
-            	original_tag = ISC 
-            	original_tag = ISM 
+            	original_tag = IMA # IOI 수정  
+            	original_tag = IML # IOI 수정 
+            	original_tag = ISC # IOI 수정 
+            	original_tag = ISM # IOI 수정 
         	}
     	}
     }
@@ -67,8 +67,8 @@ air_subdoctrine_carpet_bombing = {
         modifier = {
             factor = 25
             OR = {
-            	original_tag = LLS 
-            	original_tag = BDG 
+            	original_tag = LLS # IOI 수정 
+            	original_tag = BDG # IOI 수정 
             }
         }
         modifier = {
@@ -124,8 +124,8 @@ air_subdoctrine_deep_air_raids = {
         modifier = {
             factor = 25
             OR = {
-            	original_tag = TOH 
-            	original_tag = PRS 
+            	original_tag = TOH # IOI 수정 
+            	original_tag = PRS # IOI 수정 
             }
         }
         modifier = {
@@ -177,7 +177,7 @@ air_subdoctrine_flying_fortresses = {
         base = 1
         modifier = {
             factor = 25
-            original_tag = ICG  
+            original_tag = ICG # IOI 수정  
         }
         modifier = {
             factor = 0.5
@@ -329,7 +329,7 @@ air_subdoctrine_heavy_aircraft_focus = {
         base = 1
         modifier = {
             factor = 25
-            original_tag = ENS  
+            original_tag = ENS # IOI 수정  
         }
         modifier = {
             factor = 2

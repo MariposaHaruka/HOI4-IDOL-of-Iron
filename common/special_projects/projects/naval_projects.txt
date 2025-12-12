@@ -743,7 +743,7 @@ sp_naval_midget_submarine = {
 			}
 
 			if = { #Italian content from Midget Submarines focus moved here (focus now completes this SP)
-				limit = { original_tag = ENS }
+				limit = { original_tag = ENS } # IOI 수정
 				create_equipment_variant = {
 					name = "CB Class"
 					type = ship_hull_midget_submarine
@@ -759,7 +759,7 @@ sp_naval_midget_submarine = {
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_midget_submarine
-						creator = "ENS"
+						creator = "ENS" # IOI 수정
 						version_name = "CB Class"
 					}
 					name = "Ammiraglio Millo"
@@ -1116,7 +1116,7 @@ sp_naval_submarine_carrier = {
 		modifier = {
 			factor = 2
 			ROOT = { 
-				original_tag = LLS
+				original_tag = LLS # IOI 수정
 				OR = {
 					is_fascism = yes
 					is_neutrality = yes
@@ -1164,7 +1164,7 @@ sp_naval_submarine_carrier = {
 		}
 
 		enable_equipment_modules = {
-			 ship_submarine_deck_space
+			ship_submarine_deck_space
 		}
 	}
 	generic_prototype_rewards = {

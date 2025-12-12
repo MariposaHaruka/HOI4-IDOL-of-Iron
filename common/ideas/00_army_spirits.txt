@@ -2,7 +2,7 @@ ideas = {
 	academy_spirit = {
 		bold_attack_spirit = {
 			ledger = army
-			available = { NOT = { has_country_flag = no_military_academy } }
+			available = { NOT = { has_country_flag = no_military_academy } } # IOI 수정
 			modifier = {
 				custom_modifier_tooltip = bold_attack_spirit_tt
 			}
@@ -17,7 +17,7 @@ ideas = {
 
 		tenacious_defense_spirit = {
 			ledger = army
-			available = { NOT = { has_country_flag = no_military_academy } }
+			available = { NOT = { has_country_flag = no_military_academy } } # IOI 수정
 			modifier = {
 				custom_modifier_tooltip = tenacious_defense_spirit_tt
 			}
@@ -32,7 +32,7 @@ ideas = {
 
 		meticulous_preparation_spirit = {
 			ledger = army
-			available = { NOT = { has_country_flag = no_military_academy } }
+			available = { NOT = { has_country_flag = no_military_academy } } # IOI 수정
 			modifier = {
 				custom_modifier_tooltip = meticulous_preparation_spirit_tt
 			}
@@ -47,7 +47,7 @@ ideas = {
 
 		best_of_the_best_spirit = {
 			ledger = army
-			available = { NOT = { has_country_flag = no_military_academy } }
+			available = { NOT = { has_country_flag = no_military_academy } } # IOI 수정
 			visible = { 
 				is_democratic = yes
 			}
@@ -77,6 +77,7 @@ ideas = {
 
 		academy_scholarships_spirit = {
 			ledger = army
+			available = { NOT = { has_country_flag = no_military_academy } } # IOI 수정
 			visible = { 
 				AND = {
 					NOT = { has_country_flag = no_military_academy } 
@@ -109,6 +110,7 @@ ideas = {
 
 		political_loyalty_spirit = {
 			ledger = army
+			available = { NOT = { has_country_flag = no_military_academy } } # IOI 수정
 			visible = { 
 				NOT = { has_country_flag = no_military_academy } 
 				OR = {
@@ -141,7 +143,7 @@ ideas = {
 
 		inventive_leadership_spirit = {
 			ledger = army
-			available = { NOT = { has_country_flag = no_military_academy } }
+			available = { NOT = { has_country_flag = no_military_academy } } # IOI 수정
 			modifier = {
 				custom_modifier_tooltip = inventive_leadership_spirit_tt
 				trait_naval_invader_xp_gain_factor = 0.2
@@ -170,7 +172,7 @@ ideas = {
 		mobile_warfare_academy_spirit = {
 			ledger = army
 			available = { 
-				NOT = { has_country_flag = no_military_academy } 
+				NOT = { has_country_flag = no_military_academy }  # IOI 수정 
 				has_doctrine = new_mobile_warfare
 			}
 			modifier = {
@@ -195,7 +197,7 @@ ideas = {
 		superior_firepower_academy_spirit = {
 			ledger = army
 			available = { 
-				NOT = { has_country_flag = no_military_academy } 
+				NOT = { has_country_flag = no_military_academy } # IOI 수정
 				has_doctrine = superior_firepower
 			}
 			modifier = {
@@ -221,7 +223,7 @@ ideas = {
 		theatre_training_spirit = {
 			ledger = army
 			available = { 
-				NOT = { has_country_flag = no_military_academy } 
+				NOT = { has_country_flag = no_military_academy } # IOI 수정  
 				has_doctrine = grand_battleplan 
 			}
 			modifier = {
@@ -246,7 +248,7 @@ ideas = {
 		mass_assault_academy_spirit = {
 			ledger = army
 			available = { 
-				NOT = { has_country_flag = no_military_academy } 
+				NOT = { has_country_flag = no_military_academy } # IOI 수정
 				has_doctrine = mass_assault
 			}
 			modifier = {
@@ -268,7 +270,7 @@ ideas = {
 			}
 		}
 
-		#NOR_flexible_officers_academy_spirit = {
+		#NOR_flexible_officers_academy_spirit = { # IOI 임시조치
 		#	ledger = army
 		#	visible = { 
 		#		NOT = { has_country_flag = no_military_academy } 
@@ -294,7 +296,7 @@ ideas = {
 		#	}
 		#}	
 
-		#CHI_whampoa_military_academy_spirit = {
+		#CHI_whampoa_military_academy_spirit = { # IOI 임시조치
 		#	ledger = army
 		#	available = { 
 		#		NOT = { has_country_flag = no_military_academy } 
@@ -335,6 +337,7 @@ ideas = {
 			ledger = army
 			visible = { has_dlc = "No Compromise, No Surrender" }
 			available = { 
+				NOT = { has_country_flag = no_military_academy } # IOI 수정
 				has_doctrine = grand_battleplan
 			}
 
@@ -357,6 +360,7 @@ ideas = {
 		}
 		
 		professional_officer_corps_spirit = {
+			available = { NOT = { has_country_flag = no_military_academy } } # IOI 수정
 			ledger = army
 			modifier = {
 				experience_gain_army_unit_factor = 0.15
@@ -487,7 +491,7 @@ ideas = {
 			visible = { is_fascism = yes }
 			modifier = {
 				offensive_war_stability_factor = 0.1
-				mobilization_law_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
 			}
 			ai_will_do = {
 				base = 1

@@ -9,6 +9,7 @@ is_rural = {
 			has_state_category = metropolis
 			has_state_category = megalopolis
 
+			has_state_category = large_island
 			has_state_category = small_island
 			has_state_category = tiny_island
 		}
@@ -19,6 +20,7 @@ is_island = {
 	custom_trigger_tooltip = {
 		tooltip = is_island_tt
 		OR = {
+			has_state_category = large_island
 			has_state_category = small_island
 			has_state_category = tiny_island
 		}

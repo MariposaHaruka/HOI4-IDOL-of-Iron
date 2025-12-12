@@ -266,12 +266,12 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 2
-				tag = LLS
+				tag = LLS # IOI 수정
 			}
 
 			modifier = {
@@ -341,7 +341,7 @@ technologies = {
 
 			modifier = {
 				factor = 0
-				original_tag = PRS
+				original_tag = PRS # IOI 수정
 				date < "1941.1.1"
 			}
 
@@ -388,19 +388,19 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 2.5
-				tag = LLS
+				tag = LLS # IOI 수정
 			}
 
 			modifier = {
 				factor = 10
 				AND = {
 					is_historical_focus_on = yes
-					tag = LLS
+					tag = LLS # IOI 수정
 				}
 			}
 			modifier = {
@@ -510,12 +510,12 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 2
-				tag = LLS
+				tag = LLS # IOI 수정
 			}
 			modifier = {
 				factor = 1.5
@@ -583,7 +583,7 @@ technologies = {
 				factor = 2
 			}
 			modifier = {
-				tag = PRS
+				tag = PRS # IOI 수정
 				factor = 2
 			}
 		}
@@ -689,16 +689,16 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			
 			modifier = {
 				factor = 100
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 			modifier = {
-				has_war_with = PRS
-				tag = TOH
+				has_war_with = PRS # IOI 수정
+				tag = TOH # IOI 수정
 				factor = 2
 			}
 
@@ -734,15 +734,15 @@ technologies = {
 			modifier = {
 				factor = 2
 				OR = {
-					tag = ICG
-					tag = LLS
+					tag = ICG # IOI 수정
+					tag = LLS # IOI 수정
 				}
 			}
 			modifier = {
 				factor = 1.5
 				OR = {
-					has_war_with = ICG
-					has_war_with = LLS
+					has_war_with = ICG # IOI 수정
+					has_war_with = LLS # IOI 수정
 				}
 			}
 			modifier = {
@@ -793,7 +793,7 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			modifier = {
 				has_deployed_air_force_size = {
@@ -806,14 +806,14 @@ technologies = {
 			modifier = {
 				factor = 2
 				OR = {
-					has_war_with = PRS
-					has_war_with = TOH
+					has_war_with = PRS # IOI 수정
+					has_war_with = TOH # IOI 수정
 				}
 			}
 			
 			modifier = {
 				factor = 3
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 		}
 	}
@@ -847,15 +847,15 @@ technologies = {
 			modifier = {
 				factor = 2
 				OR = {
-					tag = ICG
-					tag = LLS
+					tag = ICG # IOI 수정
+					tag = LLS # IOI 수정
 				}
 			}
 			modifier = {
 				factor = 1.5
 				OR = {
-					has_war_with = ICG
-					has_war_with = LLS
+					has_war_with = ICG # IOI 수정
+					has_war_with = LLS # IOI 수정
 				}
 			}
 			modifier = {
@@ -905,7 +905,7 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = PRS
+				tag = PRS # IOI 수정
 			}
 			modifier = {
 				has_deployed_air_force_size = {
@@ -917,13 +917,13 @@ technologies = {
 			modifier = {
 				factor = 2
 				OR = {
-					has_war_with = PRS
-					has_war_with = TOH
+					has_war_with = PRS # IOI 수정
+					has_war_with = TOH # IOI 수정
 				}
 			}
 			modifier = {
 				factor = 2
-				tag = TOH
+				tag = TOH # IOI 수정
 			}
 		}
 	}
@@ -950,15 +950,15 @@ technologies = {
 			modifier = {
 				factor = 2
 				OR = {
-					tag = ICG
-					tag = LLS
+					tag = ICG # IOI 수정
+					tag = LLS # IOI 수정
 				}
 			}
 			modifier = {
 				factor = 1.5
 				OR = {
-					has_war_with = ICG
-					has_war_with = LLS
+					has_war_with = ICG # IOI 수정
+					has_war_with = LLS # IOI 수정
 				}
 			}
 			modifier = {
@@ -1007,20 +1007,20 @@ technologies = {
 			factor = 1
 			modifier = {
 				OR = {
-					has_war_with = IMA
-					has_war_with = ICG
-					has_war_with = LLS
+					has_war_with = IMA # IOI 수정
+					has_war_with = ICG # IOI 수정
+					has_war_with = LLS # IOI 수정
 				}
 				factor = 3
 			}
 			modifier = {
 				factor = 5
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 5
-				tag = LLS
+				tag = LLS # IOI 수정
 			}
 		}
 	}
@@ -1054,15 +1054,15 @@ technologies = {
 			modifier = {
 				factor = 2.5
 				OR = {
-					tag = ICG
-					tag = LLS
+					tag = ICG # IOI 수정
+					tag = LLS # IOI 수정
 				}
 			}
 			modifier = {
 				factor = 1.5
 				OR = {
-					has_war_with = ICG
-					has_war_with = LLS
+					has_war_with = ICG # IOI 수정
+					has_war_with = LLS # IOI 수정
 				}
 			}
 			modifier = {
@@ -1111,9 +1111,9 @@ technologies = {
 			factor = 1.5
 			modifier = {
 				OR = {
-					has_war_with = IMA
-					has_war_with = ICG
-					has_war_with = LLS
+					has_war_with = IMA # IOI 수정
+					has_war_with = ICG # IOI 수정
+					has_war_with = LLS # IOI 수정
 				}
 				factor = 3
 			}
@@ -1126,12 +1126,12 @@ technologies = {
 			}
 			modifier = {
 				factor = 5
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 5
-				tag = LLS
+				tag = LLS # IOI 수정
 			}
 		}
 	}
@@ -1165,16 +1165,16 @@ technologies = {
 			modifier = {
 				factor = 2.5
 				OR = {
-					tag = ICG
-					tag = LLS
+					tag = ICG # IOI 수정
+					tag = LLS # IOI 수정
 				}
 			}
 			modifier = {
 				factor = 1.5
 				OR = {
-					has_war_with = ICG
-					has_war_with = LLS
-					has_war_with = IMA
+					has_war_with = ICG # IOI 수정
+					has_war_with = LLS # IOI 수정
+					has_war_with = IMA # IOI 수정
 				}
 			}
 			modifier = {
@@ -1224,9 +1224,9 @@ technologies = {
 			factor = 1.5
 			modifier = {
 				OR = {
-					has_war_with = IMA
-					has_war_with = ICG
-					has_war_with = LLS
+					has_war_with = IMA # IOI 수정
+					has_war_with = ICG # IOI 수정
+					has_war_with = LLS # IOI 수정
 				}
 				factor = 3
 			}
@@ -1239,12 +1239,12 @@ technologies = {
 			}
 			modifier = {
 				factor = 5
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 			
 			modifier = {
 				factor = 5
-				tag = LLS
+				tag = LLS # IOI 수정
 			}
 		}
 	}
@@ -1270,15 +1270,15 @@ technologies = {
 			modifier = {
 				factor = 2.5
 				OR = {
-					tag = ICG
-					tag = LLS
+					tag = ICG # IOI 수정
+					tag = LLS # IOI 수정
 				}
 			}
 			modifier = {
 				factor = 1.5
 				OR = {
-					has_war_with = ICG
-					has_war_with = LLS
+					has_war_with = ICG # IOI 수정
+					has_war_with = LLS # IOI 수정
 				}
 			}
 			modifier = {
@@ -1468,7 +1468,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 4
-				original_tag = PRS
+				original_tag = PRS # IOI 수정
 			}
 		}
 	}
@@ -1798,12 +1798,12 @@ technologies = {
 			
 			modifier = {
 				factor = 5
-				tag = IMA
+				tag = IMA # IOI 수정
 			}
 			
 			modifier = {
 				factor = 5
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 		}
 	}
@@ -1866,12 +1866,12 @@ technologies = {
 			
 			modifier = {
 				factor = 5
-				tag = IMA
+				tag = IMA # IOI 수정
 			}
 			
 			modifier = {
 				factor = 5
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 		}
 	}
@@ -1908,12 +1908,12 @@ technologies = {
 			
 			modifier = {
 				factor = 5
-				tag = IMA
+				tag = IMA # IOI 수정
 			}
 			
 			modifier = {
 				factor = 5
-				tag = ICG
+				tag = ICG # IOI 수정
 			}
 		}
 	}

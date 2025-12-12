@@ -3,7 +3,7 @@ equipments = {
 	ship_hull_light = {
 		year = 1922
 
-		can_be_produced = { }
+		can_be_produced = { } # IOI 수정
 
 		is_archetype = yes
 		is_buildable = no
@@ -11,6 +11,13 @@ equipments = {
 		interface_category = interface_category_screen_ships
 		alias = destroyer
 		priority = 2000
+
+		upgrades = {
+			ship_torpedo_upgrade
+			destroyer_engine_upgrade
+			ship_ASW_upgrade
+			ship_anti_air_upgrade
+		}
 
 		module_slots = {
 			fixed_ship_battery_slot = {

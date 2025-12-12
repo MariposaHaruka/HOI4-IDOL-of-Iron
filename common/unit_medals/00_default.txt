@@ -25,11 +25,13 @@
 @cost = 30
 
 unit_medals = {
-	
+	### IOI 임시조치: 고유 훈장은 나중에 추가할 것
+
+
 	### Generic Democratic
 	
 	democratic_gallantry = {	
-		available = { is_democratic = yes }
+		available = { is_democratic = yes } # IOI 수정
 		frame = 1
 		icon = "GFX_medal_icon_democratic"
 		cost = @cost
@@ -42,7 +44,7 @@ unit_medals = {
 	}
 	
 	democratic_honor = {
-		available = { is_democratic = yes }
+		available = { is_democratic = yes } # IOI 수정
 		frame = 2
 		icon = "GFX_medal_icon_democratic"
 		cost = @cost
@@ -55,7 +57,7 @@ unit_medals = {
 	}
 	
 	democratic_war_cross = {	
-		available = { is_democratic = yes }
+		available = { is_democratic = yes } # IOI 수정
 		frame = 3
 		icon = "GFX_medal_icon_democratic"
 		cost = @cost
@@ -69,7 +71,7 @@ unit_medals = {
 	}
 	
 	democratic_lion = {
-		available = { is_democratic = yes }
+		available = { is_democratic = yes } # IOI 수정
 		frame = 4
 		icon = "GFX_medal_icon_democratic"
 		cost = @cost
@@ -84,7 +86,7 @@ unit_medals = {
 	### Generic Communist
 	
 	communist_service_medal = {
-		available = { is_communism = yes }
+		available = { is_communism = yes } # IOI 수정
 		frame = 1
 		icon = "GFX_medal_icon_communism"
 		cost = @cost
@@ -98,7 +100,7 @@ unit_medals = {
 	}
 	
 	communist_red_star = {
-		available = { is_communism = yes }
+		available = { is_communism = yes } # IOI 수정
 		frame = 2
 		icon = "GFX_medal_icon_communism"
 		cost = @cost
@@ -112,7 +114,7 @@ unit_medals = {
 	}
 	
 	communist_merit_medal = {
-		available = { is_communism = yes }
+		available = { is_communism = yes } # IOI 수정
 		frame = 3
 		icon = "GFX_medal_icon_communism"
 		cost = @cost
@@ -125,7 +127,7 @@ unit_medals = {
 	}
 	
 	communist_hero_of_revolution = {
-		available = { is_communism = yes }
+		available = { is_communism = yes } # IOI 수정
 		frame = 4
 		icon = "GFX_medal_icon_communism"
 	
@@ -144,7 +146,7 @@ unit_medals = {
 	### Generic Fascism
 	
 	fascism_bravery = {
-		available = { is_fascism = yes }
+		available = { is_fascism = yes } # IOI 수정
 		frame = 1
 		icon = "GFX_medal_icon_fascism"
 		cost = @cost
@@ -157,7 +159,7 @@ unit_medals = {
 	}
 	
 	fascism_merit = {
-		available = { is_fascism = yes }
+		available = { is_fascism = yes } # IOI 수정
 		frame = 2
 		icon = "GFX_medal_icon_fascism"
 		cost = @cost
@@ -170,7 +172,7 @@ unit_medals = {
 	}
 	
 	fascism_order_brave = {
-		available = { is_fascism = yes }
+		available = { is_fascism = yes } # IOI 수정
 		frame = 3
 		icon = "GFX_medal_icon_fascism"
 		cost = @cost
@@ -184,7 +186,7 @@ unit_medals = {
 	}
 	
 	fascism_heroism = {
-		available = { is_fascism = yes }
+		available = { is_fascism = yes } # IOI 수정
 		frame = 4
 		icon = "GFX_medal_icon_fascism"
 		cost = @cost
@@ -199,7 +201,7 @@ unit_medals = {
 	### Generic Neutrality
 	
 	neutral_bravery = {
-		available = { is_neutrality = yes }
+		available = { is_neutrality = yes } # IOI 수정
 		frame = 1
 		icon = "GFX_medal_icon_default"
 		cost = @cost
@@ -213,7 +215,7 @@ unit_medals = {
 	}
 	
 	neutral_military_order = {
-		available = { is_neutrality = yes }
+		available = { is_neutrality = yes } # IOI 수정
 		frame = 2
 		icon = "GFX_medal_icon_default"
 		cost = @cost
@@ -227,7 +229,7 @@ unit_medals = {
 	}
 	
 	neutral_sword = {
-		available = {  is_neutrality = yes }
+		available = {  is_neutrality = yes } # IOI 수정
 		frame = 3
 		icon = "GFX_medal_icon_default"
 		cost = @cost
@@ -240,7 +242,7 @@ unit_medals = {
 	}
 	
 	neutral_virtue = {
-		available = {  is_neutrality = yes }
+		available = {  is_neutrality = yes } # IOI 수정
 		frame = 4
 		icon = "GFX_medal_icon_default"
 		cost = @cost

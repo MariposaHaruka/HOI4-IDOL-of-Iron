@@ -13,10 +13,11 @@ buildings = {
 
 		show_modifier = yes
 		allied_build = yes
+		affects_energy = yes
 
 		infrastructure_construction_effect = yes
-		level_cap = {
-			state_max = 10
+		level_cap = { #IOI 수정
+			state_max = 10 
 		}
 		country_modifiers = {
 			modifiers = {
@@ -34,9 +35,9 @@ buildings = {
 		icon_frame = 2
 		value = 8
 		infrastructure_construction_effect = yes
-		level_cap = {
+		level_cap = { #IOI 수정
 			shares_slots = yes
-			state_max = 100
+			state_max = 128
 		}
 	}
 
@@ -48,9 +49,9 @@ buildings = {
 		icon_frame = 1
 		value = 5
 		infrastructure_construction_effect = yes
-		level_cap = {
+		level_cap = { #IOI 수정
 			shares_slots = yes
-			state_max = 100
+			state_max = 128
 		}
 	}
 
@@ -82,6 +83,7 @@ buildings = {
 		level_cap = {
 			province_max = 1
 		}
+		tags = { supply_building }
 	}	
 	
 	rail_way = {
@@ -177,9 +179,8 @@ buildings = {
 		icon_frame = 23
 		value = 1
 		infrastructure_construction_effect = yes
-		level_cap = {
+		level_cap = {  #IOI 수정
 			state_max = 1
-			shares_slots = yes
 		}
 		hide_if_missing_tech = yes
 		show_modifier = yes
@@ -202,9 +203,9 @@ buildings = {
 		icon_frame = 4
 		value = 5
 		infrastructure_construction_effect = yes
-		level_cap = {
+		level_cap = {  #IOI 수정
 			shares_slots = yes
-			state_max = 100
+			state_max = 128
 		}
 	}
 
@@ -219,7 +220,7 @@ buildings = {
 		damage_factor = 0.1
 		value = 1
 		infrastructure_construction_effect = yes
-		level_cap = {
+		level_cap = { #IOI 수정
 			state_max = 10
 		}
 	}
@@ -229,7 +230,7 @@ buildings = {
 		base_cost = 14500
 		icon_frame = 10
 		#local_resources_oil = 1 # May use local_resources_ + any resource name
-		local_resources_rubber = 4 # May use local_resources_ + any resource name
+		local_resources_rubber = 4 # May use local_resources_ + any resource name  #IOI 수정
 		refinery = yes
 		value = 5
 		infrastructure_construction_effect = yes
@@ -238,11 +239,12 @@ buildings = {
 
 		country_modifiers = {
 			modifiers = {
-			fuel_gain_from_states = 2.0 #per hour
+				fuel_gain_from_states = 2.0 #per hour
+				factory_energy_consumption = 0.02  #IOI 수정
 			}
 		}
 
-		level_cap = {
+		level_cap = { #IOI 수정
 			state_max = 6
 		}
 	}
@@ -263,7 +265,7 @@ buildings = {
 		}
 		
 		level_cap = {
-			state_max = 6
+			state_max = 6  #IOI 수정
 		}
 	}
 
@@ -294,10 +296,8 @@ buildings = {
 		infrastructure_construction_effect = yes
 		gun_emplacement = yes
 		spawn_point = rocket_site_spawn
-		level_cap = {
+		level_cap = { #IOI 수정
 			state_max = 1
-			shares_slots = yes
-			exclusive_with = rocket_site
 		}
 		#Building utilizes equipment "explosive_ammo_equipment" as ammunition for the air mission barrage
 	}
@@ -314,10 +314,8 @@ buildings = {
 		infrastructure_construction_effect = yes
 		disabled_in_dmz = yes
 		spawn_point = rocket_site_spawn
-		level_cap = {
+		level_cap = { #IOI 수정
 			state_max = 3
-			shares_slots = yes
-			exclusive_with = mega_gun_emplacement
 		}
 	}
 
@@ -391,9 +389,8 @@ buildings = {
 			}
 		}
 
-		level_cap = {
+		level_cap = { #IOI 수정
 			state_max = 1
-			shares_slots = yes
 			group_by = reactors
 		}
 	}
@@ -421,9 +418,8 @@ buildings = {
 			}
 		}
 
-		level_cap = {
+		level_cap = { #IOI 수정
 			state_max = 1
-			shares_slots = yes
 			group_by = reactors
 		}
 	}
@@ -439,6 +435,8 @@ buildings = {
 		base_cost = 35000
 		icon_frame = 27
 		#nuclear_reactor = yes
+		affects_energy = yes
+		local_resources_coal = 250 #IOI 수정
 		value = 10
 		infrastructure_construction_effect = yes
 		
@@ -453,12 +451,12 @@ buildings = {
 		state_modifiers = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
-			state_resources_factor = 0.1			
+			state_resources_factor = 0.1	
+			local_factory_energy_consumption = -0.50		
 		}
 
-		level_cap = {
+		level_cap = { #IOI 수정
 			state_max = 1
-			shares_slots = yes
 			group_by = reactors
 		}
 	}
@@ -554,12 +552,13 @@ buildings = {
 		tags = { dam_building }
 		spawn_point = dam_spawn
 		is_buildable = no
+		affects_energy = yes
 		need_detection = yes
 		detecting_intel_type = civilian 
 		province_damage_modifiers = { flooded }
 		#state_damage_modifier = { kurdish_agitation }
 		only_display_if_exists = yes
-		infrastructure_construction_effect = yes
+		#local_resources_coal = 100 #IOI 수정
 		special_icon = GFX_dam_icon_small
 		level_cap = {
 			province_max = 1
@@ -569,6 +568,7 @@ buildings = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
 			state_resources_factor = 0.1
+			local_factory_energy_consumption = -0.65
 		}
 	}
 	dam_mountain = {
@@ -580,11 +580,13 @@ buildings = {
 		tags = { dam_building }
 		spawn_point = dam_spawn
 		is_buildable = no
+		affects_energy = yes
 		need_detection = yes
 		detecting_intel_type = civilian 
 		province_damage_modifiers = { flooded }
 		only_display_if_exists = yes
 		special_icon = GFX_dam_icon_small
+		#local_resources_coal = 350 #IOI 수정
 		level_cap = {
 			province_max = 1
 		}
@@ -593,6 +595,7 @@ buildings = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
 			state_resources_factor = 0.1
+			local_factory_energy_consumption = -0.65
 		}
 	}
 
@@ -637,6 +640,42 @@ buildings = {
 		show_modifier = yes
 		state_modifiers = {
 			
+		}
+	}
+	
+	energy_infrastructure = {
+		base_cost = 12000
+		icon_frame = 30
+		value = 1
+
+		show_modifier = yes
+		affects_energy = yes
+
+		infrastructure_construction_effect = yes
+		level_cap = { #IOI 수정
+			state_max = 1
+			group_by = infrastructure_keystone
+		}
+		state_modifiers = {
+			local_factory_energy_consumption_per_infrastructure = -0.075
+		}
+	}
+	
+	industrial_infrastructure = {
+		base_cost = 12000
+		icon_frame = 31
+		value = 1
+
+		show_modifier = yes
+
+
+		infrastructure_construction_effect = yes
+		level_cap = { #IOI 수정
+			state_max = 1
+			group_by = infrastructure_keystone
+		}
+		state_modifiers = {
+			local_resource_gain_efficiency_per_infrastructure = 0.15
 		}
 	}
 }

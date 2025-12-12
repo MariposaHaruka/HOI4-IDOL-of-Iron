@@ -30,7 +30,7 @@ types = {
 		fire_only_once = yes
 
 		visible = {
-			has_wargoal_against = STR
+			has_completed_focus = PRS_22001
 			has_tech = paratroopers
 		}
 
@@ -76,7 +76,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = transport
+            equipment = air_transport
         }
 
 		starting_point = {

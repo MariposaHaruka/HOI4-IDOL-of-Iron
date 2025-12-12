@@ -1,5 +1,23 @@
 #반다이남코 연합국
-faction_template_bandai_namco_allies = {
+faction_template_bandai_namco_allies_1 = {
+	name = faction_bandai_namco_allies
+	manifest = faction_manifest_bandainamco_ally
+
+	goals = {
+		# Short term goals
+		# Medium term goals
+		# Long term goals
+	}
+
+
+	default_rules = {
+		#change leaders
+		#join rules
+	}
+	
+	icon = GFX_faction_icon_allies
+}
+faction_template_bandai_namco_allies_2 = {
 	name = faction_bandai_namco_allies
 	manifest = faction_manifest_bandainamco_ally
 
@@ -18,13 +36,7 @@ faction_template_bandai_namco_allies = {
 
 
 	default_rules = {
-		joining_rule_non_fascist
-		joining_rule_has_no_offensive_war
-		faction_peace_rule_liberation_focus
-		government_in_exile_allowed
-		change_leader_rule_manifest_below_35
-		dismissal_rule_ideology_not_democratic
-		change_leader_rule_industry
+		
 	}
 	
 	icon = GFX_faction_icon_allies

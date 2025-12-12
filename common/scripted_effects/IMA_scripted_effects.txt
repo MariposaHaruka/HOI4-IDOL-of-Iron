@@ -1284,7 +1284,7 @@ parliament_gui_positions_IMA = {
 
 calc_parliament_support_IMA = {
 	#없는 지지 이념 정당은 주석처리할 것
-	set_variable = { IMA.support_seats = 0 }
+	clear_variable = IMA.support_seats
 	if = {
 		limit = { 
 			OR = {
@@ -1292,8 +1292,8 @@ calc_parliament_support_IMA = {
 				is_in_coalition_with_conservatism = yes
 			}
 		}
-		set_variable = { IMA.conservative_support = 1 }
-		else = { set_variable = { IMA.conservative_support = 0 } }
+		set_temp_variable = { IMA.conservative_support = 1 }
+		else = { set_temp_variable = { IMA.conservative_support = 0 } }
 	}
 	if = {
 		limit = { 
@@ -1302,8 +1302,8 @@ calc_parliament_support_IMA = {
 				is_in_coalition_with_liberalism = yes
 			}
 		}
-		set_variable = { IMA.liberalism_support = 1 }
-		else = { set_variable = { IMA.liberalism_support = 0 } }
+		set_temp_variable = { IMA.liberalism_support = 1 }
+		else = { set_temp_variable = { IMA.liberalism_support = 0 } }
 	}
 	if = {
 		limit = { 
@@ -1312,8 +1312,8 @@ calc_parliament_support_IMA = {
 				is_in_coalition_with_progressivism = yes
 			}
 		}
-		set_variable = { IMA.progressivism_support = 1 }
-		else = { set_variable = { IMA.progressivism_support = 0 } }
+		set_temp_variable = { IMA.progressivism_support = 1 }
+		else = { set_temp_variable = { IMA.progressivism_support = 0 } }
 	}
 	if = {
 		limit = { 
@@ -1322,74 +1322,76 @@ calc_parliament_support_IMA = {
 				is_in_coalition_with_socialdemocracy = yes
 			}
 		}
-		set_variable = { IMA.support_seats = 1 }
-		else = { set_variable = { IMA.socialdemocracy_support = 0 } }
+		set_temp_variable = { IMA.support_seats = 1 }
+		else = { set_temp_variable = { IMA.socialdemocracy_support = 0 } }
 	}
 	if = {
 		limit = { is_in_coalition_with_socialism = yes }
-		set_variable = { IMA.socialism_support = 1 }
-		else = { set_variable = { IMA.socialism_support = 0 } }
+		set_temp_variable = { IMA.socialism_support = 1 }
+		else = { set_temp_variable = { IMA.socialism_support = 0 } }
 	}
 	if = {
 		limit = { is_in_coalition_with_communism = yes }
-		set_variable = { IMA.communist_support = 1 }
-		else = { set_variable = { IMA.communist_support = 0 } }
+		set_temp_variable = { IMA.communist_support = 1 }
+		else = { set_temp_variable = { IMA.communist_support = 0 } }
 	}
 	if = {
 		limit = { is_in_coalition_with_authoritariancommunism = yes }
-		set_variable = { IMA.authoritariancommunism_support = 1 }
-		else = { set_variable = { IMA.authoritariancommunism_support = 0 } }
+		set_temp_variable = { IMA.authoritariancommunism_support = 1 }
+		else = { set_temp_variable = { IMA.authoritariancommunism_support = 0 } }
 	}
 	if = {
 		limit = { is_in_coalition_with_anarchosyndicalism = yes }
-		set_variable = { IMA.anarchosyndicalism_seats = 1 }
-		else = { set_variable = { IMA.anarchosyndicalism_support = 0 } }
+		set_temp_variable = { IMA.anarchosyndicalism_seats = 1 }
+		else = { set_temp_variable = { IMA.anarchosyndicalism_support = 0 } }
 	}
 	if = {
 		limit = { is_in_coalition_with_fascism = yes }
-		set_variable = { IMA.fascism_support = 1 }
-		else = { set_variable = { IMA.fascism_support = 0 } }
+		set_temp_variable = { IMA.fascism_support = 1 }
+		else = { set_temp_variable = { IMA.fascism_support = 0 } }
 	}
 	if = {
 		limit = { is_in_coalition_with_militarytotalism = yes }
-		set_variable = { IMA.militarytotalism_support = 1 }
-		else = { set_variable = { IMA.militarytotalism_support = 0 } }
+		set_temp_variable = { IMA.militarytotalism_support = 1 }
+		else = { set_temp_variable = { IMA.militarytotalism_support = 0 } }
 	}
 	if = {
 		limit = { is_in_coalition_with_authoritariandemocracy = yes }
-		set_variable = { IMA.authoritariandemocracy_support = 1 }
-		else = { set_variable = { IMA.authoritariandemocracy_support = 0 } }
+		set_temp_variable = { IMA.authoritariandemocracy_support = 1 }
+		else = { set_temp_variable = { IMA.authoritariandemocracy_support = 0 } }
 	}
 	if = {
 		limit = { is_in_coalition_with_autocracy = yes }
-		set_variable = { IMA.autocracy_support = 1 }
-		else = { set_variable = { IMA.autocracy_support = 0 } }
+		set_temp_variable = { IMA.autocracy_support = 1 }
+		else = { set_temp_variable = { IMA.autocracy_support = 0 } }
 	}
-	multiply_variable = { IMA.conservative_support = IMA_conservative_seats }
-	multiply_variable = { IMA.liberalism_support = IMA_liberal_seats }
-	multiply_variable = { IMA.progressivism_support = IMA_nationallabour_seats }
-	multiply_variable = { IMA.socialdemocracy_support = IMA_labour_seats }
-	multiply_variable = { IMA.socialism_support = 0 }
-	multiply_variable = { IMA.communist_support = IMA_communist_seats }
-	multiply_variable = { IMA.authoritariancommunism_support = 0 }
-	multiply_variable = { IMA.anarchosyndicalism_support = IMA_producercommunist_seats }
-	multiply_variable = { IMA.fascism_support = IMA_fascist_seats }
-	multiply_variable = { IMA.militarytotalism_support = 0 }
-	multiply_variable = { IMA.authoritariandemocracy_support = IMA_republicanpeople_seats }
-	multiply_variable = { IMA.autocracy_support = IMA_kingsparty_seats }
-	add_to_variable = { IMA.support_seats = IMA.conservative_support }
-	add_to_variable = { IMA.support_seats = IMA.liberalism_support }
-	add_to_variable = { IMA.support_seats = IMA.progressivism_support }
-	add_to_variable = { IMA.support_seats = IMA.socialdemocracy_support }
-	add_to_variable = { IMA.support_seats = IMA.socialism_support }
-	add_to_variable = { IMA.support_seats = IMA.communist_support }
-	add_to_variable = { IMA.support_seats = IMA.authoritariancommunism_support }
-	add_to_variable = { IMA.support_seats = IMA.anarchosyndicalism_support }
-	add_to_variable = { IMA.support_seats = IMA.fascism_support }
-	add_to_variable = { IMA.support_seats = IMA.militarytotalism_support }
-	add_to_variable = { IMA.support_seats = IMA.authoritariandemocracy_support }
-	add_to_variable = { IMA.support_seats = IMA.autocracy_support }
-	divide_variable = { IMA.support_seats = IMA_total_seats }
+	multiply_temp_variable = { IMA.conservative_support = IMA_conservative_seats }
+	multiply_temp_variable = { IMA.liberalism_support = IMA_liberal_seats }
+	multiply_temp_variable = { IMA.progressivism_support = IMA_nationallabour_seats }
+	multiply_temp_variable = { IMA.socialdemocracy_support = IMA_labour_seats }
+	multiply_temp_variable = { IMA.socialism_support = 0 }
+	multiply_temp_variable = { IMA.communist_support = IMA_communist_seats }
+	multiply_temp_variable = { IMA.authoritariancommunism_support = 0 }
+	multiply_temp_variable = { IMA.anarchosyndicalism_support = IMA_producercommunist_seats }
+	multiply_temp_variable = { IMA.fascism_support = IMA_fascist_seats }
+	multiply_temp_variable = { IMA.militarytotalism_support = 0 }
+	multiply_temp_variable = { IMA.authoritariandemocracy_support = IMA_republicanpeople_seats }
+	multiply_temp_variable = { IMA.autocracy_support = IMA_kingsparty_seats }
+	set_temp_variable = { IMA.support_seats_temp = 0 }
+	add_to_temp_variable = { IMA.support_seats_temp = IMA.conservative_support }
+	add_to_temp_variable = { IMA.support_seats_temp = IMA.liberalism_support }
+	add_to_temp_variable = { IMA.support_seats_temp = IMA.progressivism_support }
+	add_to_temp_variable = { IMA.support_seats_temp = IMA.socialdemocracy_support }
+	add_to_temp_variable = { IMA.support_seats_temp = IMA.socialism_support }
+	add_to_temp_variable = { IMA.support_seats_temp = IMA.communist_support }
+	add_to_temp_variable = { IMA.support_seats_temp = IMA.authoritariancommunism_support }
+	add_to_temp_variable = { IMA.support_seats_temp = IMA.anarchosyndicalism_support }
+	add_to_temp_variable = { IMA.support_seats_temp = IMA.fascism_support }
+	add_to_temp_variable = { IMA.support_seats_temp = IMA.militarytotalism_support }
+	add_to_temp_variable = { IMA.support_seats_temp = IMA.authoritariandemocracy_support }
+	add_to_temp_variable = { IMA.support_seats_temp = IMA.autocracy_support }
+	divide_temp_variable = { IMA.support_seats_temp = IMA_total_seats }
+	set_variable = { IMA.support_seats = IMA.support_seats_temp }
 }
 
 IMA_reduce_depression = {

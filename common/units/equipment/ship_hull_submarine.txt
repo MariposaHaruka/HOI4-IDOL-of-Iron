@@ -3,13 +3,20 @@ equipments = {
 	ship_hull_submarine = {
 		year = 1922
 
-		can_be_produced = { }
+		can_be_produced = { } # IOI 수정
 
 		is_archetype = yes
 		is_buildable = no
 		type = submarine
 		group_by = archetype
 		priority = 2500
+		
+		upgrades = {
+			ship_reliability_upgrade
+			sub_engine_upgrade
+			sub_stealth_upgrade
+			sub_torpedo_upgrade
+		}
 		
 		interface_category = interface_category_other_ships
 
@@ -692,6 +699,12 @@ equipments = {
 		visual_level = 0
 		interface_category = interface_category_other_ships
 		model = ship_hull_cruiser_submarine
+		upgrades = {
+			ship_reliability_upgrade
+			sub_engine_upgrade
+			sub_stealth_upgrade
+			sub_torpedo_upgrade
+		}
 
 		module_slots = {
 			fixed_ship_torpedo_slot = {
@@ -785,6 +798,12 @@ equipments = {
 		visual_level = 0
 		interface_category = interface_category_other_ships
 		model = ship_hull_fleet_submarine
+		upgrades = {
+			ship_reliability_upgrade
+			sub_engine_upgrade
+			sub_stealth_upgrade
+			sub_torpedo_upgrade
+		}
 
 		module_slots = {
 			fixed_ship_torpedo_slot = {
@@ -873,6 +892,12 @@ equipments = {
 
 		archetype = ship_hull_submarine
 		priority = 1500
+		upgrades = {
+			ship_reliability_upgrade
+			sub_engine_upgrade
+			sub_stealth_upgrade
+			sub_torpedo_upgrade
+		}
 
 		module_slots = {
 			fixed_ship_torpedo_slot = {
@@ -924,7 +949,14 @@ equipments = {
 		year = 1950
 		model = ship_hull_nuclear_powered_submarine
 		archetype = ship_hull_submarine
-		priority = 150
+		priority = 1500
+		upgrades = { 
+			ship_reliability_upgrade
+			sub_engine_upgrade
+			sub_stealth_upgrade
+			sub_torpedo_upgrade			
+		}
+
 		module_slots = {
 			fixed_ship_torpedo_slot = {
 				required = no
@@ -1020,6 +1052,12 @@ equipments = {
 		model = ship_hull_fleet_submarine
 		archetype = ship_hull_submarine
 		priority = 1500
+		upgrades = { 
+			ship_reliability_upgrade
+			sub_engine_upgrade
+			sub_stealth_upgrade
+			sub_torpedo_upgrade			
+		}
 
 		module_slots = {
 			fixed_ship_torpedo_slot = {
@@ -1116,6 +1154,12 @@ equipments = {
 		model = ship_hull_nuclear_powered_submarine
 		archetype = ship_hull_submarine
 		priority = 1500
+		upgrades = { 
+			ship_reliability_upgrade
+			sub_engine_upgrade
+			sub_stealth_upgrade
+			sub_torpedo_upgrade			
+		}
 
 		module_slots = {
 			fixed_ship_torpedo_slot = {

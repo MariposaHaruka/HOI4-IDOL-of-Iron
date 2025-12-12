@@ -9,15 +9,19 @@
 # trade = yes/no
 
 opinion_modifiers = {
+
 	cheat_opinion_modifier_good = { 
 		value = 200
 	}
+
 	hostile_status = { #special used for civil wars that are on hold and blocks faction stuff
 		value = -100
 	}
+
 	unstable_alliance = {
 		value = -10
 	}
+
 	holds_our_cores = {
 		value = -30
 	}
@@ -30,12 +34,14 @@ opinion_modifiers = {
 	at_war_with_faction = {
 		value = -25
 	}
+
 	justifying_war_goal = {
 		value = -10
 		min_trust = -10
 		days = 10
 		decay = 1
 	}
+
 	pact_against_us= {
 		value = -50
 	}
@@ -111,12 +117,15 @@ opinion_modifiers = {
 		target = yes
 		value = 35
 	}
+
 	same_ruling_party = {
 		value = 30
 	}
+
 	similar_ruling_party = {
 		value = 15
 	}
+
 	different_party_types = {
 		value = 0
 	}
@@ -202,6 +211,7 @@ opinion_modifiers = {
 	anti_fascist_diplomacy_focus = {
 		value = 15
 	}
+
 	anti_fascist_diplomacy_fascists = {
 		value = -40
 	}
@@ -323,9 +333,11 @@ opinion_modifiers = {
 	betrayed_alliance = {
 		value = -50
 	}
+
 	refused_naval_treaty = {
 		value = -30
 	}
+
 	broken_naval_treaty_opinion_mod = {
 		value = -30
 	}
@@ -334,14 +346,17 @@ opinion_modifiers = {
 		value = 30
 		decay = 1
 	}
+
 	TOH_joined_NATO = {
 		value = -30
 		decay = 1
 	}
 
+	### IOI
 	same_sakuragaoka_pos = {
 		value = 100
 	}
+
 	same_sakuragaoka_neg = {
 		value = -100
 	}

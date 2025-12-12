@@ -1,112 +1,108 @@
-
- ##   ##  ### ###  ##  #  #  ## 
-#  # #  #  #   #  #  # ## # #   
-#### #     #   #  #  # # ##  #  
-#  # #  #  #   #  #  # #  #   # 
-#  #  ##   #  ###  ##  #  # ##  
-
-
-dismissal_rule_world_tension = {
-	type = dismissal_rules
-	ai_will_do = {
-		base = 0
-		modifier = {  
-			add = 1
-			has_government = democratic
-			is_faction_leader = yes 
-		}
-	}
-	dismiss_member_trigger = {
-		has_added_tension_amount > 0.1
-	}
-}
-
-dismissal_rule_offensive_war = {
-	type = dismissal_rules
-	ai_will_do = {
-		base = 0
-		modifier = {  
-			add = 1
-			has_government = neutrality
-			is_faction_leader = yes 
-		}
-	}
-	dismiss_member_trigger = {
-		has_offensive_war_without_friend = FROM
-	}
-	ai_will_do = {
-		base = 0
-	}
-}
-
-
 ### ###  ###  ##  #    ##   ##  #   # 
  #  #  # #   #  # #   #  # #     # #  
  #  #  # ##  #  # #   #  # # ##   #   
  #  #  # #   #  # #   #  # #  #   #   
 ### ###  ###  ##  ###  ##   ##    #   
 
-
-dismissal_rule_ideology_not_democratic = {
+dismissal_rule_ideology_not_anarchosyndicalism = {
 	type = dismissal_rules
-	visible = { has_government = democratic }
+	visible = { has_government = anarchosyndicalism }
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 2
+			has_government = anarchosyndicalism
+		}
+	}
+	dismiss_member_trigger = {
+		NOT = {
+			has_government = anarchosyndicalism 
+		}
+	}
+}
+
+dismissal_rule_ideology_not_following_hakurei = {
+	type = dismissal_rules
+	visible = { has_government = authoritariancommunism }
 	ai_will_do = {
 		base = 0
 	}
 
 	dismiss_member_trigger = {
-		NOT = {
-			has_government = democratic 
+		OR = {
+			NOT = { has_government = authoritariancommunism }
+			is_communism = no
 		}
+	}
+}
+
+dismissal_rule_ideology_following_hakurei = {
+	type = dismissal_rules
+	visible = { 
+		OR = {
+			has_government = communism
+			has_government = socialism
+		} 
+	}
+	ai_will_do = {
+		base = 0
+	}
+
+	dismiss_member_trigger = {
+		OR = {
+			has_government = anarchosyndicalism
+			has_government = authoritariancommunism
+			is_fascism = yes
+			is_neutrality = yes
+			has_government = conservatism
+			has_government = liberalism_mod
+		} 
+	}
+}
+
+dismissal_rule_ideology_communism = {
+	type = dismissal_rules
+	visible = { is_communism = no }
+	ai_will_do = {
+		base = 0
+	}
+
+	dismiss_member_trigger = {
+		is_communism = yes
+	}
+}
+
+dismissal_rule_ideology_fascism = {
+	type = dismissal_rules
+	visible = { is_fascism = no }
+	ai_will_do = {
+		base = 0
+	}
+
+	dismiss_member_trigger = {
+		is_fascism = yes
+	}
+}
+
+dismissal_rule_ideology_not_democratic = {
+	type = dismissal_rules
+	visible = { is_democratic = yes }
+	ai_will_do = {
+		base = 0
+	}
+	dismiss_member_trigger = {
+		is_democratic_expanded = no
 	}
 }
 
 dismissal_rule_ideology_not_communism = {
 	type = dismissal_rules
-	visible = { has_government = communism }
+	visible = { is_communism = yes }
 	ai_will_do = {
 		base = 0
 	}
 
 	dismiss_member_trigger = {
-		NOT = {
-			has_government = communism 
-		}
-	}
-}
-
-dismissal_rule_ideology_communist = {
-	type = dismissal_rules
-	visible = { NOT = { has_government = communism } }
-	ai_will_do = {
-		base = 0
-	}
-
-	dismiss_member_trigger = {
-		has_government = communism
-	}
-}
-
-dismissal_rule_ideology_fascist = {
-	type = dismissal_rules
-	visible = { NOT = { has_government = fascism } }
-	ai_will_do = {
-		base = 0
-	}
-
-	dismiss_member_trigger = {
-		has_government = fascism
-	}
-}
-
-dismissal_rule_ideology_democratic = {
-	type = dismissal_rules
-	visible = { NOT = { has_government = democratic } }
-	ai_will_do = {
-		base = 0
-	}
-
-	dismiss_member_trigger = {
-		has_government = democratic
+		is_communism = no
 	}
 }

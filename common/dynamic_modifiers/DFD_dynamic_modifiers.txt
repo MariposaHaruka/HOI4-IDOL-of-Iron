@@ -6,14 +6,20 @@ DFD_industry = {
 DFD_army = {
 	enable = { always = yes }
 	icon = GFX_idea_DFD_dynamic_army
+	
+	land_mastery_gain_factor = AGN_army_land_mastery_gain_factor
 }
 
 DFD_navy = {
 	enable = { NOT = { has_country_flag = no_naval_academy } }
 	icon = GFX_idea_DFD_dynamic_naval
+	
+	naval_mastery_gain_factor = AGN_navy_naval_mastery_gain_factor
 }
 
 DFD_air_force = {
 	enable = { NOT = { has_country_flag = no_air_academy } }
 	icon = GFX_idea_DFD_dynamic_airforce
+	
+	air_mastery_gain_factor = AGN_air_force_air_mastery_gain_factor
 }

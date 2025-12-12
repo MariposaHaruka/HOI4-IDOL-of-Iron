@@ -16,6 +16,8 @@ ENS_industry = {
 ENS_army = {
 	enable = { always = yes }
 	icon = GFX_idea_ENS_dynamic_army
+	
+	land_mastery_gain_factor = AGN_army_land_mastery_gain_factor
 
 	#더미 변수
 	#build_cost_ic_anti_air = ENS_army_build_cost_ic_anti_air
@@ -35,6 +37,8 @@ ENS_army = {
 ENS_navy = {
 	enable = { NOT = { has_country_flag = no_naval_academy } }
 	icon = GFX_idea_ENS_dynamic_naval
+	
+	naval_mastery_gain_factor = AGN_navy_naval_mastery_gain_factor
 
 	#더미 변수
 	#build_cost_ic_capital_ship = ENS_navy_build_cost_ic_capital_ship
@@ -47,6 +51,8 @@ ENS_navy = {
 ENS_air_force = {
 	enable = { NOT = { has_country_flag = no_air_academy } }
 	icon = GFX_idea_ENS_dynamic_airforce
+	
+	air_mastery_gain_factor = AGN_air_force_air_mastery_gain_factor
 
 	#더미 변수
 	#build_cost_ic_air_transport = ENS_air_force_build_cost_ic_air_transport

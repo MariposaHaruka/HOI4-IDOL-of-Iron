@@ -8,13 +8,16 @@ IMA_industry_modifier = {
 IMA_army = {
 	enable = { always = yes }
 	icon = GFX_idea_IMA_dynamic_army
+	
+	land_mastery_gain_factor = AGN_army_land_mastery_gain_factor
+
 }
 
 IMA_navy = {
 	enable = { NOT = { has_country_flag = no_naval_academy } }
 	icon = GFX_idea_IMA_dynamic_naval
 
-	naval_doctrine_cost_factor = IMA_navy_naval_doctrine_cost_factor
+	naval_mastery_gain_factor = IMA_navy_naval_mastery_gain_factor
 	experience_gain_navy_factor = IMA_navy_experience_gain_navy_factor
 	refit_speed = IMA_navy_refit_speed
 	refit_ic_cost = IMA_navy_refit_ic_cost
@@ -36,7 +39,6 @@ IMA_navy = {
 	navy_carrier_air_agility_factor = IMA_navy_navy_carrier_air_agility_factor
 	navy_capital_ship_attack_factor = IMA_navy_navy_capital_ship_attack_factor
 	navy_capital_ship_defence_factor = IMA_navy_navy_capital_ship_defence_factor
-	navy_max_range_factor = IMA_navy_navy_max_range_factor
 	navy_org_factor = IMA_navy_navy_org_factor
 	naval_critical_score_chance_factor = IMA_navy_naval_critical_score_chance_factor
 	navy_submarine_detection_factor = IMA_navy_navy_submarine_detection_factor
@@ -63,6 +65,17 @@ IMA_navy = {
 IMA_air_force = {
 	enable = { NOT = { has_country_flag = no_air_academy } }
 	icon = GFX_idea_IMA_dynamic_airforce
+
+	#더미 변수
+	#build_cost_ic_air_transport = IMA_air_force_build_cost_ic_air_transport
+	#build_cost_ic_cas_bomber = IMA_air_force_build_cost_ic_cas_bomber
+	#build_cost_ic_fighter = IMA_air_force_build_cost_ic_fighter
+	#build_cost_ic_interceptor = IMA_air_force_build_cost_ic_interceptor
+	#build_cost_ic_tactical_bomber = IMA_air_force_build_cost_ic_tactical_bomber
+	#build_cost_ic_missile = IMA_air_force_build_cost_ic_missile
+	#build_cost_ic_naval_bomber = IMA_air_force_build_cost_ic_naval_bomber
+	#build_cost_ic_strat_bomber = IMA_air_force_build_cost_ic_strat_bomber
+	#build_cost_ic_suicide = IMA_air_force_build_cost_ic_suicide
 }
 
 IMA_colonial_economy = {
