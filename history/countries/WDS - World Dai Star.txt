@@ -1,0 +1,377 @@
+#수도
+capital = 47 #아테네
+
+#부대
+set_oob = "WDS_ar"
+set_naval_oob = "WDS_na_MtG"
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "WDS_ai_BBA"
+	else = {
+		set_air_oob = "WDS_ai"
+	}
+}
+starting_train_buffer = 2
+add_command_power = 10
+set_fuel_ratio = 0.2
+
+#시작 기술
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+}
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	early_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	basic_battery = 1
+	basic_cruiser_armor_scheme = 1
+	basic_torpedo = 1
+	coastal_defense_ships = 1
+	pre_dreadnoughts = 1
+	mtg_transport = 1
+}
+if = {
+	limit = { has_BBA = yes }
+	set_technology = {
+		iw_small_airframe = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 80
+
+#국민 정신
+add_ideas = direct_election
+add_ideas = single_parliament
+
+add_dynamic_modifier = { modifier = WDS_industry }
+add_dynamic_modifier = { modifier = WDS_army }
+add_dynamic_modifier = { modifier = WDS_navy }
+add_dynamic_modifier = { modifier = WDS_air_force }
+
+## WDS_industry
+
+## WDS_army
+set_variable = { WDS_army_experience_gain_army_factor = -0.30 }
+set_variable = { WDS_army_land_mastery_gain_factor = -0.25 }
+set_variable = { WDS_army_army_org_factor = -0.15 }
+set_variable = { WDS_army_training_time_factor = 0.20 }
+set_variable = { WDS_army_supply_factor = -0.15 }
+set_variable = { WDS_army_planning_speed = -0.20 }
+set_variable = { WDS_army_army_morale_factor = -0.10 }
+set_variable = { WDS_army_max_planning_factor = -0.15 }
+set_variable = { WDS_army_command_power_gain_mult = -0.10 }
+set_variable = { WDS_army_army_leader_cost_factor = 0.50 }
+set_variable = { WDS_army_equipment_capture_factor = -0.50 }
+set_variable = { WDS_army_special_forces_cap = -0.25 }
+set_variable = { WDS_army_recon_factor = -0.15 }
+set_variable = { WDS_army_supply_consumption_factor = 0.10}
+set_variable = { WDS_army_winter_attrition_factor = 0.10 }
+set_variable = { WDS_army_heat_attrition_factor = 0.10 }
+
+set_variable = { WDS_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { WDS_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { WDS_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { WDS_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { WDS_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { WDS_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { WDS_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { WDS_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { WDS_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## WDS_navy
+set_variable = { WDS_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { WDS_navy_naval_mastery_gain_factor = -0.30 }
+set_variable = { WDS_navy_naval_detection = -0.20 }
+set_variable = { WDS_navy_navy_max_range_factor = -0.15 }
+set_variable = { WDS_navy_repair_speed_factor = -0.20 }
+set_variable = { WDS_navy_refit_speed = -0.20 }
+set_variable = { WDS_navy_amphibious_invasion = -0.25 }
+set_variable = { WDS_navy_naval_invasion_capacity = -5 }
+set_variable = { WDS_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { WDS_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { WDS_navy_naval_damage_factor = -0.10 }
+set_variable = { WDS_navy_naval_defense_factor = -0.10 }
+set_variable = { WDS_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { WDS_navy_naval_speed_factor = -0.10 }
+
+set_variable = { WDS_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { WDS_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { WDS_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { WDS_navy_build_cost_ic_screen_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { WDS_navy_build_cost_ic_submarine = 0.30 } ### 별도 국민정신 적용
+
+## WDS_air_force
+set_variable = { WDS_air_force_experience_gain_air_factor = -0.50 }
+set_variable = { WDS_air_force_air_mastery_gain_factor = -0.40 }
+set_variable = { WDS_air_force_air_accidents_factor = 0.25 }
+set_variable = { WDS_air_force_air_mission_efficiency = -0.15 }
+set_variable = { WDS_air_force_air_training_xp_gain_factor = -0.30 }
+set_variable = { WDS_air_force_air_range_factor = -0.10 }
+set_variable = { WDS_air_force_air_ace_generation_chance_factor = -0.60 }
+set_variable = { WDS_air_force_air_superiority_efficiency = -0.20 }
+set_variable = { WDS_air_force_air_cas_efficiency = -0.25 }
+set_variable = { WDS_air_force_air_strategic_bomber_bombing_factor = -0.30 }
+set_variable = { WDS_air_force_air_intercept_efficiency = -0.15 }
+set_variable = { WDS_air_force_air_nav_efficiency = -0.20 }
+set_variable = { WDS_air_force_air_detection = -0.20 }
+set_variable = { WDS_air_force_air_agility_factor = -0.10 }
+
+set_variable = { WDS_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { WDS_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { WDS_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { WDS_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { WDS_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { WDS_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { WDS_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { WDS_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { WDS_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
+
+#외교
+
+#정치 상황
+set_stability = 0.72
+set_war_support = 0.23
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1935.6.9"
+	election_frequency = 7
+	elections_allowed = yes # none after offset 1
+}
+set_popularities = {
+	conservatism = 35
+	liberalism_mod = 7
+	progressivism = 0
+	socialdemocracy = 22
+	socialism = 10
+	communism = 4
+	authoritariancommunism = 12
+	anarchosyndicalism = 6
+	fascism = 1
+	militarytotalism = 1
+	authoritariandemocracy = 1 
+	autocracy = 1
+}
+
+#의회
+
+#캐릭터 
+recruit_character = WDS_otori_kokona
+#recruit_character = WDS_shizuka
+#recruit_character = WDS_kathrina_griebel
+#recruit_character = WDS_niizuma_yae
+#recruit_character = WDS_yanagiba_panda
+#recruit_character = WDS_sasuga_chisa
+#recruit_character = WDS_senju_koyomi
+#recruit_character = WDS_ramona_wolf
+#recruit_character = WDS_wang_xue
+#recruit_character = WDS_lilja_kurtbay
+#recruit_character = WDS_yonaguni_hikari
+#recruit_character = WDS_senju_iroha
+#recruit_character = WDS_shiromaru_mito
+#recruit_character = WDS_akiru_kamira
+#recruit_character = WDS_nekoashi_tsubomi
+#recruit_character = WDS_motosu_towa
+#recruit_character = WDS_renjakuno_hatsumi
+#recruit_character = WDS_karasumori_daikoku
+#recruit_character = WDS_toneri_nikako
+#recruit_character = WDS_yorozu_iruru
+#recruit_character = WDS_fudeshima_shigure
+
+#recruit_character = WDS_konstantinos_demertzis
+#recruit_character = WDS_nikos_zachariadis
+#recruit_character = WDS_george_mercouris
+#recruit_character = WDS_alexandros_papagos
+#recruit_character = WDS_charalambos_katsimitros
+#recruit_character = WDS_markos_drakos
+#recruit_character = WDS_alexandros_sakellariou
+#recruit_character = WDS_konstantinos_ventiris
+#recruit_character = WDS_nikolaos_plastiras
+#recruit_character = WDS_napoleon_zervas
+#recruit_character = WDS_vasilios_tsarpalis
+#recruit_character = WDS_dimitrios_oikonomou
+#recruit_character = WDS_panagiotis_gazis
+#recruit_character = WDS_nikos_beloyannis
+#recruit_character = WDS_petros_voulgaris
+#recruit_character = WDS_spyridon_avgeris
+#recruit_character = WDS_georgios_tsolakoglou
+#recruit_character = WDS_aris_velouchiotis
+#recruit_character = WDS_epameinondas_kavvadias
+#recruit_character = WDS_marinos_mitralexis
+#recruit_character = WDS_georgios_kosmas
+#recruit_character = WDS_konstantinos_tsaldaris
+#recruit_character = WDS_ioannis_metaxas
+#recruit_character = WDS_markos_vafiadis
+#recruit_character = WDS_aristeidis_dimitratos
+#recruit_character = WDS_xenophon_giosmas
+#recruit_character = WDS_georgios_papandreou
+#recruit_character = WDS_sophoklis_venizelos
+#recruit_character = WDS_dimitris_glinos
+#recruit_character = WDS_aristotle_onassis
+#recruit_character = WDS_dimitrios_holevas
+#recruit_character = WDS_emmanouil_tsouderos
+#recruit_character = WDS_konstantinos_maniadakis
+#recruit_character = WDS_eleftherios_venizelos
+#recruit_character = WDS_theodoros_pangalos # Empty character -> Can become unit leader later
+#recruit_character = WDS_dimitrios_psarros # Empty character -> Can become unit leader later
+#recruit_character = WDS_panagiotis_demestichas # Empty character -> Can become unit leader later
+#recruit_character = WDS_georgios_kosmidis
+#recruit_character = WDS_stylianos_gonatas
+
+if = {
+	limit = { has_LaR = yes }
+	create_operative_leader = {
+		name = "Patrick Leigh Fermor"
+		GFX = GFX_portrait_eng_patrick_fermor
+		traits = { operative_tough operative_commando }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = no
+		nationalities = { IMA WDS }
+	}
+	#recruit_character = WDS_father_dimistrios
+}
+
+#장관진
+
+#무기 프리셋
+### Ship Variants ###
+# Submarines #
+create_equipment_variant = {
+	name = "Katsonis Class"				
+	type = ship_hull_submarine_1
+	name_group = WDS_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Glafkos Class"				
+	type = ship_hull_submarine_2
+	name_group = WDS_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = ship_torpedo_sub_1
+	}
+}
+# Destroyers #
+create_equipment_variant = {
+	name = "Aetos Class"					
+	type = ship_hull_light_1
+	name_group = WDS_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Hydra Class"	
+	type = ship_hull_light_1
+	name_group = WDS_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = ship_mine_layer_1
+	}
+}
+# Cruisers #
+create_equipment_variant = {
+	name = "Averof Class"				
+	type = ship_hull_cruiser_coastal_defense_ship
+	name_group = WDS_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_2
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = ship_medium_battery_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Elli Class"				
+	type = ship_hull_cruiser_1
+	name_group = WDS_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = empty
+		fixed_ship_secondaries_slot = empty
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = ship_mine_layer_1
+	}
+}
+# Battleships #
+create_equipment_variant = {
+	name = "Kilkis Class"	
+	type = ship_hull_pre_dreadnought
+	name_group = WDS_BB_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_bb_1
+		front_1_custom_slot = empty
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}

@@ -1,0 +1,187 @@
+﻿division_template = {
+	name = "Brigade d'Infanterie"		
+	division_names_group = Common_A_INFB_01		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "Commandement de la défense de la capitale"
+		location = 4948
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4989
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 12891
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 1909
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 5034
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 4927
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 2056
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 4948
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 4989
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 12891
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 1909
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 5034
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 4927
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 2056
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "AGN"
+		}
+		requested_factories = 1
+		progress = 0.12
+		efficiency = 100
+	}
+}

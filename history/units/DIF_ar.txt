@@ -1,0 +1,57 @@
+﻿division_template = {
+	name = "al-Mushati"		
+	division_names_group = Common_C_INFB_01		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "Capital Defense Command"
+		location = 7151
+		division_template = "al-Mushati"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11976
+		division_template = "al-Mushati"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 4115
+		division_template = "al-Mushati"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "DIF"
+		}
+		requested_factories = 1
+		progress = 0.12
+		efficiency = 100
+	}
+}

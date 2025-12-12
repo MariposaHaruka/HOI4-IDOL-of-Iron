@@ -1,0 +1,583 @@
+#수도
+capital = 429 #봄베이(키보토스 D.U.)
+
+#부대
+set_oob = "BLA_ar"
+add_command_power = 10
+set_fuel_ratio = 0.3
+
+set_country_flag = no_military_academy
+#해군은 오디세이아 해양학교가 있어요
+set_country_flag = no_air_academy
+
+#시작 기술
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+set_technology = {
+	mtg_transport = 1
+}
+if = {
+	limit = { has_BftB = yes }
+	set_technology = { camelry = 1 }
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+		}
+	else = {
+		set_technology = {
+			CAS1 = 1
+			early_fighter = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 20
+
+#국민 정신
+add_ideas = {
+	BLA_robot_technology_1
+	BLA_scientific_improvement_1
+	BLA_famine_problem
+	BLA_kivotos_bharat_problem
+}
+
+640 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
+432 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
+427 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
+436 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
+437 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
+433 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } }
+
+787 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+423 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+424 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+983 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+426 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+428 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+432 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+433 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+434 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+435 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+436 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+437 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+438 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+440 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+441 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+442 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+444 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+445 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+288 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+640 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+323 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+324 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+640 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+985 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+990 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+998 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+991 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+982 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+989 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+987 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+988 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+984 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+986 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+994 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+996 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+997 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+993 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+999 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+1012 = { add_dynamic_modifier = { modifier = agriculture_society_state_7 } }
+
+add_dynamic_modifier = { modifier = BLA_industry_modifier }
+add_dynamic_modifier = { modifier = BLA_army }
+add_dynamic_modifier = { modifier = BLA_bad_administrative }
+
+## BLA_industry
+
+## BLA_army
+set_variable = { BLA_army_land_mastery_gain_factor = 0.20 }
+
+set_variable = { BLA_army_build_cost_ic_armor = 0.10 } ### 별도 국민정신 적용
+
+## BLA_navy
+set_variable = { BLA_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { BLA_navy_naval_mastery_gain_factor = -0.30 }
+set_variable = { BLA_navy_naval_detection = -0.20 }
+set_variable = { BLA_navy_navy_max_range_factor = -0.15 }
+set_variable = { BLA_navy_repair_speed_factor = -0.20 }
+set_variable = { BLA_navy_refit_speed = -0.20 }
+set_variable = { BLA_navy_amphibious_invasion = -0.25 }
+set_variable = { BLA_navy_naval_invasion_capacity = -5 }
+set_variable = { BLA_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { BLA_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { BLA_navy_naval_damage_factor = -0.10 }
+set_variable = { BLA_navy_naval_defense_factor = -0.10 }
+set_variable = { BLA_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { BLA_navy_naval_speed_factor = -0.10 }
+
+set_variable = { BLA_navy_build_cost_ic_capital_ship = 0.15 } ### 별도 국민정신 적용
+set_variable = { BLA_navy_build_cost_ic_carrier = 0.15 } ### 별도 국민정신 적용
+set_variable = { BLA_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { BLA_navy_build_cost_ic_screen_ship = 0.15 } ### 별도 국민정신 적용
+set_variable = { BLA_navy_build_cost_ic_submarine = 0.15 } ### 별도 국민정신 적용
+
+## BLA_air_force
+set_variable = { BLA_air_force_experience_gain_air_factor = -0.50 }
+set_variable = { BLA_air_force_air_mastery_gain_factor = 0.30 }
+set_variable = { BLA_air_force_air_accidents_factor = 0.25 }
+set_variable = { BLA_air_force_air_mission_efficiency = -0.15 }
+set_variable = { BLA_air_force_air_training_xp_gain_factor = -0.30 }
+set_variable = { BLA_air_force_air_range_factor = -0.10 }
+set_variable = { BLA_air_force_air_ace_generation_chance_factor = -0.60 }
+set_variable = { BLA_air_force_air_superiority_efficiency = -0.20 }
+set_variable = { BLA_air_force_air_cas_efficiency = -0.25 }
+set_variable = { BLA_air_force_air_strategic_bomber_bombing_factor = -0.30 }
+set_variable = { BLA_air_force_air_intercept_efficiency = -0.15 }
+set_variable = { BLA_air_force_air_nav_efficiency = -0.20 }
+set_variable = { BLA_air_force_air_detection = -0.20 }
+set_variable = { BLA_air_force_air_agility_factor = -0.10 }
+
+set_variable = { BLA_air_force_build_cost_ic_air_transport = 0.15 } ### 별도 국민정신 적용
+set_variable = { BLA_air_force_build_cost_ic_cas_bomber = 0.15 } ### 별도 국민정신 적용
+set_variable = { BLA_air_force_build_cost_ic_fighter = 0.15 } ### 별도 국민정신 적용
+set_variable = { BLA_air_force_build_cost_ic_interceptor = 0.15 } ### 별도 국민정신 적용
+set_variable = { BLA_air_force_build_cost_ic_heavy_fighter = 0.15 } ### 별도 국민정신 적용
+set_variable = { BLA_air_force_build_cost_ic_tactical_bomber = 0.15 } ### 별도 국민정신 적용
+set_variable = { BLA_air_force_build_cost_ic_missile = 0.15 } ### 별도 국민정신 적용
+set_variable = { BLA_air_force_build_cost_ic_naval_bomber = 0.15 } ### 별도 국민정신 적용
+set_variable = { BLA_air_force_build_cost_ic_strat_bomber = 0.15 } ### 별도 국민정신 적용
+set_variable = { BLA_air_force_build_cost_ic_suicide = 0.15 } ### 별도 국민정신 적용
+
+## BLA_bad_administrative
+set_variable = { BLA_bad_administrative_political_power_gain = -1.0 }
+set_variable = { BLA_bad_administrative_conscription_factor = -0.45 }
+set_variable = { BLA_bad_administrative_mobilization_speed = -0.72 }
+set_variable = { BLA_bad_administrative_political_advisor_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_economic_advisor_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_internal_advisor_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_army_chief_cost_factor = 2.5 }
+set_variable = { BLA_bad_administrative_air_chief_cost_factor = 2.5 }
+set_variable = { BLA_bad_administrative_navy_chief_cost_factor = 2.5 }
+set_variable = { BLA_bad_administrative_theorist_cost_factor = 2.5 }
+set_variable = { BLA_bad_administrative_high_command_cost_factor = 2.5 }
+set_variable = { BLA_bad_administrative_press_policy_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_minors_policy_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_woman_policy_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_local_autonomy_policy_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_welfare_policy_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_industrial_concern_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_economy_model_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_mobilization_economy_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_taxation_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_tarrif_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_military_budget_cost_factor = 2.5 }
+set_variable = { BLA_bad_administrative_construction_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_high_command_order_cost_factor = 2.5 }
+set_variable = { BLA_bad_administrative_army_navy_balance_cost_factor = 2.5 }
+set_variable = { BLA_bad_administrative_logistic_cost_factor = 2.5 }
+set_variable = { BLA_bad_administrative_training_quality_cost_factor = 2.5 }
+set_variable = { BLA_bad_administrative_female_service_cost_factor = 2.5 }
+set_variable = { BLA_bad_administrative_officer_training_cost_factor = 2.5 }
+set_variable = { BLA_bad_administrative_mobilization_laws_cost_factor = 2.12 }
+set_variable = { BLA_bad_administrative_non_core_mobilization_law_cost_factor = 2.12 }
+set_variable = { BLA_bad_administrative_resource_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_industry_base_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_labours_union_cost_factor = 1.5 }
+set_variable = { BLA_bad_administrative_research_cost_factor = 1.5 }
+
+
+every_owned_state = {
+	limit = {
+		is_owned_by = BLA
+	}
+	set_variable = { BLA_ABY_recruitable_population_factor = -0.95 }
+	set_variable = { BLA_ABY_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_ABY_state_resources_factor = -0.75 }
+	set_variable = { BLA_ABY_state_production_speed_buildings_factor = -0.5 }
+
+	set_variable = { BLA_ARI_recruitable_population_factor = -0.95 }
+	set_variable = { BLA_ARI_local_building_slots_factor = -0.95 }
+	set_variable = { BLA_ARI_state_resources_factor = -0.95 }
+	set_variable = { BLA_ARI_state_production_speed_buildings_factor = -0.95 }
+
+	set_variable = { BLA_GEH_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_GEH_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_GEH_state_resources_factor = -0.75 }
+	set_variable = { BLA_GEH_state_production_speed_buildings_factor = -0.35 }
+
+	set_variable = { BLA_HIG_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_HIG_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_HIG_state_resources_factor = -0.25 }
+	set_variable = { BLA_HIG_state_production_speed_buildings_factor = -0.25 }
+
+	set_variable = { BLA_HYA_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_HYA_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_HYA_state_resources_factor = -0.75 }
+	set_variable = { BLA_HYA_state_production_speed_buildings_factor = -0.25 }
+
+	set_variable = { BLA_MIL_recruitable_population_factor = -0.8 }
+	set_variable = { BLA_MIL_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_MIL_state_resources_factor = -0.75 }
+	set_variable = { BLA_MIL_state_production_speed_buildings_factor = -0.15 }
+
+	set_variable = { BLA_RED_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_RED_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_RED_state_resources_factor = -0.85 }
+	set_variable = { BLA_RED_state_production_speed_buildings_factor = -0.35 }
+
+	set_variable = { BLA_SHA_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_SHA_local_building_slots_factor = -0.5 }
+	set_variable = { BLA_SHA_state_resources_factor = -0.5 }
+	set_variable = { BLA_SHA_state_production_speed_buildings_factor = -0.35 }
+
+	set_variable = { BLA_SRT_recruitable_population_factor = -0.05 }
+	set_variable = { BLA_SRT_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_SRT_state_resources_factor = -0.25 }
+	set_variable = { BLA_SRT_state_production_speed_buildings_factor = -0.25 }
+
+	set_variable = { BLA_TRN_recruitable_population_factor = -0.25 }
+	set_variable = { BLA_TRN_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_TRN_state_resources_factor = -0.25 }
+	set_variable = { BLA_TRN_state_production_speed_buildings_factor = -0.25 }
+
+	set_variable = { BLA_VAL_recruitable_population_factor = -0.05 }
+	set_variable = { BLA_VAL_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_VAL_state_resources_factor = -0.25 }
+	set_variable = { BLA_VAL_state_production_speed_buildings_factor = -0.25 }
+}
+
+#외교
+IMA = { embargo_ROOT = yes }
+ICG = { embargo_ROOT = yes }
+IML = { embargo_ROOT = yes }
+ISM = { embargo_ROOT = yes }
+ISC = { embargo_ROOT = yes }
+IDS = { embargo_ROOT = yes }
+IGM = { embargo_ROOT = yes }
+
+
+
+#정치 상황
+set_stability = 0.4
+set_war_support = 0.3
+set_politics = {
+	ruling_party = authoritariandemocracy
+	last_election = "1935.11.14"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	conservatism = 1
+	liberalism_mod = 13
+	progressivism = 0
+	socialdemocracy = 1
+	socialism = 1
+	communism = 1
+	authoritariancommunism = 6
+	anarchosyndicalism = 1
+	fascism = 6
+	militarytotalism = 1
+	authoritariandemocracy = 68
+	autocracy = 1
+}
+set_rule = { can_puppet = no }
+
+if = {
+	limit = {
+		has_start_date < 1936.01.02
+	}
+	set_power_balance = {
+		id = BLA_schalle_sc_balance
+		left_side = BLA_schalle_side
+		right_side = BLA_sc_side
+		set_value = 0.15
+	}
+}
+set_country_flag = BLA_student_council
+set_country_flag = BLA_kivotos_ftf_open
+
+## 학교 연락 위원회
+set_country_flag = BLA_shanhaijing_not_participated
+set_country_flag = BLA_redwinter_not_participated
+set_country_flag = BLA_gehenna_not_participated
+set_country_flag = BLA_hyakkiyako_not_participated
+set_country_flag = BLA_millenium_not_participated
+set_country_flag = BLA_trinity_not_participated
+set_country_flag = BLA_abydos_not_participated
+set_country_flag = BLA_arius_not_participated
+
+set_variable = { BLA_GEH_leader = 0 }
+set_variable = { BLA_TRN_leader = 0 }
+set_variable = { BLA_MIL_leader = 0 }
+set_variable = { BLA_HYA_leader = 0 }
+set_variable = { BLA_ABY_leader = 0 }
+set_variable = { BLA_SHA_leader = 0 }
+set_variable = { BLA_RED_leader = 0 }
+set_variable = { BLA_ARI_leader = 0 }
+set_variable = { BLA_VAL_leader = 2 }
+set_variable = { BLA_SRT_leader = 2 }
+
+set_country_flag = BLA_president_missing #학생회장 플래그
+set_country_flag = BLA_prisoners_wanted #일곱 죄수들 플래그
+set_country_flag = BLA_thugs_unemployed #불량배용 플래그
+
+set_country_flag = BLA_SHA_kai_problem
+set_country_flag = BLA_SHA_genryumon_problem
+set_country_flag = BLA_SHA_genbu_promenade_problem
+
+set_country_flag = BLA_GEH_prefect_pandemonium_problem
+set_country_flag = BLA_GEH_gourmet_research_society_problem
+set_country_flag = BLA_GEH_hot_spring_department_problem
+set_country_flag = BLA_GEH_pen_chan_problem
+
+#set_country_flag = BLA_TRN_pater_problem #이벤트로 뜸
+#set_country_flag = BLA_TRN_GEH_problem #이벤트로 뜸
+
+set_country_flag = BLA_MIL_budget_problem #이건 고질적인 문제
+#set_country_flag = BLA_MIL_decagrammaton_problem #이벤트로 뜸
+
+set_country_flag = BLA_ABY_debt_problem
+set_country_flag = BLA_ABY_desert_problem
+
+set_country_flag = BLA_HYA_hyakkaryouran_problem
+set_country_flag = BLA_HYA_hwajopungwol_problem
+set_country_flag = BLA_HYA_mangryang_problem
+
+#set_country_flag = BLA_RED_coup_problem #천방지축 어리둥절 빙글빙글 돌아가는 붉은겨울 연방학원의 하루
+set_country_flag = BLA_RED_bad_budget_problem
+
+set_country_flag = BLA_ARI_beatrice_problem
+
+#의회-> 에덴조약 이후 열림, 베타판은 미사용
+set_variable = { BLA_redwinterparty_seats = 73 }
+set_variable = { BLA_shanhaijing_seats = 18 }
+
+set_variable = { BLA_abidos_seats = 12 }
+set_variable = { BLA_milleniumliberal_seats = 148 }
+set_variable = { BLA_schalle_seats = 209 }
+set_variable = { BLA_valkyrie_seats = 27 }
+set_variable = { BLA_srt_seats = 12 }
+
+set_variable = { BLA_hyakkiyako_seats = 40 }
+set_variable = { BLA_trinitynationalparty_seats = 92 }
+set_variable = { BLA_gehennaparty_seats = 93 }
+#Total seats - 728
+
+#캐릭터
+recruit_character = BLA_empty_president
+recruit_character = BLA_sense
+recruit_character = BLA_arona
+recruit_character = BLA_prana
+recruit_character = BLA_president
+recruit_character = BLA_nanagami_rin
+recruit_character = BLA_yuragi_momoka
+recruit_character = BLA_iwabitsu_ayumu
+recruit_character = BLA_shiranui_kaya
+recruit_character = BLA_oki_aoi
+recruit_character = BLA_sumomo
+recruit_character = BLA_haine
+recruit_character = BLA_kuchinashi_yume
+recruit_character = BLA_sunaookami_shiroko
+recruit_character = BLA_takanashi_hoshino
+recruit_character = BLA_kuromi_serika
+recruit_character = BLA_izayoi_nonomi
+recruit_character = BLA_okusora_ayane
+recruit_character = BLA_hanuma_makoto
+recruit_character = BLA_natsume_iroha
+recruit_character = BLA_tanga_ibuki
+recruit_character = BLA_kyougoku_satsuki
+recruit_character = BLA_motomiya_chiaki
+recruit_character = BLA_sorasaki_hina
+recruit_character = BLA_amau_ako
+recruit_character = BLA_shiromi_iori
+recruit_character = BLA_hinomiya_chinatsu
+recruit_character = BLA_rikuhachima_aru
+recruit_character = BLA_asagi_mutsuki
+recruit_character = BLA_onikata_kayoko
+recruit_character = BLA_igusa_haruka
+recruit_character = BLA_kurodate_haruna
+recruit_character = BLA_wanibuchi_akari
+recruit_character = BLA_shishido_izumi
+recruit_character = BLA_akashi_zunko
+recruit_character = BLA_aikiyo_fuuka
+recruit_character = BLA_ushimaki_juuri
+recruit_character = BLA_himuro_sena
+recruit_character = BLA_kinugawa_kasumi
+recruit_character = BLA_shimokura_megu
+recruit_character = BLA_hatami_erika
+recruit_character = BLA_yozakura_kirara
+recruit_character = BLA_tsukatsuki_rio
+recruit_character = BLA_ushio_noa
+recruit_character = BLA_hayase_yuuka
+recruit_character = BLA_kurosaki_koyuki
+recruit_character = BLA_hanaoka_yuzu
+recruit_character = BLA_tendou_aris
+recruit_character = BLA_saiba_momoi
+recruit_character = BLA_saiba_midori
+recruit_character = BLA_mikamo_neru
+recruit_character = BLA_ichinose_asuna
+recruit_character = BLA_kakudate_karin
+recruit_character = BLA_murokasa_akane
+recruit_character = BLA_asuma_toki
+recruit_character = BLA_akeboshi_himari
+recruit_character = BLA_kagami_chihiro
+recruit_character = BLA_omagari_hare
+recruit_character = BLA_konuri_maki
+recruit_character = BLA_otose_kotama
+recruit_character = BLA_shiraishi_utaha
+recruit_character = BLA_nekozuka_hibiki
+recruit_character = BLA_toyomi_kotori
+recruit_character = BLA_otohana_sumire
+recruit_character = BLA_izumimoto_eimi
+recruit_character = BLA_nomasa_rei
+recruit_character = BLA_kirifuji_nagisa
+recruit_character = BLA_misono_mika
+recruit_character = BLA_yurizono_seia
+recruit_character = BLA_ajitani_hifumi
+recruit_character = BLA_urawa_hanako
+recruit_character = BLA_shirasu_azusa
+recruit_character = BLA_shimoe_koharu
+recruit_character = BLA_morizuki_suzumi
+recruit_character = BLA_uzawa_reisa
+recruit_character = BLA_kozeki_ui
+recruit_character = BLA_endo_shimiko
+recruit_character = BLA_ibaragi_yoshimi
+recruit_character = BLA_kurimura_airi
+recruit_character = BLA_kyouyama_kazusa
+recruit_character = BLA_yutori_natsu
+recruit_character = BLA_aomori_mine
+recruit_character = BLA_sumi_serina
+recruit_character = BLA_asagao_hanae
+recruit_character = BLA_kenzaki_tsurugi
+recruit_character = BLA_hanekawa_hasumi
+recruit_character = BLA_shizuyama_mashiro
+recruit_character = BLA_nakamasa_ichika
+recruit_character = BLA_utazumi_sakurako
+recruit_character = BLA_wakaba_hinata
+recruit_character = BLA_iochi_mari
+recruit_character = BLA_amachi_niya
+recruit_character = BLA_kuwakami_kaho
+recruit_character = BLA_waraku_chise
+recruit_character = BLA_kawawa_shizuko
+recruit_character = BLA_asahina_pina
+recruit_character = BLA_satohama_umika
+recruit_character = BLA_kasuga_tsubaki
+recruit_character = BLA_mizuha_mimori
+recruit_character = BLA_isami_kaede
+recruit_character = BLA_chidori_michiru
+recruit_character = BLA_kuda_izuna
+recruit_character = BLA_ono_tsukuyo
+recruit_character = BLA_kuzunoha
+recruit_character = BLA_goryo_nagusa
+recruit_character = BLA_fuwa_renge
+recruit_character = BLA_kiryu_kikyou
+recruit_character = BLA_kadenokouji_yukari
+recruit_character = BLA_kokuriko
+recruit_character = BLA_yabuki_shuro
+recruit_character = BLA_arata
+recruit_character = BLA_ryuuge_kisaki
+recruit_character = BLA_konoe_mina
+recruit_character = BLA_yakushi_saya
+recruit_character = BLA_sunohara_shun
+recruit_character = BLA_sunohara_kokona
+recruit_character = BLA_akeshiro_rumi
+recruit_character = BLA_kayama_reizyo
+recruit_character = BLA_urushibara_kaguya
+recruit_character = BLA_renkawa_cherino
+recruit_character = BLA_sashiro_tomoe
+recruit_character = BLA_ikekura_marina
+recruit_character = BLA_amami_nodoka
+recruit_character = BLA_mayoi_shigure
+recruit_character = BLA_himeki_meru
+recruit_character = BLA_akiizumi_momiji
+recruit_character = BLA_yasumori_minori
+recruit_character = BLA_aramaki_yakumo
+recruit_character = BLA_miyoshi_takane
+recruit_character = BLA_ogata_kanna
+recruit_character = BLA_konoka
+recruit_character = BLA_nakatsukasa_kirino
+recruit_character = BLA_nemugaki_fubuki
+recruit_character = BLA_tsukiyuki_miyako
+recruit_character = BLA_sorai_saki
+recruit_character = BLA_kazekura_moe
+recruit_character = BLA_kasumizawa_miyu
+recruit_character = BLA_shichido_yukino
+recruit_character = BLA_niko
+recruit_character = BLA_kurumi
+recruit_character = BLA_otogi
+recruit_character = BLA_joumae_saori
+recruit_character = BLA_hakari_atsuko
+recruit_character = BLA_imashino_misaki
+recruit_character = BLA_tsuchinaga_hiyori
+recruit_character = BLA_kazamaki_mai
+recruit_character = BLA_kawaru_shinon
+recruit_character = BLA_asagiri_suo
+recruit_character = BLA_tachibana_nozomi
+recruit_character = BLA_tachibana_hikari
+recruit_character = BLA_komakaze_rabu
+recruit_character = BLA_kosaka_wakamo
+recruit_character = BLA_kiyosumi_akira
+recruit_character = BLA_shintani_kai
+recruit_character = BLA_kurihama_akemi
+recruit_character = BLA_niyaniya_professor
+recruit_character = BLA_sora
+recruit_character = BLA_kaiser_parkmincheol
+recruit_character = BLA_kaiser_general
+recruit_character = BLA_kaiser_president
+recruit_character = BLA_descartes
+recruit_character = BLA_nameless_priest
+recruit_character = BLA_black_suit
+recruit_character = BLA_maestro
+recruit_character = BLA_decalcomanie
+recruit_character = BLA_beatrice
+recruit_character = BLA_underground_man
+recruit_character = BLA_ein
+recruit_character = BLA_sof
+recruit_character = BLA_ohr
+recruit_character = BLA_peroro
+recruit_character = BLA_nyantenmaru
+
+#장관진
+add_ideas = {
+	BLA_nanagami_rin
+	BLA_yuragi_momoka
+	BLA_iwabitsu_ayumu
+	BLA_shiranui_kaya
+	BLA_oki_aoi
+	BLA_sumomo
+	BLA_haine
+}
+
+#이벤트
+country_event = { id = BLA_kivotos_ftf.1 days = 3 } #총학생회 비대위 상황
+country_event = { id = BLA_kivotos_ftf.2 days = 5 } #비대위 최종의결
+country_event = { id = BLA_kivotos_ftf.3 days = 10 } #비대위 폐회식

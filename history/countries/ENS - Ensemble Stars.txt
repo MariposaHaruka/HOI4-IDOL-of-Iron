@@ -1,0 +1,927 @@
+#수도
+capital = 2 #로마
+
+#부대
+if = {
+	limit = { has_NSB = yes }
+	set_oob = "ENS_ar_NSB"
+	else = { set_oob = "ENS_ar" }
+}
+set_naval_oob = "ENS_na_MtG"
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "ENS_ai_BBA"
+	else = {
+		set_air_oob = "ENS_ai"
+	}
+}
+starting_train_buffer = 1.5
+add_command_power = 20
+set_fuel_ratio = 0.6
+
+#시작 기술
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	basic_train = 1
+}
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	basic_depth_charges = 1
+	basic_torpedo = 1
+	basic_battery = 1
+	basic_cruiser_armor_scheme = 1
+	basic_heavy_battery = 1
+	basic_light_battery = 1
+	basic_heavy_armor_scheme = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	basic_ship_hull_heavy = 1
+	mtg_transport = 1
+	coastal_defense_ships = 1
+}
+if = {
+	limit = { has_LaR = yes }
+	set_technology = {
+		armored_car1 = 1 
+	}
+}
+if = {
+	limit = { has_BftB = yes }
+	set_technology = { camelry = 1 }
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+		}
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+		set_technology = {
+			aa_lmg = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			engines_1 = 1
+			engines_2 = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_small_airframe = 1
+			basic_medium_airframe = 1
+			air_torpedoe_1 = 1
+		}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			naval_bomber1 = 1
+			CAS1 = 1
+		}
+	}
+}
+
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 200
+
+#국민 정신
+add_ideas = {
+	
+}
+
+add_dynamic_modifier = { modifier = ENS_industry }
+add_dynamic_modifier = { modifier = ENS_army }
+add_dynamic_modifier = { modifier = ENS_navy }
+add_dynamic_modifier = { modifier = ENS_air_force }
+
+## ENS_industry
+set_variable = { ENS_industry_production_speed_buildings_factor = -0.10 }
+set_variable = { ENS_industry_industrial_capacity_factory = -0.10 }
+set_variable = { ENS_industry_industrial_capacity_dockyard = -0.10 }
+set_variable = { ENS_industry_research_speed_factor = -0.10 }
+set_variable = { ENS_industry_consumer_goods_factor = 0.05 }
+set_variable = { ENS_industry_state_resources_factor = -0.05 }
+set_variable = { ENS_industry_production_factory_max_efficiency_factor = -0.10 }
+set_variable = { ENS_industry_production_factory_efficiency_gain_factor = -0.10 }
+set_variable = { ENS_industry_license_purchase_cost = 0.20 }
+set_variable = { ENS_industry_political_power_gain = -0.03 }
+set_variable = { ENS_industry_stability_factor = -0.05 }
+set_variable = { ENS_industry_industry_repair_factor = -0.15 }
+
+## ENS_army
+
+set_variable = { ENS_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { ENS_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { ENS_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { ENS_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { ENS_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { ENS_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { ENS_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { ENS_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { ENS_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## ENS_navy
+
+set_variable = { ENS_navy_build_cost_ic_capital_ship = 0.15 } ### 별도 국민정신 적용
+set_variable = { ENS_navy_build_cost_ic_carrier = 0.15 } ### 별도 국민정신 적용
+set_variable = { ENS_navy_build_cost_ic_convoy = 0 } ### 별도 국민정신 적용
+set_variable = { ENS_navy_build_cost_ic_screen_ship = 0.15 } ### 별도 국민정신 적용
+set_variable = { ENS_navy_build_cost_ic_submarine = 0.15 } ### 별도 국민정신 적용
+
+## ENS_air_force
+
+set_variable = { ENS_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { ENS_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { ENS_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { ENS_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { ENS_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { ENS_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { ENS_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { ENS_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { ENS_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
+
+#외교
+if = {
+	limit = { has_start_date < 1936.01.02 }
+	declare_war_on = {
+		target = MCR
+		type = annex_everything
+	}
+}
+
+#국민 정신
+
+550 = { #ERITREA
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}
+
+559 = { #SOMALILAND
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}
+
+844 = { #JUBALAND
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}
+
+#정치 상황
+set_stability = 0.6
+set_war_support = 0.7
+set_politics = {
+	ruling_party = fascism
+	last_election = "1934.3.26"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	conservatism = 2
+	liberalism_mod = 2
+	progressivism = 0
+	socialdemocracy = 12
+	socialism = 2
+	communism = 2
+	authoritariancommunism = 2
+	anarchosyndicalism = 1
+	fascism = 56
+	militarytotalism = 10
+	authoritariandemocracy = 1
+	autocracy = 10
+}
+ban_communism_effect = yes
+ban_democratic_effect = yes
+
+#캐릭터
+recruit_character = ENS_dummy_CON #더미
+recruit_character = ENS_dummy_LIB #더미
+recruit_character = ENS_dummy_PRO #더미
+recruit_character = ENS_dummy_SOD #더미
+recruit_character = ENS_dummy_SOC #더미
+recruit_character = ENS_dummy_COM #더미
+recruit_character = ENS_dummy_AUC #더미
+recruit_character = ENS_dummy_ANA #더미
+recruit_character = ENS_tenshouin_eichi
+recruit_character = ENS_hibiki_wataru
+recruit_character = ENS_himemiya_tori
+recruit_character = ENS_fushimi_yuzuru
+recruit_character = ENS_hidaka_hokuto
+recruit_character = ENS_akehoshi_subaru
+recruit_character = ENS_yuuki_makoto
+recruit_character = ENS_isara_mao
+recruit_character = ENS_morisawa_chiaki
+recruit_character = ENS_shinkai_kanata
+recruit_character = ENS_nagumo_tetora
+recruit_character = ENS_takamine_midori
+recruit_character = ENS_sengoku_shinobu
+recruit_character = ENS_amagi_hiiro
+recruit_character = ENS_shiratori_aira
+recruit_character = ENS_ayase_mayoi
+recruit_character = ENS_kazehaya_tatsumi
+recruit_character = ENS_ran_nagisa
+recruit_character = ENS_tomoe_hiyori
+recruit_character = ENS_saegusa_ibara
+recruit_character = ENS_sazanami_jun
+recruit_character = ENS_itsuki_shu
+recruit_character = ENS_kagehara_mika
+recruit_character = ENS_aoi_hinata
+recruit_character = ENS_aoi_yuta
+recruit_character = ENS_amagi_rinne
+recruit_character = ENS_himeru
+recruit_character = ENS_oukawa_kohaku
+recruit_character = ENS_shiina_niki
+recruit_character = ENS_sakuma_rei
+recruit_character = ENS_hakaze_kaoru
+recruit_character = ENS_ogami_koga
+recruit_character = ENS_otogari_adonis
+recruit_character = ENS_nito_nazuna
+recruit_character = ENS_tenma_mitsuru
+recruit_character = ENS_mashiro_tomoya
+recruit_character = ENS_shino_hajime
+recruit_character = ENS_hasumi_keito
+recruit_character = ENS_kiryu_kuro
+recruit_character = ENS_kanzaki_souma
+recruit_character = ENS_suou_tsukasa
+recruit_character = ENS_tsukinaga_leo
+recruit_character = ENS_sena_izumi
+recruit_character = ENS_sakuma_ritsu
+recruit_character = ENS_narukami_arashi
+recruit_character = ENS_aoba_tsumugi
+recruit_character = ENS_sakasaki_natsume
+recruit_character = ENS_harukawa_sora
+recruit_character = ENS_mikejima_madara
+recruit_character = ENS_sagami_jin
+recruit_character = ENS_kunugi_akiomi
+recruit_character = ENS_kurone_hitsugi
+recruit_character = ENS_hidaka_seiya
+recruit_character = ENS_anju
+
+#recruit_character = ENS_benito_mussolini
+#recruit_character = ENS_grand_council
+#recruit_character = ENS_vittorio_emanuele_iii
+#recruit_character = ENS_ferruccio_parri
+#recruit_character = ENS_palmiro_togliatti
+#recruit_character = ENS_rodolfo_graziani
+#recruit_character = ENS_pietro_badoglio
+#recruit_character = ENS_emilio_de_bono
+#recruit_character = ENS_ugo_cavallero
+#recruit_character = ENS_giovanni_messe
+#recruit_character = ENS_sebastiano_visconti_prasca
+#recruit_character = ENS_ubaldo_soddu
+#recruit_character = ENS_italo_balbo
+
+#recruit_character = ENS_ettore_bastico
+#recruit_character = ENS_italo_gariboldi
+#recruit_character = ENS_pietro_pintor
+#recruit_character = ENS_mario_berti
+#recruit_character = ENS_carlo_geloso
+#recruit_character = ENS_giuseppe_tellera
+#recruit_character = ENS_francesco_zingales
+#recruit_character = ENS_ezio_rosi
+#recruit_character = ENS_mario_vercellino
+#recruit_character = ENS_prince_filiberto
+#recruit_character = ENS_prince_adalberto
+#recruit_character = ENS_prince_umberto
+#recruit_character = ENS_alessandro_pirzio_biroli
+#recruit_character = ENS_carlo_vecchiarelli
+#recruit_character = ENS_mario_robotti
+#recruit_character = ENS_ettore_baldassarre
+#recruit_character = ENS_amedeo_guillet
+#recruit_character = ENS_annibale_bergonzoli
+#recruit_character = ENS_hamid_idris_awate
+#recruit_character = ENS_ibrahim_farag_mohammed
+#recruit_character = ENS_mario_ricci
+#recruit_character = ENS_norma_barbolini
+#recruit_character = ENS_luigi_longo
+#recruit_character = ENS_ada_gobetti
+#recruit_character = ENS_randolfo_pacciardi
+#recruit_character = ENS_giuseppe_pieche
+#recruit_character = ENS_giovanni_duca
+#recruit_character = ENS_giuseppe_de_stefanis
+#recruit_character = ENS_prince_aimone
+
+#recruit_character = ENS_inigo_campioni
+#recruit_character = ENS_alberto_da_zara
+#recruit_character = ENS_giuseppe_fioravanzo
+#recruit_character = ENS_carlo_bergamini
+#recruit_character = ENS_angelo_iachino
+#recruit_character = ENS_giuseppe_di_bartolo
+#recruit_character = ENS_junio_valerio_borghese
+
+#recruit_character = ENS_alfredo_guzzoni
+#recruit_character = ENS_renato_sandalli
+#recruit_character = ENS_francesco_pricolo
+#recruit_character = ENS_silvio_scaroni
+#recruit_character = ENS_vittorio_ambrosio
+#recruit_character = ENS_arturo_riccardi
+#recruit_character = ENS_mario_roatta
+#recruit_character = ENS_marziale_cerutti
+#recruit_character = ENS_ettore_muti
+#recruit_character = ENS_gaetano_crocco
+#recruit_character = ENS_luigi_mascherpa
+#recruit_character = ENS_domenico_cavagnari
+#recruit_character = ENS_amedeo_mecozzi
+#recruit_character = ENS_rino_corso_fougier
+#recruit_character = ENS_giacomo_acerbo
+#recruit_character = ENS_giovanni_marinelli
+#recruit_character = ENS_serafino_mazzolini
+#recruit_character = ENS_roberto_farinacci
+#recruit_character = ENS_ivanoe_bonomi
+#recruit_character = ENS_luigi_einaudi
+#recruit_character = ENS_amadeo_bordiga
+#recruit_character = ENS_paolo_thaon_di_revel
+#recruit_character = ENS_dino_grandi
+#recruit_character = ENS_carlo_scorza
+#recruit_character = ENS_gian_galeazzo_ciano
+
+#recruit_character = ENS_alberto_pariani
+#recruit_character = ENS_romeo_bernotti
+#recruit_character = ENS_aldo_pellegrini
+#recruit_character = ENS_achille_starace
+#recruit_character = ENS_renato_ricci
+#recruit_character = ENS_carlo_favagrossa
+#recruit_character = ENS_alberto_beneduce
+#recruit_character = ENS_guido_jung
+#recruit_character = ENS_adelchi_serena
+#recruit_character = ENS_curzio_malaparte
+#recruit_character = ENS_giuseppe_bottai
+#recruit_character = ENS_antonio_pesenti
+#recruit_character = ENS_fausto_gullo
+#recruit_character = ENS_giulio_paggio
+#recruit_character = ENS_ignazio_silone
+#recruit_character = ENS_vittorio_emanuele_orlando
+#recruit_character = ENS_mario_scelba
+#recruit_character = ENS_guido_de_ruggiero
+#recruit_character = ENS_enrico_fermi
+#recruit_character = ENS_alberto_tarchiani
+#recruit_character = ENS_giuseppe_borea
+#recruit_character = ENS_raffaele_de_courten
+
+#recruit_character = ENS_sandro_pertini
+#recruit_character = ENS_pietro_d_acquarone
+#recruit_character = ENS_alberto_de_stefani
+#recruit_character = ENS_ugo_luca
+#recruit_character = ENS_pompeo_colajanni
+#recruit_character = ENS_alcide_de_gasperi
+#recruit_character = ENS_comitato_di_liberazione_nazionale
+#recruit_character = ENS_papa_pio_xi
+#recruit_character = ENS_papa_pio_xii
+#recruit_character = ENS_antonio_gramsci
+
+#recruit_character = ENS_haile_selassie_gugsa_doppleganger
+#recruit_character = ENS_abba_jofir_doppleganger
+#recruit_character = ENS_hailu_tekle_haymanot_doppleganger
+#recruit_character = ENS_seyoum_mengesha_doppleganger
+
+#recruit_character = ENS_robert_longhi
+#recruit_character = ENS_mario_castoldi
+#recruit_character = ENS_giovanni_giorgi
+#recruit_character = ENS_filippo_bonfiglietti
+#recruit_character = ENS_curio_bernardis
+
+#장관진
+
+#무기 프리셋
+### Ship Variants ###
+### Battleship Variants	
+create_equipment_variant = {			# original configuration of class pre-refit (refit in 1937-40)
+	name = "Andrea Doria Class"
+	type = ship_hull_heavy_1
+	name_group = ENS_BB_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_bb_1
+		front_1_custom_slot = ship_anti_air_1
+		mid_1_custom_slot = ship_secondaries_1
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = ship_heavy_battery_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Conte Di Cavour Class"
+	type = ship_hull_heavy_1
+	name_group = ENS_BB_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_2
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_bb_1
+		front_1_custom_slot = empty
+		mid_1_custom_slot = ship_secondaries_1
+		mid_2_custom_slot = ship_airplane_launcher_1
+		rear_1_custom_slot = ship_heavy_battery_1
+	}
+}
+### Heavy Cruiser Variants	
+create_equipment_variant = {
+	name = "San Giorgio Class"
+	type = ship_hull_cruiser_coastal_defense_ship
+	name_group = ENS_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_2
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		front_1_custom_slot = ship_anti_air_1
+		mid_1_custom_slot = ship_secondaries_1
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = ship_torpedo_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Trento Class"
+	type = ship_hull_cruiser_1
+	name_group = ENS_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		fixed_ship_secondaries_slot = empty
+		mid_1_custom_slot = ship_medium_battery_1
+		mid_2_custom_slot = ship_airplane_launcher_1
+		rear_1_custom_slot = ship_anti_air_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Zara Class"
+	type = ship_hull_cruiser_1
+	name_group = ENS_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = ship_armor_cruiser_2
+		fixed_ship_secondaries_slot = empty
+		mid_1_custom_slot = ship_medium_battery_1
+		mid_2_custom_slot = ship_airplane_launcher_1
+		rear_1_custom_slot = ship_anti_air_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Bolzano Class"
+	type = ship_hull_cruiser_2
+	name_group = ENS_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		fixed_ship_secondaries_slot = empty
+		mid_1_custom_slot = ship_medium_battery_1
+		mid_2_custom_slot = ship_airplane_launcher_1
+		rear_1_custom_slot = ship_anti_air_1
+	}
+}
+### Light Cruiser Variants	
+create_equipment_variant = {
+	name = "Taranto Class"
+	type = ship_hull_cruiser_1
+	name_group = ENS_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = ship_mine_layer_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Giussano Class"
+	type = ship_hull_cruiser_1
+	name_group = ENS_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = empty
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_airplane_launcher_1
+		rear_1_custom_slot = ship_light_medium_battery_2
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Montecuccoli Class"
+	type = ship_hull_cruiser_2
+	name_group = ENS_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = empty
+		front_1_custom_slot = ship_anti_air_1
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_airplane_launcher_1
+		rear_1_custom_slot = ship_light_medium_battery_2
+	}
+}
+### Light Cruiser Variants	
+create_equipment_variant = {
+	name = "Duca degli Abruzzi Class"
+	type = ship_hull_cruiser_2
+	name_group = ENS_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		front_1_custom_slot = ship_anti_air_2
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_airplane_launcher_2
+		rear_1_custom_slot = ship_light_medium_battery_2
+	}
+}
+### Destroyer Variants
+create_equipment_variant = {
+	name = "Curtatone Class" 		#Represents the following WWI/1920s DDs/DEs: Curtatone, Sauro/Sella, Turbine, Pilo, Audace, Siritori, La Masa, Palestro, Cantore
+	type = ship_hull_light_1
+	name_group = ENS_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Navigatori Class"			#Represents the following WWI/1920s Heavy DDs: Mirabello, (Aquila,) Leone, Navigatori
+	type = ship_hull_light_1
+	name_group = ENS_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_mine_layer_1
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+	obsolete = yes
+}	
+create_equipment_variant = {
+	name = "Maestrale Class" 			#Represents the following WWI/1920s DDs: Freccia, Foglore, Mastrale, Oriani, Spica (and subclasses)
+	type = ship_hull_light_1
+	name_group = ENS_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+}
+create_equipment_variant = {
+	name = "Aquila Class" 			#Represents the following WWI Aquila-Class Esploratori Leggeri
+	type = ship_hull_light_1
+	name_group = ENS_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = empty
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_mine_layer_1
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Littorio Class"
+	type = ship_hull_heavy_2
+	name_group = ENS_BB_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_3
+		fixed_ship_secondaries_slot = ship_secondaries_2
+		fixed_ship_armor_slot = ship_armor_bb_2
+		front_1_custom_slot = ship_anti_air_1
+		mid_1_custom_slot = ship_secondaries_2
+		mid_2_custom_slot = ship_airplane_launcher_2
+		rear_1_custom_slot = ship_heavy_battery_2
+	}
+}
+### Submarine Variants	
+create_equipment_variant = {
+	name = "Mameli Class"
+	type = ship_hull_submarine_1
+	name_group = ENS_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}	
+create_equipment_variant = {
+	name = "Bandiera Class"
+	type = ship_hull_submarine_1
+	name_group = ENS_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = ship_torpedo_sub_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Sirena Class"
+	type = ship_hull_submarine_1
+	name_group = ENS_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Calvi Class"
+	type = ship_hull_submarine_2
+	name_group = ENS_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = ship_torpedo_sub_1
+	}
+}
+
+if = {
+	limit = { has_NSB = yes }
+	create_equipment_variant = {
+		name = "Fiat 3000"
+		type = light_tank_chassis_0
+		parent_version = 0
+		obsolete = yes
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "GFX_gwtank_medium"
+	}
+
+	add_equipment_to_stockpile = {
+		type = light_tank_chassis_0
+		amount = 150
+		variant_name = "Fiat 3000"
+	}
+
+	create_equipment_variant = {
+		name = "Fiat 3000B"
+		type = light_tank_chassis_0
+		parent_version = 1
+		obsolete = yes
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "GFX_gwtank_medium"
+	}
+
+	add_equipment_to_stockpile = {
+		type = light_tank_chassis_0
+		amount = 40
+		variant_name = "Fiat 3000B"
+	}
+
+	create_equipment_variant = {  #Note: There is a copy of this variant in Finnish National Focus file (FIN_bring_foreign_armor_experts). Any changes here should also be applied there
+		name = "L3/35"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_fixed_superstructure_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 1
+		}
+		icon = "GFX_ITA_basic_light_tank_medium"
+	}
+	else = {
+		add_equipment_to_stockpile = {
+			type = gw_tank_equipment
+			amount = 190
+			producer = ENS
+			variant_name = "Fiat 3000"
+		}
+	}
+}
+
+if = {
+	limit = { has_BBA = yes }
+	create_equipment_variant = {
+		name = "CR.32" #
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Ca.111" #
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = small_bomb_bay
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+		icon = "GFX_ITA_CAS1_medium"
+	}
+	create_equipment_variant = {
+		name = "Ca.101" #
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			engine_type_slot = engine_1_3x
+			special_type_slot_1 = lmg_defense_turret
+		}
+		obsolete = yes
+		icon = "GFX_ITA_early_bomber_old_medium"
+	}
+	create_equipment_variant = {
+		name = "Ca.133" #
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_1_3x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+		obsolete = yes
+		icon = "GFX_ITA_early_bomber_old_medium"
+	}
+	create_equipment_variant = {
+		name = "S.72" # Savoia-Marchetti S.72, used by CHI
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+			engine_type_slot = engine_1_3x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+		obsolete = yes
+		icon = "GFX_ITA_early_bomber_medium"
+	}
+	create_equipment_variant = {
+		name = "SM.81" #
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+			engine_type_slot = engine_1_3x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+		icon = "GFX_ITA_early_bomber_medium"
+	}
+	create_equipment_variant = {
+		name = "SM.79" #
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+			engine_type_slot = engine_2_3x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+		icon = "GFX_ITA_naval_bomber1_medium"
+	}
+	create_equipment_variant = {
+		name = "Ba.65" #
+		type = small_plane_cas_airframe_1
+		modules = {
+			fixed_main_weapon_slot = small_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_ITA_CAS1_medium"
+	}
+
+	else = {
+		create_equipment_variant = {
+				name = "CR.42"
+			type = fighter_equipment_0
+			upgrades = {
+				plane_gun_upgrade = 1
+				plane_range_upgrade = 0  
+				plane_engine_upgrade = 2
+				plane_reliability_upgrade = 1
+			}
+		}
+	}
+}

@@ -1,0 +1,456 @@
+#수도
+capital = 672 #메단
+
+#부대
+if = {
+	limit = { has_NSB = yes }
+	set_oob = "LAS_ar_NSB"
+	else = {
+		set_oob = "LAS_ar"
+	}
+}
+set_naval_oob = "LAS_na_MtG"
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "LAS_ai_BBA"
+	else = {
+		set_air_oob = "LAS_ai"
+	}
+}
+set_grand_doctrine = new_mobile_warfare
+set_grand_doctrine = new_base_strike
+
+#시작 기술
+set_research_slots = 4
+set_technology = {
+	infantry_weapons = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_artillery = 1
+	tech_support = 1
+}
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	basic_ship_hull_heavy = 1
+	early_ship_hull_carrier = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_heavy_battery = 1
+	basic_torpedo = 1
+	sonar = 1
+	smoke_generator = 1
+	basic_depth_charges = 1
+	basic_cruiser_armor_scheme = 1
+	basic_heavy_armor_scheme = 1
+	mtg_transport = 1
+	basic_fire_control_system = 1
+	basic_dp_light_battery = 1
+}
+if = {
+	limit = { has_BBA = yes }
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_medium_airframe = 1
+			basic_small_airframe = 1
+			basic_large_airframe = 1
+		}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 5
+
+#국민 정신
+add_ideas = {
+	LAS_disjointed_command
+	LAS_robot_technology_1
+
+	extensive_conscription
+	civilian_economy
+}
+
+add_dynamic_modifier = { modifier = LAS_industry }
+add_dynamic_modifier = { modifier = LAS_army }
+add_dynamic_modifier = { modifier = LAS_navy }
+add_dynamic_modifier = { modifier = LAS_air_force }
+add_dynamic_modifier = { modifier = LAS_human }
+
+
+## LAS_industry
+
+## LAS_army
+set_variable = { LAS_army_mobilization_laws_cost_factor = -0.1 }
+set_variable = { LAS_army_army_org_factor = -0.5 }
+set_variable = { LAS_army_experience_gain_army_factor = -0.5 }
+set_variable = { LAS_army_experience_loss_factor = 0.5 }
+
+set_variable = { LAS_army_mobilization_speed = 0 } #-> Strengthen the Mobilization Plan
+set_variable = { LAS_army_conscription_factor = 0 } #-> Strengthen the Mobilization Plan
+set_variable = { LAS_army_modifier_army_sub_unit_cavalry_speed_factor = 0 } #-> Restore Cossack Units
+set_variable = { LAS_army_cavalry_attack_factor = 0 } #-> Restore Cossack Units
+set_variable = { LAS_army_training_time_factor = 0 } # -> Cohsesion First
+set_variable = { LAS_army_heat_attrition_factor = 0 } # -> An Adaptable Army
+set_variable = { LAS_army_winter_attrition_factor = 0 } # -> An Adaptable Army
+set_variable = { LAS_army_acclimatization_cold_climate_gain_factor = 0 } # -> An Adaptable Army
+set_variable = { LAS_army_acclimatization_hot_climate_gain_factor = 0 } # -> An Adaptable Army
+set_variable = { LAS_army_terrain_penalty_reduction = 0 } # -> An Adaptable Army
+set_variable = { LAS_army_unit_infantry_design_cost_factor = 0 } # -> Military Reorganization
+set_variable = { LAS_army_unit_artillery_brigade_design_cost_factor = 0 } # -> Military Reorganization
+set_variable = { LAS_army_army_org_regain = 0 } # -> Barrier Troops
+set_variable = { LAS_army_special_forces_cap = 0 } # -> The Glory of the Red Army
+set_variable = { LAS_army_land_mastery_gain_factor = 0 } # -> The Glory of the Red Army
+set_variable = { LAS_army_cas_damage_reduction = 0 } # -> Experts in Camouflage
+set_variable = { LAS_army_max_dig_in = 0 } # -> Experts in Camouflage
+set_variable = { LAS_army_dig_in_speed_factor = 0 } # -> Experts in Camouflage
+set_variable = { LAS_army_operative_slot  = 0 } # -> Organization of the Partisans
+set_variable = { LAS_army_max_command_power_mult = 0 } # -> Depoliticize the Military
+
+set_variable = { LAS_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { LAS_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { LAS_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { LAS_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { LAS_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { LAS_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { LAS_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { LAS_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { LAS_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## LAS_navy
+set_variable = { LAS_navy_refit_ic_cost = -0.05 }
+set_variable = { LAS_navy_repair_speed_factor = 0.05 }
+
+set_variable = { LAS_navy_naval_coordination = 0 } #-> Advanced Maneuvers
+set_variable = { LAS_navy_navy_visibility = 0 } #-> Advanced Maneuvers
+set_variable = { LAS_navy_positioning = 0 } #-> Advanced Maneuvers
+set_variable = { LAS_navy_screening_efficiency = 0 } #-> Advanced Maneuvers
+set_variable = { LAS_navy_naval_invasion_capacity = 0 } #-> Marines
+set_variable = { LAS_navy_invasion_preparation = 0 } #-> Marines
+set_variable = { LAS_navy_special_forces_cap = 0 } #-> Marines
+
+set_variable = { LAS_navy_build_cost_ic_capital_ship = 0.05 } ### 별도 국민정신 적용
+set_variable = { LAS_navy_build_cost_ic_carrier = 0.05 } ### 별도 국민정신 적용
+set_variable = { LAS_navy_build_cost_ic_convoy = 0.05 } ### 별도 국민정신 적용
+set_variable = { LAS_navy_build_cost_ic_screen_ship = 0.05 } ### 별도 국민정신 적용
+set_variable = { LAS_navy_build_cost_ic_submarine = 0.05 } ### 별도 국민정신 적용
+
+## LAS_air_force
+set_variable = { LAS_airforce_air_accidents_factor = 0.75 }
+set_variable = { LAS_airforce_air_ace_generation_chance_factor = -0.5 }
+set_variable = { LAS_airforce_air_night_penalty = 0.3 }
+set_variable = { LAS_airforce_air_weather_penalty = 0.3 }
+set_variable = { LAS_airforce_air_wing_xp_loss_when_killed_factor = 0.3 }
+set_variable = { LAS_airforce_air_mission_xp_gain_factor = 0.1 }
+set_variable = { LAS_airforce_air_training_xp_gain_factor = -0.1 }
+
+set_variable = { LAS_airforce_aircraft_manufacturer_cost_factor = 0 } #-> Expand the Aircraft Industry
+set_variable = { LAS_airforce_air_fuel_consumption_factor = 0 } #-> Modernize Aircraft Factories / Intensify Pilot Training Program
+set_variable = { LAS_airforce_air_range_factor = 0 } #-> Modernize Aircraft Factories
+set_variable = { LAS_airforce_air_agility_factor = 0 } #-> Modernize Aircraft Factories
+set_variable = { LAS_airforce_air_strategic_bomber_night_penalty = 0 } #-> Raskova's Aviation Group
+set_variable = { LAS_airforce_air_cas_present_factor = 0 } #-> Ground Support
+set_variable = { LAS_airforce_strategic_bomb_visibility = 0 } #-> Long Range Aircraft
+set_variable = { LAS_airforce_air_mission_efficiency = 0 } #-> The Modern War in the Skies
+set_variable = { LAS_airforce_air_nav_efficiency = 0 } #-> Expand the Morskaya Aviatsiya
+
+set_variable = { LAS_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { LAS_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { LAS_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { LAS_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { LAS_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { LAS_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { LAS_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { LAS_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { LAS_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
+
+## LAS_human
+set_variable = { LAS_drift_defence_factor = 0.05 }
+
+set_variable = { LAS_defensive_war_stability_factor = 0 } # -> Socialism in One Country
+set_variable = { LAS_political_power_factor = 0 } #0.05 -> The Stalin Constitution
+set_variable = { LAS_economy_cost_factor  = 0 } # -> Secure the Administration
+set_variable = { LAS_trade_laws_cost_factor = 0 } # -> Secure the Administration
+set_variable = { LAS_mobilization_laws_cost_factor = 0 } # -> Secure the Administration
+set_variable = { LAS_good_consumer_goods_factor = 0 } # -> Collectivization Process
+set_variable = { LAS_production_speed_buildings_factor = 0 } # -> Collectivization Process
+set_variable = { LAS_global_building_slots_factor = 0 } # -> Collectivization Process
+set_variable = { LAS_max_surrender_limit_offset = 0 } # -> The Workers Dictatorship
+set_variable = { LAS_max_command_power = 0 } # -> Organization, Centralization, Discipline
+set_variable = { LAS_mobilization_speed = 0 } # -> Organization, Centralization, Discipline
+set_variable = { LAS_operative_slot = 0 } # -> Behead the Snake
+set_variable = { LAS_political_advisor_cost_factor = 0 } # -> Freedom of Debate, Unity of Action
+set_variable = { LAS_opinion_gain_monthly_same_ideology_factor = 0 } # -> The Construction of Communism
+
+#외교
+RST = { embargo_ROOT = yes }
+LLS = { embargo_ROOT = yes }
+LSS = { embargo_ROOT = yes }
+LNH = { embargo_ROOT = yes }
+LST = { embargo_ROOT = yes }
+LHH = { embargo_ROOT = yes }
+
+#정치 상황
+set_stability = 0.2
+set_war_support = 0.75
+set_politics = {
+	ruling_party = authoritariandemocracy
+	last_election = "1933.4.15"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	authoritariandemocracy = 100
+}
+
+#의회
+
+#캐릭터 
+recruit_character = LAS_4_human
+#recruit_character = LAS_labiata
+#recruit_character = LAS_constantia
+#recruit_character = LAS_serapias_alice
+#recruit_character = LAS_vanilla
+#recruit_character = LAS_rhea
+#recruit_character = LAS_lise
+#recruit_character = LAS_daphne
+#recruit_character = LAS_aqua
+#recruit_character = LAS_titania
+#recruit_character = LAS_alexandra
+#recruit_character = LAS_sowan
+#recruit_character = LAS_annie
+#recruit_character = LAS_maria
+#recruit_character = LAS_fotia
+#recruit_character = LAS_black_lilith
+#recruit_character = LAS_perrault
+#recruit_character = LAS_hachiko
+#recruit_character = LAS_fenrir
+#recruit_character = LAS_marie
+#recruit_character = LAS_efreeti
+#recruit_character = LAS_leprechaun
+#recruit_character = LAS_impet
+#recruit_character = LAS_brownie
+#recruit_character = LAS_silky
+#recruit_character = LAS_phoenix
+#recruit_character = LAS_gnome
+#recruit_character = LAS_red_hood
+#recruit_character = LAS_habetrot
+#recruit_character = LAS_leona
+#recruit_character = LAS_valkyrie
+#recruit_character = LAS_nymph
+#recruit_character = LAS_gremlin
+#recruit_character = LAS_sandgirl
+#recruit_character = LAS_bheur
+#recruit_character = LAS_alvis
+#recruit_character = LAS_kheshig
+#recruit_character = LAS_khan
+#recruit_character = LAS_camel
+#recruit_character = LAS_warwolf
+#recruit_character = LAS_talon
+#recruit_character = LAS_frigga
+#recruit_character = LAS_ajax
+#recruit_character = LAS_alcyone
+#recruit_character = LAS_may
+#recruit_character = LAS_night_angel
+#recruit_character = LAS_daika
+#recruit_character = LAS_djinnia
+#recruit_character = LAS_sylphid
+#recruit_character = LAS_banshee
+#recruit_character = LAS_strato_angel
+#recruit_character = LAS_arsenal
+#recruit_character = LAS_bloody_panther
+#recruit_character = LAS_calista
+#recruit_character = LAS_nashorn
+#recruit_character = LAS_io
+#recruit_character = LAS_spriggan
+#recruit_character = LAS_beast_hunter
+#recruit_character = LAS_emily
+#recruit_character = LAS_pani
+#recruit_character = LAS_raven
+#recruit_character = LAS_neodym
+#recruit_character = LAS_shade
+#recruit_character = LAS_phantom
+#recruit_character = LAS_echidna
+#recruit_character = LAS_wrauthy_bermuda
+#recruit_character = LAS_doctor
+#recruit_character = LAS_amy_razor
+#recruit_character = LAS_tomo
+#recruit_character = LAS_shirayuri
+#recruit_character = LAS_hongryeon
+#recruit_character = LAS_steel_draco
+#recruit_character = LAS_miho
+#recruit_character = LAS_pinto
+#recruit_character = LAS_bulgasari
+#recruit_character = LAS_dragon_invincible
+#recruit_character = LAS_nereid
+#recruit_character = LAS_undine
+#recruit_character = LAS_sirene
+#recruit_character = LAS_thetis
+#recruit_character = LAS_sleipnir
+#recruit_character = LAS_griffon
+#recruit_character = LAS_harpyia
+#recruit_character = LAS_ouroboros
+#recruit_character = LAS_blackhound
+#recruit_character = LAS_lindwurm
+#recruit_character = LAS_taylor
+#recruit_character = LAS_olivia
+#recruit_character = LAS_kuno_enrai
+#recruit_character = LAS_aeda
+#recruit_character = LAS_coco
+#recruit_character = LAS_stinger
+#recruit_character = LAS_spartoia
+#recruit_character = LAS_audrey
+#recruit_character = LAS_tommy_walker
+#recruit_character = LAS_dutch_girl
+#recruit_character = LAS_triania
+#recruit_character = LAS_drone08
+#recruit_character = LAS_frost_serpent
+#recruit_character = LAS_miss_safety
+#recruit_character = LAS_cerberus
+#recruit_character = LAS_rampart
+#recruit_character = LAS_pupphead
+#recruit_character = LAS_express76
+#recruit_character = LAS_fortune
+#recruit_character = LAS_LRL
+#recruit_character = LAS_mighty_R
+#recruit_character = LAS_tiequan
+#recruit_character = LAS_johanna
+#recruit_character = LAS_scathy
+#recruit_character = LAS_momo
+#recruit_character = LAS_atalanta
+#recruit_character = LAS_charlotte
+#recruit_character = LAS_azazel
+#recruit_character = LAS_baekto
+#recruit_character = LAS_goltarion
+#recruit_character = LAS_armand
+#recruit_character = LAS_niba
+#recruit_character = LAS_carol
+#recruit_character = LAS_yumi
+#recruit_character = LAS_elven_F_M
+#recruit_character = LAS_ignis
+#recruit_character = LAS_darkelven_F_H
+#recruit_character = LAS_circe
+#recruit_character = LAS_babariana
+#recruit_character = LAS_veronica
+#recruit_character = LAS_saraqael
+#recruit_character = LAS_angel
+#recruit_character = LAS_draculina
+#recruit_character = LAS_keumran
+#recruit_character = LAS_hirume
+#recruit_character = LAS_tiamat
+#recruit_character = LAS_mercury
+#recruit_character = LAS_mina
+#recruit_character = LAS_ullr
+#recruit_character = LAS_janghwa
+#recruit_character = LAS_cheona
+#recruit_character = LAS_vargr
+#recruit_character = LAS_fafnir
+#recruit_character = LAS_empress
+#recruit_character = LAS_saetti
+#recruit_character = LAS_aurora
+#recruit_character = LAS_sarena
+#recruit_character = LAS_clover_ace
+#recruit_character = LAS_sunny
+#recruit_character = LAS_faucre
+#recruit_character = LAS_lumberjane
+#recruit_character = LAS_blackwyrm
+#recruit_character = LAS_kuno_zero
+#recruit_character = LAS_snow_feather
+#recruit_character = LAS_cerestia
+#recruit_character = LAS_andvari
+#recruit_character = LAS_dryad
+#recruit_character = LAS_sadius
+#recruit_character = LAS_kuno_kaen
+#recruit_character = LAS_hraesvelgr
+#recruit_character = LAS_wraith_doombringer
+#recruit_character = LAS_poi
+#recruit_character = LAS_leanne
+#recruit_character = LAS_eternity
+#recruit_character = LAS_azaz
+#recruit_character = LAS_lemonade_alpha
+#recruit_character = LAS_ella_watchofnature
+#recruit_character = LAS_rena
+#recruit_character = LAS_mery
+#recruit_character = LAS_machina
+#recruit_character = LAS_salamander
+#recruit_character = LAS_scarabya
+#recruit_character = LAS_hyena
+#recruit_character = LAS_merlin
+#recruit_character = LAS_triton
+#recruit_character = LAS_albatross
+#recruit_character = LAS_seljuq
+#recruit_character = LAS_gigantes
+#recruit_character = LAS_fallen
+#recruit_character = LAS_orellia
+#recruit_character = LAS_tachi
+#recruit_character = LAS_erato
+#recruit_character = LAS_muse
+#recruit_character = LAS_boryeon
+#recruit_character = LAS_orangeade
+#recruit_character = LAS_hathor
+#recruit_character = LAS_lemonade_beta
+#recruit_character = LAS_deathstalker
+#recruit_character = LAS_spartan_captain
+#recruit_character = LAS_spartan_assault
+#recruit_character = LAS_spartan_boomer
+#recruit_character = LAS_roc
+#recruit_character = LAS_fortress
+#recruit_character = LAS_tyrant
+#recruit_character = LAS_rhein_ritter
+#recruit_character = LAS_alfred
+#recruit_character = LAS_watcher
+#recruit_character = LAS_stronghold
+#recruit_character = LAS_sonia
+#recruit_character = LAS_ellie_080
+#recruit_character = LAS_nicky
+#recruit_character = LAS_mane
+#recruit_character = LAS_mnemosysne
+#recruit_character = LAS_hussar
+#recruit_character = LAS_ramiel
+#recruit_character = LAS_arachene
+#recruit_character = LAS_sekhmet
+#recruit_character = LAS_peregrinus
+#recruit_character = LAS_cyclops_princess
+#recruit_character = LAS_blind_princess
+#recruit_character = LAS_nidhogg
+#recruit_character = LAS_dione
+#recruit_character = LAS_brunhild
+#recruit_character = LAS_hela
+#recruit_character = LAS_melite
+#recruit_character = LAS_amphitrite
+#recruit_character = LAS_salacia
+#recruit_character = LAS_galatea
+#recruit_character = LAS_satgat
+
+#장관진
+
+#무기 프리셋
+#create_equipment_variant = {
+#	name = ""
+#	type = amphibious_tank_equipment_2
+#}

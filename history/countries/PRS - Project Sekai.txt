@@ -1,0 +1,965 @@
+#수도
+capital = 64
+
+#부대
+if = {
+	limit = { has_NSB = yes }
+	set_oob = "PRS_ar_NSB"
+	else = { set_oob = "PRS_ar" }
+}
+set_naval_oob = "PRS_na_MtG"
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "PRS_ai_BBA"
+	else = {
+		set_air_oob = "PRS_ai"
+	}
+}
+set_grand_doctrine = new_mobile_warfare
+set_grand_doctrine = new_convoy_raiding
+set_grand_doctrine = new_battlefield_support
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+# starting_truck_buffer = 0.8
+
+#기술
+set_research_slots = 4
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	basic_ship_hull_heavy = 1
+	panzerschiffe = 1
+	pre_dreadnoughts = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	mtg_transport = 1
+	basic_torpedo = 1
+	improved_ship_torpedo_launcher = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_heavy_battery = 1
+	basic_depth_charges = 1
+	sonar = 1
+	basic_cruiser_armor_scheme = 1
+}
+if = {
+	limit = { has_LaR = yes }
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+			improved_light_tank = 1
+			basic_heavy_tank = 1
+		}
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_medium_airframe = 1
+			iw_large_airframe = 1
+			air_torpedoe_1 = 1
+			photo_reconnaisance = 1
+			bba_early_transport_plane = 1
+		}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			early_bomber = 1
+			tactical_bomber1 = 1
+			strategic_bomber1 = 1
+			CAS1 = 1
+			naval_bomber1 = 1
+			early_transport_plane = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 250
+
+#국민 정신
+add_ideas = {
+	PRS_sour_loser
+	PRS_reichsarbeitsdienst
+	PRS_rearmament_plan
+	PRS_wehrmacht_problem_4
+
+	PRS_army_start_setting
+	PRS_navy_start_setting
+	PRS_air_force_start_setting
+}
+
+add_dynamic_modifier = { modifier = PRS_mefo_bills_modifier }
+add_dynamic_modifier = { modifier = PRS_industry_modifier }
+add_dynamic_modifier = { modifier = PRS_army }
+add_dynamic_modifier = { modifier = PRS_navy }
+add_dynamic_modifier = { modifier = PRS_air_force }
+
+## PRS_mefo_bills
+set_variable = { PRS_mefo_bills_consumer_goods_factor = 0.1 } #Used for MEFO Bills, Economy of Conquest and Recovering Economy and Wirtschaftswunder - must correspond with the Fake MEFO Bills NS for the 1936 Bookmark
+set_variable = { PRS_mefo_bills_civilian_intel_to_others = -25 }
+set_variable = { PRS_mefo_bills_army_intel_to_others = -25 }
+set_variable = { PRS_mefo_bills_navy_intel_to_others = -25 }
+set_variable = { PRS_mefo_bills_airforce_intel_to_others = -25 }
+
+## PRS_industry
+set_variable = { PRS_industry_production_speed_arms_factory_factor = 0.1 }
+set_variable = { PRS_industry_production_speed_dockyard_factor = 0.1 }
+set_variable = { PRS_industry_industrial_capacity_factory = 0 }
+set_variable = { PRS_industry_industrial_capacity_dockyard = 0 }
+set_variable = { PRS_industry_production_lack_of_resource_penalty_factor = 0 }
+set_variable = { PRS_industry_conversion_cost_civ_to_mil_factor = 0 }
+set_variable = { PRS_industry_industry_air_damage_factor = 0 }
+set_variable = { PRS_industry_resource_trade_cost_bonus_per_factory = 0 }
+set_variable = { PRS_industry_production_speed_buildings_factor = 0 }
+set_variable = { PRS_industry_research_speed_factor = 0 }
+set_variable = { PRS_industry_industrial_concern_cost_factor = 0 }
+set_variable = { PRS_industry_tank_manufacturer_cost_factor = 0 } #AAT 없는 경우
+set_variable = { PRS_industry_naval_manufacturer_cost_factor = 0 } #AAT 없는 경우
+set_variable = { PRS_industry_aircraft_manufacturer_cost_factor = 0 } #AAT 없는 경우
+set_variable = { PRS_industry_materiel_manufacturer_cost_factor = 0 } #AAT 없는 경우
+set_variable = { PRS_industry_military_industrial_organization_funds_gain = 0 } #AAT 있는 경우
+set_variable = { PRS_industry_military_industrial_organization_research_bonus = 0 } #AAT 있는 경우
+set_variable = { PRS_industry_production_factory_max_efficiency_factor = 0 }
+set_variable = { PRS_industry_production_factory_efficiency_gain_factor = 0 }
+set_variable = { PRS_industry_production_factory_start_efficiency_factor = 0 }
+set_variable = { PRS_industry_line_change_production_efficiency_factor = 0 }
+set_variable = { PRS_industry_equipment_conversion_speed = 0 }
+set_variable = { PRS_industry_consumer_goods_expected_value = 0 }
+
+## PRS_army
+
+set_variable = { PRS_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRS_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRS_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRS_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRS_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { PRS_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRS_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRS_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRS_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## PRS_navy
+
+set_variable = { PRS_navy_build_cost_ic_capital_ship = 0.20 } ### 별도 국민정신 적용
+set_variable = { PRS_navy_build_cost_ic_carrier = 0.20 } ### 별도 국민정신 적용
+set_variable = { PRS_navy_build_cost_ic_convoy = 0.05 } ### 별도 국민정신 적용
+set_variable = { PRS_navy_build_cost_ic_screen_ship = 0.20 } ### 별도 국민정신 적용
+set_variable = { PRS_navy_build_cost_ic_submarine = 0.20 } ### 별도 국민정신 적용
+
+## PRS_air_force
+
+set_variable = { PRS_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRS_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRS_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRS_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRS_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRS_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRS_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRS_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRS_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
+
+#외교
+create_faction = vocaloid_axis
+add_to_faction = PRS
+
+create_import = {
+	resource = steel
+	factories = 2
+	exporter = DFD
+}
+
+set_variable = { PRS_occupied_states_europe = 0 }
+set_variable = { PRS_capitulated_major_countries = 0 }
+
+IMA = { embargo_ROOT = yes }
+ICG = { embargo_ROOT = yes }
+IML = { embargo_ROOT = yes }
+ISM = { embargo_ROOT = yes }
+ISC = { embargo_ROOT = yes }
+IDS = { embargo_ROOT = yes }
+IGM = { embargo_ROOT = yes }
+BDG = { embargo_ROOT = yes }
+
+
+#정치 상황
+set_stability = 0.72
+set_war_support = 0.35
+set_politics = {
+	ruling_party = fascism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	militarytotalism = 15
+	fascism = 85
+}
+ban_authoritariandemocracy_effect = yes
+ban_autocracy_effect = yes
+ban_communism_effect = yes
+ban_democratic_effect = yes
+
+set_variable = { PRS_inner_circle_days_to_start_focus = 75 }
+set_variable = { PRS_inner_circle_random_days = 45 }
+
+set_variable = { PRS_ascended_advisor_1 = 0 }
+set_variable = { PRS_ascended_advisor_2 = 0 }
+set_variable = { PRS_ascended_advisor_3 = 0 }
+
+set_variable = { PRS_wonder_weapons_focus_advisor = 0 } # To know who is completing this focus. Value = Advisor ID in the Inner Circle
+set_variable = { PRS_optimize_reich_service_focus_advisor = 0 } # To know who is completing this focus. Value = Advisor ID in the Inner Circle
+set_variable = { PRS_total_control_over_domestic_affairs_focus_advisor = 0 } # To know who is completing this focus. Value = Advisor ID in the Inner Circle
+
+set_variable = { PRS_industrialist_prevailed = 0 } #For allowing only one Industrialist advisor to work on the ME focus
+
+#캐릭터 
+recruit_character = PRS_hoshino_ichika
+recruit_character = PRS_tenma_saki
+recruit_character = PRS_mochizuki_honami
+recruit_character = PRS_hinomori_shiho
+recruit_character = PRS_hanasato_minori
+recruit_character = PRS_kiritani_haruka
+recruit_character = PRS_momoi_airi
+recruit_character = PRS_hinomori_shizuku
+recruit_character = PRS_azusawa_kohane
+recruit_character = PRS_shiraishi_an
+recruit_character = PRS_shinonome_akito
+recruit_character = PRS_aoyagi_touya
+recruit_character = PRS_tenma_tsukasa
+recruit_character = PRS_ootori_emu
+recruit_character = PRS_kusanagi_nene
+recruit_character = PRS_kamishiro_rui
+recruit_character = PRS_yoisaki_kanade
+recruit_character = PRS_asahina_mafuyu
+recruit_character = PRS_shinonome_ena
+recruit_character = PRS_akiyama_mizuki
+
+recruit_character = PRS_dummy_CON #더미
+recruit_character = PRS_dummy_LIB #더미
+recruit_character = PRS_dummy_PRO #더미
+recruit_character = PRS_dummy_SOD #더미
+recruit_character = PRS_dummy_SOC #더미
+recruit_character = PRS_dummy_COM #더미
+recruit_character = PRS_dummy_AUC #더미
+recruit_character = PRS_dummy_ANA #더미
+recruit_character = PRS_dummy_AUD #더미
+recruit_character = PRS_dummy_AUT #더미
+
+### 보컬로이드 흡수시 사용 가능:
+recruit_character = PRS_hatsune_miku
+recruit_character = PRS_kagamine_rin
+recruit_character = PRS_kagamine_ren
+recruit_character = PRS_megurine_ruka
+recruit_character = PRS_meiko
+recruit_character = PRS_kaito
+
+#recruit_character = PRS_wilhelm_pieck
+#recruit_character = PRS_konrad_adenauer
+#recruit_character = PRS_adolf_hitler
+#recruit_character = PRS_albert_kesselring
+#recruit_character = PRS_alfred_jodl
+#recruit_character = PRS_alfred_saalwachter
+#recruit_character = PRS_erhard_milch
+#recruit_character = PRS_erich_bey
+#recruit_character = PRS_erich_raeder
+#recruit_character = PRS_erich_von_manstein
+#recruit_character = PRS_ernst_udet
+#recruit_character = PRS_ernsteberhard_hell
+#recruit_character = PRS_erwin_rommel
+#recruit_character = PRS_erwin_von_witzleben
+#recruit_character = PRS_ewald_von_kleist
+#recruit_character = PRS_fedor_von_bock
+#recruit_character = PRS_felix_steiner
+#recruit_character = PRS_ferdinand_schorner
+#recruit_character = PRS_franz_halder
+#recruit_character = PRS_friedrich_paulus
+#recruit_character = PRS_friedrich_schulz
+#recruit_character = PRS_georg_von_kuchler
+#recruit_character = PRS_georghans_reinhardt
+#recruit_character = PRS_gerd_von_rundstedt
+#recruit_character = PRS_hermann_goring
+#recruit_character = PRS_gotthard_heinrici
+#recruit_character = PRS_gunther_lutjens
+#recruit_character = PRS_gunther_von_kluge
+#recruit_character = PRS_hasso_von_manteuffel
+#recruit_character = PRS_heinz_guderian
+#recruit_character = PRS_heisenberg
+#recruit_character = PRS_hermann_boehm
+#recruit_character = PRS_hermann_hoth
+#recruit_character = PRS_hugo_sperrle
+#recruit_character = PRS_johannes_blaskowitz
+#recruit_character = PRS_karl_donitz
+#recruit_character = PRS_kurt_student
+#recruit_character = PRS_ludwig_beck
+#recruit_character = PRS_maximilian_von_weichs
+#recruit_character = PRS_otto_ciliax
+#recruit_character = PRS_paul_hausser
+#recruit_character = PRS_ritter_von_greim
+#recruit_character = PRS_sepp_dietrich
+#recruit_character = PRS_viktor_schutze
+#recruit_character = PRS_von_braun
+#recruit_character = PRS_walter_kruger
+#recruit_character = PRS_walter_model
+#recruit_character = PRS_walther_von_brauchitsch
+#recruit_character = PRS_walther_wever
+#recruit_character = PRS_werner_von_fritsch
+#recruit_character = PRS_wilhelm_keitel
+#recruit_character = PRS_wilhelm_list
+#recruit_character = PRS_wilhelm_marschall
+
+#recruit_character = PRS_wilhelm_ritter_von_leeb
+#recruit_character = PRS_wolfram_von_richthofen
+
+#recruit_character = PRS_heinrich_himmler
+#recruit_character = PRS_walther_funk
+#recruit_character = PRS_hjalmar_schacht
+#recruit_character = PRS_julius_leber
+#recruit_character = PRS_albert_speer
+#recruit_character = PRS_hans_oster
+#recruit_character = PRS_theodor_heuss
+#recruit_character = PRS_fritz_todt
+#recruit_character = PRS_joachim_von_ribbentrop
+#recruit_character = PRS_ernst_thalmann
+#recruit_character = PRS_rudolf_hess
+#recruit_character = PRS_martin_bormann
+#recruit_character = PRS_wilhelm_canaris
+#recruit_character = PRS_joseph_goebbels
+#recruit_character = PRS_konstantin_von_neurath
+#recruit_character = PRS_alfred_hugenberg
+#recruit_character = PRS_kurt_schumacher
+#recruit_character = PRS_wilhelm_ii
+#recruit_character = PRS_wilhelm_iii
+#recruit_character = PRS_victoria
+#recruit_character = PRS_august_von_mackensen
+
+#recruit_character = PRS_alexander_von_falkenhausen #Not visible unless recalled from China
+
+#NEW PEOPLE WW
+#recruit_character = PRS_werner_von_blomberg
+#recruit_character = PRS_oswald_lutz
+#recruit_character = PRS_walther_nehring
+#recruit_character = PRS_hans_krebs
+#recruit_character = PRS_rolf_carls
+#recruit_character = PRS_helmuth_wilberg
+#recruit_character = PRS_josef_kammhuber
+#recruit_character = PRS_robert_knauss
+#recruit_character = PRS_alfred_becker
+#recruit_character = PRS_walter_dornberger
+#recruit_character = PRS_alfred_rosenberg
+#recruit_character = PRS_reinhard_heydrich
+#recruit_character = PRS_leni_riefenstahl
+#recruit_character = PRS_franz_seldte
+#recruit_character = PRS_hanns_kerrl
+#recruit_character = PRS_ludwig_erhard
+#recruit_character = PRS_paul_von_lettow_vorbeck # He is "new"
+#recruit_character = PRS_carl_friedrich_goerdeler
+#recruit_character = PRS_wilhelm_iv
+#recruit_character = PRS_eva_braun
+
+#SCIENTISTS
+#recruit_character = PRS_peter_adolf_thiessen
+#recruit_character = PRS_gustav_ludwig_hertz
+#recruit_character = PRS_eduard_grote
+#recruit_character = PRS_ferdinand_porsche 
+#recruit_character = PRS_erwin_aders
+#recruit_character = PRS_hermann_burkhardt
+#recruit_character = PRS_ulrich_gabler
+#recruit_character = PRS_hans_von_ohain
+#recruit_character = PRS_max_kramer
+#recruit_character = PRS_kurt_tank
+#recruit_character = PRS_hellmuth_walter
+#recruit_character = PRS_manfred_von_ardenne
+#recruit_character = PRS_konrad_zuse
+
+
+#recruit_character = PRS_jurgen_von_blumenthal
+#recruit_character = PRS_hans_vogel
+#recruit_character = PRS_adolf_friedrich_von_mecklenburg
+#recruit_character = PRS_wilhelm_von_gayl
+#recruit_character = PRS_andreas_hermes
+#recruit_character = PRS_hans_luther
+#recruit_character = PRS_hermann_erhardt
+#recruit_character = PRS_dietrich_bonhoeffer
+#recruit_character = PRS_oberste_heeresleitung_character
+#recruit_character = PRS_franz_ritter_von_epp
+#recruit_character = PRS_walter_ulbricht
+if = {
+	limit = { has_LaR = yes }
+	#recruit_character = PRS_wilhelm_zaisser
+}
+#recruit_character = PRS_otto_ruhle
+#recruit_character = PRS_hermann_duncker
+#recruit_character = PRS_august_thalheimer
+#recruit_character = PRS_heinrich_brandler
+#recruit_character = PRS_bernhard_bastlein
+#recruit_character = PRS_vincenz_muller
+#recruit_character = PRS_hans_kahle
+#recruit_character = PRS_hans_marchwitza
+#recruit_character = PRS_arno_von_lenski
+#recruit_character = PRS_otto_strasser
+#recruit_character = PRS_otto_grotewohl
+
+#recruit_character = PRS_henrich_focke #Heli Scientist
+
+if = {
+	limit = { has_NSB = yes }
+	#recruit_character = PRS_karl_heinrich_emil_becker #Artillery Scientist
+}
+
+# Recruiting Starting Operatives
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	# Recruit operatives
+	create_operative_leader = {
+		name = GER_nikolaus_ritter
+		GFX = GFX_portrait_nikolaus_ritter
+		traits = { operative_safe_cracker }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { PRS }
+		gender = male
+	}
+	
+	create_operative_leader = {
+		name = GER_erich_gimpel
+		GFX = GFX_portrait_GER_erich_gimpel
+		traits = { operative_infiltrator }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { PRS }
+		gender = male
+	}
+	
+	create_operative_leader = {
+		name = GER_fritz_duquesne
+		GFX = GFX_portrait_GER_fritz_joubert_duquesne
+		traits = { operative_commando operative_tough operative_escape_artist }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { PRS ISM STR ICG }
+		gender = male
+	}
+}
+
+
+#장관진
+
+#무기 프리셋
+### Ship Variants ###
+create_equipment_variant = {
+	name = "Deutschland"
+	type = ship_hull_cruiser_panzerschiff
+	name_group = PRS_PZ_HISTORICAL
+	parent_version = 0
+	modules = {
+       	fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_battery_slot = ship_heavy_battery_2
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		rear_1_custom_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_airplane_launcher_1
+   	}
+}
+create_equipment_variant = {
+	name = "Type 24"
+	type = ship_hull_light_1
+	name_group = PRS_TB_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_mine_layer_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Zerstörer 1934"
+	type = ship_hull_light_2
+	name_group = PRS_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_mine_layer_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Zerstörer 1934A"
+	type = ship_hull_light_2
+	name_group = PRS_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+}
+create_equipment_variant = {
+	name = "Type II"
+	type = ship_hull_submarine_1
+	name_group = PRS_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Type VII"
+	type = ship_hull_submarine_2
+	name_group = PRS_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_2
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
+	}
+}
+create_equipment_variant = {
+	name = "Königsberg"
+	type = ship_hull_cruiser_1
+	name_group = PRS_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_light_medium_battery_1
+		rear_1_custom_slot = ship_mine_layer_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Emden"
+	type = ship_hull_cruiser_1
+	name_group = PRS_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		mid_1_custom_slot = ship_light_medium_battery_1
+		mid_2_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Bremse"
+	type = ship_hull_cruiser_1
+	name_group = PRS_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		mid_1_custom_slot = ship_anti_air_1
+		mid_2_custom_slot = ship_mine_layer_1
+		rear_1_custom_slot = ship_mine_layer_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Leipzig"
+	type = ship_hull_cruiser_2
+	name_group = PRS_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		front_1_custom_slot = ship_anti_air_1
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_light_medium_battery_1
+		rear_1_custom_slot = ship_airplane_launcher_1
+	}
+}
+create_equipment_variant = {
+	name = "Admiral Hipper"
+	type = ship_hull_cruiser_2
+	name_group = PRS_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = ship_armor_cruiser_2
+		front_1_custom_slot = ship_anti_air_1
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_airplane_launcher_1
+		rear_1_custom_slot = ship_medium_battery_2
+	}
+}
+create_equipment_variant = {
+	name = "Scharnhorst"
+	type = ship_hull_heavy_2
+	name_group = PRS_BB_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_2
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_bc_1
+		front_1_custom_slot = ship_anti_air_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = ship_secondaries_1
+		rear_1_custom_slot = ship_heavy_battery_2
+	}
+}
+create_equipment_variant = {
+	name = "Deutschland"
+	type = ship_hull_pre_dreadnought
+	name_group = PRS_PZ_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_2
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_bb_1
+		front_1_custom_slot = ship_anti_air_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+if = {
+	limit = { has_NSB = yes }
+	create_equipment_variant = { #Note: There is a copy of this variant in Finnish Scripted Effects file (FIN_purchase_german_equipment_for_cw). Any changes here should also be applied there
+		name = "Leichttraktor"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+		obsolete = yes
+		icon = "GFX_GER_gwtank_medium"
+	}
+	create_equipment_variant = { #Note: There is a copy of this variant in Finnish National Focus file (FIN_bring_foreign_armor_experts). Any changes here should also be applied there
+		name = "Panzer I Ausf. A"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 5
+			tank_nsb_armor_upgrade = 1
+		}
+		icon = "GFX_GER_basic_light_tank_medium"
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Neubaufahrzeug"
+		type = heavy_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_close_support_gun
+			turret_type_slot = tank_heavy_three_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = secondary_turret_hmg
+			special_type_slot_3 = secondary_turret_hmg
+			special_type_slot_4 = secondary_turret_hmg
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "GFX_GER_basic_heavy_tank_medium"
+	}
+	create_equipment_variant = {
+		name = "Panzer II Ausf. A"
+		type = light_tank_chassis_2
+		design_team = mio:PRS_daimler_benz_organization
+		parent_version = 0
+		obsolete = yes
+		modules = {
+			main_armament_slot = tank_auto_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 3
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "GFX_GER_improved_light_tank_medium"
+	}
+	create_equipment_variant = {
+		name = "Panzer II"
+		type = light_tank_chassis_2
+		design_team = mio:PRS_daimler_benz_organization
+		parent_version = 1
+		modules = {
+			main_armament_slot = tank_auto_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 3
+			tank_nsb_armor_upgrade = 3
+		}
+		icon = "GFX_GER_improved_light_tank_medium"
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	create_equipment_variant = {
+		name = "Do 23"
+		type = medium_plane_airframe_0
+		design_team = mio:PRS_dornier_organization
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			fixed_auxiliary_weapon_slot_2 = empty
+			fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Ju 86"
+		type = medium_plane_airframe_0
+		design_team = mio:PRS_junkers_organization
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			fixed_auxiliary_weapon_slot_2 = empty
+			fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+			special_type_slot_2 = fuel_tanks_medium
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "He 111"
+		type = medium_plane_airframe_1
+		#design_team = mio:PRS_heinkel_organization #Dornier is Medium Airframe MIO now
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_2 = empty
+			fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+			special_type_slot_2 = lmg_defense_turret_2x
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+		icon = "GFX_GER_tactical_bomber1_medium"
+	}
+	
+	create_equipment_variant = {
+		name = "Do 17"
+		type = medium_plane_airframe_1
+		design_team = mio:PRS_dornier_organization
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+		icon = "GFX_GER_medium_plane_1_medium"
+	}
+
+	create_equipment_variant = { #Note: There is a copy of this variant in Finnish Scripted Effects file (FIN_purchase_german_equipment_for_cw). Any changes here should also be applied there
+		name = "He 51" #also covers Ar 68
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Hs 123"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Bf 109 D"
+		type = small_plane_airframe_1
+		design_team = mio:PRS_messerschmitt_organization
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_GER_fighter1_medium"
+	}
+	create_equipment_variant = {
+		name = "Ju 87"
+		type = small_plane_cas_airframe_1
+		design_team = mio:PRS_junkers_organization
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = lmg_defense_turret
+			special_type_slot_2 = dive_brakes_small
+		}
+		icon = "GFX_GER_CAS1_medium"
+	}
+	create_equipment_variant = {
+		name = "Do 22"
+		type = small_plane_naval_bomber_airframe_1
+		#design_team = mio:PRS_dornier_organization #Fieseler is Naval Aircraft MIO now
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = lmg_defense_turret
+			special_type_slot_2 = floats
+		}
+		icon = "GFX_GER_naval_bomber1_medium"
+	}
+	else = {
+		create_equipment_variant = {
+			name = "Ju 86"
+			type = tac_bomber_equipment_0
+			design_team = mio:PRS_junkers_organization
+			upgrades = {
+				plane_tac_bomb_upgrade = 5
+				plane_range_upgrade = 5
+				plane_engine_upgrade = 5
+				plane_reliability_upgrade = 5
+			}
+			obsolete = yes
+		}
+		
+		create_equipment_variant = {
+			name = "Do 17"
+			type = tac_bomber_equipment_0
+			design_team = mio:PRS_dornier_organization
+			upgrades = {
+				plane_tac_bomb_upgrade = 5
+				plane_range_upgrade = 1
+				plane_engine_upgrade = 1
+				plane_reliability_upgrade = 5
+			}
+			obsolete = yes
+		}
+	}
+}

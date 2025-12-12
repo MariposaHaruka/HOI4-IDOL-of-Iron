@@ -1,0 +1,123 @@
+﻿
+
+
+
+##### AIR WINGS #####
+air_wings = { 
+	### ENSLY ###
+	# 1a Squadra Aerea - SQA1 (Milan)
+	158 = { 
+		# 2a Divisione Aerea 'Borea'
+		fighter_equipment_0 = { 
+			amount = 80 
+			owner = "ENS" 
+		} 
+		# 4a Divisione Aerea 'Drago'
+		# 6a Divisione Aerea 'Falco'
+		tac_bomber_equipment_0 = { 
+			amount = 64 
+			owner = "ENS" 
+		} 
+		tac_bomber_equipment_0 = { 
+			amount = 64 
+			owner = "ENS" 
+		}
+	} 
+
+	# 3a Squadra Aerea - SQA3 (Rome)
+	2 = { 
+		# 5a Divisione Aerea 'Eolo'
+		tac_bomber_equipment_0 = { 
+			amount = 64 
+			owner = "ENS" 
+		} 
+		# 8a Brigata Aerea 'Astore'
+		fighter_equipment_0 = { 
+			amount = 80 
+			owner = "ENS" 
+		} 
+	} 
+
+	# 2a Squadra Aerea - SQA2 (Palermo)
+	115 = { 
+		# 1a Divisione Aerea 'Aquila'
+		fighter_equipment_0 = { 
+			amount = 80 
+			owner = "ENS" 
+		} 
+		# 3a Divisione Aerea 'Centauro'
+		tac_bomber_equipment_0 = { 
+			amount = 32 
+			owner = "ENS" 
+		} 
+	} 
+
+	# 4a Squadra Aerea - SQA4 (Bari)
+	849 = { 
+		# 9a Divisione Aerea 'Leone'
+		nav_bomber_equipment_1 = { 
+			amount = 48 
+			owner = "ENS" 
+		} 
+	} 
+
+	# Aeronautica della Sardegna - ASAR (Cagliari)
+	114 = { 
+		# 10a Brigata Aerea 'Marte'
+		nav_bomber_equipment_1 = { 
+			amount = 24 
+			owner = "ENS" 
+		} 
+	} 
+
+	### AFRICA ###
+	# Aeronautica della Libia (Tripoli)
+	448 = { 
+		# 14a Brigata Aerea 'Rex'
+		fighter_equipment_0 = { 
+			amount = 20 
+			owner = "ENS" 
+		} 
+		# 13a Divisione Aerea 'Pegaso'
+		tac_bomber_equipment_0 = { 
+			amount = 32 
+			owner = "ENS" 
+		} 
+	} 
+
+	# Aeronautica dell'Africa Orientale (Eritrea)
+	550 = { 
+		fighter_equipment_0 = { 
+			amount = 40 
+			owner = "ENS" 
+		} 
+		tac_bomber_equipment_0 = { 
+			amount = 32 
+			owner = "ENS" 
+		} 
+		CAS_equipment_1 = { 
+			amount = 48 
+			owner = "ENS" 
+		} 
+	} 
+} 
+
+
+####### Starting Production Queue #######
+instant_effect = { 
+	if = { 
+		limit = { is_tutorial = no } 
+
+		add_equipment_production = { 
+			equipment = { 
+				type = CAS_equipment_1 
+				creator = "ENS" 
+			} 
+
+			requested_factories = 1 
+			progress = 0.2 
+			efficiency = 50 
+			#industrial_manufacturer = mio:ENS_caproni_organization
+		} 
+	}
+} 

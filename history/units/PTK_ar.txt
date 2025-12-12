@@ -1,0 +1,109 @@
+division_template = {
+	name = "Su đoàn"		
+	division_names_group = PTK_INF_01		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Su đoàn ca be"		
+	division_names_group = PTK_CAV_01		
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4075
+		division_template = "Su đoàn"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 4075
+		division_template = "Su đoàn"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 1185
+		division_template = "Su đoàn"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 10180
+		division_template = "Su đoàn"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 4401
+		division_template = "Su đoàn"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4401
+		division_template = "Su đoàn ca be"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "PTK"
+		}
+		requested_factories = 1
+		progress = 0.12
+		efficiency = 100
+	}
+}

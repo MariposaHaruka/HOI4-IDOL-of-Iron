@@ -1,0 +1,664 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	##### PACIFIC FLEET #####
+	### BATTLE FLEET ###
+	### Split between San Pedro (Los Angeles) and San Diego ###
+	fleet = {
+		name = "Battle Force"			
+		naval_base = 1562 # San Diego
+		task_force = {				
+			name = "Battleships, Battle Force"
+			location = 1562 # San Diego
+			### Battleship Division 1 ###			
+			ship = { name = "IMSS Nevada" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
+			ship = { name = "IMSS Arizona" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
+			ship = { name = "IMSS Pennsylvania" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
+			### Battleship Division 2 ###			
+			ship = { name = "IMSS Oklahoma" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
+			ship = { name = "IMSS Tennessee" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
+			ship = { name = "IMSS California" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
+			### Battleship Division 3 ###			
+			ship = { name = "IMSS New Mexico" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
+			ship = { name = "IMSS Mississippi" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
+			ship = { name = "IMSS Idaho" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
+			### Battleship Division 4 ###			
+			ship = { name = "IMSS Colorado" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Colorado Class" } } }				
+			ship = { name = "IMSS West Virginia" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Colorado Class" } } }				
+			ship = { name = "IMSS Maryland" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Colorado Class" } } }				
+		}				
+		task_force = {					
+			name = "Carrier Division, Battle Force"		
+			location = 1562 # San Diego
+			ship = { name = "IMSS Ranger" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_1 = { amount = 1 owner = ICG version_name = "Ranger Class" } } 
+				
+			}
+			ship = { name = "IMSS Lexington" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = ICG version_name = "Lexington Class" } } 
+				
+			}
+			ship = { name = "IMSS Saratoga" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = ICG version_name = "Lexington Class" } } 
+				
+			}
+		}					
+		task_force = {					
+			name = "Cruisers, Battle Force"
+			location = 9814 # Los Angeles
+			# Cruiser Division 2 #			
+			ship = { name = "IMSS Omaha" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "Omaha Class" } } }				
+			ship = { name = "IMSS Milwaukee" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "Omaha Class" } } }				
+			ship = { name = "IMSS Cincinnati" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "Omaha Class" } } }				
+			# Cruiser Division 6 #		
+			ship = { name = "IMSS New Orleans" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "New Orleans Class" } } }				
+			ship = { name = "IMSS Astoria" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "New Orleans Class" } } }				
+			ship = { name = "IMSS Minneapolis" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "New Orleans Class" } } }				
+			ship = { name = "IMSS Indianapolis" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "Portland Class" } } }				
+		}					
+		task_force = {					
+			name = "Cruiser Division 3"				
+			location = 1562 # San Diego
+			ship = { name = "IMSS Trenton" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "Omaha Class" } } }				
+			ship = { name = "IMSS Concord" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "Omaha Class" } } }				
+			# Minlayer Division #		
+			ship = { name = "IMSS Oglala" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ICG version_name = "Oglala Class" } } }				
+			ship = { name = "IMSS Aroostook" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ICG version_name = "Oglala Class" } } }				
+		}					
+		### Destroyer Flotilla 1 ###				
+		task_force = {					
+			name = "Destroyer Flotilla 1"				
+			location = 1562 # San Diego
+			ship = { name = "IMSS Raleigh" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "Omaha Class" } } }				
+			### Destroyer Squadron 1 ###				
+			# 1st Destroyer Division				
+			ship = { name = "IMSS Dewey" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Farragut Class" } } }
+			ship = { name = "IMSS Hull" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Farragut Class" } } }
+			ship = { name = "IMSS MacDonough" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Farragut Class" } } }
+			ship = { name = "IMSS Worden" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Farragut Class" } } }
+			# 2nd Destroyer Division				
+			ship = { name = "IMSS Farragut" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Farragut Class" } } }
+			ship = { name = "IMSS Dale" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Farragut Class" } } }
+			ship = { name = "IMSS Monaghan" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Farragut Class" } } }
+			ship = { name = "IMSS Aylwin" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Farragut Class" } } }
+			### Destroyer Squadron 9 ###				
+			# 17th Destroyer Division				
+			ship = { name = "IMSS Hatfield" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Brooks" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Fox" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Kane" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# 19th Destroyer Division		
+			ship = { name = "IMSS Rathburne" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Talbot" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Waters" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Dent" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			### Destroyer Squadron 11 ###				
+			ship = { name = "IMSS MacLeish" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# 25th Destroyer Division				
+			ship = { name = "IMSS McCormick" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Sturtevant" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Overton" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Bainbridge" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# 26th Destroyer Division				
+			ship = { name = "IMSS King" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Sands" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Lawrence" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Humphreys" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+		}					
+		### Destroyer Flotilla 2 ###				
+		task_force = {					
+			name = "Destroyer Flotilla 2"				
+			location = 9814 # Los Angeles
+			ship = { name = "IMSS Detroit" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "Omaha Class" } } }				
+			### Destroyer Squadron 7 ###
+			# 24th Destroyer Division			
+			ship = { name = "IMSS Zane" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Wasmuth" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Trever" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Perry" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# 28th Destroyer Division				
+			ship = { name = "IMSS Chandler" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Southard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Hovey" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Long" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			### Destroyer Squadron 8 ###
+			ship = { name = "IMSS Dallas" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# 9th Destroyer Division				
+			ship = { name = "IMSS Reuben James" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Goff" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Barry" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Hopkins" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# 10th Destroyer Division				
+			ship = { name = "IMSS Broome" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Borie" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Simpson" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Truxtun" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+		}	
+		# Separate DESRONS #
+		task_force = {					
+			name = "Destroyer Division 20"				
+			location = 9671 # San Francisco
+			# 20th Destroyer Division				
+			ship = { name = "IMSS Breckinridge" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Barney" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Blakeley" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Biddle" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+		}					
+	}
+	
+	### SCOUTING FLEET ###
+	fleet = {
+		name = "Scouting Force"			
+		naval_base = 9814 # Los Angeles
+		task_force = {				
+			name = "Scouting Force"				
+			location = 9814 # Los Angeles
+			### Battleship Division 4 ###			
+			ship = { name = "IMSS Arkansas" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "New York Class" } } }				
+			ship = { name = "IMSS New York" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "New York Class" } } }				
+			ship = { name = "IMSS Texas" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "New York Class" } } }				
+			### Cruisers ###				
+			ship = { name = "IMSS Memphis" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "Omaha Class" } } }				
+			# Cruiser Division 4 #		
+			ship = { name = "IMSS Northampton" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ICG version_name = "Pensacola Class" } } }				
+			ship = { name = "IMSS Houston" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ICG version_name = "Pensacola Class" } } }				
+			ship = { name = "IMSS Pensacola" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ICG version_name = "Pensacola Class" } } }				
+			ship = { name = "IMSS Salt Lake City" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ICG version_name = "Pensacola Class" } } }				
+			# Cruiser Division 5 #		
+			ship = { name = "IMSS Chicago" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ICG version_name = "Pensacola Class" } } }				
+			ship = { name = "IMSS Chester" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ICG version_name = "Pensacola Class" } } }				
+			ship = { name = "IMSS Louisville" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ICG version_name = "Pensacola Class" } } }					
+			# Cruiser Division 7 #
+			ship = { name = "IMSS Tuscaloosa" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "New Orleans Class" } } }				
+			ship = { name = "IMSS San Francisco" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "New Orleans Class" } } }				
+			ship = { name = "IMSS Portland" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "Portland Class" } } }				
+			### Destroyer Squadron 10 ###
+			ship = { name = "IMSS Decatur" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# 22nd Destroyer Division				
+			ship = { name = "IMSS Badger" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Jacob Jones" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Leary" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Schenck" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# 23rd Destroyer Division				
+			ship = { name = "IMSS Babbitt" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Hamilton" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Roper" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+		}					
+	}
+	
+	### SUBMARINE FORCE ###
+	fleet = {
+		name = "Submarine Base Force"			
+		naval_base = 1562 # San Diego
+		task_force = {				
+			name = "Submarine Base Force"			
+			location = 1562 # San Diego
+			ship = { name = "IMSS Richmond" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "Omaha Class" } } }				
+			ship = { name = "IMSS Litchfield" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+		}
+		task_force = {					
+			name = "4th Submarine Squadron"			
+			location = 4180 # Pearl Harbor, HI
+			ship = { name = "IMSS Argonaut" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = ICG version_name = "Barracuda Class" } } }
+			# 7th Submarine Division				
+			ship = { name = "IMSS S-1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-18" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-23" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-27" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-28" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-34" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-35" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			# 16th Submarine Division			
+			ship = { name = "IMSS S-31" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-32" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-33" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+		}
+		task_force = {					
+			name = "6th Submarine Squadron"			
+			location = 1562 # San Diego
+			# 12th Submarine Division				
+			ship = { name = "IMSS Barracuda" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = ICG version_name = "Barracuda Class" } } }
+			ship = { name = "IMSS Bass" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = ICG version_name = "Barracuda Class" } } }
+			ship = { name = "IMSS Bonita" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = ICG version_name = "Barracuda Class" } } }
+			ship = { name = "IMSS Narwhal" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = ICG version_name = "Barracuda Class" } } }
+			ship = { name = "IMSS Dolphin" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = ICG version_name = "Barracuda Class" } } }
+			# 13th Submarine Division				
+			ship = { name = "IMSS Nautilus" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = ICG version_name = "Barracuda Class" } } }
+			ship = { name = "IMSS Cachalot" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = ICG version_name = "Barracuda Class" } } }
+			ship = { name = "IMSS Cuttlefish" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = ICG version_name = "Barracuda Class" } } }
+			ship = { name = "IMSS Porpoise" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = ICG version_name = "Porpoise Class" } } }
+			ship = { name = "IMSS Pike" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = ICG version_name = "Porpoise Class" } } }
+			ship = { name = "IMSS Shark" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = ICG version_name = "Porpoise Class" } } }
+		}					
+	}
+	
+	### PACIFIC RESERVES ###
+	fleet = {
+		name = "Pacific Reserve Fleet"			
+		naval_base = 1562 # San Diego
+		task_force = {					
+			name = "Pacific Reserve Destroyers"			# Decommissioned ships docked in San Diego				
+			location = 1562 # San Diego
+			ship = { name = "IMSS Ballard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Chew" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Crane" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Crosby" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Greene" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Hogan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Howard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Kennison" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Kilty" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Palmer" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Schley" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Stansbury" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Thornton" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Ward" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# Mobile Target Division 1 #
+			ship = { name = "IMSS Dorsey" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Elliot" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Boggs" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+		}					
+	}
+
+	##### ATLANTIC FLEET #####
+	fleet = {
+		name = "Atlantic Fleet"			
+		naval_base = 788 # Norfolk
+		# Independent Squadron #
+		task_force = {					
+			name = "Destroyer Squadron 12"				
+			location = 3878 # New York
+			### Destroyer Squadron 12 ###
+			ship = { name = "IMSS Gilmer" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# 21st Destroyer Division				
+			ship = { name = "IMSS Du Pont" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Bernadou" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Ellis" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Cole" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# 27th Destroyer Division				
+			ship = { name = "IMSS Tarbell" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Upshur" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Greer" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+		}					
+		# ATLANTIC SUBMARINES #
+		task_force = {					
+			name = "2nd Submarine Squadron"		
+			location = 9832 # New London, CT
+			# 1st Experimental Division			
+			ship = { name = "IMSS S-20" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-22" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			# 4th Submarine Division			
+			ship = { name = "IMSS R-2" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS R-4" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS R-10" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS R-11" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS R-13" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS R-14" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			# 8th Submarine Division			
+			ship = { name = "IMSS S-21" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-24" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-25" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-26" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-29" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-30" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+		}	
+		# ATLANTIC RESERVES #
+		task_force = {					
+			name = "Atlantic Reserve Destroyers"		# Decommissioned ships docked in Philadelphia					
+			location = 6845 # Philadelphia
+			ship = { name = "IMSS Allen" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }	
+			ship = { name = "IMSS Colhoun" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Gregory" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Little" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS McKean" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Stringham" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Clemson" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Goldsborough" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS McFarland" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Osmond Ingram" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Belknap" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Gillis" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Hulbert" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Noa" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS William B Preston" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+		}					
+		task_force = {					
+			name = "Atlantic Reserve Submarines"		# Decommissioned ships docked in Philadelphia	
+			location = 6845 # Philadelphia
+			ship = { name = "IMSS O-2" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS O-3" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS O-4" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS O-6" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS O-7" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS O-8" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS O-9" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS O-10" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS R-1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS R-3" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS R-5" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS R-6" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS R-7" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS R-9" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-11" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-12" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-13" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-14" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-15" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-16" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-17" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-48" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS R-20" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+		}					
+	}
+	
+	### CARIBBEAN AND FOREIGN DEPLOYMENTS ###
+	fleet = {
+		name = "Special Assignment Forces"			
+		naval_base = 7617 # Canal Zone
+		task_force = {					
+			name = "Naval Detachment Atlantic"			# Historically based in France	
+			location = 6732 # Boston
+			ship = { name = "IMSS Dickerson" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Herbert" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Dahlgren" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+		}		
+		task_force = {							
+			name = "Special Service Squadron"
+			location = 7617 # Canal Zone
+			ship = { name = "IMSS Tattnall" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS J Fred Talbott" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+		}
+		task_force = {					
+			name = "3rd Submarine Squadron"	
+			location = 7617 # Canal Zone
+			# 11th Submarine Division			
+			ship = { name = "IMSS S-42" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-43" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-44" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-45" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-46" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-47" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+		}					
+	}
+	
+	##### ASIATIC FLEET #####
+	fleet = {
+		name = "Asiatic Fleet"			
+		naval_base = 12140 # Manilla
+		task_force = {					
+			name = "Asiatic Fleet"				
+			location = 12140 # Manilla
+			ship = { name = "IMSS Augusta" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ICG version_name = "Pensacola Class" } } }				
+			ship = { name = "IMSS Marblehead" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ICG version_name = "Omaha Class" } } }
+			### Destroyer Squadron 5 ###				
+			ship = { name = "IMSS Paul Jones" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# 13th Destroyer Division				
+			ship = { name = "IMSS Alden" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Barker" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS John D Edwards" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Whipple" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# 14th Destroyer Division				
+			ship = { name = "IMSS Edsall" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Parrott" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Bulmer" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Stewart" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			# 15th Destroyer Division				
+			ship = { name = "IMSS Pope" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Peary" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS Pillsbury" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+			ship = { name = "IMSS John D Ford" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ICG version_name = "Clemson Class" } } }		
+		}					
+		task_force = {					
+			name = "5th Submarine Squadron"				
+			location = 12140 # Manilla
+			# 10th Submarine Division				
+			ship = { name = "IMSS S-36" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-37" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-38" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-39" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-40" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+			ship = { name = "IMSS S-41" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ICG version_name = "S Class" } } }
+		}					
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	### Under Construction Notes ###
+	# CA: Quincy (New Orleans class, Comm. 9-Jun, 1936)
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "ICG"
+			version_name = "New Orleans Class"
+		}
+		name = "IMSS Quincy" 
+		requested_factories = 2
+		progress = 0.60
+		amount = 1
+		industrial_manufacturer = mio:ICG_newport_news_shipbuilding_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "ICG"
+			version_name = "New Orleans Class"
+		}
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+		industrial_manufacturer = mio:ICG_newport_news_shipbuilding_organization
+	}
+	# CA: Wichita (Wichita class
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "ICG"
+			version_name = "Wichita Class"
+		} 
+		requested_factories = 2
+		progress = 0.10
+		amount = 1
+		industrial_manufacturer = mio:ICG_newport_news_shipbuilding_organization
+	}
+	##2 Yorktowns (Yorktown, Enterprise)
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_carrier_1
+			creator = "ICG"
+			version_name = "Yorktown Class"
+		}
+		requested_factories = 2
+		progress = 0.50
+		amount = 1
+		industrial_manufacturer = mio:ICG_newport_news_shipbuilding_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_carrier_1
+			creator = "ICG"
+			version_name = "Yorktown Class"
+		}
+		requested_factories = 2
+		progress = 0.40
+		amount = 1
+		industrial_manufacturer = mio:ICG_newport_news_shipbuilding_organization
+	}
+
+	# DD: Porter (x14) ("IMSS Porter" "IMSS Phelps" "IMSS Clark" "IMSS Moffett")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "ICG"
+			version_name = "Farragut Class"
+		}
+		name = "IMSS Porter" 
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+		industrial_manufacturer = mio:ICG_norfolk_naval_yard_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "ICG"
+			version_name = "Farragut Class"
+		}
+		name = "IMSS Phelps" 
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		industrial_manufacturer = mio:ICG_norfolk_naval_yard_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "ICG"
+			version_name = "Farragut Class"
+		}
+		name = "IMSS Clark" 
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+		industrial_manufacturer = mio:ICG_norfolk_naval_yard_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "ICG"
+			version_name = "Farragut Class"
+		}
+		name = "IMSS Moffett" 
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+		industrial_manufacturer = mio:ICG_norfolk_naval_yard_organization
+	}
+	# DD: Mahan class (x9) ("IMSS Mahan" "IMSS Cummings" "IMSS Flusser" "IMSS Case" "IMSS Conyngham" "IMSS Cassin" "IMSS Shaw" "IMSS Cushing" "IMSS Perkins")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "ICG"
+			version_name = "Farragut Class"
+		}
+		name = "IMSS Mahan" 
+		requested_factories = 1
+		progress = 0.30
+		amount = 1
+		industrial_manufacturer = mio:ICG_norfolk_naval_yard_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "ICG"
+			version_name = "Farragut Class"
+		}
+		name = "IMSS Cummings" 
+		requested_factories = 1
+		progress = 0.10
+		amount = 1
+		industrial_manufacturer = mio:ICG_norfolk_naval_yard_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "ICG"
+			version_name = "Farragut Class"
+		}
+		name = "IMSS Flusser" 
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+		industrial_manufacturer = mio:ICG_norfolk_naval_yard_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "ICG"
+			version_name = "Farragut Class"
+		}
+		name = "IMSS Case" 
+		requested_factories = 1
+		progress = 0.30
+		amount = 1
+		industrial_manufacturer = mio:ICG_norfolk_naval_yard_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "ICG"
+			version_name = "Farragut Class"
+		}
+		name = "IMSS Conyngham" 
+		requested_factories = 1
+		progress = 0.10
+		amount = 1
+		industrial_manufacturer = mio:ICG_norfolk_naval_yard_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "ICG"
+			version_name = "Farragut Class"
+		}
+		name = "IMSS Cassin" 
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+		industrial_manufacturer = mio:ICG_norfolk_naval_yard_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "ICG"
+			version_name = "Farragut Class"
+		}
+		name = "IMSS Shaw" 
+		requested_factories = 1
+		progress = 0.30
+		amount = 1
+		industrial_manufacturer = mio:ICG_norfolk_naval_yard_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "ICG"
+			version_name = "Farragut Class"
+		}
+		name = "IMSS Cushing" 
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+		industrial_manufacturer = mio:ICG_norfolk_naval_yard_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "ICG"
+			version_name = "Farragut Class"
+		}
+		name = "IMSS Perkins" 
+		requested_factories = 1
+		progress = 0.30
+		amount = 1
+		industrial_manufacturer = mio:ICG_norfolk_naval_yard_organization
+	}
+	# SS: Shark class (x1) ("IMSS Tarpon")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "ICG"
+			version_name = "Porpoise Class"
+		}
+		name = "IMSS Tarpon" 
+		requested_factories = 1
+		progress = 0.70
+		amount = 1
+		industrial_manufacturer = mio:ICG_electric_boat_company_organization
+	}
+}
+
+#####################

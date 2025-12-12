@@ -1,0 +1,327 @@
+#수도
+capital = 37
+
+#부대
+set_oob = "SZS_ar"
+set_naval_oob = "SZS_na_MtG"
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "SZS_ai_BBA"
+	else = {
+		set_air_oob = "SZS_ai"
+	}
+}
+starting_train_buffer = 4
+add_command_power = 20
+set_fuel_ratio = 0.8
+
+#시작 기술
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	fuel_silos = 1
+	basic_train = 1
+}
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	early_ship_hull_cruiser = 1
+	basic_battery = 1
+	basic_cruiser_armor_scheme = 1
+	basic_torpedo = 1
+	coastal_defense_ships = 1
+	mtg_transport = 1
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+		set_technology = {
+			iw_small_airframe = 1
+			engines_1 = 1
+			early_bombs = 1
+		}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 55
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 7
+}
+
+#국민 정신
+add_ideas = direct_election
+add_ideas = single_parliament
+
+add_dynamic_modifier = { modifier = SZS_industry }
+add_dynamic_modifier = { modifier = SZS_army }
+add_dynamic_modifier = { modifier = SZS_navy }
+add_dynamic_modifier = { modifier = SZS_air_force }
+
+## SZS_industry
+
+## SZS_army
+set_variable = { SZS_army_experience_gain_army_factor = -0.30 }
+set_variable = { SZS_army_land_mastery_gain_factor = -0.25 }
+set_variable = { SZS_army_army_org_factor = -0.15 }
+set_variable = { SZS_army_training_time_factor = 0.20 }
+set_variable = { SZS_army_supply_factor = -0.15 }
+set_variable = { SZS_army_planning_speed = -0.20 }
+set_variable = { SZS_army_army_morale_factor = -0.10 }
+set_variable = { SZS_army_max_planning_factor = -0.15 }
+set_variable = { SZS_army_command_power_gain_mult = -0.10 }
+set_variable = { SZS_army_army_leader_cost_factor = 0.50 }
+set_variable = { SZS_army_equipment_capture_factor = -0.50 }
+set_variable = { SZS_army_special_forces_cap = -0.25 }
+set_variable = { SZS_army_recon_factor = -0.15 }
+set_variable = { SZS_army_supply_consumption_factor = 0.10}
+set_variable = { SZS_army_winter_attrition_factor = 0.10 }
+set_variable = { SZS_army_heat_attrition_factor = 0.10 }
+
+set_variable = { SZS_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { SZS_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { SZS_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { SZS_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { SZS_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { SZS_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { SZS_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { SZS_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { SZS_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## SZS_navy
+set_variable = { SZS_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { SZS_navy_naval_mastery_gain_factor = -0.30 }
+set_variable = { SZS_navy_naval_detection = -0.20 }
+set_variable = { SZS_navy_navy_max_range_factor = -0.15 }
+set_variable = { SZS_navy_repair_speed_factor = -0.20 }
+set_variable = { SZS_navy_refit_speed = -0.20 }
+set_variable = { SZS_navy_amphibious_invasion = -0.25 }
+set_variable = { SZS_navy_naval_invasion_capacity = -5 }
+set_variable = { SZS_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { SZS_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { SZS_navy_naval_damage_factor = -0.10 }
+set_variable = { SZS_navy_naval_defense_factor = -0.10 }
+set_variable = { SZS_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { SZS_navy_naval_speed_factor = -0.10 }
+
+set_variable = { SZS_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { SZS_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { SZS_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { SZS_navy_build_cost_ic_screen_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { SZS_navy_build_cost_ic_submarine = 0.30 } ### 별도 국민정신 적용
+
+## SZS_air_force
+set_variable = { SZS_air_force_experience_gain_air_factor = -0.50 }
+set_variable = { SZS_air_force_air_mastery_gain_factor = -0.40 }
+set_variable = { SZS_air_force_air_accidents_factor = 0.25 }
+set_variable = { SZS_air_force_air_mission_efficiency = -0.15 }
+set_variable = { SZS_air_force_air_training_xp_gain_factor = -0.30 }
+set_variable = { SZS_air_force_air_range_factor = -0.10 }
+set_variable = { SZS_air_force_air_ace_generation_chance_factor = -0.60 }
+set_variable = { SZS_air_force_air_superiority_efficiency = -0.20 }
+set_variable = { SZS_air_force_air_cas_efficiency = -0.25 }
+set_variable = { SZS_air_force_air_strategic_bomber_bombing_factor = -0.30 }
+set_variable = { SZS_air_force_air_intercept_efficiency = -0.15 }
+set_variable = { SZS_air_force_air_nav_efficiency = -0.20 }
+set_variable = { SZS_air_force_air_detection = -0.20 }
+set_variable = { SZS_air_force_air_agility_factor = -0.10 }
+
+set_variable = { SZS_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { SZS_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { SZS_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { SZS_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { SZS_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { SZS_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { SZS_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { SZS_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { SZS_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
+
+#외교
+
+#정치 상황
+set_stability = 0.7
+set_war_support = 0.02
+set_politics = {
+	ruling_party = liberalism_mod
+	last_election = "1935.3.31"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	conservatism = 1
+	liberalism_mod = 41
+	progressivism = 0
+	socialdemocracy = 3
+	socialism = 0
+	communism = 0
+	authoritariancommunism = 1
+	anarchosyndicalism = 0
+	fascism = 29
+	militarytotalism = 0
+	authoritariandemocracy = 0
+	autocracy = 25
+}
+
+#의회
+
+#캐릭터 
+recruit_character = SZS_tachibana_hibiki
+#DEN
+#recruit_character = SZS_thorvald_stauning
+#recruit_character = SZS_knud_bach
+#recruit_character = SZS_knud_bach_2
+#recruit_character = SZS_knud_bach_3
+#recruit_character = SZS_christian_x
+#recruit_character = SZS_freedom_council
+#recruit_character = SZS_aksel_larsen
+#recruit_character = SZS_frits_clausen
+#recruit_character = SZS_werner_best
+#recruit_character = SZS_erik_with
+#recruit_character = SZS_william_wain_prior
+#recruit_character = SZS_ebbe_gortz
+#recruit_character = SZS_frederik_christian_essemann
+#recruit_character = SZS_carl_jacobsen
+#recruit_character = SZS_christian_peder_kryssing
+#recruit_character = SZS_erik_leschly
+#recruit_character = SZS_erik_moller
+#recruit_character = SZS_paul_ramm
+#recruit_character = SZS_charles_henry_rye
+#recruit_character = SZS_christian_frederik_von_schalburg
+#recruit_character = SZS_hjalmar_rechnitzer
+#recruit_character = SZS_aage_vedel
+#recruit_character = SZS_emmanuel_briand_de_crevecoeur
+#recruit_character = SZS_christian_evers
+#recruit_character = SZS_carl_hammerich
+#recruit_character = SZS_paul_ipsen
+#recruit_character = SZS_prince_frederik
+#recruit_character = SZS_frederik_ix
+#recruit_character = SZS_christian_forslev
+#recruit_character = SZS_asger_grandjean
+#recruit_character = SZS_aage_falking
+#recruit_character = SZS_hans_a_rolsted
+#recruit_character = SZS_kaj_birksted
+#recruit_character = SZS_poul_sommer
+#recruit_character = SZS_johan_von_stemann
+#recruit_character = SZS_peter_horn
+#recruit_character = SZS_paul_sommer
+#recruit_character = SZS_hans_lunding
+#recruit_character = SZS_peter_rochegune_munch
+#recruit_character = SZS_christmas_moller
+#recruit_character = SZS_vilhelm_buhl
+#recruit_character = SZS_erik_scavenius
+#recruit_character = SZS_jorgen_jorgensen
+#recruit_character = SZS_knud_kristensen
+#recruit_character = SZS_hans_hedtoft
+#recruit_character = SZS_arnold_peter_moller
+#recruit_character = SZS_alsing_andersen
+#recruit_character = SZS_karl_kristian_steincke
+#recruit_character = SZS_niels_bohr
+#recruit_character = SZS_cay_lembcke
+#recruit_character = SZS_emil_strobech
+#recruit_character = SZS_ejnar_warum
+#recruit_character = SZS_viggo_kampman
+#ICE
+#recruit_character = SZS_hermann_jonasson
+#recruit_character = SZS_gisli_sigurbjornsson
+#recruit_character = SZS_brynjolfur_bjarnason
+#recruit_character = SZS_sveinn_bjornsson
+#recruit_character = SZS_olafur_thors
+#recruit_character = SZS_eysteinn_jonsson
+#recruit_character = SZS_haraldur_gudhmundsson
+#recruit_character = SZS_skuli_gudhmundsson
+#recruit_character = SZS_stefan_johann_stefansson
+#recruit_character = SZS_jakob_moller
+#recruit_character = SZS_magnus_jonsson
+#recruit_character = SZS_einar_arnorsson
+#recruit_character = SZS_bjorn_olafsson
+#recruit_character = SZS_vilhjalmur_thor
+#recruit_character = SZS_johann_saemundsson
+#recruit_character = SZS_bjorn_thordharson
+#recruit_character = SZS_olafur_petursson
+#recruit_character = SZS_olaf_j_thorlacius
+#recruit_character = SZS_einar_olgeirsson
+#recruit_character = SZS_isleifur_hognason
+#recruit_character = SZS_agnar_eldberg_kofoed_hansen
+#recruit_character = SZS_bjorn_sveinsson_bjornsson
+#recruit_character = SZS_king_knud	
+#recruit_character = SZS_werner_gerlach
+
+#장관진
+
+#무기 프리셋
+### Ship Variants ###
+# Submarines #
+create_equipment_variant = {
+	name = "Rota Class"								# represents Rota and Daphne classes
+	type = ship_hull_submarine_1
+	name_group = SZS_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
+	}
+}
+# Heavy Cruisers #
+create_equipment_variant = {
+	name = "Herluf Trolle Class"				
+	type = ship_hull_cruiser_coastal_defense_ship
+	name_group = SZS_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_2
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = ship_torpedo_1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Niels Iuel Class"				
+	type = ship_hull_cruiser_coastal_defense_ship
+	name_group = SZS_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_2
+		fixed_ship_secondaries_slot = empty
+		mid_1_custom_slot = ship_anti_air_1
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = ship_light_medium_battery_1
+	}
+}

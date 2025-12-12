@@ -1,0 +1,349 @@
+#수도
+capital = 500
+
+#부대
+set_oob = "FGO_ar"
+set_naval_oob = "FGO_na_MtG"
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "FGO_ai_BBA"
+	else = {
+		set_air_oob = "FGO_ai"
+	}
+}
+starting_train_buffer = 2
+add_command_power = 10
+set_fuel_ratio = 0.5
+
+if = {
+	limit = { has_BBA = yes }
+	else = {
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1	
+}
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	early_ship_hull_light = 1
+	early_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	basic_battery = 1
+	basic_torpedo = 1
+	mtg_transport = 1
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 40
+
+#국민 정신
+
+add_ideas = agrarian_society
+
+add_dynamic_modifier = { modifier = FGO_industry }
+add_dynamic_modifier = { modifier = FGO_army }
+add_dynamic_modifier = { modifier = FGO_navy }
+add_dynamic_modifier = { modifier = FGO_air_force }
+
+## FGO_industry
+set_variable = { FGO_industry_production_speed_buildings_factor = -0.25 }
+set_variable = { FGO_industry_industrial_capacity_factory = -0.20 }
+set_variable = { FGO_industry_industrial_capacity_dockyard = -0.20 }
+set_variable = { FGO_industry_research_speed_factor = -0.15 }
+set_variable = { FGO_industry_consumer_goods_factor = 0.10 }
+set_variable = { FGO_industry_state_resources_factor = -0.10 }
+set_variable = { FGO_industry_production_factory_max_efficiency_factor = -0.15 }
+set_variable = { FGO_industry_production_factory_efficiency_gain_factor = -0.20 }
+set_variable = { FGO_industry_license_purchase_cost = 0.50 }
+set_variable = { FGO_industry_political_power_gain = -0.10 }
+set_variable = { FGO_industry_stability_factor = -0.10 }
+set_variable = { FGO_industry_industry_repair_factor = -0.25 }
+
+## FGO_army
+set_variable = { FGO_army_experience_gain_army_factor = -0.30 }
+set_variable = { FGO_army_land_mastery_gain_factor = -0.25 }
+set_variable = { FGO_army_army_org_factor = -0.15 }
+set_variable = { FGO_army_training_time_factor = 0.20 }
+set_variable = { FGO_army_supply_factor = -0.15 }
+set_variable = { FGO_army_planning_speed = -0.20 }
+set_variable = { FGO_army_army_morale_factor = -0.10 }
+set_variable = { FGO_army_max_planning_factor = -0.15 }
+set_variable = { FGO_army_command_power_gain_mult = -0.10 }
+set_variable = { FGO_army_army_leader_cost_factor = 0.50 }
+set_variable = { FGO_army_equipment_capture_factor = -0.50 }
+set_variable = { FGO_army_special_forces_cap = -0.25 }
+set_variable = { FGO_army_recon_factor = -0.15 }
+set_variable = { FGO_army_supply_consumption_factor = 0.10}
+set_variable = { FGO_army_winter_attrition_factor = 0.10 }
+set_variable = { FGO_army_heat_attrition_factor = 0.10 }
+
+set_variable = { FGO_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { FGO_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { FGO_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { FGO_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { FGO_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { FGO_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { FGO_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { FGO_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { FGO_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## FGO_navy
+set_variable = { FGO_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { FGO_navy_naval_mastery_gain_factor = -0.30 }
+set_variable = { FGO_navy_naval_detection = -0.20 }
+set_variable = { FGO_navy_navy_max_range_factor = -0.15 }
+set_variable = { FGO_navy_repair_speed_factor = -0.20 }
+set_variable = { FGO_navy_refit_speed = -0.20 }
+set_variable = { FGO_navy_amphibious_invasion = -0.25 }
+set_variable = { FGO_navy_naval_invasion_capacity = -5 }
+set_variable = { FGO_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { FGO_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { FGO_navy_naval_damage_factor = -0.10 }
+set_variable = { FGO_navy_naval_defense_factor = -0.10 }
+set_variable = { FGO_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { FGO_navy_naval_speed_factor = -0.10 }
+
+set_variable = { FGO_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { FGO_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { FGO_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { FGO_navy_build_cost_ic_screen_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { FGO_navy_build_cost_ic_submarine = 0.30 } ### 별도 국민정신 적용
+
+## FGO_air_force
+set_variable = { FGO_air_force_experience_gain_air_factor = -0.50 }
+set_variable = { FGO_air_force_air_mastery_gain_factor = -0.40 }
+set_variable = { FGO_air_force_air_accidents_factor = 0.25 }
+set_variable = { FGO_air_force_air_mission_efficiency = -0.15 }
+set_variable = { FGO_air_force_air_training_xp_gain_factor = -0.30 }
+set_variable = { FGO_air_force_air_range_factor = -0.10 }
+set_variable = { FGO_air_force_air_ace_generation_chance_factor = -0.60 }
+set_variable = { FGO_air_force_air_superiority_efficiency = -0.20 }
+set_variable = { FGO_air_force_air_cas_efficiency = -0.25 }
+set_variable = { FGO_air_force_air_strategic_bomber_bombing_factor = -0.30 }
+set_variable = { FGO_air_force_air_intercept_efficiency = -0.15 }
+set_variable = { FGO_air_force_air_nav_efficiency = -0.20 }
+set_variable = { FGO_air_force_air_detection = -0.20 }
+set_variable = { FGO_air_force_air_agility_factor = -0.10 }
+
+set_variable = { FGO_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { FGO_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { FGO_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { FGO_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { FGO_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { FGO_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { FGO_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { FGO_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { FGO_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
+
+
+#외교
+
+#정치 상황
+set_stability = 0.05
+set_war_support = 0.05
+set_politics = {
+	ruling_party = anarchosyndicalism
+	last_election = "1934.7.17"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	conservatism = 1
+	liberalism_mod = 1
+	progressivism = 0
+	socialdemocracy = 1
+	socialism = 1
+	communism = 1
+	authoritariancommunism = 1
+	anarchosyndicalism = 77
+	fascism = 1
+	militarytotalism = 1
+	authoritariandemocracy = 14 
+	autocracy = 1
+}
+
+#의회
+
+#캐릭터 
+recruit_character = FGO_dummy_CON #더미
+recruit_character = FGO_dummy_LIB #더미
+recruit_character = FGO_dummy_PRO #더미
+recruit_character = FGO_dummy_SOD #더미
+recruit_character = FGO_dummy_FAS #더미
+recruit_character = FGO_dummy_MIL #더미
+recruit_character = FGO_dummy_AUD #더미
+recruit_character = FGO_dummy_AUT #더미
+recruit_character = FGO_olgamally_animusphere
+
+#recruit_character = FGO_getulio_vargas
+
+#recruit_character = FGO_armando_de_sales_oliveira
+#recruit_character = FGO_domingos_bras
+#recruit_character = FGO_jose_linhares
+#recruit_character = FGO_benedito_valadres
+#recruit_character = FGO_alfred_agache
+#recruit_character = FGO_joao_neves_da_fortuna
+#recruit_character = FGO_joao_marques_de_reis
+#recruit_character = FGO_francisco_campos
+#recruit_character = FGO_filinto_muller
+#recruit_character = FGO_indigenous_council
+#recruit_character = FGO_lindolfo_collor
+#recruit_character = FGO_jose_americo_de_almeida
+#recruit_character = FGO_anisio_teixeira
+#recruit_character = FGO_integralist_militia_general
+#recruit_character = FGO_pedro_henrique
+#recruit_character = FGO_pedro_de_alcantara
+#recruit_character = FGO_alianca_nacional_libertadora_council
+#recruit_character = FGO_minervino_de_oliveira
+#recruit_character = FGO_olga_benario_prestes
+#recruit_character = FGO_apolonio_de_carvalho
+#recruit_character = FGO_war_industrialist
+#recruit_character = FGO_captain_of_industry
+#recruit_character = FGO_leoncio_basbaum
+#recruit_character = FGO_geremia_lunarelli
+#recruit_character = FGO_henry_ford
+#recruit_character = FGO_gustavo_barroso
+#recruit_character = FGO_miguel_reale
+#recruit_character = FGO_oliveria_viana
+
+#recruit_character = FGO_augusto_fragoso
+#recruit_character = FGO_alvaro_de_castro
+#recruit_character = FGO_gois_monterio
+#recruit_character = FGO_euclides_zenobio_da_costa
+#recruit_character = FGO_jose_pessoa_cavalcanti_de_albuquerque
+#recruit_character = FGO_henrique_teixeira_lott
+#recruit_character = FGO_pereira_de_oliveira
+#recruit_character = FGO_eduardo_guedes
+#recruit_character = FGO_cristovao_de_castro
+#recruit_character = FGO_milton_de_freitas
+#recruit_character = FGO_candido_mariano
+#recruit_character = FGO_olympio_falconiere_da_cunha
+#recruit_character = FGO_floriano_de_lima_brayner
+
+#recruit_character = FGO_henrique_aristides_guilhem
+#recruit_character = FGO_silvio_de_noronha
+#recruit_character = FGO_protogenes_guimaraes
+#recruit_character = FGO_renato_de_almeida_guillobel
+#recruit_character = FGO_alvaro_alberto_da_motta_e_silva
+
+#recruit_character = FGO_lampiao
+
+#recruit_character = FGO_plinio_salgado
+#recruit_character = FGO_luis_carlos_prestes
+#recruit_character = FGO_armando_sales
+#recruit_character = FGO_eurico_gaspar_dutra
+#recruit_character = FGO_mascarenhas_de_morais
+#recruit_character = FGO_augusto_rademaker
+#recruit_character = FGO_agliberto_vieira
+#recruit_character = FGO_eduardo_gomes
+#recruit_character = FGO_salgado_filho
+#recruit_character = FGO_floriano_peixoto
+#recruit_character = FGO_aristides_guilhem
+#recruit_character = FGO_joao_neves_da_fontoura
+#recruit_character = FGO_epaminondas_dos_santos
+#recruit_character = FGO_moreira_lima
+#recruit_character = FGO_nero_fiuza_de_castro
+#recruit_character = FGO_artur_da_costa_e_silva
+#recruit_character = FGO_ismael_motta_paes
+#recruit_character = FGO_jorge_martins
+#recruit_character = FGO_newton_cavalcanti
+#recruit_character = FGO_afranio_de_mello_franco
+#recruit_character = FGO_washington_luis_pereira
+#recruit_character = FGO_osvaldo_aranha
+#recruit_character = FGO_arlindo_veiga_dos_santos
+
+#장관진
+
+#무기 프리셋
+### Ship Variants ###
+create_equipment_variant = {
+	name = "Minas Geras Class"
+	type = ship_hull_heavy_1
+	name_group = FGO_BB_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_bb_1
+		front_1_custom_slot = empty
+		mid_1_custom_slot = ship_secondaries_1
+		mid_2_custom_slot = ship_secondaries_1
+		rear_1_custom_slot = ship_heavy_battery_1
+	}
+}
+create_equipment_variant = {
+	name = "Bahia Class"
+	type = ship_hull_cruiser_1
+	name_group = FGO_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = empty
+	}
+}
+create_equipment_variant = {
+	name = "Para Class"
+	type = ship_hull_light_1
+	name_group = FGO_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Humaytá Class"
+	type = ship_hull_submarine_2
+	name_group = FGO_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_2
+		rear_1_custom_slot = ship_mine_layer_sub
+	}
+}

@@ -1,0 +1,173 @@
+#수도
+capital = 319
+
+#부대
+set_oob = "CUE_ar"
+starting_train_buffer = 2
+add_command_power = 10
+set_fuel_ratio = 0.2
+
+#시작 기술
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	tech_trucks = 1
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 5
+
+#국민 정신
+
+add_ideas = agrarian_society
+
+add_dynamic_modifier = { modifier = CUE_industry }
+add_dynamic_modifier = { modifier = CUE_army }
+add_dynamic_modifier = { modifier = CUE_navy }
+add_dynamic_modifier = { modifier = CUE_air_force }
+
+## CUE_industry
+set_variable = { CUE_industry_production_speed_buildings_factor = -0.25 }
+set_variable = { CUE_industry_industrial_capacity_factory = -0.20 }
+set_variable = { CUE_industry_industrial_capacity_dockyard = -0.20 }
+set_variable = { CUE_industry_research_speed_factor = -0.15 }
+set_variable = { CUE_industry_consumer_goods_factor = 0.10 }
+set_variable = { CUE_industry_state_resources_factor = -0.10 }
+set_variable = { CUE_industry_production_factory_max_efficiency_factor = -0.15 }
+set_variable = { CUE_industry_production_factory_efficiency_gain_factor = -0.20 }
+set_variable = { CUE_industry_license_purchase_cost = 0.50 }
+set_variable = { CUE_industry_political_power_gain = -0.10 }
+set_variable = { CUE_industry_stability_factor = -0.10 }
+set_variable = { CUE_industry_industry_repair_factor = -0.25 }
+
+## CUE_army
+set_variable = { CUE_army_experience_gain_army_factor = -0.30 }
+set_variable = { CUE_army_land_mastery_gain_factor = -0.25 }
+set_variable = { CUE_army_army_org_factor = -0.15 }
+set_variable = { CUE_army_training_time_factor = 0.20 }
+set_variable = { CUE_army_supply_factor = -0.15 }
+set_variable = { CUE_army_planning_speed = -0.20 }
+set_variable = { CUE_army_army_morale_factor = -0.10 }
+set_variable = { CUE_army_max_planning_factor = -0.15 }
+set_variable = { CUE_army_command_power_gain_mult = -0.10 }
+set_variable = { CUE_army_army_leader_cost_factor = 0.50 }
+set_variable = { CUE_army_equipment_capture_factor = -0.50 }
+set_variable = { CUE_army_special_forces_cap = -0.25 }
+set_variable = { CUE_army_recon_factor = -0.15 }
+set_variable = { CUE_army_supply_consumption_factor = 0.10}
+set_variable = { CUE_army_winter_attrition_factor = 0.10 }
+set_variable = { CUE_army_heat_attrition_factor = 0.10 }
+
+set_variable = { CUE_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { CUE_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { CUE_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { CUE_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { CUE_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { CUE_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { CUE_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { CUE_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { CUE_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## CUE_navy
+set_variable = { CUE_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { CUE_navy_naval_mastery_gain_factor = -0.30 }
+set_variable = { CUE_navy_naval_detection = -0.20 }
+set_variable = { CUE_navy_navy_max_range_factor = -0.15 }
+set_variable = { CUE_navy_repair_speed_factor = -0.20 }
+set_variable = { CUE_navy_refit_speed = -0.20 }
+set_variable = { CUE_navy_amphibious_invasion = -0.25 }
+set_variable = { CUE_navy_naval_invasion_capacity = -5 }
+set_variable = { CUE_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { CUE_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { CUE_navy_naval_damage_factor = -0.10 }
+set_variable = { CUE_navy_naval_defense_factor = -0.10 }
+set_variable = { CUE_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { CUE_navy_naval_speed_factor = -0.10 }
+
+set_variable = { CUE_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { CUE_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { CUE_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { CUE_navy_build_cost_ic_screen_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { CUE_navy_build_cost_ic_submarine = 0.30 } ### 별도 국민정신 적용
+
+## CUE_air_force
+set_variable = { CUE_air_force_experience_gain_air_factor = -0.50 }
+set_variable = { CUE_air_force_air_mastery_gain_factor = -0.40 }
+set_variable = { CUE_air_force_air_accidents_factor = 0.25 }
+set_variable = { CUE_air_force_air_mission_efficiency = -0.15 }
+set_variable = { CUE_air_force_air_training_xp_gain_factor = -0.30 }
+set_variable = { CUE_air_force_air_range_factor = -0.10 }
+set_variable = { CUE_air_force_air_ace_generation_chance_factor = -0.60 }
+set_variable = { CUE_air_force_air_superiority_efficiency = -0.20 }
+set_variable = { CUE_air_force_air_cas_efficiency = -0.25 }
+set_variable = { CUE_air_force_air_strategic_bomber_bombing_factor = -0.30 }
+set_variable = { CUE_air_force_air_intercept_efficiency = -0.15 }
+set_variable = { CUE_air_force_air_nav_efficiency = -0.20 }
+set_variable = { CUE_air_force_air_detection = -0.20 }
+set_variable = { CUE_air_force_air_agility_factor = -0.10 }
+
+set_variable = { CUE_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { CUE_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { CUE_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { CUE_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { CUE_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { CUE_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { CUE_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { CUE_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { CUE_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
+
+#정치 상황
+set_war_support = 0.1
+set_politics = {
+	ruling_party = authoritariandemocracy
+	last_election = "1932.6.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	conservatism = 1
+	liberalism_mod = 1
+	progressivism = 0
+	socialdemocracy = 1
+	socialism = 0
+	communism = 0
+	authoritariancommunism = 3
+	anarchosyndicalism = 0
+	fascism = 2
+	militarytotalism = 1
+	authoritariandemocracy = 90
+	autocracy = 1
+}
+
+#의회
+
+#캐릭터
+recruit_character = CUE_mutsuishi_haruna
+
+#recruit_character = CUE_rafael_trujillo
+#recruit_character = CUE_jacinto_gonzáles
+#recruit_character = CUE_fernando_bayo
+#recruit_character = CUE_horacio_cabral
+#recruit_character = CUE_domingo_de_los_santos_ortiz
+#recruit_character = CUE_jose_miguel_moncada
+#recruit_character = CUE_humberto_rojas
+#recruit_character = CUE_julio_ortega_frier
+#recruit_character = CUE_frank_feliz_miranda
+#recruit_character = CUE_diego_trabajo_ruiz
+#recruit_character = CUE_honoracio_yuna_robles
+#recruit_character = CUE_gerardo_espaillat
+#recruit_character = CUE_jesus_da_costa_ruiz
+#recruit_character = CUE_edgar_martinez
+#recruit_character = CUE_anibal_vallejo_sosa
+#recruit_character = CUE_manuel_pena_battle
+#recruit_character = CUE_victor_vinas_roman
+#recruit_character = CUE_elias_brache
+#recruit_character = CUE_manuel_de_jesus_troncoso
+#recruit_character = CUE_jacinto_bienvenido_peynado
+
+#장관진
+
+#무기 프리셋

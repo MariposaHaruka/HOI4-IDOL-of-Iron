@@ -1,0 +1,301 @@
+#Ethiopia
+
+music_station = "base_music"
+
+music = {
+	song = "ethiopian_highlands"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_BBA = no
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { tag = MCR }
+		}
+		modifier = {
+			factor = 5
+			NOT = { tag = MCR }
+			any_enemy_country = {
+				tag = MCR
+			}
+		}
+		modifier = {
+			factor = 0.5
+			tag = MCR
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "safer_grounds"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_BBA = no
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { tag = MCR }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tag = MCR }
+			any_enemy_country = {
+				tag = MCR
+			}
+		}
+		modifier = {
+			factor = 0.5
+			tag = MCR
+			has_war = yes
+		}
+	}
+}
+
+music = {
+	song = "threat_from_red_sea"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_BBA = no
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { tag = MCR }
+		}
+		modifier = {
+			factor = 5
+			NOT = { tag = MCR }
+			any_enemy_country = {
+				tag = MCR
+			}
+		}
+		modifier = {
+			factor = 0.5
+			tag = MCR
+			has_war = no
+		}	
+	}
+}
+
+music = {
+	song = "wildlife_surroundings"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_BBA = no
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { tag = MCR }
+		}
+		modifier = {
+			factor = 5
+			NOT = { tag = MCR }
+			any_enemy_country = {
+				tag = MCR
+			}
+		}
+		modifier = {
+			factor = 0.5
+			tag = MCR
+			has_war = no
+		}	
+	}
+}
+
+
+#Italy
+
+music = {
+	song = "cittadina_irresistibile"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_BBA = no
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { tag = ENS }
+		}
+		modifier = {
+			factor = 0.5
+			tag = ENS
+			has_war = yes
+		}
+	}
+}
+
+music = {
+	song = "fino_a_combattere"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_BBA = no
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { tag = ENS }
+		}
+		modifier = {
+			factor = 0.5
+			tag = ENS
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "la_marcia_dei_soldati"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_BBA = no
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { tag = ENS }
+		}
+		modifier = {
+			factor = 0.5
+			tag = ENS
+			has_war = yes
+		}
+	}
+}
+
+music = {
+	song = "lotta_di_vecchi_amici"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_BBA = no
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { tag = ENS }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tag = ENS }
+			any_enemy_country = {
+				tag = ENS
+			}
+		}
+		modifier = {
+			factor = 0.5
+			tag = ENS
+			has_war = yes
+		}
+	}
+}
+
+
+#Switzerland
+
+music = {
+	song = "dem_vaterland"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_BBA = no
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = BOR }
+		}
+		modifier = {
+			factor = 5
+			NOT = { original_tag = BOR }
+			has_war_with = BOR
+		}	
+	}
+}
+
+music = {
+	song = "der_preis_fur_die_freiheit"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_BBA = no
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = BOR }
+		}
+		modifier = {
+			factor = 2
+			NOT = { original_tag = BOR }
+			has_war_with = BOR
+		}	
+	}
+}
+
+music = {
+	song = "die_parade"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_BBA = no
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = BOR }
+		}
+		modifier = {
+			factor = 0.5
+			original_tag = BOR
+			has_war = yes
+		}	
+	}
+}
+
+music = {
+	song = "tag_der_heimkehr"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_BBA = no
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = BOR }
+		}
+		modifier = {
+			factor = 5
+			NOT = { original_tag = BOR }
+			has_war_with = BOR
+		}
+		modifier = {
+			factor = 0.5
+			original_tag = BOR
+			has_war = no
+		}	
+	}
+}

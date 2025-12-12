@@ -1,0 +1,276 @@
+
+music_station = "base_music"
+
+music = {
+	song = "apocalyptic_weapons"
+
+	chance = {
+		base = 1
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_facility_specialization = specialization_nuclear
+				has_facility_specialization = specialization_air
+				has_facility_specialization = specialization_land
+				has_facility_specialization = specialization_naval
+			}
+		}
+		modifier = { #Scary things
+			factor = 2
+			OR = {
+				is_special_project_completed = sp:sp_nuclear_bomb
+				is_special_project_completed = sp:sp_land_land_cruiser
+				is_special_project_completed = sp:sp_naval_ice_carrier
+				is_special_project_completed = sp:sp_rockets_ballistic_missile
+			}
+		}
+	}
+}
+
+music = {
+	song = "austria_peace"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = VCD }
+		}
+		modifier = {
+			factor = 2.5
+			original_tag = VCD
+			has_war = no
+		}
+		modifier = {
+			factor = 10
+			NOT = { original_tag = VCD }
+			is_in_faction_with = VCD
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "austria_war"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = VCD }
+		}
+		modifier = {
+			factor = 5
+			original_tag = VCD
+			has_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_war_with = VCD
+		}
+	}
+}
+
+music = {
+	song = "belgium_peace"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = STR }
+		}
+		modifier = {
+			factor = 10
+			original_tag = HDA
+			has_war = no
+		}
+		modifier = {
+			factor = 2.5
+			original_tag = STR
+			has_war = no
+		}
+		modifier = {
+			factor = 10
+			NOT = {
+				original_tag = HDA
+				original_tag = STR
+			}
+			is_in_faction_with = STR
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "belgium_war"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			original_tag = STR
+		}
+		modifier = {
+			factor = 10
+			original_tag = HDA
+		}
+		modifier = {
+			factor = 2
+			original_tag = HDA
+			has_war = yes
+		}
+		modifier = {
+			factor = 5
+			original_tag = STR
+			has_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_war_with = STR
+		}
+	}
+}
+
+music = {
+	song = "commando_raid"
+
+	chance = {
+		base = 1
+	}
+}
+
+music = {
+	song = "germany_freedom"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = PRS }
+		}
+		modifier = {
+			factor = 2
+			original_tag = PRS
+			OR = {
+				is_democratic = yes
+				is_communism = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			original_tag = PRS
+			OR = {
+				is_democratic = yes
+				is_communism = yes
+			}
+			has_war = yes
+		}
+		modifier = {
+			factor = 10
+			NOT = { original_tag = PRS }
+			is_in_faction_with = PRS
+			PRS = {
+				OR = {
+					is_democratic = yes
+					is_communism = yes
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "germany_war"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = PRS }
+		}
+		modifier = {
+			factor = 5
+			original_tag = PRS
+			has_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_war_with = PRS
+		}
+	}
+}
+
+music = {
+	song = "great_empire_rises_again"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 2
+			is_faction_leader = yes
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				original_tag = PRS
+				original_tag = VCD
+				original_tag = NNN
+				original_tag = STR
+			}
+		}
+	}
+}
+
+music = {
+	song = "hungary_peace"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = NNN }
+		}
+		modifier = {
+			factor = 2.5
+			original_tag = NNN
+			has_war = no
+		}
+		modifier = {
+			factor = 10
+			NOT = { original_tag = NNN }
+			is_in_faction_with = NNN
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "hungary_war"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = NNN }
+		}
+		modifier = {
+			factor = 5
+			original_tag = NNN
+			has_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_war_with = NNN
+		}
+	}
+}

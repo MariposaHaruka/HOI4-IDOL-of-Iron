@@ -1,0 +1,19 @@
+﻿units = {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Armada de Sotokanda"
+		naval_base = 12810 # Veracruz
+		task_force = {				
+			name = "Armada de Sotokanda"
+			location = 12810 # Veracruz
+			ship = { name = "ARS Anahuac" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DOB version_name = "Anahuac Class"} } } # Brazilian pre-WW1 coastal battleship, scrapped in 1938
+			ship = { name = "ARS Nicoles Bravo" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DOB version_name = "Nicolás Bravo Class" } } } # Italian pre-WW1 torpedo gunboat
+			ship = { name = "ARS Durango" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DOB version_name = "Durango Class" } } } 			# Spanish 1935 export gunboat
+			ship = { name = "ARS Guanajuato" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DOB version_name = "Durango Class" } } } 		# Spanish 1934 export gunboat
+			ship = { name = "ARS Queretaro" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DOB version_name = "Durango Class" } } } 			# Spanish 1934 export gunboat
+			ship = { name = "ARS Potosí" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DOB version_name = "Durango Class" } } } 			# Spanish 1934 export gunboat
+		}
+	}
+}
+

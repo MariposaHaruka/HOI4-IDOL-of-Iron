@@ -1,0 +1,49 @@
+﻿
+
+### Air Wings
+air_wings = {
+	# Luchtvaartafdeling -- NONE
+	# Note: All European aircraft were built by Fokker or ordered from ICG starting in 1938
+
+	# Militaire Luchtvaart van het Koninklijk Nederlands-Indisch Leger (ML-KNIL) -- Celebes
+	# Note: ML-KNIL would increase in size during 1937-40 with ICG models:
+	#	Curtis P-36 Hawks (H-75), CW-21 Interceptors, Brewster Buffaloes, Martin B-10s (WH-1--WH-3s)
+	673 = {
+		small_plane_airframe_0 = {		# Curtis P-6
+			owner = "STR" 
+			amount = 12
+			creator = "ICG"
+			version_name = "P-6"
+		}
+		small_plane_cas_airframe_0 = {		
+			owner = "STR" 
+			amount = 12
+			version_name = "Fokker C.X"
+		}
+		medium_plane_airframe_0 = {		
+			owner = "STR" 
+			amount = 24
+			version_name = "Fokker T.IV"
+		}
+	}
+	7 = {
+		small_plane_cas_airframe_0 = {		
+			owner = "STR" 
+			amount = 12
+			version_name = "Fokker C.X"
+		}
+
+	}
+
+	6 = {
+		# 2e Régiment d'Aéronautique 
+		# Consisted of 50 operational Gladiator Is, Hurricanes, CR.42s in 1940
+		# Only had Fairey Fox recon/l bombers that were also used as fighters in 1936, along with trainers
+		small_plane_airframe_0 =  {
+			owner = "STR" 
+			amount = 43
+			creator = "IMA"
+			version_name = "Hawker Fury" #standin for Fairey Fox
+		}
+	}
+}

@@ -1,0 +1,35 @@
+state = {
+	id = 506
+	name = "STATE_506" # Antofagasta
+	manpower = 423605
+	
+	state_category = town
+
+	resources = {
+		tungsten = 42
+		coal = 1 #initial distribution
+	}
+
+	history = {
+		owner = LPR
+		add_core_of = LPR
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			air_base = 1
+			12994 = {
+				naval_base = 1
+			}
+		}
+		
+		victory_points = {
+			12994 10
+		}
+	}
+
+	provinces = {
+		5146 5171 12994 13301 13302 13304
+	}
+
+	local_supplies = 0.0 
+}

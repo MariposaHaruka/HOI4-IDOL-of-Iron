@@ -1,0 +1,195 @@
+﻿units = {
+
+	##### Naval OOB #####
+	fleet = {
+		name = "Royal Million Atlantic Navy"
+		naval_base = 7361 # Halifax
+		task_force = {				
+			name = "Halifax Squadron"			
+			location = 7361 # Halifax
+			ship = { name = "ISMS Warrior" definition = destroyer equipment = { ship_hull_carrier_1 = { amount = 1 owner = IML version_name = "Warrior Class" } } }
+			# Scrap Iron Flotilla
+			ship = { name = "ISMS Saguenay" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IML version_name = "River Class" } } }
+			ship = { name = "ISMS Skeena" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IML version_name = "River Class" } } }
+			# Outdated S class ships
+			ship = { name = "ISMS Champlain" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IML version_name = "S Class" } } }
+			ship = { name = "ISMS Vancouver" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IML version_name = "S Class" } } }
+		}
+		task_force = {				
+			name = "Newfoundland Squadron"			
+			location = 12505 # Halifax
+			ship = { name = "ISMS Oberon" definition = destroyer equipment = { ship_hull_submarine_2 = { amount = 1 owner = IML version_name = "O Class" } } }
+		}	
+	}
+	fleet = {
+		name = "Royal Million Pacific Navy"
+		naval_base = 7259 # Victoria Squadron
+		task_force = {				
+			name = "Victoria Squadron"			
+			location = 7259 # Halifax
+			# Scrap Iron Flotilla
+			ship = { name = "ISMS Saguenay" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IML version_name = "River Class" } } }
+			ship = { name = "ISMS Skeena" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IML version_name = "River Class" } } }
+			# Outdated S class ships
+			ship = { name = "ISMS Champlain" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IML version_name = "S Class" } } }
+			ship = { name = "ISMS Vancouver" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IML version_name = "S Class" } } }
+		}
+	}
+}
+instant_effect = {
+	### Ongoing Ship Production Jan 1 1936 ###
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "IML" 
+			version_name = "O Class"
+		}
+		name = "ISMS Ojibwa"
+		requested_factories = 1
+		progress = 0.95
+		amount = 1		
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "IML" 
+			version_name = "O Class"
+		}
+		name = "ISMS Oberon"
+		requested_factories = 1
+		progress = 0.95
+		amount = 1		
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "IML" 
+			version_name = "O Class"
+		}
+		name = "ISMS Okanagan"
+		requested_factories = 1
+		progress = 0.95
+		amount = 1		
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IML" 
+			version_name = "E/F Class"
+		}
+		name = "ISMS Ettrick"
+		requested_factories = 1
+		progress = 0.90
+		amount = 1
+		#industrial_manufacturer = mio:IML_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IML" 
+			version_name = "E/F Class"
+		}
+		name = "ISMS Forrest"
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		#industrial_manufacturer = mio:IML_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IML" 
+			version_name = "E/F Class"
+		}
+		name = "ISMS Fanning"
+		requested_factories = 1
+		progress = 0.90
+		amount = 1
+		#industrial_manufacturer = mio:IML_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IML" 
+			version_name = "E/F Class"
+		}
+		name = "ISMS Fitch"
+		requested_factories = 1
+		progress = 0.95
+		amount = 1
+		#industrial_manufacturer = mio:IML_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IML" 
+			version_name = "E/F Class"
+		}
+		name = "ISMS Flusser"
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		#industrial_manufacturer = mio:IML_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IML" 
+			version_name = "E/F Class"
+		}
+		name = "ISMS Finisterre"
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		#industrial_manufacturer = mio:IML_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "IML" 
+			version_name = "Ottawa Class"
+		}
+		name = "ISMS Ottawa"
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		#industrial_manufacturer = mio:IML_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "IML" 
+			version_name = "Ontario Class"
+		}
+		name = "ISMS Ontario"
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+		#industrial_manufacturer = mio:IML_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_heavy_1
+			creator = "IML" 
+			version_name = "Canada Class"
+		}
+		name = "ISMS Canada"
+		requested_factories = 1
+		progress = 0.10
+		amount = 1
+		#industrial_manufacturer = mio:IML_harland_wolff_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_carrier_1
+			creator = "IML" 
+			version_name = "Warrior Class"
+		}
+		name = "ISMS Magnificent"
+		requested_factories = 1
+		progress = 0.10
+		amount = 1
+		#industrial_manufacturer = mio:IML_harland_wolff_organization
+	}
+}
+

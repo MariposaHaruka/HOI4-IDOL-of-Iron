@@ -1,0 +1,222 @@
+
+music_station = "base_music"
+
+#### CHI ###
+music = {
+	song = "stillness_over_the_north"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = AZU }
+		}
+		modifier = {
+			factor = 2.5
+			original_tag = AZU
+			has_war = no
+		}
+		modifier = {
+			factor = 10
+			NOT = {
+				original_tag = AZU
+			}
+			is_in_faction_with = AZU
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "where_the_dragon_rises"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = AZU }
+		}
+		modifier = {
+			factor = 5
+			original_tag = AZU
+			has_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_war_with = AZU
+		}
+	}
+}
+
+#### JPN ###
+music = {
+	song = "the_last_whisper_of_sakura"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = LLS }
+		}
+		modifier = {
+			factor = 2.5
+			original_tag = LLS
+			has_war = no
+		}
+		modifier = {
+			factor = 10
+			NOT = {
+				original_tag = LLS
+			}
+			is_in_faction_with = LLS
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "battle_of_okinawa"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = LLS }
+		}
+		modifier = {
+			factor = 5
+			original_tag = LLS
+			has_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_war_with = LLS
+		}
+	}
+}
+
+#### PHI ###
+music = {
+	song = "sanctuary_of_hope_acoustic_version"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = LST }
+		}
+		modifier = {
+			factor = 2.5
+			original_tag = LST
+			has_war = no
+		}
+		modifier = {
+			factor = 2.5
+			original_tag = LST
+			has_war = no
+			date < 1940.1.1
+		}
+		modifier = {
+			factor = 10
+			NOT = {
+				original_tag = LST
+			}
+			is_in_faction_with = LST
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "sanctuary_of_hope"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = LST }
+		}
+		modifier = {
+			factor = 2.5
+			original_tag = LST
+			has_war = no
+		}
+		modifier = {
+			factor = 10
+			NOT = {
+				original_tag = LST
+			}
+			is_in_faction_with = LST
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "warriors_heart_march"
+
+	chance = {
+		base = 1
+
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = LST }
+		}
+		modifier = {
+			factor = 5
+			original_tag = LST
+			has_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_war_with = LST
+		}
+	}
+}
+
+#### PRC ###
+music = {
+	song = "march_of_hope_and_valor"
+
+	chance = {
+		base = 1
+		modifier = {
+			factor = 0.05
+			NOT = { original_tag = KTC }
+		}
+		modifier = {
+			factor = 2.5
+			original_tag = KTC
+		}
+		modifier = {
+			factor = 2.5
+			original_tag = KTC
+			has_war = yes
+		}
+		modifier = {
+			factor = 10
+			has_war_with = KTC
+		}
+	}
+}
+
+#### Generic ###
+music = {
+	song = "the_monsoon_front"
+	chance = {
+		base = 1
+	}
+}
+
+music = {
+	song = "tides_of_world_war"
+	chance = {
+		base = 1
+	}
+}

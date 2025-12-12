@@ -1,0 +1,391 @@
+#수도
+capital = 9 #프라하
+
+#부대
+if = {
+	limit = { has_NSB = yes }
+	set_oob = "PRK_ar_NSB"
+	else = { set_oob = "PRK_ar" }
+}
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "PRK_ai_BBA"
+	else = {
+		set_air_oob = "PRK_ai"
+	}
+}
+starting_train_buffer = 3
+add_command_power = 15
+set_fuel_ratio = 0.3
+
+set_country_flag = no_naval_academy
+
+#시작 기술
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	fuel_silos = 1
+	basic_train = 1
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+			improved_light_tank = 1
+		}
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			early_bombs = 1
+		}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+
+#국민 정신
+add_ideas = direct_election
+add_ideas = single_parliament
+
+add_dynamic_modifier = { modifier = PRK_industry }
+add_dynamic_modifier = { modifier = PRK_army }
+add_dynamic_modifier = { modifier = PRK_air_force }
+
+## PRK_industry
+
+## PRK_army
+
+set_variable = { PRK_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRK_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRK_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRK_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRK_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { PRK_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRK_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRK_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRK_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## PRK_navy
+set_variable = { PRK_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { PRK_navy_naval_mastery_gain_factor = -0.30 }
+set_variable = { PRK_navy_naval_detection = -0.20 }
+set_variable = { PRK_navy_navy_max_range_factor = -0.15 }
+set_variable = { PRK_navy_repair_speed_factor = -0.20 }
+set_variable = { PRK_navy_refit_speed = -0.20 }
+set_variable = { PRK_navy_amphibious_invasion = -0.25 }
+set_variable = { PRK_navy_naval_invasion_capacity = -5 }
+set_variable = { PRK_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { PRK_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { PRK_navy_naval_damage_factor = -0.10 }
+set_variable = { PRK_navy_naval_defense_factor = -0.10 }
+set_variable = { PRK_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { PRK_navy_naval_speed_factor = -0.10 }
+
+set_variable = { PRK_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRK_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRK_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { PRK_navy_build_cost_ic_screen_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRK_navy_build_cost_ic_submarine = 0.30 } ### 별도 국민정신 적용
+
+## PRK_air_force
+
+set_variable = { PRK_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRK_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRK_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRK_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRK_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRK_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRK_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRK_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRK_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
+
+
+#외교
+give_guarantee = UMA
+give_guarantee = AIK
+give_guarantee = PRP
+
+#정치 상황
+set_stability = 0.7
+set_war_support = 0.05
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1935.5.19"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+	conservatism = 48
+	liberalism_mod = 7
+	progressivism = 0
+	socialdemocracy = 2
+	socialism = 2
+	communism = 1
+	authoritariancommunism = 14
+	anarchosyndicalism = 2
+	fascism = 12
+	militarytotalism = 1
+	authoritariandemocracy = 10
+	autocracy = 1
+}
+
+#의회
+
+#캐릭터 
+recruit_character = PRK_pecorine
+#recruit_character = PRK_kokkoro
+#recruit_character = PRK_karyl
+#recruit_character = PRK_sheffy
+#recruit_character = PRK_hiyori
+#recruit_character = PRK_yui
+#recruit_character = PRK_rei
+#recruit_character = PRK_labyrista
+#recruit_character = PRK_shizuru
+#recruit_character = PRK_rino
+#recruit_character = PRK_nozomi
+#recruit_character = PRK_chika
+#recruit_character = PRK_tsumugi
+#recruit_character = PRK_mimi
+#recruit_character = PRK_misogi
+#recruit_character = PRK_kyouka
+#recruit_character = PRK_misato
+#recruit_character = PRK_aoi
+#recruit_character = PRK_hatsune
+#recruit_character = PRK_ilya
+#recruit_character = PRK_yori
+#recruit_character = PRK_akari
+#recruit_character = PRK_shinobu
+#recruit_character = PRK_miyako
+#recruit_character = PRK_jun
+#recruit_character = PRK_christina
+#recruit_character = PRK_tomo
+#recruit_character = PRK_matsuri
+#recruit_character = PRK_saren
+#recruit_character = PRK_suzume
+#recruit_character = PRK_ayane
+#recruit_character = PRK_kurumi
+#recruit_character = PRK_maho
+#recruit_character = PRK_makoto
+#recruit_character = PRK_kaori
+#recruit_character = PRK_kasumi
+#recruit_character = PRK_mahiru
+#recruit_character = PRK_rima
+#recruit_character = PRK_shiori
+#recruit_character = PRK_rin
+#recruit_character = PRK_akino
+#recruit_character = PRK_mifuyu
+#recruit_character = PRK_yukari
+#recruit_character = PRK_tamaki
+#recruit_character = PRK_ruka
+#recruit_character = PRK_mitsuki
+#recruit_character = PRK_eriko
+#recruit_character = PRK_nanaka
+#recruit_character = PRK_anna
+#recruit_character = PRK_io
+#recruit_character = PRK_misaki
+#recruit_character = PRK_suzuna
+#recruit_character = PRK_monika
+#recruit_character = PRK_yuki
+#recruit_character = PRK_ninon
+#recruit_character = PRK_kuuka
+#recruit_character = PRK_ayumi
+#recruit_character = PRK_yuni
+#recruit_character = PRK_chieru
+#recruit_character = PRK_chloe
+#recruit_character = PRK_homare
+#recruit_character = PRK_kaya
+#recruit_character = PRK_inori
+#recruit_character = PRK_creditta
+#recruit_character = PRK_karin
+#recruit_character = PRK_misora
+#recruit_character = PRK_zane
+#recruit_character = PRK_azold
+#recruit_character = PRK_ranpha
+#recruit_character = PRK_kariza
+#recruit_character = PRK_nea
+#recruit_character = PRK_lily
+#recruit_character = PRK_clear
+#recruit_character = PRK_precia
+#recruit_character = PRK_yamato
+#recruit_character = PRK_wakana
+#recruit_character = PRK_fubuki
+#recruit_character = PRK_lyrael
+#recruit_character = PRK_croce
+#recruit_character = PRK_kururu
+#recruit_character = PRK_nephi_nera
+#recruit_character = PRK_anemone
+#recruit_character = PRK_muimi
+#recruit_character = PRK_neneka
+#recruit_character = PRK_ameth
+#recruit_character = PRK_kaiser_insight
+#recruit_character = PRK_eris
+#recruit_character = PRK_nebbia
+#recruit_character = PRK_octo
+#recruit_character = PRK_masaki
+#recruit_character = PRK_rajraj
+#recruit_character = PRK_daigo
+#recruit_character = PRK_yuuki
+
+#recruit_character = PRK_karl_albrecht
+#recruit_character = PRK_edvard_benesh
+#recruit_character = PRK_jaroslav_krejchi
+#recruit_character = PRK_klement_gottwald
+#recruit_character = PRK_vojtyech_luzha
+#recruit_character = PRK_josef_shnejdarek
+#recruit_character = PRK_richard_tesarzhik
+#recruit_character = PRK_sergej_vojcechovsky
+#recruit_character = PRK_frantishek_havlik
+#recruit_character = PRK_rudolf_viest
+#recruit_character = PRK_alois_vicherek
+#recruit_character = PRK_antonin_hasal
+#recruit_character = PRK_jaroslav_fajfr
+#recruit_character = PRK_jan_golian
+#recruit_character = PRK_karel_janousek
+#recruit_character = PRK_josef_frantisek
+#recruit_character = PRK_ludvik_krejci
+#recruit_character = PRK_karel_vaclav_petrik
+#recruit_character = PRK_karel_kuttelwascher
+#recruit_character = PRK_ludvik_svoboda
+#recruit_character = PRK_frantisek_havel
+#recruit_character = PRK_stefan_osusky
+#recruit_character = PRK_ferdinand_catlos
+#recruit_character = PRK_jozef_tiso
+#recruit_character = PRK_vojtech_tuka
+#recruit_character = PRK_konrad_henlein
+#recruit_character = PRK_gustav_husak
+#recruit_character = PRK_albrecht_franz
+
+if = {
+	limit = { has_LaR = yes }
+	create_operative_leader = {
+		name = CZE_paul_thummel
+		GFX = GFX_portrait_CZE_paul_thummel
+		gender = male
+		traits = { operative_double_agent operative_well_groomed }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { PRK PRS VCD }
+	}
+}
+
+#장관진
+
+#무기 프리셋
+if = {
+	limit = { has_NSB = yes }
+	create_equipment_variant = {
+		name = "Tancik vz. 33"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_fixed_superstructure_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "LT vz. 35"
+		type = light_tank_chassis_1
+		parent_version = 1
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+	create_equipment_variant = {
+		name = "TNH"
+		type = light_tank_chassis_2
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 3
+		}
+	}
+}
+
+if = {
+	limit = { has_BBA = yes }
+	create_equipment_variant = {
+		name = "Avia B.534"
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Aero A.101"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = lmg_defense_turret
+		}
+	}
+	create_equipment_variant = {
+		name = "Letov S-16"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = lmg_defense_turret
+		}
+	}
+
+}

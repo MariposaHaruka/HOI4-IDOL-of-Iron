@@ -1,0 +1,138 @@
+
+music_station = "base_music"
+
+music = {
+	song = "a_scandinavian_summer_suite"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_AAT = no
+		}
+	}
+}
+
+music = {
+	song = "attention_swedish_tattoo"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_AAT = no
+		}
+	}
+}
+
+music = {
+	song = "danish_song_of_liberation"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_AAT = no
+		}
+		modifier = {
+			factor = 0.05
+			NOT = {
+				original_tag = SZS
+			}
+		}
+		modifier = {
+			factor = 5
+			tag = SZS
+			has_defensive_war = yes
+		}
+		modifier = {
+			factor = 1.5
+			tag = SZS
+			has_offensive_war = yes
+		}
+	}
+}
+
+music = {
+	song = "heroes_of_rjukan_extended"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_AAT = no
+		}
+	}
+}
+
+music = {
+	song = "north_star_solidarity"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_AAT = no
+		}
+	}
+}
+
+music = {
+	song = "norwegian_resistance"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_AAT = no
+		}
+	}
+}
+
+music = {
+	song = "rising_tension"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_AAT = no
+		}
+		modifier = {
+			factor = 2
+			tag = SZS
+			is_subject = yes
+			is_in_faction = no
+		}
+		modifier = {
+			factor = 1.5
+			tag = SZS
+			is_subject = no
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "swedish_solicitude"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_AAT = no
+		}
+	}
+}
+
+music = {
+	song = "the_winter_war"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_AAT = no
+		}
+	}
+}

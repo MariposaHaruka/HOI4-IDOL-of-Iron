@@ -1,0 +1,204 @@
+#수도
+capital = 3 #베른
+
+#부대
+set_oob = "BOR_ar"
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "BOR_ai_BBA"
+	else = {
+		set_air_oob = "BOR_ai"
+	}
+}
+
+set_country_flag = no_naval_academy
+
+#시작 기술
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	tech_mountaineers = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	fuel_silos = 1
+	basic_train = 1
+}
+if = {
+	limit = { has_BBA = yes }
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		iw_small_airframe = 1
+		early_bombs = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+
+#국민 정신
+add_ideas = {
+	BOR_neutrality
+}
+
+add_dynamic_modifier = { modifier = BOR_industry }
+add_dynamic_modifier = { modifier = BOR_army }
+add_dynamic_modifier = { modifier = BOR_air_force }
+
+## BOR_industry
+
+## BOR_army
+
+set_variable = { BOR_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { BOR_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { BOR_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { BOR_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { BOR_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { BOR_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { BOR_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { BOR_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { BOR_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## BOR_navy
+set_variable = { BOR_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { BOR_navy_naval_mastery_gain_factor = -0.30 }
+set_variable = { BOR_navy_naval_detection = -0.20 }
+set_variable = { BOR_navy_navy_max_range_factor = -0.15 }
+set_variable = { BOR_navy_repair_speed_factor = -0.20 }
+set_variable = { BOR_navy_refit_speed = -0.20 }
+set_variable = { BOR_navy_amphibious_invasion = -0.25 }
+set_variable = { BOR_navy_naval_invasion_capacity = -5 }
+set_variable = { BOR_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { BOR_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { BOR_navy_naval_damage_factor = -0.10 }
+set_variable = { BOR_navy_naval_defense_factor = -0.10 }
+set_variable = { BOR_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { BOR_navy_naval_speed_factor = -0.10 }
+
+set_variable = { BOR_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { BOR_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { BOR_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { BOR_navy_build_cost_ic_screen_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { BOR_navy_build_cost_ic_submarine = 0.30 } ### 별도 국민정신 적용
+
+## BOR_air_force
+
+set_variable = { BOR_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { BOR_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { BOR_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { BOR_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { BOR_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { BOR_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { BOR_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { BOR_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { BOR_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
+
+#외교
+
+#정치 상황
+set_stability = 0.85
+set_war_support = 0.05
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1935.10.27"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	conservatism = 57
+	liberalism_mod = 7
+	progressivism = 0
+	socialdemocracy = 5
+	socialism = 2
+	communism = 2
+	authoritariancommunism = 10
+	anarchosyndicalism = 2
+	fascism = 12
+	militarytotalism = 1
+	authoritariandemocracy = 1 
+	autocracy = 1
+}
+
+#의회
+
+#캐릭터
+recruit_character = BOR_ijichi_seika
+recruit_character = BOR_gotoh_hitori
+recruit_character = BOR_ijichi_nijika
+recruit_character = BOR_yamada_ryo
+recruit_character = BOR_kita_ikuyo
+recruit_character = BOR_pa
+recruit_character = BOR_hiroi_kikuri
+recruit_character = BOR_shimizu_eliza
+recruit_character = BOR_iwashita_shima
+recruit_character = BOR_yoshida_ginjiro
+recruit_character = BOR_fan_i
+recruit_character = BOR_fan_ii
+
+#recruit_character = BOR_max_leo_keller
+#recruit_character = BOR_fritz_platten
+#recruit_character = BOR_henri_guisan
+#recruit_character = BOR_hans_oehler
+#recruit_character = BOR_etienne_primault
+#recruit_character = BOR_hermann_hessel_lorenz
+#recruit_character = BOR_carl_jacob_burckhardt
+#recruit_character = BOR_johannes_baumann
+#recruit_character = BOR_roger_masson
+#recruit_character = BOR_giuseppe_motta
+#recruit_character = BOR_ernst_wetter
+#recruit_character = BOR_albert_meyer
+#recruit_character = BOR_herman_obrecht
+#recruit_character = BOR_karl_kobelt
+#recruit_character = BOR_max_petitpierre
+#recruit_character = BOR_marcel_pilet_golaz
+#recruit_character = BOR_walther_stampfli
+#recruit_character = BOR_walter_stucki
+#recruit_character = BOR_eduard_von_steiger
+#recruit_character = BOR_friedrich_wahlen
+#recruit_character = BOR_rudolf_minger
+#recruit_character = BOR_walter_allgower
+#recruit_character = BOR_august_lindt
+#recruit_character = BOR_carl_stucki
+#recruit_character = BOR_saly_mayer
+#recruit_character = BOR_philip_etter
+#recruit_character = BOR_enrico_celio
+#recruit_character = BOR_robert_eibel
+#recruit_character = BOR_ernst_nobs
+#recruit_character = BOR_robert_grimm
+#recruit_character = BOR_hans_oprecht
+#recruit_character = BOR_max_weber
+#recruit_character = BOR_adolf_brunner
+#recruit_character = BOR_jakob_schaffner
+#recruit_character = BOR_robert_tobler
+#recruit_character = BOR_rolf_henne
+#recruit_character = BOR_franz_riedweg
+#recruit_character = BOR_benno_schaeppi
+#recruit_character = BOR_hans_hausamann
+#recruit_character = BOR_max_waibel
+#recruit_character = BOR_jakob_labhart
+#recruit_character = BOR_jakob_huber
+#recruit_character = BOR_empty_councilor_seat
+#recruit_character = BOR_adolf_furrer
+#recruit_character = BOR_clara_thalmann
+#recruit_character = BOR_christian_gasser
+#recruit_character = BOR_lucien_tronchet
+
+if = {
+	limit = { has_WUW = yes }
+	#recruit_character = BOR_georg_von_trapp
+}
+#장관진
+
+#무기 프리셋

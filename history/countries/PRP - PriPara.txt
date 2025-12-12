@@ -1,0 +1,292 @@
+#수도
+capital = 107 #베오그라드
+
+#부대
+if = {
+	limit = { has_NSB = yes }
+	set_oob = "PRP_ar_NSB"
+	else = { set_oob = "PRP_ar" }
+}
+set_naval_oob = "PRP_na_MtG"
+if = {
+	limit = { has_BBA = yes }
+	set_air_oob = "PRP_ai_BBA"
+	else = {
+		set_air_oob = "PRP_ai"
+	}
+}
+starting_train_buffer = 3
+add_command_power = 10
+set_fuel_ratio = 0.4
+set_grand_doctrine = superior_firepower
+
+#시작 기술
+set_technology = {
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	interwar_antitank = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+}
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	early_ship_hull_cruiser = 1
+	basic_battery = 1
+	basic_torpedo = 1
+	basic_depth_charges = 1
+	coastal_defense_ships = 1
+}
+if = {
+	limit = { has_NSB = yes }
+	set_technology = {
+		gwtank_chassis = 1
+	}
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+if = {
+	limit = { has_BBA = yes }
+	set_technology = {
+		iw_small_airframe = 1
+		basic_small_airframe = 1
+		engines_1 = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+}
+
+#인트로
+set_variable = { country_intro_page_count = 2 }
+
+#수송선
+set_convoys = 10
+
+#국민 정신
+
+add_dynamic_modifier = { modifier = PRP_industry }
+add_dynamic_modifier = { modifier = PRP_army }
+add_dynamic_modifier = { modifier = PRP_navy }
+add_dynamic_modifier = { modifier = PRP_air_force }
+
+## PRP_industry
+
+## PRP_army
+set_variable = { PRP_army_experience_gain_army_factor = -0.30 }
+set_variable = { PRP_army_land_mastery_gain_factor = -0.25 }
+set_variable = { PRP_army_army_org_factor = -0.15 }
+set_variable = { PRP_army_training_time_factor = 0.20 }
+set_variable = { PRP_army_supply_factor = -0.15 }
+set_variable = { PRP_army_planning_speed = -0.20 }
+set_variable = { PRP_army_army_morale_factor = -0.10 }
+set_variable = { PRP_army_max_planning_factor = -0.15 }
+set_variable = { PRP_army_command_power_gain_mult = -0.10 }
+set_variable = { PRP_army_army_leader_cost_factor = 0.50 }
+set_variable = { PRP_army_equipment_capture_factor = -0.50 }
+set_variable = { PRP_army_special_forces_cap = -0.25 }
+set_variable = { PRP_army_recon_factor = -0.15 }
+set_variable = { PRP_army_supply_consumption_factor = 0.10}
+set_variable = { PRP_army_winter_attrition_factor = 0.10 }
+set_variable = { PRP_army_heat_attrition_factor = 0.10 }
+
+set_variable = { PRP_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRP_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRP_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRP_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRP_army_build_cost_ic_infantry = 0.15 } ### 별도 국민정신 적용
+set_variable = { PRP_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRP_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRP_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRP_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+
+## PRP_navy
+set_variable = { PRP_navy_experience_gain_navy_factor = -0.40 }
+set_variable = { PRP_navy_naval_mastery_gain_factor = -0.30 }
+set_variable = { PRP_navy_naval_detection = -0.20 }
+set_variable = { PRP_navy_navy_max_range_factor = -0.15 }
+set_variable = { PRP_navy_repair_speed_factor = -0.20 }
+set_variable = { PRP_navy_refit_speed = -0.20 }
+set_variable = { PRP_navy_amphibious_invasion = -0.25 }
+set_variable = { PRP_navy_naval_invasion_capacity = -5 }
+set_variable = { PRP_navy_convoy_raiding_efficiency_factor = -0.30 }
+set_variable = { PRP_navy_convoy_escort_efficiency = -0.25 }
+set_variable = { PRP_navy_naval_damage_factor = -0.10 }
+set_variable = { PRP_navy_naval_defense_factor = -0.10 }
+set_variable = { PRP_navy_navy_submarine_detection_factor = -0.30 }
+set_variable = { PRP_navy_naval_speed_factor = -0.10 }
+
+set_variable = { PRP_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRP_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRP_navy_build_cost_ic_convoy = 0.15 } ### 별도 국민정신 적용
+set_variable = { PRP_navy_build_cost_ic_screen_ship = 0.30 } ### 별도 국민정신 적용
+set_variable = { PRP_navy_build_cost_ic_submarine = 0.30 } ### 별도 국민정신 적용
+
+## PRP_air_force
+set_variable = { PRP_air_force_experience_gain_air_factor = -0.50 }
+set_variable = { PRP_air_force_air_mastery_gain_factor = -0.40 }
+set_variable = { PRP_air_force_air_accidents_factor = 0.25 }
+set_variable = { PRP_air_force_air_mission_efficiency = -0.15 }
+set_variable = { PRP_air_force_air_training_xp_gain_factor = -0.30 }
+set_variable = { PRP_air_force_air_range_factor = -0.10 }
+set_variable = { PRP_air_force_air_ace_generation_chance_factor = -0.60 }
+set_variable = { PRP_air_force_air_superiority_efficiency = -0.20 }
+set_variable = { PRP_air_force_air_cas_efficiency = -0.25 }
+set_variable = { PRP_air_force_air_strategic_bomber_bombing_factor = -0.30 }
+set_variable = { PRP_air_force_air_intercept_efficiency = -0.15 }
+set_variable = { PRP_air_force_air_nav_efficiency = -0.20 }
+set_variable = { PRP_air_force_air_detection = -0.20 }
+set_variable = { PRP_air_force_air_agility_factor = -0.10 }
+
+set_variable = { PRP_air_force_build_cost_ic_air_transport = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRP_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRP_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRP_air_force_build_cost_ic_interceptor = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRP_air_force_build_cost_ic_tactical_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRP_air_force_build_cost_ic_missile = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRP_air_force_build_cost_ic_naval_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRP_air_force_build_cost_ic_strat_bomber = 0.35 } ### 별도 국민정신 적용
+set_variable = { PRP_air_force_build_cost_ic_suicide = 0.35 } ### 별도 국민정신 적용
+
+#외교
+
+#정치 상황
+set_stability = 0.6
+set_war_support = 0.09
+set_politics = {
+	ruling_party = autocracy
+	last_election = "1935.5.3"
+	election_frequency = 36
+	elections_allowed = yes
+}
+set_popularities = {
+	conservatism = 2
+	liberalism_mod = 1
+	progressivism = 0
+	socialdemocracy = 1
+	socialism = 1
+	communism = 1
+	authoritariancommunism = 6
+	anarchosyndicalism = 1
+	fascism = 8
+	militarytotalism = 1
+	authoritariandemocracy = 10
+	autocracy = 68
+}
+
+#의회
+
+#캐릭터 
+recruit_character = PRP_manaka_laala
+
+#recruit_character = PRP_prince_paul
+#recruit_character = PRP_milan_stojadinovic
+#recruit_character = PRP_milan_grol
+#recruit_character = PRP_josip_broz_tito
+#recruit_character = PRP_vladimir_Cukavac
+#recruit_character = PRP_ivan_gosnjak
+#recruit_character = PRP_danilo_kalafatovic
+#recruit_character = PRP_milutin_nedic
+#recruit_character = PRP_petar_kosic
+#recruit_character = PRP_josef_depre
+#recruit_character = PRP_marijan_polic
+#recruit_character = PRP_borivoje_mirkovic
+#recruit_character = PRP_dusan_simovic
+#recruit_character = PRP_draza_mihailovic
+#recruit_character = PRP_mihajlo_lukic
+#recruit_character = PRP_bogoljub_ilic
+#recruit_character = PRP_petar_vukcevic
+#recruit_character = PRP_ljubomir_maric
+#recruit_character = PRP_arso_jovanovic
+#recruit_character = PRP_slobodan_jovanovic
+#recruit_character = PRP_milovan_djilas
+#recruit_character = PRP_milan_nedic
+#recruit_character = PRP_ivan_ribar
+#recruit_character = PRP_dimitrije_ljotic
+#recruit_character = PRP_ivo_lola_ribar
+#recruit_character = PRP_peter_ii
+#recruit_character = TOH_vasily_flug
+#recruit_character = TOH_boris_shteifon
+
+#장관진
+
+#무기 프리셋
+### Ship Variants ###
+# Submarines #
+create_equipment_variant = {
+	name = "Hrabri Class"				
+	type = ship_hull_submarine_2
+	name_group = PRP_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
+	}
+}
+# Destroyers #
+create_equipment_variant = {
+	name = "Dubrovnik Class"				
+	type = ship_hull_light_2
+	name_group = PRP_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_mine_layer_1
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+}
+# Cruisers #
+create_equipment_variant = {
+	name = "Dalmacija Class"				
+	type = ship_hull_cruiser_coastal_defense_ship
+	name_group = PRP_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = empty
+		fixed_ship_secondaries_slot = empty
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+}
+
+if = {
+	limit = { has_BBA = yes }
+	create_equipment_variant = {
+		name = "Ikarus IK-2" #
+		type = small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_1x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+}

@@ -1,0 +1,645 @@
+units = {
+	##### NAVAL UNITS #####
+	### HOME COMMAND ###
+	fleet = {
+		name = "Home Command"			
+		naval_base = 11064 # Scapa Flow
+		task_force = {
+			name = "Home Fleet"
+			location = 11064 # Scapa Flow
+			ship = { name = "ISS Furious" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = IMA version_name = "Courageous Class" } } 
+			
+			}
+			ship = { name = "ISS Nelson" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Nelson Class" } } }
+			ship = { name = "ISS Rodney" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Nelson Class" } } }
+			ship = { name = "ISS Royal Oak" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Revenge Class"} } }
+			ship = { name = "ISS Royal Sovereign" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Revenge Class"} } }
+			ship = { name = "ISS Ramillies" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Revenge Class"} } }
+			ship = { name = "ISS Hood" pride_of_the_fleet = yes definition = battle_cruiser start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Admiral Class" } } }
+			ship = { name = "ISS Repulse" definition = battle_cruiser start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Renown Class" } } }
+			ship = { name = "ISS Renown" definition = battle_cruiser start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Renown Class" } } }
+			ship = { name = "ISS Norfolk" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "County Class" } } }
+			ship = { name = "ISS Calcutta" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "C-Class"} } }
+			ship = { name = "ISS Emerald" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = IMA version_name = "Emerald Class" } } }
+			ship = { name = "ISS Enterprise" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = IMA version_name = "Emerald Class" } } }
+			ship = { name = "ISS Sabre" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "S Class"} } }
+			ship = { name = "ISS Shikari" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "S Class"} } }
+			### 6th Destroyer Flotilla
+			ship = { name = "ISS Keith" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }
+			# Destroyer Division 11
+			ship = { name = "ISS Venetia" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Vanessa" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Viscount" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Wessex" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			# Destroyer Division 12
+			ship = { name = "ISS Vesper" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Vivacious" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Wakeful" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Windsor" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			### 8th Destroyer Flotilla
+			ship = { name = "ISS Faulknor" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }
+			# Destroyer Division 15
+			ship = { name = "ISS Foxhound" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } } 						# to RCN as Qu'Appelle, 1943	
+			ship = { name = "ISS Fury" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }
+			ship = { name = "ISS Fearless" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }
+			ship = { name = "ISS Forester" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }
+			# Destroyer Division 16
+			ship = { name = "ISS Fame" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }
+			ship = { name = "ISS Firedrake" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }
+			ship = { name = "ISS Foresight" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }
+			ship = { name = "ISS Fortune" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }							# to RCN as Saskatchewan, 1943	
+		}				
+		task_force = {				
+			name = "Reserve Fleet"			
+			location = 9458 # Portsmouth
+			ship = { name = "ISS Queen Elizabeth" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Queen Elizabeth Class" } } }
+			ship = { name = "ISS Valiant" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Queen Elizabeth Class" } } }
+			ship = { name = "ISS Frobisher" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "Hawkins Class" } } }
+			ship = { name = "ISS Hawkins" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "Hawkins Class" } } }
+			ship = { name = "ISS Carlisle" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "C-Class" } } }
+			ship = { name = "ISS Curlew" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "C-Class" } } }
+			ship = { name = "ISS Adventure" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "Adventure Class" } } }
+			# Reserve Destroyer Division
+			ship = { name = "ISS Whitshed" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Wild Swan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Viceroy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Verdun" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Vanity" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+		}
+		task_force = {
+			name = "Channel Force"			
+			location = 9458 # Portsmouth
+			ship = { name = "ISS Courageous" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = IMA version_name = "Courageous Class" } }
+				
+			}
+			ship = { name = "ISS Resolution" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Revenge Class"} } }			
+			ship = { name = "ISS Revenge" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Revenge Class"} } }					
+			ship = { name = "ISS Ceres" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "C-Class" } } }
+			ship = { name = "ISS Caradoc" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "C-Class" } } }
+			ship = { name = "ISS Cairo" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "C-Class" } } }
+			# 5th Destroyer Flotilla
+			ship = { name = "ISS Kempenfelt" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }		# to RCN as Assiniboine, 1939
+			# Destroyer Division 9
+			ship = { name = "ISS Acasta" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			
+			ship = { name = "ISS Antelope" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			
+			ship = { name = "ISS Ardent" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			
+			ship = { name = "ISS Acheron" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			
+			# Destroyer Division 10
+			ship = { name = "ISS Achates" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }				
+			ship = { name = "ISS Anthony" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			
+			ship = { name = "ISS Arrow" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			
+			ship = { name = "ISS Amazon" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }		
+		}
+		task_force = {
+			name = "Humber Force"
+			location = 11297 # Hull
+			### 7th Destroyer Flotilla
+			# Destroyer Division 13
+			ship = { name = "ISS Broke" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Wanderer" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Whitehall" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Witch" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }	
+			# Destroyer Division 14
+			ship = { name = "ISS Verity" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Volunteer" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Witherington" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Wolverine" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }	
+		}				
+		task_force = {
+			name = "Northern Patrol"
+			location = 11064 # Scapa Flow
+			# 7th Cruiser Squadron
+			ship = { name = "ISS Diomede" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "Danae Class" } } }
+			ship = { name = "ISS Dragon" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "Danae Class" } } }
+			# 12th Cruiser Squadron
+			ship = { name = "ISS Effingham" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "Hawkins Class" } } }
+			ship = { name = "ISS Cardiff" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "C-Class" } } }
+			ship = { name = "ISS Delhi" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "Danae Class"} } }
+			ship = { name = "ISS Dunedin" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "Danae Class"} } }
+		}
+		task_force = {
+			name = "Rosyth Escort Force"
+			location = 6300 # Rosyth
+			# Rosyth Destroyer Division
+			ship = { name = "ISS Wallace" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Valorous" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Whitley" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+		}
+		task_force = {
+			name = "Nore Fleet"
+			location = 3501 # Dover
+			ship = { name = "ISS London" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "County Class" } } }
+			ship = { name = "ISS Curacoa" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "C-Class"} } }
+			# Nore Destroyer Division
+			ship = { name = "ISS Campbell" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Vivien" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Worcester" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Woolston" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Wolfhound" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			### 14th Destroyer Flotilla
+			ship = { name = "ISS Codrington" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }
+			# Destroyer Division 27
+			ship = { name = "ISS Basilisk" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }
+			ship = { name = "ISS Beagle" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }	
+			ship = { name = "ISS Boreas" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }
+			ship = { name = "ISS Bulldog" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }	
+			# Destroyer Division 28
+			ship = { name = "ISS Blanche" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }
+			ship = { name = "ISS Boadicea" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }	
+			ship = { name = "ISS Brazen" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }
+			ship = { name = "ISS Brilliant" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }
+		}
+		task_force = {
+			name = "Portsmouth Fleet"
+			location = 9458 # Portsmouth
+			ship = { name = "ISS Suffolk" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "County Class" } } }
+			### 9th Destroyer Flotilla
+			# Destroyer Division 17
+			ship = { name = "ISS Skate" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "S Class"} } }
+			ship = { name = "ISS Saladin" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "S Class"} } }
+			ship = { name = "ISS Scimitar" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "S Class"} } }
+			ship = { name = "ISS Sardonyx" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "S Class"} } }
+			# Destroyer Division 18
+			ship = { name = "ISS Ambuscade" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }
+			ship = { name = "ISS Winchester" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }	
+		}
+		task_force = {
+			name = "Western Approaches Fleet"
+			location = 540 # Plymouth
+			# Western Approaches Destroyer Division
+			ship = { name = "ISS Montrose" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Sturdy" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Valentine" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Vega" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Westminster" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			# 11th Destroyer Flotilla
+			ship = { name = "ISS Mackay" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			# Destroyer Division 21
+			ship = { name = "ISS Vanquisher" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Vanoc" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Walpole" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Winchelsea" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			# Destroyer Division 22
+			ship = { name = "ISS Versatile" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Vimiera" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Whirlwind" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+			ship = { name = "ISS Warwick" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class" } } }
+		}
+		task_force = {
+			name = "North Atlantic Fleet"
+			location = 4135 # Gibraltar
+			ship = { name = "ISS Colombo" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "C-Class" } } }
+			ship = { name = "ISS Capetown" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "C-Class" } } }
+			ship = { name = "ISS Wryneck" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }	
+			# 13th Destroyer Flotilla
+			ship = { name = "ISS Keppel" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			# Destroyer Division 25
+			ship = { name = "ISS Vidette" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Vortigern" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Velox" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Watchman" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			# Destroyer Division 26
+			ship = { name = "ISS Douglas" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Active" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }	
+			ship = { name = "ISS Wishart" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Wrestler" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+		}
+		task_force = {
+			name = "2nd Submarine Flotilla"
+			location = 11064 # Scapa Flow
+			# Submarine Division 21
+			ship = { name = "ISS Oxley" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS Swordfish" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "S Class" } } }
+			ship = { name = "ISS Sturgeon" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "S Class" } } }
+			ship = { name = "ISS Seahorse" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "S Class" } } }
+			ship = { name = "ISS Starfish" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "S Class" } } }
+			# Submarine Division 22
+			ship = { name = "ISS H32" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS L26" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS L27" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+		}
+		task_force = {
+			name = "5th Submarine Flotilla"
+			location = 9458 # Portsmouth
+			# Submarine Division 51
+			ship = { name = "ISS Oberon" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS Thames" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			# Submarine Division 52
+			ship = { name = "ISS L23" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS H28" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS H31" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS H33" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS H34" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS H43" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS H44" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS H49" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS H50" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+		}
+	}
+
+	### MEDITERRANIAN FLEET ###			
+	fleet = {
+		name = "Mediterranean Command"
+		naval_base = 12049 # Suez
+		task_force = {
+			name = "Mediterranean Fleet"
+			location = 12049 # Suez
+			ship = { name = "ISS Glorious" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = IMA version_name = "Courageous Class" } } 
+				
+			}
+			ship = { name = "ISS Warspite" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Queen Elizabeth Class" } } }			
+			ship = { name = "ISS Barham" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Queen Elizabeth Class" } } }			
+			ship = { name = "ISS Malaya" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = IMA version_name = "Queen Elizabeth Class" } } }				
+			ship = { name = "ISS Devonshire" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "County Class" } } }
+			ship = { name = "ISS Shropshire" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "County Class" } } }
+			ship = { name = "ISS Sussex" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "County Class" } } }		
+			ship = { name = "ISS Arethusa" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = IMA version_name = "Leander Class" } } }	
+			ship = { name = "ISS Galatea" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = IMA version_name = "Leander Class" } } }
+			ship = { name = "ISS Coventry" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "C-Class" } } }
+			ship = { name = "ISS Wolsey" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }	
+			ship = { name = "ISS Stronghold" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }		
+			### 1st Destroyer Flotilla
+			ship = { name = "ISS Stuart" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }	
+			# Destroyer Division 1
+			ship = { name = "ISS Comet" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			# to RCN as Restigouche, 1938
+			ship = { name = "ISS Crusader" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			# to RCN as Ottawa, 1938	
+			ship = { name = "ISS Cygnet" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			# to RCN as St Laurent, 1937
+			ship = { name = "ISS Crescent" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			# to RCN as Fraser, 1937
+			# Destroyer Division 2
+			ship = { name = "ISS Walker" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }	
+			ship = { name = "ISS Vimy" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }	
+			ship = { name = "ISS Bruce" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }			
+			### 2nd Destroyer Flotilla
+			# Destroyer Division 3
+			ship = { name = "ISS Malcolm" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }	
+			ship = { name = "ISS Veteran" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }	
+			ship = { name = "ISS Westcott" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }
+			ship = { name = "ISS Wren" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }	
+			### 3rd Destroyer Flotilla
+			ship = { name = "ISS Exmouth" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }	
+			# Destroyer Division 5
+			ship = { name = "ISS Electra" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }	
+			ship = { name = "ISS Eclipse" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }	
+			ship = { name = "ISS Esk" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }	
+			ship = { name = "ISS Express" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }											# to RCN as Gatineau, 1943	
+			# Destroyer Division 6
+			ship = { name = "ISS Encounter" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }	
+			ship = { name = "ISS Escapade" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }	
+			ship = { name = "ISS Escort" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }	
+			ship = { name = "ISS Echo" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = IMA version_name = "E/F/G/H Class"} } }											# to GRE as Navarinon, 1944
+			### 4th Destroyer Flotilla
+			ship = { name = "ISS Duncan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			
+			# Destroyer Division 7
+			ship = { name = "ISS Decoy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			# to RCN as Kootenay, 1943
+			ship = { name = "ISS Defender" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }
+			ship = { name = "ISS Duchess" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }	
+			ship = { name = "ISS Delight" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			
+			# Destroyer Division 8
+			ship = { name = "ISS Dainty" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }	
+			ship = { name = "ISS Daring" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }	
+			ship = { name = "ISS Diamond" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }	
+			ship = { name = "ISS Diana" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "A/B/C/D Class" } } }			# to RCN as Margaree, 1940	
+		}				
+		task_force = {				
+			name = "1st Submarine Flotilla"			
+			location = 12049 # Suez
+			# Submarine Division 11
+			ship = { name = "ISS Sealion" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "S Class" } } }		
+			ship = { name = "ISS Shark" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "S Class" } } }		
+			ship = { name = "ISS Snapper" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "S Class" } } }	
+			ship = { name = "ISS Salmon" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "S Class" } } }		
+			ship = { name = "ISS Porpoise" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "S Class" } } }		
+			# Submarine Division 12
+			ship = { name = "ISS Otway" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }	
+			ship = { name = "ISS Osiris" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }	
+			ship = { name = "ISS Oswald" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }			
+		}				
+	}
+				
+	### NORTH AND SOUTH AMERICAS ###			
+	fleet = {
+		name = "North and South Americas Command"
+		naval_base = 13013 # Ascension
+		task_force = {				
+			name = "America and West Indies Fleet"
+			location = 13010  # Bermuda
+			ship = { name = "ISS Berwick" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "County Class" } } }
+			ship = { name = "ISS York" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "County Class" } } }	
+			ship = { name = "ISS Orion" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = IMA version_name = "Emerald Class" } } }
+		}				
+		task_force = {				
+			name = "South Atlantic Fleet"
+			location = 13013 # Ascension
+			ship = { name = "ISS Neptune" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = IMA version_name = "Emerald Class" } } }	
+			ship = { name = "ISS Dauntless" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "Danae Class"} } }
+			# Destroyer Division 4
+			ship = { name = "ISS Vansittart" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }	
+			ship = { name = "ISS Venomous" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }	
+			ship = { name = "ISS Wivern" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "V/W Class"} } }	
+		}
+		task_force = {				
+			name = "South America Squadron"
+			location = 12960 # Falkland Is.
+			ship = { name = "ISS Exeter" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "County Class" } } }		
+			ship = { name = "ISS Cumberland" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "County Class" } } }
+			ship = { name = "ISS Ajax" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = IMA version_name = "Emerald Class" } } }	
+		}				
+		task_force = {				
+			name = "3rd Submarine Flotilla"			
+			location = 13013 # Ascension
+			# Submarine Division 71
+			ship = { name = "ISS Severn" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }		
+			ship = { name = "ISS Clyde" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }		
+		}
+	}
+
+	### FAR EAST ###			
+	fleet = {
+		name = "Far East Command"
+		naval_base = 12299 # Singapore
+		task_force = {				
+			name = "East Indies Fleet"
+			location = 10201 # Trincomalee, Ceylon
+			ship = { name = "ISS Hermes" definition = carrier equipment = { ship_hull_carrier_conversion_ca = { amount = 1 owner = IMA version_name = "Hermes Class" } } 
+				
+			}
+			ship = { name = "ISS Danae" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "Danae Class" } } }
+			ship = { name = "ISS Durban" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "Danae Class" } } }
+			ship = { name = "ISS Despatch" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "Danae Class" } } }
+		}				
+		task_force = {				
+			name = "China Fleet"
+			location = 10062 # Hong Kong			
+			ship = { name = "ISS Eagle" definition = carrier equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = IMA version_name = "Eagle Class" } } 
+				
+			}
+			ship = { name = "ISS Kent" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "County Class" } } }	
+			ship = { name = "ISS Cornwall" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "County Class" } } }	
+			ship = { name = "ISS Dorsetshire" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "County Class" } }	}
+			ship = { name = "ISS Caledon" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "C-Class" } } }
+			ship = { name = "ISS Calypso" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = IMA version_name = "C-Class" } } }
+			# Singapore & Hong Kong Division
+			ship = { name = "ISS Scout" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "S Class"} } }		
+			ship = { name = "ISS Tenedos" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "S Class"} } }		
+			ship = { name = "ISS Thanet" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "S Class"} } }		
+			ship = { name = "ISS Thracian" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IMA version_name = "S Class"} } }		
+		}				
+		task_force = {				
+			name = "New Zealand Division"
+			location = 13056 # Fongfale	
+			ship = { name = "ISS Achilles" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = IMA version_name = "Leander Class" } } }		# to RNZN 1941
+			ship = { name = "ISS Leander" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = IMA version_name = "Leander Class" } } }		# to RNZN 1941
+		}				
+		task_force = {				
+			name = "4th Submarine Flotilla"			
+			location = 12299 # Singapore
+			# Submarine Division 41
+			ship = { name = "ISS Olympus" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS Parthian" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }	
+			ship = { name = "ISS Proteus" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }	
+			ship = { name = "ISS Regent" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }	
+			ship = { name = "ISS Rover" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }		
+			# Submarine Division 42
+			ship = { name = "ISS Odin" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }	
+			ship = { name = "ISS Orpheus" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS Otus" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }	
+			ship = { name = "ISS Pandora" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }
+			ship = { name = "ISS Perseus" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }		
+			ship = { name = "ISS Phoenix" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }		
+			ship = { name = "ISS Rainbow" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }	
+			ship = { name = "ISS Regulus" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = IMA version_name = "O/P/R Class" } } }	
+		}				
+	}
+}
+instant_effect = {
+	### Ongoing Ship Production Jan 1 1936 ###
+	# CL: Amphion-class variant ("ISS Amphion", Comm. 15-Jun, 1936, "ISS Apollo", Comm. 13-Jan 1936, "ISS Penelope", Comm. 12-Nov 1936)
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "IMA" 
+			version_name = "Leander Class"
+		}
+		name = "ISS Apollo"
+		requested_factories = 1
+		progress = 0.95
+		amount = 1
+		industrial_manufacturer = mio:IMA_cammell_laird_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "IMA" 
+			version_name = "Leander Class"
+		}
+		name = "ISS Amphion"
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+		industrial_manufacturer = mio:IMA_cammell_laird_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "IMA" 
+			version_name = "Leander Class"
+		}
+		name = "ISS Penelope"
+		requested_factories = 1
+		progress = 0.15
+		amount = 1
+		industrial_manufacturer = mio:IMA_cammell_laird_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "IMA" 
+			version_name = "Leander Class"
+		}
+		name = "ISS Aurora"
+		requested_factories = 1
+		progress = 0.15
+		amount = 1
+		industrial_manufacturer = mio:IMA_cammell_laird_organization
+	}
+	#CL: 5x Town Class (Newcastle, Southhampton, Sheffield, Glasgow, Birmingham)
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "IMA" 
+			version_name = "Town Class"
+		}
+		requested_factories = 1
+		progress = 0.5
+		amount = 2
+		industrial_manufacturer = mio:IMA_harland_wolff_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "IMA" 
+			version_name = "Town Class"
+		}
+		requested_factories = 1
+		progress = 0.5
+		amount = 2
+		industrial_manufacturer = mio:IMA_harland_wolff_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "IMA" 
+			version_name = "Town Class"
+		}
+		requested_factories = 1
+		progress = 0.25
+		amount = 1
+		industrial_manufacturer = mio:IMA_harland_wolff_organization
+	}
+	# SS: S-class variant (x2) ("ISS Seawolf" "ISS Narwhal")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_1
+			creator = "IMA" 
+			version_name = "S Class"
+		}
+		name = "ISS Seawolf"
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+		industrial_manufacturer = mio:IMA_john_brown_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_1
+			creator = "IMA" 
+			version_name = "S Class"
+		}
+		name = "ISS Narwhal"
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+		industrial_manufacturer = mio:IMA_john_brown_organization
+	}
+	# DD: G/H class (x9) ("ISS Gallant" "ISS Garland" "ISS Gipsy" "ISS Glowworm" "ISS Grafton" "ISS Grenade" "ISS Grenville" "ISS Greyhound" "ISS Griffin")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IMA" 
+			version_name = "E/F/G/H Class"
+		}
+		name = "ISS Gallant"
+		requested_factories = 1
+		progress = 0.90
+		amount = 1
+		industrial_manufacturer = mio:IMA_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IMA" 
+			version_name = "E/F/G/H Class"
+		}
+		name = "ISS Garland"
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		industrial_manufacturer = mio:IMA_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IMA" 
+			version_name = "E/F/G/H Class"
+		}
+		name = "ISS Gipsy"
+		requested_factories = 1
+		progress = 0.90
+		amount = 1
+		industrial_manufacturer = mio:IMA_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IMA" 
+			version_name = "E/F/G/H Class"
+		}
+		name = "ISS Glowworm"
+		requested_factories = 1
+		progress = 0.95
+		amount = 1
+		industrial_manufacturer = mio:IMA_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IMA" 
+			version_name = "E/F/G/H Class"
+		}
+		name = "ISS Grafton"
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		industrial_manufacturer = mio:IMA_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IMA" 
+			version_name = "E/F/G/H Class"
+		}
+		name = "ISS Grenade"
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		industrial_manufacturer = mio:IMA_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IMA" 
+			version_name = "E/F/G/H Class"
+		}
+		name = "ISS Greyhound"
+		requested_factories = 1
+		progress = 0.95
+		amount = 1
+		industrial_manufacturer = mio:IMA_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IMA" 
+			version_name = "E/F/G/H Class"
+		}
+		name = "ISS Griffin"
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		industrial_manufacturer = mio:IMA_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "IMA" 
+			version_name = "E/F/G/H Class"
+		}
+		name = "ISS Grenville"
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+		industrial_manufacturer = mio:IMA_yarrow_shipbuilders_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_carrier_1
+			creator = "IMA" 
+			version_name = "Ark Royal Class"
+		}
+		name = "ISS Ark Royal"
+		requested_factories = 1
+		progress = 0.10
+		amount = 1
+		industrial_manufacturer = mio:IMA_harland_wolff_organization
+	}
+}

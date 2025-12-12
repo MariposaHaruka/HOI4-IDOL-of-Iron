@@ -1,0 +1,486 @@
+guiTypes = {
+	containerWindowType = {
+		name = "BLA_school_committee_ui_window"
+		orientation = lower_left
+		position = { x = 0 y = 0 }
+		size = { width = 500 height = 1100 }
+		clipping = no
+
+		#BACKGROUND
+		background = {
+			name = "background"
+			quadTextureSprite="GFX_tiled_window_1b_border"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BLA_school_committee_titlebox"
+			orientation = upper_left
+			position = { x = -50 y = 20 }
+			font = "hoi_36header"
+			context_aware_text = BLA_school_committee_title
+			format = center
+			maxWidth = 600
+		}
+
+		#GEH
+		iconType = {
+			name = "gehenna_flag_frame"
+			spriteType = "GFX_flag_border"
+			orientation = upper_left
+			position = { x= 80 y = 120 }
+			scale = 0.7
+			centerPosition = yes
+		}
+		iconType = {
+			name = "GEH_flag"
+			spriteType = "GFX_BLA_GEH_flag"
+			orientation = upper_left
+			position = { x= 80 y = 120 }
+			scale = 0.7
+			context_aware_tooltip = GehennaFlag
+			centerPosition = yes
+		}
+		iconType = {
+			name = "gehenna_leader_frame"
+			spriteType = "GFX_event_leader_frame"
+			orientation = upper_left
+			position = { x= 170 y = 120 }
+			centerPosition = yes
+			scale = 0.4
+		}
+		iconType = {
+			name = "GEH_leader"
+			spriteType = "GFX_BLA_GEH_notparticipated"
+			orientation = upper_left
+			position = { x= 170 y = 120 }
+			context_aware_tooltip = GehennaLeader
+			centerPosition = yes
+			scale = 0.4
+		}
+		instantTextBoxType = {
+			name = "gehenna_text"
+			orientation = upper_left
+			position = { x= 230 y = 105 }
+			font = "hoi_18b"
+			context_aware_text = {
+				localization_key = BLA_school_committee_member_GEH
+				JOIN_GEH = [BLA.BLAGehennaSchoolCommitteeMember]
+			}
+		}
+
+		#TRN
+		iconType = {
+			name = "trinity_flag_frame"
+			spriteType = "GFX_flag_border"
+			orientation = upper_left
+			position = { x= 80 y = 220 }
+			scale = 0.7
+			centerPosition = yes
+		}
+		iconType = {
+			name = "TRN_flag"
+			spriteType = "GFX_BLA_TRN_flag"
+			orientation = upper_left
+			position = { x= 80 y = 220 }
+			scale = 0.7
+			context_aware_tooltip = TrinityFlag
+			centerPosition = yes
+		}
+		iconType = {
+			name = "trinity_leader_frame"
+			spriteType = "GFX_event_leader_frame"
+			orientation = upper_left
+			position = { x= 170 y = 220 }
+			centerPosition = yes
+			scale = 0.4
+		}
+		iconType = {
+			name = "TRN_leader"
+			spriteType = "GFX_BLA_TRN_notparticipated"
+			orientation = upper_left
+			position = { x= 170 y = 220 }
+			context_aware_tooltip = TrinityLeader
+			centerPosition = yes
+			scale = 0.4
+		}
+		instantTextBoxType = {
+			name = "trinity_text"
+			orientation = upper_left
+			position = { x= 230 y = 205 }
+			font = "hoi_18b"
+			context_aware_text = {
+				localization_key = BLA_school_committee_member_TRN
+				JOIN_TRN = [BLA.BLATrinitySchoolCommitteeMember]
+			}
+		}
+		
+		#MIL
+		iconType = {
+			name = "millenium_flag_frame"
+			spriteType = "GFX_flag_border"
+			orientation = upper_left
+			position = { x= 80 y = 320 }
+			scale = 0.7
+			centerPosition = yes
+		}
+		iconType = {
+			name = "MIL_flag"
+			spriteType = "GFX_BLA_MIL_flag"
+			orientation = upper_left
+			position = { x= 80 y = 320 }
+			scale = 0.7
+			context_aware_tooltip = MilleniumFlag
+			centerPosition = yes
+		}
+		iconType = {
+			name = "millenium_leader_frame"
+			spriteType = "GFX_event_leader_frame"
+			orientation = upper_left
+			position = { x= 170 y = 320 }
+			centerPosition = yes
+			scale = 0.4
+		}
+		iconType = {
+			name = "MIL_leader"
+			spriteType = "GFX_BLA_MIL_notparticipated"
+			orientation = upper_left
+			position = { x= 170 y = 320 }
+			context_aware_tooltip = MilleniumLeader
+			centerPosition = yes
+			scale = 0.4
+		}
+		instantTextBoxType = {
+			name = "millenium_text"
+			orientation = upper_left
+			position = { x= 230 y = 305 }
+			font = "hoi_18b"
+			context_aware_text = {
+				localization_key = BLA_school_committee_member_MIL
+				JOIN_MIL = [BLA.BLAMilleniumSchoolCommitteeMember]
+			}
+		}
+		
+		#HYA
+		iconType = {
+			name = "hyakkiyako_flag_frame"
+			spriteType = "GFX_flag_border"
+			orientation = upper_left
+			position = { x= 80 y = 420 }
+			scale = 0.7
+			centerPosition = yes
+		}
+		iconType = {
+			name = "HYA_flag"
+			spriteType = "GFX_BLA_HYA_flag"
+			orientation = upper_left
+			position = { x= 80 y = 420 }
+			scale = 0.7
+			context_aware_tooltip = HyakkiyakoFlag
+			centerPosition = yes
+		}
+		iconType = {
+			name = "hyakkiyako_leader_frame"
+			spriteType = "GFX_event_leader_frame"
+			orientation = upper_left
+			position = { x= 170 y = 420 }
+			centerPosition = yes
+			scale = 0.4
+		}
+		iconType = {
+			name = "HYA_leader"
+			spriteType = "GFX_BLA_HYA_notparticipated"
+			orientation = upper_left
+			position = { x= 170 y = 420 }
+			context_aware_tooltip = HyakkiyakoLeader
+			centerPosition = yes
+			scale = 0.4
+		}
+		instantTextBoxType = {
+			name = "hyakkiyako_text"
+			orientation = upper_left
+			position = { x= 230 y = 405 }
+			font = "hoi_18b"
+			context_aware_text = {
+				localization_key = BLA_school_committee_member_HYA
+				JOIN_HYA = [BLA.BLAHyakkiyakoSchoolCommitteeMember]
+			}
+		}
+		
+		#ABY
+		iconType = {
+			name = "abydos_flag_frame"
+			spriteType = "GFX_flag_border"
+			orientation = upper_left
+			position = { x= 80 y = 520 }
+			scale = 0.7
+			centerPosition = yes
+		}
+		iconType = {
+			name = "ABY_flag"
+			spriteType = "GFX_BLA_ABY_flag"
+			orientation = upper_left
+			position = { x= 80 y = 520 }
+			scale = 0.7
+			context_aware_tooltip = AbydosFlag
+			centerPosition = yes
+		}
+		iconType = {
+			name = "abydos_leader_frame"
+			spriteType = "GFX_event_leader_frame"
+			orientation = upper_left
+			position = { x= 170 y = 520 }
+			centerPosition = yes
+			scale = 0.4
+		}
+		iconType = {
+			name = "ABY_leader"
+			spriteType = "GFX_BLA_ABY_notparticipated"
+			orientation = upper_left
+			position = { x= 170 y = 520 }
+			context_aware_tooltip = AbydosLeader
+			centerPosition = yes
+			scale = 0.4
+		}
+		instantTextBoxType = {
+			name = "abydos_text"
+			orientation = upper_left
+			position = { x= 230 y = 505 }
+			font = "hoi_18b"
+			context_aware_text = {
+				localization_key = BLA_school_committee_member_ABY
+				JOIN_ABY = [BLA.BLAAbydosSchoolCommitteeMember]
+			}
+		}
+		
+		#SHA
+		iconType = {
+			name = "shanhaijing_flag_frame"
+			spriteType = "GFX_flag_border"
+			orientation = upper_left
+			position = { x= 80 y = 620 }
+			scale = 0.7
+			centerPosition = yes
+		}
+		iconType = {
+			name = "SHA_flag"
+			spriteType = "GFX_BLA_SHA_flag"
+			orientation = upper_left
+			position = { x= 80 y = 620 }
+			scale = 0.7
+			context_aware_tooltip = ShanhaijingFlag
+			centerPosition = yes
+		}
+		iconType = {
+			name = "shanhaijing_leader_frame"
+			spriteType = "GFX_event_leader_frame"
+			orientation = upper_left
+			position = { x= 170 y = 620 }
+			centerPosition = yes
+			scale = 0.4
+		}
+		iconType = {
+			name = "SHA_leader"
+			spriteType = "GFX_BLA_SHA_notparticipated"
+			orientation = upper_left
+			position = { x= 170 y = 620 }
+			context_aware_tooltip = ShanhaijingLeader
+			centerPosition = yes
+			scale = 0.4
+		}
+		instantTextBoxType = {
+			name = "shanhaijing_text"
+			orientation = upper_left
+			position = { x= 230 y = 605 }
+			font = "hoi_18b"
+			context_aware_text = {
+				localization_key = BLA_school_committee_member_SHA
+				JOIN_SHA = [BLA.BLAShanhaijingSchoolCommitteeMember]
+			}
+		}
+		
+		#RED
+		iconType = {
+			name = "redwinter_flag_frame"
+			spriteType = "GFX_flag_border"
+			orientation = upper_left
+			position = { x= 80 y = 720 }
+			scale = 0.7
+			centerPosition = yes
+		}
+		iconType = {
+			name = "RED_flag"
+			spriteType = "GFX_BLA_RED_flag"
+			orientation = upper_left
+			position = { x= 80 y = 720 }
+			scale = 0.7
+			context_aware_tooltip = RedwinterFlag
+			centerPosition = yes
+		}
+		iconType = {
+			name = "redwinter_leader_frame"
+			spriteType = "GFX_event_leader_frame"
+			orientation = upper_left
+			position = { x= 170 y = 720 }
+			centerPosition = yes
+			scale = 0.4
+		}
+		iconType = {
+			name = "RED_leader"
+			spriteType = "GFX_BLA_RED_notparticipated"
+			orientation = upper_left
+			position = { x= 170 y = 720 }
+			context_aware_tooltip = RedwinterLeader
+			centerPosition = yes
+			scale = 0.4
+		}
+		instantTextBoxType = {
+			name = "redwinter_text"
+			orientation = upper_left
+			position = { x= 230 y = 705 }
+			font = "hoi_18b"
+			context_aware_text = {
+				localization_key = BLA_school_committee_member_RED
+				JOIN_RED = [BLA.BLARedwinterSchoolCommitteeMember]
+			}
+		}
+		
+		#ARI
+		iconType = {
+			name = "arius_flag_frame"
+			spriteType = "GFX_flag_border"
+			orientation = upper_left
+			position = { x= 80 y = 820 }
+			scale = 0.7
+			centerPosition = yes
+		}
+		iconType = {
+			name = "ARI_flag"
+			spriteType = "GFX_BLA_ARI_flag"
+			orientation = upper_left
+			position = { x= 80 y = 820 }
+			scale = 0.7
+			context_aware_tooltip = AriusFlag
+			centerPosition = yes
+		}
+		iconType = {
+			name = "arius_leader_frame"
+			spriteType = "GFX_event_leader_frame"
+			orientation = upper_left
+			position = { x= 170 y = 820 }
+			centerPosition = yes
+			scale = 0.4
+		}
+		iconType = {
+			name = "ARI_leader"
+			spriteType = "GFX_BLA_ARI_notparticipated"
+			orientation = upper_left
+			position = { x= 170 y = 820 }
+			context_aware_tooltip = AriusLeader
+			centerPosition = yes
+			scale = 0.4
+		}
+		instantTextBoxType = {
+			name = "arius_text"
+			orientation = upper_left
+			position = { x= 230 y = 805 }
+			font = "hoi_18b"
+			context_aware_text = {
+				localization_key = BLA_school_committee_member_ARI
+				JOIN_ARI = [BLA.BLAAriusSchoolCommitteeMember]
+			}
+		}
+		
+		#VAL
+		iconType = {
+			name = "valkyrie_flag_frame"
+			spriteType = "GFX_flag_border"
+			orientation = upper_left
+			position = { x= 80 y = 920 }
+			scale = 0.7
+			centerPosition = yes
+		}
+		iconType = {
+			name = "VAL_flag"
+			spriteType = "GFX_BLA_VAL_flag"
+			orientation = upper_left
+			position = { x= 80 y = 920 }
+			scale = 0.7
+			context_aware_tooltip = ValkyrieFlag
+			centerPosition = yes
+		}
+		iconType = {
+			name = "valkyrie_leader_frame"
+			spriteType = "GFX_event_leader_frame"
+			orientation = upper_left
+			position = { x= 170 y = 920 }
+			centerPosition = yes
+			scale = 0.4
+		}
+		iconType = {
+			name = "VAL_leader"
+			spriteType = "GFX_BLA_VAL_notparticipated"
+			orientation = upper_left
+			position = { x= 170 y = 920 }
+			context_aware_tooltip = ValkyrieLeader
+			centerPosition = yes
+			scale = 0.4
+		}
+		instantTextBoxType = {
+			name = "valkyrie_text"
+			orientation = upper_left
+			position = { x= 230 y = 905 }
+			font = "hoi_18b"
+			context_aware_text = {
+				localization_key = BLA_school_committee_member_VAL
+				JOIN_VAL = [BLA.BLAValkyrieSchoolCommitteeMember]
+			}
+		}
+		
+		#SRT
+		iconType = {
+			name = "srt_flag_frame"
+			spriteType = "GFX_flag_border"
+			orientation = upper_left
+			position = { x= 80 y = 1020 }
+			scale = 0.7
+			centerPosition = yes
+		}
+		iconType = {
+			name = "SRT_flag"
+			spriteType = "GFX_BLA_SRT_flag"
+			orientation = upper_left
+			position = { x= 80 y = 1020 }
+			scale = 0.7
+			context_aware_tooltip = SRTFlag
+			centerPosition = yes
+		}
+		iconType = {
+			name = "srt_leader_frame"
+			spriteType = "GFX_event_leader_frame"
+			orientation = upper_left
+			position = { x= 170 y = 1020 }
+			centerPosition = yes
+			scale = 0.4
+		}
+		iconType = {
+			name = "SRT_leader"
+			spriteType = "GFX_BLA_SRT_notparticipated"
+			orientation = upper_left
+			position = { x= 170 y = 1020 }
+			context_aware_tooltip = SRTLeader
+			centerPosition = yes
+			scale = 0.4
+		}
+		instantTextBoxType = {
+			name = "srt_text"
+			orientation = upper_left
+			position = { x= 230 y = 1005 }
+			font = "hoi_18b"
+			context_aware_text = {
+				localization_key = BLA_school_committee_member_SRT
+				JOIN_SRT = [BLA.BLASRTSchoolCommitteeMember]
+			}
+		}
+	}
+}
