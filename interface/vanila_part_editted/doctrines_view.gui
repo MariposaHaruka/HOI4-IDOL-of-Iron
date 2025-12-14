@@ -83,8 +83,8 @@ guiTypes = {
 						spriteType = "GFX_tech_bonus"
 						frame = 4
 					}
-					
-					instantTextBoxType = {
+
+                    			instantTextBoxType = {
 						name = "bonus_text"
 						position = { x = -2 y = 0 }
 						textureFile = ""
@@ -135,12 +135,12 @@ guiTypes = {
 				size = { width = 100 height = 100 } # Width and Height will be set through code to adapt to the number of tracks and spacing between tracks
 				orientation = center_up
 				
-				gridBoxType = {
+				gridBoxType = { 
 					name = "tracks_grid"
 					slotsize = { width = @doctrine_track_width height = @doctrine_track_height }
 					size = { width = 100%% height = 100%% }
-					max_slots_vertical = 1
 					format = "UPPER_LEFT"
+					# 'max_track_columns' and 'max_track_rows' can be scripted per grand doctrine
 				}
 			}
 
@@ -532,7 +532,13 @@ guiTypes = {
 				}
 			}
 			
-
+			iconType = {
+				name = "lock_icon"
+				spriteType = "GFX_locked"
+				position = { x = -84 y = 97 }
+				orientation = upper_right
+			}
+		
 			containerWindowType = {
 				name = "mastery_text_container"
 				position = { x = 232 y = 96 }
