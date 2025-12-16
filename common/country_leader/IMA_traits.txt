@@ -11,6 +11,15 @@
 @chief_experience_gain_high = 0.40
 
 leader_traits = {
+	#leader
+	IMA_amami_haruka_trait_1 = {
+		random = no
+		political_power_gain = -1.00
+		stability_factor = -0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	#political_advisor
 	construction_economist = { #건설공학자 - IMA 하기와라 유키호
 		sprite = 10

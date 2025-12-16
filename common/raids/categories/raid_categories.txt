@@ -31,11 +31,11 @@ categories = {
 	land_infiltration_raids = {
 	    intel_source = army
 	    faction_influence_score_on_success = 50
-	    visible = {
-	    	has_dlc = "No Compromise, No Surrender"
+	    visible = { # IOI 임시조치
+	    	has_dlc = "No Compromise, No Surrender" 
 		    original_tag = KTC
 	    }
-		available = {
+		available = { # IOI 임시조치
 			has_country_flag = KTC_land_infiltration_raids
 		}
 	}

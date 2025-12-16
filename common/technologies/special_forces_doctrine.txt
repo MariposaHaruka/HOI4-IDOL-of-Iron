@@ -5,6 +5,10 @@ technologies = {
 	special_forces_mountaineers = {
 		doctrine_name = "TITLE_SPECIAL_FORCES"
 		
+		allow_branch = {
+			has_dlc = "Arms Against Tyranny"
+		}
+
 		# EFFECT ########
 		mountaineers_special_forces_contribution_factor = -0.25
 		category_mountaineers = {
@@ -40,8 +44,10 @@ technologies = {
 		research_cost = 2.25
 		
 		allow = {
-			has_tech = tech_mountaineers
-			can_unlock_new_special_forces_tree = yes
+			AND = {
+				has_tech = tech_mountaineers
+				can_unlock_new_special_forces_tree = yes
+			}
 		}
 		
 		on_research_complete = {
@@ -61,10 +67,6 @@ technologies = {
 				
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				NOT = { ai_has_completed_army_doctrine = yes }
-			}
 		}
 		
 		ai_research_weights = {
@@ -430,6 +432,10 @@ technologies = {
 	
 	special_forces_marines = {
 		doctrine_name = "MARINES_DOCTRINE"
+
+		allow_branch = {
+			has_dlc = "Arms Against Tyranny"
+		}
 		
 		xp_research_type = navy
 		xp_unlock_cost = 60
@@ -460,7 +466,7 @@ technologies = {
 		}
 		
 		marines_special_forces_contribution_factor = -0.25
-		naval_invasion_capacity = 5
+		naval_invasion_division_cap = 2
 		category_special_forces = {
 			max_organisation = 5
 			soft_attack = 0.05
@@ -489,12 +495,8 @@ technologies = {
 			factor = 20
 			modifier = {
 				factor = 0
-				tag = ICG # IOI 수정
-				NOT = { has_tech = special_forces_paratroopers }
-			}
-			modifier = {
-				factor = 0
-				NOT = { ai_has_completed_naval_doctrine = yes }
+				tag = ICG
+				NOT = { has_tech = special_forces_marines }
 			}
 		}
 		
@@ -745,7 +747,7 @@ technologies = {
 			leads_to_tech = marines_commandoes_mechanised 
 			research_cost_coeff = 1
 		}
-		
+
 		marine_commando = {
 			breakthrough = 0.15
 		}
@@ -832,7 +834,7 @@ technologies = {
 		xp_unlock_cost = 60
 		
 		force_use_small_tech_layout = yes
-		
+
 		amphibious_mechanized = {
 			 soft_attack = 0.1
 			 breakthrough = 0.1
@@ -842,7 +844,7 @@ technologies = {
 		pioneer_support = {
 			battalion_mult = {
 				category = category_amphibious_tanks
-				armor_value = 0.15
+				armor = 0.15
 				breakthrough = 0.15
 			}
 		}
@@ -875,7 +877,7 @@ technologies = {
 			#artillery = 4.0
 		}
 	}
-	
+
 	marines_expeditionary_support = {
 		
 		xp_research_type = navy
@@ -905,7 +907,8 @@ technologies = {
 		}
 
 		extra_marine_supply_grace = 24
-		naval_invasion_capacity = 10
+		naval_invasion_prep_days = -5
+		naval_invasion_plan_cap = 1
 			
 		doctrine = yes	
 		research_cost = 2.25
@@ -935,6 +938,10 @@ technologies = {
 	
 	special_forces_paratroopers = {
 		doctrine_name = "PARATROOPERS_DOCTRINE"
+
+		allow_branch = {
+			has_dlc = "Arms Against Tyranny"
+		}
 
 		xp_research_type = air
 		xp_unlock_cost = 60
@@ -990,10 +997,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				factor = 0
-				NOT = { ai_has_completed_air_doctrine = yes }
-			}
 		}
 		
 		ai_research_weights = {
@@ -1382,6 +1385,7 @@ technologies = {
 		}
 	}
 	
+
 	### Rangers ###
 
 	special_forces_rangers = {
@@ -1418,9 +1422,7 @@ technologies = {
 		}
 		enable_subunits = {
 			rangers_support
-		}	
-		doctrine = yes	
-		research_cost = 2.25
+		}
 		
 
 		allow = {

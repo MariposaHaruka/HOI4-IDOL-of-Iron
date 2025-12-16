@@ -450,7 +450,7 @@ PRS_man_organization = {
 
 #Alkett
 PRS_alkett_organization = {
-  name = GER_alkett_organization
+	name = GER_alkett_organization
 	include = generic_assault_guns_organization
 	icon = GFX_idea_GER_alkett
 	
@@ -476,7 +476,7 @@ PRS_alkett_organization = {
 	override_trait = {
 		token = generic_mio_medium_assault_gun_rocket_tubes
 
-		mutually_exclusive = { GER_mio_trait_panzerjager }	
+		mutually_exclusive = { PRS_mio_trait_panzerjager }	
 	}
 
 	#override_trait = {
@@ -653,7 +653,7 @@ PRS_daimler_benz_organization = {
 
 		relative_position_id = PRS_mio_trait_versatile_chassis
 		
-		all_parents = { generic_mio_trait_improved_tracks generic_mio_trait_command_upgrades GER_mio_trait_versatile_chassis }
+		all_parents = { generic_mio_trait_improved_tracks generic_mio_trait_command_upgrades PRS_mio_trait_versatile_chassis }
 
 		position = { x=0 y=1 }
 	  }
@@ -694,7 +694,7 @@ PRS_daimler_benz_organization = {
 		position = { x=0 y=2 }
 		relative_position_id = PRS_mio_trait_hotrolled_armor
 		
-		any_parent = { GER_mio_trait_hotrolled_armor }
+		any_parent = { PRS_mio_trait_hotrolled_armor }
 		
 		limit_to_equipment_type = { light_tank_chassis medium_tank_chassis }
 		
@@ -2566,7 +2566,7 @@ PRS_rheinmetall_organization = {
 		position = { x = 0 y = 1 }
 		relative_position_id = PRS_mio_trait_3_7_cm_pak
 
-		any_parent = { GER_mio_trait_3_7_cm_pak }
+		any_parent = { PRS_mio_trait_3_7_cm_pak }
 
 		limit_to_equipment_type = { 
 			anti_tank_equipment
@@ -2844,7 +2844,7 @@ PRS_opel_organization = {
 		position = { x=0 y=1 }
 		relative_position_id = PRS_mio_trait_ford_facilities
 
-		any_parent = { GER_mio_trait_ford_facilities }
+		any_parent = { PRS_mio_trait_ford_facilities }
 
 		visible = {
 			FROM = { original_tag = PRS }
@@ -2868,7 +2868,7 @@ PRS_opel_organization = {
 		position = { x=-1 y=1 }
 		relative_position_id = PRS_mio_trait_ford_facilities
 
-		any_parent = { GER_mio_trait_ford_facilities }
+		any_parent = { PRS_mio_trait_ford_facilities }
 
 		visible = {
 			FROM = { original_tag = PRS }

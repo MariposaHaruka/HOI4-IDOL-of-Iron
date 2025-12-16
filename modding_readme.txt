@@ -6,6 +6,8 @@
 **조건이나 ai 행동 관련해서 본 모드에서 쓰이지 않는 바닐라의 요소를 갖고 오는 파일**이거나 
 **일부 규칙 변경이 반영된 파일**이기 때문에
 판올림시 항상 확인하고 올릴 것
+
+
 - common/abilities
 - common/buildings
 - common/doctrines
@@ -15,15 +17,13 @@
 - common/doctrines/subdoctrines/land
 - common/doctrines/subdoctrines/sea
 - common/doctrines/tracks
-- common/equipment_groups
-- common/focus_inlay_windows
-- common/game_rules
-- common/modifiers
-- common/peace_conference/ai_peace
-- common/peace_conference/categories
-- common/peace_conference/cost_modifiers
+- common/ideas/_mobilization_economy.txt
+- common/ideas/_mobilization_law.txt
+- common/ideas/_tarrif.txt
+- common/ideas/00_air_spirits.txt
+- common/ideas/00_army_spirits.txt
+- common/ideas/00_navy_spirits.txt
 - common/raids
-
 - common/raids/categories
 - common/resistance_compliance_modifiers
 - common/scorers/country
@@ -82,6 +82,8 @@
 - common/decisions
 - common/difficulty_settings
 - common/dynamic_modifiers
+- common/focus_inlay_windows
+- common/game_rules
 - common/idea_tags
 - common/ideas *상기한 내용의 파일 이외의 파일 한정
 - common/ideologies
@@ -90,6 +92,9 @@
 - common/national_focus
 - common/on_actions
 - common/opinion_modifiers
+- common/peace_conference/ai_peace
+- common/peace_conference/categories
+- common/peace_conference/cost_modifiers
 - common/scientist_traits
 - common/scripted_constants
 - common/scripted_diplomatic_actions
@@ -122,6 +127,8 @@
 - 빈 파일
 - 한번 수정하면 더 이상 수정을 안해도 되는 파일
 이상의 경우에 해당되어 판 올림시 수정을 안해도 된다
+- common/equipment_groups *이 녀석의 경우 패치노트에서 확인후 변동사항이 존재시 건드려도 늦지 않다
+- common/modifiers *이 녀석의 경우 패치노트에서 확인후 변동사항이 존재시 건드려도 늦지 않다
 - common/modifier_definitions *이 녀석의 경우 패치노트에서 확인후 변동사항이 존재시 건드려도 늦지 않다
 - common/operations *이 녀석의 경우 패치노트에서 확인후 변동사항이 존재시 건드려도 늦지 않다
 - common/state_category *이 녀석의 경우 패치노트에서 확인후 변동사항이 존재시 건드려도 늦지 않다

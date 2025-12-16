@@ -3863,6 +3863,7 @@ focus_tree = {
 				uses = 1
 				category = cv_tech
 			}
+			set_grand_doctrine = new_base_strike
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.15
 				name = IMA_33101
@@ -4291,7 +4292,7 @@ focus_tree = {
 				tooltip = experience_gain_navy_factor_tt 
 			}
 			add_to_variable = {
-				IMA_navy_naval_mastery_gain_factor = -0.1
+				IMA_navy_naval_mastery_gain_factor = 0.1
 				tooltip = naval_mastery_gain_factor_tt
 			}
 			
@@ -4911,7 +4912,7 @@ focus_tree = {
 				tooltip = build_cost_ic_submarine_tt
 			}
 			add_to_variable = {
-				IMA_navy_naval_mastery_gain_factor = -0.1
+				IMA_navy_naval_mastery_gain_factor = 0.1
 				tooltip = naval_mastery_gain_factor_tt
 			}
 			add_to_variable = {

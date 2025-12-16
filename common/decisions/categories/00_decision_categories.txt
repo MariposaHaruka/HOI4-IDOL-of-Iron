@@ -327,28 +327,3 @@ generic_purchase_old_ships_category = {
 	}
 	visible_when_empty = no
 }
-
-#수송선 개조(aka 선박 연금술)
-generic_refit_civilian_ships_category = {
-	icon = GFX_decision_category_MTG_naval_treaties
-	picture = GFX_decision_cat_picture_generic_shipbuilding
-	
-	allowed = { 
-		has_unique_national_focus = no
-	}
-	visible = {
-		has_country_flag = navy_convoy_decision_flag
-	}
-	priority = {
-		base = 8
-	}
-	visible_when_empty = no
-}
-
-democratic_actions = {
-	icon = generic_political_actions
-	allowed = { is_democratic = yes }
-	priority = {
-		base = 3
-	}
-}

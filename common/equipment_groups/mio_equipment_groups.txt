@@ -181,3 +181,37 @@ mio_cat_eq_only_strategic_bomber = { #Includes only Strategic Bomber (No Maritim
 		mothership_equipment
 	}
 }
+
+
+   ###    ########  ######## #### ##       ##       ######## ########  ##    ## 
+  ## ##   ##     ##    ##     ##  ##       ##       ##       ##     ##  ##  ##  
+ ##   ##  ##     ##    ##     ##  ##       ##       ##       ##     ##   ####   
+##     ## ########     ##     ##  ##       ##       ######   ########     ##    
+######### ##   ##      ##     ##  ##       ##       ##       ##   ##      ##    
+##     ## ##    ##     ##     ##  ##       ##       ##       ##    ##     ##    
+##     ## ##     ##    ##    #### ######## ######## ######## ##     ##    ##
+
+mio_cat_eq_all_artillery = {
+	equipment_type = {
+		artillery_equipment
+		anti_tank_equipment
+		anti_air_equipment
+		rocket_artillery_equipment
+	}
+}
+
+
+##     ## ####  ######   ######  
+###   ###  ##  ##    ## ##    ## 
+#### ####  ##  ##       ##       
+## ### ##  ##   ######  ##       
+##     ##  ##        ## ##       
+##     ##  ##  ##    ## ##    ## 
+##     ## ####  ######   ######
+
+mio_cat_eq_all_infantry_and_support_equipment = {
+	equipment_type = {
+		infantry_equipment
+		support_equipment
+	}
+}
