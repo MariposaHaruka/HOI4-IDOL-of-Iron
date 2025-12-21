@@ -1,10 +1,13 @@
-state={
-	id=1006
-	name="STATE_1006"
+state = {
+	id = 1006
+	name = "STATE_1006"
 	manpower = 949599
 	state_category = rural
-	provinces={
+	provinces = {
 		5082 12831 
+	}
+	resources = {
+		coal = 2 # 0 + rural 2
 	}
 	history={
 		owner = IDC
@@ -20,6 +23,6 @@ state={
 		}
 	}
 	
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
 }

@@ -56,6 +56,24 @@ add_core_category = {
 				}
 			}
 		}
+		allowed = {
+			FROM = {
+				NOT = { has_state_flag = BLA_kivotos_state_flag }
+				NOT = { has_state_flag = BLA_gehenna_state_flag }
+				NOT = { has_state_flag = BLA_abydos_state_flag }
+				NOT = { has_state_flag = BLA_redwinter_state_flag }
+				NOT = { has_state_flag = BLA_wildhunt_state_flag }
+				NOT = { has_state_flag = BLA_trinity_state_flag }
+				NOT = { has_state_flag = BLA_millenium_state_flag }
+				NOT = { has_state_flag = BLA_arius_state_flag }
+				NOT = { has_state_flag = BLA_hyakkiyako_state_flag }
+				NOT = { has_state_flag = BLA_shanhaijing_state_flag }
+				NOT = { has_state_flag = BLA_highland_state_flag }
+				NOT = { has_state_flag = BLA_valkyrie_state_flag }
+				NOT = { has_state_flag = BLA_srt_state_flag }
+				NOT = { has_state_flag = BLA_odyssey_state_flag }
+			}
+		}
 		
 		available = {
 			ROOT = { 

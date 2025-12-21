@@ -4,11 +4,13 @@ state = {
 	manpower = 25900
 	
 	state_category = small_island
+	resources = {
+		coal = 1 # 0 + small_island 1
+	}
 	
 	history = {
-		owner = IMA
-		add_core_of = IMA
-		add_claim_by = SZS
+		owner = SZS
+		add_claim_by = IMA
 		buildings = {
 			infrastructure = 2
 			13003 = {

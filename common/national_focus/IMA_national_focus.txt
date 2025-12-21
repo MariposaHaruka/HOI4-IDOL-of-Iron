@@ -1045,7 +1045,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		available = { IMA_reduce_depression_ongoing = yes }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12012"
 			IMA_reduce_depression = yes
@@ -1290,7 +1289,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_11001 focus = IMA_12001 }
 
-		available = { IMA_reduce_depression_ongoing = yes }
+		available = { }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -3775,8 +3774,8 @@ focus_tree = {
 				tooltip = naval_invasion_prep_speed_tt
 			}
 			add_to_variable = { 
-				IMA_navy_naval_invasion_capacity = 10
-				tooltip = naval_invasion_capacity_tt
+				IMA_navy_naval_invasion_division_cap = 5
+				tooltip = naval_invasion_division_cap_tt
 			}
 			add_to_variable = { 
 				IMA_navy_naval_invasion_penalty = -0.15
@@ -3811,8 +3810,8 @@ focus_tree = {
 			}
 			custom_effect_tooltip = IMA_navy_tt
 			add_to_variable = { 
-				IMA_navy_naval_invasion_capacity = 5
-				tooltip = naval_invasion_capacity_tt
+				IMA_navy_naval_invasion_division_cap = 5
+				tooltip = naval_invasion_division_cap_tt
 			}
 			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = IMA_32017_tt
@@ -5268,6 +5267,17 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40001 }
+		available = {
+			any_country = {
+				limit = {
+					OR = {
+						original_tag = IMA
+						is_in_faction_with = IMA
+					}
+				}
+				owns_state = 326
+			}
+		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
@@ -5291,7 +5301,14 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+				strategic_province_location = {
+					defensible_coastline = 10062
+				}
+				strategic_state_location = {
+					favorable_approach = 10062
+				}
 			}
+			unlock_decision_tooltip = IMA_foreign_defence_plan_fortify_326
 		}
 	}
 
@@ -5306,10 +5323,98 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40001 }
+		available = {
+			any_country = {
+				limit = {
+					OR = {
+						original_tag = IMA
+						is_in_faction_with = IMA
+					}
+				}
+				OR = {
+					owns_state = 331
+					owns_state = 696
+				}
+			}
+		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40003"
+			if = {
+				limit = {
+					any_country = {
+						limit = {
+							OR = {
+								original_tag = IMA
+								is_in_faction_with = IMA
+							}
+						}
+						owns_state = 310
+					}
+				}
+				331 = {
+					add_extra_state_shared_building_slots = 1
+					if = {
+						limit = {
+							331 = {
+								free_building_slots = {
+									building = coastal_bunker
+									size > 2
+									province = 12505
+								}
+							}
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 12505
+							instant_build = yes
+						}
+					}
+					strategic_province_location = {
+						defensible_coastline = 12505
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						limit = {
+							OR = {
+								original_tag = IMA
+								is_in_faction_with = IMA
+							}
+						}
+						owns_state = 696
+					}
+				}
+				696 = {
+					add_extra_state_shared_building_slots = 1
+					if = {
+						limit = {
+							696 = {
+								free_building_slots = {
+									building = coastal_bunker
+									size > 2
+									province = 13010
+								}
+							}
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 13010
+							instant_build = yes
+						}
+					}
+					strategic_province_location = {
+						defensible_coastline = 13010
+					}
+				}
+			}
+			unlock_decision_tooltip = IMA_foreign_defence_plan_fortify_331
+			unlock_decision_tooltip = IMA_foreign_defence_plan_fortify_696
 		}
 	}
 
@@ -5324,11 +5429,28 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40001 }
+		available = {
+			any_country = {
+				limit = {
+					OR = {
+						original_tag = IMA
+						is_in_faction_with = IMA
+					}
+				}
+				owns_state = 116
+				owns_state = 118
+				owns_state = 183
+			}
+		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40004"
 		}
+		#수에즈 운하 446 - 12046 4073
+		#키프로스 183 - 7193 11984 
+		#몰타 116 - 12003
+		#지브롤터 118 - 4135
 	}
 
 	focus = {
@@ -5346,6 +5468,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40005"
+			#몰디브 281 - 4967
+			#실론 422 - 10201
+			#크리스마스섬 711 -13005
+			#코코스 제도 712 - 13002
+			#디에고가르시아 710 - 13019
+			#안다만 제도 733 - 10321/12251 
+			#세이셀 709 - 2188
+			#카타르 765 - 8051
+			#바레인 1014 - 13313
 		}
 	}
 
@@ -5364,6 +5495,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40006"
+			#아이슬란드 - 100
+
+			#셰틀랜드 - 933
+			#페로제도 - 337
+			#그린란드 - 101
 		}
 	}
 
@@ -5381,6 +5517,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40007"
+			#아조르스 - 698
+			#마데이라 - 697
 		}
 	}
 
@@ -5399,6 +5537,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_DEFENCE }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40008"
+			#크레타섬 - 182
 		}
 	}
 	

@@ -4,10 +4,14 @@ state = {
 	manpower = 245642
 	
 	state_category = pastoral
+	resources = {
+		coal = 1 # 0 + pastoral 1
+	}
 
 	history = {
 		owner = HLL
 		add_core_of = HLL
+		#add_claim_by = IDS
 		buildings = {
 			infrastructure = 1
 		}

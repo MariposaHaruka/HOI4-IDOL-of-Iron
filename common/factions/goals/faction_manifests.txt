@@ -26,6 +26,25 @@ faction_manifest_bandainamco_ally = {
 	}
 }
 
+faction_manifest_liga_pacts = {
+	name = faction_manifest_liga_pacts_name
+	description = faction_manifest_liga_pacts_name_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:ioi_all_baltic_states
+		completed_amount_collection = collection:ioi_all_owned_baltic_states
+
+		scale = {
+			army_org_factor = 0.10
+			army_core_attack_factor = 0.10
+			army_core_defence_factor = 0.10
+			army_claim_defence_factor = 0.10
+			army_claim_attack_factor = 0.10
+			army_attack_against_major_factor = 0.10
+		}
+	}
+}
+
 # Defense of Democracy
 faction_manifest_defense_of_democracy = {
 	name = defense_of_democracy_goal_name

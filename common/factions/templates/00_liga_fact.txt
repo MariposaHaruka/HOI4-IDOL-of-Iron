@@ -1,0 +1,23 @@
+faction_template_liga_facts = {
+	name = faction_liga_pacts
+	manifest = faction_manifest_liga_pacts
+	icon = GFX_faction_logo_generic_3
+
+	goals = {
+		
+		# Short Term 
+		# faction_goal_growing_the_faction
+
+		# Medium term goals
+		faction_goal_secure_european_continent
+
+		# Long term goals 
+		faction_goal_defeat_of_communism
+
+	}
+
+	default_rules = {
+		joining_rule_same_continent_only
+		change_leader_rule_industry
+	}
+}

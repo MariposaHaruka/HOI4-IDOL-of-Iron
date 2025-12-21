@@ -8,6 +8,24 @@
 
 ########################
 
+#리가 조약
+ioi_all_baltic_states = {
+	input = constant:state_groups.baltic_peninsula
+	name = ioi_collection_all_baltic_states
+}
+
+ioi_all_owned_baltic_states = {
+	input = collection:ioi_all_baltic_states
+	name = ioi_collection_all_owned_baltic_states
+	operators = {
+		limit = { owner = { is_ally_with = ROOT } }
+	}
+}
+
+
+
+
+
 
 faction_owned_core_states = {
 	input = game:scope

@@ -2373,6 +2373,13 @@ focus_tree = {
 					freedom_level = 0.1
 				}
 			}
+			if = {
+				limit = { has_completed_focus = BLA_51002 }
+				unlock_decision_tooltip = BLA_political_actions_promote_colonial_officials
+				else = {
+					custom_effect_tooltip = BLA_political_actions_promote_colonial_officials_21102_tt
+				}
+			}
 		}
 	}
 	
@@ -5733,7 +5740,7 @@ focus_tree = {
 		prerequisite = { focus = BLA_40001 }
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_40301"
 		}
@@ -6216,7 +6223,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_51002"
-			custom_effect_tooltip = BLA_51002_tt
+			add_political_power = 150
+			add_stability = 0.10
+			unlock_decision_tooltip = BLA_political_actions_promote_indians
+			if = {
+				limit = { has_completed_focus = BLA_21104 }
+				unlock_decision_tooltip = BLA_political_actions_promote_colonial_officials
+				else = {
+					custom_effect_tooltip = BLA_political_actions_promote_colonial_officials_51002_tt
+				}
+			}
 		}
 	}
 
@@ -6369,7 +6385,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_52004"
 			swap_ideas = {
@@ -6392,7 +6408,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_52005"
 			swap_ideas = {
@@ -6522,11 +6538,19 @@ focus_tree = {
 		x = 9
 		y = 11
 
+		allow_branch = { NOT = { has_cosmetic_tag = BLA_SHA } }
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_shanhaijing_participate = yes
-				tooltip = BLA_shanhaijing_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_shanhaijing_participate_tt
+					INTEGRATION = BLA_shanhaijing_integrate_tt
+				}
+				OR = {
+					BLA_shanhaijing_participate = yes
+					BLA_shanhaijing_integrate = yes
+				}
 			}
 		}
 		
@@ -6556,8 +6580,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_shanhaijing_participate = yes
-				tooltip = BLA_shanhaijing_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_shanhaijing_participate_tt
+					INTEGRATION = BLA_shanhaijing_integrate_tt
+				}
+				OR = {
+					BLA_shanhaijing_participate = yes
+					BLA_shanhaijing_integrate = yes
+				}
 			}
 		}
 		
@@ -6565,6 +6596,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_SHA_10001"
+			add_stability = 0.02
+			custom_effect_tooltip = BLA_army_tt
+			add_to_variable = {
+				BLA_army_conscription_factor = 0.03
+				tooltip = conscription_factor_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = BLA_school_focus_tt
+				SCHOOL = SCHOOL_shanhaijing
+				CLUB = SHA_plum_blossom_garden
+			}
 		}
 	}
 
@@ -6580,46 +6623,27 @@ focus_tree = {
 		prerequisite = { focus = BLA_SHA_11001 }
 		mutually_exclusive = { focus = BLA_SHA_11003 }
 
-		ai_will_do = { factor = 50 }		
 		available = {
-			OR = {
-				if = {
-					limit = { has_country_flag = BLA_shanhaijing_not_integrated }
-					if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
-						limit = { has_country_flag = BLA_sunohara_shun_in_progress_1_flag }
-						set_temp_variable = { temp_focus_days = 20 } #For tooltip purposes
-						multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
-						custom_override_tooltip = {
-							tooltip = {
-								localization_key = BLA_school_focus_in_progress_tt
-								CHARACTER = BLA_sunohara_shun 
-								FLAG_DAYS = [?BLA_sunohara_shun_in_progress_1_flag:days]
-							}
-							always = no 
-						}
-					}
-					else = { #NOT BEEN WORKED ON (Just Explain)
-						custom_override_tooltip = {
-							tooltip = {
-								localization_key = BLA_focus_can_only_be_completed_by_SHA_maehwawon_tt
-								CHARACTER = BLA_sunohara_shun
-								FOCUS = BLA_SHA_11001
-							}
-							always = no
-						}
-					}
+			custom_trigger_tooltip = {
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sunohara_shun
+					INTEGRATION = BLA_shanhaijing_integrate_tt
 				}
-				custom_trigger_tooltip = {
-					NOT = { has_country_flag = BLA_shanhaijing_not_integrated }
-					tooltip = BLA_shanhaijing_integrate_tt
-				}
+				BLA_shanhaijing_integrate = yes
 			}
 		}
+		ai_will_do = { factor = 50 }		
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_SHA_11002"
+			custom_effect_tooltip = BLA_army_tt
+			add_to_variable = {
+				BLA_army_land_mastery_gain_factor = 0.03
+				tooltip = land_mastery_gain_factor_tt
+			}
 		}
 	}
 
@@ -6636,10 +6660,14 @@ focus_tree = {
 		mutually_exclusive = { focus = BLA_SHA_11002 }
 
 		ai_will_do = { factor = 50 }
-		available = { 
+		available = {
 			custom_trigger_tooltip = {
-				BLA_shanhaijing_participate = yes
-				tooltip = BLA_shanhaijing_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sunohara_shun
+					INTEGRATION = BLA_shanhaijing_integrate_tt
+				}
+				BLA_shanhaijing_integrate = yes
 			}
 		}
 		
@@ -6647,6 +6675,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_SHA_11003"
+			custom_effect_tooltip = BLA_army_tt
+			add_to_variable = {
+				BLA_army_land_mastery_gain_factor = 0.03
+				tooltip = land_mastery_gain_factor_tt
+			}
 		}
 	}
 
@@ -6663,10 +6696,14 @@ focus_tree = {
 		mutually_exclusive = { focus = BLA_SHA_11005 focus = BLA_SHA_11006 }
 
 		ai_will_do = { factor = 50 }
-		available = { 
+		available = {
 			custom_trigger_tooltip = {
-				BLA_shanhaijing_participate = yes
-				tooltip = BLA_shanhaijing_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kayama_reizyo
+					INTEGRATION = BLA_shanhaijing_integrate_tt
+				}
+				BLA_shanhaijing_integrate = yes
 			}
 		}
 		
@@ -6690,10 +6727,14 @@ focus_tree = {
 		mutually_exclusive = { focus = BLA_SHA_11004 focus = BLA_SHA_11006 }
 
 		ai_will_do = { factor = 50 }
-		available = { 
+		available = {
 			custom_trigger_tooltip = {
-				BLA_shanhaijing_participate = yes
-				tooltip = BLA_shanhaijing_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_konoe_mina
+					INTEGRATION = BLA_shanhaijing_integrate_tt
+				}
+				BLA_shanhaijing_integrate = yes
 			}
 		}
 		
@@ -6717,10 +6758,14 @@ focus_tree = {
 		mutually_exclusive = { focus = BLA_SHA_11004 focus = BLA_SHA_11005 }
 
 		ai_will_do = { factor = 50 }
-		available = { 
+		available = {
 			custom_trigger_tooltip = {
-				BLA_shanhaijing_participate = yes
-				tooltip = BLA_shanhaijing_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_urushibara_kaguya
+					INTEGRATION = BLA_shanhaijing_integrate_tt
+				}
+				BLA_shanhaijing_integrate = yes
 			}
 		}
 		
@@ -6745,8 +6790,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_shanhaijing_participate = yes
-				tooltip = BLA_shanhaijing_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sunohara_kokona
+					INTEGRATION = BLA_shanhaijing_integrate_tt
+				}
+				BLA_shanhaijing_integrate = yes
 			}
 		}
 		
@@ -6770,8 +6819,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_shanhaijing_participate = yes
-				tooltip = BLA_shanhaijing_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_shanhaijing_participate_tt
+					INTEGRATION = BLA_shanhaijing_integrate_tt
+				}
+				OR = {
+					BLA_shanhaijing_participate = yes
+					BLA_shanhaijing_integrate = yes
+				}
 			}
 		}
 		
@@ -6828,7 +6884,7 @@ focus_tree = {
 		}
 		
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_SHA_12003"
 			add_research_slot = 1
@@ -6955,8 +7011,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_shanhaijing_participate = yes
-				tooltip = BLA_shanhaijing_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_shanhaijing_participate_tt
+					INTEGRATION = BLA_shanhaijing_integrate_tt
+				}
+				OR = {
+					BLA_shanhaijing_participate = yes
+					BLA_shanhaijing_integrate = yes
+				}
 			}
 		}
 		
@@ -6981,8 +7044,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_shanhaijing_participate = yes
-				tooltip = BLA_shanhaijing_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_shanhaijing_participate_tt
+					INTEGRATION = BLA_shanhaijing_integrate_tt
+				}
+				OR = {
+					BLA_shanhaijing_participate = yes
+					BLA_shanhaijing_integrate = yes
+				}
 			}
 		}
 		
@@ -7160,11 +7230,19 @@ focus_tree = {
 		y = 0
 		relative_position_id = BLA_SHA_10001
 
+		allow_branch = { NOT = { has_cosmetic_tag = BLA_RED } }
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_redwinter_participate_tt
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				OR = {
+					BLA_redwinter_participate = yes
+					BLA_redwinter_integrate = yes
+				}
 			}
 		}
 		
@@ -7194,13 +7272,20 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_redwinter_participate_tt
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				OR = {
+					BLA_redwinter_participate = yes
+					BLA_redwinter_integrate = yes
+				}
 			}
 		}
 		
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_RED_11001"
 		}
@@ -7310,7 +7395,7 @@ focus_tree = {
 		}
 		
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_RED_11003"
 		}
@@ -7341,7 +7426,7 @@ focus_tree = {
 		}
 		
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_RED_11004"
 		}
@@ -7361,8 +7446,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_redwinter_participate_tt
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				OR = {
+					BLA_redwinter_participate = yes
+					BLA_redwinter_integrate = yes
+				}
 			}
 		}
 		
@@ -7491,8 +7583,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_redwinter_participate_tt
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				OR = {
+					BLA_redwinter_participate = yes
+					BLA_redwinter_integrate = yes
+				}
 			}
 		}
 		
@@ -7647,8 +7746,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_redwinter_participate_tt
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				OR = {
+					BLA_redwinter_participate = yes
+					BLA_redwinter_integrate = yes
+				}
 			}
 		}
 		
@@ -7819,66 +7925,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BLA_SHA_RED_00001 #산해경-붉은겨울 교류회
-		icon = GFX_focus_BLA_SHA_RED_00001
-		cost = 5
-
-		x = 7
-		y = 1
-		relative_position_id = BLA_SHA_10001
-		prerequisite = { focus = BLA_SHA_10001 }
-		prerequisite = { focus = BLA_RED_10001 }
-
-		ai_will_do = { factor = 50 }
-		available = {  
-			custom_trigger_tooltip = {
-				BLA_shanhaijing_participate = yes
-				tooltip = BLA_shanhaijing_participate_tt
-			}
-			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
-			}
-		}
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_SHA_RED_00001"
-		}
-	}
-
-	focus = {
-		id = BLA_GEH_RED_00001 #붉은겨울-게헨나 교류회
-		icon = GFX_focus_BLA_GEH_RED_00001
-		cost = 5
-		text_icon = BLA_RED_style
-
-		x = 0
-		y = 1
-		relative_position_id = BLA_SHA_RED_00001
-		prerequisite = { focus = BLA_SHA_RED_00001 }
-
-		ai_will_do = { factor = 50 }
-		available = {  
-			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
-			}
-			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
-			}
-		}
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_GEH_RED_00001"
-		}
-	}
-
-	focus = {
 		id = BLA_ARI_10001 #아리우스 분교
 		icon = GFX_focus_BLA_ARI_10001
 		cost = 5
@@ -7887,11 +7933,19 @@ focus_tree = {
 		y = 0
 		relative_position_id = BLA_RED_10001
 
+		allow_branch = { NOT = { has_cosmetic_tag = BLA_ARI } }
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_arius_participate = yes
-				tooltip = BLA_arius_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_arius_participate_tt
+					INTEGRATION = BLA_arius_integrate_tt
+				}
+				OR = {
+					BLA_arius_participate = yes
+					BLA_arius_integrate = yes
+				}
 			}
 		}
 		
@@ -7921,8 +7975,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_arius_participate = yes
-				tooltip = BLA_arius_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_arius_participate_tt
+					INTEGRATION = BLA_arius_integrate_tt
+				}
+				OR = {
+					BLA_arius_participate = yes
+					BLA_arius_integrate = yes
+				}
 			}
 		}
 		
@@ -7955,8 +8016,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_arius_participate = yes
-				tooltip = BLA_arius_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_arius_participate_tt
+					INTEGRATION = BLA_arius_integrate_tt
+				}
+				OR = {
+					BLA_arius_participate = yes
+					BLA_arius_integrate = yes
+				}
 			}
 		}
 		
@@ -8209,11 +8277,19 @@ focus_tree = {
 		y = 6
 		relative_position_id = BLA_SHA_10001
 
+		allow_branch = { NOT = { has_cosmetic_tag = BLA_TRN } }
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_trinity_participate_tt
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				OR = {
+					BLA_trinity_participate = yes
+					BLA_trinity_integrate = yes
+				}
 			}
 		}
 		
@@ -8243,8 +8319,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_trinity_participate_tt
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				OR = {
+					BLA_trinity_participate = yes
+					BLA_trinity_integrate = yes
+				}
 			}
 		}
 		
@@ -8351,8 +8434,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_trinity_participate_tt
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				OR = {
+					BLA_trinity_participate = yes
+					BLA_trinity_integrate = yes
+				}
 			}
 		}
 		
@@ -8507,8 +8597,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_trinity_participate_tt
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				OR = {
+					BLA_trinity_participate = yes
+					BLA_trinity_integrate = yes
+				}
 			}
 		}
 		
@@ -8584,8 +8681,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_trinity_participate_tt
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				OR = {
+					BLA_trinity_participate = yes
+					BLA_trinity_integrate = yes
+				}
 			}
 		}
 		
@@ -8661,8 +8765,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_trinity_participate_tt
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				OR = {
+					BLA_trinity_participate = yes
+					BLA_trinity_integrate = yes
+				}
 			}
 		}
 		
@@ -8840,16 +8951,24 @@ focus_tree = {
 		y = 0
 		relative_position_id = BLA_TRN_10001
 
+		allow_branch = { NOT = { has_cosmetic_tag = BLA_MIL } }
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_millenium_participate_tt
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				OR = {
+					BLA_millenium_participate = yes
+					BLA_millenium_integrate = yes
+				}
 			}
 		}
 		
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_MIL_10001"
 			add_political_power = 50
@@ -8936,8 +9055,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_millenium_participate_tt
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				OR = {
+					BLA_millenium_participate = yes
+					BLA_millenium_integrate = yes
+				}
 			}
 		}
 		
@@ -9068,8 +9194,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_millenium_participate_tt
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				OR = {
+					BLA_millenium_participate = yes
+					BLA_millenium_integrate = yes
+				}
 			}
 		}
 		
@@ -9198,13 +9331,20 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_millenium_participate_tt
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				OR = {
+					BLA_millenium_participate = yes
+					BLA_millenium_integrate = yes
+				}
 			}
 		}
 		
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_MIL_13001"
 		}
@@ -9230,7 +9370,7 @@ focus_tree = {
 		}
 		
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_MIL_13002"
 		}
@@ -9256,7 +9396,7 @@ focus_tree = {
 		}
 		
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_MIL_13003"
 		}
@@ -9282,7 +9422,7 @@ focus_tree = {
 		}
 		
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_MIL_13004"
 		}
@@ -9301,8 +9441,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_millenium_participate_tt
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				OR = {
+					BLA_millenium_participate = yes
+					BLA_millenium_integrate = yes
+				}
 			}
 		}
 		
@@ -9576,36 +9723,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_MIL_10010"
 		}
 	}
-	
-	focus = {
-		id = BLA_MIL_EX001 #밀레니엄 엑스포
-		icon = GFX_focus_BLA_MIL_EX001
-		cost = 5
-
-		x = 6
-		y = 1
-		relative_position_id = BLA_TRN_10001
-		prerequisite = { focus = BLA_MIL_10001 }
-		prerequisite = { focus = BLA_TRN_10001 }
-
-		ai_will_do = { factor = 50 }
-		available = { 
-			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
-			}
-			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
-			}
-		}
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_MIL_EX001"
-		}
-	}
 
 	focus = {
 		id = BLA_VAL_10001 #발키리 경찰학원
@@ -9616,11 +9733,19 @@ focus_tree = {
 		y = 0
 		relative_position_id = BLA_MIL_10001
 
+		allow_branch = { NOT = { has_cosmetic_tag = BLA_VAL } }
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_valkyrie_participate = yes
-				tooltip = BLA_valkyrie_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_valkyrie_participate_tt
+					INTEGRATION = BLA_valkyrie_integrate_tt
+				}
+				OR = {
+					BLA_valkyrie_participate = yes
+					BLA_valkyrie_integrate = yes
+				}
 			}
 		}
 		
@@ -9651,8 +9776,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_valkyrie_participate = yes
-				tooltip = BLA_valkyrie_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_valkyrie_participate_tt
+					INTEGRATION = BLA_valkyrie_integrate_tt
+				}
+				OR = {
+					BLA_valkyrie_participate = yes
+					BLA_valkyrie_integrate = yes
+				}
 			}
 		}
 		
@@ -9677,8 +9809,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_valkyrie_participate = yes
-				tooltip = BLA_valkyrie_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_valkyrie_participate_tt
+					INTEGRATION = BLA_valkyrie_integrate_tt
+				}
+				OR = {
+					BLA_valkyrie_participate = yes
+					BLA_valkyrie_integrate = yes
+				}
 			}
 		}
 		
@@ -9778,11 +9917,19 @@ focus_tree = {
 		y = 0
 		relative_position_id = BLA_MIL_10001
 
+		allow_branch = { NOT = { has_cosmetic_tag = BLA_SRT } }
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_srt_participate = yes
-				tooltip = BLA_srt_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_srt_participate_tt
+					INTEGRATION = BLA_srt_integrate_tt
+				}
+				OR = {
+					BLA_srt_participate = yes
+					BLA_srt_integrate = yes
+				}
 			}
 		}
 		
@@ -9813,8 +9960,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_srt_participate = yes
-				tooltip = BLA_srt_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_srt_participate_tt
+					INTEGRATION = BLA_srt_integrate_tt
+				}
+				OR = {
+					BLA_srt_participate = yes
+					BLA_srt_integrate = yes
+				}
 			}
 		}
 		
@@ -9839,8 +9993,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_srt_participate = yes
-				tooltip = BLA_srt_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_srt_participate_tt
+					INTEGRATION = BLA_srt_integrate_tt
+				}
+				OR = {
+					BLA_srt_participate = yes
+					BLA_srt_integrate = yes
+				}
 			}
 		}
 		
@@ -10144,13 +10305,20 @@ focus_tree = {
 		y = 8
 		relative_position_id = BLA_TRN_10001
 
+		allow_branch = { NOT = { has_cosmetic_tag = BLA_HYA } }
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_hyakkiyako_participate_tt
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				OR = {
+					BLA_hyakkiyako_participate = yes
+					BLA_hyakkiyako_integrate = yes
+				}
 			}
-
 		}
 		
 		available_if_capitulated = yes
@@ -10180,10 +10348,16 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_hyakkiyako_participate_tt
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				OR = {
+					BLA_hyakkiyako_participate = yes
+					BLA_hyakkiyako_integrate = yes
+				}
 			}
-
 		}
 		
 		available_if_capitulated = yes
@@ -10207,10 +10381,16 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_hyakkiyako_participate_tt
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				OR = {
+					BLA_hyakkiyako_participate = yes
+					BLA_hyakkiyako_integrate = yes
+				}
 			}
-
 		}
 		
 		available_if_capitulated = yes
@@ -10721,11 +10901,19 @@ focus_tree = {
 		y = 0
 		relative_position_id = BLA_HYA_10001
 
+		allow_branch = { NOT = { has_cosmetic_tag = BLA_GEH } }
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_gehenna_participate_tt
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				OR = {
+					BLA_gehenna_participate = yes
+					BLA_gehenna_integrate = yes
+				}
 			}
 		}
 		
@@ -10756,8 +10944,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_gehenna_participate_tt
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				OR = {
+					BLA_gehenna_participate = yes
+					BLA_gehenna_integrate = yes
+				}
 			}
 		}
 		
@@ -10993,8 +11188,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_gehenna_participate_tt
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				OR = {
+					BLA_gehenna_participate = yes
+					BLA_gehenna_integrate = yes
+				}
 			}
 		}
 		
@@ -11810,36 +12012,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BLA_HYA_GEH_00001 #신목회담
-		icon = GFX_focus_BLA_HYA_GEH_00001
-		cost = 5
-
-		x = -9
-		y = 1
-		relative_position_id = BLA_GEH_10001
-		prerequisite = { focus = BLA_HYA_10001 }
-		prerequisite = { focus = BLA_GEH_10001 }
-
-		ai_will_do = { factor = 50 }
-		available = {  
-			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
-			}
-			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
-			}
-		}
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_HYA_GEH_00001"
-		}
-	}
-
-	focus = {
 		id = BLA_ABY_10001 #아비도스 고등학교
 		icon = GFX_focus_BLA_ABY_10001
 		cost = 5
@@ -11848,11 +12020,19 @@ focus_tree = {
 		y = 0
 		relative_position_id = BLA_GEH_10001
 
+		allow_branch = { NOT = { has_cosmetic_tag = BLA_ABY } }
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_abydos_participate_tt
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				OR = {
+					BLA_abydos_participate = yes
+					BLA_abydos_integrate = yes
+				}
 			}
 		}
 		
@@ -11882,8 +12062,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_abydos_participate_tt
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				OR = {
+					BLA_abydos_participate = yes
+					BLA_abydos_integrate = yes
+				}
 			}
 		}
 		
@@ -11918,6 +12105,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_ABY_11002"
+			custom_effect_tooltip = BLA_abydos_debt_solving_200_tt
+			hidden_effect = {
+				set_country_flag = {
+					flag = BLA_abydos_debt_solving
+					days = 200
+				}
+			}
 		}
 	}
 
@@ -11945,6 +12139,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_ABY_11003"
+			custom_effect_tooltip = BLA_abydos_debt_solving_365_tt
+			hidden_effect = {
+				set_country_flag = {
+					flag = BLA_abydos_debt_solving
+					days = 365
+				}
+			}
 		}
 	}
 
@@ -12105,7 +12306,7 @@ focus_tree = {
 		}
 		
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_ABY_11007"
 			BLA_scientific_improve = yes
@@ -12134,8 +12335,23 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_abydos_participate_tt
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				OR = {
+					BLA_abydos_participate = yes
+					BLA_abydos_integrate = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = BLA_abydos_debt_solved_tt
+				OR = {
+					has_completed_focus = BLA_ABY_11002
+					has_completed_focus = BLA_ABY_11003
+				}
+				NOT = { has_country_flag = BLA_abydos_debt_solving }
 			}
 		}
 		
@@ -12160,8 +12376,23 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_abydos_participate_tt
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				OR = {
+					BLA_abydos_participate = yes
+					BLA_abydos_integrate = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = BLA_abydos_debt_solved_tt
+				OR = {
+					has_completed_focus = BLA_ABY_11002
+					has_completed_focus = BLA_ABY_11003
+				}
+				NOT = { has_country_flag = BLA_abydos_debt_solving }
 			}
 		}
 		

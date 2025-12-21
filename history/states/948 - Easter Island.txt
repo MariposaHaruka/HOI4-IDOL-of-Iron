@@ -3,12 +3,14 @@ state = {
 	name = "STATE_948"
 	manpower = 6600
 	state_category = small_island
+	resources = {
+		coal = 1 # 0 + small_island 1
+	}
 	
 	history = {
 
 		owner = LPR
 		add_core_of = LPR
-		add_core_of = RAP
 
 		buildings = {
 			infrastructure = 1

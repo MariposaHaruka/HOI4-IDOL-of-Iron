@@ -83,3 +83,11 @@ BLA_famine_problem_category = { #기근 문제 해결
 	}
 }
 
+BLA_fate_of_kivotos_category = { # IOI 임시조치 - 해당 그룹은 코스메틱 태그용 그룹
+	icon = generic_political_actions
+	priority = 94
+	allowed = { original_tag = BLA }
+	visible = { always = no }
+	visible_when_empty = no
+}
+

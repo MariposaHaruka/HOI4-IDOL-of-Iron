@@ -9,7 +9,7 @@ BLA_is_student_government = {
 	}
 }
 
-#학교연락위원회 - 참여 관련
+#학교 참여 트리거
 BLA_shanhaijing_participate = {
 	custom_trigger_tooltip = {
 		tooltip = BLA_shanhaijing_participate_tt
@@ -125,6 +125,124 @@ BLA_wildhunt_participate = {
 		has_country_flag = BLA_wildhunt_not_integrated
 		WIL = { exists = no }
 		BLA_is_student_government = yes
+	}
+}
+
+#학교 통합 트리거
+BLA_shanhaijing_integrate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_shanhaijing_integrate_tt
+		NOT = { has_country_flag = BLA_shanhaijing_not_integrated }
+		SHA = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+BLA_redwinter_integrate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_redwinter_integrate_tt
+		NOT = { has_country_flag = BLA_redwinter_not_integrated }
+		RED = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+BLA_gehenna_integrate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_gehenna_integrate_tt
+		NOT = { has_country_flag = BLA_gehenna_not_integrated }
+		GEH = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+BLA_hyakkiyako_integrate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_hyakkiyako_integrate_tt
+		NOT = { has_country_flag = BLA_hyakkiyako_not_integrated }
+		HYA = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+BLA_millenium_integrate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_millenium_integrate_tt
+		NOT = { has_country_flag = BLA_millenium_not_integrated }
+		MIL = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+BLA_trinity_integrate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_trinity_integrate_tt
+		NOT = { has_country_flag = BLA_trinity_not_integrated }
+		TRN = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+BLA_abydos_integrate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_abydos_integrate_tt
+		NOT = { has_country_flag = BLA_abydos_not_integrated }
+		ABY = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+BLA_arius_integrate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_arius_integrate_tt
+		NOT = { has_country_flag = BLA_arius_not_integrated }
+		ARI = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+BLA_valkyrie_integrate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_valkyrie_integrate_tt
+		NOT = { has_country_flag = BLA_valkyrie_not_integrated }
+		VAL = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+BLA_srt_integrate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_redwinter_integrate_tt
+		NOT = { has_country_flag = BLA_srt_not_integrated }
+		SRT = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+BLA_highlander_integrate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_highlander_integrate_tt
+		NOT = { has_country_flag = BLA_highlander_not_integrated }
+		HIG = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+BLA_wildhunt_integrate = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_wildhunt_integrate_tt
+		has_completed_focus = BLA_31233
+		NOT = { has_country_flag = BLA_wildhunt_not_integrated }
+		WIL = { exists = no }
+		BLA_is_student_government = yes
+	}
+}
+
+#학교 통치 트리거 - 이건 코스메틱 태그로 판단
+BLA_not_ruled_by_school = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_not_ruled_by_school_tt
+		NOT = { has_cosmetic_tag = BLA_ABY }
+		NOT = { has_cosmetic_tag = BLA_ARI }
+		NOT = { has_cosmetic_tag = BLA_GEH }
+		NOT = { has_cosmetic_tag = BLA_HIG }
+		NOT = { has_cosmetic_tag = BLA_HYA }
+		NOT = { has_cosmetic_tag = BLA_MIL }
+		NOT = { has_cosmetic_tag = BLA_RED }
+		NOT = { has_cosmetic_tag = BLA_SHA }
+		NOT = { has_cosmetic_tag = BLA_SRT }
+		NOT = { has_cosmetic_tag = BLA_TRN }
+		NOT = { has_cosmetic_tag = BLA_VAL }
+		NOT = { has_cosmetic_tag = BLA_WIL }
 	}
 }
 
