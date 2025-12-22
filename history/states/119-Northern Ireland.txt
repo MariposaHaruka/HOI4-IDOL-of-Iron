@@ -2,7 +2,8 @@ state = {
 	id = 119
 	name = "STATE_119"
 	resources = {
-		coal = 2
+		coal = 8 # 2 + city 6
+		aluminium = 2
 	}
 	history = {
 		owner = IMA		
@@ -30,11 +31,7 @@ state = {
 	}
 	manpower = 1198537
 	buildings_max_level_factor = 1
-	state_category = "city"
-	
-	resources = {
-		aluminium = 2
-	}
+	state_category = city
 
 	local_supplies = 0.0 
 }
