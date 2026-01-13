@@ -78,7 +78,7 @@ BLA_famine_problem_category = { #기근 문제 해결
 	visible_when_empty = yes
 	on_map_area = {
 		state = 436
-		name = BLA_famine_problem_category_name
+		name = BLA_famine_problem_category
 		zoom = 250
 	}
 }
@@ -91,3 +91,15 @@ BLA_fate_of_kivotos_category = { # IOI 임시조치 - 해당 그룹은 코스메
 	visible_when_empty = no
 }
 
+BLA_highlander_railways_category = {
+	icon = generic_industry
+	priority = 101
+	allowed = { original_tag = BLA }
+	visible = { 
+		OR = {
+			BLA_highlander_integrate = yes
+			BLA_highlander_participate = yes
+		}
+	}
+	visible_when_empty = no
+}

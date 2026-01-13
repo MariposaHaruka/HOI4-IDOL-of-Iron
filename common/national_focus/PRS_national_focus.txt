@@ -9770,6 +9770,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = PRS_31001
 		cost = 5
+		allow_branch = { has_country_flag = on_construction_flag } # IOI 임시조치
 		available = { 
 			always = no #다음 업뎃때 중점 추가함
 			date < 1936.03.01

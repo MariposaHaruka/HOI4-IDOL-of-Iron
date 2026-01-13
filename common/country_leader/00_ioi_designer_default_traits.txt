@@ -508,6 +508,20 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	
+	# 상선단 제조사
+	merchant_marine_manufacturer = {
+		random = no
+		equipment_bonus = {
+			convoy = {
+				reliability = 0.1 build_cost_ic = -0.25
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 	### 장비 설계사
 
@@ -634,7 +648,7 @@ leader_traits = {
 		ai_will_do = {
 			factor = 1
 		}
-	}
+	} 
 	
 	# 삼림 기업
 	forestry_company = {
@@ -670,4 +684,11 @@ leader_traits = {
 			factor = 1
 		}
 	}
+
+	# 은행
+	# 통신 회사
+	# 항공사
+	# 운수 회사
+
+	### 추가시 알아서 넣을 것
 }

@@ -19,6 +19,7 @@
 	support = {
 		engineer = { x = 0 y = 0 }
 		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
 	}
 }
 division_template = {
@@ -34,8 +35,10 @@ division_template = {
 		light_armor = { x= 2 y = 0 }
 		light_armor = { x= 2 y = 1 }
 	}
-	support = {
-		engineer = { x = 0 y = 0 }
+	support = { # 1 engineering battalion
+		light_tank_recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 } 
+		artillery = { x = 0 y = 2 }
 	}
 }
 division_template = {
@@ -75,7 +78,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Rikusentai"				#This template covers SNLF divisions; historically there were roughly 5 total, with 1 being paratroopers
+	name = "Rikusentai"		#This template covers SNLF divisions; historically there were roughly 5 total, with 1 being paratroopers
 	division_names_group = LLS_MAR_01
 	regiments = {
 		marine = { x = 0 y = 0 }
@@ -92,8 +95,9 @@ division_template = {
 }
 division_template = {
 	name = "Chuton-chi Shidan" 			# Garrison template - represents Imperial Manchukuo Army infantry divisions: 2 infantry regiments (3k men) -- militia (lowest equipment, experience)
-	division_names_group = LLS_GAR_01
-										# Also represents (over-sized) IJN Base Defense Unit (island, city and naval base garrisons): 2 infantry rgts (3k men), 1 field artillery rgt (abstracted), 1 engineering rgt
+	division_names_group = LLS_GAR_01 # Also represents (over-sized) IJN Base Defense Unit (island, city and naval base garrisons): 2 infantry rgts (3k men), 1 field artillery rgt (abstracted), 1 engineering rgt
+	template_counter = 109
+	role = garrison 
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -103,6 +107,19 @@ division_template = {
 		infantry = { x = 1 y = 2 }
 	}
 	priority = 0
+}
+division_template = {
+	name = "Ginrinbutai"		#This template covers the Bicycle Detachments nicknamed the Silver Wheel Units 
+	division_names_group = LLS_INF_01
+	regiments = {
+		bicycle_battalion = { x = 0 y = 0 }
+		bicycle_battalion = { x = 0 y = 1 }
+		bicycle_battalion = { x = 1 y = 0 }
+		bicycle_battalion = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}	
 }
 
 
@@ -658,7 +675,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_1
-			creator = "LLS"
+			creator = LLS 
 		}
 		requested_factories = 3
 		progress = 0.1
@@ -669,21 +686,43 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = support_equipment_1
-			creator = "LLS" 
+			creator = LLS
 		}
 		requested_factories = 1
 		progress = 0.3
 		efficiency = 50
+		#industrial_manufacturer = mio:LLS_nagoya_arsenal_organization
 	}
 
 	add_equipment_production = {
 		equipment = {
 			type = artillery_equipment_1
-			creator = "LLS" 
+			creator = LLS
 		}
 		requested_factories = 1
 		progress = 0.4
 		efficiency = 50
 		#industrial_manufacturer = mio:LLS_osaka_army_arsenal_artillery_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = LLS
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+		#industrial_manufacturer = mio:LLS_nissan_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = train_equipment_1
+			creator = LLS
+		}
+		requested_factories = 1
+		progress = 0.6
+		efficiency = 50
 	}
 }

@@ -128,7 +128,7 @@ add_dynamic_modifier = { modifier = BLA_bad_administrative }
 ## BLA_industry
 
 ## BLA_army
-set_variable = { BLA_army_land_mastery_gain_factor = 0.20 }
+set_variable = { BLA_army_land_mastery_gain_factor = -0.20 }
 
 set_variable = { BLA_army_build_cost_ic_armor = 0.10 } ### 별도 국민정신 적용
 
@@ -156,7 +156,7 @@ set_variable = { BLA_navy_build_cost_ic_submarine = 0.15 } ### 별도 국민정�
 
 ## BLA_air_force
 set_variable = { BLA_air_force_experience_gain_air_factor = -0.50 }
-set_variable = { BLA_air_force_air_mastery_gain_factor = 0.30 }
+set_variable = { BLA_air_force_air_mastery_gain_factor = -0.30 }
 set_variable = { BLA_air_force_air_accidents_factor = 0.25 }
 set_variable = { BLA_air_force_air_mission_efficiency = -0.15 }
 set_variable = { BLA_air_force_air_training_xp_gain_factor = -0.30 }
@@ -220,64 +220,125 @@ set_variable = { BLA_bad_administrative_research_cost_factor = 1.5 }
 
 
 every_owned_state = {
-	limit = {
-		is_owned_by = BLA
+	limit = { 
+		is_owned_by = BLA 
+		has_state_flag = BLA_abydos_state_flag
 	}
 	set_variable = { BLA_ABY_recruitable_population_factor = -0.95 }
 	set_variable = { BLA_ABY_local_building_slots_factor = -0.75 }
 	set_variable = { BLA_ABY_state_resources_factor = -0.75 }
 	set_variable = { BLA_ABY_state_production_speed_buildings_factor = -0.5 }
-
+}
+every_owned_state = {
+	limit = { 
+		is_owned_by = BLA 
+		has_state_flag = BLA_arius_state_flag
+	}
 	set_variable = { BLA_ARI_recruitable_population_factor = -0.95 }
 	set_variable = { BLA_ARI_local_building_slots_factor = -0.95 }
 	set_variable = { BLA_ARI_state_resources_factor = -0.95 }
 	set_variable = { BLA_ARI_state_production_speed_buildings_factor = -0.95 }
-
+}
+every_owned_state = {
+	limit = { 
+		is_owned_by = BLA 
+		has_state_flag = BLA_gehenna_state_flag
+	}
 	set_variable = { BLA_GEH_recruitable_population_factor = -0.75 }
 	set_variable = { BLA_GEH_local_building_slots_factor = -0.75 }
 	set_variable = { BLA_GEH_state_resources_factor = -0.75 }
 	set_variable = { BLA_GEH_state_production_speed_buildings_factor = -0.35 }
-
+}
+every_owned_state = { # 아직 해당 주가 없음
+	limit = { 
+		is_owned_by = BLA 
+		has_state_flag = BLA_highlander_state_flag
+	}
 	set_variable = { BLA_HIG_recruitable_population_factor = -0.5 }
 	set_variable = { BLA_HIG_local_building_slots_factor = -0.25 }
 	set_variable = { BLA_HIG_state_resources_factor = -0.25 }
 	set_variable = { BLA_HIG_state_production_speed_buildings_factor = -0.25 }
-
+}
+every_owned_state = {
+	limit = { 
+		is_owned_by = BLA 
+		has_state_flag = BLA_hyakkiyako_state_flag
+	}
 	set_variable = { BLA_HYA_recruitable_population_factor = -0.75 }
 	set_variable = { BLA_HYA_local_building_slots_factor = -0.75 }
 	set_variable = { BLA_HYA_state_resources_factor = -0.75 }
 	set_variable = { BLA_HYA_state_production_speed_buildings_factor = -0.25 }
-
+}
+every_owned_state = {
+	limit = { 
+		is_owned_by = BLA 
+		has_state_flag = BLA_millenium_state_flag
+	}
 	set_variable = { BLA_MIL_recruitable_population_factor = -0.8 }
 	set_variable = { BLA_MIL_local_building_slots_factor = -0.75 }
 	set_variable = { BLA_MIL_state_resources_factor = -0.75 }
 	set_variable = { BLA_MIL_state_production_speed_buildings_factor = -0.15 }
-
+}
+every_owned_state = {
+	limit = { 
+		is_owned_by = BLA 
+		has_state_flag = BLA_redwinter_state_flag
+	}
 	set_variable = { BLA_RED_recruitable_population_factor = -0.5 }
 	set_variable = { BLA_RED_local_building_slots_factor = -0.75 }
 	set_variable = { BLA_RED_state_resources_factor = -0.85 }
 	set_variable = { BLA_RED_state_production_speed_buildings_factor = -0.35 }
-
+}
+every_owned_state = {
+	limit = { 
+		is_owned_by = BLA 
+		has_state_flag = BLA_shanhaijing_state_flag
+	}
 	set_variable = { BLA_SHA_recruitable_population_factor = -0.5 }
 	set_variable = { BLA_SHA_local_building_slots_factor = -0.5 }
 	set_variable = { BLA_SHA_state_resources_factor = -0.5 }
 	set_variable = { BLA_SHA_state_production_speed_buildings_factor = -0.35 }
-
+}
+every_owned_state = { # 아직 해당 주가 없음
+	limit = { 
+		is_owned_by = BLA 
+		has_state_flag = BLA_srt_state_flag
+	}
 	set_variable = { BLA_SRT_recruitable_population_factor = -0.05 }
 	set_variable = { BLA_SRT_local_building_slots_factor = -0.25 }
 	set_variable = { BLA_SRT_state_resources_factor = -0.25 }
 	set_variable = { BLA_SRT_state_production_speed_buildings_factor = -0.25 }
-
+}
+every_owned_state = {
+	limit = { 
+		is_owned_by = BLA 
+		has_state_flag = BLA_trinity_state_flag
+	}
 	set_variable = { BLA_TRN_recruitable_population_factor = -0.25 }
 	set_variable = { BLA_TRN_local_building_slots_factor = -0.25 }
 	set_variable = { BLA_TRN_state_resources_factor = -0.25 }
 	set_variable = { BLA_TRN_state_production_speed_buildings_factor = -0.25 }
-
+}
+every_owned_state = { # 아직 해당 주가 없음
+	limit = { 
+		is_owned_by = BLA 
+		has_state_flag = BLA_valkyrie_state_flag
+	}
 	set_variable = { BLA_VAL_recruitable_population_factor = -0.05 }
 	set_variable = { BLA_VAL_local_building_slots_factor = -0.25 }
 	set_variable = { BLA_VAL_state_resources_factor = -0.25 }
 	set_variable = { BLA_VAL_state_production_speed_buildings_factor = -0.25 }
 }
+#every_owned_state = { #이 쪽은 아직 와일드헌트 시스템이 추가 안되서 일부러 막음
+#	limit = { 
+#		is_owned_by = BLA 
+#		has_state_flag = BLA_wildhunt_state_flag
+#	}
+#	set_variable = { BLA_VAL_recruitable_population_factor = -0.05 }
+#	set_variable = { BLA_VAL_local_building_slots_factor = -0.25 }
+#	set_variable = { BLA_VAL_state_resources_factor = -0.25 }
+#	set_variable = { BLA_VAL_state_production_speed_buildings_factor = -0.25 }
+#}
 
 #외교
 IMA = { embargo_ROOT = yes }

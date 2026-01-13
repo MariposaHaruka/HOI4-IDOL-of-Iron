@@ -12,3 +12,16 @@ TOH_stavka_category = {
 	}
 	visible_when_empty = yes
 }
+
+TOH_army_mechanize_category = { #전군 기계화 계획
+	icon = ger_military_buildup
+	picture = GFX_decision_cat_picture_SWI_military_readiness_decisions
+	priority = 134
+	allowed = {
+		original_tag = TOH
+	}
+	visible = {
+		always = yes
+	}
+	visible_when_empty = yes
+}

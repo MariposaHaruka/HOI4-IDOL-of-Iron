@@ -1,4 +1,4 @@
-# 추축국
+# 보컬로이드 추축국
 IOI_AI_theatre_vocaloid_axis_western_europe = { # IOI 수정
 	name = vocaloid_axis_theatre_western_europe
 	regions = {
@@ -23,6 +23,7 @@ IOI_AI_theatre_vocaloid_axis_western_europe = { # IOI 수정
 	}
 	cancel = {
 		OR = {
+			is_historical_focus_on = no
 			AND = {
 				# Germany should stop focusing on the Western Front when Barbarossa starts
 				original_tag = PRS
@@ -30,6 +31,24 @@ IOI_AI_theatre_vocaloid_axis_western_europe = { # IOI 수정
 				219 = { is_controlled_by_ROOT_or_ally = no }
 			}
 			has_war = no 
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						#region = 1 # 이거 주석처리 안하면 독소전쟁 중에도 프세카 애들이 이쪽에 병력을 배치함
+						region = 5
+						region = 6
+						region = 7
+						region = 19
+						region = 20
+						region = 21
+						region = 41
+						region = 208
+						region = 209
+						region = 210
+						region = 275
+					}
+				}
+			}
 		}
 	}
 
@@ -202,6 +221,7 @@ IOI_AI_theatre_vocaloid_axis_central_europe = {
 	}
 	cancel = {
 		OR = {
+			is_historical_focus_on = no
 			AND = {
 				# 서부전선 종결, 동부전선 개시
 				original_tag = PRS
@@ -215,6 +235,32 @@ IOI_AI_theatre_vocaloid_axis_central_europe = {
 				219 = { is_controlled_by_ROOT_or_ally = no }
 			}
 			has_war = no 
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 31
+						region = 141
+						region = 142
+						region = 146
+						region = 158
+						region = 159
+						region = 160
+						region = 187
+						region = 188
+						region = 228
+						region = 229
+						region = 230
+						region = 231
+						region = 248
+						region = 249
+						region = 290
+						region = 292
+						region = 293
+						region = 294
+						region = 295
+					}
+				}
+			}
 		}
 	}
 
@@ -407,7 +453,193 @@ IOI_AI_theatre_vocaloid_axis_eastern_europe = {
 		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
 	}
 	cancel = {
-		has_war = no 
+		OR = {
+			is_historical_focus_on = no
+			NOT = { HBR = { is_in_faction_with = PRS } }
+			has_war = no
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 8
+						region = 12
+						region = 13
+						region = 22
+						region = 26
+						region = 27
+						region = 37
+						region = 38
+						region = 39
+						region = 40
+						region = 130
+						region = 131
+						region = 132
+						region = 133
+						region = 134
+						region = 135
+						region = 137
+						region = 150
+						region = 264
+						region = 265
+					}
+				}
+			}
+		}  
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			has_war_with = TOH
+		}
+		modifier = { #리가 조약과 전쟁 예정
+			add = 5
+			OR = {
+				has_war_with = GBC
+				has_war_with = SOE
+				has_war_with = KON
+				has_war_with = PTD
+			}
+		}
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_vocaloid_axis_northern_europe = { 
+	name = vocaloid_axis_theatre_northern_europe
+	regions = {
+		10	# Eastern Germany
+		11	# Baltic Sea
+		12	# Northern Scandinavia
+		13	# Finland
+		22	# Czechoslovakia
+		26	# Eastern Balkans
+		27	# Northern Balkans
+		30	# Black Sea
+		37	# Baltic States
+		38	# Western Poland
+		39	# Eastern Poland
+		40	# Western Russia
+		130	# Ukraine
+		131	# Belarus
+		132	# Novgorod
+		133	# Central Rusia 
+		134	# Caucasus Region
+		135 # Taman Region
+		137	# Western Steppe
+		150 # Artic Russia
+		206	# Lower Baltic Sea
+		264	# Komi-Nenetsia
+		265 # East Karelia
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		OR = {
+			is_historical_focus_on = no
+			NOT = { HBR = { is_in_faction_with = PRS } }
+			has_war = no
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 8
+						region = 12
+						region = 13
+						region = 22
+						region = 26
+						region = 27
+						region = 37
+						region = 38
+						region = 39
+						region = 40
+						region = 130
+						region = 131
+						region = 132
+						region = 133
+						region = 134
+						region = 135
+						region = 137
+						region = 150
+						region = 264
+						region = 265
+					}
+				}
+			}
+		}  
 	}
 
 	ai_will_do = {
@@ -521,7 +753,23 @@ IOI_AI_theatre_vocaloid_axis_eastern_mediterranean = {
 		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
 	}
 	cancel = {
-		has_war = no 
+		OR = {
+			is_historical_focus_on = no
+			has_war = no
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 24
+						region = 25
+						region = 26
+						region = 128
+						region = 129
+						region = 225
+						region = 232
+					}
+				}
+			}
+		}  
 	}
 
 	ai_will_do = {
@@ -626,7 +874,25 @@ IOI_AI_theatre_vocaloid_axis_western_mediterranean = {
 		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
 	}
 	cancel = {
-		has_war = no 
+		OR = {
+			is_historical_focus_on = no
+			has_war = no
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 20
+						region = 21
+						region = 23
+						region = 41
+						region = 158
+						region = 182
+						region = 160
+						region = 210
+						region = 225
+					}
+				}
+			}
+		}  
 	}
 
 	ai_will_do = {
@@ -724,7 +990,7 @@ IOI_AI_theatre_vocaloid_axis_middle_east = {
 		116	# Iran
 		128	# Egypt
 		129	# Asia Minor
-		134	# CAucasus Region
+		134	# Caucasus Region
 		162	# Afghanistan Area
 		196	# Arabian Coast
 		203	# Persian Gulf
@@ -747,8 +1013,34 @@ IOI_AI_theatre_vocaloid_axis_middle_east = {
 	}
 	cancel = {
 		OR = {
+			is_historical_focus_on = no
 			NOT = { SBR = { is_in_faction_with = PRS } }
 			has_war = no
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 28
+						region = 116
+						region = 128
+						region = 129
+						region = 134
+						region = 162
+						region = 196
+						region = 232
+						region = 236
+						region = 237
+						region = 238
+						region = 239
+						region = 240
+						region = 241
+						region = 267
+						region = 289
+						region = 291
+						region = 297
+						region = 298
+					}
+				}
+			}
 		} 
 	}
 
@@ -880,8 +1172,35 @@ IOI_AI_theatre_vocaloid_axis_southeast_asia = {
 	}
 	cancel = {
 		OR = {
+			is_historical_focus_on = no
 			NOT = { HBR = { is_in_faction_with = PRS } }
 			has_war = no
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 31
+						region = 141
+						region = 142
+						region = 146
+						region = 158
+						region = 159
+						region = 160
+						region = 187
+						region = 188
+						region = 228
+						region = 229
+						region = 230
+						region = 231
+						region = 248
+						region = 249
+						region = 290
+						region = 292
+						region = 293
+						region = 294
+						region = 295
+					}
+				}
+			}
 		} 
 	}
 
@@ -1000,8 +1319,1305 @@ IOI_AI_theatre_vocaloid_axis_carribean_colombia = {
 	}
 	cancel = {
 		OR = {
+			is_historical_focus_on = no
 			NOT = { HLL = { is_in_faction_with = PRS } }
 			has_war = no
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 34
+						region = 124
+						region = 163
+						region = 201
+						region = 205
+						region = 280
+						region = 285
+						region = 286
+						region = 287
+						region = 288
+					}
+				}
+			}
+		} 
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			has_war_with = ICG
+		}
+		modifier = { 
+			add = 15
+			has_war_with = FGO
+		}
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+# 반다이남코 연합국
+
+IOI_AI_theatre_bandainamco_allies_western_europe = { # IOI 수정
+	name = bandainamco_allies_theatre_western_europe
+	regions = {
+		1 	# Southern England 
+		2	# Northern England
+		3	# Scotland and Northern Ireland
+		4	# Ireland
+		5 	# Benelux
+		6 	# North West Germany
+		7 	# Western Germany
+		18 	# English Channel
+		19	# Northern France
+		20	# Southern France
+		21 	# Alpine Region
+		41	# Eastern Iberia
+		42	# Bay of Biscay
+		208	# Western France
+		209	# Western Iberia
+		210	# Southern Iberia
+		275 # Jutland
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		IMA ICG IML ISC ISM IDS IGM BDG STR SZS DFD
+	}
+	cancel = {
+		OR = {
+			is_historical_focus_on = no
+			AND = {
+				# Germany should stop focusing on the Western Front when Barbarossa starts
+				original_tag = PRS
+				has_war_with = TOH
+				219 = { is_controlled_by_ROOT_or_ally = no }
+			}
+			has_war = no 
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 1
+						region = 2
+						region = 3
+						region = 4
+						region = 5
+						region = 6
+						region = 7
+						region = 19
+						region = 20
+						region = 21
+						region = 41
+						region = 208
+						region = 209
+						region = 210
+						region = 275
+					}
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			KJI = {
+				NOT = { owns_state = 446 }
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			HND = {
+				OR = {
+					NOT = { owns_state = 458 }
+					NOT = { owns_state = 665 }
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			AIN = {
+				OR = {
+					NOT = { owns_state = 459 }
+					NOT = { owns_state = 460 }
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			SBR = {
+				OR = {
+					AND = {
+						NOT = { owns_state = 656 }
+						NOT = { owns_state = 765 }
+						NOT = { owns_state = 1014 }
+					}
+					AND = {
+						has_war_with = TOH
+						NOT = { owns_state = 354 }
+						NOT = { owns_state = 259 }
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			HBR = {
+				OR = {
+					NOT = { owns_state = 327 }
+					NOT = { owns_state = 430 }
+					NOT = { owns_state = 672 }
+					NOT = { owns_state = 1021 }
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			HLL = {
+				OR = {
+					NOT = { owns_state = 310 }
+					NOT = { owns_state = 685 }
+					NOT = { owns_state = 492 }
+					NOT = { owns_state = 938 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+		modifier = {
+			factor = 0
+			original_tag = PRS 
+			has_war_with = TOH
+			219 = { is_controlled_by_ROOT_or_ally = no } # We can focus again on the west if we take Moscow
+		}
+	} 
+}
+
+IOI_AI_theatre_bandainamco_allies_central_europe = {
+	name = bandainamco_allies_theatre_central_europe
+	regions = {
+		6 	# North West Germany
+		7 	# Western Germany
+		8	# Eastern Germany
+		21 	# Alpine Region
+		23	# Italy
+		24	# Western Balkans
+		27	# Northern Balkans
+		38	# Western Poland
+		168	# Adriatic Sea
+		169	# Tyrrhenian Sea
+		207	# Denish Belts
+		275 # Jutland
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		OR = {
+			is_historical_focus_on = no
+			AND = {
+				# 서부전선 종결, 동부전선 개시
+				original_tag = PRS
+				OR = {
+					has_war_with = IMA
+					has_war_with = ICG
+					has_war_with = BDG
+				}
+				has_war_with = TOH
+				16 = { is_controlled_by_ROOT_or_ally = yes }
+				219 = { is_controlled_by_ROOT_or_ally = no }
+			}
+			has_war = no 
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 31
+						region = 141
+						region = 142
+						region = 146
+						region = 158
+						region = 159
+						region = 160
+						region = 187
+						region = 188
+						region = 228
+						region = 229
+						region = 230
+						region = 231
+						region = 248
+						region = 249
+						region = 290
+						region = 292
+						region = 293
+						region = 294
+						region = 295
+					}
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			MMM = {
+				NOT = { owns_state = 118 }
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			KJI = {
+				NOT = { owns_state = 446 }
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			HND = {
+				OR = {
+					NOT = { owns_state = 458 }
+					NOT = { owns_state = 665 }
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			AIN = {
+				OR = {
+					NOT = { owns_state = 459 }
+					NOT = { owns_state = 460 }
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			SBR = {
+				OR = {
+					AND = {
+						NOT = { owns_state = 656 }
+						NOT = { owns_state = 765 }
+						NOT = { owns_state = 1014 }
+					}
+					AND = {
+						has_war_with = TOH
+						NOT = { owns_state = 354 }
+						NOT = { owns_state = 259 }
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			HBR = {
+				OR = {
+					NOT = { owns_state = 327 }
+					NOT = { owns_state = 430 }
+					NOT = { owns_state = 672 }
+					NOT = { owns_state = 1021 }
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			HLL = {
+				OR = {
+					NOT = { owns_state = 310 }
+					NOT = { owns_state = 685 }
+					NOT = { owns_state = 492 }
+					NOT = { owns_state = 938 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+		modifier = {
+			factor = 0
+			original_tag = PRS 
+			OR = {
+				has_war_with = IMA
+				has_war_with = ICG
+				has_war_with = BDG
+			}
+			16 = { is_controlled_by_ROOT_or_ally = yes } # We can focus again on the west if we take Moscow
+		}
+	} 
+}
+
+IOI_AI_theatre_bandainamco_allies_eastern_europe = { 
+	name = bandainamco_allies_theatre_eastern_europe
+	regions = {
+		8	# Eastern Germany
+		9	# Baltic Sea
+		12	# Northern Scandinavia
+		13	# Finland
+		22	# Czechoslovakia
+		26	# Eastern Balkans
+		27	# Northern Balkans
+		30	# Black Sea
+		37	# Baltic States
+		38	# Western Poland
+		39	# Eastern Poland
+		40	# Western Russia
+		130	# Ukraine
+		131	# Belarus
+		132	# Novgorod
+		133	# Central Rusia 
+		134	# Caucasus Region
+		135 # Taman Region
+		137	# Western Steppe
+		150 # Artic Russia
+		206	# Lower Baltic Sea
+		264	# Komi-Nenetsia
+		265 # East Karelia
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		OR = {
+			is_historical_focus_on = no
+			NOT = { HBR = { is_in_faction_with = PRS } }
+			has_war = no
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 8
+						region = 12
+						region = 13
+						region = 22
+						region = 26
+						region = 27
+						region = 37
+						region = 38
+						region = 39
+						region = 40
+						region = 130
+						region = 131
+						region = 132
+						region = 133
+						region = 134
+						region = 135
+						region = 137
+						region = 150
+						region = 264
+						region = 265
+					}
+				}
+			}
+		}  
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			has_war_with = TOH
+		}
+		modifier = { #리가 조약과 전쟁 예정
+			add = 5
+			OR = {
+				has_war_with = GBC
+				has_war_with = SOE
+				has_war_with = KON
+				has_war_with = PTD
+			}
+		}
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_bandainamco_allies_eastern_mediterranean = { 
+	name = bandainamco_allies_theatre_eastern_mediterranean
+	regions = {
+		24	# Western Balkans
+		25	# Greece
+		26	# Eastern Balkans
+		29	# Central Mediterranean Sea
+		69	# Eastern Mediterranean Sea
+		128	# Egypt
+		129	# Asia Minor
+		168	# Adriatic Sea
+		202	# Aegean Sea
+		225	# Tripoli
+		232	# Levant
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		OR = {
+			is_historical_focus_on = no
+			has_war = no
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 24
+						region = 25
+						region = 26
+						region = 128
+						region = 129
+						region = 225
+						region = 232
+					}
+				}
+			}
+		}  
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			has_war_with = IMA
+		}
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_bandainamco_allies_western_mediterranean = { 
+	name = bandainamco_allies_theatre_eastern_mediterranean
+	regions = {
+		20	# Southern France
+		21	# Alpine Region
+		23	# Italy
+		29	# Central Mediterranean Sea
+		41	# Northeastern Iberia
+		68	# Western Mediterranean Sea
+		169	# Tyrrhenian Sea
+		182	# North West Africa
+		210	# Southern Iberia
+		225	# Tripoli
+
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		OR = {
+			is_historical_focus_on = no
+			has_war = no
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 20
+						region = 21
+						region = 23
+						region = 41
+						region = 158
+						region = 182
+						region = 160
+						region = 210
+						region = 225
+					}
+				}
+			}
+		}  
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			OR = {
+				has_war_with = IMA
+				has_war_with = BDG
+			}
+		}
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_bandainamco_allies_middle_east = { 
+	name = bandainamco_allies_theatre_middle_east
+	regions = {
+		28	# Middle East
+		69	# Eastern Mediterranean Sea
+		100	# Red Sea
+		104	# Arabian Sea
+		116	# Iran
+		128	# Egypt
+		129	# Asia Minor
+		134	# Caucasus Region
+		162	# Afghanistan Area
+		196	# Arabian Coast
+		203	# Persian Gulf
+		232	# Levant
+		236	# South Arabia
+		237	# Hejaz
+		238	# East Arabia
+		239	# Alborz
+		240	# Zagros
+		241	# Dasht-e Kavir
+		267	# Transcaspia
+		289	# Southern Afghanistan
+		291	# Baluchistan
+		297	# Eastern Iranian Range
+		298	# Eastern Zagros
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		OR = {
+			is_historical_focus_on = no
+			NOT = { SBR = { is_in_faction_with = PRS } }
+			has_war = no
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 28
+						region = 116
+						region = 128
+						region = 129
+						region = 134
+						region = 162
+						region = 196
+						region = 232
+						region = 236
+						region = 237
+						region = 238
+						region = 239
+						region = 240
+						region = 241
+						region = 267
+						region = 289
+						region = 291
+						region = 297
+						region = 298
+					}
+				}
+			}
+		} 
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			has_war_with = TOH
+		}
+		modifier = { 
+			add = 15
+			has_war_with = IMA
+		}
+		modifier = { 
+			add = 15
+			has_war_with = BLA
+		}
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_bandainamco_allies_southeast_asia = { 
+	name = bandainamco_allies_theatre_southeast_asia
+	regions = {
+		31	# Indian Area
+		71	# East Indian Ocean
+		72	# Straits of Malaca
+		73	# Gulf of Thailand
+		75	# South China Sea
+		80	# Celebes Sea
+		93	# Banda Sea
+		99	# Far Eastern Indian Ocean
+		101	# Bay of Bengal
+		141	# East India
+		142	# South East Asia
+		146	# Himalayas
+		158	# Guinea
+		159	# Borneo
+		160	# Philippines
+		187	# Sumatra
+		188	# Malaya
+		228	# South Indochina
+		229	# Siam
+		230	# Cape Comorin
+		231	# Coromandel Coast
+		248	# Guangxi
+		249	# Yunnan
+		290	# Bengal
+		292	# Shan States
+		293	# Tenasserim
+		294	# Rangoon
+		295	# Mandalay
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		OR = {
+			is_historical_focus_on = no
+			NOT = { HBR = { is_in_faction_with = PRS } }
+			has_war = no
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 31
+						region = 141
+						region = 142
+						region = 146
+						region = 158
+						region = 159
+						region = 160
+						region = 187
+						region = 188
+						region = 228
+						region = 229
+						region = 230
+						region = 231
+						region = 248
+						region = 249
+						region = 290
+						region = 292
+						region = 293
+						region = 294
+						region = 295
+					}
+				}
+			}
+		} 
+	}
+
+	ai_will_do = {
+		base = 0 
+		modifier = {
+			add = 15
+			has_war_with = BLA
+		}
+		modifier = { 
+			add = 15
+			has_war_with = IMA
+		}
+		modifier = { 
+			add = 15
+			has_war_with = LLS
+		}
+		modifier = {
+			add = 15
+			PRS = {
+				is_historical_focus_on = yes
+			}
+		}
+		modifier = {
+			add = 15
+			ENS = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			UMA = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			MMM = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			KJI = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HND = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			AIN = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			SBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HBR = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			add = 15
+			HLL = {
+				is_in_faction_with = PRS
+				is_fascism = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			has_war = no 
+		}
+	} 
+}
+
+IOI_AI_theatre_bandainamco_allies_carribean_colombia = { 
+	name = bandainamco_allies_theatre_carribean_colombia
+	regions = {
+		34	# Central America
+		53	# Caribbean
+		59	# Mid Atlantic 6
+		107 # Western Canal Zone
+		109 # Peruvian Coast
+		124 # Northern South America
+		170	# Florida Coast
+		163 # Amazonas
+		201 # Northern Andes
+		205	# Yucatan Peninsula
+		280 # Guyana
+		285 # Rio Tocantis
+		286	# Rio Grande de Norte
+		287 # Bolivia
+		288	# Central Brazil
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		PRS ENS UMA MMM KJI HND AIN SBR HBR HLL
+	}
+	cancel = {
+		OR = {
+			is_historical_focus_on = no
+			NOT = { HLL = { is_in_faction_with = PRS } }
+			has_war = no
+			any_enemy_country = {
+				any_owned_state = { 
+					OR = {
+						region = 34
+						region = 124
+						region = 163
+						region = 201
+						region = 205
+						region = 280
+						region = 285
+						region = 286
+						region = 287
+						region = 288
+					}
+				}
+			}
 		} 
 	}
 
@@ -1105,7 +2721,7 @@ IOI_AI_theatre_vocaloid_axis_carribean_colombia = {
 
 
 
-IOI_AI_theatre_western_europe_bandainamco_ally = {
+IOI_AI_theatre_bandainamco_ally_western_europe = {
 	name = generic_theatre_western_europe
 	regions = {
 		1 	# Southern England 

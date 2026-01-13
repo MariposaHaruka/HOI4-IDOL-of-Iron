@@ -51,3 +51,14 @@ is_neutrality = {
 		}
 	}
 }
+
+is_red = {
+	OR = {
+		is_communism = yes
+		OR = {
+			has_government = liberalism_mod
+			has_government = progressivism
+			has_government = socialdemocracy
+		}
+	}
+}

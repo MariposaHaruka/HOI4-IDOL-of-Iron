@@ -45,7 +45,18 @@ ideas = {
 				submarine = { build_cost_ic = 0.15 }
 			}
 		}
-		
+		TOH_32012_idea = {
+			allowed = {
+				original_tag = TOH
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				infantry = { build_cost_ic = -0.15 }
+			}
+		}
 	}
 	country = { 
 		TOH_2nd_5_year_plan_ns = { #북마크용

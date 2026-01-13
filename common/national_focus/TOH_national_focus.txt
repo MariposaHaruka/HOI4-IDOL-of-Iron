@@ -460,7 +460,7 @@ focus_tree = {
 			custom_effect_tooltip = SOV_expand_shipbuilding_plants_tt
 			every_owned_state = {
 				limit = {
-					has_state_flag = SOV_naval_bases_reinforced_flag
+					has_state_flag = TOH_naval_bases_reinforced_flag
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = dockyard
@@ -2757,10 +2757,33 @@ focus_tree = {
 		ai_will_do = { factor = 30 }
 		prerequisite = { focus = TOH_30001 }
 
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34001"
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = TOH_34001
+				bonus = 1.0
+				uses = 2
+				category = naval_equipment
+			}
 		}
 	}
 
@@ -3487,6 +3510,21 @@ focus_tree = {
 				category = infantry_weapons
 				bonus = 0.5
 				uses = 1
+			}
+			random_owned_core_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = TOH_army_tt
+			add_to_variable = {
+				TOH_army_build_cost_ic_infantry = -0.15
+				tooltip = build_cost_ic_infantry_tt
+			}
+			hidden_effect = {
+				add_ideas = TOH_32012_idea
 			}
 		}
 	}
@@ -4421,12 +4459,141 @@ focus_tree = {
 		x = -3
 		y = 1
 	
+		available = {
+			195 = { #LENINGRAD
+				is_owned_and_controlled_by = ROOT
+			}
+		}
 		prerequisite = { focus = TOH_34001 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34002"
+			195 = { #LENINGRAD
+				if = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 3151
+				}
+				if = {
+					limit = {
+						ROOT = { is_special_project_completed = sp:sp_air_radar }
+						radar_station < 1
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 1
+						instant_build = yes
+					}
+				}
+				else = {
+					custom_effect_tooltip = TOH_reinforce_western_naval_bases_radar_tt
+				}
+				set_state_flag = TOH_naval_bases_reinforced_flag
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = TOH_reinforce_western_naval_bases_other_states_tt
+
+			if = { #HELSINKI (UUSIMAA)
+				limit = {
+					has_full_control_of_state = 111
+				}
+				111 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = 11105
+					}
+					set_state_flag = TOH_naval_bases_reinforced_flag
+				}
+			}
+			if = { #TALLIN (HARNU)
+				limit = {
+					has_full_control_of_state = 812
+				}
+				812 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = 3152
+					}
+					set_state_flag = TOH_naval_bases_reinforced_flag
+				}
+			}
+			if = { #RIGA
+				limit = {
+					has_full_control_of_state = 808
+				}
+				808 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = 9340
+					}
+					set_state_flag = TOH_naval_bases_reinforced_flag
+				}
+			}
+			if = { #PALANGA (ŽEMAITIJA)
+				limit = {
+					has_full_control_of_state = 189
+				}
+				189 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = 6314
+					}
+					set_state_flag = TOH_naval_bases_reinforced_flag
+				}
+			}
 		}
 	}
 
@@ -4438,13 +4605,86 @@ focus_tree = {
 		relative_position_id = TOH_34001
 		x = -1
 		y = 1
-	
+
+		available = {
+			OR = {
+				213 = { #MURMANSK
+					is_owned_and_controlled_by = ROOT
+				}
+				214 = { #ARKHANGELSK
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
 		prerequisite = { focus = TOH_34001 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34003"
+			if = { #MURMANSK - Improved naval base + AA + coastal fort
+				limit = {
+					has_full_control_of_state = 213
+				}
+				213 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 3134
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = 3134
+					}
+					set_state_flag = TOH_naval_bases_reinforced_flag
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			if = { #ARKHANGELSK - Improved naval base + Severodvinsk Naval Base + AA + coastal fort
+				limit = {
+					has_full_control_of_state = 214
+				}
+				214 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						instant_build = yes
+						province = 3338
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 312
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = 3338
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = 312
+					}
+					set_state_flag = TOH_naval_bases_reinforced_flag
+				}
+			}
 		}
 	}
 
@@ -4456,13 +4696,126 @@ focus_tree = {
 		relative_position_id = TOH_34001
 		x = 1
 		y = 1
-	
+
+		available = {
+			OR = {
+				192 = { #ODESSA
+					is_owned_and_controlled_by = ROOT
+				}
+				137 = { #CRIMEA
+					is_owned_and_controlled_by = ROOT
+				}
+				218 = { #ROSTOV
+					is_owned_and_controlled_by = ROOT
+				}
+				234 = { #KRASNODAR
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
 		prerequisite = { focus = TOH_34001 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34004"
+			if = { #ODESSA - Improved naval base + AA + coastal fort
+				limit = {
+					has_full_control_of_state = 192
+				}
+				192 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 11670
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = 11670
+					}
+					set_state_flag = TOH_naval_bases_reinforced_flag
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			if = { #SEVASTOPOL (CRIMEA) - Extra AA + coastal fort
+				limit = {
+					has_full_control_of_state = 137
+				}
+				137 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						instant_build = yes
+						province = 3686
+					}
+					set_state_flag = TOH_naval_bases_reinforced_flag
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			if = { #ROSTOV - Improved naval base + AA + coastal fort
+				limit = {
+					has_full_control_of_state = 218
+				}
+				218 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 9417
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = 9417
+					}
+					set_state_flag = TOH_naval_bases_reinforced_flag
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			if = { #KRASNODAR - Improved naval base + AA + coastal fort
+				limit = {
+					has_full_control_of_state = 234
+				}
+				234 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 719
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = 719
+					}
+					set_state_flag = TOH_naval_bases_reinforced_flag
+				}
+			}
 		}
 	}
 
@@ -4475,12 +4828,79 @@ focus_tree = {
 		x = 3
 		y = 1
 	
+		available = {
+			OR = {
+				408 = { #VLADIVOSTOK
+					is_owned_and_controlled_by = ROOT
+				}
+				409 = { #KHABAROVSK
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
 		prerequisite = { focus = TOH_34001 }
 		ai_will_do = { factor = 30 }
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34005"
+			if = { #VLADIVOSTOK - Improved naval base + AA + coastal fort
+				limit = { has_full_control_of_state = 408 }
+				408 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 957
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = 957
+					}
+					set_state_flag = TOH_naval_bases_reinforced_flag
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			if = { #VLADIVOSTOK - Improved naval base + AA + coastal fort
+				limit = { has_full_control_of_state = 409 }
+				409 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 9604
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = 9604
+					}
+					set_state_flag = TOH_naval_bases_reinforced_flag
+				}
+			}
 		}
 	}
 
@@ -4586,7 +5006,7 @@ focus_tree = {
 			custom_effect_tooltip = SOV_expand_shipbuilding_plants_tt
 			every_owned_state = {
 				limit = {
-					has_state_flag = SOV_naval_bases_reinforced_flag
+					has_state_flag = TOH_naval_bases_reinforced_flag
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = dockyard
@@ -5232,6 +5652,7 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		prerequisite = { focus = TOH_00001 }
+		allow_branch = { has_country_flag = on_construction_flag } # IOI 임시조치
 		available = { always = no }
 		mutually_exclusive = { focus = TOH_41001 focus = TOH_42001 focus = TOH_43001 focus = TOH_44001 focus = TOH_46001 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5253,6 +5674,7 @@ focus_tree = {
 
 		ai_will_do = { factor = 30 }
 		prerequisite = { focus = TOH_00001 }
+		allow_branch = { has_country_flag = on_construction_flag } # IOI 임시조치
 		
 		mutually_exclusive = { focus = TOH_41001 focus = TOH_42001 focus = TOH_43001 focus = TOH_44001 focus = TOH_45001 }
 		available = { always = no }
