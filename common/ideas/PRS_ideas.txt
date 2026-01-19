@@ -508,6 +508,17 @@ ideas = {
 				experience_gain_air_factor = 0.05
 			}
 		}
+		PRS_rudeltaktik_ns = {
+			picture = generic_navy_submarines
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+			 	navy_submarine_attack_factor = 0.1
+			 	naval_torpedo_reveal_chance_factor = -0.1
+			}
+		}
 	}
 	tank_manufacturer = {
 		designer = yes

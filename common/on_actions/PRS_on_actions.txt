@@ -41,4 +41,32 @@ on_actions = {
 			}
 		}
 	}
+
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = PRS
+							is_ally_with = PRS
+						}
+					}
+					ROOT = {
+						OR = {
+							capital_scope = { is_on_continent = europe }
+							original_tag = GUP
+						}
+					}
+				}
+				ROOT = {
+					set_country_flag = PRS_has_capitulated_to_projectsekai
+					add_to_array = { 
+						array = PRS.PRS_seize_gold_targets_array 
+						value = THIS
+					}
+				}
+			}
+		}
+	}
 }

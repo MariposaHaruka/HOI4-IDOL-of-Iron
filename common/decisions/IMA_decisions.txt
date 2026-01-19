@@ -1,3 +1,5 @@
+debug_test = { }
+
 IMA_haruka_crisis_category = { #하루카 위기
 	IMA_haruka_crisis_no_confidence = {
 		icon = eng_install_government
@@ -1099,7 +1101,10 @@ IMA_imperial_federation_category = {
 					idea = IMA_41005_idea_IMA
 					days = 100
 				}
-				custom_effect_tooltip = IMA_industry_tt
+				custom_effect_tooltip = {
+					localization_key = tooltip_modify_dynmod
+					DYNMOD = IMA_industry
+				}
 				add_to_variable = {
 					IMA_industry_consumer_goods_factor = -0.03
 					tooltip = consumer_goods_factor_tt
@@ -1791,7 +1796,10 @@ IMA_foreign_defence_plan_category = {
 				}
 			}
 			IMA = {
-				custom_effect_tooltip = IMA_industry_tt
+				custom_effect_tooltip = {
+					localization_key = tooltip_modify_dynmod
+					DYNMOD = IMA_industry
+				}
 				add_to_variable = {
 					IMA_industry_consumer_goods_factor = 0.05
 					tooltip = consumer_goods_factor_tt
@@ -1804,7 +1812,10 @@ IMA_foreign_defence_plan_category = {
 		}
 		remove_effect = {
 			IMA = {
-				custom_effect_tooltip = IMA_industry_tt
+				custom_effect_tooltip = {
+					localization_key = tooltip_modify_dynmod
+					DYNMOD = IMA_industry
+				}
 				add_to_variable = {
 					IMA_industry_consumer_goods_factor = -0.03
 					tooltip = consumer_goods_factor_tt

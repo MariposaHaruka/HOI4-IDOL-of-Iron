@@ -174,27 +174,58 @@ guiTypes = {
 
 	containerWindowType = {
 		name = mod_intro_tab_2_container
-		position = { x = 0 y = 440 }
-		size = { width = 720 height = 352 }
-		margin = { left = 40 right = 40 }
+		position = { x = 0 y = 436 }
+		size = { width = 720 height = 360 }
+		margin = { left = 16 right = 16 }
 		clipping = yes
 
-		instantTextboxType = {
-			name = "mod_intro_tab_2_header"
-			text = "mod_intro_tab_2_header"
-			position = { x = 0 y = 6 }
-			font = "hoi_20bs"
-			maxWidth = 642
+		## backdrop texticon scripted loc textbox
+		containerWindowType = {
+			name = "mod_intro_tab_2_background"
+			size = { width = 172 height = 352 }
+
+			background = { quadTextureSprite = "GFX_tiled_paper_bg2" }
+
+			iconType = {
+				name = "mod_intro_tab_2_background_icon"
+				position = { x = 2 y = 2 }
+			}
 		}
 
-		instantTextboxType = {
-			name = "mod_intro_tab_2_content"
-			text = "mod_intro_tab_2_content"
-			position = { x = 0 y = 28 }
-			font = "hoi4_typewriter16w"
-			maxWidth = 642
-			maxHeight = 285
-			scrollbartype = "standardtext_slider"
+		containerWindowType = {
+			name = "mod_intro_tab_2_text_container"
+			position = { x = 172 y = 0 }
+			margin = { left = 8 right = 8 }
+
+			instantTextboxType = {
+				name = "mod_intro_tab_2_header"
+				text = "mod_intro_tab_2_header"
+				position = { x = 0 y = 6 }
+				font = "hoi_20bs"
+				maxWidth = 500
+			}
+
+			instantTextboxType = {
+				name = "mod_intro_tab_2_content"
+				text = "mod_intro_tab_2_content"
+				position = { x = 0 y = 28 }
+				font = "hoi4_typewriter16w"
+				maxWidth = 500
+				maxHeight = 270
+				scrollbartype = "standardtext_slider"
+			}
+
+			buttonType = {
+				name = "flip_back"
+				quadTextureSprite = "GFX_browser_back"
+				position = { x = 280 y = 320 }
+			}
+
+			buttonType = {
+				name = "flip_forward"
+				quadTextureSprite = "GFX_browser_forward"
+				position = { x = 320 y = 320 }
+			}
 		}
 	}
 
@@ -224,14 +255,6 @@ guiTypes = {
 			position = { x = 18 y = 50 }
 			font = "hoi4_typewriter16w"
 			maxWidth = 622
-		}
-
-		instantTextboxType = {
-			name = "mod_intro_tab_3_content_0"
-			text = "mod_intro_tab_3_content_0"
-			position = { x = 18 y = 70 }
-			font = "hoi4_typewriter16w"
-			maxWidth = 620
 		}
 	}
 

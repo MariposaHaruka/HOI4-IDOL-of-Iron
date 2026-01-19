@@ -11,8 +11,8 @@ scripted_gui = {
 		}
 
 		triggers = {
-			tab_1_visible = { tag_has_country_intro = yes }
-			tab_2_visible = { tag_has_path_guide = yes }
+			tab_2_visible = { tag_has_country_intro = yes }
+			tab_3_visible = { tag_has_path_guide = yes }
 
 			tab_1_click_enabled = { NOT = { check_variable = { intro_variable = 1 } } }
 			tab_2_click_enabled = { NOT = { check_variable = { intro_variable = 2 } } }
@@ -34,10 +34,10 @@ scripted_gui = {
 
 	intro_page_tab_1 = {
 		context_type = player_context
-		window_name =  mod_intro_tab_1_container
+		window_name = mod_intro_tab_1_container
 		parent_window_name = "mod_welcome_container"
 		dirty = intro_variable
-		dirty = curr_page
+		dirty = curr_intro1_page
 
 		ai_enabled = { always = no }
 
@@ -46,24 +46,24 @@ scripted_gui = {
 		}
 
 		triggers = {
-			flip_back_visible = { has_variable = country_intro_page_count }
-			flip_forward_visible = { has_variable = country_intro_page_count }
+			flip_back_visible = { has_variable = wwi_intro_page_count }
+			flip_forward_visible = { has_variable = wwi_intro_page_count }
 
-			flip_back_click_enabled = { check_variable = { curr_page > 0 } }
-			flip_forward_click_enabled = { check_variable = { curr_page < country_intro_page_count } }
+			flip_back_click_enabled = { check_variable = { curr_intro1_page > 0 } }
+			flip_forward_click_enabled = { check_variable = { curr_intro1_page < wwi_intro_page_count } }
 		}
 
 		effects = {
 			flip_back_click = {
 				if = {
-					limit = { check_variable = { curr_page > 0 } }
-					subtract_from_variable = { curr_page = 1 }
+					limit = { check_variable = { curr_intro1_page > 0 } }
+					subtract_from_variable = { curr_intro1_page = 1 }
 				}
 			}
 			flip_forward_click = {
 				if = {
-					limit = { check_variable = { curr_page < country_intro_page_count } }
-					add_to_variable = { curr_page = 1 }
+					limit = { check_variable = { curr_intro1_page < wwi_intro_page_count } }
+					add_to_variable = { curr_intro1_page = 1 }
 				}
 			}
 		}
@@ -80,11 +80,41 @@ scripted_gui = {
 		window_name =  mod_intro_tab_2_container
 		parent_window_name = "mod_welcome_container"
 		dirty = intro_variable
+		dirty = curr_intro2_page
 
 		ai_enabled = { always = no }
 
 		visible = {
 			check_variable = { intro_variable = 2 }
+		}
+
+		triggers = {
+			flip_back_visible = { has_variable = country_intro_page_count }
+			flip_forward_visible = { has_variable = country_intro_page_count }
+
+			flip_back_click_enabled = { check_variable = { curr_intro2_page > 0 } }
+			flip_forward_click_enabled = { check_variable = { curr_intro2_page < country_intro_page_count } }
+		}
+
+		effects = {
+			flip_back_click = {
+				if = {
+					limit = { check_variable = { curr_intro2_page > 0 } }
+					subtract_from_variable = { curr_intro2_page = 1 }
+				}
+			}
+			flip_forward_click = {
+				if = {
+					limit = { check_variable = { curr_intro2_page < country_intro_page_count } }
+					add_to_variable = { curr_intro2_page = 1 }
+				}
+			}
+		}
+
+		properties = {
+			mod_intro_tab_2_background_icon = {
+				image = "[ROOT.GetCountryIntroBackground]"
+			}
 		}
 	}
 

@@ -5312,7 +5312,7 @@ focus_tree = {
 	}
 	#해군 중점 2
 	focus = {
-		id = PRS_23101 #무차별 공습
+		id = PRS_23101 #장거리 수상 통상파괴
 		icon = GFX_focus_PRS_23101
 		prerequisite = { focus = PRS_23001 }
 		mutually_exclusive = { focus = PRS_23201 }
@@ -5331,7 +5331,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRS_23201 #무차별 공습
+		id = PRS_23201 #잠수함 통상파괴
 		icon = GFX_focus_PRS_23201
 		prerequisite = { focus = PRS_23001 }
 		mutually_exclusive = { focus = PRS_23101 }
@@ -5922,11 +5922,12 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = generic_line_break_tt
+			PRS_design_Z1936A = yes
 		}
 	}
 
 	focus = {
-		id = PRS_23014 #936년형 연안 구축함
+		id = PRS_23014 #1936년형 연안 구축함
 		icon = GFX_focus_ioi_generic_naval_destroyer_2
 		prerequisite = { focus = PRS_23102 focus = PRS_23202 }
 		mutually_exclusive = { focus = PRS_23013 }
@@ -5940,6 +5941,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = generic_line_break_tt
+			PRS_design_Z1936B = yes
 		}
 	}
 
@@ -6105,7 +6107,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
+			
 			custom_effect_tooltip = generic_line_break_tt
+			PRS_design_Z1938 = yes
 		}
 	}
 	focus = {
@@ -6153,52 +6157,64 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = GER_wolfpack_tactics
-				cost_reduction = 0.25
-				uses = 1
-				category = trade_interdiction_tree	
+			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11001"
+			if = {
+				limit = { has_doctrine = wolfpacks }
+				add_mastery_bonus = {
+					name = PRS_23203
+					bonus = 0.20
+					days = 240
+					sub_doctrine = wolfpacks
+				}
+				else = {
+					add_mastery_bonus = {
+						name = PRS_23203
+						bonus = 0.1
+						days = 240
+						track = submarines
+					}
+				}
 			}
 			custom_effect_tooltip = generic_line_break_tt
-			#if = {
-			#	limit = {
-			#		has_character = GER_karl_donitz
-			#		GER_karl_donitz = {
-			#			is_unit_leader = yes
-			#		}
-			#
-			#	}
-			#	if = {
-			#		limit = {
-			#			GER_karl_donitz = {
-			#				NOT = { has_trait = bold }
-			#			}
-			#		}
-			#		add_trait = {
-			#		    character = GER_karl_donitz
-			#		    trait = bold
-			#		}
-			#	}
-			#	else_if = {
-			#		limit = {
-			#			GER_karl_donitz = {
-			#				NOT = { has_trait = spotter }
-			#			}
-			#		}
-			#		add_trait = {
-			#		    character = GER_karl_donitz
-			#		    trait = spotter
-			#		}
-			#	}
-			#}
+			if = {
+				limit = {
+					has_character = PRS_karl_donitz
+					PRS_karl_donitz = {
+						is_unit_leader = yes
+					}
+			
+				}
+				if = {
+					limit = {
+						PRS_karl_donitz = {
+							NOT = { has_trait = bold }
+						}
+					}
+					add_trait = {
+					    character = PRS_karl_donitz
+					    trait = bold
+					}
+				}
+				else_if = {
+					limit = {
+						PRS_karl_donitz = {
+							NOT = { has_trait = spotter }
+						}
+					}
+					add_trait = {
+					    character = PRS_karl_donitz
+					    trait = spotter
+					}
+				}
+			}
 
-			#add_timed_idea = {
-			#	idea = GER_rudeltaktik_ns
-			#	days = 365
-			#}
+			add_timed_idea = {
+				idea = PRS_rudeltaktik_ns
+				days = 365
+			}
 			custom_effect_tooltip = generic_line_break_tt
-			#custom_effect_tooltip = available_theorist
-			#show_ideas_tooltip = alfred_saalwachter
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = alfred_saalwachter
 		}
 	}
 	focus = {

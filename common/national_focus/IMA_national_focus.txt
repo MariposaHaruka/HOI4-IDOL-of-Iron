@@ -189,7 +189,10 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_line_break_tt
 			}
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_political_power_gain = 0.1
 				tooltip = political_power_gain_tt
@@ -213,7 +216,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11004"
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_production_speed_industrial_complex_factor = 0.1
 				tooltip = production_speed_industrial_complex_factor_tt
@@ -269,7 +275,10 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_line_break_tt
 			}
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_weekly_manpower = 0.001
 				tooltip = weekly_manpower_tt
@@ -322,7 +331,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11007"
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_production_speed_rail_way_factor = 0.1
 				tooltip = production_speed_rail_way_factor_tt
@@ -516,7 +528,10 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_line_break_tt
 			}
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = { 
 				IMA_industry_trade_opinion_factor = 0.15 
 				tooltip = trade_opinion_factor_tt
@@ -552,7 +567,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = { 
 				IMA_industry_local_resources_factor = 0.20
 				tooltip = local_resources_factor_tt
@@ -576,7 +594,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11013"
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_consumer_goods_factor = -0.04
 				tooltip = consumer_goods_factor_tt
@@ -724,7 +745,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11017"
 			add_stability = 0.10
 			add_war_support = -0.05
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_political_power_gain = 0.15
 				tooltip = political_power_gain_tt
@@ -934,7 +958,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12008"
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = { 
 				IMA_industry_consumer_goods_factor = -0.05 
 				tooltip = consumer_goods_factor_tt
@@ -1084,7 +1111,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_12013"
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = { 
 				IMA_industry_consumer_goods_factor = -0.05 
 				tooltip = consumer_goods_factor_tt
@@ -1295,7 +1325,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10001"
 			IMA_reduce_depression = yes
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = { 
 				IMA_industry_consumer_goods_factor = -0.05 
 				tooltip = consumer_goods_factor_tt
@@ -1319,7 +1352,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10002"
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = { 
 				IMA_industry_consumer_goods_factor = -0.05 
 				tooltip = consumer_goods_factor_tt
@@ -1466,7 +1502,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10005"
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_consumer_goods_factor = -0.03
 				tooltip = consumer_goods_factor_tt
@@ -1504,7 +1543,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10006"
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_consumer_goods_factor = -0.03
 				tooltip = consumer_goods_factor_tt
@@ -1546,7 +1588,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10007"
 			mio:IMA_vickers_armstrong_organization = { add_mio_funds = 3000 }
 			mio:IMA_vauxhall_organization = { add_mio_funds = 3000 }
-			custom_effect_tooltip = IMA_army_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_army
+			}
 			add_to_variable = {
 				IMA_army_build_cost_ic_armor = -0.1
 				tooltip = build_cost_ic_armor_tt
@@ -1580,7 +1625,10 @@ focus_tree = {
 			mio:IMA_de_havilland_organization = { add_mio_funds = 3000 }
 			mio:IMA_fairey_aviation_organization = { add_mio_funds = 3000 }
 			mio:IMA_avro_organization = { add_mio_funds = 3000 }
-			custom_effect_tooltip = IMA_air_force_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_air_force
+			}
 			add_to_variable = {
 				IMA_airforce_build_cost_ic_fighter = -0.1
 				tooltip = build_cost_ic_fighter_tt
@@ -1639,7 +1687,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_10010"	
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industy_production_factory_max_efficiency_factor = 0.1
 				tooltip = production_factory_max_efficiency_factor_tt
@@ -1775,7 +1826,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20002"
 			add_research_slot = 1
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_research_speed_factor = 0.1
 				tooltip = research_speed_factor_tt
@@ -1806,7 +1860,10 @@ focus_tree = {
 				uses = 2
 				category = industry
 			}
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_research_speed_factor = 0.05
 				tooltip = research_speed_factor_tt
@@ -1890,7 +1947,10 @@ focus_tree = {
 				}
 			}
 			else = {
-				custom_effect_tooltip = IMA_bletchley_park_tt
+				custom_effect_tooltip = {
+					localization_key = tooltip_modify_dynmod
+					DYNMOD = IMA_bletchley_park
+				}
 				add_to_variable = {
 					IMA_bletchley_park_decryption_power_factor = 0.1
 					tooltip = decryption_power_factor_tt
@@ -1930,7 +1990,10 @@ focus_tree = {
 				}
 			}
 			else = {
-				custom_effect_tooltip = IMA_bletchley_park_tt
+				custom_effect_tooltip = {
+					localization_key = tooltip_modify_dynmod
+					DYNMOD = IMA_bletchley_park
+				}
 				add_to_variable = {
 					IMA_bletchley_park_decryption_power_factor = 0.1
 					tooltip = decryption_power_factor_tt
@@ -1974,7 +2037,10 @@ focus_tree = {
 				}
 			}
 			else = {
-				custom_effect_tooltip = IMA_bletchley_park_tt
+				custom_effect_tooltip = {
+					localization_key = tooltip_modify_dynmod
+					DYNMOD = IMA_bletchley_park
+				}
 				add_to_variable = {
 					IMA_bletchley_park_decryption_power_factor = 0.1
 					tooltip = decryption_power_factor_tt
@@ -2003,7 +2069,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20008"
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_research_speed_factor = 0.03
 				tooltip = research_speed_factor_tt
@@ -2261,7 +2330,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_30002"
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_production_speed_arms_factory_factor = 0.1
 				tooltip = production_speed_arms_factory_factor_tt
@@ -2302,7 +2374,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_30003"
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_consumer_goods_factor = -0.15
 				tooltip = consumer_goods_factor_tt
@@ -2741,11 +2816,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31011"
 			add_ideas = IMA_31011_idea
-			custom_effect_tooltip = IMA_air_force_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_air_force
+			}
 			add_to_variable = {
 				IMA_air_force_build_cost_ic_heavy_fighter = -0.1
 				tooltip = build_cost_ic_heavy_fighter_tt
 			}
+			IMA_design_mosquito = yes
 			hidden_effect = {
 				add_ideas = IMA_31011_idea_hidden
 			}
@@ -2768,7 +2847,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31007"
-			custom_effect_tooltip = IMA_air_force_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_air_force
+			}
 			add_to_variable = {
 				IMA_air_force_air_range_factor = 0.05
 				tooltip = air_range_factor_tt
@@ -2890,7 +2972,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31205"
-			custom_effect_tooltip = IMA_air_force_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_air_force
+			}
 			add_to_variable = {
 				IMA_air_force_air_mission_xp_gain_factor = 0.1
 				tooltip = air_mission_xp_gain_factor_tt
@@ -2935,6 +3020,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31207"
+			IMA_design_lancaster = yes
 			
 		}
 	}
@@ -3000,7 +3086,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31012"
-			custom_effect_tooltip = IMA_army_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_army
+			}
 			add_to_variable = { 
 				IMA_army_special_forces_cap = 0.03
 				tooltip = special_forces_cap_tt
@@ -3032,7 +3121,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31013"
-			custom_effect_tooltip = IMA_army_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_army
+			}
 			add_to_variable = { 
 				IMA_army_special_forces_training_time_factor = -0.1
 				tooltip = special_forces_training_time_factor_tt
@@ -3733,7 +3825,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_30004"
-			custom_effect_tooltip = IMA_army_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_army
+			}
 			add_to_variable = { 
 				IMA_army_special_forces_cap = 0.03
 				tooltip = special_forces_cap_tt
@@ -3768,7 +3863,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32016"
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = { 
 				IMA_navy_naval_invasion_prep_speed = 0.25
 				tooltip = naval_invasion_prep_speed_tt
@@ -3803,12 +3901,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32017"
-			custom_effect_tooltip = IMA_army_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_army
+			}
 			add_to_variable = { 
 				IMA_army_special_forces_cap = 0.03
 				tooltip = special_forces_cap_tt
 			}
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = { 
 				IMA_navy_naval_invasion_division_cap = 5
 				tooltip = naval_invasion_division_cap_tt
@@ -3924,7 +4028,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33102"
 			IMA_design_illustrious = yes
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = { 
 				IMA_navy_build_cost_ic_carrier = -0.05
 				tooltip = build_cost_ic_carrier_tt
@@ -3985,7 +4092,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_production_speed_dockyard_factor = 0.05
 				tooltip = production_speed_dockyard_factor_tt
@@ -4011,7 +4121,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33202"
 			IMA_design_takagi_junichiro = yes
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = { 
 				IMA_navy_build_cost_ic_capital_ship = -0.05
 				tooltip = build_cost_ic_capital_ship_tt
@@ -4039,7 +4152,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33103"
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_naval_detection = 0.10
 				tooltip = naval_detection_tt
@@ -4072,7 +4188,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33203"
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_naval_speed_factor = 0.10
 				tooltip = naval_speed_factor_tt
@@ -4107,7 +4226,10 @@ focus_tree = {
 			navy_experience = 50
 			air_experience = 50
 			IMA_design_seagladiator = yes
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_navy_carrier_air_agility_factor = 0.05
 				tooltip = navy_carrier_air_agility_factor_tt
@@ -4138,7 +4260,10 @@ focus_tree = {
 				uses = 1
 				name = IMA_33204
 			}
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_experience_gain_navy_factor = 0.1
 				tooltip = experience_gain_navy_factor_tt 
@@ -4163,7 +4288,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33205"
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_navy_capital_ship_attack_factor = 0.1
 				tooltip = navy_capital_ship_attack_factor_tt 
@@ -4192,7 +4320,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33206"
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_navy_max_range_factor = 0.10
 				tooltip = navy_max_range_factor_tt
@@ -4221,7 +4352,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33207"
 			IMA_design_invincible = yes
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = { 
 				IMA_navy_naval_critical_score_chance_factor = 0.15
 				tooltip = naval_critical_score_chance_factor_tt
@@ -4245,7 +4379,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33004"
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = { 
 				IMA_navy_navy_submarine_detection_factor = 0.2
 				tooltip = navy_submarine_detection_factor_tt
@@ -4277,7 +4414,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_33005"
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_naval_damage_factor = 0.3
 				tooltip = naval_damage_factor_tt
@@ -4348,7 +4488,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_repair_speed_factor = 0.1
 				tooltip = repair_speed_factor_tt
@@ -4384,7 +4527,10 @@ focus_tree = {
 				uses = 2
 				category = naval_minesweeping
 			}
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = { 
 				IMA_navy_mines_planting_by_fleets_factor = 0.1
 				tooltip = mines_planting_by_fleets_factor_tt
@@ -4437,7 +4583,10 @@ focus_tree = {
 					add_mio_research_bonus = 0.05
 				}
 			}
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = { 
 				IMA_navy_build_cost_ic_carrier = -0.1
 				tooltip = build_cost_ic_carrier_tt
@@ -4501,7 +4650,10 @@ focus_tree = {
 					add_mio_research_bonus = 0.05
 				}
 			}
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_experience_gain_navy_factor = 0.1
 				tooltip = experience_gain_navy_factor_tt 
@@ -4582,7 +4734,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			if = {
 				limit = { has_AAT = no }
 				if = {
@@ -4609,7 +4764,10 @@ focus_tree = {
 				}
 			}
 			IMA_design_battle = yes
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = { 
 				IMA_navy_build_cost_ic_screen_ship = -0.1
 				tooltip = build_cost_ic_screen_ship_tt
@@ -4670,7 +4828,10 @@ focus_tree = {
 				}
 			
 			}
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_naval_mine_hit_chance = -0.05
 				tooltip = naval_mine_hit_chance_tt
@@ -4705,12 +4866,18 @@ focus_tree = {
 			navy_experience = 50
 			air_experience = 50
 			IMA_design_fulmar = yes
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_navy_carrier_air_attack_factor = 0.05
 				tooltip = navy_carrier_air_attack_factor_tt
 			}
-			custom_effect_tooltip = IMA_air_force_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_air_force
+			}
 			add_to_variable = {
 				IMA_air_force_naval_strike_targetting_factor = 0.15
 				tooltip = naval_strike_targetting_factor_tt
@@ -4734,7 +4901,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			IMA_design_implacable = yes
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_navy_max_range_factor = 0.20
 				tooltip = navy_max_range_factor_tt
@@ -4763,7 +4933,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			IMA_design_churchil = yes
 			IMA_design_minotaur = yes
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_build_cost_ic_screen_ship = -0.05
 				tooltip = build_cost_ic_screen_ship_tt
@@ -4793,7 +4966,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = { 
 				IMA_navy_refit_speed = 0.15
 				tooltip = refit_speed_tt
@@ -4854,7 +5030,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = {
 				IMA_navy_naval_speed_factor = 0.1
 				tooltip = naval_speed_factor_tt
@@ -4885,7 +5064,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			custom_effect_tooltip = IMA_navy_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_navy
+			}
 			add_to_variable = { 
 				IMA_navy_build_cost_ic_capital_ship = -0.1
 				tooltip = build_cost_ic_capital_ship_tt
@@ -5076,7 +5258,10 @@ focus_tree = {
 			army_experience = 5
 			navy_experience = 25
 			air_experience = 25
-			custom_effect_tooltip = IMA_army_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_army
+			}
 			add_to_variable = {
 				IMA_army_acclimatization_hot_climate_gain_factor = 0.07
 				tooltip = acclimatization_hot_climate_gain_factor_tt
@@ -5104,7 +5289,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_41003"
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_research_speed_factor = 0.07
 				tooltip = research_speed_factor_tt
@@ -6708,7 +6896,10 @@ focus_tree = {
 		prerequisite = { focus = IMA_51002a focus = IMA_51002b focus = IMA_51002c focus = IMA_51002d focus = IMA_51002e focus = IMA_51002f focus = IMA_51002g }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51003"
-			custom_effect_tooltip = IMA_army_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_army
+			}
 			add_to_variable = {
 				IMA_army_conscription_factor = 0.02
 				tooltip = conscription_factor_tt
@@ -7041,7 +7232,10 @@ focus_tree = {
 				amount = 150
 			}
 			custom_effect_tooltip = generic_line_break_tt
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_transport_capacity = -0.2
 				tooltip = transport_capacity_tt
@@ -7213,7 +7407,10 @@ focus_tree = {
 		prerequisite = { focus = IMA_51101 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51102"
-			custom_effect_tooltip = IMA_industry_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = IMA_industry
+			}
 			add_to_variable = {
 				IMA_industry_production_speed_arms_factory_factor = 0.1
 				tooltip = production_speed_arms_factory_factor_tt
@@ -7240,7 +7437,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51103"
 			if = {
 				limit = { has_LaR = yes }
-				create_intelligence_agency = yes
+				if = {
+					limit = { has_intelligence_agency = no }
+					create_intelligence_agency = yes
+				}
 				add_war_support = 0.1
 				add_stability = 0.05
 			}
@@ -7266,6 +7466,17 @@ focus_tree = {
 		prerequisite = { focus = IMA_51103 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51104"
+			if = {
+				limit = { has_LaR = yes }
+				upgrade_intelligence_agency = upgrade_passive_defense
+				add_war_support = 0.1
+				add_stability = 0.05
+			}
+			if = {
+				limit = { has_LaR = no }
+				add_war_support = 0.15
+				add_stability = 0.1
+			}
 		}
 	}
 
@@ -7357,6 +7568,13 @@ focus_tree = {
 		prerequisite = { focus = IMA_51201 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51203"
+			if = {
+				limit = { has_LaR = yes }
+				if = {
+					limit = { has_intelligence_agency = yes }
+					upgrade_intelligence_agency = upgrade_passive_defense
+				}
+			}
 		}
 	}
 
@@ -7536,6 +7754,7 @@ focus_tree = {
 				#	id = IMA_war_events.23
 				#	days = 5 
 				#}
+				unlock_decision_tooltip = IMA_homeland_defence_operation_pied_piper
 			}
 		}
 	}
@@ -7630,6 +7849,15 @@ focus_tree = {
 		x = 0
 		y = 1
 		mutually_exclusive = { focus = IMA_51024 }
+		bypass = {
+			LLS = {
+				OR = {
+					exists = yes
+					is_in_faction_with = AIN
+					has_war_with = IMA
+				}
+			}
+		}
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_51021 }
@@ -7666,7 +7894,7 @@ focus_tree = {
 			AIN = {
 				OR = {
 					exists = yes
-					is_in_faction_with = AIN
+					is_in_faction_with = PRS
 					has_war_with = IMA
 				}
 			}
@@ -7676,6 +7904,10 @@ focus_tree = {
 		prerequisite = { focus = IMA_51023 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51027"
+			declare_war_on = {
+				target = AIN
+				type = annex_everything
+			}
 		}
 	}
 
@@ -7849,6 +8081,8 @@ focus_tree = {
 		relative_position_id = IMA_51015
 		x = 7
 		y = 1
+		
+		allow_branch = { has_country_flag = on_construction_flag } # IOI 임시조치
 		available = {
 			date > 1940.1.1
 			has_war = no

@@ -1,0 +1,927 @@
+debug_test = { }
+
+PRS_mefo_bills_category = {
+
+	PRS_mefo_bills_mission = {
+
+		allowed = { always = no }
+
+		icon = ger_mefo_bills
+
+		available = {
+			has_political_power > 0
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 180
+		is_good = yes
+		fire_only_once = yes
+
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					NOT = { has_dynamic_modifier = { modifier = PRS_mefo_bills_modifier } }
+					has_idea = PRS_mefo_bills_ended
+				}
+			}
+		}
+
+		days_remove = PRS_extend_mefo_bills_days?0
+		remove_effect = {
+		}
+
+		complete_effect = {
+		}
+
+		timeout_effect = {
+			if = {
+				limit = { has_country_flag = PRS_has_cancelled_mefo }
+				PRS_pay_back_mefo_bills = yes
+			}
+			else = {
+				custom_effect_tooltip = PRS_mefo_bills_mission_tt #TODO_Danne Re-write this to better fit the new circumstances!
+				custom_effect_tooltip = PRS_mefo_bills_effect_in_days
+				hidden_effect = {
+					set_variable = { PRS_extend_mefo_bills_days = days_mission_timeout@PRS_mefo_bills_mission }
+					set_country_flag = paid_for_mefo
+				}
+				if = {
+					limit = { check_variable = { var = PRS_mefo_bill_counter value = 15 compare = less_than } }
+					hidden_effect = { set_variable = { PRS_mefo_bill_counter = 10 } }
+				}
+				add_to_variable = { PRS_mefo_bill_counter = 10 }
+
+				hidden_effect = {
+					activate_mission = PRS_mefo_bills_mission
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+
+	PRS_cancel_mefos = {
+
+		icon = ger_mefo_bills
+
+		ai_will_do = {
+			base = 0
+		}
+
+		available = {
+		}
+
+		cost = 0
+
+		fire_only_once = no
+
+		visible = {
+			has_dynamic_modifier = { modifier = PRS_mefo_bills_modifier }
+		}
+
+		cancel_if_not_visible = yes
+
+		remove_effect = {
+			set_country_flag = PRS_has_cancelled_mefo
+		}
+
+		complete_effect = {
+			effect_tooltip = {
+				retire_character = PRS_hjalmar_schacht
+				show_ideas_tooltip = hjalmar_schacht
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			PRS_stop_rearmament = yes
+		}
+	}
+}
+
+
+PRS_seize_gold_reserves_cat = {
+	PRS_seize_gold_reserves = {
+		priority = 1
+		icon = GFX_decision_generic_confiscation
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 2.5
+				check_variable = { PRS_industrial_consumer_goods_factor > 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { PRS_industrial_consumer_goods_factor > 0.5 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { PRS_industrial_consumer_goods_factor > 0.75 }
+			}
+			modifier = {
+				factor = 5
+				check_variable = { PRS_industrial_consumer_goods_factor > 0.99 }
+			}
+			modifier = {
+				factor = 1.5
+				has_war_with_major = yes
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				check_variable = { PRS_industrial_consumer_goods_factor < 0.15 }
+			}
+		}
+
+		target_non_existing = yes #This is required for the Decision to even show up. TODO_Danne fix a better solution
+		target_array = ROOT.PRS_seize_gold_targets_array
+
+		target_trigger = {
+			FROM = {
+				has_country_flag = PRS_has_capitulated_to_projectsekai
+				NOT = { #Don't seize France's gold reserves too soon; set up Vichy France first. Set in event France.10 and cleared in event france.14
+					has_country_flag = PRS_dont_seize_gold_reserves_flag
+				}
+				any_core_state = {
+					is_controlled_by = ROOT
+					NOT = { is_core_of = ROOT }
+					NOT = { has_state_flag = PRS_seize_gold_reserves_state_flag }
+					OR = {
+						check_variable = { industrial_complex_level > 0 }
+						check_variable = { arms_factory_level > 0 }
+						check_variable = { building_level@dockyard > 0 }
+					}
+				}
+			}
+		}
+
+		available = {
+			FROM = {
+				has_country_flag = PRS_has_capitulated_to_projectsekai
+			}
+			ROOT = {
+				custom_trigger_tooltip = {
+					tooltip = PRS_economy_of_conquest_modifier_consumer_goods_tt
+					check_variable = { PRS_industrial_consumer_goods_factor > 0 }
+				}
+			}
+		}
+
+		target_root_trigger = {
+			ROOT = { has_dynamic_modifier = { modifier = PRS_economy_of_conquest_modifier }}
+		}
+		
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			set_temp_variable = { occupied_state_num_factory = 0 } #This will show how many factories in total Germany controls from FROM's cores
+			add_to_temp_variable = { PRS.occupied_state_num_factory = FROM.num_of_military_factories_in_cores@PRS }
+			add_to_temp_variable = { PRS.occupied_state_num_factory = FROM.num_of_civilian_factories_in_cores@PRS }
+			add_to_temp_variable = { PRS.occupied_state_num_factory = FROM.num_of_naval_factories_in_cores@PRS }
+
+			if = {
+				limit = {
+					NOT = {
+						FROM = {
+							original_tag = TUR
+						}
+					}
+				}
+				FROM = {
+					every_core_state = {
+						limit = {
+							is_on_continent = europe
+							is_fully_controlled_by = ROOT
+							NOT = { has_state_flag = PRS_seize_gold_reserves_state_flag }
+						}
+						add_compliance = -5
+						add_resistance = 10
+						set_state_flag = PRS_seize_gold_reserves_state_flag
+						add_dynamic_modifier = { modifier = PRS_overburdened_state_modifier days = 90 }
+					}
+				}
+			}
+			else = {
+				FROM = {
+					every_core_state = {
+						limit = {
+							is_fully_controlled_by = ROOT
+							NOT = { has_state_flag = PRS_seize_gold_reserves_state_flag }
+						}
+						add_compliance = -5
+						add_resistance = 10
+						set_state_flag = PRS_seize_gold_reserves_state_flag
+						add_dynamic_modifier = { modifier = PRS_overburdened_state_modifier days = 90 }
+					}
+				}
+			}
+			
+			divide_temp_variable = { occupied_state_num_factory = 200 } #This is necessary since a single factory will increase the occupied_state_num_factory number to 1, which in turn translates to -100% when subtracting from the Consumer Goods. Dividing it by 100 here will give you 1% instead, which is more like what we want.
+			multiply_temp_variable = { occupied_state_num_factory = -1 }
+
+			#If Germany has seized Gold Reserves from Soviet states, deduct that amount when seizing the nation wide Gold Reserves from Soviet, so we're not double dipping
+			if = { 
+				limit = {
+					FROM = { original_tag = TOH }
+					#Check if Germany has seized Gold Reserves that needs to be deducted from the total amount
+					check_variable = { PRS_reduce_russian_CG_bonus < 0 }
+				}
+				subtract_from_temp_variable = { occupied_state_num_factory = PRS_reduce_russian_CG_bonus }
+			}
+			
+			custom_effect_tooltip = PRS_modify_economy_of_conquest_modifier_tt
+			add_to_variable = {
+				PRS_industrial_consumer_goods_factor = occupied_state_num_factory
+				tooltip = consumer_goods_factor_tt
+			}
+			PRS_reduce_mefo_bills_penalty = yes
+		}
+	}
+	PRS_seize_russian_citites_gold_reserves = {
+		priority = 1
+		icon = GFX_decision_generic_confiscation
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 3
+				check_variable = { PRS_industrial_consumer_goods_factor > 0.25 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { PRS_industrial_consumer_goods_factor > 0.5 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { PRS_industrial_consumer_goods_factor > 0.75 }
+			}
+			modifier = {
+				factor = 5
+				check_variable = { PRS_industrial_consumer_goods_factor > 0.99 }
+			}
+			modifier = {
+				factor = 1.5
+				has_war_with_major = yes
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					controller = {
+						is_major = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				check_variable = { PRS_industrial_consumer_goods_factor < 0.15 }
+			}
+		}
+
+		state_target = yes
+
+		targets = { 195 219 217 242 218 206 202 137 }
+		#States being targeted: Leningrad, Moscow, Stalingrad, Smolensk, Rostov, Minsk, Kyiv, Crimea
+
+		target_trigger = {
+			FROM = {
+				owner = {
+					original_tag = SOV
+					has_war_with = ROOT
+					NOT = { has_country_flag = PRS_has_capitulated_to_projectsekai }
+				}
+				NOT = { has_state_flag = PRS_seize_gold_reserves_state_flag }
+				NOT = { is_core_of = ROOT }
+				OR = {
+					check_variable = { industrial_complex_level > 0 }
+					check_variable = { arms_factory_level > 0 }
+					check_variable = { building_level@dockyard > 0 }
+				}
+			}
+		}		
+
+		available = {
+			FROM = { #This is all for tooltip purposes
+				is_fully_controlled_by = ROOT
+				owner = {
+					NOT = { has_country_flag = PRS_has_capitulated_to_projectsekai }
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		complete_effect = {
+
+			#All temp variables need to be in the same scope to display the effect tooltip properly
+			FROM = {
+				set_temp_variable = { occupied_state_num_factory = 0 }
+				add_to_temp_variable = { occupied_state_num_factory = arms_factory_level }
+				add_to_temp_variable = { occupied_state_num_factory = industrial_complex_level }
+				add_to_temp_variable = { occupied_state_num_factory = building_level@dockyard }
+
+				add_resistance = 10
+				add_compliance = -5
+				set_state_flag = PRS_seize_gold_reserves_state_flag
+				add_dynamic_modifier = { modifier = PRS_overburdened_state_modifier days = 90 }
+				
+				divide_temp_variable = { occupied_state_num_factory = 200 } #This is necessary since a single factory will increase the occupied_state_num_factory number to 1, which in turn translates to -100% when subtracting from the Consumer Goods. Dividing it by 100 here will give you 1% instead, which is more like what we want.
+				multiply_temp_variable = { occupied_state_num_factory = -1 }
+
+				if = {
+					limit = {
+						FROM = { is_fully_controlled_by = ROOT }
+					}
+					custom_effect_tooltip = PRS_modify_economy_of_conquest_modifier_tt
+					add_to_variable = {
+						ROOT.PRS_industrial_consumer_goods_factor = occupied_state_num_factory
+						tooltip = consumer_goods_factor_tt
+					}
+				}
+				else = {
+					custom_effect_tooltip = PRS_modify_economy_of_conquest_modifier_russian_states_tt
+				}
+
+				#Reduce future Soviet Gold Reserves Germany can seize
+				add_to_variable = { ROOT.PRS_reduce_russian_CG_bonus = occupied_state_num_factory }
+			}
+			PRS_reduce_mefo_bills_penalty = yes
+		}
+	}
+}
+
+PRS_operational_planning_category = {
+
+	# Campaign Instructions against [FROM.GetName]
+	PRS_operational_planning = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 5
+				has_war_with = FROM
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 10
+				FROM = { original_tag = PRK }
+				has_completed_focus = PRS_31502
+			}
+			modifier = {
+				factor = 10
+				FROM = { original_tag = TOH }
+				has_completed_focus = PRS_31403
+			}
+			modifier = {
+				factor = 10
+				FROM = {
+					original_tag = BDG
+				}
+				OR = {
+					divisions_in_state = {
+						state = 6
+						size > 5
+						#type = armor
+					}
+					divisions_in_state = {
+						state = 977
+						size > 5
+						#type = armor
+					}
+					divisions_in_state = {
+						state = 34
+						size > 5
+						#type = armor
+					}
+					divisions_in_state = {
+						state = 980
+						size > 5
+						#type = armor
+					}
+				}
+			}
+			modifier = { #Don't Blitzkrieg France unless you can bypass the Maginot
+				factor = 0
+				FROM = {
+					original_tag = FRA
+					any_core_state = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+						ROOT = {
+							divisions_in_state = {
+								state = PREV
+								size < 1
+								#type = armor
+							}
+						}
+					}
+					NOT = {
+						any_controlled_state = {
+							is_core_of = STR
+							any_neighbor_state = {
+								is_fully_controlled_by = ROOT
+							}
+						}
+					}
+				}
+				980 = {	state_is_fully_controlled_by_ROOT_subject_or_faction_member = no }
+				28 = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = no }
+			}
+			modifier = { #Save CP and XP for the French offensive
+				factor = 0
+				FROM = {
+					original_tag = STR
+					is_ai = yes
+				}
+				has_war_with = BDG
+				command_power < 80
+				has_army_experience < 40
+			}
+			modifier = { #Muahahahaha
+				factor = 2
+				FROM = {
+					is_ai = no
+				}
+			}
+			modifier = { #Germany is super aggressive and wastes CP and XP on countries they only have a War Goal on
+				factor = 0
+				NOT = {
+					has_war_with = FROM
+				}
+			}
+			modifier = { #Save CP and XP for the offensive
+				factor = 0
+				focus_progress = {
+				    focus = PRS_31403
+				    progress > 0.01
+				}
+				NOT = { has_completed_focus = PRS_31403 }
+			}
+		}
+
+		allowed = {
+			original_tag = PRS
+		}
+
+		days_remove = 365
+
+		custom_cost_trigger = {
+			command_power > 24
+			has_army_experience > 14
+		}
+
+		custom_cost_text = decision_cost_CP_25_ArmXP_15 
+
+		available = { #Can't be target_root_trigger
+			NOT = {	has_country_flag = PRS_operational_planning_flag }
+			OR = {
+				has_war_with = FROM
+				has_wargoal_against = FROM
+			}
+		}
+
+		target_array = ROOT.PRS_war_targets_array
+
+		target_trigger = { #TODO_Danne This needs to be refined! 
+			FROM = {
+				has_war_with = ROOT
+				any_controlled_state = {
+					is_on_continent = europe
+					any_neighbor_state = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+				}
+			}
+		}
+
+	#	fire_only_once = yes
+		
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				army_experience = -15
+				set_country_flag = PRS_operational_planning_flag
+			}
+			#BLITZKRIEG
+			if = {
+				limit = { has_completed_focus = PRS_21301 }
+				if = { #It's easier to make this a separate modifier and using scripted loc to display the effects in the "main" state modifier
+					limit = { has_completed_focus = PRS_21405 }
+					hidden_effect = {
+						every_state = {
+							limit = {
+								is_controlled_by = FROM
+								is_on_continent = europe
+							}
+							add_dynamic_modifier = {
+								modifier = PRS_motor_and_mech_attack_modifier
+								scope = PRS
+								days = 45
+							}
+						}
+					}
+				}
+				if = { #Add basic Blitzkrieg modifier
+					limit = {
+						has_completed_focus = PRS_21301
+						NOT = { has_completed_focus = PRS_21405 }
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = europe
+						}
+						add_dynamic_modifier = {
+							modifier = PRS_blitzkrieg_modifier
+							scope = PRS
+							days = 45
+						}
+					}
+				}
+				else_if = { #Add Blitzkrieg Level 2
+					limit = {
+						has_completed_focus = GER_advanced_panzer_research
+						NOT = { has_completed_focus = GER_expand_kummersdorfs_capacity }
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = europe
+						}
+						add_dynamic_modifier = {
+							modifier = PRS_blitzkrieg_modifier_lvl_2
+							scope = PRS
+							days = 45
+						}
+					}
+				}
+				else_if = { #Add Blitzkrieg Level 3
+					limit = {
+						has_completed_focus = GER_expand_kummersdorfs_capacity
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = europe
+						}
+						add_dynamic_modifier = {
+							modifier = GER_blitzkrieg_modifier_lvl_3
+							scope = GER
+							days = 45
+						}
+					}
+				}
+				hidden_effect = { #This removes the GER_operational_planning_flag, enabling Germany to do the decision again. remove_effect won't work if the country in question capitulates
+					country_event = { id = wuw_GER_military_events.1 days = 45 } 
+				}
+			}
+			#BEWEGUNGSKRIEG
+			else_if = {
+				limit = {
+					has_completed_focus = GER_the_prussian_legacy
+				}
+				if = { #It's easier to make this a separate modifier and using scripted loc to display the effects in the "main" state modifier
+					limit = {
+						has_completed_focus = GER_panzergrenadier
+					}
+					hidden_effect= {
+						every_state = {
+							limit = {
+								is_controlled_by = FROM
+								is_on_continent = europe
+							}
+							add_dynamic_modifier = {
+								modifier = GER_motor_and_mech_attack_modifier
+								scope = GER
+								days = 90
+							}
+						}
+					}
+				}
+				if = { #Add basic bewegungskrieg modifier
+					limit = {
+						has_completed_focus = GER_the_prussian_legacy
+						NOT = { has_completed_focus = GER_lessons_of_the_great_war }
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = europe
+						}
+						add_dynamic_modifier = {
+							modifier = GER_bewegungskrieg_modifier
+							scope = GER
+							days = 90
+						}
+					}
+				}
+				else_if = { #Add bewegungskrieg Level 2
+					limit = {
+						has_completed_focus = GER_lessons_of_the_great_war
+						NOT = { has_completed_focus = GER_artillery_bombardment }
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = europe
+						}
+						add_dynamic_modifier = {
+							modifier = GER_bewegungskrieg_modifier_lvl_2
+							scope = GER
+							days = 90
+						}
+					}
+				}
+				else_if = { #Add bewegungskrieg Level 3
+					limit = {
+						has_completed_focus = GER_artillery_bombardment
+						NOT = { has_completed_focus = GER_stormtroopers }
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = europe
+						}
+						add_dynamic_modifier = {
+							modifier = GER_bewegungskrieg_modifier_lvl_3
+							scope = GER
+							days = 90
+						}
+					}
+				}
+				else_if = { #Add bewegungskrieg Level 4
+					limit = {
+						has_completed_focus = GER_stormtroopers
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = europe
+						}
+						add_dynamic_modifier = {
+							modifier = GER_bewegungskrieg_modifier_lvl_4
+							scope = GER
+							days = 90
+						}
+					}
+				}				
+				hidden_effect = { #This removes the GER_operational_planning_flag, enabling Germany to do the decision again. remove_effect won't work if the country in question capitulates
+					country_event = { id = wuw_GER_military_events.1 days = 90 } 
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+		remove_effect = {
+		}
+	}
+	PRS_operational_planning_africa = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+
+		ai_will_do = {
+			base = 0
+		}
+
+		allowed = {
+			original_tag = PRS
+		}
+
+		days_remove = 365
+
+		custom_cost_trigger = {
+			command_power > 24
+			has_army_experience > 14
+		}
+
+		custom_cost_text = decision_cost_CP_25_ArmXP_15
+
+		visible = { has_completed_focus = GER_establish_the_afrikakorps }
+
+		available = { #Can't be target_root_trigger
+			NOT = {	has_country_flag = PRS_operational_planning_flag }
+			OR = {
+				has_war_with = FROM
+				has_wargoal_against = FROM
+			}
+			hidden_trigger = {
+				has_completed_focus = GER_establish_the_afrikakorps
+			}
+		}
+
+		target_array = ROOT.PRS_war_targets_array
+
+		target_trigger = { #TODO_Danne This needs to be refined! 
+			FROM = {
+				has_war_with = ROOT
+				any_controlled_state = {
+					is_on_continent = africa
+					any_neighbor_state = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				army_experience = -15
+				set_country_flag = PRS_operational_planning_flag
+			}
+			if = {
+				limit = {
+					has_completed_focus = GER_adopt_new_panzer_doctrine
+				}
+				if = { #It's easier to make this a separate modifier and using scripted loc to display the effects in the "main" state modifier
+					limit = {
+						has_completed_focus = GER_panzergrenadier
+					}
+					hidden_effect= {
+						every_state = {
+							limit = {
+								is_controlled_by = FROM
+								is_on_continent = africa
+							}
+							add_dynamic_modifier = {
+								modifier = GER_motor_and_mech_attack_modifier
+								scope = GER
+								days = 45
+							}
+						}
+					}
+				}
+				if = { #Add basic Blitzkrieg modifier
+					limit = {
+						has_completed_focus = GER_adopt_new_panzer_doctrine
+						NOT = { has_completed_focus = GER_advanced_panzer_research }
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = africa
+						}
+						add_dynamic_modifier = {
+							modifier = GER_blitzkrieg_modifier
+							scope = GER
+							days = 45
+						}
+					}
+				}
+				else_if = { #Add Blitzkrieg Level 2
+					limit = {
+						has_completed_focus = GER_advanced_panzer_research
+						NOT = { has_completed_focus = GER_expand_kummersdorfs_capacity }
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = africa
+						}
+						add_dynamic_modifier = {
+							modifier = GER_blitzkrieg_modifier_lvl_2
+							scope = GER
+							days = 45
+						}
+					}
+				}
+				else_if = { #Add Blitzkrieg Level 3
+					limit = {
+						has_completed_focus = GER_expand_kummersdorfs_capacity
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = africa
+						}
+						add_dynamic_modifier = {
+							modifier = GER_blitzkrieg_modifier_lvl_3
+							scope = GER
+							days = 45
+						}
+					}
+				}
+				hidden_effect = { #This removes the GER_operational_planning_flag, enabling Germany to do the decision again. remove_effect won't work if the country in question capitulates
+					country_event = { id = wuw_GER_military_events.1 days = 45 } 
+				}
+			}
+			#BEWEGUNGSKRIEG
+			else_if = {
+				limit = {
+					has_completed_focus = GER_the_prussian_legacy
+				}
+				if = { #It's easier to make this a separate modifier and using scripted loc to display the effects in the "main" state modifier
+					limit = {
+						has_completed_focus = GER_panzergrenadier
+					}
+					hidden_effect= {
+						every_state = {
+							limit = {
+								is_controlled_by = FROM
+								is_on_continent = africa
+							}
+							add_dynamic_modifier = {
+								modifier = GER_motor_and_mech_attack_modifier
+								scope = GER
+								days = 90
+							}
+						}
+					}
+				}
+				if = { #Add basic bewegungskrieg modifier
+					limit = {
+						has_completed_focus = GER_the_prussian_legacy
+						NOT = { has_completed_focus = GER_lessons_of_the_great_war }
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = africa
+						}
+						add_dynamic_modifier = {
+							modifier = GER_bewegungskrieg_modifier
+							scope = GER
+							days = 90
+						}
+					}
+				}
+				else_if = { #Add bewegungskrieg Level 2
+					limit = {
+						has_completed_focus = GER_lessons_of_the_great_war
+						NOT = { has_completed_focus = GER_artillery_bombardment }
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = africa
+						}
+						add_dynamic_modifier = {
+							modifier = GER_bewegungskrieg_modifier_lvl_2
+							scope = GER
+							days = 90
+						}
+					}
+				}
+				else_if = { #Add bewegungskrieg Level 3
+					limit = {
+						has_completed_focus = GER_artillery_bombardment
+						NOT = { has_completed_focus = GER_stormtroopers }
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = africa
+						}
+						add_dynamic_modifier = {
+							modifier = GER_bewegungskrieg_modifier_lvl_3
+							scope = GER
+							days = 90
+						}
+					}
+				}
+				else_if = { #Add bewegungskrieg Level 4
+					limit = {
+						has_completed_focus = GER_stormtroopers
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_on_continent = africa
+						}
+						add_dynamic_modifier = {
+							modifier = GER_bewegungskrieg_modifier_lvl_4
+							scope = GER
+							days = 90
+						}
+					}
+				}				
+				hidden_effect = { #This removes the GER_operational_planning_flag, enabling Germany to do the decision again. remove_effect won't work if the country in question capitulates
+					country_event = { id = wuw_GER_military_events.1 days = 90 } 
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+		remove_effect = {
+		}
+	}
+}
