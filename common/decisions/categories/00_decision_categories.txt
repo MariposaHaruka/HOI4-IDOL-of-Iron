@@ -304,11 +304,28 @@ lar_local_recruitment = {
 
 #해외 설계사 초청
 foreign_mio_decisions_category = {
-	picture = generic_economy
+	icon = generic_economy
 	allowed = {
 		has_AAT = yes
 	}
 	priority = 5
+}
+
+#구형 선박 구매
+generic_purchase_old_ships_category = {
+	icon = MTG_naval_treaties
+	picture = GFX_decision_cat_picture_naval_treaties
+	
+	allowed = { 
+		has_unique_national_focus = no
+	}
+	visible = {
+		has_country_flag = generic_purchase_old_ships_flag
+	}
+	priority = {
+		base = 8
+	}
+	visible_when_empty = no
 }
 
 #구형 선박 구매
@@ -324,6 +341,16 @@ generic_purchase_old_ships_category = {
 	}
 	priority = {
 		base = 8
+	}
+	visible_when_empty = no
+}
+
+#군사 정책
+generic_military_buildup = {
+	icon = ger_military_buildup
+
+	priority = {
+		base = 10
 	}
 	visible_when_empty = no
 }
