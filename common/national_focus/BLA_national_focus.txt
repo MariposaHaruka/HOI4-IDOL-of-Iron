@@ -2007,9 +2007,17 @@ focus_tree = {
 				}
 				add_to_variable = { #툴팁용
 					BLA_navy_build_cost_ic_capital_ship = -0.1
-					tooltip = build_cost_ic_capital_ship_tt
+					tooltip = navy_capital_ship_attack_factor_tt
 				}
-				hidden_effect = { add_ideas = BLA_capitor_fleet }
+				add_to_variable = { 
+					BLA_navy_naval_capital_ship_attack_factor = 0.1
+					tooltip = naval_capital_ship_attack_factor_tt
+				}
+				add_to_variable = { 
+					BLA_navy_naval_capital_ship_defence_factor = 0.1
+					tooltip = naval_capital_ship_defence_factor_tt
+				}
+				hidden_effect = { add_ideas = BLA_12102_idea }
 			}
 			else_if = {
 				limit = { has_completed_focus = BLA_12103 }
@@ -2021,10 +2029,34 @@ focus_tree = {
 					BLA_navy_build_cost_ic_carrier = -0.1
 					tooltip = build_cost_ic_carrier_tt
 				}
-				hidden_effect = { add_ideas = BLA_carrier_fleet }
+				add_to_variable = { 
+					BLA_navy_naval_carrier_attack_factor = 0.1
+					tooltip = naval_carrier_attack_factor_tt
+				}
+				add_to_variable = { 
+					BLA_navy_naval_carrier_defence_factor = 0.1
+					tooltip = naval_carrier_defence_factor_tt
+				}
+				hidden_effect = { add_ideas = BLA_12103_idea }
 			}
 			else = {
 				custom_effect_tooltip = BLA_12X04_tt
+				custom_effect_tooltip = {
+					localization_key = tooltip_modify_dynmod
+					DYNMOD = BLA_navy
+				}
+				add_to_variable = { #툴팁용
+					BLA_navy_build_cost_ic_carrier = -0.1
+					tooltip = build_cost_ic_carrier_tt
+				}
+				add_to_variable = { 
+					BLA_navy_naval_carrier_attack_factor = 0.1
+					tooltip = naval_carrier_attack_factor_tt
+				}
+				add_to_variable = { 
+					BLA_navy_naval_carrier_defence_factor = 0.1
+					tooltip = naval_carrier_defence_factor_tt
+				}
 			}
 		}
 	}
