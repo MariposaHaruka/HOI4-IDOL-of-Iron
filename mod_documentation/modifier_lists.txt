@@ -1,346 +1,1120 @@
+#GENERAL modifier
+monthly_population	#매월 인구	#tt
+nuclear_production	#핵폭탄 허용
+nuclear_production_factor	#핵폭탄 생산율
+thermonuclear_production	#열핵폭탄 허용
+thermonuclear_production_factor	#열핵폭탄 생산율
+research_sharing_per_country_bonus	#기술 공유 혜택
+research_sharing_per_country_bonus_factor	#기술 공유 혜택	#tt
+research_speed_factor	#연구 속도	#tt
+local_resources_factor	#자원 획득 효율	#tt
+surrender_limit	#항복 한계치	#tt
+max_surrender_limit_offset	#최소 항복 한계치
+forced_surrender_limit #항복 한계치
+country_resource_aluminium #알루미늄	#tt
+country_resource_chromium #크롬	#tt
+country_resource_oil #석유	#tt
+country_resource_rubber #고무	#tt
+country_resource_steel #강철	#tt
+country_resource_tungsten #텅스텐	#tt
+country_resource_coal #석탄	#tt
+country_resource_cost_aluminium #알루미늄 소비량
+country_resource_cost_chromium #크롬 소비량
+country_resource_cost_oil #석유 소비량
+country_resource_cost_rubber #고무 소비량
+country_resource_cost_steel #강철 소비량
+country_resource_cost_tungsten #텅스텐 소비량
+country_resource_cost_coal #석탄 소비량
+factory_energy_consumption #공장 에너지 소비량	#tt
+
+#POLITICS modifier
+min_export	#시장으로 가는 자원	#tt
+trade_opinion_factor	#무역 거래 의견 변동치	#tt2
+defensive_war_stability_factor	#방어전쟁 불이익으로 인한 안정도 변동치	#tt
+disabled_ideas	#장관 및 법을 지정할 수 없음	#Boolean
+<idea|character slot>_cost_factor	#
+political_advisor_cost_factor	#정치 고문 비용	#tt
+theorist_cost_factor	#이론가 비용	#tt
+army_chief_cost_factor	#육군참모총장 비용	#tt
+navy_chief_cost_factor	#해군참모총장 비용	#tt
+air_chief_cost_factor	#공군참모총장 비용	#tt
+high_command_cost_factor	#최고사령부 비용	#tt
+
+army_spirit_category_type_cost_factor	#육군 사령부 정신 비용	#tt
+air_spirit_category_type_cost_factor	#공군 사령부 정신 비용	#tt
+navy_spirit_category_type_cost_factor	#해군 사령부 정신 비용	#tt
+civilian_advisor_cost_factor	#민간 고문 비용	#X
+military_advisor_cost_factor	#군사 고문 비용	#X
+all_advisor_cost_factor	#모든 고문 비용	#X
+air_advisor_cost_factor	#공군 고문 비용
+navy_advisor_cost_factor	#해군 고문 비용
+army_advisor_cost_factor	#육군 고문 비용
+unit_leader_as_advisor_cp_cost_factor	#지휘관을 고문으로 추가하는 비용	#tt
+improve_relations_maintain_cost_factor	#관계 개선 유지 비용
+female_random_country_leader_chance	#여성 국가 지도자 추가 확률
+offensive_war_stability_factor	#공격전쟁 불이익으로 인한 안정도 변동치	#tt
+party_popularity_stability_factor	#정당 인기도로 인한 안정도 변동치	#tt
+political_power_cost	#매일 정치력 비용	#tt
+political_power_gain	#매일 정치력 획득	#tt
+political_power_factor	#정치력 획득	#tt
+stability_factor	#안정도	#tt2
+stability_weekly	#매주 안정도
+stability_weekly_factor	#매주 안정도 획득
+war_stability_factor	#전쟁 불이익으로 인한 안정도 변동치	#tt
+war_support_factor	#전쟁 지지도	#tt2
+war_support_weekly	#매주 전쟁 지지도
+war_support_weekly_factor	#매주 전쟁 지지도 획득
+weekly_casualties_war_support	#매주 전쟁 지지도 (전투 사상자)	#tt
+weekly_convoys_war_support	#매주 전쟁 지지도 (수송선 침몰)	#tt
+weekly_bombing_war_support	#매주 전쟁 지지도 (적 폭격)	#tt
+drift_defence_factor	#이념 변화 방어	#tt
+power_balance_daily	#매일 권력의 균형 변화
+power_balance_weekly	#매주 권력의 균형 변화	#tt
+<ideology>_drift	#매일 (이념) 지지도	#tt
+<ideology>_acceptance	#(이념) 외교 수용
+
+#DIPLOMACY modifier
+civil_war_involvement_tension	#내전 관여에 의한 긴장도
+enemy_declare_war_tension	#우리에게 선전포고 시 발생하는 긴장도
+enemy_justify_war_goal_time	#의용군 파병에 필요한 사단
+generate_wargoal_tension	#전쟁 명분 정당화 긴장도 제한
+guarantee_cost	#독립 보장 비용
+guarantee_tension	#독립 보장 긴장도 제한
+join_faction_tension	#세력 가입 긴장도 제한	#tt
+justify_war_goal_time	#전쟁 명분 정당화 소요 시간	#tt
+justify_war_goal_when_in_major_war_time	#주요국과 전쟁 도중 전쟁 명분 정당화 소요 시간
+lend_lease_tension	#무기대여 긴장도 제한	#tt
+lend_lease_tension_with_overlord	#괴뢰국으로부터의 무기대여 긴장도 제한
+opinion_gain_monthly	#관계 및 의견 개선
+opinion_gain_monthly_factor	#관계 및 의견 개선
+opinion_gain_monthly_same_ideology	#동일 이념 국가의 월간 의견
+opinion_gain_monthly_same_ideology_factor	#동일 이념 국가의 월간 의견
+request_lease_tension	#무기대여 요청 긴장도 제한
+annex_cost_factor	#합병 비용
+puppet_cost_factor	#괴뢰화 비용	#tt
+send_volunteer_divisions_required	#의용군 파병에 필요한 사단
+send_volunteer_factor	#최대 의용군 사단
+send_volunteer_size	#최대 의용군 사단
+send_volunteers_tension	#의용군 파병 긴장도 제한
+air_volunteer_cap	#의용항공대 최대치	#tt
+embargo_threshold_factor	#금수 조치 긴장도 제한	#tt
+embargo_cost_factor	#금수 조치 비용 변동치
+
+#AUTONOMY modifier
+autonomy_gain	#매일 자치권 진행도 획득	#tt
+autonomy_gain_global_factor	#총 자치도 획득	#tt
+subjects_autonomy_gain	#종속국 자치도 획득	#tt
+autonomy_gain_ll_to_overlord	#종주국으로의 무기대여를 통한 자유도 획득
+autonomy_gain_ll_to_overlord_factor	#종주국으로의 무기대여를 통한 자유도 획득
+autonomy_gain_ll_to_subject	#종주국의 무기대여를 통한 자유도 획득
+autonomy_gain_ll_to_subject_factor	#종주국의 무기대여를 통한 자유도 획득
+autonomy_gain_trade	#무역을 통한 자유도 획득
+autonomy_gain_trade_factor	#무역을 통한 자유도 획득
+autonomy_gain_warscore	#승점으로 얻은 자유도
+autonomy_gain_warscore_factor	#승점으로 얻은 자유도
+autonomy_manpower_share	#종속국 인력 요건
+can_master_build_for_us	#종주국은 종속국의 영토에 건설 가능	#Boolean
+cic_to_overlord_factor	#종주국에 제공되는 민간산업	#tt
+mic_to_overlord_factor	#종주국에 제공되는 군수산업	#tt
+extra_trade_to_overlord_factor	#종주국과의 추가 무역
+license_subject_master_purchase_cost	#종주국과 종속국 간의 면허 비용	#tt
+master_build_autonomy_factor	#건설로 얻은 자치도
+master_ideology_drift	#종주국 이념 변화	#tt
+overlord_trade_cost_factor	#종주국 무역 비용
+
+#GOVERNMENT in EXILE modifier
+dockyard_donations	#조선소 공여
+industrial_factory_donations	#민간공장 공여
+military_factory_donations	#군수공장 공여
+exile_manpower_factor	#매일 망명 인력	#tt
+exiled_government_weekly_manpower	#매주 망명정부 인력
+legitimacy_daily	#매일 정통성 획득
+legitimacy_gain_factor	#정통성 획득	#tt
+
+#EQUIPMENT modifier
+equipment_capture	#장비 노획률	#tt
+equipment_capture_factor	#장비 노획률 변동치	#tt
+equipment_conversion_speed	#장비 전환 속도	#tt
+equipment_upgrade_xp_cost	#장비 경험치 비용
+license_purchase_cost	#면허 구매 비용	#tt
+license_air_purchase_cost	#공군 면허 구매 비용	#tt
+license_armor_purchase_cost	#기갑 면허 구매 비용
+license_infantry_purchase_cost	#보병 면허 구매 비용
+license_naval_purchase_cost	#해군 면허 구매 비용
+license_anti_tank_eq_cost_factor	#대전차 장비 면허 구매 비용
+license_artillery_eq_cost_factor	#포병 장비 면허 구매 비용
+license_infantry_eq_cost_factor	#보병 장비 면허 구매 비용
+license_light_tank_eq_cost_factor	#경전차 장비 면허 구매 비용
+license_tech_difference_speed	#기술 격차로 인한 면허 생산 속도
+license_anti_tank_eq_tech_difference_speed_factor	#기술 격차에 의한 대전차 장비 면허 생산 속도
+license_artillery_eq_tech_difference_speed_factor	#기술 격차에 의한 포병 장비 면허 생산 속도
+license_infantry_eq_tech_difference_speed_factor	#보병 장비 기술 격차로 인한 면허 생산 속도
+license_light_tank_eq_tech_difference_speed_factor	#기술 격차에 의한 경전차 장비 면허 생산 속도
+license_production_speed	#면허 생산 속도	#tt
+license_anti_tank_eq_production_speed_factor	#대전차 장비 면허 생산 속도
+license_artillery_eq_production_speed_factor	#포병 장비 면허 생산 속도
+license_infantry_eq_production_speed_factor	#보병 장비 면허 생산 속도
+license_light_tank_eq_production_speed_factor	#경전차 장비 면허 생산 속도
+production_cost_max_convoy	#수송선 최대 비용	#X
+production_cost_max_ship_hull_submarine	#잠수함 최대 비용	#X
+production_cost_max_ship_hull_light	#구축함 최대 비용	#X
+production_cost_max_ship_hull_heavy	#전함 최대 비용
+production_cost_max_ship_hull_cruiser	#순양함 최대 비용
+production_cost_max_ship_hull_carrier	#항공모함 최대 비용
+production_factory_efficiency_gain_factor	#생산 효율 성장	#tt
+production_factory_max_efficiency_factor	#생산 효율 한도	#tt
+production_factory_start_efficiency_factor	#기본 생산 효율	#tt
+line_change_production_efficiency_factor	#생산 효율 유지	#tt
+production_lack_of_resource_penalty_factor	#자원 부족 불이익	#tt
+floating_harbor_duration	#부유항 기간
+floating_harbor_range	#부유항 범위
+floating_harbor_supply	#부유항 보급
+railway_gun_bombardment_factor	#열차포 포격
+
+#FUEL and SUPPLY modifier
+base_fuel_gain	#연료 획득량
+base_fuel_gain_factor	#기본 연료 획득량	#tt
+fuel_cost	#연료 비용
+fuel_gain	#석유당 연료 획득량	#tt
+fuel_gain_factor	#석유당 연료 획득량	#tt
+fuel_gain_from_states	#정제소를 통한 연료 획득량
+fuel_gain_factor_from_states	#정제소를 통한 연료 획득량
+max_fuel	#연료 수용량 (K)
+max_fuel_factor	#연료 수용량	#tt
+army_fuel_capacity_factor	#육군 연료 수용량
+army_fuel_consumption_factor	#육군 연료 소비량	#tt
+air_fuel_consumption_factor	#공군 연료 소비량	#tt
+navy_fuel_consumption_factor	#해군 연료 소비량
+supply_factor	#보급 효율	#tt
+supply_combat_penalties_on_core_factor	#핵심 영토 내 보급 관련 전투 불이익	#tt
+supply_consumption_factor	#보급 소비량	#tt
+no_supply_grace	#보급 유예
+out_of_supply_factor	#비전투 시 보급품 고갈 불이익	#tt
+attrition	#손실	#tt
+unit_upkeep_attrition_factor	#부대 유지비
+naval_attrition	#손실
+heat_attrition	#더위로 인한 손실
+heat_attrition_factor	#더위로 인한 손실	#tt
+winter_attrition	#추위로 인한 손실
+winter_attrition_factor	#추위로 인한 손실	#tt
+extra_marine_supply_grace	#해병대의 추가 보급 유예	#tt
+extra_paratrooper_supply_grace	#공수부대의 추가 보급 유예
+special_forces_no_supply_grace	#특수부대 보급 유예	#tt
+special_forces_out_of_supply_factor	#비전투 시 특수부대 보급품 고갈	#tt
+truck_attrition	#보급 트럭 손실률
+truck_attrition_factor	#보급 트럭 손실률
+
+#BUILDINGS modifier
+production_speed_buildings_factor	#건설 속도	#tt
+production_speed_buildings_powered_factor	#기계화 건설 속도
+production_speed_infrastructure_factor	#기반시설 건설 속도	#tt
+production_speed_rail_way_factor	#철도 건설 속도	#tt
+production_speed_supply_node_factor	#보급 중심지 건설 속도
+production_speed_industrial_complex_factor	#민간공장 건설 속도	#tt
+production_speed_arms_factory_factor	#군수공장 건설 속도	#tt
+production_speed_dockyard_factor	#조선소 건설 속도	#tt
+production_speed_fuel_silo_factor	#연료 저장고 건설 속도	#tt
+production_speed_synthetic_refinery_factor	#정제소 건설 속도	#tt
+production_speed_naval_base_factor	#해군기지 건설 속도	#tt
+production_speed_radar_station_factor	#레이더 기지 건설 속도	#tt
+production_speed_air_base_factor	#공군기지 건설 속도	#tt
+production_speed_anti_air_building_factor	#대공포 건설 속도	#tt
+production_speed_bunker_factor	#요새 건설 속도	#tt
+production_speed_coastal_bunker_factor	#해안 요새 건설 속도	#tt
+production_speed_rocket_site_factor	#로켓 발사대 건설 속도	#tt
+production_speed_nuclear_reactor_factor	#원자로 건설 속도	#tt
+production_speed_naval_headquarters_factor	#해군 사령부 건설 속도	#tt
+production_speed_naval_supply_hub_factor	#해군 보급 중심지 건설 속도	#tt
+production_speed_facility_factor	#시설 건설 속도	#tt
+production_speed_nuclear_facility_factor	#핵 시설 건설 속도	#tt
+production_speed_air_facility_factor	#공균 시설 건설 속도	#tt
+production_speed_naval_facility_factor	#해군 시설 건설 속도	#tt
+production_speed_land_facility_factor	#육군 시설 건설 속도	#tt
+production_cost_infrastructure_factor	#기반시설 건설 비용	#X
+production_cost_rail_way_factor	#철도 건설 비용	#X
+production_cost_supply_node_factor	#보급 중심지 건설 비용
+production_cost_industrial_complex_factor	#민간공장 건설 비용	#X
+production_cost_arms_factory_factor	#군수공장 건설 비용	#X
+production_cost_dockyard_factor	#조선소 건설 비용	#X
+production_cost_fuel_silo_factor	#연료 저장고 건설 비용	#X
+production_cost_synthetic_refinery_factor	#정제소 건설 비용	#X
+production_cost_naval_base_factor	#해군기지 건설 비용	#X
+production_cost_radar_station_factor	#레이더 기지 건설 비용	#X
+production_cost_air_base_factor	#공군기지 건설 비용	#X
+production_cost_anti_air_building_factor	#대공포 건설 비용	#X
+production_cost_bunker_factor	#요새 건설 비용	#X
+production_cost_coastal_bunker_factor	#해안 요새 건설 비용	#X
+production_cost_rocket_site_factor	#로켓 발사대 건설 비용	#X
+production_cost_nuclear_reactor_factor	#원자로 건설 비용	#X
+production_cost_naval_headquarters_factor	#해군 사령부 건설 비용	#X
+production_cost_naval_supply_hub_factor	#해군 보급 중심지 건설 비용	#X
+production_cost_facility_factor	#시설 건설 비용	#X
+production_cost_nuclear_facility_factor	#핵 시설 건설 비용	#X
+production_cost_air_facility_factor	#공균 시설 건설 비용	#X
+production_cost_naval_facility_factor	#해군 시설 건설 비용	#X
+production_cost_land_facility_factor	#육군 시설 건설 비용	#X
+civilian_factory_use	#민간공장 사용량
+consumer_goods_factor	#소비재 공장 변동치	#tt
+consumer_goods_expected_value	#소비재 생산에 필요할 것으로 예상되는 공장의 수
+conversion_cost_civ_to_mil_factor	#민간공장을 군수공장으로 전환하는 비용
+conversion_cost_mil_to_civ_factor	#군수공장을 민간공장으로 전환하는 비용	#tt
+global_building_slots	#주 최대 공장 수	#tt
+global_building_slots_factor	#주 최대 공장 수	#tt
+industrial_capacity_dockyard	#조선소 생산량	#tt
+industrial_capacity_factory	#공장 생산량	#tt
+industrial_capacity_dockyard_powered	#전원 공급 시 조선소 생산량	#tt
+industrial_capacity_factory_powered	#전원 공급 시 공장 생산량	#tt
+industry_air_damage_factor	#공장 폭격 취약도	#tt
+industry_free_repair_factor	#자율 수리	#tt
+industry_repair_factor	#공장 수리 속도	#tt
+production_oil_factor	#합성 석유	#tt
+repair_speed_infrastructure_factor	#기반시설 수리 속도
+repair_speed_rail_way_factor	#철도 수리 속도
+repair_speed_supply_node_factor	#보급 중심지 수리 속도	#X
+repair_speed_industrial_complex_factor	#민간공장 수리 속도
+repair_speed_arms_factory_factor	#군수공장 수리 속도
+repair_speed_dockyard_factor	#조선소 수리 속도	#X
+repair_speed_fuel_silo_factor	#연료 저장고 수리 속도	#X
+repair_speed_synthetic_refinery_factor	#정제소 수리 속도	#X
+repair_speed_naval_base_factor	#해군기지 수리 속도	#X
+repair_speed_radar_station_factor	#레이더 기지 수리 속도	#X
+repair_speed_air_base_factor	#공군기지 수리 속도	#X
+repair_speed_anti_air_building_factor	#대공포 수리 속도	#X
+repair_speed_bunker_factor	#요새 수리 속도	#X
+repair_speed_coastal_bunker_factor	#해안 요새 수리 속도	#X
+repair_speed_rocket_site_factor	#로켓 발사대 수리 속도	#X
+repair_speed_nuclear_reactor_factor	#원자로 수리 속도	#X
+repair_speed_naval_headquarters_factor	#해군 사령부 수리 속도	#X
+repair_speed_naval_supply_hub_factor	#해군 보급 중심지 수리 속도	#X
+repair_speed_facility_factor	#시설 수리 속도	#X
+repair_speed_nuclear_facility_factor	#핵 시설 수리 속도	#X
+repair_speed_air_facility_factor	#공균 시설 수리 속도	#X
+repair_speed_naval_facility_factor	#해군 시설 수리 속도	#X
+repair_speed_land_facility_factor	#육군 시설 수리 속도	#X
+supply_node_range	#보급 범위	#tt
+static_anti_air_damage_factor	#고정 대공포 피해량 변동치
+static_anti_air_hit_chance_factor	#고정 대공포 타격 확률 변동치	#tt
+tech_air_damage_factor	#대공 폭격 피해 감소
+cic_construction_boost	#기본 건설 라인 속도 증가
+cic_construction_boost_factor	#시장 건설 속도 증가 배수	#tt
+land_bunker_effectiveness_factor	#요새 효율	#tt
+coastal_bunker_effectiveness_factor	#해안 요새 효율
+
+#RESISTANCE and COMPLIANCE modifier
+compliance_growth_on_our_occupied_states	#적이 점령한 우리 주의 순응도 증가 속도	#tt
+no_compliance_gain	#순응도 획득 없음	#Boolean
+required_garrison_factor	#주둔군 수요
+resistance_activity	#저항 활동 확률	#tt
+resistance_damage_to_garrison_on_our_occupied_states	#적이 점령한 우리 주의 적 주둔군에 대한 피해	#X	#tt
+resistance_decay_on_our_occupied_states	#적이 점령한 우리 주의 저항도 감소 속도
+resistance_growth_on_our_occupied_states	#적이 점령한 우리 주의 저항도 증가 속도	#X	#tt
+resistance_target_on_our_occupied_states	#적이 점령한 우리 주의 저항도 목표	#tt
+resistance_target	#저항도 목표	#tt
+
 #INTELLIGENCE modifier
 agency_upgrade_time	#정보기관 개선 소요 시간	#tt
 decryption	#해독
 decryption_factor 	#해독	#tt
 encryption	#암호화
-encryption_factor	#암호화 변동치	#tt			
-civilian_intel_decryption_bonus	#민간 암호 해독으로 인한 혜택
-army_intel_decryption_bonus	#육군 암호 해독으로 인한 혜택			
-navy_intel_decryption_bonus	#해군 암호 해독으로 인한 혜택			
-airforce_intel_decryption_bonus	#공군 암호 해독으로 인한 혜택
-
+encryption_factor	#암호화 변동치	#tt
+civilian_intel_decryption_bonus	#민간 암호 해독으로 인한 혜택	#?
+army_intel_decryption_bonus	#육군 암호 해독으로 인한 혜택	#?		
+navy_intel_decryption_bonus	#해군 암호 해독으로 인한 혜택	#?		
+airforce_intel_decryption_bonus	#공군 암호 해독으로 인한 혜택	#?
 civilian_intel_factor	#민간 정보
 army_intel_factor	#육군 정보
 navy_intel_factor	#해군 정보	#tt
-airforce_intel_factor	#공군 정보			
-crypto_department_enabled	#암호부 잠금 해제	#Boolean			
+airforce_intel_factor	#공군 정보
+civilian_intel_to_others	#타국으로 유출되는 민간 정보	#tt
+airforce_intel_to_others	#타국으로 유출되는 육군 정보	#tt
+army_intel_to_others	#타국으로 유출되는 해군 정보	#tt
+navy_intel_to_others	#타국으로 유출되는 공군 정보	#tt
+female_random_operative_chance	#여성 공작원 추가 확률
+foreign_subversive_activites	#외세 전복 활동 효율
+intel_network_gain	#정보망 강도 획득
+intel_network_gain_factor	#정보망 강도 증가 변동치	#tt
+subversive_activites_upkeep	#전복 활동 비용	#tt
+operation_cost	#작전 비용
+operation_outcome	#작전 효율
+operation_risk	#작전 위험도
+operation_fake_intel_cost	#거짓 정보 누설 임무 비용
+operation_fake_intel_outcome	#거짓 정보 누설 임무 효율
+operation_fake_intel_risk	#거짓 정보 누설 임무 위험도
+operation_rescue_operative_cost	#공작원 구출 임무 비용
+operation_rescue_operative_outcome	#공작원 구출 임무 효율
+operation_rescue_operative_risk	#공작원 구출 임무 위험도
+operation_make_resistance_contacts_cost	#저항군과 연락책 구축 임무 비용
+operation_make_resistance_contacts_outcome	#저항군과 연락책 구축 임무 효율
+operation_make_resistance_contacts_risk	#저항군과 연락책 구축 임무 위험도
+operation_boost_resistance_cost	#저항 세력 강화 임무 비용
+operation_boost_resistance_outcome	#저항 세력 강화 임무 효율
+operation_boost_resistance_risk	#저항 세력 강화 임무 위험도
+operation_collaboration_government_cost	#협력 정부 준비 임무 비용
+operation_collaboration_government_outcome	#협력 정부 준비 임무 효율
+operation_collaboration_government_risk	#협력 정부 준비 임무 위험도
+operation_coup_government_cost	#쿠데타 모의 임무 위험도
+operation_coup_government_outcome	#쿠데타 모의 임무 효율
+operation_coup_government_risk	#쿠데타 모의 임무 비용
+operation_capture_cipher_cost	#암호 탈취 임무 비용
+operation_capture_cipher_outcome	#암호 탈취 임무 효율
+operation_capture_cipher_risk	#암호 탈취 임무 위험도
+operation_coordinated_strike_cost	#협동 습격 임무 비용
+operation_coordinated_strike_outcome	#협동 습격 임무 효율
+operation_coordinated_strike_risk	#협동 습격 임무 위험도
+operation_infiltrate_cost	#잠입 임무 비용
+operation_infiltrate_outcome	#잠입 임무 효율
+operation_infiltrate_risk	#잠입 임무 위험도
+operation_infiltrate_armed_forces_army_cost	#육군 잠입 임무 비용	#X
+operation_infiltrate_armed_forces_army_outcome	#육군 잠입 임무 효율	#X
+operation_infiltrate_armed_forces_army_risk	#육군 잠입 임무 위험도	#X
+operation_infiltrate_armed_forces_navy_cost	#해군 잠입 임무 비용	#X
+operation_infiltrate_armed_forces_navy_outcome	#해군 잠입 임무 효율	#X
+operation_infiltrate_armed_forces_navy_risk	#해군 잠입 임무 위험도	#X
+operation_infiltrate_armed_forces_airforce_cost	#공군 잠입 임무 비용	#X
+operation_infiltrate_armed_forces_airforce_outcome	#공군 잠입 임무 효율	#X
+operation_infiltrate_armed_forces_airforce_risk	#공군 잠입 임무 위험도	#X
+operation_infiltrate_civilian_cost	#민간 잠입 임무 비용	#X
+operation_infiltrate_civilian_outcome	#민간 잠입 임무 효율	#X
+operation_infiltrate_civilian_risk	#민간 잠입 임무 위험도	#X
+operation_steal_tech_cost	#청사진 탈취 임무 비용
+operation_steal_tech_outcome	#청사진 탈취 임무 효율
+operation_steal_tech_risk	#청사진 탈취 임무 위험도
+operation_steal_tech_army_cost	#군사 기술 청사진 탈취 비용	#X
+operation_steal_tech_army_outcome	#군사 기술 청사진 탈취 효율	#X
+operation_steal_tech_army_risk	#군사 기술 청사진 탈취 위험도	#X
+operation_steal_tech_navy_cost	#해군 청사진 탈취 비용	#X
+operation_steal_tech_navy_outcome	#해군 청사진 탈취 위험도	#X
+operation_steal_tech_navy_risk	#해군 청사진 탈취 효율	#X
+operation_steal_tech_airforce_cost	#항공 산업 청사진 탈취 비용	#X
+operation_steal_tech_airforce_outcome	#항공 산업 청사진 탈취 효율	#X
+operation_steal_tech_airforce_risk	#항공 산업 청사진 탈취 위험도	#X
+operation_steal_tech_civilian_cost	#산업 청사진 탈취 비용	#X
+operation_steal_tech_civilian_outcome	#산업 청사진 탈취 효율	#X
+operation_steal_tech_civilian_risk	#산업 청사진 탈취 위험도	#X
+target_sabotage_cost	#사보타주 임무 비용
+target_sabotage_factor	#목표 사보타주 효율
+target_sabotage_risk	#사보타주 임무 위험도
+operation_targeted_sabotage_industry_cost	#산업 사보타주 임무 비용	#X
+operation_targeted_sabotage_industry_outcome	#산업 사보타주 임무 효율
+operation_targeted_sabotage_industry_risk	#산업 사보타주 임무 위험도	#X
+operation_targeted_sabotage_infrastructure_cost	#기반시설 사보타주 임무 비용	#X
+operation_targeted_sabotage_infrastructure_outcome	#기반시설 사보타주 임무 효율
+operation_targeted_sabotage_infrastructure_risk	#기반시설 사보타주 임무 위험도	#X
+operation_targeted_sabotage_resources_cost	#자원 사보타주 임무 비용	#X
+operation_targeted_sabotage_resources_outcome	#자원 사보타주 임무 효율
+operation_targeted_sabotage_resources_risk	#자원 사보타주 임무 위험도	#X
+boost_ideology_mission_factor	#이념 지지 기반 강화 임무 효과	#tt			
+control_trade_mission_factor	#무역 통제 임무 효과
+propaganda_mission_factor	#선전 임무 효과
+diplomatic_pressure_mission_factor	#외교적 압력 임무 효과
+boost_resistance_factor	#저항 강화 효율
+root_out_resistance_effectiveness_factor	#저항군 소탕 임무 효과	#tt
+commando_trait_chance_factor	#특공대 특성을 가진 공작원을 모집할 확률
+crypto_department_enabled	#암호부 잠금 해제	#Boolean	
 crypto_strength	#암호화 레벨			
 decryption_power	#복호력	#tt	
-decryption_power_factor	#복호력 변동치			
-operative_slot	#공작원 슬롯	#tt			
-new_operative_slot_bonus	#Operative recruitment choices			
-female_random_operative_chance	#공작원 모집 선택지		
-commando_trait_chance_factor	#특공대 특성을 가진 공작원을 모집할 확률	
-enemy_operative_recruitment_chance	#적 국적자 모집 확률			
-occupied_operative_recruitment_chance	#점령된 우방 국적자 모집 확률			
-operative_death_on_capture_chance	#구금된 우리 공작원의 사망 확률			
-intel_network_gain	#정보망 강도 획득	#tt		
-intel_network_gain_factor	#정보망 강도 증가 변동치	#tt	
-intel_from_operatives_factor	#공작원과 침투 자산으로부터 획득한 정보	
-intel_from_combat_factor	#전투에서 획득한 정보	#tt		
-intelligence_agency_defense	#방첩 활동	#tt			
-defense_impact_on_blueprint_stealing	Impact of enemy Counter Intelligence on Steal Blueprints operation	Number with 1 decimal places			
-boost_ideology_mission_factor	#Boost Ideology mission effects	Number with 2 decimal places			
-control_trade_mission_factor	#Control Trade mission effects			
-propaganda_mission_factor	#Propaganda mission effects			
-diplomatic_pressure_mission_factor	#Diplomatic Pressure mission effects			
-boost_resistance_factor	#Strengthen Resistance efficiency			
-root_out_resistance_effectiveness_factor	#저항군 소탕 임무 효과	#tt		
-<land/air/naval>_doctrine_cost_factor	Changes the cost of buying a new doctrine of the specified type.	
-land_doctrine_cost_factor = -0.05
-Percentual.		1.11
-operation_cost
-operation_outcome
-operation_risk	Operation <parameter>	Number with 2 decimal places			
-operation_fake_intel_cost
-operation_fake_intel_outcome
-operation_fake_intel_risk	False Intelligence <parameter>			
-operation_rescue_operative_cost
-operation_rescue_operative_outcome
-operation_rescue_operative_risk	Rescue Operative <parameter>			
-operation_make_resistance_contacts_cost
-operation_make_resistance_contacts_outcome
-operation_make_resistance_contacts_risk	Make Resistance Contacts <parameter>			
-operation_boost_resistance_cost
-operation_boost_resistance_outcome
-operation_boost_resistance_risk	Strengthen Resistance <parameter>			
-operation_collaboration_government_cost
-operation_collaboration_government_outcome
-operation_collaboration_government_risk	Prepare Collaboration Government <parameter>			
-operation_coup_government_cost
-operation_coup_government_outcome
-operation_coup_government_risk	Stage Coup <parameter>			
-operation_capture_cipher_cost
-operation_capture_cipher_outcome
-operation_capture_cipher_risk	Capture Cipher <parameter>			
-operation_coordinated_strike_cost
-operation_coordinated_strike_outcome
-operation_coordinated_strike_risk	Coordinated Strike <parameter>			
-operation_infiltrate_cost
-operation_infiltrate_outcome
-operation_infiltrate_risk	Infiltration <parameter>			
-operation_infiltrate_armed_forces_army_cost
-operation_infiltrate_armed_forces_army_outcome
-operation_infiltrate_armed_forces_army_risk	Infiltrate Army <parameter>			
-operation_infiltrate_armed_forces_navy_cost
-operation_infiltrate_armed_forces_navy_outcome
-operation_infiltrate_armed_forces_navy_risk	Infiltrate Navy <parameter>			
-operation_infiltrate_armed_forces_airforce_cost
-operation_infiltrate_armed_forces_airforce_outcome
-operation_infiltrate_armed_forces_airforce_risk	Infiltrate Airforce <parameter>			
-operation_infiltrate_civilian_cost
-operation_infiltrate_civilian_outcome
-operation_infiltrate_civilian_risk	Infiltrate Civilian Administration <parameter>			
-operation_steal_tech_cost
-operation_steal_tech_outcome
-operation_steal_tech_risk	Steal Blueprint <parameter>			
-operation_steal_tech_army_cost
-operation_steal_tech_army_outcome
-operation_steal_tech_army_risk	Steal Military Blueprints <parameter>			
-operation_steal_tech_navy_cost
-operation_steal_tech_navy_outcome
-operation_steal_tech_navy_risk	Steal Naval Blueprints <parameter>			
-operation_steal_tech_airforce_cost
-operation_steal_tech_airforce_outcome
-operation_steal_tech_airforce_risk	Steal Aviation Industry Blueprints <parameter>			
-operation_steal_tech_civilian_cost
-operation_steal_tech_civilian_outcome
-operation_steal_tech_civilian_risk	Steal Industrial Blueprints <parameter>			
-target_sabotage_cost
-target_sabotage_factor
-target_sabotage_risk	Sabotage <parameter>			
-operation_targeted_sabotage_industry_cost
-operation_targeted_sabotage_industry_outcome
-operation_targeted_sabotage_industry_risk	Sabotage Industry <parameter>			
-operation_targeted_sabotage_infrastructure_cost
-operation_targeted_sabotage_infrastructure_outcome
-operation_targeted_sabotage_infrastructure_risk	Sabotage Infrastructure <parameter>			
-operation_targeted_sabotage_resources_cost
-operation_targeted_sabotage_resources_outcome
-operation_targeted_sabotage_resources_risk
+decryption_power_factor	#복호력 변동치
+defense_impact_on_blueprint_stealing	#적의 방첩 활동이 청사진 탈취 작전에 미치는 영향
+intel_from_combat_factor	#전투에서 획득한 정보	#tt
+intel_from_operatives_factor	#공작원과 침투 자산으로부터 획득한 정보
+intelligence_agency_defense	#방첩 활동	#tt
+
+#OPERATIVES modifier
+own_operative_capture_chance_factor	#우리 공작원이 체포될 확률
+own_operative_detection_chance	#우리 공작원이 감지될 확률 보정치
+own_operative_detection_chance_factor	#우리 공작원이 감지될 확률 변동치
+own_operative_forced_into_hiding_time_factor	#강제 잠적 시간
+own_operative_harmed_time_factor	#피해 상태 지속 시간
+own_operative_intel_extraction_rate	#정보 추출률
+enemy_operative_capture_chance_factor	#적 공작원을 체포할 확률	#tt
+enemy_operative_detection_chance	#적 공작원을 감지할 확률 보정치
+enemy_operative_detection_chance_factor	#적 공작원을 감지할 확률 변동치	#tt
+enemy_operative_forced_into_hiding_time_factor	#적 공작원 강제 잠적 시간
+enemy_operative_harmed_time_factor	#적 공작원이 피해 상태 지속 시간
+enemy_operative_intel_extraction_rate	#적 공작원 정보 추출률	#tt
+enemy_spy_negative_status_factor	#적 스파이의 부정적인 상태
+enemy_operative_recruitment_chance	#적 국적자 모집 확률
+new_operative_slot_bonus	#공작원 모집 선택지
+occupied_operative_recruitment_chance	#점령된 우방 국적자 모집 확률	#바닐라 미구현
+operative_death_on_capture_chance	#구금된 우리 공작원의 사망 확률
+operative_slot	#공작원 슬롯	#tt	
+
+#AI modifier
+ai_badass_factor	#AI 변동치: 위협 수용력
+ai_call_ally_desire_factor	#AI 변동치: 동맹 호출 욕망
+ai_desired_divisions_factor	#AI 변동치: 원하는 사단 개수 비율
+ai_focus_aggressive_factor	#AI 변동치: 공격 중점
+ai_focus_defense_factor	#AI 변동치: 방어 중점
+ai_focus_aviation_factor	#AI 변동치: 공군 중점
+ai_focus_military_advancements_factor	#AI 변동치: 군사적 발전 중점
+ai_focus_military_equipment_factor	#AI 변동치: 군사 장비 중점
+ai_focus_naval_air_factor	#AI 변동치: 해군 항공대 중점
+ai_focus_naval_factor	#AI 변동치: 해군 중점
+ai_focus_peaceful_factor	#AI 변동치: 평화 중점
+ai_focus_war_production_factor	#AI 변동치: 전시 생산 중점
+ai_get_ally_desire_factor	#AI 변동치: 세력 확대/가입 욕망
+ai_join_ally_desire_factor	#AI 변동치: 동맹 참전 욕망
+ai_license_acceptance	#면허 구매 요청 시 수락
+
+#MILITARY modifier - Military outside of combat
+command_power_gain	#매일 지휘력 획득	#tt
+command_power_gain_mult	#매일 지휘력 획득 배율	#tt
+conscription	#모병 가능 인구	#tt
+conscription_factor	#모병 가능 인구 변동치	#tt
+experience_gain_army	#육군 경험치 획득량	#tt
+experience_gain_army_factor	#육군 경험치 획득량	#tt
+experience_gain_navy	#해군 경험치 획득량	#tt
+experience_gain_navy_factor	#해군 경험치 획득량	#tt
+experience_gain_air	#공군 경험치 획득량	#tt
+experience_gain_air_factor	#공군 경험치 획득량	#tt
+land_equipment_upgrade_xp_cost	#육군 장비 경험치 비용
+land_reinforce_rate	#증원율
+max_command_power	#최대 지휘력 증가	#tt
+max_command_power_mult	#최대 지휘력 증가 배율	#tt
+weekly_manpower	#매주 인력
+naval_equipment_upgrade_xp_cost	#해군 장비 경험치 비용	#tt
+refit_ic_cost	#함정 개장 비용
+refit_speed	#함정 개장 속도	#tt
+air_equipment_upgrade_xp_cost	#공군 장비 경험치 비용
+training_time_factor	#훈련 시간	#tt
+minimum_training_level	#최소 훈련 레벨	#tt
+max_training	#최대 훈련
+training_time_army	#사단 훈련 시간
+training_time_army_factor	#사단 훈련 시간
+special_forces_training_time_factor	#특수부대 사단 훈련 시간	#tt
+air_doctrine_cost_factor	#공군 교리 비용
+land_doctrine_cost_factor	#육군 교리 비용
+naval_doctrine_cost_factor	#해군 교리 비용
+cat_mobile_warfare_cost_factor	#기동전 교리 비용
+cat_superior_firepower_cost_factor	#화력 우세 교리 비용
+cat_grand_battle_plan_cost_factor	#대전략 교리 비용
+cat_mass_assault_cost_factor	#대규모 돌격 교리 비용
+cat_mass_mobilization_cost_factor	#대규모 동원 교리 비용	#tt
+cat_deep_battle_cost_factor	#종심 전투 교리 비용	#tt
+cat_strategic_destruction_cost_factor	#전략적 파괴 교리 비용
+cat_battlefield_support_cost_factor	#전장 지원 교리 비용
+cat_operational_integrity_cost_factor	#작전상의 무결성 교리 비용
+cat_fleet_in_being_cost_factor	#현존 함대 교리 비용
+cat_trade_interdiction_cost_factor	#무역 차단 교리 비용
+cat_base_strike_cost_factor	#기지 타격 교리 비용
+land_mastery_gain_factor	#육군 대교리 통달치 획득
+air_mastery_gain_factor	#공군 대교리 통달치 획득
+naval_mastery_gain_factor	#해군 대교리 통달치 획득
+infantry_track_mastery_gain_factor	#
+combat_support_track_mastery_gain_factor	#
+armor_track_mastery_gain_factor	#
+operations_track_mastery_gain_factor	#
+fighter_aircraft_track_mastery_gain_factor	#
+strike_aircraft_track_mastery_gain_factor	#
+medium_aircraft_track_mastery_gain_factor	#
+heavy_aircraft_track_mastery_gain_factor	#
+capital_ships_track_mastery_gain_factor	#
+carriers_track_mastery_gain_factor	#
+screens_track_mastery_gain_factor	#
+submarines_track_mastery_gain_factor	#
+
+[folder_name]_track_mastery_gain_factor
+[grand_doctrine_name]_mastery_gain_factor
+[subdoctrine_name]_mastery_gain_factor
+[track_name]_track_mastery_gain_factor
+
+
+choose_preferred_tactics_cost	#선호 전술 선택 비용
+command_abilities_cost_factor	#지휘관 능력 비용
+transport_capacity	#병력 수송선 필요량
+paratroopers_special_forces_contribution_factor	#공수부대 특수부대 한도 기여
+marines_special_forces_contribution_factor	#해병대 특수부대 한도 기여
+mountaineers_special_forces_contribution_factor	#산악병 특수부대 한도 기여
+rangers_special_forces_contribution_factor	#레인저 특수부대 한도 기여
+special_forces_cap_flat	#특수부대 한도	#tt
+additional_brigade_column_size	#
+modifier_unit_transport_plane_design_cost_factor	#수송기 설계 비용
+unit_rocket_interceptor_design_cost_factor	#로켓 요격기 설계 비용
+unit_guided_missile_design_cost_factor	#로켓 설계 비용
+unit_suicide_craft_design_cost_factor	#요코스카 MXY7 오카 설계 비용
+unit_amphibious_armor_design_cost_factor	#수륙양용전차 대대 설계 비용
+unit_amphibious_mechanized_design_cost_factor	#수륙양용장갑차 대대 설계 비용
+unit_anti_air_design_cost_factor	#지원 대공포 설계 비용
+unit_anti_air_brigade_design_cost_factor	#대공포 설계 비용
+unit_mot_anti_air_brigade_design_cost_factor	#기동대공포 설계 비용
+unit_anti_tank_design_cost_factor	#지원 대전차포 설계 비용
+unit_anti_tank_brigade_design_cost_factor	#대전차포 설계 비용
+unit_mot_anti_tank_brigade_design_cost_factor	#기동 대전차포병 설계 비용
+unit_armored_car_design_cost_factor	#장갑차 설계 비용
+unit_artillery_design_cost_factor	#지원포병 설계 비용
+unit_rocket_artillery_design_cost_factor	#지원 로켓포 설계 비용
+unit_artillery_brigade_design_cost_factor	#포병 설계 비용
+unit_mot_artillery_brigade_design_cost_factor	#기동포병 설계 비용
+unit_rocket_artillery_brigade_design_cost_factor	#로켓포병 설계 비용
+unit_mot_rocket_artillery_brigade_design_cost_factor	#트럭 견인형 로켓포병 설계 비용
+unit_motorized_rocket_brigade_design_cost_factor	#차량화 로켓포병 설계 비용
+unit_battle_cruiser_design_cost_factor	#순양전함 설계 비용
+unit_battleship_design_cost_factor	#전함 설계 비용
+unit_carrier_design_cost_factor	#항공모함 설계 비용
+unit_cavalry_design_cost_factor	#기병 설계 비용
+unit_camelry_design_cost_factor	#낙타 기병 설계 비용
+unit_destroyer_design_cost_factor	#구축함 설계 비용
+unit_engineer_design_cost_factor	#공병중대 설계 비용
+unit_field_hospital_design_cost_factor	#야전병원 설계 비용
+unit_heavy_armor_design_cost_factor	#중전차 설계 비용
+unit_modular_heavy_armor_design_cost_factor	#중기갑 설계 비용
+unit_heavy_cruiser_design_cost_factor	#중순양함 설계 비용
+unit_infantry_design_cost_factor	#보병 설계 비용
+unit_bicycle_battalion_design_cost_factor	#자전거 대대 설계 비용
+unit_marine_design_cost_factor	#해병 설계 비용
+unit_mountaineers_design_cost_factor	#산악병 설계 비용
+unit_paratrooper_design_cost_factor	#공수부대 설계 비용
+unit_ranger_battalion_design_cost_factor	#레인저 설계 비용
+unit_motorized_design_cost_factor	#차량화보병 설계 비용	#tt
+unit_mechanized_design_cost_factor	#기계화보병 설계 비용	#tt
+unit_fake_intel_unit_design_cost_factor	#위장 대대 설계 비용
+unit_light_armor_design_cost_factor	#경전차 설계 비용
+unit_modular_light_armor_design_cost_factor	#경기갑 설계 비용
+unit_light_cruiser_design_cost_factor	#경순양함 설계 비용
+unit_logistics_company_design_cost_factor	#군수중대 설계 비용
+unit_maintenance_company_design_cost_factor	#정비중대 설계 비용
+unit_medium_armor_design_cost_factor	#중형전차 설계 비용
+unit_modular_medium_armor_design_cost_factor	#중형기갑 설계 비용
+unit_military_police_design_cost_factor	#헌병대 설계 비용
+unit_modern_armor_design_cost_factor	#현대식 전차 설계 비용
+unit_railway_gun_design_cost_factor	#열차포 설계 비용
+unit_recon_design_cost_factor	#기병수색파견대 설계 비용
+unit_mot_recon_design_cost_factor	#차량화수색중대 설계 비용
+unit_armored_car_recon_design_cost_factor	#경기갑수색중대 설계 비용
+unit_light_tank_recon_design_cost_factor	#기갑수색중대 설계 비용
+unit_signal_company_design_cost_factor	#통신중대 설계 비용
+unit_light_sp_anti_air_brigade_design_cost_factor	#경자주대공포 설계 비용
+unit_medium_sp_anti_air_brigade_design_cost_factor	#중형자주대공포 설계 비용
+unit_heavy_sp_anti_air_brigade_design_cost_factor	#중자주대공포 설계 비용
+unit_super_heavy_sp_anti_air_brigade_design_cost_factor	#초중자주대공포 설계 비용
+unit_modern_sp_anti_air_brigade_design_cost_factor	#현대식 자주대공포 설계 비용
+unit_modular_light_sp_anti_air_brigade_design_cost_factor	#경대공전차 여단 설계 비용
+unit_modular_medium_sp_anti_air_brigade_design_cost_factor	#중형대공전차 여단 설계 비용
+unit_modular_heavy_sp_anti_air_brigade_design_cost_factor	#중대공전차 여단 설계 비용
+unit_light_sp_artillery_brigade_design_cost_factor	#경자주포 설계 비용
+unit_medium_sp_artillery_brigade_design_cost_factor	#중형자주포 설계 비용
+unit_heavy_sp_artillery_brigade_design_cost_factor	#중자주포 설계 비용
+unit_super_heavy_sp_artillery_brigade_design_cost_factor	#초중자주포 설계 비용
+unit_modern_sp_artillery_brigade_design_cost_factor	#현대식 자주포 설계 비용
+unit_modular_light_sp_artillery_brigade_design_cost_factor	#경자주포 여단 설계 비용
+unit_modular_medium_sp_artillery_brigade_design_cost_factor	#중형자주포 여단 설계 비용
+unit_modular_heavy_sp_artillery_brigade_design_cost_factor	#중자주포 여단 설계 비용
+unit_super_heavy_armor_design_cost_factor	#초중전차 설계 비용
+unit_light_tank_destroyer_brigade_design_cost_factor	#경구축전차 설계 비용
+unit_medium_tank_destroyer_brigade_design_cost_factor	#중형구축전차 설계 비용
+unit_heavy_tank_destroyer_brigade_design_cost_factor	#중구축전차 설계 비용
+unit_super_heavy_tank_destroyer_brigade_design_cost_factor	#초중구축전차 설계 비용
+unit_modern_tank_destroyer_brigade_design_cost_factor	#현대식 구축전차 설계 비용
+unit_modular_light_tank_destroyer_brigade_design_cost_factor	#경구축전차 여단 설계 비용
+unit_modular_medium_tank_destroyer_brigade_design_cost_factor	#중형구축전차 여단 설계 비용
+unit_modular_heavy_tank_destroyer_brigade_design_cost_factor	#중구축전차 여단 설계 비용
+
+<equipment archetype>_design_cost_factor	#
+module_<module type>_design_cost_factor	#
+
+#MIO modifier
+military_industrial_organization_research_bonus	#군수산업체 연구 혜택	#tt
+military_industrial_organization_design_team_assign_cost	#설계국 배정 비용
+military_industrial_organization_design_team_change_cost	#설계국 변경 비용
+military_industrial_organization_industrial_manufacturer_assign_cost	#산업 제조사 배정 비용
+military_industrial_organization_task_capacity	#작업 수용량
+military_industrial_organization_size_up_requirement	#한도 증가 요구사항
+military_industrial_organization_funds_gain	#자금 획득	#tt
+military_industrial_organization_policy_cost	#정책 비용
+military_industrial_organization_policy_cooldown	#정책 재사용 대기
+
+#UNIT LEADERS modifier
+female_random_army_leader_chance	#여성 군 지도자 추가 확률	#: $VALUE$
+assign_army_leader_cp_cost	#육군 지휘관 배정 비용
+army_leader_cost_factor	#육군 지휘관 비용	#tt
+army_leader_start_level	#신임 육군 지휘관의 시작 시 레벨	#tt
+army_leader_start_attack_level	#신임 육군 지휘관의 시작 시 공격 기술 레벨	#tt
+army_leader_start_defense_level	#신임 육군 지휘관의 시작 시 방어 기술 레벨	#tt
+army_leader_start_logistics_level	#신임 육군 지휘관의 시작 시 군수 기술 레벨	#tt
+army_leader_start_planning_level	#신임 육군 지휘관의 시작 시 계획 기술 레벨	#tt
+military_leader_cost_factor	#군 지휘관 비용	#tt
+female_random_admiral_chance	#여성 제독 추가 확률
+assign_navy_leader_cp_cost	#해군 지휘관 배정 비용
+navy_leader_cost_factor	#해군 지휘관 비용	#tt
+navy_leader_start_level	#신임 해군 지휘관의 시작 시 레벨
+navy_leader_start_attack_level	#신임 해군 지휘관의 시작 시 공격 기술 레벨
+navy_leader_start_coordination_level	#신임 해군 지휘관의 시작 시 방어 기술 레벨
+navy_leader_start_defense_level	#신임 해군 지휘관의 시작 시 기동 기술 레벨
+navy_leader_start_maneuvering_level	#신임 해군 지휘관의 시작 시 조직 기술 레벨
+grant_medal_cost_factor	#훈장 수여 비용
+field_officer_promotion_penalty	#야전 장교 사단 불이익
+female_divisional_commander_chance	#여성 사단장 확률
+
+#GENERAL COMBAT modifier
+offence	#공격
+defence	#방어
+tactic_elastic_defense_preferred_weight_factor	#탄력적 방어 전술이 선호 전술일 경우, 해당 전술이 발동될 확률이 높아짐
+tactic_overwhelming_fire_preferred_weight_factor	#압도적 화력 전술이 선호 전술일 경우, 해당 전술이 발동될 확률이 높아짐
+tactic_seize_bridge_preferred_weight_factor	#교량 점거 전술이 선호 전술일 경우, 해당 전술이 발동될 확률이 높아짐
+tactic_infantry_charge_preferred_weight_factor	#침투 공격 전술이 선호 전술일 경우, 해당 전술이 발동될 확률이 높아짐
+tactic_delay_preferred_weight_factor	#지연 전술이 선호 전술일 경우, 해당 전술이 발동될 확률이 높아짐
+tactic_human_wave_tactics_preferred_weight_factor	#대규모 돌격 전술이 선호 전술일 경우, 해당 전술이 발동될 확률이 높아짐
+tactic_unexpected_thrust_preferred_weight_factor	#예상치 못한 진군 전술이 선호 전술일 경우, 해당 전술이 발동될 확률이 높아짐
+tactic_barrage_preferred_weight_factor	#제압 사격 전술이 선호 전술일 경우, 해당 전술이 발동될 확률이 높아짐
+tactic_planned_attack_preferred_weight_factor	#잘 계획된 공격 전술이 선호 전술일 경우, 해당 전술이 발동될 확률이 높아짐
+tactic_relentless_assault_preferred_weight_factor	#가차없는 공격 전술이 선호 전술일 경우, 해당 전술이 발동될 확률이 높아짐
+tactic_tactical_withdrawal_preferred_weight_factor	#전술적 후퇴 전술이 선호 전술일 경우, 해당 전술이 발동될 확률이 높아짐
+tactic_breakthrough_preferred_weight_factor	#돌파 전술이 선호 전술일 경우, 해당 전술이 발동될 확률이 높아짐
+
+#LAND COMBAT modifier
+acclimatization_cold_climate_gain_factor	#추위 적응 획득치	#tt
+acclimatization_hot_climate_gain_factor	#더위 적응 획득	#tt
+air_superiority_bonus_in_combat	#전투 중 공중 우세 혜택	#tt
+army_attack_factor	#사단 공격	#tt
+army_core_attack_factor	#핵심 영토 대상 사단 공격	#tt
+army_attack_against_major_factor	#강대국에 대한 공격력	#tt
+army_attack_against_minor_factor	#약소국에 대한 공격력	#tt
+army_attack_speed_factor	#공격 사단 속도	#tt
+army_breakthrough_against_major_factor	#강대국에 대한 돌파력
+army_breakthrough_against_minor_factor	#약소국에 대한 돌파력
+army_defence_factor	#사단 방어	#tt
+army_defence_against_major_factor	#강대국에 대한 방어력	#tt
+army_defence_against_minor_factor	#약소국에 대한 방어력	#tt
+army_core_defence_factor	#핵심 영토 내 사단 방어	#tt
+army_speed_factor	#사단 속도	#tt
+army_strength_factor	#내구도
+army_infantry_attack_factor	#보병 공격	#tt
+army_armor_attack_factor	#기갑 공격	#tt
+army_artillery_attack_factor	#포병 공격	#tt
+special_forces_attack_factor	#특수부대 공격	#tt
+motorized_attack_factor	#차량화 공격	#tt
+mechanized_attack_factor	#기계화 공격	#tt
+cavalry_attack_factor	#기병 공격	#tt
+army_infantry_defence_factor	#보병 방어	#tt
+army_armor_defence_factor	#기갑 방어	#tt
+army_artillery_defence_factor	#포병 방어	#tt
+special_forces_defence_factor	#특수부대 방어	#tt
+motorized_defence_factor	#차량화 방어
+mechanized_defence_factor	#기계화 방어
+cavalry_defence_factor	#기병 방어	#tt
+army_armor_speed_factor	#기갑 속도	#tt
+army_morale	#사단 회복률
+army_morale_factor	#사단 회복률	#tt
+army_org	#사단 조직력
+army_org_factor	#사단 조직력	#tt
+army_org_regain	#육군 조직력 회복	#tt
+breakthrough_factor	#돌파	#tt
+cas_damage_reduction	#근접항공지원 공격에 대한 피해량 감소	#tt
+combat_width_factor	#소속군 전장 너비
+coordination_bonus	#조정
+dig_in_speed	#참호 부설 속도
+dig_in_speed_factor	#참호 부설 속도	#tt
+experience_gain_army_unit	#사단 경험치 획득량
+experience_gain_army_unit_factor	#사단 경험치 획득량
+experience_loss_factor	#숙련병 손실률	#tt
+initiative_factor	#우선권	#tt
+land_night_attack	#야간 지상 공격	#tt
+max_dig_in	#참호 최대치	#tt
+max_dig_in_factor	#참호 최대치	#tt
+max_planning	#최대 계획
+max_planning_factor	#최대 계획 변동치	#tt
+pocket_penalty	#포위 불이익	#tt
+recon_factor	#수색	#tt
+recon_factor_while_entrenched	#참호 시 수색 혜택	#tt
+special_forces_cap	#특수부대 수용량 배율	#tt
+special_forces_min	#특수부대 최소 수용량	#tt
+terrain_penalty_reduction	#지형 불이익 감소
+org_loss_at_low_org_factor	#25% 미만일 때의 조직력 손실	#tt
+org_loss_when_moving	#이동 시 조직력 손실	#tt
+planning_speed	#계획 수립 속도	#tt
+experience_gain_infantry_training_factor	#보병 훈련 경험치 획득량	#X
+experience_gain_infantry_combat_factor	#전투로 인한 보병 경험치 획득량/보병 전투 경험치 획득량
+experience_gain_mountaineers_training_factor	#산악병 훈련 경험치 획득량	#X
+experience_gain_mountaineers_combat_factor	#산악병 전투 경험치 획득량	#X
+experience_gain_marine_training_factor	#해병 훈련 경험치 획득량	#X
+experience_gain_marine_combat_factor	#해병 전투 경험치 획득량	#X
+experience_gain_paratrooper_training_factor	#공수부대 훈련 경험치 획득량	#X
+experience_gain_paratrooper_combat_factor	#공수부대 전투 경험치 획득량	#X
+experience_gain_bicycle_battalion_training_factor	#자전거 대대 훈련 경험치 획득량	#X
+experience_gain_bicycle_battalion_combat_factor	#자전거 대대 전투 경험치 획득량	#X
+experience_gain_cavalry_training_factor	#기병 훈련 경험치 획득량	#X
+experience_gain_cavalry_combat_factor	#기병 전투 경험치 획득량	#X
+experience_gain_armored_car_training_factor	#장갑차 훈련 경험치 획득량	#X
+experience_gain_armored_car_combat_factor	#장갑차 전투 경험치 획득량	#X
+experience_gain_armored_car_recon_training_factor	#경기갑수색중대 훈련 경험치 획득량	#X
+experience_gain_armored_car_recon_combat_factor	#경기갑수색중대 전투 경험치 획득량	#X
+experience_gain_motorized_training_factor	#차량화 훈련 경험치 획득량	#X
+experience_gain_motorized_combat_factor	#차량화 전투 경험치 획득량/전투로 인한 차량화 경험치 획득량
+experience_gain_motorized_rocket_brigade_training_factor	#차량화 로켓포병 훈련 경험치 획득량	#X
+experience_gain_motorized_rocket_brigade_combat_factor	#차량화 로켓포병 전투 경험치 획득량	#X
+experience_gain_mechanized_training_factor	#기계화보병 훈련 경험치 획득량	#X
+experience_gain_mechanized_combat_factor	#기계화보병 전투 경험치 획득량/전투로 인한 기계화 경험치 획득량
+experience_gain_amphibious_mechanized_training_factor	#수륙양용장갑차 훈련 경험치 획득량	#X
+experience_gain_amphibious_mechanized_combat_factor	#수륙양용장갑차 전투 경험치 획득량	#X
+experience_gain_engineer_training_factor	#공병 훈련 경험치 획득량	#X
+experience_gain_engineer_combat_factor	#공병 전투 경험치 획득량	#X
+experience_gain_recon_training_factor	#수색대 훈련 경험치 획득량	#X
+experience_gain_recon_combat_factor	#수색대 전투 경험치 획득량	#X
+experience_gain_military_police_training_factor	#헌병대 훈련 경험치 획득량	#X
+experience_gain_military_police_combat_factor	#헌병대 전투 경험치 획득량	#X
+experience_gain_maintenance_company_training_factor	#정비 훈련 경험치 획득량	#X
+experience_gain_maintenance_company_combat_factor	#정비 전투 경험치 획득량	#X
+experience_gain_field_hospital_training_factor	#야전병원 훈련 경험치 획득량	#X
+experience_gain_field_hospital_combat_factor	#야전병원 전투 경험치 획득량	#X
+experience_gain_logistics_company_training_factor	#군수 훈련 경험치 획득량	#X
+experience_gain_logistics_company_combat_factor	#군수 전투 경험치 획득량	#X
+experience_gain_signal_company_training_factor	#통신중대 훈련 경험치 획득량	#X
+experience_gain_signal_company_combat_factor	#통신중대 전투 경험치 획득량	#X
+experience_gain_mot_recon_training_factor	#차량화수색중대 훈련 경험치 획득량	#X
+experience_gain_mot_recon_combat_factor	#차량화수색중대 전투 경험치 획득량	#X
+experience_gain_artillery_training_factor	#지원 포병 훈련 경험치 획득량	#X
+experience_gain_artillery_combat_factor	#전투로 인한 포병 경험치 획득량/지원 포병 전투 경험치 획득량	#tt
+experience_gain_rocket_artillery_training_factor	#지원 로켓포 훈련 경험치 획득량	#X
+experience_gain_rocket_artillery_combat_factor	#지원 로켓포 전투 경험치 획득량	#X
+experience_gain_anti_air_training_factor	#지원 대공포 훈련 경험치 획득량	#X
+experience_gain_anti_air_combat_factor	#지원 대공포 전투 경험치 획득량	#X
+experience_gain_anti_tank_training_factor	#지원 대전차포 훈련 경험치 획득량	#X
+experience_gain_anti_tank_combat_factor	#지원 대전차포 전투 경험치 획득량	#X
+experience_gain_artillery_brigade_training_factor	#포병 훈련 경험치 획득량	#X
+experience_gain_artillery_brigade_combat_factor	#포병 전투 경험치 획득량	#X
+experience_gain_rocket_artillery_brigade_training_factor	#로켓포 훈련 경험치 획득량	#X
+experience_gain_rocket_artillery_brigade_combat_factor	#로켓포 전투 경험치 획득량	#X
+experience_gain_anti_air_brigade_training_factor	#대공포 훈련 경험치 획득량	#X
+experience_gain_anti_air_brigade_combat_factor	#대공포 전투 경험치 획득량	#X
+experience_gain_anti_tank_brigade_training_factor	#대전차포 훈련 경험치 획득량	#X
+experience_gain_anti_tank_brigade_combat_factor	#대전차포 전투 경험치 획득량	#X
+experience_gain_mot_artillery_brigade_training_factor	#기동포병 훈련 경험치 획득량	#X
+experience_gain_mot_artillery_brigade_combat_factor	#기동포병 전투 경험치 획득량	#X
+experience_gain_mot_rocket_artillery_brigade_training_factor	#트럭 견인형 로켓포병 훈련 경험치 획득량	#X
+experience_gain_mot_rocket_artillery_brigade_combat_factor	#트럭 견인형 로켓포병 전투 경험치 획득량	#X
+experience_gain_mot_anti_air_brigade_training_factor	#기동대공포 훈련 경험치 획득량	#X
+experience_gain_mot_anti_air_brigade_combat_factor	#기동대공포 전투 경험치 획득량	#X
+experience_gain_mot_anti_tank_brigade_training_factor	#기동 대전차포병 훈련 경험치 획득량	#X
+experience_gain_mot_anti_tank_brigade_combat_factor	#기동 대전차포병 전투 경험치 획득량	#X
+experience_gain_light_armor_training_factor	#경전차 훈련 경험치 획득량	#X
+experience_gain_light_armor_combat_factor	#경전차 전투 경험치 획득량	#X
+experience_gain_light_sp_artillery_brigade_training_factor	#경자주포 훈련 경험치 획득량	#X
+experience_gain_light_sp_artillery_brigade_combat_factor	#경자주포 전투 경험치 획득량	#X
+experience_gain_light_sp_anti_air_brigade_training_factor	#경자주대공포 훈련 경험치 획득량	#X
+experience_gain_light_sp_anti_air_brigade_combat_factor	#경자주대공포 전투 경험치 획득량	#X
+experience_gain_light_tank_destroyer_brigade_training_factor	#경구축전차 훈련 경험치 획득량	#X
+experience_gain_light_tank_destroyer_brigade_combat_factor	#경구축전차 전투 경험치 획득량	#X
+experience_gain_light_tank_recon_training_factor	#기갑수색중대 훈련 경험치 획득량	#X
+experience_gain_light_tank_recon_combat_factor	#기갑수색중대 전투 경험치 획득량	#X
+experience_gain_medium_armor_training_factor	#중형전차 훈련 경험치 획득량	#X
+experience_gain_medium_armor_combat_factor	#중형전차 전투 경험치 획득량	#X
+experience_gain_medium_sp_artillery_brigade_training_factor	#중형자주포 훈련 경험치 획득량	#X
+experience_gain_medium_sp_artillery_brigade_combat_factor	#중형자주포 전투 경험치 획득량	#X
+experience_gain_medium_sp_anti_air_brigade_training_factor	#중형자주대공포 훈련 경험치 획득량	#X
+experience_gain_medium_sp_anti_air_brigade_combat_factor	#중형자주대공포 전투 경험치 획득량	#X
+experience_gain_medium_tank_destroyer_brigade_training_factor	#중형구축전차 훈련 경험치 획득량	#X
+experience_gain_medium_tank_destroyer_brigade_combat_factor	#중형구축전차 전투 경험치 획득량	#X
+experience_gain_heavy_armor_training_factor	#중전차 훈련 경험치 획득량	#X
+experience_gain_heavy_armor_combat_factor	#중전차 전투 경험치 획득량	#X
+experience_gain_heavy_sp_artillery_brigade_training_factor	#중자주포 훈련 경험치 획득량	#X
+experience_gain_heavy_sp_artillery_brigade_combat_factor	#중자주포 전투 경험치 획득량	#X
+experience_gain_heavy_sp_anti_air_brigade_training_factor	#중자주대공포 훈련 경험치 획득량	#X
+experience_gain_heavy_sp_anti_air_brigade_combat_factor	#중자주대공포 전투 경험치 획득량	#X
+experience_gain_heavy_tank_destroyer_brigade_training_factor	#중구축전차 훈련 경험치 획득량	#X
+experience_gain_heavy_tank_destroyer_brigade_combat_factor	#중구축전차 전투 경험치 획득량	#X
+experience_gain_super_heavy_armor_training_factor	#초중전차 훈련 경험치 획득량	#X
+experience_gain_super_heavy_armor_combat_factor	#초중전차 전투 경험치 획득량	#X
+experience_gain_super_heavy_sp_artillery_brigade_training_factor	#초중자주포 훈련 경험치 획득량	#X
+experience_gain_super_heavy_sp_artillery_brigade_combat_factor	#초중자주포 전투 경험치 획득량	#X
+experience_gain_super_heavy_sp_anti_air_brigade_training_factor	#초중자주대공포 훈련 경험치 획득량	#X
+experience_gain_super_heavy_sp_anti_air_brigade_combat_factor	#초중자주대공포 전투 경험치 획득량	#X
+experience_gain_super_heavy_tank_destroyer_brigade_training_factor	#초중구축전차 훈련 경험치 획득량	#X
+experience_gain_super_heavy_tank_destroyer_brigade_combat_factor	#초중구축전차 전투 경험치 획득량	#X
+experience_gain_modern_armor_training_factor	#현대식 전차 훈련 경험치 획득량	#X
+experience_gain_modern_armor_combat_factor	#보병 전투 경험치 획득량	#X
+experience_gain_modern_sp_artillery_brigade_training_factor	#현대식 자주포 훈련 경험치 획득량	#X
+experience_gain_modern_sp_artillery_brigade_combat_factor	#현대식 자주포 전투 경험치 획득량	#X
+experience_gain_modern_sp_anti_air_brigade_training_factor	#현대식 자주대공포 훈련 경험치 획득량	#X
+experience_gain_modern_sp_anti_air_brigade_combat_factor	#현대식 자주대공포 전투 경험치 획득량	#X
+experience_gain_modern_tank_destroyer_brigade_training_factor	#현대식 구축전차 훈련 경험치 획득량	#X
+experience_gain_modern_tank_destroyer_brigade_combat_factor	#현대식 구축전차 전투 경험치 획득량	#X
+experience_gain_amphibious_armor_training_factor	#수륙양용전차 훈련 경험치 획득량보병 훈련 경험치 획득량	#X
+experience_gain_amphibious_armor_combat_factor	#수륙양용전차 전투 경험치 획득량	#X
+
+#NAVAL INVASIONS modifier
+naval_invasion_prep_speed	#상륙 준비 속도	#tt
+naval_invasion_capacity	#상륙 수용량	#tt
+naval_invasion_penalty	#상륙 불이익
+naval_invasion_planning_bonus_speed	#상륙 계획
+amphibious_invasion	#상륙 속도	#tt
+amphibious_invasion_defence		#상륙 방어력
+invasion_preparation	#상륙 준비 시간
+
+#NAVAL COMBAT modifier
+convoy_escort_efficiency	#호위 효율	#tt
+convoy_raiding_efficiency_factor	#수송선 습격 효율	#tt
+convoy_retreat_speed	#후퇴 시 수송선 속도	#tt
+critical_receive_chance	#치명타를 받을 확률
+experience_gain_navy_unit	#선박 경험치 획득량
+experience_gain_navy_unit_factor	#선박 경험치 획득량	#tt
+mines_planting_by_fleets_factor	#기뢰 부설 효율	#tt
+mines_sweeping_by_fleets_factor	#기뢰 소해 효율
+naval_accidents_chance	#사고 확률	#tt
+navy_anti_air_attack	#해군 대공 공격
+navy_anti_air_attack_factor	#해군 대공 공격	#tt
+naval_coordination	#함대 조직	#tt
+naval_critical_effect_factor	#연속 치명타 효과
+naval_critical_score_chance_factor	#치명타를 입힐 확률	#tt
+naval_damage_factor	#해군 피해	#tt
+naval_defense_factor	#해군 방어	#tt
+naval_detection	#해군 탐지	#tt
+naval_enemy_fleet_size_ratio_penalty_factor	#적 함대 규모 불이익	#tt
+naval_enemy_positioning_in_initial_attack	#최초 공격 시 적 방어 위치 선정
+naval_enemy_retreat_chance	#적 후퇴 확률
+naval_has_potf_in_combat_attack	#함대의 자랑과 함께 전투 시 공격
+naval_has_potf_in_combat_defense	#함대의 자랑과 함께 전투 시 방어
+naval_hit_chance	#해군 타격 확률	#tt
+naval_mine_hit_chance	#기뢰에 피격될 확률	#tt
+naval_mines_damage_factor	#기뢰 피해량
+naval_mines_effect_reduction	#기뢰 회피율	#tt
+naval_morale	#함정 회복률
+naval_morale_factor	#함정 회복률	#tt
+naval_night_attack	#야간 공격
+naval_retreat_chance	#후퇴 결정 확률
+naval_retreat_chance_after_initial_combat	#첫 단계 후 후퇴 확률
+naval_retreat_speed	#후퇴 시 함대 속도
+naval_retreat_speed_after_initial_combat	#첫 단계 후 후퇴 속도
+naval_speed_factor	#해군 속도
+navy_org	#해군 조직력
+navy_org_factor	#해군 조직력	#tt
+navy_max_range	#해군 최대 항속거리
+navy_max_range_factor	#해군 최대 항속거리 변동치	#tt
+naval_torpedo_cooldown_factor	#어뢰 재사용 대기시간
+naval_torpedo_hit_chance_factor	#어뢰 명중률	#tt
+naval_torpedo_reveal_chance_factor	#어뢰 발각 확률	#tt
+naval_torpedo_screen_penetration_factor	#어뢰 스크린 관통	#tt
+naval_torpedo_damage_reduction_factor	#적 어뢰 피해량 감소
+naval_torpedo_enemy_critical_chance_factor	#적 어뢰 치명타 확률
+naval_light_gun_hit_chance_factor	#경함포 명중	#tt
+naval_heavy_gun_hit_chance_factor	#중함포 명중	#tt
+navy_capital_ship_attack_factor	#주력함 공격
+navy_capital_ship_defence_factor	#주력함 장갑	#tt
+navy_screen_attack_factor	#보조함 공격	#tt
+navy_screen_defence_factor	#보조함 방어	#tt
+navy_submarine_attack_factor	#잠수함 공격	#tt
+navy_submarine_defence_factor	#잠수함 방어
+navy_submarine_detection_factor	#잠수함 탐지	#tt
+navy_visibility	#가시성
+navy_weather_penalty	#악천후 불이익
+night_spotting_chance	#야간 탐지
+positioning	#위치 선정	#tt
+repair_speed_factor	#함정 수리 속도	#tt
+screening_efficiency	#스크린 임무 효율	#tt
+screening_without_screens	#주력함만 운용할 때 스크린 혜택	#tt
+ships_at_battle_start	#접촉 시의 함선 숫자
+spotting_chance	#탐지 속도	#tt
+strike_force_movement_org_loss	#타격 부대 조직력 손실
+sub_retreat_speed	#후퇴 시 잠수함 속도	#tt
+submarine_attack	#잠수함 공격
+
+#CARRIERS and PLANES modifier
+navy_carrier_air_agility_factor	#항공모함 함재기 기동성
+navy_carrier_air_attack_factor	#항공모함 함재기 공격
+navy_carrier_air_targetting_factor	#항공모함 함재기 명중률
+air_carrier_night_penalty_reduction_factor	#항공모함 야간 불이익 감소
+carrier_capacity_penalty_reduction	#항공모함 혼잡
+carrier_traffic	#함재기 출격 수
+sortie_efficiency	#함재기 출격 효율	#tt
+carrier_sortie_hours_delay	#항모 비행단 출격 지연 (시간)
+carrier_night_traffic	#함재기 야간 출격 수
+fighter_sortie_efficiency	#전투기 출격 효율
+
+#AIR COMBAT modifier
+air_accidents_factor	#항공기 사고 확률	#tt
+air_ace_bonuses_factor	#공군 에이스 혜택	#tt
+air_ace_generation_chance_factor	#에이스 조종사 확률	#tt
+ace_effectiveness_factor	#에이스 효율	#tt
+air_agility_factor	#기동성	#tt
+air_attack_factor	#대공 공격	#tt
+air_defence_factor	#대공 방어	#tt
+air_interception_detect_factor	#요격 시 탐지
+naval_strike_targetting_factor	#해상 조준	#tt
+port_strike	#항구 타격	#tt
+air_close_air_support_org_damage_factor		#근접항공지원 조직력 피해
+air_bombing_targetting	#지상 폭격 조준 체계	#tt
+air_cas_efficiency	#공중 지원 임무 효율
+air_cas_present_factor	#지상 지원	#tt
+air_escort_efficiency	#호위 효율	#tt
+air_home_defence_factor	#공군 조국 방위 변동치	#tt
+air_intercept_efficiency	#요격 임무 효율	#tt
+air_manpower_requirement_factor	#공군 인력 요건	#tt
+air_maximum_speed_factor	#최대 비행 속도
+air_mission_efficiency	#공군 임무 효율	#tt
+air_mission_xp_gain_factor	#비행단 임무 경험치 획득량	#tt
+air_nav_efficiency	#해상 임무 효율	#tt
+air_night_penalty	#야간전 불이익	#tt
+air_power_projection_factor	#공군력 투사 변동치	#tt
+air_range_factor	#공군 작전 범위	#tt
+air_strategic_bomber_bombing_factor	#전략폭격	#tt
+air_strategic_bomber_night_penalty	#야간 전략폭격 불이익
+air_superiority_detect_factor	#전투기 탐지
+air_superiority_efficiency	#공중 우세 임무 효율	#tt
+air_training_xp_gain_factor	#비행단 훈련 경험치 획득량	#tt
+air_untrained_pilots_penalty_factor	#신규 비행단 미숙련 조종사 불이익	#tt
+air_weather_penalty	#악천후 불이익	#tt
+air_wing_xp_loss_when_killed_factor	#전사로 인한 비행단 경험치 손실	#tt
+army_bonus_air_superiority_factor	#공중 우세
+enemy_army_bonus_air_superiority_factor	#적 공중 지원
+ground_attack_factor	#지상 공격 변동치	#tt
+mines_planting_by_air_factor	#공중 기뢰 부설 효율	#tt
+mines_sweeping_by_air_factor	#공중 기뢰 소해 효율
+strategic_bomb_visibility	#전략폭격 가시성
+rocket_attack_factor	#로켓 피해
+
+#TARGETED modifier - 다이나믹 모디파이어 못 씀
+extra_trade_to_target_factor	#종주국과의 추가 무역
+generate_wargoal_tension_against	#타국에 대한 전쟁 명분 정당화 긴장도 제한
+cic_to_target_factor	#목표국의 민간산업
+mic_to_target_factor	#목표국의 군수산업
+trade_cost_for_target_factor	#목표국 무역 비용	#tt
+targeted_legitimacy_daily	#매일 정통성 획득
+attack_bonus_against	#국가를 대상으로 한 공격 혜택	#tt
+attack_bonus_against_cores	#해당 국가 핵심 영토에 공격
+breakthrough_bonus_against	#국가에 대한 돌파 혜택
+defense_bonus_against	#국가를 대상으로 한 방어 혜택	#tt
+
+#STATE modifier
+army_speed_factor_for_controller	#사단 속도
+attrition_for_controller	#사단 손실
+equipment_capture_for_controller	#
+equipment_capture_factor_for_controller	#
+enemy_army_speed_factor	#적 사단 속도
+enemy_local_supplies	#적 현지 보급
+enemy_attrition	#적 사단 손실
+enemy_truck_attrition_factor	#
+compliance_gain	#매일 순응도 획득	#tt
+compliance_growth	#순응도 증가 속도	#tt
+disable_strategic_redeployment	#전략적 재배치 비활성화	#Boolean
+disable_strategic_redeployment_for_controller	#전략적 재배치 비활성화	#Boolean
+enemy_intel_network_gain_factor_over_occupied_tag	#
+local_building_slots	#
+local_building_slots_factor	#
+local_factories	Modifies	#
+local_factory_energy_consumption	#
+local_factory_energy_consumption_per_infrastructure	#기반시설당 공장 에너지 필요량
+local_factory_sabotage	#
+local_intel_to_enemies	#
+local_manpower	#
+local_non_core_manpower	#
+local_org_regain	#
+local_resource_gain_efficiency_per_infrastructure	#기반시설당 자원 획득량
+local_resources	#
+local_supplies	#
+local_supplies_for_controller	#현지 보급
+local_supply_impact_factor	#
+local_non_core_supply_impact_factor	#
+mobilization_speed	#
+non_core_manpower	#
+max_fuel_building	#
+recruitable_population	#
+recruitable_population_factor	#
+resistance_damage_to_garrison	#주둔군에 대한 피해	#tt
+resistance_decay	#저항도 감소 속도
+resistance_garrison_penetration_chance	#주둔군 침투 확률
+resistance_growth	#저항도 증가 속도	#tt
+resistance_target	#
+starting_compliance	#시작 순응도
+state_supply_node_max_level_terrain_limit	#최대 보급 중심지 레벨
+state_rail_way_max_level_terrain_limit	#최대 철도 레벨
+state_naval_base_max_level_terrain_limit	#최대 해군기지 레벨
+state_bunker_max_level_terrain_limit	#최대 요새 레벨
+state_coastal_bunker_max_level_terrain_limit	#최대 해안 요새 레벨
+state_production_speed_<building>_factor
+state_repair_speed_<building>_factor
+state_resources_factor	#현지 가용 자원	#tt(MODIFIER_STATE_RESOURCES_FACTOR_tt)
+state_resource_oil	#석유
+state_resource_aluminium	#알루미늄
+state_resource_rubber	#고무
+state_resource_tungsten	#텅스텐
+state_resource_steel	#강철
+state_resource_chromium	#크롬
+temporary_state_resource_oil	#석유
+temporary_state_resource_aluminium	#알루미늄
+temporary_state_resource_rubber	#고무
+temporary_state_resource_tungsten	#텅스텐
+temporary_state_resource_steel	#강철
+temporary_state_resource_chromium	#크롬
+temporary_state_resource_coal	#석탄
+state_resource_cost_oil	#석유 소비량
+state_resource_cost_aluminium	#알루미늄 소비량
+state_resource_cost_rubber	#고무 소비량
+state_resource_cost_tungsten	#텅스텐 소비량
+state_resource_cost_steel	#강철 소비량
+state_resource_cost_chromium	#크롬 소비량
+state_resource_cost_coal	#석탄 소비량
+enemy_operative_detection_chance_over_occupied_tag	#적 공작원을 감지할 확률 보정치
+enemy_operative_detection_chance_factor_over_occupied_tag	#적 공작원을 감지할 확률 변동치
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Modifiers for scope aggressive
-carrier_capacity_penalty_reduction](#carrier_capacity_penalty_reduction)
-carrier_sortie_hours_delay](#carrier_sortie_hours_delay)
-carrier_traffic](#carrier_traffic)
-cavalry_attack_factor](#cavalry_attack_factor)
 combat_width_factor](#combat_width_factor)
-convoy_raiding_efficiency_factor](#convoy_raiding_efficiency_factor)
-coordination_bonus](#coordination_bonus)
 enemy_attrition](#enemy_attrition)
-enemy_declare_war_tension](#enemy_declare_war_tension)
-enemy_justify_war_goal_time](#enemy_justify_war_goal_time)
-fighter_sortie_efficiency](#fighter_sortie_efficiency)
+
 ground_attack](#ground_attack)
-ground_attack_factor](#ground_attack_factor)
-heat_attrition](#heat_attrition)
-heat_attrition_factor](#heat_attrition_factor)
-justify_war_goal_time](#justify_war_goal_time)
-justify_war_goal_when_in_major_war_time](#justify_war_goal_when_in_major_war_time)
-land_night_attack](#land_night_attack)
-max_planning](#max_planning)
-max_planning_factor](#max_planning_factor)
 max_training](#max_training)
-mechanized_attack_factor](#mechanized_attack_factor)
-motorized_attack_factor](#motorized_attack_factor)
-naval_critical_score_chance_factor](#naval_critical_score_chance_factor)
 naval_critical_score_chance_factor_against](#naval_critical_score_chance_factor_against)
-naval_damage_factor](#naval_damage_factor)
-naval_enemy_fleet_size_ratio_penalty_factor](#naval_enemy_fleet_size_ratio_penalty_factor)
-naval_enemy_positioning_in_initial_attack](#naval_enemy_positioning_in_initial_attack)
-naval_has_potf_in_combat_attack](#naval_has_potf_in_combat_attack)
-naval_has_potf_in_combat_defense](#naval_has_potf_in_combat_defense)
-naval_heavy_gun_hit_chance_factor](#naval_heavy_gun_hit_chance_factor)
-naval_hit_chance](#naval_hit_chance)
-naval_invasion_planning_bonus_speed](#naval_invasion_planning_bonus_speed)
-naval_light_gun_hit_chance_factor](#naval_light_gun_hit_chance_factor)
-naval_night_attack](#naval_night_attack)
+
 naval_strike](#naval_strike)
 naval_supply_consumption_factor](#naval_supply_consumption_factor)
-naval_torpedo_cooldown_factor](#naval_torpedo_cooldown_factor)
-naval_torpedo_hit_chance_factor](#naval_torpedo_hit_chance_factor)
-naval_torpedo_screen_penetration_factor](#naval_torpedo_screen_penetration_factor)
-navy_capital_ship_attack_factor](#navy_capital_ship_attack_factor)
+
 navy_capital_ship_attack_factor_against](#navy_capital_ship_attack_factor_against)
-navy_carrier_air_agility_factor](#navy_carrier_air_agility_factor)
-navy_carrier_air_attack_factor](#navy_carrier_air_attack_factor)
-navy_carrier_air_targetting_factor](#navy_carrier_air_targetting_factor)
-navy_screen_attack_factor](#navy_screen_attack_factor)
 navy_screen_attack_factor_against](#navy_screen_attack_factor_against)
-navy_submarine_attack_factor](#navy_submarine_attack_factor)
 navy_submarine_attack_factor_against](#navy_submarine_attack_factor_against)
 no_supply_grace](#no_supply_grace)
-offence](#offence)
-org_loss_when_moving](#org_loss_when_moving)
-out_of_supply_factor](#out_of_supply_factor)
 planning_decay_rate_factor](#planning_decay_rate_factor)
-planning_speed](#planning_speed)
-pocket_penalty](#pocket_penalty)
-port_strike](#port_strike)
-rocket_attack_factor](#rocket_attack_factor)
-sortie_efficiency](#sortie_efficiency)
-special_forces_attack_factor](#special_forces_attack_factor)
-special_forces_no_supply_grace](#special_forces_no_supply_grace)
-special_forces_out_of_supply_factor](#special_forces_out_of_supply_factor)
-strike_force_movement_org_loss](#strike_force_movement_org_loss)
-submarine_attack](#submarine_attack)
-supply_combat_penalties_on_core_factor](#supply_combat_penalties_on_core_factor)
+
 supply_consumption_factor](#supply_consumption_factor)
-training_time_factor](#training_time_factor)
-winter_attrition](#winter_attrition)
-winter_attrition_factor](#winter_attrition_factor)
-
-## Modifiers for scope ai
-
-ai_badass_factor](#ai_badass_factor)
-ai_call_ally_desire_factor](#ai_call_ally_desire_factor)
-ai_desired_divisions_factor](#ai_desired_divisions_factor)
-ai_focus_aggressive_factor](#ai_focus_aggressive_factor)
-ai_focus_aviation_factor](#ai_focus_aviation_factor)
-ai_focus_defense_factor](#ai_focus_defense_factor)
-ai_focus_military_advancements_factor](#ai_focus_military_advancements_factor)
-ai_focus_military_equipment_factor](#ai_focus_military_equipment_factor)
-ai_focus_naval_air_factor](#ai_focus_naval_air_factor)
-ai_focus_naval_factor](#ai_focus_naval_factor)
-ai_focus_peaceful_factor](#ai_focus_peaceful_factor)
-ai_focus_war_production_factor](#ai_focus_war_production_factor)
-ai_get_ally_desire_factor](#ai_get_ally_desire_factor)
-ai_join_ally_desire_factor](#ai_join_ally_desire_factor)
-ai_license_acceptance](#ai_license_acceptance)
 
 ## Modifiers for scope air
 
-ace_effectiveness_factor](#ace_effectiveness_factor)
 air_accidents](#air_accidents)
-air_accidents_factor](#air_accidents_factor)
-air_ace_bonuses_factor](#air_ace_bonuses_factor)
-air_ace_generation_chance_factor](#air_ace_generation_chance_factor)
-air_advisor_cost_factor](#air_advisor_cost_factor)
-air_agility_factor](#air_agility_factor)
-air_attack_factor](#air_attack_factor)
-air_bombing_targetting](#air_bombing_targetting)
-air_carrier_night_penalty_reduction_factor](#air_carrier_night_penalty_reduction_factor)
-air_cas_efficiency](#air_cas_efficiency)
-air_cas_present_factor](#air_cas_present_factor)
-air_close_air_support_org_damage_factor](#air_close_air_support_org_damage_factor)
-air_defence_factor](#air_defence_factor)
 air_detection](#air_detection)
-air_escort_efficiency](#air_escort_efficiency)
-air_fuel_consumption_factor](#air_fuel_consumption_factor)
-air_home_defence_factor](#air_home_defence_factor)
-air_intercept_efficiency](#air_intercept_efficiency)
 air_interception_detect_factor](#air_interception_detect_factor)
 air_invasion_division_cap](#air_invasion_division_cap)
 air_invasion_preparation](#air_invasion_preparation)
-air_manpower_requirement_factor](#air_manpower_requirement_factor)
-air_maximum_speed_factor](#air_maximum_speed_factor)
-air_mission_efficiency](#air_mission_efficiency)
-air_mission_xp_gain_factor](#air_mission_xp_gain_factor)
-air_nav_efficiency](#air_nav_efficiency)
-air_night_penalty](#air_night_penalty)
-air_power_projection_factor](#air_power_projection_factor)
-air_range_factor](#air_range_factor)
-air_strategic_bomber_bombing_factor](#air_strategic_bomber_bombing_factor)
 air_strategic_bomber_defence_factor](#air_strategic_bomber_defence_factor)
-air_strategic_bomber_night_penalty](#air_strategic_bomber_night_penalty)
-air_superiority_detect_factor](#air_superiority_detect_factor)
-air_superiority_efficiency](#air_superiority_efficiency)
-air_training_xp_gain_factor](#air_training_xp_gain_factor)
-air_untrained_pilots_penalty_factor](#air_untrained_pilots_penalty_factor)
-air_weather_penalty](#air_weather_penalty)
-air_wing_xp_loss_when_killed_factor](#air_wing_xp_loss_when_killed_factor)
-army_bonus_air_superiority_factor](#army_bonus_air_superiority_factor)
-carrier_night_traffic](#carrier_night_traffic)
-enemy_army_bonus_air_superiority_factor](#enemy_army_bonus_air_superiority_factor)
-experience_gain_air](#experience_gain_air)
-experience_gain_air_factor](#experience_gain_air_factor)
 ground_attack](#ground_attack)
-ground_attack_factor](#ground_attack_factor)
-mines_planting_by_air_factor](#mines_planting_by_air_factor)
-mines_sweeping_by_air_factor](#mines_sweeping_by_air_factor)
 naval_strike_agility_factor](#naval_strike_agility_factor)
 naval_strike_attack_factor](#naval_strike_attack_factor)
-naval_strike_targetting_factor](#naval_strike_targetting_factor)
-navy_weather_penalty](#navy_weather_penalty)
-strategic_bomb_visibility](#strategic_bomb_visibility)
 
 ## Modifiers for scope army
 
 <Trait>_xp_gain_factor](#-trait-_xp_gain_factor)
-acclimatization_cold_climate_gain_factor](#acclimatization_cold_climate_gain_factor)
-acclimatization_hot_climate_gain_factor](#acclimatization_hot_climate_gain_factor)
-air_superiority_bonus_in_combat](#air_superiority_bonus_in_combat)
 armor_factor](#armor_factor)
-army_advisor_cost_factor](#army_advisor_cost_factor)
-army_armor_attack_factor](#army_armor_attack_factor)
-army_armor_defence_factor](#army_armor_defence_factor)
-army_armor_speed_factor](#army_armor_speed_factor)
-army_artillery_attack_factor](#army_artillery_attack_factor)
-army_artillery_defence_factor](#army_artillery_defence_factor)
-army_attack_against_major_factor](#army_attack_against_major_factor)
-army_attack_against_minor_factor](#army_attack_against_minor_factor)
-army_attack_factor](#army_attack_factor)
-army_attack_speed_factor](#army_attack_speed_factor)
-army_breakthrough_against_major_factor](#army_breakthrough_against_major_factor)
-army_breakthrough_against_minor_factor](#army_breakthrough_against_minor_factor)
 army_claim_attack_factor](#army_claim_attack_factor)
 army_claim_defence_factor](#army_claim_defence_factor)
-army_core_attack_factor](#army_core_attack_factor)
-army_core_defence_factor](#army_core_defence_factor)
-army_defence_against_major_factor](#army_defence_against_major_factor)
-army_defence_against_minor_factor](#army_defence_against_minor_factor)
-army_defence_factor](#army_defence_factor)
 army_experience_from_volunteers](#army_experience_from_volunteers)
-army_fuel_capacity_factor](#army_fuel_capacity_factor)
-army_fuel_consumption_factor](#army_fuel_consumption_factor)
-army_infantry_attack_factor](#army_infantry_attack_factor)
-army_infantry_defence_factor](#army_infantry_defence_factor)
-army_morale](#army_morale)
-army_morale_factor](#army_morale_factor)
-army_org](#army_org)
-army_org_factor](#army_org_factor)
-army_org_regain](#army_org_regain)
 army_retreat_speed_factor](#army_retreat_speed_factor)
-army_speed_factor](#army_speed_factor)
 army_speed_factor_for_controller](#army_speed_factor_for_controller)
-army_strength_factor](#army_strength_factor)
-assign_army_leader_cp_cost](#assign_army_leader_cp_cost)
-attack_bonus_against](#attack_bonus_against)
-attack_bonus_against_cores](#attack_bonus_against_cores)
-attrition](#attrition)
 attrition_for_controller](#attrition_for_controller)
-breakthrough_bonus_against](#breakthrough_bonus_against)
-breakthrough_factor](#breakthrough_factor)
-cas_damage_reduction](#cas_damage_reduction)
-cavalry_attack_factor](#cavalry_attack_factor)
-cavalry_defence_factor](#cavalry_defence_factor)
 combat_width_factor](#combat_width_factor)
 command_abilities_cost_factor](#command_abilities_cost_factor)
 command_power_gain](#command_power_gain)
 command_power_gain_mult](#command_power_gain_mult)
-coordination_bonus](#coordination_bonus)
-defence](#defence)
-defense_bonus_against](#defense_bonus_against)
-dig_in_speed](#dig_in_speed)
-dig_in_speed_factor](#dig_in_speed_factor)
 disable_strategic_redeployment](#disable_strategic_redeployment)
 disable_strategic_redeployment_for_controller](#disable_strategic_redeployment_for_controller)
 dont_lose_dig_in_on_attack](#dont_lose_dig_in_on_attack)
 enemy_army_speed_factor](#enemy_army_speed_factor)
 enemy_attrition](#enemy_attrition)
-experience_gain_army](#experience_gain_army)
-experience_gain_army_factor](#experience_gain_army_factor)
-experience_gain_army_unit](#experience_gain_army_unit)
-experience_gain_army_unit_factor](#experience_gain_army_unit_factor)
-extra_marine_supply_grace](#extra_marine_supply_grace)
-extra_paratrooper_supply_grace](#extra_paratrooper_supply_grace)
-female_random_army_leader_chance](#female_random_army_leader_chance)
-heat_attrition](#heat_attrition)
-heat_attrition_factor](#heat_attrition_factor)
 land_night_attack](#land_night_attack)
 local_org_regain](#local_org_regain)
 marines_special_forces_contribution_factor](#marines_special_forces_contribution_factor)
 max_command_power](#max_command_power)
 max_command_power_mult](#max_command_power_mult)
 max_commander_army_size](#max_commander_army_size)
-max_dig_in](#max_dig_in)
-max_dig_in_factor](#max_dig_in_factor)
-max_planning](#max_planning)
-max_planning_factor](#max_planning_factor)
 max_training](#max_training)
-mechanized_attack_factor](#mechanized_attack_factor)
-mechanized_defence_factor](#mechanized_defence_factor)
 modifier_army_sub_unit_armored_car_attack_factor](#modifier_army_sub_unit_armored_car_attack_factor)
 modifier_army_sub_unit_armored_car_defence_factor](#modifier_army_sub_unit_armored_car_defence_factor)
 modifier_army_sub_unit_armored_car_max_org_factor](#modifier_army_sub_unit_armored_car_max_org_factor)
@@ -396,69 +1170,23 @@ modifier_army_sub_unit_paratrooper_defence_factor](#modifier_army_sub_unit_parat
 modifier_army_sub_unit_paratrooper_max_org_factor](#modifier_army_sub_unit_paratrooper_max_org_factor)
 modifier_army_sub_unit_paratrooper_speed_factor](#modifier_army_sub_unit_paratrooper_speed_factor)
 module_<EquipmentModule>_design_cost_factor](#module_-equipmentmodule-_design_cost_factor)
-motorized_attack_factor](#motorized_attack_factor)
-motorized_defence_factor](#motorized_defence_factor)
 mountaineers_special_forces_contribution_factor](#mountaineers_special_forces_contribution_factor)
-naval_invasion_planning_bonus_speed](#naval_invasion_planning_bonus_speed)
 no_supply_grace](#no_supply_grace)
-offence](#offence)
-org_loss_at_low_org_factor](#org_loss_at_low_org_factor)
-org_loss_when_moving](#org_loss_when_moving)
-out_of_supply_factor](#out_of_supply_factor)
 paratroopers_special_forces_contribution_factor](#paratroopers_special_forces_contribution_factor)
 planning_decay_rate_factor](#planning_decay_rate_factor)
-planning_speed](#planning_speed)
-pocket_penalty](#pocket_penalty)
 rangers_special_forces_contribution_factor](#rangers_special_forces_contribution_factor)
-recon_factor](#recon_factor)
-recon_factor_while_entrenched](#recon_factor_while_entrenched)
 river_crossing_factor_against](#river_crossing_factor_against)
-rocket_attack_factor](#rocket_attack_factor)
+
 shore_bombardment_bonus](#shore_bombardment_bonus)
-special_forces_attack_factor](#special_forces_attack_factor)
-special_forces_cap](#special_forces_cap)
-special_forces_cap_flat](#special_forces_cap_flat)
-special_forces_defence_factor](#special_forces_defence_factor)
-special_forces_min](#special_forces_min)
-special_forces_no_supply_grace](#special_forces_no_supply_grace)
-special_forces_out_of_supply_factor](#special_forces_out_of_supply_factor)
-special_forces_training_time_factor](#special_forces_training_time_factor)
-supply_combat_penalties_on_core_factor](#supply_combat_penalties_on_core_factor)
 supply_consumption_factor](#supply_consumption_factor)
-terrain_penalty_reduction](#terrain_penalty_reduction)
 terrain_trait_xp_gain_factor](#terrain_trait_xp_gain_factor)
-training_time_army](#training_time_army)
-training_time_army_factor](#training_time_army_factor)
-training_time_factor](#training_time_factor)
 trait_<Trait>_xp_gain_factor](#trait_-trait-_xp_gain_factor)
 unit_<Unit>_design_cost_factor](#unit_-unit-_design_cost_factor)
-unit_upkeep_attrition_factor](#unit_upkeep_attrition_factor)
-winter_attrition](#winter_attrition)
-winter_attrition_factor](#winter_attrition_factor)
 
 ## Modifiers for scope autonomy
 
-autonomy_gain](#autonomy_gain)
-autonomy_gain_global_factor](#autonomy_gain_global_factor)
-autonomy_gain_ll_to_overlord](#autonomy_gain_ll_to_overlord)
-autonomy_gain_ll_to_overlord_factor](#autonomy_gain_ll_to_overlord_factor)
-autonomy_gain_ll_to_subject](#autonomy_gain_ll_to_subject)
-autonomy_gain_ll_to_subject_factor](#autonomy_gain_ll_to_subject_factor)
-autonomy_gain_trade](#autonomy_gain_trade)
-autonomy_gain_trade_factor](#autonomy_gain_trade_factor)
-autonomy_gain_warscore](#autonomy_gain_warscore)
-autonomy_gain_warscore_factor](#autonomy_gain_warscore_factor)
-autonomy_manpower_share](#autonomy_manpower_share)
 autonomy_manpower_share_from_subjects](#autonomy_manpower_share_from_subjects)
-can_master_build_for_us](#can_master_build_for_us)
-cic_to_overlord_factor](#cic_to_overlord_factor)
-extra_trade_to_overlord_factor](#extra_trade_to_overlord_factor)
-license_subject_master_purchase_cost](#license_subject_master_purchase_cost)
-master_build_autonomy_factor](#master_build_autonomy_factor)
-mic_to_overlord_factor](#mic_to_overlord_factor)
-overlord_trade_cost_factor](#overlord_trade_cost_factor)
 resources_to_overlord_factor](#resources_to_overlord_factor)
-subjects_autonomy_gain](#subjects_autonomy_gain)
 
 ## Modifiers for scope character
 
@@ -470,13 +1198,11 @@ scientist_xp_gain_factor](#scientist_xp_gain_factor)
 
 <Building>_max_level_terrain_limit](#-building-_max_level_terrain_limit)
 <Building>_max_level_terrain_limit](#-building-_max_level_terrain_limit)
-<CombatTactic>_preferred_weight_factor](#-combattactic-_preferred_weight_factor)
 <Doctrine>_doctrine_cost_factor](#-doctrine-_doctrine_cost_factor)
 <Doctrine>_mastery_gain_factor](#-doctrine-_mastery_gain_factor)
 <Doctrine>_mastery_gain_factor](#-doctrine-_mastery_gain_factor)
 <Doctrine>_track_mastery_gain_factor](#-doctrine-_track_mastery_gain_factor)
 <Equipment>_design_cost_factor](#-equipment-_design_cost_factor)
-<IdeaCategory>_category_type_cost_factor](#-ideacategory-_category_type_cost_factor)
 <IdeaGroup>_cost_factor](#-ideagroup-_cost_factor)
 <ModifierStat>_factor](#-modifierstat-_factor)
 <ModifierStatValue>_value_factor](#-modifierstatvalue-_value_factor)
@@ -486,52 +1212,26 @@ scientist_xp_gain_factor](#scientist_xp_gain_factor)
 additional_brigade_column_size](#additional_brigade_column_size)
 agency_upgrade_time](#agency_upgrade_time)
 air_doctrine_cost_factor](#air_doctrine_cost_factor)
-air_equipment_upgrade_xp_cost](#air_equipment_upgrade_xp_cost)
 air_invasion_plan_cap](#air_invasion_plan_cap)
 air_invasion_prep_days](#air_invasion_prep_days)
-air_volunteer_cap](#air_volunteer_cap)
-airforce_intel_to_others](#airforce_intel_to_others)
+
 annex_subject_cost_factor](#annex_subject_cost_factor)
-army_intel_to_others](#army_intel_to_others)
-assign_army_leader_cp_cost](#assign_army_leader_cp_cost)
-assign_navy_leader_cp_cost](#assign_navy_leader_cp_cost)
+
 automatic_grant_medal_chance](#automatic_grant_medal_chance)
-base_fuel_gain](#base_fuel_gain)
-base_fuel_gain_factor](#base_fuel_gain_factor)
 can_guarantee_other_ideologies](#can_guarantee_other_ideologies)
 choose_preferred_tactics_cost](#choose_preferred_tactics_cost)
-cic_construction_boost](#cic_construction_boost)
-cic_construction_boost_factor](#cic_construction_boost_factor)
-cic_to_target_factor](#cic_to_target_factor)
-civil_war_involvement_tension](#civil_war_involvement_tension)
-civilian_factory_use](#civilian_factory_use)
-civilian_intel_to_others](#civilian_intel_to_others)
-coastal_bunker_effectiveness_factor](#coastal_bunker_effectiveness_factor)
+
 command_abilities_cost_factor](#command_abilities_cost_factor)
 command_power_gain](#command_power_gain)
 command_power_gain_mult](#command_power_gain_mult)
 compliance_gain](#compliance_gain)
 compliance_growth](#compliance_growth)
 compliance_growth_on_our_occupied_states](#compliance_growth_on_our_occupied_states)
-conscription](#conscription)
-conscription_factor](#conscription_factor)
-consumer_goods_expected_value](#consumer_goods_expected_value)
-consumer_goods_factor](#consumer_goods_factor)
-conversion_cost_civ_to_mil_factor](#conversion_cost_civ_to_mil_factor)
-conversion_cost_mil_to_civ_factor](#conversion_cost_mil_to_civ_factor)
-country_resource_<Resource>](#country_resource_-resource-)
-country_resource_cost_<Resource>](#country_resource_cost_-resource-)
-critical_receive_chance](#critical_receive_chance)
 decryption](#decryption)
 decryption_factor](#decryption_factor)
-defensive_war_stability_factor](#defensive_war_stability_factor)
-disabled_ideas](#disabled_ideas)
-embargo_cost_factor](#embargo_cost_factor)
-embargo_threshold_factor](#embargo_threshold_factor)
+
 encryption](#encryption)
 encryption_factor](#encryption_factor)
-enemy_declare_war_tension](#enemy_declare_war_tension)
-enemy_justify_war_goal_time](#enemy_justify_war_goal_time)
 enemy_operative_capture_chance_factor](#enemy_operative_capture_chance_factor)
 enemy_operative_detection_chance](#enemy_operative_detection_chance)
 enemy_operative_detection_chance_factor](#enemy_operative_detection_chance_factor)
@@ -539,144 +1239,50 @@ enemy_operative_detection_chance_factor_over_occupied_tag](#enemy_operative_dete
 enemy_operative_detection_chance_over_occupied_tag](#enemy_operative_detection_chance_over_occupied_tag)
 enemy_operative_forced_into_hiding_time_factor](#enemy_operative_forced_into_hiding_time_factor)
 enemy_operative_harmed_time_factor](#enemy_operative_harmed_time_factor)
-enemy_operative_intel_extraction_rate](#enemy_operative_intel_extraction_rate)
-enemy_spy_negative_status_factor](#enemy_spy_negative_status_factor)
-equipment_capture](#equipment_capture)
-equipment_capture_factor](#equipment_capture_factor)
-equipment_conversion_speed](#equipment_conversion_speed)
-equipment_upgrade_xp_cost](#equipment_upgrade_xp_cost)
-exiled_government_weekly_manpower](#exiled_government_weekly_manpower)
 experience_gain_<Unit>_combat_factor](#experience_gain_-unit-_combat_factor)
 experience_gain_<Unit>_mission_factor](#experience_gain_-unit-_mission_factor)
 experience_gain_<Unit>_training_factor](#experience_gain_-unit-_training_factor)
 experience_loss_factor](#experience_loss_factor)
-extra_trade_to_target_factor](#extra_trade_to_target_factor)
 faction_trade_opinion_factor](#faction_trade_opinion_factor)
-factory_energy_consumption](#factory_energy_consumption)
-female_divisional_commander_chance](#female_divisional_commander_chance)
-female_random_admiral_chance](#female_random_admiral_chance)
-female_random_army_leader_chance](#female_random_army_leader_chance)
-female_random_country_leader_chance](#female_random_country_leader_chance)
-female_random_operative_chance](#female_random_operative_chance)
+
+
 female_random_scientist_chance](#female_random_scientist_chance)
-field_officer_promotion_penalty](#field_officer_promotion_penalty)
-floating_harbor_duration](#floating_harbor_duration)
-floating_harbor_range](#floating_harbor_range)
-floating_harbor_supply](#floating_harbor_supply)
-forced_surrender_limit](#forced_surrender_limit)
+
+
 foreign_subversive_activites](#foreign_subversive_activites)
-fuel_cost](#fuel_cost)
-fuel_gain](#fuel_gain)
-fuel_gain_factor](#fuel_gain_factor)
-fuel_gain_factor_from_states](#fuel_gain_factor_from_states)
-fuel_gain_from_states](#fuel_gain_from_states)
-generate_wargoal_tension](#generate_wargoal_tension)
-generate_wargoal_tension_against](#generate_wargoal_tension_against)
-global_building_slots](#global_building_slots)
-global_building_slots_factor](#global_building_slots_factor)
-grant_medal_cost_factor](#grant_medal_cost_factor)
-guarantee_cost](#guarantee_cost)
-guarantee_tension](#guarantee_tension)
-improve_relations_maintain_cost_factor](#improve_relations_maintain_cost_factor)
-industrial_capacity_dockyard](#industrial_capacity_dockyard)
-industrial_capacity_dockyard_powered](#industrial_capacity_dockyard_powered)
-industrial_capacity_factory](#industrial_capacity_factory)
-industrial_capacity_factory_powered](#industrial_capacity_factory_powered)
-industry_air_damage_factor](#industry_air_damage_factor)
-industry_free_repair_factor](#industry_free_repair_factor)
-industry_repair_factor](#industry_repair_factor)
+
+
 initiative_factor](#initiative_factor)
 intel_from_combat_factor](#intel_from_combat_factor)
-intel_network_gain](#intel_network_gain)
-intel_network_gain_factor](#intel_network_gain_factor)
-join_faction_tension](#join_faction_tension)
-justify_war_goal_time](#justify_war_goal_time)
-justify_war_goal_when_in_major_war_time](#justify_war_goal_when_in_major_war_time)
-land_bunker_effectiveness_factor](#land_bunker_effectiveness_factor)
-land_equipment_upgrade_xp_cost](#land_equipment_upgrade_xp_cost)
+
 land_reinforce_rate](#land_reinforce_rate)
-lend_lease_tension](#lend_lease_tension)
-lend_lease_tension_with_overlord](#lend_lease_tension_with_overlord)
-license_air_purchase_cost](#license_air_purchase_cost)
-license_anti_tank_eq_cost_factor](#license_anti_tank_eq_cost_factor)
-license_anti_tank_eq_production_speed_factor](#license_anti_tank_eq_production_speed_factor)
-license_anti_tank_eq_tech_difference_speed_factor](#license_anti_tank_eq_tech_difference_speed_factor)
-license_armor_purchase_cost](#license_armor_purchase_cost)
-license_artillery_eq_cost_factor](#license_artillery_eq_cost_factor)
-license_artillery_eq_production_speed_factor](#license_artillery_eq_production_speed_factor)
-license_artillery_eq_tech_difference_speed_factor](#license_artillery_eq_tech_difference_speed_factor)
-license_infantry_eq_cost_factor](#license_infantry_eq_cost_factor)
-license_infantry_eq_production_speed_factor](#license_infantry_eq_production_speed_factor)
-license_infantry_eq_tech_difference_speed_factor](#license_infantry_eq_tech_difference_speed_factor)
-license_infantry_purchase_cost](#license_infantry_purchase_cost)
-license_light_tank_eq_cost_factor](#license_light_tank_eq_cost_factor)
-license_light_tank_eq_production_speed_factor](#license_light_tank_eq_production_speed_factor)
-license_light_tank_eq_tech_difference_speed_factor](#license_light_tank_eq_tech_difference_speed_factor)
-license_naval_purchase_cost](#license_naval_purchase_cost)
-license_production_speed](#license_production_speed)
-license_purchase_cost](#license_purchase_cost)
-license_tech_difference_speed](#license_tech_difference_speed)
-line_change_production_efficiency_factor](#line_change_production_efficiency_factor)
+
+
 local_resources_<Resource>_factor](#local_resources_-resource-_factor)
 max_command_power](#max_command_power)
 max_command_power_mult](#max_command_power_mult)
-max_fuel](#max_fuel)
 max_fuel_building](#max_fuel_building)
-max_fuel_factor](#max_fuel_factor)
-max_surrender_limit_offset](#max_surrender_limit_offset)
-mic_to_target_factor](#mic_to_target_factor)
-min_export](#min_export)
+
+
+
 minimum_training_level](#minimum_training_level)
 module_<EquipmentModule>_design_cost_factor](#module_-equipmentmodule-_design_cost_factor)
-monthly_population](#monthly_population)
-naval_equipment_upgrade_xp_cost](#naval_equipment_upgrade_xp_cost)
 naval_invasion_plan_cap](#naval_invasion_plan_cap)
 naval_invasion_prep_days](#naval_invasion_prep_days)
-navy_intel_to_others](#navy_intel_to_others)
 no_compliance_gain](#no_compliance_gain)
-nuclear_production](#nuclear_production)
-nuclear_production_factor](#nuclear_production_factor)
-offensive_war_stability_factor](#offensive_war_stability_factor)
-opinion_gain_monthly](#opinion_gain_monthly)
-opinion_gain_monthly_factor](#opinion_gain_monthly_factor)
-opinion_gain_monthly_same_ideology](#opinion_gain_monthly_same_ideology)
-opinion_gain_monthly_same_ideology_factor](#opinion_gain_monthly_same_ideology_factor)
+
 out_of_power_impact_factor](#out_of_power_impact_factor)
-own_operative_capture_chance_factor](#own_operative_capture_chance_factor)
-own_operative_detection_chance](#own_operative_detection_chance)
-own_operative_detection_chance_factor](#own_operative_detection_chance_factor)
 own_operative_forced_into_hiding_time_factor](#own_operative_forced_into_hiding_time_factor)
 own_operative_harmed_time_factor](#own_operative_harmed_time_factor)
 own_operative_intel_extraction_rate](#own_operative_intel_extraction_rate)
 paradrop_organization_factor](#paradrop_organization_factor)
 paratrooper_aa_defense](#paratrooper_aa_defense)
 paratrooper_weight_factor](#paratrooper_weight_factor)
-party_popularity_stability_factor](#party_popularity_stability_factor)
-political_power_cost](#political_power_cost)
-political_power_factor](#political_power_factor)
-political_power_gain](#political_power_gain)
-power_balance_daily](#power_balance_daily)
-power_balance_weekly](#power_balance_weekly)
-production_cost_<Building>_factor](#production_cost_-building-_factor)
-production_factory_efficiency_gain_factor](#production_factory_efficiency_gain_factor)
-production_factory_max_efficiency_factor](#production_factory_max_efficiency_factor)
-production_factory_start_efficiency_factor](#production_factory_start_efficiency_factor)
-production_lack_of_resource_penalty_factor](#production_lack_of_resource_penalty_factor)
-production_oil_factor](#production_oil_factor)
-production_speed_<Building>_factor](#production_speed_-building-_factor)
-production_speed_buildings_factor](#production_speed_buildings_factor)
-production_speed_buildings_powered_factor](#production_speed_buildings_powered_factor)
-production_speed_facility_factor](#production_speed_facility_factor)
-railway_gun_bombardment_factor](#railway_gun_bombardment_factor)
-refit_ic_cost](#refit_ic_cost)
-refit_speed](#refit_speed)
-repair_speed_<Building>_factor](#repair_speed_-building-_factor)
-repair_speed_factor](#repair_speed_factor)
-request_lease_tension](#request_lease_tension)
+
+
 required_garrison_factor](#required_garrison_factor)
-research_sharing_per_country_bonus](#research_sharing_per_country_bonus)
-research_sharing_per_country_bonus_factor](#research_sharing_per_country_bonus_factor)
-research_speed_factor](#research_speed_factor)
+
+
 resistance_activity](#resistance_activity)
 resistance_damage_to_garrison](#resistance_damage_to_garrison)
 resistance_damage_to_garrison_on_our_occupied_states](#resistance_damage_to_garrison_on_our_occupied_states)
@@ -689,105 +1295,45 @@ resistance_target](#resistance_target)
 resistance_target_on_our_occupied_states](#resistance_target_on_our_occupied_states)
 resource_trade_cost_bonus_per_factory](#resource_trade_cost_bonus_per_factory)
 screening_without_screens](#screening_without_screens)
-send_volunteer_divisions_required](#send_volunteer_divisions_required)
-send_volunteer_factor](#send_volunteer_factor)
-send_volunteer_size](#send_volunteer_size)
-send_volunteers_tension](#send_volunteers_tension)
 shore_bombardment_collateral_damage_factor](#shore_bombardment_collateral_damage_factor)
 special_forces_doctrine_cost_factor](#special_forces_doctrine_cost_factor)
 special_project_facility_supply_consumption_factor](#special_project_facility_supply_consumption_factor)
 special_project_speed_factor](#special_project_speed_factor)
-stability_factor](#stability_factor)
-stability_weekly](#stability_weekly)
-stability_weekly_factor](#stability_weekly_factor)
+
 starting_compliance](#starting_compliance)
 subversive_activites_upkeep](#subversive_activites_upkeep)
-supply_factor](#supply_factor)
-supply_node_range](#supply_node_range)
-surrender_limit](#surrender_limit)
-tech_air_damage_factor](#tech_air_damage_factor)
+
 terrain_trait_xp_gain_factor](#terrain_trait_xp_gain_factor)
-thermonuclear_production](#thermonuclear_production)
-thermonuclear_production_factor](#thermonuclear_production_factor)
-trade_cost_for_target_factor](#trade_cost_for_target_factor)
-trade_opinion_factor](#trade_opinion_factor)
+
+
 trait_<Trait>_xp_gain_factor](#trait_-trait-_xp_gain_factor)
-truck_attrition](#truck_attrition)
-truck_attrition_factor](#truck_attrition_factor)
 underway_replenishment_convoy_cost](#underway_replenishment_convoy_cost)
 underway_replenishment_range](#underway_replenishment_range)
 unit_<Unit>_design_cost_factor](#unit_-unit-_design_cost_factor)
-unit_leader_as_advisor_cp_cost_factor](#unit_leader_as_advisor_cp_cost_factor)
 unit_medal_effectiveness](#unit_medal_effectiveness)
-war_stability_factor](#war_stability_factor)
-war_support_factor](#war_support_factor)
-war_support_weekly](#war_support_weekly)
-war_support_weekly_factor](#war_support_weekly_factor)
-weekly_bombing_war_support](#weekly_bombing_war_support)
-weekly_casualties_war_support](#weekly_casualties_war_support)
-weekly_convoys_war_support](#weekly_convoys_war_support)
+
+
+
 weekly_manpower](#weekly_manpower)
 
 ## Modifiers for scope defensive
 
 armor_factor](#armor_factor)
-army_armor_defence_factor](#army_armor_defence_factor)
-army_artillery_defence_factor](#army_artillery_defence_factor)
-army_breakthrough_against_major_factor](#army_breakthrough_against_major_factor)
-army_breakthrough_against_minor_factor](#army_breakthrough_against_minor_factor)
+
 army_claim_defence_factor](#army_claim_defence_factor)
-army_core_defence_factor](#army_core_defence_factor)
-army_defence_against_major_factor](#army_defence_against_major_factor)
-army_defence_against_minor_factor](#army_defence_against_minor_factor)
-army_defence_factor](#army_defence_factor)
-army_infantry_defence_factor](#army_infantry_defence_factor)
-army_morale](#army_morale)
-army_morale_factor](#army_morale_factor)
-army_org](#army_org)
-army_org_factor](#army_org_factor)
 army_retreat_speed_factor](#army_retreat_speed_factor)
-attrition](#attrition)
 attrition_for_controller](#attrition_for_controller)
-cavalry_defence_factor](#cavalry_defence_factor)
-convoy_escort_efficiency](#convoy_escort_efficiency)
-convoy_retreat_speed](#convoy_retreat_speed)
-defence](#defence)
-dig_in_speed](#dig_in_speed)
-dig_in_speed_factor](#dig_in_speed_factor)
 dont_lose_dig_in_on_attack](#dont_lose_dig_in_on_attack)
 encryption](#encryption)
 encryption_factor](#encryption_factor)
 enemy_attrition](#enemy_attrition)
-guarantee_tension](#guarantee_tension)
 local_intel_to_enemies](#local_intel_to_enemies)
-max_dig_in](#max_dig_in)
-max_dig_in_factor](#max_dig_in_factor)
-mechanized_defence_factor](#mechanized_defence_factor)
-motorized_defence_factor](#motorized_defence_factor)
-naval_retreat_chance](#naval_retreat_chance)
-naval_retreat_chance_after_initial_combat](#naval_retreat_chance_after_initial_combat)
-naval_retreat_speed](#naval_retreat_speed)
-naval_retreat_speed_after_initial_combat](#naval_retreat_speed_after_initial_combat)
 naval_supply_consumption_factor](#naval_supply_consumption_factor)
-naval_torpedo_damage_reduction_factor](#naval_torpedo_damage_reduction_factor)
-naval_torpedo_enemy_critical_chance_factor](#naval_torpedo_enemy_critical_chance_factor)
-navy_capital_ship_defence_factor](#navy_capital_ship_defence_factor)
 navy_capital_ship_defence_factor_against](#navy_capital_ship_defence_factor_against)
-navy_screen_defence_factor](#navy_screen_defence_factor)
 navy_screen_defence_factor_against](#navy_screen_defence_factor_against)
-navy_submarine_defence_factor](#navy_submarine_defence_factor)
 navy_submarine_defence_factor_against](#navy_submarine_defence_factor_against)
-navy_submarine_detection_factor](#navy_submarine_detection_factor)
-puppet_cost_factor](#puppet_cost_factor)
-recon_factor](#recon_factor)
-recon_factor_while_entrenched](#recon_factor_while_entrenched)
-send_volunteers_tension](#send_volunteers_tension)
-special_forces_defence_factor](#special_forces_defence_factor)
-static_anti_air_damage_factor](#static_anti_air_damage_factor)
-static_anti_air_hit_chance_factor](#static_anti_air_hit_chance_factor)
-sub_retreat_speed](#sub_retreat_speed)
+
 supply_consumption_factor](#supply_consumption_factor)
-terrain_penalty_reduction](#terrain_penalty_reduction)
 
 ## Modifiers for scope faction
 
@@ -795,181 +1341,54 @@ faction_influence_contribution_factor](#faction_influence_contribution_factor)
 faction_influence_war_score_factor](#faction_influence_war_score_factor)
 faction_subject_contribution_gain](#faction_subject_contribution_gain)
 
-## Modifiers for scope government_in_exile
-
-dockyard_donations](#dockyard_donations)
-exile_manpower_factor](#exile_manpower_factor)
-industrial_factory_donations](#industrial_factory_donations)
-legitimacy_daily](#legitimacy_daily)
-legitimacy_gain_factor](#legitimacy_gain_factor)
-military_factory_donations](#military_factory_donations)
-targeted_legitimacy_daily](#targeted_legitimacy_daily)
-
-## Modifiers for scope intelligence_agency
-
-<Operation>_cost](#-operation-_cost)
-<Operation>_outcome](#-operation-_outcome)
-<Operation>_risk](#-operation-_risk)
-boost_ideology_mission_factor](#boost_ideology_mission_factor)
-boost_resistance_factor](#boost_resistance_factor)
-civilian_intel_decryption_bonus](#civilian_intel_decryption_bonus)
-civilian_intel_factor](#civilian_intel_factor)
-commando_trait_chance_factor](#commando_trait_chance_factor)
-control_trade_mission_factor](#control_trade_mission_factor)
-crypto_department_enabled](#crypto_department_enabled)
-crypto_strength](#crypto_strength)
-decryption_power](#decryption_power)
-decryption_power_factor](#decryption_power_factor)
-defense_impact_on_blueprint_stealing](#defense_impact_on_blueprint_stealing)
-diplomatic_pressure_mission_factor](#diplomatic_pressure_mission_factor)
-enemy_operative_recruitment_chance](#enemy_operative_recruitment_chance)
-female_random_operative_chance](#female_random_operative_chance)
-intel_from_operatives_factor](#intel_from_operatives_factor)
-intel_network_gain](#intel_network_gain)
-intel_network_gain_factor](#intel_network_gain_factor)
-intelligence_agency_defense](#intelligence_agency_defense)
-intelligence_operation_speed](#intelligence_operation_speed)
-navy_intel_decryption_bonus](#navy_intel_decryption_bonus)
-navy_intel_factor](#navy_intel_factor)
-new_operative_slot_bonus](#new_operative_slot_bonus)
-occupied_operative_recruitment_chance](#occupied_operative_recruitment_chance)
-operation_cost](#operation_cost)
-operation_infiltrate_outcome](#operation_infiltrate_outcome)
-operation_outcome](#operation_outcome)
-operative_death_on_capture_chance](#operative_death_on_capture_chance)
-operative_slot](#operative_slot)
-propaganda_mission_factor](#propaganda_mission_factor)
-root_out_resistance_effectiveness_factor](#root_out_resistance_effectiveness_factor)
-target_sabotage_factor](#target_sabotage_factor)
 
 ## Modifiers for scope military_advancements
 
-experience_gain_army](#experience_gain_army)
-experience_gain_army_factor](#experience_gain_army_factor)
-experience_gain_army_unit](#experience_gain_army_unit)
-experience_gain_army_unit_factor](#experience_gain_army_unit_factor)
 experience_gain_factor](#experience_gain_factor)
-experience_gain_navy](#experience_gain_navy)
-experience_gain_navy_factor](#experience_gain_navy_factor)
-experience_gain_navy_unit](#experience_gain_navy_unit)
-experience_gain_navy_unit_factor](#experience_gain_navy_unit_factor)
-research_speed_factor](#research_speed_factor)
+
 
 ## Modifiers for scope naval
 
 <Trait>_xp_gain_factor](#-trait-_xp_gain_factor)
-amphibious_invasion](#amphibious_invasion)
 amphibious_invasion_against](#amphibious_invasion_against)
-amphibious_invasion_defence](#amphibious_invasion_defence)
-assign_navy_leader_cp_cost](#assign_navy_leader_cp_cost)
-carrier_capacity_penalty_reduction](#carrier_capacity_penalty_reduction)
-carrier_sortie_hours_delay](#carrier_sortie_hours_delay)
-carrier_traffic](#carrier_traffic)
-convoy_escort_efficiency](#convoy_escort_efficiency)
-convoy_raiding_efficiency_factor](#convoy_raiding_efficiency_factor)
-convoy_retreat_speed](#convoy_retreat_speed)
-critical_receive_chance](#critical_receive_chance)
+
 experience_gain_<Unit>_combat_factor](#experience_gain_-unit-_combat_factor)
 experience_gain_<Unit>_mission_factor](#experience_gain_-unit-_mission_factor)
 experience_gain_<Unit>_training_factor](#experience_gain_-unit-_training_factor)
-experience_gain_navy](#experience_gain_navy)
-experience_gain_navy_factor](#experience_gain_navy_factor)
-experience_gain_navy_unit](#experience_gain_navy_unit)
-experience_gain_navy_unit_factor](#experience_gain_navy_unit_factor)
-female_random_admiral_chance](#female_random_admiral_chance)
-fighter_sortie_efficiency](#fighter_sortie_efficiency)
+
 headquarters_experience_gain_factor](#headquarters_experience_gain_factor)
-invasion_preparation](#invasion_preparation)
 invasion_preparation_against](#invasion_preparation_against)
 max_organisation](#max_organisation)
-mines_planting_by_fleets_factor](#mines_planting_by_fleets_factor)
-mines_sweeping_by_fleets_factor](#mines_sweeping_by_fleets_factor)
 module_<EquipmentModule>_design_cost_factor](#module_-equipmentmodule-_design_cost_factor)
-naval_accidents_chance](#naval_accidents_chance)
-naval_attrition](#naval_attrition)
 naval_commando_raid_distance](#naval_commando_raid_distance)
-naval_coordination](#naval_coordination)
-naval_critical_effect_factor](#naval_critical_effect_factor)
-naval_critical_score_chance_factor](#naval_critical_score_chance_factor)
+
 naval_critical_score_chance_factor_against](#naval_critical_score_chance_factor_against)
-naval_damage_factor](#naval_damage_factor)
-naval_defense_factor](#naval_defense_factor)
-naval_detection](#naval_detection)
-naval_enemy_fleet_size_ratio_penalty_factor](#naval_enemy_fleet_size_ratio_penalty_factor)
-naval_enemy_positioning_in_initial_attack](#naval_enemy_positioning_in_initial_attack)
-naval_enemy_retreat_chance](#naval_enemy_retreat_chance)
-naval_has_potf_in_combat_attack](#naval_has_potf_in_combat_attack)
-naval_has_potf_in_combat_defense](#naval_has_potf_in_combat_defense)
-naval_heavy_gun_hit_chance_factor](#naval_heavy_gun_hit_chance_factor)
-naval_hit_chance](#naval_hit_chance)
+
 naval_hit_chance_against](#naval_hit_chance_against)
-naval_invasion_capacity](#naval_invasion_capacity)
 naval_invasion_division_cap](#naval_invasion_division_cap)
-naval_invasion_penalty](#naval_invasion_penalty)
-naval_light_gun_hit_chance_factor](#naval_light_gun_hit_chance_factor)
-naval_mine_hit_chance](#naval_mine_hit_chance)
-naval_mines_damage_factor](#naval_mines_damage_factor)
-naval_mines_effect_reduction](#naval_mines_effect_reduction)
+
 naval_mission_xp_factor](#naval_mission_xp_factor)
-naval_morale](#naval_morale)
-naval_morale_factor](#naval_morale_factor)
-naval_night_attack](#naval_night_attack)
-naval_retreat_chance](#naval_retreat_chance)
-naval_retreat_chance_after_initial_combat](#naval_retreat_chance_after_initial_combat)
-naval_retreat_speed](#naval_retreat_speed)
-naval_retreat_speed_after_initial_combat](#naval_retreat_speed_after_initial_combat)
+
 naval_ship_recovery_chance](#naval_ship_recovery_chance)
 naval_ship_recovery_chance_factor](#naval_ship_recovery_chance_factor)
-naval_speed_factor](#naval_speed_factor)
 naval_strike](#naval_strike)
 naval_supply_consumption_factor](#naval_supply_consumption_factor)
-naval_torpedo_cooldown_factor](#naval_torpedo_cooldown_factor)
-naval_torpedo_damage_reduction_factor](#naval_torpedo_damage_reduction_factor)
-naval_torpedo_enemy_critical_chance_factor](#naval_torpedo_enemy_critical_chance_factor)
-naval_torpedo_hit_chance_factor](#naval_torpedo_hit_chance_factor)
-naval_torpedo_reveal_chance_factor](#naval_torpedo_reveal_chance_factor)
-naval_torpedo_screen_penetration_factor](#naval_torpedo_screen_penetration_factor)
-navy_advisor_cost_factor](#navy_advisor_cost_factor)
-navy_anti_air_attack](#navy_anti_air_attack)
-navy_anti_air_attack_factor](#navy_anti_air_attack_factor)
-navy_capital_ship_attack_factor](#navy_capital_ship_attack_factor)
+
 navy_capital_ship_attack_factor_against](#navy_capital_ship_attack_factor_against)
-navy_capital_ship_defence_factor](#navy_capital_ship_defence_factor)
 navy_capital_ship_defence_factor_against](#navy_capital_ship_defence_factor_against)
-navy_carrier_air_agility_factor](#navy_carrier_air_agility_factor)
-navy_carrier_air_attack_factor](#navy_carrier_air_attack_factor)
-navy_carrier_air_targetting_factor](#navy_carrier_air_targetting_factor)
+
 navy_casualty_on_hit](#navy_casualty_on_hit)
 navy_casualty_on_sink](#navy_casualty_on_sink)
-navy_fuel_consumption_factor](#navy_fuel_consumption_factor)
-navy_max_range](#navy_max_range)
-navy_max_range_factor](#navy_max_range_factor)
-navy_org](#navy_org)
-navy_org_factor](#navy_org_factor)
-navy_screen_attack_factor](#navy_screen_attack_factor)
+
+
 navy_screen_attack_factor_against](#navy_screen_attack_factor_against)
-navy_screen_defence_factor](#navy_screen_defence_factor)
 navy_screen_defence_factor_against](#navy_screen_defence_factor_against)
-navy_submarine_attack_factor](#navy_submarine_attack_factor)
 navy_submarine_attack_factor_against](#navy_submarine_attack_factor_against)
-navy_submarine_defence_factor](#navy_submarine_defence_factor)
 navy_submarine_defence_factor_against](#navy_submarine_defence_factor_against)
-navy_submarine_detection_factor](#navy_submarine_detection_factor)
-navy_visibility](#navy_visibility)
-night_spotting_chance](#night_spotting_chance)
-port_strike](#port_strike)
-positioning](#positioning)
-production_cost_max_<NavalEquipment>](#production_cost_max_-navalequipment-)
-repair_speed_factor](#repair_speed_factor)
-screening_efficiency](#screening_efficiency)
-screening_without_screens](#screening_without_screens)
-ships_at_battle_start](#ships_at_battle_start)
-sortie_efficiency](#sortie_efficiency)
-spotting_chance](#spotting_chance)
+
+
+
 spotting_chance_against](#spotting_chance_against)
-strike_force_movement_org_loss](#strike_force_movement_org_loss)
-sub_retreat_speed](#sub_retreat_speed)
-submarine_attack](#submarine_attack)
 terrain_trait_xp_gain_factor](#terrain_trait_xp_gain_factor)
 trait_<Trait>_xp_gain_factor](#trait_-trait-_xp_gain_factor)
 transport_capacity](#transport_capacity)
@@ -977,21 +1396,19 @@ unit_<Unit>_design_cost_factor](#unit_-unit-_design_cost_factor)
 
 ## Modifiers for scope peace
 
-annex_cost_factor](#annex_cost_factor)
+
 peace_score_ratio_transferred_to_overlord](#peace_score_ratio_transferred_to_overlord)
 peace_score_ratio_transferred_to_players](#peace_score_ratio_transferred_to_players)
-puppet_cost_factor](#puppet_cost_factor)
+
 
 ## Modifiers for scope politics
 
-<Ideology>_acceptance](#-ideology-_acceptance)
-<Ideology>_drift](#-ideology-_drift)
+
 <Ideology>_drift_from_guarantees](#-ideology-_drift_from_guarantees)
-drift_defence_factor](#drift_defence_factor)
-embargo_cost_factor](#embargo_cost_factor)
-embargo_threshold_factor](#embargo_threshold_factor)
-guarantee_cost](#guarantee_cost)
-master_ideology_drift](#master_ideology_drift)
+
+
+
+
 
 ## Modifiers for scope scientist
 
@@ -1003,7 +1420,6 @@ female_random_scientist_chance](#female_random_scientist_chance)
 <ModifierStatValue>_value_factor](#-modifierstatvalue-_value_factor)
 <SpecialProject>_speed_factor](#-specialproject-_speed_factor)
 army_speed_factor_for_controller](#army_speed_factor_for_controller)
-coastal_bunker_effectiveness_factor](#coastal_bunker_effectiveness_factor)
 compliance_gain](#compliance_gain)
 compliance_growth](#compliance_growth)
 compliance_growth_on_our_occupied_states](#compliance_growth_on_our_occupied_states)
@@ -1013,13 +1429,9 @@ enemy_army_speed_factor](#enemy_army_speed_factor)
 enemy_attrition](#enemy_attrition)
 enemy_intel_network_gain_factor_over_occupied_tag](#enemy_intel_network_gain_factor_over_occupied_tag)
 enemy_local_supplies](#enemy_local_supplies)
-enemy_spy_negative_status_factor](#enemy_spy_negative_status_factor)
 enemy_truck_attrition_factor](#enemy_truck_attrition_factor)
 equipment_capture_factor_for_controller](#equipment_capture_factor_for_controller)
 equipment_capture_for_controller](#equipment_capture_for_controller)
-intel_network_gain](#intel_network_gain)
-intel_network_gain_factor](#intel_network_gain_factor)
-land_bunker_effectiveness_factor](#land_bunker_effectiveness_factor)
 local_building_slots](#local_building_slots)
 local_building_slots_factor](#local_building_slots_factor)
 local_factories](#local_factories)
@@ -1030,7 +1442,7 @@ local_manpower](#local_manpower)
 local_non_core_manpower](#local_non_core_manpower)
 local_non_core_supply_impact_factor](#local_non_core_supply_impact_factor)
 local_resources](#local_resources)
-local_resources_factor](#local_resources_factor)
+
 local_supplies](#local_supplies)
 local_supplies_for_controller](#local_supplies_for_controller)
 local_supply_impact_factor](#local_supply_impact_factor)
@@ -1061,29 +1473,14 @@ state_resource_<Resource>](#state_resource_-resource-)
 state_resource_cost_<Resource>](#state_resource_cost_-resource-)
 state_resources_<Resource>_factor](#state_resources_-resource-_factor)
 state_resources_factor](#state_resources_factor)
-supply_factor](#supply_factor)
 temporary_state_resource_<Resource>](#temporary_state_resource_-resource-)
-truck_attrition](#truck_attrition)
-truck_attrition_factor](#truck_attrition_factor)
 
 ## Modifiers for scope unit_leader
 
 air_invasion_preparation](#air_invasion_preparation)
-amphibious_invasion](#amphibious_invasion)
-amphibious_invasion_defence](#amphibious_invasion_defence)
-army_leader_cost_factor](#army_leader_cost_factor)
-army_leader_start_attack_level](#army_leader_start_attack_level)
-army_leader_start_defense_level](#army_leader_start_defense_level)
-army_leader_start_level](#army_leader_start_level)
-army_leader_start_logistics_level](#army_leader_start_logistics_level)
-army_leader_start_planning_level](#army_leader_start_planning_level)
 cannot_use_abilities](#cannot_use_abilities)
-carrier_sortie_hours_delay](#carrier_sortie_hours_delay)
-carrier_traffic](#carrier_traffic)
-convoy_escort_efficiency](#convoy_escort_efficiency)
-convoy_raiding_efficiency_factor](#convoy_raiding_efficiency_factor)
-convoy_retreat_speed](#convoy_retreat_speed)
-critical_receive_chance](#critical_receive_chance)
+
+
 enemy_operative_capture_chance_factor](#enemy_operative_capture_chance_factor)
 enemy_operative_detection_chance](#enemy_operative_detection_chance)
 enemy_operative_detection_chance_factor](#enemy_operative_detection_chance_factor)
@@ -1091,168 +1488,57 @@ enemy_operative_detection_chance_factor_over_occupied_tag](#enemy_operative_dete
 enemy_operative_detection_chance_over_occupied_tag](#enemy_operative_detection_chance_over_occupied_tag)
 enemy_operative_forced_into_hiding_time_factor](#enemy_operative_forced_into_hiding_time_factor)
 enemy_operative_harmed_time_factor](#enemy_operative_harmed_time_factor)
-enemy_operative_intel_extraction_rate](#enemy_operative_intel_extraction_rate)
 exiled_divisions_attack_factor](#exiled_divisions_attack_factor)
 exiled_divisions_defense_factor](#exiled_divisions_defense_factor)
 experience_gain_factor](#experience_gain_factor)
-experience_gain_navy](#experience_gain_navy)
-experience_gain_navy_factor](#experience_gain_navy_factor)
-experience_gain_navy_unit](#experience_gain_navy_unit)
-experience_gain_navy_unit_factor](#experience_gain_navy_unit_factor)
-fighter_sortie_efficiency](#fighter_sortie_efficiency)
 fortification_collateral_chance](#fortification_collateral_chance)
 fortification_damage](#fortification_damage)
 initiative_factor](#initiative_factor)
-intel_network_gain](#intel_network_gain)
-intel_network_gain_factor](#intel_network_gain_factor)
-invasion_preparation](#invasion_preparation)
 max_army_group_size](#max_army_group_size)
-military_leader_cost_factor](#military_leader_cost_factor)
-naval_coordination](#naval_coordination)
-naval_critical_effect_factor](#naval_critical_effect_factor)
-naval_critical_score_chance_factor](#naval_critical_score_chance_factor)
 naval_critical_score_chance_factor_against](#naval_critical_score_chance_factor_against)
-naval_damage_factor](#naval_damage_factor)
-naval_defense_factor](#naval_defense_factor)
-naval_detection](#naval_detection)
-naval_enemy_fleet_size_ratio_penalty_factor](#naval_enemy_fleet_size_ratio_penalty_factor)
-naval_enemy_positioning_in_initial_attack](#naval_enemy_positioning_in_initial_attack)
-naval_enemy_retreat_chance](#naval_enemy_retreat_chance)
-naval_has_potf_in_combat_attack](#naval_has_potf_in_combat_attack)
-naval_has_potf_in_combat_defense](#naval_has_potf_in_combat_defense)
-naval_heavy_gun_hit_chance_factor](#naval_heavy_gun_hit_chance_factor)
-naval_hit_chance](#naval_hit_chance)
-naval_invasion_penalty](#naval_invasion_penalty)
-naval_invasion_prep_speed](#naval_invasion_prep_speed)
-naval_light_gun_hit_chance_factor](#naval_light_gun_hit_chance_factor)
-naval_morale](#naval_morale)
-naval_morale_factor](#naval_morale_factor)
-naval_retreat_chance](#naval_retreat_chance)
-naval_retreat_chance_after_initial_combat](#naval_retreat_chance_after_initial_combat)
-naval_retreat_speed](#naval_retreat_speed)
-naval_retreat_speed_after_initial_combat](#naval_retreat_speed_after_initial_combat)
-naval_speed_factor](#naval_speed_factor)
 naval_strike](#naval_strike)
-naval_torpedo_cooldown_factor](#naval_torpedo_cooldown_factor)
-naval_torpedo_damage_reduction_factor](#naval_torpedo_damage_reduction_factor)
-naval_torpedo_enemy_critical_chance_factor](#naval_torpedo_enemy_critical_chance_factor)
-naval_torpedo_hit_chance_factor](#naval_torpedo_hit_chance_factor)
-naval_torpedo_reveal_chance_factor](#naval_torpedo_reveal_chance_factor)
-naval_torpedo_screen_penetration_factor](#naval_torpedo_screen_penetration_factor)
-navy_anti_air_attack](#navy_anti_air_attack)
-navy_anti_air_attack_factor](#navy_anti_air_attack_factor)
-navy_capital_ship_attack_factor](#navy_capital_ship_attack_factor)
-navy_capital_ship_defence_factor](#navy_capital_ship_defence_factor)
-navy_carrier_air_agility_factor](#navy_carrier_air_agility_factor)
-navy_carrier_air_attack_factor](#navy_carrier_air_attack_factor)
-navy_carrier_air_targetting_factor](#navy_carrier_air_targetting_factor)
-navy_leader_cost_factor](#navy_leader_cost_factor)
-navy_leader_start_attack_level](#navy_leader_start_attack_level)
-navy_leader_start_coordination_level](#navy_leader_start_coordination_level)
-navy_leader_start_defense_level](#navy_leader_start_defense_level)
-navy_leader_start_level](#navy_leader_start_level)
-navy_leader_start_maneuvering_level](#navy_leader_start_maneuvering_level)
-navy_max_range](#navy_max_range)
-navy_max_range_factor](#navy_max_range_factor)
-navy_org](#navy_org)
-navy_org_factor](#navy_org_factor)
-navy_screen_attack_factor](#navy_screen_attack_factor)
-navy_screen_defence_factor](#navy_screen_defence_factor)
-navy_submarine_attack_factor](#navy_submarine_attack_factor)
-navy_submarine_defence_factor](#navy_submarine_defence_factor)
-navy_submarine_detection_factor](#navy_submarine_detection_factor)
+
 own_exiled_divisions_attack_factor](#own_exiled_divisions_attack_factor)
 own_exiled_divisions_defense_factor](#own_exiled_divisions_defense_factor)
-own_operative_capture_chance_factor](#own_operative_capture_chance_factor)
-own_operative_detection_chance](#own_operative_detection_chance)
-own_operative_detection_chance_factor](#own_operative_detection_chance_factor)
 own_operative_forced_into_hiding_time_factor](#own_operative_forced_into_hiding_time_factor)
 own_operative_harmed_time_factor](#own_operative_harmed_time_factor)
 own_operative_intel_extraction_rate](#own_operative_intel_extraction_rate)
 paradrop_organization_factor](#paradrop_organization_factor)
 paratrooper_aa_defense](#paratrooper_aa_defense)
 paratrooper_weight_factor](#paratrooper_weight_factor)
-port_strike](#port_strike)
-positioning](#positioning)
+
 promote_cost_factor](#promote_cost_factor)
 reassignment_duration_factor](#reassignment_duration_factor)
 river_crossing_factor](#river_crossing_factor)
-screening_efficiency](#screening_efficiency)
-ships_at_battle_start](#ships_at_battle_start)
 sickness_chance](#sickness_chance)
 skill_bonus_factor](#skill_bonus_factor)
-sortie_efficiency](#sortie_efficiency)
-spotting_chance](#spotting_chance)
-strike_force_movement_org_loss](#strike_force_movement_org_loss)
-sub_retreat_speed](#sub_retreat_speed)
-submarine_attack](#submarine_attack)
-unit_leader_as_advisor_cp_cost_factor](#unit_leader_as_advisor_cp_cost_factor)
+
 wounded_chance_factor](#wounded_chance_factor)
 
 ## Modifiers for scope war_production
 
-cic_construction_boost](#cic_construction_boost)
-cic_construction_boost_factor](#cic_construction_boost_factor)
-civilian_factory_use](#civilian_factory_use)
-conscription](#conscription)
-conscription_factor](#conscription_factor)
-consumer_goods_expected_value](#consumer_goods_expected_value)
-consumer_goods_factor](#consumer_goods_factor)
-conversion_cost_civ_to_mil_factor](#conversion_cost_civ_to_mil_factor)
-conversion_cost_mil_to_civ_factor](#conversion_cost_mil_to_civ_factor)
 enemy_local_supplies](#enemy_local_supplies)
-equipment_conversion_speed](#equipment_conversion_speed)
-exiled_government_weekly_manpower](#exiled_government_weekly_manpower)
 faction_trade_opinion_factor](#faction_trade_opinion_factor)
-global_building_slots](#global_building_slots)
-global_building_slots_factor](#global_building_slots_factor)
-industrial_capacity_dockyard](#industrial_capacity_dockyard)
-industrial_capacity_dockyard_powered](#industrial_capacity_dockyard_powered)
-industrial_capacity_factory](#industrial_capacity_factory)
-industrial_capacity_factory_powered](#industrial_capacity_factory_powered)
-industry_air_damage_factor](#industry_air_damage_factor)
-industry_free_repair_factor](#industry_free_repair_factor)
-industry_repair_factor](#industry_repair_factor)
 land_reinforce_rate](#land_reinforce_rate)
-line_change_production_efficiency_factor](#line_change_production_efficiency_factor)
+
 local_building_slots](#local_building_slots)
 local_building_slots_factor](#local_building_slots_factor)
 local_factories](#local_factories)
 local_manpower](#local_manpower)
 local_non_core_manpower](#local_non_core_manpower)
 local_resources](#local_resources)
-local_resources_factor](#local_resources_factor)
+
 local_supplies](#local_supplies)
 local_supplies_for_controller](#local_supplies_for_controller)
-military_industrial_organization_design_team_assign_cost](#military_industrial_organization_design_team_assign_cost)
-military_industrial_organization_design_team_change_cost](#military_industrial_organization_design_team_change_cost)
-military_industrial_organization_funds_gain](#military_industrial_organization_funds_gain)
-military_industrial_organization_industrial_manufacturer_assign_cost](#military_industrial_organization_industrial_manufacturer_assign_cost)
-military_industrial_organization_policy_cooldown](#military_industrial_organization_policy_cooldown)
-military_industrial_organization_policy_cost](#military_industrial_organization_policy_cost)
-military_industrial_organization_research_bonus](#military_industrial_organization_research_bonus)
-military_industrial_organization_size_up_requirement](#military_industrial_organization_size_up_requirement)
-military_industrial_organization_task_capacity](#military_industrial_organization_task_capacity)
-min_export](#min_export)
+
 minimum_training_level](#minimum_training_level)
 mobilization_speed](#mobilization_speed)
-monthly_population](#monthly_population)
+
 non_core_manpower](#non_core_manpower)
 out_of_power_impact_factor](#out_of_power_impact_factor)
-production_factory_efficiency_gain_factor](#production_factory_efficiency_gain_factor)
-production_factory_max_efficiency_factor](#production_factory_max_efficiency_factor)
-production_factory_start_efficiency_factor](#production_factory_start_efficiency_factor)
-production_lack_of_resource_penalty_factor](#production_lack_of_resource_penalty_factor)
-production_oil_factor](#production_oil_factor)
-production_speed_buildings_factor](#production_speed_buildings_factor)
-production_speed_buildings_powered_factor](#production_speed_buildings_powered_factor)
-special_forces_training_time_factor](#special_forces_training_time_factor)
 state_production_speed_buildings_factor](#state_production_speed_buildings_factor)
 state_resources_factor](#state_resources_factor)
-tech_air_damage_factor](#tech_air_damage_factor)
-trade_opinion_factor](#trade_opinion_factor)
-training_time_army](#training_time_army)
-training_time_army_factor](#training_time_army_factor)
+
 weekly_manpower](#weekly_manpower)
 
 
