@@ -2266,6 +2266,26 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12017"
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_carrier_capacity_penalty_reduction = -0.10
+				tooltip = carrier_capacity_penalty_reduction_tt
+			}
+			add_to_variable = {
+				BLA_navy_carrier_sortie_hours_delay = 2
+				tooltip = carrier_sortie_hours_delay_tt
+			}
+			add_to_variable = {
+				BLA_navy_carrier_traffic = 0.15
+				tooltip = carrier_traffic_tt
+			}
+			add_to_variable = {
+				BLA_navy_fighter_sortie_efficiency = 0.10
+				tooltip = fighter_sortie_efficiency_tt
+			}
 		}
 	}
 
@@ -2304,6 +2324,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12019"
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_convoy_escort_efficiency = 0.15
+				tooltip = convoy_escort_efficiency_tt
+			}
+			add_to_variable = {
+				BLA_navy_convoy_retreat_speed = 0.15
+				tooltip = convoy_retreat_speed_tt
+			}
 		}
 	}
 
@@ -2324,6 +2356,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12020"
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_build_cost_ic_submarine = -0.20
+				tooltip = build_cost_ic_submarine_tt
+			}
 		}
 	}
 
