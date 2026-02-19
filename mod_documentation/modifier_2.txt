@@ -47,8 +47,8 @@
 	attrition	#
 	attrition_for_controller	#
 	breakthrough_factor	#
-	#carrier_capacity_penalty_reduction	#
-	#carrier_sortie_hours_delay	#
+	carrier_capacity_penalty_reduction	#항공모함 혼잡 #-3%
+	carrier_sortie_hours_delay	#항모 항공단 출격 지연(시간) #-0F
 	#carrier_traffic	#
 	cavalry_attack_factor	#
 	combat_width_factor	#
@@ -160,6 +160,40 @@
 	air_invasion_division_cap	#공중 침공당 사단 수용량	#+0F
 	air_invasion_preparation	#공중 침공 준비 시간	#-3%
 	air_manpower_requirement_factor	#공군 인력 요건	#-4%
+	air_mastery_gain_factor	#공군 교리 통달치 획득	#+2%
+	new_battlefield_support_mastery_gain_factor
+	new_operational_integrity_mastery_gain_factor
+	new_strategic_destruction_mastery_gain_factor
+	air_subdoctrine_fighter_homeland_defense_mastery_gain_factor
+	air_subdoctrine_escort_fighter_mastery_gain_factor
+	air_subdoctrine_fighter_bombers_mastery_gain_factor
+	air_subdoctrine_tactical_flexibility_mastery_gain_factor
+	air_subdoctrine_dogfighting_mastery_mastery_gain_factor
+	air_subdoctrine_fighter_central_field_mastery_gain_factor
+	air_subdoctrine_night_bombing_mastery_gain_factor
+	air_subdoctrine_carpet_bombing_mastery_gain_factor
+	air_subdoctrine_deep_air_raids_mastery_gain_factor
+	air_subdoctrine_flying_fortresses_mastery_gain_factor
+	air_subdoctrine_coastal_air_patrol_mastery_gain_factor
+	air_subdoctrine_open_ocean_air_patrol_mastery_gain_factor
+	air_subdoctrine_heavy_aircraft_focus_mastery_gain_factor
+	air_subdoctrine_bomber_interception_mastery_gain_factor
+	air_subdoctrine_long_range_escort_mastery_gain_factor
+	air_subdoctrine_operational_air_support_mastery_gain_factor
+	air_subdoctrine_tactical_battlefield_support_mastery_gain_factor
+	air_subdoctrine_theater_interdiction_mastery_gain_factor
+	air_subdoctrine_aerial_reconnaissance_mastery_gain_factor
+	air_subdoctrine_flying_artillery_mastery_gain_factor
+	air_subdoctrine_dive_bombers_mastery_gain_factor
+	air_subdoctrine_flexible_fire_support_mastery_gain_factor
+	air_subdoctrine_carrier_strikes_mastery_gain_factor
+	air_subdoctrine_naval_strike_tactics_mastery_gain_factor
+	air_subdoctrine_naval_torpedo_tactics_mastery_gain_factor
+	fighter_aircraft_track_mastery_gain_factor
+	strike_aircraft_track_mastery_gain_factor
+	medium_aircraft_track_mastery_gain_factor
+	heavy_aircraft_track_mastery_gain_factor
+
 	air_maximum_speed_factor	#최대 비행 속도	#+2%
 	air_mission_efficiency	#공군 작전 효율	#+3%
 
@@ -173,6 +207,7 @@
 	air_strategic_bomber_night_penalty	#air_strategic_bomber_night_penalty
 	air_superiority_detect_factor	#air_superiority_detect_factor
 	air_superiority_efficiency	#air_superiority_efficiency
+
 	air_training_xp_gain_factor	#air_training_xp_gain_factor
 	air_untrained_pilots_penalty_factor	#air_untrained_pilots_penalty_factor
 	air_weather_penalty	#air_weather_penalty
@@ -265,6 +300,8 @@
 	female_random_army_leader_chance	#female_random_army_leader_chance
 	heat_attrition	#heat_attrition
 	heat_attrition_factor	#heat_attrition_factor
+	land_mastery_gain_factor	#육군 교리 통달치 획득량	#+2%
+	
 	land_night_attack	#land_night_attack
 	local_org_regain	#local_org_regain
 	marines_special_forces_contribution_factor	#marines_special_forces_contribution_factor
@@ -372,7 +409,7 @@
 	winter_attrition	#winter_attrition
 	winter_attrition_factor	#winter_attrition_factor
 
-	## Modifiers for scope autonomy
+### Modifiers for scope autonomy
 
 	autonomy_gain	#autonomy_gain
 	autonomy_gain_global_factor	#autonomy_gain_global_factor
@@ -825,6 +862,7 @@
 	naval_damage_factor	#해군 피해	#+4%	#tt
 	naval_defense_factor	#해군 방어	#+4%	#tt
 	naval_detection	#해군 탐지	#+2%	#tt
+	naval_doctrine_cost_factor
 	naval_enemy_fleet_size_ratio_penalty_factor	#적 함대 규모 불이익	#+4%	#tt
 	naval_enemy_positioning_in_initial_attack	#최초 공격 시 적 방어 위치 설정	#+2%
 	naval_enemy_retreat_chance	#적 후퇴 확률	#-4%
@@ -836,6 +874,7 @@
 	naval_invasion_division_cap	#상륙당 사단 수용량 #+0F
 	naval_invasion_penalty	#상륙 불이익	#-2%
 	naval_light_gun_hit_chance_factor	#부포 명중률	#+4%	#tt
+	naval_track_mastery_gain_factor
 	naval_mine_hit_chance	#기뢰에 피격될 확률	#-4%	#tt
 	naval_mines_damage_factor	#기뢰 피해량	#+2%
 	naval_mines_effect_reduction	#기뢰 피해율	#+2%	#tt
@@ -885,6 +924,39 @@
 	navy_submarine_defence_factor_against	#특정 국가를 상대로 한 잠수함 방어
 	navy_submarine_detection_factor	#잠수함 탐지	#+4%	#tt
 	navy_visibility	#가시성	#-4%
+	new_base_strike_mastery_gain_factor
+	new_convoy_raiding_mastery_gain_factor
+	new_fleet_in_being_mastery_gain_factor
+	line_of_battle_mastery_gain_factor
+	battlecruiser_supremacy_mastery_gain_factor
+	armored_raiders_mastery_gain_factor
+	coastal_defence_fleet_mastery_gain_factor
+	naval_gunfire_support_mastery_gain_factor
+	battleship_antiair_screen_mastery_gain_factor
+	carrier_battlegroups_mastery_gain_factor
+	floating_airfields_mastery_gain_factor
+	escort_carrier_support_mastery_gain_factor
+	broad_naval_support_mastery_gain_factor
+	massed_carrier_fleet_mastery_gain_factor
+	light_task_forces_mastery_gain_factor
+	convoy_escort_mastery_gain_factor
+	support_integrated_operations_mastery_gain_factor
+	hunter_killers_mastery_gain_factor
+	torpedo_primacy_mastery_gain_factor
+	anti_aircraft_cruisers_mastery_gain_factor
+	screen_support_focus_mastery_gain_factor
+	jeune_ecole_mastery_gain_factor
+	patrol_boats_mastery_gain_factor
+	wolfpacks_mastery_gain_factor
+	submarine_fleet_operations_mastery_gain_factor
+	capital_hunters_mastery_gain_factor
+	submarine_coastal_defense_mastery_gain_factor
+	coastal_minelaying_mastery_gain_factor
+	long_range_submarines_mastery_gain_factor
+	capital_ships_track_mastery_gain_factor
+	carriers_track_mastery_gain_factor
+	screens_track_mastery_gain_factor
+	submarines_track_mastery_gain_factor
 	night_spotting_chance	#야간 탐지	#+3%
 	port_strike	#항구 타격	#+3%
 	positioning	#위치 선정	#+3%	#tt
@@ -3428,7 +3500,8 @@
 * **Categories**: country
 
 * **Modified types**: land
-	naval
+	naval_doctrine_cost_factor
+	air
 
 ##  <span id="-combattactic-_preferred_weight_factor"></span><CombatTactic>_preferred_weight_factor
 
@@ -6404,13 +6477,6 @@
 	aggressive
 
 
-
-## carrier_capacity_penalty_reduction
-
-* Number with 1 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
 
 ## carrier_night_traffic
 
