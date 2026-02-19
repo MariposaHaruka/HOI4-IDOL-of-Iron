@@ -332,7 +332,6 @@
 	modifier_army_sub_unit_paratrooper_defence_factor	#modifier_army_sub_unit_paratrooper_defence_factor
 	modifier_army_sub_unit_paratrooper_max_org_factor	#modifier_army_sub_unit_paratrooper_max_org_factor
 	modifier_army_sub_unit_paratrooper_speed_factor	#modifier_army_sub_unit_paratrooper_speed_factor
-	module_<EquipmentModule>_design_cost_factor	#module_-equipmentmodule-_design_cost_factor
 	motorized_attack_factor	#motorized_attack_factor
 	motorized_defence_factor	#motorized_defence_factor
 	mountaineers_special_forces_contribution_factor	#mountaineers_special_forces_contribution_factor
@@ -564,7 +563,6 @@
 	mic_to_target_factor	#mic_to_target_factor
 	min_export	#min_export
 	minimum_training_level	#minimum_training_level
-	module_<EquipmentModule>_design_cost_factor	#module_-equipmentmodule-_design_cost_factor
 	monthly_population	#monthly_population
 	naval_equipment_upgrade_xp_cost	#naval_equipment_upgrade_xp_cost
 	naval_invasion_plan_cap	#naval_invasion_plan_cap
@@ -801,7 +799,7 @@
 	amphibious_invasion_defence	#상륙 방어력 #+2%
 	assign_navy_leader_cp_cost	#해군 지휘관 할당 비용 #-0F
 	carrier_capacity_penalty_reduction	#항공모함 혼잡 #-3%
-	carrier_sortie_hours_delay	#항모 항공단 출격 지연(시간) #+0F
+	carrier_sortie_hours_delay	#항모 항공단 출격 지연(시간) #-0F
 	carrier_traffic	#함재기 출격수 #+2%
 	convoy_escort_efficiency	#호위 효율 #+3%	#tt
 	convoy_raiding_efficiency_factor	#수송선단 습격 효율 #+4%	#tt
@@ -813,126 +811,11 @@
 	experience_gain_navy_unit_factor	#선박 경험치 획득량 #+3%	#tt
 	female_random_admiral_chance	#여성 제독 추가 확률 #Y2%
 	fighter_sortie_efficiency	#전투기 출격 효율 #+2%
-	headquarters_experience_gain_factor	#해군 사령부 경험치 획득량 #+4%
+	headquarters_experience_gain_factor	#해군 사령부에서 얻은 경험 #+4%
 	invasion_preparation	#상륙 준비 시간 #-3%
 	max_organisation	#최대 조직력	#+2%
 	mines_planting_by_fleets_factor	#기뢰 부설 효율	#+2%	#tt
 	mines_sweeping_by_fleets_factor	#기뢰 소해 효율	#+2%
-	module_carrier_ship_engine_1_design_cost_factor	#50,000축마력 함선 엔진 설계 비용
-	module_carrier_ship_engine_2_design_cost_factor	#120,000축마력 함선 엔진 설계 비용
-	module_carrier_ship_engine_3_design_cost_factor	#150,000축마력 함선 엔진 설계 비용
-	module_carrier_ship_engine_4_design_cost_factor	#210,000축마력 함선 엔진 설계 비용
-	module_carrier_ship_nuclear_engine_1_design_cost_factor	#원자력 항공모함 원자로 설계 비용	#X
-	module_cruiser_ship_engine_1_design_cost_factor	#60,000축마력 함선 엔진 설계 비용
-	module_cruiser_ship_engine_2_design_cost_factor	#70,000축마력 함선 엔진 설계 비용
-	module_cruiser_ship_engine_3_design_cost_factor	#80,000축마력 함선 엔진 설계 비용
-	module_cruiser_ship_engine_4_design_cost_factor	#90,000축마력 함선 엔진 설계 비용
-	module_dp_light_battery_1_design_cost_factor	#100mm 양용포 설계 비용
-	module_dp_light_battery_2_design_cost_factor	#113mm 양용포 설계 비용
-	module_dp_light_battery_3_design_cost_factor	#127mm 양용포 설계 비용
-	module_dp_light_battery_4_design_cost_factor	#127mm 속사양용포 설계 비용
-	module_dp_ship_medium_1_design_cost_factor	#152mm 속사양용포 설계 비용	#X
-	module_dp_ship_secondaries_1_design_cost_factor	#100mm 공지양용 부포 설계 비용	#X
-	module_dp_ship_secondaries_2_design_cost_factor	#113mm 공지양용 부포 설계 비용	#X
-	module_dp_ship_secondaries_3_design_cost_factor	#127mm 공지양용 부포 설계 비용	#X
-	module_dp_ship_secondaries_4_design_cost_factor	#127mm 속사 공지양용 부포 설계 비용	#X
-	module_heavy_ship_engine_1_design_cost_factor	#30,000축마력 함선 엔진 설계 비용
-	module_heavy_ship_engine_2_design_cost_factor	#90,000축마력 함선 엔진 설계 비용
-	module_heavy_ship_engine_3_design_cost_factor	#150,000축마력 함선 엔진 설계 비용
-	module_heavy_ship_engine_4_design_cost_factor	#210,000축마력 함선 엔진 설계 비용
-	module_heavy_ship_nuclear_engine_1_design_cost_factor	#원자력 중형 함선 원자로 설계 비용	#X
-	module_light_ship_engine_1_design_cost_factor	#35,000축마력 함선 엔진 설계 비용
-	module_light_ship_engine_2_design_cost_factor	#40,000축마력 함선 엔진 설계 비용
-	module_light_ship_engine_3_design_cost_factor	#45,000축마력 함선 엔진 설계 비용
-	module_light_ship_engine_4_design_cost_factor	#50,000축마력 함선 엔진 설계 비용
-	module_ship_airplane_launcher_1_design_cost_factor	#수상기 캐터펄트 설계 비용
-	module_ship_airplane_launcher_2_design_cost_factor	#개선된 수상기 캐터펄트 부품 비용
-	module_ship_anechoic_tile_design_cost_factor	#음향 흡수 타일 설계 비용	#X
-	module_ship_anti_air_1_design_cost_factor	#.50 구경 함재기관총 설계 비용
-	module_ship_anti_air_2_design_cost_factor	#20mm 함재대공포 설계 비용
-	module_ship_anti_air_3_design_cost_factor	#37mm 함재대공포 설계 비용
-	module_ship_anti_air_4_design_cost_factor	#40mm 4연장 함재대공포 설계 비용
-	module_ship_armor_bb_1_design_cost_factor	#200mm 수선부/40mm 갑판 설계 비용
-	module_ship_armor_bb_2_design_cost_factor	#350mm 수선부/150mm 갑판 설계 비용
-	module_ship_armor_bb_3_design_cost_factor	#380mm 수선부/155mm 갑판 설계 비용
-	module_ship_armor_bc_1_design_cost_factor	#150mm 수선부/25mm 갑판 설계 비용
-	module_ship_armor_bc_2_design_cost_factor	#305mm 수선부/100mm 갑판 설계 비용
-	module_ship_armor_bc_3_design_cost_factor	#330mm 수선부/130mm 갑판 설계 비용
-	module_ship_armor_carrier_deck_design_cost_factor	#90mm 갑판 설계 비용
-	module_ship_armor_cruiser_1_design_cost_factor	#50mm 수선부/40mm 갑판 설계 비용
-	module_ship_armor_cruiser_2_design_cost_factor	#100mm 수선부/30mm 갑판 설계 비용
-	module_ship_armor_cruiser_3_design_cost_factor	#120mm 수선부/50mm 갑판 설계 비용
-	module_ship_armor_cruiser_4_design_cost_factor	#150mm 수선부/60mm 갑판 설계 비용
-	module_ship_armor_ice_carrier_deck_1_design_cost_factor	#파이크리트 활주로 강화 설계 비용#X
-	module_ship_armor_ice_carrier_deck_2_design_cost_factor	#강철 보강 파이크리트 활주로 설계 비용	#X
-	module_ship_armor_ice_carrier_deck_3_design_cost_factor	#얼음 합성물 활주로 설계 비용	#X
-	module_ship_armor_shbb_design_cost_factor	#450mm 수선부/210mm 갑판 설계 비용
-	module_ship_deck_space_design_cost_factor	#격납고 공간 설계 비용
-	module_ship_depth_charge_1_design_cost_factor	#폭뢰 투하 레일 설계 비용
-	module_ship_depth_charge_2_design_cost_factor	#폭뢰 투하대 설계 비용
-	module_ship_depth_charge_3_design_cost_factor	#대잠 박격포 설계 비용
-	module_ship_depth_charge_4_design_cost_factor	#발전된 대잠 박격포 설계 비용
-	module_ship_engine_sub_aip_1_design_cost_factor	#공기 불요 추진 설계 비용	#X
-	module_ship_engine_sub_aip_2_design_cost_factor	#공기 불요 추진 디젤 결합 엔진 설계 비용	#X
-	module_ship_engine_sub_aip_3_design_cost_factor	#고속 발터 엔진 설계 비용	#X
-	module_ship_escort_deck_space_design_cost_factor	#호위 항공모함 격납고 설계 비용	#X
-	module_ship_extra_fuel_tank_design_cost_factor	#추가 연료 탱크 설계 비용
-	module_ship_fire_control_system_0_design_cost_factor	#함재 중앙 거리측정기 설계 비용	#X
-	module_ship_fire_control_system_1_design_cost_factor	#함재 지휘 사격 설계 비용	#X
-	module_ship_fire_control_system_2_design_cost_factor	#함재 기계식 탄도 계산기 설계 비용	#X
-	module_ship_fire_control_system_3_design_cost_factor	#함재 탄도계산기 설계 비용	#X
-	module_ship_heavy_battery_1_design_cost_factor	#28cm 함포
-	module_ship_heavy_battery_2_design_cost_factor	#30.5cm 함포
-	module_ship_heavy_battery_3_design_cost_factor	#38cm 함포
-	module_ship_heavy_battery_4_design_cost_factor	#40.6cm 함포
-	module_ship_light_battery_1_design_cost_factor	#85 mm 속사포 설계 비용
-	module_ship_light_battery_2_design_cost_factor	#105 mm 속사포 설계 비용
-	module_ship_light_battery_3_design_cost_factor	#127 mm 속사포 설계 비용
-	module_ship_light_battery_4_design_cost_factor	#130 mm 속사포 설계 비용
-	module_ship_light_battery_sub_design_cost_factor	#200mm 함포 설계 비용	#X
-	module_ship_light_medium_battery_1_design_cost_factor	#14.5cm 함포 설계 비용
-	module_ship_light_medium_battery_2_design_cost_factor	#15cm 함포 설계 비용
-	module_ship_light_medium_battery_3_design_cost_factor	#15.5cm 함포 설계 비용
-	module_ship_light_medium_battery_4_design_cost_factor	#15.5cm 자동 장전식 함포 설계 비용
-	module_ship_medium_battery_1_design_cost_factor	#17cm 함포 설계 비용
-	module_ship_medium_battery_2_design_cost_factor	#19cm 함포 설계 비용
-	module_ship_medium_battery_3_design_cost_factor	#20.3cm 함포 설계 비용
-	module_ship_medium_battery_4_design_cost_factor	#20.3cm 자동 장전식 함포 설계 비용
-	module_ship_mine_layer_1_design_cost_factor	#기뢰 부설 레일 설계 비용
-	module_ship_mine_layer_sub_design_cost_factor	#기뢰 부설관 설계 비용
-	module_ship_mine_sweeper_1_design_cost_factor	#함재 기뢰 소해 장비 설계 비용
-	module_ship_radar_1_design_cost_factor	#데시미터파 해군 수색 레이더
-	module_ship_radar_2_design_cost_factor	#개선된 데시미터파 해군 수색 레이더
-	module_ship_radar_3_design_cost_factor	#센티미터파 포격 레이더
-	module_ship_radar_4_design_cost_factor	#통합형 사격 통제 레이더
-	module_ship_seaplane_tender_1_design_cost_factor	#수상기모함 설계 비용	#X
-	module_ship_seaplane_tender_2_design_cost_factor	#개선된 수상기모함 설계 비용	#X
-	module_ship_secondaries_1_design_cost_factor	#75mm 속사포 설계 비용
-	module_ship_secondaries_2_design_cost_factor	#120mm 속사포 설계 비용
-	module_ship_sonar_1_design_cost_factor	#수중 청음기 설계 비용
-	module_ship_sonar_2_design_cost_factor	#능동 음파탐지기 설계 비용
-	module_ship_sonar_3_design_cost_factor	#발전된 음파탐지기 설계 비용	#X
-	module_ship_sonar_4_design_cost_factor	#현대식 음파탐지기 설계 비용	#X
-	module_ship_sub_snorkel_1_design_cost_factor	#기초 스노클 설계 비용
-	module_ship_sub_snorkel_2_design_cost_factor	#개선된 스노클 설계 비용
-	module_ship_submarine_deck_space_design_cost_factor	#잠수함 항공모함 격납고
-	module_ship_super_heavy_battery_1_design_cost_factor	#46cm 함포 설계 비용
-	module_ship_torpedo_1_design_cost_factor	#3연장 21인치 어뢰 발사관 설계 비용
-	module_ship_torpedo_2_design_cost_factor	#4연장 21인치 어뢰 발사관 설계 비용
-	module_ship_torpedo_3_design_cost_factor	#5연장 21인치 어뢰 발사 설계 비용
-	module_ship_torpedo_4_design_cost_factor	#5연장 압축 공기식 어뢰 발사관 설계 비용
-	module_ship_torpedo_sub_1_design_cost_factor	#4x21인치 전방 어뢰 발사관 설계 비용
-	module_ship_torpedo_sub_2_design_cost_factor	#6x21인치 전방 어뢰 발사관 설계 비용
-	module_ship_torpedo_sub_3_design_cost_factor	#6x21인치 수압 발사식 설계 비용
-	module_ship_torpedo_sub_4_design_cost_factor	#6x21인치 동력 장전식 설계 비용
-	module_ship_torpedo_sub_nuclear_design_cost_factor	#핵어뢰 설계 비용	#X
-	module_slbm_launcher_design_cost_factor	#잠수함 핵미사일 발사대 설계 비용	#X
-	module_sub_missile_launcher_design_cost_factor	#잠수함 미사일 발사대 설계 비용	#X
-	module_sub_ship_engine_1_design_cost_factor	#1,000축마력 엔진 설계 비용
-	module_sub_ship_engine_2_design_cost_factor	#2,000축마력 엔진 설계 비용
-	module_sub_ship_engine_3_design_cost_factor	#3,000축마력 엔진 설계 비용
-	module_sub_ship_engine_4_design_cost_factor	#4,000축마력 엔진 설계 비용
-	module_sub_ship_nuclear_engine_1_design_cost_factor	#원자력 잠수함 원자로 설계 비용	#X
 	naval_accidents_chance	#사고 확률	#-4%	#tt
 	naval_attrition	#소모	#-4%
 	naval_commando_raid_distance	#해군 특공대 습격 사거리	#+2%
@@ -1034,10 +917,6 @@
 	unit_heavy_cruiser_design_cost_factor	#중순양함 설계 비용	#-4%
 	unit_submarine_design_cost_factor	#잠수함 설계 비용	#-4%	#X
 	unit_support_ship_design_cost_factor	#지원함 설계 비용	#-4%	#X
-
-
-
-	
 
 ### Modifiers for scope peace
 
@@ -1774,8 +1653,7 @@
 	trait_<Trait>_xp_gain_factor	#trait_-trait-_xp_gain_factor
 
 
-	module_<EquipmentModule>_design_cost_factor	#module_-equipmentmodule-_design_cost_factor
-	
+### 모듈 설계 비용 - 정확한 용도도, 발동법도 모르겠음, 어지간하면 건들지 말것
 	module_NOR_rikstanken_turret_design_cost_factor
 	module_NOR_tank_rikstanken_armor_design_cost_factor
 	module_additional_machine_guns_design_cost_factor
@@ -1991,8 +1869,6 @@
 	module_torpedo_mounting_2_design_cost_factor
 	module_torpedo_mounting_3_design_cost_factor
 	module_wet_ammo_storage_design_cost_factor
-
-	trait_<Trait>_xp_gain_factor	#trait_-trait-_xp_gain_factor
 
 
 
