@@ -10,7 +10,7 @@
  experience_gain_navy_factor_tt: " $MODIFIER_XP_GAIN_NAVY_FACTOR$: $RIGHT|+=%1$"
  experience_gain_navy_unit_tt: "$MODIFIER_XP_GAIN_NAVY_UNIT$: $RIGHT|+=1$"
  female_random_admiral_chance_tt: "$ODIFIER_FEMALE_ADMIRAL_CHANC$: $RIGHT|Y=0$"
- fighter_sortie_efficiency_tt: " $MODIFIER_CARRIER_FIGHTER_SORTIE_EFFICIENCY_FACTOR$: $RIGHT|+=%2$"
+ fighter_sortie_efficiency_tt: " $MODIFIER_CARRIER_FIGHTER_SORTIE_EFFICIENCY_FACTOR$: $RIGHT|+=%1$"
  headquarters_experience_gain_factor_tt: "$MODIFIER_NAVAL_INVASION_PREPARATION$: $RIGHT|+=%1$"
  invasion_preparation_tt: "$MODIFIER_NAVAL_INVASION_PREPARATION$: $RIGHT|-=%1$$"
  max_organisation_tt: "$MODIFIER_MAX_ORGANISATION_FACTOR$: $RIGHT|+=%1$"
@@ -57,17 +57,57 @@
  navy_submarine_defence_factor_tt: "$modifier_$: $RIGHT|+=%1$" #잠수함 방어
  navy_submarine_defence_factor_against_tt: "$modifier_$: $RIGHT|+=%1$" #특정 국가를 상대로 한 잠수함 방어
  navy_visibility_tt: "$modifier_$: $RIGHT|-=%1$" #가시성 #-4%
+ naval_mastery_gain_factor_tt: " £doctrine_mod  해군 $FOLDER_mastery_gain$: $RIGHT|+=%1$"	
+ new_base_strike_mastery_gain_factor: " £doctrine_mod  $GRAND_DOCTRINE_BASE_STRIKE$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ new_convoy_raiding_mastery_gain_factor: " £doctrine_mod  $GRAND_DOCTRINE_CONVOY_RAIDING$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ new_fleet_in_being_mastery_gain_factor: " £doctrine_mod  $GRAND_DOCTRINE_FLEET_IN_BEING$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ line_of_battle_mastery_gain_factor: " £doctrine_mod  $$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ battlecruiser_supremacy_mastery_gain_factor: " £doctrine_mod  $$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ armored_raiders_mastery_gain_factor: " £doctrine_mod  $$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ coastal_defence_fleet_mastery_gain_factor: " £doctrine_mod  $$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ naval_gunfire_support_mastery_gain_factor: " £doctrine_mod  $$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ battleship_antiair_screen_mastery_gain_factor: " £doctrine_mod  $$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ carrier_battlegroups_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_CARRIER_BATTLEGROUPS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ floating_airfields_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_CARRIER_AIRFIELDS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ escort_carrier_support_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_ESCORT_CARRIER_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ broad_naval_support_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_BROAD_NAVAL_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ massed_carrier_fleet_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_MASSED_CARRIER_FLEET$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ light_task_forces_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_LIGHT_TASK_FORCES$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ convoy_escort_mastery_gain_factor: " £doctrine_mod  $$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ support_integrated_operations_mastery_gain_factor: " £doctrine_mod  $$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ hunter_killers_mastery_gain_factor: " £doctrine_mod  $$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ torpedo_primacy_mastery_gain_factor: " £doctrine_mod  $$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ anti_aircraft_cruisers_mastery_gain_factor: " £doctrine_mod  $$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ screen_support_focus_mastery_gain_factor: " £doctrine_mod  $$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ jeune_ecole_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_JEUNE_ECOLE$ "
+ patrol_boats_mastery_gain_factor: " £doctrine_mod  $$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ wolfpacks_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_WOLFPACKS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ submarine_fleet_operations_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_FLEET_OPERATIONS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ capital_hunters_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_CAPITAL_HUNTERS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ submarine_coastal_defense_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_COASTAL_DEFENSE$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ coastal_minelaying_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_COASTAL_MINELAYING$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ long_range_submarines_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_LONG_RANGE_SUBMARINES$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ capital_ships_track_mastery_gain_factor: " £doctrine_mod  주력함 $TRACK_mastery_gain$: $RIGHT|+=%1$"
+ carriers_track_mastery_gain_factor: " £doctrine_mod  항공모함 $TRACK_mastery_gain$: $RIGHT|+=%1$"
+ screens_track_mastery_gain_factor: " £doctrine_mod  보조함 $TRACK_mastery_gain$: $RIGHT|+=%1$"
+ submarines_track_mastery_gain_factor: " £doctrine_mod  잠수함 $TRACK_mastery_gain$: $RIGHT|+=%1$"
  night_spotting_chance_tt: "$modifier_$: $RIGHT|+=%1$" #야간 탐지 #+3%
  port_strike_tt: "$modifier_$: $RIGHT|+=%1$" #항구 타격 #+3%
- production_cost_max_convoy_tt: "$modifier_$: $RIGHT|Y=0$" #수송선 최대 비용 #Y0F
- production_cost_max_floating_harbor_equipment_tt: "$modifier_$: $RIGHT|Y=0$" #부유항 최대 비용 #Y0F
- production_cost_max_repair_ship_hull_tt: "$modifier_$: $RIGHT|Y=0$" #수리함 최대 비용 #Y0F
  production_cost_max_ship_hull_carrier_tt: "$modifier_production_cost_max_ship_hull_carrier$: $RIGHT|Y=0$"
  production_cost_max_ship_hull_cruiser_tt: "$modifier_production_cost_max_ship_hull_cruiser$: $RIGHT|Y=0$"
  production_cost_max_ship_hull_heavy_tt: "$modifier_production_cost_max_ship_hull_heavy$: $RIGHT|Y=0$"
- production_cost_max_ship_hull_light_tt: "$modifier_$: $RIGHT|Y=0$" #구축함 최대 비용 #Y0F
- production_cost_max_ship_hull_submarine_tt: "$modifier_$: $RIGHT|Y=0$" #잠수함 최대 비용 #Y0F
- production_cost_max_support_ship_hull_tt: "$modifier_$: $RIGHT|Y=0$" #지원함 최대 비용 #Y0F
+ modifier_production_cost_max_convoy: " £navprod_cost  수송선 최대 비용"
+ modifier_production_cost_max_floating_harbor_equipment: " £navprod_cost  부유항 최대 비용"
+ modifier_production_cost_max_ship_hull_light: " £navprod_cost  구축함 최대 비용"
+ modifier_production_cost_max_repair_ship_hull: " £navprod_cost  수리함 최대 비용"
+ modifier_production_cost_max_ship_hull_submarine: " £navprod_cost  잠수함 최대 비용"
+ modifier_production_cost_max_support_ship_hull: " £navprod_cost  지원함 최대 비용"
+ production_cost_max_convoy_tt: "$modifier_production_cost_max_convoy$: $RIGHT|Y=0$"
+ production_cost_max_floating_harbor_equipment_tt: "$modifier_production_cost_max_floating_harbor_equipment$: $RIGHT|Y=0$"
+ production_cost_max_repair_ship_hull_tt: "$modifier_production_cost_max_repair_ship_hull$: $RIGHT|Y=0$"
+ production_cost_max_ship_hull_light_tt: "$modifier_production_cost_max_ship_hull_light$: $RIGHT|Y=0$"
+ production_cost_max_ship_hull_submarine_tt: "$modifier_production_cost_max_ship_hull_submarine$: $RIGHT|Y=0$"
+ production_cost_max_support_ship_hull_tt: "$modifier_production_cost_max_support_ship_hull$: $RIGHT|Y=0$"
  ships_at_battle_start_tt: "$modifier_$: $RIGHT|Y=%0$" #접촉 시의 함선 숫자 #Y2%
  spotting_chance_against_tt: "$modifier_$: $RIGHT|+=%1$" #특정 국가를 상대로 한 탐지 확률 #+2%
  strike_force_movement_org_loss_tt: "$modifier_$: $RIGHT|-=%1$" #타격 부대 조직력 손실 #-4%
@@ -84,6 +124,11 @@
  modifier_unit_submarine_design_cost_factor: "£navy_design_cost_texticon  잠수함 설계 비용"
  unit_submarine_design_cost_factor_tt: "$modifier_unit_submarine_design_cost_factor$: $RIGHT|-=%1$"
  unit_support_ship_design_cost_factor_tt: "$modifier_unit_support_ship_design_cost_factor$: $RIGHT|-=%1$" #지원함 설계 비용 #-4%
+ ### Other COUNTRY modifiers
+ country_resource_cost_coal: "에너지 소비량"
+ ### STATE modifiers
+ state_resource_cost_coal: "에너지 소비량"
+ ### 이하 수정 예정:
  #이념 모디파이어 툴팁
  conservatism_drift: "£boost_popularity_texticon  매일 보수주의 지지"
  liberalism_mod_drift: "£boost_popularity_texticon  매일 자유주의 지지"
@@ -174,6 +219,4 @@
  experience_gain_destroyer_combat_factor_tt: "$modifier_experience_gain_destroyer_training_factor$: $RIGHT|+=%1$"
  experience_gain_destroyer_training_factor_tt: "$modifier_experience_gain_destroyer_combat_factor$: $RIGHT|+=%1$"
  #doctrines
- land_mastery_gain_factor_tt: "£doctrine_mod 육군 대교리 통달치 획득량: $RIGHT|+=%1$"
- naval_mastery_gain_factor_tt: "£doctrine_mod 해군 대교리 통달치 획득량: $RIGHT|+=%1$"
- air_mastery_gain_factor_tt: "£doctrine_mod 공군 대교리 통달치 획득량: $RIGHT|+=%1$"
+ air_mastery_gain_factor_tt: " £doctrine_mod  공군 대교리 통달치 획득: $RIGHT|+=%1$"

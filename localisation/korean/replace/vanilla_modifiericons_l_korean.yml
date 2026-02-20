@@ -247,7 +247,7 @@
  naval_air_research: "£research_speed_texticon  해군 항공기 연구 속도"
  naval_mines_research: "£research_speed_texticon  기뢰 연구 속도"
  radar_tech_research: "£research_speed_texticon  레이더 연구 속도"
- infantry_weapons_research:3 "£research_speed_texticon  무기 및 장비 연구 속도"
+ infantry_weapons_research: "£research_speed_texticon  무기 및 장비 연구 속도"
  motorized_equipment_research: "£research_speed_texticon  차량화 연구 속도"
  naval_equipment_research: "£research_speed_texticon  해군 연구 속도"
  ship_modules_tech_research: "£research_speed_texticon  선박 부품 연구 속도"
@@ -886,6 +886,7 @@
  state_resource_tungsten: "텅스텐"
  state_resource_steel: "강철"
  state_resource_chromium: "크롬"
+ state_resource_coal: "에너지"
  temporary_state_resource_oil: "석유"
  temporary_state_resource_aluminium: "알루미늄"
  temporary_state_resource_rubber: "고무"
@@ -1977,7 +1978,7 @@
  trait_bonus_logistics: "£logistics_texticon  군수: $VAL|+=0$"
  trait_bonus_maneuvering: "£maneuver_texticon  기동: $VAL|+=0$"
  trait_bonus_coordination: "£coordination_texticon  조직: $VAL|+=0$"
- expert_improviser_movement_bonus_on_land: "£movement_texticon  육상 이동 보너스: §G+10.0%§!
+ expert_improviser_movement_bonus_on_land: "£movement_texticon  육상 이동 보너스: §G+10.0%§!"
  
  #unit_l_korean
  ATTRITION: "£attrition_texticon  소모:"
@@ -1986,3 +1987,6 @@
  MODIFIER_NAVAL_INVASION_DIVISION_CAP: "£naval_capacity_texticon  상륙당 사단 수용량"
  MODIFIER_AIR_INVASION_DIVISION_CAP: "£paratroop_texticon 공중 침공당 사단 수용량"
  MODIFIER_NAVAL_COMMANDO_RAID_DISTANCE: "£naval_invasion_texticon  해군 특공대 습격 사거리"
+
+ #doctrine_l_korean
+ land_mastery_gain_factor_tt: " £doctrine_mod  육군 대교리 통달치 획득: $RIGHT|+=%1$"

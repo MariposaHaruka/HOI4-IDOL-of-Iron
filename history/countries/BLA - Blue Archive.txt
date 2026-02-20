@@ -218,37 +218,296 @@ set_variable = { BLA_bad_administrative_industry_base_cost_factor = 1.5 }
 set_variable = { BLA_bad_administrative_labours_union_cost_factor = 1.5 }
 set_variable = { BLA_bad_administrative_research_cost_factor = 1.5 }
 
+#429 = { } #키보토스 직할령은 모디파이어 없음
 
-every_owned_state = {
-	limit = { 
-		is_owned_by = BLA 
-		has_state_flag = BLA_abydos_state_flag
-	}
+#게헨나 학원
+442 = { 
+	set_variable = { BLA_GEH_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_GEH_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_GEH_state_resources_factor = -0.75 }
+	set_variable = { BLA_GEH_state_production_speed_buildings_factor = -0.65 }
+}
+443 = { 
+	set_variable = { BLA_GEH_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_GEH_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_GEH_state_resources_factor = -0.75 }
+	set_variable = { BLA_GEH_state_production_speed_buildings_factor = -0.65 }
+}
+444  = { 
+	set_variable = { BLA_GEH_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_GEH_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_GEH_state_resources_factor = -0.75 }
+	set_variable = { BLA_GEH_state_production_speed_buildings_factor = -0.65 }
+}
+445 = { 
+	set_variable = { BLA_GEH_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_GEH_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_GEH_state_resources_factor = -0.75 }
+	set_variable = { BLA_GEH_state_production_speed_buildings_factor = -0.65 }
+}
+988 = { 
+	set_variable = { BLA_GEH_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_GEH_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_GEH_state_resources_factor = -0.75 }
+	set_variable = { BLA_GEH_state_production_speed_buildings_factor = -0.65 }
+}
+987 = { 
+	set_variable = { BLA_GEH_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_GEH_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_GEH_state_resources_factor = -0.75 }
+	set_variable = { BLA_GEH_state_production_speed_buildings_factor = -0.65 }
+}
+1012 = { 
+	set_variable = { BLA_GEH_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_GEH_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_GEH_state_resources_factor = -0.75 }
+	set_variable = { BLA_GEH_state_production_speed_buildings_factor = -0.65 }
+}
+
+#아비도스 고등학교
+433 = {
 	set_variable = { BLA_ABY_recruitable_population_factor = -0.95 }
 	set_variable = { BLA_ABY_local_building_slots_factor = -0.75 }
 	set_variable = { BLA_ABY_state_resources_factor = -0.75 }
 	set_variable = { BLA_ABY_state_production_speed_buildings_factor = -0.5 }
 }
-every_owned_state = {
-	limit = { 
-		is_owned_by = BLA 
-		has_state_flag = BLA_arius_state_flag
-	}
+989 = {
+	set_variable = { BLA_ABY_recruitable_population_factor = -0.95 }
+	set_variable = { BLA_ABY_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_ABY_state_resources_factor = -0.75 }
+	set_variable = { BLA_ABY_state_production_speed_buildings_factor = -0.5 }
+}
+
+#붉은겨울 연방학원
+787 = { 
+	set_variable = { BLA_RED_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_RED_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_RED_state_resources_factor = -0.85 }
+	set_variable = { BLA_RED_state_production_speed_buildings_factor = -0.35 } 
+}
+441 = { 
+	set_variable = { BLA_RED_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_RED_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_RED_state_resources_factor = -0.85 }
+	set_variable = { BLA_RED_state_production_speed_buildings_factor = -0.35 }
+}
+440 = {
+	set_variable = { BLA_RED_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_RED_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_RED_state_resources_factor = -0.85 }
+	set_variable = { BLA_RED_state_production_speed_buildings_factor = -0.35 }
+}
+986 = { 
+	set_variable = { BLA_RED_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_RED_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_RED_state_resources_factor = -0.85 }
+	set_variable = { BLA_RED_state_production_speed_buildings_factor = -0.35 }
+}
+439 = { 
+	set_variable = { BLA_RED_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_RED_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_RED_state_resources_factor = -0.85 }
+	set_variable = { BLA_RED_state_production_speed_buildings_factor = -0.35 }
+}
+
+#와일드헌트 예술학원
+427 = { #ioi 임시조치 - 아직 와일드헌트 모디파이어 추가 안함
+	set_variable = { BLA_TRN_recruitable_population_factor = -0.25 }
+	set_variable = { BLA_TRN_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_TRN_state_resources_factor = -0.25 }
+	set_variable = { BLA_TRN_state_production_speed_buildings_factor = -0.25 }
+}
+
+#트리니티 종합학원
+438 = { 
+	set_variable = { BLA_TRN_recruitable_population_factor = -0.25 }
+	set_variable = { BLA_TRN_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_TRN_state_resources_factor = -0.25 }
+	set_variable = { BLA_TRN_state_production_speed_buildings_factor = -0.25 }
+}
+991 = { 
+	set_variable = { BLA_TRN_recruitable_population_factor = -0.25 }
+	set_variable = { BLA_TRN_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_TRN_state_resources_factor = -0.25 }
+	set_variable = { BLA_TRN_state_production_speed_buildings_factor = -0.25 }
+}
+437 = { 
+	set_variable = { BLA_TRN_recruitable_population_factor = -0.25 }
+	set_variable = { BLA_TRN_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_TRN_state_resources_factor = -0.25 }
+	set_variable = { BLA_TRN_state_production_speed_buildings_factor = -0.25 }
+}
+428 = { 
+	set_variable = { BLA_TRN_recruitable_population_factor = -0.25 }
+	set_variable = { BLA_TRN_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_TRN_state_resources_factor = -0.25 }
+	set_variable = { BLA_TRN_state_production_speed_buildings_factor = -0.25 }
+}
+435 = { 
+	set_variable = { BLA_TRN_recruitable_population_factor = -0.25 }
+	set_variable = { BLA_TRN_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_TRN_state_resources_factor = -0.25 }
+	set_variable = { BLA_TRN_state_production_speed_buildings_factor = -0.25 }
+}
+436 = { 
+	set_variable = { BLA_TRN_recruitable_population_factor = -0.25 }
+	set_variable = { BLA_TRN_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_TRN_state_resources_factor = -0.25 }
+	set_variable = { BLA_TRN_state_production_speed_buildings_factor = -0.25 }
+}
+984 = { 
+	set_variable = { BLA_TRN_recruitable_population_factor = -0.25 }
+	set_variable = { BLA_TRN_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_TRN_state_resources_factor = -0.25 }
+	set_variable = { BLA_TRN_state_production_speed_buildings_factor = -0.25 }
+}
+426 = { 
+	set_variable = { BLA_TRN_recruitable_population_factor = -0.25 }
+	set_variable = { BLA_TRN_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_TRN_state_resources_factor = -0.25 }
+	set_variable = { BLA_TRN_state_production_speed_buildings_factor = -0.25 }
+}
+
+#밀레니엄 사이언스 스쿨
+423 = { 
+	set_variable = { BLA_MIL_recruitable_population_factor = -0.8 }
+	set_variable = { BLA_MIL_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_MIL_state_resources_factor = -0.75 }
+	set_variable = { BLA_MIL_state_production_speed_buildings_factor = -0.15 }
+}
+424 = { 
+	set_variable = { BLA_MIL_recruitable_population_factor = -0.8 }
+	set_variable = { BLA_MIL_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_MIL_state_resources_factor = -0.75 }
+	set_variable = { BLA_MIL_state_production_speed_buildings_factor = -0.15 }
+}
+425 = { 
+	set_variable = { BLA_MIL_recruitable_population_factor = -0.8 }
+	set_variable = { BLA_MIL_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_MIL_state_resources_factor = -0.75 }
+	set_variable = { BLA_MIL_state_production_speed_buildings_factor = -0.15 }
+}
+982 = {
+	set_variable = { BLA_MIL_recruitable_population_factor = -0.8 }
+	set_variable = { BLA_MIL_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_MIL_state_resources_factor = -0.75 }
+	set_variable = { BLA_MIL_state_production_speed_buildings_factor = -0.15 }
+}
+983 = { 
+	set_variable = { BLA_MIL_recruitable_population_factor = -0.8 }
+	set_variable = { BLA_MIL_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_MIL_state_resources_factor = -0.75 }
+	set_variable = { BLA_MIL_state_production_speed_buildings_factor = -0.15 }
+}
+
+#아리우스 분교
+323 = {
 	set_variable = { BLA_ARI_recruitable_population_factor = -0.95 }
 	set_variable = { BLA_ARI_local_building_slots_factor = -0.95 }
 	set_variable = { BLA_ARI_state_resources_factor = -0.95 }
 	set_variable = { BLA_ARI_state_production_speed_buildings_factor = -0.95 }
 }
-every_owned_state = {
-	limit = { 
-		is_owned_by = BLA 
-		has_state_flag = BLA_gehenna_state_flag
-	}
-	set_variable = { BLA_GEH_recruitable_population_factor = -0.75 }
-	set_variable = { BLA_GEH_local_building_slots_factor = -0.75 }
-	set_variable = { BLA_GEH_state_resources_factor = -0.75 }
-	set_variable = { BLA_GEH_state_production_speed_buildings_factor = -0.35 }
+985 = {
+	set_variable = { BLA_ARI_recruitable_population_factor = -0.95 }
+	set_variable = { BLA_ARI_local_building_slots_factor = -0.95 }
+	set_variable = { BLA_ARI_state_resources_factor = -0.95 }
+	set_variable = { BLA_ARI_state_production_speed_buildings_factor = -0.95 }
 }
+
+#백귀야행 연합학원
+324 = { 
+	set_variable = { BLA_HYA_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_HYA_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_HYA_state_resources_factor = -0.75 }
+	set_variable = { BLA_HYA_state_production_speed_buildings_factor = -0.25 }
+}
+430 = { 
+	set_variable = { BLA_HYA_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_HYA_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_HYA_state_resources_factor = -0.75 }
+	set_variable = { BLA_HYA_state_production_speed_buildings_factor = -0.25 }
+}
+431 = {
+	set_variable = { BLA_HYA_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_HYA_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_HYA_state_resources_factor = -0.75 }
+	set_variable = { BLA_HYA_state_production_speed_buildings_factor = -0.25 }
+}
+432 = {
+	set_variable = { BLA_HYA_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_HYA_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_HYA_state_resources_factor = -0.75 }
+	set_variable = { BLA_HYA_state_production_speed_buildings_factor = -0.25 }
+}
+434 = {
+	set_variable = { BLA_HYA_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_HYA_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_HYA_state_resources_factor = -0.75 }
+	set_variable = { BLA_HYA_state_production_speed_buildings_factor = -0.25 }
+}
+990 = { 
+	set_variable = { BLA_HYA_recruitable_population_factor = -0.75 }
+	set_variable = { BLA_HYA_local_building_slots_factor = -0.75 }
+	set_variable = { BLA_HYA_state_resources_factor = -0.75 }
+	set_variable = { BLA_HYA_state_production_speed_buildings_factor = -0.25 }
+}
+
+#산해경 고급중학교
+288 = { 
+	set_variable = { BLA_SHA_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_SHA_local_building_slots_factor = -0.5 }
+	set_variable = { BLA_SHA_state_resources_factor = -0.5 }
+	set_variable = { BLA_SHA_state_production_speed_buildings_factor = -0.35 }
+}
+640 = { 
+	set_variable = { BLA_SHA_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_SHA_local_building_slots_factor = -0.5 }
+	set_variable = { BLA_SHA_state_resources_factor = -0.5 }
+	set_variable = { BLA_SHA_state_production_speed_buildings_factor = -0.35 }
+}
+993 = { 
+	set_variable = { BLA_SHA_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_SHA_local_building_slots_factor = -0.5 }
+	set_variable = { BLA_SHA_state_resources_factor = -0.5 }
+	set_variable = { BLA_SHA_state_production_speed_buildings_factor = -0.35 }
+}
+994 = { 
+	set_variable = { BLA_SHA_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_SHA_local_building_slots_factor = -0.5 }
+	set_variable = { BLA_SHA_state_resources_factor = -0.5 }
+	set_variable = { BLA_SHA_state_production_speed_buildings_factor = -0.35 }
+}
+995 = { 
+	set_variable = { BLA_SHA_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_SHA_local_building_slots_factor = -0.5 }
+	set_variable = { BLA_SHA_state_resources_factor = -0.5 }
+	set_variable = { BLA_SHA_state_production_speed_buildings_factor = -0.35 }
+}
+996 = {
+	set_variable = { BLA_SHA_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_SHA_local_building_slots_factor = -0.5 }
+	set_variable = { BLA_SHA_state_resources_factor = -0.5 }
+	set_variable = { BLA_SHA_state_production_speed_buildings_factor = -0.35 }
+}
+997 = {
+	set_variable = { BLA_SHA_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_SHA_local_building_slots_factor = -0.5 }
+	set_variable = { BLA_SHA_state_resources_factor = -0.5 }
+	set_variable = { BLA_SHA_state_production_speed_buildings_factor = -0.35 }
+}
+998 = { 
+	set_variable = { BLA_SHA_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_SHA_local_building_slots_factor = -0.5 }
+	set_variable = { BLA_SHA_state_resources_factor = -0.5 }
+	set_variable = { BLA_SHA_state_production_speed_buildings_factor = -0.35 }
+}
+999 = { 
+	set_variable = { BLA_SHA_recruitable_population_factor = -0.5 }
+	set_variable = { BLA_SHA_local_building_slots_factor = -0.5 }
+	set_variable = { BLA_SHA_state_resources_factor = -0.5 }
+	set_variable = { BLA_SHA_state_production_speed_buildings_factor = -0.35 }
+}
+
 every_owned_state = { # 아직 해당 주가 없음
 	limit = { 
 		is_owned_by = BLA 
@@ -258,46 +517,6 @@ every_owned_state = { # 아직 해당 주가 없음
 	set_variable = { BLA_HIG_local_building_slots_factor = -0.25 }
 	set_variable = { BLA_HIG_state_resources_factor = -0.25 }
 	set_variable = { BLA_HIG_state_production_speed_buildings_factor = -0.25 }
-}
-every_owned_state = {
-	limit = { 
-		is_owned_by = BLA 
-		has_state_flag = BLA_hyakkiyako_state_flag
-	}
-	set_variable = { BLA_HYA_recruitable_population_factor = -0.75 }
-	set_variable = { BLA_HYA_local_building_slots_factor = -0.75 }
-	set_variable = { BLA_HYA_state_resources_factor = -0.75 }
-	set_variable = { BLA_HYA_state_production_speed_buildings_factor = -0.25 }
-}
-every_owned_state = {
-	limit = { 
-		is_owned_by = BLA 
-		has_state_flag = BLA_millenium_state_flag
-	}
-	set_variable = { BLA_MIL_recruitable_population_factor = -0.8 }
-	set_variable = { BLA_MIL_local_building_slots_factor = -0.75 }
-	set_variable = { BLA_MIL_state_resources_factor = -0.75 }
-	set_variable = { BLA_MIL_state_production_speed_buildings_factor = -0.15 }
-}
-every_owned_state = {
-	limit = { 
-		is_owned_by = BLA 
-		has_state_flag = BLA_redwinter_state_flag
-	}
-	set_variable = { BLA_RED_recruitable_population_factor = -0.5 }
-	set_variable = { BLA_RED_local_building_slots_factor = -0.75 }
-	set_variable = { BLA_RED_state_resources_factor = -0.85 }
-	set_variable = { BLA_RED_state_production_speed_buildings_factor = -0.35 }
-}
-every_owned_state = {
-	limit = { 
-		is_owned_by = BLA 
-		has_state_flag = BLA_shanhaijing_state_flag
-	}
-	set_variable = { BLA_SHA_recruitable_population_factor = -0.5 }
-	set_variable = { BLA_SHA_local_building_slots_factor = -0.5 }
-	set_variable = { BLA_SHA_state_resources_factor = -0.5 }
-	set_variable = { BLA_SHA_state_production_speed_buildings_factor = -0.35 }
 }
 every_owned_state = { # 아직 해당 주가 없음
 	limit = { 
@@ -309,16 +528,6 @@ every_owned_state = { # 아직 해당 주가 없음
 	set_variable = { BLA_SRT_state_resources_factor = -0.25 }
 	set_variable = { BLA_SRT_state_production_speed_buildings_factor = -0.25 }
 }
-every_owned_state = {
-	limit = { 
-		is_owned_by = BLA 
-		has_state_flag = BLA_trinity_state_flag
-	}
-	set_variable = { BLA_TRN_recruitable_population_factor = -0.25 }
-	set_variable = { BLA_TRN_local_building_slots_factor = -0.25 }
-	set_variable = { BLA_TRN_state_resources_factor = -0.25 }
-	set_variable = { BLA_TRN_state_production_speed_buildings_factor = -0.25 }
-}
 every_owned_state = { # 아직 해당 주가 없음
 	limit = { 
 		is_owned_by = BLA 
@@ -329,16 +538,16 @@ every_owned_state = { # 아직 해당 주가 없음
 	set_variable = { BLA_VAL_state_resources_factor = -0.25 }
 	set_variable = { BLA_VAL_state_production_speed_buildings_factor = -0.25 }
 }
-#every_owned_state = { #이 쪽은 아직 와일드헌트 시스템이 추가 안되서 일부러 막음
-#	limit = { 
-#		is_owned_by = BLA 
-#		has_state_flag = BLA_wildhunt_state_flag
-#	}
-#	set_variable = { BLA_VAL_recruitable_population_factor = -0.05 }
-#	set_variable = { BLA_VAL_local_building_slots_factor = -0.25 }
-#	set_variable = { BLA_VAL_state_resources_factor = -0.25 }
-#	set_variable = { BLA_VAL_state_production_speed_buildings_factor = -0.25 }
-#}
+every_owned_state = { #이 쪽은 아직 와일드헌트 시스템이 추가 안되서 작동안하는 코드
+	limit = { 
+		is_owned_by = BLA 
+		has_state_flag = BLA_wildhunt_state_flag
+	}
+	set_variable = { BLA_WIL_recruitable_population_factor = -0.05 }
+	set_variable = { BLA_WIL_local_building_slots_factor = -0.25 }
+	set_variable = { BLA_WIL_state_resources_factor = -0.25 }
+	set_variable = { BLA_WIL_state_production_speed_buildings_factor = -0.25 }
+}
 
 #외교
 IMA = { embargo_ROOT = yes }
@@ -492,7 +701,7 @@ set_country_flag = BLA_RED_bad_budget_problem
 
 set_country_flag = BLA_ARI_beatrice_problem
 
-#의회-> 에덴조약 이후 열림, 베타판은 미사용
+#의회 #에덴조약 이후 열림, 베타판은 미사용
 set_variable = { BLA_redwinterparty_seats = 73 }
 set_variable = { BLA_shanhaijing_seats = 18 }
 
