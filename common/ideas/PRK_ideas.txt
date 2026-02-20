@@ -1,5 +1,863 @@
 ideas = {
-	country = { }
+	country = { 
+		test_modifier_1 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				annex_cost_factor = 0.01
+				army_armor_attack_factor = 0.02
+				army_armor_speed_factor = 0.03
+				army_artillery_attack_factor = 0.04
+				army_attack_against_major_factor = 0.05
+				army_attack_against_minor_factor = 0.06
+				army_attack_factor = 0.07
+				army_claim_attack_factor = 0.08
+				army_core_attack_factor = 0.09
+				army_infantry_attack_factor = 0.10
+			}
+		}
+		test_modifier_2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				army_morale = 0.01
+				army_morale_factor = 0.02
+				army_org = 0.03
+				army_org_factor = 0.04
+				attrition = 0.05
+				attrition_for_controller = 0.06
+				breakthrough_factor = 0.07
+				carrier_capacity_penalty_reduction = 0.08
+				carrier_sortie_hours_delay = 0.09
+				carrier_traffic = 0.10
+			}
+		}
+		test_modifier_3 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				cavalry_attack_factor = 0.01
+				combat_width_factor = 0.02
+				convoy_raiding_efficiency_factor = 0.03
+				coordination_bonus = 0.04
+				decryption = 0.05
+				decryption_factor = 0.06
+				enemy_attrition = 0.07
+				enemy_declare_war_tension = 0.08
+				enemy_justify_war_goal_time = 0.09
+				fighter_sortie_efficiency = 0.10
+			}
+		}
+		test_modifier_4 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				ground_attack = 0.01
+				ground_attack_factor = 0.02
+				heat_attrition = 0.03
+				heat_attrition_factor = 0.04
+				justify_war_goal_time = 0.05
+				justify_war_goal_when_in_major_war_time = 0.06
+				land_night_attack = 0.07
+				max_planning = 0.08
+				max_planning_factor = 0.09
+				max_training = 0.10
+			}
+		}
+		test_modifier_5 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				mechanized_attack_factor = 0.01
+				motorized_attack_factor = 0.02
+				naval_critical_score_chance_factor = 0.03
+				naval_critical_score_chance_factor_against = 0.04
+				naval_damage_factor = 0.05
+				naval_enemy_fleet_size_ratio_penalty_factor = 0.06
+				naval_enemy_positioning_in_initial_attack = 0.07
+				naval_has_potf_in_combat_attack = 0.08
+				naval_has_potf_in_combat_defense = 0.09
+				naval_heavy_gun_hit_chance_factor = 0.10
+			}
+		}
+		test_modifier_6 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				naval_hit_chance = 0.01
+				naval_invasion_planning_bonus_speed = 0.02
+				naval_light_gun_hit_chance_factor = 0.03
+				naval_night_attack = 0.04
+				naval_strike = 0.05
+				naval_supply_consumption_factor = 0.06
+				naval_torpedo_cooldown_factor = 0.07
+				naval_torpedo_hit_chance_factor = 0.08
+				naval_torpedo_screen_penetration_factor = 0.09
+				navy_capital_ship_attack_factor = 0.10
+			}
+		}
+		test_modifier_7 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				navy_capital_ship_attack_factor_against = 0.01
+				navy_carrier_air_agility_factor = 0.02
+				navy_carrier_air_attack_factor = 0.03
+				navy_carrier_air_targetting_factor = 0.04
+				navy_screen_attack_factor = 0.05
+				navy_screen_attack_factor_against = 0.06
+				navy_submarine_attack_factor = 0.07
+				navy_submarine_attack_factor_against = 0.08
+				no_supply_grace = 0.09
+				offence = 0.10
+			}
+		}
+		test_modifier_8 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				org_loss_when_moving = 0.01
+				out_of_supply_factor = 0.02
+				planning_decay_rate_factor = 0.03
+				planning_speed = 0.04
+				pocket_penalty = 0.05
+				port_strike = 0.06
+				rocket_attack_factor = 0.07
+				sortie_efficiency = 0.08
+				special_forces_attack_factor = 0.09
+				special_forces_no_supply_grace = 0.10
+			}
+		}
+		test_modifier_9 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				special_forces_out_of_supply_factor = 0.01
+				strike_force_movement_org_loss = 0.02
+				submarine_attack = 0.03
+				supply_combat_penalties_on_core_factor = 0.04
+				supply_consumption_factor = 0.05
+				training_time_factor = 0.06
+				winter_attrition = 0.07
+				winter_attrition_factor = 0.08
+				ace_effectiveness_factor = 0.09
+				air_accidents = 0.10
+			}
+		}
+		test_modifier_ai = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				ai_badass_factor = 0.01
+				ai_call_ally_desire_factor = 0.02
+				ai_desired_divisions_factor = 0.03
+				ai_focus_aggressive_factor = 0.04
+				ai_focus_aviation_factor = 0.05
+				ai_focus_defense_factor = 0.06
+				ai_focus_military_advancements_factor = 0.07
+				ai_focus_military_equipment_factor = 0.08
+				ai_focus_naval_air_factor = 0.09
+				ai_focus_naval_factor = 0.10
+				ai_focus_peaceful_factor = 0.11
+				ai_focus_war_production_factor = 0.12
+				ai_get_ally_desire_factor = 0.13
+				ai_join_ally_desire_factor = 0.14
+				ai_license_acceptance = 0.15
+			}
+		}
+		test_modifier_10 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				air_accidents_factor = 0.01
+				air_ace_bonuses_factor = 0.02
+				air_ace_generation_chance_factor = 0.03
+				air_advisor_cost_factor = 0.04
+				air_agility_factor = 0.05
+				air_attack_factor = 0.06
+				air_bombing_targetting = 0.07
+				air_carrier_night_penalty_reduction_factor = 0.08
+				air_cas_efficiency = 0.09
+				air_cas_present_factor = 0.10
+			}
+		}
+		test_modifier_11 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				air_close_air_support_org_damage_factor = 0.01
+				air_defence_factor = 0.02
+				air_detection = 0.03
+				air_escort_efficiency = 0.04
+				air_fuel_consumption_factor = 0.05
+				air_home_defence_factor = 0.06
+				air_intercept_efficiency = 0.07
+				air_interception_detect_factor = 0.08
+				air_invasion_division_cap = 0.09
+				air_invasion_preparation = 0.10
+			}
+		}
+		test_modifier_12 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				air_manpower_requirement_factor = 0.01
+				air_maximum_speed_factor = 0.02
+				air_mission_efficiency = 0.03
+				air_mission_xp_gain_factor = 0.04
+				air_nav_efficiency = 0.05
+				air_night_penalty = 0.06
+				air_power_projection_factor = 0.07
+				air_range_factor = 0.08
+				air_strategic_bomber_bombing_factor = 0.09
+				air_strategic_bomber_defence_factor = 0.10
+			}
+		}
+		test_modifier_13 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				air_strategic_bomber_night_penalty = 0.01
+				air_superiority_detect_factor = 0.02
+				air_superiority_efficiency = 0.03
+				air_training_xp_gain_factor = 0.04
+				air_untrained_pilots_penalty_factor = 0.05
+				air_weather_penalty = 0.06
+				air_wing_xp_loss_when_killed_factor = 0.07
+				army_bonus_air_superiority_factor = 0.08
+				carrier_night_traffic = 0.09
+				enemy_army_bonus_air_superiority_factor = 0.10
+			}
+		}
+		test_modifier_14 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				experience_gain_air = 0.01
+				experience_gain_air_factor = 0.02
+				mines_planting_by_air_factor = 0.03
+				mines_sweeping_by_air_factor = 0.04
+				naval_strike_agility_factor = 0.05
+				naval_strike_attack_factor = 0.06
+				naval_strike_targetting_factor = 0.07
+				strategic_bomb_visibility = 0.08
+				acclimatization_cold_climate_gain_factor = 0.09
+				acclimatization_hot_climate_gain_factor = 0.10
+			}
+		}
+		test_modifier_trait1 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				trait_adaptable_xp_gain_factor = 0.01
+				trait_aggressive_assaulter_xp_gain_factor = 0.02
+				trait_air_controller_xp_gain_factor = 0.03
+				trait_ambusher_xp_gain_factor = 0.04
+				trait_arctic_water_expert_xp_gain_factor = 0.05
+				trait_armor_officer_xp_gain_factor = 0.06
+				trait_engineer_officer_xp_gain_factor = 0.07
+				trait_aviation_enthusiast_xp_gain_factor = 0.08
+				trait_BALTIC_anti_bolshevik_xp_gain_factor = 0.09
+				trait_BALTIC_ex_russian_xp_gain_factor = 0.10
+				trait_battleship_adherent_xp_gain_factor = 0.11
+				trait_bearer_of_artillery_xp_gain_factor = 0.12
+				trait_big_guns_expert_xp_gain_factor = 0.13
+				trait_blockade_runner_xp_gain_factor = 0.14
+				trait_blue_water_expert_xp_gain_factor = 0.15
+				trait_bold_xp_gain_factor = 0.16
+				trait_brilliant_strategist_xp_gain_factor = 0.17
+				trait_camouflage_expert_xp_gain_factor = 0.18
+				trait_career_officer_xp_gain_factor = 0.19
+				trait_caustic_personality_xp_gain_factor = 0.20
+			}
+		}
+		test_modifier_trait2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				trait_cavalry_expert_xp_gain_factor = 0.01
+				trait_cavalry_leader_xp_gain_factor = 0.02
+				trait_cavalry_officer_xp_gain_factor = 0.03
+				trait_chief_engineer_xp_gain_factor = 0.04
+				trait_combined_arms_expert_xp_gain_factor = 0.05
+				trait_commando_xp_gain_factor = 0.06
+				trait_concealment_expert_xp_gain_factor = 0.07
+				trait_craven_xp_gain_factor = 0.08
+				trait_crisis_magician_xp_gain_factor = 0.09
+				trait_cruiser_captain_xp_gain_factor = 0.10
+				trait_cuts_corners_xp_gain_factor = 0.11
+				trait_defensive_doctrine_xp_gain_factor = 0.12
+				trait_demoted_xp_gain_factor = 0.13
+				trait_desert_fox_xp_gain_factor = 0.14
+				trait_destroyer_leader_xp_gain_factor = 0.15
+				trait_disgruntled_xp_gain_factor = 0.16
+				trait_dive_bomber_xp_gain_factor = 0.17
+				trait_exiled_leader_xp_gain_factor = 0.18
+				trait_expert_delegator_xp_gain_factor = 0.19
+				trait_expert_improviser_xp_gain_factor = 0.20
+			}
+		}
+		test_modifier_trait3 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				trait_fast_planner_xp_gain_factor = 0.01
+				trait_fighter_director_xp_gain_factor = 0.02
+				trait_fleet_protector_xp_gain_factor = 0.03
+				trait_flight_deck_manager_xp_gain_factor = 0.04
+				trait_fly_swatter_xp_gain_factor = 0.05
+				trait_fortress_buster_xp_gain_factor = 0.06
+				trait_gentlemanly_xp_gain_factor = 0.07
+				trait_green_water_expert_xp_gain_factor = 0.08
+				trait_ground_pounder_xp_gain_factor = 0.09
+				trait_guerilla_fighter_xp_gain_factor = 0.10
+				trait_gunnery_expert_xp_gain_factor = 0.11
+				trait_hidden_sympathies_xp_gain_factor = 0.12
+				trait_hill_fighter_xp_gain_factor = 0.13
+				trait_hunter_killer_xp_gain_factor = 0.14
+				trait_infantry_expert_xp_gain_factor = 0.15
+				trait_infantry_leader_xp_gain_factor = 0.16
+				trait_infantry_officer_xp_gain_factor = 0.17
+				trait_inflexible_strategist_xp_gain_factor = 0.18
+				trait_inshore_fighter_xp_gain_factor = 0.19
+				trait_inspirational_leader_xp_gain_factor = 0.20
+			}
+		}
+		test_modifier_trait4 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				trait_fast_planner_xp_gain_factor = 0.01
+				trait_fighter_director_xp_gain_factor = 0.02
+				trait_fleet_protector_xp_gain_factor = 0.03
+				trait_flight_deck_manager_xp_gain_factor = 0.04
+				trait_fly_swatter_xp_gain_factor = 0.05
+				trait_fortress_buster_xp_gain_factor = 0.06
+				trait_gentlemanly_xp_gain_factor = 0.07
+				trait_green_water_expert_xp_gain_factor = 0.08
+				trait_ground_pounder_xp_gain_factor = 0.09
+				trait_guerilla_fighter_xp_gain_factor = 0.10
+				trait_gunnery_expert_xp_gain_factor = 0.11
+				trait_hidden_sympathies_xp_gain_factor = 0.12
+				trait_hill_fighter_xp_gain_factor = 0.13
+				trait_hunter_killer_xp_gain_factor = 0.14
+				trait_infantry_expert_xp_gain_factor = 0.15
+				trait_infantry_leader_xp_gain_factor = 0.16
+				trait_infantry_officer_xp_gain_factor = 0.17
+				trait_inflexible_strategist_xp_gain_factor = 0.18
+				trait_inshore_fighter_xp_gain_factor = 0.19
+				trait_inspirational_leader_xp_gain_factor = 0.20
+			}
+		}
+		test_modifier_trait5 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				trait_invader_ii_xp_gain_factor = 0.01
+				trait_ironside_xp_gain_factor = 0.02
+				trait_JAP_communist_sympathizer_xp_gain_factor = 0.03
+				trait_JAP_samurai_lineage_xp_gain_factor = 0.04
+				trait_jungle_rat_xp_gain_factor = 0.05
+				trait_lancer_xp_gain_factor = 0.06
+				trait_loading_drill_master_xp_gain_factor = 0.07
+				trait_logistics_wizard_xp_gain_factor = 0.08
+				trait_lone_wolf_xp_gain_factor = 0.09
+				trait_marksman_xp_gain_factor = 0.10
+				trait_media_personality_xp_gain_factor = 0.11
+				trait_mine_layer_xp_gain_factor = 0.12
+				trait_mine_sweeper_xp_gain_factor = 0.13
+				trait_naval_invader_xp_gain_factor = 0.14
+				trait_naval_liason_xp_gain_factor = 0.15
+				trait_naval_lineage_xp_gain_factor = 0.16
+				trait_navy_career_officer_xp_gain_factor = 0.17
+				trait_navy_media_personality_xp_gain_factor = 0.18
+				trait_offensive_doctrine_xp_gain_factor = 0.19
+				trait_old_guard_navy_xp_gain_factor = 0.20
+			}
+		}
+		test_modifier_trait6 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				trait_old_guard_xp_gain_factor = 0.01
+				trait_operative_commando_xp_gain_factor = 0.02
+				trait_operative_demolition_expert_xp_gain_factor = 0.03
+				trait_operative_double_agent_xp_gain_factor = 0.04
+				trait_operative_escape_artist_xp_gain_factor = 0.05
+				trait_operative_infiltrator_xp_gain_factor = 0.06
+				trait_operative_linguist_xp_gain_factor = 0.07
+				trait_operative_master_interrogator_xp_gain_factor = 0.08
+				trait_operative_natural_orator_xp_gain_factor = 0.09
+				trait_operative_safe_cracker_xp_gain_factor = 0.10
+				trait_operative_seducer_xp_gain_factor = 0.11
+				trait_operative_tough_xp_gain_factor = 0.12
+				trait_operative_well_groomed_xp_gain_factor = 0.13
+				trait_organisational_leader_xp_gain_factor = 0.14
+				trait_organizer_xp_gain_factor = 0.15
+				trait_panzer_expert_xp_gain_factor = 0.16
+				trait_panzer_leader_xp_gain_factor = 0.17
+				trait_paratrooper_xp_gain_factor = 0.18
+				trait_peasant_sympathiser_xp_gain_factor = 0.19
+				trait_POL_sanation_left_leader_xp_gain_factor = 0.20
+			}
+		}
+		test_modifier_trait7 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				trait_POL_sanation_right_leader_xp_gain_factor = 0.01
+				trait_politically_connected_xp_gain_factor = 0.02
+				trait_ranger_xp_gain_factor = 0.03
+				trait_reassigned_xp_gain_factor = 0.04
+				trait_recently_promoted_xp_gain_factor = 0.05
+				trait_safety_first_xp_gain_factor = 0.06
+				trait_scavenger_xp_gain_factor = 0.07
+				trait_search_pattern_expert_xp_gain_factor = 0.08
+				trait_seawolf_xp_gain_factor = 0.09
+				trait_sick_xp_gain_factor = 0.10
+				trait_silent_hunter_xp_gain_factor = 0.11
+				trait_skilled_staffer_xp_gain_factor = 0.12
+				trait_skirmisher_xp_gain_factor = 0.13
+				trait_smoke_screen_expert_xp_gain_factor = 0.14
+				trait_spotter_xp_gain_factor = 0.15
+				trait_substance_abuser_xp_gain_factor = 0.16
+				trait_substance_addict_xp_gain_factor = 0.17
+				trait_superior_tactician_xp_gain_factor = 0.18
+				trait_swamp_fox_xp_gain_factor = 0.19
+				trait_thorough_planner_xp_gain_factor = 0.20
+			}
+		}
+		test_modifier_trait8 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				trait_torpedo_bomber_xp_gain_factor = 0.01
+				trait_torpedo_expert_xp_gain_factor = 0.02
+				trait_BUL_ff_sympathizer_xp_gain_factor = 0.03
+				trait_BUL_tsar_loyalist_xp_gain_factor = 0.04
+				trait_BUL_zveno_member_xp_gain_factor = 0.05
+				trait_cautious_xp_gain_factor = 0.06
+				trait_engineer_xp_gain_factor = 0.07
+				trait_GRE_fascist_sympathizer_xp_gain_factor = 0.08
+				trait_GRE_marxist_acolyte_xp_gain_factor = 0.09
+				trait_GRE_stauch_monarchist_xp_gain_factor = 0.10
+				trait_GRE_venezelist_loyalist_xp_gain_factor = 0.11
+				trait_mountaineer_xp_gain_factor = 0.12
+				trait_reckless_xp_gain_factor = 0.13
+				trait_SPA_carlist_loyalties_xp_gain_factor = 0.14
+				trait_SPA_falangist_loyalties_xp_gain_factor = 0.15
+				trait_SPA_nationalist_sympathies_xp_gain_factor = 0.16
+				trait_SPR_anti_stalinist_loyalties_xp_gain_factor = 0.17
+				trait_SPR_republican_loyalties_xp_gain_factor = 0.18
+				trait_SPR_stalinist_loyalties_xp_gain_factor = 0.19
+				trait_TUR_kemalist_champion_xp_gain_factor = 0.20
+			}
+		}
+		test_modifier_trait9 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				trait_trickster_xp_gain_factor = 0.01
+				trait_unyielding_defender_xp_gain_factor = 0.02
+				trait_urban_assault_specialist_xp_gain_factor = 0.03
+				trait_war_hero_xp_gain_factor = 0.04
+				trait_winter_expert_xp_gain_factor = 0.05
+				trait_winter_specialist_xp_gain_factor = 0.06
+				trait_wounded_xp_gain_factor = 0.07
+			}
+		}
+		test_modifier_15 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				air_superiority_bonus_in_combat = 0.01
+				armor_factor = 0.02
+				army_advisor_cost_factor = 0.03
+				army_armor_attack_factor = 0.04
+				army_armor_defence_factor = 0.05
+				army_armor_speed_factor = 0.06
+				army_artillery_attack_factor = 0.07
+				army_artillery_defence_factor = 0.08
+				army_attack_against_major_factor = 0.09
+				army_attack_against_minor_factor = 0.10
+			}
+		}
+		test_modifier_16 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				army_attack_factor = 0.01
+				army_attack_speed_factor = 0.02
+				army_breakthrough_against_major_factor = 0.03
+				army_breakthrough_against_minor_factor = 0.04
+				army_claim_attack_factor = 0.05
+				army_claim_defence_factor = 0.06
+				army_core_attack_factor = 0.07
+				army_core_defence_factor = 0.08
+				army_defence_against_major_factor = 0.09
+				army_defence_against_minor_factor = 0.10
+			}
+		}
+		test_modifier_17 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				army_defence_factor = 0.01
+				army_experience_from_volunteers = 0.02
+				army_fuel_capacity_factor = 0.03
+				army_fuel_consumption_factor = 0.04
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.06
+				army_morale = 0.07
+				army_morale_factor = 0.08
+				army_org = 0.09
+				army_org_factor = 0.10
+			}
+		}
+		test_modifier_18 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				army_org_regain = 0.01
+				army_retreat_speed_factor = 0.02
+				army_speed_factor = 0.03
+				army_speed_factor_for_controller = 0.04
+				army_strength_factor = 0.05
+				assign_army_leader_cp_cost = 0.06
+				attack_bonus_against = 0.07
+				attack_bonus_against_cores = 0.08
+				attrition = 0.09
+				attrition_for_controller = 0.10
+			}
+		}
+		test_modifier_19 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				breakthrough_bonus_against = 0.01
+				breakthrough_factor = 0.02
+				cas_damage_reduction = 0.03
+				cavalry_attack_factor = 0.04
+				cavalry_defence_factor = 0.05
+				combat_width_factor = 0.06
+				command_abilities_cost_factor = 0.07
+				command_power_gain = 0.08
+				command_power_gain_mult = 0.09
+				coordination_bonus = 0.10
+			}
+		}
+		test_modifier_20 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				defence = 0.01
+				defense_bonus_against = 0.02
+				dig_in_speed = 0.03
+				dig_in_speed_factor = 0.04
+				enemy_army_speed_factor = 0.05
+				enemy_attrition = 0.06
+				experience_gain_army = 0.07
+				experience_gain_army_factor = 0.08
+				experience_gain_army_unit = 0.09
+				experience_gain_army_unit_factor = 0.10
+			}
+		}
+		test_modifier_21 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				navy_capital_ship_defence_factor_against = 0.01
+				navy_carrier_air_agility_factor	= 0.02
+				navy_carrier_air_attack_factor = 0.03
+				navy_carrier_air_targetting_factor = 0.04
+				navy_casualty_on_hit = 0.05
+				navy_casualty_on_sink = 0.06
+				navy_fuel_consumption_factor = 0.07
+				navy_max_range = 0.08
+				navy_max_range_factor = 0.09
+				navy_org = 0.10
+				navy_org_factor = 0.11
+				#experience_gain_<Unit>_combat_factor = 0.05
+				#experience_gain_<Unit>_mission_factor	#experience_gain_-unit-_mission_factor
+				#experience_gain_<Unit>_training_factor	#experience_gain_-unit-_training_factor
+				navy_screen_attack_factor = 0.12
+				navy_screen_attack_factor_against = 0.13
+				navy_screen_defence_factor = 0.14
+				navy_screen_defence_factor_against = 0.15
+				navy_submarine_attack_factor = 0.16
+				navy_submarine_attack_factor_against = 0.17
+				navy_submarine_defence_factor = 0.18
+				navy_submarine_defence_factor_against = 0.19
+				navy_submarine_detection_factor = 0.20
+				night_spotting_chance = 0.21
+				port_strike = 0.22
+				positioning = 0.23
+				production_cost_max_convoy = 0.24
+				production_cost_max_floating_harbor_equipment = 0.25
+			}
+		}
+		test_modifier_22 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				modifier_module_carrier_ship_engine_1_design_cost_factor = -0.5
+				#navy_carrier_air_agility_factor	= 0.02
+				#navy_carrier_air_attack_factor = 0.03
+				#navy_carrier_air_targetting_factor = 0.04
+				#navy_casualty_on_hit = 0.05
+				#navy_casualty_on_sink = 0.06
+				navy_fuel_consumption_factor = 0.07
+				repair_speed_factor = 0.08
+				screening_efficiency = 0.09
+				screening_without_screens = 0.10
+				ships_at_battle_start = 0.11
+				sortie_efficiency = 0.12
+				spotting_chance = 0.13
+				spotting_chance_against = 0.14
+				strike_force_movement_org_loss = 0.15
+				sub_retreat_speed = 0.16
+				submarine_attack = 0.17
+				terrain_trait_xp_gain_factor = 0.18
+				transport_capacity = 0.19
+				unit_battle_cruiser_design_cost_factor = 0.20
+				unit_battleship_design_cost_factor = 0.21
+				unit_carrier_design_cost_factor = 0.22
+				unit_destroyer_design_cost_factor = 0.23
+				unit_heavy_cruiser_design_cost_factor = 0.24
+				unit_submarine_design_cost_factor = 0.25
+				unit_support_ship_design_cost_factor = 0.26
+			}
+		}
+		test_modifier_23 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = usa_great_depression_3
+			modifier = {
+				ace_effectiveness_factor = 0.01
+				air_accidents = 0.02
+				air_accidents_factor = 0.03
+				air_ace_bonuses_factor = 0.04
+				air_ace_generation_chance_factor = 0.05
+				air_advisor_cost_factor = 0.06
+				air_agility_factor = 0.07
+				air_attack_factor = 0.08
+				air_bombing_targetting = 0.09
+				air_carrier_night_penalty_reduction_factor = 0.10
+				air_cas_efficiency = 0.11
+				air_cas_present_factor = 0.12
+				air_close_air_support_org_damage_factor = 0.13
+				air_defence_factor = 0.14
+				air_detection = 0.15
+				air_escort_efficiency = 0.16
+				air_fuel_consumption_factor = 0.17
+				air_home_defence_factor = 0.18
+				air_intercept_efficiency = 0.19
+				air_interception_detect_factor = 0.20
+				air_invasion_division_cap = 0.21
+				air_invasion_preparation = 0.22
+				air_manpower_requirement_factor = 0.23
+				air_maximum_speed_factor = 0.24
+				air_mission_efficiency = 0.25
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

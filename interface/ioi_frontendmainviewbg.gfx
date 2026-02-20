@@ -1,0 +1,28 @@
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg"
+		texturefile = "gfx/loadingscreens/load_29.dds" #do not modify as it is swapped out in game trough the background manager, add new backgrounds in game\common\frontend\backgrounds in the same way base_backgrounds.txt does it
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1440 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_basic"
+		texturefile = "gfx/loadingscreens/load_29.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1440 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+
+		corneredTileSpriteType = {
+		name = "GFX_frontend_bg_basic_small"
+		texturefile = "gfx/loadingscreens/load_29_small.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=192 y=144 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+}
