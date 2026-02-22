@@ -49,17 +49,17 @@
 	breakthrough_factor	#
 	carrier_capacity_penalty_reduction	#항공모함 혼잡 #-3%
 	carrier_sortie_hours_delay	#항모 항공단 출격 지연(시간) #-0F
-	#carrier_traffic	#
+	carrier_traffic	#함재기 출격 수 #+2%
 	cavalry_attack_factor	#
 	combat_width_factor	#
-	convoy_raiding_efficiency_factor	#
+	convoy_raiding_efficiency_factor	#수송선단 습격 효율 #+4%	#tt
 	coordination_bonus	#
 	decryption	#
 	decryption_factor	#
 	enemy_attrition	#
 	enemy_declare_war_tension	#
 	enemy_justify_war_goal_time	#
-	fighter_sortie_efficiency	#
+	fighter_sortie_efficiency	#전투기 출격 효율 #+2%
 	ground_attack	#ground_attack
 	ground_attack_factor	#ground_attack_factor
 	heat_attrition	#heat_attrition
@@ -72,23 +72,22 @@
 	max_training	#max_training
 	mechanized_attack_factor	#mechanized_attack_factor
 	motorized_attack_factor	#motorized_attack_factor
-	naval_critical_score_chance_factor	#naval_critical_score_chance_factor
-	naval_critical_score_chance_factor_against	#naval_critical_score_chance_factor_against
-	naval_damage_factor	#naval_damage_factor
-	naval_enemy_fleet_size_ratio_penalty_factor	#naval_enemy_fleet_size_ratio_penalty_factor
-	naval_enemy_positioning_in_initial_attack	#naval_enemy_positioning_in_initial_attack
-	naval_has_potf_in_combat_attack	#naval_has_potf_in_combat_attack
-	naval_has_potf_in_combat_defense	#naval_has_potf_in_combat_defense
-	naval_heavy_gun_hit_chance_factor	#naval_heavy_gun_hit_chance_factor
-	naval_hit_chance	#naval_hit_chance
+	naval_critical_score_chance_factor	#치명타 입힐 확률	#+4%	#tt
+	naval_damage_factor	#해군 피해	#+4%	#tt
+	naval_enemy_fleet_size_ratio_penalty_factor	#적 함대 규모 불이익	#+4%	#tt
+	naval_enemy_positioning_in_initial_attack	#최초 공격 시 적 방어 위치 설정	#+2%
+	naval_has_potf_in_combat_attack	#함대의 자랑과 함께 전투 중일 때 공격	#+4%
+	naval_has_potf_in_combat_defense	#함대의 자랑과 함께 전투 중일 때 방어	#+4%
+	naval_heavy_gun_hit_chance_factor	#주포 명중률	#+4%	#tt
+	naval_hit_chance	#해군 타격 확률	#+2%	#tt
 	naval_invasion_planning_bonus_speed	#naval_invasion_planning_bonus_speed
-	naval_light_gun_hit_chance_factor	#naval_light_gun_hit_chance_factor
-	naval_night_attack	#naval_night_attack
-	naval_strike	#naval_strike
-	naval_supply_consumption_factor	#naval_supply_consumption_factor
-	naval_torpedo_cooldown_factor	#naval_torpedo_cooldown_factor
-	naval_torpedo_hit_chance_factor	#naval_torpedo_hit_chance_factor
-	naval_torpedo_screen_penetration_factor	#naval_torpedo_screen_penetration_factor
+	naval_light_gun_hit_chance_factor	#부포 명중률	#+4%	#tt
+	naval_night_attack	#야간 공격	#+3%
+	naval_strike	#해상 타격	#+2%
+	naval_supply_consumption_factor	#해군 보급 소비량	#+3%
+	naval_torpedo_cooldown_factor	#어뢰 재사용 대기시간	#-4%
+	naval_torpedo_hit_chance_factor	#어뢰 명중률	#+4%	#tt
+	naval_torpedo_screen_penetration_factor	#어뢰 스크린 관통	#+4%	#tt
 	navy_capital_ship_attack_factor	#navy_capital_ship_attack_factor
 	navy_capital_ship_attack_factor_against	#navy_capital_ship_attack_factor_against
 	navy_carrier_air_agility_factor	#navy_carrier_air_agility_factor
@@ -161,52 +160,50 @@
 	air_invasion_preparation	#공중 침공 준비 시간	#-3%
 	air_manpower_requirement_factor	#공군 인력 요건	#-4%
 	air_mastery_gain_factor	#공군 교리 통달치 획득	#+2%
-	new_battlefield_support_mastery_gain_factor
-	new_operational_integrity_mastery_gain_factor
-	new_strategic_destruction_mastery_gain_factor
-	air_subdoctrine_fighter_homeland_defense_mastery_gain_factor
-	air_subdoctrine_escort_fighter_mastery_gain_factor
-	air_subdoctrine_fighter_bombers_mastery_gain_factor
-	air_subdoctrine_tactical_flexibility_mastery_gain_factor
-	air_subdoctrine_dogfighting_mastery_mastery_gain_factor
-	air_subdoctrine_fighter_central_field_mastery_gain_factor
-	air_subdoctrine_night_bombing_mastery_gain_factor
-	air_subdoctrine_carpet_bombing_mastery_gain_factor
-	air_subdoctrine_deep_air_raids_mastery_gain_factor
-	air_subdoctrine_flying_fortresses_mastery_gain_factor
-	air_subdoctrine_coastal_air_patrol_mastery_gain_factor
-	air_subdoctrine_open_ocean_air_patrol_mastery_gain_factor
-	air_subdoctrine_heavy_aircraft_focus_mastery_gain_factor
-	air_subdoctrine_bomber_interception_mastery_gain_factor
-	air_subdoctrine_long_range_escort_mastery_gain_factor
-	air_subdoctrine_operational_air_support_mastery_gain_factor
-	air_subdoctrine_tactical_battlefield_support_mastery_gain_factor
-	air_subdoctrine_theater_interdiction_mastery_gain_factor
-	air_subdoctrine_aerial_reconnaissance_mastery_gain_factor
-	air_subdoctrine_flying_artillery_mastery_gain_factor
-	air_subdoctrine_dive_bombers_mastery_gain_factor
-	air_subdoctrine_flexible_fire_support_mastery_gain_factor
-	air_subdoctrine_carrier_strikes_mastery_gain_factor
-	air_subdoctrine_naval_strike_tactics_mastery_gain_factor
-	air_subdoctrine_naval_torpedo_tactics_mastery_gain_factor
-	fighter_aircraft_track_mastery_gain_factor
-	strike_aircraft_track_mastery_gain_factor
-	medium_aircraft_track_mastery_gain_factor
-	heavy_aircraft_track_mastery_gain_factor
-
+	new_battlefield_support_mastery_gain_factor	# (대교리) 통달치 획득	#+2%
+	new_operational_integrity_mastery_gain_factor	# (대교리) 통달치 획득	#+2%
+	new_strategic_destruction_mastery_gain_factor	# (대교리) 통달치 획득	#+2%
+	air_subdoctrine_fighter_homeland_defense_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_escort_fighter_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_fighter_bombers_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_tactical_flexibility_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_dogfighting_mastery_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_fighter_central_field_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_night_bombing_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_carpet_bombing_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_deep_air_raids_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_flying_fortresses_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_coastal_air_patrol_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_open_ocean_air_patrol_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_heavy_aircraft_focus_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_bomber_interception_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_long_range_escort_mastery_gain_factor	#장거리 호위 (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_operational_air_support_mastery_gain_factor	#작전 중 공중 지원 (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_tactical_battlefield_support_mastery_gain_factor	#전술적 전장 지원 (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_theater_interdiction_mastery_gain_factor	#전구 차단 (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_aerial_reconnaissance_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_flying_artillery_mastery_gain_factor	#날아다니는 포병대 (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_dive_bombers_mastery_gain_factor	#정밀 타격 (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_flexible_fire_support_mastery_gain_factor	#육해군 협력 (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_carrier_strikes_mastery_gain_factor	#함안 공군력 (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_naval_strike_tactics_mastery_gain_factor	#정밀 해군 폭격 (하위 교리) 통달치 획득	#+2%
+	air_subdoctrine_naval_torpedo_tactics_mastery_gain_factor	#대량 어뢰 전술 (하위 교리) 통달치 획득	#+2%
+	fighter_aircraft_track_mastery_gain_factor	#전투기 트랙 통달치 획득 요인	#+2%
+	strike_aircraft_track_mastery_gain_factor	#타격항공기 트랙 통달치 획득 요인	#+2%
+	medium_aircraft_track_mastery_gain_factor	#중형항공기 트랙 통달치 획득 요인	#+2%
+	heavy_aircraft_track_mastery_gain_factor	#중항공기 트랙 통달치 획득 요인	#+2%
 	air_maximum_speed_factor	#최대 비행 속도	#+2%
 	air_mission_efficiency	#공군 작전 효율	#+3%
-
-	air_mission_xp_gain_factor	#air_mission_xp_gain_factor
-	air_nav_efficiency	#air_nav_efficiency
-	air_night_penalty	#air_night_penalty
-	air_power_projection_factor	#air_power_projection_factor
-	air_range_factor	#air_range_factor
-	air_strategic_bomber_bombing_factor	#air_strategic_bomber_bombing_factor
-	air_strategic_bomber_defence_factor	#air_strategic_bomber_defence_factor
-	air_strategic_bomber_night_penalty	#air_strategic_bomber_night_penalty
-	air_superiority_detect_factor	#air_superiority_detect_factor
-	air_superiority_efficiency	#air_superiority_efficiency
+	air_mission_xp_gain_factor	#비행단 임무 경험치 획득량	#+2%
+	air_nav_efficiency	#해상 임무 효율	#+2%
+	air_night_penalty	#야간 임무 불이익	#-4%
+	air_power_projection_factor	#공군력 투사 획득치	#+2%
+	air_range_factor	#공군 작전범위	#+2%
+	air_strategic_bomber_bombing_factor	#전략폭격	#+3%
+	air_strategic_bomber_defence_factor	#폭격기 방어	#+4%
+	air_strategic_bomber_night_penalty	#야간 전략폭격 불이익	#-4%
+	air_superiority_detect_factor	#최대 비행 속도	#+2%
+	air_superiority_efficiency	#공중우세 임무 효율	#+2%
 
 	air_training_xp_gain_factor	#air_training_xp_gain_factor
 	air_untrained_pilots_penalty_factor	#air_untrained_pilots_penalty_factor
@@ -467,7 +464,7 @@
 	annex_subject_cost_factor	#annex_subject_cost_factor
 	army_intel_to_others	#army_intel_to_others
 	assign_army_leader_cp_cost	#assign_army_leader_cp_cost
-	assign_navy_leader_cp_cost	#assign_navy_leader_cp_cost
+	assign_navy_leader_cp_cost	#해군 지휘관 할당 비용 #-0F
 	automatic_grant_medal_chance	#automatic_grant_medal_chance
 	base_fuel_gain	#base_fuel_gain
 	base_fuel_gain_factor	#base_fuel_gain_factor
@@ -494,7 +491,7 @@
 	conversion_cost_mil_to_civ_factor	#conversion_cost_mil_to_civ_factor
 	country_resource_<Resource>	#country_resource_-resource-
 	country_resource_cost_<Resource>	#country_resource_cost_-resource-
-	critical_receive_chance	#critical_receive_chance
+	critical_receive_chance	#치명타를 받을 확률 #-3%
 	decryption	#decryption
 	decryption_factor	#decryption_factor
 	defensive_war_stability_factor	#defensive_war_stability_factor
@@ -527,7 +524,7 @@
 	faction_trade_opinion_factor	#faction_trade_opinion_factor
 	factory_energy_consumption	#factory_energy_consumption
 	female_divisional_commander_chance	#female_divisional_commander_chance
-	female_random_admiral_chance	#female_random_admiral_chance
+	female_random_admiral_chance	#여성 제독 추가 확률 #Y2%
 	female_random_army_leader_chance	#female_random_army_leader_chance
 	female_random_country_leader_chance	#female_random_country_leader_chance
 	female_random_operative_chance	#female_random_operative_chance
@@ -721,8 +718,8 @@
 	attrition	#attrition
 	attrition_for_controller	#attrition_for_controller
 	cavalry_defence_factor	#cavalry_defence_factor
-	convoy_escort_efficiency	#convoy_escort_efficiency
-	convoy_retreat_speed	#convoy_retreat_speed
+	convoy_escort_efficiency	#호위 효율 #+3%	#tt
+	convoy_retreat_speed	#후퇴 시 수송선의 속도 #+2%	#tt
 	defence	#defence
 	dig_in_speed	#dig_in_speed
 	dig_in_speed_factor	#dig_in_speed_factor
@@ -736,13 +733,13 @@
 	max_dig_in_factor	#max_dig_in_factor
 	mechanized_defence_factor	#mechanized_defence_factor
 	motorized_defence_factor	#motorized_defence_factor
-	naval_retreat_chance	#naval_retreat_chance
-	naval_retreat_chance_after_initial_combat	#naval_retreat_chance_after_initial_combat
-	naval_retreat_speed	#naval_retreat_speed
-	naval_retreat_speed_after_initial_combat	#naval_retreat_speed_after_initial_combat
-	naval_supply_consumption_factor	#naval_supply_consumption_factor
-	naval_torpedo_damage_reduction_factor	#naval_torpedo_damage_reduction_factor
-	naval_torpedo_enemy_critical_chance_factor	#naval_torpedo_enemy_critical_chance_factor
+	naval_retreat_chance	#후퇴 결정 확률	#+2%
+	naval_retreat_chance_after_initial_combat	#최초 작전 후 후퇴 확률	#+2%
+	naval_retreat_speed	#후퇴 시 함선의 속도	#+32%
+	naval_retreat_speed_after_initial_combat	#최초 작전 후 후퇴 속도	#+2%
+	naval_supply_consumption_factor	#해군 보급 소비량	#+3%
+	naval_torpedo_damage_reduction_factor	#적 어뢰 피해량 감소	#+2%
+	naval_torpedo_enemy_critical_chance_factor	#적 어뢰 치명타 확률	#+4%
 	navy_capital_ship_defence_factor	#주력함 기갑
 	navy_capital_ship_defence_factor_against	#navy_capital_ship_defence_factor_against
 	navy_screen_defence_factor	#navy_screen_defence_factor
@@ -825,44 +822,71 @@
 	experience_gain_army_unit	#experience_gain_army_unit
 	experience_gain_army_unit_factor	#experience_gain_army_unit_factor
 	experience_gain_factor	#experience_gain_factor
-	experience_gain_navy	#experience_gain_navy
-	experience_gain_navy_factor	#experience_gain_navy_factor
-	experience_gain_navy_unit	#experience_gain_navy_unit
-	experience_gain_navy_unit_factor	#experience_gain_navy_unit_factor
+	experience_gain_navy	#해군 경험치 획득량(매일) #+3F	#tt
+	experience_gain_navy_factor	#해군 경험치 획득량 #+3%	#tt
+	experience_gain_navy_unit	#선박 경험치 획득량(매일) #+2F
+	experience_gain_navy_unit_factor	#선박 경험치 획득량 #+3%	#tt
 	research_speed_factor	#research_speed_factor
 
 ### NAVAL modifiers
-	amphibious_invasion	#상륙 침입 속도 #-3%	#tt
+	amphibious_invasion	#상륙 침입 속도 #+3%	#tt
 	amphibious_invasion_defence	#상륙 방어력 #+2%
 	assign_navy_leader_cp_cost	#해군 지휘관 할당 비용 #-0F
 	carrier_capacity_penalty_reduction	#항공모함 혼잡 #-3%
-	carrier_sortie_hours_delay	#항모 항공단 출격 지연(시간) #-0F
-	carrier_traffic	#함재기 출격수 #+2%
+	carrier_sortie_hours_delay	#항모 비행단 출격 지연(시간) #-0F
+	carrier_traffic	#함재기 출격 수 #+2%
 	convoy_escort_efficiency	#호위 효율 #+3%	#tt
 	convoy_raiding_efficiency_factor	#수송선단 습격 효율 #+4%	#tt
-	convoy_retreat_speed	#후퇴시 수송선 속도 #+2%	#tt
-	critical_receive_chance	#치명타 입을 확률 #-3%
-	experience_gain_navy	#해군 경험치 획득량(매일) #+3F
-	experience_gain_navy_factor	#해군 경험치 획득량 #+3%
+	convoy_retreat_speed	#후퇴 시 수송선의 속도 #+2%	#tt
+	critical_receive_chance	#치명타를 받을 확률 #-3%
+	experience_gain_navy	#해군 경험치 획득량(매일) #+3F	#tt
+	experience_gain_navy_factor	#해군 경험치 획득량 #+3%	#tt
 	experience_gain_navy_unit	#선박 경험치 획득량(매일) #+2F
 	experience_gain_navy_unit_factor	#선박 경험치 획득량 #+3%	#tt
+	experience_battle_cruiser_combat_factor	#순양전함 전투 경험치 획득량
+	experience_battleship_combat_factor	#전함 전투 경험치 획득량
+	experience_carrier_combat_factor	#항공모함 전투 경험치 획득량
+	experience_destroyer_combat_factor	#구축함 전투 경험치 획득량
+	experience_heavy_cruiser_combat_factor	#중순양함 전투 경험치 획득량
+	experience_light_cruiser_combat_factor	#경순양함 전투 경험치 획득량
+	experience_repair_ship_combat_factor	#수리함 전투 경험치 획득량
+	experience_submarine_combat_factor	#잠수함 전투 경험치 획득량
+	experience_support_ship_combat_factor	#지원함 전투 경험치 획득량
+	experience_battle_cruiser_mission_factor	#순양전함 임무 경험치 획득량
+	experience_battleship_mission_factor	#전함 임무 경험치 획득량
+	experience_carrier_mission_factor	#항공모함 임무 경험치 획득량
+	experience_destroyer_mission_factor	#구축함 임무 경험치 획득량
+	experience_heavy_cruiser_mission_factor	#중순양함 임무 경험치 획득량
+	experience_light_cruiser_mission_factor	#경순양함 임무 경험치 획득량
+	experience_repair_ship_mission_factor	#수리함 임무 경험치 획득량
+	experience_submarine_mission_factor	#잠수함 임무 경험치 획득량
+	experience_support_ship_mission_factor	#지원함 임무 경험치 획득량
+	experience_battle_cruiser_training_factor	#순양전함 훈련 경험치 획득량
+	experience_battleship_training_factor	#전함 훈련 경험치 획득량
+	experience_carrier_training_factor	#항공모함 훈련 경험치 획득량
+	experience_destroyer_training_factor	#구축함 훈련 경험치 획득량
+	experience_heavy_cruiser_training_factor	#중순양함 훈련 경험치 획득량
+	experience_light_cruiser_training_factor	#경순양함 훈련 경험치 획득량
+	experience_repair_ship_training_factor	#수리함 훈련 경험치 획득량
+	experience_submarine_training_factor	#잠수함 훈련 경험치 획득량
+	experience_support_ship_training_factor	#지원함 훈련 경험치 획득량
 	female_random_admiral_chance	#여성 제독 추가 확률 #Y2%
 	fighter_sortie_efficiency	#전투기 출격 효율 #+2%
 	headquarters_experience_gain_factor	#해군 사령부에서 얻은 경험 #+4%
-	invasion_preparation	#상륙 준비 시간 #-3%
+	invasion_preparation	#상륙 준비 시간 #-3%	#tt
 	max_organisation	#최대 조직력	#+2%
 	mines_planting_by_fleets_factor	#기뢰 부설 효율	#+2%	#tt
 	mines_sweeping_by_fleets_factor	#기뢰 소해 효율	#+2%
 	naval_accidents_chance	#사고 확률	#-4%	#tt
 	naval_attrition	#소모	#-4%
 	naval_commando_raid_distance	#해군 특공대 습격 사거리	#+2%
-	naval_coordination	#함대 조직력	#+2%	#tt
-	naval_critical_effect_factor	#치명타 지속 효과	#-4%
-	naval_critical_score_chance_factor	#치명타 입힐 확률	#+4%
+	naval_coordination	#함대 조직	#+2%	#tt
+	naval_critical_effect_factor	#연속 치명타 효과	#-4%
+	naval_critical_score_chance_factor	#치명타 입힐 확률	#+4%	#tt
 	naval_damage_factor	#해군 피해	#+4%	#tt
 	naval_defense_factor	#해군 방어	#+4%	#tt
 	naval_detection	#해군 탐지	#+2%	#tt
-	naval_doctrine_cost_factor
+	naval_doctrine_cost_factor	#해군 교리 비용	#	#tt
 	naval_enemy_fleet_size_ratio_penalty_factor	#적 함대 규모 불이익	#+4%	#tt
 	naval_enemy_positioning_in_initial_attack	#최초 공격 시 적 방어 위치 설정	#+2%
 	naval_enemy_retreat_chance	#적 후퇴 확률	#-4%
@@ -874,9 +898,8 @@
 	naval_invasion_division_cap	#상륙당 사단 수용량 #+0F
 	naval_invasion_penalty	#상륙 불이익	#-2%
 	naval_light_gun_hit_chance_factor	#부포 명중률	#+4%	#tt
-	naval_track_mastery_gain_factor
 	naval_mine_hit_chance	#기뢰에 피격될 확률	#-4%	#tt
-	naval_mines_damage_factor	#기뢰 피해량	#+2%
+	naval_mines_damage_factor	#기뢰 피해량	#+2%	#tt
 	naval_mines_effect_reduction	#기뢰 피해율	#+2%	#tt
 	naval_mission_xp_factor	#해상 임무 경험치 변동치	#+4%
 	naval_morale	#함정 회복률	#+1F
@@ -886,28 +909,26 @@
 	naval_retreat_chance_after_initial_combat	#최초 작전 후 후퇴 확률	#+2%
 	naval_retreat_speed	#후퇴 시 함선의 속도	#+32%
 	naval_retreat_speed_after_initial_combat	#최초 작전 후 후퇴 속도	#+2%
-	naval_ship_recovery_chance	#함선 회복 확률	#+2%
-	naval_ship_recovery_chance_factor	#함선 회복 확률 변동치	#+2%
+	naval_ship_recovery_chance	#함선 회복 확률	#+2%	#tt
+	naval_ship_recovery_chance_factor	#함선 회복 확률 변동치	#+2%	#tt
 	naval_speed_factor	#해군 속도	#+2%
-	naval_strike	#해상 공습	#+2%
+	naval_strike	#해상 타격	#+2%
 	naval_supply_consumption_factor	#해군 보급 소비량	#+3%
 	naval_torpedo_cooldown_factor	#어뢰 재사용 대기시간	#-4%
-	naval_torpedo_damage_reduction_factor	#적 어뢰 피해량 감소치	#+2%
-	naval_torpedo_enemy_critical_chance_factor	#적의 어뢰가 치명타를 입힐 확률	#+4%
+	naval_torpedo_damage_reduction_factor	#적 어뢰 피해량 감소	#+2%
+	naval_torpedo_enemy_critical_chance_factor	#적 어뢰 치명타 확률	#+4%
 	naval_torpedo_hit_chance_factor	#어뢰 명중률	#+4%	#tt
 	naval_torpedo_reveal_chance_factor	#어뢰가 탐지될 확률	#-4%	#tt
 	naval_torpedo_screen_penetration_factor	#어뢰 스크린 관통	#+4%	#tt
-	navy_advisor_cost_factor	#해군 이론가 비용	#+2%
+	navy_advisor_cost_factor	#해군 고문 비용	#-2%
 	navy_anti_air_attack	#해군의 대공 공격	#+1F
-	navy_anti_air_attack_factor	#해군의 대공 공격	#+4%	#tt
+	navy_anti_air_attack_factor	#해군 대공 공격	#+4%	#tt
 	navy_capital_ship_attack_factor	#주력함 공격	#+4%
-	navy_capital_ship_attack_factor_against	#특정 국가를 상대로 한 주력함 공격	#+4%
 	navy_capital_ship_defence_factor	#주력함 기갑	#+4%	#tt
-	navy_capital_ship_defence_factor_against	#특정 국가를 상대로 한 주력함 방어	#+4%
-	navy_carrier_air_agility_factor	#항공모함 함재기의 기동성	#+4%
-	navy_carrier_air_attack_factor	#항공모함 함재기의 공격	#+4%
-	navy_carrier_air_targetting_factor	#항공모함 함재기의 명중	#+4%
-	navy_casualty_on_hit	#피격시 사상자 획득치	#-4%
+	navy_carrier_air_agility_factor	#항공모함 함재기 기동성	#+4%
+	navy_carrier_air_attack_factor	#항공모함 함재기 공격	#+4%
+	navy_carrier_air_targetting_factor	#항공모함 함재기 명중	#+4%
+	navy_casualty_on_hit	#피격 시 사상자 변동치	#-4%
 	navy_casualty_on_sink	#침몰 사상자	#-4%
 	navy_fuel_consumption_factor	#해군 연료 소비량	#-4%
 	navy_max_range	#해군 최대 작전 범위	#+1F
@@ -915,51 +936,47 @@
 	navy_org	#해군 조직력	#+1F
 	navy_org_factor	#해군 조직력	#+4%	#tt
 	navy_screen_attack_factor	#보조함 공격	#tt
-	navy_screen_attack_factor_against	#특정 국가를 상대로 한 보조함 공격
 	navy_screen_defence_factor	#보조함 방어	#tt
-	navy_screen_defence_factor_against	#특정 국가를 상대로 한 보조함 방어
 	navy_submarine_attack_factor	#잠수함 공격	#tt
-	navy_submarine_attack_factor_against	#n특정 국가를 상대로 한 잠수함 공격
 	navy_submarine_defence_factor	#잠수함 방어
-	navy_submarine_defence_factor_against	#특정 국가를 상대로 한 잠수함 방어
 	navy_submarine_detection_factor	#잠수함 탐지	#+4%	#tt
 	navy_visibility	#가시성	#-4%
 	naval_mastery_gain_factor	#해군 교리 통달치 획득	#+2%
 	new_base_strike_mastery_gain_factor	#기지 타격 (대교리) 통달치 획득	#+2%
 	new_convoy_raiding_mastery_gain_factor	#무역 차단 (대교리) 통달치 획득	#+2%
 	new_fleet_in_being_mastery_gain_factor	#현존 함대 (대교리) 통달치 획득	#+2%
-	line_of_battle_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	battlecruiser_supremacy_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	armored_raiders_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	coastal_defence_fleet_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	naval_gunfire_support_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	battleship_antiair_screen_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	carrier_battlegroups_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	floating_airfields_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	escort_carrier_support_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	broad_naval_support_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	massed_carrier_fleet_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	light_task_forces_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	convoy_escort_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	support_integrated_operations_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	hunter_killers_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	torpedo_primacy_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	anti_aircraft_cruisers_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	screen_support_focus_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	jeune_ecole_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	patrol_boats_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	wolfpacks_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	submarine_fleet_operations_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	capital_hunters_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	submarine_coastal_defense_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
-	coastal_minelaying_mastery_gain_factor	# (하위 교리) 통달치 획득	#+2%
+	line_of_battle_mastery_gain_factor	# 전선 (하위 교리) 통달치 획득	#+2%
+	battlecruiser_supremacy_mastery_gain_factor	#빠른 전함 (하위 교리) 통달치 획득	#+2%
+	armored_raiders_mastery_gain_factor	# 기갑 습격대 (하위 교리) 통달치 획득	#+2%
+	coastal_defence_fleet_mastery_gain_factor	#해안 방어 함대 (하위 교리) 통달치 획득	#+2%
+	naval_gunfire_support_mastery_gain_factor	#함포 사격 지원 (하위 교리) 통달치 획득	#+2%
+	battleship_antiair_screen_mastery_gain_factor	#방공전함 (하위 교리) 통달치 획득	#+2%
+	carrier_battlegroups_mastery_gain_factor	#항공모함 전투단 (하위 교리) 통달치 획득	#+2%
+	floating_airfields_mastery_gain_factor	#부유식 비행장 (하위 교리) 통달치 획득	#+2%
+	escort_carrier_support_mastery_gain_factor	#호위 항공모함 지원 (하위 교리) 통달치 획득	#+2%
+	broad_naval_support_mastery_gain_factor	#포괄적 지원 (하위 교리) 통달치 획득	#+2%
+	massed_carrier_fleet_mastery_gain_factor	#대규모 항공모함 지원 (하위 교리) 통달치 획득	#+2%
+	light_task_forces_mastery_gain_factor	#경량 테스크 포스 (하위 교리) 통달치 획득	#+2%
+	convoy_escort_mastery_gain_factor	#수송선 호위 (하위 교리) 통달치 획득	#+2%
+	support_integrated_operations_mastery_gain_factor	#통합 작전 (하위 교리) 통달치 획득	#+2%
+	hunter_killers_mastery_gain_factor	#대잠 격침조 (하위 교리) 통달치 획득	#+2%
+	torpedo_primacy_mastery_gain_factor	#어뢰 우선 (하위 교리) 통달치 획득	#+2%
+	anti_aircraft_cruisers_mastery_gain_factor	#방공순양함 (하위 교리) 통달치 획득	#+2%
+	screen_support_focus_mastery_gain_factor	#스크린 지원 중점 (하위 교리) 통달치 획득	#+2%
+	jeune_ecole_mastery_gain_factor	#신식 교리 (하위 교리) 통달치 획득	#+2%
+	patrol_boats_mastery_gain_factor	#초계정 (하위 교리) 통달치 획득	#+2%
+	wolfpacks_mastery_gain_factor	#늑대 떼 (하위 교리) 통달치 획득	#+2%
+	submarine_fleet_operations_mastery_gain_factor	#함대 작전 (하위 교리) 통달치 획득	#+2%
+	capital_hunters_mastery_gain_factor	#주력함 사냥꾼 (하위 교리) 통달치 획득	#+2%
+	submarine_coastal_defense_mastery_gain_factor	#해안 방어 (하위 교리) 통달치 획득	#+2%
+	coastal_minelaying_mastery_gain_factor	#연안 기뢰 부설 (하위 교리) 통달치 획득	#+2%
 	long_range_submarines_mastery_gain_factor	#장거리 잠수함 (하위 교리) 통달치 획득	#+2%
 	capital_ships_track_mastery_gain_factor	#주력함 트랙 통달치 획득 요인	#+2%
 	carriers_track_mastery_gain_factor	#항공모함 트랙 통달치 획득 요인	#+2%
 	screens_track_mastery_gain_factor	#보조함 트랙 통달치 획득 요인	#+2%
 	submarines_track_mastery_gain_factor	#잠수함 트랙 통달치 획득 요인	#+2%
 	night_spotting_chance	#야간 탐지	#+3%
-	port_strike	#항구 타격	#+3%
+	port_strike	#항구 타격	#+3%	#tt
 	positioning	#위치 선정	#+3%	#tt
 	production_cost_max_convoy	#수송선 최대 비용	#Y0F	#X
 	production_cost_max_floating_harbor_equipment	#부유항 최대 비용	#Y0F	#X
@@ -976,18 +993,64 @@
 	ships_at_battle_start	#접촉 시의 함선 숫자	#Y2%
 	sortie_efficiency	#함재기 출격 효율	#+2%	#tt
 	spotting_chance	#탐지 속도	#+2%	#tt
-	spotting_chance_against	#특정 국가를 상대로 한 탐지 확률	#+2%
 	strike_force_movement_org_loss	#타격 부대 조직력 손실	#-4%
 	sub_retreat_speed	#후퇴 시 잠수함 속도	#+2%	#tt
 	submarine_attack	#잠수함 공격	#+1F
-	terrain_trait_xp_gain_factor	#지형 특성 경험치 획득량	#+4%
-	#trait_<Trait>_xp_gain_factor	#trait_-trait-_xp_gain_factor
+	terrain_trait_xp_gain_factor	#지형 특성 경험치 획득량	#+4%	#tt
+	trait_old_guard_navy_xp_gain_factor	#보수파 (해군) 특성 경험치 획득량	#+4%
+	trait_navy_career_officer_xp_gain_factor	#직업장교 (해군) 특성 경험치 획득량	#+4%
+	trait_navy_media_personality_xp_gain_factor	#미디어 친화적 (해군) 특성 경험치 획득량	#+4%
+	trait_bold_xp_gain_factor	#대담함 특성 경험치 획득량	#+4%
+	trait_caustic_personality_xp_gain_factor	#독설가 특성 경험치 획득량	#+4%
+	trait_naval_lineage_xp_gain_factor	#해군 혈통 특성 경험치 획득량	#+4%
+	trait_gentlemanly_xp_gain_factor	#신사 특성 경험치 획득량	#+4%
+	trait_battleship_adherent_xp_gain_factor	#전함 옹호자 특성 경험치 획득량	#+4%
+	trait_gunnery_expert_xp_gain_factor	#포격 전문가 특성 경험치 획득량	#+4%
+	trait_aviation_enthusiast_xp_gain_factor	#항공기 열성론자 특성 경험치 획득량	#+4%
+	trait_cuts_corners_xp_gain_factor	#편법가 특성 경험치 획득량	#+4%
+	trait_chief_engineer_xp_gain_factor	#기관장 특성 경험치 획득량	#+4%
+	trait_craven_xp_gain_factor	#비겁자 특성 경험치 획득량	#+4%
+	trait_blockade_runner_xp_gain_factor	#봉쇄 회피 특성 경험치 획득량	#+4%
+	trait_seawolf_xp_gain_factor	#바다의 늑대 특성 경험치 획득량	#+4%
+	trait_spotter_xp_gain_factor	#관측수 특성 경험치 획득량	#+4%
+	trait_fleet_protector_xp_gain_factor	#함대 보호가 특성 경험치 획득량	#+4%
+	trait_superior_tactician_xp_gain_factor	#우수한 전술가 특성 경험치 획득량	#+4%
+	trait_air_controller_xp_gain_factor	#항공관제사 특성 경험치 획득량	#+4%
+	trait_ironside_xp_gain_factor	#철기병 특성 경험치 획득량	#+4%
+	trait_arctic_water_expert_xp_gain_factor	#극지 전문가 특성 경험치 획득량	#+4%
+	trait_inshore_fighter_xp_gain_factor	#연안 싸움꾼 특성 경험치 획득량	#+4%
+	trait_blue_water_expert_xp_gain_factor	#대양 전문가 특성 경험치 획득량	#+4%
+	trait_green_water_expert_xp_gain_factor	#연안 전문가 특성 경험치 획득량	#+4%
+	trait_concealment_expert_xp_gain_factor	#은폐 전문가 특성 경험치 획득량	#+4%
+	trait_lone_wolf_xp_gain_factor	#고독한 늑대 특성 경험치 획득량	#+4%
+	trait_silent_hunter_xp_gain_factor	#조용한 사냥꾼 특성 경험치 획득량	#+4%
+	trait_lancer_xp_gain_factor	#어뢰 전문가 특성 경험치 획득량	#+4%
+	trait_search_pattern_expert_xp_gain_factor	#탐지양식 전문가 특성 경험치 획득량	#+4%
+	trait_destroyer_leader_xp_gain_factor	#구축함 지휘관 특성 경험치 획득량	#+4%
+	trait_cruiser_captain_xp_gain_factor	#순양함 지휘관 특성 경험치 획득량	#+4%
+	trait_mine_craft_xp_gain_factor	#기뢰정 특성 경험치 획득량	#+4%	#X
+	trait_flight_deck_manager_xp_gain_factor	#비행갑판 관리관 특성 경험치 획득량	#+4%
+	trait_ground_pounder_xp_gain_factor	#지상 분쇄기 특성 경험치 획득량	#+4%
+	trait_big_guns_expert_xp_gain_factor	#거포 전문가 특성 경험치 획득량	#+4%
+	trait_marksman_xp_gain_factor	#명사수 특성 경험치 획득량	#+4%
+	trait_safety_first_xp_gain_factor	#안전제일 특성 경험치 획득량	#+4%
+	trait_crisis_magician_xp_gain_factor	#위기의 마술사 특성 경험치 획득량	#+4%
+	trait_torpedo_expert_xp_gain_factor	#어뢰 전문가 특성 경험치 획득량	#+4%
+	trait_loading_drill_master_xp_gain_factor	#재장전 훈련의 대가특성 경험치 획득량	#+4%
+	trait_hunter_killer_xp_gain_factor	#탐지격침 전문가 특성 경험치 획득량	#+4%
+	trait_smoke_screen_expert_xp_gain_factor	#연막차장 전문가 특성 경험치 획득량	#+4%
+	trait_fighter_director_xp_gain_factor	#전투기 지휘 전문가 특성 경험치 획득량	#+4%
+	trait_dive_bomber_xp_gain_factor	#급강하폭격 전문가 특성 경험치 획득량	#+4%
+	trait_torpedo_bomber_xp_gain_factor	#뇌격기 전문가 특성 경험치 획득량	#+4%
+	trait_fly_swatter_xp_gain_factor	#파리채 특성 경험치 획득량	#+4%
 	transport_capacity	#병력 수송선 필요량	#-2%
 	unit_battle_cruiser_design_cost_factor	#순양전함 설계 비용	#-4%
 	unit_battleship_design_cost_factor	#전함 설계 비용	#-4%
 	unit_carrier_design_cost_factor	#항공모함 설계 비용	#-4%
 	unit_destroyer_design_cost_factor	#구축함 설계 비용	#-4%
 	unit_heavy_cruiser_design_cost_factor	#중순양함 설계 비용	#-4%
+	unit_light_cruiser_design_cost_factor	#경순양함 설계 비용	#-4%
+	unit_repair_ship_design_cost_factor	#수리함 설계 비용	#-4%
 	unit_submarine_design_cost_factor	#잠수함 설계 비용	#-4%	#X
 	unit_support_ship_design_cost_factor	#지원함 설계 비용	#-4%	#X
 
@@ -1150,7 +1213,7 @@
 
 ### UNIT LEADER modifiers
 	air_invasion_preparation	#air_invasion_preparation
-	amphibious_invasion	#상륙 침입 속도 #-3%
+	amphibious_invasion	#상륙 침입 속도 #+3%	#tt
 	amphibious_invasion_defence	#상륙 방어력 #+2%
 	army_leader_cost_factor	#army_leader_cost_factor
 	army_leader_start_attack_level	#army_leader_start_attack_level
@@ -1160,11 +1223,12 @@
 	army_leader_start_planning_level	#army_leader_start_planning_level
 	cannot_use_abilities #B
 	carrier_capacity_penalty_reduction	#항공모함 혼잡 #-3%
-	carrier_sortie_hours_delay	#항모 항공단 출격 지연(시간) #+0F
+	carrier_sortie_hours_delay	#항모 비행단 출격 지연(시간) #-0F
 	carrier_traffic	#함재기 출격수 #+2%
-	convoy_raiding_efficiency_factor	#convoy_raiding_efficiency_factor
-	convoy_retreat_speed	#convoy_retreat_speed
-	critical_receive_chance	#critical_receive_chance
+	convoy_escort_efficiency	#호위 효율 #+3%	#tt
+	convoy_raiding_efficiency_factor	#수송선단 습격 효율 #+4%	#tt
+	convoy_retreat_speed	#후퇴 시 수송선의 속도 #+2%	#tt
+	critical_receive_chance	#치명타를 받을 확률 #-3%
 	enemy_operative_capture_chance_factor	#enemy_operative_capture_chance_factor
 	enemy_operative_detection_chance	#enemy_operative_detection_chance
 	enemy_operative_detection_chance_factor	#enemy_operative_detection_chance_factor
@@ -1176,50 +1240,49 @@
 	exiled_divisions_attack_factor	#exiled_divisions_attack_factor
 	exiled_divisions_defense_factor	#exiled_divisions_defense_factor
 	experience_gain_factor	#experience_gain_factor
-	experience_gain_navy	#experience_gain_navy
-	experience_gain_navy_factor	#experience_gain_navy_factor
-	experience_gain_navy_unit	#experience_gain_navy_unit
-	experience_gain_navy_unit_factor	#experience_gain_navy_unit_factor
-	fighter_sortie_efficiency	#fighter_sortie_efficiency
+	experience_gain_navy	#해군 경험치 획득량(매일) #+3F	#tt
+	experience_gain_navy_factor	#해군 경험치 획득량 #+3%	#tt
+	experience_gain_navy_unit	#선박 경험치 획득량(매일) #+2F
+	experience_gain_navy_unit_factor	#선박 경험치 획득량 #+3%	#tt
+	fighter_sortie_efficiency	#전투기 출격 효율 #+2%
 	fortification_collateral_chance	#fortification_collateral_chance
 	fortification_damage	#fortification_damage
 	initiative_factor	#initiative_factor
 	intel_network_gain	#intel_network_gain
 	intel_network_gain_factor	#intel_network_gain_factor
-	invasion_preparation	#invasion_preparation
+	invasion_preparation	#상륙 준비 시간 #-3%	#tt
 	max_army_group_size	#max_army_group_size
 	military_leader_cost_factor	#military_leader_cost_factor
-	naval_coordination	#naval_coordination
-	naval_critical_effect_factor	#naval_critical_effect_factor
-	naval_critical_score_chance_factor	#naval_critical_score_chance_factor
-	naval_critical_score_chance_factor_against	#naval_critical_score_chance_factor_against
-	naval_damage_factor	#naval_damage_factor
-	naval_defense_factor	#naval_defense_factor
-	naval_detection	#naval_detection
-	naval_enemy_fleet_size_ratio_penalty_factor	#naval_enemy_fleet_size_ratio_penalty_factor
-	naval_enemy_positioning_in_initial_attack	#naval_enemy_positioning_in_initial_attack
-	naval_enemy_retreat_chance	#naval_enemy_retreat_chance
-	naval_has_potf_in_combat_attack	#naval_has_potf_in_combat_attack
-	naval_has_potf_in_combat_defense	#naval_has_potf_in_combat_defense
-	naval_heavy_gun_hit_chance_factor	#naval_heavy_gun_hit_chance_factor
-	naval_hit_chance	#naval_hit_chance
-	naval_invasion_penalty	#naval_invasion_penalty
+	naval_coordination	#함대 조직	#+2%	#tt
+	naval_critical_effect_factor	#연속 치명타 효과	#-4%
+	naval_critical_score_chance_factor	#치명타 입힐 확률	#+4%	#tt
+	naval_damage_factor	#해군 피해	#+4%	#tt
+	naval_defense_factor	#해군 방어	#+4%	#tt
+	naval_detection	#해군 탐지	#+2%	#tt
+	naval_enemy_fleet_size_ratio_penalty_factor	#적 함대 규모 불이익	#+4%	#tt
+	naval_enemy_positioning_in_initial_attack	#최초 공격 시 적 방어 위치 설정	#+2%
+	naval_enemy_retreat_chance	#적 후퇴 확률	#-4%
+	naval_has_potf_in_combat_attack	#함대의 자랑과 함께 전투 중일 때 공격	#+4%
+	naval_has_potf_in_combat_defense	#함대의 자랑과 함께 전투 중일 때 방어	#+4%
+	naval_heavy_gun_hit_chance_factor	#주포 명중률	#+4%	#tt
+	naval_hit_chance	#해군 타격 확률	#+2%	#tt
+	naval_invasion_penalty	#상륙 불이익	#-2%
 	naval_invasion_prep_speed	#상륙 준비 속도	#tt
-	naval_light_gun_hit_chance_factor	#naval_light_gun_hit_chance_factor
-	naval_morale	#naval_morale
-	naval_morale_factor	#naval_morale_factor
-	naval_retreat_chance	#naval_retreat_chance
-	naval_retreat_chance_after_initial_combat	#naval_retreat_chance_after_initial_combat
-	naval_retreat_speed	#naval_retreat_speed
-	naval_retreat_speed_after_initial_combat	#naval_retreat_speed_after_initial_combat
-	naval_speed_factor	#naval_speed_factor
-	naval_strike	#naval_strike
-	naval_torpedo_cooldown_factor	#naval_torpedo_cooldown_factor
-	naval_torpedo_damage_reduction_factor	#naval_torpedo_damage_reduction_factor
-	naval_torpedo_enemy_critical_chance_factor	#naval_torpedo_enemy_critical_chance_factor
-	naval_torpedo_hit_chance_factor	#naval_torpedo_hit_chance_factor
-	naval_torpedo_reveal_chance_factor	#naval_torpedo_reveal_chance_factor
-	naval_torpedo_screen_penetration_factor	#naval_torpedo_screen_penetration_factor
+	naval_light_gun_hit_chance_factor	#부포 명중률	#+4%	#tt
+	naval_morale	#함정 회복률	#+1F
+	naval_morale_factor	#함정 회복률	#+3%	#tt
+	naval_retreat_chance	#후퇴 결정 확률	#+2%
+	naval_retreat_chance_after_initial_combat	#최초 작전 후 후퇴 확률	#+2%
+	naval_retreat_speed	#후퇴 시 함선의 속도	#+32%
+	naval_retreat_speed_after_initial_combat	#최초 작전 후 후퇴 속도	#+2%
+	naval_speed_factor	#해군 속도	#+2%
+	naval_strike	#해상 타격	#+2%
+	naval_torpedo_cooldown_factor	#어뢰 재사용 대기시간	#-4%
+	naval_torpedo_damage_reduction_factor	#적 어뢰 피해량 감소	#+2%
+	naval_torpedo_enemy_critical_chance_factor	#적 어뢰 치명타 확률	#+4%
+	naval_torpedo_hit_chance_factor	#어뢰 명중률	#+4%	#tt
+	naval_torpedo_reveal_chance_factor	#어뢰가 탐지될 확률	#-4%	#tt
+	naval_torpedo_screen_penetration_factor	#어뢰 스크린 관통	#+4%	#tt
 	navy_anti_air_attack	#navy_anti_air_attack
 	navy_anti_air_attack_factor	#navy_anti_air_attack_factor
 	navy_capital_ship_attack_factor	#navy_capital_ship_attack_factor
@@ -1272,6 +1335,7 @@
 
 ## Targeted Modifiers
 ### AGGRESSIVE modifiers
+	naval_critical_score_chance_factor_against	#특정 국가를 상대로 한 해군 치명타 발생 확률	#+4%
 ### AIR modifiers
 ### ARMY modifiers
 ### DEFENSIVE modifiers
@@ -1279,8 +1343,18 @@
 ### NAVAL modifiers
 	amphibious_invasion_against	#특정 국가를 상대로 한 상륙 침공	#+3%
 	invasion_preparation_against	#특정 국가를 상대로 한 상륙 준비	#-3%
-	naval_critical_score_chance_factor_against	#특정 국가를 상대로 한 해군 치명타 발생 확률	#+4%	#tt
+	naval_critical_score_chance_factor_against	#특정 국가를 상대로 한 해군 치명타 발생 확률	#+4%
 	naval_hit_chance_against	#특정 국가를 상대로 한 해군 명중률	#+2%
+	navy_capital_ship_attack_factor_against	#특정 국가를 상대로 한 주력함 공격	#+4%
+	navy_capital_ship_defence_factor_against	#특정 국가를 상대로 한 주력함 방어	#+4%
+	navy_screen_attack_factor_against	#특정 국가를 상대로 한 보조함 공격	#+4%
+	navy_screen_defence_factor_against	#특정 국가를 상대로 한 보조함 방어	#+4%
+	navy_submarine_attack_factor_against	#특정 국가를 상대로 한 잠수함 공격	#+4%
+	navy_submarine_defence_factor_against	#특정 국가를 상대로 한 잠수함 방어	#+4%
+	spotting_chance_against	#특정 국가를 상대로 한 탐지 확률	#+2%
+
+### UNIT LEADER modifiers
+	naval_critical_score_chance_factor_against	#특정 국가를 상대로 한 해군 치명타 발생 확률	#+4%
 
 ## State Modifiers
 ## Equipment Modifiers
@@ -1288,6 +1362,7 @@
 
 ## TMP category
 	<Trait>_xp_gain_factor	#-trait-_xp_gain_factor
+
 	trait_BUL_ff_sympathizer_xp_gain_factor_xp_gain_factor
 	trait_BUL_tsar_loyalist_xp_gain_factor
 	trait_BUL_zveno_member_xp_gain_factor
@@ -1313,12 +1388,9 @@
 	trait_SPR_republican_loyalties_xp_gain_factor
 	trait_SPR_stalinist_loyalties_xp_gain_factor
 	trait_TUR_kemalist_champion_xp_gain_factor
-	trait_cautious_xp_gain_factor
-	trait_engineer_xp_gain_factor
-	trait_mountaineer_xp_gain_factor
-	trait_reckless_xp_gain_factor
 	trait_BALTIC_ex_russian_xp_gain_factor
 	trait_CHI_dubious_loyalty_xp_gain_factor
+	trait_ascari_officer_xp_gain_factor
 	trait_ETH_hero_of_ethiopia_xp_gain_factor
 	trait_IRQ_golden_square_member_xp_gain_factor
 	trait_JAP_IJA_loyalist_xp_gain_factor
@@ -1337,140 +1409,154 @@
 	trait_SWE_wounded_in_protests_xp_gain_factor
 	trait_XSM_dubious_loyalty_xp_gain_factor
 	trait_YUN_dubious_loyalty_xp_gain_factor
-	trait_adaptable_xp_gain_factor
-	trait_aggressive_assaulter_xp_gain_factor
-	trait_air_controller_xp_gain_factor
-	trait_ambusher_xp_gain_factor
-	trait_arctic_water_expert_xp_gain_factor
-	trait_armor_officer_xp_gain_factor
-	trait_ascari_officer_xp_gain_factor
-	trait_aviation_enthusiast_xp_gain_factor
-	trait_battleship_adherent_xp_gain_factor
 	trait_bearer_of_artillery_xp_gain_factor
-	trait_big_guns_expert_xp_gain_factor
-	trait_blockade_runner_xp_gain_factor
-	trait_blue_water_expert_xp_gain_factor
-	trait_bold_xp_gain_factor
-	trait_brave_xp_gain_factor
-	trait_brilliant_strategist_xp_gain_factor
-	trait_camouflage_expert_xp_gain_factor
-	trait_career_officer_xp_gain_factor
-	trait_caustic_personality_xp_gain_factor
-	trait_cavalry_expert_xp_gain_factor
-	trait_cavalry_leader_xp_gain_factor
-	trait_cavalry_officer_xp_gain_factor
-	trait_chief_engineer_xp_gain_factor
-	trait_combined_arms_expert_xp_gain_factor
-	trait_commando_xp_gain_factor
-	trait_concealment_expert_xp_gain_factor
-	trait_craven_xp_gain_factor
-	trait_crisis_magician_xp_gain_factor
-	trait_cruiser_captain_xp_gain_factor
-	trait_cuts_corners_xp_gain_factor
-	trait_defensive_doctrine_xp_gain_factor
-	trait_demoted_xp_gain_factor
-	trait_desert_fox_xp_gain_factor
-	trait_destroyer_leader_xp_gain_factor
-	trait_disgruntled_xp_gain_factor
-	trait_dive_bomber_xp_gain_factor
-	trait_engineer_officer_xp_gain_factor
-	trait_exiled_leader_xp_gain_factor
-	trait_expert_delegator_xp_gain_factor
-	trait_expert_improviser_xp_gain_factor
-	trait_fast_planner_xp_gain_factor
-	trait_fighter_director_xp_gain_factor
-	trait_fleet_protector_xp_gain_factor
-	trait_flight_deck_manager_xp_gain_factor
-	trait_fly_swatter_xp_gain_factor
-	trait_fortress_buster_xp_gain_factor
-	trait_gentlemanly_xp_gain_factor
-	trait_green_water_expert_xp_gain_factor
-	trait_ground_pounder_xp_gain_factor
-	trait_guerilla_fighter_xp_gain_factor
-	trait_gunnery_expert_xp_gain_factor
-	trait_harsh_leader_xp_gain_factor
-	trait_hidden_sympathies_xp_gain_factor
-	trait_hill_fighter_xp_gain_factor
-	trait_hunter_killer_xp_gain_factor
-	trait_infantry_expert_xp_gain_factor
-	trait_infantry_leader_xp_gain_factor
-	trait_infantry_officer_xp_gain_factor
-	trait_inflexible_strategist_xp_gain_factor
-	trait_inshore_fighter_xp_gain_factor
 	trait_inspirational_bagpiper_xp_gain_factor
-	trait_inspirational_leader_xp_gain_factor
-	trait_invader_ii_xp_gain_factor
-	trait_ironside_xp_gain_factor
-	trait_irregulars_officer_xp_gain_factor
-	trait_jaeger_xp_gain_factor
-	trait_jungle_rat_xp_gain_factor
-	trait_lancer_xp_gain_factor
-	trait_loading_drill_master_xp_gain_factor
-	trait_logistics_wizard_xp_gain_factor
-	trait_lone_wolf_xp_gain_factor
 	trait_loyalty_to_britain_xp_gain_factor
 	trait_loyalty_to_india_xp_gain_factor
 	trait_loyalty_to_pakistan_xp_gain_factor
-	trait_marksman_xp_gain_factor
+	trait_peasant_sympathiser_xp_gain_factor
+
+	trait_armor_officer_xp_gain_factor
+	trait_brave_xp_gain_factor
+	trait_brilliant_strategist_xp_gain_factor
+	trait_career_officer_xp_gain_factor
+	trait_cautious_xp_gain_factor
+	trait_cavalry_officer_xp_gain_factor
+	trait_engineer_officer_xp_gain_factor
+	trait_exiled_leader_xp_gain_factor
+	trait_harsh_leader_xp_gain_factor
+	trait_infantry_officer_xp_gain_factor
+	trait_inflexible_strategist_xp_gain_factor
+	trait_irregulars_officer_xp_gain_factor
 	trait_media_personality_xp_gain_factor
 	trait_militias_officer_xp_gain_factor
-	trait_mine_craft_xp_gain_factor
-	trait_motivated_xp_gain_factor
+	trait_old_guard_xp_gain_factor
+	trait_politically_connected_xp_gain_factor
+	trait_promoted_from_the_ranks_xp_gain_factor
+	trait_reckless_xp_gain_factor
+	trait_substance_abuser_xp_gain_factor
+	trait_jaeger_xp_gain_factor
+	trait_war_hero_xp_gain_factor
+
+	trait_organizer_xp_gain_factor
+	trait_cavalry_leader_xp_gain_factor
+	trait_infantry_leader_xp_gain_factor
+	trait_skilled_staffer_xp_gain_factor
+	trait_trickster_xp_gain_factor
+	trait_winter_specialist_xp_gain_factor
+	trait_engineer_xp_gain_factor
+	trait_panzer_leader_xp_gain_factor
+	trait_commando_xp_gain_factor
+	trait_desert_fox_xp_gain_factor
+	trait_swamp_fox_xp_gain_factor
+	trait_mountaineer_xp_gain_factor
+	trait_hill_fighter_xp_gain_factor
+	trait_jungle_rat_xp_gain_factor
+	trait_ranger_xp_gain_factor
+	trait_urban_assault_specialist_xp_gain_factor
 	trait_naval_invader_xp_gain_factor
+
+	trait_logistics_wizard_xp_gain_factor
+	trait_fast_planner_xp_gain_factor
+	trait_thorough_planner_xp_gain_factor
+	trait_unyielding_defender_xp_gain_factor
+	trait_aggressive_assaulter_xp_gain_factor
+	trait_offensive_doctrine_xp_gain_factor
+	trait_defensive_doctrine_xp_gain_factor
+	trait_organisational_leader_xp_gain_factor
+	trait_inspirational_leader_xp_gain_factor
+	trait_expert_delegator_xp_gain_factor
+
+	trait_panzer_expert_xp_gain_factor
+	trait_combined_arms_expert_xp_gain_factor
+	trait_cavalry_expert_xp_gain_factor
+	trait_fortress_buster_xp_gain_factor
+	trait_scavenger_xp_gain_factor
+	trait_infantry_expert_xp_gain_factor
+	trait_ambusher_xp_gain_factor
+	trait_invader_ii_xp_gain_factor
 	trait_naval_liason_xp_gain_factor
-	trait_naval_lineage_xp_gain_factor
+	trait_skirmisher_xp_gain_factor
+	trait_paratrooper_xp_gain_factor
+	trait_camouflage_expert_xp_gain_factor
+	trait_expert_improviser_xp_gain_factor
+	trait_guerilla_fighter_xp_gain_factor
+	trait_adaptable_xp_gain_factor
+	trait_winter_expert_xp_gain_factor
+
+	trait_substance_addict_xp_gain_factor
+	trait_recently_promoted_xp_gain_factor
+	trait_demoted_xp_gain_factor
+	trait_motivated_xp_gain_factor
+	trait_reassigned_xp_gain_factor
+	trait_hidden_sympathies_xp_gain_factor
+	trait_disgruntled_xp_gain_factor
+	trait_sick_xp_gain_factor
+	trait_wounded_xp_gain_factor
+
+	trait_old_guard_navy_xp_gain_factor
 	trait_navy_career_officer_xp_gain_factor
 	trait_navy_media_personality_xp_gain_factor
-	trait_offensive_doctrine_xp_gain_factor
-	trait_old_guard_xp_gain_factor
-	trait_old_guard_navy_xp_gain_factor
+	trait_bold_xp_gain_factor
+	trait_caustic_personality_xp_gain_factor
+	trait_naval_lineage_xp_gain_factor
+	trait_gentlemanly_xp_gain_factor
+	trait_battleship_adherent_xp_gain_factor
+	trait_gunnery_expert_xp_gain_factor
+	trait_aviation_enthusiast_xp_gain_factor
+	trait_cuts_corners_xp_gain_factor
+	trait_chief_engineer_xp_gain_factor
+	trait_craven_xp_gain_factor
+
+	trait_blockade_runner_xp_gain_factor
+	trait_seawolf_xp_gain_factor
+	trait_spotter_xp_gain_factor
+	trait_fleet_protector_xp_gain_factor
+	trait_superior_tactician_xp_gain_factor
+	trait_air_controller_xp_gain_factor
+	trait_ironside_xp_gain_factor
+	trait_arctic_water_expert_xp_gain_factor
+	trait_inshore_fighter_xp_gain_factor
+	trait_blue_water_expert_xp_gain_factor
+	trait_green_water_expert_xp_gain_factor
+
+	trait_concealment_expert_xp_gain_factor
+	trait_lone_wolf_xp_gain_factor
+	trait_silent_hunter_xp_gain_factor
+	trait_lancer_xp_gain_factor
+	trait_search_pattern_expert_xp_gain_factor
+	trait_destroyer_leader_xp_gain_factor
+	trait_cruiser_captain_xp_gain_factor
+	trait_mine_craft_xp_gain_factor
+	trait_flight_deck_manager_xp_gain_factor
+	trait_ground_pounder_xp_gain_factor
+	trait_big_guns_expert_xp_gain_factor
+	trait_marksman_xp_gain_factor
+	trait_safety_first_xp_gain_factor
+	trait_crisis_magician_xp_gain_factor
+	trait_torpedo_expert_xp_gain_factor
+	trait_loading_drill_master_xp_gain_factor
+	trait_hunter_killer_xp_gain_factor
+	trait_smoke_screen_expert_xp_gain_factor
+	trait_fighter_director_xp_gain_factor
+	trait_dive_bomber_xp_gain_factor
+	trait_torpedo_bomber_xp_gain_factor
+	trait_fly_swatter_xp_gain_factor
+
+	trait_operative_double_agent_xp_gain_factor
+	trait_operative_safe_cracker_xp_gain_factor
+	trait_operative_seducer_xp_gain_factor
+	trait_operative_tough_xp_gain_factor
+
 	trait_operative_commando_xp_gain_factor
 	trait_operative_demolition_expert_xp_gain_factor
-	trait_operative_double_agent_xp_gain_factor
 	trait_operative_escape_artist_xp_gain_factor
 	trait_operative_infiltrator_xp_gain_factor
 	trait_operative_linguist_xp_gain_factor
 	trait_operative_master_interrogator_xp_gain_factor
 	trait_operative_natural_orator_xp_gain_factor
-	trait_operative_safe_cracker_xp_gain_factor
-	trait_operative_seducer_xp_gain_factor
-	trait_operative_tough_xp_gain_factor
 	trait_operative_well_groomed_xp_gain_factor
-	trait_organisational_leader_xp_gain_factor
-	trait_organizer_xp_gain_factor
-	trait_panzer_expert_xp_gain_factor
-	trait_panzer_leader_xp_gain_factor
-	trait_paratrooper_xp_gain_factor
-	trait_peasant_sympathiser_xp_gain_factor
-	trait_politically_connected_xp_gain_factor
-	trait_promoted_from_the_ranks_xp_gain_factor
-	trait_ranger_xp_gain_factor
-	trait_reassigned_xp_gain_factor
-	trait_recently_promoted_xp_gain_factor
-	trait_safety_first_xp_gain_factor
-	trait_scavenger_xp_gain_factor
-	trait_search_pattern_expert_xp_gain_factor
-	trait_seawolf_xp_gain_factor
-	trait_sick_xp_gain_factor
-	trait_silent_hunter_xp_gain_factor
-	trait_skilled_staffer_xp_gain_factor
-	trait_skirmisher_xp_gain_factor
-	trait_smoke_screen_expert_xp_gain_factor
-	trait_spotter_xp_gain_factor
-	trait_substance_abuser_xp_gain_factor
-	trait_substance_addict_xp_gain_factor
-	trait_superior_tactician_xp_gain_factor
-	trait_swamp_fox_xp_gain_factor
-	trait_thorough_planner_xp_gain_factor
-	trait_torpedo_bomber_xp_gain_factor
-	trait_torpedo_expert_xp_gain_factor
-	trait_trickster_xp_gain_factor
-	trait_unyielding_defender_xp_gain_factor
-	trait_urban_assault_specialist_xp_gain_factor
-	trait_war_hero_xp_gain_factor
-	trait_winter_expert_xp_gain_factor
-	trait_winter_specialist_xp_gain_factor
-	trait_wounded_xp_gain_factor
+
 
 	
 	experience_gain_<Unit>_combat_factor	#experience_gain_-unit-_combat_factor
@@ -1494,31 +1580,16 @@
 	artillery
 	artillery_brigade
 	assault_engineer
-	ballistic_missile
-	battle_cruiser
-	battleship
 	bicycle_battalion
 	blackshirt_assault_battalion
 	bus
 	camelry
-	carrier
-	cas
 	cavalry
-	cv_cas
-	cv_fighter
-	cv_nav_bomber
-	cv_suicide_craft
-	destroyer
 	elephantry
 	engineer
-	explosive_ammo
 	fake_intel_unit
 	field_hospital
-	fighter
-	guided_missile
 	heavy_armor
-	heavy_cruiser
-	heavy_fighter
 	heavy_flame_tank
 	heavy_sp_anti_air_brigade
 	heavy_sp_artillery_brigade
@@ -1529,13 +1600,9 @@
 	helicopter_transport
 	infantry
 	irregular_infantry
-	jet_fighter
-	jet_strat_bomber
-	jet_tac_bomber
 	jungle_pioneers_support
 	land_cruiser
 	light_armor
-	light_cruiser
 	light_flame_tank
 	light_sp_anti_air_brigade
 	light_sp_artillery_brigade
@@ -1546,7 +1613,6 @@
 	maintenance_company
 	marine
 	marine_commando
-	maritime_patrol_plane
 	mechanized
 	medium_armor
 	medium_flame_tank
@@ -1564,13 +1630,10 @@
 	mot_artillery_brigade
 	mot_recon
 	mot_rocket_artillery_brigade
-	mothership
 	motorized
 	motorized_military_police
 	motorized_rocket_brigade
 	mountaineers
-	nav_bomber
-	nuclear_missile
 	paratrooper
 	penal_battalion
 	pioneer_support
@@ -1578,29 +1641,54 @@
 	ranger_battalion
 	rangers_support
 	recon
-	repair_ship
 	rocket_artillery
 	rocket_artillery_brigade
 	rocket_interceptor
-	sam_missile
-	scout_plane
 	self_propelled_super_heavy_artillery
 	signal_company
-	strat_bomber
-	strat_bomber_intercontinental
 	sturmtruppe_battalion
-	submarine
-	suicide_craft
 	super_heavy_armor
 	super_heavy_artillery
 	super_heavy_railway_gun
 	super_heavy_sp_anti_air_brigade
 	super_heavy_sp_artillery_brigade
 	super_heavy_tank_destroyer_brigade
+	winter_logistics_support
+	
+	battle_cruiser
+	battleship
+	carrier
+	destroyer
+	heavy_cruiser
+	light_cruiser
+	repair_ship
+	submarine
 	support_ship
+
+	ballistic_missile
+	cas
+	cv_cas
+	cv_fighter
+	cv_nav_bomber
+	cv_suicide_craft
+	explosive_ammo
+	fighter
+	guided_missile
+	heavy_fighter
+	jet_fighter
+	jet_strat_bomber
+	jet_tac_bomber
+	maritime_patrol_plane
+	mothership
+	nav_bomber
+	nuclear_missile
+	sam_missile
+	scout_plane
+	strat_bomber
+	strat_bomber_intercontinental
+	suicide_craft
 	tac_bomber
 	transport_plane
-	winter_logistics_support
 
 	unit_<Unit>_design_cost_factor	#unit_-unit-_design_cost_factor
 	
@@ -1726,7 +1814,7 @@
 	trait_<Trait>_xp_gain_factor	#trait_-trait-_xp_gain_factor
 
 
-### 모듈 설계 비용 - 정확한 용도도, 발동법도 모르겠음, 어지간하면 건들지 말것
+### 모듈 설계 비용 - 정확한 용도도, 작동법도 모르겠음, 어지간하면 건들지 말것
 	module_NOR_rikstanken_turret_design_cost_factor
 	module_NOR_tank_rikstanken_armor_design_cost_factor
 	module_additional_machine_guns_design_cost_factor
@@ -6067,16 +6155,6 @@
 * Number with 1 decimal places
 * **Categories**: country
 
-## amphibious_invasion
-
-* Number with 1 decimal places
-* **Categories**: naval
-	unit_leader
-
-## amphibious_invasion_against
-
-* Number with 1 decimal places
-* **Categories**: naval
 
 ## amphibious_invasion_defence
 
@@ -6351,12 +6429,6 @@
 * **Categories**: country
 	army
 
-## assign_navy_leader_cp_cost
-
-* Number with 0 decimal places
-* **Categories**: naval
-	country
-
 ## attack_bonus_against
 
 * Number with 1 decimal places
@@ -6483,20 +6555,6 @@
 
 * Number with 2 decimal places
 * **Categories**: air
-
-## carrier_sortie_hours_delay
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## carrier_traffic
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
 
 ## cas_damage_reduction
 
@@ -6662,40 +6720,11 @@
 * **Categories**: country
 	war_production
 
-## convoy_escort_efficiency
-
-* Number with 1 decimal places
-* **Categories**: naval
-	unit_leader
-	defensive
-
-## convoy_raiding_efficiency_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## convoy_retreat_speed
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-	defensive
-
 ## coordination_bonus
 
 * Number with 1 decimal places
 * **Categories**: army
 	aggressive
-
-## critical_receive_chance
-
-* Number with 1 decimal places
-* **Categories**: naval
-	unit_leader
-	country
-
 
 ## crypto_strength
 
@@ -6994,34 +7023,6 @@
 * **Categories**: unit_leader
 	military_advancements
 
-## experience_gain_navy
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	military_advancements
-
-## experience_gain_navy_factor
-
-* Number with 1 decimal places
-* **Categories**: naval
-	unit_leader
-	military_advancements
-
-## experience_gain_navy_unit
-
-* Number with 1 decimal places
-* **Categories**: naval
-	unit_leader
-	military_advancements
-
-## experience_gain_navy_unit_factor
-
-* Number with 1 decimal places
-* **Categories**: naval
-	unit_leader
-	military_advancements
-
 ## experience_loss_factor
 
 * Number with 1 decimal places
@@ -7078,12 +7079,6 @@
 * Number with 0 decimal places
 * **Categories**: country
 
-## female_random_admiral_chance
-
-* Number with 0 decimal places
-* **Categories**: naval
-	country
-
 ## female_random_army_leader_chance
 
 * Number with 0 decimal places
@@ -7111,13 +7106,6 @@
 
 * Number with 0 decimal places
 * **Categories**: country
-
-## fighter_sortie_efficiency
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
 
 ## floating_harbor_duration
 
@@ -7230,11 +7218,6 @@
 * **Categories**: country
 	defensive
 
-## headquarters_experience_gain_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-
 ## heat_attrition
 
 * Number with 1 decimal places
@@ -7340,17 +7323,6 @@
 
 * Number with 0 decimal places
 * **Categories**: intelligence_agency
-
-## invasion_preparation
-
-* Number with 1 decimal places
-* **Categories**: naval
-	unit_leader
-
-## invasion_preparation_against
-
-* Number with 1 decimal places
-* **Categories**: naval
 
 ## join_faction_tension
 
@@ -7662,10 +7634,6 @@
 * Number with 2 decimal places
 * **Categories**: country
 
-## max_organisation
-
-* Number with 0 decimal places
-* **Categories**: naval
 
 ## max_planning
 
@@ -7778,20 +7746,11 @@
 * Number with 0 decimal places
 * **Categories**: air
 
-## mines_planting_by_fleets_factor
-
-* Number with 0 decimal places
-* **Categories**: naval
 
 ## mines_sweeping_by_air_factor
 
 * Number with 0 decimal places
 * **Categories**: air
-
-## mines_sweeping_by_fleets_factor
-
-* Number with 0 decimal places
-* **Categories**: naval
 
 ## minimum_training_level
 
@@ -8098,139 +8057,10 @@
 * Number with 0 decimal places
 * **Categories**: army
 
-## naval_accidents_chance
-
-* Number with 2 decimal places
-* **Categories**: naval
-
-## naval_attrition
-
-* Number with 2 decimal places
-* **Categories**: naval
-
-## naval_commando_raid_distance
-
-* Number with 0 decimal places
-* **Categories**: naval
-
-## naval_coordination
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-
-## naval_critical_effect_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-
-## naval_critical_score_chance_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## naval_critical_score_chance_factor_against
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## naval_damage_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## naval_defense_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-
-## naval_detection
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-
-## naval_enemy_fleet_size_ratio_penalty_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## naval_enemy_positioning_in_initial_attack
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## naval_enemy_retreat_chance
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-
 ## naval_equipment_upgrade_xp_cost
 
 * Number with 0 decimal places
 * **Categories**: country
-
-## naval_has_potf_in_combat_attack
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## naval_has_potf_in_combat_defense
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## naval_heavy_gun_hit_chance_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## naval_hit_chance
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## naval_hit_chance_against
-
-* Number with 0 decimal places
-* **Categories**: naval
-
-## naval_invasion_capacity
-
-* Number with 0 decimal places
-* **Categories**: naval
-
-## naval_invasion_division_cap
-
-* Number with 0 decimal places
-* **Categories**: naval
-
-## naval_invasion_penalty
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
 
 ## naval_invasion_plan_cap
 
@@ -8253,102 +8083,6 @@
 * Number with 1 decimal places
 * **Categories**: unit_leader
 
-## naval_light_gun_hit_chance_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## naval_mine_hit_chance
-
-* Number with 2 decimal places
-* **Categories**: naval
-
-## naval_mines_damage_factor
-
-* Number with 0 decimal places
-* **Categories**: naval
-
-## naval_mines_effect_reduction
-
-* Number with 0 decimal places
-* **Categories**: naval
-
-## naval_mission_xp_factor
-
-* Number with 3 decimal places
-* **Categories**: naval
-
-## naval_morale
-
-* Number with 1 decimal places
-* **Categories**: naval
-	unit_leader
-
-## naval_morale_factor
-
-* Number with 1 decimal places
-* **Categories**: naval
-	unit_leader
-
-## naval_night_attack
-
-* Number with 1 decimal places
-* **Categories**: naval
-	aggressive
-
-## naval_retreat_chance
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-	defensive
-
-## naval_retreat_chance_after_initial_combat
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-	defensive
-
-## naval_retreat_speed
-
-* Number with 1 decimal places
-* **Categories**: naval
-	unit_leader
-	defensive
-
-## naval_retreat_speed_after_initial_combat
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-	defensive
-
-## naval_ship_recovery_chance
-
-* Number with 0 decimal places
-* **Categories**: naval
-
-## naval_ship_recovery_chance_factor
-
-* Number with 0 decimal places
-* **Categories**: naval
-
-## naval_speed_factor
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-
-## naval_strike
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
 ## naval_strike_agility_factor
 
 * Number with 0 decimal places
@@ -8363,34 +8097,6 @@
 
 * Number with 0 decimal places
 * **Categories**: air
-
-## naval_supply_consumption_factor
-
-* Number with 1 decimal places
-* **Categories**: naval
-	defensive
-	aggressive
-
-## naval_torpedo_cooldown_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## naval_torpedo_damage_reduction_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	defensive
-
-## naval_torpedo_enemy_critical_chance_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	defensive
 
 ## naval_torpedo_hit_chance_factor
 
@@ -8411,11 +8117,6 @@
 * **Categories**: naval
 	unit_leader
 	aggressive
-
-## navy_advisor_cost_factor
-
-* Number with 0 decimal places
-* **Categories**: naval
 
 ## navy_anti_air_attack
 
@@ -8475,21 +8176,6 @@
 * **Categories**: naval
 	unit_leader
 	aggressive
-
-## navy_casualty_on_hit
-
-* Number with 2 decimal places
-* **Categories**: naval
-
-## navy_casualty_on_sink
-
-* Number with 2 decimal places
-* **Categories**: naval
-
-## navy_fuel_consumption_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
 
 ## navy_intel_decryption_bonus
 
@@ -8619,11 +8305,6 @@
 	unit_leader
 	defensive
 
-## navy_visibility
-
-* Number with 2 decimal places
-* **Categories**: naval
-
 ## navy_weather_penalty
 
 * Number with 2 decimal places
@@ -8633,11 +8314,6 @@
 
 * Number with 0 decimal places
 * **Categories**: intelligence_agency
-
-## night_spotting_chance
-
-* Number with 1 decimal places
-* **Categories**: naval
 
 ## no_supply_grace
 
@@ -9266,11 +8942,6 @@
 * **Categories**: naval
 	unit_leader
 
-## spotting_chance_against
-
-* Number with 0 decimal places
-* **Categories**: naval
-
 ## stability_factor
 
 * Number with 2 decimal places
@@ -9446,11 +9117,6 @@
 * Number with 2 decimal places
 * **Categories**: army
 	aggressive
-
-## transport_capacity
-
-* Number with 0 decimal places
-* **Categories**: naval
 
 ## truck_attrition
 

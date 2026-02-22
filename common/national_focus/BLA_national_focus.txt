@@ -1617,6 +1617,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_dynamic_modifier = { modifier = BLA_navy }
 		}
 	}
@@ -1638,6 +1639,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12001"
+			navy_experience = 50
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = { 
+				BLA_navy_naval_mastery_gain_factor = 0.10
+				tooltip = naval_mastery_gain_factor_tt
+			}
 		}
 	}
 	
@@ -1658,6 +1669,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12001"
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
 		}
 	}
 	
@@ -1685,7 +1705,7 @@ focus_tree = {
 				DYNMOD = BLA_navy
 			}
 			add_to_variable = { 
-				BLA_navy_naval_mastery_gain_factor = -0.1
+				BLA_navy_naval_mastery_gain_factor = 0.10
 				tooltip = naval_mastery_gain_factor_tt
 			}
 			custom_effect_tooltip = {
@@ -1705,7 +1725,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = BLA_12001
-		x = 3
+		x = 4
 		y = 1
 
 		ai_will_do = { factor = 50 }
@@ -1715,7 +1735,50 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12001"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12005"
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = { #툴팁용
+				BLA_navy_build_cost_ic_convoy = -0.10
+				tooltip = build_cost_ic_convoy_tt
+			}
 		}
 	}
 	
@@ -1730,28 +1793,18 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_12005 }
-
+		available = { 
+			has_war_with_major = yes
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12006"
-			random_owned_controlled_state = {
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 50
+				producer = BLA
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -1770,6 +1823,24 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			unlock_decision_category_tooltip = navy_convoy_decision_category
 			hidden_effect = {
 				set_country_flag = navy_convoy_decision_flag
@@ -1783,7 +1854,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = BLA_12001
-		x = 5
+		x = 6
 		y = 1
 
 		ai_will_do = { factor = 50 }
@@ -1794,6 +1865,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12001"
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
 		}
 	}
 
@@ -1807,7 +1887,7 @@ focus_tree = {
 		y = 1
 
 		ai_will_do = { factor = 50 }
-		prerequisite = { focus = BLA_12004 }
+		prerequisite = { focus = BLA_12001 }
 		mutually_exclusive = { focus = BLA_12201 }
 
 
@@ -1815,6 +1895,22 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12101"
+			add_tech_bonus = {
+				name = BLA_12101
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+				category = cv_tech
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
 		}
 	}
 
@@ -1828,7 +1924,7 @@ focus_tree = {
 		y = 1
 
 		ai_will_do = { factor = 50 }
-		prerequisite = { focus = BLA_12004 }
+		prerequisite = { focus = BLA_12001 }
 		mutually_exclusive = { focus = BLA_12101 }
 
 
@@ -1841,7 +1937,16 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				category = dd_tech
-				category = ca_tech
+				category = ss_tech
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
 			}
 		}
 	}
@@ -1866,6 +1971,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12102"
 			BLA_design_abydos = yes
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_unit_battleship_design_cost_factor = -0.10
+				tooltip = unit_battleship_design_cost_factor_tt
+			}
 		}
 	}
 
@@ -1889,6 +2002,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12102"
 			BLA_design_kivotos = yes
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_unit_carrier_design_cost_factor = -0.10
+				tooltip = unit_carrier_design_cost_factor_tt
+			}
 		}
 	}
 
@@ -1912,6 +2033,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12202"
 			BLA_design_kivboat = yes
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_unit_submarine_design_cost_factor = -0.10
+				tooltip = unit_submarine_design_cost_factor_tt
+			}
 		}
 	}
 
@@ -1935,6 +2064,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12203"
 			BLA_design_rabbit = yes
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_unit_destroyer_design_cost_factor = -0.10
+				tooltip = unit_destroyer_design_cost_factor_tt
+			}
 		}
 	}
 	
@@ -1957,6 +2094,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12009"
 			BLA_design_gourmet_research_society = yes
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
 		}
 	}
 
@@ -1979,6 +2125,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12010"
 			BLA_design_haruhabara = yes
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
 		}
 	}
 
@@ -1999,64 +2154,61 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12104"
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_naval_mastery_gain_factor = 0.1
+				tooltip = naval_mastery_gain_factor_tt
+			}
 			if = {
 				limit = { has_completed_focus = BLA_12102 }
-				custom_effect_tooltip = {
-					localization_key = tooltip_modify_dynmod
-					DYNMOD = BLA_navy
-				}
 				add_to_variable = { #툴팁용
 					BLA_navy_build_cost_ic_capital_ship = -0.1
 					tooltip = navy_capital_ship_attack_factor_tt
 				}
 				add_to_variable = { 
-					BLA_navy_naval_capital_ship_attack_factor = 0.1
-					tooltip = naval_capital_ship_attack_factor_tt
+					BLA_navy_capital_ships_track_mastery_gain_factor = 0.1
+					tooltip = capital_ships_track_mastery_gain_factor_tt
 				}
 				add_to_variable = { 
-					BLA_navy_naval_capital_ship_defence_factor = 0.1
+					BLA_navy_navy_capital_ship_attack_factor = 0.1
 					tooltip = naval_capital_ship_defence_factor_tt
+				}
+				add_to_variable = { 
+					BLA_navy_navy_capital_ship_defence_factor= 0.1
+					tooltip = navy_capital_ship_defence_factor_tt
 				}
 				hidden_effect = { add_ideas = BLA_12102_idea }
 			}
 			else_if = {
 				limit = { has_completed_focus = BLA_12103 }
-				custom_effect_tooltip = {
-					localization_key = tooltip_modify_dynmod
-					DYNMOD = BLA_navy
-				}
 				add_to_variable = { #툴팁용
 					BLA_navy_build_cost_ic_carrier = -0.1
 					tooltip = build_cost_ic_carrier_tt
 				}
 				add_to_variable = { 
-					BLA_navy_naval_carrier_attack_factor = 0.1
-					tooltip = naval_carrier_attack_factor_tt
+					BLA_navy_carriers_track_mastery_gain_factor = 0.1
+					tooltip = carriers_track_mastery_gain_factor_tt
 				}
 				add_to_variable = { 
-					BLA_navy_naval_carrier_defence_factor = 0.1
-					tooltip = naval_carrier_defence_factor_tt
+					BLA_navy_navy_carrier_air_agility_factor = 0.1
+					tooltip = navy_carrier_air_agility_factor_tt
+				}
+				add_to_variable = { 
+					BLA_navy_navy_carrier_air_attack_factor = 0.1
+					tooltip = navy_carrier_air_attack_factor_tt
+				}
+				add_to_variable = { 
+					BLA_navy_navy_carrier_air_targetting_factor = 0.1
+					tooltip = navy_carrier_air_targetting_factor_tt
 				}
 				hidden_effect = { add_ideas = BLA_12103_idea }
 			}
 			else = {
+				custom_effect_tooltip = generic_line_break_tt
 				custom_effect_tooltip = BLA_12X04_tt
-				custom_effect_tooltip = {
-					localization_key = tooltip_modify_dynmod
-					DYNMOD = BLA_navy
-				}
-				add_to_variable = { #툴팁용
-					BLA_navy_build_cost_ic_carrier = -0.1
-					tooltip = build_cost_ic_carrier_tt
-				}
-				add_to_variable = { 
-					BLA_navy_naval_carrier_attack_factor = 0.1
-					tooltip = naval_carrier_attack_factor_tt
-				}
-				add_to_variable = { 
-					BLA_navy_naval_carrier_defence_factor = 0.1
-					tooltip = naval_carrier_defence_factor_tt
-				}
 			}
 		}
 	}
@@ -2078,12 +2230,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12204"
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_naval_mastery_gain_factor = 0.1
+				tooltip = naval_mastery_gain_factor_tt
+			}
 			if = {
 				limit = { has_completed_focus = BLA_12202 }
-				custom_effect_tooltip = {
-					localization_key = tooltip_modify_dynmod
-					DYNMOD = BLA_navy
-				}
 				add_to_variable = { #툴팁용
 					BLA_navy_build_cost_ic_submarine = -0.05
 					tooltip = build_cost_ic_submarine_tt
@@ -2092,10 +2248,6 @@ focus_tree = {
 			}
 			else_if = {
 				limit = { has_completed_focus = BLA_12203 }
-				custom_effect_tooltip = {
-					localization_key = tooltip_modify_dynmod
-					DYNMOD = BLA_navy
-				}
 				add_to_variable = { #툴팁용
 					BLA_navy_build_cost_ic_screen_ship = -0.05
 					tooltip = build_cost_ic_screen_ship_tt
@@ -2103,6 +2255,7 @@ focus_tree = {
 				hidden_effect = { add_ideas = BLA_12203_idea }
 			}
 			else = {
+				custom_effect_tooltip = generic_line_break_tt
 				custom_effect_tooltip = BLA_12X04_tt
 			}
 		}
@@ -2184,6 +2337,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12013"
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
 		}
 	}
 
@@ -2205,6 +2367,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12014"
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
 		}
 	}
 
@@ -2226,6 +2397,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12015"
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
 		}
 	}
 
@@ -2246,6 +2426,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12016"
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
 		}
 	}
 
@@ -2290,7 +2479,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BLA_12018 #봄베이 상륙 훈련
+		id = BLA_12018 #뭄바이 상륙 훈련
 		icon = GFX_focus_generic_naval_invasion
 		cost = 5
 
@@ -2305,6 +2494,22 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12018"
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
+			add_to_variable = {
+				BLA_navy_naval_invasion_penalty = -0.10
+				tooltip = naval_invasion_penalty_tt
+			}
+			add_to_variable = {
+				BLA_navy_amphibious_invasion = 0.10
+				tooltip = amphibious_invasion_tt
+			}
 		}
 	}
 
@@ -2360,7 +2565,7 @@ focus_tree = {
 				localization_key = tooltip_modify_dynmod
 				DYNMOD = BLA_navy
 			}
-			add_to_variable = {
+			add_to_variable = { #툴팁용
 				BLA_navy_build_cost_ic_submarine = -0.20
 				tooltip = build_cost_ic_submarine_tt
 			}
@@ -2384,6 +2589,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12021"
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
 		}
 	}
 
@@ -2403,6 +2616,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12022"
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
 		}
 	}
 
@@ -2422,6 +2643,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12023"
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
 		}
 	}
 
@@ -2442,6 +2671,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12024"
 			BLA_design_brown_bear = yes
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = BLA_navy
+			}
+			add_to_variable = {
+				BLA_navy_transport_capacity = -0.10
+				tooltip = transport_capacity_tt
+			}
 		}
 	}
 
@@ -2451,7 +2689,7 @@ focus_tree = {
 		icon = GFX_focus_BLA_20001
 		cost = 5
 
-		x = 33
+		x = 34
 		y = 0
 
 		ai_will_do = { factor = 50 }
@@ -3164,7 +3402,7 @@ focus_tree = {
 		id = BLA_31001 #선생 체제
 		icon = GFX_focus_BLA_31001
 		cost = 0
-		x = 53
+		x = 54
 		y = 0
 
 		ai_will_do = { factor = 50 }
@@ -3184,7 +3422,7 @@ focus_tree = {
 		icon = GFX_focus_BLA_32001
 		cost = 0
 
-		x = 61
+		x = 62
 		y = 0
 
 		ai_will_do = { factor = 50 }
@@ -3226,7 +3464,7 @@ focus_tree = {
 		icon = GFX_focus_ioi_generic_election_1
 		cost = 0
 
-		x = 66
+		x = 67
 		y = 0
 
 		ai_will_do = { factor = 50 }
