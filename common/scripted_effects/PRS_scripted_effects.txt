@@ -162,7 +162,7 @@ PRS_stop_rearmament = {
 			}
 		}
 		PRS_pay_back_mefo_bills = yes
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = PRS_replace_mefo_bills_with_recovering_economy_tt
 		add_to_variable = {
 			GER_mefo_bills_civilian_intel_to_others = 0.25
@@ -904,7 +904,7 @@ PRS_add_kanade_effects = {
 		add_ideas = PRS_kanade_chief_of_german_police
 	}
 
-	custom_effect_tooltip = generic_skip_one_line_tt
+	custom_effect_tooltip = generic_line_break_tt
 
 	country_event = PRS_inner_circle_kanade.00
 }

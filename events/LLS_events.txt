@@ -16,7 +16,7 @@ country_event = {
 		add_war_support = 0.05
 		IF = {
 			limit = { has_country_flag = LLS_inflicted_loss_nr_3 }
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			effect_tooltip = {
 				add_timed_idea = {
 					idea = LLS_day_of_infamy_3 
@@ -26,7 +26,7 @@ country_event = {
 		}
 		ELSE_IF = {
 			limit = { has_country_flag = LLS_inflicted_loss_nr_2 }
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			effect_tooltip = {
 				add_timed_idea = {
 					idea = LLS_day_of_infamy_2 
@@ -36,7 +36,7 @@ country_event = {
 		}
 		ELSE_IF = {
 			limit = { has_country_flag = LLS_inflicted_loss_nr_1 }
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			effect_tooltip = {
 				add_timed_idea = {
 					idea = LLS_day_of_infamy_1 

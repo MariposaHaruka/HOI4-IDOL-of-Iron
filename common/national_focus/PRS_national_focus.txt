@@ -1223,7 +1223,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_11007"
 			add_stability = 0.05
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			random_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -1458,7 +1458,7 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			add_tech_bonus = {
 				name = GER_wirtschaftswunder
@@ -1467,7 +1467,7 @@ focus_tree = {
 				category = industry
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			custom_effect_tooltip = GER_replace_recovering_economy_with_wirtschaftswunder_tt
 			add_to_variable = { 
@@ -5400,20 +5400,21 @@ focus_tree = {
 				}
 				custom_effect_tooltip = GER_unlock_trade_interdiction_tt
 			}
-
 			custom_effect_tooltip = generic_line_break_tt
-
-			custom_effect_tooltip = PRS_navy_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_navy
+			}
 			add_to_variable = { 
-				GER_military_naval_defense_factor = 0.05
+				PRS_navy_naval_defense_factor = 0.05
 				tooltip = naval_defense_factor_tt
 			}
 			add_to_variable = { 
-				GER_military_naval_hit_chance = 0.05
+				PRS_navy_naval_hit_chance = 0.05
 				tooltip = naval_hit_chance_tt
 			}
 			add_to_variable = { 
-				GER_military_screening_efficiency = 0.1
+				PRS_navy_screening_efficiency = 0.1
 				tooltip = screening_efficiency_tt
 			}
 
@@ -5702,23 +5703,23 @@ focus_tree = {
 
 		completion_reward = {
 			add_command_power = 25
-			custom_effect_tooltip = generic_line_break_tt
-			#custom_effect_tooltip = PRS_navy_tt
-			#add_to_variable = { 
-			#	GER_military_navy_max_range_factor = 0.1
-			#	tooltip = navy_max_range_factor_tt
-			#}
-			custom_effect_tooltip = generic_line_break_tt
 			add_doctrine_cost_reduction = {
 				name = GER_re_establish_the_seekriegsleitung
 				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
-
-			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = available_chief_of_navy
 			#show_ideas_tooltip = GER_rolf_carls
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_navy
+			}
+			add_to_variable = { 
+				PRS_navy_max_range_factor = 0.1
+				tooltip = navy_max_range_factor_tt
+			}
 		}
 	}
 	focus = {
@@ -6018,11 +6019,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: PRS_23016"
-			#custom_effect_tooltip = PRS_navy_tt
-			#add_to_variable = { 
-			#	GER_military_navy_max_range_factor = 0.1
-			#	tooltip = navy_max_range_factor_tt
-			#}
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_navy
+			}
+			add_to_variable = { 
+				PRS_navy_max_range_factor = 0.1
+				tooltip = navy_max_range_factor_tt
+			}
 			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = GER_naval_bases_on_atlantic_islands_tt
 			every_state = {
@@ -6294,15 +6298,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			#custom_effect_tooltip = PRS_navy_tt
-			#add_to_variable = { 
-			#	GER_military_naval_defense_factor = 0.05
-			#	tooltip = naval_defense_factor_tt
-			#}
-			#add_to_variable = { 
-			#	GER_military_convoy_raiding_efficiency_factor = 0.05
-			#	tooltip = convoy_raiding_efficiency_factor_tt
-			#}
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_navy
+			}
+			add_to_variable = { 
+				PRS_navy_naval_defense_factor = 0.05
+				tooltip = naval_defense_factor_tt
+			}
+			add_to_variable = { 
+				PRS_navy_convoy_raiding_efficiency_factor = 0.05
+				tooltip = convoy_raiding_efficiency_factor_tt
+			}
 			custom_effect_tooltip = GER_submarine_max_speed_small_tt
 			hidden_effect = {
 				add_equipment_bonus = {

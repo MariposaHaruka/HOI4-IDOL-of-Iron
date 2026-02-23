@@ -1641,7 +1641,7 @@ focus_tree = {
 			}
 
 			add_ideas = TOH_transformation_of_nature
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 
 			217 = {	
 				add_building_construction = {
@@ -1723,7 +1723,7 @@ focus_tree = {
 				specialization = specialization_nuclear
 				value = 0.75
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			add_tech_bonus = {
 				name = TOH_13002
 				bonus = 0.5
@@ -1753,14 +1753,14 @@ focus_tree = {
 				specialization = specialization_air
 				value = 0.75
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			add_tech_bonus = {
 				name = TOH_13003
 				bonus = 0.5
 				uses = 1 # was 2
 				category = rocketry
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			#add_ideas = TOH_no_time_for_peace_idea
 		}
 	}
@@ -3073,9 +3073,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_30002"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = TOH_30002_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			add_political_power = 150
 		}
 	}
@@ -3096,9 +3096,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_30002"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			unlock_decision_category_tooltip = TOH_stavka_category
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			add_command_power = 20
 		}
 	}
@@ -3553,7 +3553,7 @@ focus_tree = {
 				idea = TOH_desperate_measures
 				days = 365
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = SOV_desperate_measures_decisions_unlocked_tt
 		}
 	}
@@ -3915,7 +3915,7 @@ focus_tree = {
 				unlock_tactic = tactic_masterful_blitz
 			}
 			custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			add_breakthrough_progress = {
 				specialization = specialization_land
 				value = 0.25
@@ -4514,7 +4514,7 @@ focus_tree = {
 				set_state_flag = TOH_naval_bases_reinforced_flag
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			
 			custom_effect_tooltip = TOH_reinforce_western_naval_bases_other_states_tt
 
@@ -4646,7 +4646,7 @@ focus_tree = {
 					}
 					set_state_flag = TOH_naval_bases_reinforced_flag
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 			if = { #ARKHANGELSK - Improved naval base + Severodvinsk Naval Base + AA + coastal fort
 				limit = {
@@ -4743,7 +4743,7 @@ focus_tree = {
 					}
 					set_state_flag = TOH_naval_bases_reinforced_flag
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 			if = { #SEVASTOPOL (CRIMEA) - Extra AA + coastal fort
 				limit = {
@@ -4763,7 +4763,7 @@ focus_tree = {
 					}
 					set_state_flag = TOH_naval_bases_reinforced_flag
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 			if = { #ROSTOV - Improved naval base + AA + coastal fort
 				limit = {
@@ -4789,7 +4789,7 @@ focus_tree = {
 					}
 					set_state_flag = TOH_naval_bases_reinforced_flag
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 			if = { #KRASNODAR - Improved naval base + AA + coastal fort
 				limit = {
@@ -4871,7 +4871,7 @@ focus_tree = {
 					}
 					set_state_flag = TOH_naval_bases_reinforced_flag
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_line_break_tt
 			}
 			if = { #VLADIVOSTOK - Improved naval base + AA + coastal fort
 				limit = { has_full_control_of_state = 409 }
@@ -5114,7 +5114,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_34013"
 			add_ideas = TOH_mine_warfare
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			add_tech_bonus = {
 				name = TOH_34013
 				bonus = 1.0
@@ -7099,7 +7099,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_43026"
 			custom_effect_tooltip = TOH_43026_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			hidden_effect = {
 				#news_event = { id = rusnews.22 days = 1 }
 				#country_event = russia.321 #Operation Arkhangel

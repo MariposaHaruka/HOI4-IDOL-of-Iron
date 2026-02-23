@@ -188,3 +188,19 @@ defined_text = {
 		localization_key = BLA_kivotos_colony_state
 	}
 }
+
+#다이나믹 모디파이어
+defined_text = {
+	name = GetBLANavyPath
+	text = {
+		trigger = { has_completed_focus = BLA_12101 }
+		localization_key = NAVY_RIO_PATH
+	}
+	text = {
+		trigger = { has_completed_focus = BLA_12201 }
+		localization_key = NAVY_HIFUMI_PATH
+	}
+	text = {
+		localization_ket = EMPTY
+	}
+}

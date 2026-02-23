@@ -69,7 +69,7 @@ faction_goal_undo_versailles = {
 			}
 			add_faction_initiative = 1
 		}
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		every_faction_member = { 
 			tooltip = INFLUENCE_ABOVE_30_PERCENT
 			visible_when_empty = yes
@@ -120,7 +120,7 @@ faction_goal_secure_european_continent = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		every_faction_member = { 
 			tooltip = INFLUENCE_ABOVE_30_PERCENT
 			visible_when_empty = yes
@@ -174,7 +174,7 @@ faction_goal_secure_north_africa = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 500
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = INFLUENCE_TOP_TWO
 		every_faction_member = {
 			limit = {
@@ -227,7 +227,7 @@ faction_goal_high_seas_fleet = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
 		every_collection_element = {
@@ -465,7 +465,7 @@ faction_goal_guardians_of_peace = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_stability = 0.05
@@ -553,10 +553,10 @@ faction_goal_control_the_chinese_coast = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		every_collection_element = {
 			input = {
 				input = game:scope
@@ -748,7 +748,7 @@ faction_goal_subjugate_the_faction = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
 		every_collection_element = {
@@ -801,7 +801,7 @@ faction_goal_control_the_chinese_capitals = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
 		every_collection_element = {
@@ -913,7 +913,7 @@ faction_goal_indifference_is_a_threat = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 500
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_political_power = 50
@@ -969,10 +969,10 @@ faction_goal_undoing_brest_litowsk = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 500
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			army_experience = 50
@@ -1024,7 +1024,7 @@ faction_goal_the_two_seas = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 50 
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
 	}
@@ -1067,7 +1067,7 @@ faction_goal_a_large_faction = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 200
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
 	}
@@ -1098,7 +1098,7 @@ faction_goal_marine_corps = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		every_collection_element = {
 			input = {
 				input = game:scope
@@ -1128,7 +1128,7 @@ faction_goal_marine_corps = {
 				add_trait = { trait = invader }
 			}
 		}
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_tech_bonus = {
@@ -1179,7 +1179,7 @@ faction_goal_submarine_force = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		every_collection_element = {
 			input = {
 				input = game:scope
@@ -1214,7 +1214,7 @@ faction_goal_submarine_force = {
 				track = submarines
 			}
 		}
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_tech_bonus = {
@@ -1267,7 +1267,7 @@ faction_goal_convoy_escort_force = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		every_collection_element = {
 			input = {
 				input = game:scope
@@ -1303,7 +1303,7 @@ faction_goal_convoy_escort_force = {
 				track = screens
 			}
 		}
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_tech_bonus = {
@@ -1352,7 +1352,7 @@ faction_goal_air_superiority = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		every_collection_element = {
 			input = {
 				input = game:scope
@@ -1373,7 +1373,7 @@ faction_goal_air_superiority = {
 				track = fighter_aircraft
 			}
 		}
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_tech_bonus = {
@@ -1436,7 +1436,7 @@ faction_goal_industrial_expansion = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 200
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		every_faction_member = {
 			tooltip = AT_LEAST_50_CIVS
 			visible_when_empty = yes 
@@ -1499,7 +1499,7 @@ faction_goal_industrial_research = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 200
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		every_faction_member = {
 			tooltip = INFLUENCE_ABOVE_30_PERCENT
 			visible_when_empty = yes 
@@ -1560,7 +1560,7 @@ faction_goal_a_military_base = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 200
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		every_faction_member = {
 			tooltip = AT_LEAST_50_MILS
 			visible_when_empty = yes 
@@ -1624,7 +1624,7 @@ faction_goal_aggressive_defense = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS_INFLICTED_250K_CASUALTIES
 		every_faction_member = {
 			limit = {
@@ -1638,7 +1638,7 @@ faction_goal_aggressive_defense = {
 			}
 			add_faction_initiative = 1
 		}
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			army_experience = 50
@@ -1691,7 +1691,7 @@ faction_goal_control_mexican_oil = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = {
 			visible_when_empty = yes
@@ -1812,7 +1812,7 @@ faction_goal_control_curacao_oil = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_allied_country = {
 			visible_when_empty = yes
@@ -1921,7 +1921,7 @@ faction_goal_control_venezuelan_oil = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_allied_country = { 
 			visible_when_empty = yes
@@ -2038,7 +2038,7 @@ faction_goal_control_guyanan_bauxite = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_allied_country = { 
 			visible_when_empty = yes
@@ -2130,7 +2130,7 @@ faction_goal_control_suriname_bauxite = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_allied_country = { 
 			visible_when_empty = yes
@@ -2223,7 +2223,7 @@ faction_goal_control_lappland_metals = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -2354,7 +2354,7 @@ faction_goal_control_ploiesti_oil_fields = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -2464,7 +2464,7 @@ faction_goal_control_baku_oil_fields = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -2585,7 +2585,7 @@ faction_goal_control_iraqi_oil = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -2706,7 +2706,7 @@ faction_goal_control_persian_oil = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -2827,7 +2827,7 @@ faction_goal_control_chinese_metals = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -2965,7 +2965,7 @@ faction_goal_control_malayan_riches = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -3128,7 +3128,7 @@ faction_goal_control_indonesian_riches = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -3287,7 +3287,7 @@ faction_goal_control_newfoundland_bases = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -3417,7 +3417,7 @@ faction_goal_control_bermuda = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -3548,7 +3548,7 @@ faction_goal_control_bahamas_bases = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -3708,7 +3708,7 @@ faction_goal_control_panama_canal = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -3831,7 +3831,7 @@ faction_goal_control_trinidad = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -3967,7 +3967,7 @@ faction_goal_control_azores = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -4105,7 +4105,7 @@ faction_goal_control_iceland = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -4241,7 +4241,7 @@ faction_goal_control_faroe_islands = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -4377,7 +4377,7 @@ faction_goal_control_narvik = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -4478,7 +4478,7 @@ faction_goal_control_danish_belts = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -4614,7 +4614,7 @@ faction_goal_control_brittany_bases = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -4709,7 +4709,7 @@ faction_goal_control_gibraltar = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -4816,7 +4816,7 @@ faction_goal_control_malta = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -4942,7 +4942,7 @@ faction_goal_control_crete = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -5070,7 +5070,7 @@ faction_goal_control_cyprus = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -5204,7 +5204,7 @@ faction_goal_control_bosporus = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -5336,7 +5336,7 @@ faction_goal_control_dardanelles = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -5461,7 +5461,7 @@ faction_goal_control_suez_canal = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -5581,7 +5581,7 @@ faction_goal_control_gulf_of_aden_bases = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -5700,7 +5700,7 @@ faction_goal_control_strait_of_hormuz = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -5875,7 +5875,7 @@ faction_goal_control_ceylon = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -5999,7 +5999,7 @@ faction_goal_control_singapore = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -6123,7 +6123,7 @@ faction_goal_control_manila = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -6223,7 +6223,7 @@ faction_goal_control_okinawa = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -6316,7 +6316,7 @@ faction_goal_control_iwo_jima = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -6411,7 +6411,7 @@ faction_goal_control_caroline_islands = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -6546,7 +6546,7 @@ faction_goal_control_guadalcanal = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -6676,7 +6676,7 @@ faction_goal_control_wake_island = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -6812,7 +6812,7 @@ faction_goal_control_midway_island = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -6948,7 +6948,7 @@ faction_goal_control_hawaii = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes
@@ -7091,7 +7091,7 @@ faction_goal_control_attu_island = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = { 
 			visible_when_empty = yes

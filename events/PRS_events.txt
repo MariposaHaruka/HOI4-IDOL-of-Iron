@@ -291,7 +291,7 @@ country_event = {
 		
 		GER_remove_replaced_advisor_1_effects = yes
 
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 
 		set_variable = { PRS_ascended_advisor_1 = PRS_ascending_advisor }
 		GER_add_replacing_advisor_effects = yes
@@ -318,7 +318,7 @@ country_event = {
 
 		GER_remove_replaced_advisor_2_effects = yes
 
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 
 		set_variable = { PRS_ascended_advisor_2 = PRS_ascending_advisor }
 		GER_add_replacing_advisor_effects = yes
@@ -345,7 +345,7 @@ country_event = {
 
 		GER_remove_replaced_advisor_3_effects = yes
 
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 
 		set_variable = { PRS_ascended_advisor_3 = PRS_ascending_advisor }
 		GER_add_replacing_advisor_effects = yes
@@ -630,7 +630,7 @@ country_event = {
 			GER_remove_replaced_advisor_1_effects = yes
 		}
 
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 
 		hidden_effect = {
 			#Cleaning vars / flags / etc
@@ -806,7 +806,7 @@ country_event = {
 			GER_remove_replaced_advisor_2_effects = yes
 		}
 
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 
 		hidden_effect = {
 			#Cleaning vars / flags / etc
@@ -982,7 +982,7 @@ country_event = {
 			GER_remove_replaced_advisor_3_effects = yes
 		}
 
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 
 		hidden_effect = {
 			#Cleaning vars / flags / etc
@@ -1118,7 +1118,7 @@ country_event = {
 			}
 		}
 
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 
 		if = {
 			limit = {
@@ -1130,7 +1130,7 @@ country_event = {
 				CHARACTER = PRS_ootori_emu
 				FOCUS = PRS_31017
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			
 			hidden_effect = {
 				deactivate_shine_on_focus = PRS_31017
@@ -1147,7 +1147,7 @@ country_event = {
 				CHARACTER = PRS_kamishiro_rui
 				FOCUS = PRS_31017
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			
 			hidden_effect = {
 				deactivate_shine_on_focus = PRS_31017
@@ -1164,7 +1164,7 @@ country_event = {
 				CHARACTER = PRS_tenma_tsukasa
 				FOCUS = GER_plenipotentiary_of_the_four_year_plan
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = generic_line_break_tt
 			
 			hidden_effect = {
 				deactivate_shine_on_focus = GER_plenipotentiary_of_the_four_year_plan
@@ -1246,7 +1246,7 @@ country_event = {
 				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
 					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
 					GER_remove_replaced_advisor_1_effects = yes
-					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = generic_line_break_tt
 
 					#Set the new advisor
 					set_variable = { PRS_ascended_advisor_1 = 1 }
@@ -1322,7 +1322,7 @@ country_event = {
 				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
 					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
 					GER_remove_replaced_advisor_2_effects = yes
-					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = generic_line_break_tt
 
 					#Set the new advisor
 					set_variable = { PRS_ascended_advisor_2 = 1 }
@@ -1398,7 +1398,7 @@ country_event = {
 				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
 					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
 					GER_remove_replaced_advisor_3_effects = yes
-					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = generic_line_break_tt
 
 					#Set the new advisor
 					set_variable = { PRS_ascended_advisor_3 = 1 }
@@ -1525,7 +1525,7 @@ country_event = {
 				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
 					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
 					GER_remove_replaced_advisor_1_effects = yes
-					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = generic_line_break_tt
 
 					#Set the new advisor
 					set_variable = { PRS_ascended_advisor_1 = 2 }
@@ -1601,7 +1601,7 @@ country_event = {
 				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
 					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
 					GER_remove_replaced_advisor_2_effects = yes
-					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = generic_line_break_tt
 
 					#Set the new advisor
 					set_variable = { PRS_ascended_advisor_2 = 2 }
@@ -1677,7 +1677,7 @@ country_event = {
 				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
 					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
 					GER_remove_replaced_advisor_3_effects = yes
-					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = generic_line_break_tt
 
 					#Set the new advisor
 					set_variable = { PRS_ascended_advisor_3 = 2 }
@@ -1801,7 +1801,7 @@ country_event = {
 				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
 					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
 					GER_remove_replaced_advisor_1_effects = yes
-					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = generic_line_break_tt
 
 					#Set the new advisor
 					set_variable = { PRS_ascended_advisor_1 = 3 }
@@ -1877,7 +1877,7 @@ country_event = {
 				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
 					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
 					GER_remove_replaced_advisor_2_effects = yes
-					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = generic_line_break_tt
 
 					#Set the new advisor
 					set_variable = { PRS_ascended_advisor_2 = 3 }
@@ -1953,7 +1953,7 @@ country_event = {
 				else = { #There is no open slot for Ascending Advisor, replace the Intrigue Character
 					# REMOVE THE ADVISOR THAT TRIGGERED THE EVENT
 					GER_remove_replaced_advisor_3_effects = yes
-					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = generic_line_break_tt
 
 					#Set the new advisor
 					set_variable = { PRS_ascended_advisor_3 = 3 }

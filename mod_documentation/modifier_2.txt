@@ -88,15 +88,12 @@
 	naval_torpedo_cooldown_factor	#어뢰 재사용 대기시간	#-4%
 	naval_torpedo_hit_chance_factor	#어뢰 명중률	#+4%	#tt
 	naval_torpedo_screen_penetration_factor	#어뢰 스크린 관통	#+4%	#tt
-	navy_capital_ship_attack_factor	#navy_capital_ship_attack_factor
-	navy_capital_ship_attack_factor_against	#navy_capital_ship_attack_factor_against
-	navy_carrier_air_agility_factor	#navy_carrier_air_agility_factor
-	navy_carrier_air_attack_factor	#navy_carrier_air_attack_factor
-	navy_carrier_air_targetting_factor	#navy_carrier_air_targetting_factor
-	navy_screen_attack_factor	#navy_screen_attack_factor
-	navy_screen_attack_factor_against	#navy_screen_attack_factor_against
-	navy_submarine_attack_factor	#navy_submarine_attack_factor
-	navy_submarine_attack_factor_against	#navy_submarine_attack_factor_against
+	navy_capital_ship_attack_factor	#주력함 공격	#+4%
+	navy_carrier_air_agility_factor	#항공모함 함재기 기동성	#+4%
+	navy_carrier_air_attack_factor	#항공모함 함재기 공격	#+4%
+	navy_carrier_air_targetting_factor	#항공모함 함재기 명중	#+4%
+	navy_screen_attack_factor	#보조함 공격	#tt
+	navy_submarine_attack_factor	#잠수함 공격	#tt
 	no_supply_grace	#no_supply_grace
 	offence	#offence
 	org_loss_when_moving	#org_loss_when_moving
@@ -104,14 +101,14 @@
 	planning_decay_rate_factor	#planning_decay_rate_factor
 	planning_speed	#planning_speed
 	pocket_penalty	#pocket_penalty
-	port_strike	#port_strike
+	port_strike	#항구 타격	#+3%	#tt
 	rocket_attack_factor	#rocket_attack_factor
-	sortie_efficiency	#sortie_efficiency
+	sortie_efficiency	#함재기 출격 효율	#+2%	#tt
 	special_forces_attack_factor	#special_forces_attack_factor
 	special_forces_no_supply_grace	#special_forces_no_supply_grace
 	special_forces_out_of_supply_factor	#special_forces_out_of_supply_factor
-	strike_force_movement_org_loss	#strike_force_movement_org_loss
-	submarine_attack	#submarine_attack
+	strike_force_movement_org_loss	#타격 부대 조직력 손실	#-4%
+	submarine_attack	#잠수함 공격	#+1F
 	supply_combat_penalties_on_core_factor	#supply_combat_penalties_on_core_factor
 	supply_consumption_factor	#supply_consumption_factor
 	training_time_factor	#training_time_factor
@@ -396,7 +393,7 @@
 	supply_combat_penalties_on_core_factor	#supply_combat_penalties_on_core_factor
 	supply_consumption_factor	#supply_consumption_factor
 	terrain_penalty_reduction	#terrain_penalty_reduction
-	terrain_trait_xp_gain_factor	#terrain_trait_xp_gain_factor
+	terrain_trait_xp_gain_factor	#지형 특성 경험치 획득량	#+4%	#tt
 	training_time_army	#training_time_army
 	training_time_army_factor	#training_time_army_factor
 	training_time_factor	#training_time_factor
@@ -675,7 +672,7 @@
 	supply_node_range	#supply_node_range
 	surrender_limit	#surrender_limit
 	tech_air_damage_factor	#tech_air_damage_factor
-	terrain_trait_xp_gain_factor	#terrain_trait_xp_gain_factor
+	terrain_trait_xp_gain_factor	#지형 특성 경험치 획득량	#+4%	#tt
 	thermonuclear_production #B
 	thermonuclear_production_factor	#thermonuclear_production_factor
 	trade_cost_for_target_factor	#trade_cost_for_target_factor
@@ -1283,28 +1280,28 @@
 	naval_torpedo_hit_chance_factor	#어뢰 명중률	#+4%	#tt
 	naval_torpedo_reveal_chance_factor	#어뢰가 탐지될 확률	#-4%	#tt
 	naval_torpedo_screen_penetration_factor	#어뢰 스크린 관통	#+4%	#tt
-	navy_anti_air_attack	#navy_anti_air_attack
-	navy_anti_air_attack_factor	#navy_anti_air_attack_factor
-	navy_capital_ship_attack_factor	#navy_capital_ship_attack_factor
-	navy_capital_ship_defence_factor	#navy_capital_ship_defence_factor
-	navy_carrier_air_agility_factor	#navy_carrier_air_agility_factor
-	navy_carrier_air_attack_factor	#navy_carrier_air_attack_factor
-	navy_carrier_air_targetting_factor	#navy_carrier_air_targetting_factor
+	navy_anti_air_attack	#해군의 대공 공격	#+1F
+	navy_anti_air_attack_factor	#해군 대공 공격	#+4%	#tt
+	navy_capital_ship_attack_factor	#주력함 공격	#+4%
+	navy_capital_ship_defence_factor	#주력함 기갑	#+4%	#tt
+	navy_carrier_air_agility_factor	#항공모함 함재기 기동성	#+4%
+	navy_carrier_air_attack_factor	#항공모함 함재기 공격	#+4%
+	navy_carrier_air_targetting_factor	#항공모함 함재기 명중	#+4%
 	navy_leader_cost_factor	#navy_leader_cost_factor
 	navy_leader_start_attack_level	#navy_leader_start_attack_level
 	navy_leader_start_coordination_level	#navy_leader_start_coordination_level
 	navy_leader_start_defense_level	#navy_leader_start_defense_level
 	navy_leader_start_level	#navy_leader_start_level
 	navy_leader_start_maneuvering_level	#navy_leader_start_maneuvering_level
-	navy_max_range	#navy_max_range
-	navy_max_range_factor	#navy_max_range_factor
-	navy_org	#navy_org
-	navy_org_factor	#navy_org_factor
-	navy_screen_attack_factor	#navy_screen_attack_factor
-	navy_screen_defence_factor	#navy_screen_defence_factor
-	navy_submarine_attack_factor	#navy_submarine_attack_factor
-	navy_submarine_defence_factor	#navy_submarine_defence_factor
-	navy_submarine_detection_factor	#navy_submarine_detection_factor
+	navy_max_range	#해군 최대 작전 범위	#+1F
+	navy_max_range_factor	#해군 최대 작전 거리 획득치	#+4%	#tt
+	navy_org	#해군 조직력	#+1F
+	navy_org_factor	#해군 조직력	#+4%	#tt
+	navy_screen_attack_factor	#보조함 공격	#tt
+	navy_screen_defence_factor	#보조함 방어	#tt
+	navy_submarine_attack_factor	#잠수함 공격	#tt
+	navy_submarine_defence_factor	#잠수함 방어
+	navy_submarine_detection_factor	#잠수함 탐지	#+4%	#tt
 	own_exiled_divisions_attack_factor	#own_exiled_divisions_attack_factor
 	own_exiled_divisions_defense_factor	#own_exiled_divisions_defense_factor
 	own_operative_capture_chance_factor	#own_operative_capture_chance_factor
@@ -1316,26 +1313,29 @@
 	paradrop_organization_factor	#paradrop_organization_factor
 	paratrooper_aa_defense	#paratrooper_aa_defense
 	paratrooper_weight_factor	#paratrooper_weight_factor
-	port_strike	#port_strike
-	positioning	#positioning
+	port_strike	#항구 타격	#+3%	#tt
+	positioning	#위치 선정	#+3%	#tt
 	promote_cost_factor	#promote_cost_factor
 	reassignment_duration_factor	#reassignment_duration_factor
 	river_crossing_factor	#river_crossing_factor
-	screening_efficiency	#screening_efficiency
-	ships_at_battle_start	#ships_at_battle_start
+	screening_efficiency	#스크린 임무 효율	#+3%	#tt
+	ships_at_battle_start	#접촉 시의 함선 숫자	#Y2%
 	sickness_chance	#sickness_chance
 	skill_bonus_factor	#skill_bonus_factor
-	sortie_efficiency	#sortie_efficiency
+	sortie_efficiency	#함재기 출격 효율	#+2%	#tt
 	spotting_chance	#spotting_chance
-	strike_force_movement_org_loss	#strike_force_movement_org_loss
-	sub_retreat_speed	#sub_retreat_speed
-	submarine_attack	#submarine_attack
+	strike_force_movement_org_loss	#타격 부대 조직력 손실	#-4%
+	sub_retreat_speed	#후퇴 시 잠수함 속도	#+2%	#tt
+	submarine_attack	#잠수함 공격	#+1F
 	unit_leader_as_advisor_cp_cost_factor	#unit_leader_as_advisor_cp_cost_factor
 	wounded_chance_factor	#wounded_chance_factor
 
 ## Targeted Modifiers
 ### AGGRESSIVE modifiers
 	naval_critical_score_chance_factor_against	#특정 국가를 상대로 한 해군 치명타 발생 확률	#+4%
+	navy_capital_ship_attack_factor_against	#특정 국가를 상대로 한 주력함 공격	#+4%
+	navy_screen_attack_factor_against	#특정 국가를 상대로 한 보조함 공격	#+4%
+	navy_submarine_attack_factor_against	#특정 국가를 상대로 한 잠수함 공격	#+4%
 ### AIR modifiers
 ### ARMY modifiers
 ### DEFENSIVE modifiers
@@ -8272,19 +8272,6 @@
 * **Categories**: naval
 	defensive
 
-## navy_submarine_attack_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
-## navy_submarine_attack_factor_against
-
-* Number with 2 decimal places
-* **Categories**: naval
-	aggressive
-
 ## navy_submarine_defence_factor
 
 * Number with 2 decimal places
@@ -9014,12 +9001,6 @@
 * Number with 2 decimal places
 * **Categories**: autonomy
 
-## submarine_attack
-
-* Number with 1 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
 
 ## subversive_activites_upkeep
 
@@ -9076,13 +9057,6 @@
 * Number with 1 decimal places
 * **Categories**: army
 	defensive
-
-## terrain_trait_xp_gain_factor
-
-* Number with 2 decimal places
-* **Categories**: naval
-	country
-	army
 
 ## thermonuclear_production_factor
 

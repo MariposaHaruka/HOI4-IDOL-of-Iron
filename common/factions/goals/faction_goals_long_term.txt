@@ -97,10 +97,10 @@ faction_goal_resource_control = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 500
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		every_faction_member = { 
 			tooltip = INFLUENCE_TOP_THREE
 			visible_when_empty = yes
@@ -151,7 +151,7 @@ faction_goal_secure_chinese_waters = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
 		every_collection_element = {
@@ -350,7 +350,7 @@ faction_goal_war_on_communism_in_asia = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
 		every_collection_element = {
@@ -525,7 +525,7 @@ faction_goal_eastern_european_security = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 1000
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = INFLUENCE_ABOVE_30_PERCENT
 		every_faction_member = {
 			limit = { faction_influence_ratio > 0.3}
@@ -582,7 +582,7 @@ faction_goal_eliminate_the_twin_threats = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 1000
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = INFLUENCE_ABOVE_30_PERCENT
 		every_faction_member = {
 			limit = { faction_influence_ratio > 0.3}
@@ -666,7 +666,7 @@ faction_goal_disarm_aggression_central_powers = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 1000
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = INFLUENCE_ABOVE_30_PERCENT
 		every_faction_member = {
 			limit = { faction_influence_ratio > 0.3}
@@ -729,7 +729,7 @@ faction_goal_rule_the_waves = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 300
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = INFLUENCE_TOP_TWO
 		every_faction_member = {
 			limit = { faction_influence_rank < 3}
@@ -832,7 +832,7 @@ faction_goal_strategic_bombing_campaign = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		every_collection_element = {
 			input = {
 				input = game:scope
@@ -915,10 +915,10 @@ faction_goal_liberate_territory = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_stability = 0.1
@@ -1003,12 +1003,12 @@ faction_goal_great_offensive = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_war_support = 0.1
 		}
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
 		every_faction_member = {
 			visible_when_empty = yes
@@ -1071,12 +1071,12 @@ faction_goal_defeating_our_enemies = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 200
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_war_support = 0.1
 		}
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = PEACE_CONFERENCE_WINNERS
 		every_faction_member = {
 			visible_when_empty = yes
@@ -1119,7 +1119,7 @@ faction_goal_industrial_domination = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 200
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		every_faction_member = {
 			tooltip = AT_LEAST_500_FACTORIES
 			visible_when_empty = yes 
@@ -1250,10 +1250,10 @@ faction_goal_defeat_of_communism = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 500
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_popularity = {
@@ -1301,10 +1301,10 @@ faction_goal_defeat_of_fascism = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 500
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_popularity = {
@@ -1355,10 +1355,10 @@ faction_goal_defeat_of_anti_fascists = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 500
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_popularity = {
@@ -1418,10 +1418,10 @@ faction_goal_defeat_of_anti_communists = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 500
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = THE_FACTION_LEADER
 		add_faction_initiative = 1
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_popularity = {
@@ -1470,7 +1470,7 @@ faction_goal_the_red_tide = {
 	}
 	complete_effect = {
 		add_faction_power_projection = 250
-		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = generic_line_break_tt
 		custom_effect_tooltip = HAS_DEPLOYED_AT_LEAST_5M_MANPOWER
 		every_faction_member = {
 			limit = {	
