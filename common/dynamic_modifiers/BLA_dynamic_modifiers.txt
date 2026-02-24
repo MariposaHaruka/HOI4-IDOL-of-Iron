@@ -27,8 +27,7 @@ BLA_army = {
 BLA_navy = {
 	enable = { NOT = { has_country_flag = no_naval_academy } }
 	icon = GFX_idea_BLA_dynamic_naval
-	
-	custom_modifier_tooltip = BLA_navy_follow_tt
+
 	experience_gain_navy_factor = BLA_navy_experience_gain_navy_factor
 	naval_mastery_gain_factor = BLA_navy_naval_mastery_gain_factor
 	naval_detection = BLA_navy_naval_detection

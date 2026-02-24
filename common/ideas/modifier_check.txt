@@ -10,16 +10,41 @@ ideas = {
 			removal_cost = -1
 			picture = usa_great_depression_3
 			modifier = {
-				annex_cost_factor = 0.01
-				army_armor_attack_factor = 0.02
-				army_armor_speed_factor = 0.03
-				army_artillery_attack_factor = 0.04
-				army_attack_against_major_factor = 0.05
-				army_attack_against_minor_factor = 0.06
-				army_attack_factor = 0.07
-				army_claim_attack_factor = 0.08
-				army_core_attack_factor = 0.09
-				army_infantry_attack_factor = 0.10
+				conseratism_acceptance = 0.01
+				conseratism_drift	= 0.02
+				conseratism_drift_from_guarantees = 0.03
+				drift_defence_factor = 0.04
+				embargo_cost_factor = 0.05
+				embargo_threshold_factor = 0.06
+				guarantee_cost = 0.07
+				master_ideology_drift = 0.08
+				female_random_scientist_chance = 0.09
+				autonomy_gain = 0.10
+				autonomy_gain_global_factor = 0.11
+				autonomy_gain_ll_to_overlord = 0.12
+				autonomy_gain_ll_to_overlord_factor = 0.13
+				autonomy_gain_ll_to_subject = 0.14
+				autonomy_gain_ll_to_subject_factor = 0.15
+				autonomy_gain_trade = 0.16
+				autonomy_gain_trade_factor = 0.17
+				autonomy_gain_warscore = 0.18
+				autonomy_gain_warscore_factor = 0.19
+				autonomy_manpower_share_from_subjects = 0.20
+				autonomy_manpower_share_from_subjects = 0.21
+				cic_to_overlord_factor = 0.22
+				extra_trade_to_overlord_factor = 0.23
+				license_subject_master_purchase_cost = 0.24
+				mic_to_overlord_factor = 0.25
+				overlord_trade_cost_factor = 0.26
+				resources_to_overlord_factor = 0.27
+				subjects_autonomy_gain = 0.28
+				annex_cost_factor = 0.29
+				peace_score_ratio_transferred_to_overlord = 0.30
+				peace_score_ratio_transferred_to_players = 0.31
+				puppet_cost_factor = 0.32
+				faction_influence_contribution_factor = 0.33
+				faction_influence_war_score_factor = 0.34
+				faction_subject_contribution_gain = 0.35
 			}
 		}
 		test_modifier_2 = {
@@ -32,16 +57,31 @@ ideas = {
 			removal_cost = -1
 			picture = usa_great_depression_3
 			modifier = {
-				army_morale = 0.01
-				army_morale_factor = 0.02
-				army_org = 0.03
-				army_org_factor = 0.04
-				attrition = 0.05
-				attrition_for_controller = 0.06
-				breakthrough_factor = 0.07
-				carrier_capacity_penalty_reduction = 0.08
-				carrier_sortie_hours_delay = 0.09
-				carrier_traffic = 0.10
+				additional_brigade_column_size = 0.01
+				agency_upgrade_time	= 0.02
+				air_doctrine_cost_factor = 0.03
+				air_equipment_upgrade_xp_cost = 0.04
+				air_invasion_plan_cap = 0.05
+				air_invasion_prep_days = 0.06
+				air_volunteer_cap = 0.07
+				airforce_intel_to_others = 0.08
+				annex_subject_cost_factor = 0.09
+				army_intel_to_others = 0.10
+				assign_army_leader_cp_cost = 0.11
+				automatic_grant_medal_chance = 0.12
+				base_fuel_gain = 0.13
+				base_fuel_gain_factor = 0.14
+				choose_preferred_tactics_cost = 0.15
+				cic_construction_boost = 0.16
+				cic_construction_boost_factor = 0.17
+				cic_to_target_factor = 0.18
+				civil_war_involvement_tension = 0.19
+				civilian_factory_use = 0.20
+				civilian_intel_to_others = 0.21
+				coastal_bunker_effectiveness_factor = 0.22
+				command_abilities_cost_factor = 0.23
+				command_power_gain = 0.24
+				command_power_gain_mult = 0.25
 			}
 		}
 		test_modifier_3 = {
@@ -333,281 +373,6 @@ ideas = {
 				strategic_bomb_visibility = 0.08
 				acclimatization_cold_climate_gain_factor = 0.09
 				acclimatization_hot_climate_gain_factor = 0.10
-			}
-		}
-		test_modifier_trait1 = {
-			allowed = {
-				always = yes
-			}
-			allowed_civil_war = {
-				always = yes
-			}	
-			removal_cost = -1
-			picture = usa_great_depression_3
-			modifier = {
-				trait_adaptable_xp_gain_factor = 0.01
-				trait_aggressive_assaulter_xp_gain_factor = 0.02
-				trait_air_controller_xp_gain_factor = 0.03
-				trait_ambusher_xp_gain_factor = 0.04
-				trait_arctic_water_expert_xp_gain_factor = 0.05
-				trait_armor_officer_xp_gain_factor = 0.06
-				trait_engineer_officer_xp_gain_factor = 0.07
-				trait_aviation_enthusiast_xp_gain_factor = 0.08
-				trait_BALTIC_anti_bolshevik_xp_gain_factor = 0.09
-				trait_BALTIC_ex_russian_xp_gain_factor = 0.10
-				trait_battleship_adherent_xp_gain_factor = 0.11
-				trait_bearer_of_artillery_xp_gain_factor = 0.12
-				trait_big_guns_expert_xp_gain_factor = 0.13
-				trait_blockade_runner_xp_gain_factor = 0.14
-				trait_blue_water_expert_xp_gain_factor = 0.15
-				trait_bold_xp_gain_factor = 0.16
-				trait_brilliant_strategist_xp_gain_factor = 0.17
-				trait_camouflage_expert_xp_gain_factor = 0.18
-				trait_career_officer_xp_gain_factor = 0.19
-				trait_caustic_personality_xp_gain_factor = 0.20
-			}
-		}
-		test_modifier_trait2 = {
-			allowed = {
-				always = yes
-			}
-			allowed_civil_war = {
-				always = yes
-			}	
-			removal_cost = -1
-			picture = usa_great_depression_3
-			modifier = {
-				trait_cavalry_expert_xp_gain_factor = 0.01
-				trait_cavalry_leader_xp_gain_factor = 0.02
-				trait_cavalry_officer_xp_gain_factor = 0.03
-				trait_chief_engineer_xp_gain_factor = 0.04
-				trait_combined_arms_expert_xp_gain_factor = 0.05
-				trait_commando_xp_gain_factor = 0.06
-				trait_concealment_expert_xp_gain_factor = 0.07
-				trait_craven_xp_gain_factor = 0.08
-				trait_crisis_magician_xp_gain_factor = 0.09
-				trait_cruiser_captain_xp_gain_factor = 0.10
-				trait_cuts_corners_xp_gain_factor = 0.11
-				trait_defensive_doctrine_xp_gain_factor = 0.12
-				trait_demoted_xp_gain_factor = 0.13
-				trait_desert_fox_xp_gain_factor = 0.14
-				trait_destroyer_leader_xp_gain_factor = 0.15
-				trait_disgruntled_xp_gain_factor = 0.16
-				trait_dive_bomber_xp_gain_factor = 0.17
-				trait_exiled_leader_xp_gain_factor = 0.18
-				trait_expert_delegator_xp_gain_factor = 0.19
-				trait_expert_improviser_xp_gain_factor = 0.20
-			}
-		}
-		test_modifier_trait3 = {
-			allowed = {
-				always = yes
-			}
-			allowed_civil_war = {
-				always = yes
-			}	
-			removal_cost = -1
-			picture = usa_great_depression_3
-			modifier = {
-				trait_fast_planner_xp_gain_factor = 0.01
-				trait_fighter_director_xp_gain_factor = 0.02
-				trait_fleet_protector_xp_gain_factor = 0.03
-				trait_flight_deck_manager_xp_gain_factor = 0.04
-				trait_fly_swatter_xp_gain_factor = 0.05
-				trait_fortress_buster_xp_gain_factor = 0.06
-				trait_gentlemanly_xp_gain_factor = 0.07
-				trait_green_water_expert_xp_gain_factor = 0.08
-				trait_ground_pounder_xp_gain_factor = 0.09
-				trait_guerilla_fighter_xp_gain_factor = 0.10
-				trait_gunnery_expert_xp_gain_factor = 0.11
-				trait_hidden_sympathies_xp_gain_factor = 0.12
-				trait_hill_fighter_xp_gain_factor = 0.13
-				trait_hunter_killer_xp_gain_factor = 0.14
-				trait_infantry_expert_xp_gain_factor = 0.15
-				trait_infantry_leader_xp_gain_factor = 0.16
-				trait_infantry_officer_xp_gain_factor = 0.17
-				trait_inflexible_strategist_xp_gain_factor = 0.18
-				trait_inshore_fighter_xp_gain_factor = 0.19
-				trait_inspirational_leader_xp_gain_factor = 0.20
-			}
-		}
-		test_modifier_trait4 = {
-			allowed = {
-				always = yes
-			}
-			allowed_civil_war = {
-				always = yes
-			}	
-			removal_cost = -1
-			picture = usa_great_depression_3
-			modifier = {
-				trait_fast_planner_xp_gain_factor = 0.01
-				trait_fighter_director_xp_gain_factor = 0.02
-				trait_fleet_protector_xp_gain_factor = 0.03
-				trait_flight_deck_manager_xp_gain_factor = 0.04
-				trait_fly_swatter_xp_gain_factor = 0.05
-				trait_fortress_buster_xp_gain_factor = 0.06
-				trait_gentlemanly_xp_gain_factor = 0.07
-				trait_green_water_expert_xp_gain_factor = 0.08
-				trait_ground_pounder_xp_gain_factor = 0.09
-				trait_guerilla_fighter_xp_gain_factor = 0.10
-				trait_gunnery_expert_xp_gain_factor = 0.11
-				trait_hidden_sympathies_xp_gain_factor = 0.12
-				trait_hill_fighter_xp_gain_factor = 0.13
-				trait_hunter_killer_xp_gain_factor = 0.14
-				trait_infantry_expert_xp_gain_factor = 0.15
-				trait_infantry_leader_xp_gain_factor = 0.16
-				trait_infantry_officer_xp_gain_factor = 0.17
-				trait_inflexible_strategist_xp_gain_factor = 0.18
-				trait_inshore_fighter_xp_gain_factor = 0.19
-				trait_inspirational_leader_xp_gain_factor = 0.20
-			}
-		}
-		test_modifier_trait5 = {
-			allowed = {
-				always = yes
-			}
-			allowed_civil_war = {
-				always = yes
-			}	
-			removal_cost = -1
-			picture = usa_great_depression_3
-			modifier = {
-				trait_invader_ii_xp_gain_factor = 0.01
-				trait_ironside_xp_gain_factor = 0.02
-				trait_JAP_communist_sympathizer_xp_gain_factor = 0.03
-				trait_JAP_samurai_lineage_xp_gain_factor = 0.04
-				trait_jungle_rat_xp_gain_factor = 0.05
-				trait_lancer_xp_gain_factor = 0.06
-				trait_loading_drill_master_xp_gain_factor = 0.07
-				trait_logistics_wizard_xp_gain_factor = 0.08
-				trait_lone_wolf_xp_gain_factor = 0.09
-				trait_marksman_xp_gain_factor = 0.10
-				trait_media_personality_xp_gain_factor = 0.11
-				trait_mine_layer_xp_gain_factor = 0.12
-				trait_mine_sweeper_xp_gain_factor = 0.13
-				trait_naval_invader_xp_gain_factor = 0.14
-				trait_naval_liason_xp_gain_factor = 0.15
-				trait_naval_lineage_xp_gain_factor = 0.16
-				trait_navy_career_officer_xp_gain_factor = 0.17
-				trait_navy_media_personality_xp_gain_factor = 0.18
-				trait_offensive_doctrine_xp_gain_factor = 0.19
-				trait_old_guard_navy_xp_gain_factor = 0.20
-			}
-		}
-		test_modifier_trait6 = {
-			allowed = {
-				always = yes
-			}
-			allowed_civil_war = {
-				always = yes
-			}	
-			removal_cost = -1
-			picture = usa_great_depression_3
-			modifier = {
-				trait_old_guard_xp_gain_factor = 0.01
-				trait_operative_commando_xp_gain_factor = 0.02
-				trait_operative_demolition_expert_xp_gain_factor = 0.03
-				trait_operative_double_agent_xp_gain_factor = 0.04
-				trait_operative_escape_artist_xp_gain_factor = 0.05
-				trait_operative_infiltrator_xp_gain_factor = 0.06
-				trait_operative_linguist_xp_gain_factor = 0.07
-				trait_operative_master_interrogator_xp_gain_factor = 0.08
-				trait_operative_natural_orator_xp_gain_factor = 0.09
-				trait_operative_safe_cracker_xp_gain_factor = 0.10
-				trait_operative_seducer_xp_gain_factor = 0.11
-				trait_operative_tough_xp_gain_factor = 0.12
-				trait_operative_well_groomed_xp_gain_factor = 0.13
-				trait_organisational_leader_xp_gain_factor = 0.14
-				trait_organizer_xp_gain_factor = 0.15
-				trait_panzer_expert_xp_gain_factor = 0.16
-				trait_panzer_leader_xp_gain_factor = 0.17
-				trait_paratrooper_xp_gain_factor = 0.18
-				trait_peasant_sympathiser_xp_gain_factor = 0.19
-				trait_POL_sanation_left_leader_xp_gain_factor = 0.20
-			}
-		}
-		test_modifier_trait7 = {
-			allowed = {
-				always = yes
-			}
-			allowed_civil_war = {
-				always = yes
-			}	
-			removal_cost = -1
-			picture = usa_great_depression_3
-			modifier = {
-				trait_POL_sanation_right_leader_xp_gain_factor = 0.01
-				trait_politically_connected_xp_gain_factor = 0.02
-				trait_ranger_xp_gain_factor = 0.03
-				trait_reassigned_xp_gain_factor = 0.04
-				trait_recently_promoted_xp_gain_factor = 0.05
-				trait_safety_first_xp_gain_factor = 0.06
-				trait_scavenger_xp_gain_factor = 0.07
-				trait_search_pattern_expert_xp_gain_factor = 0.08
-				trait_seawolf_xp_gain_factor = 0.09
-				trait_sick_xp_gain_factor = 0.10
-				trait_silent_hunter_xp_gain_factor = 0.11
-				trait_skilled_staffer_xp_gain_factor = 0.12
-				trait_skirmisher_xp_gain_factor = 0.13
-				trait_smoke_screen_expert_xp_gain_factor = 0.14
-				trait_spotter_xp_gain_factor = 0.15
-				trait_substance_abuser_xp_gain_factor = 0.16
-				trait_substance_addict_xp_gain_factor = 0.17
-				trait_superior_tactician_xp_gain_factor = 0.18
-				trait_swamp_fox_xp_gain_factor = 0.19
-				trait_thorough_planner_xp_gain_factor = 0.20
-			}
-		}
-		test_modifier_trait8 = {
-			allowed = {
-				always = yes
-			}
-			allowed_civil_war = {
-				always = yes
-			}	
-			removal_cost = -1
-			picture = usa_great_depression_3
-			modifier = {
-				trait_torpedo_bomber_xp_gain_factor = 0.01
-				trait_torpedo_expert_xp_gain_factor = 0.02
-				trait_BUL_ff_sympathizer_xp_gain_factor = 0.03
-				trait_BUL_tsar_loyalist_xp_gain_factor = 0.04
-				trait_BUL_zveno_member_xp_gain_factor = 0.05
-				trait_cautious_xp_gain_factor = 0.06
-				trait_engineer_xp_gain_factor = 0.07
-				trait_GRE_fascist_sympathizer_xp_gain_factor = 0.08
-				trait_GRE_marxist_acolyte_xp_gain_factor = 0.09
-				trait_GRE_stauch_monarchist_xp_gain_factor = 0.10
-				trait_GRE_venezelist_loyalist_xp_gain_factor = 0.11
-				trait_mountaineer_xp_gain_factor = 0.12
-				trait_reckless_xp_gain_factor = 0.13
-				trait_SPA_carlist_loyalties_xp_gain_factor = 0.14
-				trait_SPA_falangist_loyalties_xp_gain_factor = 0.15
-				trait_SPA_nationalist_sympathies_xp_gain_factor = 0.16
-				trait_SPR_anti_stalinist_loyalties_xp_gain_factor = 0.17
-				trait_SPR_republican_loyalties_xp_gain_factor = 0.18
-				trait_SPR_stalinist_loyalties_xp_gain_factor = 0.19
-				trait_TUR_kemalist_champion_xp_gain_factor = 0.20
-			}
-		}
-		test_modifier_trait9 = {
-			allowed = {
-				always = yes
-			}
-			allowed_civil_war = {
-				always = yes
-			}	
-			removal_cost = -1
-			picture = usa_great_depression_3
-			modifier = {
-				trait_trickster_xp_gain_factor = 0.01
-				trait_unyielding_defender_xp_gain_factor = 0.02
-				trait_urban_assault_specialist_xp_gain_factor = 0.03
-				trait_war_hero_xp_gain_factor = 0.04
-				trait_winter_expert_xp_gain_factor = 0.05
-				trait_winter_specialist_xp_gain_factor = 0.06
-				trait_wounded_xp_gain_factor = 0.07
 			}
 		}
 		test_modifier_15 = {

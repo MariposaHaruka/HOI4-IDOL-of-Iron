@@ -751,7 +751,7 @@
 	special_forces_defence_factor	#special_forces_defence_factor
 	static_anti_air_damage_factor	#static_anti_air_damage_factor
 	static_anti_air_hit_chance_factor	#static_anti_air_hit_chance_factor
-	sub_retreat_speed	#sub_retreat_speed
+	sub_retreat_speed	#후퇴 시 잠수함 속도	#+2%	#tt
 	supply_consumption_factor	#supply_consumption_factor
 	terrain_penalty_reduction	#terrain_penalty_reduction
 
@@ -1058,19 +1058,50 @@
 	peace_score_ratio_transferred_to_players	#peace_score_ratio_transferred_to_players
 	puppet_cost_factor	#puppet_cost_factor
 
-### Modifiers for scope politics
-
-	<Ideology>_acceptance	#-ideology-_acceptance
-	<Ideology>_drift	#-ideology-_drift
-	<Ideology>_drift_from_guarantees	#-ideology-_drift_from_guarantees
+### POLITICS modifiers
+	conseratism_acceptance	#보수주의 외교 수용
+	liberalism_mod_acceptance	#자유주의 외교 수용
+	progressivism_acceptance	#진보주의 외교 수용
+	socialdemocracy_acceptance	#사민주의 외교 수용
+	socialism_acceptance	#사회주의 외교 수용
+	communism_acceptance	#공산주의 외교 수용
+	authoritariancommunism_acceptance	#권위공산주의 외교 수용
+	anarchosyndicalism_acceptance	#아나코-생디칼리즘 외교 수용
+	fascisn_acceptance	#파시즘 외교 수용
+	militarytotalism_acceptance	#군국주의 외교 수용
+	authoritariandemocracy_acceptance	#권위민주주의 외교 수용
+	autocracy_acceptance	#전제주의 외교 수용
+	conseratism_drift	#매일 보수주의 지지도
+	liberalism_mod_drift	#매일 자유주의 지지도
+	progressivism_drift	#매일 진보주의 지지도
+	socialdemocracy_drift	#매일 사민주의 지지도
+	socialism_drift	#매일 사회주의 지지도
+	communism_drift	#매일 공산주의 지지도	#tt
+	authoritariancommunism_drift	#매일 권위공산주의 지지도
+	anarchosyndicalism_drift	#매일 아나코-생디칼리즘 지지도
+	fascisn_drift	#매일 파시즘 지지도	#tt
+	militarytotalism_drift	#매일 군국주의 지지도
+	authoritariandemocracy_drift	#매일 권위민주주의 지지도
+	autocracy_drift	#매일 전제주의 지지도
+	conseratism_drift_from_guarantees	#보장으로 인한 타국의 보수주의 증가
+	liberalism_mod_drift_from_guarantees	#보장으로 인한 타국의 자유주의 증가
+	progressivism_drift_from_guarantees	#보장으로 인한 타국의 진보주의 증가
+	socialdemocracy_drift_from_guarantees	#보장으로 인한 타국의 사민주의 증가
+	socialism_drift_from_guarantees	#보장으로 인한 타국의 사회주의 증가
+	communism_drift_from_guarantees	#보장으로 인한 타국의 공산주의 증가
+	authoritariancommunism_drift_from_guarantees	#보장으로 인한 타국의 권위공산주의 증가
+	anarchosyndicalism_drift_from_guarantees	#보장으로 인한 타국의 아나코-생디칼리즘 증가
+	fascisn_drift_from_guarantees	#보장으로 인한 타국의 파시즘 증가파
+	militarytotalism_drift_from_guarantees	#보장으로 인한 타국의 군국주의 증가
+	authoritariandemocracy_drift_from_guarantees	#보장으로 인한 타국의 권위민주주의 증가
+	autocracy_drift_from_guarantees	#보장으로 인한 타국의 전제주의 증가
 	drift_defence_factor	#drift_defence_factor
 	embargo_cost_factor	#embargo_cost_factor
 	embargo_threshold_factor	#embargo_threshold_factor
 	guarantee_cost	#guarantee_cost
 	master_ideology_drift	#master_ideology_drift
 
-### Modifiers for scope scientist
-
+### SCIENTIST modifiers
 	female_random_scientist_chance	#female_random_scientist_chance
 
 ### Modifiers for scope state
@@ -1323,7 +1354,7 @@
 	sickness_chance	#sickness_chance
 	skill_bonus_factor	#skill_bonus_factor
 	sortie_efficiency	#함재기 출격 효율	#+2%	#tt
-	spotting_chance	#spotting_chance
+	spotting_chance	#탐지 속도	#+2%	#tt
 	strike_force_movement_org_loss	#타격 부대 조직력 손실	#-4%
 	sub_retreat_speed	#후퇴 시 잠수함 속도	#+2%	#tt
 	submarine_attack	#잠수함 공격	#+1F
@@ -2080,16 +2111,6 @@
 
 
 
-##  <span id="-ideology-_drift_from_guarantees"></span><Ideology>_drift_from_guarantees
-
-* **Description**: Ideology drift guarantees
-* Number with 2 decimal places
-* **Categories**: politics
-
-* **Modified types**: communism
-	democratic
-	fascism
-	neutrality
 
 ##  <span id="experience_gain_-unit-_training_factor"></span>experience_gain_<Unit>_training_factor
 
@@ -4741,16 +4762,6 @@
 	supply_node
 	synthetic_refinery
 
-##  <span id="-ideology-_drift"></span><Ideology>_drift
-
-* **Description**: Ideology drift.
-* Number with 2 decimal places
-* **Categories**: politics
-
-* **Modified types**: communism
-	democratic
-	fascism
-	neutrality
 
 ##  <span id="module_-equipmentmodule-_design_cost_factor"></span>module_<EquipmentModule>_design_cost_factor
 
@@ -5205,17 +5216,6 @@
 	stronghold_network
 	supply_node
 	synthetic_refinery
-
-##  <span id="-ideology-_acceptance"></span><Ideology>_acceptance
-
-* **Description**: Ideology acceptance.
-* Number with 0 decimal places
-* **Categories**: politics
-
-* **Modified types**: communism
-	democratic
-	fascism
-	neutrality
 
 ##  <span id="state_resource_-resource-"></span>state_resource_<Resource>
 
@@ -8856,13 +8856,6 @@
 * Number with 1 decimal places
 * **Categories**: unit_leader
 
-## sortie_efficiency
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-	aggressive
-
 ## special_forces_attack_factor
 
 * Number with 1 decimal places
@@ -8923,12 +8916,6 @@
 * Number with 2 decimal places
 * **Categories**: country
 
-## spotting_chance
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-
 ## stability_factor
 
 * Number with 2 decimal places
@@ -8988,13 +8975,6 @@
 * **Categories**: naval
 	unit_leader
 	aggressive
-
-## sub_retreat_speed
-
-* Number with 0 decimal places
-* **Categories**: naval
-	unit_leader
-	defensive
 
 ## subjects_autonomy_gain
 
