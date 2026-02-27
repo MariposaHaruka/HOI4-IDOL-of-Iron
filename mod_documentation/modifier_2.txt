@@ -60,8 +60,8 @@
 	enemy_declare_war_tension	#
 	enemy_justify_war_goal_time	#
 	fighter_sortie_efficiency	#전투기 출격 효율 #+2%
-	ground_attack	#ground_attack
-	ground_attack_factor	#ground_attack_factor
+	ground_attack	#지상 공격	#+2F
+	ground_attack_factor	#지상 공격 획득치	#+3%	#tt
 	heat_attrition	#heat_attrition
 	heat_attrition_factor	#heat_attrition_factor
 	justify_war_goal_time	#justify_war_goal_time
@@ -133,29 +133,29 @@
 	ai_license_acceptance	#면허 구매 요청 시 수락
 
 ### AIR modifiers
-	ace_effectiveness_factor	#에이스 효율	#+3%
+	ace_effectiveness_factor	#에이스 효율	#+3%	#tt
 	air_accidents	#항공기 사고 확률	#-3%
-	air_accidents_factor	#항공기 사고 확률	#-3%
-	air_ace_bonuses_factor	#에이스 조종사 확률 보너스	#+2%
-	air_ace_generation_chance_factor	#에이스 조종사 확률	#+4%
-	air_advisor_cost_factor	#공군 이론가 비용	#-2%
-	air_agility_factor	#기동성	#+2%
-	air_attack_factor	#대공 공격	#+2%
-	air_bombing_targetting	#지상 폭격 조준	#+3%
+	air_accidents_factor	#항공기 사고 확률	#-3%	#tt
+	air_ace_bonuses_factor	#공군 에이스 혜택	#+2%	#tt
+	air_ace_generation_chance_factor	#에이스 조종사 확률	#+4%	#tt
+	air_advisor_cost_factor	#공군 고문 비용	#-2%	#tt
+	air_agility_factor	#기동성	#+2%	#tt
+	air_attack_factor	#대공 공격	#+2%	#tt
+	air_bombing_targetting	#지상 폭격 조준 체계	#+3%	#tt
 	air_carrier_night_penalty_reduction_factor	#항공모함 야간 불이익 감소	#+4%
-	air_cas_efficiency	#공군 지원 임무 효율	#+2%
-	air_cas_present_factor	#지상 지원	#+4%
+	air_cas_efficiency	#공군 지원 임무 효율	#+2%	#tt
+	air_cas_present_factor	#지상 지원	#+4%	#tt
 	air_close_air_support_org_damage_factor	#근접항공지원 조직력 피해	#+2%
-	air_defence_factor	#대공 방어	#+2%
+	air_defence_factor	#대공 방어	#+2%	#tt
 	air_detection	#대공 탐지	#+3%
-	air_escort_efficiency	#호위 효율	#+2%
-	air_fuel_consumption_factor	#공군 연료 소비량	#-4%
-	air_home_defence_factor	#공군 조국 방위 변동치
-	air_intercept_efficiency	#요격 임무 효율	#+2%
-	air_interception_detect_factor	#a요격시 적기 포착	#+4%
+	air_escort_efficiency	#호위 효율	#+2%	#tt
+	air_fuel_consumption_factor	#공군 연료 소비량	#-4%	#tt
+	air_home_defence_factor	#공군 조국 방위 변동치	#tt
+	air_intercept_efficiency	#요격 임무 효율	#+2%	#tt
+	air_interception_detect_factor	#요격시 적기 포착	#+4%	#tt
 	air_invasion_division_cap	#공중 침공당 사단 수용량	#+0F
 	air_invasion_preparation	#공중 침공 준비 시간	#-3%
-	air_manpower_requirement_factor	#공군 인력 요건	#-4%
+	air_manpower_requirement_factor	#공군 인력 요건	#-4%	#tt
 	air_mastery_gain_factor	#공군 교리 통달치 획득	#+2%
 	new_battlefield_support_mastery_gain_factor	# (대교리) 통달치 획득	#+2%
 	new_operational_integrity_mastery_gain_factor	# (대교리) 통달치 획득	#+2%
@@ -190,36 +190,35 @@
 	medium_aircraft_track_mastery_gain_factor	#중형항공기 트랙 통달치 획득 요인	#+2%
 	heavy_aircraft_track_mastery_gain_factor	#중항공기 트랙 통달치 획득 요인	#+2%
 	air_maximum_speed_factor	#최대 비행 속도	#+2%
-	air_mission_efficiency	#공군 작전 효율	#+3%
-	air_mission_xp_gain_factor	#비행단 임무 경험치 획득량	#+2%
-	air_nav_efficiency	#해상 임무 효율	#+2%
-	air_night_penalty	#야간 임무 불이익	#-4%
-	air_power_projection_factor	#공군력 투사 획득치	#+2%
-	air_range_factor	#공군 작전범위	#+2%
-	air_strategic_bomber_bombing_factor	#전략폭격	#+3%
+	air_mission_efficiency	#공군 작전 효율	#+3%	#tt
+	air_mission_xp_gain_factor	#비행단 임무 경험치 획득량	#+2%	#tt
+	air_nav_efficiency	#해상 임무 효율	#+2%	#tt
+	air_night_penalty	#야간 임무 불이익	#-4%	#tt
+	air_power_projection_factor	#공군력 투사 획득치	#+2%	#tt
+	air_range_factor	#공군 작전 범위	#+2%	#tt
+	air_strategic_bomber_bombing_factor	#전략폭격	#+3%	#tt
 	air_strategic_bomber_defence_factor	#폭격기 방어	#+4%
 	air_strategic_bomber_night_penalty	#야간 전략폭격 불이익	#-4%
 	air_superiority_detect_factor	#최대 비행 속도	#+2%
-	air_superiority_efficiency	#공중우세 임무 효율	#+2%
-
-	air_training_xp_gain_factor	#air_training_xp_gain_factor
-	air_untrained_pilots_penalty_factor	#air_untrained_pilots_penalty_factor
-	air_weather_penalty	#air_weather_penalty
-	air_wing_xp_loss_when_killed_factor	#air_wing_xp_loss_when_killed_factor
-	army_bonus_air_superiority_factor	#army_bonus_air_superiority_factor
-	carrier_night_traffic	#carrier_night_traffic
-	enemy_army_bonus_air_superiority_factor	#enemy_army_bonus_air_superiority_factor
-	experience_gain_air	#experience_gain_air
-	experience_gain_air_factor	#experience_gain_air_factor
-	ground_attack	#ground_attack
-	ground_attack_factor	#ground_attack_factor
-	mines_planting_by_air_factor	#mines_planting_by_air_factor
-	mines_sweeping_by_air_factor	#mines_sweeping_by_air_factor
-	naval_strike_agility_factor	#naval_strike_agility_factor
-	naval_strike_attack_factor	#naval_strike_attack_factor
-	naval_strike_targetting_factor	#naval_strike_targetting_factor
-	navy_weather_penalty	#navy_weather_penalty
-	strategic_bomb_visibility	#strategic_bomb_visibility
+	air_superiority_efficiency	#공중우세 임무 효율	#+2%	#tt
+	air_training_xp_gain_factor	#비행단 훈련 경험치 획득량	#+2%	#tt
+	air_untrained_pilots_penalty_factor	#새 비행단에 대한 미숙련 조종사 불이익	#-2%	#tt
+	air_weather_penalty	#악천후 불이익	#-4%	#tt
+	air_wing_xp_loss_when_killed_factor	#비행단 전사 경험치 손실	#-2%	#tt
+	army_bonus_air_superiority_factor	#공중우세	#+4%	#tt
+	carrier_night_traffic	#함재기 야간 출격 수	#+4%
+	enemy_army_bonus_air_superiority_factor	#적 공중 지원	#-4%
+	experience_gain_air	#공군 경험치 획득량 (매일)	#+2F	#tt
+	experience_gain_air_factor	#공군 경험치 획득량	#+3%	#tt
+	ground_attack	#지상 공격	#+2F
+	ground_attack_factor	#지상 공격 획득치	#+3%	#tt
+	mines_planting_by_air_factor	#공중 기뢰부설 효율	#+2%	#tt
+	mines_sweeping_by_air_factor	#공중 기뢰소해 효율	#+2%
+	naval_strike_agility_factor	#해상 기동성	#+2%
+	naval_strike_attack_factor	#해군 폭격	#+2%	#tt
+	naval_strike_targetting_factor	#해상 조준	#+2%	#tt
+	navy_weather_penalty	#악천후 불이익	#-4%	#tt
+	strategic_bomb_visibility	#전략폭격 은밀성	#-2%
 
 ### ARMY modifier
 
@@ -411,8 +410,8 @@
 	winter_attrition_factor	#winter_attrition_factor
 
 ### AUTONOMY modifiers
-	autonomy_gain	#매일 자치도 진행이 오름	#+1F
-	autonomy_gain_global_factor	#총 자치도 획득	#+3% #*
+	autonomy_gain	#매일 자치도 진행이 오름	#+1F	#tt
+	autonomy_gain_global_factor	#총 자치도 획득	#+3%	#tt #*
 	autonomy_gain_ll_to_overlord	#종주국으로의 무기대여로 얻은 자유	#+2F
 	autonomy_gain_ll_to_overlord_factor	#종주국으로의 무기대여로 얻은 자유	#+4%
 	autonomy_gain_ll_to_subject	#종주국의 무기대여로 인한 종속국의 자유 획득	#+2F
@@ -422,16 +421,16 @@
 	autonomy_gain_warscore	#승점으로 얻은 자유	#+2F
 	autonomy_gain_warscore_factor	#승점으로 얻은 자유	#+4%
 	autonomy_manpower_share	#괴뢰국 인력 요건	#-4%
-	autonomy_manpower_share_from_subjects	#종속국의 인력 요구 사항	#-4%
-	can_master_build_for_us #B
-	cic_to_overlord_factor	#종주국으로 보내는 민간산업	#-4%
+	autonomy_manpower_share_from_subjects	#종속국의 인력 요구 사항	#-4%	#tt
+	can_master_build_for_us #종주국은 종속국의 영토에 건설 가능	#B
+	cic_to_overlord_factor	#종주국으로 보내는 민간산업	#-4%	#tt
 	extra_trade_to_overlord_factor	#종주국과의 추가 무역	#+4%
-	license_subject_master_purchase_cost	#종주국과 종속국 간의 면허 비용	#-4%
+	license_subject_master_purchase_cost	#종주국과 종속국 간의 면허 비용	#-4%	#tt
 	master_build_autonomy_factor #B
-	mic_to_overlord_factor	#종주국으로 보내는 군수산업	#+4%
+	mic_to_overlord_factor	#종주국으로 보내는 군수산업	#+4%	#tt
 	overlord_trade_cost_factor	#종주국 무역 비용	#-4%
-	resources_to_overlord_factor	#종주국으로 가는 자원	#+4%
-	subjects_autonomy_gain	#종주국의 영향력	#+2F
+	resources_to_overlord_factor	#종주국으로 가는 자원	#+4%	#tt
+	subjects_autonomy_gain	#종주국의 영향력	#+2F	#tt
 
 ### Modifiers for scope character
 
@@ -1277,7 +1276,7 @@
 	weekly_manpower	#weekly_manpower
 
 ### UNIT LEADER modifiers
-	air_invasion_preparation	#air_invasion_preparation
+	air_invasion_preparation	#공중 침공 준비 시간	#-3%
 	amphibious_invasion	#상륙 침입 속도 #+3%	#tt
 	amphibious_invasion_defence	#상륙 방어력 #+2%
 	army_leader_cost_factor	#army_leader_cost_factor
@@ -5550,11 +5549,6 @@
 * Number with 1 decimal places
 * **Categories**: army
 
-## ace_effectiveness_factor
-
-* Number with 1 decimal places
-* **Categories**: air
-
 ## additional_brigade_column_size
 
 * Number with 0 decimal places
@@ -5564,76 +5558,6 @@
 
 * Number with 1 decimal places
 * **Categories**: country
-
-## air_accidents
-
-* Number with 1 decimal places
-* **Categories**: air
-
-## air_accidents_factor
-
-* Number with 1 decimal places
-* **Categories**: air
-
-## air_ace_bonuses_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_ace_generation_chance_factor
-
-* Number with 2 decimal places
-* **Categories**: air
-
-## air_advisor_cost_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_agility_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_attack_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_bombing_targetting
-
-* Number with 1 decimal places
-* **Categories**: air
-
-## air_carrier_night_penalty_reduction_factor
-
-* Number with 2 decimal places
-* **Categories**: air
-
-## air_cas_efficiency
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_cas_present_factor
-
-* Number with 2 decimal places
-* **Categories**: air
-
-## air_close_air_support_org_damage_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_defence_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_detection
-
-* Number with 1 decimal places
-* **Categories**: air
 
 ## air_doctrine_cost_factor
 
@@ -5645,36 +5569,6 @@
 * Number with 0 decimal places
 * **Categories**: country
 
-## air_escort_efficiency
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_fuel_consumption_factor
-
-* Number with 2 decimal places
-* **Categories**: air
-
-## air_home_defence_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_intercept_efficiency
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_interception_detect_factor
-
-* Number with 2 decimal places
-* **Categories**: air
-
-## air_invasion_division_cap
-
-* Number with 0 decimal places
-* **Categories**: air
-
 ## air_invasion_plan_cap
 
 * Number with 0 decimal places
@@ -5685,106 +5579,15 @@
 * Number with 1 decimal places
 * **Categories**: country
 
-## air_invasion_preparation
-
-* Number with 1 decimal places
-* **Categories**: air
-	unit_leader
-
-## air_manpower_requirement_factor
-
-* Number with 2 decimal places
-* **Categories**: air
-
-## air_maximum_speed_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_mission_efficiency
-
-* Number with 1 decimal places
-* **Categories**: air
-
-## air_mission_xp_gain_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_nav_efficiency
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_night_penalty
-
-* Number with 2 decimal places
-* **Categories**: air
-
-## air_power_projection_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_range_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_strategic_bomber_bombing_factor
-
-* Number with 1 decimal places
-* **Categories**: air
-
-## air_strategic_bomber_defence_factor
-
-* Number with 2 decimal places
-* **Categories**: air
-
-## air_strategic_bomber_night_penalty
-
-* Number with 2 decimal places
-* **Categories**: air
-
 ## air_superiority_bonus_in_combat
 
 * Number with 1 decimal places
 * **Categories**: army
 
-## air_superiority_detect_factor
-
-* Number with 2 decimal places
-* **Categories**: air
-
-## air_superiority_efficiency
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_training_xp_gain_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## air_untrained_pilots_penalty_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
 ## air_volunteer_cap
 
 * Number with 0 decimal places
 * **Categories**: country
-
-## air_weather_penalty
-
-* Number with 2 decimal places
-* **Categories**: air
-
-## air_wing_xp_loss_when_killed_factor
-
-* Number with 0 decimal places
-* **Categories**: air
 
 ## airforce_intel_decryption_bonus
 
@@ -5877,10 +5680,6 @@
 * Number with 2 decimal places
 * **Categories**: army
 
-## army_bonus_air_superiority_factor
-
-* Number with 2 decimal places
-* **Categories**: air
 
 ## army_breakthrough_against_major_factor
 
@@ -6189,13 +5988,6 @@
 * **Categories**: army
 	aggressive
 
-
-
-## carrier_night_traffic
-
-* Number with 2 decimal places
-* **Categories**: air
-
 ## cas_damage_reduction
 
 * Number with 1 decimal places
@@ -6465,11 +6257,6 @@
 * **Categories**: country
 	defensive
 
-## enemy_army_bonus_air_superiority_factor
-
-* Number with 2 decimal places
-* **Categories**: air
-
 ## enemy_army_speed_factor
 
 * Number with 2 decimal places
@@ -6622,16 +6409,6 @@
 * Number with 0 decimal places
 * **Categories**: country
 	war_production
-
-## experience_gain_air
-
-* Number with 2 decimal places
-* **Categories**: air
-
-## experience_gain_air_factor
-
-* Number with 1 decimal places
-* **Categories**: air
 
 ## experience_gain_army
 
@@ -6818,18 +6595,6 @@
 
 * Number with 1 decimal places
 * **Categories**: country
-
-## ground_attack
-
-* Number with 1 decimal places
-* **Categories**: air
-	aggressive
-
-## ground_attack_factor
-
-* Number with 1 decimal places
-* **Categories**: air
-	aggressive
 
 ## guarantee_cost
 
@@ -7366,17 +7131,6 @@
 * **Categories**: country
 	war_production
 
-## mines_planting_by_air_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-
-## mines_sweeping_by_air_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
 ## minimum_training_level
 
 * Number with 0 decimal places
@@ -7708,21 +7462,6 @@
 * Number with 1 decimal places
 * **Categories**: unit_leader
 
-## naval_strike_agility_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## naval_strike_attack_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
-## naval_strike_targetting_factor
-
-* Number with 0 decimal places
-* **Categories**: air
-
 ## navy_intel_decryption_bonus
 
 * Number with 0 decimal places
@@ -7767,10 +7506,6 @@
 
 * Number with 0 decimal places
 * **Categories**: unit_leader
-## navy_weather_penalty
-
-* Number with 2 decimal places
-* **Categories**: air
 
 ## new_operative_slot_bonus
 
@@ -8401,11 +8136,6 @@
 
 * Number with 2 decimal places
 * **Categories**: defensive
-
-## strategic_bomb_visibility
-
-* Number with 0 decimal places
-* **Categories**: air
 
 ## subjects_autonomy_gain
 
