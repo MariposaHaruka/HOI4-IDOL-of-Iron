@@ -9,42 +9,90 @@ ideas = {
 			}	
 			removal_cost = -1
 			picture = usa_great_depression_3
-			modifier = {
-				conservatism_acceptance = 0.01
-				conservatism_drift	= 0.02
-				conservatism_drift_from_guarantees = 0.03
-				drift_defence_factor = 0.04
-				embargo_cost_factor = 0.05
-				embargo_threshold_factor = 0.06
-				guarantee_cost = 0.07
-				master_ideology_drift = 0.08
-				female_random_scientist_chance = 0.09
-				autonomy_gain = 0.10
-				autonomy_gain_global_factor = 0.11
-				autonomy_gain_ll_to_overlord = 0.12
-				autonomy_gain_ll_to_overlord_factor = 0.13
-				autonomy_gain_ll_to_subject = 0.14
-				autonomy_gain_ll_to_subject_factor = 0.15
-				autonomy_gain_trade = 0.16
-				autonomy_gain_trade_factor = 0.17
-				autonomy_gain_warscore = 0.18
-				autonomy_gain_warscore_factor = 0.19
-				autonomy_manpower_share_from_subjects = 0.20
-				autonomy_manpower_share_from_subjects = 0.21
-				cic_to_overlord_factor = 0.22
-				extra_trade_to_overlord_factor = 0.23
-				license_subject_master_purchase_cost = 0.24
-				mic_to_overlord_factor = 0.25
-				overlord_trade_cost_factor = 0.26
-				resources_to_overlord_factor = 0.27
-				subjects_autonomy_gain = 0.28
-				annex_cost_factor = 0.29
-				peace_score_ratio_transferred_to_overlord = 0.30
-				peace_score_ratio_transferred_to_players = 0.31
-				puppet_cost_factor = 0.32
-				faction_influence_contribution_factor = 0.33
-				faction_influence_war_score_factor = 0.34
-				faction_subject_contribution_gain = 0.35
+			equipment_bonus = {	#script_enum_equipment_bonus_type/script_enum_equipment_stat
+				anti_air = {
+					build_cost_ic = 0.01
+				}
+				anti_tank = {
+					build_cost_ic = 0.01
+				}
+				armor = {
+					build_cost_ic = 0.01
+				}
+				artillery = {
+					build_cost_ic = 0.01
+				}
+				heavy_tank_chassis = {
+					build_cost_ic = 0.01
+				}
+				infantry = {
+					build_cost_ic = 0.01
+				}
+				light_tank_chassis = {
+					build_cost_ic = 0.01
+				}
+				mechanized = {
+					build_cost_ic = 0.01
+				}
+				medium_tank_chassis = {
+					build_cost_ic = 0.01
+				}
+				motorized = {
+					build_cost_ic = 0.01
+				}
+				rocket = {
+					build_cost_ic = 0.01
+				}
+				support_equipment = {
+					build_cost_ic = 0.01
+				}
+				
+				capital_ship = {
+					build_cost_ic = 0.01
+				}
+				carrier = {
+					build_cost_ic = 0.01
+				}
+				convoy = {
+					build_cost_ic = 0.01
+				}
+				naval_transport = {
+					build_cost_ic = 0.01
+				}
+				screen_ship = {
+					build_cost_ic = 0.01
+				}
+				submarine = {
+					build_cost_ic = 0.01
+				}
+				
+				air_transport = {
+					build_cost_ic = 0.01
+				}
+				cas = {
+					build_cost_ic = 0.01
+				}
+				fighter = {
+					build_cost_ic = 0.01
+				}
+				interceptor = {
+					build_cost_ic = 0.01
+				}
+				tactical_bomber = {
+					build_cost_ic = 0.01
+				}
+				missile = {
+					build_cost_ic = 0.01
+				}
+				naval_bomber = {
+					build_cost_ic = 0.01
+				}
+				strat_bomber = {
+					build_cost_ic = 0.01
+				}
+				suicide = {
+					build_cost_ic = 0.01
+				}
 			}
 		}
 		test_modifier_2 = {
@@ -56,32 +104,89 @@ ideas = {
 			}	
 			removal_cost = -1
 			picture = usa_great_depression_3
-			modifier = {
-				additional_brigade_column_size = 0.01
-				agency_upgrade_time	= 0.02
-				air_doctrine_cost_factor = 0.03
-				air_equipment_upgrade_xp_cost = 0.04
-				air_invasion_plan_cap = 0.05
-				air_invasion_prep_days = 0.06
-				air_volunteer_cap = 0.07
-				airforce_intel_to_others = 0.08
-				annex_subject_cost_factor = 0.09
-				army_intel_to_others = 0.10
-				assign_army_leader_cp_cost = 0.11
-				automatic_grant_medal_chance = 0.12
-				base_fuel_gain = 0.13
-				base_fuel_gain_factor = 0.14
-				choose_preferred_tactics_cost = 0.15
-				cic_construction_boost = 0.16
-				cic_construction_boost_factor = 0.17
-				cic_to_target_factor = 0.18
-				civil_war_involvement_tension = 0.19
-				civilian_factory_use = 0.20
-				civilian_intel_to_others = 0.21
-				coastal_bunker_effectiveness_factor = 0.22
-				command_abilities_cost_factor = 0.23
-				command_power_gain = 0.24
-				command_power_gain_mult = 0.25
+			equipment_bonus = {	
+				light_tank_chassis_0 = {
+					build_cost_ic = 0.01
+				}
+				light_tank_chassis_1 = {
+					build_cost_ic = 0.01
+				}
+				light_tank_chassis_2 = {
+					build_cost_ic = 0.01
+				}
+				light_tank_chassis_3 = {
+					build_cost_ic = 0.01
+				}
+				light_sp_anti_air_brigade = {
+					build_cost_ic = 0.01
+				}
+				medium_sp_anti_air_brigade = {
+					build_cost_ic = 0.01
+				}
+				light_tank_chassis = {
+					build_cost_ic = 0.01
+				}
+				sturmtruppe_battalion = {
+					build_cost_ic = 0.01
+				}
+				submarine = {
+					build_cost_ic = 0.01
+				}
+				ballistic_missile_equipment = {
+					build_cost_ic = 0.01
+				}
+				ballistic_missile_equipment_1 = {
+					build_cost_ic = 0.01
+				}
+				ballistic_missile_equipment_2 = {
+					build_cost_ic = 0.01
+				}
+				ballistic_missile_equipment_3 = {
+					build_cost_ic = 0.01
+				}
+				carrier = {
+					build_cost_ic = 0.01
+				}
+				convoy = {
+					build_cost_ic = 0.01
+				}
+				naval_transport = {
+					build_cost_ic = 0.01
+				}
+				screen_ship = {
+					build_cost_ic = 0.01
+				}
+				submarine = {
+					build_cost_ic = 0.01
+				}
+				
+				air_transport = {
+					build_cost_ic = 0.01
+				}
+				cas = {
+					air_visibility_factor = 0.01
+				}
+				fighter = {
+					air_visibility_factor = 0.01
+				}
+				interceptor = {
+					air_visibility_factor = 0.01
+				}
+				tactical_bomber = {
+					air_visibility_factor = 0.01
+				}
+				missile = {
+					air_visibility_factor = 0.01
+				}
+				naval_bomber = {
+					air_visibility_factor = 0.01
+				}
+				strat_bomber = {
+					air_visibility_factor = 0.01
+				}
+				suicide = {
+					air_visibility_factor = 0.01
+				}
 			}
 		}
 		test_modifier_3 = {

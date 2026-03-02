@@ -34,7 +34,7 @@
 	army_armor_attack_factor	#기갑 사단 공격
 	army_armor_speed_factor	#기갑 속도
 	army_artillery_attack_factor	#포병 공격
-	army_attack_against_major_factor	#주요국에 대한 공격
+	army_attack_against_major_factor	#강대국에 대한 공격
 	army_attack_against_minor_factor	#약소국에 대한 공격
 	army_attack_factor	#사단 공격
 	army_claim_attack_factor	#자국 영토 내 사단 공격
@@ -147,7 +147,7 @@
 	air_cas_present_factor	#지상 지원	#+4%	#tt
 	air_close_air_support_org_damage_factor	#근접항공지원 조직력 피해	#+2%
 	air_defence_factor	#대공 방어	#+2%	#tt
-	air_detection	#대공 탐지	#+3%
+	air_detection	#항공 탐지력	#+3%
 	air_escort_efficiency	#호위 효율	#+2%	#tt
 	air_fuel_consumption_factor	#공군 연료 소비량	#-4%	#tt
 	air_home_defence_factor	#공군 조국 방위 변동치	#tt
@@ -199,7 +199,7 @@
 	air_strategic_bomber_bombing_factor	#전략폭격	#+3%	#tt
 	air_strategic_bomber_defence_factor	#폭격기 방어	#+4%
 	air_strategic_bomber_night_penalty	#야간 전략폭격 불이익	#-4%
-	air_superiority_detect_factor	#최대 비행 속도	#+2%
+	air_superiority_detect_factor	#전투기에 의한 포착	#+4%
 	air_superiority_efficiency	#공중우세 임무 효율	#+2%	#tt
 	air_training_xp_gain_factor	#비행단 훈련 경험치 획득량	#+2%	#tt
 	air_untrained_pilots_penalty_factor	#새 비행단에 대한 미숙련 조종사 불이익	#-2%	#tt
@@ -224,97 +224,96 @@
 
 	<Trait>_xp_gain_factor	#-trait-_xp_gain_factor
 
-	acclimatization_cold_climate_gain_factor	#acclimatization_cold_climate_gain_factor
-	acclimatization_hot_climate_gain_factor	#acclimatization_hot_climate_gain_factor
-	air_superiority_bonus_in_combat	#air_superiority_bonus_in_combat
-	armor_factor	#armor_factor
-	army_advisor_cost_factor	#army_advisor_cost_factor
-	army_armor_attack_factor	#army_armor_attack_factor
-	army_armor_defence_factor	#army_armor_defence_factor
+	acclimatization_cold_climate_gain_factor	#추위 적응 획득치	#+3%
+	acclimatization_hot_climate_gain_factor	#더위 적응 획득치	#+3%
+	air_superiority_bonus_in_combat	#전투 중 공중우세 혜택	#+3%
+	armor_factor	#장갑	#+4%
+	army_advisor_cost_factor	#육군 이론가 비용	#-2%
+	army_armor_attack_factor	#기갑사단 공격	#+3%
+	army_armor_defence_factor	#기갑사단 방어	#+3%
+	army_armor_speed_factor	#기갑 속도	#+3%	#tt
+	army_artillery_attack_factor	#포병 공격	#+3%	#tt
+	army_artillery_defence_factor	#포병 방어	#+3%	#tt
+	army_attack_against_major_factor	#강대국에 대한 공격력	#+3%	#tt
+	army_attack_against_minor_factor	#약소국에 대한 공격력	#+3%	#tt
+	army_attack_factor	#사단 공격	#+3%	#tt
+	army_attack_speed_factor	#공격 사단 속도	#+4%
+	army_breakthrough_against_major_factor	#강대국에 대한 돌파	#+3%
+	army_breakthrough_against_minor_factor	#약소국에 대한 돌파	#+3%
+	army_claim_attack_factor	#자국 영토 내 사단 공격	#+3%
+	army_claim_defence_factor	#자국 영토 내 사단 방어	#+3%
+	army_core_attack_factor	#핵심 영토 내 사단 공격	#+3%	#tt
+	army_core_defence_factor	#핵심 영토 내 사단 방어	#+3%	#tt
+	army_defence_against_major_factor	#강대국에 대한 방어력	#+3%	#tt
+	army_defence_against_minor_factor	#약소국에 대한 방어력	#+3%	#tt
+	army_defence_factor	#사단 방어	#+3%	#tt
+	army_experience_from_volunteers	#의용군을 통한 육군 경험	#+3%
+	army_fuel_capacity_factor	#육군 연료 보유량	#+4%
+	army_fuel_consumption_factor	#육군 연료 소비량	#-4%	#tt
+	army_infantry_attack_factor	#보병사단 공격	#+3%
+	army_infantry_defence_factor	#보병사단 방어	#+3%
+	army_morale	#사단 회복	#+1F
+	army_morale_factor	#사단 회복률	#+3%	#tt
+	army_org	#사단 조직력	#+1F
+	army_org_factor	#사단 조직력	#+3%	#tt
 
-	army_armor_speed_factor	#army_armor_speed_factor
-	army_artillery_attack_factor	#army_artillery_attack_factor
-	army_artillery_defence_factor	#army_artillery_defence_factor
-	army_attack_against_major_factor	#army_attack_against_major_factor
-	army_attack_against_minor_factor	#army_attack_against_minor_factor
-	army_attack_factor	#army_attack_factor
-	army_attack_speed_factor	#army_attack_speed_factor
-	army_breakthrough_against_major_factor	#army_breakthrough_against_major_factor
-	army_breakthrough_against_minor_factor	#army_breakthrough_against_minor_factor
-	army_claim_attack_factor	#army_claim_attack_factor
-	army_claim_defence_factor	#army_claim_defence_factor
-	army_core_attack_factor	#army_core_attack_factor
-	army_core_defence_factor	#army_core_defence_factor
-	army_defence_against_major_factor	#army_defence_against_major_factor
-	army_defence_against_minor_factor	#army_defence_against_minor_factor
-	army_defence_factor	#army_defence_factor
-	army_experience_from_volunteers	#army_experience_from_volunteers
-	army_fuel_capacity_factor	#army_fuel_capacity_factor
-	army_fuel_consumption_factor	#army_fuel_consumption_factor
-	army_infantry_attack_factor	#army_infantry_attack_factor
-	army_infantry_defence_factor	#army_infantry_defence_factor
-	army_morale	#army_morale
-	army_morale_factor	#army_morale_factor
-	army_org	#army_org
-	army_org_factor	#army_org_factor
+	army_org_regain	#육군 조직력 회복	#+4%
+	army_retreat_speed_factor	#퇴각하는 사단 속도	#+4%
+	army_speed_factor	#사단 속도	#+4%
+	army_speed_factor_for_controller	#사단 속도	#+4%
+	army_strength_factor	#내구도	#+4%
+	assign_army_leader_cp_cost	#육군 지휘관 배정 비용	#-0F
+	attack_bonus_against	#국가에 대한 공격 혜택	#+3%
+	attack_bonus_against_cores	#핵심 영토 공격	#+3%
+	attrition	#사단 손실	#-3%
+	attrition_for_controller	#사단 손실	#-3%
+	breakthrough_bonus_against	#국가에 대한 돌파 보너스	#+4%
+	breakthrough_factor	#돌파	#+4%
+	cas_damage_reduction	#근접항공지원기 피해량 감소	#+3%
+	cavalry_attack_factor	#기병 공격	#+3%
+	cavalry_defence_factor	#기병 방어	#+3%
+	combat_width_factor	#소속군 전장 너비	#-3%
+	command_abilities_cost_factor	#지휘관 능력 비용	#-4%
+	command_power_gain	#매일 지휘력 획득	#+2F	#tt
+	command_power_gain_mult	#매일 지휘력 획득 증가치	#+2%	#tt
+	coordination_bonus	#조직	#+3%
+	defence	#방어	#+4%
+	defense_bonus_against	#타국에 대한 방어 혜택	#+3%
+	dig_in_speed	#참호 부설 속도	#+0F
+	dig_in_speed_factor	#참호 부설 속도	#+3%
+	disable_strategic_redeployment #전략적 재배치 비활성화됨	#B	#*
+	disable_strategic_redeployment_for_controller #전략적 재배치 비활성화됨	#B	#*
+	dont_lose_dig_in_on_attack	#공격 패퇴 중 참호구축 불가 #B
+	enemy_army_speed_factor	#적 사단 속도	#-4%
 
-	army_org_regain	#army_org_regain
-	army_retreat_speed_factor	#army_retreat_speed_factor
-	army_speed_factor	#army_speed_factor
-	army_speed_factor_for_controller	#army_speed_factor_for_controller
-	army_strength_factor	#army_strength_factor
-	assign_army_leader_cp_cost	#assign_army_leader_cp_cost
-	attack_bonus_against	#attack_bonus_against
-	attack_bonus_against_cores	#attack_bonus_against_cores
-	attrition	#attrition
-	attrition_for_controller	#attrition_for_controller
-	breakthrough_bonus_against	#breakthrough_bonus_against
-	breakthrough_factor	#breakthrough_factor
-	cas_damage_reduction	#cas_damage_reduction
-	cavalry_attack_factor	#cavalry_attack_factor
-	cavalry_defence_factor	#cavalry_defence_factor
-	combat_width_factor	#combat_width_factor
-	command_abilities_cost_factor	#command_abilities_cost_factor
-	command_power_gain	#command_power_gain
-	command_power_gain_mult	#command_power_gain_mult
-	coordination_bonus	#coordination_bonus
-	defence	#defence
-	defense_bonus_against	#defense_bonus_against
-	dig_in_speed	#dig_in_speed
-	dig_in_speed_factor	#dig_in_speed_factor
-	disable_strategic_redeployment #B
-	disable_strategic_redeployment_for_controller #B
-	dont_lose_dig_in_on_attack #B
-	enemy_army_speed_factor	#enemy_army_speed_factor
-
-	enemy_attrition	#enemy_attrition
-	experience_gain_army	#experience_gain_army
-	experience_gain_army_factor	#experience_gain_army_factor
-	experience_gain_army_unit	#experience_gain_army_unit
-	experience_gain_army_unit_factor	#experience_gain_army_unit_factor
-	extra_marine_supply_grace	#extra_marine_supply_grace
-	extra_paratrooper_supply_grace	#extra_paratrooper_supply_grace
-	female_random_army_leader_chance	#female_random_army_leader_chance
-	heat_attrition	#heat_attrition
-	heat_attrition_factor	#heat_attrition_factor
+	enemy_attrition	#enemy_attrition	#+4%
+	experience_gain_army	#육군 경험치 획득량 (매일)	#+2F
+	experience_gain_army_factor	#육군 경험치 획득량	#+4%
+	experience_gain_army_unit	#사단 경험치 획득량 (매일)	#+1F
+	experience_gain_army_unit_factor	#사단 경험치 획득량	#+4%
+	extra_marine_supply_grace	#extra_marine_supply_grace	#+4%
+	extra_paratrooper_supply_grace	#extra_paratrooper_supply_grace	#+4%
+	female_random_army_leader_chance	#여성 군 지도자 추가 확률	#Y2%
+	heat_attrition	#더위로 인한 손실	#-3%
+	heat_attrition_factor	#더위로 인한 손실	#-4%
 	land_mastery_gain_factor	#육군 교리 통달치 획득량	#+2%	#tt
 	
-	land_night_attack	#land_night_attack
-	local_org_regain	#local_org_regain
-	marines_special_forces_contribution_factor	#marines_special_forces_contribution_factor
-	max_command_power	#max_command_power
-	max_command_power_mult	#max_command_power_mult
-	max_commander_army_size	#max_commander_army_size
-	max_dig_in	#max_dig_in
-	max_dig_in_factor	#max_dig_in_factor
-	max_planning	#max_planning
-	max_planning_factor	#max_planning_factor
-	max_training	#max_training
-	mechanized_attack_factor	#mechanized_attack_factor
-	mechanized_defence_factor	#mechanized_defence_factor
-	modifier_army_sub_unit_armored_car_attack_factor	#modifier_army_sub_unit_armored_car_attack_factor
-	modifier_army_sub_unit_armored_car_defence_factor	#modifier_army_sub_unit_armored_car_defence_factor
-	modifier_army_sub_unit_armored_car_max_org_factor	#modifier_army_sub_unit_armored_car_max_org_factor
+	land_night_attack	#야간 지상 공격	#+4%
+	local_org_regain	#조직력 회복	#+4%
+	marines_special_forces_contribution_factor	#해병대 특수부대 한도 기여	#-2%
+	max_command_power	#매일 지휘력 획득	#+0F	#tt
+	max_command_power_mult	#최대 지휘력 증가 배율	#+2%	#tt
+	max_commander_army_size	#max_commander_army_size	#+4%
+	max_dig_in	#최대 참호	#+1F
+	max_dig_in_factor	#최대 참호	#+4%
+	max_planning	#최대 계획 수립	#+3%
+	max_planning_factor	#최대 계획 수립 획득치	#+3%
+	max_training	#max_training	#+4%
+	mechanized_attack_factor	#기계화 공격	#+3%
+	mechanized_defence_factor	#기계화 방어	#+3%
+	modifier_army_sub_unit_armored_car_attack_factor	#장갑차 공격	#+4%
+	modifier_army_sub_unit_armored_car_defence_factor	#장갑차 방어	#+4%
+	modifier_army_sub_unit_armored_car_max_org_factor	#modifier_army_sub_unit_armored_car_max_org_factor	#+4%
 	modifier_army_sub_unit_armored_car_recon_attack_factor	#modifier_army_sub_unit_armored_car_recon_attack_factor
 	modifier_army_sub_unit_armored_car_recon_defence_factor	#modifier_army_sub_unit_armored_car_recon_defence_factor
 	modifier_army_sub_unit_armored_car_recon_max_org_factor	#modifier_army_sub_unit_armored_car_recon_max_org_factor
@@ -411,7 +410,7 @@
 
 ### AUTONOMY modifiers
 	autonomy_gain	#매일 자치도 진행이 오름	#+1F	#tt
-	autonomy_gain_global_factor	#총 자치도 획득	#+3%	#tt #*
+	autonomy_gain_global_factor	#총 자치도 획득	#+3%	#tt
 	autonomy_gain_ll_to_overlord	#종주국으로의 무기대여로 얻은 자유	#+2F
 	autonomy_gain_ll_to_overlord_factor	#종주국으로의 무기대여로 얻은 자유	#+4%
 	autonomy_gain_ll_to_subject	#종주국의 무기대여로 인한 종속국의 자유 획득	#+2F
@@ -426,7 +425,7 @@
 	cic_to_overlord_factor	#종주국으로 보내는 민간산업	#-4%	#tt
 	extra_trade_to_overlord_factor	#종주국과의 추가 무역	#+4%
 	license_subject_master_purchase_cost	#종주국과 종속국 간의 면허 비용	#-4%	#tt
-	master_build_autonomy_factor #B
+	master_build_autonomy_factor #건설로 얻은 자치도	#B
 	mic_to_overlord_factor	#종주국으로 보내는 군수산업	#+4%	#tt
 	overlord_trade_cost_factor	#종주국 무역 비용	#-4%
 	resources_to_overlord_factor	#종주국으로 가는 자원	#+4%	#tt
@@ -471,8 +470,8 @@
 	automatic_grant_medal_chance	#무료 훈장 자동 획득 확률	#+2%
 	base_fuel_gain	#연료 획득량	#+0F
 	base_fuel_gain_factor	#기본 연료 획득량	#+4%
-	can_guarantee_other_ideologies	#-3%  #B
-	choose_preferred_tactics_cost	#선호전 술 선택 비용 점수	#-0F
+	can_guarantee_other_ideologies	#다른 이념 국가의 독립 보장 가능	#B
+	choose_preferred_tactics_cost	#선호전술 선택 비용 점수	#-0F
 	cic_construction_boost	#기본 건설 라인 속도 성장	#+3%
 	cic_construction_boost_factor	#시장 건설 성장 배수	#+3%
 	cic_to_target_factor	#목표국의 민간 산업	#-4%
@@ -481,8 +480,8 @@
 	civilian_intel_to_others	#다른 국가가 얻는 민간 정보	#-1%
 	coastal_bunker_effectiveness_factor	#해안 요새 효율	#+2%
 	command_abilities_cost_factor	#지휘관 능력 비용	#-4%
-	command_power_gain	#매일 지휘력 획득	#+2F
-	command_power_gain_mult	#매일 지휘력 획득 증가치	#-3%
+	command_power_gain	#매일 지휘력 획득	#+2F	#tt
+	command_power_gain_mult	#매일 지휘력 획득 증가치	#+2%	#tt
 
 	compliance_gain	#compliance_gain
 	compliance_growth	#compliance_growth
@@ -502,9 +501,9 @@
 	decryption_factor	#decryption_factor
 	defensive_war_stability_factor	#defensive_war_stability_factor
 
-	disabled_ideas #B
-	embargo_cost_factor	#embargo_cost_factor
-	embargo_threshold_factor	#embargo_threshold_factor
+	disabled_ideas	#장관 및 법을 지정할 수 없음	#B
+	embargo_cost_factor	#금수 조치 비용 변동치	#-3%
+	embargo_threshold_factor	#금수 조치 긴장도 제한	#-3%	#tt
 	encryption	#encryption
 	encryption_factor	#encryption_factor
 	enemy_declare_war_tension	#enemy_declare_war_tension
@@ -527,6 +526,81 @@
 	experience_gain_<Unit>_combat_factor	#experience_gain_-unit-_combat_factor
 	experience_gain_<Unit>_mission_factor	#experience_gain_-unit-_mission_factor
 	experience_gain_<Unit>_training_factor	#experience_gain_-unit-_training_factor
+
+	experience_gain_ballistic_missile_combat_factor	#	#
+	experience_gain_cas_combat_factor	#	#
+	experience_gain_cv_cas_combat_factor	#	#
+	experience_gain_cv_fighter_combat_factor	#	#
+	experience_gain_cv_nav_bomber_combat_factor	#	#
+	experience_gain_cv_suicide_craft_combat_factor	#	#
+	experience_gain_explosive_ammo_combat_factor	#	#
+	experience_gain_fighter_combat_factor	#	#
+	experience_gain_guided_missile_combat_factor	#	#
+	experience_gain_heavy_fighter_combat_factor	#	#
+	experience_gain_jet_fighter_combat_factor	#	#
+	experience_gain_jet_strat_bomber_combat_factor	#	#
+	experience_gain_jet_tac_bomber_combat_factor	#	#
+	experience_gain_maritime_patrol_plane_combat_factor	#	#
+	experience_gain_mothership_combat_factor	#	#
+	experience_gain_nav_bomber_combat_factor	#	#
+	experience_gain_nuclear_missile_combat_factor	#	#
+	experience_gain_sam_missile_combat_factor	#	#
+	experience_gain_scout_plane_combat_factor	#	#
+	experience_gain_strat_bomber_combat_factor	#	#
+	experience_gain_strat_bomber_intercontinental_combat_factor	#	#
+	experience_gain_suicide_craft_combat_factor	#	#
+	experience_gain_tac_bomber_combat_factor	#	#
+	experience_gain_transport_plane_combat_factor	#	#
+	experience_gain_ballistic_missile_mission_factor	#	#
+	experience_gain_cas_mission_factor	#	#
+	experience_gain_cv_cas_mission_factor	#	#
+	experience_gain_cv_fighter_mission_factor	#	#
+	experience_gain_cv_nav_bomber_mission_factor	#	#
+	experience_gain_cv_suicide_craft_mission_factor	#	#
+	experience_gain_explosive_ammo_mission_factor	#	#
+	experience_gain_fighter_mission_factor	#	#
+	experience_gain_guided_missile_mission_factor	#	#
+	experience_gain_heavy_fighter_mission_factor	#	#
+	experience_gain_jet_fighter_mission_factor	#	#
+	experience_gain_jet_strat_bomber_mission_factor	#	#
+	experience_gain_jet_tac_bomber_mission_factor	#	#
+	experience_gain_maritime_patrol_plane_mission_factor	#	#
+	experience_gain_mothership_mission_factor	#	#
+	experience_gain_nav_bomber_mission_factor	#	#
+	experience_gain_nuclear_missile_mission_factor	#	#
+	experience_gain_sam_missile_mission_factor	#	#
+	experience_gain_scout_plane_mission_factor	#	#
+	experience_gain_strat_bomber_mission_factor	#	#
+	experience_gain_strat_bomber_intercontinental_mission_factor	#	#
+	experience_gain_suicide_craft_mission_factor	#	#
+	experience_gain_tac_bomber_mission_factor	#	#
+	experience_gain_transport_plane_mission_factor	#	#
+	experience_gain_ballistic_missile_training_factor	#	#
+	experience_gain_cas_training_factor	#	#
+	experience_gain_cv_cas_training_factor	#	#
+	experience_gain_cv_fighter_training_factor	#	#
+	experience_gain_cv_nav_bomber_training_factor	#	#
+	experience_gain_cv_suicide_craft_training_factor	#	#
+	experience_gain_explosive_ammo_training_factor	#	#
+	experience_gain_fighter_training_factor	#	#
+	experience_gain_guided_missile_training_factor	#	#
+	experience_gain_heavy_fighter_training_factor	#	#
+	experience_gain_jet_fighter_training_factor	#	#
+	experience_gain_jet_strat_bomber_training_factor	#	#
+	experience_gain_jet_tac_bomber_training_factor	#	#
+	experience_gain_maritime_patrol_plane_training_factor	#	#
+	experience_gain_mothership_training_factor	#	#
+	experience_gain_nav_bomber_training_factor	#	#
+	experience_gain_nuclear_missile_training_factor	#	#
+	experience_gain_sam_missile_training_factor	#	#
+	experience_gain_scout_plane_training_factor	#	#
+	experience_gain_strat_bomber_training_factor	#	#
+	experience_gain_strat_bomber_intercontinental_training_factor	#	#
+	experience_gain_suicide_craft_training_factor	#	#
+	experience_gain_tac_bomber_training_factor	#	#
+	experience_gain_transport_plane_training_factor	#	#
+
+
 
 	experience_loss_factor	#experience_loss_factor
 	extra_trade_to_target_factor	#extra_trade_to_target_factor
@@ -557,7 +631,7 @@
 	global_building_slots_factor	#global_building_slots_factor
 
 	grant_medal_cost_factor	#grant_medal_cost_factor
-	guarantee_cost	#guarantee_cost
+	guarantee_cost	#독립보장 비용	#-2%
 	guarantee_tension	#guarantee_tension
 	improve_relations_maintain_cost_factor	#improve_relations_maintain_cost_factor
 
@@ -606,8 +680,8 @@
 
 	local_resources_<Resource>_factor	#local_resources_-resource-_factor
 
-	max_command_power	#max_command_power
-	max_command_power_mult	#max_command_power_mult
+	max_command_power	#매일 지휘력 획득	#	#tt
+	max_command_power_mult	#최대 지휘력 증가 배율	#	#tt
 
 	max_fuel	#max_fuel
 	max_fuel_building	#max_fuel_building
@@ -792,9 +866,9 @@
 
 ### Modifiers for scope faction
 
-	faction_influence_contribution_factor	#기여 영향력 획득량	#+4%	#*
-	faction_influence_war_score_factor	#승점 영향력 획득량	#+4%	#*
-	faction_subject_contribution_gain	#종속국 기여도 감소	#Y4%	#*
+	faction_influence_contribution_factor	#기여 영향력 획득량	#+4%	#tt
+	faction_influence_war_score_factor	#승점 영향력 획득량	#+4%	#tt
+	faction_subject_contribution_gain	#종속국 기여도 감소	#Y4%
 
 ### Modifiers for scope government_in_exile
 
@@ -1089,53 +1163,53 @@
 	unit_support_ship_design_cost_factor	#지원함 설계 비용	#-4%	#X
 
 ### PEACE modifiers
-	annex_cost_factor	#합병 비용	#-4%
+	annex_cost_factor	#합병 비용	#-4%	#tt
 	peace_score_ratio_transferred_to_overlord	#종주국에 양도된 평화 점수	#-4%	#*
 	peace_score_ratio_transferred_to_players	#플레이어에게 양도된 평화 점수	#-4%	#*
-	puppet_cost_factor	#괴뢰국 생성 비용	#-4%
+	puppet_cost_factor	#괴뢰국 생성 비용	#-4%	#tt
 
 ### POLITICS modifiers
-	conseratism_acceptance	#보수주의 외교 수용
-	liberalism_mod_acceptance	#자유주의 외교 수용
-	progressivism_acceptance	#진보주의 외교 수용
-	socialdemocracy_acceptance	#사민주의 외교 수용
-	socialism_acceptance	#사회주의 외교 수용
-	communism_acceptance	#공산주의 외교 수용
-	authoritariancommunism_acceptance	#권위공산주의 외교 수용
-	anarchosyndicalism_acceptance	#아나코-생디칼리즘 외교 수용
-	fascisn_acceptance	#파시즘 외교 수용
-	militarytotalism_acceptance	#군국주의 외교 수용
-	authoritariandemocracy_acceptance	#권위민주주의 외교 수용
-	autocracy_acceptance	#전제주의 외교 수용
-	conseratism_drift	#매일 보수주의 지지도
-	liberalism_mod_drift	#매일 자유주의 지지도
-	progressivism_drift	#매일 진보주의 지지도
-	socialdemocracy_drift	#매일 사민주의 지지도
-	socialism_drift	#매일 사회주의 지지도
-	communism_drift	#매일 공산주의 지지도	#tt
-	authoritariancommunism_drift	#매일 권위공산주의 지지도
-	anarchosyndicalism_drift	#매일 아나코-생디칼리즘 지지도
-	fascisn_drift	#매일 파시즘 지지도	#tt
-	militarytotalism_drift	#매일 군국주의 지지도
-	authoritariandemocracy_drift	#매일 권위민주주의 지지도
-	autocracy_drift	#매일 전제주의 지지도
-	conseratism_drift_from_guarantees	#보장으로 인한 타국의 보수주의 증가
-	liberalism_mod_drift_from_guarantees	#보장으로 인한 타국의 자유주의 증가
-	progressivism_drift_from_guarantees	#보장으로 인한 타국의 진보주의 증가
-	socialdemocracy_drift_from_guarantees	#보장으로 인한 타국의 사민주의 증가
-	socialism_drift_from_guarantees	#보장으로 인한 타국의 사회주의 증가
-	communism_drift_from_guarantees	#보장으로 인한 타국의 공산주의 증가
-	authoritariancommunism_drift_from_guarantees	#보장으로 인한 타국의 권위공산주의 증가
-	anarchosyndicalism_drift_from_guarantees	#보장으로 인한 타국의 아나코-생디칼리즘 증가
-	fascisn_drift_from_guarantees	#보장으로 인한 타국의 파시즘 증가파
-	militarytotalism_drift_from_guarantees	#보장으로 인한 타국의 군국주의 증가
-	authoritariandemocracy_drift_from_guarantees	#보장으로 인한 타국의 권위민주주의 증가
-	autocracy_drift_from_guarantees	#보장으로 인한 타국의 전제주의 증가
-	drift_defence_factor	#이념 변화 방어	#+3%
-	embargo_cost_factor	#embargo_cost_factor	#금수 조치 비용 변동치	#-3%	#*
-	embargo_threshold_factor	#embargo_threshold_factor	#금수 조치 긴장도 제한	#-3%	#*
-	guarantee_cost	#guarantee_cost	#독립보장 비용	#-2%
-	master_ideology_drift	#master_ideology_drift	#종주국 이념 변화	#+2F
+	conservatism_acceptance	#보수주의 외교 수용	#+0F
+	liberalism_mod_acceptance	#자유주의 외교 수용	#+0F
+	progressivism_acceptance	#진보주의 외교 수용	#+0F
+	socialdemocracy_acceptance	#사민주의 외교 수용	#+0F
+	socialism_acceptance	#사회주의 외교 수용	#+0F
+	communism_acceptance	#공산주의 외교 수용	#+0F
+	authoritariancommunism_acceptance	#권위공산주의 외교 수용	#+0F
+	anarchosyndicalism_acceptance	#아나코-생디칼리즘 외교 수용	#+0F
+	fascism_acceptance	#파시즘 외교 수용	#+0F
+	militarytotalism_acceptance	#군국주의 외교 수용	#+0F
+	authoritariandemocracy_acceptance	#권위민주주의 외교 수용	#+0F
+	autocracy_acceptance	#전제주의 외교 수용	#+0F
+	conservatism_drift	#매일 보수주의 지지도	#+2F
+	liberalism_mod_drift	#매일 자유주의 지지도	#+2F
+	progressivism_drift	#매일 진보주의 지지도	#+2F
+	socialdemocracy_drift	#매일 사민주의 지지도	#+2F
+	socialism_drift	#매일 사회주의 지지도	#+2F
+	communism_drift	#매일 공산주의 지지도	#+2F	#tt
+	authoritariancommunism_drift	#매일 권위공산주의 지지도	#+2F
+	anarchosyndicalism_drift	#매일 아나코-생디칼리즘 지지도	#+2F
+	fascism_drift	#매일 파시즘 지지도	#+2F	#tt
+	militarytotalism_drift	#매일 군국주의 지지도	#+2F
+	authoritariandemocracy_drift	#매일 권위민주주의 지지도	#+2F
+	autocracy_drift	#매일 전제주의 지지도	#+2F
+	conservatism_drift_from_guarantees	#보장으로 인한 타국의 보수주의 증가	#+2F
+	liberalism_mod_drift_from_guarantees	#보장으로 인한 타국의 자유주의 증가	#+2F
+	progressivism_drift_from_guarantees	#보장으로 인한 타국의 진보주의 증가	#+2F
+	socialdemocracy_drift_from_guarantees	#보장으로 인한 타국의 사민주의 증가	#+2F
+	socialism_drift_from_guarantees	#보장으로 인한 타국의 사회주의 증가	#+2F
+	communism_drift_from_guarantees	#보장으로 인한 타국의 공산주의 증가	#+2F
+	authoritariancommunism_drift_from_guarantees	#보장으로 인한 타국의 권위공산주의 증가	#+2F
+	anarchosyndicalism_drift_from_guarantees	#보장으로 인한 타국의 아나코-생디칼리즘 증가	#+2F
+	fascism_drift_from_guarantees	#보장으로 인한 타국의 파시즘 증가파	#+2F
+	militarytotalism_drift_from_guarantees	#보장으로 인한 타국의 군국주의 증가	#+2F
+	authoritariandemocracy_drift_from_guarantees	#보장으로 인한 타국의 권위민주주의 증가	#+2F
+	autocracy_drift_from_guarantees	#보장으로 인한 타국의 전제주의 증가	#+2F
+	drift_defence_factor	#이념 변화 방어	#+3%	#tt
+	embargo_cost_factor	#금수 조치 비용 변동치	#-3%
+	embargo_threshold_factor	#금수 조치 긴장도 제한	#-3%	#tt
+	guarantee_cost	#독립보장 비용	#-2%
+	master_ideology_drift	#종주국 이념 변화	#+2F	#tt
 
 ### SCIENTIST modifiers
 	female_random_scientist_chance	#여성 과학자 추가 확률	#Y2%
@@ -1145,6 +1219,7 @@
 	<ModifierStat>_factor	#-modifierstat-_factor
 	<ModifierStatValue>_value_factor	#-modifierstatvalue-_value_factor
 	<SpecialProject>_speed_factor	#-specialproject-_speed_factor
+
 	army_speed_factor_for_controller	#army_speed_factor_for_controller
 	coastal_bunker_effectiveness_factor	#coastal_bunker_effectiveness_factor
 	compliance_gain	#compliance_gain
@@ -1258,7 +1333,7 @@
 	mobilization_speed	#mobilization_speed
 	monthly_population	#monthly_population
 	non_core_manpower	#non_core_manpower
-	out_of_power_impact_factor	#out_of_power_impact_factor
+	out_of_power_impact_factor	#에너지 부족으로 인한 불이익 감소
 	production_factory_efficiency_gain_factor	#production_factory_efficiency_gain_factor
 	production_factory_max_efficiency_factor	#production_factory_max_efficiency_factor
 	production_factory_start_efficiency_factor	#production_factory_start_efficiency_factor
@@ -1400,19 +1475,19 @@
 	wounded_chance_factor	#wounded_chance_factor
 
 ## Targeted Modifiers
-### AGGRESSIVE modifiers
+	### AGGRESSIVE modifiers
 	naval_critical_score_chance_factor_against	#특정 국가를 상대로 한 해군 치명타 발생 확률	#+4%
 	navy_capital_ship_attack_factor_against	#특정 국가를 상대로 한 주력함 공격	#+4%
 	navy_screen_attack_factor_against	#특정 국가를 상대로 한 보조함 공격	#+4%
 	navy_submarine_attack_factor_against	#특정 국가를 상대로 한 잠수함 공격	#+4%
-### AIR modifiers
-### ARMY modifiers
-### DEFENSIVE modifiers
+	### AIR modifiers
+	### ARMY modifiers
+	### DEFENSIVE modifiers
 	navy_capital_ship_defence_factor_against	#특정 국가를 상대로 한 주력함 방어	#+4%
 	navy_screen_defence_factor_against	#특정 국가를 상대로 한 보조함 방어	#+4%
 	navy_submarine_defence_factor_against	#특정 국가를 상대로 한 잠수함 방어	#+4%
-### INTEL modifiers
-### NAVAL modifiers
+	### INTEL modifiers
+	### NAVAL modifiers
 	amphibious_invasion_against	#특정 국가를 상대로 한 상륙 침공	#+3%
 	invasion_preparation_against	#특정 국가를 상대로 한 상륙 준비	#-3%
 	naval_critical_score_chance_factor_against	#특정 국가를 상대로 한 해군 치명타 발생 확률	#+4%
@@ -1430,6 +1505,620 @@
 
 ## State Modifiers
 ## Equipment Modifiers
+	### 이용법
+	variable definition: <Dynamic Modifier ID>_<Equipment categories/Equipment archetypes/types>_<Equipment Modifiers>
+	해당 변수는 실제로 다이나믹 모디파이어에 넣는게 불가능하므로, 자체 변수를 추가해야 합니다
+	그리고, 당연하지만 해당 모디파이어 변동치와 동일한 국민정신을 히든 트리거로 추가해야 합니다
+
+	그래서 모디파이어에 넣을 경우, 
+	위의 정의한 변수에서 모디파이어 ID 부분을 빼고 뒤에 _tt만 입력하면
+	모디파이어가 작동하는 것처럼 구현이 가능합니다 'v'
+
+	[EX]
+	add_to_variable = {
+		BLA_navy_carrier_carrier_size = 0.33
+		tooltip = carrier_carrier_size_tt
+	}
+	add_to_variable = {
+		BLA_navy_carrier_surface_visibility = -0.15
+		tooltip = carrier_surface_visibility_tt
+	}
+
+	### ARMY Equipment categories
+	train
+	railway_gun
+	armor
+	motorized
+	mechanized
+	infantry
+	support
+	amphibious
+	anti_air
+	artillery
+	anti_tank
+	rocket
+	flame
+	land_cruiser
+	super_heavy_artillery_equipment
+	super_heavy_artillery_equipment_1
+	self_propelled_super_heavy_artillery_equipment
+	self_propelled_super_heavy_artillery_equipment_1
+	armored_support_vehicle
+	armored_support_vehicle_1
+	motorbike_equipment
+	motorbike_equipment_1
+
+	### NAVAL Equipment categories
+	convoy
+	floating_harbor
+	capital_ship
+	submarine
+	screen_ship
+	support_ship
+	carrier
+
+	### AIR Equipment categories
+	fighter
+	heavy_fighter
+	interceptor
+	tactical_bomber
+	strategic_bomber
+	cas
+	naval_bomber
+	missile
+	emplacement_gun_ammo
+	ballistic_missile
+	nuclear_missile
+	sam_missile
+	suicide
+	scout_plane
+	maritime_patrol_plane
+	air_transport
+	missile_launcher
+	helicopter_equipment
+	helicopter_equipment_1
+	mothership_equipment
+	mothership_equipment_0
+	strat_bomber_intercontinental_equipment
+	strat_bomber_intercontinental_equipment_1
+
+	# ARMY Equipment archetypes & types
+	land_cruiser_chassis
+	land_cruiser_chassis_1
+	land_cruiser_equipment_1 #(No-NSB version)
+	infantry_equipment
+	artillery_equipment
+	anti_tank_equipment
+	amphibious_mechanized_equipment
+	amphibious_mechanized_equipment_1
+	amphibious_mechanized_equipment_2
+	anti_air_equipment
+	anti_air_equipment_1
+	anti_air_equipment_2
+	anti_air_equipment_3
+	anti_tank_equipment_1
+	anti_tank_equipment_2
+	anti_tank_equipment_3
+	armored_car_equipment
+	gw_armored_car_equipment
+	armored_car_equipment_1
+	armored_car_equipment_2
+	armored_car_at_equipment
+	artillery_equipment_1
+	artillery_equipment_2
+	artillery_equipment_3
+	rocket_artillery_equipment
+	rocket_artillery_equipment_1
+	rocket_artillery_equipment_2
+	motorized_rocket_equipment
+	motorized_rocket_equipment_1
+	infantry_equipment_0
+	infantry_equipment_1
+	infantry_equipment_2
+	infantry_equipment_3
+	mechanized_equipment
+	mechanized_equipment_1
+	mechanized_equipment_2
+	mechanized_equipment_3
+	motorized_equipment
+	motorized_equipment_0
+	motorized_equipment_1
+	railway_gun_equipment
+	railway_gun_equipment_1
+	super_heavy_railway_gun_equipment
+	super_heavy_railway_gun_equipment_1
+	support_equipment
+	support_equipment_1
+	light_tank_chassis
+	light_tank_chassis_0
+	light_tank_chassis_1
+	light_tank_chassis_2
+	light_tank_chassis_3
+	medium_tank_chassis
+	medium_tank_chassis_0
+	medium_tank_chassis_1
+	medium_tank_chassis_2
+	medium_tank_chassis_3
+	heavy_tank_chassis
+	heavy_tank_chassis_0
+	heavy_tank_chassis_1
+	heavy_tank_chassis_2
+	heavy_tank_chassis_3
+	modern_tank_chassis
+	modern_tank_chassis_1
+	super_heavy_tank_chassis
+	super_heavy_tank_chassis_1
+	amphibious_tank_chassis
+	amphibious_tank_chassis_1
+	train_equipment
+	train_equipment_1
+	train_equipment_2
+	train_equipment_3
+	light_tank_aa_chassis
+	light_tank_artillery_chassis
+	light_tank_destroyer_chassis
+	light_tank_amphibious_chassis
+	light_tank_flame_chassis
+	medium_tank_aa_chassis
+	medium_tank_artillery_chassis
+	medium_tank_destroyer_chassis
+	medium_tank_amphibious_chassis
+	medium_tank_flame_chassis
+	heavy_tank_aa_chassis
+	heavy_tank_artillery_chassis
+	heavy_tank_destroyer_chassis
+	heavy_tank_amphibious_chassis
+	heavy_tank_flame_chassis
+	super_heavy_tank_aa_chassis
+	super_heavy_tank_artillery_chassis
+	super_heavy_tank_destroyer_chassis
+	modern_tank_aa_chassis
+	modern_tank_artillery_chassis
+	modern_tank_destroyer_chassis
+	light_tank_aa_chassis_0
+	light_tank_aa_chassis_1
+	light_tank_aa_chassis_2
+	light_tank_aa_chassis_3
+	light_tank_artillery_chassis_0
+	light_tank_artillery_chassis_1
+	light_tank_artillery_chassis_2
+	light_tank_artillery_chassis_3
+	light_tank_destroyer_chassis_0
+	light_tank_destroyer_chassis_1
+	light_tank_destroyer_chassis_2
+	light_tank_destroyer_chassis_3
+	light_tank_amphibious_chassis_0
+	light_tank_amphibious_chassis_1
+	light_tank_amphibious_chassis_2
+	light_tank_amphibious_chassis_3
+	light_tank_flame_chassis_0
+	light_tank_flame_chassis_1
+	light_tank_flame_chassis_2
+	light_tank_flame_chassis_3
+	medium_tank_aa_chassis_0
+	medium_tank_aa_chassis_1
+	medium_tank_aa_chassis_2
+	medium_tank_aa_chassis_3
+	medium_tank_artillery_chassis_0
+	medium_tank_artillery_chassis_1
+	medium_tank_artillery_chassis_2
+	medium_tank_artillery_chassis_3
+	medium_tank_destroyer_chassis_0
+	medium_tank_destroyer_chassis_1
+	medium_tank_destroyer_chassis_2
+	medium_tank_destroyer_chassis_3
+	medium_tank_amphibious_chassis_0
+	medium_tank_amphibious_chassis_1
+	medium_tank_amphibious_chassis_2
+	medium_tank_amphibious_chassis_3
+	medium_tank_flame_chassis_0
+	medium_tank_flame_chassis_1
+	medium_tank_flame_chassis_2
+	medium_tank_flame_chassis_3
+	heavy_tank_aa_chassis_0
+	heavy_tank_aa_chassis_1
+	heavy_tank_aa_chassis_2
+	heavy_tank_aa_chassis_3
+	heavy_tank_artillery_chassis_0
+	heavy_tank_artillery_chassis_1
+	heavy_tank_artillery_chassis_2
+	heavy_tank_artillery_chassis_3
+	heavy_tank_destroyer_chassis_0
+	heavy_tank_destroyer_chassis_1
+	heavy_tank_destroyer_chassis_2
+	heavy_tank_destroyer_chassis_3
+	heavy_tank_amphibious_chassis_0
+	heavy_tank_amphibious_chassis_1
+	heavy_tank_amphibious_chassis_2
+	heavy_tank_amphibious_chassis_3
+	heavy_tank_flame_chassis_0
+	heavy_tank_flame_chassis_1
+	heavy_tank_flame_chassis_2
+	heavy_tank_flame_chassis_3
+	super_heavy_tank_aa_chassis_1
+	super_heavy_tank_artillery_chassis_1
+	super_heavy_tank_destroyer_chassis_1
+	modern_tank_aa_chassis_1
+	modern_tank_artillery_chassis_1
+	modern_tank_destroyer_chassis_1
+	gw_tank_equipment
+	light_tank_equipment_1
+	light_tank_equipment_2
+	light_tank_equipment_3
+	light_tank_artillery_equipment_1
+	light_tank_artillery_equipment_2
+	light_tank_artillery_equipment_3
+	light_tank_destroyer_equipment_1
+	light_tank_destroyer_equipment_2
+	light_tank_destroyer_equipment_3
+	light_tank_aa_equipment_1
+	light_tank_aa_equipment_2
+	light_tank_aa_equipment_3
+	medium_tank_equipment_1
+	medium_tank_equipment_2
+	medium_tank_equipment_3
+	medium_tank_artillery_equipment_1
+	medium_tank_artillery_equipment_2
+	medium_tank_artillery_equipment_3
+	medium_tank_destroyer_equipment_1
+	medium_tank_destroyer_equipment_2
+	medium_tank_destroyer_equipment_3
+	medium_tank_aa_equipment_1
+	medium_tank_aa_equipment_2
+	medium_tank_aa_equipment_3
+	heavy_tank_equipment_1
+	heavy_tank_equipment_2
+	heavy_tank_equipment_3
+	heavy_tank_artillery_equipment_1
+	heavy_tank_artillery_equipment_2
+	heavy_tank_artillery_equipment_3
+	heavy_tank_destroyer_equipment_1
+	heavy_tank_destroyer_equipment_2
+	heavy_tank_destroyer_equipment_3
+	heavy_tank_aa_equipment_1
+	heavy_tank_aa_equipment_2
+	heavy_tank_aa_equipment_3
+	modern_tank_equipment_1
+	modern_tank_artillery_equipment_1
+	modern_tank_destroyer_equipment_1
+	modern_tank_aa_equipment_1
+	super_heavy_tank_equipment_1
+	super_heavy_tank_artillery_equipment_1
+	super_heavy_tank_destroyer_equipment_1
+	super_heavy_tank_aa_equipment_1
+	amphibious_tank_equipment_1
+	amphibious_tank_equipment_2
+
+	# NAVAL Equipment archetypes & types
+	destroyer
+	convoy_1
+	floating_harbor_equipment
+	floating_harbor_equipment_1
+	support_ship_hull
+	support_ship_1
+	support_ship_2
+	repair_ship_hull
+	repair_ship_1
+	repair_ship_2
+	ship_hull_carrier
+	ship_hull_carrier_1
+	ship_hull_carrier_2
+	ship_hull_carrier_3
+	ship_hull_mega_carrier
+	ship_hull_carrier_modern
+	ship_hull_carrier_conversion_bb
+	ship_hull_carrier_conversion_ca
+	ship_hull_escort_carrier
+	carrier_1
+	carrier_2
+	carrier_3
+	carrier_4
+	modern_carrier
+	mega_carrier
+	escort_carrier
+	ship_hull_cruiser
+	light_cruiser
+	ship_hull_cruiser_1
+	ship_hull_cruiser_2
+	ship_hull_cruiser_3
+	ship_hull_cruiser_4
+	light_cruiser_1
+	light_cruiser_2
+	light_cruiser_3
+	light_cruiser_4
+	heavy_cruiser_1
+	heavy_cruiser_2
+	heavy_cruiser_3
+	heavy_cruiser_4
+	torpedo_cruiser
+	ship_hull_cruiser_modern_aa
+	ship_hull_torpedo_cruiser
+	ship_hull_cruiser_panzerschiff
+	ship_hull_cruiser_coastal_defense_ship
+	ship_hull_heavy
+	ship_hull_pre_dreadnought
+	ship_hull_heavy_1
+	ship_hull_heavy_2
+	ship_hull_heavy_3
+	ship_hull_heavy_4
+	ship_hull_super_heavy_1
+	ship_hull_heavy_modern
+	battleship_1
+	battleship_2
+	battleship_3
+	battleship_4
+	SH_battleship_1
+	SH_battleship_2
+	modern_battleship
+	battle_cruiser_1
+	battle_cruiser_2
+	ship_hull_light
+	ship_hull_light_1
+	ship_hull_light_2
+	ship_hull_light_3
+	ship_hull_light_4
+	destroyer_1
+	destroyer_2
+	destroyer_3
+	destroyer_4
+	ship_hull_submarine
+	ship_hull_submarine_1
+	ship_hull_submarine_2
+	ship_hull_submarine_3
+	ship_hull_submarine_4
+	ship_hull_carrier_submarine
+	cruiser_submarine
+	fleet_submarine
+	midget_submarine
+	nuclear_submarine
+	nuclear_missile_submarine
+	rocket_submarine
+	ship_hull_cruiser_submarine
+	ship_hull_midget_submarine
+	ship_hull_nuclear_submarine
+	ship_hull_fleet_submarine
+	submarine_1
+	submarine_2
+	submarine_3
+	submarine_4
+
+	# AIR Equipment archetypes & types
+	guided_missile_equipment
+	guided_missile_equipment_1
+	guided_missile_equipment_2
+	guided_missile_equipment_3
+	explosive_ammo_equipment
+	explosive_ammo_equipment_1
+	ballistic_missile_equipment
+	ballistic_missile_equipment_1
+	ballistic_missile_equipment_2
+	ballistic_missile_equipment_3
+	nuclear_missile_equipment
+	nuclear_missile_equipment_1
+	nuclear_missile_equipment_2
+	sam_missile_equipment
+	sam_missile_equipment_1
+	small_plane_airframe
+	cv_small_plane_airframe
+	small_plane_airframe_0
+	small_plane_airframe_1
+	small_plane_airframe_2
+	small_plane_airframe_3
+	small_plane_airframe_4
+	small_plane_airframe_5
+	cv_small_plane_airframe_0
+	cv_small_plane_airframe_1
+	cv_small_plane_airframe_2
+	cv_small_plane_airframe_3
+	cv_small_plane_airframe_4
+	medium_plane_airframe
+	medium_plane_airframe_0
+	medium_plane_airframe_1
+	medium_plane_airframe_2
+	medium_plane_airframe_3
+	medium_plane_airframe_4
+	large_plane_airframe
+	large_plane_airframe_0
+	large_plane_airframe_1
+	large_plane_airframe_2
+	large_plane_airframe_3
+	large_plane_airframe_4
+	transport_plane_equipment
+	transport_plane_equipment_1
+	transport_plane_equipment_2
+	transport_plane_equipment_3
+	small_plane_cas_airframe
+	cv_small_plane_cas_airframe
+	small_plane_naval_bomber_airframe
+	cv_small_plane_naval_bomber_airframe
+	small_plane_suicide_airframe
+	cv_small_plane_suicide_airframe
+	medium_plane_fighter_airframe
+	medium_plane_scout_plane_airframe
+	large_plane_maritime_patrol_plane_airframe
+	jet_fighter_equipment
+	rocket_interceptor_equipment
+	jet_tac_bomber_equipment
+	jet_strat_bomber_equipment
+	small_plane_cas_airframe_0
+	small_plane_cas_airframe_1
+	small_plane_cas_airframe_2
+	small_plane_cas_airframe_3
+	small_plane_cas_airframe_4
+	small_plane_cas_airframe_5
+	cv_small_plane_cas_airframe_0
+	cv_small_plane_cas_airframe_1
+	cv_small_plane_cas_airframe_2
+	cv_small_plane_cas_airframe_3
+	cv_small_plane_cas_airframe_4
+	small_plane_naval_bomber_airframe_0
+	small_plane_naval_bomber_airframe_1
+	small_plane_naval_bomber_airframe_2
+	small_plane_naval_bomber_airframe_3
+	small_plane_naval_bomber_airframe_4
+	small_plane_naval_bomber_airframe_5
+	cv_small_plane_naval_bomber_airframe_0
+	cv_small_plane_naval_bomber_airframe_1
+	cv_small_plane_naval_bomber_airframe_2
+	cv_small_plane_naval_bomber_airframe_3
+	cv_small_plane_naval_bomber_airframe_4
+	small_plane_suicide_airframe_0
+	small_plane_suicide_airframe_1
+	small_plane_suicide_airframe_2
+	small_plane_suicide_airframe_3
+	small_plane_suicide_airframe_4
+	small_plane_suicide_airframe_5
+	cv_small_plane_suicide_airframe_0
+	cv_small_plane_suicide_airframe_1
+	cv_small_plane_suicide_airframe_2
+	cv_small_plane_suicide_airframe_3
+	cv_small_plane_suicide_airframe_4
+	medium_plane_fighter_airframe_0
+	medium_plane_fighter_airframe_1
+	medium_plane_fighter_airframe_2
+	medium_plane_fighter_airframe_3
+	medium_plane_fighter_airframe_4
+	medium_plane_scout_plane_airframe_0
+	medium_plane_scout_plane_airframe_1
+	medium_plane_scout_plane_airframe_2
+	medium_plane_scout_plane_airframe_3
+	medium_plane_scout_plane_airframe_4
+	large_plane_maritime_patrol_plane_airframe_0
+	large_plane_maritime_patrol_plane_airframe_1
+	large_plane_maritime_patrol_plane_airframe_2
+	large_plane_maritime_patrol_plane_airframe_3
+	large_plane_maritime_patrol_plane_airframe_4
+	fighter_equipment_0
+	fighter_equipment_1
+	fighter_equipment_2
+	fighter_equipment_3
+	jet_fighter_equipment_1
+	jet_fighter_equipment_2
+	cv_fighter_equipment_0
+	cv_fighter_equipment_1
+	cv_fighter_equipment_2
+	cv_fighter_equipment_3
+	CAS_equipment_1
+	CAS_equipment_2
+	CAS_equipment_3
+	cv_CAS_equipment_1
+	cv_CAS_equipment_2
+	cv_CAS_equipment_3
+	nav_bomber_equipment_1
+	nav_bomber_equipment_2
+	nav_bomber_equipment_3
+	cv_nav_bomber_equipment_1
+	cv_nav_bomber_equipment_2
+	cv_nav_bomber_equipment_3
+	rocket_interceptor_equipment_1
+	rocket_interceptor_equipment_2
+	rocket_interceptor_equipment_3
+	rocket_suicide_equipment_1
+	tac_bomber_equipment_0
+	tac_bomber_equipment_1
+	tac_bomber_equipment_2
+	tac_bomber_equipment_3
+	jet_tac_bomber_equipment_1
+	jet_tac_bomber_equipment_2
+	heavy_fighter_equipment_1
+	heavy_fighter_equipment_2
+	heavy_fighter_equipment_3
+	scout_plane_equipment_1
+	scout_plane_equipment_2
+	strat_bomber_equipment_1
+	strat_bomber_equipment_2
+	strat_bomber_equipment_3
+	jet_strat_bomber_equipment_1
+	supersonic_fighter_equipment_1
+
+	### ARMY modifiers
+	default_morale	#회복률	#+2%
+	defense	#방어	#+2%
+	breakthrough	#돌파	#+2%
+	hardness	#기갑 비율	#+2%
+	soft_attack	#대인 공격	#+2%
+	hard_attack	#대물 공격	#+2%
+	recon	#수색	#+2%
+	entrenchment	#참호	#+2F	#도저 블레이드 단 전차만 해당
+	initiative	#우선권	#+2%
+	casualty_trickleback	#전선 복귀 및 전쟁 지지도 방어	#+2%
+	supply_consumption_factor	#보급품 소비	#+2%
+	supply_consumption	#보급품 소비	#-2%
+	suppression	#제압	#+2%
+	suppression_factor	#제압 혜택	#+2%
+	experience_loss_factor	#경험치 손실	#+2%
+	equipment_capture_factor	#장비 노획률
+	recovery	#회복	#+2%
+	additional_collateral_damage	#추가 부수적 피해	#+2%
+	fuel_capacity	#연료 보유량	#+2%
+
+	### NAVAL modifier
+	surface_detection	#수상 탐지	#+2%
+	sub_detection	#대잠 탐지	#+2%
+	surface_visibility	#수상 가시성	#-3%
+	sub_visibility	#대잠 가시성	#-3%
+	lg_attack	#부포 공격	#+2%
+	lg_armor_piercing	#부포 관통	#+2%
+	hg_attack	#주포 공격	#+2%
+	hg_armor_piercing	#주포 관통	#+2%
+	torpedo_attack	#어뢰 공격	#+2%
+	sub_attack	#폭뢰	#+2%
+	anti_air_attack	#대공	#+2%
+	amphibious_defense	#상륙 방어	#+2%
+	naval_speed	#최대 속도	#+2%
+	naval_range	#최대 작전 범위	#+2%
+	mines_planting	#기뢰 부설	#+2%
+	mines_sweeping	#기뢰 소해	#+2%
+	naval_light_gun_hit_chance_factor	#경함포 명중률	#+2%
+	naval_heavy_gun_hit_chance_factor	#중함포 명중률	#+2%
+	naval_torpedo_hit_chance_factor	#어뢰 명중률	#+2%
+	naval_torpedo_damage_reduction_factor	#어뢰 피해량 감소	#+2%
+	naval_torpedo_enemy_critical_chance_factor	#어뢰 피격 시 치명타 확률	#+2%
+	convoy_raiding_coordination	#습격 효율	#+2%
+	patrol_coordination	#초계 효율	#+2%
+	search_and_destroy_coordination	#수색 및 섬멸	#+2%
+	naval_weather_penalty_factor	#날씨 불이익	#+2%
+
+	### CARRIER only modifiers
+	carrier_size	#함재기 적재량	#+0F
+	submarine_carrier_size	#잠수함 함재기 적재량	#+0F
+	carrier_surface_detection	#항공모함 수상 탐지	#+2%
+	carrier_sub_detection	#항공모함 대잠 탐지	#+2%
+
+	### AIR modifiers
+	air_range	#항속 거리	#+2%
+	air_defence	#기체 방어력	#+2%
+	air_attack	#대공 공격	#+2%
+	air_agility	#기동성	#+2%
+	air_bombing	#전략폭격	#+2%
+	air_superiority	#공중우세	#+2%
+	naval_strike_attack	#해상 공격	#+2%
+	naval_strike_targetting	#해상 조준	#+2%
+	air_ground_attack	#지상 공격	#+2%
+	air_visibility_factor	#공중 가시성	#+2%
+	strategic_attack	#전략폭격	#+2%
+	weight	#중량	#-2%
+	thrust	#추력	#+2%	#DLC 있어야 작동됨
+
+	### RAILWAY GUN only modifiers
+	railway_gun_attack	#포격	#+2%
+	railway_gun_annex_ratio	#합병 비율	#-2%
+	railway_gun_hours_between_redistribution	#재배치 간 시간	#-2%
+
+	### COMMON modifiers
+	max_organisation	#조직력	#+2%
+	max_strength	#내구도	#+2%
+	maximum_speed	#최대 속도	#+2%
+	armor_value	#장갑	#+2%
+	ap_attack	#관통	#+2%
+	reliability	#신뢰도	#+2%
+	reliability_factor	#신뢰도 보너스	#+2%
+	fuel_consumption	#연료 사용량	#+2%
+	fuel_consumption_factor	#연료 사용량	#+2%
+	acclimatization_hot_climate_gain_factor	#더위 적응 획득치	#+2%
+	acclimatization_cold_climate_gain_factor	#추위 적응 획득치	#+2%
+	night_penalty	#야간 패널티	#+2%
+	build_cost_ic	#생산 비용	#+2%
 
 
 ## TMP category
@@ -3130,7 +3819,8 @@
 * Number with 0 decimal places
 * **Categories**: country
 
-* **Modified types**: amphibious_mechanized_equipment
+* **Modified types**: 
+	amphibious_mechanized_equipment
 	amphibious_tank_chassis
 	anti_air_equipment
 	anti_tank_equipment
@@ -6076,18 +6766,6 @@
 * **Categories**: country
 	army
 
-## command_power_gain
-
-* Number with 2 decimal places
-* **Categories**: country
-	army
-
-## command_power_gain_mult
-
-* Number with 0 decimal places
-* **Categories**: country
-	army
-
 ## commando_trait_chance_factor
 
 * Number with 0 decimal places
@@ -6227,23 +6905,6 @@
 
 * Number with 0 decimal places
 * **Categories**: government_in_exile
-
-## drift_defence_factor
-
-* Number with 1 decimal places
-* **Categories**: politics
-
-## embargo_cost_factor
-
-* Number with 1 decimal places
-* **Categories**: country
-	politics
-
-## embargo_threshold_factor
-
-* Number with 1 decimal places
-* **Categories**: country
-	politics
 
 ## encryption
 
@@ -6595,12 +7256,6 @@
 
 * Number with 1 decimal places
 * **Categories**: country
-
-## guarantee_cost
-
-* Number with 0 decimal places
-* **Categories**: country
-	politics
 
 ## guarantee_tension
 
@@ -6970,27 +7625,10 @@
 * Number with 0 decimal places
 * **Categories**: army
 
-## master_ideology_drift
-
-* Number with 2 decimal places
-* **Categories**: politics
-
 ## max_army_group_size
 
 * Number with 0 decimal places
 * **Categories**: unit_leader
-
-## max_command_power
-
-* Number with 0 decimal places
-* **Categories**: country
-	army
-
-## max_command_power_mult
-
-* Number with 0 decimal places
-* **Categories**: country
-	army
 
 ## max_commander_army_size
 

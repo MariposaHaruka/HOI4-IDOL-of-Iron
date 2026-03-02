@@ -1636,7 +1636,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12001"
 			navy_experience = 50
@@ -1666,7 +1666,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12001"
 			custom_effect_tooltip = generic_line_break_tt
@@ -1695,7 +1695,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12001"
 			navy_experience = 50
@@ -1733,7 +1733,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12005"
 			random_owned_controlled_state = {
@@ -1798,7 +1798,7 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12006"
 			add_equipment_to_stockpile = {
@@ -1862,7 +1862,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12001"
 			custom_effect_tooltip = generic_line_break_tt
@@ -1892,7 +1892,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12101"
 			add_tech_bonus = {
@@ -1929,7 +1929,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12101"
 			add_tech_bonus = {
@@ -1967,7 +1967,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12102"
 			BLA_design_abydos = yes
@@ -1998,7 +1998,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12102"
 			BLA_design_kivotos = yes
@@ -2029,7 +2029,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12202"
 			BLA_design_kivboat = yes
@@ -2060,7 +2060,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12203"
 			BLA_design_rabbit = yes
@@ -2090,7 +2090,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12009"
 			BLA_design_gourmet_research_society = yes
@@ -2121,7 +2121,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12010"
 			BLA_design_haruhabara = yes
@@ -2151,7 +2151,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12104"
 			custom_effect_tooltip = {
@@ -2186,7 +2186,7 @@ focus_tree = {
 				limit = { has_completed_focus = BLA_12103 }
 				add_to_variable = { #툴팁용
 					BLA_navy_build_cost_ic_carrier = -0.1
-					tooltip = build_cost_ic_carrier_tt
+					tooltip = carrier_build_cost_ic_tt
 				}
 				add_to_variable = { 
 					BLA_navy_carriers_track_mastery_gain_factor = 0.1
@@ -2227,7 +2227,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12204"
 			custom_effect_tooltip = {
@@ -2276,7 +2276,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12011"
 			custom_effect_tooltip = {
@@ -2305,7 +2305,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12012"
 			custom_effect_tooltip = {
@@ -2334,7 +2334,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12013"
 			custom_effect_tooltip = generic_line_break_tt
@@ -2364,7 +2364,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12014"
 			custom_effect_tooltip = generic_line_break_tt
@@ -2394,7 +2394,7 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12015"
 			custom_effect_tooltip = generic_line_break_tt
@@ -2423,7 +2423,7 @@ focus_tree = {
 		available = { has_completed_focus = BLA_12104 }
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12016"
 			custom_effect_tooltip = generic_line_break_tt
@@ -2452,7 +2452,7 @@ focus_tree = {
 		available = { has_completed_focus = BLA_12104 }
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12017"
 			custom_effect_tooltip = {
@@ -2475,6 +2475,18 @@ focus_tree = {
 				BLA_navy_fighter_sortie_efficiency = 0.10
 				tooltip = fighter_sortie_efficiency_tt
 			}
+			add_to_variable = { #툴팁 용
+				BLA_navy_carrier_carrier_size = 15
+				tooltip = carrier_carrier_size_tt
+			}
+			add_to_variable = { #툴팁 용
+				BLA_navy_carrier_surface_visibility = -0.1
+				tooltip = carrier_surface_visibility_tt
+			}
+			add_to_variable = { #툴팁 용
+				BLA_navy_carrier_build_cost_ic = -0.15
+				tooltip = carrier_build_cost_ic_tt
+			}
 		}
 	}
 
@@ -2491,7 +2503,7 @@ focus_tree = {
 		prerequisite = { focus = BLA_12011 focus = BLA_12012 focus = BLA_12013 focus = BLA_12014 focus = BLA_12015 }
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12018"
 			custom_effect_tooltip = {
@@ -2526,7 +2538,7 @@ focus_tree = {
 		prerequisite = { focus = BLA_12011 focus = BLA_12012 focus = BLA_12013 focus = BLA_12014 focus = BLA_12015 }
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12019"
 			custom_effect_tooltip = {
@@ -2558,7 +2570,7 @@ focus_tree = {
 		available = { has_completed_focus = BLA_12204 }
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12020"
 			custom_effect_tooltip = {
@@ -2613,7 +2625,7 @@ focus_tree = {
 		prerequisite = { focus = BLA_12018 }
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY FOCUS_FILTER_ARMY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12022"
 			custom_effect_tooltip = {
@@ -2640,7 +2652,7 @@ focus_tree = {
 		prerequisite = { focus = BLA_12018 }
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12023"
 			custom_effect_tooltip = {
@@ -2667,7 +2679,7 @@ focus_tree = {
 		prerequisite = { focus = BLA_12019 }
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_12024"
 			BLA_design_brown_bear = yes
