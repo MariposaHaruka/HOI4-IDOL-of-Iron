@@ -3508,9 +3508,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_32002A"
-			BLA_sense = { unit_leader_event = { id = BLA_schalle.1 } }
-			custom_effect_tooltip = generic_line_break_tt
 			add_political_power = 150
+			BLA_sense = { unit_leader_event = { id = BLA_schalle.1 } }
 			custom_effect_tooltip = generic_line_break_tt
 			if = {
 				limit = { has_completed_focus = BLA_31001 }
@@ -7857,8 +7856,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_renkawa_cherino
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -7938,8 +7941,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_renkawa_cherino
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -7965,12 +7972,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
-			}
-			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_renkawa_cherino
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -7996,14 +8003,11 @@ focus_tree = {
 		available = { 
 			custom_trigger_tooltip = {
 				tooltip = {
-					localization_key = BLA_available_school_tt
-					PARTICIPATE = BLA_redwinter_participate_tt
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_renkawa_cherino
 					INTEGRATION = BLA_redwinter_integrate_tt
 				}
-				OR = {
-					BLA_redwinter_participate = yes
-					BLA_redwinter_integrate = yes
-				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8028,8 +8032,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_redwinter_participate_tt
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				OR = {
+					BLA_redwinter_participate = yes
+					BLA_redwinter_integrate = yes
+				}
 			}
 		}
 		
@@ -8054,8 +8065,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_amami_nodoka
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8080,8 +8095,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_mayoi_shigure
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8106,8 +8125,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_amami_nodoka
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8133,14 +8156,11 @@ focus_tree = {
 		available = { 
 			custom_trigger_tooltip = {
 				tooltip = {
-					localization_key = BLA_available_school_tt
-					PARTICIPATE = BLA_redwinter_participate_tt
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_amami_nodoka
 					INTEGRATION = BLA_redwinter_integrate_tt
 				}
-				OR = {
-					BLA_redwinter_participate = yes
-					BLA_redwinter_integrate = yes
-				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8165,8 +8185,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_redwinter_participate_tt
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				OR = {
+					BLA_redwinter_participate = yes
+					BLA_redwinter_integrate = yes
+				}
 			}
 		}
 		
@@ -8191,8 +8218,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sashiro_tomoe
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8217,8 +8248,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sashiro_tomoe
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8243,8 +8278,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sashiro_tomoe
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8269,8 +8308,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sashiro_tomoe
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8294,14 +8337,38 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		available = { 
-			custom_trigger_tooltip = {
-				tooltip = {
-					localization_key = BLA_available_school_tt
-					PARTICIPATE = BLA_redwinter_participate_tt
-					INTEGRATION = BLA_redwinter_integrate_tt
+			if = {
+				limit = { has_completed_focus = BLA_RED_12101 }
+				custom_trigger_tooltip = {
+					tooltip = {
+						localization_key = BLA_available_focus_tt
+						CHARACTER = BLA_amami_nodoka
+						INTEGRATION = BLA_redwinter_integrate_tt
+					}
+					BLA_redwinter_integrate = yes
 				}
-				OR = {
-					BLA_redwinter_participate = yes
+			}
+			else_if = {
+				limit = { has_completed_focus = BLA_RED_12201 }
+				custom_trigger_tooltip = {
+					tooltip = {
+						localization_key = BLA_available_focus_tt
+						CHARACTER = BLA_sashiro_tomoe
+						INTEGRATION = BLA_redwinter_integrate_tt
+					}
+					BLA_redwinter_integrate = yes
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = {
+						localization_key = BLA_available_focus_changable_tt
+						FOCUSA = BLA_RED_12101
+						FOCUSB = BLA_RED_12201
+						CHARACTERA = BLA_amami_nodoka
+						CHARACTERB = BLA_sashiro_tomoe
+						INTEGRATION = BLA_redwinter_integrate_tt
+					}
 					BLA_redwinter_integrate = yes
 				}
 			}
@@ -8327,8 +8394,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_redwinter_participate_tt
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				OR = {
+					BLA_redwinter_participate = yes
+					BLA_redwinter_integrate = yes
+				}
 			}
 		}
 		
@@ -8354,8 +8428,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_ikekura_marina
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8381,8 +8459,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_ikekura_marina
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8407,8 +8489,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_ikekura_marina
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8434,8 +8520,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_ikekura_marina
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8461,8 +8551,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_redwinter_participate = yes
-				tooltip = BLA_redwinter_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_ikekura_marina
+					INTEGRATION = BLA_redwinter_integrate_tt
+				}
+				BLA_redwinter_integrate = yes
 			}
 		}
 		
@@ -8616,8 +8710,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_arius_participate = yes
-				tooltip = BLA_arius_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_joumae_saori
+					INTEGRATION = BLA_arius_integrate_tt
+				}
+				BLA_arius_integrate = yes
 			}
 		}
 		
