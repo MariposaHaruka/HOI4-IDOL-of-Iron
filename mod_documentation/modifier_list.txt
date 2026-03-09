@@ -26,7 +26,7 @@
 
 	추가로 tt뒤에 *붙은건 툴팁 키는 존재하지만 다른 형태로 존재하는 경우니 꼭 확인할 것
 	
-	special_forces_cap_flat의 경우 툴팁 키는 존재하지만, 
+	tt**의 경우 툴팁 키는 존재하지만,  
 	모디파이어 표기 단위랑 툴팁 키의 표기 단위가 달라 별도로 tt** 표기한 경우이니 참고
 
 ### X
@@ -68,8 +68,8 @@
 	combat_width_factor	#소속군 전장 너비	#-3%
 	convoy_raiding_efficiency_factor	#수송선단 습격 효율 #+4%	#tt
 	coordination_bonus	#조직	#+3%	#tt
-	decryption	#
-	decryption_factor	#
+	decryption	#해독	#+2F
+	decryption_factor	#해독	#+4%	#tt
 	enemy_attrition	#적 사단 손실	#+3%
 	enemy_declare_war_tension	#선전포고에 따른 우리에 대한 긴장도	#+3%
 	enemy_justify_war_goal_time	#우리에게 전쟁 목표를 정당화하는 시간	#+3%
@@ -78,8 +78,8 @@
 	ground_attack_factor	#지상 공격 획득치	#+3%	#tt
 	heat_attrition	#더위로 인한 손실	#-3%
 	heat_attrition_factor	#더위로 인한 손실	#-4%	#tt
-	justify_war_goal_time	#justify_war_goal_time
-	justify_war_goal_when_in_major_war_time	#justify_war_goal_when_in_major_war_time
+	justify_war_goal_time	#전쟁 명분 정당화 소요 시간	#-3%	#tt
+	justify_war_goal_when_in_major_war_time	#주요국과 전쟁 도중 전쟁 명분 정당화 소요 시간	#-3%
 	land_night_attack	#야간 지상 공격	#+4%	#tt
 	max_planning	#최대 계획	#+3%
 	max_planning_factor	#최대 계획 변동치	#+3%	#tt
@@ -256,7 +256,7 @@
 	dig_in_speed_factor	#참호 부설 속도	#+3%	#tt
 	disable_strategic_redeployment #전략적 재배치 비활성화됨	#B
 	disable_strategic_redeployment_for_controller #전략적 재배치 비활성화됨	#B
-	dont_lose_dig_in_on_attack	#공격 패퇴 중 참호구축 불가	#tt #B
+	dont_lose_dig_in_on_attack	#공격 패퇴 중 참호구축 불가	#tt**	#B
 	enemy_army_speed_factor	#적 사단 속도	#-4%
 	enemy_attrition	#적 사단 손실	#+3%
 	experience_gain_army	#육군 경험치 획득량 (매일)	#+2F	#tt
@@ -286,8 +286,8 @@
 	modifier_army_sub_unit_armored_car_max_org_factor	#장갑차 조직력	#+4%	#tt
 	modifier_army_sub_unit_armored_car_recon_attack_factor	#기갑수색중대 공격	#+4%	#tt
 	modifier_army_sub_unit_armored_car_recon_defence_factor	#기갑수색중대 방어	#+4%
-	modifier_army_sub_unit_armored_car_recon_max_org_factor	#기갑수색중대 속도	#+4%
-	modifier_army_sub_unit_armored_car_recon_speed_factor	#기갑수색중대 조직력	#+4%	#tt
+	modifier_army_sub_unit_armored_car_recon_max_org_factor	#기갑수색중대 속도	#+4%	#tt
+	modifier_army_sub_unit_armored_car_recon_speed_factor	#기갑수색중대 조직력	#+4%
 	modifier_army_sub_unit_armored_car_speed_factor	#장갑차 속도	#+4%
 	modifier_army_sub_unit_blackshirt_assault_battalion_attack_factor	#검은 셔츠단 돌격 대대 공격	#+4%
 	modifier_army_sub_unit_blackshirt_assault_battalion_defence_factor	#검은 셔츠단 돌격 대대 방어	#+4%
@@ -400,8 +400,8 @@
 	subjects_autonomy_gain	#종주국의 영향력	#+2F	#tt
 
 ### CHARACTER modifiers
-	scientist_breakthrough_bonus_factor	#혁신 혜택	#+4%	#tt*
-	scientist_research_bonus_factor	#연구 혜택	#+4%	#tt*
+	scientist_breakthrough_bonus_factor	#혁신 혜택	#+4%	#tt*	(MODIFIER_SCIENTIST_BREAKTHROUGH_BONUS_FACTOR_tt)
+	scientist_research_bonus_factor	#연구 혜택	#+4%	#tt*	(MODIFIER_SCIENTIST_RESEARCH_BONUS_FACTOR_tt)
 	scientist_xp_gain_factor	#과학자 경험치 획득량	#+4%
 
 ### COUNTRY modifiers
@@ -492,20 +492,20 @@
 	<Trait>_xp_gain_factor	#-trait-_xp_gain_factor
 
 	additional_brigade_column_size	#여단 규모	#+0F
-	agency_upgrade_time	#정보기관 개선 시간	#-3%
-	air_doctrine_cost_factor	#공군 교리 비용	#-4%
+	agency_upgrade_time	#정보기관 개선 시간	#-3%	#tt
+	air_doctrine_cost_factor	#공군 교리 비용	#-4%	#tt
 	air_equipment_upgrade_xp_cost	#공군 장비 경험치 비용	#-2%
 	air_invasion_plan_cap	#최대 공중 침공 계획 수	#-0F
 	air_invasion_prep_days	#공중 침공 준비 시간	#+3%
 	air_volunteer_cap	#공군 의용군 수용량	#+0F
-	airforce_intel_to_others	#다른 국가가 얻는 공군 정보	#-1F%
+	airforce_intel_to_others	#다른 국가가 얻는 공군 정보	#-1F%	#tt
 	annex_subject_cost_factor	#종속국 병합 비용 변동치	#-4%
-	army_intel_to_others	#다른 국가가 얻는 육군 정보	#-1F%
+	army_intel_to_others	#다른 국가가 얻는 육군 정보	#-1F%	#tt
 	assign_army_leader_cp_cost	#육군 지휘관 배정 비용	#-0F
 	assign_navy_leader_cp_cost	#해군 지휘관 할당 비용 #-0F
 	automatic_grant_medal_chance	#무료 훈장 자동 획득 확률	#+2%
 	base_fuel_gain	#연료 획득량	#+0F
-	base_fuel_gain_factor	#기본 연료 획득량	#+4%
+	base_fuel_gain_factor	#기본 연료 획득량	#+4%	#tt
 	can_guarantee_other_ideologies	#다른 이념 국가의 독립 보장 가능	#B
 	choose_preferred_tactics_cost	#선호전술 선택 비용 점수	#-0F
 	cic_construction_boost	#기본 건설 라인 속도 성장	#+3%
@@ -513,15 +513,15 @@
 	cic_to_target_factor	#목표국의 민간 산업	#-4%
 	civil_war_involvement_tension	#내전 관여에 의한 긴장	#-3%
 	civilian_factory_use	#민간공장 사용량	#-0F
-	civilian_intel_to_others	#다른 국가가 얻는 민간 정보	#-1F%
+	civilian_intel_to_others	#다른 국가가 얻는 민간 정보	#-1F%	#tt
 	coastal_bunker_effectiveness_factor	#해안 요새 효율	#+2%
 	command_abilities_cost_factor	#지휘관 능력 비용	#-4%
 	command_power_gain	#매일 지휘력 획득	#+2F	#tt
 	command_power_gain_mult	#매일 지휘력 획득 증가치	#+2%	#tt
 
-	compliance_gain	#compliance_gain
-	compliance_growth	#compliance_growth
-	compliance_growth_on_our_occupied_states	#compliance_growth_on_our_occupied_states
+	compliance_gain	#매일 순응도 획득	#+2F%	#tt*	(modifier_compliance_gain_tt)
+	compliance_growth	#순응도 증가 속도	#+2%	#tt
+	compliance_growth_on_our_occupied_states	#적이 점령한 우리 주의 순응도 증가 속도	#-2%	#tt
 	conscription	#징병 가능 인구	#Y4%	#tt
 	conscription_factor	#모병 가능 인구 변동치	#+2%
 	consumer_goods_expected_value	#소비재 생산에 필요할 것으로 예상되는 공장의 수	#Y3%
@@ -533,17 +533,16 @@
 	country_resource_cost_<Resource>	#country_resource_cost_-resource-
 
 	critical_receive_chance	#치명타를 받을 확률 #-3%
-	decryption	#decryption
-	decryption_factor	#decryption_factor
-	defensive_war_stability_factor	#defensive_war_stability_factor
-
+	decryption	#해독	#+2F
+	decryption_factor	#해독	#+4%	#tt
+	defensive_war_stability_factor	#방어전쟁 불이익으로 인한 안정도 변동치	#+4%	#tt
 	disabled_ideas	#장관 및 법을 지정할 수 없음	#B
-	embargo_cost_factor	#금수 조치 비용 변동치	#-3%	#*
-	embargo_threshold_factor	#금수 조치 긴장도 제한	#-3%	#tt	#*
+	embargo_cost_factor	#금수 조치 비용 변동치	#-3%
+	embargo_threshold_factor	#금수 조치 긴장도 제한	#-3%	#tt
 	encryption	#암호화	#+2F
-	encryption_factor	#암호화	#+4%
+	encryption_factor	#암호화	#+4%	#tt
 	enemy_declare_war_tension	#선전포고에 따른 우리에 대한 긴장도	#+3%
-	enemy_justify_war_goal_time	#우리에게 전쟁 목표를 정당화하는 시간	#+3%
+	enemy_justify_war_goal_time	#우리에게 전쟁 목표를 정당화하는 시간	#+3%	#tt
 	enemy_operative_capture_chance_factor	#적 공작원을 체포할 확률	#+2%
 	enemy_operative_detection_chance	#적 공작원을 감지할 확률 변화	#+2F%
 	enemy_operative_detection_chance_factor	#적 공작원을 감지할 확률	#+2%
@@ -553,8 +552,8 @@
 	enemy_operative_harmed_time_factor	#적 공작원이 피해받은 시간	#+2%
 	enemy_operative_intel_extraction_rate	#적 공작원 정보 추출률	#+2%
 	#enemy_spy_negative_status_factor	#적 스파이의 부정 상태	#+0F	#사용 안 함
-	equipment_capture	#장비 노획률 증가	#+3%
-	equipment_capture_factor	#장비 노획률 변동치	#+4%
+	equipment_capture	#장비 노획률 증가	#+3%	#tt
+	equipment_capture_factor	#장비 노획률 변동치	#+4%	#tt
 	equipment_conversion_speed	#장비 전환 속도	#+2%	#tt
 	equipment_upgrade_xp_cost	#장비 경험치 비용	#-2%
 	exiled_government_weekly_manpower	#매주 망명정부 인력	#+0F
@@ -653,7 +652,7 @@
 	forced_surrender_limit	#항복 한계치	#+4%
 	foreign_subversive_activites	#외세 전복 활동 효율	#-2%
 	fuel_cost	#연료 비용	#-0F
-	fuel_gain	#석유당 연료 획득량	#+2F	#tt*	fuel_gain_add_factor_tt
+	fuel_gain	#석유당 연료 획득량	#+2F	#tt*	(fuel_gain_add_factor_tt)
 	fuel_gain_factor	#석유당 연료 획득량	#+4%	#tt
 	fuel_gain_factor_from_states	#정제소를 통한 연료 획득량	#+4%
 	fuel_gain_from_states	#정제소를 통한 연료 획득량	#+2F
@@ -675,47 +674,44 @@
 	intel_from_combat_factor	#전투에서 획득한 정보	#+4%	#tt
 	intel_network_gain	#정보망 강도 획득	#+1F
 	intel_network_gain_factor	#정보망 강도 증가 변동치	#+2%	#tt
-
-	join_faction_tension	#join_faction_tension
-	justify_war_goal_time	#justify_war_goal_time
-	justify_war_goal_when_in_major_war_time	#justify_war_goal_when_in_major_war_time
-	land_bunker_effectiveness_factor	#land_bunker_effectiveness_factor
-	land_equipment_upgrade_xp_cost	#land_equipment_upgrade_xp_cost
+	join_faction_tension	#세력 가입 긴장도 제한	#-3%	#tt
+	justify_war_goal_time	#전쟁 명분 정당화 소요 시간	#-3%	#tt
+	justify_war_goal_when_in_major_war_time	#주요국과 전쟁 도중 전쟁 명분 정당화 소요 시간	#-3%
+	land_bunker_effectiveness_factor	#요새 효율	#+2%	#tt
+	land_equipment_upgrade_xp_cost	#육군 장비 경험치 비용	#-2%
 	land_reinforce_rate	#증원율	#+3%
-	lend_lease_tension	#무기대여 긴장도 제한	#	#tt
-	lend_lease_tension_with_overlord	#lend_lease_tension_with_overlord
-	license_air_purchase_cost	#license_air_purchase_cost
-	license_anti_tank_eq_cost_factor	#license_anti_tank_eq_cost_factor
-	license_anti_tank_eq_production_speed_factor	#license_anti_tank_eq_production_speed_factor
-	license_anti_tank_eq_tech_difference_speed_factor	#license_anti_tank_eq_tech_difference_speed_factor
-	license_armor_purchase_cost	#license_armor_purchase_cost
-	license_artillery_eq_cost_factor	#license_artillery_eq_cost_factor
-	license_artillery_eq_production_speed_factor	#license_artillery_eq_production_speed_factor
-	license_artillery_eq_tech_difference_speed_factor	#license_artillery_eq_tech_difference_speed_factor
-	license_infantry_eq_cost_factor	#license_infantry_eq_cost_factor
-	license_infantry_eq_production_speed_factor	#license_infantry_eq_production_speed_factor
-	license_infantry_eq_tech_difference_speed_factor	#license_infantry_eq_tech_difference_speed_factor
-	license_infantry_purchase_cost	#license_infantry_purchase_cost
-	license_light_tank_eq_cost_factor	#license_light_tank_eq_cost_factor
-	license_light_tank_eq_production_speed_factor	#license_light_tank_eq_production_speed_factor
-	license_light_tank_eq_tech_difference_speed_factor	#license_light_tank_eq_tech_difference_speed_factor
-	license_naval_purchase_cost	#license_naval_purchase_cost
-	license_production_speed	#license_production_speed
-
-	license_purchase_cost	#license_purchase_cost
-	license_tech_difference_speed	#license_tech_difference_speed
-	line_change_production_efficiency_factor	#생산 효율 유지	#+4%
+	lend_lease_tension	#무기대여 긴장도 제한	#-3%	#tt
+	lend_lease_tension_with_overlord	#괴뢰국으로부터의 무기대여 긴장도 제한	#-3%	#*	#tt
+	license_air_purchase_cost	#공군 면허 구매 비용	#-2%
+	license_anti_tank_eq_cost_factor	#대전차 장비 면허 구매 비용	#-2%
+	license_anti_tank_eq_production_speed_factor	#대전차 장비 면허 생산 속도	#+2%
+	license_anti_tank_eq_tech_difference_speed_factor	#기술 격차에 의한 대전차 장비 면허 생산 속도	#+2%
+	license_armor_purchase_cost	#license_armor_purchase_cost	#-2%
+	license_artillery_eq_cost_factor	#포병 장비 면허 구매 비용	#-2%
+	license_artillery_eq_production_speed_factor	#포병 장비 면허 생산 속도	#+2%
+	license_artillery_eq_tech_difference_speed_factor	#기술 격차에 의한 포병 장비 면허 생산 속도	#+2%
+	license_infantry_eq_cost_factor	#보병 장비 면허 구매 비용	#-2%
+	license_infantry_eq_production_speed_factor	#보병 장비 면허 생산 속도	#+2%
+	license_infantry_eq_tech_difference_speed_factor	#기술 격차에 의한 보병 장비 면허 생산 속도	#+2%
+	license_infantry_purchase_cost	#보볌 면허 구매 비용	#-2%
+	license_light_tank_eq_cost_factor	#경전차 장비 면허 구매 비용	#-2%
+	license_light_tank_eq_production_speed_factor	#경전차 장비 면허 생산 속도	#+2%
+	license_light_tank_eq_tech_difference_speed_factor	#기술 격차에 의한 경전차 장비 면허 생산 속도 	#+2%
+	license_naval_purchase_cost	#해군 면허 구매 비용	#-2%
+	license_production_speed	#면허 생산 속도	#+2$	#tt
+	license_purchase_cost	#면허 구매 비용	#-2%	#tt
+	license_tech_difference_speed	#기술 격차로 인한 면허 생산 속도	#+2%
+	line_change_production_efficiency_factor	#생산 효율 유지	#+4%	#tt
 
 	local_resources_<Resource>_factor	#local_resources_-resource-_factor
 
 	max_command_power	#매일 지휘력 획득	#+0F	#tt
 	max_command_power_mult	#최대 지휘력 증가 배율	#+2%	#tt
-
-	max_fuel	#max_fuel
-	max_fuel_building	#max_fuel_building
-	max_fuel_factor	#max_fuel_factor
-	max_surrender_limit_offset	#max_surrender_limit_offset
-	mic_to_target_factor	#mic_to_target_factor
+	max_fuel	#연료 보유량 (K)	#+2F
+	max_fuel_building	#연료 보유량 (K)	#+2F
+	max_fuel_factor	#연료 보유량	#+4%	#tt
+	max_surrender_limit_offset	#최소 항복 한계치	#+4%
+	mic_to_target_factor	#목표국의 군수산업	#-4%
 	min_export	#시장으로 가는 자원	#Y2%	#tt
 	minimum_training_level	#최소 훈련 레벨	#2%	#tt
 	monthly_population	#월간 인구	#+3%	#tt
@@ -775,15 +771,15 @@
 	research_speed_factor	#연구 속도	#+2%	#tt
 	resistance_activity	#저항 활동 확률	#-3%	#tt
 	resistance_damage_to_garrison	#주둔군에 대한 피해	#-2%	#tt
-	resistance_damage_to_garrison_on_our_occupied_states	#적이 점령한 우리 주의 적 주둔군에 대한 피해	#+4%
+	resistance_damage_to_garrison_on_our_occupied_states	#적이 점령한 우리 주의 적 주둔군에 대한 피해	#+4%	#tt
 	resistance_decay	#저항도 감소 속도	#+2%
 	resistance_decay_on_our_occupied_states	#적이 점령한 우리 주의 저항도 감소 속도	#-2%
 	resistance_garrison_penetration_chance	#적이 점령한 우리 주의 적 주둔군에 대한 피해	#-4%
 	resistance_growth	#저항도 증가 속도	#-2%	#tt
-	resistance_growth_on_our_occupied_states	#적이 점령한 우리 주의 저항도 증가 속도	#+2%
+	resistance_growth_on_our_occupied_states	#적이 점령한 우리 주의 저항도 증가 속도	#+2%	#tt**
 	resistance_target	#저항도 목표	#-2%	#tt
 	resistance_target_on_our_occupied_states	#적이 점령한 우리 영토의 저항도 목표	#+2%	#tt
-	resource_trade_cost_bonus_per_factory	#무역시 공장당 추가 자원	#+0F
+	resource_trade_cost_bonus_per_factory	#무역시 공장당 추가 자원	#+0F	#tt
 	screening_without_screens	#주력함만 운용할 때 스크린 혜택	#+3%	#tt
 	send_volunteer_divisions_required	#의용군 파병에 필요한 사단	#-3%
 	send_volunteer_factor	#최대 의용군 사단	#+3%
@@ -855,7 +851,7 @@
 	dig_in_speed_factor	#참호 부설 속도	#+3%	#tt
 	dont_lose_dig_in_on_attack	#공격 패퇴 중 참호구축 불가	#tt #B
 	encryption	#암호화	#+2F
-	encryption_factor	#암호화	#+4%
+	encryption_factor	#암호화	#+4%	#tt
 	enemy_attrition	#적 사단 손실	#+3%
 	guarantee_tension	#독립 보장 긴장도 제한 	#-3%	#tt
 	local_intel_to_enemies	#local_intel_to_enemies
@@ -870,7 +866,7 @@
 	naval_supply_consumption_factor	#해군 보급 소비량	#+3%
 	naval_torpedo_damage_reduction_factor	#적 어뢰 피해량 감소	#+2%
 	naval_torpedo_enemy_critical_chance_factor	#적 어뢰 치명타 확률	#+4%
-	navy_capital_ship_defence_factor	#주력함 기갑
+	navy_capital_ship_defence_factor	#주력함 기갑	#+4%	#tt
 	navy_screen_defence_factor	#보조함 방어	#tt
 	navy_submarine_defence_factor	#잠수함 방어
 	navy_submarine_detection_factor	#잠수함 탐지	#+4%	#tt
@@ -1064,7 +1060,7 @@
 	operation_risk #작전 위험도	#-2%
 
 	operative_death_on_capture_chance	#구금된 우리 공작원의 사망 확률	#+2%
-	operative_slot	#공작원 슬롯	#+0F
+	operative_slot	#공작원 슬롯	#+0F	#tt
 	target_sabotage_factor	#목표 사보타주 효율	#+2%
 
 ### MILITARY ADVANCEMENTS modifiers
@@ -1072,7 +1068,7 @@
 	experience_gain_army_factor	#육군 경험치 획득량	#+4%	#tt
 	experience_gain_army_unit	#사단 경험치 획득량 (매일)	#+1F
 	experience_gain_army_unit_factor	#사단 경험치 획득량	#+4%
-	experience_gain_factor	#experience_gain_factor
+	experience_gain_factor	#지휘관 경험치 얻음	#+3%
 	experience_gain_navy	#해군 경험치 획득량(매일) #+3F	#tt
 	experience_gain_navy_factor	#해군 경험치 획득량 #+3%	#tt
 	experience_gain_navy_unit	#선박 경험치 획득량(매일) #+2F
@@ -1175,7 +1171,7 @@
 	navy_anti_air_attack	#해군의 대공 공격	#+1F
 	navy_anti_air_attack_factor	#해군 대공 공격	#+4%	#tt
 	navy_capital_ship_attack_factor	#주력함 공격	#+4%
-	navy_capital_ship_defence_factor	#주력함 기갑	#+4%	#tt
+	navy_capital_ship_defence_factor	#주력함 기갑	#+4%	#tt*	(navy_capital_ship_defense_factor_tt)
 	navy_carrier_air_agility_factor	#항공모함 함재기 기동성	#+4%
 	navy_carrier_air_attack_factor	#항공모함 함재기 공격	#+4%
 	navy_carrier_air_targetting_factor	#항공모함 함재기 명중	#+4%
@@ -1330,10 +1326,10 @@
 	<SpecialProject>_speed_factor	#-specialproject-_speed_factor
 
 	army_speed_factor_for_controller	#사단 속도	#+4%
-	coastal_bunker_effectiveness_factor	#coastal_bunker_effectiveness_factor
-	compliance_gain	#compliance_gain
-	compliance_growth	#compliance_growth
-	compliance_growth_on_our_occupied_states	#compliance_growth_on_our_occupied_states
+	coastal_bunker_effectiveness_factor	#해안 요새 효율	#+2%
+	compliance_gain	#매일 순응도 획득	#+2F%	#tt*	(modifier_compliance_gain_tt)
+	compliance_growth	#순응도 증가 속도	#+2%	#tt
+	compliance_growth_on_our_occupied_states	#적이 점령한 우리 주의 순응도 증가 속도	#-2%	#tt
 	disable_strategic_redeployment #전략적 재배치 비활성화됨	#B
 	disable_strategic_redeployment_for_controller #전략적 재배치 비활성화됨	#B
 	enemy_army_speed_factor	#적 사단 속도	#-4%
@@ -1346,11 +1342,11 @@
 	equipment_capture_for_controller	#equipment_capture_for_controller
 	intel_network_gain	#정보망 강도 획득	#+1F
 	intel_network_gain_factor	#정보망 강도 증가 변동치	#+2%	#tt
-	land_bunker_effectiveness_factor	#land_bunker_effectiveness_factor
+	land_bunker_effectiveness_factor	#요새 효율	#+2%	#tt
 	local_building_slots	#주 최대 공장 수	#+0F
-	local_building_slots_factor	#주 최대 공장 수	#+2%	#tt*
+	local_building_slots_factor	#주 최대 공장 수	#+2%	#tt*	(MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_tt)
 	local_factories	#현지 공장	#+2%	#tt
-	local_factory_energy_consumption	#local_factory_energy_consumption
+	local_factory_energy_consumption	#local_factory_energy_consumption	#	#tt*	(MODIFIER_LOCAL_FACTORY_ENERGY_CONSUMPTION_tt)
 	local_factory_sabotage	#local_factory_sabotage
 	local_intel_to_enemies	#local_intel_to_enemies
 	local_manpower	#현지 인력	#+2%
@@ -1365,16 +1361,16 @@
 	no_compliance_gain #순응도 획득 없음	#B
 	non_core_manpower	#비핵심 인력	#+4%	#tt
 	recruitable_population	#recruitable_population
-	recruitable_population_factor	#recruitable_population_factor
+	recruitable_population_factor	#recruitable_population_factor	#	#tt
 	required_garrison_factor	#주둔군 수요	#-2%
 	resistance_activity	#저항 활동 확률	#-3%	#tt
 	resistance_damage_to_garrison	#주둔군에 대한 피해	#-2%	#tt
-	resistance_damage_to_garrison_on_our_occupied_states	#적이 점령한 우리 주의 적 주둔군에 대한 피해	#+4%
+	resistance_damage_to_garrison_on_our_occupied_states	#적이 점령한 우리 주의 적 주둔군에 대한 피해	#+4%	#tt**
 	resistance_decay	#저항도 감소 속도	#+2%
 	resistance_decay_on_our_occupied_states	#적이 점령한 우리 주의 저항도 감소 속도	#-2%
 	resistance_garrison_penetration_chance	#적이 점령한 우리 주의 적 주둔군에 대한 피해	#-4%
 	resistance_growth	#저항도 증가 속도	#-2%	#tt
-	resistance_growth_on_our_occupied_states	#적이 점령한 우리 주의 저항도 증가 속도	#+2%
+	resistance_growth_on_our_occupied_states	#적이 점령한 우리 주의 저항도 증가 속도	#+2%	#tt**
 	resistance_target	#저항도 목표	#-2%	#tt
 	resistance_target_on_our_occupied_states	#적이 점령한 우리 영토의 저항도 목표	#+2%	#tt
 	starting_compliance	#시작 순응도	#+2%
@@ -1382,13 +1378,13 @@
 	state_<Building>_max_level_terrain_limit	#state_-building-_max_level_terrain_limit
 	state_<Building>_max_level_terrain_limit	#state_-building-_max_level_terrain_limit
 	state_production_speed_<Building>_factor	#state_production_speed_-building-_factor
-	state_production_speed_buildings_factor	#현지 건설 속도	#+2%	#tt*
+	state_production_speed_buildings_factor	#현지 건설 속도	#+2%	#tt*	(MODIFIER_STATE_PRODUCTION_SPEED_BUILDINGS_FACTOR_tt)
 	state_production_speed_facility_factor	#state_production_speed_facility_factor
 	state_repair_speed_<Building>_factor	#state_repair_speed_-building-_factor
 	state_resource_<Resource>	#state_resource_-resource-
 	state_resource_cost_<Resource>	#state_resource_cost_-resource-
 	state_resources_<Resource>_factor	#state_resources_-resource-_factor
-	state_resources_factor	#사용 가능한 현지 자원	#+2%	#tt*
+	state_resources_factor	#현지 가용 자원	#+2%	#tt*	(MODIFIER_STATE_RESOURCES_FACTOR_tt)
 	supply_factor	#보급 효율	#+2%	#tt
 	temporary_state_resource_<Resource>	#temporary_state_resource_-resource-
 	truck_attrition	#보급 트럭 손실률	#-4%
@@ -1420,7 +1416,7 @@
 	land_reinforce_rate	#증원율	#+3%
 	line_change_production_efficiency_factor	#생산 효율 유지	#+4%	#tt
 	local_building_slots	#주 최대 공장 수	#+0F
-	local_building_slots_factor	#주 최대 공장 수	#+2%	#tt*
+	local_building_slots_factor	#주 최대 공장 수	#+2%	#tt*	(MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_tt)
 	local_factories	#현지 공장	#+2%	#tt
 	local_manpower	#현지 인력	#+2%
 	local_non_core_manpower	#현지 비핵심 인력	#+4%
@@ -1451,10 +1447,10 @@
 	production_speed_buildings_factor	#건설 속도	#+4%	#tt
 	production_speed_buildings_powered_factor	#기계화 건설 속도	#+4%	#tt
 	special_forces_training_time_factor	#특수부대 사단 훈련 시간	#-3%	#tt
-	state_production_speed_buildings_factor	#현지 건설 속도	#+2%	#tt*
-	state_resources_factor	#사용 가능한 현지 자원	#+2%	#tt*
+	state_production_speed_buildings_factor	#현지 건설 속도	#+2%	#tt*	(MODIFIER_STATE_PRODUCTION_SPEED_BUILDINGS_FACTOR_tt)
+	state_resources_factor	#현지 가용 자원	#+2%	#tt*	(MODIFIER_STATE_RESOURCES_FACTOR_tt)
 	tech_air_damage_factor	#방공 폭격 피해 감소	#-4%
-	trade_opinion_factor	#무역거래에의 평판 획득치	#Y4%
+	trade_opinion_factor	#무역 거래 의견 변동치	#Y4%	#tt
 	training_time_army	#사단 훈련 시간	#+1F
 	training_time_army_factor	#사단 훈련 시간	#+3%
 	weekly_manpower	#주간 인력	#+0F
@@ -1463,14 +1459,14 @@
 	air_invasion_preparation	#공중 침공 준비 시간	#-3%
 	amphibious_invasion	#상륙 침입 속도 #+3%	#tt
 	amphibious_invasion_defence	#상륙 방어력 #+2%
-	army_leader_cost_factor	#army_leader_cost_factor
-	army_leader_start_attack_level	#army_leader_start_attack_level
-	army_leader_start_defense_level	#army_leader_start_defense_level
-	army_leader_start_level	#army_leader_start_level
-	army_leader_start_logistics_level	#army_leader_start_logistics_level
-	army_leader_start_planning_level	#army_leader_start_planning_level
+	army_leader_cost_factor	#육군 지휘관 비용 #-3%	#tt
+	army_leader_start_attack_level	#army_leader_start_attack_level	#+0F	#tt
+	army_leader_start_defense_level	#army_leader_start_defense_level	#+0F	#tt
+	army_leader_start_level	#army_leader_start_level	#+0F
+	army_leader_start_logistics_level	#army_leader_start_logistics_level	#+0F	#tt
+	army_leader_start_planning_level	#army_leader_start_planning_level	#+0F	#tt
 
-	cannot_use_abilities #B
+	cannot_use_abilities #전투 능력 사용 불가	#B
 	carrier_capacity_penalty_reduction	#항공모함 혼잡 #-3%
 	carrier_sortie_hours_delay	#항모 비행단 출격 지연(시간) #-0F
 	carrier_traffic	#함재기 출격수 #+2%
@@ -1486,23 +1482,23 @@
 	enemy_operative_forced_into_hiding_time_factor	#적 공작원 강제 잠적 시간	#+2%
 	enemy_operative_harmed_time_factor	#적 공작원이 피해받은 시간	#+2%
 	enemy_operative_intel_extraction_rate	#적 공작원 정보 추출률	#+2%
-	exiled_divisions_attack_factor	#exiled_divisions_attack_factor
-	exiled_divisions_defense_factor	#exiled_divisions_defense_factor
-	experience_gain_factor	#experience_gain_factor
+	exiled_divisions_attack_factor	#망명 사단 공격	#+4%
+	exiled_divisions_defense_factor	#망명 사단 방어	#+4%
+	experience_gain_factor	#지휘관 경험치 얻음	#+3%
 	experience_gain_navy	#해군 경험치 획득량(매일) #+3F	#tt
 	experience_gain_navy_factor	#해군 경험치 획득량 #+3%	#tt
 	experience_gain_navy_unit	#선박 경험치 획득량(매일) #+2F
 	experience_gain_navy_unit_factor	#선박 경험치 획득량 #+3%	#tt
 	fighter_sortie_efficiency	#전투기 출격 효율 #+2%
-	fortification_collateral_chance	#fortification_collateral_chance
+	fortification_collateral_chance	#요새 전투에서 피해를 줄 확률	#+3%
 	
-	fortification_damage	#fortification_damage
+	fortification_damage	#전투에서의 요새 피해	#+3%
 	initiative_factor	#우선권	#+3%	#tt
 	intel_network_gain	#정보망 강도 획득	#+1F
 	intel_network_gain_factor	#정보망 강도 증가 변동치	#+2%	#tt
 	invasion_preparation	#상륙 준비 시간 #-3%	#tt
-	max_army_group_size	#max_army_group_size
-	military_leader_cost_factor	#military_leader_cost_factor
+	max_army_group_size	#장군 최대 집단군 규모	#+0F
+	military_leader_cost_factor	#군 지휘관 비용	#-3%	#tt
 	naval_coordination	#함대 조직	#+2%	#tt
 	naval_critical_effect_factor	#연속 치명타 효과	#-4%
 	naval_critical_score_chance_factor	#치명타 입힐 확률	#+4%	#tt
@@ -1540,12 +1536,12 @@
 	navy_carrier_air_agility_factor	#항공모함 함재기 기동성	#+4%
 	navy_carrier_air_attack_factor	#항공모함 함재기 공격	#+4%
 	navy_carrier_air_targetting_factor	#항공모함 함재기 명중	#+4%
-	navy_leader_cost_factor	#navy_leader_cost_factor
-	navy_leader_start_attack_level	#navy_leader_start_attack_level
-	navy_leader_start_coordination_level	#navy_leader_start_coordination_level
-	navy_leader_start_defense_level	#navy_leader_start_defense_level
-	navy_leader_start_level	#navy_leader_start_level
-	navy_leader_start_maneuvering_level	#navy_leader_start_maneuvering_level
+	navy_leader_cost_factor	#해군 지휘관 비용	#-3%	#tt	#tt
+	navy_leader_start_attack_level	#신임 해군 지휘관의 시작시 공격 기술 수준	#+0F
+	navy_leader_start_coordination_level	#신임 해군 지휘관의 시작시 조직 기술 수준	#+0F
+	navy_leader_start_defense_level	#신임 해군 지휘관의 시작시 방어 기술 수준	#+0F
+	navy_leader_start_level	#신임 해군 지휘관의 시작시 수준	#+0F
+	navy_leader_start_maneuvering_level	#신임 해군 지휘관의 시작시 기동 기술 수준	#+0F
 	navy_max_range	#해군 최대 작전 범위	#+1F
 	navy_max_range_factor	#해군 최대 작전 거리 획득치	#+4%	#tt
 	navy_org	#해군 조직력	#+1F
@@ -1555,8 +1551,8 @@
 	navy_submarine_attack_factor	#잠수함 공격	#tt
 	navy_submarine_defence_factor	#잠수함 방어
 	navy_submarine_detection_factor	#잠수함 탐지	#+4%	#tt
-	own_exiled_divisions_attack_factor	#own_exiled_divisions_attack_factor
-	own_exiled_divisions_defense_factor	#own_exiled_divisions_defense_factor
+	own_exiled_divisions_attack_factor	#자국 망명 사단 공격 #+4%
+	own_exiled_divisions_defense_factor	#자국 망명 사단 방어 #+4%
 	own_operative_capture_chance_factor	#우리 공작원이 체포될 확률	#-2%
 	own_operative_detection_chance	#우리 공작원이 감지될 확률 보정치	#-2F
 	own_operative_detection_chance_factor	#우리 공작원이 감지될 확률 변동치	#-2%
@@ -1568,12 +1564,12 @@
 	paratrooper_weight_factor	#공수부대 수송 공간 변동치	#-3%
 	port_strike	#항구 타격	#+3%	#tt
 	positioning	#위치 선정	#+3%	#tt
-	promote_cost_factor	#promote_cost_factor
-	reassignment_duration_factor	#reassignment_duration_factor
-	river_crossing_factor	#river_crossing_factor
+	promote_cost_factor	#진급 비용	#-3%
+	reassignment_duration_factor	#부대 재발령 기간	#-4%
+	river_crossing_factor	#도하 속도 불이익	#-4%
 	screening_efficiency	#스크린 임무 효율	#+3%	#tt
 	ships_at_battle_start	#접촉 시의 함선 숫자	#Y2%
-	sickness_chance	#sickness_chance
+	sickness_chance	#질병에 걸릴 확률	#-4%
 	skill_bonus_factor	#skill_bonus_factor
 	sortie_efficiency	#함재기 출격 효율	#+2%	#tt
 	spotting_chance	#탐지 속도	#+2%	#tt
@@ -1581,7 +1577,7 @@
 	sub_retreat_speed	#후퇴 시 잠수함 속도	#+2%	#tt
 	submarine_attack	#잠수함 공격	#+1F
 	unit_leader_as_advisor_cp_cost_factor	#지휘관을 고문으로 추가하는 비용	#-3%	#tt
-	wounded_chance_factor	#wounded_chance_factor
+	wounded_chance_factor	#전투에서 부상을 입을 확률	#-3%
 
 ## Targeted Modifiers
 	### AGGRESSIVE modifiers
@@ -6354,87 +6350,10 @@
 	army_spirit
 	navy_spirit
 
-## army_leader_cost_factor
-
-* Number with 1 decimal places
-* **Categories**: unit_leader
-
-## army_leader_start_attack_level
-
-* Number with 0 decimal places
-* **Categories**: unit_leader
-
-## army_leader_start_defense_level
-
-* Number with 0 decimal places
-* **Categories**: unit_leader
-
-## army_leader_start_level
-
-* Number with 0 decimal places
-* **Categories**: unit_leader
-
-## army_leader_start_logistics_level
-
-* Number with 0 decimal places
-* **Categories**: unit_leader
-
-## army_leader_start_planning_level
-
-* Number with 0 decimal places
-* **Categories**: unit_leader
-
-## coastal_bunker_effectiveness_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-	state
-
-## compliance_gain
-
-* Number with 3 decimal places
-* **Categories**: country
-	state
-
-## compliance_growth
-
-* Number with 0 decimal places
-* **Categories**: country
-	state
-
-## compliance_growth_on_our_occupied_states
-
-* Number with 0 decimal places
-* **Categories**: country
-	state
-
-## decryption
-
-* Number with 2 decimal places
-* **Categories**: country
-	aggressive
-
-## decryption_factor
-
-* Number with 2 decimal places
-* **Categories**: country
-	aggressive
-
-## defensive_war_stability_factor
-
-* Number with 2 decimal places
-* **Categories**: country
-
 ## enemy_intel_network_gain_factor_over_occupied_tag
 
 * Number with 0 decimal places
 * **Categories**: state
-
-## enemy_justify_war_goal_time
-
-* Number with 1 decimal places
-* **Categories**: country
-	aggressive
 
 ## equipment_capture_factor_for_controller
 
@@ -6445,165 +6364,6 @@
 
 * Number with 1 decimal places
 * **Categories**: state
-
-## exiled_divisions_attack_factor
-
-* Number with 2 decimal places
-* **Categories**: unit_leader
-
-## exiled_divisions_defense_factor
-
-* Number with 2 decimal places
-* **Categories**: unit_leader
-
-## experience_gain_factor
-
-* Number with 1 decimal places
-* **Categories**: unit_leader
-	military_advancements
-
-## fortification_collateral_chance
-
-* Number with 1 decimal places
-* **Categories**: unit_leader
-
-## fortification_damage
-
-* Number with 1 decimal places
-* **Categories**: unit_leader
-
-## join_faction_tension
-
-* Number with 1 decimal places
-* **Categories**: country
-
-## justify_war_goal_time
-
-* Number with 1 decimal places
-* **Categories**: country
-	aggressive
-
-## justify_war_goal_when_in_major_war_time
-
-* Number with 1 decimal places
-* **Categories**: country
-	aggressive
-
-## land_bunker_effectiveness_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-	state
-
-## land_equipment_upgrade_xp_cost
-
-* Number with 0 decimal places
-* **Categories**: Country
-
-## lend_lease_tension
-
-* Number with 1 decimal places
-* **Categories**: country
-
-## lend_lease_tension_with_overlord
-
-* Number with 1 decimal places
-* **Categories**: country
-
-## license_air_purchase_cost
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_anti_tank_eq_cost_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_anti_tank_eq_production_speed_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_anti_tank_eq_tech_difference_speed_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_armor_purchase_cost
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_artillery_eq_cost_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_artillery_eq_production_speed_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_artillery_eq_tech_difference_speed_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_infantry_eq_cost_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_infantry_eq_production_speed_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_infantry_eq_tech_difference_speed_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_infantry_purchase_cost
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_light_tank_eq_cost_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_light_tank_eq_production_speed_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_light_tank_eq_tech_difference_speed_factor
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_naval_purchase_cost
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_production_speed
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_purchase_cost
-
-* Number with 0 decimal places
-* **Categories**: country
-
-## license_tech_difference_speed
-
-* Number with 0 decimal places
-* **Categories**: country
 
 ## local_factory_energy_consumption
 
