@@ -420,7 +420,6 @@
 
 	additional_brigade_column_size	#여단 규모	#+0F
 	agency_upgrade_time	#정보기관 개선 시간	#-3%	#tt
-	air_doctrine_cost_factor	#공군 교리 비용	#-4%	#tt
 	air_equipment_upgrade_xp_cost	#공군 장비 경험치 비용	#-2%
 	air_invasion_plan_cap	#최대 공중 침공 계획 수	#-0F
 	air_invasion_prep_days	#공중 침공 준비 시간	#+3%
@@ -1054,7 +1053,6 @@
 	naval_damage_factor	#해군 피해	#+4%	#tt
 	naval_defense_factor	#해군 방어	#+4%	#tt
 	naval_detection	#해군 탐지	#+2%	#tt
-	naval_doctrine_cost_factor	#해군 교리 비용	#	#tt
 	naval_enemy_fleet_size_ratio_penalty_factor	#적 함대 규모 불이익	#+4%	#tt
 	naval_enemy_positioning_in_initial_attack	#최초 공격 시 적 방어 위치 설정	#+2%
 	naval_enemy_retreat_chance	#적 후퇴 확률	#-4%
@@ -2372,110 +2370,110 @@
 	### production_cost_<Building>_factor
 		#### category: COUNTRY Modifiers
 		
-		production_cost_air_base_factor	#	#
-		production_cost_air_facility_factor	#	#
-		production_cost_anti_air_building_factor	#	#
-		production_cost_arms_factory_factor	#	#
-		production_cost_bunker_factor	#	#
-		production_cost_canal_kiel_factor	#	#
-		production_cost_canal_panama_factor	#	#
-		production_cost_coastal_bunker_factor	#	#
-		production_cost_commercial_nuclear_reactor_factor	#	#
-		production_cost_dam_factor	#	#
-		production_cost_dam_mountain_factor	#	#
-		production_cost_dockyard_factor	#	#
-		production_cost_fuel_silo_factor	#	#
-		production_cost_industrial_complex_factor	#	#
-		production_cost_infrastructure_factor	#	#
-		production_cost_land_facility_factor	#	#
-		production_cost_landmark_berlin_reichstag_factor	#	#
-		production_cost_landmark_berlin_volkshalle_factor	#	#
-		production_cost_landmark_big_ben_factor	#	#
-		production_cost_landmark_colosseum_factor	#	#
-		production_cost_landmark_cristo_redentor_factor	#	#
-		production_cost_landmark_eiffel_tower_factor	#	#
-		production_cost_landmark_forbidden_city_factor	#	#
-		production_cost_landmark_great_wall_section_factor	#	#
-		production_cost_landmark_hagia_sophia_factor	#	#
-		production_cost_landmark_hakko_ichiu_factor	#	#
-		production_cost_landmark_hofburg_palace_factor	#	#
-		production_cost_landmark_kremlin_factor	#	#
-		production_cost_landmark_nanjing_presidential_palace_factor	#	#
-		production_cost_landmark_nanjing_presidential_palace_gen_factor	#	#
-		production_cost_landmark_nanjing_presidential_palace_prc_factor	#	#
-		production_cost_landmark_national_diet_factor	#	#
-		production_cost_landmark_sadabad_complex_factor	#	#
-		production_cost_landmark_statue_of_liberty_factor	#	#
-		production_cost_landmark_taj_mahal_factor	#	#
-		production_cost_landmark_tokyo_imperial_palace_factor	#	#
-		production_cost_mega_gun_emplacement_factor	#	#
-		production_cost_naval_base_factor	#	#
-		production_cost_naval_facility_factor	#	#
-		production_cost_naval_headquarters_factor	#	#
-		production_cost_naval_supply_hub_factor	#	#
-		production_cost_nuclear_facility_factor	#	#
-		production_cost_nuclear_reactor_factor	#	#
-		production_cost_nuclear_reactor_heavy_water_factor	#	#
-		production_cost_radar_station_factor	#	#
-		production_cost_rail_way_factor	#	#
-		production_cost_rocket_site_factor	#	#
-		production_cost_stronghold_network_factor	#	#
-		production_cost_supply_node_factor	#	#
-		production_cost_synthetic_refinery_factor	#	#
+		production_cost_air_base_factor	# 건설 비용	#
+		production_cost_air_facility_factor	# 건설 비용	#
+		production_cost_anti_air_building_factor	# 건설 비용	#
+		production_cost_arms_factory_factor	# 건설 비용	#
+		production_cost_bunker_factor	# 건설 비용	#
+		production_cost_canal_kiel_factor	# 건설 비용	#
+		production_cost_canal_panama_factor	# 건설 비용	#
+		production_cost_coastal_bunker_factor	# 건설 비용	#
+		production_cost_commercial_nuclear_reactor_factor	# 건설 비용	#
+		production_cost_dam_factor	# 건설 비용	#
+		production_cost_dam_mountain_factor	# 건설 비용	#
+		production_cost_dockyard_factor	# 건설 비용	#
+		production_cost_fuel_silo_factor	# 건설 비용	#
+		production_cost_industrial_complex_factor	# 건설 비용	#
+		production_cost_infrastructure_factor	# 건설 비용	#
+		production_cost_land_facility_factor	# 건설 비용	#
+		production_cost_landmark_berlin_reichstag_factor	# 건설 비용	#
+		production_cost_landmark_berlin_volkshalle_factor	# 건설 비용	#
+		production_cost_landmark_big_ben_factor	# 건설 비용	#
+		production_cost_landmark_colosseum_factor	# 건설 비용	#
+		production_cost_landmark_cristo_redentor_factor	# 건설 비용	#
+		production_cost_landmark_eiffel_tower_factor	# 건설 비용	#
+		production_cost_landmark_forbidden_city_factor	# 건설 비용	#
+		production_cost_landmark_great_wall_section_factor	# 건설 비용	#
+		production_cost_landmark_hagia_sophia_factor	# 건설 비용	#
+		production_cost_landmark_hakko_ichiu_factor	# 건설 비용	#
+		production_cost_landmark_hofburg_palace_factor	# 건설 비용	#
+		production_cost_landmark_kremlin_factor	# 건설 비용	#
+		production_cost_landmark_nanjing_presidential_palace_factor	# 건설 비용	#
+		production_cost_landmark_nanjing_presidential_palace_gen_factor	# 건설 비용	#
+		production_cost_landmark_nanjing_presidential_palace_prc_factor	# 건설 비용	#
+		production_cost_landmark_national_diet_factor	# 건설 비용	#
+		production_cost_landmark_sadabad_complex_factor	# 건설 비용	#
+		production_cost_landmark_statue_of_liberty_factor	# 건설 비용	#
+		production_cost_landmark_taj_mahal_factor	# 건설 비용	#
+		production_cost_landmark_tokyo_imperial_palace_factor	# 건설 비용	#
+		production_cost_mega_gun_emplacement_factor	# 건설 비용	#
+		production_cost_naval_base_factor	# 건설 비용	#
+		production_cost_naval_facility_factor	# 건설 비용	#
+		production_cost_naval_headquarters_factor	# 건설 비용	#
+		production_cost_naval_supply_hub_factor	# 건설 비용	#
+		production_cost_nuclear_facility_factor	# 건설 비용	#
+		production_cost_nuclear_reactor_factor	# 건설 비용	#
+		production_cost_nuclear_reactor_heavy_water_factor	# 건설 비용	#
+		production_cost_radar_station_factor	# 건설 비용	#
+		production_cost_rail_way_factor	# 건설 비용	#
+		production_cost_rocket_site_factor	# 건설 비용	#
+		production_cost_stronghold_network_factor	# 건설 비용	#
+		production_cost_supply_node_factor	# 건설 비용	#
+		production_cost_synthetic_refinery_factor	# 건설 비용	#
 
 	### repair_speed_<Building>_factor
 		#### category: COUNTRY Modifiers
 		
-		repair_speed_air_base_factor	#	#
-		repair_speed_air_facility_factor	#	#
-		repair_speed_anti_air_building_factor	#	#
-		repair_speed_arms_factory_factor	#	#
-		repair_speed_bunker_factor	#	#
-		repair_speed_canal_kiel_factor	#	#
-		repair_speed_canal_panama_factor	#	#
-		repair_speed_coastal_bunker_factor	#	#
-		repair_speed_commercial_nuclear_reactor_factor	#	#
-		repair_speed_dam_factor	#	#
-		repair_speed_dam_mountain_factor	#	#
-		repair_speed_dockyard_factor	#	#
-		repair_speed_fuel_silo_factor	#	#
-		repair_speed_industrial_complex_factor	#	#
-		repair_speed_infrastructure_factor	#	#
-		repair_speed_land_facility_factor	#	#
-		repair_speed_landmark_berlin_reichstag_factor	#	#
-		repair_speed_landmark_berlin_volkshalle_factor	#	#
-		repair_speed_landmark_big_ben_factor	#	#
-		repair_speed_landmark_colosseum_factor	#	#
-		repair_speed_landmark_cristo_redentor_factor	#	#
-		repair_speed_landmark_eiffel_tower_factor	#	#
-		repair_speed_landmark_forbidden_city_factor	#	#
-		repair_speed_landmark_great_wall_section_factor	#	#
-		repair_speed_landmark_hagia_sophia_factor	#	#
-		repair_speed_landmark_hakko_ichiu_factor	#	#
-		repair_speed_landmark_hofburg_palace_factor	#	#
-		repair_speed_landmark_kremlin_factor	#	#
-		repair_speed_landmark_nanjing_presidential_palace_factor	#	#
-		repair_speed_landmark_nanjing_presidential_palace_gen_factor	#	#
-		repair_speed_landmark_nanjing_presidential_palace_prc_factor	#	#
-		repair_speed_landmark_national_diet_factor	#	#
-		repair_speed_landmark_sadabad_complex_factor	#	#
-		repair_speed_landmark_statue_of_liberty_factor	#	#
-		repair_speed_landmark_taj_mahal_factor	#	#
-		repair_speed_landmark_tokyo_imperial_palace_factor	#	#
-		repair_speed_mega_gun_emplacement_factor	#	#
-		repair_speed_naval_base_factor	#	#
-		repair_speed_naval_facility_factor	#	#
-		repair_speed_naval_headquarters_factor	#	#
-		repair_speed_naval_supply_hub_factor	#	#
-		repair_speed_nuclear_facility_factor	#	#
-		repair_speed_nuclear_reactor_factor	#	#
-		repair_speed_nuclear_reactor_heavy_water_factor	#	#
-		repair_speed_radar_station_factor	#	#
-		repair_speed_rail_way_factor	#	#
-		repair_speed_rocket_site_factor	#	#
-		repair_speed_stronghold_network_factor	#	#
-		repair_speed_supply_node_factor	#	#
-		repair_speed_synthetic_refinery_factor	#	#
+		repair_speed_air_base_factor	# 수리 속도	#
+		repair_speed_air_facility_factor	# 수리 속도	#
+		repair_speed_anti_air_building_factor	# 수리 속도	#
+		repair_speed_arms_factory_factor	#군수공장 수리 속도	#
+		repair_speed_bunker_factor	# 수리 속도	#
+		repair_speed_canal_kiel_factor	# 수리 속도	#
+		repair_speed_canal_panama_factor	# 수리 속도	#
+		repair_speed_coastal_bunker_factor	# 수리 속도	#
+		repair_speed_commercial_nuclear_reactor_factor	# 수리 속도	#
+		repair_speed_dam_factor	# 수리 속도	#
+		repair_speed_dam_mountain_factor	# 수리 속도	#
+		repair_speed_dockyard_factor	# 수리 속도	#
+		repair_speed_fuel_silo_factor	# 수리 속도	#
+		repair_speed_industrial_complex_factor	# 수리 속도	#
+		repair_speed_infrastructure_factor	# 수리 속도	#
+		repair_speed_land_facility_factor	# 수리 속도	#
+		repair_speed_landmark_berlin_reichstag_factor	# 수리 속도	#
+		repair_speed_landmark_berlin_volkshalle_factor	# 수리 속도	#
+		repair_speed_landmark_big_ben_factor	# 수리 속도	#
+		repair_speed_landmark_colosseum_factor	# 수리 속도	#
+		repair_speed_landmark_cristo_redentor_factor	# 수리 속도	#
+		repair_speed_landmark_eiffel_tower_factor	# 수리 속도	#
+		repair_speed_landmark_forbidden_city_factor	# 수리 속도	#
+		repair_speed_landmark_great_wall_section_factor	# 수리 속도	#
+		repair_speed_landmark_hagia_sophia_factor	# 수리 속도	#
+		repair_speed_landmark_hakko_ichiu_factor	# 수리 속도	#
+		repair_speed_landmark_hofburg_palace_factor	# 수리 속도	#
+		repair_speed_landmark_kremlin_factor	# 수리 속도	#
+		repair_speed_landmark_nanjing_presidential_palace_factor	# 수리 속도	#
+		repair_speed_landmark_nanjing_presidential_palace_gen_factor	# 수리 속도	#
+		repair_speed_landmark_nanjing_presidential_palace_prc_factor	# 수리 속도	#
+		repair_speed_landmark_national_diet_factor	# 수리 속도	#
+		repair_speed_landmark_sadabad_complex_factor	# 수리 속도	#
+		repair_speed_landmark_statue_of_liberty_factor	# 수리 속도	#
+		repair_speed_landmark_taj_mahal_factor	# 수리 속도	#
+		repair_speed_landmark_tokyo_imperial_palace_factor	# 수리 속도	#
+		repair_speed_mega_gun_emplacement_factor	# 수리 속도	#
+		repair_speed_naval_base_factor	# 수리 속도	#
+		repair_speed_naval_facility_factor	# 수리 속도	#
+		repair_speed_naval_headquarters_factor	# 수리 속도	#
+		repair_speed_naval_supply_hub_factor	# 수리 속도	#
+		repair_speed_nuclear_facility_factor	# 수리 속도	#
+		repair_speed_nuclear_reactor_factor	# 수리 속도	#
+		repair_speed_nuclear_reactor_heavy_water_factor	# 수리 속도	#
+		repair_speed_radar_station_factor	# 수리 속도	#
+		repair_speed_rail_way_factor	#철도 수리 속도	#
+		repair_speed_rocket_site_factor	# 수리 속도	#
+		repair_speed_stronghold_network_factor	# 수리 속도	#
+		repair_speed_supply_node_factor	# 수리 속도	#
+		repair_speed_synthetic_refinery_factor	# 수리 속도	#
 
 	### temporary_state_resource_<Resource>
 		#### category: STATE Modifiers
