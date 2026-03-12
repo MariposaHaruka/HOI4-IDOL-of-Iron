@@ -1,45 +1,112 @@
 ﻿l_korean:
  ### AIR modifiers
+ ace_effectiveness_factor_tt: "$$: $RIGHT|-=%1$"	#에이스 효율	#+3%	#tt
  air_accidents_tt: "$MODIFIER_AIR_ACCIDENTS$: $RIGHT|-=%1$"
+ air_accidents_factor_tt: "$$: $RIGHT|-=%1$"		#항공기 사고 확률	#-3%	#tt
+ air_ace_bonuses_factor_tt: "$$: $RIGHT|-=%1$"		#공군 에이스 혜택	#+2%	#tt
+ air_ace_generation_chance_factor_tt: "$$: $RIGHT|-=%1$"		#에이스 조종사 확률	#+4%	#tt
+ air_advisor_cost_factor_tt: "$$: $RIGHT|-=%1$"	#공군 고문 비용	#-2%	#tt
+ air_agility_factor_tt: "$$: $RIGHT|-=%1$"	#기동성	#+2%	#tt
+ air_attack_factor_tt: "$$: $RIGHT|-=%1$"	#대공 공격	#+2%	#tt
+ air_bombing_targetting_tt: "$$: $RIGHT|-=%1$"	#지상 폭격 조준 체계	#+3%	#tt
  air_carrier_night_penalty_reduction_factor_tt: "$MODIFIER_AIR_CARRIER_NIGHT_PENALTY_REDUCTION_FACTOR$: $RIGHT|+=%1$"
+ air_cas_efficiency_tt: "$$: $RIGHT|-=%1$"	#공군 지원 임무 효율	#+2%	#tt
+ air_cas_present_factor_tt: "$$: $RIGHT|-=%1$"	#지상 지원	#+4%	#tt
  air_close_air_support_org_damage_factor_tt: "$MODIFIER_AIR_CAS_ORG_DAMAGE_FACTOR$: $RIGHT|+=%1$"
+ air_defence_factor_tt: "$$: $RIGHT|-=%1$"	#대공 방어	#+2%	#tt
  air_detection_tt: "$MODIFIER_AIR_DETECTION$: $RIGHT|+=%1$"
+ air_escort_efficiency_tt: "$$: $RIGHT|-=%1$"	#호위 효율	#+2%	#tt
+ air_fuel_consumption_factor_tt: "$$: $RIGHT|-=%1$"	#공군 연료 소비량	#-4%	#tt
+ air_home_defence_factor_tt: "$$: $RIGHT|-=%1$"	#공군 조국 방위 변동치	#tt
+ air_intercept_efficiency_tt: "$$: $RIGHT|-=%1$"	#요격 임무 효율	#+2%	#tt
+ air_interception_detect_factor_tt: "$$: $RIGHT|-=%1$"	#요격시 적기 포착	#+4%	#tt
  air_invasion_division_cap_tt: "$MODIFIER_AIR_INVASION_DIVISION_CAP$: $RIGHT|+=0$"
  air_invasion_preparation_tt: "$MODIFIER_AIR_INVASION_PREPARATION$: $RIGHT|-=%1$"
+ air_manpower_requirement_factor_tt: "$$: $RIGHT|-=%1$"	#공군 인력 요건	#-4%	#tt
  air_maximum_speed_factor_tt: "$MODIFIER_AIR_MAX_SPEED_FACTOR$: $RIGHT|+=%1$"
+ air_mission_efficiency_tt: "$$: $RIGHT|-=%1$"	#공군 작전 효율	#+3%	#tt
+ air_mission_xp_gain_factor_tt: "$$: $RIGHT|-=%1$"	#비행단 임무 경험치 획득량	#+2%	#tt
+ air_nav_efficiency_tt: "$$: $RIGHT|-=%1$"	#해상 임무 효율	#+2%	#tt
+ air_night_penalty_tt: "$$: $RIGHT|-=%1$"	#야간 임무 불이익	#-4%	#tt
+ air_power_projection_factor_tt: "$$: $RIGHT|-=%1$"	#공군력 투사 획득치	#+2%	#tt
+ air_range_factor_tt: "$$: $RIGHT|-=%1$"	#공군 작전 범위	#+2%	#tt
+ air_strategic_bomber_bombing_factor_tt: "$$: $RIGHT|-=%1$"	#전략폭격	#+3%	#tt
  air_strategic_bomber_defence_factor_tt: "$MODIFIER_STRATEGIC_BOMBER_DEFENCE_FACTOR$: $RIGHT|+=%1$"
  air_strategic_bomber_night_penalty_tt: "$MODIFIER_AIR_STRAT_BOMBER_NIGHT_PENALTY$: $RIGHT|-=%1$"
  air_superiority_detect_factor_tt: "$MODIFIER_AIR_SUPERIORITY_DETECT_FACTOR$: $RIGHT|+=%1$"
+ air_superiority_detect_factor_tt: "$$: $RIGHT|-=%1$"	#전투기에 의한 포착	#+4%
+ air_superiority_efficiency_tt: "$$: $RIGHT|-=%1$"	#공중우세 임무 효율	#+2%	#tt
+ air_training_xp_gain_factor_tt: "$$: $RIGHT|-=%1$"	#비행단 훈련 경험치 획득량	#+2%	#tt
+ air_untrained_pilots_penalty_factor_tt: "$$: $RIGHT|-=%1$"	#새 비행단에 대한 미숙련 조종사 불이익	#-2%	#tt
+ air_weather_penalty_tt: "$$: $RIGHT|-=%1$"	#악천후 불이익	#-4%	#tt
+ air_wing_xp_loss_when_killed_factor_tt: "$$: $RIGHT|-=%1$"	#비행단 전사 경험치 손실	#-2%	#tt
+ army_bonus_air_superiority_factor_tt: "$$: $RIGHT|-=%1$"	#공중우세	#+4%	#tt
  carrier_night_traffic_tt: "$MODIFIER_CARRIER_NIGHT_TRAFFIC$: $RIGHT|+=%1$"
  enemy_army_bonus_air_superiority_factor_tt: "$MODIFIER_ENEMY_ARMY_BONUS_AIR_SUPERIORITY_FACTOR$: $RIGHT|-=%1$"
+ experience_gain_air_tt: "$$: $RIGHT|+=2$"
+ experience_gain_air_factor_tt: "$$: $RIGHT|+=%1$"	#공군 경험치 획득량	#+3%	#tt
  ground_attack_tt: "$MODIFIER_GROUND_ATTACK$: $RIGHT|+=2$"
+ ground_attack_factor_tt: "$$: $RIGHT|+=2$"	#지상 공격 획득치	#+3%	#tt
+ mines_planting_by_air_factor_tt: "$$: $RIGHT|+=2$"	#공중 기뢰부설 효율	#+2%	#tt
  mines_sweeping_by_air_factor_tt: "$MODIFIER_MINES_SWEEPING_BY_AIR_FACTOR$: $RIGHT|+=%1$"
  naval_strike_agility_factor_tt: "$MODIFIER_NAVAL_STRIKE_AGILITY_FACTOR$: $RIGHT|+=%1$"
+ naval_strike_attack_factor_tt: "$$: $RIGHT|+=2$"	#해군 폭격	#+2%	#tt
+ naval_strike_targetting_factor_tt: "$$: $RIGHT|+=2$"	#해상 조준	#+2%	#tt
+ navy_weather_penalty_tt: "$$: $RIGHT|-=%1$"	#악천후 불이익	#-4%	#tt
  strategic_bomb_visibility_tt: "$MODIFIER_STRAT_BOMBING_VISIBILITY$: $RIGHT|-=%1$"
  ### ARMY modifiers
+ acclimatization_cold_climate_gain_factor_tt: "$$: $RIGHT|-=%1$"	#추위 적응 획득치	#+3%	#tt
+ acclimatization_hot_climate_gain_factor_tt: "$$: $RIGHT|-=%1$"	#더위 적응 획득치	#+3%	#tt
+ air_superiority_bonus_in_combat_tt: "$$: $RIGHT|+=%1$"	#전투 중 공중우세 혜택	#+3%	#tt
  armor_factor_tt: "$MODIFIER_ARMOR$: $RIGHT|+=%1$"
  army_advisor_cost_factor_tt: "$MODIFIER_ARMY_ADVISOR_COST_FACTOR$: $RIGHT|-=%0$"
  army_armor_attack_factor_tt: "$MODIFIER_ARMY_ARMOR_ATTACK_FACTOR$: $RIGHT|+=%1$"
  army_armor_defence_factor_tt: "$MODIFIER_ARMY_ARMOR_DEFENCE_FACTOR$: $RIGHT|+=%1$"
+ army_armor_speed_factor_tt: "$$: $RIGHT|-=%1$"	#기갑 속도	#+3%	#tt
+ army_artillery_attack_factor_tt: "$$: $RIGHT|-=%1$"	#포병 공격	#+3%	#tt
+ army_artillery_defence_factor_tt: "$$: $RIGHT|-=%1$"	#포병 방어	#+3%	#tt
+ army_attack_against_major_factor_tt: "$$: $RIGHT|-=%1$"	#강대국에 대한 공격력	#+3%	#tt
+ army_attack_against_minor_factor_tt: "$$: $RIGHT|-=%1$"	#약소국에 대한 공격력	#+3%	#tt
+ army_attack_factor_tt: "$$: $RIGHT|-=%1$"	#사단 공격	#+3%	#tt
+ army_attack_speed_factor_tt: "$$: $RIGHT|-=%1$"	#공격 사단 속도	#+4%	#tt
  army_breakthrough_against_major_factor_tt: "$MODIFIERS_ARMY_BREAKTHROUGH_AGAINST_MAJOR_FACTOR$: $RIGHT|+=%1$"
  army_breakthrough_against_minor_factor_tt: "$MODIFIERS_ARMY_BREAKTHROUGH_AGAINST_MINOR_FACTOR$: $RIGHT|+=%1$"
  army_claim_attack_factor_tt: "$MODIFIERS_ARMY_CLAIM_ATTACK_FACTOR$: $RIGHT|+=%1$"
  army_claim_defence_factor_tt: "$MODIFIERS_ARMY_CLAIM_DEFENCE_FACTOR$: $RIGHT|+=%1$"
+ army_core_attack_factor_tt: "$$: $RIGHT|+=%1$"	#핵심 영토 내 사단 공격	#+3%	#tt
+ army_core_defence_factor_tt: "$$: $RIGHT|+=%1$"	#핵심 영토 내 사단 방어	#+3%	#tt
+ army_defence_against_major_factor_tt: "$$: $RIGHT|-=%1$"	#강대국에 대한 방어력	#+3%	#tt
+ army_defence_against_minor_factor_tt: "$$: $RIGHT|-=%1$"	#약소국에 대한 방어력	#+3%	#tt
+ army_defence_factor_tt: "$$: $RIGHT|-=%1$"	#사단 방어	#+3%	#tt
  army_experience_from_volunteers_tt: "$MODIFIER_ARMY_EXPERIENCE_FROM_VOLUNTEERS$: $RIGHT|+=%1$"
  army_fuel_capacity_factor_tt: "$MODIFIER_ARMY_FUEL_CAPACITY_FACTOR$: $RIGHT|+=%1$"
+ army_fuel_consumption_factor_tt: "$$: $RIGHT|-=%1$"	#육군 연료 소비량	#-4%	#tt
  army_infantry_attack_factor_tt: "$MODIFIER_ARMY_INFANTRY_ATTACK_FACTOR$: $RIGHT|+=%1$"
  army_infantry_defence_factor_tt: "$MODIFIER_ARMY_INFANTRY_DEFENCE_FACTOR$: $RIGHT|+=%1$"
  army_morale_tt: "$MODIFIER_ARMY_MORALE$: $RIGHT|+=1$"
+ army_morale_factor_tt: "$$: $RIGHT|+=%1$"	#사단 회복률	#+3%	#tt
  army_org_tt: "$MODIFIER_ARMY_ORG$: $RIGHT|+=1$"
+ army_org_factor_tt: "$$: $RIGHT|+=%1$"	#사단 조직력	#+3%	#tt
+ army_org_regain_tt: "$$: $RIGHT|+=%1$"	#육군 조직력 회복	#+4%	#tt
  army_retreat_speed_factor_tt: "$MODIFIER_ARMY_RETREAT_SPEED_FACTOR$: $RIGHT|+=%1$"
+ army_speed_factor_tt: "$$: $RIGHT|+=%1$"	#사단 속도	#+4%	#tt
  army_speed_factor_for_controller_tt: "$MODIFIER_ARMY_SPEED_FACTOR_FOR_CONTROLLER$: $RIGHT|+=%1$"
  army_strength_factor_tt: "$MODIFIER_ARMY_STRENGTH$: $RIGHT|+=%1$"
  assign_army_leader_cp_cost_tt: "$MODIFIER_ASSIGN_ARMY_LEADER_CP_COST$: $RIGHT|-=0$"
+ attrition_tt: "$$: $RIGHT|-=%1$"	#사단 손실	#-3%	#tt
  attrition_for_controller_tt: "$MODIFIER_ATTRITION_FOR_CONTROLLER$: $RIGHT|-=%1$"
+ breakthrough_factor_tt: "$$: $RIGHT|+=%1$"	#돌파	#+4%	#tt
+ cas_damage_reduction_tt: "$$: $RIGHT|+=%1$"	#근접항공지원 공격에 대한 피해량 감소	#+3%	#tt
+ cavalry_attack_factor_tt: "$$: $RIGHT|+=%1$"	#기병 공격	#+3%	#tt
+ cavalry_defence_factor_tt: "$$: $RIGHT|+=%1$"	#기병 방어	#+3%	#tt
  combat_width_factor_tt: "$MODIFIER_COMBAT_WIDTH_FACTOR$: $RIGHT|-=%1$"
  command_abilities_cost_factor_tt: "$MODIFIER_COMMAND_ABILITIES_COST_FACTOR$: $RIGHT|-=%1$"
+ command_power_gain_tt: "$$: $RIGHT|+=%1$"	#매일 지휘력 획득	#+2F	#tt
+ command_power_gain_mult_tt: "$$: $RIGHT|+=%1$"	#매일 지휘력 획득 증가치	#+2%	#tt
+ coordination_bonus_tt: "$$: $RIGHT|+=%1$"	#조직	#+3%	#tt
  defence_tt: "$MODIFIER_DEFENCE$: $RIGHT|+=%1$"
  dig_in_speed_tt: "$MODIFIER_DIG_IN_SPEED$: $RIGHT|+=0$"
+ dig_in_speed_factor_tt: "$$: $RIGHT|+=%1$"	#참호 부설 속도	#+3%	#tt
  disable_strategic_redeployment_yes_tt: "$MODIFIER_STRATEGIC_REDEPLOYMENT_DISABLED$: §G예§!"
  disable_strategic_redeployment_no_tt: "$MODIFIER_STRATEGIC_REDEPLOYMENT_DISABLED$: §R아니오§!"
  disable_strategic_redeployment_for_controller_yes_tt: "$MODIFIER_STRATEGIC_REDEPLOYMENT_DISABLED_FOR_CONTROLLER$: §G예§!"
@@ -48,19 +115,34 @@
  dont_lose_dig_in_on_attack_no_tt: "$MODIFIER_DONT_LOSE_DIGIN_ON_ATTACK_MOVE$: §R아니오§!"
  enemy_army_speed_factor_tt: "$MODIFIER_ENEMY_ARMY_SPEED_FACTOR$: $RIGHT|-=%1$"
  enemy_attrition_tt: "$MODIFIER_ENEMY_ATTRITION$: $RIGHT|+=%1$"
+ experience_gain_army_tt: "$$: $RIGHT|+=%1$"	#육군 경험치 획득량 (매일)	#+2F	#tt
+ experience_gain_army_factor_tt: "$$: $RIGHT|+=%1$"	#육군 경험치 획득량	#+4%	#tt
  experience_gain_army_unit_tt: "$MODIFIER_XP_GAIN_ARMY_UNIT$: $RIGHT|+=1$"
  experience_gain_army_unit_factor_tt: "$MODIFIER_XP_GAIN_ARMY_UNIT_FACTOR$: $RIGHT|+=%1$"
  extra_paratrooper_supply_grace_tt: "$MODIFIER_PARATROOPER_EXTRA_SUPPLY_GRACE$: $RIGHT|+=1$"
+ extra_marine_supply_grace_tt: "$$: $RIGHT|+=1$"	#해병대의 추가 보급 유예	#+1F	#tt
  female_random_army_leader_chance_tt: "$MODIFIER_FEMALE_ARMY_LEADER_CHANCE$: $RIGHT|Y%0$"
  heat_attrition_tt: "$MODIFIER_HEAT_ATTRITION$: $RIGHT|-=%1$"
+ heat_attrition_factor_tt: "$$: $RIGHT|+=1$"	#더위로 인한 손실	#-4%	#tt
+ land_night_attack_tt: "$$: $RIGHT|+=1$"	#야간 지상 공격	#+4%	#tt
  local_org_regain_tt: "$MODIFIER_LOCAL_ORG_REGAIN$: $RIGHT|+=%1$"
  marines_special_forces_contribution_factor_tt: "$MODIFIER_MARINES_SPECIAL_FORCES_CONTRIBUTION_FACTOR$: $RIGHT|-=%0$"
+ max_command_power_tt: "$$: $RIGHT|+=1$"	#매일 지휘력 획득	#+0F	#tt
+ max_command_power_mult_tt: "$$: $RIGHT|+=1$"	#최대 지휘력 증가 배율	#+2%	#tt
  max_commander_army_size_tt: "$MODIFIER_ARMY_LEADER_MAX_ARMY_SIZE$: $RIGHT|+=0$"
+ max_dig_intt: "$$: $RIGHT|+=1$"	#최대 참호	#+1F	#tt
+ max_dig_in_factor_tt: "$$: $RIGHT|+=1$"	#최대 참호	#+4%	#tt
  max_planning_tt: "$MODIFIER_MAX_PLANNING$: $RIGHT|+=%1$"
+ max_planning_factor_tt: "$$: $RIGHT|+=1$"	#최대 계획 변동치	#+3%	#tt
  max_training_tt: "$MODIFIER_MAX_TRAINING_XP_FACTOR$: $RIGHT|+=%1$"
+ mechanized_attack_factor_tt: "$$: $RIGHT|+=1$"	#기계화 공격	#+3%	#tt
  mechanized_defence_factor_tt: "$MODIFIER_MECHANIZED_DEFENCE_FACTOR$: $RIGHT|+=%1$"
+ modifier_army_sub_unit_armored_car_attack_factor_tt: "$$: $RIGHT|+=1$"	#장갑차 공격	#+4%	#tt
  modifier_army_sub_unit_armored_car_defence_factor_tt: "$modifier_army_sub_unit_armored_car_defence_factor$: $RIGHT|+=%1$"
+ modifier_army_sub_unit_armored_car_max_org_factor_tt: "$$: $RIGHT|+=1$"		#장갑차 조직력	#+4%	#tt
+ modifier_army_sub_unit_armored_car_recon_attack_factor_tt: "$$: $RIGHT|+=1$"		#기갑수색중대 공격	#+4%	#tt
  modifier_army_sub_unit_armored_car_recon_defence_factor_tt: "$modifier_army_sub_unit_armored_car_recon_defence_factor$: $RIGHT|+=%1$"
+ modifier_army_sub_unit_armored_car_recon_max_org_factor_tt: "$$: $RIGHT|+=1$"	#기갑수색중대 속도	#+4%	#tt
  modifier_army_sub_unit_armored_car_recon_speed_factor_tt: "$modifier_army_sub_unit_armored_car_recon_max_org_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_armored_car_speed_factor_tt: "$modifier_army_sub_unit_armored_car_speed_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_blackshirt_assault_battalion_attack_factor_tt: "$modifier_army_sub_unit_blackshirt_assault_battalion_attack_factor$: $RIGHT|+=%1$"
@@ -74,13 +156,20 @@
  modifier_army_sub_unit_category_special_forces_max_org_factor_tt: "$modifier_army_sub_unit_category_special_forces_max_org_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_cavalry_attack_factor_tt: "$modifier_army_sub_unit_cavalry_attack_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_cavalry_defence_factor_tt: "$modifier_army_sub_unit_cavalry_defence_factor$: $RIGHT|+=%1$"
+ modifier_army_sub_unit_cavalry_speed_factor_tt: "$$: $RIGHT|+=1$"	#기병 속도	#+4%	#tt
  modifier_army_sub_unit_infantry_attack_factor_tt: "$modifier_army_sub_unit_infantry_attack_factor$: $RIGHT|+=%1$"	
  modifier_army_sub_unit_infantry_defence_factor_tt: "$modifier_army_sub_unit_infantry_defence_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_infantry_speed_factor_tt: "$modifier_army_sub_unit_infantry_speed_factor$: $RIGHT|+=%1$"
+ modifier_army_sub_unit_irregular_infantry_attack_factor_tt: "$$: $RIGHT|+=1$"	#비정규 보병 공격	#+4%	#tt
+ modifier_army_sub_unit_irregular_infantry_defence_factor_tt: "$$: $RIGHT|+=1$"	#비정규 보병 방어	#+4%	#tt
+ modifier_army_sub_unit_irregular_infantry_max_org_factor_tt: "$$: $RIGHT|+=1$"	#비정규 보병 조직력	#+4%	#tt
+ modifier_army_sub_unit_irregular_infantry_speed_factor_tt: "$$: $RIGHT|+=1$"	#비정규 보병 속도	#+4%	#tt
  modifier_army_sub_unit_light_tank_recon_attack_factor_tt: "$modifier_army_sub_unit_light_tank_recon_attack_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_light_tank_recon_defence_factor_tt: "$modifier_army_sub_unit_light_tank_recon_defence_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_light_tank_recon_max_org_factor_tt: "$modifier_army_sub_unit_light_tank_recon_max_org_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_light_tank_recon_speed_factor_tt: "$modifier_army_sub_unit_light_tank_recon_speed_factor$: $RIGHT|+=%1$"
+ modifier_army_sub_unit_long_range_patrol_support_attack_factor_tt: "$$: $RIGHT|+=1$"	#장거리 정찰 공격	#+4%	#tt
+ modifier_army_sub_unit_long_range_patrol_support_defence_factor_tt: "$$: $RIGHT|+=1$"	#장거리 정찰 방어	#+4%	#tt
  modifier_army_sub_unit_marine_defence_factor_tt: "$modifier_army_sub_unit_marine_defence_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_marine_max_org_factor_tt: "$modifier_army_sub_unit_marine_max_org_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_marine_speed_factor_tt: "$modifier_army_sub_unit_marine_speed_factor$: $RIGHT|+=%1$"
@@ -88,6 +177,9 @@
  modifier_army_sub_unit_military_police_defence_factor_tt: "$modifier_army_sub_unit_military_police_defence_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_military_police_max_org_factor_tt: "$modifier_army_sub_unit_military_police_max_org_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_military_police_speed_factor_tt: "$modifier_army_sub_unit_military_police_speed_factor$: $RIGHT|+=%1$"
+ modifier_army_sub_unit_militia_attack_factor_tt: "$$: $RIGHT|+=1$"	#민병 공격	#+4%	#tt
+ modifier_army_sub_unit_militia_defence_factor_tt: "$$: $RIGHT|+=1$"	#민병 방어	#+4%	#tt
+ modifier_army_sub_unit_militia_max_org_factor_tt: "$$: $RIGHT|+=1$"	#민병 조직력	#+4%	#tt
  modifier_army_sub_unit_militia_org_recovery_cap_factor_tt: "$modifier_army_sub_unit_militia_org_recovery_cap_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_mountaineers_attack_factor_tt: "$modifier_army_sub_unit_mountaineers_attack_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_mountaineers_defence_factor_tt: "$modifier_army_sub_unit_mountaineers_defence_factor$: $RIGHT|+=%1$"
@@ -97,20 +189,149 @@
  modifier_army_sub_unit_paratrooper_defence_factor_tt: "$modifier_army_sub_unit_paratrooper_defence_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_paratrooper_max_org_factor_tt: "$modifier_army_sub_unit_paratrooper_max_org_factor$: $RIGHT|+=%1$"
  modifier_army_sub_unit_paratrooper_speed_factor_tt: "$modifier_army_sub_unit_paratrooper_speed_factor$: $RIGHT|+=%1$"
+ motorized_attack_factor_tt: "$$: $RIGHT|+=1$"	#차량화 공격	#+3%	#tt
  motorized_defence_factor_tt: "$MODIFIER_MOTORIZED_DEFENCE_FACTOR$: $RIGHT|+=%1$"
  mountaineers_special_forces_contribution_factor_tt: "$MODIFIER_MOUNTAINEERS_SPECIAL_FORCES_CONTRIBUTION_FACTOR$: $RIGHT|-=%0$"
  naval_invasion_planning_bonus_speed_tt: "$MODIFIER_NAVAL_INVASION_PLANNING_SPEED$: $RIGHT|+=%0$"
  no_supply_grace_tt: "$MODIFIER_NO_SUPPLY_GRACE$: $RIGHT|+=1$"
  offence_tt: "$MODIFIER_OFFENCE$: $RIGHT|+=%1$"
+ org_loss_at_low_org_factor_tt: "$$: $RIGHT|+=1$"	#25% 미만일 경우 조직력 손실	#-4%	#tt
+ org_loss_when_moving_tt: "$$: $RIGHT|+=1$"	#이동 시 조직력 손실	#+4%	#tt
+ out_of_supply_factor_tt: "$$: $RIGHT|+=1$"	#비전투 시 보급품 고갈 불이익	#-3%	#tt
  paratroopers_special_forces_contribution_factor_tt: "$MODIFIER_PARATROOPERS_SPECIAL_FORCES_CONTRIBUTION_FACTOR$: $RIGHT|-=%0$"
  planning_decay_rate_factor_tt: "$MODIFIER_PLANNING_DECAY_RATE_FACTOR$: $RIGHT|-=%1$"
+ planning_speed_tt: "$$: $RIGHT|+=%1$"	#계획 수립 속도	#+3%	#tt
+ pocket_penalty_tt: "$$: $RIGHT|+=%1$"	#포위 불이익	#-3%	#tt
  rangers_special_forces_contribution_factor_tt: "$MODIFIER_RANGERS_SPECIAL_FORCES_CONTRIBUTION_FACTOR$: $RIGHT|-=%0$"
+ recon_factor_tt: "$$: $RIGHT|+=%1$"	#수색	#+3%	#tt
+ recon_factor_while_entrenched_tt: "$$: $RIGHT|+=%1$"	#참호 시 수색 혜택	#+3%	#tt
  rocket_attack_factor_tt: "$MODIFIER_ROCKET_ATTACK_FACTOR$: $RIGHT|+=%1$"
+ shore_bombardment_bonus_tt: "$$: $RIGHT|+=%1$"	#해안 포격 혜택	#+3%	#tt
+ special_forces_attack_factor_tt: "$$: $RIGHT|+=%1$"	#특수부대 공격	#+3%	#tt
+ special_forces_cap_tt: "$$: $RIGHT|+=%1$"	#특수부대 수용량 증가치	#+3%	#tt
+ special_forces_cap_flat_tt: "$$: $RIGHT|+=%1$"	#특수부대 한도	#+0F	#tt**
+ special_forces_defence_factor_tt: "$$: $RIGHT|+=%1$"	#특수부대 방어	#+3%	#tt
+ special_forces_min_tt: "$$: $RIGHT|+=%1$"	#특수부대 최소 수용량	#+0F	#tt
+ special_forces_no_supply_grace_tt: "$$: $RIGHT|+=%1$"	#특수부대 보급 유예	#+1F	#tt
+ special_forces_out_of_supply_factor_tt: "$$: $RIGHT|+=%1$"	#비전투 시 특수부대 보급품 고갈	#-4%	#tt
+ special_forces_training_time_factor_tt: "$$: $RIGHT|+=%1$"	#특수부대 사단 훈련 시간	#-3%	#tt
+ supply_combat_penalties_on_core_factor_tt: "$$: $RIGHT|+=%1$"	#핵심 영토 내 보급 관련 전투 불이익	#-3%	#tt
+ supply_consumption_factor_tt: "$$: $RIGHT|+=%1$"	#보급 소비량	#-3%	#tt
  terrain_penalty_reduction_tt: "$MODIFIER_TERRAIN_PENALTY_REDUCTION$: $RIGHT|+=%1$"
+ terrain_trait_xp_gain_factor_tt: "$$: $RIGHT|+=%1$"	#지형 특성 경험치 획득량	#+4%	#tt
  training_time_army_tt: "$MODIFIER_TRAINING_TIME_ARMY$: $RIGHT|Y%1$"
  training_time_army_factor_tt: "$MODIFIER_TRAINING_TIME_ARMY_FACTOR$: $RIGHT|Y%1$"
+ training_time_factor_tt: "$$: $RIGHT|+=%1$"	#훈련 시간	#-4%	#tt
  unit_upkeep_attrition_factor_tt: "$MODIFIER_UNIT_UPKEEP_ATTRITION_FACTOR$: $RIGHT|-=%0$"
  winter_attrition_tt: "$MODIFIER_WINTER_ATTRITION$: $RIGHT|-=%1$"
+ winter_attrition_factor_tt: "$$: $RIGHT|+=%1$"	#추위로 인한 손실	#-3%	#tt
+ ### NAVAL modifiers
+ amphibious_invasion_tt: "$$: $RIGHT|+=%1$"	#상륙 침입 속도 #+3%	#tt
+ amphibious_invasion_defence_tt: "$MODIFIER_NAVAL_INVASION_DEFENSE$: $RIGHT|+=%1$"
+ assign_navy_leader_cp_cost_tt: "$MODIFIER_ASSIGN_NAVY_LEADER_CP_COST$: $RIGHT|-=0$"
+ carrier_capacity_penalty_reduction_tt: "$MODIFIER_CARRIER_CAPACITY_PENALTY_REDUCTION$: $RIGHT|-=%1$"
+ carrier_sortie_hours_delay_tt: "$MODIFIER_CARRIER_SORTIE_HOURS_DELAY$: $RIGHT|-=0$"
+ carrier_traffic_tt: "$MODIFIER_CARRIER_TRAFFIC$: $RIGHT|+=%1$"
+ convoy_escort_efficiency_tt: "$$: $RIGHT|+=%1$"	#호위 효율 #+3%	#tt
+ convoy_raiding_efficiency_factor_tt: "$$: $RIGHT|+=%1$"	#수송선단 습격 효율 #+4%	#tt
+ convoy_retreat_speed_tt: "$$: $RIGHT|+=%1$"	#후퇴 시 수송선의 속도 #+2%	#tt
+ critical_receive_chance_tt: "$MODIFIER_NAVAL_CRITICAL_RECEIVE_CHANCE_FACTOR$: $RIGHT|-=%1$"
+ experience_gain_navy_tt: "$$: $RIGHT|+=%1$"	#해군 경험치 획득량(매일) #+3F	#tt
+ experience_gain_navy_factor_tt: "$$: $RIGHT|+=%1$"	#해군 경험치 획득량 #+3%	#tt
+ experience_gain_navy_unit_tt: "$MODIFIER_XP_GAIN_NAVY_UNIT$: $RIGHT|+=1$"
+ experience_gain_navy_unit_factor_tt: "$$: $RIGHT|+=%1$"	#선박 경험치 획득량 #+3%	#tt
+ female_random_admiral_chance_tt: "$ODIFIER_FEMALE_ADMIRAL_CHANC$: $RIGHT|Y=0$"
+ fighter_sortie_efficiency_tt: "$MODIFIER_CARRIER_FIGHTER_SORTIE_EFFICIENCY_FACTOR$: $RIGHT|+=%1$"
+ headquarters_experience_gain_factor_tt: "$MODIFIER_NAVAL_INVASION_PREPARATION$: $RIGHT|+=%1$"
+ invasion_preparation_tt: "$$: $RIGHT|+=%1$"	#상륙 준비 시간 #-3%	#tt
+ max_organisation_tt: "$MODIFIER_MAX_ORGANISATION_FACTOR$: $RIGHT|+=%1$"
+ mines_planting_by_fleets_factor_tt: "$$: $RIGHT|+=%1$"	#기뢰 부설 효율	#+2%	#tt
+ mines_sweeping_by_fleets_factor_tt: "$MODIFIER_MINES_SWEEPING_BY_FLEETS_FACTOR$: $RIGHT|+=%1$"
+ naval_accidents_chance_tt: "$$: $RIGHT|+=%1$"	#사고 확률	#-4%	#tt
+ naval_attrition_tt: "$MODIFIER_NAVAL_ATTRITION_FACTOR$: $RIGHT|-=%1$"
+ naval_commando_raid_distance_tt: "$MODIFIER_NAVAL_COMMANDO_RAID_DISTANCE$: $RIGHT|+=%1$"
+ naval_coordination_tt: "$$: $RIGHT|+=%1$"	#함대 조직	#+2%	#tt
+ naval_critical_effect_factor_tt: "$MODIFIER_NAVAL_CRITICAL_EFFECT_FACTOR$: $RIGHT|-=%1$"
+ naval_critical_score_chance_factor_tt: "$$: $RIGHT|+=%1$"	#치명타 입힐 확률	#+4%	#tt
+ naval_damage_factor_tt: "$$: $RIGHT|+=%1$"	#해군 피해	#+4%	#tt
+ naval_defense_factor_tt: "$$: $RIGHT|+=%1$"	#해군 방어	#+4%	#tt
+ naval_detection_tt: "$$: $RIGHT|+=%1$"	#해군 탐지	#+2%	#tt
+ naval_enemy_fleet_size_ratio_penalty_factor_tt: "$$: $RIGHT|+=%1$"	#적 함대 규모 불이익	#+4%	#tt
+ naval_critical_score_chance_factor_tt: "$MODIFIER_NAVAL_CRITICAL_SCORE_CHANCE_FACTOR$: $RIGHT|+=%1$"
+ naval_enemy_positioning_in_initial_attack_tt: "$MODIFIER_NAVAL_ENEMY_POSITIONING_IN_INITIAL_ATTACK$: $RIGHT|+=%1$"
+ naval_enemy_retreat_chance_tt: "$MODIFIER_NAVAL_ENEMY_RETREAT_CHANCE$: $RIGHT|-=%1$"
+ naval_has_potf_in_combat_attack_tt: "$MODIFIER_NAVAL_HAS_POTF_IN_COMBAT_ATTACK$: $RIGHT|+=%1$"
+ naval_has_potf_in_combat_defense_tt: "$MODIFIER_NAVAL_HAS_POTF_IN_COMBAT_DEFENSE$: $RIGHT|+=%1$"
+ naval_heavy_gun_hit_chance_factor_tt: "$$: $RIGHT|+=%1$"	#주포 명중률	#+4%	#tt
+ naval_hit_chance_tt: "$$: $RIGHT|+=%1$"	#해군 타격 확률	#+2%	#tt
+ naval_invasion_capacity_tt: "$$: $RIGHT|+=%1$"	#상륙 수용량 #+0F	#tt
+ naval_invasion_division_cap_tt: "$MODIFIER_NAVAL_INVASION_DIVISION_CAP$: $RIGHT|+=0$"
+ naval_invasion_penalty_tt: "$MODIFIER_NAVAL_INVASION_PENALTY$: $RIGHT|-=%1$"
+ naval_light_gun_hit_chance_factor_tt: "$$: $RIGHT|+=%1$"	#부포 명중률	#+4%	#tt
+ naval_mine_hit_chance_tt: "$$: $RIGHT|+=%1$"	#기뢰에 피격될 확률	#-4%	#tt
+ naval_mines_damage_factor_tt: "$$: $RIGHT|+=%1$"	#기뢰 피해량	#+2%	#tt
+ naval_mines_effect_reduction_tt: "$$: $RIGHT|+=%1$"	#기뢰 피해율	#+2%	#tt
+ naval_mission_xp_factor_tt: "$MODIFIER_NAVAL_MISSION_XP_FACTOR$: $RIGHT|+=%1$"
+ naval_morale_tt: "$MODIFIER_NAVAL_MORALE$: $RIGHT|+=1$"
+ naval_morale_factor_tt: "$$: $RIGHT|+=%1$"	#함정 회복률	#+3%	#tt
+ naval_night_attack_tt: "$MODIFIER_NAVAL_NIGHT_ATTACK$: $RIGHT|+=%1$"
+ naval_retreat_chance_tt: "$MODIFIER_NAVAL_RETREAT_CHANCE$: $RIGHT|+=%1$"
+ naval_retreat_chance_after_initial_combat_tt: "$MODIFIER_NAVAL_RETREAT_CHANCE_AFTER_INITIAL_COMBAT$: $RIGHT|+=%1$"
+ naval_retreat_speed_tt: "$MODIFIER_NAVAL_RETREAT_SPEED$: $RIGHT|+=%1$"
+ naval_retreat_speed_after_initial_combat_tt: "$MODIFIER_NAVAL_RETREAT_SPEED_AFTER_INITIAL_COMBAT$: $RIGHT|+=%1$"
+ naval_ship_recovery_chance_tt: "$$: $RIGHT|+=%1$"	#함선 회복 확률	#+2%	#tt
+ naval_ship_recovery_chance_factor_tt: "$$: $RIGHT|+=%1$"	#함선 회복 확률 변동치	#+2%	#tt
+ naval_speed_factor_tt: "$MODIFIER_NAVAL_SPEED_FACTOR$: $RIGHT|+=%1$"
+ naval_strike_tt: "$MODIFIER_NAVAL_STRIKE$: $RIGHT|+=%1$"
+ naval_supply_consumption_factor_tt: "$MODIFIER_NAVAL_SUPPLY_CONSUMPTION_FACTOR$: $RIGHT|+=%1$"
+ naval_torpedo_cooldown_factor_tt: "$MODIFIER_NAVAL_TORPEDO_COOLDOWN_FACTOR$: $RIGHT|-=%1$"
+ naval_torpedo_damage_reduction_factor_tt: "$MODIFIER_NAVAL_TORPEDO_DAMAGE_REDUCTION_FACTOR$: $RIGHT|+=%1$"
+ naval_torpedo_enemy_critical_chance_factor_tt: "$MODIFIER_NAVAL_TORPEDO_ENEMY_CRITICAL_CHANCE_FACTOR$: $RIGHT|+=%1$"
+ naval_torpedo_hit_chance_factor_tt: "$$: $RIGHT|+=%1$"	#어뢰 명중률	#+4%	#tt
+ naval_torpedo_reveal_chance_factor_tt: "$$: $RIGHT|+=%1$"	#어뢰가 탐지될 확률	#-4%	#tt
+ naval_torpedo_screen_penetration_factor_tt: "$$: $RIGHT|+=%1$"	#어뢰 스크린 관통	#+4%	#tt
+ navy_advisor_cost_factor_tt: "$MODIFIER_NAVY_ADVISOR_COST_FACTOR$: $RIGHT|-=%1$"
+ navy_anti_air_attack_tt: "$MODIFIER_NAVY_ANTI_AIR_ATTACK$: $RIGHT|+=1$"
+ navy_anti_air_attack_factor_tt: "$$: $RIGHT|+=%1$"	#해군 대공 공격	#+4%	#tt
+ navy_capital_ship_attack_factor_tt: "$MODIFIER_NAVY_CAPITAL_SHIP_ATTACK_FACTOR$: $RIGHT|+=%1$"
+ navy_capital_ship_defence_factor_tt: "$$: $RIGHT|+=%1$"	#주력함 기갑	#+4%	#tt*	(navy_capital_ship_defense_factor_tt)
+ navy_carrier_air_agility_factor_tt: "$MODIFIER_NAVAL_CARRIER_AIR_AGILITY_FACTOR$: $RIGHT|+=%1$"
+ navy_carrier_air_attack_factor_tt: "$MODIFIER_NAVAL_CARRIER_AIR_ATTACK_FACTOR$: $RIGHT|+=%1$"
+ navy_carrier_air_targetting_factor_tt: "$MODIFIER_NAVAL_CARRIER_AIR_TARGETTING_FACTOR$: $RIGHT|+=%1$"
+ navy_casualty_on_hit_tt: "$MODIFIER_NAVAL_CASUALTY_ON_HIT_FACTOR$: $RIGHT|-=%1$"
+ navy_casualty_on_sink_tt: "$MODIFIER_NAVAL_CASUALTY_ON_SINK_FACTOR$: $RIGHT|-=%1$"
+ navy_fuel_consumption_factor_tt: "$MODIFIER_NAVY_FUEL_CONSUMPTION_FACTOR$: $RIGHT|-=%1$"
+ navy_max_range_tt: "$MODIFIER_NAVY_MAX_RANGE$: $RIGHT|+=1$"
+ navy_max_range_factor_tt: "$$: $RIGHT|+=%1$"	#해군 최대 작전 거리 획득치	#+4%	#tt
+ navy_org_tt: "$MODIFIER_NAVY_ORG$: $RIGHT|+=1$"
+ navy_org_factor_tt: "$$: $RIGHT|+=%1$"	#해군 조직력	#+4%	#tt
+ navy_screen_attack_factor_tt: "$$: $RIGHT|+=%1$"	#보조함 공격	#tt
+ navy_screen_defence_factor_tt: "$$: $RIGHT|+=%1$"	#보조함 방어	#tt
+ navy_submarine_attack_factor_tt: "$$: $RIGHT|+=%1$"	#잠수함 공격	#tt
+ navy_submarine_defence_factor_tt: "$MODIFIER_NAVY_SUBMARINE_DEFENCE_FACTOR$: $RIGHT|+=%1$"
+ navy_submarine_detection_factor_tt: "$$: $RIGHT|+=%1$"	#잠수함 탐지	#+4%	#tt
+ navy_visibility_tt: "$MODIFIER_NAVAL_VISIBILITY_FACTOR$: $RIGHT|-=%1$"
+ night_spotting_chance_tt: "$ODIFIER_NIGHT_SPOTTING_CHANC$: $RIGHT|+=%1$"
+ port_strike_tt: "$$: $RIGHT|+=%1$"	#항구 타격	#+3%	#tt
+ positioning_tt: "$$: $RIGHT|+=%1$"	#위치 선정	#+3%	#tt
+ repair_speed_factor_tt: "$$: $RIGHT|+=%1$"	#함정 수리 속도	#+2%	#tt
+ screening_efficiency_tt: "$$: $RIGHT|+=%1$"	#스크린 임무 효율	#+3%	#tt
+ screening_without_screens_tt: "$$: $RIGHT|+=%1$"	#주력함만 운용할 때 스크린 혜택	#+3%	#tt
+ ships_at_battle_start_tt: "$MODIFIER_SHIPS_AT_BATTLE_START_FACTOR$: $RIGHT|Y=%0$"
+ sortie_efficiency_tt: "$$: $RIGHT|+=%1$"	#함재기 출격 효율	#+2%	#tt
+ spotting_chance_tt: "$$: $RIGHT|+=%1$"	#탐지 속도	#+2%	#tt
+ strike_force_movement_org_loss_tt: "$MODIFIER_STRIKE_FORCE_MOVING_ORG$: $RIGHT|-=%1$"
+ sub_retreat_speed_tt: "$$: $RIGHT|+=%1$"	#후퇴 시 잠수함 속도	#+2%	#tt
+ submarine_attack_tt: "$MODIFIER_SUBMARINE_ATTACK$: $RIGHT|+=1$"
+ terrain_trait_xp_gain_factor_tt: "$$: $RIGHT|+=%1$"	#지형 특성 경험치 획득량	#+4%	#tt
+ transport_capacity_tt: "$MODIFIER_TRANSPORT_CAPACITY$: $RIGHT|-=%1$"
+ ### CHARACTER modifiers
+ scientist_breakthrough_bonus_factor_tt: "$MODIFIER_SCIENTIST_BREAKTHROUGH_BONUS_FACTOR_tt$" #?????
+ scientist_research_bonus_factor_tt: "$MODIFIER_SCIENTIST_RESEARCH_BONUS_FACTOR_tt$" #?????
+ scientist_xp_gain_factor_tt: "$MODIFIER_SCIENTIST_XP_GAIN_FACTOR$: $RIGHT|+=%1$"
+ ### SCIENTIST modifiers
+ female_random_scientist_chance_tt: "$MODIFIER_FEMALE_SCIENTIST_CHANCE$: $RIGHT|Y=%1$"
+ ### MILITARY ADVANCEMENTS modifiers
  ### AUTONOMY modifiers
  autonomy_gain_ll_to_overlord_tt: "$MODIFIER_AUTONOMY_GAIN_LL_TO_OVERLORD$: $RIGHT|+=1$"
  autonomy_gain_ll_to_overlord_factor_tt: "$MODIFIER_AUTONOMY_GAIN_LL_TO_OVERLORD_FACTOR$: $RIGHT|+=%1$"
@@ -126,14 +347,6 @@
  master_build_autonomy_factor_yes_tt: "$MODIFIER_MASTER_BUILD_AUTONOMY_FACTOR$: §G예§!"
  master_build_autonomy_factor_no_tt: "$MODIFIER_MASTER_BUILD_AUTONOMY_FACTOR$: §R아니오§!"
  overlord_trade_cost_factor_tt: "$MODIFIER_TRADE_COST_FACTOR$: $RIGHT|-=%1$"
- ### CHARACTER modifiers
- scientist_breakthrough_bonus_factor_tt: "$MODIFIER_SCIENTIST_BREAKTHROUGH_BONUS_FACTOR_tt$" #?????
- scientist_research_bonus_factor_tt: "$MODIFIER_SCIENTIST_RESEARCH_BONUS_FACTOR_tt$" #?????
- scientist_xp_gain_factor_tt: "$MODIFIER_SCIENTIST_XP_GAIN_FACTOR$: $RIGHT|+=%1$"
- ### COUNTRY modifiers
- fuel_gain_tt: "$MODIFIER_FUEL_GAIN_ADD$: $RIGHT|+=1$"
- ### DEFENSIVE modifiers
- static_anti_air_damage_factor_tt: "$MODIFIER_STATIC_ANTI_AIR_DAMAGE_FACTOR$: $RIGHT|+=%1$"
  ### FACTION modifiers
  faction_subject_contribution_gain_tt: "$MODIFIER_FACTION_SUBJECT_CONTRIBUTION_GAIN$: $RIGHT|Y=%1$"
  ### GOVERNMENT IN EXILE modifiers
@@ -176,32 +389,46 @@
  operative_death_on_capture_chance_tt: "$MODIFIER_OPERATIVE_DEATH_ON_CAPTURE_CHANCE$: $RIGHT|+=%1$"
  operative_slot_tt: "$MODIFIER_OPERATIVE_SLOT$: $RIGHT|+=0$"
  target_sabotage_factor_tt: "$MODIFIER_TARGET_SABOTAGE_FACTOR$: $RIGHT|+=%1$"
- ### NAVAL modifiers
- amphibious_invasion_defence_tt: "$MODIFIER_NAVAL_INVASION_DEFENSE$: $RIGHT|+=%1$"
- assign_navy_leader_cp_cost_tt: "$MODIFIER_ASSIGN_NAVY_LEADER_CP_COST$: $RIGHT|-=0$"
- carrier_capacity_penalty_reduction_tt: "$MODIFIER_CARRIER_CAPACITY_PENALTY_REDUCTION$: $RIGHT|-=%1$"
- carrier_sortie_hours_delay_tt: "$MODIFIER_CARRIER_SORTIE_HOURS_DELAY$: $RIGHT|-=0$"
- carrier_traffic_tt: "$MODIFIER_CARRIER_TRAFFIC$: $RIGHT|+=%1$"
- critical_receive_chance_tt: "$MODIFIER_NAVAL_CRITICAL_RECEIVE_CHANCE_FACTOR$: $RIGHT|-=%1$"
- experience_gain_navy_unit_tt: "$MODIFIER_XP_GAIN_NAVY_UNIT$: $RIGHT|+=1$"
- experience_gain_battle_cruiser_combat_factor_tt: "$modifier_experience_gain_battle_cruiser_combat_factor$: $RIGHT|+=%1$"
- experience_gain_battleship_combat_factor_tt: "$modifier_experience_gain_battleship_combat_factor$: $RIGHT|+=%1$"
- experience_gain_carrier_combat_factor_tt: "$modifier_experience_gain_carrier_combat_factor$: $RIGHT|+=%1$"
- experience_gain_destroyer_combat_factor_tt: "$modifier_experience_gain_destroyer_combat_factor$: $RIGHT|+=%1$"
- experience_gain_heavy_cruiser_combat_factor_tt: "$modifier_experience_gain_heavy_cruiser_combat_factor$: $RIGHT|+=%1$"
- experience_gain_light_cruiser_combat_factor_tt: "$modifier_experience_gain_light_cruiser_combat_factor$: $RIGHT|+=%1$"
- experience_gain_repair_ship_combat_factor_tt: "$modifier_experience_gain_repair_ship_combat_factor$: $RIGHT|+=%1$"
- experience_gain_submarine_combat_factor_tt: "$modifier_experience_gain_submarine_combat_factor$: $RIGHT|+=%1$"
- experience_gain_support_ship_combat_factor_tt: "$modifier_experience_gain_support_ship_combat_factor$: $RIGHT|+=%1$"
- experience_gain_battle_cruiser_mission_factor_tt: "$modifier_xperience_gain_battle_cruiser_mission_factor_t$: $RIGHT|+=%1$"
- experience_gain_battleship_mission_factor_tt: "$modifier_experience_gain_battleship_mission_factor$: $RIGHT|+=%1$"
- experience_gain_carrier_mission_factor_tt: "$modifier_experience_gain_carrier_mission_factor$: $RIGHT|+=%1$"
- experience_gain_destroyer_mission_factor_tt: "$modifier_experience_gain_destroyer_mission_factor$: $RIGHT|+=%1$"
- experience_gain_heavy_cruiser_mission_factor_tt: "$modifier_experience_gain_heavy_cruiser_mission_factor$: $RIGHT|+=%1$"
- experience_gain_light_cruiser_mission_factor_tt: "$modifier_experience_gain_light_cruiser_mission_factor$: $RIGHT|+=%1$"
- experience_gain_repair_ship_mission_factor_tt: "$modifier_experience_gain_repair_ship_mission_factor$: $RIGHT|+=%1$"
- experience_gain_submarine_mission_factor_tt: "$modifier_experience_gain_submarine_mission_factor$: $RIGHT|+=%1$"
- experience_gain_support_ship_mission_factor_tt: "$modifier_experience_gain_support_ship_mission_factor$: $RIGHT|+=%1$"
+ ### PEACE modifiers
+ peace_score_ratio_transferred_to_overlord_tt: "$MODIFIER_PEACE_SCORE_RATIO_TRANSFERRED_TO_OVERLORD$: $RIGHT|-=%1$"
+ peace_score_ratio_transferred_to_players_tt: "$MODIFIER_PEACE_SCORE_RATIO_TRANSFERRED_TO_PLAYERS$: $RIGHT|-=%1$"
+ ### COUNTRY modifiers
+ fuel_gain_tt: "$MODIFIER_FUEL_GAIN_ADD$: $RIGHT|+=1$"
+ ### POLITICS modifiers
+ embargo_cost_factor_tt: "$MODIFIER_embargo_cost_factor$: $RIGHT|-=%1$"
+ guarantee_cost_tt: "$MODIFIER_GUARANTEE_COST$: $RIGHT|-=%1$"
+ ### STATE modifiers
+ state_resources_coal_factor: "£resources_strip|7  현지 가용 에너지"
+ country_resource_cost_coal: "£resources_strip|7  에너지 소비량"
+ state_resource_cost_coal: "£resources_strip|7  에너지 소비량"
+ ### UNIT LEADER modifiers
+ ### WAR PRODUCTION modifiers
+ ### DEFENSIVE modifiers
+ static_anti_air_damage_factor_tt: "$MODIFIER_STATIC_ANTI_AIR_DAMAGE_FACTOR$: $RIGHT|+=%1$"
+ ### <Ideology>_drift_from_guarantees
+ conservatism_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 보수주의 증가"
+ liberalism_mod_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 자유주의 증가"
+ progressivism_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 진보주의 증가"
+ socialdemocracy_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 사민주의 증가"
+ socialism_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 사회주의 증가"
+ authoritariancommunism_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 권위공산주의 증가"
+ anarchosyndicalism_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 아나코-생디칼리즘 증가"
+ militarytotalism_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 군국주의 증가"
+ authoritariandemocracy_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 권위민주주의 증가"
+ autocracy_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 전제주의 증가"
+ conservatism_drift_from_guarantees_tt: "$conservatism_drift_from_guarantees$: $RIGHT|+=0$"
+ liberalism_mod_drift_from_guarantees_tt: "$liberalism_mod_drift_from_guarantees$: $RIGHT|+=0$"
+ progressivism_drift_from_guarantees_tt: "$progressivism_drift_from_guarantees$: $RIGHT|+=0$"
+ socialdemocracy_drift_from_guarantees_tt: "$socialdemocracy_drift_from_guarantees$: $RIGHT|+=0$"
+ socialism_drift_from_guarantees_tt: "$socialism_drift_from_guarantees$: $RIGHT|+=0$"
+ communism_drift_from_guarantees_tt: "$communism_drift_from_guarantees$: $RIGHT|+=0$"
+ authoritariancommunism_drift_from_guarantees_tt: "$authoritariancommunism_drift_from_guarantees$: $RIGHT|+=0$"
+ anarchosyndicalism_drift_from_guarantees_tt: "$anarchosyndicalism_drift_from_guarantees$: $RIGHT|+=0$"
+ fascism_drift_from_guarantees_tt: "$fascism_drift_from_guarantees$: $RIGHT|+=0$"
+ militarytotalism_drift_from_guarantees_tt: "$militarytotalism_drift_from_guarantees$: $RIGHT|+=0$"
+ authoritariandemocracy_drift_from_guarantees_tt: "$authoritariandemocracy_drift_from_guarantees$: $RIGHT|+=0$"
+ autocracy_drift_from_guarantees_tt: "$autocracy_drift_from_guarantees$: $RIGHT|+=0$"
+ ### experience_gain_<Unit>_training_factor
  experience_gain_battle_cruiser_training_factor_tt: "$modifier_experience_gain_battle_cruiser_training_factor$: $RIGHT|+=%1$"
  experience_gain_battleship_training_factor_tt: "$modifier_experience_gain_battleship_training_factor$: $RIGHT|+=%1$"
  experience_gain_carrier_training_factor_tt: "$modifier_experience_gain_carrier_training_factor$: $RIGHT|+=%1$"
@@ -211,51 +438,81 @@
  experience_gain_repair_ship_training_factor_tt: "$modifier_experience_gain_repair_ship_training_factor$: $RIGHT|+=%1$"
  experience_gain_submarine_training_factor_tt: "$modifier_experience_gain_submarine_training_factor$: $RIGHT|+=%1$"
  experience_gain_support_ship_training_factor_tt: "$modifier_experience_gain_support_ship_training_factor$: $RIGHT|+=%1$"
- female_random_admiral_chance_tt: "$ODIFIER_FEMALE_ADMIRAL_CHANC$: $RIGHT|Y=0$"
- fighter_sortie_efficiency_tt: "$MODIFIER_CARRIER_FIGHTER_SORTIE_EFFICIENCY_FACTOR$: $RIGHT|+=%1$"
- headquarters_experience_gain_factor_tt: "$MODIFIER_NAVAL_INVASION_PREPARATION$: $RIGHT|+=%1$"
- max_organisation_tt: "$MODIFIER_MAX_ORGANISATION_FACTOR$: $RIGHT|+=%1$"
- mines_sweeping_by_fleets_factor_tt: "$MODIFIER_MINES_SWEEPING_BY_FLEETS_FACTOR$: $RIGHT|+=%1$"
- naval_attrition_tt: "$MODIFIER_NAVAL_ATTRITION_FACTOR$: $RIGHT|-=%1$"
- naval_commando_raid_distance_tt: "$MODIFIER_NAVAL_COMMANDO_RAID_DISTANCE$: $RIGHT|+=%1$"
- naval_critical_effect_factor_tt: "$MODIFIER_NAVAL_CRITICAL_EFFECT_FACTOR$: $RIGHT|-=%1$"
- naval_critical_score_chance_factor_tt: "$MODIFIER_NAVAL_CRITICAL_SCORE_CHANCE_FACTOR$: $RIGHT|+=%1$"
- naval_enemy_positioning_in_initial_attack_tt: "$MODIFIER_NAVAL_ENEMY_POSITIONING_IN_INITIAL_ATTACK$: $RIGHT|+=%1$"
- naval_enemy_retreat_chance_tt: "$MODIFIER_NAVAL_ENEMY_RETREAT_CHANCE$: $RIGHT|-=%1$"
- naval_has_potf_in_combat_attack_tt: "$MODIFIER_NAVAL_HAS_POTF_IN_COMBAT_ATTACK$: $RIGHT|+=%1$"
- naval_has_potf_in_combat_defense_tt: "$MODIFIER_NAVAL_HAS_POTF_IN_COMBAT_DEFENSE$: $RIGHT|+=%1$"
- naval_invasion_division_cap_tt: "$MODIFIER_NAVAL_INVASION_DIVISION_CAP$: $RIGHT|+=0$"
- naval_invasion_penalty_tt: "$MODIFIER_NAVAL_INVASION_PENALTY$: $RIGHT|-=%1$"
- naval_mission_xp_factor_tt: "$MODIFIER_NAVAL_MISSION_XP_FACTOR$: $RIGHT|+=%1$"
- naval_morale_tt: "$MODIFIER_NAVAL_MORALE$: $RIGHT|+=1$"
- naval_night_attack_tt: "$MODIFIER_NAVAL_NIGHT_ATTACK$: $RIGHT|+=%1$"
- naval_retreat_chance_tt: "$MODIFIER_NAVAL_RETREAT_CHANCE$: $RIGHT|+=%1$"
- naval_retreat_chance_after_initial_combat_tt: "$MODIFIER_NAVAL_RETREAT_CHANCE_AFTER_INITIAL_COMBAT$: $RIGHT|+=%1$"
- naval_retreat_speed_tt: "$MODIFIER_NAVAL_RETREAT_SPEED$: $RIGHT|+=%1$"
- naval_retreat_speed_after_initial_combat_tt: "$MODIFIER_NAVAL_RETREAT_SPEED_AFTER_INITIAL_COMBAT$: $RIGHT|+=%1$"
- naval_speed_factor_tt: "$MODIFIER_NAVAL_SPEED_FACTOR$: $RIGHT|+=%1$"
- naval_strike_tt: "$MODIFIER_NAVAL_STRIKE$: $RIGHT|+=%1$"
- naval_supply_consumption_factor_tt: "$MODIFIER_NAVAL_SUPPLY_CONSUMPTION_FACTOR$: $RIGHT|+=%1$"
- naval_torpedo_cooldown_factor_tt: "$MODIFIER_NAVAL_TORPEDO_COOLDOWN_FACTOR$: $RIGHT|-=%1$"
- naval_torpedo_damage_reduction_factor_tt: "$MODIFIER_NAVAL_TORPEDO_DAMAGE_REDUCTION_FACTOR$: $RIGHT|+=%1$"
- naval_torpedo_enemy_critical_chance_factor_tt: "$MODIFIER_NAVAL_TORPEDO_ENEMY_CRITICAL_CHANCE_FACTOR$: $RIGHT|+=%1$"
- navy_advisor_cost_factor_tt: "$MODIFIER_NAVY_ADVISOR_COST_FACTOR$: $RIGHT|-=%1$"
- navy_anti_air_attack_tt: "$MODIFIER_NAVY_ANTI_AIR_ATTACK$: $RIGHT|+=1$"
- navy_capital_ship_attack_factor_tt: "$MODIFIER_NAVY_CAPITAL_SHIP_ATTACK_FACTOR$: $RIGHT|+=%1$"
- navy_carrier_air_agility_factor_tt: "$MODIFIER_NAVAL_CARRIER_AIR_AGILITY_FACTOR$: $RIGHT|+=%1$"
- navy_carrier_air_attack_factor_tt: "$MODIFIER_NAVAL_CARRIER_AIR_ATTACK_FACTOR$: $RIGHT|+=%1$"
- navy_carrier_air_targetting_factor_tt: "$MODIFIER_NAVAL_CARRIER_AIR_TARGETTING_FACTOR$: $RIGHT|+=%1$"
- navy_casualty_on_hit_tt: "$MODIFIER_NAVAL_CASUALTY_ON_HIT_FACTOR$: $RIGHT|-=%1$"
- navy_casualty_on_sink_tt: "$MODIFIER_NAVAL_CASUALTY_ON_SINK_FACTOR$: $RIGHT|-=%1$"
- navy_fuel_consumption_factor_tt: "$MODIFIER_NAVY_FUEL_CONSUMPTION_FACTOR$: $RIGHT|-=%1$"
- navy_max_range_tt: "$MODIFIER_NAVY_MAX_RANGE$: $RIGHT|+=1$"
- navy_org_tt: "$MODIFIER_NAVY_ORG$: $RIGHT|+=1$"
- navy_submarine_defence_factor_tt: "$MODIFIER_NAVY_SUBMARINE_DEFENCE_FACTOR$: $RIGHT|+=%1$"
- navy_visibility_tt: "$MODIFIER_NAVAL_VISIBILITY_FACTOR$: $RIGHT|-=%1$"
- night_spotting_chance_tt: "$ODIFIER_NIGHT_SPOTTING_CHANC$: $RIGHT|+=%1$"
- ships_at_battle_start_tt: "$MODIFIER_SHIPS_AT_BATTLE_START_FACTOR$: $RIGHT|Y=%0$"
- strike_force_movement_org_loss_tt: "$MODIFIER_STRIKE_FORCE_MOVING_ORG$: $RIGHT|-=%1$"
- submarine_attack_tt: "$MODIFIER_SUBMARINE_ATTACK$: $RIGHT|+=1$"
+ ### <Doctrine>_mastery_gain_factor
+ naval_mastery_gain_factor_tt: " £doctrine_mod  해군 $FOLDER_mastery_gain$: $RIGHT|+=%1$"	
+ air_mastery_gain_factor_tt: " £doctrine_mod  공군 $FOLDER_mastery_gain$: $RIGHT|+=%1$"
+ #육군 대교리
+ # 임시 공백
+ #해군 대교리
+ new_base_strike_mastery_gain_factor: " £doctrine_mod  $GRAND_DOCTRINE_BASE_STRIKE$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ new_convoy_raiding_mastery_gain_factor: " £doctrine_mod  $GRAND_DOCTRINE_CONVOY_RAIDING$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ new_fleet_in_being_mastery_gain_factor: " £doctrine_mod  $GRAND_DOCTRINE_FLEET_IN_BEING$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ #공군 대교리
+ new_battlefield_support_mastery_gain_factor_tt: " £doctrine_mod  $GRAND_DOCTRINE_BATTLEFIELD_SUPPORT$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ new_operational_integrity_mastery_gain_factor_tt: " £doctrine_mod  $GRAND_DOCTRINE_OPERATIONAL_INTEGRITY$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ new_strategic_destruction_mastery_gain_factor_tt: " £doctrine_mod  $GRAND_DOCTRINE_STRATEGIC_DESTRUCTION$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ #육군 하위교리
+ # 임시 공백
+ #해군 하위교리
+ line_of_battle_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_LINE_OF_BATTLE$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ battlecruiser_supremacy_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_BATTLECRUISER_SUPREMACY$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ armored_raiders_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_ARMORED_RAIDERS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ coastal_defence_fleet_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_COASTAL_DEFENCE$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ naval_gunfire_support_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_NAVAL_GUNFIRE_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ battleship_antiair_screen_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_BATTLESHIP_ANTIAIR_SCREEN$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ carrier_battlegroups_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_CARRIER_BATTLEGROUPS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ floating_airfields_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_CARRIER_AIRFIELDS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ escort_carrier_support_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_ESCORT_CARRIER_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ broad_naval_support_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_BROAD_NAVAL_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ massed_carrier_fleet_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_MASSED_CARRIER_FLEET$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ light_task_forces_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_LIGHT_TASK_FORCES$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ convoy_escort_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_CONVOY_ESCORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ support_integrated_operations_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_INTEGRATED_OPERATIONS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ hunter_killers_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_HUNTER_KILLERS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ torpedo_primacy_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_TORPEDO_PRIMACY$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ anti_aircraft_cruisers_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_ANTI_AIRCRAFT_CRUISERS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ screen_support_focus_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_SUPPORT_FOCUS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ jeune_ecole_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_JEUNE_ECOLE$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ patrol_boats_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_PATROL_BOATS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ wolfpacks_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_WOLFPACKS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ submarine_fleet_operations_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_FLEET_OPERATIONS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ capital_hunters_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_CAPITAL_HUNTERS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ submarine_coastal_defense_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_COASTAL_DEFENSE$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ coastal_minelaying_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_COASTAL_MINELAYING$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ long_range_submarines_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_LONG_RANGE_SUBMARINES$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ #공군 하위교리
+ air_subdoctrine_fighter_homeland_defense_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_FIGHTER_HOMELAND_DEFENSE$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_escort_fighter_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_ESCORT_FIGHTER$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_fighter_bombers_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_FIGHTER_BOMBERS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_tactical_flexibility_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_TACTICAL_FLEXIBILITY$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_dogfighting_mastery_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_DOGFIGHTING_MASTERY$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_fighter_central_field_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_FIGHTER_CENTRAL_FIELD$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_night_bombing_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_NIGHT_BOMBING$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_carpet_bombing_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_CARPET_BOMBING$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_deep_air_raids_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_DEEP_AIR_RAIDS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_flying_fortresses_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_FLYING_FORTRESSES$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_coastal_air_patrol_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_COASTAL_AIR_PATROL$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_open_ocean_air_patrol_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_OPEN_OCEAN_AIR_PATROL$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_heavy_aircraft_focus_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_HEAVY_AIRCRAFT_FOCUS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_bomber_interception_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_BOMBER_INTERCEPTION$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_long_range_escort_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_LONG_RANGE_ESCORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_operational_air_support_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_OPERATIONAL_AIR_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_tactical_battlefield_support_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_TACTICAL_BATTLEFIELD_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_theater_interdiction_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_THEATER_INTERDICTION$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_aerial_reconnaissance_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_AERIAL_RECONNAISSANCE$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_flying_artillery_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_FLYING_ARTILLERY$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_dive_bombers_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_DIVE_BOMBERS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_flexible_fire_support_mastery_gain_factor_tt: "$ £doctrine_mod  $SUBDOCTRINE_FLEXIBLE_FIRE_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_carrier_strikes_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_CARRIER_STRIKES$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_naval_strike_tactics_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_NAVAL_STRIKE_TACTICS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ air_subdoctrine_naval_torpedo_tactics_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_NAVAL_TORPEDO_TACTICS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
+ ### state_resources_<Resource>_factor
+ ### <Building>_max_level_terrain_limit
+ ### state_resource_cost_<Resource>
+ ### <ModifierStatValue>_value_factor
+ ### <Equipment>_design_cost_factor
+ ### state_repair_speed_<Building>_factor
+ ### <Trait>_xp_gain_factor/trait_<Trait>_xp_gain_factor
  trait_old_guard_navy_xp_gain_factor_tt: "$modifier_trait_old_guard_navy_xp_gain_factor$: $RIGHT|+=%1$"
  trait_navy_career_officer_xp_gain_factor_tt: "$modifier_trait_navy_career_officer_xp_gain_factor$: $RIGHT|+=%1$"
  trait_navy_media_personality_xp_gain_factor_tt: "$modifier_trait_navy_media_personality_xp_gain_factor$: $RIGHT|+=%1$"
@@ -302,128 +559,6 @@
  trait_dive_bomber_xp_gain_factor_tt: "$modifier_trait_dive_bomber_xp_gain_factor$: $RIGHT|+=%1$"
  trait_torpedo_bomber_xp_gain_factor_tt: "$modifier_trait_torpedo_bomber_xp_gain_factor$: $RIGHT|+=%1$"
  trait_fly_swatter_xp_gain_factor_tt: "$modifier_trait_fly_swatter_xp_gain_factor$: $RIGHT|+=%1$"
- transport_capacity_tt: "$MODIFIER_TRANSPORT_CAPACITY$: $RIGHT|-=%1$"
- unit_battle_cruiser_design_cost_factor_tt: "$modifier_unit_battle_cruiser_design_cost_factor$: $RIGHT|-=%1$"
- unit_battleship_design_cost_factor_tt: "$modifier_unit_battleship_design_cost_factor$: $RIGHT|-=%1$"
- unit_carrier_design_cost_factor_tt: "$modifier_unit_carrier_design_cost_factor$: $RIGHT|-=%1$"
- unit_destroyer_design_cost_factor_tt: "$modifier_unit_destroyer_design_cost_factor$: $RIGHT|-=%1$"
- unit_heavy_cruiser_design_cost_factor_tt: "$modifier_unit_heavy_cruiser_design_cost_factor$: $RIGHT|-=%1$"
- unit_light_cruiser_design_cost_factor_tt: "$modifier_unit_light_cruiser_design_cost_factor$: $RIGHT|-=%1$"
- modifier_unit_repair_ship_design_cost_factor:  "£navy_design_cost_texticon  수리함 설계 비용"
- unit_repair_ship_design_cost_factor_tt: "$modifier_unit_repair_ship_design_cost_factor$: $RIGHT|-=%1$"
- modifier_unit_submarine_design_cost_factor: " £navy_design_cost_texticon  잠수함 설계 비용"
- unit_submarine_design_cost_factor_tt: "$modifier_unit_submarine_design_cost_factor$: $RIGHT|-=%1$"
- modifier_unit_support_ship_design_cost_factor: "£navy_design_cost_texticon  지원함 설계 비용"
- unit_support_ship_design_cost_factor_tt: "$modifier_unit_support_ship_design_cost_factor$: $RIGHT|-=%1$"
- ### PEACE modifiers
- peace_score_ratio_transferred_to_overlord_tt: "$MODIFIER_PEACE_SCORE_RATIO_TRANSFERRED_TO_OVERLORD$: $RIGHT|-=%1$"
- peace_score_ratio_transferred_to_players_tt: "$MODIFIER_PEACE_SCORE_RATIO_TRANSFERRED_TO_PLAYERS$: $RIGHT|-=%1$"
- ### POLITICS modifiers
- embargo_cost_factor_tt: "$MODIFIER_embargo_cost_factor$: $RIGHT|-=%1$"
- guarantee_cost_tt: "$MODIFIER_GUARANTEE_COST$: $RIGHT|-=%1$"
- ### SCIENTIST modifiers
- female_random_scientist_chance_tt: "$MODIFIER_FEMALE_SCIENTIST_CHANCE$: $RIGHT|Y=%1$"
- ### STATE modifiers
- state_resources_coal_factor: "£resources_strip|7  현지 가용 에너지"
- country_resource_cost_coal: "£resources_strip|7  에너지 소비량"
- state_resource_cost_coal: "£resources_strip|7  에너지 소비량"
- ### <Ideology>_drift_from_guarantees
- conservatism_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 보수주의 증가"
- liberalism_mod_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 자유주의 증가"
- progressivism_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 진보주의 증가"
- socialdemocracy_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 사민주의 증가"
- socialism_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 사회주의 증가"
- authoritariancommunism_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 권위공산주의 증가"
- anarchosyndicalism_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 아나코-생디칼리즘 증가"
- militarytotalism_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 군국주의 증가"
- authoritariandemocracy_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 권위민주주의 증가"
- autocracy_drift_from_guarantees: " £boost_popularity_texticon  보장으로 인한 타국의 전제주의 증가"
- conservatism_drift_from_guarantees_tt: "$conservatism_drift_from_guarantees$: $RIGHT|+=0$"
- liberalism_mod_drift_from_guarantees_tt: "$liberalism_mod_drift_from_guarantees$: $RIGHT|+=0$"
- progressivism_drift_from_guarantees_tt: "$progressivism_drift_from_guarantees$: $RIGHT|+=0$"
- socialdemocracy_drift_from_guarantees_tt: "$socialdemocracy_drift_from_guarantees$: $RIGHT|+=0$"
- socialism_drift_from_guarantees_tt: "$socialism_drift_from_guarantees$: $RIGHT|+=0$"
- communism_drift_from_guarantees_tt: "$communism_drift_from_guarantees$: $RIGHT|+=0$"
- authoritariancommunism_drift_from_guarantees_tt: "$authoritariancommunism_drift_from_guarantees$: $RIGHT|+=0$"
- anarchosyndicalism_drift_from_guarantees_tt: "$anarchosyndicalism_drift_from_guarantees$: $RIGHT|+=0$"
- fascism_drift_from_guarantees_tt: "$fascism_drift_from_guarantees$: $RIGHT|+=0$"
- militarytotalism_drift_from_guarantees_tt: "$militarytotalism_drift_from_guarantees$: $RIGHT|+=0$"
- authoritariandemocracy_drift_from_guarantees_tt: "$authoritariandemocracy_drift_from_guarantees$: $RIGHT|+=0$"
- autocracy_drift_from_guarantees_tt: "$autocracy_drift_from_guarantees$: $RIGHT|+=0$"
- ### experience_gain_<Unit>_training_factor
- ### <Doctrine>_mastery_gain_factor
- naval_mastery_gain_factor_tt: " £doctrine_mod  해군 $FOLDER_mastery_gain$: $RIGHT|+=%1$"	
- air_mastery_gain_factor_tt: " £doctrine_mod  공군 $FOLDER_mastery_gain$: $RIGHT|+=%1$"
-
-
- new_base_strike_mastery_gain_factor: " £doctrine_mod  $GRAND_DOCTRINE_BASE_STRIKE$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- new_convoy_raiding_mastery_gain_factor: " £doctrine_mod  $GRAND_DOCTRINE_CONVOY_RAIDING$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- new_fleet_in_being_mastery_gain_factor: " £doctrine_mod  $GRAND_DOCTRINE_FLEET_IN_BEING$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
-
- new_battlefield_support_mastery_gain_factor_tt: " £doctrine_mod  $GRAND_DOCTRINE_BATTLEFIELD_SUPPORT$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- new_operational_integrity_mastery_gain_factor_tt: " £doctrine_mod  $GRAND_DOCTRINE_OPERATIONAL_INTEGRITY$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- new_strategic_destruction_mastery_gain_factor_tt: " £doctrine_mod  $GRAND_DOCTRINE_STRATEGIC_DESTRUCTION$ $GRAND_DOCTRINE_mastery_gain$: $RIGHT|+=%1$"
-
-
- line_of_battle_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_LINE_OF_BATTLE$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- battlecruiser_supremacy_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_BATTLECRUISER_SUPREMACY$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- armored_raiders_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_ARMORED_RAIDERS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- coastal_defence_fleet_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_COASTAL_DEFENCE$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- naval_gunfire_support_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_NAVAL_GUNFIRE_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- battleship_antiair_screen_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_BATTLESHIP_ANTIAIR_SCREEN$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- carrier_battlegroups_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_CARRIER_BATTLEGROUPS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- floating_airfields_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_CARRIER_AIRFIELDS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- escort_carrier_support_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_ESCORT_CARRIER_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- broad_naval_support_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_BROAD_NAVAL_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- massed_carrier_fleet_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_MASSED_CARRIER_FLEET$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- light_task_forces_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_LIGHT_TASK_FORCES$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- convoy_escort_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_CONVOY_ESCORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- support_integrated_operations_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_INTEGRATED_OPERATIONS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- hunter_killers_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_HUNTER_KILLERS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- torpedo_primacy_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_TORPEDO_PRIMACY$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- anti_aircraft_cruisers_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_ANTI_AIRCRAFT_CRUISERS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- screen_support_focus_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_SUPPORT_FOCUS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- jeune_ecole_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_JEUNE_ECOLE$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- patrol_boats_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SCREEN_PATROL_BOATS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- wolfpacks_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_WOLFPACKS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- submarine_fleet_operations_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_FLEET_OPERATIONS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- capital_hunters_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_CAPITAL_HUNTERS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- submarine_coastal_defense_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_COASTAL_DEFENSE$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- coastal_minelaying_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_COASTAL_MINELAYING$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- long_range_submarines_mastery_gain_factor: " £doctrine_mod  $SUBDOCTRINE_SUBMARINE_LONG_RANGE_SUBMARINES$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- 
- air_subdoctrine_fighter_homeland_defense_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_FIGHTER_HOMELAND_DEFENSE$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_escort_fighter_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_ESCORT_FIGHTER$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_fighter_bombers_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_FIGHTER_BOMBERS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_tactical_flexibility_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_TACTICAL_FLEXIBILITY$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_dogfighting_mastery_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_DOGFIGHTING_MASTERY$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_fighter_central_field_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_FIGHTER_CENTRAL_FIELD$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_night_bombing_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_NIGHT_BOMBING$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_carpet_bombing_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_CARPET_BOMBING$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_deep_air_raids_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_DEEP_AIR_RAIDS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_flying_fortresses_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_FLYING_FORTRESSES$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_coastal_air_patrol_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_COASTAL_AIR_PATROL$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_open_ocean_air_patrol_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_OPEN_OCEAN_AIR_PATROL$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_heavy_aircraft_focus_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_HEAVY_AIRCRAFT_FOCUS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_bomber_interception_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_BOMBER_INTERCEPTION$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_long_range_escort_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_LONG_RANGE_ESCORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_operational_air_support_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_OPERATIONAL_AIR_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_tactical_battlefield_support_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_TACTICAL_BATTLEFIELD_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_theater_interdiction_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_THEATER_INTERDICTION$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_aerial_reconnaissance_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_AERIAL_RECONNAISSANCE$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_flying_artillery_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_FLYING_ARTILLERY$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_dive_bombers_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_DIVE_BOMBERS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_flexible_fire_support_mastery_gain_factor_tt: "$ £doctrine_mod  $SUBDOCTRINE_FLEXIBLE_FIRE_SUPPORT$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_carrier_strikes_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_CARRIER_STRIKES$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_naval_strike_tactics_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_NAVAL_STRIKE_TACTICS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- air_subdoctrine_naval_torpedo_tactics_mastery_gain_factor_tt: " £doctrine_mod  $SUBDOCTRINE_NAVAL_TORPEDO_TACTICS$ $SUBDOCTRINE_mastery_gain$: $RIGHT|+=%1$"
- ### state_resources_<Resource>_factor
- ### <Building>_max_level_terrain_limit
- ### state_resource_cost_<Resource>
- ### <ModifierStatValue>_value_factor
- ### <Equipment>_design_cost_factor
- ### state_repair_speed_<Building>_factor
- ### <Trait>_xp_gain_factor/trait_<Trait>_xp_gain_factor
  ### <Operation>_risk
  ### <Technology>_cost_factor
  ### <SpecialProject>_speed_factor
@@ -432,6 +567,15 @@
  ### <CombatTactic>_preferred_weight_factor
  ### <ModifierStat>_factor
  ### experience_gain_<Unit>_combat_factor
+ experience_gain_battle_cruiser_combat_factor_tt: "$modifier_experience_gain_battle_cruiser_combat_factor$: $RIGHT|+=%1$"
+ experience_gain_battleship_combat_factor_tt: "$modifier_experience_gain_battleship_combat_factor$: $RIGHT|+=%1$"
+ experience_gain_carrier_combat_factor_tt: "$modifier_experience_gain_carrier_combat_factor$: $RIGHT|+=%1$"
+ experience_gain_destroyer_combat_factor_tt: "$modifier_experience_gain_destroyer_combat_factor$: $RIGHT|+=%1$"
+ experience_gain_heavy_cruiser_combat_factor_tt: "$modifier_experience_gain_heavy_cruiser_combat_factor$: $RIGHT|+=%1$"
+ experience_gain_light_cruiser_combat_factor_tt: "$modifier_experience_gain_light_cruiser_combat_factor$: $RIGHT|+=%1$"
+ experience_gain_repair_ship_combat_factor_tt: "$modifier_experience_gain_repair_ship_combat_factor$: $RIGHT|+=%1$"
+ experience_gain_submarine_combat_factor_tt: "$modifier_experience_gain_submarine_combat_factor$: $RIGHT|+=%1$"
+ experience_gain_support_ship_combat_factor_tt: "$modifier_experience_gain_support_ship_combat_factor$: $RIGHT|+=%1$"
  ### state_<Building>_max_level_terrain_limit
  ### production_cost_max_<NavalEquipment>
  modifier_production_cost_max_convoy: "£navprod_cost  수송선 최대 비용"
@@ -500,6 +644,15 @@
  ### state_resource_<Resource>
  ### country_resource_cost_<Resource>
  ### experience_gain_<Unit>_mission_factor
+ experience_gain_battle_cruiser_mission_factor_tt: "$modifier_xperience_gain_battle_cruiser_mission_factor_t$: $RIGHT|+=%1$"
+ experience_gain_battleship_mission_factor_tt: "$modifier_experience_gain_battleship_mission_factor$: $RIGHT|+=%1$"
+ experience_gain_carrier_mission_factor_tt: "$modifier_experience_gain_carrier_mission_factor$: $RIGHT|+=%1$"
+ experience_gain_destroyer_mission_factor_tt: "$modifier_experience_gain_destroyer_mission_factor$: $RIGHT|+=%1$"
+ experience_gain_heavy_cruiser_mission_factor_tt: "$modifier_experience_gain_heavy_cruiser_mission_factor$: $RIGHT|+=%1$"
+ experience_gain_light_cruiser_mission_factor_tt: "$modifier_experience_gain_light_cruiser_mission_factor$: $RIGHT|+=%1$"
+ experience_gain_repair_ship_mission_factor_tt: "$modifier_experience_gain_repair_ship_mission_factor$: $RIGHT|+=%1$"
+ experience_gain_submarine_mission_factor_tt: "$modifier_experience_gain_submarine_mission_factor$: $RIGHT|+=%1$"
+ experience_gain_support_ship_mission_factor_tt: "$modifier_experience_gain_support_ship_mission_factor$: $RIGHT|+=%1$"
  ### <Operation>_cost
  ### <Doctrine>_track_mastery_gain_factor
  infantry_track_mastery_gain_factor_tt: " £doctrine_mod  보병 $TRACK_mastery_gain$: $RIGHT|+=%1$"
@@ -519,6 +672,18 @@
  ### state_production_speed_<Building>_factor
  ### local_resources_<Resource>_factor
  ### unit_<Unit>_design_cost_factor
+ modifier_unit_repair_ship_design_cost_factor:  "£navy_design_cost_texticon  수리함 설계 비용"
+ modifier_unit_submarine_design_cost_factor: " £navy_design_cost_texticon  잠수함 설계 비용"
+ modifier_unit_support_ship_design_cost_factor: "£navy_design_cost_texticon  지원함 설계 비용"
+ unit_battle_cruiser_design_cost_factor_tt: "$modifier_unit_battle_cruiser_design_cost_factor$: $RIGHT|-=%1$"
+ unit_battleship_design_cost_factor_tt: "$modifier_unit_battleship_design_cost_factor$: $RIGHT|-=%1$"
+ unit_carrier_design_cost_factor_tt: "$modifier_unit_carrier_design_cost_factor$: $RIGHT|-=%1$"
+ unit_destroyer_design_cost_factor_tt: "$modifier_unit_destroyer_design_cost_factor$: $RIGHT|-=%1$"
+ unit_heavy_cruiser_design_cost_factor_tt: "$modifier_unit_heavy_cruiser_design_cost_factor$: $RIGHT|-=%1$"
+ unit_light_cruiser_design_cost_factor_tt: "$modifier_unit_light_cruiser_design_cost_factor$: $RIGHT|-=%1$"
+ unit_repair_ship_design_cost_factor_tt: "$modifier_unit_repair_ship_design_cost_factor$: $RIGHT|-=%1$"
+ unit_submarine_design_cost_factor_tt: "$modifier_unit_submarine_design_cost_factor$: $RIGHT|-=%1$"
+ unit_support_ship_design_cost_factor_tt: "$modifier_unit_support_ship_design_cost_factor$: $RIGHT|-=%1$"
  ### production_cost_<Building>_factor
  ### repair_speed_<Building>_factor
  ### temporary_state_resource_<Resource>

@@ -1010,33 +1010,6 @@
 	experience_gain_navy_factor	#해군 경험치 획득량 #+3%	#tt
 	experience_gain_navy_unit	#선박 경험치 획득량(매일) #+2F
 	experience_gain_navy_unit_factor	#선박 경험치 획득량 #+3%	#tt
-	experience_battle_cruiser_combat_factor	#순양전함 전투 경험치 획득량
-	experience_battleship_combat_factor	#전함 전투 경험치 획득량
-	experience_carrier_combat_factor	#항공모함 전투 경험치 획득량
-	experience_destroyer_combat_factor	#구축함 전투 경험치 획득량
-	experience_heavy_cruiser_combat_factor	#중순양함 전투 경험치 획득량
-	experience_light_cruiser_combat_factor	#경순양함 전투 경험치 획득량
-	experience_repair_ship_combat_factor	#수리함 전투 경험치 획득량
-	experience_submarine_combat_factor	#잠수함 전투 경험치 획득량
-	experience_support_ship_combat_factor	#지원함 전투 경험치 획득량
-	experience_battle_cruiser_mission_factor	#순양전함 임무 경험치 획득량
-	experience_battleship_mission_factor	#전함 임무 경험치 획득량
-	experience_carrier_mission_factor	#항공모함 임무 경험치 획득량
-	experience_destroyer_mission_factor	#구축함 임무 경험치 획득량
-	experience_heavy_cruiser_mission_factor	#중순양함 임무 경험치 획득량
-	experience_light_cruiser_mission_factor	#경순양함 임무 경험치 획득량
-	experience_repair_ship_mission_factor	#수리함 임무 경험치 획득량
-	experience_submarine_mission_factor	#잠수함 임무 경험치 획득량
-	experience_support_ship_mission_factor	#지원함 임무 경험치 획득량
-	experience_battle_cruiser_training_factor	#순양전함 훈련 경험치 획득량
-	experience_battleship_training_factor	#전함 훈련 경험치 획득량
-	experience_carrier_training_factor	#항공모함 훈련 경험치 획득량
-	experience_destroyer_training_factor	#구축함 훈련 경험치 획득량
-	experience_heavy_cruiser_training_factor	#중순양함 훈련 경험치 획득량
-	experience_light_cruiser_training_factor	#경순양함 훈련 경험치 획득량
-	experience_repair_ship_training_factor	#수리함 훈련 경험치 획득량
-	experience_submarine_training_factor	#잠수함 훈련 경험치 획득량
-	experience_support_ship_training_factor	#지원함 훈련 경험치 획득량
 	female_random_admiral_chance	#여성 제독 추가 확률 #Y2%
 	fighter_sortie_efficiency	#전투기 출격 효율 #+2%
 	headquarters_experience_gain_factor	#해군 사령부에서 얻은 경험 #+4%
@@ -1546,16 +1519,16 @@
 		unit_super_heavy_sp_artillery_brigade_design_cost_factor	#초중자주포 설계 비용	#-4%
 		unit_super_heavy_tank_destroyer_brigade_design_cost_factor	#초중구축전차 설계 비용	#-4%
 		unit_winter_logistics_support_design_cost_factor	#동계군수중대 설계 비용	#-4%	#X
-		
-		unit_battle_cruiser_design_cost_factor	#순양전함 설계 비용	#-4%
-		unit_battleship_design_cost_factor	#전함 설계 비용	#-4%
-		unit_carrier_design_cost_factor	#항공모함 설계 비용	#-4%
-		unit_destroyer_design_cost_factor	#구축함 설계 비용	#-4%
-		unit_heavy_cruiser_design_cost_factor	#중순양함 설계 비용	#-4%
-		unit_light_cruiser_design_cost_factor	#경순양함 설계 비용	#-4%
-		unit_repair_ship_design_cost_factor	#수리함 설계 비용	#-4%
-		unit_submarine_design_cost_factor	#잠수함 설계 비용	#-4%	#X
-		unit_support_ship_design_cost_factor	#지원함 설계 비용	#-4%	#X
+	
+		experience_gain_battle_cruiser_training_factor	#순양전함 훈련 경험치 획득량
+		experience_gain_battleship_training_factor	#전함 훈련 경험치 획득량
+		experience_gain_carrier_training_factor	#항공모함 훈련 경험치 획득량
+		experience_gain_destroyer_training_factor	#구축함 훈련 경험치 획득량
+		experience_gain_heavy_cruiser_training_factor	#중순양함 훈련 경험치 획득량
+		experience_gain_light_cruiser_training_factor	#경순양함 훈련 경험치 획득량
+		experience_gain_repair_ship_training_factor	#수리함 훈련 경험치 획득량
+		experience_gain_submarine_training_factor	#잠수함 훈련 경험치 획득량
+		experience_gain_support_ship_training_factor	#지원함 훈련 경험치 획득량
 
 		unit_ballistic_missile_design_cost_factor	#탄도 미사일 설계 비용	#-4%	#X
 		unit_cas_design_cost_factor	#근접항공지원기 설계 비용	#-4%	#X
@@ -1979,15 +1952,15 @@
 		unit_super_heavy_tank_destroyer_brigade_design_cost_factor	#초중구축전차 설계 비용	#-4%
 		unit_winter_logistics_support_design_cost_factor	#동계군수중대 설계 비용	#-4%	#X
 		
-		unit_battle_cruiser_design_cost_factor	#순양전함 설계 비용	#-4%
-		unit_battleship_design_cost_factor	#전함 설계 비용	#-4%
-		unit_carrier_design_cost_factor	#항공모함 설계 비용	#-4%
-		unit_destroyer_design_cost_factor	#구축함 설계 비용	#-4%
-		unit_heavy_cruiser_design_cost_factor	#중순양함 설계 비용	#-4%
-		unit_light_cruiser_design_cost_factor	#경순양함 설계 비용	#-4%
-		unit_repair_ship_design_cost_factor	#수리함 설계 비용	#-4%
-		unit_submarine_design_cost_factor	#잠수함 설계 비용	#-4%	#X
-		unit_support_ship_design_cost_factor	#지원함 설계 비용	#-4%	#X
+		experience_gain_battle_cruiser_combat_factor	#순양전함 전투 경험치 획득량
+		experience_gain_battleship_combat_factor	#전함 전투 경험치 획득량
+		experience_gain_carrier_combat_factor	#항공모함 전투 경험치 획득량
+		experience_gain_destroyer_combat_factor	#구축함 전투 경험치 획득량
+		experience_gain_heavy_cruiser_combat_factor	#중순양함 전투 경험치 획득량
+		experience_gain_light_cruiser_combat_factor	#경순양함 전투 경험치 획득량
+		experience_gain_repair_ship_combat_factor	#수리함 전투 경험치 획득량
+		experience_gain_submarine_combat_factor	#잠수함 전투 경험치 획득량
+		experience_gain_support_ship_combat_factor	#지원함 전투 경험치 획득량
 
 		unit_ballistic_missile_design_cost_factor	#탄도 미사일 설계 비용	#-4%	#X
 		unit_cas_design_cost_factor	#근접항공지원기 설계 비용	#-4%	#X
@@ -2197,15 +2170,15 @@
 		unit_super_heavy_tank_destroyer_brigade_design_cost_factor	#초중구축전차 설계 비용	#-4%
 		unit_winter_logistics_support_design_cost_factor	#동계군수중대 설계 비용	#-4%	#X
 		
-		unit_battle_cruiser_design_cost_factor	#순양전함 설계 비용	#-4%
-		unit_battleship_design_cost_factor	#전함 설계 비용	#-4%
-		unit_carrier_design_cost_factor	#항공모함 설계 비용	#-4%
-		unit_destroyer_design_cost_factor	#구축함 설계 비용	#-4%
-		unit_heavy_cruiser_design_cost_factor	#중순양함 설계 비용	#-4%
-		unit_light_cruiser_design_cost_factor	#경순양함 설계 비용	#-4%
-		unit_repair_ship_design_cost_factor	#수리함 설계 비용	#-4%
-		unit_submarine_design_cost_factor	#잠수함 설계 비용	#-4%	#X
-		unit_support_ship_design_cost_factor	#지원함 설계 비용	#-4%	#X
+		experience_gain_battle_cruiser_mission_factor	#순양전함 임무 경험치 획득량
+		experience_gain_battleship_mission_factor	#전함 임무 경험치 획득량
+		experience_gain_carrier_mission_factor	#항공모함 임무 경험치 획득량
+		experience_gain_destroyer_mission_factor	#구축함 임무 경험치 획득량
+		experience_gain_heavy_cruiser_mission_factor	#중순양함 임무 경험치 획득량
+		experience_gain_light_cruiser_mission_factor	#경순양함 임무 경험치 획득량
+		experience_gain_repair_ship_mission_factor	#수리함 임무 경험치 획득량
+		experience_gain_submarine_mission_factor	#잠수함 임무 경험치 획득량
+		experience_gain_support_ship_mission_factor	#지원함 임무 경험치 획득량
 
 		unit_ballistic_missile_design_cost_factor	#탄도 미사일 설계 비용	#-4%	#X
 		unit_cas_design_cost_factor	#근접항공지원기 설계 비용	#-4%	#X
