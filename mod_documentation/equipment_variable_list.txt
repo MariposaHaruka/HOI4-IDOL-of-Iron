@@ -3098,8 +3098,346 @@
 	air_attack
 	air_defence
 	air_agility
+
+
+
+
+
+
+		missile_launcher
+	미사일 잠수함용
 	
+############################################################################################	
+
+	##### 	#####
+	    # 		#
+	  # # 		#
+	  #   	#####	
+	##### 	  #
+			  #
+	 ### 	#	
+	#   #	#		
+	 ###	#####
+
+
+# fighter
+	## 속하는 장비 (공통):
+		mothership_equipment	#WUW 필요
+
+	## 속하는 장비 (BBA 보유):
+		small_plane_airframe
+		cv_small_plane_airframe
+
+	## 속하는 장비 (BBA 미보유):
+		fighter_equipment
+		jet_fighter_equipment
+		cv_fighter_equipment
 	
+	fighter_
+
+
+		air_agility
+		air_attack
+		air_defence
+					air_ground_attack
+		air_range
+		air_superiority
+		build_cost_ic
+		fuel_consumption
+		maximum_speed
+		naval_strike_attack
+		naval_strike_targetting
+		reliability
+		weight
+
+		module_slots = {
+			fixed_main_weapon_slot = {
+				required = yes
+				allowed_module_categories = {
+					fighter_weapon
+					cas_weapon
+					nav_bomber_weapon
+					kamikaze_bomber_weapon
+				}
+			}
+
+			fixed_auxiliary_weapon_slot_1 = { 
+				required = no
+				allowed_module_categories = {
+					recon_camera
+					
+					build_cost_ic
+					weight
+
+					fighter_weapon
+					
+					air_agility
+					air_attack
+					air_ground_attack
+					build_cost_ic
+					weight
+					
+					cas_weapon
+
+					air_agility
+					air_ground_attack
+					build_cost_ic
+					naval_strike_attack
+					naval_strike_targetting
+					weight
+
+					nav_bomber_weapon
+
+					air_agility
+					build_cost_ic
+					naval_strike_attack 
+					naval_strike_targetting
+					weight
+					
+					kamikaze_bomber_weapon
+
+					air_agility
+					air_defence
+					build_cost_ic
+					naval_strike_attack
+					naval_strike_targetting
+
+				}
+			}
+
+			engine_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					plane_engine_type
+					twin_plane_engine_type
+
+					air_agility
+					air_range
+					build_cost_ic
+					fuel_consumption 
+					maximum_speed
+					thrust
+				
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+
+					air_agility
+					air_defence
+					air_range
+					build_cost_ic
+					maximum_speed
+					naval_strike_targetting
+					sub_detection
+					surface_detection
+					weight 
+
+					plane_special_module_bomb_sights
+
+					air_bombing
+					build_cost_ic
+					weight
+
+					plane_special_module_radio_navigation
+
+					air_bombing
+					build_cost_ic
+					night_penalty
+					weight
+					
+					plane_special_module_air_ground_radar
+
+					air_bombing
+					build_cost_ic
+					night_penalty
+					sub_detection
+					surface_detection
+					weight
+					
+					plane_special_module_air_air_radar
+
+					build_cost_ic
+					night_penalty
+					weight
+					
+					plane_special_module_defense_turret
+
+					air_agility
+					air_attack
+					air_defence 
+					build_cost_ic
+					maximum_speed
+					weight
+				}
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# heavy_fighter
+	## 속하는 장비 (BBA 보유):
+		medium_plane_fighter_airframe
+
+	## 속하는 장비 (BBA 미보유):
+		heavy_fighter_equipment
+
+
+# scout_plane
+	## 속하는 장비 (BBA 보유):
+		medium_plane_scout_plane_airframe
+
+	## 속하는 장비 (BBA 미보유): #뒤의 숫자는 분량상 생략
+		scout_plane_equipment
+
+
+# interceptor
+# tactical_bomber
+# strategic_bomber
+# cas
+# naval_bomber
+# missile
+# emplacement_gun_ammo
+# ballistic_missile
+# nuclear_missile
+# sam_missile
+# suicide
+# scout_plane
+
+# maritime_patrol_plane
+	## 속하는 장비 (BBA 보유):
+		large_plane_maritime_patrol_plane_airframe
+
+
+# air_transport
+	## 속하는 장비:
+		transport_plane_equipment
+
+	transport_plane_equipment_air_agility
+	transport_plane_equipment_air_defence
+	transport_plane_equipment_air_range
+	transport_plane_equipment_build_cost_ic
+	transport_plane_equipment_fuel_consumption
+	transport_plane_equipment_maximum_speed
+	transport_plane_equipment_reliability
+	transport_plane_equipment_1_air_agility
+	transport_plane_equipment_1_air_defence
+	transport_plane_equipment_1_air_range
+	transport_plane_equipment_1_build_cost_ic
+	transport_plane_equipment_1_fuel_consumption
+	transport_plane_equipment_1_maximum_speed
+	transport_plane_equipment_1_reliability
+	transport_plane_equipment_2_air_agility
+	transport_plane_equipment_2_air_defence
+	transport_plane_equipment_2_air_range
+	transport_plane_equipment_2_build_cost_ic
+	transport_plane_equipment_2_fuel_consumption
+	transport_plane_equipment_2_maximum_speed
+	transport_plane_equipment_2_reliability
+	transport_plane_equipment_3_air_agility
+	transport_plane_equipment_3_air_defence
+	transport_plane_equipment_3_air_range
+	transport_plane_equipment_3_build_cost_ic
+	transport_plane_equipment_3_fuel_consumption
+	transport_plane_equipment_3_maximum_speed
+	transport_plane_equipment_3_reliability
+
+# mothership_equipment/mothership_equipment_0
+	## 속하는 장비:
+		mothership_equipment	#WUW 필요
+	
+	mothership_equipment_air_agility
+	mothership_equipment_air_attack
+	mothership_equipment_air_defence
+	mothership_equipment_air_range
+	mothership_equipment_air_superiority
+	mothership_equipment_build_cost_ic
+	mothership_equipment_fuel_consumption
+	mothership_equipment_maximum_speed
+	mothership_equipment_reliability
+	mothership_equipment_surface_detection
+	mothership_equipment_0_air_agility
+	mothership_equipment_0_air_attack
+	mothership_equipment_0_air_defence
+	mothership_equipment_0_air_range
+	mothership_equipment_0_air_superiority
+	mothership_equipment_0_build_cost_ic
+	mothership_equipment_0_fuel_consumption
+	mothership_equipment_0_maximum_speed
+	mothership_equipment_0_reliability
+	mothership_equipment_0_surface_detection
+
+# strat_bomber_intercontinental_equipment/strat_bomber_intercontinental_equipment_0
+	## 속하는 장비:
+		strat_bomber_intercontinental_equipment	#WUW 필요
+
+	strat_bomber_intercontinental_equipment_air_agility
+	strat_bomber_intercontinental_equipment_air_attack
+	strat_bomber_intercontinental_equipment_air_bombing
+	strat_bomber_intercontinental_equipment_air_defence
+	strat_bomber_intercontinental_equipment_air_range
+	strat_bomber_intercontinental_equipment_air_superiority
+	strat_bomber_intercontinental_equipment_build_cost_ic
+	strat_bomber_intercontinental_equipment_fuel_consumption
+	strat_bomber_intercontinental_equipment_maximum_speed
+	strat_bomber_intercontinental_equipment_surface_detection
+	strat_bomber_intercontinental_equipment_reliability
+	strat_bomber_intercontinental_equipment_0_air_agility
+	strat_bomber_intercontinental_equipment_0_air_attack
+	strat_bomber_intercontinental_equipment_0_air_bombing
+	strat_bomber_intercontinental_equipment_0_air_defence
+	strat_bomber_intercontinental_equipment_0_air_range
+	strat_bomber_intercontinental_equipment_0_air_superiority
+	strat_bomber_intercontinental_equipment_0_build_cost_ic
+	strat_bomber_intercontinental_equipment_0_fuel_consumption
+	strat_bomber_intercontinental_equipment_0_maximum_speed
+	strat_bomber_intercontinental_equipment_0_surface_detection
+	strat_bomber_intercontinental_equipment_0_reliability
+
+
+
+### AIR Equipment categories
+	fighter
+	heavy_fighter
+	interceptor
+	tactical_bomber
+	strategic_bomber
+	cas
+	naval_bomber
+	missile
+	emplacement_gun_ammo
+	ballistic_missile
+	nuclear_missile
+	sam_missile
+	suicide
+	scout_plane
+	maritime_patrol_plane
+
+	mothership_equipment - fighter/interceptor
+	strat_bomber_intercontinental_equipment - strategic_bomber
+
+
+
 		# AIR Equipment archetypes & types
 		guided_missile_equipment
 		guided_missile_equipment_1
@@ -3190,18 +3528,7 @@
 	
 	
 	
-		transport_plane_equipment	#air_transport
-		transport_plane_equipment_1
-		transport_plane_equipment_2
-		transport_plane_equipment_3
-	
-	reliability
-	build_cost_ic
-	fuel_consumption
-	air_range
-	maximum_speed
-	air_agility
-	air_defence
+		
 	
 		small_plane_cas_airframe
 		cv_small_plane_cas_airframe
@@ -3269,37 +3596,6 @@
 		
 	
 	
-	
-	
-		mothership_equipment
-		mothership_equipment_0	#type = fighter
-	
-	air_range
-	maximum_speed
-	air_agility
-	air_attack
-	air_defence
-	air_superiority
-	reliability
-	surface_detection 
-	build_cost_ic
-	fuel_consumption
-	
-		strat_bomber_intercontinental_equipment
-		strat_bomber_intercontinental_equipment_1
-	
-	air_range
-	maximum_speed
-	air_agility
-	air_attack
-	air_defence
-	air_bombing
-	air_superiorit
-	reliability
-	surface_detection
-	build_cost_ic
-	manpower
-	fuel_consumption
 	
 	
 	
