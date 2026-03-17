@@ -1501,30 +1501,30 @@
 		supply_node_max_level_terrain_limit
 
 		# 건물+자연 환경
-		bunker_desert_max_level_terrain_limit	#최대 레벨	#+0F
-		bunker_forest_max_level_terrain_limit	#최대 레벨	#+0F
-		bunker_hills_max_level_terrain_limit	#최대 레벨	#+0F
-		bunker_jungle_max_level_terrain_limit	#최대 레벨	#+0F
-		bunker_marsh_max_level_terrain_limit	#최대 레벨	#+0F
-		bunker_mountain_max_level_terrain_limit	#최대 레벨	#+0F
-		bunker_plains_max_level_terrain_limit	#최대 레벨	#+0F
-		bunker_urban_max_level_terrain_limit	#최대 레벨	#+0F
-		coastal_bunker_desert_max_level_terrain_limit	#최대 레벨	#+0F
-		coastal_bunker_forest_max_level_terrain_limit	#최대 레벨	#+0F
-		coastal_bunker_hills_max_level_terrain_limit	#최대 레벨	#+0F
-		coastal_bunker_jungle_max_level_terrain_limit	#최대 레벨	#+0F
-		coastal_bunker_marsh_max_level_terrain_limit	#최대 레벨	#+0F
-		coastal_bunker_mountain_max_level_terrain_limit	#최대 레벨	#+0F
-		coastal_bunker_plains_max_level_terrain_limit	#최대 레벨	#+0F
-		coastal_bunker_urban_max_level_terrain_limit	#최대 레벨	#+0F
-		naval_base_desert_max_level_terrain_limit	#최대 레벨	#+0F
-		naval_base_forest_max_level_terrain_limit	#최대 레벨	#+0F
-		naval_base_hills_max_level_terrain_limit	#최대 레벨	#+0F
-		naval_base_jungle_max_level_terrain_limit	#최대 레벨	#+0F
-		naval_base_marsh_max_level_terrain_limit	#최대 레벨	#+0F
-		naval_base_mountain_max_level_terrain_limit	#최대 레벨	#+0F
-		naval_base_plains_max_level_terrain_limit	#최대 레벨	#+0F
-		naval_base_urban_max_level_terrain_limit	#최대 레벨	#+0F
+		bunker_desert_max_level_terrain_limit	#사막에서의 최대 요새 레벨	#+0F
+		bunker_forest_max_level_terrain_limit	#숲에서의 최대 요새 레벨	#+0F
+		bunker_hills_max_level_terrain_limit	#언덕에서의 최대 요새 레벨	#+0F
+		bunker_jungle_max_level_terrain_limit	#밀림에서의 최대 요새 레벨	#+0F
+		bunker_marsh_max_level_terrain_limit	#습지에서의 최대 요새 레벨	#+0F
+		bunker_mountain_max_level_terrain_limit	#산악에서의 최대 요새 레벨	#+0F
+		bunker_plains_max_level_terrain_limit	#평야에서의 최대 요새 레벨	#+0F
+		bunker_urban_max_level_terrain_limit	#도시에서의 최대 요새 레벨	#+0F
+		coastal_bunker_desert_max_level_terrain_limit	#사막에서의 최대 해안 요새 레벨	#+0F
+		coastal_bunker_forest_max_level_terrain_limit	#숲에서의 최대 해안 요새 레벨	#+0F
+		coastal_bunker_hills_max_level_terrain_limit	#언덕에서의 최대 해안 요새 레벨	#+0F
+		coastal_bunker_jungle_max_level_terrain_limit	#밀림에서의 최대 해안 요새 레벨	#+0F
+		coastal_bunker_marsh_max_level_terrain_limit	#습지에서의 최대 해안 요새 레벨	#+0F
+		coastal_bunker_mountain_max_level_terrain_limit	#산악에서의 최대 해안 요새 레벨	#+0F
+		coastal_bunker_plains_max_level_terrain_limit	#평야에서의 최대 해안 요새 레벨	#+0F
+		coastal_bunker_urban_max_level_terrain_limit	#도시에서의 최대 해안 요새 레벨	#+0F
+		naval_base_desert_max_level_terrain_limit	#사막에서의 최대 해군기지 레벨	#+0F
+		naval_base_forest_max_level_terrain_limit	#숲에서의 최대 해군기지 레벨	#+0F
+		naval_base_hills_max_level_terrain_limit	#언덕에서의 최대 해군기지 레벨	#+0F
+		naval_base_jungle_max_level_terrain_limit	#밀림에서의 최대 해군기지 레벨	#+0F
+		naval_base_marsh_max_level_terrain_limit	#습지에서의 최대 해군기지 레벨	#+0F
+		naval_base_mountain_max_level_terrain_limit	#산악에서의 최대 해군기지 레벨	#+0F
+		naval_base_plains_max_level_terrain_limit	#평야에서의 최대 해군기지 레벨	#+0F
+		naval_base_urban_max_level_terrain_limit	#도시에서의 최대 해군기지 레벨	#+0F
 
 		#### 해당 모디파이어는 바닐라에서 해당 건물이 max_level_terrain_limit = 1이거나 해당 건물이 건설 불가능, 프로빈스 단위 건축 가능한 건물이 아니거나, terrain이 일반적인 땅이 아니라서 사용할 수 없는 모디파이어를 모아놓은 일람이니 절대 쓸 일이 없도록 할 것
 		air_base_desert_max_level_terrain_limit
@@ -2422,62 +2422,136 @@
 	### state_repair_speed_<Building>_factor
 		#### category: STATE Modifiers
 		
-		state_repair_speed_air_base_factor	#공군기지 수리 속도	#	#X
-		state_repair_speed_air_facility_factor	# 수리 속도	#	#X
-		state_repair_speed_anti_air_building_factor	# 수리 속도	#	#X
-		state_repair_speed_arms_factory_factor	#군수공장 수리 속도	#
-		state_repair_speed_bunker_factor	# 수리 속도	#	#X
-		state_repair_speed_canal_kiel_factor	#킬 운하 갑문 수리 속도	#
-		state_repair_speed_canal_panama_factor	#파나마 운하 갑문 수리 속도	#
-		state_repair_speed_coastal_bunker_factor	#해안 요새 수리 속도	#	#X
-		state_repair_speed_commercial_nuclear_reactor_factor	# 수리 속도	#	#X
-		state_repair_speed_dam_factor	# 수리 속도	#	#X
-		state_repair_speed_dam_mountain_factor	# 수리 속도	#	#X
-		state_repair_speed_dockyard_factor	# 수리 속도	#	#X
-		state_repair_speed_fuel_silo_factor	# 수리 속도	#	#X
-		state_repair_speed_industrial_complex_factor	#민간공장 수리 속도	#
-		state_repair_speed_infrastructure_factor	#기반시설 수리 속도	#
-		state_repair_speed_land_facility_factor	# 수리 속도	#	#X
-		state_repair_speed_landmark_berlin_reichstag_factor	#라이히스탁 수리 속도	#
-		state_repair_speed_landmark_berlin_volkshalle_factor	#국민대회당 수리 속도	#
-		state_repair_speed_landmark_big_ben_factor	#빅 벤 수리 속도	#
-		state_repair_speed_landmark_colosseum_factor	#콜로세움 수리 속도	#
-		state_repair_speed_landmark_cristo_redentor_factor	#구세주 그리스도상 수리 속도	#
-		state_repair_speed_landmark_eiffel_tower_factor	#에펠탑 수리 속도	#
-		state_repair_speed_landmark_forbidden_city_factor	#자금성 수리 속도	#
-		state_repair_speed_landmark_great_wall_section_factor	#만리장성 수리 속도	#
-		state_repair_speed_landmark_hagia_sophia_factor	#아야 소피아 수리 속도	#
-		state_repair_speed_landmark_hakko_ichiu_factor	#팔굉의 기주 수리 속도	#
-		state_repair_speed_landmark_hofburg_palace_factor	#호프부르크 궁전 수리 속도	#
-		state_repair_speed_landmark_kremlin_factor	#크렘린 수리 속도	#
-		state_repair_speed_landmark_nanjing_presidential_palace_factor	#난징 총통부 수리 속도	#
-		state_repair_speed_landmark_nanjing_presidential_palace_gen_factor	#난징 총통부 수리 속도	#
-		state_repair_speed_landmark_nanjing_presidential_palace_prc_factor	#난징 총통부 수리 속도	#
-		state_repair_speed_landmark_national_diet_factor	#국회의사당 수리 속도	#
-		state_repair_speed_landmark_sadabad_complex_factor	#사다바드 단지 수리 속도	#
-		state_repair_speed_landmark_statue_of_liberty_factor	#자유의 여신상 수리 속도	#
-		state_repair_speed_landmark_taj_mahal_factor	#타지마할 수리 속도	#
-		state_repair_speed_landmark_tokyo_imperial_palace_factor	#황궁 수리 속도	#
-		state_repair_speed_mega_gun_emplacement_factor	# 수리 속도	#	#X
-		state_repair_speed_naval_base_factor	# 수리 속도	#	#X
-		state_repair_speed_naval_facility_factor	# 수리 속도	#	#X
-		state_repair_speed_naval_headquarters_factor	# 수리 속도	#	#X
-		state_repair_speed_naval_supply_hub_factor	# 수리 속도	#	#X
-		state_repair_speed_nuclear_facility_factor	# 수리 속도	#	#X
-		state_repair_speed_nuclear_reactor_factor	# 수리 속도	#	#X
-		state_repair_speed_nuclear_reactor_heavy_water_factor	# 수리 속도	#	#X
-		state_repair_speed_radar_station_factor	# 수리 속도	#	#X
-		state_repair_speed_rail_way_factor	#철도 수리 속도	#
-		state_repair_speed_rocket_site_factor	#로켓 발사장 수리 속도	#	#X
-		state_repair_speed_stronghold_network_factor	# 수리 속도	#	#X
-		state_repair_speed_supply_node_factor	# 수리 속도	#	#X
-		state_repair_speed_synthetic_refinery_factor	# 수리 속도	#	#X
+		state_repair_speed_air_base_factor	#공군기지 수리 속도	#+4%	#X
+		state_repair_speed_air_facility_factor	#공기역학 및 항공전자 연구소 수리 속도	#+4%	#X
+		state_repair_speed_anti_air_building_factor	#대공포 수리 속도	#+4%	#X
+		state_repair_speed_arms_factory_factor	#군수공장 수리 속도	#+4%	#X
+		state_repair_speed_bunker_factor	#요새 수리 속도	#+4%	#X
+		state_repair_speed_canal_kiel_factor	#킬 운하 갑문 수리 속도	#+4%4%	#X
+		state_repair_speed_canal_panama_factor	#파나마 운하 갑문 수리 속도	#+4%4%	#X
+		state_repair_speed_coastal_bunker_factor	#해안 요새 수리 속도	#+4%	#X
+		state_repair_speed_commercial_nuclear_reactor_factor	#민간 원자로 수리 속도	#+4%	#X
+		state_repair_speed_dam_factor	#댐 수리 속도	#+4%	#X
+		state_repair_speed_dam_mountain_factor	#댐 수리 속도	#+4%	#X
+		state_repair_speed_dockyard_factor	#조선소 수리 속도	#+4%	#X
+		state_repair_speed_fuel_silo_factor	#연료 저장고 수리 속도	#+4%	#X
+		state_repair_speed_industrial_complex_factor	#민간공장 수리 속도	#+4%	#X
+		state_repair_speed_infrastructure_factor	#기반시설 수리 속도	#+4%	#X
+		state_repair_speed_land_facility_factor	#육상전 연구소 수리 속도	#+4%	#X
+		state_repair_speed_landmark_berlin_reichstag_factor	#라이히스탁 수리 속도	#+4%	#X
+		state_repair_speed_landmark_berlin_volkshalle_factor	#국민대회당 수리 속도	#+4%	#X
+		state_repair_speed_landmark_big_ben_factor	#빅 벤 수리 속도	#+4%	#X
+		state_repair_speed_landmark_colosseum_factor	#콜로세움 수리 속도	#+4%	#X
+		state_repair_speed_landmark_cristo_redentor_factor	#구세주 그리스도상 수리 속도	#+4%	#X
+		state_repair_speed_landmark_eiffel_tower_factor	#에펠탑 수리 속도	#+4%	#X
+		state_repair_speed_landmark_forbidden_city_factor	#자금성 수리 속도	#+4%	#X
+		state_repair_speed_landmark_great_wall_section_factor	#만리장성 수리 속도	#+4%	#X
+		state_repair_speed_landmark_hagia_sophia_factor	#아야 소피아 수리 속도	#+4%	#X
+		state_repair_speed_landmark_hakko_ichiu_factor	#팔굉의 기주 수리 속도	#+4%	#X
+		state_repair_speed_landmark_hofburg_palace_factor	#호프부르크 궁전 수리 속도	#+4%	#X
+		state_repair_speed_landmark_kremlin_factor	#크렘린 수리 속도	#+4%	#X
+		state_repair_speed_landmark_nanjing_presidential_palace_factor	#난징 총통부 수리 속도	#+4%	#X
+		state_repair_speed_landmark_nanjing_presidential_palace_gen_factor	#난징 총통부 수리 속도	#+4%	#X
+		state_repair_speed_landmark_nanjing_presidential_palace_prc_factor	#난징 총통부 수리 속도	#+4%	#X
+		state_repair_speed_landmark_national_diet_factor	#국회의사당 수리 속도	#+4%	#X
+		state_repair_speed_landmark_sadabad_complex_factor	#사다바드 단지 수리 속도	#+4%	#X
+		state_repair_speed_landmark_statue_of_liberty_factor	#자유의 여신상 수리 속도	#+4%	#X
+		state_repair_speed_landmark_taj_mahal_factor	#타지마할 수리 속도	#+4%	#X
+		state_repair_speed_landmark_tokyo_imperial_palace_factor	#황궁 수리 속도	#+4%	#X
+		state_repair_speed_mega_gun_emplacement_factor	#다단 추진 거포 수리 속도	#+4%	#X
+		state_repair_speed_naval_base_factor	#해군기지 수리 속도	#+4%	#X
+		state_repair_speed_naval_facility_factor	#조선공학 연구소 수리 속도	#+4%	#X
+		state_repair_speed_naval_headquarters_factor	#해군 사령부 수리 속도	#+4%	#X
+		state_repair_speed_naval_supply_hub_factor	#해군 보급 중심지 수리 속도	#+4%	#X
+		state_repair_speed_nuclear_facility_factor	#원자력 연구소 수리 속도	#+4%	#X
+		state_repair_speed_nuclear_reactor_factor	#원자로 수리 속도	#+4%	#X
+		state_repair_speed_nuclear_reactor_heavy_water_factor	#중수로 수리 속도	#+4%	#X
+		state_repair_speed_radar_station_factor	#레이더 기지 수리 속도	#+4%	#X
+		state_repair_speed_rail_way_factor	#철도 수리 속도	#+4%	#X
+		state_repair_speed_rocket_site_factor	#로켓 발사장 수리 속도	#+4%	#X
+		state_repair_speed_stronghold_network_factor	#요새망 수리 속도	#+4%	#X
+		state_repair_speed_supply_node_factor	#보급 중심지 수리 속도	#+4%	#X
+		state_repair_speed_synthetic_refinery_factor	#합성 정제소 수리 속도	#+4%	#X
 
 	### <Trait>_xp_gain_factor/trait_<Trait>_xp_gain_factor
 		#### category: ARMY Modifiers, NAVAL Modifiers, COUNTRY Modifiers
 		#### common에 정의된 장교 트레잇이 앞에 "trait_" 접두어가 붙은 상태로 정의된 경우 전자를,
 		아닌 경우 후자를 사용하도록 정해져 있으니 사용시 참고할 것
+		#### 육군 트레잇
+		trait_armor_officer_xp_gain_factor	#기갑장교 특성 경험치 획득량	#+4%
+		trait_brave_xp_gain_factor	#용감함 특성 경험치 획득량	#+4%	#X
+		trait_brilliant_strategist_xp_gain_factor	#명석한 전략가 특성 경험치 획득량	#+4%
+		trait_cavalry_leader_xp_gain_factor	#기병 지휘관 특성 경험치 획득량	#+4%
+		trait_career_officer_xp_gain_factor	#직업장교 특성 경험치 획득량	#+4%
+		trait_cautious_xp_gain_factor	#신중함 특성 경험치 획득량	#+4%
+		trait_cavalry_officer_xp_gain_factor	#기병장교 특성 경험치 획득량	#+4%
+		trait_engineer_officer_xp_gain_factor	#공병장교 특성 경험치 획득량	#+4%
+		trait_exiled_leader_xp_gain_factor	#망명 지휘관 특성 경험치 획득량	#+4%
+		trait_harsh_leader_xp_gain_factor	#가혹한 지휘관 특성 경험치 획득량	#+4%
+		trait_infantry_officer_xp_gain_factor	#보병장교 특성 경험치 획득량	#+4%
+		trait_inflexible_strategist_xp_gain_factor	#완고한 전략가 특성 경험치 획득량	#+4%
+		trait_irregulars_officer_xp_gain_factor	#비정규군 장교 특성 경험치 획득량	#+4%	#X
+		trait_media_personality_xp_gain_factor	#유명인 특성 경험치 획득량	#+4%
+		trait_militias_officer_xp_gain_factor	#민병 장교 특성 경험치 획득량	#+4%	#X
+		trait_old_guard_xp_gain_factor	#보수파 특성 경험치 획득량	#+4%
+		trait_politically_connected_xp_gain_factor	#정계와의 연줄 특성 경험치 획득량	#+4%
+		trait_promoted_from_the_ranks_xp_gain_factor	#현역 출신 특성 경험치 획득량	#+4%
+		trait_reckless_xp_gain_factor	#무모함 특성 경험치 획득량	#+4%
+		trait_substance_abuser_xp_gain_factor	#약물 남용 특성 경험치 획득량	#+4%
+		trait_war_hero_xp_gain_factor	#전쟁영웅 특성 경험치 획득량	#+4%
+		trait_organizer_xp_gain_factor	#조직자 특성 경험치 획득량	#+4%
+		trait_infantry_leader_xp_gain_factor	#보병 지휘관 특성 경험치 획득량	#+4%
+		trait_skilled_staffer_xp_gain_factor	#숙련된 참모 특성 경험치 획득량	#+4%
+		trait_trickster_xp_gain_factor	#책략가 특성 경험치 획득량	#+4%
+		trait_winter_specialist_xp_gain_factor	#동계전 특기병 특성 경험치 획득량	#+4%
+		trait_engineer_xp_gain_factor	#공학자 특성 경험치 획득량	#+4%
+		trait_panzer_leader_xp_gain_factor	#전차 지휘관 특성 경험치 획득량	#+4%
+		trait_commando_xp_gain_factor	#특공대 특성 경험치 획득량	#+4%
+		trait_desert_fox_xp_gain_factor	#사막의 여우 특성 경험치 획득량	#+4%
+		trait_swamp_fox_xp_gain_factor	#늪지의 여우 특성 경험치 획득량	#+4%
+		trait_mountaineer_xp_gain_factor	#산악병 특성 경험치 획득량	#+4%
+		trait_hill_fighter_xp_gain_factor	#언덕 싸움꾼 특성 경험치 획득량	#+4%
+		trait_jungle_rat_xp_gain_factor	#밀림쥐 특성 경험치 획득량	#+4%
+		trait_ranger_xp_gain_factor	#레인저 특성 경험치 획득량	#+4%
+		trait_urban_assault_specialist_xp_gain_factor	#시가전 특기병 특성 경험치 획득량	#+4%
+		trait_naval_invader_xp_gain_factor	#침략 해군 특성 경험치 획득량	#+4%
+		trait_logistics_wizard_xp_gain_factor	#군수의 마술사 특성 경험치 획득량	#+4%
+		trait_fast_planner_xp_gain_factor	#신속한 계획 수립가 특성 획득	#+4%
+		trait_thorough_planner_xp_gain_factor	#철저한 계획 수립가 특성 경험치 획득량	#+4%
+		trait_unyielding_defender_xp_gain_factor	#포기를 모르는 방어자 특성 경험치 획득량	#+4%
+		trait_aggressive_assaulter_xp_gain_factor	#공격적인 돌격가 특성 경험치 획득량	#+4%
+		trait_offensive_doctrine_xp_gain_factor	#공세적 교리 특성 경험치 획득량	#+4%
+		trait_defensive_doctrine_xp_gain_factor	#방어적 교리 특성 경험치 획득량	#+4%
+		trait_organisational_leader_xp_gain_factor	#조직 제일주의 지휘관 특성 경험치 획득량	#+4%
+		trait_inspirational_leader_xp_gain_factor	#영감을 주는 지휘관 특성 경험치 획득량	#+4%
+		trait_expert_delegator_xp_gain_factor	#위임 전문가 특성 경험치 획득량	#+4%
+		trait_panzer_expert_xp_gain_factor	#전차 전문가 특성 경험치 획득량	#+4%
+		trait_combined_arms_expert_xp_gain_factor	#제병협동 전문가 특성 경험치 획득량	#+4%
+		trait_cavalry_expert_xp_gain_factor	#기병 전문가 특성 경험치 획득량	#+4%
+		trait_fortress_buster_xp_gain_factor	#요새 파괴자 특성 경험치 획득량	#+4%
+		trait_scavenger_xp_gain_factor	#노획꾼 특성 경험치 획득량	#+4%
+		trait_infantry_expert_xp_gain_factor	#보병 전문가 특성 경험치 획득량	#+4%
+		trait_ambusher_xp_gain_factor	#매복가 특성 경험치 획득량	#+4%
+		trait_invader_ii_xp_gain_factor	#침략자 특성 경험치 획득량	#+4%
+		trait_naval_liason_xp_gain_factor	#해군 연락장교 특성 경험치 획득량	#+4%
+		trait_skirmisher_xp_gain_factor	#척후병 특성 경험치 획득량	#+4%
+		trait_paratrooper_xp_gain_factor	#공수부대 특성 경험치 획득량	#+4%
+		trait_camouflage_expert_xp_gain_factor	#위장 전문가 특성 경험치 획득량	#+4%
+		trait_expert_improviser_xp_gain_factor	#즉흥 전술 전문가 특성 경험치 획득량	#+4%
+		trait_guerilla_fighter_xp_gain_factor	#게릴라 투사 특성 경험치 획득량	#+4%
+		trait_adaptable_xp_gain_factor	#적응가 특성 경험치 획득량	#+4%
+		trait_winter_expert_xp_gain_factor	#동계전 전문가 특성 경험치 획득량	#+4%
+		trait_substance_addict_xp_gain_factor	#약물 중독 특성 경험치 획득량	#+4%
+		trait_recently_promoted_xp_gain_factor	#최근 진급 특성 경험치 획득량	#+4%
+		trait_demoted_xp_gain_factor	#강등됨 특성 경험치 획득량	#+4%
+		trait_motivated_xp_gain_factor	#동기부여 특성 경험치 획득량	#+4%
+		trait_reassigned_xp_gain_factor	#재배치됨 특성 경험치 획득량	#+4%
+		trait_hidden_sympathies_xp_gain_factor	#숨은 동조자 특성 경험치 획득량	#+4%
+		trait_disgruntled_xp_gain_factor	#언짢음 특성 경험치 획득량	#+4%
+		trait_sick_xp_gain_factor	#아픔 특성 경험치 획득량	#+4%
+		trait_wounded_xp_gain_factor	#부상당함 특성 경험치 획득량	#+4%
 		
+		#### 해군 트레잇
 		trait_old_guard_navy_xp_gain_factor	#보수파 (해군) 특성 경험치 획득량	#+4%
 		trait_navy_career_officer_xp_gain_factor	#직업장교 (해군) 특성 경험치 획득량	#+4%
 		trait_navy_media_personality_xp_gain_factor	#미디어 친화적 (해군) 특성 경험치 획득량	#+4%
@@ -2525,6 +2599,74 @@
 		trait_torpedo_bomber_xp_gain_factor	#뇌격기 전문가 특성 경험치 획득량	#+4%
 		trait_fly_swatter_xp_gain_factor	#파리채 특성 경험치 획득량	#+4%
 
+		#### 첩보 트레잇
+		trait_operative_double_agent_xp_gain_factor	#이중간첩 공작원 특성 경험치 획득량	#+4%
+		trait_operative_safe_cracker_xp_gain_factor	#금고 털이 공작원 특성 경험치 획득량	#+4%
+		trait_operative_seducer_xp_gain_factor	#유혹가 공작원 특성 경험치 획득량"	#+4%
+		trait_operative_tough_xp_gain_factor	#불굴 공작원 특성 경험치 획득량	#+4%
+		trait_operative_commando_xp_gain_factor	#특공대 공작원 특성 경험치 획득량	#+4%
+		trait_operative_demolition_expert_xp_gain_factor	#폭파 전문가 공작원 특성 경험치 획득량	#+4%
+		trait_operative_escape_artist_xp_gain_factor	#탈옥의 명수 공작원 특성 경험치 획득량	#+4%
+		trait_operative_infiltrator_xp_gain_factor	#잠입가 공작원 특성 경험치 획득량	#+4%
+		trait_operative_linguist_xp_gain_factor	#언어학자 공작원 특성 경험치 획득량	#+4%
+		trait_operative_master_interrogator_xp_gain_factor	#심문의 대가 공작원 특성 경험치 획득량	#+4%
+		trait_operative_natural_orator_xp_gain_factor	#타고난 웅변가 공작원 특성 경험치 획득량	#+4%
+		trait_operative_well_groomed_xp_gain_factor	#멋쟁이 공작원 특성 경험치 획득량	#+4%
+
+		#### 해당 모디파이어는 바닐라에서 특수 트레잇으로 쓰이는 모디파이어를 모아놓은 일람이니 본 모드에서는 사용할 일이 없도록 할것:
+		trait_BUL_ff_sympathizer_xp_gain_factor_xp_gain_factor
+		trait_BUL_tsar_loyalist_xp_gain_factor
+		trait_BUL_zveno_member_xp_gain_factor
+		trait_GRE_fascist_sympathizer_xp_gain_factor
+		trait_GRE_marxist_acolyte_xp_gain_factor
+		trait_GRE_stauch_monarchist_xp_gain_factor
+		trait_GRE_venezelist_loyalist_xp_gain_factor
+		trait_HUN_fascist_sympathies_xp_gain_factor
+		trait_HUN_vitez_xp_gain_factor
+		trait_JAP_kodoha_sympathizer_xp_gain_factor
+		trait_SOV_bukharinist_xp_gain_factor
+		trait_SOV_cowed_by_stalin_army_xp_gain_factor
+		trait_SOV_cowed_by_stalin_navy_xp_gain_factor
+		trait_SOV_determined_xp_gain_factor
+		trait_SOV_foreign_military_advisor_xp_gain_factor
+		trait_SOV_monarchist_sympathizer_xp_gain_factor
+		trait_SOV_stalinist_xp_gain_factor
+		trait_SOV_trotskyist_xp_gain_factor
+		trait_SPA_carlist_loyalties_xp_gain_factor
+		trait_SPA_falangist_loyalties_xp_gain_factor
+		trait_SPA_nationalist_sympathies_xp_gain_factor
+		trait_SPR_anti_stalinist_loyalties_xp_gain_factor
+		trait_SPR_republican_loyalties_xp_gain_factor
+		trait_SPR_stalinist_loyalties_xp_gain_factor
+		trait_TUR_kemalist_champion_xp_gain_factor
+		trait_BALTIC_ex_russian_xp_gain_factor
+		trait_CHI_dubious_loyalty_xp_gain_factor
+		trait_ascari_officer_xp_gain_factor
+		trait_ETH_hero_of_ethiopia_xp_gain_factor
+		trait_IRQ_golden_square_member_xp_gain_factor
+		trait_JAP_IJA_loyalist_xp_gain_factor
+		trait_JAP_communist_sympathizer_xp_gain_factor
+		trait_JAP_government_supporter_xp_gain_factor
+		trait_JAP_kamikaze_proponent_xp_gain_factor
+		trait_JAP_royal_lineage_xp_gain_factor
+		trait_JAP_samurai_lineage_xp_gain_factor
+		trait_JAP_tohokai_sympathies_xp_gain_factor
+		trait_POL_sanation_left_leader_xp_gain_factor
+		trait_POL_sanation_right_leader_xp_gain_factor
+		trait_PRC_survivor_of_the_long_march_xp_gain_factor
+		trait_SIC_dubious_loyalty_xp_gain_factor
+		trait_SWE_disillusioned_with_the_government_xp_gain_factor
+		trait_SWE_promoted_away_from_power_xp_gain_factor
+		trait_SWE_wounded_in_protests_xp_gain_factor
+		trait_XSM_dubious_loyalty_xp_gain_factor
+		trait_YUN_dubious_loyalty_xp_gain_factor
+		trait_bearer_of_artillery_xp_gain_factor
+		trait_inspirational_bagpiper_xp_gain_factor
+		trait_jaeger_xp_gain_factor
+		trait_loyalty_to_britain_xp_gain_factor
+		trait_loyalty_to_india_xp_gain_factor
+		trait_loyalty_to_pakistan_xp_gain_factor
+		trait_peasant_sympathiser_xp_gain_factor
 
 	### <Operation>_risk
 		#### category: COUNTRY Modifiers
@@ -2576,45 +2718,45 @@
 	### <Technology>_cost_factor
 		#### category: COUNTRY Modifiers
 
-		cat_air_bombs_cost_factor	# 비용	#
-		cat_air_engine_cost_factor	# 비용	#
-		cat_air_guns_cost_factor	# 비용	#
-		cat_anti_air_cost_factor	# 비용	#
-		cat_anti_tank_cost_factor	# 비용	#
-		cat_armored_cars_cost_factor	# 비용	#
-		cat_base_strike_cost_factor	# 비용	#
-		cat_battlefield_support_cost_factor	# 비용	#
-		cat_deep_battle_cost_factor	# 비용	#	#tt
-		cat_fleet_in_being_cost_factor	# 비용	#
-		cat_fortification_cost_factor	# 비용	#
-		cat_grand_battle_plan_cost_factor	# 비용	#
-		cat_heavy_armor_cost_factor	# 비용	#
-		cat_heavy_fighter_cost_factor	# 비용	#
-		cat_light_armor_cost_factor	# 비용	#
-		cat_marines_doctrine_cost_factor	# 비용	#
-		cat_maritime_patrol_cost_factor	# 비용	#
-		cat_mass_assault_cost_factor	# 비용	#
-		cat_mass_mobilization_cost_factor	# 비용	#	#tt
-		cat_mechanized_equipment_cost_factor	# 비용	#
-		cat_medium_armor_cost_factor	# 비용	#
-		cat_mobile_warfare_cost_factor	# 비용	#
-		cat_mountaineers_doctrine_cost_factor	# 비용	#
-		cat_operational_integrity_cost_factor	# 비용	#
-		cat_paratroopers_doctrine_cost_factor	# 비용	#
-		cat_production_cost_factor	# 비용	#
-		cat_rangers_doctrine_cost_factor	# 비용	#
-		cat_scout_plane_cost_factor	# 비용	#
-		cat_ship_heavy_battery_cost_factor	# 비용	#
-		cat_ship_light_battery_cost_factor	# 비용	#
-		cat_ship_medium_battery_cost_factor	# 비용	#
-		cat_special_forces_generic_cost_factor	# 비용	#
-		cat_strategic_bomber_cost_factor	# 비용	#
-		cat_strategic_destruction_cost_factor	# 비용	#
-		cat_superior_firepower_cost_factor	# 비용	#
-		cat_synth_oil_cost_factor	# 비용	#
-		cat_synth_rubber_cost_factor	# 비용	#
-		cat_torpedoes_cost_factor	# 비용	#
-		cat_trade_interdiction_cost_factor	# 비용	#
+		cat_air_bombs_cost_factor	#항공 폭탄 연구 비용	#-2%	#X
+		cat_air_engine_cost_factor	#항공기 엔진 연구 비용	#-2%	#X
+		cat_air_guns_cost_factor	#항공기 화기 연구 비용	#-2%	#X
+		cat_anti_air_cost_factor	#대공 연구 비용	#-2%	#X
+		cat_anti_tank_cost_factor	#대전차 연구 비용	#-2%	#X
+		cat_armored_cars_cost_factor	#장갑차 연구 비용	#-2%	#X
+		cat_base_strike_cost_factor	#기지 타격 교리 비용	#-2%
+		cat_battlefield_support_cost_factor	#전장 지원 교리 비용	#-2%
+		cat_deep_battle_cost_factor	#종심 전투 교리 비용	#-2%	#tt
+		cat_fleet_in_being_cost_factor	#현존 함대 교리 비용	#-2%
+		cat_fortification_cost_factor	#요새화 공학 연구 비용	#-2%	#X
+		cat_grand_battle_plan_cost_factor	#대전략 교리 비용	#-2%
+		cat_heavy_armor_cost_factor	#중전차 모델 연구 비용	#-2%	#X
+		cat_heavy_fighter_cost_factor	#중전투기 모델 연구 비용	#-2%	#X
+		cat_light_armor_cost_factor	#경전차 모델 연구 비용	#-2%	#X
+		cat_marines_doctrine_cost_factor	#해병 교리 비용	#-2%	#X
+		cat_maritime_patrol_cost_factor	#해상 초계기 모델 연구 비용	#-2%	#X
+		cat_mass_assault_cost_factor	#대규모 돌격 교리 비용	#-2%
+		cat_mass_mobilization_cost_factor	#대규모 동원 교리 비용	#-2%	#tt
+		cat_mechanized_equipment_cost_factor	#기계화 모델 연구 비용	#-2%	#X
+		cat_medium_armor_cost_factor	#중형전차 모델 비용	#-2%	#X
+		cat_mobile_warfare_cost_factor	#기동전 교리 비용	#-2%
+		cat_mountaineers_doctrine_cost_factor	#산악병 교리 비용	#-2%	#X
+		cat_operational_integrity_cost_factor	#작전상의 무결성 교리 비용	#-2%
+		cat_paratroopers_doctrine_cost_factor	#공수부대 교리 비용	#-2%	#X
+		cat_production_cost_factor	#생산 연구 비용	#-2%	#X
+		cat_rangers_doctrine_cost_factor	#레인저 교리 비용	#-2%	#X
+		cat_scout_plane_cost_factor	#정찰기 모델 연구 비용	#-2%	#X
+		cat_ship_heavy_battery_cost_factor	#중함포 연구 비용	#-2%	#X
+		cat_ship_light_battery_cost_factor	#경함포 연구 비용	#-2%	#X
+		cat_ship_medium_battery_cost_factor	#중형함포 연구 비용	#-2%	#X
+		cat_special_forces_generic_cost_factor	#특수부대 비용	#-2%	#X
+		cat_strategic_bomber_cost_factor	#전략폭격기 모델 연구 비용	#-2%	#X
+		cat_strategic_destruction_cost_factor	#전략적 파괴 교리 비용	#-2%
+		cat_superior_firepower_cost_factor	#화력 우세 교리 비용	#-2%
+		cat_synth_oil_cost_factor	#합성 석유 연구 비용	#-2%	#X
+		cat_synth_rubber_cost_factor	#합성 고무 연구 비용	#-2%	#X
+		cat_torpedoes_cost_factor	#어뢰 연구 비용	#-2%	#X
+		cat_trade_interdiction_cost_factor	#무역 차단 교리 비용	#-2%
 
 	### <SpecialProject>_speed_factor
 		#### category: COUNTRY Modifiers, STATE Modifiers
@@ -2637,7 +2779,6 @@
 		sp_land_stronghold_network_speed_factor	#요새망 연구 속도	#+2%	#tt
 		sp_land_super_heavy_howitzer_speed_factor	#초중곡사포 연구 속도	#+2%	#tt
 		sp_land_super_heavy_railway_gun_speed_factor	#초중열차포 연구 속도	#+2%	#tt
-		sp_naval_aa_cruiser_speed_factor	#현대식 방공순양함 연구 속도	#+2%	#tt
 		sp_naval_aip_engine_speed_factor	#공기 불요 추진 엔진 연구 속도	#+2%	#tt
 		sp_naval_anechoic_tiles_speed_factor	#음향 흡수 타일 연구 속도	#+2%	#tt
 		sp_naval_cruiser_submarine_speed_factor	#순양잠수함 연구 속도	#+2%	#tt
@@ -2663,8 +2804,6 @@
 		sp_nuclear_warheads_speed_factor	#핵탄두 연구 속도	#+2%	#tt
 		sp_rocket_interceptor_speed_factor	#로켓 요격기 연구 속도	#+2%	#X
 		sp_rockets_ballistic_missile_speed_factor	#탄도 미사일 연구 속도	#+2%	#tt
-		sp_rockets_cruise_missile_speed_factor	#순항 미사일 연구 속도	#+2%	#tt
-		sp_rockets_experimental_rockets_speed_factor	#실험적 로켓 연구 속도	#+2%	#tt
 		sp_rockets_flying_bomb_speed_factor	#비행폭탄 연구 속도	#+2%	#tt
 		sp_rockets_ground_to_air_missile_speed_factor	#지대공 미사일 연구 속도	#+2%	#tt
 		sp_rockets_long_range_ballistic_missile_speed_factor	#장거리 탄도 미사일 연구 속도	#+2%	#tt
@@ -2699,61 +2838,61 @@
 	### <CombatTactic>_preferred_weight_factor
 		#### category: COUNTRY Modifiers
 
-		nullCombatTactic_preferred_weight_factor
-		tactic_ambush_preferred_weight_factor
-		tactic_assault_preferred_weight_factor
-		tactic_attacker_hb_attack_preferred_weight_factor
-		tactic_attacker_hb_rush_preferred_weight_factor
-		tactic_attacker_hb_storm_preferred_weight_factor
-		tactic_attacker_sb_hold_preferred_weight_factor
-		tactic_attacker_sb_skillful_defence_preferred_weight_factor
-		tactic_backhand_blow_preferred_weight_factor
-		tactic_banzai_charge_preferred_weight_factor
-		tactic_barrage_preferred_weight_factor
-		tactic_basic_attack_preferred_weight_factor
-		tactic_basic_defend_preferred_weight_factor
-		tactic_blitz_preferred_weight_factor
-		tactic_breakthrough_preferred_weight_factor
-		tactic_cc_attack_preferred_weight_factor
-		tactic_cc_defend_preferred_weight_factor
-		tactic_cc_local_strong_point_preferred_weight_factor
-		tactic_cc_storm_preferred_weight_factor
-		tactic_cc_withdraw_preferred_weight_factor
-		tactic_counterattack_preferred_weight_factor
-		tactic_defender_hb_hold_preferred_weight_factor
-		tactic_defender_hb_skillful_defence_preferred_weight_factor
-		tactic_defender_sb_assault_preferred_weight_factor
-		tactic_defender_sb_reckless_assault_preferred_weight_factor
-		tactic_defender_sb_retake_bridge_preferred_weight_factor
-		tactic_delay_preferred_weight_factor
-		tactic_elastic_defense_preferred_weight_factor
-		tactic_encirclement_preferred_weight_factor
-		tactic_grand_banzai_charge_preferred_weight_factor
-		tactic_guerrilla_tactics_preferred_weight_factor
-		tactic_hold_bridge_preferred_weight_factor
-		tactic_human_wave_tactics_preferred_weight_factor
-		tactic_infantry_charge_preferred_weight_factor
-		tactic_masterful_blitz_preferred_weight_factor
-		tactic_overwhelming_fire_preferred_weight_factor
-		tactic_planned_attack_preferred_weight_factor
-		tactic_relentless_assault_preferred_weight_factor
-		tactic_seize_bridge_preferred_weight_factor
-		tactic_sf_ambush_preferred_weight_factor
-		tactic_sf_armor_supported_assault_preferred_weight_factor
-		tactic_sf_barrage_preferred_weight_factor
-		tactic_sf_defense_preferred_weight_factor
-		tactic_sf_fortify_preferred_weight_factor
-		tactic_sf_mouse_holing_preferred_weight_factor
-		tactic_sf_storm_preferred_weight_factor
-		tactic_shock_preferred_weight_factor
-		tactic_tactical_withdrawal_preferred_weight_factor
-		tactic_tw_attack_preferred_weight_factor
-		tactic_tw_chase_preferred_weight_factor
-		tactic_tw_defend_preferred_weight_factor
-		tactic_tw_evade_preferred_weight_factor
-		tactic_tw_intercept_preferred_weight_factor
-		tactic_unexpected_thrust_preferred_weight_factor
-		tactic_urban_defense_preferred_weight_factor
+		nullCombatTactic_preferred_weight_factor	#선호 전술이 없을 경우 아무 전술도 발동되지 않을 확률이 높아짐	#+4%	#X
+		tactic_ambush_preferred_weight_factor	#매복 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_assault_preferred_weight_factor	#돌격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_attacker_hb_attack_preferred_weight_factor	#공격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_attacker_hb_rush_preferred_weight_factor	#교량 돌진 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_attacker_hb_storm_preferred_weight_factor	#교량 기습 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_attacker_sb_hold_preferred_weight_factor	#교량 사수 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_attacker_sb_skillful_defence_preferred_weight_factor	#교량 방어 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_backhand_blow_preferred_weight_factor	#유인 후 역습 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_banzai_charge_preferred_weight_factor	#반자이 돌격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_barrage_preferred_weight_factor	#제압 사격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%
+		tactic_basic_attack_preferred_weight_factor	#공격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_basic_defend_preferred_weight_factor	#방어 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_blitz_preferred_weight_factor	#전격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_breakthrough_preferred_weight_factor	#돌파 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%
+		tactic_cc_attack_preferred_weight_factor	#백병전 공격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_cc_defend_preferred_weight_factor	#백병전 방어 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_cc_local_strong_point_preferred_weight_factor	#지역 거점 백병전 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_cc_storm_preferred_weight_factor	#백병전 기습 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_cc_withdraw_preferred_weight_factor	#백병전 후퇴 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_counterattack_preferred_weight_factor	#반격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_defender_hb_hold_preferred_weight_factor	#교량 사수 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_defender_hb_skillful_defence_preferred_weight_factor	#교량 방어 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_defender_sb_assault_preferred_weight_factor	#교량 공격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_defender_sb_reckless_assault_preferred_weight_factor	#무모한 돌격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_defender_sb_retake_bridge_preferred_weight_factor	#교량 탈환 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_delay_preferred_weight_factor	#지연 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%
+		tactic_elastic_defense_preferred_weight_factor	#탄력적 방어 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%
+		tactic_encirclement_preferred_weight_factor	#포위 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_grand_banzai_charge_preferred_weight_factor	#대반자이 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_guerrilla_tactics_preferred_weight_factor	#게릴라 전술 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_hold_bridge_preferred_weight_factor	#교량 사수 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_human_wave_tactics_preferred_weight_factor	#대규모 돌격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%
+		tactic_infantry_charge_preferred_weight_factor	#침투 공격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%
+		tactic_masterful_blitz_preferred_weight_factor	#전격전의 대가 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_overwhelming_fire_preferred_weight_factor	#압도적 화력 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%
+		tactic_planned_attack_preferred_weight_factor	#잘 계획된 공격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%
+		tactic_relentless_assault_preferred_weight_factor	#가차없는 공격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%
+		tactic_seize_bridge_preferred_weight_factor	#교량 점거 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%
+		tactic_sf_ambush_preferred_weight_factor	#도심 매복 전슐 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_sf_armor_supported_assault_preferred_weight_factor	#기갑 지원 시가전 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_sf_barrage_preferred_weight_factor	#시가지 포격 진압 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_sf_defense_preferred_weight_factor	#도시 방어 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_sf_fortify_preferred_weight_factor	#요새화된 방어 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_sf_mouse_holing_preferred_weight_factor	#쥐구멍 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_sf_storm_preferred_weight_factor	#시가전 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_shock_preferred_weight_factor	#충격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_tactical_withdrawal_preferred_weight_factor	#전술적 후퇴 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%
+		tactic_tw_attack_preferred_weight_factor	#전술적 후퇴 공격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_tw_chase_preferred_weight_factor	#추격 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_tw_defend_preferred_weight_factor	#후퇴 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_tw_evade_preferred_weight_factor	#회피 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_tw_intercept_preferred_weight_factor	#차단 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
+		tactic_unexpected_thrust_preferred_weight_factor	#예상치 못한 진군 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%
+		tactic_urban_defense_preferred_weight_factor	#도시 방어 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐	#+4%	#X
 
 	### <ModifierStat>_factor
 		#### category: COUNTRY Modifiers, STATE Modifiers
@@ -2952,30 +3091,30 @@
 		state_supply_node_max_level_terrain_limit
 
 		# 건물+자연 환경
-		state_bunker_desert_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_bunker_forest_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_bunker_hills_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_bunker_jungle_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_bunker_marsh_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_bunker_mountain_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_bunker_plains_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_bunker_urban_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_coastal_bunker_desert_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_coastal_bunker_forest_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_coastal_bunker_hills_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_coastal_bunker_jungle_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_coastal_bunker_marsh_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_coastal_bunker_mountain_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_coastal_bunker_plains_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_coastal_bunker_urban_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_naval_base_desert_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_naval_base_forest_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_naval_base_hills_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_naval_base_jungle_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_naval_base_marsh_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_naval_base_mountain_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_naval_base_plains_max_level_terrain_limit	#최대 레벨	#+0F	#X
-		state_naval_base_urban_max_level_terrain_limit	#최대 레벨	#+0F	#X
+		state_bunker_desert_max_level_terrain_limit	#사막에서의 최대 요새 레벨	#+0F
+		state_bunker_forest_max_level_terrain_limit	#숲에서의 최대 요새 레벨	#+0F
+		state_bunker_hills_max_level_terrain_limit	#언덕에서의 최대 요새 레벨	#+0F
+		state_bunker_jungle_max_level_terrain_limit	#밀림에서의 최대 요새 레벨	#+0F
+		state_bunker_marsh_max_level_terrain_limit	#습지에서의 최대 요새 레벨	#+0F
+		state_bunker_mountain_max_level_terrain_limit	#산악에서의 최대 요새 레벨	#+0F
+		state_bunker_plains_max_level_terrain_limit	#평야에서의 최대 요새 레벨	#+0F
+		state_bunker_urban_max_level_terrain_limit	#도시에서의 최대 요새 레벨	#+0F
+		state_coastal_bunker_desert_max_level_terrain_limit	#사막에서의 최대 해안 요새 레벨	#+0F
+		state_coastal_bunker_forest_max_level_terrain_limit	#숲에서의 최대 해안 요새 레벨	#+0F
+		state_coastal_bunker_hills_max_level_terrain_limit	#언덕에서의 최대 해안 요새 레벨	#+0F
+		state_coastal_bunker_jungle_max_level_terrain_limit	#밀림에서의 최대 해안 요새 레벨	#+0F
+		state_coastal_bunker_marsh_max_level_terrain_limit	#습지에서의 최대 해안 요새 레벨	#+0F
+		state_coastal_bunker_mountain_max_level_terrain_limit	#산악에서의 최대 해안 요새 레벨	#+0F
+		state_coastal_bunker_plains_max_level_terrain_limit	#평야에서의 최대 해안 요새 레벨	#+0F
+		state_coastal_bunker_urban_max_level_terrain_limit	#도시에서의 최대 해안 요새 레벨	#+0F
+		state_naval_base_desert_max_level_terrain_limit	#사막에서의 최대 해군기지 레벨	#+0F
+		state_naval_base_forest_max_level_terrain_limit	#숲에서의 최대 해군기지 레벨	#+0F
+		state_naval_base_hills_max_level_terrain_limit	#언덕에서의 최대 해군기지 레벨	#+0F
+		state_naval_base_jungle_max_level_terrain_limit	#밀림에서의 최대 해군기지 레벨	#+0F
+		state_naval_base_marsh_max_level_terrain_limit	#습지에서의 최대 해군기지 레벨	#+0F
+		state_naval_base_mountain_max_level_terrain_limit	#산악에서의 최대 해군기지 레벨	#+0F
+		state_naval_base_plains_max_level_terrain_limit	#평야에서의 최대 해군기지 레벨	#+0F
+		state_naval_base_urban_max_level_terrain_limit	#도시에서의 최대 해군기지 레벨	#+0F
 
 		#### 해당 모디파이어는 바닐라에서 해당 건물이 max_level_terrain_limit = 1이거나 해당 건물이 건설 불가능, 프로빈스 단위 건축 가능한 건물이 아니거나, terrain이 일반적인 땅이 아니라서 사용할 수 없는 모디파이어를 모아놓은 일람이니 절대 쓸 일이 없도록 할 것
 		state_air_base_lakes_max_level_terrain_limit
@@ -3741,9 +3880,225 @@
 		autocracy_drift	#매일 전제주의 지지도	#+2F	#MOD
 
 	### module_<EquipmentModule>_design_cost_factor
-		#### category: COUNTRY Modifiers
-		#### 해당 모디파이어 사용 비추천 ####
-		#### 해당 모디파이어는 별도로 밑에 정리해놓았으니 참고할 것 ####
+		#### category: NAVAL Modifiers, country, ARMY Modifiers, COUNTRY Modifiers
+		#### 주의사항: 해당 모디파이어가 작동하는지 확인하는 법은 설계창에 들어가면 되지만
+		xp 소모량이 애초에 크지 않아서 0.25,0.33,0.50,0.66,0.75,-0.25,-0.33,-0.50,-0.66,-0.75 값 이외에는 실제 반영됬는지 확인이 잘 안되니 참고
+
+		module_NOR_rikstanken_turret_design_cost_factor	#	#-4%	#X
+		module_NOR_tank_rikstanken_armor_design_cost_factor	#	#-4%	#X
+		module_additional_machine_guns_design_cost_factor	#	#-4%	#X
+		module_advanced_flamethrower_design_cost_factor	#	#-4%	#X
+		module_air_air_radar_1_design_cost_factor	#	#-4%	#X
+		module_air_air_radar_2_design_cost_factor	#	#-4%	#X
+		module_air_ground_radar_1_design_cost_factor	#	#-4%	#X
+		module_air_ground_radar_2_design_cost_factor	#	#-4%	#X
+		module_aircraft_cannon_1_1x_design_cost_factor	#	#-4%	#X
+		module_aircraft_cannon_1_2x_design_cost_factor	#	#-4%	#X
+		module_aircraft_cannon_2_1x_design_cost_factor	#	#-4%	#X
+		module_aircraft_cannon_2_2x_design_cost_factor	#	#-4%	#X
+		module_airdropped_mines_design_cost_factor	#	#-4%	#X
+		module_amphibious_drive_design_cost_factor	#	#-4%	#X
+		module_armor_piercing_bomb_locks_design_cost_factor	#	#-4%	#X
+		module_armor_plate_large_design_cost_factor	#	#-4%	#X
+		module_armor_plate_medium_design_cost_factor	#	#-4%	#X
+		module_armor_plate_small_design_cost_factor	#	#-4%	#X
+		module_armor_skirts_design_cost_factor	#	#-4%	#X
+		module_auto_loader_design_cost_factor	#	#-4%	#X
+		module_big_ship_deck_space_design_cost_factor	#	#-4%	#X
+		module_bomb_locks_design_cost_factor	#	#-4%	#X
+		module_bomb_sights_1_design_cost_factor	#	#-4%	#X
+		module_bomb_sights_2_design_cost_factor	#	#-4%	#X
+		module_cannon_defense_turret_design_cost_factor	#	#-4%	#X
+		module_cannon_defense_turret_2x_design_cost_factor	#	#-4%	#X
+		module_carrier_ship_engine_1_design_cost_factor	#	#-4%	#X
+		module_carrier_ship_engine_2_design_cost_factor	#	#-4%	#X
+		module_carrier_ship_engine_3_design_cost_factor	#	#-4%	#X
+		module_carrier_ship_engine_4_design_cost_factor	#	#-4%	#X
+		module_carrier_ship_nuclear_engine_1_design_cost_factor	#	#-4%	#X
+		module_cruiser_ship_engine_1_design_cost_factor	#	#-4%	#X
+		module_cruiser_ship_engine_2_design_cost_factor	#	#-4%	#X
+		module_cruiser_ship_engine_3_design_cost_factor	#	#-4%	#X
+		module_cruiser_ship_engine_4_design_cost_factor	#	#-4%	#X
+		module_demining_coil_design_cost_factor	#	#-4%	#X
+		module_dive_brakes_small_design_cost_factor	#	#-4%	#X
+		module_dozer_blade_design_cost_factor	#	#-4%	#X
+		module_dp_light_battery_1_design_cost_factor	#	#-4%	#X
+		module_dp_light_battery_2_design_cost_factor	#	#-4%	#X
+		module_dp_light_battery_3_design_cost_factor	#	#-4%	#X
+		module_dp_light_battery_4_design_cost_factor	#	#-4%	#X
+		module_dp_ship_medium_1_design_cost_factor	#	#-4%	#X
+		module_dp_ship_secondaries_1_design_cost_factor	#	#-4%	#X
+		module_dp_ship_secondaries_2_design_cost_factor	#	#-4%	#X
+		module_dp_ship_secondaries_3_design_cost_factor	#	#-4%	#X
+		module_dp_ship_secondaries_4_design_cost_factor	#	#-4%	#X
+		module_drop_tanks_design_cost_factor	#	#-4%	#X
+		module_earthshaker_bomb_release_design_cost_factor	#	#-4%	#X
+		module_easy_maintenance_design_cost_factor	#	#-4%	#X
+		module_engine_1_1x_design_cost_factor	#	#-4%	#X
+		module_engine_1_2x_design_cost_factor	#	#-4%	#X
+		module_engine_1_3x_design_cost_factor	#	#-4%	#X
+		module_engine_1_4x_design_cost_factor	#	#-4%	#X
+		module_engine_1_6x_design_cost_factor	#	#-4%	#X
+		module_engine_2_1x_design_cost_factor	#	#-4%	#X
+		module_engine_2_2x_design_cost_factor	#	#-4%	#X
+		module_engine_2_3x_design_cost_factor	#	#-4%	#X
+		module_engine_2_4x_design_cost_factor	#	#-4%	#X
+		module_engine_2_6x_design_cost_factor	#	#-4%	#X
+		module_engine_3_1x_design_cost_factor	#	#-4%	#X
+		module_engine_3_2x_design_cost_factor	#	#-4%	#X
+		module_engine_3_3x_design_cost_factor	#	#-4%	#X
+		module_engine_3_4x_design_cost_factor	#	#-4%	#X
+		module_engine_3_6x_design_cost_factor	#	#-4%	#X
+		module_engine_4_1x_design_cost_factor	#	#-4%	#X
+		module_engine_4_2x_design_cost_factor	#	#-4%	#X
+		module_engine_4_3x_design_cost_factor	#	#-4%	#X
+		module_engine_4_4x_design_cost_factor	#	#-4%	#X
+		module_engine_4_6x_design_cost_factor	#	#-4%	#X
+		module_expanded_fuel_tank_design_cost_factor	#	#-4%	#X
+		module_extra_ammo_storage_design_cost_factor	#	#-4%	#X
+		module_fixed_explosive_charge_design_cost_factor	#	#-4%	#X
+		module_flamethrower_design_cost_factor	#	#-4%	#X
+		module_floats_design_cost_factor	#	#-4%	#X
+		module_flying_boat_large_design_cost_factor	#	#-4%	#X
+		module_flying_boat_medium_design_cost_factor	#	#-4%	#X
+		module_fuel_tanks_large_design_cost_factor	#	#-4%	#X
+		module_fuel_tanks_medium_design_cost_factor	#	#-4%	#X
+		module_fuel_tanks_small_design_cost_factor	#	#-4%	#X
+		module_guided_anti_ship_missile_design_cost_factor	#	#-4%	#X
+		module_heavy_bomb_locks_design_cost_factor	#	#-4%	#X
+		module_heavy_mg_2x_design_cost_factor	#	#-4%	#X
+		module_heavy_mg_4x_design_cost_factor	#	#-4%	#X
+		module_hmg_defense_turret_design_cost_factor	#	#-4%	#X
+		module_hmg_defense_turret_2x_design_cost_factor	#	#-4%	#X
+		module_improved_rocket_propelled_bombs_design_cost_factor	#	#-4%	#X
+		module_jet_engine_1x_design_cost_factor	#	#-4%	#X
+		module_jet_engine_2x_design_cost_factor	#	#-4%	#X
+		module_jet_engine_3x_design_cost_factor	#	#-4%	#X
+		module_jet_engine_4x_design_cost_factor	#	#-4%	#X
+		module_jet_engine_6x_design_cost_factor	#	#-4%	#X
+		module_jet_engine_axial_1x_design_cost_factor	#	#-4%	#X
+		module_jet_engine_axial_2x_design_cost_factor	#	#-4%	#X
+		module_jet_engine_axial_3x_design_cost_factor	#	#-4%	#X
+		module_jet_engine_axial_4x_design_cost_factor	#	#-4%	#X
+		module_jet_engine_axial_6x_design_cost_factor	#	#-4%	#X
+		module_large_aircraft_cannon_1x_design_cost_factor	#	#-4%	#X
+		module_large_aircraft_cannon_2x_design_cost_factor	#	#-4%	#X
+		module_large_bomb_bay_design_cost_factor	#	#-4%	#X
+		module_lc_aircraft_catapult_design_cost_factor	#	#-4%	#X
+		module_lc_armored_skirts_design_cost_factor	#	#-4%	#X
+		module_lc_assault_gun_design_cost_factor	#	#-4%	#X
+		module_lc_bunker_emplacement_design_cost_factor	#	#-4%	#X
+		module_lc_command_center_design_cost_factor	#	#-4%	#X
+		module_lc_flamethrower_turret_design_cost_factor	#	#-4%	#X
+		module_lc_heavy_anti_air_battery_design_cost_factor	#	#-4%	#X
+		module_lc_heavy_anti_air_platform_design_cost_factor	#	#-4%	#X
+		module_lc_heavy_high_velocity_cannons_design_cost_factor	#	#-4%	#X
+		module_lc_heavy_naval_guns_design_cost_factor	#	#-4%	#X
+		module_lc_helipad_design_cost_factor	#	#-4%	#X
+		module_lc_high_impact_obliterator_cannon_design_cost_factor	#	#-4%	#X
+		module_lc_high_velocity_cannon_turret_design_cost_factor	#	#-4%	#X
+		module_lc_hull_mounted_railway_gun_design_cost_factor	#	#-4%	#X
+		module_lc_internal_ammunition_compartments_design_cost_factor	#	#-4%	#X
+		module_lc_internal_fuel_tanks_design_cost_factor	#	#-4%	#X
+		module_lc_light_anti_air_battery_design_cost_factor	#	#-4%	#X
+		module_lc_medium_cannon_turret_design_cost_factor	#	#-4%	#X
+		module_lc_medium_naval_guns_design_cost_factor	#	#-4%	#X
+		module_lc_obstacle_clearance_gear_design_cost_factor	#	#-4%	#X
+		module_lc_radar_design_cost_factor	#	#-4%	#X
+		module_lc_radio_1_design_cost_factor	#	#-4%	#X
+		module_lc_radio_2_design_cost_factor	#	#-4%	#X
+		module_lc_radio_3_design_cost_factor	#	#-4%	#X
+		module_lc_rocket_launcher_design_cost_factor	#	#-4%	#X
+		module_lc_smoke_generators_design_cost_factor	#	#-4%	#X
+		module_lc_stabilizers_design_cost_factor	#	#-4%	#X
+		module_lc_super_heavy_howitzer_design_cost_factor	#	#-4%	#X
+		module_lc_super_heavy_railway_gun_design_cost_factor	#	#-4%	#X
+		module_lc_wet_ammunition_storage_design_cost_factor	#	#-4%	#X
+		module_light_mg_2x_design_cost_factor	#	#-4%	#X
+		module_light_mg_4x_design_cost_factor	#	#-4%	#X
+		module_lmg_defense_turret_design_cost_factor	#	#-4%	#X
+		module_lmg_defense_turret_2x_design_cost_factor	#	#-4%	#X
+		module_medium_bomb_bay_design_cost_factor	#	#-4%	#X
+		module_non_strategic_materials_large_design_cost_factor	#	#-4%	#X
+		module_non_strategic_materials_medium_design_cost_factor	#	#-4%	#X
+		module_non_strategic_materials_small_design_cost_factor	#	#-4%	#X
+		module_radio_navigation_1_design_cost_factor	#	#-4%	#X
+		module_radio_navigation_2_design_cost_factor	#	#-4%	#X
+		module_recon_camera_design_cost_factor	#	#-4%	#X
+		module_rocket_engine_1_design_cost_factor	#	#-4%	#X
+		module_rocket_engine_2_design_cost_factor	#	#-4%	#X
+		module_rocket_engine_3_design_cost_factor	#	#-4%	#X
+		module_rocket_propelled_bombs_design_cost_factor	#	#-4%	#X
+		module_rocket_rails_design_cost_factor	#	#-4%	#X
+		module_secondary_turret_hmg_design_cost_factor	#	#-4%	#X
+		module_secondary_turret_small_cannon_design_cost_factor	#	#-4%	#X
+		module_self_sealing_fuel_tanks_large_design_cost_factor	#	#-4%	#X
+		module_self_sealing_fuel_tanks_medium_design_cost_factor	#	#-4%	#X
+		module_self_sealing_fuel_tanks_small_design_cost_factor	#	#-4%	#X
+		module_sloped_armor_design_cost_factor	#	#-4%	#X
+		module_small_bomb_bay_design_cost_factor	#	#-4%	#X
+		module_smoke_launchers_design_cost_factor	#	#-4%	#X
+		module_squeezebore_adaptor_design_cost_factor	#	#-4%	#X
+		module_stabilizer_design_cost_factor	#	#-4%	#X
+		module_tank_anti_air_cannon_design_cost_factor	#	#-4%	#X
+		module_tank_anti_air_cannon_2_design_cost_factor	#	#-4%	#X
+		module_tank_anti_air_cannon_3_design_cost_factor	#	#-4%	#X
+		module_tank_auto_cannon_design_cost_factor	#	#-4%	#X
+		module_tank_auto_cannon_2_design_cost_factor	#	#-4%	#X
+		module_tank_bogie_suspension_design_cost_factor	#	#-4%	#X
+		module_tank_buster_1_design_cost_factor	#	#-4%	#X
+		module_tank_buster_2_design_cost_factor	#	#-4%	#X
+		module_tank_cast_armor_design_cost_factor	#	#-4%	#X
+		module_tank_christie_suspension_design_cost_factor	#	#-4%	#X
+		module_tank_close_support_gun_design_cost_factor	#	#-4%	#X
+		module_tank_diesel_engine_design_cost_factor	#	#-4%	#X
+		module_tank_gas_turbine_engine_design_cost_factor	#	#-4%	#X
+		module_tank_gasoline_engine_design_cost_factor	#	#-4%	#X
+		module_tank_half_track_suspension_design_cost_factor	#	#-4%	#X
+		module_tank_heavy_cannon_design_cost_factor	#	#-4%	#X
+		module_tank_heavy_cannon_2_design_cost_factor	#	#-4%	#X
+		module_tank_heavy_cannon_3_design_cost_factor	#	#-4%	#X
+		module_tank_heavy_fixed_superstructure_turret_design_cost_factor	#	#-4%	#X
+		module_tank_heavy_howitzer_design_cost_factor	#	#-4%	#X
+		module_tank_heavy_machine_gun_design_cost_factor	#	#-4%	#X
+		module_tank_heavy_three_man_tank_turret_design_cost_factor	#	#-4%	#X
+		module_tank_heavy_two_man_tank_turret_design_cost_factor	#	#-4%	#X
+		module_tank_high_velocity_cannon_design_cost_factor	#	#-4%	#X
+		module_tank_high_velocity_cannon_2_design_cost_factor	#	#-4%	#X
+		module_tank_high_velocity_cannon_3_design_cost_factor	#	#-4%	#X
+		module_tank_interleaved_suspension_design_cost_factor	#	#-4%	#X
+		module_tank_light_fixed_superstructure_turret_design_cost_factor	#	#-4%	#X
+		module_tank_light_one_man_tank_turret_design_cost_factor	#	#-4%	#X
+		module_tank_light_three_man_tank_turret_design_cost_factor	#	#-4%	#X
+		module_tank_light_two_man_tank_turret_design_cost_factor	#	#-4%	#X
+		module_tank_medium_cannon_design_cost_factor	#	#-4%	#X
+		module_tank_medium_cannon_2_design_cost_factor	#	#-4%	#X
+		module_tank_medium_fixed_superstructure_turret_design_cost_factor	#	#-4%	#X
+		module_tank_medium_howitzer_design_cost_factor	#	#-4%	#X
+		module_tank_medium_howitzer_2_design_cost_factor	#	#-4%	#X
+		module_tank_medium_one_man_tank_turret_design_cost_factor	#	#-4%	#X
+		module_tank_medium_three_man_tank_turret_design_cost_factor	#	#-4%	#X
+		module_tank_medium_two_man_tank_turret_design_cost_factor	#	#-4%	#X
+		module_tank_modern_tank_turret_design_cost_factor	#	#-4%	#X
+		module_tank_petrol_electric_engine_design_cost_factor	#	#-4%	#X
+		module_tank_radio_1_design_cost_factor	#	#-4%	#X
+		module_tank_radio_2_design_cost_factor	#	#-4%	#X
+		module_tank_radio_3_design_cost_factor	#	#-4%	#X
+		module_tank_riveted_armor_design_cost_factor	#	#-4%	#X
+		module_tank_rocket_launcher_design_cost_factor	#	#-4%	#X
+		module_tank_rocket_launcher_2_design_cost_factor	#	#-4%	#X
+		module_tank_small_cannon_design_cost_factor	#	#-4%	#X
+		module_tank_small_cannon_2_design_cost_factor	#	#-4%	#X
+		module_tank_super_heavy_cannon_design_cost_factor	#	#-4%	#X
+		module_tank_super_heavy_four_man_tank_turret_design_cost_factor	#	#-4%	#X
+		module_tank_super_heavy_three_man_tank_turret_design_cost_factor	#	#-4%	#X
+		module_tank_torsion_bar_suspension_design_cost_factor	#	#-4%	#X
+		module_tank_welded_armor_design_cost_factor	#	#-4%	#X
+		module_tank_wheeled_suspension_design_cost_factor	#	#-4%	#X
+		module_torpedo_mounting_design_cost_factor	#	#-4%	#X
+		module_torpedo_mounting_2_design_cost_factor	#	#-4%	#X
+		module_torpedo_mounting_3_design_cost_factor	#	#-4%	#X
+		module_wet_ammo_storage_design_cost_factor	#	#-4%	#X
 
 	### <IdeaGroup>_cost_factor
 		#### category: COUNTRY Modifiers
@@ -4204,8 +4559,8 @@
 		unit_helicopter_recon_design_cost_factor	#헬리콥터 정찰대대 설계 비용	#-4%	#X
 		unit_helicopter_transport_design_cost_factor	#헬리콥터 수송대대 설계 비용	#-4%	#X
 		unit_infantry_design_cost_factor	#보병 설계 비용	#-4%
-		unit_irregular_infantry_design_cost_factor	#비정규 보병 설계 비용	#-4%
-		unit_jungle_pioneers_support_design_cost_factor	#밀림 전투 공병중대 설계 비용	#-4%
+		unit_irregular_infantry_design_cost_factor	#비정규 보병 설계 비용	#-4%	#X
+		unit_jungle_pioneers_support_design_cost_factor	#밀림 전투 공병중대 설계 비용	#-4%	#X
 		unit_land_cruiser_design_cost_factor	#지원 육상순양함 설계 비용	#-4%	#X
 		unit_light_armor_design_cost_factor	#경전차 설계 비용	#-4%
 		unit_light_flame_tank_design_cost_factor	#경화염방사전차중대 설계 비용	#-4%	#X
@@ -4214,18 +4569,18 @@
 		unit_light_tank_destroyer_brigade_design_cost_factor	#경구축전차 설계 비용	#-4%
 		unit_light_tank_recon_design_cost_factor	#기갑수색중대 설계 비용	#-4%
 		unit_logistics_company_design_cost_factor	#군수중대 설계 비용	#-4%
-		unit_long_range_patrol_support_design_cost_factor	#정비중대 설계 비용	#-4%
+		unit_long_range_patrol_support_design_cost_factor	#장거리 정찰중대 설계 비용	#-4%	#X
 		unit_maintenance_company_design_cost_factor	#정비중대 설계 비용	#-4%
 		unit_marine_design_cost_factor	#해병 설계 비용	#-4%
-		unit_marine_commando_design_cost_factor	#해병특공대 설계 비용	#-4%
-		unit_mechanized_design_cost_factor	#기계화보병 설계 비용	#-4%	#tt
+		unit_marine_commando_design_cost_factor	#해병특공대 설계 비용	#-4%	#X
+		unit_mechanized_design_cost_factor	#기계화보병 설계 비용	#-4%	#tt*	(modifier_unit_mechanized_design_cost_factor_tt)
 		unit_medium_armor_design_cost_factor	#중형전차 설계 비용	#-4%
 		unit_medium_flame_tank_design_cost_factor	#중형화염방사전차중대 설계 비용	#-4%	#X
 		unit_medium_sp_anti_air_brigade_design_cost_factor	#중형자주대공포 설계 비용	#-4%
 		unit_medium_sp_artillery_brigade_design_cost_factor	#중형자주포 여단 설계 비용	#-4%
 		unit_medium_tank_destroyer_brigade_design_cost_factor	#중형구축전차 설계 비용	#-4%
 		unit_military_police_design_cost_factor	#헌병대 설계 비용	#-4%
-		unit_militia_design_cost_factor	#민병대 설계 비용	#-4%
+		unit_militia_design_cost_factor	#민병대 설계 비용	#-4%	#X
 		unit_modern_armor_design_cost_factor	#현대식 전차 설계 비용	#-4%
 		unit_modern_sp_anti_air_brigade_design_cost_factor	#현대식 자주대공포 설계 비용	#-4%
 		unit_modern_sp_artillery_brigade_design_cost_factor	#현대식 자주포 설계 비용	#-4%
@@ -4235,13 +4590,13 @@
 		unit_mot_artillery_brigade_design_cost_factor	#기동포병 설계 비용	#-4%
 		unit_mot_recon_design_cost_factor	#차량화수색중대 설계 비용	#-4%
 		unit_mot_rocket_artillery_brigade_design_cost_factor	#트럭 견인형 로켓포병 설계 비용	#-4%
-		unit_motorized_design_cost_factor	#차량화보병 설계 비용	#-4%	#tt
-		unit_motorized_military_police_design_cost_factor	#차량화 헌병대 설계 비용	#-4%
+		unit_motorized_design_cost_factor	#차량화보병 설계 비용	#-4%	#tt* (modifier_unit_motorized_design_cost_factor_tt)
+		unit_motorized_military_police_design_cost_factor	#차량화 헌병대 설계 비용	#-4%	#X
 		unit_motorized_rocket_brigade_design_cost_factor	#차량화 로켓포병 설계 비용	#-4%
 		unit_mountaineers_design_cost_factor	#산악병 설계 비용	#-4%
 		unit_paratrooper_design_cost_factor	#공수부대 설계 비용	#-4%
-		unit_penal_battalion_design_cost_factor	#형벌 대대 설계 비용	#-4%
-		unit_pioneer_support_design_cost_factor	#전투 공병 설계 비용	#-4%
+		unit_penal_battalion_design_cost_factor	#형벌 대대 설계 비용	#-4%	#X
+		unit_pioneer_support_design_cost_factor	#전투 공병 설계 비용	#-4%	#X
 		unit_railway_gun_design_cost_factor	#열차포 설계 비용	#-4%
 		unit_ranger_battalion_design_cost_factor	#레인저 설계 비용	#-4%
 		unit_rangers_support_design_cost_factor	#정찰 레인저 설계 비용	#-4%
@@ -4250,7 +4605,7 @@
 		unit_rocket_artillery_brigade_design_cost_factor	#로켓포병 설계 비용	#-4%
 		unit_self_propelled_super_heavy_artillery_design_cost_factor	#초중자주포 설계 비용	#-4%	#X
 		unit_signal_company_design_cost_factor	#통신중대 설계 비용	#-4%
-		unit_sturmtruppe_battalion_design_cost_factor	#충격보병 대대 설계 비용	#-4%
+		unit_sturmtruppe_battalion_design_cost_factor	#충격보병 대대 설계 비용	#-4%	#X
 		unit_super_heavy_armor_design_cost_factor	#초중전차 설계 비용	#-4%
 		unit_super_heavy_artillery_design_cost_factor	#초중야포 설계 비용	#-4%	#X
 		unit_super_heavy_railway_gun_design_cost_factor	#초중열차포 설계 비용	#-4%	#X
@@ -4277,7 +4632,7 @@
 		unit_cv_suicide_craft_design_cost_factor	#함재 자살특공기 설계 비용	#-4%	#X
 		unit_explosive_ammo_design_cost_factor	#다단 추진 거포 설계 비용	#-4%	#X
 		unit_fighter_design_cost_factor	#전투기 설계 비용	#-4%	#X
-		unit_guided_missile_design_cost_factor	#유도미사일 설계 비용	#-4%	#X
+		unit_guided_missile_design_cost_factor	#유도미사일 설계 비용	#-4%
 		unit_heavy_fighter_design_cost_factor	#중전투기 설계 비용	#-4%	#X
 		unit_jet_fighter_design_cost_factor	#제트 전투기 설계 비용	#-4%	#X
 		unit_jet_strat_bomber_design_cost_factor	#제트 전략폭격기 설계 비용	#-4%	#X
@@ -4291,7 +4646,7 @@
 		unit_scout_plane_design_cost_factor	#정찰기 설계 비용	#-4%	#X
 		unit_strat_bomber_design_cost_factor	#전략폭격기 설계 비용	#-4%	#X
 		unit_strat_bomber_intercontinental_design_cost_factor	#대륙간 폭격기 설계 비용	#-4%	#X
-		unit_suicide_craft_design_cost_factor	#자살특공기 설계 비용	#-4%
+		unit_suicide_craft_design_cost_factor	#요코스카 MXY7 오카 설계 비용	#-4%
 		unit_tac_bomber_design_cost_factor	#전술폭격기 설계 비용	#-4%	#X
 		unit_transport_plane_design_cost_factor	#수송기 설계 비용	#-4%
 
@@ -4308,8 +4663,6 @@
 		production_cost_bunker_factor	# 건설 비용	#+2%	#X
 		production_cost_coastal_bunker_factor	# 건설 비용	#+2%	#X
 		production_cost_commercial_nuclear_reactor_factor	# 건설 비용	#+2%	#X
-		production_cost_dam_factor	# 건설 비용	#+2%	#X
-		production_cost_dam_mountain_factor	# 건설 비용	#+2%	#X
 		production_cost_dockyard_factor	# 건설 비용	#+2%	#X
 		production_cost_fuel_silo_factor	# 건설 비용	#+2%	#X
 		production_cost_industrial_complex_factor	# 건설 비용	#+2%	#X
@@ -4331,84 +4684,84 @@
 		production_cost_synthetic_refinery_factor	# 건설 비용	#+2%	#X
 
 		#### 해당 모디파이어는 건설 가능 건물이 아니라서 사용할 수 없는 모디파이어이니 절대 사용 할 일이 없도록 할것
-		production_cost_canal_kiel_factor	#킬 운하 갑문 건설 비용	#
-		production_cost_canal_panama_factor	#파나마 운하 갑문 건설 비용	#
-		production_cost_landmark_berlin_reichstag_factor	#라이히스탁 건설 비용	#
-		production_cost_landmark_berlin_volkshalle_factor	#국민대회당 건설 비용	#
-		production_cost_landmark_big_ben_factor	#빅 벤 건설 비용	#
-		production_cost_landmark_colosseum_factor	#콜로세움 건설 비용	#
-		production_cost_landmark_cristo_redentor_factor	#구세주 그리스도상 건설 비용	#
-		production_cost_landmark_eiffel_tower_factor	#에펠탑 건설 비용	#
-		production_cost_landmark_forbidden_city_factor	#자금성 건설 비용	#
-		production_cost_landmark_great_wall_section_factor	#만리장성 건설 비용	#
-		production_cost_landmark_hagia_sophia_factor	#아야 소피아 건설 비용	#
-		production_cost_landmark_hakko_ichiu_factor	#팔굉의 기주 건설 비용	#
-		production_cost_landmark_hofburg_palace_factor	#호프부르크 궁전 건설 비용	#
-		production_cost_landmark_kremlin_factor	#크렘린 건설 비용	#
-		production_cost_landmark_nanjing_presidential_palace_factor	#난징 총통부 건설 비용	#
-		production_cost_landmark_nanjing_presidential_palace_gen_factor	#난징 총통부 건설 비용	#
-		production_cost_landmark_nanjing_presidential_palace_prc_factor	#난징 총통부 건설 비용	#
-		production_cost_landmark_national_diet_factor	#국회의사당 건설 비용	#
-		production_cost_landmark_sadabad_complex_factor	#사다바드 단지 건설 비용	#
-		production_cost_landmark_statue_of_liberty_factor	#자유의 여신상 건설 비용	#
-		production_cost_landmark_taj_mahal_factor	#타지마할 건설 비용	#
-		production_cost_landmark_tokyo_imperial_palace_factor	#황궁 건설 비용	#
+		production_cost_canal_kiel_factor
+		production_cost_canal_panama_factor
+		production_cost_dam_factor
+		production_cost_dam_mountain_factor
+		production_cost_landmark_berlin_reichstag_factor
+		production_cost_landmark_berlin_volkshalle_factor
+		production_cost_landmark_big_ben_factor
+		production_cost_landmark_colosseum_factor
+		production_cost_landmark_cristo_redentor_factor
+		production_cost_landmark_eiffel_tower_factor
+		production_cost_landmark_forbidden_city_factor
+		production_cost_landmark_great_wall_section_factor
+		production_cost_landmark_hagia_sophia_factor
+		production_cost_landmark_hakko_ichiu_factor
+		production_cost_landmark_hofburg_palace_factor
+		production_cost_landmark_kremlin_factor
+		production_cost_landmark_nanjing_presidential_palace_factor
+		production_cost_landmark_nanjing_presidential_palace_gen_factor
+		production_cost_landmark_nanjing_presidential_palace_prc_factor
+		production_cost_landmark_national_diet_factor
+		production_cost_landmark_sadabad_complex_factor
+		production_cost_landmark_statue_of_liberty_factor
+		production_cost_landmark_taj_mahal_factor
+		production_cost_landmark_tokyo_imperial_palace_factor
 
 	### repair_speed_<Building>_factor
 		#### category: COUNTRY Modifiers
 		
-		repair_speed_air_base_factor	#공군기지 수리 속도	#	#X
-		repair_speed_air_facility_factor	# 수리 속도	#	#X
-		repair_speed_anti_air_building_factor	# 수리 속도	#	#X
-		repair_speed_arms_factory_factor	#군수공장 수리 속도	#
-		repair_speed_bunker_factor	# 수리 속도	#	#X
-		repair_speed_canal_kiel_factor	#킬 운하 갑문 수리 속도	#
-		repair_speed_canal_panama_factor	#파나마 운하 갑문 수리 속도	#
-		repair_speed_coastal_bunker_factor	#해안 요새 수리 속도	#	#X
-		repair_speed_commercial_nuclear_reactor_factor	# 수리 속도	#	#X
-		repair_speed_dam_factor	# 수리 속도	#	#X
-		repair_speed_dam_mountain_factor	# 수리 속도	#	#X
-		repair_speed_dockyard_factor	# 수리 속도	#	#X
-		repair_speed_fuel_silo_factor	# 수리 속도	#	#X
-		repair_speed_industrial_complex_factor	#민간공장 수리 속도	#
-		repair_speed_infrastructure_factor	#기반시설 수리 속도	#
-		repair_speed_land_facility_factor	# 수리 속도	#	#X
-		repair_speed_landmark_berlin_reichstag_factor	#라이히스탁 수리 속도	#
-		repair_speed_landmark_berlin_volkshalle_factor	#국민대회당 수리 속도	#
-		repair_speed_landmark_big_ben_factor	#빅 벤 수리 속도	#
-		repair_speed_landmark_colosseum_factor	#콜로세움 수리 속도	#
-		repair_speed_landmark_cristo_redentor_factor	#구세주 그리스도상 수리 속도	#
-		repair_speed_landmark_eiffel_tower_factor	#에펠탑 수리 속도	#
-		repair_speed_landmark_forbidden_city_factor	#자금성 수리 속도	#
-		repair_speed_landmark_great_wall_section_factor	#만리장성 수리 속도	#
-		repair_speed_landmark_hagia_sophia_factor	#아야 소피아 수리 속도	#
-		repair_speed_landmark_hakko_ichiu_factor	#팔굉의 기주 수리 속도	#
-		repair_speed_landmark_hofburg_palace_factor	#호프부르크 궁전 수리 속도	#
-		repair_speed_landmark_kremlin_factor	#크렘린 수리 속도	#
-		repair_speed_landmark_nanjing_presidential_palace_factor	#난징 총통부 수리 속도	#
-		repair_speed_landmark_nanjing_presidential_palace_gen_factor	#난징 총통부 수리 속도	#
-		repair_speed_landmark_nanjing_presidential_palace_prc_factor	#난징 총통부 수리 속도	#
-		repair_speed_landmark_national_diet_factor	#국회의사당 수리 속도	#
-		repair_speed_landmark_sadabad_complex_factor	#사다바드 단지 수리 속도	#
-		repair_speed_landmark_statue_of_liberty_factor	#자유의 여신상 수리 속도	#
-		repair_speed_landmark_taj_mahal_factor	#타지마할 수리 속도	#
-		repair_speed_landmark_tokyo_imperial_palace_factor	#황궁 수리 속도	#
-		repair_speed_mega_gun_emplacement_factor	# 수리 속도	#	#X
-		repair_speed_naval_base_factor	# 수리 속도	#	#X
-		repair_speed_naval_facility_factor	# 수리 속도	#	#X
-		repair_speed_naval_headquarters_factor	# 수리 속도	#	#X
-		repair_speed_naval_supply_hub_factor	# 수리 속도	#	#X
-		repair_speed_nuclear_facility_factor	# 수리 속도	#	#X
-		repair_speed_nuclear_reactor_factor	# 수리 속도	#	#X
-		repair_speed_nuclear_reactor_heavy_water_factor	# 수리 속도	#	#X
-		repair_speed_radar_station_factor	# 수리 속도	#	#X
-		repair_speed_rail_way_factor	#철도 수리 속도	#
-		repair_speed_rocket_site_factor	#로켓 발사장 수리 속도	#	#X
-		repair_speed_stronghold_network_factor	# 수리 속도	#	#X
-		repair_speed_supply_node_factor	# 수리 속도	#	#X
-		repair_speed_synthetic_refinery_factor	# 수리 속도	#	#X
-
-		#### 해당 모디파이어는 건설 가능 건물이 아니라서 사용할 수 없는 모디파이어이니 절대 사용 할 일이 없도록 할것
+		repair_speed_air_base_factor	#공군기지 수리 속도	#+4%	#X
+		repair_speed_air_facility_factor	#공기역학 및 항공전자 연구소 수리 속도	#+4%	#X
+		repair_speed_anti_air_building_factor	#대공포 수리 속도	#+4%	#X
+		repair_speed_arms_factory_factor	#군수공장 수리 속도	#+4%
+		repair_speed_bunker_factor	#요새 수리 속도	#+4%	#X
+		repair_speed_canal_kiel_factor	#킬 운하 갑문 수리 속도	#+4%4%	#X
+		repair_speed_canal_panama_factor	#파나마 운하 갑문 수리 속도	#+4%4%	#X
+		repair_speed_coastal_bunker_factor	#해안 요새 수리 속도	#+4%	#X
+		repair_speed_commercial_nuclear_reactor_factor	#민간 원자로 수리 속도	#+4%	#X
+		repair_speed_dam_factor	#댐 수리 속도	#+4%	#X
+		repair_speed_dam_mountain_factor	#댐 수리 속도	#+4%	#X
+		repair_speed_dockyard_factor	#조선소 수리 속도	#+4%	#X
+		repair_speed_fuel_silo_factor	#연료 저장고 수리 속도	#+4%	#X
+		repair_speed_industrial_complex_factor	#민간공장 수리 속도	#+4%
+		repair_speed_infrastructure_factor	#기반시설 수리 속도	#+4%
+		repair_speed_land_facility_factor	#육상전 연구소 수리 속도	#+4%	#X
+		repair_speed_landmark_berlin_reichstag_factor	#라이히스탁 수리 속도	#+4%	#X
+		repair_speed_landmark_berlin_volkshalle_factor	#국민대회당 수리 속도	#+4%	#X
+		repair_speed_landmark_big_ben_factor	#빅 벤 수리 속도	#+4%	#X
+		repair_speed_landmark_colosseum_factor	#콜로세움 수리 속도	#+4%	#X
+		repair_speed_landmark_cristo_redentor_factor	#구세주 그리스도상 수리 속도	#+4%	#X
+		repair_speed_landmark_eiffel_tower_factor	#에펠탑 수리 속도	#+4%	#X
+		repair_speed_landmark_forbidden_city_factor	#자금성 수리 속도	#+4%	#X
+		repair_speed_landmark_great_wall_section_factor	#만리장성 수리 속도	#+4%	#X
+		repair_speed_landmark_hagia_sophia_factor	#아야 소피아 수리 속도	#+4%	#X
+		repair_speed_landmark_hakko_ichiu_factor	#팔굉의 기주 수리 속도	#+4%	#X
+		repair_speed_landmark_hofburg_palace_factor	#호프부르크 궁전 수리 속도	#+4%	#X
+		repair_speed_landmark_kremlin_factor	#크렘린 수리 속도	#+4%	#X
+		repair_speed_landmark_nanjing_presidential_palace_factor	#난징 총통부 수리 속도	#+4%	#X
+		repair_speed_landmark_nanjing_presidential_palace_gen_factor	#난징 총통부 수리 속도	#+4%	#X
+		repair_speed_landmark_nanjing_presidential_palace_prc_factor	#난징 총통부 수리 속도	#+4%	#X
+		repair_speed_landmark_national_diet_factor	#국회의사당 수리 속도	#+4%	#X
+		repair_speed_landmark_sadabad_complex_factor	#사다바드 단지 수리 속도	#+4%	#X
+		repair_speed_landmark_statue_of_liberty_factor	#자유의 여신상 수리 속도	#+4%	#X
+		repair_speed_landmark_taj_mahal_factor	#타지마할 수리 속도	#+4%	#X
+		repair_speed_landmark_tokyo_imperial_palace_factor	#황궁 수리 속도	#+4%	#X
+		repair_speed_mega_gun_emplacement_factor	#다단 추진 거포 수리 속도	#+4%	#X
+		repair_speed_naval_base_factor	#해군기지 수리 속도	#+4%	#X
+		repair_speed_naval_facility_factor	#조선공학 연구소 수리 속도	#+4%	#X
+		repair_speed_naval_headquarters_factor	#해군 사령부 수리 속도	#+4%	#X
+		repair_speed_naval_supply_hub_factor	#해군 보급 중심지 수리 속도	#+4%	#X
+		repair_speed_nuclear_facility_factor	#원자력 연구소 수리 속도	#+4%	#X
+		repair_speed_nuclear_reactor_factor	#원자로 수리 속도	#+4%	#X
+		repair_speed_nuclear_reactor_heavy_water_factor	#중수로 수리 속도	#+4%	#X
+		repair_speed_radar_station_factor	#레이더 기지 수리 속도	#+4%	#X
+		repair_speed_rail_way_factor	#철도 수리 속도	#+4%
+		repair_speed_rocket_site_factor	#로켓 발사장 수리 속도	#+4%	#X
+		repair_speed_stronghold_network_factor	#요새망 수리 속도	#+4%	#X
+		repair_speed_supply_node_factor	#보급 중심지 수리 속도	#+4%	#X
+		repair_speed_synthetic_refinery_factor	#합성 정제소 수리 속도	#+4%	#X
 
 	### temporary_state_resource_<Resource>
 		#### category: STATE Modifiers
@@ -4427,226 +4780,6 @@
 		air_spirit_category_type_cost_factor	#공군 사령부 정신 비용	#-2%	#tt
 		army_spirit_category_type_cost_factor	#육군 사령부 정신 비용	#-2%	#tt
 		navy_spirit_category_type_cost_factor	#해군 사령부 정신 비용	#-2%	#tt
-
-	### (X) module_<EquipmentModule>_design_cost_factor
-		#### 모듈 설계 비용 - 정확한 용도도, 작동법도 모르겠음, 어지간하면 건들지 말것
-		
-		module_NOR_rikstanken_turret_design_cost_factor
-		module_NOR_tank_rikstanken_armor_design_cost_factor
-		module_additional_machine_guns_design_cost_factor
-		module_advanced_flamethrower_design_cost_factor
-		module_air_air_radar_1_design_cost_factor
-		module_air_air_radar_2_design_cost_factor
-		module_air_ground_radar_1_design_cost_factor
-		module_air_ground_radar_2_design_cost_factor
-		module_aircraft_cannon_1_1x_design_cost_factor
-		module_aircraft_cannon_1_2x_design_cost_factor
-		module_aircraft_cannon_2_1x_design_cost_factor
-		module_aircraft_cannon_2_2x_design_cost_factor
-		module_airdropped_mines_design_cost_factor
-		module_amphibious_drive_design_cost_factor
-		module_armor_piercing_bomb_locks_design_cost_factor
-		module_armor_plate_large_design_cost_factor
-		module_armor_plate_medium_design_cost_factor
-		module_armor_plate_small_design_cost_factor
-		module_armor_skirts_design_cost_factor
-		module_auto_loader_design_cost_factor
-		module_big_ship_deck_space_design_cost_factor
-		module_bomb_locks_design_cost_factor
-		module_bomb_sights_1_design_cost_factor
-		module_bomb_sights_2_design_cost_factor
-		module_cannon_defense_turret_design_cost_factor
-		module_cannon_defense_turret_2x_design_cost_factor
-		module_carrier_ship_engine_1_design_cost_factor
-		module_carrier_ship_engine_2_design_cost_factor
-		module_carrier_ship_engine_3_design_cost_factor
-		module_carrier_ship_engine_4_design_cost_factor
-		module_carrier_ship_nuclear_engine_1_design_cost_factor
-		module_cruiser_ship_engine_1_design_cost_factor
-		module_cruiser_ship_engine_2_design_cost_factor
-		module_cruiser_ship_engine_3_design_cost_factor
-		module_cruiser_ship_engine_4_design_cost_factor
-		module_demining_coil_design_cost_factor
-		module_dive_brakes_small_design_cost_factor
-		module_dozer_blade_design_cost_factor
-		module_dp_light_battery_1_design_cost_factor
-		module_dp_light_battery_2_design_cost_factor
-		module_dp_light_battery_3_design_cost_factor
-		module_dp_light_battery_4_design_cost_factor
-		module_dp_ship_medium_1_design_cost_factor
-		module_dp_ship_secondaries_1_design_cost_factor
-		module_dp_ship_secondaries_2_design_cost_factor
-		module_dp_ship_secondaries_3_design_cost_factor
-		module_dp_ship_secondaries_4_design_cost_factor
-		module_drop_tanks_design_cost_factor
-		module_earthshaker_bomb_release_design_cost_factor
-		module_easy_maintenance_design_cost_factor
-		module_engine_1_1x_design_cost_factor
-		module_engine_1_2x_design_cost_factor
-		module_engine_1_3x_design_cost_factor
-		module_engine_1_4x_design_cost_factor
-		module_engine_1_6x_design_cost_factor
-		module_engine_2_1x_design_cost_factor
-		module_engine_2_2x_design_cost_factor
-		module_engine_2_3x_design_cost_factor
-		module_engine_2_4x_design_cost_factor
-		module_engine_2_6x_design_cost_factor
-		module_engine_3_1x_design_cost_factor
-		module_engine_3_2x_design_cost_factor
-		module_engine_3_3x_design_cost_factor
-		module_engine_3_4x_design_cost_factor
-		module_engine_3_6x_design_cost_factor
-		module_engine_4_1x_design_cost_factor
-		module_engine_4_2x_design_cost_factor
-		module_engine_4_3x_design_cost_factor
-		module_engine_4_4x_design_cost_factor
-		module_engine_4_6x_design_cost_factor
-		module_expanded_fuel_tank_design_cost_factor
-		module_extra_ammo_storage_design_cost_factor
-		module_fixed_explosive_charge_design_cost_factor
-		module_flamethrower_design_cost_factor
-		module_floats_design_cost_factor
-		module_flying_boat_large_design_cost_factor
-		module_flying_boat_medium_design_cost_factor
-		module_fuel_tanks_large_design_cost_factor
-		module_fuel_tanks_medium_design_cost_factor
-		module_fuel_tanks_small_design_cost_factor
-		module_guided_anti_ship_missile_design_cost_factor
-		module_heavy_bomb_locks_design_cost_factor
-		module_heavy_mg_2x_design_cost_factor
-		module_heavy_mg_4x_design_cost_factor
-		module_hmg_defense_turret_design_cost_factor
-		module_hmg_defense_turret_2x_design_cost_factor
-		module_improved_rocket_propelled_bombs_design_cost_factor
-		module_jet_engine_1x_design_cost_factor
-		module_jet_engine_2x_design_cost_factor
-		module_jet_engine_3x_design_cost_factor
-		module_jet_engine_4x_design_cost_factor
-		module_jet_engine_6x_design_cost_factor
-		module_jet_engine_axial_1x_design_cost_factor
-		module_jet_engine_axial_2x_design_cost_factor
-		module_jet_engine_axial_3x_design_cost_factor
-		module_jet_engine_axial_4x_design_cost_factor
-		module_jet_engine_axial_6x_design_cost_factor
-		module_large_aircraft_cannon_1x_design_cost_factor
-		module_large_aircraft_cannon_2x_design_cost_factor
-		module_large_bomb_bay_design_cost_factor
-		module_lc_aircraft_catapult_design_cost_factor
-		module_lc_armored_skirts_design_cost_factor
-		module_lc_assault_gun_design_cost_factor
-		module_lc_bunker_emplacement_design_cost_factor
-		module_lc_command_center_design_cost_factor
-		module_lc_flamethrower_turret_design_cost_factor
-		module_lc_heavy_anti_air_battery_design_cost_factor
-		module_lc_heavy_anti_air_platform_design_cost_factor
-		module_lc_heavy_high_velocity_cannons_design_cost_factor
-		module_lc_heavy_naval_guns_design_cost_factor
-		module_lc_helipad_design_cost_factor
-		module_lc_high_impact_obliterator_cannon_design_cost_factor
-		module_lc_high_velocity_cannon_turret_design_cost_factor
-		module_lc_hull_mounted_railway_gun_design_cost_factor
-		module_lc_internal_ammunition_compartments_design_cost_factor
-		module_lc_internal_fuel_tanks_design_cost_factor
-		module_lc_light_anti_air_battery_design_cost_factor
-		module_lc_medium_cannon_turret_design_cost_factor
-		module_lc_medium_naval_guns_design_cost_factor
-		module_lc_obstacle_clearance_gear_design_cost_factor
-		module_lc_radar_design_cost_factor
-		module_lc_radio_1_design_cost_factor
-		module_lc_radio_2_design_cost_factor
-		module_lc_radio_3_design_cost_factor
-		module_lc_rocket_launcher_design_cost_factor
-		module_lc_smoke_generators_design_cost_factor
-		module_lc_stabilizers_design_cost_factor
-		module_lc_super_heavy_howitzer_design_cost_factor
-		module_lc_super_heavy_railway_gun_design_cost_factor
-		module_lc_wet_ammunition_storage_design_cost_factor
-		module_light_mg_2x_design_cost_factor
-		module_light_mg_4x_design_cost_factor
-		module_lmg_defense_turret_design_cost_factor
-		module_lmg_defense_turret_2x_design_cost_factor
-		module_medium_bomb_bay_design_cost_factor
-		module_non_strategic_materials_large_design_cost_factor
-		module_non_strategic_materials_medium_design_cost_factor
-		module_non_strategic_materials_small_design_cost_factor
-		module_radio_navigation_1_design_cost_factor
-		module_radio_navigation_2_design_cost_factor
-		module_recon_camera_design_cost_factor
-		module_rocket_engine_1_design_cost_factor
-		module_rocket_engine_2_design_cost_factor
-		module_rocket_engine_3_design_cost_factor
-		module_rocket_propelled_bombs_design_cost_factor
-		module_rocket_rails_design_cost_factor
-		module_secondary_turret_hmg_design_cost_factor
-		module_secondary_turret_small_cannon_design_cost_factor
-		module_self_sealing_fuel_tanks_large_design_cost_factor
-		module_self_sealing_fuel_tanks_medium_design_cost_factor
-		module_self_sealing_fuel_tanks_small_design_cost_factor
-		module_sloped_armor_design_cost_factor
-		module_small_bomb_bay_design_cost_factor
-		module_smoke_launchers_design_cost_factor
-		module_squeezebore_adaptor_design_cost_factor
-		module_stabilizer_design_cost_factor
-		module_tank_anti_air_cannon_design_cost_factor
-		module_tank_anti_air_cannon_2_design_cost_factor
-		module_tank_anti_air_cannon_3_design_cost_factor
-		module_tank_auto_cannon_design_cost_factor
-		module_tank_auto_cannon_2_design_cost_factor
-		module_tank_bogie_suspension_design_cost_factor
-		module_tank_buster_1_design_cost_factor
-		module_tank_buster_2_design_cost_factor
-		module_tank_cast_armor_design_cost_factor
-		module_tank_christie_suspension_design_cost_factor
-		module_tank_close_support_gun_design_cost_factor
-		module_tank_diesel_engine_design_cost_factor
-		module_tank_gas_turbine_engine_design_cost_factor
-		module_tank_gasoline_engine_design_cost_factor
-		module_tank_half_track_suspension_design_cost_factor
-		module_tank_heavy_cannon_design_cost_factor
-		module_tank_heavy_cannon_2_design_cost_factor
-		module_tank_heavy_cannon_3_design_cost_factor
-		module_tank_heavy_fixed_superstructure_turret_design_cost_factor
-		module_tank_heavy_howitzer_design_cost_factor
-		module_tank_heavy_machine_gun_design_cost_factor
-		module_tank_heavy_three_man_tank_turret_design_cost_factor
-		module_tank_heavy_two_man_tank_turret_design_cost_factor
-		module_tank_high_velocity_cannon_design_cost_factor
-		module_tank_high_velocity_cannon_2_design_cost_factor
-		module_tank_high_velocity_cannon_3_design_cost_factor
-		module_tank_interleaved_suspension_design_cost_factor
-		module_tank_light_fixed_superstructure_turret_design_cost_factor
-		module_tank_light_one_man_tank_turret_design_cost_factor
-		module_tank_light_three_man_tank_turret_design_cost_factor
-		module_tank_light_two_man_tank_turret_design_cost_factor
-		module_tank_medium_cannon_design_cost_factor
-		module_tank_medium_cannon_2_design_cost_factor
-		module_tank_medium_fixed_superstructure_turret_design_cost_factor
-		module_tank_medium_howitzer_design_cost_factor
-		module_tank_medium_howitzer_2_design_cost_factor
-		module_tank_medium_one_man_tank_turret_design_cost_factor
-		module_tank_medium_three_man_tank_turret_design_cost_factor
-		module_tank_medium_two_man_tank_turret_design_cost_factor
-		module_tank_modern_tank_turret_design_cost_factor
-		module_tank_petrol_electric_engine_design_cost_factor
-		module_tank_radio_1_design_cost_factor
-		module_tank_radio_2_design_cost_factor
-		module_tank_radio_3_design_cost_factor
-		module_tank_riveted_armor_design_cost_factor
-		module_tank_rocket_launcher_design_cost_factor
-		module_tank_rocket_launcher_2_design_cost_factor
-		module_tank_small_cannon_design_cost_factor
-		module_tank_small_cannon_2_design_cost_factor
-		module_tank_super_heavy_cannon_design_cost_factor
-		module_tank_super_heavy_four_man_tank_turret_design_cost_factor
-		module_tank_super_heavy_three_man_tank_turret_design_cost_factor
-		module_tank_torsion_bar_suspension_design_cost_factor
-		module_tank_welded_armor_design_cost_factor
-		module_tank_wheeled_suspension_design_cost_factor
-		module_torpedo_mounting_design_cost_factor
-		module_torpedo_mounting_2_design_cost_factor
-		module_torpedo_mounting_3_design_cost_factor
-		module_wet_ammo_storage_design_cost_factor
-
 
 ## Equipment Modifiers
 	### 이용법
@@ -5036,252 +5169,6 @@
 	acclimatization_cold_climate_gain_factor	#추위 적응 획득치	#+2%
 	night_penalty	#야간 패널티	#+2%
 	build_cost_ic	#생산 비용	#+2%
-
-
-## TMP category
-	<Trait>_xp_gain_factor	#-trait-_xp_gain_factor
-
-	trait_BUL_ff_sympathizer_xp_gain_factor_xp_gain_factor
-	trait_BUL_tsar_loyalist_xp_gain_factor
-	trait_BUL_zveno_member_xp_gain_factor
-	trait_GRE_fascist_sympathizer_xp_gain_factor
-	trait_GRE_marxist_acolyte_xp_gain_factor
-	trait_GRE_stauch_monarchist_xp_gain_factor
-	trait_GRE_venezelist_loyalist_xp_gain_factor
-	trait_HUN_fascist_sympathies_xp_gain_factor
-	trait_HUN_vitez_xp_gain_factor
-	trait_JAP_kodoha_sympathizer_xp_gain_factor
-	trait_SOV_bukharinist_xp_gain_factor
-	trait_SOV_cowed_by_stalin_army_xp_gain_factor
-	trait_SOV_cowed_by_stalin_navy_xp_gain_factor
-	trait_SOV_determined_xp_gain_factor
-	trait_SOV_foreign_military_advisor_xp_gain_factor
-	trait_SOV_monarchist_sympathizer_xp_gain_factor
-	trait_SOV_stalinist_xp_gain_factor
-	trait_SOV_trotskyist_xp_gain_factor
-	trait_SPA_carlist_loyalties_xp_gain_factor
-	trait_SPA_falangist_loyalties_xp_gain_factor
-	trait_SPA_nationalist_sympathies_xp_gain_factor
-	trait_SPR_anti_stalinist_loyalties_xp_gain_factor
-	trait_SPR_republican_loyalties_xp_gain_factor
-	trait_SPR_stalinist_loyalties_xp_gain_factor
-	trait_TUR_kemalist_champion_xp_gain_factor
-	trait_BALTIC_ex_russian_xp_gain_factor
-	trait_CHI_dubious_loyalty_xp_gain_factor
-	trait_ascari_officer_xp_gain_factor
-	trait_ETH_hero_of_ethiopia_xp_gain_factor
-	trait_IRQ_golden_square_member_xp_gain_factor
-	trait_JAP_IJA_loyalist_xp_gain_factor
-	trait_JAP_communist_sympathizer_xp_gain_factor
-	trait_JAP_government_supporter_xp_gain_factor
-	trait_JAP_kamikaze_proponent_xp_gain_factor
-	trait_JAP_royal_lineage_xp_gain_factor
-	trait_JAP_samurai_lineage_xp_gain_factor
-	trait_JAP_tohokai_sympathies_xp_gain_factor
-	trait_POL_sanation_left_leader_xp_gain_factor
-	trait_POL_sanation_right_leader_xp_gain_factor
-	trait_PRC_survivor_of_the_long_march_xp_gain_factor
-	trait_SIC_dubious_loyalty_xp_gain_factor
-	trait_SWE_disillusioned_with_the_government_xp_gain_factor
-	trait_SWE_promoted_away_from_power_xp_gain_factor
-	trait_SWE_wounded_in_protests_xp_gain_factor
-	trait_XSM_dubious_loyalty_xp_gain_factor
-	trait_YUN_dubious_loyalty_xp_gain_factor
-	trait_bearer_of_artillery_xp_gain_factor
-	trait_inspirational_bagpiper_xp_gain_factor
-	trait_loyalty_to_britain_xp_gain_factor
-	trait_loyalty_to_india_xp_gain_factor
-	trait_loyalty_to_pakistan_xp_gain_factor
-	trait_peasant_sympathiser_xp_gain_factor
-
-	trait_armor_officer_xp_gain_factor
-	trait_brave_xp_gain_factor
-	trait_brilliant_strategist_xp_gain_factor
-	trait_career_officer_xp_gain_factor
-	trait_cautious_xp_gain_factor
-	trait_cavalry_officer_xp_gain_factor
-	trait_engineer_officer_xp_gain_factor
-	trait_exiled_leader_xp_gain_factor
-	trait_harsh_leader_xp_gain_factor
-	trait_infantry_officer_xp_gain_factor
-	trait_inflexible_strategist_xp_gain_factor
-	trait_irregulars_officer_xp_gain_factor
-	trait_media_personality_xp_gain_factor
-	trait_militias_officer_xp_gain_factor
-	trait_old_guard_xp_gain_factor
-	trait_politically_connected_xp_gain_factor
-	trait_promoted_from_the_ranks_xp_gain_factor
-	trait_reckless_xp_gain_factor
-	trait_substance_abuser_xp_gain_factor
-	trait_jaeger_xp_gain_factor
-	trait_war_hero_xp_gain_factor
-
-	trait_organizer_xp_gain_factor
-	trait_cavalry_leader_xp_gain_factor
-	trait_infantry_leader_xp_gain_factor
-	trait_skilled_staffer_xp_gain_factor
-	trait_trickster_xp_gain_factor
-	trait_winter_specialist_xp_gain_factor
-	trait_engineer_xp_gain_factor
-	trait_panzer_leader_xp_gain_factor
-	trait_commando_xp_gain_factor
-	trait_desert_fox_xp_gain_factor
-	trait_swamp_fox_xp_gain_factor
-	trait_mountaineer_xp_gain_factor
-	trait_hill_fighter_xp_gain_factor
-	trait_jungle_rat_xp_gain_factor
-	trait_ranger_xp_gain_factor
-	trait_urban_assault_specialist_xp_gain_factor
-	trait_naval_invader_xp_gain_factor
-
-	trait_logistics_wizard_xp_gain_factor
-	trait_fast_planner_xp_gain_factor
-	trait_thorough_planner_xp_gain_factor
-	trait_unyielding_defender_xp_gain_factor
-	trait_aggressive_assaulter_xp_gain_factor
-	trait_offensive_doctrine_xp_gain_factor
-	trait_defensive_doctrine_xp_gain_factor
-	trait_organisational_leader_xp_gain_factor
-	trait_inspirational_leader_xp_gain_factor
-	trait_expert_delegator_xp_gain_factor
-
-	trait_panzer_expert_xp_gain_factor
-	trait_combined_arms_expert_xp_gain_factor
-	trait_cavalry_expert_xp_gain_factor
-	trait_fortress_buster_xp_gain_factor
-	trait_scavenger_xp_gain_factor
-	trait_infantry_expert_xp_gain_factor
-	trait_ambusher_xp_gain_factor
-	trait_invader_ii_xp_gain_factor
-	trait_naval_liason_xp_gain_factor
-	trait_skirmisher_xp_gain_factor
-	trait_paratrooper_xp_gain_factor
-	trait_camouflage_expert_xp_gain_factor
-	trait_expert_improviser_xp_gain_factor
-	trait_guerilla_fighter_xp_gain_factor
-	trait_adaptable_xp_gain_factor
-	trait_winter_expert_xp_gain_factor
-
-	trait_substance_addict_xp_gain_factor
-	trait_recently_promoted_xp_gain_factor
-	trait_demoted_xp_gain_factor
-	trait_motivated_xp_gain_factor
-	trait_reassigned_xp_gain_factor
-	trait_hidden_sympathies_xp_gain_factor
-	trait_disgruntled_xp_gain_factor
-	trait_sick_xp_gain_factor
-	trait_wounded_xp_gain_factor
-
-	trait_old_guard_navy_xp_gain_factor
-	trait_navy_career_officer_xp_gain_factor
-	trait_navy_media_personality_xp_gain_factor
-	trait_bold_xp_gain_factor
-	trait_caustic_personality_xp_gain_factor
-	trait_naval_lineage_xp_gain_factor
-	trait_gentlemanly_xp_gain_factor
-	trait_battleship_adherent_xp_gain_factor
-	trait_gunnery_expert_xp_gain_factor
-	trait_aviation_enthusiast_xp_gain_factor
-	trait_cuts_corners_xp_gain_factor
-	trait_chief_engineer_xp_gain_factor
-	trait_craven_xp_gain_factor
-
-	trait_blockade_runner_xp_gain_factor
-	trait_seawolf_xp_gain_factor
-	trait_spotter_xp_gain_factor
-	trait_fleet_protector_xp_gain_factor
-	trait_superior_tactician_xp_gain_factor
-	trait_air_controller_xp_gain_factor
-	trait_ironside_xp_gain_factor
-	trait_arctic_water_expert_xp_gain_factor
-	trait_inshore_fighter_xp_gain_factor
-	trait_blue_water_expert_xp_gain_factor
-	trait_green_water_expert_xp_gain_factor
-
-	trait_concealment_expert_xp_gain_factor
-	trait_lone_wolf_xp_gain_factor
-	trait_silent_hunter_xp_gain_factor
-	trait_lancer_xp_gain_factor
-	trait_search_pattern_expert_xp_gain_factor
-	trait_destroyer_leader_xp_gain_factor
-	trait_cruiser_captain_xp_gain_factor
-	trait_mine_craft_xp_gain_factor
-	trait_flight_deck_manager_xp_gain_factor
-	trait_ground_pounder_xp_gain_factor
-	trait_big_guns_expert_xp_gain_factor
-	trait_marksman_xp_gain_factor
-	trait_safety_first_xp_gain_factor
-	trait_crisis_magician_xp_gain_factor
-	trait_torpedo_expert_xp_gain_factor
-	trait_loading_drill_master_xp_gain_factor
-	trait_hunter_killer_xp_gain_factor
-	trait_smoke_screen_expert_xp_gain_factor
-	trait_fighter_director_xp_gain_factor
-	trait_dive_bomber_xp_gain_factor
-	trait_torpedo_bomber_xp_gain_factor
-	trait_fly_swatter_xp_gain_factor
-
-	trait_operative_double_agent_xp_gain_factor
-	trait_operative_safe_cracker_xp_gain_factor
-	trait_operative_seducer_xp_gain_factor
-	trait_operative_tough_xp_gain_factor
-
-	trait_operative_commando_xp_gain_factor
-	trait_operative_demolition_expert_xp_gain_factor
-	trait_operative_escape_artist_xp_gain_factor
-	trait_operative_infiltrator_xp_gain_factor
-	trait_operative_linguist_xp_gain_factor
-	trait_operative_master_interrogator_xp_gain_factor
-	trait_operative_natural_orator_xp_gain_factor
-	trait_operative_well_groomed_xp_gain_factor
-
-
-	
-	
-	trait_<Trait>_xp_gain_factor	#trait_-trait-_xp_gain_factor
-
-
-
-
-
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-
-
 
 #주의 모디파이어
 ## Boolean Modifiers

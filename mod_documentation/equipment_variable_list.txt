@@ -2674,18 +2674,96 @@
 
 # capital_ship
 	## 속하는 장비: 
-		ship_hull_cruiser
-		ship_hull_cruiser_1
-		ship_hull_cruiser_2
-		ship_hull_cruiser_3
-		ship_hull_cruiser_4
-		ship_hull_cruiser_modern_aa
-		ship_hull_torpedo_cruiser
-		ship_hull_cruiser_panzerschiff
-		ship_hull_cruiser_coastal_defense_ship
+		ship_hull_cruiser	#중순함포 필요
+		ship_hull_cruiser_1	#중순함포 필요
+		ship_hull_cruiser_2	#중순함포 필요
+		ship_hull_cruiser_3	#중순함포 필요
+		ship_hull_cruiser_4	#중순함포 필요
+		ship_hull_cruiser_modern_aa	#중순함포 필요
+		ship_hull_torpedo_cruiser	#중순함포 필요
+		ship_hull_cruiser_panzerschiff	#중순함포 필요
+		ship_hull_cruiser_coastal_defense_ship	#중순함포 필요
+		ship_hull_heavy
+		ship_hull_pre_dreadnought
+		ship_hull_heavy_1
+		ship_hull_heavy_2
+		ship_hull_heavy_3
+		ship_hull_heavy_4
+		ship_hull_super_heavy_1
+		ship_hull_heavy_modern
 
 	floating_harbor_build_cost_ic	#NSB 필요
 	floating_harbor_equipment_build_cost_ic	#NSB 필요
+
+# submarine
+
+# screen_ship
+
+# support_ship
+	## 속하는 장비:
+		support_ship_hull	#NCNS 필요
+		repair_ship_hull	#NCNS 필요
+
+	support_ship_build_cost_ic	#NCNS 필요
+	support_ship_max_strength	#NCNS 필요
+	support_ship_naval_range	#NCNS 필요
+	support_ship_naval_speed	#NCNS 필요
+	support_ship_reliability	#NCNS 필요
+	support_ship_sub_attack	#NCNS 필요
+	support_ship_sub_detection	#NCNS 필요
+	support_ship_surface_detection	#NCNS 필요
+	support_ship_surface_visibility	#NCNS 필요
+	support_ship_hull_build_cost_ic	#NCNS 필요
+	support_ship_hull_max_strength	#NCNS 필요
+	support_ship_hull_naval_range	#NCNS 필요
+	support_ship_hull_naval_speed	#NCNS 필요
+	support_ship_hull_reliability	#NCNS 필요
+	support_ship_hull_sub_attack	#NCNS 필요
+	support_ship_hull_sub_detection	#NCNS 필요
+	support_ship_hull_surface_detection	#NCNS 필요
+	support_ship_hull_surface_visibility	#NCNS 필요
+	support_ship_1_build_cost_ic	#NCNS 필요
+	support_ship_1_max_strength	#NCNS 필요
+	support_ship_1_naval_range	#NCNS 필요
+	support_ship_1_naval_speed	#NCNS 필요
+	support_ship_1_reliability	#NCNS 필요
+	support_ship_1_sub_attack	#NCNS 필요
+	support_ship_1_sub_detection	#NCNS 필요
+	support_ship_1_surface_detection	#NCNS 필요
+	support_ship_1_surface_visibility	#NCNS 필요
+	support_ship_2_build_cost_ic	#NCNS 필요
+	support_ship_2_max_strength	#NCNS 필요
+	support_ship_2_naval_range	#NCNS 필요
+	support_ship_2_naval_speed	#NCNS 필요
+	support_ship_2_reliability	#NCNS 필요
+	support_ship_2_sub_attack	#NCNS 필요
+	support_ship_2_sub_detection	#NCNS 필요
+	support_ship_2_surface_detection	#NCNS 필요
+	support_ship_2_surface_visibility	#NCNS 필요
+	repair_ship_hull_build_cost_ic	#NCNS 필요
+	repair_ship_hull_max_strength	#NCNS 필요
+	repair_ship_hull_naval_range	#NCNS 필요
+	repair_ship_hull_naval_speed	#NCNS 필요
+	repair_ship_hull_reliability	#NCNS 필요
+	repair_ship_hull_surface_detection	#NCNS 필요
+	repair_ship_hull_surface_visibility	#NCNS 필요
+	repair_ship_1_build_cost_ic	#NCNS 필요
+	repair_ship_1_max_strength	#NCNS 필요
+	repair_ship_1_naval_range	#NCNS 필요
+	repair_ship_1_naval_speed	#NCNS 필요
+	repair_ship_1_reliability	#NCNS 필요
+	repair_ship_1_surface_detection	#NCNS 필요
+	repair_ship_1_surface_visibility	#NCNS 필요
+	repair_ship_2_build_cost_ic	#NCNS 필요
+	repair_ship_2_max_strength	#NCNS 필요
+	repair_ship_2_naval_range	#NCNS 필요
+	repair_ship_2_naval_speed	#NCNS 필요
+	repair_ship_2_reliability	#NCNS 필요
+	repair_ship_2_surface_detection	#NCNS 필요
+	repair_ship_2_surface_visibility	#NCNS 필요
+
+# carrier
+	## 속하는 장비:
 
 
 	ship_hull_cruiser
@@ -2747,43 +2825,10 @@
 	
 	naval_light_gun_hit_chance_factor
 	naval_heavy_gun_hit_chance_factor
-
-
-
-
-		### NAVAL Equipment categories
-		submarine
-		screen_ship
-		support_ship
-		carrier
 	
 	
 		# NAVAL Equipment archetypes & types
 		destroyer
-		support_ship_hull	#NCNS
-		support_ship_1	#NCNS
-		support_ship_2	#NCNS
-	
-	sub_attack
-	surface_detection
-	sub_detection
-	surface_visibility
-	naval_speed
-	naval_range
-	max_strength
-	build_cost_ic
-	
-		repair_ship_hull	#NCNS
-		repair_ship_1	#NCNS
-		repair_ship_2	#NCNS
-	
-	surface_detection
-	surface_visibility 
-	naval_speed
-	reliability
-	naval_range
-	max_strength 
-	build_cost_ic
 	
 		ship_hull_carrier
 		ship_hull_carrier_1
@@ -2970,16 +3015,10 @@
 	large_plane_airframe_2
 	large_plane_airframe_3
 	large_plane_airframe_4
-	transport_plane_equipment
-	transport_plane_equipment_1
-	transport_plane_equipment_2
-	transport_plane_equipment_3
 	small_plane_cas_airframe
 	cv_small_plane_cas_airframe
 	small_plane_naval_bomber_airframe
 	cv_small_plane_naval_bomber_airframe
-	small_plane_suicide_airframe
-	cv_small_plane_suicide_airframe
 	medium_plane_fighter_airframe
 	medium_plane_scout_plane_airframe
 	large_plane_maritime_patrol_plane_airframe	#maritime_patrol_plane
@@ -3009,17 +3048,6 @@
 	cv_small_plane_naval_bomber_airframe_2
 	cv_small_plane_naval_bomber_airframe_3
 	cv_small_plane_naval_bomber_airframe_4
-	small_plane_suicide_airframe_0
-	small_plane_suicide_airframe_1
-	small_plane_suicide_airframe_2
-	small_plane_suicide_airframe_3
-	small_plane_suicide_airframe_4
-	small_plane_suicide_airframe_5
-	cv_small_plane_suicide_airframe_0
-	cv_small_plane_suicide_airframe_1
-	cv_small_plane_suicide_airframe_2
-	cv_small_plane_suicide_airframe_3
-	cv_small_plane_suicide_airframe_4
 	medium_plane_fighter_airframe_0
 	medium_plane_fighter_airframe_1
 	medium_plane_fighter_airframe_2
@@ -3127,19 +3155,424 @@
 	## 속하는 장비 (BBA 보유):
 		small_plane_airframe
 		cv_small_plane_airframe
+		jet_fighter_equipment
 
-	## 속하는 장비 (BBA 미보유):
+	## 속하는 장비 (BBA 미보유): #뒤의 숫자는 분량상 생략
 		fighter_equipment
 		jet_fighter_equipment
 		cv_fighter_equipment
+		supersonic_fighter_equipment	#WUW 필요
 	
-	fighter_
+	fighter_air_agility
+	fighter_air_attack
+	fighter_air_bombing	#BBA 필요
+	fighter_air_defence
+	fighter_air_ground_attack	#BBA 필요
+	fighter_air_range
+	fighter_air_superiority
+	fighter_build_cost_ic
+	fighter_fuel_consumption
+	fighter_maximum_speed
+	fighter_naval_strike_attack
+	fighter_naval_strike_targetting
+	fighter_night_penalty	#BBA 필요
+	fighter_reliability
+	fighter_sub_detection
+	fighter_surface_detection
+	fighter_thrust	#BBA 필요
+	fighter_weight	#BBA 필요
+	small_plane_airframe_air_agility
+	small_plane_airframe_air_attack
+	small_plane_airframe_air_bombing
+	small_plane_airframe_air_defence
+	small_plane_airframe_air_ground_attack
+	small_plane_airframe_air_range
+	small_plane_airframe_air_superiority
+	small_plane_airframe_build_cost_ic
+	small_plane_airframe_fuel_consumption
+	small_plane_airframe_maximum_speed
+	small_plane_airframe_naval_strike_attack
+	small_plane_airframe_naval_strike_targetting
+	small_plane_airframe_night_penalty
+	small_plane_airframe_sub_detection
+	small_plane_airframe_surface_detection
+	small_plane_airframe_reliability
+	small_plane_airframe_thrust
+	small_plane_airframe_weight
+	small_plane_airframe_0_air_agility
+	small_plane_airframe_0_air_attack
+	small_plane_airframe_0_air_defence
+	small_plane_airframe_0_air_ground_attack
+	small_plane_airframe_0_air_range
+	small_plane_airframe_0_air_superiority
+	small_plane_airframe_0_build_cost_ic
+	small_plane_airframe_0_fuel_consumption
+	small_plane_airframe_0_maximum_speed
+	small_plane_airframe_0_naval_strike_attack
+	small_plane_airframe_0_naval_strike_targetting
+	small_plane_airframe_0_reliability
+	small_plane_airframe_0_weight
+	small_plane_airframe_1_air_agility
+	small_plane_airframe_1_air_attack
+	small_plane_airframe_1_air_defence
+	small_plane_airframe_1_air_ground_attack
+	small_plane_airframe_1_air_range
+	small_plane_airframe_1_air_superiority
+	small_plane_airframe_1_build_cost_ic
+	small_plane_airframe_1_fuel_consumption
+	small_plane_airframe_1_maximum_speed
+	small_plane_airframe_1_naval_strike_attack
+	small_plane_airframe_1_naval_strike_targetting
+	small_plane_airframe_1_reliability
+	small_plane_airframe_1_weight
+	small_plane_airframe_2_air_agility
+	small_plane_airframe_2_air_attack
+	small_plane_airframe_2_air_defence
+	small_plane_airframe_2_air_ground_attack
+	small_plane_airframe_2_air_range
+	small_plane_airframe_2_air_superiority
+	small_plane_airframe_2_build_cost_ic
+	small_plane_airframe_2_fuel_consumption
+	small_plane_airframe_2_maximum_speed
+	small_plane_airframe_2_naval_strike_attack
+	small_plane_airframe_2_naval_strike_targetting
+	small_plane_airframe_2_reliability
+	small_plane_airframe_2_weight
+	small_plane_airframe_3_air_agility
+	small_plane_airframe_3_air_attack
+	small_plane_airframe_3_air_defence
+	small_plane_airframe_3_air_ground_attack
+	small_plane_airframe_3_air_range
+	small_plane_airframe_3_air_superiority
+	small_plane_airframe_3_build_cost_ic
+	small_plane_airframe_3_fuel_consumption
+	small_plane_airframe_3_maximum_speed
+	small_plane_airframe_3_naval_strike_attack
+	small_plane_airframe_3_naval_strike_targetting
+	small_plane_airframe_3_reliability
+	small_plane_airframe_3_weight
+	small_plane_airframe_4_air_agility
+	small_plane_airframe_4_air_attack
+	small_plane_airframe_4_air_defence
+	small_plane_airframe_4_air_ground_attack
+	small_plane_airframe_4_air_range
+	small_plane_airframe_4_air_superiority
+	small_plane_airframe_4_build_cost_ic
+	small_plane_airframe_4_fuel_consumption
+	small_plane_airframe_4_maximum_speed
+	small_plane_airframe_4_naval_strike_attack
+	small_plane_airframe_4_naval_strike_targetting
+	small_plane_airframe_4_reliability
+	small_plane_airframe_4_weight
+	small_plane_airframe_5_air_agility
+	small_plane_airframe_5_air_attack
+	small_plane_airframe_5_air_defence
+	small_plane_airframe_5_air_ground_attack
+	small_plane_airframe_5_air_range
+	small_plane_airframe_5_air_superiority
+	small_plane_airframe_5_build_cost_ic
+	small_plane_airframe_5_fuel_consumption
+	small_plane_airframe_5_maximum_speed
+	small_plane_airframe_5_naval_strike_attack
+	small_plane_airframe_5_naval_strike_targetting
+	small_plane_airframe_5_reliability
+	small_plane_airframe_5_weight
+	cv_small_plane_airframe_air_agility
+	cv_small_plane_airframe_air_attack
+	cv_small_plane_airframe_air_bombing
+	cv_small_plane_airframe_air_defence
+	cv_small_plane_airframe_air_ground_attack
+	cv_small_plane_airframe_air_range
+	cv_small_plane_airframe_air_superiority
+	cv_small_plane_airframe_build_cost_ic
+	cv_small_plane_airframe_fuel_consumption
+	cv_small_plane_airframe_maximum_speed
+	cv_small_plane_airframe_naval_strike_attack
+	cv_small_plane_airframe_naval_strike_targetting
+	cv_small_plane_airframe_night_penalty
+	cv_small_plane_airframe_sub_detection
+	cv_small_plane_airframe_surface_detection
+	cv_small_plane_airframe_reliability
+	cv_small_plane_airframe_thrust
+	cv_small_plane_airframe_weight
+	cv_small_plane_airframe_0_air_agility
+	cv_small_plane_airframe_0_air_attack
+	cv_small_plane_airframe_0_air_bombing
+	cv_small_plane_airframe_0_air_defence
+	cv_small_plane_airframe_0_air_ground_attack
+	cv_small_plane_airframe_0_air_range
+	cv_small_plane_airframe_0_air_superiority
+	cv_small_plane_airframe_0_build_cost_ic
+	cv_small_plane_airframe_0_fuel_consumption
+	cv_small_plane_airframe_0_maximum_speed
+	cv_small_plane_airframe_0_naval_strike_attack
+	cv_small_plane_airframe_0_naval_strike_targetting
+	cv_small_plane_airframe_0_night_penalty
+	cv_small_plane_airframe_0_sub_detection
+	cv_small_plane_airframe_0_surface_detection
+	cv_small_plane_airframe_0_reliability
+	cv_small_plane_airframe_0_thrust
+	cv_small_plane_airframe_0_weight
+	cv_small_plane_airframe_1_air_agility
+	cv_small_plane_airframe_1_air_attack
+	cv_small_plane_airframe_1_air_bombing
+	cv_small_plane_airframe_1_air_defence
+	cv_small_plane_airframe_1_air_ground_attack
+	cv_small_plane_airframe_1_air_range
+	cv_small_plane_airframe_1_air_superiority
+	cv_small_plane_airframe_1_build_cost_ic
+	cv_small_plane_airframe_1_fuel_consumption
+	cv_small_plane_airframe_1_maximum_speed
+	cv_small_plane_airframe_1_naval_strike_attack
+	cv_small_plane_airframe_1_naval_strike_targetting
+	cv_small_plane_airframe_1_night_penalty
+	cv_small_plane_airframe_1_sub_detection
+	cv_small_plane_airframe_1_surface_detection
+	cv_small_plane_airframe_1_reliability
+	cv_small_plane_airframe_1_thrust
+	cv_small_plane_airframe_1_weight
+	cv_small_plane_airframe_2_air_agility
+	cv_small_plane_airframe_2_air_attack
+	cv_small_plane_airframe_2_air_bombing
+	cv_small_plane_airframe_2_air_defence
+	cv_small_plane_airframe_2_air_ground_attack
+	cv_small_plane_airframe_2_air_range
+	cv_small_plane_airframe_2_air_superiority
+	cv_small_plane_airframe_2_build_cost_ic
+	cv_small_plane_airframe_2_fuel_consumption
+	cv_small_plane_airframe_2_maximum_speed
+	cv_small_plane_airframe_2_naval_strike_attack
+	cv_small_plane_airframe_2_naval_strike_targetting
+	cv_small_plane_airframe_2_night_penalty
+	cv_small_plane_airframe_2_sub_detection
+	cv_small_plane_airframe_2_surface_detection
+	cv_small_plane_airframe_2_reliability
+	cv_small_plane_airframe_2_thrust
+	cv_small_plane_airframe_2_weight
+	cv_small_plane_airframe_3_air_agility
+	cv_small_plane_airframe_3_air_attack
+	cv_small_plane_airframe_3_air_bombing
+	cv_small_plane_airframe_3_air_defence
+	cv_small_plane_airframe_3_air_ground_attack
+	cv_small_plane_airframe_3_air_range
+	cv_small_plane_airframe_3_air_superiority
+	cv_small_plane_airframe_3_build_cost_ic
+	cv_small_plane_airframe_3_fuel_consumption
+	cv_small_plane_airframe_3_maximum_speed
+	cv_small_plane_airframe_3_naval_strike_attack
+	cv_small_plane_airframe_3_naval_strike_targetting
+	cv_small_plane_airframe_3_night_penalty
+	cv_small_plane_airframe_3_sub_detection
+	cv_small_plane_airframe_3_surface_detection
+	cv_small_plane_airframe_3_reliability
+	cv_small_plane_airframe_3_thrust
+	cv_small_plane_airframe_3_weight
+	cv_small_plane_airframe_4_air_agility
+	cv_small_plane_airframe_4_air_attack
+	cv_small_plane_airframe_4_air_bombing
+	cv_small_plane_airframe_4_air_defence
+	cv_small_plane_airframe_4_air_ground_attack
+	cv_small_plane_airframe_4_air_range
+	cv_small_plane_airframe_4_air_superiority
+	cv_small_plane_airframe_4_build_cost_ic
+	cv_small_plane_airframe_4_fuel_consumption
+	cv_small_plane_airframe_4_maximum_speed
+	cv_small_plane_airframe_4_naval_strike_attack
+	cv_small_plane_airframe_4_naval_strike_targetting
+	cv_small_plane_airframe_4_night_penalty
+	cv_small_plane_airframe_4_sub_detection
+	cv_small_plane_airframe_4_surface_detection
+	cv_small_plane_airframe_4_reliability
+	cv_small_plane_airframe_4_thrust
+	cv_small_plane_airframe_4_weight
+	jet_fighter_equipment_air_agility
+	jet_fighter_equipment_air_attack
+	jet_fighter_equipment_air_defence
+	jet_fighter_equipment_air_ground_attack
+	jet_fighter_equipment_air_range
+	jet_fighter_equipment_air_superiority
+	jet_fighter_equipment_build_cost_ic
+	jet_fighter_equipment_fuel_consumption
+	jet_fighter_equipment_maximum_speed
+	jet_fighter_equipment_naval_strike_attack
+	jet_fighter_equipment_naval_strike_targetting
+	jet_fighter_equipment_reliability
+	jet_fighter_equipment_weight
+	fighter_equipment_0_air_agility
+	fighter_equipment_0_air_attack
+	fighter_equipment_0_air_defence
+	fighter_equipment_0_air_range
+	fighter_equipment_0_air_superiority
+	fighter_equipment_0_build_cost_ic
+	fighter_equipment_0_fuel_consumption
+	fighter_equipment_0_maximum_speed
+	fighter_equipment_0_naval_strike_attack
+	fighter_equipment_0_naval_strike_targetting
+	fighter_equipment_0_reliability
+	fighter_equipment_0_sub_detection
+	fighter_equipment_0_surface_detection
+	fighter_equipment_1_air_agility
+	fighter_equipment_1_air_attack
+	fighter_equipment_1_air_defence
+	fighter_equipment_1_air_range
+	fighter_equipment_1_air_superiority
+	fighter_equipment_1_build_cost_ic
+	fighter_equipment_1_fuel_consumption
+	fighter_equipment_1_maximum_speed
+	fighter_equipment_1_naval_strike_attack
+	fighter_equipment_1_naval_strike_targetting
+	fighter_equipment_1_reliability
+	fighter_equipment_1_sub_detection
+	fighter_equipment_1_surface_detection
+	fighter_equipment_2_air_agility
+	fighter_equipment_2_air_attack
+	fighter_equipment_2_air_defence
+	fighter_equipment_2_air_range
+	fighter_equipment_2_air_superiority
+	fighter_equipment_2_build_cost_ic
+	fighter_equipment_2_fuel_consumption
+	fighter_equipment_2_maximum_speed
+	fighter_equipment_2_naval_strike_attack
+	fighter_equipment_2_naval_strike_targetting
+	fighter_equipment_2_reliability
+	fighter_equipment_2_sub_detection
+	fighter_equipment_2_surface_detection
+	fighter_equipment_3_air_agility
+	fighter_equipment_3_air_attack
+	fighter_equipment_3_air_defence
+	fighter_equipment_3_air_range
+	fighter_equipment_3_air_superiority
+	fighter_equipment_3_build_cost_ic
+	fighter_equipment_3_fuel_consumption
+	fighter_equipment_3_maximum_speed
+	fighter_equipment_3_naval_strike_attack
+	fighter_equipment_3_naval_strike_targetting
+	fighter_equipment_3_reliability
+	fighter_equipment_3_sub_detection
+	fighter_equipment_3_surface_detection
+	jet_fighter_equipment_1_air_agility
+	jet_fighter_equipment_1_air_attack
+	jet_fighter_equipment_1_air_defence
+	jet_fighter_equipment_1_air_range
+	jet_fighter_equipment_1_air_superiority
+	jet_fighter_equipment_1_build_cost_ic
+	jet_fighter_equipment_1_fuel_consumption
+	jet_fighter_equipment_1_maximum_speed
+	jet_fighter_equipment_1_naval_strike_attack
+	jet_fighter_equipment_1_naval_strike_targetting
+	jet_fighter_equipment_1_reliability
+	jet_fighter_equipment_1_sub_detection
+	jet_fighter_equipment_1_surface_detection
+	jet_fighter_equipment_2_air_agility
+	jet_fighter_equipment_2_air_attack
+	jet_fighter_equipment_2_air_defence
+	jet_fighter_equipment_2_air_range
+	jet_fighter_equipment_2_air_superiority
+	jet_fighter_equipment_2_build_cost_ic
+	jet_fighter_equipment_2_fuel_consumption
+	jet_fighter_equipment_2_maximum_speed
+	jet_fighter_equipment_2_naval_strike_attack
+	jet_fighter_equipment_2_naval_strike_targetting
+	jet_fighter_equipment_2_reliability
+	jet_fighter_equipment_2_sub_detection
+	jet_fighter_equipment_2_surface_detection
+	cv_fighter_equipment_1_air_agility
+	cv_fighter_equipment_1_air_attack
+	cv_fighter_equipment_1_air_defence
+	cv_fighter_equipment_1_air_range
+	cv_fighter_equipment_1_air_superiority
+	cv_fighter_equipment_1_build_cost_ic
+	cv_fighter_equipment_1_fuel_consumption
+	cv_fighter_equipment_1_maximum_speed
+	cv_fighter_equipment_1_naval_strike_attack
+	cv_fighter_equipment_1_naval_strike_targetting
+	cv_fighter_equipment_1_reliability
+	cv_fighter_equipment_1_sub_detection
+	cv_fighter_equipment_1_surface_detection
+	cv_fighter_equipment_2_air_agility
+	cv_fighter_equipment_2_air_attack
+	cv_fighter_equipment_2_air_defence
+	cv_fighter_equipment_2_air_range
+	cv_fighter_equipment_2_air_superiority
+	cv_fighter_equipment_2_build_cost_ic
+	cv_fighter_equipment_2_fuel_consumption
+	cv_fighter_equipment_2_maximum_speed
+	cv_fighter_equipment_2_naval_strike_attack
+	cv_fighter_equipment_2_naval_strike_targetting
+	cv_fighter_equipment_2_reliability
+	cv_fighter_equipment_2_sub_detection
+	cv_fighter_equipment_2_surface_detection
+	cv_fighter_equipment_3_air_agility
+	cv_fighter_equipment_3_air_attack
+	cv_fighter_equipment_3_air_defence
+	cv_fighter_equipment_3_air_range
+	cv_fighter_equipment_3_air_superiority
+	cv_fighter_equipment_3_build_cost_ic
+	cv_fighter_equipment_3_fuel_consumption
+	cv_fighter_equipment_3_maximum_speed
+	cv_fighter_equipment_3_naval_strike_attack
+	cv_fighter_equipment_3_naval_strike_targetting
+	cv_fighter_equipment_3_reliability
+	cv_fighter_equipment_3_sub_detection
+	cv_fighter_equipment_3_surface_detection
+	supersonic_fighter_equipment_1_air_agility
+	supersonic_fighter_equipment_1_air_attack
+	supersonic_fighter_equipment_1_air_defence
+	supersonic_fighter_equipment_1_air_range
+	supersonic_fighter_equipment_1_air_superiority
+	supersonic_fighter_equipment_1_build_cost_ic
+	supersonic_fighter_equipment_1_fuel_consumption
+	supersonic_fighter_equipment_1_maximum_speed
+	supersonic_fighter_equipment_1_naval_strike_attack
+	supersonic_fighter_equipment_1_naval_strike_targetting
+	supersonic_fighter_equipment_1_reliability
+	supersonic_fighter_equipment_1_sub_detection
+	supersonic_fighter_equipment_1_surface_detection
 
 
+
+
+
+
+
+
+
+	fighter_equipment_0
+	fighter_equipment_1
+	fighter_equipment_2
+	fighter_equipment_3
+	jet_fighter_equipment_1
+	jet_fighter_equipment_2
+	cv_fighter_equipment_0
+	cv_fighter_equipment_1
+	cv_fighter_equipment_2
+	cv_fighter_equipment_3
+	supersonic_fighter_equipment_1
+
+	# small_plane_airframe/cv_small_plane_airframe
+		air_agility
+		air_attack
+		air_bombing
+		air_defence
+		air_ground_attack
+		air_range
+		air_superiority
+		build_cost_ic
+		fuel_consumption
+		maximum_speed
+		naval_strike_attack
+		naval_strike_targetting
+		night_penalty
+		sub_detection
+		surface_detection
+		reliability
+		thrust
+		weight
+
+	# fighter_equipment/jet_fighter_equipment/cv_fighter_equipment
 		air_agility
 		air_attack
 		air_defence
-					air_ground_attack
 		air_range
 		air_superiority
 		build_cost_ic
@@ -3148,9 +3581,48 @@
 		naval_strike_attack
 		naval_strike_targetting
 		reliability
-		weight
+		sub_detection
+		surface_detection
 
-		module_slots = {
+		upgrades = {
+			plane_gun_upgrade
+
+			air_agility
+			air_attack
+			maximum_speed
+			reliability
+
+			plane_range_upgrade
+
+			air_range
+			reliability
+
+			plane_engine_upgrade
+
+			air_agility
+			maximum_speed
+
+			plane_reliability_upgraded
+
+			reliability
+		}
+
+	# mothership
+		air_agility
+		air_attack
+		air_defence
+		air_range
+		air_superiority
+		build_cost_ic
+		fuel_consumption
+		maximum_speed
+		reliability
+		surface_detection
+
+
+
+
+	# module_slots = {
 			fixed_main_weapon_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -3312,17 +3784,336 @@
 
 
 # interceptor
+	## 속하는 장비 (BBA 보유):
+		medium_plane_scout_plane_airframe
+
 # tactical_bomber
+	## 속하는 장비 (BBA 보유):
+		medium_plane_scout_plane_airframe
+
 # strategic_bomber
+	## 속하는 장비 (BBA 보유):
+		medium_plane_scout_plane_airframe
+
 # cas
+	## 속하는 장비 (BBA 보유):
+		medium_plane_scout_plane_airframe
+
 # naval_bomber
+	## 속하는 장비 (BBA 보유):
+		medium_plane_scout_plane_airframe
+
 # missile
+	## 속하는 장비:
+		medium_plane_scout_plane_airframe	#WUW 필요
+
 # emplacement_gun_ammo
+	## 속하는 장비:
+		medium_plane_scout_plane_airframe	#WUW 필요
+
 # ballistic_missile
+	## 속하는 장비:
+		medium_plane_scout_plane_airframe	#WUW 필요
+
 # nuclear_missile
+	## 속하는 장비:
+		medium_plane_scout_plane_airframe	#WUW 필요
+
 # sam_missile
+	## 속하는 장비:
+		sam_missile_equipment	#WUW 필요
+	
+	sam_missile_equipment_air_agility
+	sam_missile_equipment_air_attack
+	sam_missile_equipment_air_range
+	sam_missile_equipment_build_cost_ic
+	sam_missile_equipment_maximum_speed
+	sam_missile_equipment_naval_strike_attack
+	sam_missile_equipment_naval_strike_targetting
+	sam_missile_equipment_reliability
+	sam_missile_equipment_1_air_agility
+	sam_missile_equipment_1_air_attack
+	sam_missile_equipment_1_air_range
+	sam_missile_equipment_1_build_cost_ic
+	sam_missile_equipment_1_maximum_speed
+	sam_missile_equipment_1_naval_strike_attack
+	sam_missile_equipment_1_naval_strike_targetting
+	sam_missile_equipment_1_reliability
+
 # suicide
+	## 속하는 장비 (BBA 보유):
+		small_plane_suicide_airframe
+		cv_small_plane_suicide_airframe
+
+	## 속하는 장비 (BBA 미보유): #뒤의 숫자는 분량상 생략
+		rocket_suicide_equipment
+
+	suicide_air_agility
+	suicide_air_attack
+	suicide_air_bombing
+	suicide_air_defence
+	suicide_air_ground_attack
+	suicide_air_range
+	suicide_air_superiority
+	suicide_build_cost_ic
+	suicide_fuel_consumption
+	suicide_maximum_speed
+	suicide_naval_strike_attack
+	suicide_naval_strike_targetting
+	suicide_night_penalty
+	suicide_sub_detection
+	suicide_surface_detection
+	suicide_reliability
+	suicide_thrust
+	suicide_weight
+	small_plane_suicide_airframe_air_agility
+	small_plane_suicide_airframe_air_attack
+	small_plane_suicide_airframe_air_bombing
+	small_plane_suicide_airframe_air_defence
+	small_plane_suicide_airframe_air_ground_attack
+	small_plane_suicide_airframe_air_range
+	small_plane_suicide_airframe_air_superiority
+	small_plane_suicide_airframe_build_cost_ic
+	small_plane_suicide_airframe_fuel_consumption
+	small_plane_suicide_airframe_maximum_speed
+	small_plane_suicide_airframe_naval_strike_attack
+	small_plane_suicide_airframe_naval_strike_targetting
+	small_plane_suicide_airframe_night_penalty
+	small_plane_suicide_airframe_sub_detection
+	small_plane_suicide_airframe_surface_detection
+	small_plane_suicide_airframe_reliability
+	small_plane_suicide_airframe_thrust
+	small_plane_suicide_airframe_weight
+	small_plane_suicide_airframe_0_air_agility
+	small_plane_suicide_airframe_0_air_attack
+	small_plane_suicide_airframe_0_air_bombing
+	small_plane_suicide_airframe_0_air_defence
+	small_plane_suicide_airframe_0_air_ground_attack
+	small_plane_suicide_airframe_0_air_range
+	small_plane_suicide_airframe_0_air_superiority
+	small_plane_suicide_airframe_0_build_cost_ic
+	small_plane_suicide_airframe_0_fuel_consumption
+	small_plane_suicide_airframe_0_maximum_speed
+	small_plane_suicide_airframe_0_naval_strike_attack
+	small_plane_suicide_airframe_0_naval_strike_targetting
+	small_plane_suicide_airframe_0_night_penalty
+	small_plane_suicide_airframe_0_sub_detection
+	small_plane_suicide_airframe_0_surface_detection
+	small_plane_suicide_airframe_0_reliability
+	small_plane_suicide_airframe_0_thrust
+	small_plane_suicide_airframe_0_weight
+	small_plane_suicide_airframe_1_air_agility
+	small_plane_suicide_airframe_1_air_attack
+	small_plane_suicide_airframe_1_air_bombing
+	small_plane_suicide_airframe_1_air_defence
+	small_plane_suicide_airframe_1_air_ground_attack
+	small_plane_suicide_airframe_1_air_range
+	small_plane_suicide_airframe_1_air_superiority
+	small_plane_suicide_airframe_1_build_cost_ic
+	small_plane_suicide_airframe_1_fuel_consumption
+	small_plane_suicide_airframe_1_maximum_speed
+	small_plane_suicide_airframe_1_naval_strike_attack
+	small_plane_suicide_airframe_1_naval_strike_targetting
+	small_plane_suicide_airframe_1_night_penalty
+	small_plane_suicide_airframe_1_sub_detection
+	small_plane_suicide_airframe_1_surface_detection
+	small_plane_suicide_airframe_1_reliability
+	small_plane_suicide_airframe_1_thrust
+	small_plane_suicide_airframe_1_weight
+	small_plane_suicide_airframe_2_air_agility
+	small_plane_suicide_airframe_2_air_attack
+	small_plane_suicide_airframe_2_air_bombing
+	small_plane_suicide_airframe_2_air_defence
+	small_plane_suicide_airframe_2_air_ground_attack
+	small_plane_suicide_airframe_2_air_range
+	small_plane_suicide_airframe_2_air_superiority
+	small_plane_suicide_airframe_2_build_cost_ic
+	small_plane_suicide_airframe_2_fuel_consumption
+	small_plane_suicide_airframe_2_maximum_speed
+	small_plane_suicide_airframe_2_naval_strike_attack
+	small_plane_suicide_airframe_2_naval_strike_targetting
+	small_plane_suicide_airframe_2_night_penalty
+	small_plane_suicide_airframe_2_sub_detection
+	small_plane_suicide_airframe_2_surface_detection
+	small_plane_suicide_airframe_2_reliability
+	small_plane_suicide_airframe_2_thrust
+	small_plane_suicide_airframe_2_weight
+	small_plane_suicide_airframe_3_air_agility
+	small_plane_suicide_airframe_3_air_attack
+	small_plane_suicide_airframe_3_air_bombing
+	small_plane_suicide_airframe_3_air_defence
+	small_plane_suicide_airframe_3_air_ground_attack
+	small_plane_suicide_airframe_3_air_range
+	small_plane_suicide_airframe_3_air_superiority
+	small_plane_suicide_airframe_3_build_cost_ic
+	small_plane_suicide_airframe_3_fuel_consumption
+	small_plane_suicide_airframe_3_maximum_speed
+	small_plane_suicide_airframe_3_naval_strike_attack
+	small_plane_suicide_airframe_3_naval_strike_targetting
+	small_plane_suicide_airframe_3_night_penalty
+	small_plane_suicide_airframe_3_sub_detection
+	small_plane_suicide_airframe_3_surface_detection
+	small_plane_suicide_airframe_3_reliability
+	small_plane_suicide_airframe_3_thrust
+	small_plane_suicide_airframe_3_weight
+	small_plane_suicide_airframe_4_air_agility
+	small_plane_suicide_airframe_4_air_attack
+	small_plane_suicide_airframe_4_air_bombing
+	small_plane_suicide_airframe_4_air_defence
+	small_plane_suicide_airframe_4_air_ground_attack
+	small_plane_suicide_airframe_4_air_range
+	small_plane_suicide_airframe_4_air_superiority
+	small_plane_suicide_airframe_4_build_cost_ic
+	small_plane_suicide_airframe_4_fuel_consumption
+	small_plane_suicide_airframe_4_maximum_speed
+	small_plane_suicide_airframe_4_naval_strike_attack
+	small_plane_suicide_airframe_4_naval_strike_targetting
+	small_plane_suicide_airframe_4_night_penalty
+	small_plane_suicide_airframe_4_sub_detection
+	small_plane_suicide_airframe_4_surface_detection
+	small_plane_suicide_airframe_4_reliability
+	small_plane_suicide_airframe_4_thrust
+	small_plane_suicide_airframe_4_weight
+	small_plane_suicide_airframe_5_air_agility
+	small_plane_suicide_airframe_5_air_attack
+	small_plane_suicide_airframe_5_air_bombing
+	small_plane_suicide_airframe_5_air_defence
+	small_plane_suicide_airframe_5_air_ground_attack
+	small_plane_suicide_airframe_5_air_range
+	small_plane_suicide_airframe_5_air_superiority
+	small_plane_suicide_airframe_5_build_cost_ic
+	small_plane_suicide_airframe_5_fuel_consumption
+	small_plane_suicide_airframe_5_maximum_speed
+	small_plane_suicide_airframe_5_naval_strike_attack
+	small_plane_suicide_airframe_5_naval_strike_targetting
+	small_plane_suicide_airframe_5_night_penalty
+	small_plane_suicide_airframe_5_sub_detection
+	small_plane_suicide_airframe_5_surface_detection
+	small_plane_suicide_airframe_5_reliability
+	small_plane_suicide_airframe_5_thrust
+	small_plane_suicide_airframe_5_weight
+	cv_small_plane_suicide_airframe_air_agility
+	cv_small_plane_suicide_airframe_air_attack
+	cv_small_plane_suicide_airframe_air_bombing
+	cv_small_plane_suicide_airframe_air_defence
+	cv_small_plane_suicide_airframe_air_ground_attack
+	cv_small_plane_suicide_airframe_air_range
+	cv_small_plane_suicide_airframe_air_superiority
+	cv_small_plane_suicide_airframe_build_cost_ic
+	cv_small_plane_suicide_airframe_fuel_consumption
+	cv_small_plane_suicide_airframe_maximum_speed
+	cv_small_plane_suicide_airframe_naval_strike_attack
+	cv_small_plane_suicide_airframe_naval_strike_targetting
+	cv_small_plane_suicide_airframe_night_penalty
+	cv_small_plane_suicide_airframe_sub_detection
+	cv_small_plane_suicide_airframe_surface_detection
+	cv_small_plane_suicide_airframe_reliability
+	cv_small_plane_suicide_airframe_thrust
+	cv_small_plane_suicide_airframe_weight
+	cv_small_plane_suicide_airframe_0_air_agility
+	cv_small_plane_suicide_airframe_0_air_attack
+	cv_small_plane_suicide_airframe_0_air_bombing
+	cv_small_plane_suicide_airframe_0_air_defence
+	cv_small_plane_suicide_airframe_0_air_ground_attack
+	cv_small_plane_suicide_airframe_0_air_range
+	cv_small_plane_suicide_airframe_0_air_superiority
+	cv_small_plane_suicide_airframe_0_build_cost_ic
+	cv_small_plane_suicide_airframe_0_fuel_consumption
+	cv_small_plane_suicide_airframe_0_maximum_speed
+	cv_small_plane_suicide_airframe_0_naval_strike_attack
+	cv_small_plane_suicide_airframe_0_naval_strike_targetting
+	cv_small_plane_suicide_airframe_0_night_penalty
+	cv_small_plane_suicide_airframe_0_sub_detection
+	cv_small_plane_suicide_airframe_0_surface_detection
+	cv_small_plane_suicide_airframe_0_reliability
+	cv_small_plane_suicide_airframe_0_thrust
+	cv_small_plane_suicide_airframe_0_weight
+	cv_small_plane_suicide_airframe_1_air_agility
+	cv_small_plane_suicide_airframe_1_air_attack
+	cv_small_plane_suicide_airframe_1_air_bombing
+	cv_small_plane_suicide_airframe_1_air_defence
+	cv_small_plane_suicide_airframe_1_air_ground_attack
+	cv_small_plane_suicide_airframe_1_air_range
+	cv_small_plane_suicide_airframe_1_air_superiority
+	cv_small_plane_suicide_airframe_1_build_cost_ic
+	cv_small_plane_suicide_airframe_1_fuel_consumption
+	cv_small_plane_suicide_airframe_1_maximum_speed
+	cv_small_plane_suicide_airframe_1_naval_strike_attack
+	cv_small_plane_suicide_airframe_1_naval_strike_targetting
+	cv_small_plane_suicide_airframe_1_night_penalty
+	cv_small_plane_suicide_airframe_1_sub_detection
+	cv_small_plane_suicide_airframe_1_surface_detection
+	cv_small_plane_suicide_airframe_1_reliability
+	cv_small_plane_suicide_airframe_1_thrust
+	cv_small_plane_suicide_airframe_1_weight
+	cv_small_plane_suicide_airframe_2_air_agility
+	cv_small_plane_suicide_airframe_2_air_attack
+	cv_small_plane_suicide_airframe_2_air_bombing
+	cv_small_plane_suicide_airframe_2_air_defence
+	cv_small_plane_suicide_airframe_2_air_ground_attack
+	cv_small_plane_suicide_airframe_2_air_range
+	cv_small_plane_suicide_airframe_2_air_superiority
+	cv_small_plane_suicide_airframe_2_build_cost_ic
+	cv_small_plane_suicide_airframe_2_fuel_consumption
+	cv_small_plane_suicide_airframe_2_maximum_speed
+	cv_small_plane_suicide_airframe_2_naval_strike_attack
+	cv_small_plane_suicide_airframe_2_naval_strike_targetting
+	cv_small_plane_suicide_airframe_2_night_penalty
+	cv_small_plane_suicide_airframe_2_sub_detection
+	cv_small_plane_suicide_airframe_2_surface_detection
+	cv_small_plane_suicide_airframe_2_reliability
+	cv_small_plane_suicide_airframe_2_thrust
+	cv_small_plane_suicide_airframe_2_weight
+	cv_small_plane_suicide_airframe_3_air_agility
+	cv_small_plane_suicide_airframe_3_air_attack
+	cv_small_plane_suicide_airframe_3_air_bombing
+	cv_small_plane_suicide_airframe_3_air_defence
+	cv_small_plane_suicide_airframe_3_air_ground_attack
+	cv_small_plane_suicide_airframe_3_air_range
+	cv_small_plane_suicide_airframe_3_air_superiority
+	cv_small_plane_suicide_airframe_3_build_cost_ic
+	cv_small_plane_suicide_airframe_3_fuel_consumption
+	cv_small_plane_suicide_airframe_3_maximum_speed
+	cv_small_plane_suicide_airframe_3_naval_strike_attack
+	cv_small_plane_suicide_airframe_3_naval_strike_targetting
+	cv_small_plane_suicide_airframe_3_night_penalty
+	cv_small_plane_suicide_airframe_3_sub_detection
+	cv_small_plane_suicide_airframe_3_surface_detection
+	cv_small_plane_suicide_airframe_3_reliability
+	cv_small_plane_suicide_airframe_3_thrust
+	cv_small_plane_suicide_airframe_3_weight
+	cv_small_plane_suicide_airframe_4_air_agility
+	cv_small_plane_suicide_airframe_4_air_attack
+	cv_small_plane_suicide_airframe_4_air_bombing
+	cv_small_plane_suicide_airframe_4_air_defence
+	cv_small_plane_suicide_airframe_4_air_ground_attack
+	cv_small_plane_suicide_airframe_4_air_range
+	cv_small_plane_suicide_airframe_4_air_superiority
+	cv_small_plane_suicide_airframe_4_build_cost_ic
+	cv_small_plane_suicide_airframe_4_fuel_consumption
+	cv_small_plane_suicide_airframe_4_maximum_speed
+	cv_small_plane_suicide_airframe_4_naval_strike_attack
+	cv_small_plane_suicide_airframe_4_naval_strike_targetting
+	cv_small_plane_suicide_airframe_4_night_penalty
+	cv_small_plane_suicide_airframe_4_sub_detection
+	cv_small_plane_suicide_airframe_4_surface_detection
+	cv_small_plane_suicide_airframe_4_reliability
+	cv_small_plane_suicide_airframe_4_thrust
+	cv_small_plane_suicide_airframe_4_weight
+	rocket_suicide_equipment_1_air_agility
+	rocket_suicide_equipment_1_air_defence
+	rocket_suicide_equipment_1_air_range
+	rocket_suicide_equipment_1_air_superiority
+	rocket_suicide_equipment_1_build_cost_ic
+	rocket_suicide_equipment_1_maximum_speed
+	rocket_suicide_equipment_1_naval_strike_attack
+	rocket_suicide_equipment_1_naval_strike_targetting
+	rocket_suicide_equipment_1_reliability
+
 # scout_plane
+	## 속하는 장비 (BBA 보유):
+		medium_plane_scout_plane_airframe
+
 
 # maritime_patrol_plane
 	## 속하는 장비 (BBA 보유):
@@ -3488,31 +4279,7 @@
 	air_agility
 	air_bombing
 	
-		sam_missile_equipment
-		sam_missile_equipment_1
 	
-	reliability
-	naval_strike_attack
-	naval_strike_targetting
-	build_cost_ic
-	air_range
-	maximum_speed
-	air_agility
-	air_attack
-	
-		small_plane_airframe
-		cv_small_plane_airframe
-		small_plane_airframe_0
-		small_plane_airframe_1
-		small_plane_airframe_2
-		small_plane_airframe_3
-		small_plane_airframe_4
-		small_plane_airframe_5
-		cv_small_plane_airframe_0
-		cv_small_plane_airframe_1
-		cv_small_plane_airframe_2
-		cv_small_plane_airframe_3
-		cv_small_plane_airframe_4
 		medium_plane_airframe
 		medium_plane_airframe_0
 		medium_plane_airframe_1
@@ -3565,17 +4332,6 @@
 		cv_small_plane_naval_bomber_airframe_2
 		cv_small_plane_naval_bomber_airframe_3
 		cv_small_plane_naval_bomber_airframe_4
-		small_plane_suicide_airframe_0	#suicide
-		small_plane_suicide_airframe_1
-		small_plane_suicide_airframe_2
-		small_plane_suicide_airframe_3
-		small_plane_suicide_airframe_4
-		small_plane_suicide_airframe_5
-		cv_small_plane_suicide_airframe_0	#suicide
-		cv_small_plane_suicide_airframe_1
-		cv_small_plane_suicide_airframe_2
-		cv_small_plane_suicide_airframe_3
-		cv_small_plane_suicide_airframe_4
 		medium_plane_fighter_airframe_0	#heavy_fighter
 		medium_plane_fighter_airframe_1
 		medium_plane_fighter_airframe_2
@@ -3597,42 +4353,7 @@
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		fighter_equipment_0
-		fighter_equipment_1
-		fighter_equipment_2
-		fighter_equipment_3
-		jet_fighter_equipment_1
-		jet_fighter_equipment_2
-		cv_fighter_equipment_0
-		cv_fighter_equipment_1
-		cv_fighter_equipment_2
-		cv_fighter_equipment_3
-		supersonic_fighter_equipment_1
-	
-	air_range
-	maximum_speed
-	air_agility
-	air_attack
-	air_defence
-	naval_strike_attack
-	naval_strike_targetting
-	air_superiority
-	reliability
-	surface_detection
-	sub_detection
-	build_cost_ic
-	fuel_consumption
+
 	
 		CAS_equipment_1
 		CAS_equipment_2
@@ -3684,16 +4405,10 @@
 	
 		rocket_suicide_equipment_1
 	
-	air_range
-	maximum_speed
-	air_agility
-	air_defence
-	build_cost_ic
 	naval_strike_attack
 	naval_strike_targetting
 	surface_detection
 	sub_detection
-	air_superiority
 	reliability
 	
 		tac_bomber_equipment_0
