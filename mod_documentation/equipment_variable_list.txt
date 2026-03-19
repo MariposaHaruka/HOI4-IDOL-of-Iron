@@ -2805,13 +2805,130 @@
 	ship_hull_heavy_4_surface_detection
 	ship_hull_heavy_4_surface_visibility
 	ship_hull_heavy_4_torpedo_attack
+	ship_hull_pre_dreadnought_anti_air_attack
+	ship_hull_pre_dreadnought_armor_value
+	ship_hull_pre_dreadnought_build_cost_ic
+	ship_hull_pre_dreadnought_fuel_consumption
+	ship_hull_pre_dreadnought_hg_armor_piercing
+	ship_hull_pre_dreadnought_hg_attack
+	ship_hull_pre_dreadnought_lg_armor_piercing
+	ship_hull_pre_dreadnought_lg_attack
+	ship_hull_pre_dreadnought_max_strength
+	ship_hull_pre_dreadnought_naval_dominance_factor
+	ship_hull_pre_dreadnought_naval_heavy_gun_hit_chance_factor
+	ship_hull_pre_dreadnought_naval_light_gun_hit_chance_factor
+	ship_hull_pre_dreadnought_naval_range
+	ship_hull_pre_dreadnought_naval_speed
+	ship_hull_pre_dreadnought_naval_torpedo_damage_reduction_factor
+	ship_hull_pre_dreadnought_naval_torpedo_enemy_critical_chance_factor
+	ship_hull_pre_dreadnought_naval_torpedo_hit_chance_factor
+	ship_hull_pre_dreadnought_naval_weather_penalty_factor
+	ship_hull_pre_dreadnought_reliability 
+	ship_hull_pre_dreadnought_sub_detection
+	ship_hull_pre_dreadnought_surface_detection
+	ship_hull_pre_dreadnought_surface_visibility
+	ship_hull_pre_dreadnought_torpedo_attack
+	ship_hull_super_heavy_anti_air_attack
+	ship_hull_super_heavy_armor_value
+	ship_hull_super_heavy_build_cost_ic
+	ship_hull_super_heavy_fuel_consumption
+	ship_hull_super_heavy_hg_armor_piercing
+	ship_hull_super_heavy_hg_attack
+	ship_hull_super_heavy_lg_armor_piercing
+	ship_hull_super_heavy_lg_attack
+	ship_hull_super_heavy_max_strength
+	ship_hull_super_heavy_naval_dominance_factor
+	ship_hull_super_heavy_naval_heavy_gun_hit_chance_factor
+	ship_hull_super_heavy_naval_light_gun_hit_chance_factor
+	ship_hull_super_heavy_naval_range
+	ship_hull_super_heavy_naval_speed
+	ship_hull_super_heavy_naval_torpedo_damage_reduction_factor
+	ship_hull_super_heavy_naval_torpedo_enemy_critical_chance_factor
+	ship_hull_super_heavy_naval_torpedo_hit_chance_factor
+	ship_hull_super_heavy_naval_weather_penalty_factor
+	ship_hull_super_heavy_reliability 
+	ship_hull_super_heavy_sub_detection
+	ship_hull_super_heavy_surface_detection
+	ship_hull_super_heavy_surface_visibility
+	ship_hull_super_heavy_torpedo_attack
+	ship_hull_heavy_modern_anti_air_attack
+	ship_hull_heavy_modern_armor_value
+	ship_hull_heavy_modern_build_cost_ic
+	ship_hull_heavy_modern_fuel_consumption
+	ship_hull_heavy_modern_hg_armor_piercing
+	ship_hull_heavy_modern_hg_attack
+	ship_hull_heavy_modern_lg_armor_piercing
+	ship_hull_heavy_modern_lg_attack
+	ship_hull_heavy_modern_max_strength
+	ship_hull_heavy_modern_naval_dominance_factor
+	ship_hull_heavy_modern_naval_heavy_gun_hit_chance_factor
+	ship_hull_heavy_modern_naval_light_gun_hit_chance_factor
+	ship_hull_heavy_modern_naval_range
+	ship_hull_heavy_modern_naval_speed
+	ship_hull_heavy_modern_naval_torpedo_damage_reduction_factor
+	ship_hull_heavy_modern_naval_torpedo_enemy_critical_chance_factor
+	ship_hull_heavy_modern_naval_torpedo_hit_chance_factor
+	ship_hull_heavy_modern_naval_weather_penalty_factor
+	ship_hull_heavy_modern_reliability 
+	ship_hull_heavy_modern_sub_detection
+	ship_hull_heavy_modern_surface_detection
+	ship_hull_heavy_modern_surface_visibility
+	ship_hull_heavy_modern_torpedo_attack
 	
+# screen_ship
+	## 속하는 장비: #뒤의 숫자는 분량상 생략
+		ship_hull_cruiser	#중순함포 X
+		ship_hull_cruiser_modern_aa	#중순함포 X
+		ship_hull_torpedo_cruiser	#중순함포 X
+		ship_hull_cruiser_panzerschiff	#중순함포 X
+		ship_hull_cruiser_coastal_defense_ship	#중순함포 X
+		ship_hull_light
 
-		ship_hull_pre_dreadnought
-		ship_hull_super_heavy
-		ship_hull_heavy_modern
+	### hull_light ###
+	module_slots = {
+		fixed_ship_battery_slot = {
+			ship_light_battery
+			dp_light_battery
+		}
+		fixed_ship_anti_air_slot = {
+			ship_anti_air
 
+			anti_air_attack
+			build_cost_ic
+			naval_speed
+		}
+		fixed_ship_fire_control_system_slot = {
+			ship_fire_control_system
+			ship_sonar
+		}
+		fixed_ship_radar_slot = {
+			ship_radar
+			ship_sonar
+		}
+		fixed_ship_torpedo_slot = {
+			ship_torpedo
+		}
+		fixed_ship_engine_slot = {
+			light_ship_engine
+		}
 
+		mid_1_custom_slot = {
+			ship_torpedo
+			ship_mine_warfare
+			ship_mine_layer
+			ship_anti_air
+			ship_depth_charge
+			ship_seaplane_tender
+		}
+		rear_1_custom_slot = {
+			ship_torpedo
+			ship_mine_warfare
+			ship_mine_layer
+			ship_anti_air
+			ship_depth_charge
+		}
+	}		
+		
 
 
 	module_slots = {
@@ -2910,7 +3027,59 @@
 		}
 	}
 
-
+	### hull cruiser ###
+	module_slots = {
+		fixed_ship_battery_slot = {
+			ship_light_battery
+			dp_light_battery
+			ship_light_medium_battery
+			ship_medium_battery
+		}
+		fixed_ship_anti_air_slot = {
+			ship_anti_air
+		}
+		fixed_ship_fire_control_system_slot = {
+			ship_fire_control_system
+			ship_sonar
+		}
+		fixed_ship_radar_slot = {
+			ship_radar
+			ship_sonar
+		}
+		fixed_ship_engine_slot = {
+			cruiser_ship_engine
+		}
+		fixed_ship_secondaries_slot = {
+			ship_secondaries
+			ship_dp_secondaries
+		}
+		fixed_ship_armor_slot = {
+			ship_cruiser_armor	
+		}
+		mid_1_custom_slot = {
+			ship_torpedo
+			ship_anti_air
+			ship_light_battery
+			dp_light_battery
+			ship_light_medium_battery
+			ship_medium_battery
+			ship_secondaries
+			ship_dp_secondaries
+			ship_airplane_launcher
+			ship_mine_layer
+		}
+		mid_2_custom_slot = mid_1_custom_slot
+		rear_1_custom_slot = {
+			ship_anti_air
+			ship_light_battery
+			dp_light_battery
+			ship_light_medium_battery
+			ship_medium_battery
+			ship_airplane_launcher
+			ship_mine_layer
+			ship_depth_charge
+		}
+	}
 
 
 
