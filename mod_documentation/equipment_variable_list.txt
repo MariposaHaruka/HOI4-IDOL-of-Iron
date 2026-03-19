@@ -3182,6 +3182,54 @@
 
 # submarine
 
+
+	surface_detection
+	surface_visibility
+	sub_visibility
+	naval_speed
+	reliability 
+	naval_range
+	max_strength 
+	fuel_consumption 
+	build_cost_ic =
+	naval_dominance_factor
+	naval_weather_penalty_factor
+
+
+	module_slots = {
+		fixed_ship_torpedo_slot = {
+			ship_torpedo_sub
+		}
+		fixed_ship_engine_slot = {
+			sub_ship_engine
+		}
+		front_1_custom_slot = {
+			ship_torpedo_sub
+			ship_mine_layer_sub
+		}
+		mid_1_custom_slot = {
+			ship_radar
+			ship_sub_snorkel
+			ship_sub_coating
+		}
+		rear_1_custom_slot = {
+			ship_torpedo_sub
+			ship_mine_layer_sub
+			ship_radar
+		}
+	}
+
+	ship_hull_cruiser_submarine
+
+		ship_extra_fuel_tank
+		ship_light_battery_sub
+		ship_airplane_launcher
+
+	ship_hull_fleet_submarine
+	ship_hull_midget_submarine
+	ship_hull_nuclear_submarine
+	ship_hull_carrier_submarine
+
 # screen_ship
 
 # support_ship
