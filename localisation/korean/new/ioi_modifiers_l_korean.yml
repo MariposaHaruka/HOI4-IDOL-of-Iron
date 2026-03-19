@@ -2777,6 +2777,493 @@
  temporary_state_resource_tungsten_tt: "$temporary_state_resource_tungsten$: $RIGHT|+=0$"
  ### <IdeaCategory>_category_type_cost_factor - 툴팁 전부 존재함
  ### module_<EquipmentModule>_design_cost_factor
+ modifier_module_NOR_rikstanken_turret_design_cost_factor: "급조 포탑 설계 비용"
+ modifier_module_NOR_tank_rikstanken_armor_design_cost_factor: "급조 장갑 설계 비용"
+ modifier_module_additional_machine_guns_design_cost_factor: "추가 기관총 설계 비용"
+ modifier_module_advanced_flamethrower_design_cost_factor: "발전된 화염방사기 설계 비용"
+ modifier_module_air_air_radar_1_design_cost_factor: "공대공 레이더 I 설계 비용"
+ modifier_module_air_air_radar_2_design_cost_factor: "공대공 레이더 II 설계 비용"
+ modifier_module_air_ground_radar_1_design_cost_factor: "공대지 레이더 I 설계 비용"
+ modifier_module_air_ground_radar_2_design_cost_factor: "공대지 레이더 II 설계 비용"
+ modifier_module_aircraft_cannon_1_1x_design_cost_factor: "1x 포 I 설계 비용"
+ modifier_module_aircraft_cannon_1_2x_design_cost_factor: "2x 포 I 설계 비용"
+ modifier_module_aircraft_cannon_2_1x_design_cost_factor: "1x 포 II 설계 비용"
+ modifier_module_aircraft_cannon_2_2x_design_cost_factor: "1x 포 II 설계 비용"
+ modifier_module_airdropped_mines_design_cost_factor: "공중투하 기뢰 설계 비용"
+ modifier_module_armor_piercing_bomb_locks_design_cost_factor: "철갑폭탄 장착 설계 비용"
+ modifier_module_armor_plate_large_design_cost_factor: "대형 기체 장갑판 설계 비용"
+ modifier_module_armor_plate_medium_design_cost_factor: "중형 기체 장갑판 설계 비용"
+ modifier_module_armor_plate_small_design_cost_factor: "소형 기체 장갑판 설계 비용"
+ modifier_module_armor_skirts_design_cost_factor: "장갑 스커트 설계 비용"
+ modifier_module_auto_loader_design_cost_factor: "자동 장전기 설계 비용"
+ modifier_module_big_ship_deck_space_design_cost_factor: "부유식 비행장 활주로 설계 비용"
+ modifier_module_bomb_locks_design_cost_factor: "폭탄 장착(소형) 설계 비용"
+ modifier_module_bomb_sights_1_design_cost_factor: "폭격 조준기 I 설계 비용"
+ modifier_module_bomb_sights_2_design_cost_factor: "폭격 조준기 II 설계 비용"
+ modifier_module_cannon_defense_turret_design_cost_factor: "기관포 방어 포탑 설계 비용"
+ modifier_module_cannon_defense_turret_2x_design_cost_factor: "기관포 방어 포탑 2x 설계 비용"
+ modifier_module_carrier_ship_nuclear_engine_1_design_cost_factor: "원자력 항공모함 원자로 설계 비용"
+ modifier_module_demining_coil_design_cost_factor: "기뢰 제거용 코일 설계 비용"
+ modifier_module_dive_brakes_small_design_cost_factor: "다이브 브레이크 설계 비용"
+ modifier_module_dozer_blade_design_cost_factor: "도저 블레이드 설계 비용"
+ modifier_module_dp_light_battery_1_design_cost_factor: "100mm 양용포 설계 비용"
+ modifier_module_dp_light_battery_2_design_cost_factor: "113mm 양용포 설계 비용"
+ modifier_module_dp_light_battery_3_design_cost_factor: "127mm 양용포 설계 비용"
+ modifier_module_dp_light_battery_4_design_cost_factor: "127mm 속사양용포 설계 비용"
+ modifier_module_dp_ship_medium_1_design_cost_factor: "152mm 속사양용포 설계 비용"
+ modifier_module_dp_ship_secondaries_1_design_cost_factor: "100mm 공지양용 부포 설계 비용"
+ modifier_module_dp_ship_secondaries_2_design_cost_factor: "113mm 공지양용 부포 설계 비용"
+ modifier_module_dp_ship_secondaries_3_design_cost_factor: "127mm 공지양용 부포 설계 비용"
+ modifier_module_dp_ship_secondaries_4_design_cost_factor: "127mm 속사 공지양용 부포 설계 비용"
+ modifier_module_drop_tanks_design_cost_factor: "외부 연료 탱크 설계 비용"
+ modifier_module_earthshaker_bomb_release_design_cost_factor: "지진 폭탄 거치대 설계 비용"
+ modifier_module_easy_maintenance_design_cost_factor: "쉬운 정비 설계 비용"
+ modifier_module_engine_1_1x_design_cost_factor: "1x 엔진 I 설계 비용"
+ modifier_module_engine_1_2x_design_cost_factor: "2x 엔진 I 설계 비용"
+ modifier_module_engine_1_3x_design_cost_factor: "3x 엔진 I 설계 비용"
+ modifier_module_engine_1_4x_design_cost_factor: "4x 엔진 I 설계 비용"
+ modifier_module_engine_1_6x_design_cost_factor: "6x 엔진 I 설계 비용"
+ modifier_module_engine_2_1x_design_cost_factor: "1x 엔진 II 설계 비용"
+ modifier_module_engine_2_2x_design_cost_factor: "2x 엔진 II 설계 비용"
+ modifier_module_engine_2_3x_design_cost_factor: "3x 엔진 II 설계 비용"
+ modifier_module_engine_2_4x_design_cost_factor: "4x 엔진 II 설계 비용"
+ modifier_module_engine_2_6x_design_cost_factor: "6x 엔진 II 설계 비용"
+ modifier_module_engine_3_1x_design_cost_factor: "1x 엔진 III 설계 비용"
+ modifier_module_engine_3_2x_design_cost_factor: "2x 엔진 III 설계 비용"
+ modifier_module_engine_3_3x_design_cost_factor: "3x 엔진 III 설계 비용"
+ modifier_module_engine_3_4x_design_cost_factor: "4x 엔진 III 설계 비용"
+ modifier_module_engine_3_6x_design_cost_factor: "6x 엔진 III 설계 비용"
+ modifier_module_engine_4_1x_design_cost_factor: "1x 엔진 IV 설계 비용"
+ modifier_module_engine_4_2x_design_cost_factor: "2x 엔진 IV 설계 비용"
+ modifier_module_engine_4_3x_design_cost_factor: "3x 엔진 IV 설계 비용"
+ modifier_module_engine_4_4x_design_cost_factor: "4x 엔진 IV 설계 비용"
+ modifier_module_engine_4_6x_design_cost_factor: "6x 엔진 IV 설계 비용"
+ modifier_module_expanded_fuel_tank_design_cost_factor: "전차용 연료 드럼 설계 비용"
+ modifier_module_extra_ammo_storage_design_cost_factor: "전차용 추가 탄약고 설계 비용"
+ modifier_module_fixed_explosive_charge_design_cost_factor: "고정 폭발물 설계 비용"
+ modifier_module_flamethrower_design_cost_factor: "화염방사기 설계 비용"
+ modifier_module_floats_design_cost_factor: "플로트 설계 비용"
+ modifier_module_flying_boat_large_design_cost_factor: "중형 기체 비행정 설계 비용"
+ modifier_module_flying_boat_medium_design_cost_factor: "대형 기체 비행정 설계 비용"
+ modifier_module_fuel_tanks_large_design_cost_factor: "대형 기체 추가 연료 탱크 설계 비용"
+ modifier_module_fuel_tanks_medium_design_cost_factor: "중형 기체 추가 연료 탱크 설계 비용"
+ modifier_module_fuel_tanks_small_design_cost_factor: "소형 기체 추가 연료 탱크 설계 비용"
+ modifier_module_guided_anti_ship_missile_design_cost_factor: "대함 유도 미사일 설계 비용"
+ modifier_module_heavy_bomb_locks_design_cost_factor: "대형 폭탄 장착 설계 비용"
+ modifier_module_heavy_mg_2x_design_cost_factor: "2x 중기관총 설계 비용"
+ modifier_module_heavy_mg_4x_design_cost_factor: "4x 중기관총 설계 비용"
+ modifier_module_heavy_ship_nuclear_engine_1_design_cost_factor: "원자력 중형 함선 원자로 설계 비용"
+ modifier_module_hmg_defense_turret_design_cost_factor: "중기관총 방어 포탑 설계 비용"
+ modifier_module_hmg_defense_turret_2x_design_cost_factor: "중기관총 방어 포탑 2x 설계 비용"
+ modifier_module_improved_rocket_propelled_bombs_design_cost_factor: "대형 로켓 추진 폭탄 설계 비용"
+ modifier_module_jet_engine_1x_design_cost_factor: "1x 제트 엔진 설계 비용"
+ modifier_module_jet_engine_2x_design_cost_factor: "2x 제트 엔진 설계 비용"
+ modifier_module_jet_engine_3x_design_cost_factor: "3x 제트 엔진 설계 비용"
+ modifier_module_jet_engine_4x_design_cost_factor: "4x 제트 엔진 설계 비용"
+ modifier_module_jet_engine_6x_design_cost_factor: "5x 제트 엔진 설계 비용"
+ modifier_module_jet_engine_axial_1x_design_cost_factor: "1x 축류식 제트 엔진 설계 비용"
+ modifier_module_jet_engine_axial_2x_design_cost_factor: "2x 축류식 제트 엔진 설계 비용"
+ modifier_module_jet_engine_axial_3x_design_cost_factor: "3x 축류식 제트 엔진 설계 비용"
+ modifier_module_jet_engine_axial_4x_design_cost_factor: "4x 축류식 제트 엔진 설계 비용"
+ modifier_module_jet_engine_axial_6x_design_cost_factor: "6x 축류식 제트 엔진 설계 비용"
+ modifier_module_large_aircraft_cannon_1x_design_cost_factor: "1x 대구경 포 설계 비용"
+ modifier_module_large_aircraft_cannon_2x_design_cost_factor: "2x 대구경 포 설계 비용"
+ modifier_module_large_bomb_bay_design_cost_factor: "대형 폭탄 적재실 설계 비용"
+ modifier_module_lc_aircraft_catapult_design_cost_factor: "육상순양함 항공기 캐터펄트 설계 비용"
+ modifier_module_lc_armored_skirts_design_cost_factor: "육상순양함 장갑 스커트 설계 비용"
+ modifier_module_lc_assault_gun_design_cost_factor: "육상순양함 돌격포 설계 비용"
+ modifier_module_lc_bunker_emplacement_design_cost_factor: "육상순양함 벙커 포좌 설계 비용"
+ modifier_module_lc_command_center_design_cost_factor: "육상순양함 지휘소 설계 비용"
+ modifier_module_lc_flamethrower_turret_design_cost_factor: "육상순양함 화염방사기 포진 설계 비용"
+ modifier_module_lc_heavy_anti_air_battery_design_cost_factor: "육상순양함 중대공포대 설계 비용"
+ modifier_module_lc_heavy_anti_air_platform_design_cost_factor: "육상순양함 중대공 플랫폼 설계 비용"
+ modifier_module_lc_heavy_high_velocity_cannons_design_cost_factor: "육상순양함 중고속포 설계 비용"
+ modifier_module_lc_heavy_naval_guns_design_cost_factor: "육상순양함 중함포 설계 비용"
+ modifier_module_lc_helipad_design_cost_factor: "육상순양함 헬리패드 설계 비용"
+ modifier_module_lc_high_impact_obliterator_cannon_design_cost_factor: "육상순양함 고충격 절멸포 설계 비용"
+ modifier_module_lc_high_velocity_cannon_turret_design_cost_factor: "육상순양함 동축 고속포 설계 비용"
+ modifier_module_lc_hull_mounted_railway_gun_design_cost_factor: "육상순양함 차체 장착 열차포 설계 비용"
+ modifier_module_lc_internal_ammunition_compartments_design_cost_factor: "육상순양함 내부 탄약실 설계 비용"
+ modifier_module_lc_internal_fuel_tanks_design_cost_factor: "육상순양함 내부 연료 탱크 설계 비용"
+ modifier_module_lc_light_anti_air_battery_design_cost_factor: "육상순양함 경대공포대 설계 비용"
+ modifier_module_lc_medium_cannon_turret_design_cost_factor: "육상순양함 동축 중형포 설계 비용"
+ modifier_module_lc_medium_naval_guns_design_cost_factor: "육상순양함 중형함포 설계 비용"
+ modifier_module_lc_obstacle_clearance_gear_design_cost_factor: "육상순양함 장애물 개척 장비 설계 비용"
+ modifier_module_lc_radar_design_cost_factor: "육상순양함 레이더 설계 비용"
+ modifier_module_lc_radio_1_design_cost_factor: "육상순양함 기초 무전기 설계 비용"
+ modifier_module_lc_radio_2_design_cost_factor: "육상순양함 향상된 무전기 설계 비용"
+ modifier_module_lc_radio_3_design_cost_factor: "육상순양함 발전된 무전기 설계 비용"
+ modifier_module_lc_rocket_launcher_design_cost_factor: "육상순양함 로켓 발사기 설계 비용"
+ modifier_module_lc_smoke_generators_design_cost_factor: "육상순양함 연막 발생기 설계 비용"
+ modifier_module_lc_stabilizers_design_cost_factor: "육상순양함 주포안정기 설계 비용"
+ modifier_module_lc_super_heavy_howitzer_design_cost_factor: "육상순양함 초중곡사포 설계 비용"
+ modifier_module_lc_super_heavy_railway_gun_design_cost_factor: "육상순양함 초중열차포 설계 비용"
+ modifier_module_lc_wet_ammunition_storage_design_cost_factor: "육상순양함 습식 탄약고 설계 비용"
+ modifier_module_light_mg_2x_design_cost_factor: "2x 경기관총 설계 비용"
+ modifier_module_light_mg_4x_design_cost_factor: "4x 경기관총 설계 비용"
+ modifier_module_lmg_defense_turret_design_cost_factor: "경기관총 방어 포탑 설계 비용"
+ modifier_module_lmg_defense_turret_2x_design_cost_factor: "경기관총 방어 포탑 2x 설계 비용"
+ modifier_module_medium_bomb_bay_design_cost_factor: "중형 폭탄 적재실 설계 비용"
+ modifier_module_non_strategic_materials_large_design_cost_factor: "대형기체 비전략 원료 사용 설계 비용"
+ modifier_module_non_strategic_materials_medium_design_cost_factor: "중형기체 비전략 원료 사용 설계 비용"
+ modifier_module_non_strategic_materials_small_design_cost_factor: "소형기체 비전략 원료 사용 설계 비용"
+ modifier_module_radio_navigation_1_design_cost_factor: "라디오 내비게이션 I 설계 비용"
+ modifier_module_radio_navigation_2_design_cost_factor: "라디오 내비게이션 II 설계 비용"
+ modifier_module_recon_camera_design_cost_factor: "정찰 카메라 설계 비용"
+ modifier_module_rocket_engine_1_design_cost_factor: "로켓 엔진 I 설계 비용"
+ modifier_module_rocket_engine_2_design_cost_factor: "로켓 엔진 II 설계 비용"
+ modifier_module_rocket_engine_3_design_cost_factor: "로켓 엔진 III 설계 비용"
+ modifier_module_rocket_propelled_bombs_design_cost_factor: "로켓 추진 폭탄 설계 비용"
+ modifier_module_rocket_rails_design_cost_factor: "로켓 레일 설계 비용"
+ modifier_module_self_sealing_fuel_tanks_large_design_cost_factor: "대형 기체용 자동 방루 연료 탱크 설계 비용"
+ modifier_module_self_sealing_fuel_tanks_medium_design_cost_factor: "중형 기체용 자동 방루 연료 탱크 설계 비용"
+ modifier_module_self_sealing_fuel_tanks_small_design_cost_factor: "소형 기체용 자동 방루 연료 탱크 설계 비용"
+ modifier_module_ship_anechoic_tile_design_cost_factor: "음향 흡수 타일 설계 비용"
+ modifier_module_ship_armor_ice_carrier_deck_1_design_cost_factor: "파이크리트 활주로 강화 설계 비용"
+ modifier_module_ship_armor_ice_carrier_deck_2_design_cost_factor: "강철 보강 파이크리트 활주로 설계 비용"
+ modifier_module_ship_armor_ice_carrier_deck_3_design_cost_factor: "얼음 합성물 활주로 설계 비용"
+ modifier_module_ship_engine_sub_aip_1_design_cost_factor: "공기 불요 추진 설계 비용"
+ modifier_module_ship_engine_sub_aip_2_design_cost_factor: "공기 불요 추진 디젤 결합 엔진 설계 비용"
+ modifier_module_ship_engine_sub_aip_3_design_cost_factor: "고속 발터 엔진 설계 비용"
+ modifier_module_ship_escort_deck_space_design_cost_factor: "호위 항공모함 격납고 설계 비용"
+ modifier_module_ship_light_battery_sub_design_cost_factor: "200mm 함포 설계 비용"
+ modifier_module_ship_light_medium_battery_1_design_cost_factor: "14.5cm 함포 설계 비용"
+ modifier_module_ship_light_medium_battery_2_design_cost_factor: "15cm 함포 설계 비용"
+ modifier_module_ship_light_medium_battery_3_design_cost_factor: "15.5cm 함포 설계 비용"
+ modifier_module_ship_light_medium_battery_4_design_cost_factor: "15.5cm 자동 장전식 함포 설계 비용"
+ modifier_module_ship_seaplane_tender_1_design_cost_factor: "수상기 캐터펄트 설계 비용"
+ modifier_module_ship_seaplane_tender_2_design_cost_factor: "개선된 수상기 캐터펄트 설계 비용"
+ modifier_module_ship_sonar_3_design_cost_factor: "발전된 음파탐지기 설계 비용"
+ modifier_module_ship_sonar_4_design_cost_factor: "현대식 음파탐지기 설계 비용"
+ modifier_module_ship_submarine_deck_space_design_cost_factor: "잠수함 항공모함 격납고 설계 비용"
+ modifier_module_ship_super_heavy_battery_1_design_cost_factor: "46cm 함포 설계 비용"
+ modifier_module_ship_torpedo_sub_nuclear_design_cost_factor: "핵어뢰 설계 비용"
+ modifier_module_slbm_launcher_design_cost_factor: "잠수함 핵미사일 발사대 설계 비용"
+ modifier_module_small_bomb_bay_design_cost_factor: "소형 폭탄 적재실 설계 비용"
+ modifier_module_squeezebore_adaptor_design_cost_factor: "원추형 어댑터 설계 비용"
+ modifier_module_sub_missile_launcher_design_cost_factor: "잠수함 미사일 발사대 설계 비용"
+ modifier_module_sub_ship_nuclear_engine_1_design_cost_factor: "원자력 잠수함 원자로 설계 비용"
+ modifier_module_tank_buster_1_design_cost_factor: "근접지원기용 대전차포 I 설계 비용"
+ modifier_module_tank_buster_2_design_cost_factor: "근접지원기용 대전차포 II 설계 비용"
+ modifier_module_tank_half_track_suspension_design_cost_factor: "하프트랙 현가장치 설계 비용"
+ modifier_module_tank_rocket_launcher_design_cost_factor: "로켓 발사기 설계 비용"
+ modifier_module_tank_rocket_launcher_2_design_cost_factor: "개선된 로켓 발사기 설계 비용"
+ modifier_module_tank_wheeled_suspension_design_cost_factor: "차륜형 현가장치 설계 비용"
+ modifier_module_torpedo_mounting_design_cost_factor: "경어뢰 장착 설계 비용"
+ modifier_module_torpedo_mounting_2_design_cost_factor: "중형어뢰 장착 설계 비용"
+ modifier_module_torpedo_mounting_3_design_cost_factor: "중어뢰 장착 설계 비용"
+ module_NOR_rikstanken_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_NOR_tank_rikstanken_armor_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_additional_machine_guns_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_advanced_flamethrower_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_air_air_radar_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_air_air_radar_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_air_ground_radar_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_air_ground_radar_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_aircraft_cannon_1_1x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_aircraft_cannon_1_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_aircraft_cannon_2_1x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_aircraft_cannon_2_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_airdropped_mines_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_amphibious_drive_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_armor_piercing_bomb_locks_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_armor_plate_large_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_armor_plate_medium_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_armor_plate_small_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_armor_skirts_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_auto_loader_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_big_ship_deck_space_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_bomb_locks_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_bomb_sights_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#폭격 조준기 I 설계 비용"
+ module_bomb_sights_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#폭격 조준기 II 설계 비용"
+ module_cannon_defense_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#기관포 방어 포탑 설계 비용"
+ module_cannon_defense_turret_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#기관포 방어 포탑 2x 설계 비용"
+ module_carrier_ship_engine_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_carrier_ship_engine_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_carrier_ship_engine_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_carrier_ship_engine_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_carrier_ship_nuclear_engine_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#원자력 항공모함 원자로 설계 비용"
+ module_cruiser_ship_engine_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_cruiser_ship_engine_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_cruiser_ship_engine_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_cruiser_ship_engine_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_demining_coil_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#기뢰 제거용 코일 설계 비용"
+ module_dive_brakes_small_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#다이브 브레이크 설계 비용"
+ module_dozer_blade_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#도저 블레이드 설계 비용"
+ module_dp_light_battery_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#100mm 양용포 설계 비용"
+ module_dp_light_battery_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#113mm 양용포 설계 비용"
+ module_dp_light_battery_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#127mm 양용포 설계 비용"
+ module_dp_light_battery_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#127mm 속사양용포 설계 비용"
+ module_dp_ship_medium_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#152mm 속사양용포 설계 비용"
+ module_dp_ship_secondaries_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#100mm 공지양용 부포 설계 비용"
+ module_dp_ship_secondaries_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#113mm 공지양용 부포 설계 비용"
+ module_dp_ship_secondaries_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#127mm 공지양용 부포 설계 비용"
+ module_dp_ship_secondaries_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#127mm 속사 공지양용 부포 설계 비용"
+ module_drop_tanks_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#외부 연료 탱크 설계 비용"
+ module_earthshaker_bomb_release_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#지진 폭탄 거치대 설계 비용"
+ module_easy_maintenance_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#쉬운 정비 설계 비용"
+ module_engine_1_1x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#1x 엔진 I 설계 비용"
+ module_engine_1_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#2x 엔진 I 설계 비용"
+ module_engine_1_3x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#3x 엔진 I 설계 비용"
+ module_engine_1_4x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#4x 엔진 I 설계 비용"
+ module_engine_1_6x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#6x 엔진 I 설계 비용"
+ module_engine_2_1x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#1x 엔진 II 설계 비용"
+ module_engine_2_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#2x 엔진 II 설계 비용"
+ module_engine_2_3x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#3x 엔진 II 설계 비용"
+ module_engine_2_4x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#4x 엔진 II 설계 비용"
+ module_engine_2_6x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#6x 엔진 II 설계 비용"
+ module_engine_3_1x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#1x 엔진 III 설계 비용"
+ module_engine_3_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#2x 엔진 III 설계 비용"
+ module_engine_3_3x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#3x 엔진 III 설계 비용"
+ module_engine_3_4x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#4x 엔진 III 설계 비용"
+ module_engine_3_6x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#6x 엔진 III 설계 비용"
+ module_engine_4_1x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#1x 엔진 IV 설계 비용"
+ module_engine_4_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#2x 엔진 IV 설계 비용"
+ module_engine_4_3x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#3x 엔진 IV 설계 비용"
+ module_engine_4_4x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#4x 엔진 IV 설계 비용"
+ module_engine_4_6x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#6x 엔진 IV 설계 비용"
+ module_expanded_fuel_tank_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 연료 드럼 설계 비용"
+ module_extra_ammo_storage_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 추가 탄약고 설계 비용"
+ module_fixed_explosive_charge_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#고정 폭발물 설계 비용"
+ module_flamethrower_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#화염방사기 설계 비용"
+ module_floats_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#플로트 설계 비용"
+ module_flying_boat_large_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중형 기체 비행정 설계 비용"
+ module_flying_boat_medium_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#대형 기체 비행정 설계 비용"
+ module_fuel_tanks_large_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#대형 기체 추가 연료 탱크 설계 비용"
+ module_fuel_tanks_medium_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중형 기체 추가 연료 탱크 설계 비용"
+ module_fuel_tanks_small_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#소형 기체 추가 연료 탱크 설계 비용"
+ module_guided_anti_ship_missile_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#대함 유도 미사일 설계 비용"
+ module_heavy_bomb_locks_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#대형 폭탄 장착 설계 비용"
+ module_heavy_mg_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#2x 중기관총 설계 비용"
+ module_heavy_mg_4x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#4x 중기관총 설계 비용"
+ module_heavy_ship_engine_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_heavy_ship_engine_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_heavy_ship_engine_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_heavy_ship_engine_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_heavy_ship_nuclear_engine_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#원자력 중형 함선 원자로 설계 비용"
+ module_hmg_defense_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중기관총 방어 포탑 설계 비용"
+ module_hmg_defense_turret_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중기관총 방어 포탑 2x 설계 비용"
+ module_improved_rocket_propelled_bombs_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#대형 로켓 추진 폭탄 설계 비용"
+ module_jet_engine_1x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#1x 제트 엔진 설계 비용"
+ module_jet_engine_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#2x 제트 엔진 설계 비용"
+ module_jet_engine_3x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#3x 제트 엔진 설계 비용"
+ module_jet_engine_4x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#4x 제트 엔진 설계 비용"
+ module_jet_engine_6x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#5x 제트 엔진 설계 비용"
+ module_jet_engine_axial_1x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#1x 축류식 제트 엔진 설계 비용"
+ module_jet_engine_axial_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#2x 축류식 제트 엔진 설계 비용"
+ module_jet_engine_axial_3x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#3x 축류식 제트 엔진 설계 비용"
+ module_jet_engine_axial_4x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#4x 축류식 제트 엔진 설계 비용"
+ module_jet_engine_axial_6x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#6x 축류식 제트 엔진 설계 비용"
+ module_large_aircraft_cannon_1x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#1x 대구경 포 설계 비용"
+ module_large_aircraft_cannon_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#2x 대구경 포 설계 비용"
+ module_large_bomb_bay_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#대형 폭탄 적재실 설계 비용"
+ module_lc_aircraft_catapult_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 항공기 캐터펄트 설계 비용"
+ module_lc_armored_skirts_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 장갑 스커트 설계 비용"
+ module_lc_assault_gun_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 돌격포 설계 비용"
+ module_lc_bunker_emplacement_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 벙커 포좌 설계 비용"
+ module_lc_command_center_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 지휘소 설계 비용"
+ module_lc_flamethrower_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 화염방사기 포진 설계 비용"
+ module_lc_heavy_anti_air_battery_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 중대공포대 설계 비용"
+ module_lc_heavy_anti_air_platform_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 중대공 플랫폼 설계 비용"
+ module_lc_heavy_high_velocity_cannons_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 중고속포 설계 비용"
+ module_lc_heavy_naval_guns_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 중함포 설계 비용"
+ module_lc_helipad_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 헬리패드 설계 비용"
+ module_lc_high_impact_obliterator_cannon_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 고충격 절멸포 설계 비용"
+ module_lc_high_velocity_cannon_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 동축 고속포 설계 비용"
+ module_lc_hull_mounted_railway_gun_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 차체 장착 열차포 설계 비용"
+ module_lc_internal_ammunition_compartments_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 내부 탄약실 설계 비용"
+ module_lc_internal_fuel_tanks_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 내부 연료 탱크 설계 비용"
+ module_lc_light_anti_air_battery_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 경대공포대 설계 비용"
+ module_lc_medium_cannon_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 동축 중형포 설계 비용"
+ module_lc_medium_naval_guns_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 중형함포 설계 비용"
+ module_lc_obstacle_clearance_gear_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 장애물 개척 장비 설계 비용"
+ module_lc_radar_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 레이더 설계 비용"
+ module_lc_radio_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 기초 무전기 설계 비용"
+ module_lc_radio_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 향상된 무전기 설계 비용"
+ module_lc_radio_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 발전된 무전기 설계 비용"
+ module_lc_rocket_launcher_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 로켓 발사기 설계 비용"
+ module_lc_smoke_generators_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 연막 발생기 설계 비용"
+ module_lc_stabilizers_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 주포안정기 설계 비용"
+ module_lc_super_heavy_howitzer_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 초중곡사포 설계 비용"
+ module_lc_super_heavy_railway_gun_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 초중열차포 설계 비용"
+ module_lc_wet_ammunition_storage_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#육상순양함 습식 탄약고 설계 비용"
+ module_light_mg_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#2x 경기관총 설계 비용"
+ module_light_mg_4x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#4x 경기관총 설계 비용"
+ module_light_ship_engine_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#35,000축마력 함선 엔진 설계 비용	#-4%
+ module_light_ship_engine_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#40,000축마력 함선 엔진 설계 비용	#-4%
+ module_light_ship_engine_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#45,000축마력 함선 엔진 설계 비용	#-4%
+ module_light_ship_engine_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#50,000축마력 함선 엔진 설계 비용	#-4%
+ module_lmg_defense_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#경기관총 방어 포탑 설계 비용"
+ module_lmg_defense_turret_2x_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#경기관총 방어 포탑 2x 설계 비용"
+ module_medium_bomb_bay_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중형 폭탄 적재실 설계 비용"
+ module_non_strategic_materials_large_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#대형기체 비전략 원료 사용 설계 비용"
+ module_non_strategic_materials_medium_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중형기체 비전략 원료 사용 설계 비용"
+ module_non_strategic_materials_small_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#소형기체 비전략 원료 사용 설계 비용"
+ module_radio_navigation_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#라디오 내비게이션 I 설계 비용"
+ module_radio_navigation_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#라디오 내비게이션 II 설계 비용"
+ module_recon_camera_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#정찰 카메라 설계 비용"
+ module_rocket_engine_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#로켓 엔진 I 설계 비용"
+ module_rocket_engine_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#로켓 엔진 II 설계 비용"
+ module_rocket_engine_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#로켓 엔진 III 설계 비용"
+ module_rocket_propelled_bombs_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#로켓 추진 폭탄 설계 비용"
+ module_rocket_rails_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#로켓 레일 설계 비용"
+ module_secondary_turret_hmg_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 보조 포탑 - 중기관총 설계 비용	#-4%
+ module_secondary_turret_small_cannon_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 보조 포탑 - 소형포 설계 비용	#-4%
+ module_self_sealing_fuel_tanks_large_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#대형 기체용 자동 방루 연료 탱크 설계 비용"
+ module_self_sealing_fuel_tanks_medium_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중형 기체용 자동 방루 연료 탱크 설계 비용"
+ module_self_sealing_fuel_tanks_small_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#소형 기체용 자동 방루 연료 탱크 설계 비용"
+ module_ship_airplane_launcher_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#수상기 캐터펄트 설계 비용	#-4%
+ module_ship_airplane_launcher_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#개선된 수상기 캐터펄트 설계 비용	#-4%
+ module_ship_anechoic_tile_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#음향 흡수 타일 설계 비용"
+ module_ship_anti_air_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#.50구경 함재기관총 설계 비용	#-4%
+ module_ship_anti_air_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#20mm 함재대공포 설계 비용	#-4%
+ module_ship_anti_air_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#37mm 함재대공포 설계 비용	#-4%
+ module_ship_anti_air_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#40mm 4연장 함재대공포 설계 비용	#-4%
+ module_ship_armor_bb_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#200mm 수선장갑대/40mm 갑판 설계 비용	#-4%
+ module_ship_armor_bb_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#350mm 수선장갑대/150mm 갑판 설계 비용	#-4%
+ module_ship_armor_bb_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#380mm 수선장갑대/155mm 갑판 설계 비용	#-4%
+ module_ship_armor_bc_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#150mm 수선장갑대/25mm 갑판 설계 비용	#-4%
+ module_ship_armor_bc_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#305mm 수선장갑대/100mm 갑판 설계 비용	#-4%
+ module_ship_armor_bc_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#330mm 수선장갑대/130mm 갑판 설계 비용	#-4%
+ module_ship_armor_carrier_deck_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#90mm 갑판 설계 비용	#-4%
+ module_ship_armor_cruiser_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#50mm 수선장갑대/40mm 갑판 설계 비용	#-4%
+ module_ship_armor_cruiser_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#100mm 수선장갑대/30mm 갑판 설계 비용	#-4%
+ module_ship_armor_cruiser_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#120mm 수선장갑대/50mm 갑판 설계 비용	#-4%
+ module_ship_armor_cruiser_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#150mm 수선장갑대/60mm 갑판 설계 비용	#-4%
+ module_ship_armor_ice_carrier_deck_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#파이크리트 활주로 강화 설계 비용"
+ module_ship_armor_ice_carrier_deck_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#강철 보강 파이크리트 활주로 설계 비용"
+ module_ship_armor_ice_carrier_deck_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#얼음 합성물 활주로 설계 비용"
+ module_ship_armor_shbb_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#450mm 수선장갑대/210mm 갑판 설계 비용	#-4%
+ module_ship_deck_space_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#격납고 공간 설계 비용	#-4%
+ module_ship_depth_charge_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#함재 폭뢰 투하 레일 설계 비용	#-4%
+ module_ship_depth_charge_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#함재 폭뢰 투하대 설계 비용	#-4%
+ module_ship_depth_charge_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#대잠 박격포 설계 비용	#-4%
+ module_ship_depth_charge_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#발전형 대잠 박격포 설계 비용	#-4%
+ module_ship_engine_sub_aip_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#공기 불요 추진 설계 비용"
+ module_ship_engine_sub_aip_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#공기 불요 추진 디젤 결합 엔진 설계 비용"
+ module_ship_engine_sub_aip_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#고속 발터 엔진 설계 비용"
+ module_ship_escort_deck_space_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#호위 항공모함 격납고 설계 비용"
+ module_ship_extra_fuel_tank_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#함재 추가 연료 탱크 설계 비용	#-4%
+ module_ship_fire_control_system_0_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#함재 중앙 거리측정기 설계 비용	#-4%
+ module_ship_fire_control_system_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#함재 지휘 사격 장치 설계 비용	#-4%
+ module_ship_fire_control_system_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#함재 기계식 탄도 계산기 설계 비용	#-4%
+ module_ship_fire_control_system_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#함재 탄도계산기 설계 비용	#-4%
+ module_ship_heavy_battery_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#28cm 함포 설계 비용	#-4%
+ module_ship_heavy_battery_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#30.5cm 함포 설계 비용	#-4%
+ module_ship_heavy_battery_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#38cm 함포 설계 비용	#-4%
+ module_ship_heavy_battery_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#40.6cm 함포 설계 비용	#-4%
+ module_ship_light_battery_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#85mm 속사포 설계 비용	#-4%
+ module_ship_light_battery_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#105mm 속사포 설계 비용	#-4%
+ module_ship_light_battery_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#127mm 속사포 설계 비용	#-4%
+ module_ship_light_battery_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#130mm 속사포 설계 비용	#-4%
+ module_ship_light_battery_sub_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#200mm 함포 설계 비용"
+ module_ship_light_medium_battery_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#14.5cm 함포 설계 비용"
+ module_ship_light_medium_battery_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#15cm 함포 설계 비용"
+ module_ship_light_medium_battery_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#15.5cm 함포 설계 비용"
+ module_ship_light_medium_battery_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#15.5cm 자동 장전식 함포 설계 비용"
+ module_ship_medium_battery_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#17cm 함포 설계 비용	#-4%
+ module_ship_medium_battery_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#19cm 함포 설계 비용	#-4%
+ module_ship_medium_battery_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#20.3cm 함포 설계 비용	#-4%
+ module_ship_medium_battery_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#20.3cm 자동 장전식 함포 설계 비용	#-4%
+ module_ship_mine_layer_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_mine_layer_sub_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#기뢰 부설관 설계 비용	#-4%
+ module_ship_mine_sweeper_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#함재 기뢰 소해 장비 설계 비용	#-4%
+ module_ship_radar_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#데시미터파 해군 수색 레이더 설계 비용	#-4%
+ module_ship_radar_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#개선된 데시미터파 해군 수색 레이더 설계 비용	#-4%
+ module_ship_radar_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#함재 센티미터파 포격 레이더 설계 비용	#-4%
+ module_ship_radar_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#함재 통합형 사격 통제 레이더 설계 비용	#-4%
+ module_ship_seaplane_tender_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#수상기 캐터펄트 설계 비용"
+ module_ship_seaplane_tender_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#개선된 수상기 캐터펄트 설계 비용"
+ module_ship_secondaries_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_secondaries_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_sonar_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_sonar_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_sonar_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#발전된 음파탐지기 설계 비용"
+ module_ship_sonar_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#현대식 음파탐지기 설계 비용"
+ module_ship_sub_snorkel_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_sub_snorkel_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_submarine_deck_space_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#잠수함 항공모함 격납고 설계 비용"
+ module_ship_super_heavy_battery_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#46cm 함포 설계 비용"
+ module_ship_torpedo_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_torpedo_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_torpedo_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_torpedo_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_torpedo_sub_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_torpedo_sub_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_torpedo_sub_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_torpedo_sub_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_ship_torpedo_sub_nuclear_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#핵어뢰 설계 비용"
+ module_slbm_launcher_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#잠수함 핵미사일 발사대 설계 비용"
+ module_sloped_armor_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 경사장갑 설계 비용	#-4%
+ module_small_bomb_bay_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#소형 폭탄 적재실 설계 비용"
+ module_smoke_launchers_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 연막 발사기 설계 비용	#-4%
+ module_squeezebore_adaptor_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#원추형 어댑터 설계 비용"
+ module_stabilizer_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 안정기 설계 비용 설계 비용	#-4%
+ module_sub_missile_launcher_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#잠수함 미사일 발사대 설계 비용"
+ module_sub_ship_engine_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#1,000축마력 함선 엔진 설계 비용	#-4%
+ module_sub_ship_engine_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#2,000축마력 함선 엔진 설계 비용	#-4%
+ module_sub_ship_engine_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#3,000축마력 함선 엔진 설계 비용	#-4%
+ module_sub_ship_engine_4_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#4,000축마력 함선 엔진 설계 비용	#-4%
+ module_sub_ship_nuclear_engine_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#원자력 잠수함 원자로 설계 비용"
+ module_tank_anti_air_cannon_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 기초 대공포 설계 비용	#-4%
+ module_tank_anti_air_cannon_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 개선된 대공포 설계 비용	#-4%
+ module_tank_anti_air_cannon_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 발전된 대공포 설계 비용	#-4%
+ module_tank_auto_cannon_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 기관포 설계 비용	#-4%
+ module_tank_auto_cannon_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 개선된 기관포 설계 비용	#-4%
+ module_tank_bogie_suspension_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#보기 현가장치 설계 비용	#-4%
+ module_tank_buster_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#근접지원기용 대전차포 I 설계 비용"
+ module_tank_buster_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#근접지원기용 대전차포 II 설계 비용"
+ module_tank_cast_armor_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#주조장갑 설계 비용	#-4%
+ module_tank_christie_suspension_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#크리스티 현가장치 설계 비용	#-4%
+ module_tank_close_support_gun_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 근접지원포 설계 비용	#-4%
+ module_tank_diesel_engine_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#디젤 엔진 설계 비용	#-4%
+ module_tank_gas_turbine_engine_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#가스 터빈 설계 비용	#-4%
+ module_tank_gasoline_engine_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#가솔린 엔진 설계 비용	#-4%
+ module_tank_half_track_suspension_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#하프트랙 현가장치 설계 비용"
+ module_tank_heavy_cannon_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 기초 중포 설계 비용	#-4%
+ module_tank_heavy_cannon_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 개선된 중포 설계 비용	#-4%
+ module_tank_heavy_cannon_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 개선된 중포 설계 비용	#-4%
+ module_tank_heavy_fixed_superstructure_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중전차용 대형 고정 상부구조 설계 비용	#-4%
+ module_tank_heavy_howitzer_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중전차용 곡사포 설계 비용	#-4%
+ module_tank_heavy_machine_gun_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 중기관총 설계 비용	#-4%
+ module_tank_heavy_three_man_tank_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중전차용 3인용 포탑 설계 비용	#-4%
+ module_tank_heavy_two_man_tank_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중전차용 2인용 포탑 설계 비용	#-4%
+ module_tank_high_velocity_cannon_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 기초 고속포 설계 비용	#-4%
+ module_tank_high_velocity_cannon_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 개선된 고속포 설계 비용	#-4%
+ module_tank_high_velocity_cannon_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 발전된 고속포 설계 비용	#-4%
+ module_tank_interleaved_suspension_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#교차 삽입식 주행륜 설계 비용	#-4%
+ module_tank_light_fixed_superstructure_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#경전차용 고정 상부구조 설계 비용	#-4%
+ module_tank_light_one_man_tank_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#경전차용 1인용 포탑 설계 비용	#-4%
+ module_tank_light_three_man_tank_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#경전차용 3인용 포탑 설계 비용	#-4%
+ module_tank_light_two_man_tank_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#경전차용 2인용 포탑 설계 비용	#-4%
+ module_tank_medium_cannon_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중형전차용 주포 설계 비용	#-4%
+ module_tank_medium_cannon_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중형전차용 개선된 주포 설계 비용	#-4%
+ module_tank_medium_fixed_superstructure_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중형전차용 고정 상부구조 설계 비용	#-4%
+ module_tank_medium_howitzer_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중형전차용 주포 설계 비용	#-4%
+ module_tank_medium_howitzer_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중형전차용 개선된 주포 설계 비용	#-4%
+ module_tank_medium_one_man_tank_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중형전차용 1인용 포탑 설계 비용	#-4%
+ module_tank_medium_three_man_tank_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중형전차용 3인용 포탑 설계 비용	#-4%
+ module_tank_medium_two_man_tank_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#중형전차용 2인용 포탑 설계 비용	#-4%
+ module_tank_modern_tank_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#현대식 전차용 포탑 설계 비용	#-4%
+ module_tank_petrol_electric_engine_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#가솔린-전기 엔진 설계 비용	#-4%
+ module_tank_radio_1_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 기초 무전기 설계 비용	#-4%
+ module_tank_radio_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 향상된 무전기 설계 비용	#-4%
+ module_tank_radio_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#전차용 발전된 무전기 설계 비용	#-4%
+ module_tank_riveted_armor_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#리벳장갑 설계 비용	#-4%
+ module_tank_rocket_launcher_design_cost_factor_tt: "$$: $RIGHT|-=%1$"	#로켓 발사기 설계 비용"
+ module_tank_rocket_launcher_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_tank_small_cannon_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_tank_small_cannon_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_tank_super_heavy_cannon_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_tank_super_heavy_four_man_tank_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_tank_super_heavy_three_man_tank_turret_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_tank_torsion_bar_suspension_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_tank_welded_armor_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_tank_wheeled_suspension_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_torpedo_mounting_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_torpedo_mounting_2_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_torpedo_mounting_3_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
+ module_wet_ammo_storage_design_cost_factor_tt: "$$: $RIGHT|-=%1$"
  ### Equipment Modifiers - For tooltip
  #### EQUIPMENT Categories
  train: "철도 차량"
