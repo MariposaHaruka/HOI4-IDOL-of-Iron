@@ -66,6 +66,7 @@ set_technology = {
 	mtg_transport = 1
 	basic_fire_control_system = 1
 	basic_dp_light_battery = 1
+	coastal_defense_ships = 1
 }
 if = {
 	limit = { has_BftB = yes }
@@ -94,19 +95,20 @@ if = {
 }
 if = {
 	limit = { has_BBA = yes }
-		set_technology = {
-			aa_lmg = 1
-			engines_1 = 1
-			engines_2 = 1
-			early_bombs = 1
-			aircraft_construction = 1
-			iw_small_airframe = 1
-			iw_medium_airframe = 1
-			iw_large_airframe = 1
-			basic_medium_airframe = 1
-			basic_small_airframe = 1
-			basic_large_airframe = 1
-		}
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		engines_2 = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		basic_medium_airframe = 1
+		basic_small_airframe = 1
+		air_torpedoe_1 = 1
+		bba_early_transport_plane = 1
+	}
 	else = {
 		set_technology = {
 			early_fighter = 1
@@ -115,6 +117,7 @@ if = {
 			naval_bomber1 = 1
 			early_bomber = 1
 			CAS1 = 1
+			early_transport_plane = 1
 		}
 	}
 }
@@ -555,6 +558,12 @@ create_equipment_variant = {
 		mid_1_custom_slot = empty
 		rear_1_custom_slot = ship_depth_charge_1
 	}
+	optional_assets = {
+		{
+			icon = "GFX_commonwealth_destroyer_vampire"
+			model = "commonwealth_gfx_destroyer_1_entity"
+		}
+	}
 	obsolete = yes
 }
 create_equipment_variant = {
@@ -653,6 +662,12 @@ create_equipment_variant = {
 		mid_2_custom_slot = ship_airplane_launcher_1
 		rear_1_custom_slot = ship_light_medium_battery_2
 	}
+	optional_assets = {
+		{
+			icon = "GFX_commonwealth_light_cruiser_hobart"
+			model = "commonwealth_gfx_light_cruiser_entity"
+		}
+	}
 }
 create_equipment_variant = {
 	name = "Adventure Class"						# cruiser minelayer
@@ -711,6 +726,12 @@ create_equipment_variant = {
 		mid_1_custom_slot = ship_airplane_launcher_1
 		mid_2_custom_slot = ship_torpedo_1
 		rear_1_custom_slot = ship_medium_battery_2
+	}
+	optional_assets = {
+		{
+			icon = "GFX_commonwealth_heavy_cruiser_australia"
+			model = "commonwealth_gfx_heavy_cruiser_entity"
+		}
 	}
 }
 create_equipment_variant = {
@@ -814,6 +835,33 @@ create_equipment_variant = {
 		rear_1_custom_slot = empty
 	}
 }
+# Monitors
+create_equipment_variant = {
+	name = "Erebus Class"
+	type = ship_hull_cruiser_coastal_defense_ship
+	name_group = IMA_BM_HISTORICAL
+	parent_version = 0
+	design_team = mio:IMA_harland_wolff_organization
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_secondaries_slot = empty
+		fixed_ship_armor_slot = ship_armor_cruiser_2
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+	optional_assets = {
+		{
+			icon = "GFX_commonwealth_heavy_cruiser_erebus"
+			model = "commonwealth_gfx_heavy_cruiser_2_entity"
+		}
+	}
+	obsolete = yes
+}
 # Battleships #
 create_equipment_variant = {
 	name = "Nelson Class"
@@ -854,6 +902,12 @@ create_equipment_variant = {
 		mid_1_custom_slot = ship_airplane_launcher_1
 		mid_2_custom_slot = ship_secondaries_1
 		rear_1_custom_slot = ship_heavy_battery_1
+	}
+	optional_assets = {
+		{
+			icon = "GFX_commonwealth_battleship_warspite"
+			model = "commonwealth_gfx_battleship_entity"
+		}
 	}
 	obsolete = yes
 }

@@ -3276,146 +3276,73 @@
  missile_launcher: "미사일 잠수함"
  emplacement_gun_ammo: "다단 추진 거포 시설"
  #### 공통 모디파이어
- stat_build_cost_ic_tt: "생산 비용"
- stat_maximum_speed_tt: "최대 속도"  #해군은 별도 속도 모디파이어 있음
- stat_reliability_tt: "신뢰도"
+ stat_build_cost_ic_tt: "생산 비용" #£production_cost  
+ stat_maximum_speed_tt: "최대 속도" #£attacker_speed_texticon   #해군은 별도 속도 모디파이어 있음
+ stat_reliability_tt: "신뢰도" #£repairing  
  #### 육군 장비 모디파이어
- stat_additional_collateral_damage_tt: "추가 부수적 피해"
- stat_air_attack_tt: "대공 공격"
- stat_ap_attack_tt: "관통"
- stat_armor_value_tt: "장갑"
- stat_breakthrough_tt: "돌파"
- stat_defense_tt: "방어"
- stat_entrenchment_tt: "참호"
- stat_fuel_capacity_tt: "연료 보유량"
- stat_fuel_consumption_tt: "연료 사용량"
- stat_hard_attack_tt: "대물 공격"
- stat_hardness_tt: "기갑 비율"
- stat_railway_gun_annex_ratio_tt: "합병 비율"
- stat_railway_gun_attack_tt: "포격"
- stat_railway_gun_hours_between_redistribution_tt: "재배치 간 시간"
- stat_soft_attack_tt: "대인 공격"
+ stat_additional_collateral_damage_tt: "추가 부수적 피해" #£attack_texticon  
+ stat_air_attack_tt: "대공 공격" #£anti_air_gun_texticon  
+ stat_ap_attack_tt: "관통" #£piercing_texticon  
+ stat_armor_value_tt: "장갑" #£armor_texticon  
+ stat_breakthrough_tt: "돌파" #£breakthrough_texticon  
+ stat_defense_tt: "방어" #£defence_texticon  
+ stat_entrenchment_tt: "참호" #£dig_in_texticon  
+ stat_fuel_capacity_tt: "연료 보유량" #£fuel_texticon  
+ stat_fuel_consumption_tt: "연료 사용량" #£fuel_consumption_texticon  
+ stat_hard_attack_tt: "대물 공격" #£hard_attack_texticon  
+ stat_hardness_tt: "기갑 비율" #£attacker_damage_texticon  
+ stat_railway_gun_annex_ratio_tt: "합병 비율" #£railway_gun_texticon  
+ stat_railway_gun_attack_tt: "포격" #£railway_gun_texticon  
+ stat_railway_gun_hours_between_redistribution_tt: "재배치 간 시간" #£railway_gun_texticon  
+ stat_soft_attack_tt: "대인 공격" #£soft_attack_texticon  
  #### 해군 장비 모디파이어
- #stat_anti_air_attack_tt
- #lg_armor_piercing
- #lg_attack
- #max_organisation
- #max_strength
- #naval_speed
- #surface_detection
- #surface_visibility
- #### 공통 모디파이어
- STAT_COMMON_BUILD_COST_IC_tt: "£production_cost  생산 비용"
- STAT_COMMON_MAXIMUM_SPEED_tt: "£attacker_speed_texticon  최대 속도"
- STAT_COMMON_RELIABILITY_tt: "£repairing  신뢰도"
- #### 육군 장비 모디파이어
- STAT_ARMY_ADDITIONAL_COLLATERAL_DAMAGE_tt: "£attack_texticon  추가 부수적 피해"
- STAT_AIR_ATTACK_tt: "£anti_air_gun_texticon  대공 공격"
- STAT_COMMON_PIERCING_tt: "£piercing_texticon  관통"
- STAT_COMMON_ARMOR_tt: "£armor_texticon  장갑"
- STAT_ARMY_BREAKTHROUGH_tt: "£breakthrough_texticon  돌파"
- STAT_ARMY_DEFENSE_tt: "£defence_texticon  방어"
- STAT_ARMY_ENTRENCHMENT_tt: "£dig_in_texticon  참호"
- STAT_ARMY_FUEL_CAPACITY_tt: "£fuel_texticon  연료 보유량"
- STAT_ARMY_HARD_ATTACK_tt: "£hard_attack_texticon  대물 공격"
- STAT_ARMY_HARDNESS_tt: "£attacker_damage_texticon  기갑 비율"
- STAT_ARMY_FUEL_CONSUMPTION_tt: "£fuel_consumption_texticon  연료 소비"
- STAT_RAILWAY_GUN_ANNEX_RATIO_tt: "£railway_gun_texticon  합병 비율"
- STAT_RAILWAY_GUN_ATTACK_tt: "£railway_gun_texticon  포격"
- STAT_RAILWAY_GUN_HOURS_TO_REDISTRIBUTE_tt: "£railway_gun_texticon  재배치 간 시간"
- STAT_ARMY_SOFT_ATTACK_tt: "£soft_attack_texticon  대인 공격"
- 
- STAT_COMMON_MAX_ORG_tt: "£organization_texticon  조직력"
- STAT_ARMY_DEFAULT_MORALE_tt: "£army_morale_texticon  회복률"
- STAT_ARMY_COMBAT_WIDTH_tt: "£combat_width_texticon  전장 너비"
- STAT_ARMY_COLLATERAL_tt: "£going_to_combat  표적외 손상도"
- STAT_ARMY_BREAKTHROUGH_tt: "£breakthrough_texticon  돌파"
- STAT_ARMY_RECON_tt: "£recon_texticon  수색"
- STAT_ARMY_SUPPLY_CONSUMPTION_tt: "£supply_texticon  보급품 소비"
- STAT_ARMY_SUPPLY_CONSUMPTION_FACTOR_tt: "£supply_texticon  보급품 소비"
- STAT_ARMY_CASUALTY_TRICKLEBACK_tt: "£trickleback_texticon  전선 복귀 및 전쟁 지지도 방어"
- STAT_ARMY_EXPERIENCE_LOSS_FACTOR_tt: "£experience_loss_texticon  경험치 손실"
- STAT_ARMY_SUPRESSION_tt: "£occupation_costs  제압"
- STAT_ARMY_SUPRESSION_FACTOR_tt: "£occupation_costs  제압 혜택"
- STAT_ARMY_RESISTANCE_SUPPRESS_tt: "£occupation_costs  저항군 제압"
- STAT_NAVY_TRANSPORT_CAPABILITY_tt: "£naval_capacity_texticon  수송 능력"
- STAT_NAVY_SURFACE_DETECTION_tt: "£spotting  수상 탐지"
- STAT_NAVY_CARRIER_SUB_DETECTION_tt: "£spotting  항공모함 대잠 탐지"
- STAT_NAVY_CARRIER_SURFACE_DETECTION_tt: "£spotting  항공모함 수상 탐지"
- STAT_NAVY_SUB_DETECTION_tt: "£spotting  대잠 탐지"
- STAT_NAVY_SURFACE_VISIBILITY_tt: "수상 가시성"
- STAT_NAVY_SUB_VISIBILITY_tt: "£spotting  대잠 가시성"
- STAT_NAVY_SHORE_BOMBARDMENT_tt: "£naval_battery_texticon  해안 포격"
- STAT_NAVY_MISSION_COVERAGE_tt: "£spotting  탐지 효율"
- STAT_NAVY_FIRE_RANGE_tt: "£naval_battery2_texticon  사거리"
- STAT_NAVY_EVASION_tt: "£retreat_texticon  회피"
- STAT_NAVY_TORPEDO_ATTACK_tt: "£torpedo_texticon  어뢰 공격"
- STAT_NAVY_SUB_ATTACK_tt: "£depth_charge_texticon  폭뢰"
- STAT_NAVY_ATTACK_tt: "£attacker_damage_texticon  함포 화력"
- STAT_NAVY_ANTI_AIR_ATTACK_tt: "£anti_air_texticon  대공 무기"
- STAT_NAVY_ANTI_AIR_TARGETTING_tt: "£air_superiority_efficiency_texticon  대공 표적"
- STAT_NAVY_PORT_CAPACITY_USAGE_tt: "£naval_capacity_texticon  정박 요구 공간"
- STAT_AIR_RANGE_tt: "£air_range_texticon  항속 거리"
- STAT_AIR_DEFENCE_tt: "£defence_texticon  기체 방어력"
- STAT_AIR_ATTACK_tt: "£anti_air_gun_texticon  대공 공격"
- STAT_AIR_AGILITY_tt: "£attacker_speed_texticon  기동성"
- STAT_AIR_SUPERIORITY_tt: "£air_superiority_texticon  공중우세"
- STAT_AIR_VISIBILITY_FACTOR_tt: "£spotting  공중 가시성"
- STAT_AIR_NAVAL_STRIKE_ATTACK_tt: "£attack_texticon  해상 공격"
- STAT_AIR_NAVAL_STRIKE_TARGETTING_tt: "£naval_strike_targetting_texticon  해상 조준"
- STAT_AIR_NAVAL_STRIKE_AGILITY_tt: "£attacker_speed_texticon  해상 기동성"
- STAT_AIR_GROUND_ATTACK_tt: "£cas_texticon  지상 공격"
- STAT_COMMON_MAX_STRENGTH_tt: "£strenght_texticon  내구도"
- STAT_NAVY_MAXIMUM_SPEED_tt: "£attacker_speed_texticon  최대 속도"
- STAT_NAVY_RANGE_tt: "£navy_anchor_texticon  최대 작전 범위"
- STAT_COMMON_PIERCING_tt: "£piercing_texticon  관통"
- STAT_RANGE_tt: "£air_range_texticon  범위"
- STAT_CARRIER_SIZE_tt: "함재기 적재량"
- STAT_SUB_CARRIER_SIZE_tt: "£carrier_capacity_texticon  잠수함 함재기 적재량"
- STAT_COMMON_ACCLIMATIZATION_HOT_GAIN_tt: "£temperature_hot_texticon  더위 적응 획득치"
- STAT_COMMON_ACCLIMATIZATION_COLD_GAIN_tt: "£temperature_cold_texticon  추위 적응 획득치"
- STAT_AIR_BOMBING_tt: "£strat_bombing_texticon  전략폭격"
- COMBAT_WIDTH_tt: "£combat_width_texticon  전장 너비"
- STAT_ADJUSTER_ATTACK_tt: "£attack_texticon  공격"
- STAT_ADJUSTER_DEFENCE_tt: "£defence_texticon  방어"
- STAT_ADJUSTER_MOVEMENT_tt: "£movement_texticon  이동"
- STAT_ARMY_INITIATIVE_tt: "£initiative_texticon  우선권"
- STAT_ARMY_RECOVERY_tt: "£organization_gain_texticon  회복"
- STAT_ARMY_ADDITIONAL_COLLATERAL_DAMAGE_tt: "£attack_texticon  추가 부수적 피해"
- STAT_COMMON_RELIABILITY_tt: "£repairing  신뢰도"
- STAT_COMMON_RELIABILITY_AVERAGE_tt: "£repairing  평균 신뢰도"
- STAT_COMMON_RELIABILITY_FACTOR_tt: "£repairing  신뢰도 보너스"
- STAT_COMMON_WEIGHT_tt: "£divisions_texticon  중량"
- STAT_CASUALTY_TRICKLEBACK_tt: "£trickleback_texticon 사상자 전선 복귀 및 전쟁 지지도 방어"
- STAT_NAVY_AMPHIBIOUS_DEFENSE_tt: "£defence_texticon  상륙 방어"
- STAT_NAVY_INVASION_SPEED_tt: "£naval_invasion_texticon  하선 속도"
- STAT_NAVY_MINES_PLANTING_tt: "£minelaying_texticon  기뢰 부설"
- STAT_NAVY_MINES_SWEEPING_tt: "£minesweeping_texticon  기뢰 소해"
- STAT_NAVY_RAIDING_COORDINATION_tt: "£convoy_raiding_efficiency_texticon  습격 효율"
- STAT_NAVY_PATROL_COORDINATION_tt: "£naval_patrol_texticon  초계 효율"
- STAT_NAVY_SEARCH_AND_DESTROY_COORDINATION_tt: "£coordination_texticon  수색 및 섬멸"
- STAT_MISSION_CONVOY_ESCORT_EFFICIENCY_tt: "£convoy_escort_texticon  호위 효율"
- SOFT_ATTACK_TAKEN_tt: "£soft_attack_texticon  §T대인 공격 받음: §!"
- HARD_ATTACK_TAKEN_tt: "£hard_attack_texticon  §T대물 공격 받음: §!"
- STAT_COMMON_BUILD_COST_IC_T_CONVERTING_tt: "£equipment_conversion_texticon  §T전환 비용: §!"
- STAT_ARMY_EQUIPMENT_CAPTURE_FACTOR_tt: "£infantry_equipment_texticon  장비 노획률"
- STAT_COMMON_FUEL_CONSUMPTION_tt: "£fuel_consumption_texticon  연료 사용량"
- STAT_COMMON_FUEL_CONSUMPTION_FACTOR_tt: "£fuel_consumption_texticon  연료 사용량"
- STAT_NAVY_LG_ATTACK_tt: "£soft_attack_texticon  부포 공격"
- STAT_NAVY_LG_ARMOR_PIERCING_tt: "£naval_battery_texticon  부포 관통"
- STAT_NAVY_HG_ATTACK_tt: "£hard_attack_texticon  주포 공격"
- STAT_NAVY_HG_ARMOR_PIERCING_tt: "£naval_battery2_texticon  주포 관통"
- RAILWAY_GUN_BOMBARDMENT_FORT_MODIFIER_tt: "£fort_texticon  §H요새§!"
- STAT_RAILWAY_GUN_ATTACK_RANGE_tt: "£railway_gun_texticon  사거리"
- STAT_NAVY_TORPEDO_HIT_CHANCE_tt: "£torpedo_texticon  어뢰 명중률"
- STAT_NAVY_LIGHT_GUN_HIT_CHANCE_tt: "£naval_battery_texticon  경함포 명중률"
- STAT_NAVY_HEAVY_GUN_HIT_CHANCE_tt: "£naval_battery2_texticon  중함포 명중률"
- STAT_NAVY_TORPEDO_DAMAGE_REDUCTION_tt: "£torpedo_texticon  어뢰 피해량 감소"
- STAT_NAVY_TORPEDO_ENEMY_CRIT_CHANCE_tt: "£torpedo_texticon  어뢰 피격 시 치명타 확률"
- STAT_COMMON_NIGHT_PENALTY_tt: "야간 패널티"
- STAT_COMMON_THRUST_tt: "추력"
- STAT_STRATEGIC_ATTACK_tt: "전략폭격"
- STAT_NAVY_WEATHER_PENALTY_tt: "날씨 불이익"
+ stat_anti_air_attack_tt: "대공" #£anti_air_texticon  
+ #stat_armor_value_tt: "장갑" - 위에 이미 있음! #£armor_texticon  
+ stat_carrier_size_tt: "함재기 적재량" #£carrier_capacity_texticon  
+ stat_carrier_sub_detection_tt: "항공모함 대잠 탐지" #£spotting  
+ stat_carrier_surface_detection_tt: "항공모함 수상 탐지" #£spotting  
+ #stat_fuel_consumption_tt: "연료 사용량" - 위에 이미 있음! #£fuel_consumption_texticon  
+ stat_hg_armor_piercing_tt: "주포 관통" #£naval_battery2_texticon  
+ stat_hg_attack_tt: "주포 공격" #£hard_attack_texticon  
+ stat_lg_armor_piercing_tt: "부포 관통" #£naval_battery_texticon  
+ stat_lg_attack_tt: "부포 공격" #£soft_attack_texticon  
+ stat_max_organisation_tt: "조직력" #£organization_texticon  
+ stat_max_strength_tt: "내구도" #£strenght_texticon  
+ stat_mines_planting_tt: "기뢰 부설" #£minelaying_texticon  
+ stat_mines_sweeping_tt: "기뢰 소해" #£minesweeping_texticon  
+ stat_naval_heavy_gun_hit_chance_factor_tt: "중함포 명중률" #£naval_battery2_texticon  
+ stat_naval_light_gun_hit_chance_factor_tt: "경함포 명중률" #£naval_battery_texticon  
+ stat_naval_range_tt: "최대 작전 범위" #£navy_anchor_texticon  
+ stat_naval_speed_tt: "최대 속도" #£attacker_speed_texticon  
+ stat_naval_torpedo_damage_reduction_factor_tt: "어뢰 피해량 감소" #£torpedo_texticon  
+ stat_naval_torpedo_enemy_critical_chance_factor_tt: "어뢰 피격 시 치명타 확률" #£torpedo_texticon  
+ stat_naval_torpedo_hit_chance_factor_tt: "어뢰 명중률" #£torpedo_texticon  
+ stat_naval_weather_penalty_factor_tt: "날씨 불이익" #£weather_texticon  
+ stat_sub_attack_tt: "폭뢰" #£depth_charge_texticon  
+ stat_sub_detection_tt: "대잠 탐지" #£spotting  
+ stat_sub_visibility_tt: "대잠 가시성" #£spotting  
+ stat_submarine_carrier_size_tt: "잠수함 함재기 적재량" #£carrier_capacity_texticon  
+ stat_surface_detection_tt: "수상 탐지" #£spotting  
+ stat_surface_visibility_tt: "수상 가시성" #£spotting  
+ stat_torpedo_attack_tt: "어뢰 공격" #£torpedo_texticon 
+ #### 공군 장비 모디파이어
+ stat_air_agility_tt: "기동성" #£attacker_speed_texticon  
+ #stat_air_attack_tt: "대공 공격" - 위에 이미 있음! #£anti_air_gun_texticon  
+ stat_air_bombing_tt: "전략폭격" #£strat_bombing_texticon  
+ stat_air_defence_tt: "기체 방어력" #£defence_texticon  
+ stat_air_ground_attack_tt: "지상 공격" #£cas_texticon  
+ stat_air_range_tt: "항속 거리" #£air_range_texticon  
+ stat_air_superiority_tt: "공중우세" #£air_superiority_texticon  
+ #stat_fuel_consumption_tt: "연료 사용량" - 위에 이미 있음! #£fuel_consumption_texticon  
+ #stat_mines_planting_tt: "기뢰 부설" - 위에 이미 있음! #£minelaying_texticon  
+ #stat_mines_sweeping_tt: "기뢰 소해" - 위에 이미 있음! #£minesweeping_texticon 
+ stat_naval_strike_attack_tt: "해상 공격" #£attack_texticon  
+ stat_naval_strike_targetting_tt: "해상 조준" #£naval_strike_targetting_texticon  
+ stat_night_penalty_tt: "야간 패널티" #£night_texticon  
+ #stat_sub_detection_tt: "대잠 탐지" - 위에 이미 있음!  #£spotting  
+ #stat_surface_detection_tt: "수상 탐지" - 위에 이미 있음!  #£spotting  
+ stat_thrust_tt: "추력" #£speed_air_texticon  
+ stat_weight_tt: "중량" #£divisions_texticon  
  ### Equipment Modifiers
  train_armor_value: "£armor_texticon  $$ $stat_armor_value_tt$:"
  train_air_attack: "£armor_texticon  $$ $stat_air_attack_tt$:"

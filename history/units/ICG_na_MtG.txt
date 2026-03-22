@@ -1,5 +1,5 @@
 ﻿
-units= {
+units = {
 
 	##### NAVAL UNITS #####
 	##### PACIFIC FLEET #####
@@ -12,34 +12,29 @@ units= {
 			name = "Battleships, Battle Force"
 			location = 1562 # San Diego
 			### Battleship Division 1 ###			
-			ship = { name = "IMSS Nevada" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
+			ship = { name = "IMSS Nevada" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Nevada Class" } } }				
 			ship = { name = "IMSS Arizona" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
-			ship = { name = "IMSS Pennsylvania" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
+			ship = { name = "IMSS Pennsylvania" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
 			### Battleship Division 2 ###			
-			ship = { name = "IMSS Oklahoma" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
-			ship = { name = "IMSS Tennessee" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
-			ship = { name = "IMSS California" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
+			ship = { name = "IMSS Oklahoma" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Nevada Class" } } }				
+			ship = { name = "IMSS Tennessee" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Tennessee Class" } } }				
+			ship = { name = "IMSS California" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Tennessee Class" } } }				
 			### Battleship Division 3 ###			
 			ship = { name = "IMSS New Mexico" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
 			ship = { name = "IMSS Mississippi" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
 			ship = { name = "IMSS Idaho" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Pennsylvania Class" } } }				
 			### Battleship Division 4 ###			
 			ship = { name = "IMSS Colorado" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Colorado Class" } } }				
-			ship = { name = "IMSS West Virginia" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Colorado Class" } } }				
+			ship = { name = "IMSS West Virginia" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Colorado Class" } } }				
 			ship = { name = "IMSS Maryland" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ICG version_name = "Colorado Class" } } }				
 		}				
 		task_force = {					
 			name = "Carrier Division, Battle Force"		
 			location = 1562 # San Diego
-			ship = { name = "IMSS Ranger" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_1 = { amount = 1 owner = ICG version_name = "Ranger Class" } } 
-				
-			}
-			ship = { name = "IMSS Lexington" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = ICG version_name = "Lexington Class" } } 
-				
-			}
-			ship = { name = "IMSS Saratoga" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = ICG version_name = "Lexington Class" } } 
-				
-			}
+			ship = { name = "IMSS Ranger" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_1 = { amount = 1 owner = ICG version_name = "Ranger Class" } } }
+			ship = { name = "IMSS Lexington" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = ICG version_name = "Lexington Class" } } }
+			ship = { name = "IMSS Saratoga" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = ICG version_name = "Lexington Class" } } } 
+			ship = { name = "IMSS Langley" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = ICG version_name = "Langley Class" } } }
 		}					
 		task_force = {					
 			name = "Cruisers, Battle Force"
