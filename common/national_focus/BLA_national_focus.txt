@@ -8741,8 +8741,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_arius_participate = yes
-				tooltip = BLA_arius_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_imashino_misaki
+					INTEGRATION = BLA_arius_integrate_tt
+				}
+				BLA_arius_integrate = yes
 			}
 		}
 		
@@ -8767,8 +8771,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_arius_participate = yes
-				tooltip = BLA_arius_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_imashino_misaki
+					INTEGRATION = BLA_arius_integrate_tt
+				}
+				BLA_arius_integrate = yes
 			}
 		}
 		
@@ -8794,8 +8802,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_arius_participate = yes
-				tooltip = BLA_arius_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hakari_atsuko
+					INTEGRATION = BLA_arius_integrate_tt
+				}
+				BLA_arius_integrate = yes
 			}
 		}
 		
@@ -8821,8 +8833,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_arius_participate = yes
-				tooltip = BLA_arius_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_tsuchinaga_hiyori
+					INTEGRATION = BLA_arius_integrate_tt
+				}
+				BLA_arius_integrate = yes
 			}
 		}
 		
@@ -8858,8 +8874,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_arius_participate = yes
-				tooltip = BLA_arius_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hakari_atsuko
+					INTEGRATION = BLA_arius_integrate_tt
+				}
+				BLA_arius_integrate = yes
 			}
 		}
 		
@@ -8889,8 +8909,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_arius_participate = yes
-				tooltip = BLA_arius_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kakehashi_subaru
+					INTEGRATION = BLA_arius_integrate_tt
+				}
+				BLA_arius_integrate = yes
 			}
 		}
 		
@@ -8915,8 +8939,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_arius_participate = yes
-				tooltip = BLA_arius_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_joumae_saori
+					INTEGRATION = BLA_arius_integrate_tt
+				}
+				BLA_arius_integrate = yes
 			}
 		}
 		
@@ -9015,8 +9043,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kenzaki_tsurugi
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9042,8 +9074,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_morizuki_suzumi
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9069,8 +9105,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hanekawa_hasumi
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9097,14 +9137,11 @@ focus_tree = {
 		available = { 
 			custom_trigger_tooltip = {
 				tooltip = {
-					localization_key = BLA_available_school_tt
-					PARTICIPATE = BLA_trinity_participate_tt
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_nakamasa_ichika
 					INTEGRATION = BLA_trinity_integrate_tt
 				}
-				OR = {
-					BLA_trinity_participate = yes
-					BLA_trinity_integrate = yes
-				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9128,8 +9165,15 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_school_tt
+					PARTICIPATE = BLA_trinity_participate_tt
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				OR = {
+					BLA_trinity_participate = yes
+					BLA_trinity_integrate = yes
+				}
 			}
 		}
 		
@@ -9155,8 +9199,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_endo_shimiko
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 			
@@ -9182,8 +9230,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kozeki_ui
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9208,8 +9260,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_endo_shimiko
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9234,8 +9290,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kozeki_ui
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9292,8 +9352,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_iochi_mari
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9318,8 +9382,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_wakaba_hinata
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9376,8 +9444,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sumi_serina
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9402,8 +9474,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_asagao_hanae
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9461,8 +9537,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_yurizono_seia
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9488,8 +9568,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_misono_mika
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9514,8 +9598,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_ajitani_hifumi
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9540,8 +9628,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_urawa_hanako
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9566,8 +9658,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kirifuji_nagisa
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9592,8 +9688,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_trinity_participate = yes
-				tooltip = BLA_trinity_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_misono_mika
+					INTEGRATION = BLA_trinity_integrate_tt
+				}
+				BLA_trinity_integrate = yes
 			}
 		}
 		
@@ -9668,8 +9768,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hayase_yuuka
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				BLA_millenium_integrate = yes
 			}
 		}
 		
@@ -9695,8 +9799,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hayase_yuuka
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				BLA_millenium_integrate = yes
 			}
 		}
 		
@@ -9753,8 +9861,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_tsukatsuki_rio
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				BLA_millenium_integrate = yes
 			}
 			BLA_robot_problem = yes
 		}
@@ -9782,8 +9894,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_ushio_noa
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				BLA_millenium_integrate = yes
 			}
 		}
 		
@@ -9808,8 +9924,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_tsukatsuki_rio
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				BLA_millenium_integrate = yes
 			}
 		}
 		
@@ -9836,7 +9956,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = {
 					localization_key = BLA_available_focus_tt
-					CHARACTER = BLA_akeboshi_himari
+					CHARACTER = BLA_tsukatsuki_rio
 					INTEGRATION = BLA_millenium_integrate_tt
 				}
 				BLA_millenium_integrate = yes
@@ -9897,8 +10017,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kagami_chihiro
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				BLA_millenium_integrate = yes
 			}
 		}
 		
@@ -10257,8 +10381,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hayase_yuuka
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				BLA_millenium_integrate = yes
 			}
 		}
 		
@@ -10283,8 +10411,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hayase_yuuka
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				BLA_millenium_integrate = yes
 			}
 		}
 		
@@ -10309,8 +10441,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hayase_yuuka
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				BLA_millenium_integrate = yes
 			}
 		}
 		
@@ -10335,8 +10471,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hayase_yuuka
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				BLA_millenium_integrate = yes
 			}
 		}
 		
@@ -10362,8 +10502,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hayase_yuuka
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				BLA_millenium_integrate = yes
 			}
 		}
 		
@@ -10390,8 +10534,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hayase_yuuka
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				BLA_millenium_integrate = yes
 			}
 		}
 		
@@ -10417,8 +10565,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_millenium_participate = yes
-				tooltip = BLA_millenium_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hayase_yuuka
+					INTEGRATION = BLA_millenium_integrate_tt
+				}
+				BLA_millenium_integrate = yes
 			}
 		}
 		
@@ -10550,8 +10702,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_valkyrie_participate = yes
-				tooltip = BLA_valkyrie_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_nakatsukasa_kirino
+					INTEGRATION = BLA_valkyrie_integrate_tt
+				}
+				BLA_valkyrie_integrate = yes
 			}
 		}
 		
@@ -10577,8 +10733,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_valkyrie_participate = yes
-				tooltip = BLA_valkyrie_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_nakatsukasa_kirino
+					INTEGRATION = BLA_valkyrie_integrate_tt
+				}
+				BLA_valkyrie_integrate = yes
 			}
 		}
 		
@@ -10604,8 +10764,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_valkyrie_participate = yes
-				tooltip = BLA_valkyrie_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_shima_konoka
+					INTEGRATION = BLA_valkyrie_integrate_tt
+				}
+				BLA_valkyrie_integrate = yes
 			}
 		}
 		
@@ -10736,9 +10900,40 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		available = { 
-			custom_trigger_tooltip = {
-				BLA_srt_participate = yes
-				tooltip = BLA_srt_participate_tt
+			if = {
+				limit = { has_completed_focus = BLA_SRT_10002 }
+				custom_trigger_tooltip = {
+					tooltip = {
+						localization_key = BLA_available_focus_tt
+						CHARACTER = BLA_sorai_saki
+						INTEGRATION = BLA_srt_integrate_tt
+					}
+					BLA_srt_integrate = yes
+				}
+			}
+			else_if = {
+				limit = { has_completed_focus = BLA_SRT_10003 }
+				custom_trigger_tooltip = {
+					tooltip = {
+						localization_key = BLA_available_focus_tt
+						CHARACTER = BLA_niko
+						INTEGRATION = BLA_srt_integrate_tt
+					}
+					BLA_srt_integrate = yes
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = {
+						localization_key = BLA_available_focus_changable_tt
+						FOCUSA = BLA_SRT_10002
+						FOCUSB = BLA_SRT_10003
+						CHARACTERA = BLA_sorai_saki
+						CHARACTERB = BLA_niko
+						INTEGRATION = BLA_srt_integrate_tt
+					}
+					BLA_srt_integrate = yes
+				}
 			}
 		}
 		
@@ -10764,8 +10959,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_srt_participate = yes
-				tooltip = BLA_srt_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_tsukiyuki_miyako
+					INTEGRATION = BLA_srt_integrate_tt
+				}
+				BLA_srt_integrate = yes
 			}
 		}
 		
@@ -10791,8 +10990,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_srt_participate = yes
-				tooltip = BLA_srt_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_shichido_yukino
+					INTEGRATION = BLA_srt_integrate_tt
+				}
+				BLA_srt_integrate = yes
 			}
 		}
 		
@@ -11128,8 +11331,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kawawa_shizuko
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 
 		}
@@ -11155,8 +11362,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_waraku_chise
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 
 		}
@@ -11182,8 +11393,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_satohama_umika
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 
 		}
@@ -11209,8 +11424,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kuda_izuna
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 
 		}
@@ -11238,10 +11457,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kawawa_shizuko
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
-
 		}
 		
 		available_if_capitulated = yes
@@ -11267,10 +11489,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kawawa_shizuko
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
-
 		}
 		
 		available_if_capitulated = yes
@@ -11294,10 +11519,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_amachi_niya
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
-
 		}
 		
 		available_if_capitulated = yes
@@ -11321,8 +11549,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_amachi_niya
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 
 		}
@@ -11348,10 +11580,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_amachi_niya
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
-
 		}
 		
 		available_if_capitulated = yes
@@ -11376,8 +11611,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_amachi_niya
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 
 		}
@@ -11404,8 +11643,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_goryo_nagusa
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 		}
 		
@@ -11431,8 +11674,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_amachi_niya
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 		}
 		
@@ -11458,8 +11705,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kuwakami_kaho
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 		}
 		
@@ -11485,8 +11736,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_chidori_michiru
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 
 		}
@@ -11513,8 +11768,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_goryo_nagusa
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 
 		}
@@ -11540,8 +11799,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kadenokouji_yukari
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 
 		}
@@ -11567,8 +11830,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kiryu_kikyou
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 
 		}
@@ -11594,8 +11861,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_hyakkiyako_participate = yes
-				tooltip = BLA_hyakkiyako_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_fuwa_renge
+					INTEGRATION = BLA_hyakkiyako_integrate_tt
+				}
+				BLA_hyakkiyako_integrate = yes
 			}
 		}
 		
@@ -11694,8 +11965,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hanuma_makoto
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -11720,8 +11995,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hanuma_makoto
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -11746,8 +12025,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hanuma_makoto
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -11772,8 +12055,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hanuma_makoto
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -11798,8 +12085,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_kyougoku_satsuki
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -11824,8 +12115,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_motomiya_chiaki
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -11851,8 +12146,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hanuma_makoto
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -11879,8 +12178,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_natsume_iroha
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -11949,8 +12252,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sorasaki_hina
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -11987,8 +12294,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sorasaki_hina
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12014,8 +12325,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_shiromi_iori
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12040,8 +12355,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sorasaki_hina
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12066,8 +12385,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_shiromi_iori
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12092,8 +12415,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_hinomiya_chinatsu
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12118,8 +12445,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_amau_ako
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12163,8 +12494,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_ushimaki_juuri
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12189,8 +12524,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_aikiyo_fuuka
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12216,8 +12555,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_amau_ako
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12310,8 +12653,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_amau_ako
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12348,8 +12695,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_amau_ako
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12389,8 +12740,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_amau_ako
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12435,8 +12790,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_ushimaki_juuri
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12462,8 +12821,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_ushimaki_juuri
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12489,8 +12852,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_ushimaki_juuri
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12515,8 +12882,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_himuro_sena
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
@@ -12541,8 +12912,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_gehenna_participate = yes
-				tooltip = BLA_gehenna_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_himuro_sena
+					INTEGRATION = BLA_gehenna_integrate_tt
+				}
+				BLA_gehenna_integrate = yes
 			}
 		}
 		
