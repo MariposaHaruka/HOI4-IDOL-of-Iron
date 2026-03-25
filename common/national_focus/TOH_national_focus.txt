@@ -3518,10 +3518,13 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = TOH_army_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = TOH_army
+			}
 			add_to_variable = {
-				TOH_army_build_cost_ic_infantry = -0.15
-				tooltip = build_cost_ic_infantry_tt
+				TOH_army_infantry_build_cost_ic = -0.15
+				tooltip = infantry_build_cost_ic_tt
 			}
 			hidden_effect = {
 				add_ideas = TOH_32012_idea
@@ -4953,8 +4956,8 @@ focus_tree = {
 			navy_experience = 15
 			custom_effect_tooltip = TOH_navy_tt
 			add_to_variable = { #툴팁용
-				TOH_navy_build_cost_ic_screen_ship = -0.1
-				tooltip = build_cost_ic_screen_ship_tt
+				TOH_navy_screen_ship_build_cost_ic = -0.1
+				tooltip = screen_ship_build_cost_ic_tt
 			}
 			hidden_effect = { add_ideas = TOH_34007 }
 		}

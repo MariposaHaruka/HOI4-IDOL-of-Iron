@@ -2815,14 +2815,25 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31011"
-			add_ideas = IMA_31011_idea
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_air_force
 			}
 			add_to_variable = {
-				IMA_air_force_build_cost_ic_heavy_fighter = -0.1
-				tooltip = build_cost_ic_heavy_fighter_tt
+				IMA_air_force_heavy_fighter_build_cost_ic = -0.1
+				tooltip = heavy_fighter_build_cost_ic_tt
+			}
+			add_to_variable = {
+				IMA_air_force_heavy_fighter_air_agility = 0.15
+				tooltip = heavy_fighter_air_agility_tt
+			}
+			add_to_variable = {
+				IMA_air_force_heavy_fighter_maximum_speed = 0.05
+				tooltip = heavy_fighter_maximum_speed_tt
+			}
+			add_to_variable = {
+				IMA_air_force_heavy_fighter_weight = -0.10
+				tooltip = heavy_fighter_weight_tt
 			}
 			IMA_design_mosquito = yes
 			hidden_effect = {
@@ -4126,8 +4137,8 @@ focus_tree = {
 				DYNMOD = IMA_navy
 			}
 			add_to_variable = { 
-				IMA_navy_build_cost_ic_capital_ship = -0.05
-				tooltip = build_cost_ic_capital_ship_tt
+				IMA_navy_ship_hull_heavy_build_cost_ic = -0.05
+				tooltip = ship_hull_heavy_build_cost_ic_tt
 			}
 			hidden_effect = {
 				add_ideas = IMA_33202_idea
@@ -4359,6 +4370,10 @@ focus_tree = {
 			add_to_variable = { 
 				IMA_navy_naval_critical_score_chance_factor = 0.15
 				tooltip = naval_critical_score_chance_factor_tt
+			}
+			add_to_variable = { 
+				IMA_navy_ship_hull_heavy_naval_speed = 0.15
+				tooltip = ship_hull_heavy_naval_speed_tt
 			}
 		}
 	}
@@ -4769,8 +4784,8 @@ focus_tree = {
 				DYNMOD = IMA_navy
 			}
 			add_to_variable = { 
-				IMA_navy_build_cost_ic_screen_ship = -0.1
-				tooltip = build_cost_ic_screen_ship_tt
+				IMA_navy_screen_ship_build_cost_ic = -0.1
+				tooltip = screen_ship_build_cost_ic_tt
 			}
 			add_to_variable = { 
 				IMA_navy_build_cost_ic_convoy = -0.1
@@ -4938,12 +4953,12 @@ focus_tree = {
 				DYNMOD = IMA_navy
 			}
 			add_to_variable = {
-				IMA_navy_build_cost_ic_screen_ship = -0.05
-				tooltip = build_cost_ic_screen_ship_tt
+				IMA_navy_screen_ship_build_cost_ic = -0.05
+				tooltip = screen_ship_build_cost_ic_tt
 			}
 			add_to_variable = {
 				IMA_navy_build_cost_ic_capital_ship = -0.05
-				tooltip = build_cost_ic_screen_ship_tt
+				tooltip = screen_ship_build_cost_ic_tt
 			}
 			hidden_effect = {
 				add_ideas = IMA_33011_idea
@@ -5081,16 +5096,16 @@ focus_tree = {
 				tooltip = build_cost_ic_convoy_tt
 			}
 			add_to_variable = { 
-				IMA_navy_build_cost_ic_screen_ship = -0.1
-				tooltip = build_cost_ic_screen_ship_tt
+				IMA_navy_screen_ship_build_cost_ic = -0.1
+				tooltip = screen_ship_build_cost_ic_tt
 			}
 			add_to_variable = { 
-				IMA_navy_build_cost_ic_submarine = -0.1
-				tooltip = build_cost_ic_submarine_tt
+				IMA_navy_submarine_build_cost_ic = -0.1
+				tooltip = submarine_build_cost_ic_tt
 			}
 			add_to_variable = { 
-				IMA_navy_build_cost_ic_submarine = -0.1
-				tooltip = build_cost_ic_submarine_tt
+				IMA_navy_submarine_build_cost_ic = -0.1
+				tooltip = submarine_build_cost_ic_tt
 			}
 			add_to_variable = {
 				IMA_navy_naval_mastery_gain_factor = 0.1
