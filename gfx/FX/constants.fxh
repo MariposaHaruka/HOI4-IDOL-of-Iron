@@ -153,19 +153,15 @@ static const float  SHADOW_WEIGHT_TREE   		= 0.7f;
 
 static const float GB_CAM_MIN = 180.0f; 
 static const float GB_CAM_MAX = 300.0f;
-// THE 1.17 DEFINE
-// GB_CAM_MAX_FILLING_CLAMP was previously 1.0. This gives you the original DH map coloring. It also however makes the sea map black in certain map modes, at the start menu and more. To solve this bug, this setting has to be on 0.8 until Paradox gets their **** together. 
-// - Generalis
-static const float GB_CAM_MAX_FILLING_CLAMP = 0.8f; // 0 to 1 value for clamping the fill when camera is at max distance
-//
+static const float GB_CAM_MAX_FILLING_CLAMP = 1.0f; // 0 to 1 value for clamping the fill when camera is at max distance
 static const float GB_THRESHOLD = 0.05f; // interpolation time
 static const float GB_THRESHOLD2 = 0.25f; // interpolation time
 static const float GB_OUTLINE_CUTOFF_SEA = 0.990f; // Magic number to balance cutoff on edges without neighbor (over Sea)
 static const float GB_OPACITY_NEAR = 1.0f; // Transparency when camera is near
 static const float GB_OPACITY_FAR = 1.0f;  // Transparency when camera is far
-static const float BORDER_NIGHT_DESATURATION_MAX = 0.5f; // how much border colors can get desaturated at night. 1.0f is full grey
-static const float BORDER_FOW_REMOVAL_FACTOR = 0.1f; // How much of the FOW that is removed from the borders. 1.0f is no FOW
-static const float BORDER_LIGHT_REMOVAL_FACTOR = 0.5f; // How much of the light calculations that are removed from the borders. 1.0f is no light
+static const float BORDER_NIGHT_DESATURATION_MAX = 0.2f; // how much border colors can get desaturated at night. 1.0f is full grey
+static const float BORDER_FOW_REMOVAL_FACTOR = 0.8f; // How much of the FOW that is removed from the borders. 1.0f is no FOW
+static const float BORDER_LIGHT_REMOVAL_FACTOR = 0.3f; // How much of the light calculations that are removed from the borders. 1.0f is no light
 static const float GB_STRENGTH_CH1 = 1.0; // Opacity of bottom layer
 static const float GB_STRENGTH_CH2 = 1.0; // Opacity of top layer
 static const float GB_FIRST_LAYER_PRIORITY = 0.9; // Priority for first/second layer when both are active at the same pixel

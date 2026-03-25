@@ -427,7 +427,7 @@ focus_tree = {
 				DYNMOD = BLA_air_force
 			}
 			add_to_variable = { 
-				BLA_air_force_air_mastery_gain_factor = -0.1
+				BLA_air_force_air_mastery_gain_factor = 0.1
 				tooltip = air_mastery_gain_factor_tt
 			}
 			add_to_variable = { 
@@ -459,7 +459,7 @@ focus_tree = {
 				DYNMOD = BLA_air_force
 			}
 			add_to_variable = { 
-				BLA_air_force_air_mastery_gain_factor = -0.1
+				BLA_air_force_air_mastery_gain_factor = 0.1
 				tooltip = air_mastery_gain_factor_tt
 			}
 		}
@@ -664,8 +664,8 @@ focus_tree = {
 				DYNMOD = BLA_air_force
 			}
 			add_to_variable = {
-				BLA_air_force_build_cost_ic_air_transport = 0.05
-				tooltip = build_cost_ic_air_transport_tt
+				BLA_air_force_air_transport_build_cost_ic = 0.05
+				tooltip = air_transport_build_cost_ic_tt
 			}
 			add_to_variable = {
 				BLA_air_force_cas_build_cost_ic = 0.05
@@ -676,32 +676,32 @@ focus_tree = {
 				tooltip = fighter_build_cost_ic_tt
 			}
 			add_to_variable = {
-				BLA_air_force_build_cost_ic_interceptor = 0.05
-				tooltip = build_cost_ic_interceptor_tt
+				BLA_air_force_interceptor_build_cost_ic = 0.05
+				tooltip = interceptor_build_cost_ic_tt
 			}
 			add_to_variable = {
-				BLA_air_force_build_cost_ic_heavy_fighter = 0.05
-				tooltip = build_cost_ic_heavy_fighter_tt
+				BLA_air_force_heavy_fighter_build_cost_ic = 0.05
+				tooltip = heavy_fighter_build_cost_ic_tt
 			}
 			add_to_variable = {
-				BLA_air_force_build_cost_ic_tactical_bomber = 0.05
-				tooltip = build_cost_ic_tactical_bomber_tt
+				BLA_air_force_tactical_bomber_build_cost_ic = 0.05
+				tooltip = tactical_bomber_build_cost_ic_tt
 			}
 			add_to_variable = {
-				BLA_air_force_build_cost_ic_missile = 0.05
-				tooltip = build_cost_ic_missile_tt
+				BLA_air_force_missile_build_cost_ic = 0.05
+				tooltip = missile_build_cost_ic_tt
 			}
 			add_to_variable = {
-				BLA_air_force_build_cost_ic_naval_bomber = 0.05
-				tooltip = build_cost_ic_naval_bomber_tt
+				BLA_air_force_naval_bomber_build_cost_ic = 0.05
+				tooltip = naval_bomber_build_cost_ic_tt
 			}
 			add_to_variable = {
-				BLA_air_force_build_cost_ic_strat_bomber = 0.05
-				tooltip = build_cost_ic_strat_bomber_tt
+				BLA_air_force_strategic_bomber_build_cost_ic = 0.05
+				tooltip = strategic_bomber_build_cost_ic_tt
 			}
 			add_to_variable = {
-				BLA_air_force_build_cost_ic_suicide = 0.05
-				tooltip = build_cost_ic_suicide_tt
+				BLA_air_force_suicide_build_cost_ic = 0.05
+				tooltip = suicide_build_cost_ic_tt
 			}
 			custom_effect_tooltip = BLA_11008_tt
 		}
@@ -925,7 +925,7 @@ focus_tree = {
 				DYNMOD = BLA_air_force
 			}
 			add_to_variable = { 
-				BLA_air_force_air_mastery_gain_factor = -0.1
+				BLA_air_force_air_mastery_gain_factor = 0.1
 				tooltip = air_mastery_gain_factor_tt
 			}
 			add_to_variable = { 
@@ -943,8 +943,8 @@ focus_tree = {
 					tooltip = air_strategic_bomber_bombing_factor_tt
 				}
 				add_to_variable = {
-					BLA_air_force_build_cost_ic_strat_bomber = -0.15
-					tooltip = build_cost_ic_strat_bomber_tt
+					BLA_air_force_strategic_bomber_build_cost_ic = -0.15
+					tooltip = strategic_bomber_build_cost_ic_tt
 				}
 			}
 			else_if = {
@@ -954,8 +954,8 @@ focus_tree = {
 					tooltip = air_cas_efficiency_tt
 				}
 				add_to_variable = {
-					BLA_air_force_build_cost_ic_tactical_bomber = -0.15
-					tooltip = build_cost_ic_tactical_bomber_tt
+					BLA_air_force_tactical_bomber_build_cost_ic = -0.15
+					tooltip = tactical_bomber_build_cost_ic_tt
 				}
 			}
 			else = {
@@ -1192,7 +1192,7 @@ focus_tree = {
 				DYNMOD = BLA_air_force
 			}
 			add_to_variable = { 
-				BLA_air_force_air_mastery_gain_factor = -0.1
+				BLA_air_force_air_mastery_gain_factor = 0.1
 				tooltip = air_mastery_gain_factor_tt
 			}
 			add_to_variable = { 
@@ -1206,8 +1206,8 @@ focus_tree = {
 					tooltip = air_escort_efficiency_tt
 				}
 				add_to_variable = {
-					BLA_air_force_build_cost_ic_heavy_fighter = -0.15
-					tooltip = build_cost_ic_heavy_fighter_tt
+					BLA_air_force_heavy_fighter_build_cost_ic = -0.15
+					tooltip = heavy_fighter_build_cost_ic_tt
 				}
 			}
 			else_if = {
@@ -1776,8 +1776,8 @@ focus_tree = {
 				DYNMOD = BLA_navy
 			}
 			add_to_variable = { #툴팁용
-				BLA_navy_build_cost_ic_convoy = -0.10
-				tooltip = build_cost_ic_convoy_tt
+				BLA_navy_convoy_build_cost_ic = -0.10
+				tooltip = convoy_build_cost_ic_tt
 			}
 		}
 	}
@@ -3482,6 +3482,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { always = no }
 		mutually_exclusive = { focus = BLA_31001 focus = BLA_32001 }
+		allow_branch = { has_country_flag = on_construction_flag } # IOI 임시조치
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -7872,10 +7873,7 @@ focus_tree = {
 			hidden_effect = {
 				every_state = {
 					limit = { is_owned_by = BLA }
-					add_to_variable = {
-						BLA_RED_local_building_slots_factor = 0.35
-						tooltip = MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_tt
-					}
+					add_to_variable = { BLA_RED_local_building_slots_factor = 0.35 }
 					BLA_agriculture_society_relieve = yes
 				}
 				if = {
@@ -7903,7 +7901,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				BLA_RED_local_building_slots_factor = 0.35
-				tooltip = MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_tt
+				tooltip = local_building_slots_factor_tt
 			}
 			986 = {	
 				add_building_construction = {
@@ -8638,15 +8636,19 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_ARI_10002"
 			add_stability = 0.05
-			every_state = {
-				limit = { has_state_flag = BLA_arius_state_flag }
-				custom_effect_tooltip = {
-					localization_key = dynmod_modifiy_tt
-					DYNMOD = BLA_ARI_modifiers
-				}
-				add_to_variable = {
-					BLA_ARI_local_building_slots_factor = 0.5
-					tooltip = MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_ARI_modifiers
+			}
+			add_to_variable = {
+				BLA_ARI_local_building_slots_factor = 0.5
+				tooltip = local_building_slots_factor_tt
+			}
+			hidden_effect = {
+				every_state = {
+					limit = { is_owned_by = BLA }
+					add_to_variable = { BLA_ARI_local_building_slots_factor = 0.5 }
+					BLA_agriculture_society_relieve = yes
 				}
 			}
 		}
@@ -8846,15 +8848,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_ARI_10008"
-			every_state = {
-				limit = { has_state_flag = BLA_arius_state_flag }
-				custom_effect_tooltip = {
-					localization_key = dynmod_modifiy_tt
-					DYNMOD = BLA_ARI_modifiers
-				}
-				add_to_variable = {
-					BLA_ARI_local_building_slots_factor = 0.45
-					tooltip = MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_ARI_modifiers
+			}
+			add_to_variable = {
+				BLA_ARI_local_building_slots_factor = 0.45
+				tooltip = local_building_slots_factor_tt
+			}
+			hidden_effect = {
+				every_state = {
+					limit = { is_owned_by = BLA }
+					add_to_variable = { BLA_ARI_local_building_slots_factor = 0.45 }
+					BLA_agriculture_society_relieve = yes
 				}
 			}
 		}
@@ -12470,7 +12476,7 @@ focus_tree = {
 				}
 				add_to_variable = {
 					BLA_GEH_local_building_slots_factor = 0.40
-					tooltip = MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_tt
+					tooltip = local_building_slots_factor_tt
 				}
 				add_to_variable = {
 					BLA_GEH_state_resources_factor = 0.40
@@ -12716,7 +12722,7 @@ focus_tree = {
 				}
 				add_to_variable = {
 					BLA_GEH_local_building_slots_factor = 0.40
-					tooltip = MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_tt
+					tooltip = local_building_slots_factor_tt
 				}
 				add_to_variable = {
 					BLA_GEH_state_resources_factor = 0.40
@@ -12761,7 +12767,7 @@ focus_tree = {
 				}
 				add_to_variable = {
 					BLA_GEH_local_building_slots_factor = 0.2
-					tooltip = MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_tt
+					tooltip = local_building_slots_factor_tt
 				}
 				add_to_variable = {
 					BLA_GEH_state_production_speed_buildings_factor = 0.2
