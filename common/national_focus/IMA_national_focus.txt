@@ -1593,8 +1593,8 @@ focus_tree = {
 				DYNMOD = IMA_army
 			}
 			add_to_variable = {
-				IMA_army_build_cost_ic_armor = -0.1
-				tooltip = build_cost_ic_armor_tt
+				IMA_army_armor_build_cost_ic = -0.1
+				tooltip = armor_build_cost_ic_tt
 			}
 			hidden_effect = {
 				add_ideas = IMA_10007_idea
@@ -1630,8 +1630,8 @@ focus_tree = {
 				DYNMOD = IMA_air_force
 			}
 			add_to_variable = {
-				IMA_airforce_build_cost_ic_fighter = -0.1
-				tooltip = build_cost_ic_fighter_tt
+				IMA_airforce_fighter_build_cost_ic = -0.1
+				tooltip = fighter_build_cost_ic_tt
 			}
 			hidden_effect = {
 				add_ideas = IMA_10008_idea
@@ -4044,7 +4044,7 @@ focus_tree = {
 				DYNMOD = IMA_navy
 			}
 			add_to_variable = { 
-				IMA_navy_build_cost_ic_carrier = -0.05
+				IMA_navy_carrier_build_cost_ic = -0.05
 				tooltip = carrier_build_cost_ic_tt
 			}
 			hidden_effect = {
@@ -4603,7 +4603,7 @@ focus_tree = {
 				DYNMOD = IMA_navy
 			}
 			add_to_variable = { 
-				IMA_navy_build_cost_ic_carrier = -0.1
+				IMA_navy_carrier_build_cost_ic = -0.1
 				tooltip = carrier_build_cost_ic_tt
 			}
 			add_to_variable = { 
@@ -4957,7 +4957,7 @@ focus_tree = {
 				tooltip = screen_ship_build_cost_ic_tt
 			}
 			add_to_variable = {
-				IMA_navy_build_cost_ic_capital_ship = -0.05
+				IMA_navy_capital_ship_build_cost_ic = -0.05
 				tooltip = screen_ship_build_cost_ic_tt
 			}
 			hidden_effect = {
@@ -5084,11 +5084,11 @@ focus_tree = {
 				DYNMOD = IMA_navy
 			}
 			add_to_variable = { 
-				IMA_navy_build_cost_ic_capital_ship = -0.1
-				tooltip = build_cost_ic_capital_ship_tt
+				IMA_navy_capital_ship_build_cost_ic = -0.1
+				tooltip = capital_ship_build_cost_ic_tt
 			}
 			add_to_variable = { 
-				IMA_navy_build_cost_ic_carrier = -0.1
+				IMA_navy_carrier_build_cost_ic = -0.1
 				tooltip = carrier_build_cost_ic_tt
 			}
 			add_to_variable = { 

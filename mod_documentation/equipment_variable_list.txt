@@ -6243,3 +6243,245 @@
 	strat_bomber_intercontinental_equipment_0_surface_detection	#WUW 필요
 	strat_bomber_intercontinental_equipment_0_reliability	#WUW 필요
 
+#######################################################################################
+# RESEARCH CATEGORY
+	### 해당 그룹은 연구 기술 태그 중, 실제로 작동하는 대상만 모은 그룹이니, 
+	툴팁으로 사용할 경우 뒤에 _reseach_ttd을 붙여 사용하면 되고
+	**마찬가지로 다이나믹 모디파이어에는 실제로 적용되는 그룹이 아니기 때문에, hidden_idea로 정의해서 집어넣을 것** 
+
+	### research_bonus 용
+
+	air_equipment
+	transport_planes_cat
+	light_air
+	light_fighter
+	mio_cat_all_light_fighter_and_modules
+	mio_cat_all_light_aircraft_and_modules
+	naval_air
+	jet_technology
+	cas_bomber
+	mio_cat_all_cas_and_modules
+	naval_bomber
+	mio_cat_all_naval_bomber_and_modules
+	medium_air
+	tactical_bomber
+	mio_cat_all_medium_aircraft_and_modules
+	cat_heavy_fighter
+	cat_scout_plane
+	heavy_air
+	cat_strategic_bomber
+	mio_cat_all_heavy_aircraft_and_modules
+
+	armor
+	mio_cat_tech_all_armor_and_modules
+	cat_light_armor
+	mio_cat_tech_light_armor_and_modules
+	tp_tech
+	cat_medium_armor
+	mio_cat_tech_medium_armor_and_modules
+	cat_heavy_armor
+	mio_cat_tech_heavy_armor_and_modules
+	cat_anti_tank
+	artillery
+	mio_cat_all_artillery_equipment
+
+	mio_cat_artillery
+	rocketry
+	cat_anti_air
+	cat_anti_tank
+
+	cat_maritime_patrol
+	plane_modules_tech
+	cat_air_bombs
+	cat_air_guns
+	cat_air_engine
+	helicopter_tech
+
+	electronics
+	radar_tech
+	computing_tech
+	encryption_tech
+	decryption_tech
+	naval_equipment
+	cat_fortification
+	nuclear
+
+	industry
+	cat_production
+	construction_tech
+	excavation_tech		
+	concentrated_industry_category
+	dispersed_industry_category
+	synth_resources
+	cat_synth_oil
+	cat_synth_rubber
+
+	infantry_weapons
+	para_tech
+	cat_special_forces_generic
+	marine_tech
+	infantry_tech
+	mountaineers_tech
+	rangers_tech_cat
+	night_vision
+	motorized_equipment
+	mio_cat_tech_all_motorized_mechanized
+	mot_rockets
+	cat_armored_cars
+	cat_mechanized_equipment
+
+	naval_artillery
+	naval_equipment
+	ship_modules_tech
+	cat_ship_light_battery
+	cat_ship_medium_battery
+	cat_ship_heavy_battery
+	mio_cat_tech_all_capital_ship_and_modules
+	mio_cat_tech_all_screen_ship_and_modules
+	mio_cat_tech_all_carrier_and_modules
+	mio_cat_tech_all_cruiser_and_modules
+	mio_cat_tech_all_destroyer_and_modules
+	cat_torpedoes
+	mio_cat_tech_all_submarine_and_modules
+	naval_mines
+	naval_minelaying
+	naval_minesweeping
+
+	dd_tech
+	asw_tech
+	ca_tech
+	bb_tech
+	bc_tech
+	naval_armor
+	cv_tech
+	ss_tech
+	pykrete_tech
+
+	support_tech
+	engineers_tech
+	recon_tech
+	military_police_tech
+	maintenance_company_tech
+	hospital_tech
+	logistics_tech
+	signal_company_tech
+	train_tech
+
+	
+	### variable 용
+
+	air_equipment_research
+	transport_planes_cat_research
+	light_air_research
+	light_fighter_research
+	mio_cat_all_light_fighter_and_modules_research
+	mio_cat_all_light_aircraft_and_modules_research
+	naval_air_research
+	jet_technology_research
+	cas_bomber_research
+	mio_cat_all_cas_and_modules_research
+	naval_bomber_research
+	mio_cat_all_naval_bomber_and_modules_research
+	medium_air_research
+	tactical_bomber_research
+	mio_cat_all_medium_aircraft_and_modules_research
+	cat_heavy_fighter_research
+	cat_scout_plane_research
+	heavy_air_research
+	cat_strategic_bomber_research
+	mio_cat_all_heavy_aircraft_and_modules_research
+	
+	armor_research
+	mio_cat_tech_all_armor_and_modules_research
+	cat_light_armor_research
+	mio_cat_tech_light_armor_and_modules_research
+	tp_tech_research
+	cat_medium_armor_research
+	mio_cat_tech_medium_armor_and_modules_research
+	cat_heavy_armor_research
+	mio_cat_tech_heavy_armor_and_modules_research
+	cat_anti_tank_research
+	artillery_research
+	mio_cat_all_artillery_equipment_research
+	
+	mio_cat_artillery_research
+	rocketry_research
+	cat_anti_air_research
+	cat_anti_tank_research
+	
+	cat_maritime_patrol_research
+	plane_modules_tech_research
+	cat_air_bombs_research
+	cat_air_guns_research
+	cat_air_engine_research
+	helicopter_tech_research
+	
+	electronics_research
+	radar_tech_research
+	computing_tech_research
+	encryption_tech_research
+	decryption_tech_research
+	naval_equipment_research
+	cat_fortification_research
+	nuclear_research
+	
+	industry_research
+	cat_production_research
+	construction_tech_research
+	excavation_tech_research
+	concentrated_industry_category_research
+	dispersed_industry_category_research
+	synth_resources_research
+	cat_synth_oil_research
+	cat_synth_rubber_research
+	
+	infantry_weapons_research
+	para_tech_research
+	cat_special_forces_generic_research
+	marine_tech_research
+	infantry_tech_research
+	mountaineers_tech_research
+	rangers_tech_cat_research
+	night_vision_research
+	motorized_equipment_research
+	mio_cat_tech_all_motorized_mechanized_research
+	mot_rockets_research
+	cat_armored_cars_research
+	cat_mechanized_equipment_research_research
+	
+	naval_artillery_research
+	naval_equipment_research
+	ship_modules_tech_research
+	cat_ship_light_battery_research
+	cat_ship_medium_battery_research
+	cat_ship_heavy_battery_research
+	mio_cat_tech_all_capital_ship_and_modules_research
+	mio_cat_tech_all_screen_ship_and_modules_research
+	mio_cat_tech_all_carrier_and_modules_research
+	mio_cat_tech_all_cruiser_and_modules_research
+	mio_cat_tech_all_destroyer_and_modules_research
+	cat_torpedoes_research
+	mio_cat_tech_all_submarine_and_modules_research
+	naval_mines_research
+	naval_minelaying_research
+	naval_minesweeping_research
+	
+	dd_tech_research
+	asw_tech_research
+	ca_tech_research
+	bb_tech_research
+	bc_tech_research
+	naval_armor_research
+	cv_tech_research
+	ss_tech_research
+	pykrete_tech_research
+	
+	support_tech_research
+	engineers_tech_research
+	recon_tech_research
+	military_police_tech_research
+	maintenance_company_tech_research
+	hospital_tech_research
+	logistics_tech_research
+	signal_company_tech_research
+	train_tech_research_research

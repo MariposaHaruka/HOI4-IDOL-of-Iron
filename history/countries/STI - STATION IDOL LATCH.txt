@@ -65,15 +65,15 @@ set_variable = { STI_army_supply_consumption_factor = 0.10}
 set_variable = { STI_army_winter_attrition_factor = 0.10 }
 set_variable = { STI_army_heat_attrition_factor = 0.10 }
 
-set_variable = { STI_army_build_cost_ic_anti_air = 0.30 } ### 별도 국민정신 적용
-set_variable = { STI_army_build_cost_ic_anti_tank = 0.30 } ### 별도 국민정신 적용
-set_variable = { STI_army_build_cost_ic_armor = 0.30 } ### 별도 국민정신 적용
-set_variable = { STI_army_build_cost_ic_artillery = 0.30 } ### 별도 국민정신 적용
+set_variable = { STI_army_anti_air_build_cost_ic = 0.30 } ### 별도 국민정신 적용
+set_variable = { STI_army_anti_tank_build_cost_ic = 0.30 } ### 별도 국민정신 적용
+set_variable = { STI_army_armor_build_cost_ic = 0.30 } ### 별도 국민정신 적용
+set_variable = { STI_army_artillery_build_cost_ic = 0.30 } ### 별도 국민정신 적용
 set_variable = { STI_army_infantry_build_cost_ic = 0.15 } ### 별도 국민정신 적용
-set_variable = { STI_army_build_cost_ic_mechanized = 0.30 } ### 별도 국민정신 적용
-set_variable = { STI_army_build_cost_ic_motorized = 0.30 } ### 별도 국민정신 적용
-set_variable = { STI_army_build_cost_ic_rocket = 0.30 } ### 별도 국민정신 적용
-set_variable = { STI_army_build_cost_ic_support_equipment = 0.30 } ### 별도 국민정신 적용
+set_variable = { STI_army_mechanized_build_cost_ic = 0.30 } ### 별도 국민정신 적용
+set_variable = { STI_army_motorized_build_cost_ic = 0.30 } ### 별도 국민정신 적용
+set_variable = { STI_army_rocket_build_cost_ic = 0.30 } ### 별도 국민정신 적용
+set_variable = { STI_army_support_build_cost_ic = 0.30 } ### 별도 국민정신 적용
 
 ## STI_navy
 set_variable = { STI_navy_experience_gain_navy_factor = -0.40 }
@@ -91,8 +91,8 @@ set_variable = { STI_navy_naval_defense_factor = -0.10 }
 set_variable = { STI_navy_navy_submarine_detection_factor = -0.30 }
 set_variable = { STI_navy_naval_speed_factor = -0.10 }
 
-set_variable = { STI_navy_build_cost_ic_capital_ship = 0.30 } ### 별도 국민정신 적용
-set_variable = { STI_navy_build_cost_ic_carrier = 0.30 } ### 별도 국민정신 적용
+set_variable = { STI_navy_capital_ship_build_cost_ic = 0.30 } ### 별도 국민정신 적용
+set_variable = { STI_navy_carrier_build_cost_ic = 0.30 } ### 별도 국민정신 적용
 set_variable = { STI_navy_convoy_build_cost_ic = 0.15 } ### 별도 국민정신 적용
 set_variable = { STI_navy_screen_ship_build_cost_ic = 0.30 } ### 별도 국민정신 적용
 set_variable = { STI_navy_submarine_build_cost_ic = 0.30 } ### 별도 국민정신 적용
@@ -114,8 +114,8 @@ set_variable = { STI_air_force_air_detection = -0.20 }
 set_variable = { STI_air_force_air_agility_factor = -0.10 }
 
 set_variable = { STI_air_force_air_transport_build_cost_ic = 0.35 } ### 별도 국민정신 적용
-set_variable = { STI_air_force_build_cost_ic_cas_bomber = 0.35 } ### 별도 국민정신 적용
-set_variable = { STI_air_force_build_cost_ic_fighter = 0.35 } ### 별도 국민정신 적용
+set_variable = { STI_air_force_cas_build_cost_ic = 0.35 } ### 별도 국민정신 적용
+set_variable = { STI_air_force_fighter_build_cost_ic = 0.35 } ### 별도 국민정신 적용
 set_variable = { STI_air_force_interceptor_build_cost_ic = 0.35 } ### 별도 국민정신 적용
 set_variable = { STI_air_force_tactical_bomber_build_cost_ic = 0.35 } ### 별도 국민정신 적용
 set_variable = { STI_air_force_missile_build_cost_ic = 0.35 } ### 별도 국민정신 적용

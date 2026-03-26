@@ -1217,8 +1217,8 @@ focus_tree = {
 					tooltip = air_superiority_efficiency_tt
 				}
 				add_to_variable = {
-					BLA_air_force_build_cost_ic_fighter = -0.15
-					tooltip = build_cost_ic_fighter_tt
+					BLA_air_force_fighter_build_cost_ic = -0.15
+					tooltip = fighter_build_cost_ic_tt
 				}
 			}
 			else = {
@@ -1361,8 +1361,8 @@ focus_tree = {
 					DYNMOD = BLA_air_force
 				}
 				add_to_variable = { 
-					BLA_air_force_build_cost_ic_fighter = -0.05
-					tooltip = build_cost_ic_fighter_tt
+					BLA_air_force_fighter_build_cost_ic = -0.05
+					tooltip = fighter_build_cost_ic_tt
 				}
 			}
 			else_if = {
@@ -1372,8 +1372,8 @@ focus_tree = {
 					DYNMOD = BLA_air_force
 				}
 				add_to_variable = { 
-					BLA_air_force_build_cost_ic_cas_bomber = -0.05
-					tooltip = build_cost_ic_cas_bomber_tt
+					BLA_air_force_cas_build_cost_ic = -0.05
+					tooltip = cas_build_cost_ic_tt
 				}
 			}
 			else = {
@@ -2165,7 +2165,7 @@ focus_tree = {
 			if = {
 				limit = { has_completed_focus = BLA_12102 }
 				add_to_variable = { #툴팁용
-					BLA_navy_build_cost_ic_capital_ship = -0.1
+					BLA_navy_capital_ship_build_cost_ic = -0.1
 					tooltip = navy_capital_ship_attack_factor_tt
 				}
 				add_to_variable = { 
@@ -2185,7 +2185,7 @@ focus_tree = {
 			else_if = {
 				limit = { has_completed_focus = BLA_12103 }
 				add_to_variable = { #툴팁용
-					BLA_navy_build_cost_ic_carrier = -0.1
+					BLA_navy_carrier_build_cost_ic = -0.1
 					tooltip = carrier_build_cost_ic_tt
 				}
 				add_to_variable = { 
