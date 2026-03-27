@@ -204,7 +204,7 @@ sub_units = {
 		}
 	}
 	
-	super_heavy_sp_anti_air_brigade = {
+	super_heavy_sp_anti_air_brigade = {	#IOI 수정
 		abbreviation = "SAA"
 		sprite = heavy_armor
 		map_icon_category = armored
@@ -217,15 +217,14 @@ sub_units = {
 			category_self_propelled_anti_air
 		}
 		
-		group = armor_combat_support # IOI 수정
+		group = armor_combat_support
 		
-		type = {
-			support
+		type = { 
 			armor
 			anti_air
 		}
 
-		combat_width = 0
+		combat_width = 2
 
 		need = {
 			super_heavy_tank_aa_chassis = 20

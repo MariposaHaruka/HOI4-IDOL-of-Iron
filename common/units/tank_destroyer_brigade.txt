@@ -212,22 +212,20 @@ sub_units = {
 		}
 	}
 	
-	super_heavy_tank_destroyer_brigade = {
-		abbreviation = "STD"
+	super_heavy_tank_destroyer_brigade = {	# IOI 수정
+		abbreviation = "OTD"
 		sprite = "heavy_armor"
 		map_icon_category = armored
-		priority = 1798
+		priority = 1796
 		ai_priority = 100
 		active = yes
 		
 		type = {
-			support
 			armor
 			anti_tank
 		}
-
-		group = armor_combat_support # IOI 수정
-
+		
+		group = armor_combat_support
 		
 		categories = {
 			category_front_line
@@ -236,10 +234,11 @@ sub_units = {
 			category_tank_destroyers
 		}
 
+
 		combat_width = 2
 
 		need = {
-			super_heavy_tank_destroyer_chassis = 20
+			super_heavy_tank_destroyer_chassis = 40
 		}
 		manpower = 500
 		max_organisation = 0
@@ -250,40 +249,40 @@ sub_units = {
 		supply_consumption = 0.4
 
 		breakthrough = -0.25
-		ap_attack = 0.15
-		suppression = 1.25
 
+		suppression = 1.25
+		
 		forest = {
-		    attack = -0.5
+		    attack = -0.3
 			movement = -0.4
 		}
-		hills = {
-		    attack = -0.3
+		hills = 	{
+		    attack = -0.1
 		}
 		mountain = 	{
-		    attack = -0.4
+		    attack = -0.2
 		}
 		jungle = {
-		    attack = -0.7
+		    attack = -0.4
 			movement = -0.4
 		}
 		marsh = {
-		    attack = -0.5 
-			movement = -0.2
+		    attack = -0.1 
+			movement = -0.1
 		}
 		urban = {
-			attack = -0.6
-			defence = -0.2
+			attack = -0.4
+			defence = -0.1
 		}
 		river = { 
-			attack = -0.5
-			movement = -0.5
+			attack = -0.2 
+			movement = -0.2
 		}
 		amphibious = { 
-			attack = -1.0
+			attack = -0.7
 		}
 		fort = {
-			attack = 0.3
+			attack = 0.15
 		}
 	}
 	
