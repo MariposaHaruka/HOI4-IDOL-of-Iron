@@ -18,6 +18,9 @@ joining_rule_anarchosyndicalism = {
 	trigger = {
 		has_government = anarchosyndicalism
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 joining_rule_authositariancommunism = {
@@ -30,6 +33,9 @@ joining_rule_authositariancommunism = {
 	}
 	trigger = {
 		has_government = authoritariancommunism
+	}
+	can_remove = {
+		always = no
 	}
 }
 
@@ -48,6 +54,9 @@ joining_rule_anti_hakurei = {
 		NOT = { has_government = anarchosyndicalism }
 		NOT = { has_government = authoritariancommunism }
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 joining_rule_anti_sekai_ideology = {
@@ -60,6 +69,9 @@ joining_rule_anti_sekai_ideology = {
 	}
 	trigger = {
 		is_fascism = no
+	}
+	can_remove = {
+		always = no
 	}
 }
 
@@ -74,6 +86,9 @@ joining_rule_anti_765_ideology = {
 	trigger = {
 		is_democratic = no
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 joining_rule_democratics_only = {
@@ -86,6 +101,9 @@ joining_rule_democratics_only = {
 	}
 	trigger = {
 		is_democratic = yes
+	}
+	can_remove = {
+		always = no
 	}
 }
 
@@ -100,6 +118,9 @@ joining_rule_democratics_widely = {
 	trigger = {
 		is_democratic_expanded = yes
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 joining_rule_communist_unified = {
@@ -112,6 +133,9 @@ joining_rule_communist_unified = {
 	}
 	trigger = {
 		is_communism = yes
+	}
+	can_remove = {
+		always = no
 	}
 }
 
@@ -126,6 +150,9 @@ joining_rule_fascist_only = {
 	trigger = {
 		is_fascism = yes
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 joining_rule_neutrality_only = {
@@ -139,13 +166,13 @@ joining_rule_neutrality_only = {
 	trigger = {
 		is_neutrality = yes
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 joining_rule_puppets_only = {
 	type = joining_rules
-	can_remove = {
-		faction_manifest_fulfillment > 0.95
-	}
 	ai_will_do = {
 		base = 0
 	}
@@ -158,6 +185,9 @@ joining_rule_puppets_only = {
 	}
 	modifier= {
 		subjects_autonomy_gain = -0.05
+	}
+	can_remove = {
+		always = no
 	}
 }
 
@@ -188,6 +218,9 @@ joining_rule_has_no_war = {
 	modifier = {
 		improve_relations_maintain_cost_factor = -0.1
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 joining_rule_has_no_offensive_war = {
@@ -210,6 +243,9 @@ joining_rule_has_no_offensive_war = {
 	modifier = {
 		defensive_war_stability_factor = 0.15
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 ########################################################
@@ -226,11 +262,6 @@ joining_rule_neighbors_only = {
 	type = joining_rules
 	ai_will_do = {
 		base = 0
-		modifier = {
-			add = 1
-			is_neutrality = yes
-			has_war = no 
-		}
 	}
 	
 	trigger = {
@@ -240,6 +271,9 @@ joining_rule_neighbors_only = {
 	}
 	modifier = {
 		enemy_justify_war_goal_time = 0.2
+	}
+	can_remove = {
+		always = no
 	}
 }
 
@@ -257,6 +291,9 @@ joining_rule_same_continent_only = {
 	modifier = {
 		enemy_justify_war_goal_time = 0.1
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 joining_rule_asia_only = {
@@ -264,12 +301,7 @@ joining_rule_asia_only = {
 	visible = {
 		capital_scope = { is_on_continent = asia }
 			
-	}
-	
-	can_remove = {
-		faction_manifest_fulfillment > 0.95
-	}
-	
+	}	
 	trigger = {
 		capital_scope = { is_on_continent = asia }
 	}
@@ -281,6 +313,9 @@ joining_rule_asia_only = {
 			capital_scope = { is_on_continent = asia }
 		}
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 joining_rule_africa_only = {
@@ -290,16 +325,8 @@ joining_rule_africa_only = {
 			is_on_continent = africa
 		}
 	}
-	can_remove = {
-		faction_manifest_fulfillment > 0.95
-	}
 	ai_will_do = {
 		base = 0
-		modifier = {
-			add = 1
-			is_faction_leader = yes 
-			capital_scope = { is_on_continent = africa }
-		}
 	}
 
 	trigger = {
@@ -309,6 +336,9 @@ joining_rule_africa_only = {
 	}
 	modifier = {
 		enemy_justify_war_goal_time = 0.1
+	}
+	can_remove = {
+		always = no
 	}
 }
 
@@ -327,16 +357,6 @@ joining_rule_americas_only = {
 	}
 	ai_will_do = {
 		base = 0
-		modifier = {
-			add = 1
-			is_faction_leader = yes
-			capital_scope = {
-				OR = {
-					is_on_continent = north_america
-					is_on_continent = south_america
-				}
-			}
-		}
 	}
 
 	trigger = {
@@ -349,6 +369,9 @@ joining_rule_americas_only = {
 	}
 	modifier = {
 		enemy_justify_war_goal_time = 0.1
+	}
+	can_remove = {
+		always = no
 	}
 }
 
@@ -364,9 +387,6 @@ joining_rule_baltics_only = {
 				state = 209   
 			}
 		}
-	}
-	can_remove = {
-		has_war_with = TOH
 	}
 	ai_will_do = {
 		base = 0
@@ -390,16 +410,15 @@ joining_rule_baltics_only = {
 			}
 		}
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 joining_rule_balkans_only = {
 	type = joining_rules
-
 	visible = {
 		is_balkan = yes		
-	}
-	can_remove = {
-		faction_manifest_fulfillment > 0.85
 	}
 	ai_will_do = {
 		base = 0
@@ -415,15 +434,15 @@ joining_rule_balkans_only = {
 			is_balkan = yes
 		}
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 joining_rule_islamic_only = {
 	type = joining_rules
 	visible = {
 		is_islamic = yes
-	}
-	can_remove = {
-		faction_manifest_fulfillment > 0.75
 	}
 	ai_will_do = {
 		base = 0
@@ -439,15 +458,15 @@ joining_rule_islamic_only = {
 			is_islamic = yes
 		}
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 joining_rule_hispanic_only = {
 	type = joining_rules
 	visible = {
-		is_hispanic = YES
-	}
-	can_remove = {
-		faction_manifest_fulfillment > 0.7
+		is_hispanic = yes
 	}
 	ai_will_do = {
 		base = 0
@@ -460,7 +479,10 @@ joining_rule_hispanic_only = {
 	trigger = {
 		custom_trigger_tooltip = {
 			tooltip = is_hispanic_country_tt
-			is_hispanic = YES
+			is_hispanic = yes
 		}
+	}
+	can_remove = {
+		always = no
 	}
 }

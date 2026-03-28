@@ -1159,11 +1159,104 @@
 	
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_shared_20001 }
-		available = { commomwealth_joined = yes }
+		available = { 
+			commomwealth_joined = yes 
+			is_cryptology_department_active = yes
+		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_20002"
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = {
+				IMA_commonwealth_airforce_intel_decryption_bonus = 5
+				tooltip = airforce_intel_decryption_bonus_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_army_intel_decryption_bonuss = 5
+				tooltip = army_intel_decryption_bonus_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_civilian_intel_decryption_bonus = 5
+				tooltip = civilian_intel_decryption_bonus_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_navy_intel_decryption_bonus = 5
+				tooltip = navy_intel_decryption_bonus_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_crypto_strength = 1
+				tooltip = crypto_strength_tt
+			}
+			custom_effect_tooltip = IMA_shared_20002_tt
+			hidden_effect = {
+				if = {
+					limit = { IMA = { is_cryptology_department_active = no } }
+					IMA = {
+						add_to_variable = {
+							IMA_commonwealth_crypto_department_enabled = 1
+							tooltip = crypto_department_enabled_yes_tt
+						}
+					}
+				}
+				if = {
+					limit = { IMA = { is_cryptology_department_active = no } }
+					ICG = {
+						add_to_variable = {
+							IMA_commonwealth_crypto_department_enabled = 1
+							tooltip = crypto_department_enabled_yes_tt
+						}
+					}
+				}
+				if = {
+					limit = { IMA = { is_cryptology_department_active = no } }
+					IML = {
+						add_to_variable = {
+							IMA_commonwealth_crypto_department_enabled = 1
+							tooltip = crypto_department_enabled_yes_tt
+						}
+					}
+				}
+				if = {
+					limit = { IMA = { is_cryptology_department_active = no } }
+					ISC = {
+						add_to_variable = {
+							IMA_commonwealth_crypto_department_enabled = 1
+							tooltip = crypto_department_enabled_yes_tt
+						}
+					}
+				}
+				if = {
+					limit = { IMA = { is_cryptology_department_active = no } }
+					ISM = {
+						add_to_variable = {
+							IMA_commonwealth_crypto_department_enabled = 1
+							tooltip = crypto_department_enabled_yes_tt
+						}
+					}
+				}
+				if = {
+					limit = { IMA = { is_cryptology_department_active = no } }
+					IDS = {
+						add_to_variable = {
+							IMA_commonwealth_crypto_department_enabled = 1
+							tooltip = crypto_department_enabled_yes_tt
+						}
+					}
+				}
+				if = {
+					limit = { IMA = { is_cryptology_department_active = no } }
+					IGM = {
+						add_to_variable = {
+							IMA_commonwealth_crypto_department_enabled = 1
+							tooltip = crypto_department_enabled_yes_tt
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -1184,6 +1277,14 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_20003"
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = {
+				IMA_commonwealth_political_power_factor = 0.05
+				tooltip = 345
+			}
 		}
 	}
 
@@ -1201,8 +1302,8 @@
 		prerequisite = { focus = IMA_shared_20002 }
 		prerequisite = { focus = IMA_shared_20003 }
 		available = { 
-			commomwealth_joined = yes
 			original_tag = IMA
+			commomwealth_joined = yes
 		}
 		bypass = {
 			IMA = { commomwealth_joined = no }
@@ -1312,6 +1413,20 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_31003"
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -1850,13 +1965,16 @@
 				limit = { IMA = { commomwealth_joined = yes } }
 				custom_effect_tooltip = IMA_shared_43001_IMA_tt
 			}
-			if = {
+			else_if = {
 				limit = { ICG = { commomwealth_joined = yes } }
 				custom_effect_tooltip = IMA_shared_43001_ICG_tt
 			}
-			if = {
+			else_if = {
 				limit = { IML = { commomwealth_joined = yes } }
 				custom_effect_tooltip = IMA_shared_43001_IML_tt
+			}
+			else = {
+				custom_effect_tooltip = IMA_shared_43001_tt
 			}
 			hidden_effect = {
 				if = {
@@ -2001,5 +2119,25 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42004"
+			if = {
+				limit = { IMA = { commomwealth_joined = yes } }
+				if = {
+					limit = {
+						IMA = { has_completed_focus = IMA_10001 }
+					}
+				}
+				custom_effect_tooltip = IMA_shared_43001_IMA_tt
+			}
+			else_if = {
+				limit = { ICG = { commomwealth_joined = yes } }
+				custom_effect_tooltip = IMA_shared_43001_ICG_tt
+			}
+			else_if = {
+				limit = { IML = { commomwealth_joined = yes } }
+				custom_effect_tooltip = IMA_shared_43001_IML_tt
+			}
+			else = {
+				custom_effect_tooltip = IMA_shared_43001_tt
+			}
 		}
 	}

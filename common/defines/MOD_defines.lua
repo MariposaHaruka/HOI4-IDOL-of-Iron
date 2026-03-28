@@ -32,6 +32,7 @@ NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 1000
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 1000
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 1000
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_WIDTH = 2
+NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 5
 NDefines.NDiplomacy.PEACE_SCORE_SCALE_FACTOR = 2.15							-- Vanilla is 1.35
 NDefines.NDiplomacy.PEACE_SCORE_DISTRIBUTION = { 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2 } -- Vanilla is 0.2 in the first five turns
 NDefines.NDiplomacy.PEACE_CONTEST_REFUND_FACTOR = { 1.0, 0.90, 0.80, 0.70, 0.60, 0.50  } -- Vanilla is 1.0, 0.92, 0.84, 0.76
