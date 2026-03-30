@@ -361,16 +361,17 @@
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_shared_00001 focus = IMA_shared_00002 focus = IMA_shared_00003 focus = IMA_shared_00004 focus = IMA_shared_00005 focus = IMA_shared_00006 focus = IMA_shared_00007 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_COMMONWEALTH }
-		joint_trigger = {
-			commomwealth_joined = yes
-		}
+		search_filters = { FOCUS_FILTER_COMMONWEALTH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
+		available = { commomwealth_joined = yes }
+		joint_trigger = { commomwealth_joined = yes }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_10001"
 			air_experience = 25
 			navy_experience = 25
 			army_experience = 25
 			add_command_power = 25
+			add_ideas = allied_supreme_command
+			custom_effect_tooltip = IMA_shared_10001_tt
 			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
@@ -383,6 +384,16 @@
 			add_to_variable = {
 				IMA_commonwealth_max_planning_factor = 0.05
 				tooltip = max_planning_factor_tt
+			}
+			hiddenn_effect = {
+				set_global_flag = allied_supreme_command_flag
+				if = {
+					limit = {
+						is_imas = no
+						is_in_faction_with = IMA
+					}
+					add_ideas = allied_supreme_command
+				}
 			}
 		}
 	}
@@ -400,15 +411,103 @@
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_shared_10001 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_COMMONWEALTH }
-		joint_trigger = {
+		search_filters = { FOCUS_FILTER_COMMONWEALTH FOCUS_FILTER_AIR_FORCE }
+		available = {
 			commomwealth_joined = yes
 			has_deployed_air_force_size = {
 				size > 199
 			}
 		}
+		joint_trigger = { commomwealth_joined = yes }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11001"
+		}
+
+	}
+
+	joint_focus = {
+		id = IMA_shared_12001 #연합 해군 사령부
+		icon = GFX_focus_ioi_generic_naval_command
+		cost = 5
+
+		x =2
+		y = 1
+		relative_position_id = IMA_shared_10001
+		text_icon = joint_focus_style
+
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_10001 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		available = {
+			has_navy_size = {
+				size > 24
+			}
+		}
+		joint_trigger = { commomwealth_joined = yes }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12001"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_13001 #연합 특수전 사령부
+		icon = GFX_focus_ioi_generic_special_force_command
+		cost = 5
+		text_icon = joint_focus_style
+
+		x = 8
+		y = 1
+		relative_position_id = IMA_shared_10001
+
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_10001 }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		joint_trigger = { commomwealth_joined = yes }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_13001"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_14001 #연합 육군 사령부
+		icon = GFX_focus_ioi_generic_army_high_command
+		cost = 5
+		text_icon = joint_focus_style
+
+		x = 12
+		y = 1
+		relative_position_id = IMA_shared_10001
+
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_10001 }
+		joint_trigger = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14001"
+		}
+	}
+
+	joint_focus = {
+		id = IMA_shared_11002 #합동 공군 훈련
+		icon = GFX_goal_generic_air_fighter2
+		cost = 5
+	
+		x = -1
+		y = 1
+		relative_position_id = IMA_shared_11001
+		text_icon = joint_focus_style
+	
+		ai_will_do = { factor = 50 } 
+		prerequisite = { focus = IMA_shared_11001 }
+		available = { commomwealth_joined = yes }
+		joint_trigger = { commomwealth_joined = yes }
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_COMMONWEALTH FOCUS_FILTER_AIR_FORCE FOCUS_FILTER_AIR_XP }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11002"
 		}
 
 		completion_reward_joint_originator = {
@@ -441,127 +540,6 @@
 			}
 		}
 	}
-
-	joint_focus = {
-		id = IMA_shared_12001 #연합 해군 사령부
-		icon = GFX_focus_ioi_generic_naval_command
-		cost = 5
-
-		x =2
-		y = 1
-		relative_position_id = IMA_shared_10001
-
-		ai_will_do = { factor = 50 } 
-		prerequisite = { focus = IMA_shared_10001 }
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_COMMONWEALTH }
-		available = {
-			has_navy_size = {
-				size > 24
-			}
-		}
-		joint_trigger = {
-			commomwealth_joined = yes
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12001"
-		}
-
-		completion_reward_joint_originator = {
-			custom_effect_tooltip = {
-				localization_key = dynmod_modifiy_tt
-				DYNMOD = IMA_commonwealth
-			}
-			add_to_variable = {
-				IMA_commonwealth_experience_gain_navy_factor = 0.10
-				tooltip = experience_gain_navy_factor_tt
-			}
-			add_to_variable = {
-				IMA_commonwealth_naval_mastery_gain_factor = 0.10
-				tooltip = naval_mastery_gain_factor_tt
-			}
-		}
-
-		completion_reward_joint_member = { 
-			custom_effect_tooltip = {
-				localization_key = dynmod_modifiy_tt
-				DYNMOD = IMA_commonwealth
-			}
-			add_to_variable = {
-				IMA_commonwealth_experience_gain_navy_factor = 0.05
-				tooltip = experience_gain_navy_factor_tt
-			}
-			add_to_variable = {
-				IMA_commonwealth_naval_mastery_gain_factor = 0.05
-				tooltip = naval_mastery_gain_factor_tt
-			}
-		}
-	}
-
-	joint_focus = {
-		id = IMA_shared_13001 #연합 특수전 사령부
-		icon = GFX_focus_ioi_generic_special_force_command
-		cost = 5
-		text_icon = joint_focus_style
-
-		x = 8
-		y = 1
-		relative_position_id = IMA_shared_10001
-
-		ai_will_do = { factor = 50 } 
-		prerequisite = { focus = IMA_shared_10001 }
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_COMMONWEALTH }
-		joint_trigger = {
-			commomwealth_joined = yes
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_13001"
-		}
-	}
-
-	joint_focus = {
-		id = IMA_shared_14001 #연합 육군 사령부
-		icon = GFX_focus_ioi_generic_army_high_command
-		cost = 5
-		text_icon = joint_focus_style
-
-		x = 12
-		y = 1
-		relative_position_id = IMA_shared_10001
-
-		ai_will_do = { factor = 50 } 
-		prerequisite = { focus = IMA_shared_10001 }
-		joint_trigger = {
-			commomwealth_joined = yes
-		}
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_COMMONWEALTH }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14001"
-		}
-	}
-
-	joint_focus = {
-		id = IMA_shared_11002 #합동 공군 훈련
-		icon = GFX_goal_generic_air_fighter2
-		cost = 5
-	
-		x = -1
-		y = 1
-		relative_position_id = IMA_shared_11001
-	
-		ai_will_do = { factor = 50 } 
-		prerequisite = { focus = IMA_shared_11001 }
-		joint_trigger = {
-			commomwealth_joined = yes
-		}
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_COMMONWEALTH }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11002"
-		}
-	}
 	
 	joint_focus = {
 		id = IMA_shared_11003 #연합 뇌격기 사령부
@@ -577,21 +555,89 @@
 		prerequisite = { focus = IMA_shared_11002 }
 		available = {
 			OR = {
-				original_tag = IMA
-				original_tag = ICG
+				AND = {
+					original_tag = IMA
+					IMA = { commomwealth_joined = yes }
+					OR = {
+						has_deployed_air_force_size = {
+							size > 249
+							type = naval_bomber
+						}
+						if = {
+							limit = { has_BBA = yes }
+							has_deployed_air_force_size = {
+								size > 249
+								type = maritime_patrol_plane
+							}
+						}
+					}
+				}
+				AND = {
+					original_tag = ICG
+					ICG = { commomwealth_joined = yes }
+					OR = {
+						has_deployed_air_force_size = {
+							size > 249
+							type = naval_bomber
+						}
+						if = {
+							limit = { has_BBA = yes }
+							has_deployed_air_force_size = {
+								size > 249
+								type = maritime_patrol_plane
+							}
+						}
+					}
+				}
 			}
 		}
 		bypass = {
 			IMA = { commomwealth_joined = no }
 			ICG = { commomwealth_joined = no }
 		}
-		joint_trigger = {
-			commomwealth_joined = yes
-		}
+		joint_trigger = { commomwealth_joined = yes }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		search_filters = { FOCUS_FILTER_COMMONWEALTH FOCUS_FILTER_AIR_FORCE }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11003"
+		}
+
+		completion_reward_joint_originator = {
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = {
+				IMA_commonwealth_naval_strike_agility_factor = 0.10
+				tooltip = naval_strike_agility_factor_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_naval_strike_attack_factor = 0.10
+				tooltip = naval_strike_attack_factor_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_naval_strike_targetting_factor = 0.10
+				tooltip = naval_strike_targetting_factor_tt
+			}
+		}
+
+		completion_reward_joint_member = { 
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = {
+				IMA_commonwealth_naval_strike_agility_factor = 0.05
+				tooltip = naval_strike_agility_factor_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_naval_strike_attack_factor = 0.05
+				tooltip = naval_strike_attack_factor_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_naval_strike_targetting_factor = 0.05
+				tooltip = naval_strike_targetting_factor_tt
+			}
 		}
 	}
 	
@@ -609,21 +655,45 @@
 		prerequisite = { focus = IMA_shared_11002 }
 		available = {
 			OR = {
-				original_tag = ICG
-				original_tag = ISC
-			}
-			OR = {
-				has_deployed_air_force_size = {
-					size > 249
-					type = cas
+				AND = {
+					original_tag = ICG
+					ICG = {
+						commomwealth_joined = yes
+						OR = {
+							has_deployed_air_force_size = {
+								size > 249
+								type = cas
+							}
+							has_deployed_air_force_size = {
+								size > 249
+								type = tactical_bomber
+							}
+							has_deployed_air_force_size = {
+								size > 249
+								type = strategic_bomber
+							}
+						}
+					}
 				}
-				has_deployed_air_force_size = {
-					size > 249
-					type = tactical_bomber
-				}
-				has_deployed_air_force_size = {
-					size > 249
-					type = strategic_bomber
+				AND = {
+					original_tag = ISC
+					ISC = {
+						commomwealth_joined = yes
+						OR = {
+							has_deployed_air_force_size = {
+								size > 249
+								type = cas
+							}
+							has_deployed_air_force_size = {
+								size > 249
+								type = tactical_bomber
+							}
+							has_deployed_air_force_size = {
+								size > 249
+								type = strategic_bomber
+							}
+						}
+					}
 				}
 			}
 		}
@@ -631,13 +701,41 @@
 			ICG = { commomwealth_joined = no }
 			ISC = { commomwealth_joined = no }
 		}
-		joint_trigger = {
-			commomwealth_joined = yes
-		}
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		search_filters = { FOCUS_FILTER_COMMONWEALTH FOCUS_FILTER_AIR_FORCE }
+		joint_trigger = { commomwealth_joined = yes }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11004"
+		}
+
+		completion_reward_joint_originator = {
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = {
+				IMA_commonwealth_air_cas_present_factor = 0.10
+				tooltip = air_cas_present_factor_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_air_strategic_bomber_bombing_factor = 0.10
+				tooltip = air_strategic_bomber_bombing_factor_tt
+			}
+		}
+
+		completion_reward_joint_member = { 
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = {
+				IMA_commonwealth_air_cas_present_factor = 0.05
+				tooltip = air_cas_present_factor_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_air_strategic_bomber_bombing_factor = 0.05
+				tooltip = air_strategic_bomber_bombing_factor_tt
+			}
 		}
 	}
 	
@@ -655,17 +753,43 @@
 		prerequisite = { focus = IMA_shared_11002 }
 		available = {
 			OR = {
-				original_tag = IML
-				original_tag = ISC
-			}
-			OR = {
-				has_deployed_air_force_size = {
-					size > 349
-					type = heavy_fighter
+				AND = {
+					original_tag = IML
+					IML = { 
+						commomwealth_joined = yes
+						OR = {
+							custom_trigger_tooltip = {
+								tooltip = IMA_shared_11005_heavy_fighter_tt
+								has_deployed_air_force_size = {
+									size > 349
+									type = heavy_fighter
+								}
+							}
+							has_deployed_air_force_size = {
+								size > 349
+								type = fighter
+							}
+						}
+					}
 				}
-				has_deployed_air_force_size = {
-					size > 349
-					type = fighter
+				AND = {
+					original_tag = ISC
+					ISC = { 
+						commomwealth_joined = yes
+						OR = {
+							custom_trigger_tooltip = {
+								tooltip = IMA_shared_11005_heavy_fighter_tt
+								has_deployed_air_force_size = {
+									size > 349
+									type = heavy_fighter
+								}
+							}
+							has_deployed_air_force_size = {
+								size > 349
+								type = fighter
+							}
+						}
+					}
 				}
 			}
 		}
@@ -677,9 +801,39 @@
 			commomwealth_joined = yes
 		}
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		search_filters = { FOCUS_FILTER_COMMONWEALTH FOCUS_FILTER_AIR_FORCE }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11005"
+		}
+
+		completion_reward_joint_originator = {
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = {
+				IMA_commonwealth_air_intercept_efficiency = 0.10
+				tooltip = air_intercept_efficiency_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_air_superiority_efficiency = 0.10
+				tooltip = air_superiority_efficiency_tt
+			}
+		}
+
+		completion_reward_joint_member = { 
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = {
+				IMA_commonwealth_air_intercept_efficiency = 0.05
+				tooltip = air_intercept_efficiency_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_air_superiority_efficiency = 0.05
+				tooltip = air_superiority_efficiency_tt
+			}
 		}
 	}
 	
@@ -699,24 +853,98 @@
 		prerequisite = { focus = IMA_shared_11005 }
 		available = {
 			original_tag = IMA
+			IMA = { commomwealth_joined = yes }
 		}
 		bypass = {
 			IMA = { commomwealth_joined = no }
 		}
-		joint_trigger = {
-			commomwealth_joined = yes
-		}
+		joint_trigger = { commomwealth_joined = yes }
 		cancel_if_invalid = yes
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		search_filters = { FOCUS_FILTER_COMMONWEALTH FOCUS_FILTER_AIR_FORCE }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11006"
+		}
+
+		completion_reward_joint_originator = {
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_naval_bomber_build_cost_ic = -0.05
+				tooltip = naval_bomber_build_cost_ic_tt
+			}
 			if = {
-				limit = { any_country = { commomwealth_joined = yes } }
-				custom_effect_tooltip = { 
-					localization_key = IMA_shared_11006_tt
-					add_ideas = commonwealth_aircraft_discount
+				limit = { has_BBA = yes }
+				add_to_variable = { # 툴팁용
+					IMA_commonwealth_maritime_patrol_plane_build_cost_ic = -0.05
+					tooltip = maritime_patrol_plane_build_cost_ic_tt
 				}
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_cas_build_cost_ic = -0.05
+				tooltip = cas_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_tactical_bomber_build_cost_ic = -0.05
+				tooltip = tactical_bomber_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_strategic_bomber_build_cost_ic = -0.05
+				tooltip = strategic_bomber_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_fighter_build_cost_ic = -0.05
+				tooltip = fighter_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_heavy_fighter_build_cost_ic = -0.05
+				tooltip = heavy_fighter_build_cost_ic_tt
+			}
+			hidden_effect = { # 진짜
+				add_ideas = IMA_shared_11006_hidden_idea_joint_originator
+			}
+		}
+
+		completion_reward_joint_member = { 
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_naval_bomber_build_cost_ic = -0.10
+				tooltip = naval_bomber_build_cost_ic_tt
+			}
+			if = {
+				limit = { has_BBA = yes }
+				add_to_variable = { # 툴팁용
+					IMA_commonwealth_maritime_patrol_plane_build_cost_ic = -0.10
+					tooltip = maritime_patrol_plane_build_cost_ic_tt
+				}
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_cas_build_cost_ic = -0.10
+				tooltip = cas_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_tactical_bomber_build_cost_ic = -0.10
+				tooltip = tactical_bomber_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_strategic_bomber_build_cost_ic = -0.10
+				tooltip = strategic_bomber_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_fighter_build_cost_ic = -0.10
+				tooltip = fighter_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_heavy_fighter_build_cost_ic = -0.10
+				tooltip = heavy_fighter_build_cost_ic_tt
+			}
+			hidden_effect = { # 진짜
+				add_ideas = IMA_shared_11006_hidden_idea_joint_member
 			}
 		}
 	}
@@ -814,13 +1042,42 @@
 	
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_shared_12001 }
-		joint_trigger = {
-			commomwealth_joined = yes
-		}
+		available = { commomwealth_joined = yes }
+		joint_trigger = { commomwealth_joined = yes }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12002"
+		}
+
+		completion_reward_joint_originator = {
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = {
+				IMA_commonwealth_experience_gain_navy_factor = 0.10
+				tooltip = experience_gain_navy_factor_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_naval_mastery_gain_factor = 0.10
+				tooltip = naval_mastery_gain_factor_tt
+			}
+		}
+
+		completion_reward_joint_member = { 
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = {
+				IMA_commonwealth_experience_gain_navy_factor = 0.05
+				tooltip = experience_gain_navy_factor_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_naval_mastery_gain_factor = 0.05
+				tooltip = naval_mastery_gain_factor_tt
+			}
 		}
 	}
 	
@@ -950,16 +1207,62 @@
 		bypass = {
 			ICG = { commomwealth_joined = no }
 		}
+		joint_trigger = { commomwealth_joined = yes }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12006"
-			if = {
-				limit = { any_country = { commomwealth_joined = yes } }
-				custom_effect_tooltip = { 
-					localization_key = IMA_shared_12006_tt
-					add_ideas = commonwealth_ship_discount
-				}
+		}
+
+		completion_reward_joint_originator = {
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_capital_ship_build_cost_ic = -0.05
+				tooltip = capital_ship_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_screen_ship_build_cost_ic = -0.05
+				tooltip = screen_ship_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_submarine_build_cost_ic = -0.05
+				tooltip = submarine_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_carrier_build_cost_ic = -0.05
+				tooltip = carrier_build_cost_ic_tt
+			}
+			hidden_effect = { # 진짜
+				add_ideas = IMA_shared_12006_hidden_idea_joint_originator
+			}
+		}
+
+		completion_reward_joint_member = { 
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_capital_ship_build_cost_ic = -0.10
+				tooltip = capital_ship_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_screen_ship_build_cost_ic = -0.10
+				tooltip = screen_ship_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_submarine_build_cost_ic = -0.10
+				tooltip = submarine_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁용
+				IMA_commonwealth_carrier_build_cost_ic = -0.10
+				tooltip = carrier_build_cost_ic_tt
+			}
+			hidden_effect = { # 진짜
+				add_ideas = IMA_shared_12006_hidden_idea_joint_member
 			}
 		}
 	}
@@ -1091,13 +1394,42 @@
 	
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_shared_14001 }
-		joint_trigger = {
-			commomwealth_joined = yes
-		}
+		available = { commomwealth_joined = yes }
+		joint_trigger = { commomwealth_joined = yes }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_COMMONWEALTH }
+		search_filters = { FOCUS_FILTER_COMMONWEALTH FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14002"
+		}
+
+		completion_reward_joint_originator = {
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = {
+				IMA_commonwealth_experience_gain_army_factor = 0.10
+				tooltip = experience_gain_army_factor_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_land_mastery_gain_factor = 0.10
+				tooltip = land_mastery_gain_factor_tt
+			}
+		}
+
+		completion_reward_joint_member = { 
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = {
+				IMA_commonwealth_experience_gain_army_factor = 0.05
+				tooltip = experience_gain_army_factor_tt
+			}
+			add_to_variable = {
+				IMA_commonwealth_land_mastery_gain_factor = 0.05
+				tooltip = land_mastery_gain_factor_tt
+			}
 		}
 	}
 	
@@ -1117,13 +1449,16 @@
 			OR = {
 				AND = {
 					original_tag = ICG
-					commomwealth_joined = yes
+					ICG = { commomwealth_joined = yes }
 				}
 				AND = {
 					original_tag = IML
-					commomwealth_joined = yes
+					IML = { commomwealth_joined = yes }
 				}
 			}
+		}
+		joint_trigger = {
+			commomwealth_joined = yes
 		}
 		bypass = {
 			ICG = { commomwealth_joined = no }
@@ -1150,6 +1485,15 @@
 		prerequisite = { focus = IMA_shared_14002 }
 		available = { 
 			original_tag = IMA
+			IMA = { 
+				commomwealth_joined = yes
+				has_army_size = {
+					size > 35
+					type = infantry
+				}
+			}
+		}
+		joint_trigger = {
 			commomwealth_joined = yes
 		}
 		bypass = {
@@ -1174,8 +1518,14 @@
 	
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_shared_14003 }
-		joint_trigger = {
-			commomwealth_joined = yes
+		available = {
+			any_country = {
+				commomwealth_joined = yes
+				has_army_size = {
+					size > 11
+					type = armor
+				}
+			}
 		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
@@ -1201,11 +1551,11 @@
 			OR = {
 				AND = {
 					original_tag = IML
-					commomwealth_joined = yes
+					IML = { commomwealth_joined = yes }
 				}
 				AND = {
 					original_tag = ISM
-					commomwealth_joined = yes
+					ISM = { commomwealth_joined = yes }
 				}
 			}
 		}
@@ -1213,10 +1563,33 @@
 			IML = { commomwealth_joined = no }
 			ISM = { commomwealth_joined = no }
 		}
+		joint_trigger = { commomwealth_joined = yes }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14006"
+		}
+
+		completion_reward_joint_originator = {
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = { 
+				IMA_commonwealth_conscription_factor = 0.10
+				tooltip = conscription_factor_tt
+			}
+		}
+
+		completion_reward_joint_member = { 
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = { 
+				IMA_commonwealth_conscription_factor = 0.05
+				tooltip = conscription_factor_tt
+			}
 		}
 	}
 	
@@ -1234,21 +1607,51 @@
 		prerequisite = { focus = IMA_shared_14005 }
 		available = { 
 			original_tag = IML
-			commomwealth_joined = yes
+			IML = { commomwealth_joined = yes }
 		}
 		bypass = {
 			IML = { commomwealth_joined = no }
 		}
+		joint_trigger = { commomwealth_joined = yes }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14007"
-			if = {
-				limit = { any_country = { commomwealth_joined = yes } }
-				custom_effect_tooltip = { 
-					localization_key = IMA_shared_14007_tt
-					add_ideas = commonwealth_tank_discount
-				}
+		}
+
+		completion_reward_joint_originator = {
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = { # 툴팁 용
+				IMA_commonwealth_armor_build_cost_ic = -0.10
+				tooltip = armor_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁 용
+				IMA_commonwealth_armor_reliability = 0.10
+				tooltip = armor_reliability_tt
+			}
+			hidden_effect = { # 진짜
+				add_ideas = IMA_shared_14007_hidden_idea_joint_originator
+			}
+		}
+
+		completion_reward_joint_member = { 
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_commonwealth
+			}
+			add_to_variable = { # 툴팁 용
+				IMA_commonwealth_armor_build_cost_ic = -0.05
+				tooltip = armor_build_cost_ic_tt
+			}
+			add_to_variable = { # 툴팁 용
+				IMA_commonwealth_armor_reliability = 0.05
+				tooltip = armor_reliability_tt
+			}
+			hidden_effect = { # 진짜
+				add_ideas = IMA_shared_14007_hidden_idea_joint_member
 			}
 		}
 	}
@@ -1301,6 +1704,7 @@
 			commomwealth_joined = yes 
 			is_cryptology_department_active = yes
 		}
+		joint_trigger = { commomwealth_joined = yes }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
@@ -1363,9 +1767,8 @@
 	
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_shared_20001 }
-		joint_trigger = {
-			commomwealth_joined = yes
-		}
+		available = { commomwealth_joined = yes }
+		joint_trigger = { commomwealth_joined = yes }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
@@ -1376,7 +1779,7 @@
 			}
 			add_to_variable = {
 				IMA_commonwealth_political_power_factor = 0.05
-				tooltip = 345
+				tooltip = political_power_factor_tt
 			}
 		}
 	}
@@ -1396,11 +1799,12 @@
 		prerequisite = { focus = IMA_shared_20003 }
 		available = { 
 			original_tag = IMA
-			commomwealth_joined = yes
+			IMA = { commomwealth_joined = yes }
 		}
 		bypass = {
 			IMA = { commomwealth_joined = no }
 		}
+		joint_trigger = { commomwealth_joined = yes }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {

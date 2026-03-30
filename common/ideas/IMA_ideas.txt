@@ -9,10 +9,10 @@ ideas = {
 			}	
 			removal_cost = -1
 			equipment_bonus = {
-				capital_ship = { build_cost_ic = 0.15 }
-				carrier = { build_cost_ic = 0.15 }
-				screen_ship = { build_cost_ic = 0.15 }
-				submarine = { build_cost_ic = 0.15 }
+				capital_ship = { build_cost_ic = 0.15 instant = yes }
+				carrier = { build_cost_ic = 0.15 instant = yes }
+				screen_ship = { build_cost_ic = 0.15 instant = yes }
+				submarine = { build_cost_ic = 0.15 instant = yes }
 			}
 		}
 		IMA_navy_start_setting = { #모디파이어, 히스토리 파일과 동기화할 것
@@ -24,10 +24,10 @@ ideas = {
 			}	
 			removal_cost = -1
 			equipment_bonus = {
-				capital_ship = { build_cost_ic = 0.15 }
-				carrier = { build_cost_ic = 0.15 }
-				screen_ship = { build_cost_ic = 0.15 }
-				submarine = { build_cost_ic = 0.15 }
+				capital_ship = { build_cost_ic = 0.15 instant = yes }
+				carrier = { build_cost_ic = 0.15 instant = yes }
+				screen_ship = { build_cost_ic = 0.15 instant = yes }
+				submarine = { build_cost_ic = 0.15 instant = yes }
 			}
 		}
 		IMA_air_force_start_setting = { #모디파이어, 히스토리 파일과 동기화할 것
@@ -39,13 +39,13 @@ ideas = {
 			}	
 			removal_cost = -1
 			equipment_bonus = {
-				capital_ship = { build_cost_ic = 0.15 }
-				carrier = { build_cost_ic = 0.15 }
-				screen_ship = { build_cost_ic = 0.15 }
-				submarine = { build_cost_ic = 0.15 }
+				capital_ship = { build_cost_ic = 0.15 instant = yes }
+				carrier = { build_cost_ic = 0.15 instant = yes }
+				screen_ship = { build_cost_ic = 0.15 instant = yes }
+				submarine = { build_cost_ic = 0.15 instant = yes }
 			}
 		}
-		IMA_10007_idea = {
+		IMA_10007_hidden_idea = {
 			allowed = {
 				original_tag = IMA
 			}
@@ -54,10 +54,10 @@ ideas = {
 			}	
 			removal_cost = -1
 			equipment_bonus = {
-				armor = { build_cost_ic = -0.1 }
+				armor = { build_cost_ic = -0.1 instant = yes }
 			}
 		}
-		IMA_10008_idea = {
+		IMA_10008_hidden_idea = {
 			allowed = {
 				original_tag = IMA
 			}
@@ -66,10 +66,10 @@ ideas = {
 			}	
 			removal_cost = -1
 			equipment_bonus = {
-				fighter = { build_cost_ic = -0.1 }
+				fighter = { build_cost_ic = -0.1 instant = yes }
 			}
 		}
-		IMA_31011_idea_hidden = {
+		IMA_31011_hidden_idea = {
 			name = IMA_31011_idea
 			allowed = {
 				original_tag = IMA
@@ -79,7 +79,13 @@ ideas = {
 			}	
 			removal_cost = -1
 			equipment_bonus = {
-				heavy_fighter = { build_cost_ic = -0.1 }
+				heavy_fighter = { 
+					air_agility = 0.15
+					build_cost_ic = -0.1
+					maximum_speed = 0.05
+					weight = -0.10
+					instant = yes 
+				}
 			}
 		}
 		IMA_33008_idea = {
@@ -91,7 +97,7 @@ ideas = {
 			}	
 			removal_cost = -1
 			equipment_bonus = {
-				carrier = { build_cost_ic = -0.1 }
+				ship_hull_escort_carrier = { build_cost_ic = -0.15 }
 			}
 		}
 		IMA_33014_idea = {
@@ -145,6 +151,127 @@ ideas = {
 			removal_cost = -1
 			equipment_bonus = {
 				capital_ship = { build_cost_ic = -0.05 }
+			}
+		}
+		IMA_shared_11006_hidden_idea_joint_originator = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				naval_bomber = { build_cost_ic = -0.05 instant = yes }
+				maritime_patrol_plane = { build_cost_ic = -0.05 instant = yes }
+				cas = { build_cost_ic = -0.05 instant = yes }
+				tactical_bomber = { build_cost_ic = -0.05 instant = yes }
+				strategic_bomber = { build_cost_ic = -0.05 instant = yes }
+				fighter = { build_cost_ic = -0.05 instant = yes }
+				heavy_fighter = { build_cost_ic = -0.05 instant = yes }
+			}
+		}
+		IMA_shared_11006_hidden_idea_joint_member = {
+			allowed = {
+				OR = {
+					original_tag = ICG
+					original_tag = IML
+					original_tag = ISC
+					original_tag = ISM
+					original_tag = IDS
+					original_tag = IGM
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				naval_bomber = { build_cost_ic = -0.10 instant = yes }
+				maritime_patrol_plane = { build_cost_ic = -0.10 instant = yes }
+				cas = { build_cost_ic = -0.10 instant = yes }
+				tactical_bomber = { build_cost_ic = -0.10 instant = yes }
+				strategic_bomber = { build_cost_ic = -0.10 instant = yes }
+				fighter = { build_cost_ic = -0.10 instant = yes }
+				heavy_fighter = { build_cost_ic = -0.10 instant = yes }
+			}
+		}
+		IMA_shared_12005_hidden_idea_joint_originator = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				capital_ship = { build_cost_ic = -0.05 instant = yes }
+				screen_ship = { build_cost_ic = -0.05 instant = yes }
+				submarine = { build_cost_ic = -0.05 instant = yes }
+				carrier = { build_cost_ic = -0.05 instant = yes }
+				support_ship = { build_cost_ic = -0.05 instant = yes }
+			}
+		}
+		IMA_shared_12005_hidden_idea_joint_member = {
+			allowed = {
+				OR = {
+					original_tag = ICG
+					original_tag = IML
+					original_tag = ISC
+					original_tag = ISM
+					original_tag = IDS
+					original_tag = IGM
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				capital_ship = { build_cost_ic = -0.10 instant = yes }
+				screen_ship = { build_cost_ic = -0.10 instant = yes }
+				submarine = { build_cost_ic = -0.10 instant = yes }
+				carrier = { build_cost_ic = -0.10 instant = yes }
+				support_ship = { build_cost_ic = -0.10 instant = yes }
+			}
+		}
+		IMA_shared_14007_hidden_idea_joint_originator = {
+			allowed = {
+				original_tag = IML
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				armor = { 
+					instant = yes
+					build_cost_ic = -0.10
+					reliability = 0.10
+				}
+			}
+		}
+		IMA_shared_14007_hidden_idea_joint_member = {
+			allowed = {
+				OR = {
+					original_tag = IMA
+					original_tag = ICG
+					original_tag = ISC
+					original_tag = ISM
+					original_tag = IDS
+					original_tag = IGM
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				armor = { 
+					instant = yes
+					build_cost_ic = -0.05 
+					reliability = 0.05 
+				}
 			}
 		}
 	}

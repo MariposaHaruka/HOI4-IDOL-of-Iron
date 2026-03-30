@@ -5670,6 +5670,22 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_navy
+			}
+			add_to_variable = { 
+				PRS_navy_screening_without_screens = 0.1
+				tooltip = screening_without_screens_tt
+			}
+			add_to_variable = { 
+				PRS_navy_naval_light_gun_hit_chance_factor = 0.05
+				tooltip = naval_light_gun_hit_chance_factor_tt
+			}
+			add_to_variable = { 
+				PRS_navy_naval_heavy_gun_hit_chance_factor = 0.05
+				tooltip = naval_heavy_gun_hit_chance_factor_tt
+			}
 		}
 	}
 	focus = {
@@ -6353,7 +6369,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+			add_political_power = 125
 			custom_effect_tooltip = generic_line_break_tt
+			add_named_threat = { threat = 5 name = PRS_31001_threat }
+			hidden_effect = {
+				PRS = { news_event = { id = PRS_news.1 hours = 1 }}
+			}
 		}
 	}
 
@@ -7317,14 +7338,127 @@ focus_tree = {
 		relative_position_id = PRS_31104
 		prerequisite = { focus = PRS_31104 }
 		cost = 5
-		available = { }
+		available = {
+			NNN = {
+				OR = {
+					is_fascism = yes
+					OR = {
+						fascism > 0.5
+						militarytotalism > 0.5
+					}
+				}
+			}
+		}
+		bypass = {
+			OR = {
+				has_war_with = NNN
+				NOT = { country_exists = NNN }
+				NNN = {
+					is_subject = yes
+					NOT = { is_subject_of = ROOT }
+					OVERLORD = {
+						is_in_faction_with = ROOT
+					}	
+				}
+				#NNN = { # IOI 임시 - NNN 중점이 있어야 주석 뗄 수 있음
+				#	is_subject_of = ROOT
+				#	OR = {
+				#		has_completed_focus = CZE_german_minor_ally
+				#		has_completed_focus = CZE_german_puppet
+				#	}
+				#}
+			}
+		}
 		will_lead_to_war_with = NNN
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			custom_effect_tooltip = generic_line_break_tt
-			
+			add_named_threat = { threat = 5 name = PRS_31107_threat }
+			### CLAIMS
+			if = {
+				limit = {
+					69 = {
+						controller = {
+							NOT = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				add_state_claim = 69
+			}
+			if = {
+				limit = {
+					972 = {
+						controller = {
+							NOT = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				add_state_claim = 972
+			}
+			if = {
+				limit = {
+					74 = {
+						controller = {
+							NOT = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				add_state_claim = 74
+			}
+			if = {
+				limit = {
+					CZE = {
+						OR = {
+							is_subject = no
+							is_subject_of = ROOT
+						}
+					}
+				}
+				NNN = { country_event = { id = wuw_GER_diplomacy.117 days = 1 }}
+				custom_effect_tooltip = if_they_accept_tt
+				effect_tooltip = {
+					annex_country = {
+						target = NNN
+						transfer_troops = yes
+					}
+
+					custom_effect_tooltip =  generic_skip_one_line_tt
+					every_state = {
+						limit = {
+							is_owned_and_controlled_by = NNN
+							OR = {
+								state = 69
+								state = 972
+								state = 74
+							}
+						}
+						add_core_of = PREV
+					}
+				}
+			}
+			if = {
+				limit = {
+					NNN = {
+						is_subject = yes
+						NOT = { is_subject_of = ROOT }
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = NNN
+				}
+			}
 		}
 	}
 
@@ -9763,25 +9897,25 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 25
 			custom_effect_tooltip = generic_line_break_tt
-			#if = {
-			#	limit = { has_LaR = yes }
-			#	random_other_country = {
-			#		limit = {
-			#			original_tag = MMM
-			#			is_fascism = yes
-			#		}
-			#		add_opinion_modifier = { target = GER modifier = ita_supported_spain_civil_war }
-			#	}
-			#}
+			if = {
+				limit = { has_LaR = yes }
+				random_other_country = {
+					limit = {
+						original_tag = MMM
+						is_fascism = yes
+					}
+					add_opinion_modifier = { target = PRS modifier = ita_supported_spain_civil_war }
+				}
+			}
 			#if = {
 			#	limit = { has_LaR = yes }
 			#	MMA = { add_opinion_modifier = { target = GER modifier = ita_supported_spain_civil_war } }
 			#}
 
-			#add_timed_idea = {
-			#	idea = GER_legion_condor_ns
-			#	days = 545
-			#}
+			add_timed_idea = {
+				idea = PRS_31641_idea_timed
+				days = 545
+			}
 		}
 	}
 

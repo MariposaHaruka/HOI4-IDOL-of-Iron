@@ -71,17 +71,17 @@ ideas = {
 
 		allied_supreme_command = {
 			available = { 
-				IMA = { is_democratic = yes }
+				has_global_flag = allied_supreme_command_flag
 				OR = {
 					is_in_faction_with = IMA
-					original_tag = IMA
+					is_imas = yes
 				}
 			}
 			visible = { 
-				IMA = { is_democratic = yes }
+				has_global_flag = allied_supreme_command_flag
 				OR = {
 					is_in_faction_with = IMA
-					original_tag = IMA
+					is_imas = yes
 				}
 			}
 			level = 3

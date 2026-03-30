@@ -1597,7 +1597,7 @@ focus_tree = {
 				tooltip = armor_build_cost_ic_tt
 			}
 			hidden_effect = {
-				add_ideas = IMA_10007_idea
+				add_ideas = IMA_10007_hidden_idea
 			}
 		}
 	}
@@ -1634,7 +1634,7 @@ focus_tree = {
 				tooltip = fighter_build_cost_ic_tt
 			}
 			hidden_effect = {
-				add_ideas = IMA_10008_idea
+				add_ideas = IMA_10008_hidden_idea
 			}
 		}
 	}
@@ -2837,7 +2837,7 @@ focus_tree = {
 			}
 			IMA_design_mosquito = yes
 			hidden_effect = {
-				add_ideas = IMA_31011_idea_hidden
+				add_ideas = IMA_31011_hidden_idea
 			}
 		}
 	}
@@ -4603,10 +4603,6 @@ focus_tree = {
 				DYNMOD = IMA_navy
 			}
 			add_to_variable = { 
-				IMA_navy_carrier_build_cost_ic = -0.1
-				tooltip = carrier_build_cost_ic_tt
-			}
-			add_to_variable = { 
 				IMA_navy_carrier_capacity_penalty_reduction = -0.1
 				tooltip = carrier_capacity_penalty_reduction_tt
 			}
@@ -4617,6 +4613,22 @@ focus_tree = {
 			add_to_variable = {
 				IMA_navy_navy_max_range_factor = 0.10
 				tooltip = navy_max_range_factor_tt
+			}
+			add_to_variable = {
+				IMA_navy_sp_naval_escort_carrier_speed_factor = 0.25
+				tooltip = sp_naval_escort_carrier_speed_factor_tt
+			}
+			add_to_variable = { 
+				IMA_navy_ship_hull_escort_carrier_build_cost_ic = -0.1
+				tooltip = ship_hull_escort_carrier_build_cost_ic_tt
+			}
+			add_to_variable = { 
+				IMA_navy_ship_hull_escort_carrier_build_cost_ic = -0.1
+				tooltip = ship_hull_escort_carrier_build_cost_ic_tt
+			}
+			add_to_variable = { 
+				IMA_navy_ship_hull_escort_carrier_carrier_size = 0.25
+				tooltip = ship_hull_escort_carrier_carrier_size_tt
 			}
 			hidden_effect = {
 				add_ideas = IMA_33008_idea
