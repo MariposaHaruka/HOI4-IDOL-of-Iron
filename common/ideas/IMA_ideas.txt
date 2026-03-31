@@ -69,8 +69,22 @@ ideas = {
 				fighter = { build_cost_ic = -0.1 instant = yes }
 			}
 		}
+		IMA_31106_hidden_idea = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				fighter = { 
+					build_cost_ic = -0.2
+					instant = yes 
+				}
+			}
+		}
 		IMA_31011_hidden_idea = {
-			name = IMA_31011_idea
 			allowed = {
 				original_tag = IMA
 			}
@@ -84,6 +98,36 @@ ideas = {
 					build_cost_ic = -0.1
 					maximum_speed = 0.05
 					weight = -0.10
+					instant = yes 
+				}
+			}
+		}
+		IMA_31208_hidden_idea = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				heavy_fighter = { 
+					air_range = 0.20
+					instant = yes 
+				}
+			}
+		}
+		IMA_33011_hidden_idea = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				ship_hull_cruiser = { 
+					build_cost_ic = -0.15
 					instant = yes 
 				}
 			}
@@ -113,7 +157,7 @@ ideas = {
 				convoy = { build_cost_ic = -0.1 }
 			}
 		}
-		IMA_33018_idea_hidden = {
+		IMA_33018_hidden_idea = {
 			allowed = {
 				original_tag = IMA
 			}

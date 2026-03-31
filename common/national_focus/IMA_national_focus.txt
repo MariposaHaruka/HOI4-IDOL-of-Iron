@@ -2099,6 +2099,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20008"
 			add_research_slot = 1
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_industry_modifier
+			}
+			add_to_variable = {
+				IMA_industry_research_speed_factor = 0.03
+				tooltip = research_speed_factor_tt
+			}
 		}
 	}
 	
@@ -2116,15 +2124,25 @@ focus_tree = {
 		prerequisite = { focus = IMA_20009 }
 
 		available_if_capitulated = yes
+		available = {
+			owns_state = 338
+		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_20010"
-			add_research_slot = 1
 			add_tech_bonus = {
 				name = IMA_20010
 				bonus = 1.0
 				uses = 2
 				category = radar_tech
+			}
+			338 = {
+				add_building_construction = {
+					type = air_facility
+					province = { id = 6351 }
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -2180,16 +2198,66 @@ focus_tree = {
 		prerequisite = { focus = IMA_20010 }
 		prerequisite = { focus = IMA_20011 }
 		bypass = {
-			NOT = { 
-				ICG = { 
-					has_idea = IMA_westminster_statute
-					is_in_faction_with = IMA
+			OR = {
+				AND = {
+					ICG = {
+						OR = {
+							AND = {
+								NOT = { is_subject_of = IMA }
+								NOT = { is_in_faction_with = IMA }
+							}
+							exists = no
+						}
+					}
+					IML = {
+						OR = {
+							AND = {
+								NOT = { is_subject_of = IMA }
+								NOT = { is_in_faction_with = IMA }
+							}
+							exists = no
+						}
+					}
+					ISC = {
+						OR = {
+							AND = {
+								NOT = { is_subject_of = IMA }
+								NOT = { is_in_faction_with = IMA }
+							}
+							exists = no
+						}
+					}
+					ISM = {
+						OR = {
+							AND = {
+								NOT = { is_subject_of = IMA }
+								NOT = { is_in_faction_with = IMA }
+							}
+							exists = no
+						}
+					}
+					IDS = {
+						OR = {
+							AND = {
+								NOT = { is_subject_of = IMA }
+								NOT = { is_in_faction_with = IMA }
+							}
+							exists = no
+						}
+					}
+					IGM = {
+						OR = {
+							AND = {
+								NOT = { is_subject_of = IMA }
+								NOT = { is_in_faction_with = IMA }
+							}
+							exists = no
+						}
+					}
 				}
-			}
-			NOT = {
-				IML = {
-					has_idea = IMA_westminster_statute
-					is_in_faction_with = IMA 
+				custom_trigger_tooltip = {
+					tooltip = IMA_commonwealth_tech_sharing_group_trigger_tt
+					has_global_flag = IMA_commonwealth_tech_sharing_group
 				}
 			}
 		}
@@ -2225,6 +2293,10 @@ focus_tree = {
 			}
 			unlock_decision_category_tooltip = IMA_tizard_mission_expand
 			custom_effect_tooltip = IMA_20012_tt
+			custom_effect_tooltip = IMA_commonwealth_tech_sharing_group_effect_tt
+			hidden_effect = {
+				set_global_flag = IMA_commonwealth_tech_sharing_group
+			}
 		}
 	}
 	
@@ -2487,13 +2559,24 @@ focus_tree = {
 		prerequisite = { focus = IMA_31002 }
 
 		available = {
-			threat > 0.35
+			threat > 0.15
 			has_full_control_of_state = 129
 		}
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31005"
-			
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_air_force
+			}
+			add_to_variable = {
+				IMA_air_force_air_ace_generation_chance_factor = 0.15
+				tooltip = air_ace_generation_chance_factor_tt
+			}
+			add_to_variable = {
+				IMA_air_force_air_untrained_pilots_penalty_factor = -0.15
+				tooltip = air_untrained_pilots_penalty_factor_tt
+			}
 		}
 	}
 
@@ -2591,6 +2674,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31202"
+			unlock_decision_tooltip = IMA_warplan_strategic_propaganda_spread
 			custom_effect_tooltip = IMA_31202_tt
 		}
 	}
@@ -2691,7 +2775,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31106"
-			
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_air_force
+			}
+			add_to_variable = {
+				IMA_air_force_fighter_build_cost_ic = -0.20
+				tooltip = fighter_build_cost_ic_tt
+			}
+			hidden_effect = {
+				add_ideas = IMA_31106_hidden_idea
+			}
 		}
 	}
 
@@ -2815,6 +2909,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31011"
+			IMA_design_mosquito = yes
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_air_force
@@ -2835,7 +2931,6 @@ focus_tree = {
 				IMA_air_force_heavy_fighter_weight = -0.10
 				tooltip = heavy_fighter_weight_tt
 			}
-			IMA_design_mosquito = yes
 			hidden_effect = {
 				add_ideas = IMA_31011_hidden_idea
 			}
@@ -3011,6 +3106,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31206"
 			
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_air_force
+			}
+			add_to_variable = {
+				IMA_air_force_air_strategic_bomber_bombing_factor = 0.20
+				tooltip = air_strategic_bomber_bombing_factor_tt
+			}
 		}
 	}
 
@@ -3032,7 +3136,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31207"
 			IMA_design_lancaster = yes
-			
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_air_force
+			}
+			add_to_variable = {
+				IMA_air_force_air_strategic_bomber_bombing_factor = 0.15
+				tooltip = air_strategic_bomber_bombing_factor_tt
+			}
 		}
 	}
 
@@ -3052,9 +3164,27 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
-		completion_reward = {
+		completion_reward = {air_escort_efficiency
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31208"
-			
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_air_force
+			}
+			add_to_variable = {
+				IMA_air_force_air_escort_efficiency = 0.15
+				tooltip = air_escort_efficiency_tt
+			}
+			add_to_variable = {
+				IMA_air_force_air_range_factor = 0.15
+				tooltip = air_range_factor_tt
+			}
+			add_to_variable = { # 툴팁 용
+				IMA_air_force_heavy_fighter_air_range = 0.20
+				tooltip = heavy_fighter_air_range_tt
+			}
+			hidden_effect = {
+				add_ideas = IMA_31208_hidden_idea
+			}
 		}
 	}
 
@@ -3075,7 +3205,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31209"
-			
+			add_ideas = IMA_31011_hidden_idea			
 		}
 	}
 
@@ -3463,9 +3593,14 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		available = { always = no }
-
-
+		available = {
+			any_country = {
+				NOT = { original_tag = IMA }
+				NOT = { is_subject_of = ROOT }
+				is_in_faction_with = ROOT
+				capital_scope = { is_on_continent = europe}
+			}
+		}
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_32103 }
 		prerequisite = { focus = IMA_32203 }
@@ -4503,6 +4638,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_navy
@@ -4542,6 +4678,7 @@ focus_tree = {
 				uses = 2
 				category = naval_minesweeping
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_navy
@@ -4965,15 +5102,11 @@ focus_tree = {
 				DYNMOD = IMA_navy
 			}
 			add_to_variable = {
-				IMA_navy_screen_ship_build_cost_ic = -0.05
-				tooltip = screen_ship_build_cost_ic_tt
-			}
-			add_to_variable = {
-				IMA_navy_capital_ship_build_cost_ic = -0.05
-				tooltip = screen_ship_build_cost_ic_tt
+				IMA_navy_ship_hull_cruiser_build_cost_ic = -0.15
+				tooltip = ship_hull_cruiser_build_cost_ic_tt
 			}
 			hidden_effect = {
-				add_ideas = IMA_33011_idea
+				add_ideas = IMA_33011_hidden_idea
 			}
 		}
 	}
@@ -5128,7 +5261,7 @@ focus_tree = {
 				tooltip = experience_gain_navy_factor_tt 
 			}
 			hidden_effect = {
-				add_ideas = IMA_33018_idea_hidden
+				add_ideas = IMA_33018_hidden_idea
 			}
 		}
 	}
@@ -5379,11 +5512,119 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 } 
 		available = {
-			every_country = {
-				limit = { is_subject_of = IMA }
-				NOT = { has_autonomy_state = ima_westminster_dominion }
-				NOT = { has_autonomy_state = ima_dominion }
-				NOT = { has_autonomy_state = ima_colony }
+			ICG = {
+				OR = {
+					AND = {
+						is_subject_of = IMA
+						NOT = { has_autonomy_state = ima_westminster_dominion }
+						NOT = { has_autonomy_state = ima_dominion }
+						NOT = { has_autonomy_state = ima_colony }
+					}
+					AND = {
+						exists = no
+						NOT = {
+							any_state = {
+								is_core_of = ICG
+								NOT = { is_owned_by = ROOT }
+							}
+						}
+					}
+				}
+			}
+			IML = {
+				OR = {
+					AND = {
+						is_subject_of = IMA
+						NOT = { has_autonomy_state = ima_westminster_dominion }
+						NOT = { has_autonomy_state = ima_dominion }
+						NOT = { has_autonomy_state = ima_colony }
+					}
+					AND = {
+						exists = no
+						NOT = {
+							any_state = {
+								is_core_of = IML
+								NOT = { is_owned_by = ROOT }
+							}
+						}
+					}
+				}
+			}
+			ISC = {
+				OR = {
+					AND = {
+						is_subject_of = IMA
+						NOT = { has_autonomy_state = ima_westminster_dominion }
+						NOT = { has_autonomy_state = ima_dominion }
+						NOT = { has_autonomy_state = ima_colony }
+					}
+					AND = {
+						exists = no
+						NOT = {
+							any_state = {
+								is_core_of = ISC
+								NOT = { is_owned_by = ROOT }
+							}
+						}
+					}
+				}
+			}
+			ISM = {
+				OR = {
+					AND = {
+						is_subject_of = IMA
+						NOT = { has_autonomy_state = ima_westminster_dominion }
+						NOT = { has_autonomy_state = ima_dominion }
+						NOT = { has_autonomy_state = ima_colony }
+					}
+					AND = {
+						exists = no
+						NOT = {
+							any_state = {
+								is_core_of = ISM
+								NOT = { is_owned_by = ROOT }
+							}
+						}
+					}
+				}
+			}
+			IDS = {
+				OR = {
+					AND = {
+						is_subject_of = IMA
+						NOT = { has_autonomy_state = ima_westminster_dominion }
+						NOT = { has_autonomy_state = ima_dominion }
+						NOT = { has_autonomy_state = ima_colony }
+					}
+					AND = {
+						exists = no
+						NOT = {
+							any_state = {
+								is_core_of = IDS
+								NOT = { is_owned_by = ROOT }
+							}
+						}
+					}
+				}
+			}
+			IGM = {
+				OR = {
+					AND = {
+						is_subject_of = IMA
+						NOT = { has_autonomy_state = ima_westminster_dominion }
+						NOT = { has_autonomy_state = ima_dominion }
+						NOT = { has_autonomy_state = ima_colony }
+					}
+					AND = {
+						exists = no
+						NOT = {
+							any_state = {
+								is_core_of = IGM
+								NOT = { is_owned_by = ROOT }
+							}
+						}
+					}
+				}
 			}
 		}
 		prerequisite = { focus = IMA_41004 }
@@ -5483,14 +5724,9 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40001 }
 		available = {
-			any_country = {
-				limit = {
-					OR = {
-						original_tag = IMA
-						is_in_faction_with = IMA
-					}
-				}
-				owns_state = 326
+			OR = {
+				IMA = { owns_state = 326 }
+				any_allied_country = { owns_state = 326 }
 			}
 		}
 		available_if_capitulated = yes
@@ -5499,22 +5735,11 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40002"
 			326 = {
 				add_extra_state_shared_building_slots = 1
-				if = {
-					limit = {
-						326 = {
-							free_building_slots = {
-								building = coastal_bunker
-								size > 2
-								province = 10062
-							}
-						}
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 10062
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 10062
+					instant_build = yes
 				}
 				strategic_province_location = {
 					defensible_coastline = 10062
@@ -5539,16 +5764,18 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40001 }
 		available = {
-			any_country = {
-				limit = {
-					OR = {
-						original_tag = IMA
-						is_in_faction_with = IMA
+			OR = {
+				IMA = {
+					OR = {		
+						owns_state = 331
+						owns_state = 696
 					}
 				}
-				OR = {
-					owns_state = 331
-					owns_state = 696
+				any_allied_country = { 
+					OR = {		
+						owns_state = 331
+						owns_state = 696
+					} 
 				}
 			}
 		}
@@ -5558,34 +5785,18 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40003"
 			if = {
 				limit = {
-					any_country = {
-						limit = {
-							OR = {
-								original_tag = IMA
-								is_in_faction_with = IMA
-							}
-						}
-						owns_state = 310
+					OR = {
+						IMA = { owns_state = 331 }
+						any_allied_country = { owns_state = 331 } 
 					}
 				}
 				331 = {
 					add_extra_state_shared_building_slots = 1
-					if = {
-						limit = {
-							331 = {
-								free_building_slots = {
-									building = coastal_bunker
-									size > 2
-									province = 12505
-								}
-							}
-						}
-						add_building_construction = {
-							type = coastal_bunker
-							level = 3
-							province = 12505
-							instant_build = yes
-						}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 12505
+						instant_build = yes
 					}
 					strategic_province_location = {
 						defensible_coastline = 12505
@@ -5594,34 +5805,18 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					any_country = {
-						limit = {
-							OR = {
-								original_tag = IMA
-								is_in_faction_with = IMA
-							}
-						}
-						owns_state = 696
+					OR = {
+						IMA = { owns_state = 696 }
+						any_allied_country = { owns_state = 696 } 
 					}
 				}
 				696 = {
 					add_extra_state_shared_building_slots = 1
-					if = {
-						limit = {
-							696 = {
-								free_building_slots = {
-									building = coastal_bunker
-									size > 2
-									province = 13010
-								}
-							}
-						}
-						add_building_construction = {
-							type = coastal_bunker
-							level = 3
-							province = 13010
-							instant_build = yes
-						}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 13010
+						instant_build = yes
 					}
 					strategic_province_location = {
 						defensible_coastline = 13010
@@ -5645,16 +5840,23 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40001 }
 		available = {
-			any_country = {
-				limit = {
-					OR = {
-						original_tag = IMA
-						is_in_faction_with = IMA
+			OR = {
+				IMA = {
+					OR = {		
+						owns_state = 116
+						owns_state = 118
+						owns_state = 183
+						owns_state = 446
 					}
 				}
-				owns_state = 116
-				owns_state = 118
-				owns_state = 183
+				any_allied_country = { 
+					OR = {		
+						owns_state = 116
+						owns_state = 118
+						owns_state = 183
+						owns_state = 446
+					} 
+				}
 			}
 		}
 		available_if_capitulated = yes
@@ -6480,7 +6682,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40101 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_DEFENCE }
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40002"
 			every_country = {
@@ -6517,7 +6719,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_40102 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_DEFENCE }
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_40003"
 		}
@@ -6535,7 +6737,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_43001 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_DEFENCE }
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43002"
 		}
@@ -6553,7 +6755,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_43002 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_DEFENCE }
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43003"
 		}
@@ -6571,7 +6773,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_43001 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_DEFENCE }
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43004"
 		}
@@ -6589,7 +6791,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_43004 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_DEFENCE }
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43005"
 		}
@@ -6606,7 +6808,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_43005 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_DEFENCE }
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43006"
 		}
@@ -6626,7 +6828,7 @@ focus_tree = {
 		prerequisite = { focus = IMA_43003 }
 		prerequisite = { focus = IMA_43006 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_DEFENCE }
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_43007"
 			set_country_flag = commonwealth_leader_possible
@@ -6949,7 +7151,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_51101"
 			custom_effect_tooltip = historical_tt
+			custom_effect_tooltip = generic_line_break_tt
 			add_war_support = 0.05
+			custom_effect_tooltip = generic_line_break_tt
 			# East Anglia
 			125 = {
 				if = {
@@ -7035,6 +7239,7 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			unlock_decision_category_tooltip = IMA_homeland_defence_category
 		}
 	}
@@ -7118,7 +7323,6 @@ focus_tree = {
 					}
 				}								
 			}
-			custom_effect_tooltip = generic_line_break_tt
 			# Nova Scotia
 			464 = {
 				if = {
@@ -7878,11 +8082,8 @@ focus_tree = {
 		mutually_exclusive = { focus = IMA_51024 }
 		bypass = {
 			LLS = {
-				OR = {
-					exists = yes
-					is_in_faction_with = AIN
-					has_war_with = IMA
-				}
+				exists = yes
+				has_war_with = IMA
 			}
 		}
 
@@ -7919,8 +8120,8 @@ focus_tree = {
 		y = 1
 		bypass = {
 			AIN = {
+				exists = yes
 				OR = {
-					exists = yes
 					is_in_faction_with = PRS
 					has_war_with = IMA
 				}

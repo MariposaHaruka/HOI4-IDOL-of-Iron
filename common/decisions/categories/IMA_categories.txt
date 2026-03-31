@@ -96,7 +96,7 @@ IMA_thames_plan_category = { #템즈 계획
 
 IMA_homeland_defence_category = { #본토 방어 계획
 	icon = generic_fortification
-	priority = 95
+	priority = 100
 	allowed = {
 		threat > 0.25
 		original_tag = IMA
@@ -108,9 +108,29 @@ IMA_homeland_defence_category = { #본토 방어 계획
 	visible_when_empty = yes
 }
 
+IMA_the_war_room = { #전쟁실
+	icon = military_operation
+	priority = 101
+	allowed = {
+		OR = {
+			has_completed_focus = IMA_51013
+			has_completed_focus = IMA_51014
+		}
+		has_war_with_major = yes
+	}
+	visible = {
+		OR = {
+			has_completed_focus = IMA_51013
+			has_completed_focus = IMA_51014
+		}
+		has_war_with_major = yes
+	}
+	visible_when_empty = yes
+}
+
 IMA_foreign_defence_plan_category = { #해외 방어 계획
 	icon = generic_fortification
-	priority = 95
+	priority = 99
 	allowed = {
 		original_tag = IMA
 	}
@@ -122,7 +142,7 @@ IMA_foreign_defence_plan_category = { #해외 방어 계획
 
 IMA_intervension_plan_category = { #개입 계획
 	icon = generic_foreign_policy
-	priority = 96
+	priority = 98
 	allowed = {
 		original_tag = IMA
 	}
