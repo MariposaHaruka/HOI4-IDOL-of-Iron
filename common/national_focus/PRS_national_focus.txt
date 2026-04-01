@@ -5315,7 +5315,6 @@ focus_tree = {
 		id = PRS_23101 #장거리 수상 통상파괴
 		icon = GFX_focus_PRS_23101
 		prerequisite = { focus = PRS_23001 }
-		mutually_exclusive = { focus = PRS_23201 }
 		x = -6
 		y = 1
 		relative_position_id = PRS_23001
@@ -5334,7 +5333,6 @@ focus_tree = {
 		id = PRS_23201 #잠수함 통상파괴
 		icon = GFX_focus_PRS_23201
 		prerequisite = { focus = PRS_23001 }
-		mutually_exclusive = { focus = PRS_23101 }
 		x = 8
 		y = 1
 		relative_position_id = PRS_23001
@@ -5394,13 +5392,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_completed_focus = GER_trade_interdiction }
-				}
-				custom_effect_tooltip = GER_unlock_trade_interdiction_tt
-			}
-			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = PRS_navy
@@ -5489,7 +5480,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRS_23104 #카이저 미쿠급 순양전함
+		id = PRS_23104 #프란츠 요제프 1세급 순양전함
 		icon = GFX_focus_generic_navy_battleship2
 		prerequisite = { focus = PRS_23102 }
 		mutually_exclusive = { focus = PRS_23105 }
@@ -5506,7 +5497,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PRS_23105 #샤른호르스트급 전함
+		id = PRS_23105 #샤른 	호르스트급 전함
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = PRS_23102 }
 		mutually_exclusive = { focus = PRS_23104 }
