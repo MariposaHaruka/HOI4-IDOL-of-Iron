@@ -1886,7 +1886,29 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			
+			add_war_support = 0.05
+			custom_effect_tooltip = generic_line_break_tt
+
+			custom_effect_tooltip = GER_gain_totaler_krieg_remove_total_mob_tt
+			#add_ideas = totaler_krieg_economy
+
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			OR = {
+			#				has_completed_focus = GER_womens_rights_and_equality 
+			#				has_decision = women_in_the_workforce 
+			#			}
+			#		}
+			#	}
+			#	custom_effect_tooltip = generic_line_break_tt
+			#	unlock_decision_tooltip = {
+			#		decision = women_in_the_workforce
+			#		show_effect_tooltip = yes # default is no
+			#		show_modifiers = yes # default is no
+			#	} 
+			#	activate_decision = women_in_the_workforce
+			#}
 		}
 	}
 	focus = {
@@ -5223,16 +5245,37 @@ focus_tree = {
 			PRS_preparing_war_against_sekai = no
 		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_NAVY }
 
 		completion_reward = {
+			navy_experience = 25
+			custom_effect_tooltip = generic_line_break_tt
 			add_doctrine_cost_reduction = {
 				name = PRS_23001
 				cost_reduction = 0.25
 				uses = 3
 				category = naval_doctrine
 			}
-
+			custom_effect_tooltip = generic_line_break_tt
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_line_break_tt
 			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -5254,7 +5297,7 @@ focus_tree = {
 		cost = 5
 		available = { }
 
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_NAVY FOCUS_FILTER_AIR_FORCE }
 
 		completion_reward = {
 			custom_effect_tooltip = generic_line_break_tt
@@ -5323,7 +5366,7 @@ focus_tree = {
 			PRS_preparing_war_against_sekai = no
 		}
 
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 
 		completion_reward = {
 			custom_effect_tooltip = generic_line_break_tt
@@ -5341,7 +5384,7 @@ focus_tree = {
 			PRS_preparing_war_against_sekai = no
 		}
 
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_NAVY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
 			custom_effect_tooltip = generic_line_break_tt
@@ -5357,7 +5400,7 @@ focus_tree = {
 		cost = 5
 		available = { }
 
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 
 		completion_reward = {
 			custom_effect_tooltip = generic_line_break_tt
@@ -5373,7 +5416,7 @@ focus_tree = {
 		cost = 5
 		available = { }
 
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 
 		completion_reward = {
 			custom_effect_tooltip = generic_line_break_tt
@@ -5448,9 +5491,50 @@ focus_tree = {
 		cost = 5
 		available = { }
 
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = PRS_23202_idea_timed
+				time = 730
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			if = {
+				limit = {
+					NOT = { has_dlc = "Arms Against Tyranny" }
+				}
+				if = {
+					limit = {
+						has_idea = PRS_hdw
+					}
+					swap_ideas = {
+						remove_idea = PRS_hdw
+						add_idea = PRS_hdw_improved
+					}
+				}
+				else = {
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = PRS_hdw
+							add_idea = PRS_hdw_improved
+						}
+					}
+				}
+			}
+			else = {
+				mio:PRS_hdw_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.05
+
+					unlock_mio_trait_tooltip = PRS_mio_trait_ocean_u_boats
+					unlock_mio_trait_tooltip = PRS_mio_trait_kilian_submarine_bunker
+					unlock_mio_trait_tooltip = PRS_mio_trait_atlantic_raiders
+				}
+				mio:PRS_blohm_und_voss_organization = {
+					unlock_mio_trait_tooltip = PRS_mio_trait_u_boat_yards
+				}
+			}
 			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
@@ -5651,16 +5735,15 @@ focus_tree = {
 		id = PRS_23114 #장갑함 습격함대
 		icon = GFX_focus_generic_trade_interdiction
 		prerequisite = { focus = PRS_23111 }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = PRS_23111
 		cost = 5
 		available = { }
 
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = PRS_navy
@@ -5683,7 +5766,7 @@ focus_tree = {
 		id = PRS_23115 #대양함대
 		icon = GFX_focus_GER_high_seas_fleet
 		prerequisite = { focus = PRS_23112 focus = PRS_23113 focus = PRS_23114 }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = PRS_23113
 		cost = 5
@@ -5692,7 +5775,50 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_navy
+			}
+			add_to_variable = { 
+				PRS_navy_naval_defense_factor = 0.05
+				tooltip = naval_defense_factor_tt
+			}
+			add_to_variable = { 
+				PRS_navy_naval_hit_chance = 0.05
+				tooltip = naval_hit_chance_tt
+			}
+			add_to_variable = { 
+				PRS_navy_screening_efficiency = 0.1
+				tooltip = screening_efficiency_tt
+			}
 			custom_effect_tooltip = generic_line_break_tt
+			if = {
+				limit = { has_AAT = no }
+				if = {
+					limit = {
+						has_idea = PRS_deschimag
+					}
+					swap_ideas = {
+						remove_idea = PRS_deschimag
+						add_idea = PRS_deschimag_improved
+					}
+				}
+				else = {
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = PRS_deschimag
+							add_idea = PRS_deschimag_improved
+						}
+					}
+				}
+			}
+			else = {
+				mio:PRS_deschimag_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.05
+				}
+			}
 		}
 	}
 
@@ -5711,13 +5837,14 @@ focus_tree = {
 		completion_reward = {
 			add_command_power = 25
 			add_doctrine_cost_reduction = {
-				name = GER_re_establish_the_seekriegsleitung
+				name = PRS_23005
 				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = available_chief_of_navy
-			#show_ideas_tooltip = GER_rolf_carls
+			#show_ideas_tooltip = PRS_rolf_carls
 			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
@@ -5729,6 +5856,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = PRS_23006 #조선소 확충
 		icon = GFX_goal_generic_construct_naval_dockyard
@@ -5742,9 +5870,44 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
+			if = {
+				limit = {
+					56 = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				56 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_core_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
 			custom_effect_tooltip = generic_line_break_tt
 		}
 	}
+
 	focus = {
 		id = PRS_23007 #함대 협회 부활
 		icon = GFX_goal_generic_build_navy
@@ -5758,7 +5921,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_navy
+			}
+			add_to_variable = { 
+				PRS_navy_capital_ship_build_cost_ic = -0.05
+				tooltip = capital_ship_build_cost_ic_tt
+			}
+			hidden_effect = {
+				add_ideas = PRS_23007_hidden_idea
+			}
 		}
 	}
 	focus = {
@@ -5774,9 +5947,38 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
+			if = {
+				limit = { has_AAT = yes }
+				if = {
+					limit = { NOT = { has_completed_focus = PRS_22005 } }
+					add_potential_special_forces_tree = yes
+				}
+				add_doctrine_cost_reduction = {
+					name = PRS_23008
+					cost_reduction = 0.25
+					uses = 2
+					category = cat_marines_doctrine
+				}
+			}
 			custom_effect_tooltip = generic_line_break_tt
+			add_tech_bonus = {
+				name = PRS_23008
+				bonus = 1
+				uses = 1
+				category = marine_tech
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_army
+			}
+			add_to_variable = { 
+				PRS_army_special_forces_cap = 0.05
+				tooltip = special_forces_cap_tt
+			}
 		}
 	}
+
 	focus = {
 		id = PRS_23009 #조함단
 		icon = GFX_focus_POL_develop_polish_shipbuilding
@@ -5790,9 +5992,42 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_navy
+			}
+			add_to_variable = { 
+				PRS_navy_ship_hull_light_design_cost_factor = -0.05
+				tooltip = special_forces_cap_tt
+			}
+			if = {
+				limit = { has_completed_focus = PRS_23101 }
+				add_to_variable = { 
+					PRS_navy_ship_hull_cruiser_design_cost_factor = -0.05
+					tooltip = ship_hull_cruiser_design_cost_factor_tt
+				}
+				add_to_variable = { 
+					PRS_navy_ship_hull_heavy_design_cost_factor = -0.05
+					tooltip = ship_hull_heavy_design_cost_factor_tt
+				}
+				if = {
+					limit = { has_completed_focus = PRS_23002 }
+					add_to_variable = { 
+						PRS_navy_ship_hull_carrier_design_cost_factor = -0.05
+						tooltip = ship_hull_carrier_design_cost_factor_tt
+					}
+				}
+			}
+			if = {
+				limit = { has_completed_focus = PRS_23201 }
+				add_to_variable = { 
+					PRS_navy_ship_hull_submarine_design_cost_factor = -0.05
+					tooltip = ship_hull_submarine_design_cost_factor_tt
+				}
+			}
 		}
 	}
+
 	focus = {
 		id = PRS_23010 #라이프치히급 경순양함
 		icon = GFX_goal_generic_navy_cruiser
@@ -6126,8 +6361,9 @@ focus_tree = {
 	focus = {
 		id = PRS_23018 #슈넬보트
 		icon = GFX_focus_ioi_generic_gunboat
+		prerequisite = { focus = PRS_23014 }
 		prerequisite = { focus = PRS_23017 }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = PRS_23017
 		cost = 5
@@ -6142,8 +6378,9 @@ focus_tree = {
 	focus = {
 		id = PRS_23019 #장기 지속 작전 지원
 		icon = GFX_focus_ioi_generic_shipyard
+		prerequisite = { focus = PRS_23013 }
 		prerequisite = { focus = PRS_23017 }
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = PRS_23017
 		cost = 5
@@ -6242,6 +6479,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = generic_line_break_tt
+			PRS_design_uboat7 = yes
 		}
 	}
 	focus = {
@@ -6273,7 +6511,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_navy
+			}
+			add_to_variable = { 
+				PRS_navy_submarine_build_cost_ic = -0.10
+				tooltip = submarine_build_cost_ic_tt
+			}
 			custom_effect_tooltip = generic_line_break_tt
+			PRS_design_uboat9 = yes
 		}
 	}
 	focus = {
@@ -6295,8 +6542,8 @@ focus_tree = {
 	focus = {
 		id = PRS_23208 #무제한적 수송선 습격
 		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = PRS_23207 }
-		x = -1
+		prerequisite = { focus = PRS_23207 focus = PRS_23114 }
+		x = -6
 		y = 1
 		relative_position_id = PRS_23207
 		cost = 5
@@ -6317,15 +6564,21 @@ focus_tree = {
 				PRS_navy_convoy_raiding_efficiency_factor = 0.05
 				tooltip = convoy_raiding_efficiency_factor_tt
 			}
-			custom_effect_tooltip = GER_submarine_max_speed_small_tt
-			hidden_effect = {
-				add_equipment_bonus = {
-					name = GER_unrestricted_convoy_raiding
-					bonus = {
-						ship_hull_submarine = {
-							naval_speed = 0.05 #WARNING! If you change this value, you need to update GER_submarine_max_speed_small_tt
-						}
-					}
+			if = {
+				limit = { has_completed_focus = PRS_23201 }
+				add_to_variable = { # 툴팁 용
+					PRS_navy_submarine_naval_speed = 0.05
+					tooltip = submarine_naval_speed_tt
+				}
+				hidden_effect = { # 진짜
+					add_ideas = PRS_23208_hidden_idea
+				}
+			}
+			if = {
+				limit = { has_completed_focus = PRS_23101 }
+				add_to_variable = { # 툴팁 용
+					PRS_navy_screening_without_screens = 0.1
+					tooltip = screening_without_screens_tt
 				}
 			}
 		}
@@ -6334,16 +6587,55 @@ focus_tree = {
 		id = PRS_23020 #무차별 공습
 		icon = GFX_focus_GER_seeherrschaft
 		prerequisite = { focus = PRS_23115 focus = PRS_23208 }
-		x = 8
+		x =5
 		y = 1
 		relative_position_id = PRS_23115
 		cost = 5
 		available = { }
 
-		search_filters = { FOCUS_FILTER_NAVY_XP }
+		search_filters = { FOCUS_FILTER_NAVY }
 
 		completion_reward = {
+			random_navy_leader = {
+				limit = { NOT = { has_trait = blue_water_expert } }
+				add_trait = { trait = blue_water_expert }
+				ROOT = {
+					random_navy_leader = {
+						limit = {
+							NOT = {
+								is_character = PREV.PREV
+								has_trait = blue_water_expert
+							}
+						}
+						add_trait = { trait = blue_water_expert }
+					}
+				}
+			}
 			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_navy
+			}
+			add_to_variable = { 
+				PRS_navy_navy_org_factor = 0.1
+				tooltip = navy_org_factor_tt
+			}
+			add_to_variable = { 
+				PRS_navy_spotting_chance = 0.1
+				tooltip = spotting_chance_tt
+			}
+			add_to_variable = { 
+				PRS_navy_repair_speed_factor = 0.15
+				tooltip = repair_speed_factor_tt
+			}
+			add_to_variable = { 
+				PRS_navy_refit_speed = 0.15
+				tooltip = refit_speed_tt
+			}
+			add_to_variable = { 
+				PRS_navy_navy_fuel_consumption_factor = -0.1
+				tooltip = navy_fuel_consumption_factor_tt
+			}
 		}
 	}
 
