@@ -3,12 +3,8 @@ government_in_exile_allowed = {
 	government_in_exile_allowed_trigger = {
 		always = yes
 	}
-	ai_will_do = {
-		base = 0
-		modifier = {  
-			add = 1
-			is_democratic = yes
-		}
+	can_remove = {
+		always = no
 	}
 }
 

@@ -12230,16 +12230,22 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_GEH_12001"
-			every_state = {
-				limit = { is_owned_by = BLA }
-				custom_effect_tooltip = {
-					localization_key = dynmod_modifiy_tt
-					DYNMOD = BLA_GEH_modifiers
-				}
-				add_to_variable = {
-					BLA_GEH_recruitable_population_factor = 0.40
-					tooltip = recruitable_population_factor_tt
-				}
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_GEH_modifiers
+			}
+			add_to_variable = {
+				BLA_GEH_recruitable_population_factor = 0.40
+				tooltip = recruitable_population_factor_tt
+			}
+			hidden_effect = {
+				442 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
+				443 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
+				444 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
+				445 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
+				987 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
+				988 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
+				1012 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
 			}
 		}
 	}
@@ -12271,16 +12277,22 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_GEH_12101"
-			every_state = {
-				limit = { is_owned_by = BLA }
-				custom_effect_tooltip = {
-					localization_key = dynmod_modifiy_tt
-					DYNMOD = BLA_GEH_modifiers
-				}	
-				add_to_variable = {
-					BLA_GEH_recruitable_population_factor = 0.40
-					tooltip = recruitable_population_factor_tt
-				}
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_GEH_modifiers
+			}
+			add_to_variable = {
+				BLA_GEH_recruitable_population_factor = 0.40
+				tooltip = recruitable_population_factor_tt
+			}
+			hidden_effect = {
+				442 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
+				443 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
+				444 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
+				445 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
+				987 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
+				988 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
+				1012 = { add_to_variable = { BLA_GEH_recruitable_population_factor = 0.40 } }
 			}
 		}
 	}
@@ -13245,8 +13257,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_okusora_ayane
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				BLA_abydos_integrate = yes
+				NOT = { has_country_flag = BLA_ABY_11002_in_progress_flag }
 			}
 		}
 		
@@ -13254,11 +13271,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_ABY_11002"
-			custom_effect_tooltip = BLA_abydos_debt_solving_200_tt
+			custom_effect_tooltip = BLA_abydos_debt_solving_365_tt
 			hidden_effect = {
 				set_country_flag = {
 					flag = BLA_abydos_debt_solving
-					days = 200
+					days = 365
 				}
 			}
 		}
@@ -13279,8 +13296,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_okusora_ayane
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				BLA_abydos_integrate = yes
+				NOT = { has_country_flag = BLA_ABY_11003_in_progress_flag }
 			}
 		}
 		
@@ -13288,11 +13310,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_ABY_11003"
-			custom_effect_tooltip = BLA_abydos_debt_solving_365_tt
+			custom_effect_tooltip = BLA_abydos_debt_solving_140_tt
 			hidden_effect = {
 				set_country_flag = {
 					flag = BLA_abydos_debt_solving
-					days = 365
+					days = 140
 				}
 			}
 		}
@@ -13312,8 +13334,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_okusora_ayane
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				BLA_abydos_integrate = yes
+				NOT = { has_country_flag = BLA_ABY_11004_in_progress_flag }
 			}
 		}
 		
@@ -13349,6 +13376,11 @@ focus_tree = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = BLA_saint_nephthys
 			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = BLA_ABY_11006_trigger_tt
+			hidden_effect = {
+				country_event = { id = BLA_ABY_auto.5 days = BLA_school_days_to_start_focus random_days = BLA_school_random_days }
+			}
 		}
 	}
 
@@ -13366,8 +13398,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_okusora_ayane
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				BLA_abydos_integrate = yes
+				NOT = { has_country_flag = BLA_ABY_11005_in_progress_flag }
 			}
 		}
 		
@@ -13375,17 +13412,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_ABY_11005"
-			every_state = {
-				limit = { has_state_flag = BLA_abydos_state_flag }
-				increase_state_category_by_one_level = yes
-				add_extra_state_shared_building_slots = 2
-			}
+			433 = {	add_extra_state_shared_building_slots = 2 }
+			989 = {	add_extra_state_shared_building_slots = 2 }
 			custom_effect_tooltip = BLA_abydos_agriculture_society_relieve_tt
 			hidden_effect = {
-				every_state = {
-					limit = { has_state_flag = BLA_abydos_state_flag }
-					BLA_agriculture_society_relieve = yes
-				}
+				433 = { BLA_agriculture_society_relieve = yes }
+				989 = { BLA_agriculture_society_relieve = yes }
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = BLA_ABY_11006_trigger_tt
+			hidden_effect = {
+				country_event = { id = BLA_ABY_auto.5 days = BLA_school_days_to_start_focus random_days = BLA_school_random_days }
 			}
 		}
 	}
@@ -13403,34 +13440,33 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		available = { 
-			num_of_available_civilian_factories > 10
+			num_of_civilian_factories > 10
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_okusora_ayane
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				BLA_abydos_integrate = yes
+				NOT = { has_country_flag = BLA_ABY_11006_in_progress_flag }
 			}
 		}
 		select_effect = {
-			hidden_effect = {
-				add_ideas = BLA_abydos_construction
-			}
+			custom_effect_tooltip = BLA_ABY_11006_tt
+			# hidden_effect = { add_ideas = BLA_ABY_11006_hidden_idea } - 이미 다른데 들어감
 		}
 		
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_ABY_11006"
-			custom_effect_tooltip = BLA_abydos_construction_tt
-			every_state = {
-				limit = { has_state_flag = BLA_abydos_state_flag }
-				add_extra_state_shared_building_slots = 2
-			}
+			433 = {	add_extra_state_shared_building_slots = 2 }
+			989 = {	add_extra_state_shared_building_slots = 2 }
 			custom_effect_tooltip = BLA_abydos_agriculture_society_relieve_tt
 			hidden_effect = {
-				remove_ideas = BLA_abydos_construction
-				every_state = {
-					limit = { has_state_flag = BLA_abydos_state_flag }
-					BLA_agriculture_society_relieve = yes
-				}
+				# remove_ideas = BLA_abydos_construction - 이미 다른데 들어감
+				433 = { BLA_agriculture_society_relieve = yes }
+				989 = { BLA_agriculture_society_relieve = yes }
 			}
 		}
 	}
@@ -13449,8 +13485,13 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = { 
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_izayoi_nonomi
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				BLA_abydos_integrate = yes
+				NOT = { has_country_flag = BLA_ABY_11007_in_progress_flag }
 			}
 		}
 		

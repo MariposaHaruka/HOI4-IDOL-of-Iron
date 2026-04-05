@@ -2191,10 +2191,6 @@
 		ai_will_do = { factor = 50 } 
 		available = {
 			commomwealth_joined = yes
-			custom_trigger_tooltip = {
-				tooltip = IMA_commonwealth_tech_sharing_group_trigger_tt
-				has_global_flag = IMA_commonwealth_tech_sharing_group
-			}
 		}
 		prerequisite = { focus = IMA_shared_00001 focus = IMA_shared_00002 focus = IMA_shared_00003 focus = IMA_shared_00004 focus = IMA_shared_00005 focus = IMA_shared_00006 focus = IMA_shared_00007 }
 		joint_trigger = {
@@ -2204,6 +2200,14 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_40001"
+		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
 	}
 
@@ -2219,6 +2223,10 @@
 	
 		ai_will_do = { factor = 50 } 
 		prerequisite = { focus = IMA_shared_40001 }
+		available = {
+			commomwealth_joined = yes
+			has_tech = improved_machine_tools
+		}
 		joint_trigger = {
 			commomwealth_joined = yes
 		}
@@ -2226,6 +2234,14 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_41001"
+		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
 	}
 
@@ -2251,6 +2267,14 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_33002"
 		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
 	}
 
 	joint_focus = {
@@ -2274,6 +2298,14 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_33003"
+		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
 	}
 
@@ -2299,6 +2331,14 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_33004"
 		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
 	}
 
 	joint_focus = {
@@ -2322,6 +2362,14 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_33005"
 		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
 	}
 
 	joint_focus = {
@@ -2344,6 +2392,14 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_41002"
 		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
 	}
 
 	joint_focus = {
@@ -2365,6 +2421,14 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42001"
+		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
 	}
 
@@ -2401,6 +2465,14 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42002"
 		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
 	}
 
 	joint_focus = {
@@ -2435,6 +2507,14 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42003"
+		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
 	}
 	
@@ -2471,6 +2551,14 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42004"
 		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
 	}
 	
 	joint_focus = {
@@ -2492,6 +2580,14 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_44505"
+		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
 	}
 
@@ -2572,6 +2668,14 @@
 				}
 			}
 		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
 	}
 
 	joint_focus = {
@@ -2612,6 +2716,14 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42002"
+		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
 	}
 
@@ -2654,6 +2766,14 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42003"
 		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
 	}
 	
 	joint_focus = {
@@ -2694,5 +2814,13 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42004"
+		}
+		
+		completion_reward_joint_originator = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
+		}
+
+		completion_reward_joint_member = {
+			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
 	}

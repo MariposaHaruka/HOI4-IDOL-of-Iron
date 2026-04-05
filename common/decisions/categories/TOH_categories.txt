@@ -1,4 +1,40 @@
-TOH_stavka_category = {
+TOH_5_year_plan_2nd_category = { #제2차 5개년 계획
+	icon = generic_industry
+	priority = 137
+	allowed = {
+		original_tag = TOH
+	}
+	visible = {
+		has_idea = TOH_2nd_5_year_plan
+	}
+	visible_when_empty = yes
+}
+
+TOH_5_year_plan_3rd_category = { #제3차 5개년 계획
+	icon = generic_industry
+	priority = 137
+	allowed = {
+		original_tag = TOH
+	}
+	visible = {
+		has_idea = TOH_3rd_5_year_plan
+	}
+	visible_when_empty = yes
+}
+
+TOH_5_year_plan_4th_category = { #제4차 5개년 계획
+	icon = generic_industry
+	priority = 137
+	allowed = {
+		original_tag = TOH
+	}
+	visible = {
+		has_idea = TOH_4th_5_year_plan
+	}
+	visible_when_empty = yes
+}
+
+TOH_stavka_category = { #스타프카
 	icon = gre_faction_management
 	priority = 135
 	allowed = {

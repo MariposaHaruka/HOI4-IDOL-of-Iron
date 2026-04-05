@@ -19,6 +19,9 @@ dismissal_rule_ideology_not_anarchosyndicalism = {
 			has_government = anarchosyndicalism 
 		}
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 dismissal_rule_ideology_not_following_hakurei = {
@@ -33,6 +36,9 @@ dismissal_rule_ideology_not_following_hakurei = {
 			NOT = { has_government = authoritariancommunism }
 			is_communism = no
 		}
+	}
+	can_remove = {
+		always = no
 	}
 }
 
@@ -58,6 +64,9 @@ dismissal_rule_ideology_following_hakurei = {
 			has_government = liberalism_mod
 		} 
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 dismissal_rule_ideology_communism = {
@@ -69,6 +78,9 @@ dismissal_rule_ideology_communism = {
 
 	dismiss_member_trigger = {
 		is_communism = yes
+	}
+	can_remove = {
+		always = no
 	}
 }
 
@@ -82,6 +94,9 @@ dismissal_rule_ideology_fascism = {
 	dismiss_member_trigger = {
 		is_fascism = yes
 	}
+	can_remove = {
+		always = no
+	}
 }
 
 dismissal_rule_ideology_not_democratic = {
@@ -92,6 +107,9 @@ dismissal_rule_ideology_not_democratic = {
 	}
 	dismiss_member_trigger = {
 		is_democratic_expanded = no
+	}
+	can_remove = {
+		always = no
 	}
 }
 
@@ -104,5 +122,8 @@ dismissal_rule_ideology_not_communism = {
 
 	dismiss_member_trigger = {
 		is_communism = no
+	}
+	can_remove = {
+		always = no
 	}
 }

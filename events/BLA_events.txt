@@ -1,18 +1,33 @@
 add_namespace = BLA_kivotos_ftf
 add_namespace = BLA_schalle
 add_namespace = BLA_ABY
+add_namespace = BLA_ABY_auto
 add_namespace = BLA_ARI
+add_namespace = BLA_ARI_auto
 add_namespace = BLA_GEH
+add_namespace = BLA_GEH_auto
 add_namespace = BLA_HIG
+add_namespace = BLA_HIG_auto
 add_namespace = BLA_HYA
+add_namespace = BLA_HYA_auto
 add_namespace = BLA_MIL
+add_namespace = BLA_MIL_auto
 add_namespace = BLA_RED
+add_namespace = BLA_RED_auto
 add_namespace = BLA_SHA
+add_namespace = BLA_SHA_auto
 add_namespace = BLA_SRT
+add_namespace = BLA_SRT_auto
 add_namespace = BLA_TRN
+add_namespace = BLA_TRN_auto
 add_namespace = BLA_VAL
+add_namespace = BLA_VAL_auto
+add_namespace = BLA_WIL
+add_namespace = BLA_WIL_auto
 add_namespace = BLA_diplomacy
+add_namespace = BLA_character
 
+#BLA_kivotos_ftf
 country_event = {
 	id = BLA_kivotos_ftf.1 #
 	title = BLA_kivotos_ftf.1.t
@@ -109,6 +124,7 @@ country_event = {
 	}
 }
 
+#BLA_schalle
 unit_leader_event = {
 	id = BLA_schalle.1 #
 	title = BLA_schalle.1.t
@@ -127,6 +143,7 @@ unit_leader_event = {
 	}
 }
 
+#BLA_ABY
 country_event = {
 	id = BLA_ABY.1 #아비도스 고등학교의 학교 연락위원회 참여
 	title = BLA_ABY.1.t
@@ -141,8 +158,9 @@ country_event = {
 	}
 }
 
+#BLA_ARI
 country_event = {
-	id = BLA_ARI.1 #아비도스 고등학교의 학교 연락위원회 참여
+	id = BLA_ARI.1 #아리우스 분교의 학교 연락위원회 참여
 	title = BLA_ARI.1.t
 	desc = BLA_ARI.1.desc
 	is_triggered_only = yes
@@ -155,8 +173,9 @@ country_event = {
 	}
 }
 
+#BLA_GEH
 country_event = {
-	id = BLA_GEH.1 #아비도스 고등학교의 학교 연락위원회 참여
+	id = BLA_GEH.1 #게헨나 학원의 학교 연락위원회 참여
 	title = BLA_GEH.1.t
 	desc = BLA_GEH.1.desc
 	is_triggered_only = yes
@@ -169,6 +188,7 @@ country_event = {
 	}
 }
 
+#BLA_HIG
 country_event = {
 	id = BLA_HIG.1 #아비도스 고등학교의 학교 연락위원회 참여
 	title = BLA_HIG.1.t
@@ -183,6 +203,7 @@ country_event = {
 	}
 }
 
+#BLA_HYA
 country_event = {
 	id = BLA_HYA.1 #아비도스 고등학교의 학교 연락위원회 참여
 	title = BLA_HYA.1.t
@@ -197,6 +218,7 @@ country_event = {
 	}
 }
 
+#BLA_MIL
 country_event = {
 	id = BLA_MIL.1 #아비도스 고등학교의 학교 연락위원회 참여
 	title = BLA_MIL.1.t
@@ -211,6 +233,7 @@ country_event = {
 	}
 }
 
+#BLA_RED
 country_event = {
 	id = BLA_RED.1 #아비도스 고등학교의 학교 연락위원회 참여
 	title = BLA_RED.1.t
@@ -225,6 +248,7 @@ country_event = {
 	}
 }
 
+#BLA_SHA
 country_event = {
 	id = BLA_SHA.1 #아비도스 고등학교의 학교 연락위원회 참여
 	title = BLA_SHA.1.t
@@ -239,6 +263,7 @@ country_event = {
 	}
 }
 
+#BLA_SRT
 country_event = {
 	id = BLA_SRT.1 #아비도스 고등학교의 학교 연락위원회 참여
 	title = BLA_SRT.1.t
@@ -253,6 +278,7 @@ country_event = {
 	}
 }
 
+#BLA_TRN
 country_event = {
 	id = BLA_TRN.1 #아비도스 고등학교의 학교 연락위원회 참여
 	title = BLA_TRN.1.t
@@ -267,6 +293,7 @@ country_event = {
 	}
 }
 
+#BLA_VAL
 country_event = {
 	id = BLA_VAL.1 #아비도스 고등학교의 학교 연락위원회 참여
 	title = BLA_VAL.1.t
@@ -275,6 +302,564 @@ country_event = {
 	
 	option = {
 		name = BLA_VAL.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+#BLA_WIL
+country_event = {
+	id = BLA_WIL.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_WIL.1.t
+	desc = BLA_WIL.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_WIL.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+#BLA_ABY_auto
+#경제 재건 루트 - 외부 개입
+country_event = {
+	id = BLA_ABY_auto.1
+
+	hidden = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = BLA_abydos_not_integrated
+				NOT = { has_completed_focus = BLA_ABY_11002 }
+			}
+			activate_shine_on_focus = BLA_ABY_11002
+			set_country_flag = { 
+				flag = BLA_ABY_11002_in_progress_flag 
+				days = BLA_school_days_to_activate_focus_2 
+				value = 1 }
+			country_event = { 
+				id = BLA_ABY_auto.2 
+				days = BLA_school_days_to_activate_focus_2 
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BLA_abydos_not_integrated
+				has_completed_focus = BLA_ABY_11002
+				NOT = { has_completed_focus = BLA_ABY_11004 }
+			}
+			activate_shine_on_focus = BLA_ABY_11004
+			set_country_flag = { 
+				flag = BLA_ABY_11004_in_progress_flag 
+				days = BLA_school_days_to_activate_focus_2 
+				value = 1 }
+			country_event = { 
+				id = BLA_ABY_auto.2 
+				days = BLA_school_days_to_activate_focus_2 
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BLA_abydos_not_integrated
+				has_completed_focus = BLA_ABY_11004
+				NOT = { has_completed_focus = BLA_ABY_11007 }
+			}
+			activate_shine_on_focus = BLA_ABY_11007
+			set_country_flag = { 
+				flag = BLA_ABY_11007_in_progress_flag 
+				days = BLA_school_days_to_activate_focus_2 
+				value = 1 
+			}
+			country_event = { 
+				id = BLA_ABY_auto.2 
+				days = BLA_school_days_to_activate_focus_2 
+			}
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+
+country_event = {
+	id = BLA_ABY_auto.2
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = BLA_ABY_11002
+			}
+			complete_national_focus = {
+				focus = BLA_ABY_11002
+				use_side_message = yes
+				originator_name = BLA_okusora_ayane
+			}
+			clr_country_flag = BLA_ABY_11002_in_progress_flag
+			if = {
+				limit = { has_country_flag = BLA_abydos_not_integrated }
+				country_event = { 
+					id = BLA_ABY_auto.1 
+					days = BLA_school_days_to_start_focus 
+					random_days = BLA_school_random_days 
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = BLA_ABY_11004
+			}
+			complete_national_focus = {
+				focus = BLA_ABY_11004
+				use_side_message = yes
+				originator_name = BLA_okusora_ayane
+			}
+			clr_country_flag = BLA_ABY_11004_in_progress_flag
+			if = {
+				limit = { has_country_flag = BLA_abydos_not_integrated }
+				country_event = { 
+					id = BLA_ABY_auto.1 
+					days = BLA_school_days_to_start_focus 
+					random_days = BLA_school_random_days 
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = BLA_ABY_11007
+			}
+			complete_national_focus = {
+				focus = BLA_ABY_11007
+				use_side_message = yes
+				originator_name = BLA_izayoi_nonomi
+			}
+			clr_country_flag = BLA_ABY_11007_in_progress_flag
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH FOCUS BRANCH - Cannot complete focus"
+		}
+	}
+}
+
+#경제 재건 루트 - 자구책
+country_event = {
+	id = BLA_ABY_auto.3 
+
+	hidden = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = BLA_abydos_not_integrated
+				NOT = { has_completed_focus = BLA_ABY_11003 }
+			}
+			activate_shine_on_focus = BLA_ABY_11003
+			set_country_flag = { 
+				flag = BLA_ABY_11003_in_progress_flag 
+				days = BLA_school_days_to_activate_focus_1 
+				value = 1 
+			}
+			country_event = { 
+				id = BLA_ABY_auto.4 
+				days = BLA_school_days_to_activate_focus_1 
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = BLA_abydos_not_integrated
+				has_completed_focus = BLA_ABY_11003
+				NOT = { has_completed_focus = BLA_ABY_11005 }
+			}
+			activate_shine_on_focus = BLA_ABY_11005
+			set_country_flag = { 
+				flag = BLA_ABY_11005_in_progress_flag 
+				days = BLA_school_days_to_activate_focus_1 
+				value = 1 
+			}
+			country_event = { 
+				id = BLA_ABY_auto.4 
+				days = BLA_school_days_to_activate_focus_1 
+			}
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+
+country_event = {
+	id = BLA_ABY_auto.4
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = BLA_ABY_11003
+			}
+			complete_national_focus = {
+				focus = BLA_ABY_11003
+				use_side_message = yes
+				originator_name = BLA_okusora_ayane
+			}
+			clr_country_flag = BLA_ABY_11002_in_progress_flag
+			if = {
+				limit = { has_country_flag = BLA_abydos_not_integrated }
+				country_event = { 
+					id = BLA_ABY_auto.3 
+					days = BLA_school_days_to_start_focus 
+					random_days = BLA_school_random_days 
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = BLA_ABY_11005
+			}
+			complete_national_focus = {
+				focus = BLA_ABY_11005
+				use_side_message = yes
+				originator_name = BLA_okusora_ayane
+			}
+			clr_country_flag = BLA_ABY_11004_in_progress_flag
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH FOCUS BRANCH - Cannot complete focus"
+		}
+	}
+}
+
+#녹화 사업
+country_event = {
+	id = BLA_ABY_auto.5
+
+	hidden = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = BLA_abydos_not_integrated
+			}
+			activate_shine_on_focus = BLA_ABY_11006
+			set_country_flag = { 
+				flag = BLA_ABY_11006_in_progress_flag 
+				days = BLA_school_days_to_activate_focus_1 
+				value = 1 
+			}
+			country_event = { 
+				id = BLA_ABY_auto.6 
+				days = BLA_school_days_to_activate_focus_1 
+			}
+			hidden_effect = { add_ideas = BLA_ABY_11006_idea_hidden }
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+
+country_event = {
+	id = BLA_ABY_auto.6
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		complete_national_focus = {
+			focus = BLA_ABY_11006
+			use_side_message = yes
+			originator_name = BLA_okusora_ayane
+		}
+		clr_country_flag = BLA_ABY_11006_in_progress_flag
+		hidden_effect = { remove_idea = BLA_ABY_11006_idea_hidden }
+	}
+}
+
+#경제 재건 루트 - 외부 개입
+country_event = {
+	id = BLA_ABY_auto.7
+
+	hidden = yes
+	is_triggered_only = yes
+	
+	immediate = {
+
+		if = {
+			limit = {
+				NOT = { has_completed_focus = BLA_ABY_11002 }
+			}
+			activate_shine_on_focus = BLA_ABY_11002
+			set_country_flag = { 
+				flag = BLA_ABY_11002_in_progress_flag 
+				days = BLA_school_days_to_activate_focus_2 
+				value = 1 }
+			country_event = { 
+				id = BLA_ABY_auto.8 
+				days = BLA_school_days_to_activate_focus_2 
+			}
+		}
+		else_if = {
+			limit = {
+				has_completed_focus = BLA_ABY_11002
+				NOT = { has_completed_focus = BLA_ABY_11004 }
+			}
+			activate_shine_on_focus = BLA_ABY_11004
+			set_country_flag = { 
+				flag = BLA_ABY_11004_in_progress_flag 
+				days = BLA_school_days_to_activate_focus_2 
+				value = 1 }
+			country_event = { 
+				id = BLA_ABY_auto.8 
+				days = BLA_school_days_to_activate_focus_2 
+			}
+		}
+		else_if = {
+			limit = {
+				has_completed_focus = BLA_ABY_11004
+				NOT = { has_completed_focus = BLA_ABY_11007 }
+			}
+			activate_shine_on_focus = BLA_ABY_11007
+			set_country_flag = { 
+				flag = BLA_ABY_11007_in_progress_flag 
+				days = BLA_school_days_to_activate_focus_2 
+				value = 1 
+			}
+			country_event = { 
+				id = BLA_ABY_auto.8 
+				days = BLA_school_days_to_activate_focus_2 
+			}
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH FOCUS BRANCH - Cannot start new focus"
+		}
+	}
+}
+
+country_event = {
+	id = BLA_ABY_auto.8
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = BLA_ABY_11002
+			}
+			complete_national_focus = {
+				focus = BLA_ABY_11002
+				use_side_message = yes
+				originator_name = BLA_okusora_ayane
+			}
+			clr_country_flag = BLA_ABY_11002_in_progress_flag
+			country_event = { 
+				id = BLA_ABY_auto.7 
+				days = BLA_school_days_to_start_focus 
+				random_days = BLA_school_random_days 
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = BLA_ABY_11004
+			}
+			complete_national_focus = {
+				focus = BLA_ABY_11004
+				use_side_message = yes
+				originator_name = BLA_okusora_ayane
+			}
+			clr_country_flag = BLA_ABY_11004_in_progress_flag
+			country_event = { 
+				id = BLA_ABY_auto.7 
+				days = BLA_school_days_to_start_focus 
+				random_days = BLA_school_random_days 
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = BLA_ABY_11007
+			}
+			complete_national_focus = {
+				focus = BLA_ABY_11007
+				use_side_message = yes
+				originator_name = BLA_izayoi_nonomi
+			}
+			clr_country_flag = BLA_ABY_11007_in_progress_flag
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG WITH FOCUS BRANCH - Cannot complete focus"
+		}
+	}
+}
+
+#BLA_ARI_auto
+country_event = {
+	id = BLA_ARI_auto.1 #아리우스 분교의 학교 연락위원회 참여
+	title = BLA_ARI.1.t
+	desc = BLA_ARI.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_ARI.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+#BLA_GEH_auto
+country_event = {
+	id = BLA_GEH_auto.1 #게헨나 학원의 학교 연락위원회 참여
+	title = BLA_GEH.1.t
+	desc = BLA_GEH.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_GEH.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+#BLA_HIG_auto
+country_event = {
+	id = BLA_HIG_auto.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_HIG.1.t
+	desc = BLA_HIG.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_HIG.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+#BLA_HYA_auto
+country_event = {
+	id = BLA_HYA_auto.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_HYA.1.t
+	desc = BLA_HYA.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_HYA.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+#BLA_MIL_auto
+country_event = {
+	id = BLA_MIL_auto.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_MIL.1.t
+	desc = BLA_MIL.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_MIL.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+#BLA_RED_auto
+country_event = {
+	id = BLA_RED_auto.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_RED.1.t
+	desc = BLA_RED.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_RED.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+#BLA_SHA_auto
+country_event = {
+	id = BLA_SHA_auto.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_SHA.1.t
+	desc = BLA_SHA.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_SHA.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+#BLA_SRT_auto
+country_event = {
+	id = BLA_SRT_auto.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_SRT.1.t
+	desc = BLA_SRT.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_SRT.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+#BLA_TRN_auto
+country_event = {
+	id = BLA_TRN_auto.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_TRN.1.t
+	desc = BLA_TRN.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_TRN.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+#BLA_VAL_auto
+country_event = {
+	id = BLA_VAL_auto.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_VAL.1.t
+	desc = BLA_VAL.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_VAL.1.a
+		ai_chance = { 
+			base = 99
+		}
+	}
+}
+
+#BLA_WIL_auto
+country_event = {
+	id = BLA_WIL_auto.1 #아비도스 고등학교의 학교 연락위원회 참여
+	title = BLA_WIL.1.t
+	desc = BLA_WIL.1.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = BLA_WIL.1.a
 		ai_chance = { 
 			base = 99
 		}

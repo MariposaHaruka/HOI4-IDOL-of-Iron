@@ -928,29 +928,31 @@ war_measures = {
         allowed = { always = yes }
         available = {
             has_war = yes
-            has_idea = tot_economic_mobilisation
-            OR = {
-                AND = {
-                    is_democratic = yes
-                    has_war_support > 0.79
-                }
-                AND = {
-                    is_communism = yes
-                    has_war_support > 0.79
-                }
-                AND = {
-                    is_fascism = yes
-                    OR = {
-                        has_war_support > 0.89
-                        surrender_progress > 0
-                    }
-                }
-                AND = {
-                    is_neutrality = yes
-                    has_war_support > 0.84
-                    has_stability > 0.7
-                }
-            }
+			OR = {
+				has_idea = tot_economic_mobilisation
+				OR = {
+					AND = {
+						is_democratic = yes
+						has_war_support > 0.79
+					}
+					AND = {
+						is_communism = yes
+						has_war_support > 0.79
+					}
+					AND = {
+						is_fascism = yes
+						OR = {
+							has_war_support > 0.89
+							surrender_progress > 0
+						}
+					}
+					AND = {
+						is_neutrality = yes
+						has_war_support > 0.84
+						has_stability > 0.7
+					}
+    	        }
+			}
         }
         visible = {
             has_war = yes
@@ -975,10 +977,10 @@ war_measures = {
 			}
 		}
 		complete_effect = {
-			if = {
-				limit = { tag = IML }
-				country_event = { id = canada_vanilla.1 hours = 6 } # Ronnie the Bren Gun Girl
-			}
+			#if = {
+			#	limit = { tag = IML }
+			#	country_event = { id = canada_vanilla.1 hours = 6 } # Ronnie the Bren Gun Girl
+			#}
         }
    }
 

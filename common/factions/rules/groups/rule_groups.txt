@@ -91,23 +91,6 @@ rule_group_war_declaration_declarer = {
 	}
 }
 
-rule_group_war_declaration_target = {
-	#default_rule = war_declaration_generated_tension_10
-	rules = {
-		war_declaration_generated_tension_10
-		war_declaration_generated_tension_25
-	}
-}
-
-rule_group_war_declaration_situation = {
-	#default_rule = war_declaration_threat_50
-	rules = {
-		war_declaration_threat_25
-		war_declaration_threat_50
-		war_declaration_threat_75
-	}
-}
-
 rule_group_guarantee = {
 	#default_rule = war_declaration_threat_50
 	rules = {
@@ -124,35 +107,10 @@ rule_group_guarantee = {
 
 
 rule_group_call_to_war = {
-	#default_rule = call_to_war_rule_faction_leader_only
 	rules = {
 		call_to_war_rule_faction_leader_only
 		call_to_war_rule_major_only
 		call_to_war_rule_independent_only
-	}
-}
-
-rule_group_generate_wargoal_threat = {
-	#default_rule = call_to_war_rule_faction_leader_only
-	rules = {
-		generate_wargoal_threat_reduction_20
-		generate_wargoal_threat_reduction_40
-	}
-}
-
-
-###  ###  ##   ##  ###     ###  #  # #   ###  ## 
-#  # #   #  # #  # #       #  # #  # #   #   #   
-###  ##  #### #    ##      ###  #  # #   ##   #  
-#    #   #  # #  # #       #  # #  # #   #     # 
-#    ### #  #  ##  ###     #  #  ##  ### ### ##  
-
-
-# TEST TEST TEST
-
-rule_group_peace_rules = {
-	rules = {
-		faction_peace_rule_conquest_focus
 	}
 }
 
@@ -161,7 +119,6 @@ rule_group_peace_rules = {
 rule_group_leader_faction = {
 	rules = {
 		change_leader_rule_never
-		change_leader_rule_allowed
 	}
 }
 

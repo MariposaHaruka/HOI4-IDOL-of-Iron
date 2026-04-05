@@ -1,8 +1,5 @@
 manpower_contribution_small = {
 	type = contribution_rule
-	ai_will_do = {
-		base = 0
-	}
 	available = {
 		has_faction_military_unlocked = yes
 	}
@@ -15,13 +12,6 @@ manpower_contribution_small = {
 
 manpower_contribution_medium = {
 	type = contribution_rule
-	ai_will_do = {
-		base = 0
-		modifier = {
-			add = 1
-			is_major = no 
-		}
-	}
 	available = {
 		has_faction_military_unlocked = yes
 	}
@@ -35,13 +25,13 @@ manpower_contribution_medium = {
 manpower_contribution_high = {
 	type = contribution_rule
 	ai_will_do = {
-		base = 0
+		base = 1
 		modifier = {
-			add = 2 
+			multiply = 2 
 			OR = {
-				has_war_with = JAP
-				has_war_with = GER
-				has_war_with = SOV
+				has_war_with = LLS
+				has_war_with = PRS
+				has_war_with = TOH
 			}
 		}
 	}

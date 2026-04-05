@@ -123,9 +123,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11001"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
 			remove_ideas = TOH_2nd_5_year_plan
-			hidden_effect = {
-				set_country_flag = TOH_2nd_5year_plan_completed_flag
-			}
 		}
 	}
 
@@ -166,90 +163,24 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10002"
-			every_state = {
-				limit = { 
-					has_state_flag = SOV_finish_five_year_plan_2IC 
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
 				}
-				add_extra_state_shared_building_slots = 1
+				random_select_amount = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			if = {
-				limit = {
-					all_owned_state = {
-						infrastructure > 2
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = infrastructure
-							size > 1
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes						
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = infrastructure
-							size > 1
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}				
-			}
-			random_owned_controlled_state = {
-				limit = {
-					infrastructure < 3
-				}
-				add_building_construction = {
-					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				limit = {
-					infrastructure < 3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					infrastructure < 3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					infrastructure < 3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}	
-			}
+			unlock_decision_tooltip = TOH_5_year_plan_2nd_build_industrial_complex
 		}
 	}
 
@@ -269,56 +200,37 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10003"
-			random_owned_state = {
-				limit = { is_rural = yes }
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_rural = yes
+
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 5
 				increase_state_category_by_two_levels = yes
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				limit = { is_rural = yes }
-				increase_state_category_by_two_levels = yes
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = { is_rural = yes }
-				increase_state_category_by_two_levels = yes
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = { is_rural = yes }
-				increase_state_category_by_two_levels = yes
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = { is_rural = yes }
-				increase_state_category_by_two_levels = yes
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
+			unlock_decision_tooltip = TOH_5_year_plan_2nd_develop_rural
 		}
 	}
 
@@ -377,9 +289,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = TOH_soviet_railways
-			
+			custom_effect_tooltip = generic_line_break_tt
+			unlock_decision_tooltip = TOH_5_year_plan_2nd_build_railway
 		}
 	}
 
@@ -399,44 +313,39 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10005"
-			random_owned_state = {
-				limit = { 
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
 					is_rural = no 
 					NOT = { has_state_category = tiny_island }
 					NOT = { has_state_category = small_island }
+
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
 				}
+				random_select_amount = 2
 				increase_state_category_by_one_level = yes
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				limit = { 
-					is_rural = no 
-					NOT = { has_state_category = tiny_island }
-					NOT = { has_state_category = small_island }
-				}
-				increase_state_category_by_one_level = yes
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-			}
+			unlock_decision_tooltip = TOH_5_year_plan_2nd_develop_urban
 		}
 	}
 
@@ -457,42 +366,26 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10006"
-			custom_effect_tooltip = SOV_expand_shipbuilding_plants_tt
-			every_owned_state = {
+			every_core_state = {
 				limit = {
-					has_state_flag = TOH_naval_bases_reinforced_flag
 					is_fully_controlled_by = ROOT
+					is_coastal = yes 
+
 					free_building_slots = {
 						building = dockyard
-						size > 0
+						size > 1
 						include_locked = yes
 					}
 				}
-				if = {
-					limit = {
-						state = 195 #LENINGRAD - Gets 2 dockyards instead of 1
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
-				}
-				else = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
+			unlock_decision_tooltip = TOH_5_year_plan_2nd_build_dockyard
 		}
 	}
 
@@ -513,7 +406,24 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10007"
-			
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			unlock_decision_tooltip = TOH_5_year_plan_2nd_build_arms_factory
 		}
 	}
 
@@ -539,6 +449,19 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_10011"
 			add_research_slot = 1
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = TOH_industry
+			}
+			add_to_variable = { 
+				TOH_industry_research_speed_factor = 0.05 
+				tooltip = research_speed_factor_tt
+			}
+			add_to_variable = { 
+				TOH_industry_production_speed_facility_factor = 0.05 
+				tooltip = production_speed_facility_factor_tt
+			}
 		}
 	}
 
@@ -1048,7 +971,7 @@ focus_tree = {
 		select_effect = {
 			add_equipment_to_stockpile = {
 				type = train_equipment
-				amount = SOV_industrial_relocation_trains_focus_negative
+				amount = -120
 				producer = SOV
 			}
 			#Factories are removed immediately to keep consistency with how decisions work
@@ -1262,7 +1185,6 @@ focus_tree = {
 		y = 1
 
 		ai_will_do = { factor = 30 }
-		bypass = { has_country_flag = TOH_third_five_year_plan_locked_flag }
 		prerequisite = { focus = TOH_11003 }
 		prerequisite = { focus = TOH_11004 }
 
@@ -1294,6 +1216,28 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11008"
+			add_tech_bonus = {
+				name = TOH_11008
+				ahead_reduction = 2
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = TOH_industry
+			}
+			add_to_variable = { 
+				TOH_industry_production_factory_max_efficiency_factor = 0.05 
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = { 
+				TOH_industry_line_change_production_efficiency_factor = 0.1
+				tooltip = line_change_production_efficiency_factor_tt 
+			}
+
+
 		}
 	}
 
@@ -1318,32 +1262,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11009"
-			add_to_variable = { SOV_defense_industry_production_factory_max_efficiency_factor = 0.05 }
-			add_to_variable = { SOV_defense_industry_production_factory_efficiency_gain_factor = -0.05 }
-			custom_effect_tooltip = SOV_pc_of_mechanical_engineering_ns_tt
-
-			if = { #DEFAULT COMMIE
-				limit = {
-					has_government = communism
-				}
-				add_tech_bonus = {
-					name = SOV_pc_of_mechanical_engineering_name_default
-					bonus = 1
-					uses = 2
-					category = motorized_equipment
-					category = infantry_weapons
-				}
+			add_tech_bonus = {
+				name = TOH_11009
+				bonus = 1
+				uses = 2
+				category = motorized_equipment
+				category = infantry_weapons
 			}
-			else = { #ALT IDEOLOGY
-				add_tech_bonus = {
-					name = SOV_pc_of_mechanical_engineering_name_alt
-					bonus = 1
-					uses = 2
-					category = motorized_equipment
-					category = infantry_weapons
-				}
-			}
-			
+			custom_effect_tooltip = generic_line_break_tt
 			219 = {
 				if = {
 					limit = {
@@ -1360,6 +1286,19 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = TOH_industry
+			}
+			add_to_variable = { 
+				TOH_industry_production_factory_max_efficiency_factor = 0.05 
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = { 
+				TOH_industry_production_factory_efficiency_gain_factor = 0.1
+				tooltip = production_factory_efficiency_gain_factor_tt 
 			}
 		}
 	}
@@ -1476,6 +1415,20 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11011"
+			if = {
+				limit = { has_AAT = yes }
+				every_military_industrial_organization = {
+					limit = {
+						has_mio_trait = SOV_mio_trait_merge_plant_no_28 #All Aircraft MIOs have this trait
+					}
+					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_28
+					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_150
+					unlock_mio_trait_tooltip = SOV_mio_trait_merge_vef_plant
+				}
+			}
+			else = {
+				# custom_effect_tooltip = SOV_merge_aircraft_plants_tt
+			}
 		}
 	}
 
@@ -1588,7 +1541,7 @@ focus_tree = {
 					limit = {
 						has_country_leader = {
 							ruling_only = yes
-							character = SOV_iosif_stalin
+							character = TOH_hakurei_reimu
 						}	
 					}
 					set_province_name = {
@@ -2599,6 +2552,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_20003"
+			declare_war_on = {
+				target = NPT
+				type = annex_everything
+			}
 		}
 	}
 
@@ -2742,6 +2699,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33001"
 			custom_effect_tooltip = complete_national_focus_by_event_tt
+			air_experience = 50
 		}
 	}
 	
@@ -3527,7 +3485,7 @@ focus_tree = {
 				tooltip = infantry_build_cost_ic_tt
 			}
 			hidden_effect = {
-				add_ideas = TOH_32012_idea
+				add_ideas = TOH_32012_hidden_idea
 			}
 		}
 	}
@@ -3996,6 +3954,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33006"
+			air_experience = 50
 		}
 	}
 
@@ -4015,6 +3974,26 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33007"
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = TOH_air_force
+			}
+			add_to_variable = { 
+				TOH_air_force_air_accidents_factor = -0.25
+				tooltip = air_accidents_factor_tt
+			}
+			add_to_variable = { 
+				TOH_air_force_air_ace_generation_chance_factor = 0.25 
+				tooltip = air_ace_generation_chance_factor_tt
+			}
+			add_to_variable = { 
+				TOH_air_force_air_weather_penalty = -0.1 
+				tooltip = air_weather_penalty_tt
+			}
+			add_to_variable = {
+				TOH_air_force_air_training_xp_gain_factor = 0.1 
+				tooltip = air_training_xp_gain_factor_tt
+			}
 		}
 	}
 
@@ -4052,6 +4031,39 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33009"
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = air_base
+						size > 2
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -4103,10 +4115,35 @@ focus_tree = {
 		
 		prerequisite = { focus = TOH_33010 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_AIR_FORCE }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33012"
+			air_experience = 25
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = TOH_air_force
+			}
+			add_to_variable = { 
+				TOH_air_force_air_ace_generation_chance_factor = 0.25
+				tooltip = air_ace_generation_chance_factor_tt
+			}
+			add_to_variable = { 
+				TOH_air_force_air_weather_penalty = -0.05 
+				tooltip = air_weather_penalty_tt
+			}
+			add_to_variable = { 
+				TOH_air_force_air_mission_xp_gain_factor = 0.05 
+				tooltip = air_mission_xp_gain_factor_tt
+			}
+			add_to_variable = { 
+				TOH_air_force_air_training_xp_gain_factor = 0.05 
+				tooltip = air_training_xp_gain_factor_tt
+			}
 		}
 	}
 
@@ -4299,6 +4336,14 @@ focus_tree = {
 	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33022"
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.75
+			}
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = TOH_air_force
+			}
 		}
 	}
 
