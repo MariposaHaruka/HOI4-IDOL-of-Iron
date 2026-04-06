@@ -1320,7 +1320,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11010"
-			custom_effect_tooltip = TOH_industry_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = TOH_industry
+			}
 			add_to_variable = { 
 				TOH_industry_industrial_capacity_factory = 0.05
 				tooltip = industrial_capacity_factory_tt
@@ -2760,10 +2763,22 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_31002"
-			add_to_variable = { SOV_defense_industry_production_speed_coastal_bunker_factor = 0.05 }
-			add_to_variable = { SOV_defense_industry_production_speed_bunker_factor = 0.05 }
-			add_to_variable = { SOV_defense_industry_max_dig_in_factor = 0.05 }
-			custom_effect_tooltip = SOV_military_engineering_university_ns_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = TOH_army
+			}
+			add_to_variable = { 
+				TOH_army_production_speed_coastal_bunker_factor = 0.05
+				tooltip = production_speed_coastal_bunker_factor_tt
+			}
+			add_to_variable = { 
+				TOH_army_production_speed_bunker_factor = 0.05 
+				tooltip = production_speed_bunker_factor_tt
+			}
+			add_to_variable = { 
+				TOH_army_max_dig_in_factor = 0.05 
+				tooltip = max_dig_in_factor_tt
+			}
 		}
 	}
 
@@ -3469,6 +3484,7 @@ focus_tree = {
 				bonus = 0.5
 				uses = 1
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			random_owned_state = {
 				add_building_construction = {
 					type = arms_factory
@@ -3476,6 +3492,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = TOH_army
@@ -3501,7 +3518,7 @@ focus_tree = {
 
 		prerequisite = { focus = TOH_32009 focus = TOH_32011 focus = TOH_32012  }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_ARMY }
 		available = { 
 			any_enemy_country = {
 				TOH_is_major_not_original_TOH = yes
@@ -3531,7 +3548,10 @@ focus_tree = {
 		prerequisite = { focus = TOH_30003 }
 		prerequisite = { focus = TOH_32013 }
 		ai_will_do = { factor = 30 }
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_ARMY }
+		available = { 
+			NOT = { has_idea = TOH_desperate_measures }
+		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32014"
@@ -3816,8 +3836,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_32027"
-			add_to_variable = { SOV_the_red_army_army_org_regain = 0.1 }
-			custom_effect_tooltip = SOV_barrier_troops_ns_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = TOH_army
+			}
+			add_to_variable = { 
+				TOH_army_army_org_regain = 0.1 
+				tooltip = army_org_regain_tt
+			}
 		}
 	}
 	focus = {

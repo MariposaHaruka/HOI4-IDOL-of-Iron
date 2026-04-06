@@ -610,54 +610,31 @@ set_country_flag = BLA_abydos_not_participated
 set_country_flag = BLA_arius_not_participated
 set_country_flag = BLA_wildhunt_not_participated
 
-set_country_flag = {
-	flag = BLA_shanhaijing_not_integrated
-	value = 3
-}
-set_country_flag = {
-	flag = BLA_redwinter_not_integrated
-	value = 3
-}
-set_country_flag = {
-	flag = BLA_gehenna_not_integrated
-	value = 3
-}
-set_country_flag = {
-	flag = BLA_hyakkiyako_not_integrated
-	value = 3
-}
-set_country_flag = {
-	flag = BLA_millenium_not_integrated
-	value = 3
-}
-set_country_flag = {
-	flag = BLA_trinity_not_integrated
-	value = 3
-}
-set_country_flag = {
-	flag = BLA_abydos_not_integrated
-	value = 3
-}
-set_country_flag = {
-	flag = BLA_arius_not_integrated
-	value = 3
-}
-set_country_flag = {
-	flag = BLA_valkyrie_not_integrated
-	value = 3
-}
-set_country_flag = {
-	flag = BLA_srt_not_integrated
-	value = 3
-}
-set_country_flag = {
-	flag = BLA_highlander_not_integrated
-	value = 3
-}
-set_country_flag = {
-	flag = BLA_wildhunt_not_integrated
-	value = 3
-}
+set_country_flag = BLA_shanhaijing_not_economic_integrated
+set_country_flag = BLA_redwinter_not_economic_integrated
+set_country_flag = BLA_gehenna_not_economic_integrated
+set_country_flag = BLA_hyakkiyako_not_economic_integrated
+set_country_flag = BLA_millenium_not_economic_integrated
+set_country_flag = BLA_trinity_not_economic_integrated
+set_country_flag = BLA_abydos_not_economic_integrated 
+set_country_flag = BLA_arius_not_economic_integrated
+set_country_flag = BLA_valkyrie_not_economic_integrated
+set_country_flag = BLA_srt_not_economic_integrated
+set_country_flag = BLA_highlander_not_economic_integrated
+set_country_flag = BLA_wildhunt_not_economic_integrated
+
+set_country_flag = BLA_shanhaijing_not_integrated
+set_country_flag = BLA_redwinter_not_integrated
+set_country_flag = BLA_gehenna_not_integrated
+set_country_flag = BLA_hyakkiyako_not_integrated
+set_country_flag = BLA_millenium_not_integrated
+set_country_flag = BLA_trinity_not_integrated
+set_country_flag = BLA_abydos_not_integrated 
+set_country_flag = BLA_arius_not_integrated
+set_country_flag = BLA_valkyrie_not_integrated
+set_country_flag = BLA_srt_not_integrated
+set_country_flag = BLA_highlander_not_integrated
+set_country_flag = BLA_wildhunt_not_integrated
 
 set_variable = { BLA_GEH_leader = 0 }
 set_variable = { BLA_TRN_leader = 0 }
@@ -669,6 +646,12 @@ set_variable = { BLA_RED_leader = 0 }
 set_variable = { BLA_ARI_leader = 0 }
 set_variable = { BLA_VAL_leader = 2 }
 set_variable = { BLA_SRT_leader = 2 }
+
+#학교 중점용 변수
+set_variable = { BLA_school_days_to_activate_focus_1 = 105 }
+set_variable = { BLA_school_days_to_activate_focus_2 = 70 }
+set_variable = { BLA_school_days_to_start_focus = 75 }
+set_variable = { BLA_school_random_days = 45 }
 
 set_country_flag = BLA_president_missing #학생회장 플래그
 set_country_flag = BLA_prisoners_wanted #일곱 죄수들 플래그
