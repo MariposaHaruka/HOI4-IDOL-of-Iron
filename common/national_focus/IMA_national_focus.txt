@@ -3891,7 +3891,162 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32013"
-			
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_army
+			}
+			if = {
+				limit = { 
+					has_WUW = yes
+					has_NSB = yes
+				}
+				add_to_variable = {
+					IMA_army_unit_armored_engineer_design_cost_factor = -1
+					tooltip = unit_armored_engineer_design_cost_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_unit_armored_maintenance_design_cost_factor = -1
+					tooltip = unit_armored_maintenance_design_cost_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_unit_armored_signal_design_cost_factor = -1
+					tooltip = unit_armored_signal_design_cost_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_unit_heavy_flame_tank_design_cost_factor = -1
+					tooltip = unit_armored_engineer_design_cost_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_unit_medium_flame_tank_design_cost_factor = -1
+					tooltip = unit_armored_engineer_design_cost_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_unit_light_flame_tank_design_cost_factor = -1
+					tooltip = unit_armored_engineer_design_cost_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_armored_support_vehicle_build_cost_ic = -0.25
+					tooltip = armored_support_vehicle_build_cost_ic_tt
+				}
+				add_to_variable = {
+					IMA_army_armored_support_vehicle_reliability = 0.25
+					tooltip = armored_support_vehicle_reliability_tt
+				}
+				add_to_variable = {
+					IMA_army_flame_build_cost_ic = -0.25
+					tooltip = flame_build_cost_ic_tt
+				}
+				add_to_variable = {
+					IMA_army_flame_reliability = 0.25
+					tooltip = flame_reliability_tt
+				}
+			}
+			else_if = {
+				limit = {
+					has_WUW = yes
+					has_NSB = no
+				}
+				add_to_variable = {
+					IMA_army_unit_armored_engineer_design_cost_factor = -1
+					tooltip = unit_armored_engineer_design_cost_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_unit_armored_maintenance_design_cost_factor = -1
+					tooltip = unit_armored_maintenance_design_cost_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_unit_armored_signal_design_cost_factor = -1
+					tooltip = unit_armored_signal_design_cost_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_army_armor_attack_factor = 0.05
+					tooltip = army_armor_attack_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_army_armor_defence_factor = 0.05
+					tooltip = army_armor_defence_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_army_armor_speed_factor = 0.05
+					tooltip = army_armor_speed_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_breakthrough_factor = 0.05
+					tooltip = breakthrough_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_armored_support_vehicle_build_cost_ic = -0.25
+					tooltip = armored_support_vehicle_build_cost_ic_tt
+				}
+				add_to_variable = {
+					IMA_army_armored_support_vehicle_reliability = 0.25
+					tooltip = armored_support_vehicle_reliability_tt
+				}
+			}
+			else_if = {
+				limit = {
+					has_WUW = no
+					has_NSB = yes
+				}
+				add_to_variable = {
+					IMA_army_unit_heavy_flame_tank_design_cost_factor = -1
+					tooltip = unit_armored_engineer_design_cost_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_unit_medium_flame_tank_design_cost_factor = -1
+					tooltip = unit_armored_engineer_design_cost_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_unit_light_flame_tank_design_cost_factor = -1
+					tooltip = unit_armored_engineer_design_cost_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_army_armor_attack_factor = 0.05
+					tooltip = army_armor_attack_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_army_armor_defence_factor = 0.05
+					tooltip = army_armor_defence_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_army_armor_speed_factor = 0.05
+					tooltip = army_armor_speed_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_breakthrough_factor = 0.05
+					tooltip = breakthrough_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_flame_build_cost_ic = -0.25
+					tooltip = flame_build_cost_ic_tt
+				}
+				add_to_variable = {
+					IMA_army_flame_reliability = 0.25
+					tooltip = flame_reliability_tt
+				}
+			}
+			else = {
+				add_to_variable = {
+					IMA_army_army_armor_attack_factor = 0.10
+					tooltip = army_armor_attack_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_army_armor_defence_factor = 0.10
+					tooltip = army_armor_defence_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_army_armor_speed_factor = 0.10
+					tooltip = army_armor_speed_factor_tt
+				}
+				add_to_variable = {
+					IMA_army_breakthrough_factor = 0.10
+					tooltip = breakthrough_factor_tt
+				}
+			}
+			hidden_effect = {
+				add_ideas = IMA_32013_hidden_idea
+			}
 		}
 	}
 
