@@ -3785,7 +3785,21 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32008"
-			
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_army
+			}
+			add_to_variable = {
+				IMA_army_sp_land_military_engineering_vehicles_speed_factor = -0.5
+				tooltip = sp_land_military_engineering_vehicles_speed_factor_tt
+			}
+			if = {
+				limit = { has_NSB = yes }
+				add_to_variable = {
+					IMA_army_sp_land_flamethrower_tank_speed_factor = -0.5
+					tooltip = sp_land_flamethrower_tank_speed_factor_tt
+				}
+			}
 		}
 	}
 
