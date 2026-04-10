@@ -3196,7 +3196,39 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31209"
-			add_ideas = IMA_31011_hidden_idea			
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.75
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_air_force
+			}
+			if = {
+				limit = { has_WUW = yes }
+				add_to_variable = {
+					IMA_air_force_sp_air_bouncing_bomb_speed_factor = 0.50
+					tooltip = sp_air_bouncing_bomb_speed_factor_tt
+				}
+				add_to_variable = {
+					IMA_air_force_sp_air_earthshaker_bomb_speed_factor = 0.50
+					tooltip = sp_air_earthshaker_bomb_speed_factor_tt
+				}
+				if = {
+					limit = { has_BBA = yes }
+					add_to_variable = {
+						IMA_air_force_module_earthshaker_bomb_release_design_cost_factor = -0.50
+						tooltip = module_earthshaker_bomb_release_design_cost_factor_tt
+					}
+				}
+			}
+			else = {
+				add_to_variable = {
+					IMA_air_force_air_strategic_bomber_bombing_factor = 0.10
+					tooltip = air_strategic_bomber_bombing_factor_tt
+				}
+			}
 		}
 	}
 
@@ -3732,10 +3764,10 @@ focus_tree = {
 						is_field_marshal = no
 					}
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
 				IMA_alan_brooke = {
 					promote_leader = yes
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 		}
 	}
@@ -3792,6 +3824,9 @@ focus_tree = {
 		ai_will_do = { factor = 0 }
 		prerequisite = { focus = IMA_32005 }
 
+		available = {
+			land_facility > 0
+		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
@@ -3905,7 +3940,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32012"
-			
+			if = {
+				limit = {
+					has_character = IMA_bernard_montgomery
+					IMA_bernard_montgomery = {
+						is_field_marshal = no
+					}
+				}
+				IMA_bernard_montgomery = {
+					promote_leader = yes
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
 		}
 	}
 
@@ -3933,6 +3979,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32013"
+			#퍼시 호바트 관련 이벤트
 			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
@@ -4155,9 +4202,10 @@ focus_tree = {
 				DYNMOD = IMA_army
 			}
 			add_to_variable = { 
-				IMA_army_special_forces_cap = 0.03
+				IMA_army_special_forces_cap = 0.05
 				tooltip = special_forces_cap_tt
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_navy
@@ -4838,6 +4886,12 @@ focus_tree = {
 					add_mio_research_bonus = 0.05
 				}
 			}
+			custom_effect_tooltip = generic_line_break_tt
+			if = {
+				limit = { has_SEA = yes }
+				complete_special_project = sp:sp_naval_escort_carrier
+				custom_effect_tooltip = generic_line_break_tt
+			}
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_navy
@@ -4854,24 +4908,19 @@ focus_tree = {
 				IMA_navy_navy_max_range_factor = 0.10
 				tooltip = navy_max_range_factor_tt
 			}
-			add_to_variable = {
-				IMA_navy_sp_naval_escort_carrier_speed_factor = 0.25
-				tooltip = sp_naval_escort_carrier_speed_factor_tt
-			}
-			add_to_variable = { 
-				IMA_navy_ship_hull_escort_carrier_build_cost_ic = -0.1
-				tooltip = ship_hull_escort_carrier_build_cost_ic_tt
-			}
-			add_to_variable = { 
-				IMA_navy_ship_hull_escort_carrier_build_cost_ic = -0.1
-				tooltip = ship_hull_escort_carrier_build_cost_ic_tt
-			}
-			add_to_variable = { 
-				IMA_navy_ship_hull_escort_carrier_carrier_size = 0.25
-				tooltip = ship_hull_escort_carrier_carrier_size_tt
-			}
-			hidden_effect = {
-				add_ideas = IMA_33008_idea
+			if = {
+				limit = { has_SEA = yes }
+				add_to_variable = { 
+					IMA_navy_ship_hull_escort_carrier_build_cost_ic = -0.1
+					tooltip = ship_hull_escort_carrier_build_cost_ic_tt
+				}
+				add_to_variable = { 
+					IMA_navy_ship_hull_escort_carrier_carrier_size = 0.25
+					tooltip = ship_hull_escort_carrier_carrier_size_tt
+				}
+				hidden_effect = {
+					add_ideas = IMA_33008_idea
+				}
 			}
 		}
 	}
@@ -5133,6 +5182,7 @@ focus_tree = {
 			navy_experience = 50
 			air_experience = 50
 			IMA_design_fulmar = yes
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_navy
@@ -5168,6 +5218,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
 			IMA_design_implacable = yes
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_navy
