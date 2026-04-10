@@ -4085,12 +4085,23 @@ focus_tree = {
 		x = 1
 		y = 1
 		
+		available = {
+			has_full_control_of_state = 195
+		}
 		prerequisite = { focus = TOH_33001 }
 		ai_will_do = { factor = 30 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_33005"
+			195 = {
+				add_building_construction = {
+					type = air_facility
+					level = 1
+					instant_build = yes
+					province = 6174
+				}
+			}
 		}
 	}
 

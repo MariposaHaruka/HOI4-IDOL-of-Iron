@@ -3725,7 +3725,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32005"
-			
+			if = {
+				limit = {
+					has_character = IMA_alan_brooke
+					IMA_alan_brooke = {
+						is_field_marshal = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				IMA_alan_brooke = {
+					promote_leader = yes
+				}
+			}
 		}
 	}
 
@@ -3787,8 +3798,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32008"
 			add_breakthrough_progress = {
 				specialization = specialization_land
-				value = 0.5
+				value = 0.75
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			add_tech_bonus = {
 				name = IMA_32008
 				bonus = 0.5
@@ -3801,13 +3813,13 @@ focus_tree = {
 				DYNMOD = IMA_army
 			}
 			add_to_variable = {
-				IMA_army_sp_land_military_engineering_vehicles_speed_factor = -0.5
+				IMA_army_sp_land_military_engineering_vehicles_speed_factor = 0.5
 				tooltip = sp_land_military_engineering_vehicles_speed_factor_tt
 			}
 			if = {
 				limit = { has_NSB = yes }
 				add_to_variable = {
-					IMA_army_sp_land_flamethrower_tank_speed_factor = -0.5
+					IMA_army_sp_land_flamethrower_tank_speed_factor = 0.5
 					tooltip = sp_land_flamethrower_tank_speed_factor_tt
 				}
 			}
