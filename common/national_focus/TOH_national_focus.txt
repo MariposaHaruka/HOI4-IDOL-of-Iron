@@ -1071,7 +1071,7 @@ focus_tree = {
 					}
 				}
 			}
-			custom_effect_tooltip = SOV_move_industry_to_the_urals_trains_tt
+			custom_effect_tooltip = TOH_11005_tt
 			custom_effect_tooltip = SOV_focus_complete_effect_tt
 			#unlock_decision_category_tooltip = SOV_industry_relocation
 			random_controlled_state = {
@@ -1192,6 +1192,27 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11007"
+			add_research_slot = 1
+			every_country = {
+				limit = {
+					OR = { 
+						is_subject_of = TOH
+						#is_autonomous_state_of_TOH = yes
+					}
+				}
+				add_to_tech_sharing_group = touhou_comin_research
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = TOH_industry
+			}
+			add_to_variable = { 
+				TOH_industry_research_speed_factor = 0.01 
+				tooltip = research_speed_factor_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			unlock_decision_category_tooltip = TOH_national_academies_of_sciences
 		}
 	}
 
@@ -1236,8 +1257,6 @@ focus_tree = {
 				TOH_industry_line_change_production_efficiency_factor = 0.1
 				tooltip = line_change_production_efficiency_factor_tt 
 			}
-
-
 		}
 	}
 
@@ -1263,11 +1282,24 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_11009"
 			add_tech_bonus = {
-				name = TOH_11009
+				name = TOH_11009_tech_bonus_1
 				bonus = 1
 				uses = 2
 				category = motorized_equipment
 				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = TOH_11009_tech_bonus_2
+				bonus = 1.0
+				uses = 2
+				category = industry
+				category = electronics
+			}
+			add_tech_bonus = {
+				name = TOH_11009_tech_bonus_3
+				bonus = 1
+				uses = 2
+				category = cat_production
 			}
 			custom_effect_tooltip = generic_line_break_tt
 			219 = {
@@ -1293,12 +1325,16 @@ focus_tree = {
 				DYNMOD = TOH_industry
 			}
 			add_to_variable = { 
-				TOH_industry_production_factory_max_efficiency_factor = 0.05 
-				tooltip = production_factory_max_efficiency_factor_tt
+				TOH_industry_production_factory_start_efficiency_factor = 0.05 
+				tooltip = production_factory_start_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				TOH_industry_production_factory_efficiency_gain_factor = 0.1
+				TOH_industry_production_factory_efficiency_gain_factor = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt 
+			}
+			add_to_variable = { 
+				TOH_industry_industrial_capacity_factory = 0.02
+				tooltip = industrial_capacity_factory_tt 
 			}
 		}
 	}
@@ -1333,8 +1369,10 @@ focus_tree = {
 				tooltip = industrial_capacity_dockyard_tt
 			}
 
-			random_owned_controlled_state = {
+			every_core_state = {
 				limit = {
+					is_fully_controlled_by = ROOT
+
 					has_resources_amount = {
 						resource = steel
 						amount > 0
@@ -1345,6 +1383,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -1355,49 +1394,8 @@ focus_tree = {
 					type = steel
 					amount = 5
 				}
-				set_state_flag = TOH_steel_casting_industry_flag
 			}
-			if = {
-				limit = {
-					any_owned_state = {
-						has_resources_amount = {
-							resource = steel
-							amount > 0
-						}
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-						NOT = {	has_state_flag = TOH_steel_casting_industry_flag }
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						has_resources_amount = {
-							resource = steel
-							amount > 0
-						}
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-						NOT = {	has_state_flag = TOH_steel_casting_industry_flag }
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					add_resource = {
-						type = steel
-						amount = 5
-					}
-					set_state_flag = TOH_steel_casting_industry_flag
-				}
-			}
+			unlock_decision_tooltip = TOH_the_sacred_war_steel_casting_industry
 		}
 	}
 
@@ -1430,7 +1428,7 @@ focus_tree = {
 				}
 			}
 			else = {
-				# custom_effect_tooltip = SOV_merge_aircraft_plants_tt
+				unlock_decision_tooltip = TOH_the_sacred_war_merge_aircraft_plants
 			}
 		}
 	}
@@ -1472,7 +1470,7 @@ focus_tree = {
 				}
 			}
 			else = {
-				custom_effect_tooltip = SOV_merge_tank_and_materiel_plants_tt
+				unlock_decision_tooltip = TOH_the_sacred_war_merge_material_plants
 			}
 		}
 	}
@@ -1571,7 +1569,7 @@ focus_tree = {
 				}
 			}
 			else = {
-				custom_effect_tooltip = SOV_merge_tank_and_materiel_plants_tt
+				unlock_decision_tooltip = TOH_the_sacred_war_merge_tank_plants
 			}
 
 		}
@@ -1618,11 +1616,10 @@ focus_tree = {
 					unlock_mio_trait_tooltip = SOV_mio_trait_merge_mariupol_plant
 					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_200
 				}
-				
-				
+
 			}
 			else = {
-				custom_effect_tooltip = SOV_merge_naval_plants_tt
+				unlock_decision_tooltip = TOH_the_sacred_war_merge_naval_plants
 			}
 		}
 	}
@@ -1648,7 +1645,10 @@ focus_tree = {
 
 		cancelable = no
 		select_effect = {
-			add_ideas = TOH_mass_construction
+			custom_effect_tooltip = TOH_13001_tt
+			hidden_effect = {
+				add_ideas = TOH_13001_idea_timed
+			}
 		}
 
 		available = {
@@ -1669,7 +1669,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: TOH_13001"
 			hidden_effect = {
-				remove_ideas = TOH_mass_construction
+				remove_ideas = TOH_13001_idea_timed
 				IF = {
 					limit = {
 						has_country_leader = {
@@ -1726,7 +1726,7 @@ focus_tree = {
 				}
 			}
 
-			add_ideas = TOH_transformation_of_nature
+			add_ideas = TOH_13001_idea
 			custom_effect_tooltip = generic_line_break_tt
 
 			217 = {	
