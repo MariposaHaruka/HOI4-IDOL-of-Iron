@@ -1,6 +1,10 @@
 NDefines_Graphics.NGraphics.COUNTRY_FLAG_TEX_MAX_SIZE = 2048	--default 256
 NDefines_Graphics.NGraphics.COUNTRY_FLAG_SMALL_TEX_MAX_SIZE = 512
 
+NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 800						-- 1100 
+NDefines_Graphics.NGraphics.DRAW_MAP_OBJECTS_CUTOFF = 250 					-- 550 
+NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
+
 NDefines_Graphics.NGraphics.SUN_HEIGHT = 1200
 NDefines_Graphics.NGraphics.SUN_INTENSITY = 0.9
 NDefines_Graphics.NGraphics.BLOOM_SCALE = 0.0

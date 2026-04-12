@@ -149,3 +149,10 @@ NDefines.NDiplomacy.TENSION_DISMANTLE_INDUSTRY = 0.25		-- Amount of tension gene
 NDefines.NDiplomacy.TENSION_CAPITULATE = 0.40				-- Scale of the amount of tension created by a countries capitulation.
 NDefines.NDiplomacy.GUARANTEE_COST = 25					    -- Scale with the number of already guaranteed countries.
 NDefines.NDiplomacy.REVOKE_GUARANTEE_COST = 25
+
+-- Modification
+NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 6
+NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 60 --10
+NDefines.NGame.LAG_DAYS_FOR_PAUSE = 100 --25
+NDefines.NGame.GAME_SPEED_SECONDS = { 0.4, 0.25, 0.1, 0.05, 0.0 } --{2.0, 0.5, 0.2, 0.1, 0.0}
+NDefines.NCountry.EVENT_PROCESS_OFFSET = 27 --20 

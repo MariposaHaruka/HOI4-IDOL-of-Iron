@@ -280,7 +280,7 @@ focus_tree = {
 				DYNMOD = IMA_industry_modifier
 			}
 			add_to_variable = {
-				IMA_industry_weekly_manpower = 0.001
+				IMA_industry_weekly_manpower = 100
 				tooltip = weekly_manpower_tt
 			}
 		}
@@ -559,7 +559,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11013"
-			unlock_decision_tooltip = IMA_haruka_plan_support_colliery
 			132 = {
 				add_building_construction = {
 					type = infrastructure
@@ -567,6 +566,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_industry_modifier
@@ -575,6 +575,8 @@ focus_tree = {
 				IMA_industry_local_resources_factor = 0.20
 				tooltip = local_resources_factor_tt
 			}
+			custom_effect_tooltip = generic_line_break_tt
+			unlock_decision_tooltip = IMA_haruka_plan_support_colliery
 		}
 	}
 
@@ -594,14 +596,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_11013"
-			custom_effect_tooltip = {
-				localization_key = dynmod_modifiy_tt
-				DYNMOD = IMA_industry_modifier
-			}
-			add_to_variable = {
-				IMA_industry_consumer_goods_factor = -0.04
-				tooltip = consumer_goods_factor_tt
-			}
 			if = {
 				limit = { IMA_is_on_great_depression = yes }
 				add_to_variable = {
@@ -610,7 +604,16 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_line_break_tt
 			}
-			unlock_decision_tooltip = IMA_haruka_plan_support_farmer_society 
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_industry_modifier
+			}
+			add_to_variable = {
+				IMA_industry_consumer_goods_factor = -0.04
+				tooltip = consumer_goods_factor_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			unlock_decision_tooltip = IMA_haruka_plan_support_farmer_society
 		}
 	}
 
@@ -737,6 +740,11 @@ focus_tree = {
 		available = {
 			date > 1940.1.1
 			IMA_is_bankrupt = no
+			NOT = {
+				has_idea = IMA_great_depression_1
+				has_idea = IMA_great_depression_2
+				has_idea = IMA_great_depression_3
+			}
 		}
 
 		available_if_capitulated = yes
@@ -3563,7 +3571,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32401"
-			
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = IMA_army
+			}
+			add_to_variable = {
+				IMA_army_out_of_supply_factor = -0.25
+				tooltip = out_of_supply_factor_tt
+			}
+			add_to_variable = {
+				IMA_army_supply_consumption_factor = -0.20
+				tooltip = supply_consumption_factor_tt
+			}
 		}
 	}
 
@@ -5027,6 +5046,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			unlock_decision_category_tooltip = navy_convoy_decision_category
 			hidden_effect = {
 				set_country_flag = navy_convoy_decision_flag
@@ -5050,10 +5070,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_32001"
-			custom_effect_tooltip = {
-				localization_key = dynmod_modifiy_tt
-				DYNMOD = IMA_navy
-			}
 			if = {
 				limit = { has_AAT = no }
 				if = {
@@ -5079,7 +5095,9 @@ focus_tree = {
 					add_mio_research_bonus = 0.05
 				}
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			IMA_design_battle = yes
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_navy
