@@ -69,7 +69,7 @@ ideas = {
 				fighter = { build_cost_ic = -0.1 instant = yes }
 			}
 		}
-		IMA_31106_hidden_idea = {
+		IMA_31006_hidden_idea = {
 			allowed = {
 				original_tag = IMA
 			}
@@ -79,7 +79,30 @@ ideas = {
 			removal_cost = -1
 			equipment_bonus = {
 				fighter = { 
-					build_cost_ic = -0.2
+					build_cost_ic = 0.15
+					instant = yes 
+				}
+				tactical_bomber = { 
+					build_cost_ic = 0.15
+					instant = yes 
+				}
+				strategic_bomber = { 
+					build_cost_ic = 0.15
+					instant = yes 
+				}
+			}
+		}
+		IMA_31010_hidden_idea = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				heavy_fighter = { 
+					air_attack = 0.15
 					instant = yes 
 				}
 			}
@@ -97,6 +120,56 @@ ideas = {
 					air_agility = 0.15
 					build_cost_ic = -0.1
 					maximum_speed = 0.05
+					weight = -0.10
+					instant = yes 
+				}
+			}
+		}
+		IMA_31105_hidden_idea = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				fighter = { 
+					air_agility = 0.1
+					air_range = -0.1
+					air_attack = 0.1
+					maximum_speed = 0.1
+					instant = yes 
+				}
+			}
+		}
+		IMA_31106_hidden_idea = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				fighter = { 
+					build_cost_ic = -0.2
+					instant = yes 
+				}
+			}
+		}
+		IMA_31201_hidden_idea = {
+			allowed = {
+				original_tag = IMA
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			equipment_bonus = {
+				tactical_bomber = { 
+					maximum_speed = 0.10
+					reliability = 0.10
 					weight = -0.10
 					instant = yes 
 				}
@@ -154,7 +227,7 @@ ideas = {
 				}
 			}
 		}
-		IMA_33008_idea = {
+		IMA_33008_hidden_idea = {
 			allowed = {
 				original_tag = IMA
 			}
@@ -166,7 +239,7 @@ ideas = {
 				ship_hull_escort_carrier = { build_cost_ic = -0.15 }
 			}
 		}
-		IMA_33014_idea = {
+		IMA_33014_hidden_idea = {
 			allowed = {
 				original_tag = IMA
 			}
@@ -195,7 +268,7 @@ ideas = {
 				submarine = { build_cost_ic = -0.1 }
 			}
 		}
-		IMA_33102_idea = {
+		IMA_33102_hidden_idea = {
 			allowed = {
 				original_tag = IMA
 			}
@@ -207,7 +280,7 @@ ideas = {
 				carrier = { build_cost_ic = -0.05 }
 			}
 		}
-		IMA_33202_idea = {
+		IMA_33202_hidden_idea = {
 			allowed = {
 				original_tag = IMA
 			}

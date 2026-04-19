@@ -186,9 +186,11 @@ shared_focus = {
 		add_political_power = 150
 		if = {
 			limit = { ROOT = { NOT = { has_autonomy_state = ima_dominion } } }
-			set_autonomy = {
-				target = THIS
-				autonomy_state = ima_dominion
+			IMA = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = ima_dominion
+				}
 			}
 		}
 		hidden_effect = {

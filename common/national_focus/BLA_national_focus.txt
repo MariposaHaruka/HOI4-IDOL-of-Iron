@@ -2183,7 +2183,7 @@ focus_tree = {
 					BLA_navy_navy_capital_ship_defence_factor= 0.1
 					tooltip = navy_capital_ship_defence_factor_tt
 				}
-				hidden_effect = { add_ideas = BLA_12102_idea }
+				hidden_effect = { add_ideas = BLA_12102_hidden_idea }
 			}
 			else_if = {
 				limit = { has_completed_focus = BLA_12103 }
@@ -2207,7 +2207,7 @@ focus_tree = {
 					BLA_navy_navy_carrier_air_targetting_factor = 0.1
 					tooltip = navy_carrier_air_targetting_factor_tt
 				}
-				hidden_effect = { add_ideas = BLA_12103_idea }
+				hidden_effect = { add_ideas = BLA_12103_hidden_idea }
 			}
 			else = {
 				custom_effect_tooltip = generic_line_break_tt
@@ -2247,7 +2247,7 @@ focus_tree = {
 					BLA_navy_submarine_build_cost_ic = -0.05
 					tooltip = submarine_build_cost_ic_tt
 				}
-				hidden_effect = { add_ideas = BLA_12202_idea }
+				hidden_effect = { add_ideas = BLA_12202_hidden_idea }
 			}
 			else_if = {
 				limit = { has_completed_focus = BLA_12203 }
@@ -2255,7 +2255,7 @@ focus_tree = {
 					BLA_navy_screen_ship_build_cost_ic = -0.05
 					tooltip = screen_ship_build_cost_ic_tt
 				}
-				hidden_effect = { add_ideas = BLA_12203_idea }
+				hidden_effect = { add_ideas = BLA_12203_hidden_idea }
 			}
 			else = {
 				custom_effect_tooltip = generic_line_break_tt
@@ -3362,7 +3362,15 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		available_if_capitulated = yes
-		bypass = { has_war_with = AZU }
+		bypass = { 
+			OR = {
+				has_war_with = AZU
+				AND = {
+					owns_state = 747
+					owns_state = 325
+				}
+			}
+		}
 		bypass_effect = {
 			747 = {
 				add_claim_by = BLA
@@ -3380,6 +3388,7 @@ focus_tree = {
 			325 = {
 				add_claim_by = BLA
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			declare_war_on = {
 				target = AZU
 				type = take_claimed_state
@@ -3406,10 +3415,8 @@ focus_tree = {
 				target = HBR
 				type = annex_everything
 			}
-			custom_effect_tooltip = BLA_22206_tt
-			hidden_effect = {
-				unlock_decision_category_tooltip = BLA_east_expansion
-			}
+			custom_effect_tooltip = generic_line_break_tt
+			unlock_decision_category_tooltip = BLA_east_expansion
 		}
 	}
 
@@ -10924,7 +10931,7 @@ focus_tree = {
 				custom_trigger_tooltip = {
 					tooltip = {
 						localization_key = BLA_available_focus_tt
-						CHARACTER = BLA_niko
+						CHARACTER = BLA_yoshino_niko
 						INTEGRATION = BLA_srt_integrate_tt
 					}
 					BLA_srt_integrate = yes
@@ -10937,7 +10944,7 @@ focus_tree = {
 						FOCUSA = BLA_SRT_10002
 						FOCUSB = BLA_SRT_10003
 						CHARACTERA = BLA_sorai_saki
-						CHARACTERB = BLA_niko
+						CHARACTERB = BLA_yoshino_niko
 						INTEGRATION = BLA_srt_integrate_tt
 					}
 					BLA_srt_integrate = yes

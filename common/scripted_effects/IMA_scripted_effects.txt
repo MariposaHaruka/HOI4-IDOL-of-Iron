@@ -1462,6 +1462,87 @@ IMA_create_paratroop_division = {
 	}
 }
 
+#technology
+IMA_design_blenheim = { #블레넘 - 중전투기
+	if = {
+		limit = { has_BBA = yes }
+		create_equipment_variant = {
+			name = "Bristol Blenheim IF"
+			type = medium_plane_fighter_airframe_1
+			design_team = mio:IMA_de_havilland_organization #브리스톨 설계
+			parent_version = 0
+			modules = {
+				fixed_main_weapon_slot = heavy_mg_4x
+				fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+				engine_type_slot = engine_2_2x
+			}
+			icon = "GFX_ENG_heavy_fighter1_medium"
+		}
+	}
+	else = {
+		create_equipment_variant = {
+			name = "Bristol Blenheim IF"
+			type = heavy_fighter_equipment_1
+			design_team = mio:IMA_de_havilland_organization #브리스톨 설계
+			parent_version = 0
+			upgrades = {
+				plane_gun_upgrade = 1
+				plane_range_upgrade = 0
+				plane_engine_upgrade = 1
+				plane_reliability_upgrade = 1
+			}
+			icon = "GFX_ENG_heavy_fighter1_medium"
+		}
+	}
+}
+IMA_design_hector = { #헥터 - 근접지원항공기
+	create_equipment_variant = {
+		name = "Hawker Hector"
+		type = small_plane_cas_airframe_1
+		design_team = mio:IMA_hawker_organization
+		parent_version = 0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+			engine_type_slot = engine_2_1x
+		}
+		icon = "GFX_ENG_CAS1_medium"
+	}
+}
+IMA_design_typhoon = { #타이푼 - 근접지원항공기
+	create_equipment_variant = {
+		name = "Hawker Typhoon"
+		type = small_plane_cas_airframe_2
+		design_team = mio:IMA_hawker_organization
+		parent_version = 0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_3 = heavy_mg_4x
+			engine_type_slot = engine_3_1x
+		}
+		icon = "GFX_ENG_CAS2_medium"
+	}
+}
+IMA_design_tempest = { #템페스트 - 근접지원항공기
+	create_equipment_variant = {
+		name = "Hawker Tempest"
+		type = small_plane_cas_airframe_3
+		design_team = mio:IMA_hawker_organization
+		parent_version = 0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_3 = heavy_mg_4x
+			engine_type_slot = engine_4_1x
+		}
+		icon = "GFX_ENG_CAS3_medium"
+	}
+}
+BLA_design_chabasco
+BLA_design_supernova
 IMA_design_illustrious = {
 	create_equipment_variant = {
 		name = "Illustrious Class"

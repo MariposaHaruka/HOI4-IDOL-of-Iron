@@ -1,3 +1,279 @@
+### 편집증 ###
+
+TOH_update_ui_effect = {
+	if = {
+		limit = {
+			check_variable = { TOH_paranoia = 0 }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 1 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 5 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 2 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 10 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 3 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 15 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 4 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 20 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 25 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 6 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 30 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 7 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 35 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 8 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 40 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 9 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 45 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 50 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 11 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 55 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 12 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 60 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 13 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 65 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 14 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 70 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 15 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 75 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 16 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 80 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 17 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 85 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 18 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 90 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 19 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { TOH_paranoia = 95 compare = less_than_or_equals }
+		}
+		set_variable = { TOH_paranoia_main_paranoiameter = 20 }
+	}
+	else = { # paranoia > 95
+		set_variable = { TOH_paranoia_main_paranoiameter = 21 }
+	}
+}
+
+TOH_paranoia_very_low_increase_effect = {
+	if = {
+		limit = {
+			has_country_flag = TOH_paranoia_system_active_flag
+		}
+		custom_effect_tooltip = TOH_paranoia_very_low_increase_effect_tt
+		add_to_variable = { TOH_paranoia = TOH_paranoia_very_low_increase }
+		TOH_paranoia_clamp_and_update_ui_effect = yes
+	}
+}
+
+TOH_paranoia_low_increase_effect = {
+	if = {
+		limit = {
+			has_country_flag = TOH_paranoia_system_active_flag
+		}
+		custom_effect_tooltip = TOH_paranoia_low_increase_effect_tt
+		add_to_variable = { TOH_paranoia = TOH_paranoia_low_increase }
+		TOH_paranoia_clamp_and_update_ui_effect = yes
+	}
+}
+
+TOH_paranoia_medium_increase_effect = {
+	if = {
+		limit = {
+			has_country_flag = TOH_paranoia_system_active_flag
+		}
+		custom_effect_tooltip = TOH_paranoia_medium_increase_effect_tt
+		add_to_variable = { TOH_paranoia = TOH_paranoia_medium_increase }
+		TOH_paranoia_clamp_and_update_ui_effect = yes
+	}
+}
+
+TOH_paranoia_high_increase_effect = {
+	if = {
+		limit = {
+			has_country_flag = TOH_paranoia_system_active_flag
+		}
+		custom_effect_tooltip = TOH_paranoia_high_increase_effect_tt
+		add_to_variable = { TOH_paranoia = TOH_paranoia_high_increase }
+		TOH_paranoia_clamp_and_update_ui_effect = yes
+	}
+}
+
+TOH_paranoia_very_high_increase_effect = {
+	if = {
+		limit = {
+			has_country_flag = TOH_paranoia_system_active_flag
+		}
+		custom_effect_tooltip = TOH_paranoia_very_high_increase_effect_tt
+		add_to_variable = { TOH_paranoia = TOH_paranoia_very_high_increase }
+		TOH_paranoia_clamp_and_update_ui_effect = yes
+	}
+}
+
+TOH_paranoia_low_decrease_effect = {
+	if = {
+		limit = {
+			has_country_flag = TOH_paranoia_system_active_flag
+		}
+		custom_effect_tooltip = TOH_paranoia_low_decrease_effect_tt
+		add_to_variable = { TOH_paranoia = TOH_paranoia_low_decrease }
+		TOH_paranoia_clamp_and_update_ui_effect = yes
+	}
+}
+
+TOH_paranoia_medium_decrease_effect = {
+	if = {
+		limit = {
+			has_country_flag = TOH_paranoia_system_active_flag
+		}
+		custom_effect_tooltip = TOH_paranoia_medium_decrease_effect_tt
+		add_to_variable = { TOH_paranoia = TOH_paranoia_medium_decrease }
+		TOH_paranoia_clamp_and_update_ui_effect = yes
+	}
+}
+
+TOH_paranoia_high_decrease_effect = {
+	if = {
+		limit = {
+			has_country_flag = TOH_paranoia_system_active_flag
+		}
+		custom_effect_tooltip = TOH_paranoia_high_decrease_effect_tt
+		add_to_variable = { TOH_paranoia = TOH_paranoia_high_decrease }
+		TOH_paranoia_clamp_and_update_ui_effect = yes
+	}
+}
+
+TOH_paranoia_very_high_decrease_effect = {
+	if = {
+		limit = {
+			has_country_flag = TOH_paranoia_system_active_flag
+		}
+		custom_effect_tooltip = TOH_paranoia_very_high_decrease_effect_tt
+		add_to_variable = { TOH_paranoia = TOH_paranoia_very_high_decrease }
+		TOH_paranoia_clamp_and_update_ui_effect = yes
+	}
+}
+
+
+
+TOH_paranoia_increase_based_on_unit_leader_level_effect = {
+	if = {
+		limit = {
+			has_country_flag = TOH_paranoia_system_active_flag
+		}
+		#custom_effect_tooltip = TOH_paranoia_increase_based_on_unit_leader_level_effect_tt
+		add_to_variable = { TOH_paranoia = TOH_unit_leader_level }
+		TOH_paranoia_clamp_and_update_ui_effect = yes
+		clear_variable = TOH_unit_leader_level
+	}
+}
+
+TOH_paranoia_decrease_based_on_unit_leader_level_effect = {
+	if = {
+		limit = {
+			has_country_flag = TOH_paranoia_system_active_flag
+		}
+		#custom_effect_tooltip = TOH_paranoia_decrease_based_on_unit_leader_level_effect_tt
+		subtract_from_variable = { TOH_paranoia = TOH_unit_leader_level }
+		TOH_paranoia_clamp_and_update_ui_effect = yes
+		clear_variable = TOH_unit_leader_level
+	}
+}
+
+TOH_paranoia_modifier_increase_effect = { #Called on_weekly to apply the modifier
+	custom_effect_tooltip = TOH_paranoia_modifier_increase_effect_tt
+	set_temp_variable = { TOH_paranoia_total_weekly_modifier_increase = TOH_paranoia_modifier_increase } #Get default weekly modifier increase value
+	multiply_temp_variable = { TOH_paranoia_total_weekly_modifier_increase = TOH_paranoia_weekly_modifiers_amount } #Multiply default weekly modifier increase by the number of active weekly modifiers
+	add_to_variable = { TOH_paranoia = TOH_paranoia_total_weekly_modifier_increase } #Apply the result and add to Paranoia
+	TOH_paranoia_clamp_and_update_ui_effect = yes
+}
+
+TOH_paranoia_modifier_update_gui_tooltip = { #Only updates the tooltip in the decision GUI
+	ROOT = { set_variable = { TOH_paranoia_weekly_modifier_ui = TOH_paranoia_modifier_increase } } #Get default weekly modifier increase value
+	ROOT = { multiply_variable = { TOH_paranoia_weekly_modifier_ui = TOH_paranoia_weekly_modifiers_amount } } #Multiply default weekly modifier increase by the number of active weekly modifiers
+}
+
+TOH_paranoia_clamp_and_update_ui_effect = {
+	clamp_variable = {
+		var = TOH_paranoia
+		min = 0
+		max = 100
+	}
+	TOH_update_ui_effect = yes
+}
+
+### 형벌부대 생성 ###
 TOH_spawn_penal_divisions_effect = {
 	hidden_effect = {
 		capital_scope = {
@@ -14,6 +290,7 @@ TOH_spawn_penal_divisions_effect = {
 	}
 }
 
+### 5개년 계획 중지 ###
 TOH_remove_5year_plan = {
 	if = {
 		limit = { has_idea = TOH_2nd_5_year_plan }

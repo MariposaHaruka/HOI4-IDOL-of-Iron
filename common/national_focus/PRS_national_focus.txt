@@ -315,7 +315,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
-				DYNMOD = PRS_industry
+				DYNMOD = PRS_industry_modifier
 			}
 			add_to_variable = {
 				PRS_industry_consumer_goods_factor = -0.1
@@ -826,7 +826,10 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_line_break_tt
-			custom_effect_tooltip = PRS_industry_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_industry_modifier
+			}
 			add_to_variable = { 
 				PRS_industry_consumer_goods_factor = -0.15
 				tooltip = consumer_goods_factor_tt
@@ -1203,7 +1206,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = PRS_industry_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_industry_modifier
+			}
 			add_to_variable = { 
 				PRS_industry_consumer_goods_factor = -0.2
 				tooltip = consumer_goods_factor_tt
@@ -1520,7 +1526,10 @@ focus_tree = {
 				limit = { 978 = {  is_owned_and_controlled_by = ROOT } } #바덴
 				978 = { set_state_category = metropolis }
 			}
-			custom_effect_tooltip = PRS_industry_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_industry_modifier
+			}
 			add_to_variable = { 
 				PRS_industry_industrial_capacity_factory = 0.05
 				tooltip = industrial_capacity_factory_tt
@@ -1568,7 +1577,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = PRS_industry_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_industry_modifier
+			}
 			add_to_variable = { 
 				PRS_industry_production_lack_of_resource_penalty_factor = -0.05
 				tooltip = production_lack_of_resource_penalty_factor_tt
@@ -1662,7 +1674,10 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = PRS_industry_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_industry_modifier
+			}
 			add_to_variable = { 
 				PRS_industry_industrial_capacity_factory = 0.05
 				tooltip = industrial_capacity_factory_tt
@@ -3622,7 +3637,7 @@ focus_tree = {
 				tooltip = medium_tank_chassis_maximum_speed_tt	
 			}
 			hidden_effect = {
-				add_ideas = PRS_21305_idea_hidden
+				add_ideas = PRS_21305_hidden_idea
 			}
 		}
 	}
@@ -9451,7 +9466,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = PRS_industry_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = PRS_industry_modifier
+			}
 			add_to_variable = {
 				PRS_industry_production_speed_rail_way_factor = 0.05
 				tooltip = production_speed_rail_way_factor_tt
