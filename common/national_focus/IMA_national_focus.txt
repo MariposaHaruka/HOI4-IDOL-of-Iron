@@ -2525,6 +2525,10 @@ focus_tree = {
 				IMA_air_force_air_superiority_efficiency = 0.05
 				tooltip = air_superiority_efficiency_tt
 			}
+			add_to_variable = {
+				IMA_air_force_fighter_aircraft_track_mastery_gain_factor = 0.10
+				tooltip = fighter_aircraft_track_mastery_gain_factor_tt
+			}
 		}
 	}
 	
@@ -2581,6 +2585,14 @@ focus_tree = {
 			add_to_variable = {
 				IMA_air_force_air_bombing_targetting = 0.05
 				tooltip = air_bombing_targetting_tt
+			}
+			add_to_variable = {
+				IMA_air_force_medium_aircraft_track_mastery_gain_factor = 0.10
+				tooltip = medium_aircraft_track_mastery_gain_factor_tt
+			}
+			add_to_variable = {
+				IMA_air_force_heavy_aircraft_track_mastery_gain_factor = 0.10
+				tooltip = heavy_aircraft_track_mastery_gain_factor_tt
 			}
 		}
 	}
@@ -3077,6 +3089,13 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31105"
 			IMA_design_spitfire = yes
 			custom_effect_tooltip = generic_line_break_tt
+			add_mastery_bonus = {
+				name = IMA_31105
+				bonus = 0.1
+				days = 365
+				track = fighter_aircraft
+			}
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_air_force
@@ -3513,6 +3532,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus Completed: IMA_31205"
+			
+			add_mastery_bonus = {
+				name = IMA_31105
+				bonus = 0.1
+				days = 365
+				track = heavy_aircraft
+			}
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_air_force
@@ -3616,6 +3642,14 @@ focus_tree = {
 			add_to_variable = { # 툴팁 용
 				IMA_air_force_heavy_fighter_air_range = 0.20
 				tooltip = heavy_fighter_air_range_tt
+			}
+			add_to_variable = { # 툴팁 용
+				IMA_air_force_heavy_fighter_air_defence = 0.10
+				tooltip = heavy_fighter_air_defence_tt
+			}
+			add_to_variable = { # 툴팁 용
+				IMA_air_force_strategic_bomber_air_defence = 0.10
+				tooltip = strategic_bomber_air_defence_tt
 			}
 			hidden_effect = {
 				add_ideas = IMA_31208_hidden_idea
