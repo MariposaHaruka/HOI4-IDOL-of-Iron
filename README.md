@@ -68,7 +68,7 @@
 
 ## 크레딧
 ### 제작자
-- 아마미 하루카(a.k.a. Mariposa): 1인 총괄 제작
+- まりぽさ(a.k.a. Mariposa): 1인 총괄 제작
 
 ### 영감을 얻거나 참고한 모드
 - Kaiserreich : <https://steamcommunity.com/sharedfiles/filedetails/?id=1521695605> - 시스템 관련해서 많은 참고를 받았을 뿐만 아니라, 일부 GFX도 사용했습니다. 아주 좋은 모드입니다.
