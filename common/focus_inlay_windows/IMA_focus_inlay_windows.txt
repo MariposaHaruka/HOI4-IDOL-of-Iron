@@ -1,2 +1,512 @@
-#generic = {
-#}
+ima_war_plan_inlay_window = {
+    window_name = ima_war_plan_ui_window
+    internal = yes
+    visible = {
+        any_country_with_original_tag = { 
+			original_tag_to_check = IMA
+            exists = yes
+        }
+        IMA = { has_country_flag = on_construction_flag } #완성시 제거
+    }
+
+    scripted_images = {
+		#상단 선택창
+		IMA_selected_image_1 = {
+			GFX_IMA_inlay_no_selected = {
+				check_variable = { IMA_focus_equipment_1 = 0 }
+			}
+			GFX_IMA_inlay_small_arms_selected = {
+	   			check_variable = { IMA_focus_equipment_1 = 1 }
+			}
+			GFX_IMA_inlay_artillery_selected = {
+				check_variable = { IMA_focus_equipment_1 = 2 }
+			}
+			GFX_IMA_inlay_motors_selected = {
+	   			check_variable = { IMA_focus_equipment_1 = 3 }
+			}
+			GFX_IMA_inlay_tank_selected = {
+				check_variable = { IMA_focus_equipment_1 = 4 }
+			}
+			GFX_IMA_inlay_warship_selected = {
+				check_variable = { IMA_focus_equipment_1 = 5 }
+			}
+			GFX_IMA_inlay_cruiser_selected = {
+				check_variable = { IMA_focus_equipment_1 = 6 }
+			}
+			GFX_IMA_inlay_battleship_selected = {
+				check_variable = { IMA_focus_equipment_1 = 7 }
+			}
+			GFX_IMA_inlay_carrier_selected = {
+				check_variable = { IMA_focus_equipment_1 = 8 }
+			}
+			GFX_IMA_inlay_fighter_selected = {
+	   			check_variable = { IMA_focus_equipment_1 = 9 }
+			}
+			GFX_IMA_inlay_bomber_selected = {
+				check_variable = { IMA_focus_equipment_1 = 10 }
+			}
+		}
+
+		IMA_selected_image_2 = {
+			GFX_IMA_inlay_no_selected = {
+				check_variable = { IMA_focus_equipment_2 = 0 }
+			}
+			GFX_IMA_inlay_small_arms_selected = {
+	   			check_variable = { IMA_focus_equipment_2 = 1 }
+			}
+			GFX_IMA_inlay_artillery_selected = {
+				check_variable = { IMA_focus_equipment_2 = 2 }
+			}
+			GFX_IMA_inlay_motors_selected = {
+	   			check_variable = { IMA_focus_equipment_2 = 3 }
+			}
+			GFX_IMA_inlay_tank_selected = {
+				check_variable = { IMA_focus_equipment_2 = 4 }
+			}
+			GFX_IMA_inlay_warship_selected = {
+				check_variable = { IMA_focus_equipment_2 = 5 }
+			}
+			GFX_IMA_inlay_cruiser_selected = {
+				check_variable = { IMA_focus_equipment_2 = 6 }
+			}
+			GFX_IMA_inlay_battleship_selected = {
+				check_variable = { IMA_focus_equipment_2 = 7 }
+			}
+			GFX_IMA_inlay_carrier_selected = {
+				check_variable = { IMA_focus_equipment_2 = 8 }
+			}
+			GFX_IMA_inlay_fighter_selected = {
+	   			check_variable = { IMA_focus_equipment_2 = 9 }
+			}
+			GFX_IMA_inlay_bomber_selected = {
+				check_variable = { IMA_focus_equipment_2 = 10 }
+			}
+		}
+
+		IMA_selected_image_3 = {
+			GFX_IMA_inlay_no_selected = {
+				check_variable = { IMA_focus_equipment_3 = 0 }
+			}
+			GFX_IMA_inlay_small_arms_selected = {
+	   			check_variable = { IMA_focus_equipment_3 = 1 }
+			}
+			GFX_IMA_inlay_artillery_selected = {
+				check_variable = { IMA_focus_equipment_3 = 2 }
+			}
+			GFX_IMA_inlay_motors_selected = {
+	   			check_variable = { IMA_focus_equipment_3 = 3 }
+			}
+			GFX_IMA_inlay_tank_selected = {
+				check_variable = { IMA_focus_equipment_3 = 4 }
+			}
+			GFX_IMA_inlay_warship_selected = {
+				check_variable = { IMA_focus_equipment_3 = 5 }
+			}
+			GFX_IMA_inlay_cruiser_selected = {
+				check_variable = { IMA_focus_equipment_3 = 6 }
+			}
+			GFX_IMA_inlay_battleship_selected = {
+				check_variable = { IMA_focus_equipment_3 = 7 }
+			}
+			GFX_IMA_inlay_carrier_selected = {
+				check_variable = { IMA_focus_equipment_3 = 8 }
+			}
+			GFX_IMA_inlay_fighter_selected = {
+	   			check_variable = { IMA_focus_equipment_3 = 9 }
+			}
+			GFX_IMA_inlay_bomber_selected = {
+				check_variable = { IMA_focus_equipment_3 = 10 }
+			}
+		}
+
+		#하단 선택 이미지
+		IMA_inlay_small_arms = {
+			GFX_IMA_inlay_small_arms_selected_button = {
+				OR = {
+					check_variable = { IMA_focus_equipment_1 = 1 }
+					check_variable = { IMA_focus_equipment_2 = 1 }
+					check_variable = { IMA_focus_equipment_3 = 1 }
+				}
+			}
+			GFX_IMA_inlay_small_arms_available = yes
+		}
+
+		IMA_inlay_artillery = {
+			GFX_IMA_inlay_artillery_selected_button = {
+				OR = {
+					check_variable = { IMA_focus_equipment_1 = 2 }
+					check_variable = { IMA_focus_equipment_2 = 2 }
+					check_variable = { IMA_focus_equipment_3 = 2 }
+				}
+			}
+			GFX_IMA_inlay_artillery_available = yes
+		}
+
+		IMA_inlay_motors = {
+			GFX_IMA_inlay_motors_selected_button = {
+				OR = {
+					check_variable = { IMA_focus_equipment_1 = 3 }
+					check_variable = { IMA_focus_equipment_2 = 3 }
+					check_variable = { IMA_focus_equipment_3 = 3 }
+				}
+			}
+			GFX_IMA_inlay_small_arms_available = yes
+		}
+
+		IMA_inlay_tank = {
+			GFX_IMA_inlay_tank_selected_button = {
+				OR = {
+					check_variable = { IMA_focus_equipment_1 = 4 }
+					check_variable = { IMA_focus_equipment_2 = 4 }
+					check_variable = { IMA_focus_equipment_3 = 4 }
+				}
+			}
+			GFX_IMA_inlay_tank_available = yes
+		}
+
+		IMA_inlay_warship = {
+			GFX_IMA_inlay_warship_selected_button = {
+				OR = {
+					check_variable = { IMA_focus_equipment_1 = 5 }
+					check_variable = { IMA_focus_equipment_2 = 5 }
+					check_variable = { IMA_focus_equipment_3 = 5 }
+				}
+			}
+			GFX_IMA_inlay_warship_available = yes
+		}
+
+		IMA_inlay_convoy = {
+			GFX_IMA_inlay_cruiser_selected_button = {
+				OR = {
+					check_variable = { IMA_focus_equipment_1 = 6 }
+					check_variable = { IMA_focus_equipment_2 = 6 }
+					check_variable = { IMA_focus_equipment_3 = 6 }
+				}
+			}
+			GFX_IMA_inlay_cruiser_available = yes
+		}
+
+		IMA_inlay_carrier = {
+			GFX_IMA_inlay_battleship_selected_button = {
+				OR = {
+					check_variable = { IMA_focus_equipment_1 = 7 }
+					check_variable = { IMA_focus_equipment_2 = 7 }
+					check_variable = { IMA_focus_equipment_3 = 7 }
+				}
+			}
+			GFX_IMA_inlay_battleship_available = yes
+		}
+		
+		IMA_inlay_fighter = {
+			GFX_IMA_inlay_carrier_selected_button = {
+				OR = {
+					check_variable = { IMA_focus_equipment_1 = 8 }
+					check_variable = { IMA_focus_equipment_2 = 8 }
+					check_variable = { IMA_focus_equipment_3 = 8 }
+				}
+			}
+			GFX_IMA_inlay_carrier_available = yes
+		}
+
+		IMA_inlay_bomber = {
+			GFX_IMA_inlay_fighter_selected_button = {
+				OR = {
+					check_variable = { IMA_focus_equipment_1 = 9 }
+					check_variable = { IMA_focus_equipment_2 = 9 }
+					check_variable = { IMA_focus_equipment_3 = 9 }
+				}
+			}
+			GFX_IMA_inlay_fighter_available = yes
+		}
+    }
+
+    scripted_buttons = {
+		IMA_inlay_small_arms = {
+			click_effect = {
+				if = {
+					limit = { check_variable = { IMA_focus_equipment_1 = 0 } }
+					set_variable = { IMA_focus_equipment_1 = 1 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_1_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_2 = 0 } }
+					set_variable = { IMA_focus_equipment_2 = 1 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_2_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_3 = 0 } }
+					set_variable = { IMA_focus_equipment_3 = 1 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_3_changed
+						days = 60
+					}
+				}
+				else = {
+					country_event = IMA_inlay.1
+				}
+			}
+		}
+
+		IMA_inlay_artillery = {
+			click_effect = {
+				if = {
+					limit = { check_variable = { IMA_focus_equipment_1 = 0 } }
+					set_variable = { IMA_focus_equipment_1 = 2 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_1_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_2 = 0 } }
+					set_variable = { IMA_focus_equipment_2 = 2 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_2_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_3 = 0 } }
+					set_variable = { IMA_focus_equipment_3 = 2 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_3_changed
+						days = 60
+					}
+				}
+				else = {
+					country_event = IMA_inlay.2
+				}
+			}
+		}
+
+		IMA_inlay_motors = {
+			click_effect = {
+				if = {
+					limit = { check_variable = { IMA_focus_equipment_1 = 0 } }
+					set_variable = { IMA_focus_equipment_1 = 3 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_1_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_2 = 0 } }
+					set_variable = { IMA_focus_equipment_2 = 3 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_2_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_3 = 0 } }
+					set_variable = { IMA_focus_equipment_3 = 3 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_3_changed
+						days = 60
+					}
+				}
+				else = {
+					country_event = IMA_inlay.3
+				}
+			}
+		}
+
+		IMA_inlay_tank = {
+			click_effect = {
+				if = {
+					limit = { check_variable = { IMA_focus_equipment_1 = 0 } }
+					set_variable = { IMA_focus_equipment_1 = 4 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_1_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_2 = 0 } }
+					set_variable = { IMA_focus_equipment_2 = 4 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_2_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_3 = 0 } }
+					set_variable = { IMA_focus_equipment_3 = 4 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_3_changed
+						days = 60
+					}
+				}
+				else = {
+					country_event = IMA_inlay.4
+				}
+			}
+		}
+
+		IMA_inlay_warship = {
+			click_effect = {
+				if = {
+					limit = { check_variable = { IMA_focus_equipment_1 = 0 } }
+					set_variable = { IMA_focus_equipment_1 = 5 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_1_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_2 = 0 } }
+					set_variable = { IMA_focus_equipment_2 = 5 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_2_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_3 = 0 } }
+					set_variable = { IMA_focus_equipment_3 = 5 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_3_changed
+						days = 60
+					}
+				}
+				else = {
+					country_event = IMA_inlay.5
+				}
+			}
+		}
+
+		IMA_inlay_convoy = {
+			click_effect = {
+				if = {
+					limit = { check_variable = { IMA_focus_equipment_1 = 0 } }
+					set_variable = { IMA_focus_equipment_1 = 6 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_1_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_2 = 0 } }
+					set_variable = { IMA_focus_equipment_2 = 6 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_2_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_3 = 0 } }
+					set_variable = { IMA_focus_equipment_3 = 6 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_3_changed
+						days = 60
+					}
+				}
+				else = {
+					country_event = IMA_inlay.6
+				}
+			}
+		}
+
+		IMA_inlay_carrier = {
+			click_effect = {
+				if = {
+					limit = { check_variable = { IMA_focus_equipment_1 = 0 } }
+					set_variable = { IMA_focus_equipment_1 = 7 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_1_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_2 = 0 } }
+					set_variable = { IMA_focus_equipment_2 = 7 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_2_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_3 = 0 } }
+					set_variable = { IMA_focus_equipment_3 = 7 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_3_changed
+						days = 60
+					}
+				}
+				else = {
+					country_event = IMA_inlay.7
+				}
+			}
+		}
+		
+		IMA_inlay_fighter = {
+			click_effect = {
+				if = {
+					limit = { check_variable = { IMA_focus_equipment_1 = 0 } }
+					set_variable = { IMA_focus_equipment_1 = 8 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_1_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_2 = 0 } }
+					set_variable = { IMA_focus_equipment_2 = 8 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_2_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_3 = 0 } }
+					set_variable = { IMA_focus_equipment_3 = 8 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_3_changed
+						days = 60
+					}
+				}
+				else = {
+					country_event = IMA_inlay.8
+				}
+			}
+		}
+
+		IMA_inlay_bomber = {
+			click_effect = {
+				if = {
+					limit = { check_variable = { IMA_focus_equipment_1 = 0 } }
+					set_variable = { IMA_focus_equipment_1 = 9 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_1_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_2 = 0 } }
+					set_variable = { IMA_focus_equipment_2 = 9 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_2_changed
+						days = 60
+					}
+				}
+				else_if = {
+					limit = { check_variable = { IMA_focus_equipment_3 = 0 } }
+					set_variable = { IMA_focus_equipment_3 = 9 }
+					set_country_flag = {
+						flag = IMA_focus_equipment_3_changed
+						days = 60
+					}
+				}
+				else = {
+					country_event = IMA_inlay.9
+				}
+			}
+		}
+    }
+}

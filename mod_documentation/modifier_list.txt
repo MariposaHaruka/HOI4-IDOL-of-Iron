@@ -458,6 +458,8 @@
 	enemy_operative_harmed_time_factor	#적 공작원의 피해 상태 지속 시간	#+2%
 	enemy_operative_intel_extraction_rate	#적 공작원 정보 추출률	#+2%	#tt
 	#enemy_spy_negative_status_factor	#적 스파이의 부정 상태	#+0F	#사용 안 함
+	energy_gain_factor	#에너지 획득량	#+4%
+	energy_scale_per_trade_factory_export_factor	#무역이 공장 에너지 사용량에 미치는 영향	#-4%
 	equipment_capture	#장비 노획률 증가	#+3%	#tt
 	equipment_capture_factor	#장비 노획률 변동치	#+4%	#tt
 	equipment_conversion_speed	#장비 전환 속도	#+2%	#tt
@@ -902,6 +904,8 @@
 	local_manpower	#현지 인력	#+2%
 	local_non_core_manpower	#현지 비핵심 인력	#+4%
 	local_non_core_supply_impact_factor	#현지 비핵심 보급 영향	#-2%
+	local_factory_energy_consumption_per_infrastructure	#기반시설당 공장 에너지 필요량	#-4%
+	local_resource_gain_efficiency_per_infrastructure	#기반시설당 자원 획득량	#+4%
 	local_resources	#현지 자원	#+2%
 	local_resources_factor	#자원 획득 효율	#+4%	#tt
 	local_supplies	#현지 보급	#+2%	#tt

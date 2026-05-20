@@ -5,6 +5,7 @@ add_namespace = IMA_bankrupt
 add_namespace = IMA_westminster_diplomacy
 add_namespace = IMA_dominion
 add_namespace = IMA_diplomacy
+add_namespace = IMA_inlay
 
 ### 하루카 위기 이벤트
 country_event = {
@@ -1028,5 +1029,3696 @@ country_event = {
 	
 	option = { 
 		name = IMA_diplomacy.293.a
+	}
+}
+
+#전쟁 사업
+country_event = {
+	id = IMA_inlay.1
+	title = IMA_inlay.1.t
+	desc = IMA_inlay.1.desc
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = IMA_inlay.1.a
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 2 }
+				check_variable = { IMA_focus_equipment_2 = 2 }
+				check_variable = { IMA_focus_equipment_3 = 2 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 2 } }
+			set_variable = { IMA_focus_equipment_1 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 2 } }
+			set_variable = { IMA_focus_equipment_2 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.1.b
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 3 }
+				check_variable = { IMA_focus_equipment_2 = 3 }
+				check_variable = { IMA_focus_equipment_3 = 3 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 3 } }
+			set_variable = { IMA_focus_equipment_1 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 3 } }
+			set_variable = { IMA_focus_equipment_2 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.1.c
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 4 }
+				check_variable = { IMA_focus_equipment_2 = 4 }
+				check_variable = { IMA_focus_equipment_3 = 4 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 4 } }
+			set_variable = { IMA_focus_equipment_1 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 4 } }
+			set_variable = { IMA_focus_equipment_2 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.1.d
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 5 }
+				check_variable = { IMA_focus_equipment_2 = 5 }
+				check_variable = { IMA_focus_equipment_3 = 5 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 5 } }
+			set_variable = { IMA_focus_equipment_1 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 5 } }
+			set_variable = { IMA_focus_equipment_2 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.1.e
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 6 }
+				check_variable = { IMA_focus_equipment_2 = 6 }
+				check_variable = { IMA_focus_equipment_3 = 6 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 6 } }
+			set_variable = { IMA_focus_equipment_1 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 6 } }
+			set_variable = { IMA_focus_equipment_2 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.1.f
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 7 }
+				check_variable = { IMA_focus_equipment_2 = 7 }
+				check_variable = { IMA_focus_equipment_3 = 7 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 7 } }
+			set_variable = { IMA_focus_equipment_1 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 7 } }
+			set_variable = { IMA_focus_equipment_2 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.1.g
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 8 }
+				check_variable = { IMA_focus_equipment_2 = 8 }
+				check_variable = { IMA_focus_equipment_3 = 8 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 8 } }
+			set_variable = { IMA_focus_equipment_1 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 8 } }
+			set_variable = { IMA_focus_equipment_2 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.1.h
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 9 }
+				check_variable = { IMA_focus_equipment_2 = 9 }
+				check_variable = { IMA_focus_equipment_3 = 9 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 9 } }
+			set_variable = { IMA_focus_equipment_1 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 9 } }
+			set_variable = { IMA_focus_equipment_2 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.1.i
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 10 }
+				check_variable = { IMA_focus_equipment_2 = 10 }
+				check_variable = { IMA_focus_equipment_3 = 10 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 10 } }
+			set_variable = { IMA_focus_equipment_1 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 10 } }
+			set_variable = { IMA_focus_equipment_2 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 1 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IMA_inlay.2
+	title = IMA_inlay.2.t
+	desc = IMA_inlay.2.d
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = IMA_inlay.2.a #보병 무기
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 1 }
+				check_variable = { IMA_focus_equipment_2 = 1 }
+				check_variable = { IMA_focus_equipment_3 = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 1 } }
+			set_variable = { IMA_focus_equipment_1 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 1 } }
+			set_variable = { IMA_focus_equipment_2 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.2.b
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 3 }
+				check_variable = { IMA_focus_equipment_2 = 3 }
+				check_variable = { IMA_focus_equipment_3 = 3 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 3 } }
+			set_variable = { IMA_focus_equipment_1 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 3 } }
+			set_variable = { IMA_focus_equipment_2 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.2.c
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 4 }
+				check_variable = { IMA_focus_equipment_2 = 4 }
+				check_variable = { IMA_focus_equipment_3 = 4 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 4 } }
+			set_variable = { IMA_focus_equipment_1 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 4 } }
+			set_variable = { IMA_focus_equipment_2 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.2.d
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 5 }
+				check_variable = { IMA_focus_equipment_2 = 5 }
+				check_variable = { IMA_focus_equipment_3 = 5 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 5 } }
+			set_variable = { IMA_focus_equipment_1 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 5 } }
+			set_variable = { IMA_focus_equipment_2 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.2.e
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 6 }
+				check_variable = { IMA_focus_equipment_2 = 6 }
+				check_variable = { IMA_focus_equipment_3 = 6 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 6 } }
+			set_variable = { IMA_focus_equipment_1 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 6 } }
+			set_variable = { IMA_focus_equipment_2 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.2.f
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 7 }
+				check_variable = { IMA_focus_equipment_2 = 7 }
+				check_variable = { IMA_focus_equipment_3 = 7 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 7 } }
+			set_variable = { IMA_focus_equipment_1 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 7 } }
+			set_variable = { IMA_focus_equipment_2 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.2.g
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 8 }
+				check_variable = { IMA_focus_equipment_2 = 8 }
+				check_variable = { IMA_focus_equipment_3 = 8 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 8 } }
+			set_variable = { IMA_focus_equipment_1 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 8 } }
+			set_variable = { IMA_focus_equipment_2 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.2.h
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 9 }
+				check_variable = { IMA_focus_equipment_2 = 9 }
+				check_variable = { IMA_focus_equipment_3 = 9 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 9 } }
+			set_variable = { IMA_focus_equipment_1 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 9 } }
+			set_variable = { IMA_focus_equipment_2 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.2.i
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 10 }
+				check_variable = { IMA_focus_equipment_2 = 10 }
+				check_variable = { IMA_focus_equipment_3 = 10 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 10 } }
+			set_variable = { IMA_focus_equipment_1 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 10 } }
+			set_variable = { IMA_focus_equipment_2 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 2 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IMA_inlay.3
+	title = IMA_inlay.3.t
+	desc = IMA_inlay.3.desc
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = IMA_inlay.3.a #보병 무기
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 1 }
+				check_variable = { IMA_focus_equipment_2 = 1 }
+				check_variable = { IMA_focus_equipment_3 = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 1 } }
+			set_variable = { IMA_focus_equipment_1 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 1 } }
+			set_variable = { IMA_focus_equipment_2 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.3.b
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 2 }
+				check_variable = { IMA_focus_equipment_2 = 2 }
+				check_variable = { IMA_focus_equipment_3 = 2 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 2 } }
+			set_variable = { IMA_focus_equipment_1 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 2 } }
+			set_variable = { IMA_focus_equipment_2 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.3.c
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 4 }
+				check_variable = { IMA_focus_equipment_2 = 4 }
+				check_variable = { IMA_focus_equipment_3 = 4 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 4 } }
+			set_variable = { IMA_focus_equipment_1 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 4 } }
+			set_variable = { IMA_focus_equipment_2 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.3.d
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 5 }
+				check_variable = { IMA_focus_equipment_2 = 5 }
+				check_variable = { IMA_focus_equipment_3 = 5 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 5 } }
+			set_variable = { IMA_focus_equipment_1 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 5 } }
+			set_variable = { IMA_focus_equipment_2 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.3.e
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 6 }
+				check_variable = { IMA_focus_equipment_2 = 6 }
+				check_variable = { IMA_focus_equipment_3 = 6 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 6 } }
+			set_variable = { IMA_focus_equipment_1 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 6 } }
+			set_variable = { IMA_focus_equipment_2 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.3.f
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 7 }
+				check_variable = { IMA_focus_equipment_2 = 7 }
+				check_variable = { IMA_focus_equipment_3 = 7 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 7 } }
+			set_variable = { IMA_focus_equipment_1 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 7 } }
+			set_variable = { IMA_focus_equipment_2 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.3.g
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 8 }
+				check_variable = { IMA_focus_equipment_2 = 8 }
+				check_variable = { IMA_focus_equipment_3 = 8 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 8 } }
+			set_variable = { IMA_focus_equipment_1 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 8 } }
+			set_variable = { IMA_focus_equipment_2 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.3.h
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 9 }
+				check_variable = { IMA_focus_equipment_2 = 9 }
+				check_variable = { IMA_focus_equipment_3 = 9 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 9 } }
+			set_variable = { IMA_focus_equipment_1 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 9 } }
+			set_variable = { IMA_focus_equipment_2 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.3.i
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 10 }
+				check_variable = { IMA_focus_equipment_2 = 10 }
+				check_variable = { IMA_focus_equipment_3 = 10 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 10 } }
+			set_variable = { IMA_focus_equipment_1 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 10 } }
+			set_variable = { IMA_focus_equipment_2 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 3 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IMA_inlay.4
+	title = IMA_inlay.4.t
+	desc = IMA_inlay.4.desc
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = IMA_inlay.4.a #보병 무기
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 1 }
+				check_variable = { IMA_focus_equipment_2 = 1 }
+				check_variable = { IMA_focus_equipment_3 = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 1 } }
+			set_variable = { IMA_focus_equipment_1 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 1 } }
+			set_variable = { IMA_focus_equipment_2 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.4.b
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 2 }
+				check_variable = { IMA_focus_equipment_2 = 2 }
+				check_variable = { IMA_focus_equipment_3 = 2 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 2 } }
+			set_variable = { IMA_focus_equipment_1 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 2 } }
+			set_variable = { IMA_focus_equipment_2 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.4.c
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 3 }
+				check_variable = { IMA_focus_equipment_2 = 3 }
+				check_variable = { IMA_focus_equipment_3 = 3 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 3 } }
+			set_variable = { IMA_focus_equipment_1 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 3 } }
+			set_variable = { IMA_focus_equipment_2 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.4.d
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 5 }
+				check_variable = { IMA_focus_equipment_2 = 5 }
+				check_variable = { IMA_focus_equipment_3 = 5 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 5 } }
+			set_variable = { IMA_focus_equipment_1 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 5 } }
+			set_variable = { IMA_focus_equipment_2 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.4.e
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 6 }
+				check_variable = { IMA_focus_equipment_2 = 6 }
+				check_variable = { IMA_focus_equipment_3 = 6 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 6 } }
+			set_variable = { IMA_focus_equipment_1 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 6 } }
+			set_variable = { IMA_focus_equipment_2 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.4.f
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 7 }
+				check_variable = { IMA_focus_equipment_2 = 7 }
+				check_variable = { IMA_focus_equipment_3 = 7 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 7 } }
+			set_variable = { IMA_focus_equipment_1 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 7 } }
+			set_variable = { IMA_focus_equipment_2 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.4.g
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 8 }
+				check_variable = { IMA_focus_equipment_2 = 8 }
+				check_variable = { IMA_focus_equipment_3 = 8 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 8 } }
+			set_variable = { IMA_focus_equipment_1 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 8 } }
+			set_variable = { IMA_focus_equipment_2 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.4.h
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 9 }
+				check_variable = { IMA_focus_equipment_2 = 9 }
+				check_variable = { IMA_focus_equipment_3 = 9 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 9 } }
+			set_variable = { IMA_focus_equipment_1 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 9 } }
+			set_variable = { IMA_focus_equipment_2 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.4.i
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 10 }
+				check_variable = { IMA_focus_equipment_2 = 10 }
+				check_variable = { IMA_focus_equipment_3 = 10 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 10 } }
+			set_variable = { IMA_focus_equipment_1 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 10 } }
+			set_variable = { IMA_focus_equipment_2 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 4 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IMA_inlay.5
+	title = IMA_inlay.5.t
+	desc = IMA_inlay.5.desc
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = IMA_inlay.5.a #보병 무기
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 1 }
+				check_variable = { IMA_focus_equipment_2 = 1 }
+				check_variable = { IMA_focus_equipment_3 = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 1 } }
+			set_variable = { IMA_focus_equipment_1 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 1 } }
+			set_variable = { IMA_focus_equipment_2 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.5.b
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 2 }
+				check_variable = { IMA_focus_equipment_2 = 2 }
+				check_variable = { IMA_focus_equipment_3 = 2 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 2 } }
+			set_variable = { IMA_focus_equipment_1 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 2 } }
+			set_variable = { IMA_focus_equipment_2 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.5.c
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 3 }
+				check_variable = { IMA_focus_equipment_2 = 3 }
+				check_variable = { IMA_focus_equipment_3 = 3 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 3 } }
+			set_variable = { IMA_focus_equipment_1 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 3 } }
+			set_variable = { IMA_focus_equipment_2 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.5.d
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 4 }
+				check_variable = { IMA_focus_equipment_2 = 4 }
+				check_variable = { IMA_focus_equipment_3 = 4 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 4 } }
+			set_variable = { IMA_focus_equipment_1 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 4 } }
+			set_variable = { IMA_focus_equipment_2 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.5.e
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 6 }
+				check_variable = { IMA_focus_equipment_2 = 6 }
+				check_variable = { IMA_focus_equipment_3 = 6 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 6 } }
+			set_variable = { IMA_focus_equipment_1 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 6 } }
+			set_variable = { IMA_focus_equipment_2 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.5.f
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 7 }
+				check_variable = { IMA_focus_equipment_2 = 7 }
+				check_variable = { IMA_focus_equipment_3 = 7 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 7 } }
+			set_variable = { IMA_focus_equipment_1 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 7 } }
+			set_variable = { IMA_focus_equipment_2 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.5.g
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 8 }
+				check_variable = { IMA_focus_equipment_2 = 8 }
+				check_variable = { IMA_focus_equipment_3 = 8 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 8 } }
+			set_variable = { IMA_focus_equipment_1 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 8 } }
+			set_variable = { IMA_focus_equipment_2 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.5.h
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 9 }
+				check_variable = { IMA_focus_equipment_2 = 9 }
+				check_variable = { IMA_focus_equipment_3 = 9 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 9 } }
+			set_variable = { IMA_focus_equipment_1 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 9 } }
+			set_variable = { IMA_focus_equipment_2 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.5.i
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 10 }
+				check_variable = { IMA_focus_equipment_2 = 10 }
+				check_variable = { IMA_focus_equipment_3 = 10 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 10 } }
+			set_variable = { IMA_focus_equipment_1 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 10 } }
+			set_variable = { IMA_focus_equipment_2 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 5 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IMA_inlay.6
+	title = IMA_inlay.6.t
+	desc = IMA_inlay.6.desc
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = IMA_inlay.6.a #보병 무기
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 1 }
+				check_variable = { IMA_focus_equipment_2 = 1 }
+				check_variable = { IMA_focus_equipment_3 = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 1 } }
+			set_variable = { IMA_focus_equipment_1 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 1 } }
+			set_variable = { IMA_focus_equipment_2 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.6.b
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 2 }
+				check_variable = { IMA_focus_equipment_2 = 2 }
+				check_variable = { IMA_focus_equipment_3 = 2 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 2 } }
+			set_variable = { IMA_focus_equipment_1 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 2 } }
+			set_variable = { IMA_focus_equipment_2 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.6.c
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 3 }
+				check_variable = { IMA_focus_equipment_2 = 3 }
+				check_variable = { IMA_focus_equipment_3 = 3 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 3 } }
+			set_variable = { IMA_focus_equipment_1 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 3 } }
+			set_variable = { IMA_focus_equipment_2 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.6.d
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 4 }
+				check_variable = { IMA_focus_equipment_2 = 4 }
+				check_variable = { IMA_focus_equipment_3 = 4 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 4 } }
+			set_variable = { IMA_focus_equipment_1 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 4 } }
+			set_variable = { IMA_focus_equipment_2 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.6.e
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 5 }
+				check_variable = { IMA_focus_equipment_2 = 5 }
+				check_variable = { IMA_focus_equipment_3 = 5 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 5 } }
+			set_variable = { IMA_focus_equipment_1 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 5 } }
+			set_variable = { IMA_focus_equipment_2 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.6.f
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 7 }
+				check_variable = { IMA_focus_equipment_2 = 7 }
+				check_variable = { IMA_focus_equipment_3 = 7 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 7 } }
+			set_variable = { IMA_focus_equipment_1 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 7 } }
+			set_variable = { IMA_focus_equipment_2 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.6.g
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 8 }
+				check_variable = { IMA_focus_equipment_2 = 8 }
+				check_variable = { IMA_focus_equipment_3 = 8 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 8 } }
+			set_variable = { IMA_focus_equipment_1 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 8 } }
+			set_variable = { IMA_focus_equipment_2 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.6.h
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 9 }
+				check_variable = { IMA_focus_equipment_2 = 9 }
+				check_variable = { IMA_focus_equipment_3 = 9 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 9 } }
+			set_variable = { IMA_focus_equipment_1 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 9 } }
+			set_variable = { IMA_focus_equipment_2 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.6.i
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 10 }
+				check_variable = { IMA_focus_equipment_2 = 10 }
+				check_variable = { IMA_focus_equipment_3 = 10 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 10 } }
+			set_variable = { IMA_focus_equipment_1 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 10 } }
+			set_variable = { IMA_focus_equipment_2 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 6 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IMA_inlay.7
+	title = IMA_inlay.7.t
+	desc = IMA_inlay.7.desc
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = IMA_inlay.7.a #보병 무기
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 1 }
+				check_variable = { IMA_focus_equipment_2 = 1 }
+				check_variable = { IMA_focus_equipment_3 = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 1 } }
+			set_variable = { IMA_focus_equipment_1 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 1 } }
+			set_variable = { IMA_focus_equipment_2 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.7.b
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 2 }
+				check_variable = { IMA_focus_equipment_2 = 2 }
+				check_variable = { IMA_focus_equipment_3 = 2 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 2 } }
+			set_variable = { IMA_focus_equipment_1 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 2 } }
+			set_variable = { IMA_focus_equipment_2 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.7.c
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 3 }
+				check_variable = { IMA_focus_equipment_2 = 3 }
+				check_variable = { IMA_focus_equipment_3 = 3 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 3 } }
+			set_variable = { IMA_focus_equipment_1 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 3 } }
+			set_variable = { IMA_focus_equipment_2 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.7.d
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 4 }
+				check_variable = { IMA_focus_equipment_2 = 4 }
+				check_variable = { IMA_focus_equipment_3 = 4 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 4 } }
+			set_variable = { IMA_focus_equipment_1 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 4 } }
+			set_variable = { IMA_focus_equipment_2 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.7.e
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 5 }
+				check_variable = { IMA_focus_equipment_2 = 5 }
+				check_variable = { IMA_focus_equipment_3 = 5 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 5 } }
+			set_variable = { IMA_focus_equipment_1 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 5 } }
+			set_variable = { IMA_focus_equipment_2 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.7.f
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 6 }
+				check_variable = { IMA_focus_equipment_2 = 6 }
+				check_variable = { IMA_focus_equipment_3 = 6 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 6 } }
+			set_variable = { IMA_focus_equipment_1 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 6 } }
+			set_variable = { IMA_focus_equipment_2 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.7.g
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 8 }
+				check_variable = { IMA_focus_equipment_2 = 8 }
+				check_variable = { IMA_focus_equipment_3 = 8 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 8 } }
+			set_variable = { IMA_focus_equipment_1 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 8 } }
+			set_variable = { IMA_focus_equipment_2 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.7.h
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 9 }
+				check_variable = { IMA_focus_equipment_2 = 9 }
+				check_variable = { IMA_focus_equipment_3 = 9 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 9 } }
+			set_variable = { IMA_focus_equipment_1 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 9 } }
+			set_variable = { IMA_focus_equipment_2 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.7.i
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 10 }
+				check_variable = { IMA_focus_equipment_2 = 10 }
+				check_variable = { IMA_focus_equipment_3 = 10 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 10 } }
+			set_variable = { IMA_focus_equipment_1 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 10 } }
+			set_variable = { IMA_focus_equipment_2 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 7 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IMA_inlay.8
+	title = IMA_inlay.8.t
+	desc = IMA_inlay.8.desc
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = IMA_inlay.8.a #보병 무기
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 1 }
+				check_variable = { IMA_focus_equipment_2 = 1 }
+				check_variable = { IMA_focus_equipment_3 = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 1 } }
+			set_variable = { IMA_focus_equipment_1 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 1 } }
+			set_variable = { IMA_focus_equipment_2 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.8.b
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 2 }
+				check_variable = { IMA_focus_equipment_2 = 2 }
+				check_variable = { IMA_focus_equipment_3 = 2 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 2 } }
+			set_variable = { IMA_focus_equipment_1 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 2 } }
+			set_variable = { IMA_focus_equipment_2 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.8.c
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 3 }
+				check_variable = { IMA_focus_equipment_2 = 3 }
+				check_variable = { IMA_focus_equipment_3 = 3 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 3 } }
+			set_variable = { IMA_focus_equipment_1 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 3 } }
+			set_variable = { IMA_focus_equipment_2 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.8.d
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 4 }
+				check_variable = { IMA_focus_equipment_2 = 4 }
+				check_variable = { IMA_focus_equipment_3 = 4 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 4 } }
+			set_variable = { IMA_focus_equipment_1 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 4 } }
+			set_variable = { IMA_focus_equipment_2 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.8.e
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 5 }
+				check_variable = { IMA_focus_equipment_2 = 5 }
+				check_variable = { IMA_focus_equipment_3 = 5 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 5 } }
+			set_variable = { IMA_focus_equipment_1 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 5 } }
+			set_variable = { IMA_focus_equipment_2 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.8.f
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 6 }
+				check_variable = { IMA_focus_equipment_2 = 6 }
+				check_variable = { IMA_focus_equipment_3 = 6 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 6 } }
+			set_variable = { IMA_focus_equipment_1 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 6 } }
+			set_variable = { IMA_focus_equipment_2 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.8.g
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 7 }
+				check_variable = { IMA_focus_equipment_2 = 7 }
+				check_variable = { IMA_focus_equipment_3 = 7 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 7 } }
+			set_variable = { IMA_focus_equipment_1 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 7 } }
+			set_variable = { IMA_focus_equipment_2 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.8.h
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 9 }
+				check_variable = { IMA_focus_equipment_2 = 9 }
+				check_variable = { IMA_focus_equipment_3 = 9 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 9 } }
+			set_variable = { IMA_focus_equipment_1 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 9 } }
+			set_variable = { IMA_focus_equipment_2 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.8.i
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 10 }
+				check_variable = { IMA_focus_equipment_2 = 10 }
+				check_variable = { IMA_focus_equipment_3 = 10 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 10 } }
+			set_variable = { IMA_focus_equipment_1 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 10 } }
+			set_variable = { IMA_focus_equipment_2 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 8 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IMA_inlay.9
+	title = IMA_inlay.9.t
+	desc = IMA_inlay.9.desc
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = IMA_inlay.9.a #보병 무기
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 1 }
+				check_variable = { IMA_focus_equipment_2 = 1 }
+				check_variable = { IMA_focus_equipment_3 = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 1 } }
+			set_variable = { IMA_focus_equipment_1 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 1 } }
+			set_variable = { IMA_focus_equipment_2 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.9.b
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 2 }
+				check_variable = { IMA_focus_equipment_2 = 2 }
+				check_variable = { IMA_focus_equipment_3 = 2 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 2 } }
+			set_variable = { IMA_focus_equipment_1 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 2 } }
+			set_variable = { IMA_focus_equipment_2 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.9.c
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 3 }
+				check_variable = { IMA_focus_equipment_2 = 3 }
+				check_variable = { IMA_focus_equipment_3 = 3 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 3 } }
+			set_variable = { IMA_focus_equipment_1 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 3 } }
+			set_variable = { IMA_focus_equipment_2 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.9.d
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 4 }
+				check_variable = { IMA_focus_equipment_2 = 4 }
+				check_variable = { IMA_focus_equipment_3 = 4 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 4 } }
+			set_variable = { IMA_focus_equipment_1 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 4 } }
+			set_variable = { IMA_focus_equipment_2 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.9.e
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 5 }
+				check_variable = { IMA_focus_equipment_2 = 5 }
+				check_variable = { IMA_focus_equipment_3 = 5 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 5 } }
+			set_variable = { IMA_focus_equipment_1 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 5 } }
+			set_variable = { IMA_focus_equipment_2 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.9.f
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 6 }
+				check_variable = { IMA_focus_equipment_2 = 6 }
+				check_variable = { IMA_focus_equipment_3 = 6 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 6 } }
+			set_variable = { IMA_focus_equipment_1 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 6 } }
+			set_variable = { IMA_focus_equipment_2 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.9.g
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 7 }
+				check_variable = { IMA_focus_equipment_2 = 7 }
+				check_variable = { IMA_focus_equipment_3 = 7 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 7 } }
+			set_variable = { IMA_focus_equipment_1 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 7 } }
+			set_variable = { IMA_focus_equipment_2 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.9.h
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 8 }
+				check_variable = { IMA_focus_equipment_2 = 8 }
+				check_variable = { IMA_focus_equipment_3 = 8 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 8 } }
+			set_variable = { IMA_focus_equipment_1 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 8 } }
+			set_variable = { IMA_focus_equipment_2 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.9.i
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 10 }
+				check_variable = { IMA_focus_equipment_2 = 10 }
+				check_variable = { IMA_focus_equipment_3 = 10 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 10 } }
+			set_variable = { IMA_focus_equipment_1 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 10 } }
+			set_variable = { IMA_focus_equipment_2 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 9 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IMA_inlay.10
+	title = IMA_inlay.10.t
+	desc = IMA_inlay.10.desc
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = IMA_inlay.10.a #보병 무기
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 1 }
+				check_variable = { IMA_focus_equipment_2 = 1 }
+				check_variable = { IMA_focus_equipment_3 = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 1 } }
+			set_variable = { IMA_focus_equipment_1 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 1 } }
+			set_variable = { IMA_focus_equipment_2 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.10.b
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 2 }
+				check_variable = { IMA_focus_equipment_2 = 2 }
+				check_variable = { IMA_focus_equipment_3 = 2 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 2 } }
+			set_variable = { IMA_focus_equipment_1 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 2 } }
+			set_variable = { IMA_focus_equipment_2 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.10.c
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 3 }
+				check_variable = { IMA_focus_equipment_2 = 3 }
+				check_variable = { IMA_focus_equipment_3 = 3 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 3 } }
+			set_variable = { IMA_focus_equipment_1 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 3 } }
+			set_variable = { IMA_focus_equipment_2 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.10.d
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 4 }
+				check_variable = { IMA_focus_equipment_2 = 4 }
+				check_variable = { IMA_focus_equipment_3 = 4 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 4 } }
+			set_variable = { IMA_focus_equipment_1 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 4 } }
+			set_variable = { IMA_focus_equipment_2 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.10.e
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 5 }
+				check_variable = { IMA_focus_equipment_2 = 5 }
+				check_variable = { IMA_focus_equipment_3 = 5 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 5 } }
+			set_variable = { IMA_focus_equipment_1 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 5 } }
+			set_variable = { IMA_focus_equipment_2 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.10.f
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 6 }
+				check_variable = { IMA_focus_equipment_2 = 6 }
+				check_variable = { IMA_focus_equipment_3 = 6 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 6 } }
+			set_variable = { IMA_focus_equipment_1 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 6 } }
+			set_variable = { IMA_focus_equipment_2 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.10.g
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 7 }
+				check_variable = { IMA_focus_equipment_2 = 7 }
+				check_variable = { IMA_focus_equipment_3 = 7 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 7 } }
+			set_variable = { IMA_focus_equipment_1 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 7 } }
+			set_variable = { IMA_focus_equipment_2 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.10.h
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 8 }
+				check_variable = { IMA_focus_equipment_2 = 8 }
+				check_variable = { IMA_focus_equipment_3 = 8 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 8 } }
+			set_variable = { IMA_focus_equipment_1 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 8 } }
+			set_variable = { IMA_focus_equipment_2 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
+	}
+	option = { 
+		name = IMA_inlay.10.i
+		trigger = {
+			OR = {
+				check_variable = { IMA_focus_equipment_1 = 9 }
+				check_variable = { IMA_focus_equipment_2 = 9 }
+				check_variable = { IMA_focus_equipment_3 = 9 }
+			}
+		}
+		if = {
+			limit = { check_variable = { IMA_focus_equipment_1 = 9 } }
+			set_variable = { IMA_focus_equipment_1 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_1_changed
+				days = 60
+			}
+		}
+		else_if = {
+			limit = { check_variable = { IMA_focus_equipment_2 = 9 } }
+			set_variable = { IMA_focus_equipment_2 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_2_changed
+				days = 60
+			}
+		}
+		else = {
+			set_variable = { IMA_focus_equipment_3 = 10 }
+			set_country_flag = {
+				flag = IMA_focus_equipment_3_changed
+				days = 60
+			}
+		}
+		if = {
+			limit = { IMA_warplan_already_selected = yes }
+			add_timed_idea = { #이거 디버프 누적 가능하니 주의
+				idea = IMA_war_plan_industry
+				days = 60
+			}
+		}
 	}
 }

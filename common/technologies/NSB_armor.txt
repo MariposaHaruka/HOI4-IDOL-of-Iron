@@ -854,6 +854,23 @@ technologies = {
 				factor = 1.2
 				date > "1946.1.1"
 			}
+
+			modifier = {
+				factor = 5.0
+				tag = PRS
+				date > "1942.6.1"
+				has_completed_focus = PRS_21304
+				has_tech_bonus = {
+				    category = cat_medium_armor
+				}
+			}
+
+			modifier = {
+				factor = 6
+				# Comet was designed and entered production in 1943-1944
+				tag = IMA
+				date > 1943.6.1
+			}
 		}
 
 		categories = {

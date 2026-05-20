@@ -128,3 +128,13 @@ commomwealth_joined = {
 		has_dynamic_modifier = { modifier = IMA_commonwealth }
 	}
 }
+
+#산업창 관련
+IMA_warplan_already_selected = {
+	custom_trigger_tooltip = {
+		tooltip = IMA_warplan_already_selected_tt
+		has_country_flag = IMA_focus_equipment_1_changed
+		has_country_flag = IMA_focus_equipment_2_changed
+		has_country_flag = IMA_focus_equipment_3_changed
+	}
+}

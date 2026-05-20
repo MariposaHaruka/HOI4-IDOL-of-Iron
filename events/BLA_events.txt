@@ -340,11 +340,11 @@ country_event = {
 			activate_shine_on_focus = BLA_ABY_11002
 			set_country_flag = { 
 				flag = BLA_ABY_11002_in_progress_flag 
-				days = BLA_school_days_to_activate_focus_2 
+				days = 105 #BLA_school_days_to_activate_focus  
 				value = 1 }
 			country_event = { 
 				id = BLA_ABY_auto.2 
-				days = BLA_school_days_to_activate_focus_2 
+				days = BLA_school_days_to_activate_focus 
 			}
 		}
 		else_if = {
@@ -356,11 +356,11 @@ country_event = {
 			activate_shine_on_focus = BLA_ABY_11004
 			set_country_flag = { 
 				flag = BLA_ABY_11004_in_progress_flag 
-				days = BLA_school_days_to_activate_focus_2 
+				days = 105 #BLA_school_days_to_activate_focus  
 				value = 1 }
 			country_event = { 
 				id = BLA_ABY_auto.2 
-				days = BLA_school_days_to_activate_focus_2 
+				days = BLA_school_days_to_activate_focus 
 			}
 		}
 		else_if = {
@@ -372,12 +372,12 @@ country_event = {
 			activate_shine_on_focus = BLA_ABY_11007
 			set_country_flag = { 
 				flag = BLA_ABY_11007_in_progress_flag 
-				days = BLA_school_days_to_activate_focus_2 
+				days = 105 #BLA_school_days_to_activate_focus  
 				value = 1 
 			}
 			country_event = { 
 				id = BLA_ABY_auto.2 
-				days = BLA_school_days_to_activate_focus_2 
+				days = BLA_school_days_to_activate_focus 
 			}
 		}
 		else = { #Debug logs
@@ -464,12 +464,12 @@ country_event = {
 			activate_shine_on_focus = BLA_ABY_11003
 			set_country_flag = { 
 				flag = BLA_ABY_11003_in_progress_flag 
-				days = BLA_school_days_to_activate_focus_1 
+				days = 105 #BLA_school_days_to_activate_focus  
 				value = 1 
 			}
 			country_event = { 
 				id = BLA_ABY_auto.4 
-				days = BLA_school_days_to_activate_focus_1 
+				days = BLA_school_days_to_activate_focus 
 			}
 		}
 		else_if = {
@@ -481,12 +481,12 @@ country_event = {
 			activate_shine_on_focus = BLA_ABY_11005
 			set_country_flag = { 
 				flag = BLA_ABY_11005_in_progress_flag 
-				days = BLA_school_days_to_activate_focus_1 
+				days = 105 #BLA_school_days_to_activate_focus  
 				value = 1 
 			}
 			country_event = { 
 				id = BLA_ABY_auto.4 
-				days = BLA_school_days_to_activate_focus_1 
+				days = BLA_school_days_to_activate_focus 
 			}
 		}
 		else = { #Debug logs
@@ -553,12 +553,12 @@ country_event = {
 			activate_shine_on_focus = BLA_ABY_11006
 			set_country_flag = { 
 				flag = BLA_ABY_11006_in_progress_flag 
-				days = BLA_school_days_to_activate_focus_1 
+				days = 105 #BLA_school_days_to_activate_focus  
 				value = 1 
 			}
 			country_event = { 
 				id = BLA_ABY_auto.6 
-				days = BLA_school_days_to_activate_focus_1 
+				days = BLA_school_days_to_activate_focus 
 			}
 			hidden_effect = { add_ideas = BLA_ABY_11006_idea_hidden }
 		}
@@ -581,7 +581,7 @@ country_event = {
 			originator_name = BLA_okusora_ayane
 		}
 		clr_country_flag = BLA_ABY_11006_in_progress_flag
-		hidden_effect = { remove_idea = BLA_ABY_11006_idea_hidden }
+		hidden_effect = { remove_ideas = BLA_ABY_11006_hidden_idea }
 	}
 }
 
@@ -596,16 +596,18 @@ country_event = {
 
 		if = {
 			limit = {
-				NOT = { has_completed_focus = BLA_ABY_11002 }
+				has_country_flag = BLA_ABY_11002_in_progress_flag
+				NOT = { has_completed_focus = BLA_ABY_12003 }
 			}
-			activate_shine_on_focus = BLA_ABY_11002
+			activate_shine_on_focus = BLA_ABY_12003
 			set_country_flag = { 
-				flag = BLA_ABY_11002_in_progress_flag 
-				days = BLA_school_days_to_activate_focus_2 
-				value = 1 }
+				flag = BLA_ABY_12003_in_progress_flag 
+				days = 105 #BLA_school_days_to_activate_focus  
+				value = 1 
+			}
 			country_event = { 
 				id = BLA_ABY_auto.8 
-				days = BLA_school_days_to_activate_focus_2 
+				days = BLA_school_days_to_activate_focus 
 			}
 		}
 		else_if = {
@@ -616,11 +618,12 @@ country_event = {
 			activate_shine_on_focus = BLA_ABY_11004
 			set_country_flag = { 
 				flag = BLA_ABY_11004_in_progress_flag 
-				days = BLA_school_days_to_activate_focus_2 
-				value = 1 }
+				days = 105 #BLA_school_days_to_activate_focus 
+				value = 1 
+			}
 			country_event = { 
 				id = BLA_ABY_auto.8 
-				days = BLA_school_days_to_activate_focus_2 
+				days = BLA_school_days_to_activate_focus 
 			}
 		}
 		else_if = {
@@ -631,12 +634,12 @@ country_event = {
 			activate_shine_on_focus = BLA_ABY_11007
 			set_country_flag = { 
 				flag = BLA_ABY_11007_in_progress_flag 
-				days = BLA_school_days_to_activate_focus_2 
+				days = 105 #BLA_school_days_to_activate_focus  
 				value = 1 
 			}
 			country_event = { 
 				id = BLA_ABY_auto.8 
-				days = BLA_school_days_to_activate_focus_2 
+				days = BLA_school_days_to_activate_focus 
 			}
 		}
 		else = { #Debug logs

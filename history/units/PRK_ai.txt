@@ -40,3 +40,17 @@ air_wings = {
 	}
 }
 
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = { #Avia B.534, 568 were built. Production began oct. 1935
+		equipment = {
+			type = fighter_equipment_0
+			creator = "PRK" 
+		}
+		requested_factories = 1
+		progress = 0.25
+		efficiency = 75
+		#industrial_manufacturer = mio:PRK_avia_organization
+	}
+}
+

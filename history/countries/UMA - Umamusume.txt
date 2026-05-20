@@ -195,6 +195,7 @@ set_popularities = {
 #의회
 
 #캐릭터
+recruit_character = UMA_symboli_rudolf
 recruit_character = UMA_special_week
 #recruit_character = UMA_silence_suzuka
 #recruit_character = UMA_tokai_teio
@@ -399,9 +400,7 @@ recruit_character = UMA_special_week
 #recruit_character = UMA_sejmik_regency
 
 if = {
-	limit = {
-		has_dlc = "Gotterdammerung"
-	}
+	limit = { has_WUW = yes }
 	#recruit_character = UMA_jan_zumbach
 }
 

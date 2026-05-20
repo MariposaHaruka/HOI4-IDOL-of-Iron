@@ -1,4 +1,25 @@
 characters = {
+	UMA_symboli_rudolf = {
+        name = UMA_symboli_rudolf
+        gender = female
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_UMA_symboli_rudolf"
+            }
+        }
+        country_leader = {
+            ideology = authoritariandemocracy_subtype
+            traits = { popular_queen }
+        }
+        corps_commander ={
+            traits = { }
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+        }
+    }
 	UMA_special_week = {
         name = UMA_special_week
         gender = female
@@ -6,10 +27,6 @@ characters = {
             civilian = {
                 large = "GFX_portrait_UMA_special_week"
             }
-        }
-        country_leader = {
-            ideology = authoritariandemocracy_subtype
-            traits = { popular_queen }
         }
         corps_commander ={
             traits = { }

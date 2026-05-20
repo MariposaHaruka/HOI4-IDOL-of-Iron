@@ -138,6 +138,38 @@ PRK_CAV_01 = {
 	}
 }
 
+PRK_CAV_02 = {
+	name = "Alternate Cavalry Division"
+
+	for_countries = { PRK }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { PRK_CAV_01 }
+
+	fallback_name = "%d. dragounský divize"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	# Smaller Formations
+	ordered =
+	{
+		1 = { "%d. dragounský divize" }
+		2 = { "%d. dragounský divize" }
+		3 = { "%d. dragounský divize" }
+		4 = { "%d. dragounský divize" }
+		5 = { "%d. dragounský divize" }
+		6 = { "%d. dragounský divize" }
+		7 = { "%d. dragounský divize" }
+		8 = { "%d. dragounský divize" }
+		9 = { "%d. dragounský divize" }
+		10 = { "%d. dragounský divize" }
+	}
+}
+
 PRK_MOT_01 = {
 	name = "Motorized Division"
 

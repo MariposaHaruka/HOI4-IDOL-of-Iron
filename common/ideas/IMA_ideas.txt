@@ -565,6 +565,22 @@ ideas = {
 				autonomy_gain = 0.1
 			}
 		}
+		#전쟁 계획 산업 조정
+		IMA_war_plan_industry = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}	
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				consumer_goods_factor = 0.10
+			}
+		}
 
 		#부채 재조정
 		IMA_11017_idea = {
