@@ -2,13 +2,7 @@
 capital = 672 #메단
 
 #부대
-if = {
-	limit = { has_NSB = yes }
-	set_oob = "LAS_ar_NSB"
-	else = {
-		set_oob = "LAS_ar"
-	}
-}
+set_oob = "LAS_ar"
 set_naval_oob = "LAS_na_MtG"
 if = {
 	limit = { has_BBA = yes }
@@ -43,6 +37,7 @@ set_technology = {
 	early_ship_hull_heavy = 1
 	basic_ship_hull_heavy = 1
 	early_ship_hull_carrier = 1
+	basic_ship_hull_carrier = 1
 	basic_battery = 1
 	basic_light_battery = 1
 	basic_heavy_battery = 1
@@ -55,6 +50,19 @@ set_technology = {
 	mtg_transport = 1
 	basic_fire_control_system = 1
 	basic_dp_light_battery = 1
+}
+if = {
+	limit = { has_NSB = yes }
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+		}
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+		}
+	}
 }
 if = {
 	limit = { has_BBA = yes }
@@ -87,7 +95,24 @@ if = {
 set_variable = { country_intro_page_count = 2 }
 
 #수송선
-set_convoys = 5
+set_convoys = 35
+
+#LAS 전용 오프셋 공장 시스템
+set_variable = { LAS_offsite_com_num = 5 }
+set_variable = { LAS_offsite_mil_num = 5 }
+set_variable = { LAS_offsite_doc_num = 5 }
+add_offsite_building = {
+	type = industrial_complex
+	level = 5
+}
+add_offsite_building = {
+	type = arms_factory
+	level = 5
+}
+add_offsite_building = {
+	type = dockyard
+	level = 5
+}
 
 #국민 정신
 add_ideas = {
@@ -452,7 +477,185 @@ recruit_character = LAS_4_human
 #장관진
 
 #무기 프리셋
-#create_equipment_variant = {
-#	name = ""
-#	type = amphibious_tank_equipment_2
-#}
+#DD
+create_equipment_variant = {
+	name = "Gaeseong Class I"
+	type = ship_hull_light_1
+	name_group = LAS_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Gaeseong Class II"
+	type = ship_hull_light_2
+	name_group = LAS_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = dp_light_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = ship_sonar_1
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+}
+#SS
+create_equipment_variant = {
+	name = "Dolgorae Class I"
+	type = ship_hull_submarine_1
+	name_group = LAS_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
+	}
+}
+create_equipment_variant = {
+	name = "Dolgorae Class II"
+	type = ship_hull_submarine_2
+	name_group = LAS_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_2
+		rear_1_custom_slot = empty
+	}
+}
+#CL
+create_equipment_variant = {
+	name = "Seoul Class I"
+	type = ship_hull_cruiser_1
+	name_group = LAS_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		fixed_ship_secondaries_slot = dp_ship_secondaries_1
+		front_1_custom_slot = ship_anti_air_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+}
+create_equipment_variant = {
+	name = "Seoul Class II"
+	type = ship_hull_cruiser_2
+	name_group = LAS_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = ship_armor_cruiser_2
+		fixed_ship_secondaries_slot = dp_ship_secondaries_2
+		front_1_custom_slot = ship_anti_air_2
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_secondaries_2
+		rear_1_custom_slot = ship_light_medium_battery_2
+	}
+}
+#CA
+create_equipment_variant = {
+	name = "Chungmugong Yi Sunshin Class I"
+	type = ship_hull_cruiser_1
+	name_group = LAS_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		mid_2_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = empty
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Orca Class"
+	type = ship_hull_carrier_1
+	name_group = LAS_CV_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_deck_slot_1 = ship_deck_space
+		fixed_ship_deck_slot_2 = ship_deck_space
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = carrier_ship_engine_2
+		fixed_ship_secondaries_slot = dp_ship_secondaries_1
+		front_1_custom_slot = ship_deck_space
+	}
+}
+
+if = {
+	limit = { has_BBA = yes }
+	create_equipment_variant = {
+		name = "KF-1 Jegong" #also covers Gloster Gauntlet, Hawker Demon
+		type = small_plane_airframe_0
+		#design_team = mio:LAS MIO
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "KA-1 Ung-bi" 
+		type = small_plane_cas_airframe_0
+		#design_team = mio:LAS MIO
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+		icon = "GFX_ENG_CAS1_medium"
+	}
+
+	create_equipment_variant = {
+		name = "KF-1C Chammae" 
+		type = cv_small_plane_airframe_0
+		#design_team = mio:LAS MIO
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "KT-1 Haechui" 
+		type = cv_small_plane_naval_bomber_airframe_0
+		#design_team = mio:LAS MIO
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_ENG_naval_bomber1_medium"
+	}
+}

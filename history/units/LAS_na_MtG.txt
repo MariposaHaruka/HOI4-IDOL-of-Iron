@@ -1,83 +1,58 @@
-﻿division_template = {
-	name = "스틸라인"
-	is_locked = yes		
-	division_names_group = LAS_01
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-        infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-	}
-	support = {
-       	engineer = { x = 0 y = 0 }
-       	artillery = { x = 0 y = 1 }
-	}
-}
+﻿units = {
 
-division_template = {
-	name = "시스터즈 오브 발할라"
-	is_locked = yes		
-	division_names_group = LAS_02
-	regiments = {
-		mountaineers = { x = 0 y = 0 }
-		mountaineers = { x = 0 y = 1 }
-		mountaineers = { x = 0 y = 2 }
-        mountaineers = { x = 1 y = 0 }
-		mountaineers = { x = 1 y = 1 }
-		mountaineers = { x = 1 y = 2 }
-        mountaineers = { x = 2 y = 0 }
-		mountaineers = { x = 2 y = 1 }
-		mountaineers = { x = 2 y = 2 }
+	##### Naval OOB #####
+	fleet = {
+		name = "Je 1 Hamdae"
+		naval_base = 4652
+		task_force = {				
+			name = "Je 1 Jeontu Jeondae"			
+			location = 4652 # Halifax
+			ship = { name = "ROS Orca" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = LAS version_name = "Orca Class" } } }
+			ship = { name = "ROS Chungmugong Yi Sunshin" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = LAS version_name = "Chungmugong Yi Sunshin Class I" } } }
+			ship = { name = "ROS Seoul" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = LAS version_name = "Seoul Class I" } } }
+			ship = { name = "ROS Pyeongyang" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = LAS version_name = "Seoul Class I" } } }
+			ship = { name = "ROS Gaeseong" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LAS version_name = "Gaeseong Class I" } } }
+			ship = { name = "ROS Gangneung" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LAS version_name = "Gaeseong Class I" } } }
+			ship = { name = "ROS Gyeongju" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LAS version_name = "Gaeseong Class I" } } }
+			ship = { name = "ROS Chungju" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LAS version_name = "Gaeseong Class I" } } }
+			ship = { name = "ROS Jeonju" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LAS version_name = "Gaeseong Class I" } } }
+			ship = { name = "ROS Naju" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LAS version_name = "Gaeseong Class I" } } }
+		}
+		task_force = {				
+			name = "Je 1 Guchuk Jeondae"			
+			location = 1648 
+			ship = { name = "ROS Gongju" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LAS version_name = "Gaeseong Class I" } } }
+			ship = { name = "ROS Sangju" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LAS version_name = "Gaeseong Class I" } } }
+			ship = { name = "ROS Donghae" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LAS version_name = "Gaeseong Class I" } } }
+			ship = { name = "ROS Suwon" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LAS version_name = "Gaeseong Class I" } } }
+			ship = { name = "ROS Nampo" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LAS version_name = "Gaeseong Class I" } } }
+			ship = { name = "ROS Pohang" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LAS version_name = "Gaeseong Class I" } } }
+		}
+		task_force = {				
+			name = "Je 1 Jamsu Jeondae"			
+			location = 1648 
+			ship = { name = "ROS Dolgorae-001" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-002" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-003" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-004" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-005" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-006" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-010" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-012" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+		}	
+		task_force = {				
+			name = "Je 2 Jamsu Jeondae"			
+			location = 12268
+			ship = { name = "ROS Dolgorae-007" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-008" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-009" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-011" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-013" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-014" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-015" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+			ship = { name = "ROS Dolgorae-016" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAS version_name = "Dolgorae Class I" } } }
+		}	
 	}
-	support = {
-       	engineer = { x = 0 y = 0 }
-       	artillery = { x = 0 y = 1 }
-	}
-}
-
-division_template = {
-	name = "앵거 오브 호드"
-	is_locked = yes		
-	division_names_group = LAS_03
-	regiments = {
-		motorized = { x = 0 y = 0 }
-		motorized = { x = 0 y = 1 }
-		motorized = { x = 0 y = 2 }
-        motorized = { x = 1 y = 0 }
-		motorized = { x = 1 y = 1 }
-		motorized = { x = 1 y = 2 }
-        motorized = { x = 2 y = 0 }
-		motorized = { x = 2 y = 1 }
-		motorized = { x = 2 y = 2 }
-	}
-	support = {
-       	engineer = { x = 0 y = 0 }
-       	artillery = { x = 0 y = 1 }
-	}
-}
-
-units = {
-	division = {
-		name = "스틸라인 제4사단"
-		location = 4652
-		division_template = "스틸라인"
-	}
-	division = {
-		name = "시스터즈 오브 발할라 제1사단"
-		location = 1246
-		division_template = "시스터즈 오브 발할라"
-	}
-	division = {
-		name = "앵거 오브 호드 제1사단"
-		location = 1460
-		division_template = "앵거 오브 호드"
-	}
-	
 }
 
 
@@ -88,32 +63,146 @@ units = {
 #########################
 
 instant_effect = {
+	### Ongoing Ship Production Jan 1 1936 ###
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_1
-			creator = "LAS"
+			type = ship_hull_submarine_2
+			creator = "LAS" 
+			version_name = "Dolgorae Class II"
 		}
-		requested_factories = 2
-		progress = 0.1
-		efficiency = 50
+		name = "ROS Dolgorae-017"
+		requested_factories = 1
+		progress = 0.95
+		amount = 1		
 	}
 	add_equipment_production = {
 		equipment = {
-			type = artillery_equipment_1
-			creator = "LAS"
+			type = ship_hull_submarine_2
+			creator = "LAS" 
+			version_name = "Dolgorae Class II"
 		}
+		name = "ROS Dolgorae-018"
 		requested_factories = 1
-		progress = 0.1
-		efficiency = 50
+		progress = 0.95
+		amount = 1		
 	}
 	add_equipment_production = {
 		equipment = {
-			type = support_equipment_1
-			creator = "LAS"
+			type = ship_hull_submarine_2
+			creator = "LAS" 
+			version_name = "Dolgorae Class II"
 		}
+		name = "ROS Dolgorae-019"
 		requested_factories = 1
-		progress = 0.1
-		efficiency = 50
+		progress = 0.95
+		amount = 1		
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "LAS" 
+			version_name = "Dolgorae Class II"
+		}
+		name = "ROS Dolgorae-020"
+		requested_factories = 1
+		progress = 0.95
+		amount = 1		
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "LAS" 
+			version_name = "Gaeseong Class II"
+		}
+		name = "ROS Gunsan"
+		requested_factories = 1
+		progress = 0.90
+		amount = 1
+		#industrial_manufacturer = mio:LAS 대충 설계사
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "LAS" 
+			version_name = "Gaeseong Class II"
+		}
+		name = "ROS Mokpo"
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		#industrial_manufacturer = mio:LAS 대충 설계사
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "LAS" 
+			version_name = "Gaeseong Class II"
+		}
+		name = "ROS Gimcheon"
+		requested_factories = 1
+		progress = 0.90
+		amount = 1
+		#industrial_manufacturer = mio:LAS 대충 설계사
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "LAS" 
+			version_name = "Gaeseong Class II"
+		}
+		name = "ROS Jinju"
+		requested_factories = 1
+		progress = 0.95
+		amount = 1
+		#industrial_manufacturer = mio:LAS 대충 설계사
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "LAS" 
+			version_name = "Gaeseong Class II"
+		}
+		name = "ROS Yeosu"
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		#industrial_manufacturer = mio:LAS 대충 설계사
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "LAS" 
+			version_name = "Gaeseong Class II"
+		}
+		name = "ROS Jinhae"
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		#industrial_manufacturer = mio:LAS 대충 설계사
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "LAS" 
+			version_name = "Seoul Class II"
+		}
+		name = "ROS Busan"
+		requested_factories = 1
+		progress = 0.80
+		amount = 1
+		#industrial_manufacturer = mio:LAS 대충 설계사
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "LAS" 
+			version_name = "Seoul Class II"
+		}
+		name = "ROS Cheongjin"
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+		#industrial_manufacturer = mio:LAS 대충 설계사
 	}
 }
 

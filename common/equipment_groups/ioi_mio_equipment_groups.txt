@@ -1,0 +1,343 @@
+
+
+########    ###    ##    ## ##    ##     ######   ########   #######  ##     ## ########   ######  
+   ##      ## ##   ###   ## ##   ##     ##    ##  ##     ## ##     ## ##     ## ##     ## ##    ## 
+   ##     ##   ##  ####  ## ##  ##      ##        ##     ## ##     ## ##     ## ##     ## ##       
+   ##    ##     ## ## ## ## #####       ##   #### ########  ##     ## ##     ## ########   ######  
+   ##    ######### ##  #### ##  ##      ##    ##  ##   ##   ##     ## ##     ## ##              ## 
+   ##    ##     ## ##   ### ##   ##     ##    ##  ##    ##  ##     ## ##     ## ##        ##    ## 
+   ##    ##     ## ##    ## ##    ##     ######   ##     ##  #######   #######  ##         ######  
+
+IOI_mio_eq_group_all_light_tank = {
+	equipment_type = {
+		light_tank_chassis
+		light_tank_aa_chassis
+		light_tank_artillery_chassis
+		light_tank_destroyer_chassis
+		light_tank_amphibious_chassis
+		light_tank_flame_chassis
+		amphibious_tank_chassis
+	}	
+}
+
+IOI_mio_eq_group_all_medium_tank = {
+	equipment_type = {
+		medium_tank_chassis
+		medium_tank_aa_chassis
+		medium_tank_artillery_chassis
+		medium_tank_destroyer_chassis
+		medium_tank_amphibious_chassis
+		medium_tank_flame_chassis
+		modern_tank_chassis
+		modern_tank_aa_chassis
+		modern_tank_artillery_chassis
+		modern_tank_destroyer_chassis
+	}
+}
+
+IOI_mio_eq_group_all_heavy_tank = {
+	equipment_type = {
+		heavy_tank_chassis
+		heavy_tank_aa_chassis
+		heavy_tank_artillery_chassis
+		heavy_tank_destroyer_chassis
+		heavy_tank_amphibious_chassis
+		heavy_tank_flame_chassis
+		super_heavy_tank_chassis
+		super_heavy_tank_aa_chassis
+		super_heavy_tank_artillery_chassis
+		super_heavy_tank_destroyer_chassis
+		land_cruiser_chassis
+	}
+}
+
+IOI_mio_eq_group_all_tank_destroyers = {
+	equipment_type = {
+		light_tank_destroyer_chassis 
+		medium_tank_destroyer_chassis
+		heavy_tank_destroyer_chassis
+		super_heavy_tank_destroyer_chassis
+		modern_tank_destroyer_chassis
+	}
+}
+
+IOI_mio_eq_group_all_tanks = {
+	equipment_type = {
+		#Light and Amphibious
+		light_tank_chassis
+		medium_tank_chassis
+		modern_tank_chassis
+		heavy_tank_chassis
+		super_heavy_tank_chassis
+		land_cruiser_chassis
+	}
+}
+
+IOI_mio_eq_group_all_tank_aas = { 
+	equipment_type = {
+		light_tank_aa_chassis
+		medium_tank_aa_chassis
+		modern_tank_aa_chassis
+		heavy_tank_aa_chassis
+		super_heavy_tank_aa_chassis
+	}
+}
+
+IOI_mio_eq_group_all_tank_amphibiouses = { 
+	equipment_type = {
+		amphibious_tank_chassis
+		light_tank_amphibious_chassis
+		medium_tank_amphibious_chassis
+		heavy_tank_amphibious_chassis
+	}
+}
+
+IOI_mio_eq_group_all_tank_flames = { 
+	equipment_type = {
+		light_tank_flame_chassis
+		medium_tank_flame_chassis
+		heavy_tank_flame_chassis
+	}
+}
+
+IOI_mio_eq_group_all_armors = { 
+	equipment_type = {
+		light_tank_chassis
+		light_tank_aa_chassis
+		light_tank_artillery_chassis
+		light_tank_destroyer_chassis
+		light_tank_amphibious_chassis
+		light_tank_flame_chassis
+		medium_tank_chassis
+		medium_tank_aa_chassis
+		medium_tank_artillery_chassis
+		medium_tank_destroyer_chassis
+		medium_tank_amphibious_chassis
+		medium_tank_flame_chassis
+		heavy_tank_chassis
+		heavy_tank_aa_chassis
+		heavy_tank_artillery_chassis
+		heavy_tank_destroyer_chassis
+		heavy_tank_amphibious_chassis
+		heavy_tank_flame_chassis
+		super_heavy_tank_chassis
+		super_heavy_tank_aa_chassis
+		super_heavy_tank_artillery_chassis
+		super_heavy_tank_destroyer_chassis
+		modern_tank_chassis
+		modern_tank_aa_chassis
+		modern_tank_artillery_chassis
+		modern_tank_destroyer_chassis
+		amphibious_tank_chassis
+		land_cruiser_chassis
+		armored_support_vehicle
+	}
+}
+
+
+ ######  ##     ## #### ########      ######   ########   #######  ##     ## ########   ######  
+##    ## ##     ##  ##  ##     ##    ##    ##  ##     ## ##     ## ##     ## ##     ## ##    ## 
+##       ##     ##  ##  ##     ##    ##        ##     ## ##     ## ##     ## ##     ## ##       
+ ######  #########  ##  ########     ##   #### ########  ##     ## ##     ## ########   ######  
+      ## ##     ##  ##  ##           ##    ##  ##   ##   ##     ## ##     ## ##              ## 
+##    ## ##     ##  ##  ##           ##    ##  ##    ##  ##     ## ##     ## ##        ##    ## 
+ ######  ##     ## #### ##            ######   ##     ##  #######   #######  ##         ######  
+
+IOI_mio_eq_group_all_carrier = { 
+	equipment_type = {
+		ship_hull_carrier
+		ship_hull_mega_carrier
+		ship_hull_carrier_modern
+		ship_hull_carrier_conversion_bb
+		ship_hull_carrier_conversion_ca
+	}
+}
+
+IOI_mio_eq_group_all_cruiser = { 
+	equipment_type = {
+		ship_hull_cruiser
+		ship_hull_cruiser_modern_aa
+		ship_hull_torpedo_cruiser
+		ship_hull_cruiser_coastal_defense_ship	
+	}
+}
+
+IOI_mio_eq_group_all_destroyer = {
+	equipment_type = {
+		ship_hull_light
+	}
+}
+
+IOI_mio_eq_group_all_battleship = { 
+	equipment_type = {
+		ship_hull_heavy
+		ship_hull_pre_dreadnought
+		ship_hull_super_heavy_1
+		ship_hull_heavy_modern
+	}
+}
+
+IOI_mio_eq_group_all_submarine = { 
+	equipment_type = {
+		ship_hull_submarine
+		ship_hull_cruiser_submarine
+		ship_hull_fleet_submarine
+		ship_hull_midget_submarine
+		ship_hull_nuclear_submarine
+		ship_hull_carrier_submarine
+	}
+}
+
+IOI_mio_eq_group_all_ships = {
+	equipment_type = {
+		ship_hull_carrier
+		ship_hull_cruiser
+		ship_hull_light
+		ship_hull_heavy
+		ship_hull_submarine
+		support_ship_hull
+		repair_ship_hull
+		convoy
+		floating_harbor_equipment
+	}
+}
+
+########  ##          ###    ##    ## ########     ######   ########   #######  ##     ## ########   ######  
+##     ## ##         ## ##   ###   ## ##          ##    ##  ##     ## ##     ## ##     ## ##     ## ##    ## 
+##     ## ##        ##   ##  ####  ## ##          ##        ##     ## ##     ## ##     ## ##     ## ##       
+########  ##       ##     ## ## ## ## ######      ##   #### ########  ##     ## ##     ## ########   ######  
+##        ##       ######### ##  #### ##          ##    ##  ##   ##   ##     ## ##     ## ##              ## 
+##        ##       ##     ## ##   ### ##          ##    ##  ##    ##  ##     ## ##     ## ##        ##    ## 
+##        ######## ##     ## ##    ## ########     ######   ##     ##  #######   #######  ##         ######  
+
+IOI_mio_eq_group_all_small_plane = { #Includes all Small Aircraft (Fighter, CAS, Nav) and CV versions --- Used due to custom loc capabilities
+	equipment_type = {
+		small_plane_airframe
+		small_plane_cas_airframe
+		small_plane_naval_bomber_airframe
+		small_plane_suicide_airframe
+		cv_small_plane_airframe
+		cv_small_plane_cas_airframe
+		cv_small_plane_naval_bomber_airframe
+		cv_small_plane_suicide_airframe
+		jet_fighter_equipment
+		rocket_interceptor_equipment
+	}
+}
+
+IOI_mio_eq_group_all_medium_plane = { #Includes all Medium Aircraft (Tactical Bomber, Heavy Fighter, Scout) --- Used due to custom loc capabilities
+	equipment_type = {
+		medium_plane_airframe
+		medium_plane_fighter_airframe
+		medium_plane_scout_plane_airframe
+		jet_tac_bomber_equipment
+	}
+}
+
+IOI_mio_eq_group_all_large_plane = { #Includes all Heavy Aircraft (Strategic Bomber, Maritime Patrol) --- Used due to custom loc capabilities
+	equipment_type = {
+		large_plane_airframe
+		large_plane_maritime_patrol_plane_airframe
+		strat_bomber_intercontinental_equipment
+		mothership_equipment
+		jet_strat_bomber_equipment
+	}
+}
+
+IOI_mio_eq_group_all_cv_aircraft = { #Includes all CV aircraft (Fighter, CAS, Nav) --- Needed because plane designer is a gift to us all
+	equipment_type = {
+		cv_small_plane_airframe
+		cv_small_plane_cas_airframe
+		cv_small_plane_naval_bomber_airframe
+		cv_small_plane_suicide_airframe
+	}
+}
+
+IOI_mio_eq_group_only_light_fighter = { #Includes Small Fighter and CV Fighter (no CAS, no Nav...) --- Needed because plane designer is a gift to us all
+	equipment_type = {
+		small_plane_airframe
+		cv_small_plane_airframe
+		jet_fighter_equipment
+		rocket_interceptor_equipment
+	}
+}
+
+IOI_mio_eq_group_only_light_aircraft_no_cv = { #Includes only Small Fighter (No CV, no CAS, no Nav...) --- Needed because plane designer is a gift to us all
+	equipment_type = {
+		small_plane_airframe
+		small_plane_cas_airframe
+		small_plane_naval_bomber_airframe
+		small_plane_suicide_airframe
+		jet_fighter_equipment
+		rocket_interceptor_equipment
+	}
+}
+
+IOI_mio_eq_group_only_light_fighter_and_CAS_no_cv = { #Includes only Small Fighter and CAS (No CV, no Nav...) --- Needed because plane designer is a gift to us all 
+	equipment_type = {
+		small_plane_airframe
+		small_plane_cas_airframe
+		jet_fighter_equipment
+		rocket_interceptor_equipment
+	}
+}
+
+IOI_mio_eq_group_only_tactical_bomber = { #Includes only Tactical Bomber (Heavy Fighter, No Scout...) --- Needed because plane designer is a gift to us all
+	equipment_type = {
+		medium_plane_airframe
+		jet_tac_bomber_equipment
+	}
+}
+
+IOI_mio_eq_group_only_strategic_bomber = { #Includes only Strategic Bomber (No Maritime Patrol) --- Needed because plane designer is a gift to us all
+	equipment_type = {
+		large_plane_airframe
+		jet_strat_bomber_equipment
+		strat_bomber_intercontinental_equipment
+		mothership_equipment
+	}
+}
+
+
+IOI_mio_eq_group_missiles = { #Includes only Strategic Bomber (No Maritime Patrol) --- Needed because plane designer is a gift to us all
+	equipment_type = {
+		guided_missile_equipment
+		explosive_ammo_equipment
+		ballistic_missile_equipment
+		nuclear_missile_equipment
+		sam_missile_equipment
+	}
+}
+
+   ###    ########  ######## #### ##       ##       ######## ########  ##    ## 
+  ## ##   ##     ##    ##     ##  ##       ##       ##       ##     ##  ##  ##  
+ ##   ##  ##     ##    ##     ##  ##       ##       ##       ##     ##   ####   
+##     ## ########     ##     ##  ##       ##       ######   ########     ##    
+######### ##   ##      ##     ##  ##       ##       ##       ##   ##      ##    
+##     ## ##    ##     ##     ##  ##       ##       ##       ##    ##     ##    
+##     ## ##     ##    ##    #### ######## ######## ######## ##     ##    ##
+
+IOI_mio_eq_group_all_artillery = {
+	equipment_type = {
+		artillery_equipment
+		anti_tank_equipment
+		anti_air_equipment
+		rocket_artillery_equipment
+	}
+}
+
+
+##     ## ####  ######   ######  
+###   ###  ##  ##    ## ##    ## 
+#### ####  ##  ##       ##       
+## ### ##  ##   ######  ##       
+##     ##  ##        ## ##       
+##     ##  ##  ##    ## ##    ## 
+##     ## ####  ######   ######
+
+IOI_mio_eq_group_all_infantry_and_support_equipment = {
+	equipment_type = {
+		infantry_equipment
+		support_equipment
+	}
+}
