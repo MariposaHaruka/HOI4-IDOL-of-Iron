@@ -1,29 +1,14 @@
 on_actions = {
 	on_startup = {
-		#역사적 AI
-		effect = {
-			PRK = {
-				if = {
-					limit = { 
-						is_ai = yes
-						is_historical_focus_on = yes 
-					}
-					add_ideas = {
-						stay_authoritariandemocracy
-						non_interventionism_hidden
-					}
-				}
-			}
-		}
 		#스타팅 정책
 		effect = {
 			PRK = {
 				add_ideas = {
 					constitutional_monarchy
-					double_parliament
+					single_parliament
 					indirect_election
 					unitary_state
-					subordinate_to_the_executive
+					independent_judiciary
 					
 					semi_independent_press
 					neutral_stance

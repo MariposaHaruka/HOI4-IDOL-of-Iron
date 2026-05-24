@@ -1,20 +1,5 @@
 on_actions = {
 	on_startup = {
-		#역사적 AI
-		effect = {
-			BDG = {
-				if = {
-					limit = { 
-						is_ai = yes
-						is_historical_focus_on = yes 
-					}
-					add_ideas = {
-						socialdemocracy_movement
-						ally_like_hidden
-					}
-				}
-			}
-		}
 		#스타팅 정책
 		effect = {
 			BDG = {

@@ -1,23 +1,8 @@
 on_actions = {
 	on_startup = {
-		#역사적 AI
-		effect = {
-			AIC = {
-				if = {
-					limit = { 
-						is_ai = yes
-						is_historical_focus_on = yes 
-					}
-					add_ideas = {
-						stay_authoritariandemocracy
-						non_interventionism_hidden
-					}
-				}
-			}
-		}
 		#스타팅 정책
 		effect = {
-			AIC = {
+			LOC = {
 				add_ideas = {
 					president_idea
 					no_parliament
@@ -59,12 +44,12 @@ on_actions = {
 	#on_ruling_party_change_immediate = {
 		#의회
 	#	effect = {
-	#		AIC = { 
+	#		LOC = { 
 	#			if = {
 	#				limit = { is_democratic = yes}
-	#				parliament_gui_initial_AIC = yes
+	#				parliament_gui_initial_LOC = yes
 	#				clr_country_flag = parliament_gui_on
-	#				calc_parliament_support_AIC = yes
+	#				calc_parliament_support_LOC = yes
 	#			}
 	#		}
     #    }
@@ -72,10 +57,10 @@ on_actions = {
 	#on_weekly = {
 		#의회 지지도 계산
 	#	effect = {
-	#		AIC = {
+	#		LOC = {
 	#			if = {
-	#				limit = { AIC = { NOT = { has_idea = no_parliament } } }
-	#				calc_parliament_support_AIC = yes
+	#				limit = { LOC = { NOT = { has_idea = no_parliament } } }
+	#				calc_parliament_support_LOC = yes
 	#			}
 	#		}
 	#	}

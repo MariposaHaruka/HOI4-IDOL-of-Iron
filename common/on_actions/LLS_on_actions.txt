@@ -1,25 +1,10 @@
 on_actions = {
 	on_startup = {
-		#역사적 AI
-		effect = {
-			LLS = {
-				if = {
-					limit = { 
-						is_ai = yes
-						is_historical_focus_on = yes 
-					}
-					add_ideas = {
-						militarytotalism_movement
-						lls_like_hidden
-					}
-				}
-			}
-		}
 		#스타팅 정책
 		effect = {
 			LLS = {
 				add_ideas = {
-					president_idea
+					prime_minister
 					double_parliament
 					indirect_election
 					unitary_state

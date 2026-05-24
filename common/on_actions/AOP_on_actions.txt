@@ -1,27 +1,12 @@
 on_actions = {
 	on_startup = {
-		#역사적 AI
-		effect = {
-			AOP = {
-				if = {
-					limit = { 
-						is_ai = yes
-						is_historical_focus_on = yes 
-					}
-					add_ideas = {
-						conservatism_movement
-						ima_like_hidden
-					}
-				}
-			}
-		}
 		#스타팅 정책
 		effect = {
 			AOP = {
 				add_ideas = {
 					president_idea
-					no_parliament
-					no_election
+					single_parliament
+					direct_election
 					unitary_state
 					subordinate_to_the_executive
 					

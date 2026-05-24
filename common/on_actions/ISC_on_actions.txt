@@ -1,20 +1,5 @@
 on_actions = {
 	on_startup = {
-		#역사적 AI
-		effect = {
-			ISC = {
-				if = {
-					limit = { 
-						is_ai = yes
-						is_historical_focus_on = yes 
-					}
-					add_ideas = {
-						socialdemocracy_movement
-						ally_like_hidden
-					}
-				}
-			}
-		}
 		#스타팅 정책
 		effect = {
 			ISC = {
@@ -26,8 +11,8 @@ on_actions = {
 					independent_judiciary
 					
 					free_press
-					neutral_stance
-					full_equality
+					racial_segregation
+					limited_womens_rights
 					strong_local_autonomy
 					higher_education
 					moderate_state_welfare
@@ -66,15 +51,15 @@ on_actions = {
 			}
         }
     }
-	#on_weekly = {
+	on_weekly = {
 		#의회 지지도 계산
-	#	effect = {
-	#		ISC = {
-	#			if = {
-	#				limit = { ISC = { NOT = { has_idea = no_parliament } } }
-	#				calc_parliament_support_ISC = yes
-	#			}
-	#		}
-	#	}
-	#}
+		effect = {
+			ISC = {
+				if = {
+					limit = { ISC = { NOT = { has_idea = no_parliament } } }
+					calc_parliament_support_ISC = yes
+				}
+			}
+		}
+	}
 }

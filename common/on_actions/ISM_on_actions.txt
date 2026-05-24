@@ -1,0 +1,65 @@
+on_actions = {
+	on_startup = {
+		#스타팅 정책
+		effect = {
+			ISM = {
+				add_ideas = {
+					prime_minister
+					double_parliament
+					direct_election
+					federal_state
+					independent_judiciary
+					
+					free_press
+					racial_segregation
+					limited_womens_rights
+					strong_local_autonomy
+					higher_education
+					moderate_state_welfare
+
+					welfare_capitalism
+					standard_taxation
+					civilian_economy
+					free_trade
+					low_military_budget
+					support_infrastructure_construction
+
+					supreme_command
+					navy_dominant
+					push_system
+					basic_training
+					service_prohibited
+					major_officer_training
+
+					volunteer_only
+					segregated_regiments
+					extraction_programs
+					agrarian_base
+					workers_unions_allowed
+					university_research_complex				
+				}
+			}
+		}
+	}
+	#on_startup = {
+		#의회
+	#	effect = {
+	#		ISM = { 
+	#			parliament_gui_initial_ISM = yes
+	#			clr_country_flag = parliament_gui_on
+	#			calc_parliament_support_ISM = yes
+	#		}
+    #    }
+    #}
+	#on_weekly = {
+		#의회 지지도 계산
+	#	effect = {
+	#		ISM = {
+	#			if = {
+	#				limit = { ISM = { NOT = { has_idea = no_parliament } } }
+	#				calc_parliament_support_ISM = yes
+	#			}
+	#		}
+	#	}
+	#}
+}

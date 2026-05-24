@@ -1,20 +1,5 @@
 on_actions = {
 	on_startup = {
-		#역사적 AI
-		effect = {
-			TAB = {
-				if = {
-					limit = { 
-						is_ai = yes
-						is_historical_focus_on = yes 
-					}
-					add_ideas = {
-						stay_authoritariandemocracy
-						non_interventionism_hidden
-					}
-				}
-			}
-		}
 		#스타팅 정책
 		effect = {
 			TAB = {

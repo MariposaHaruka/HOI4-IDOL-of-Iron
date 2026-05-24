@@ -1,20 +1,5 @@
 on_actions = {
 	on_startup = {
-		#역사적 AI
-		effect = {
-			IMA = {
-				if = {
-					limit = { 
-						is_ai = yes
-						is_historical_focus_on = yes 
-					}
-					add_ideas = {
-						stay_conservatism
-						ally_like_hidden
-					}
-				}
-			}
-		}
 		#스타팅 정책
 		effect = {
 			IMA = {
@@ -27,7 +12,7 @@ on_actions = {
 					
 					free_press
 					neutral_stance
-					full_equality
+					limited_womens_rights
 					strong_local_autonomy
 					higher_education
 					moderate_state_welfare

@@ -1,20 +1,5 @@
 on_actions = {
 	on_startup = {
-		#역사적 AI
-		effect = {
-			IGM = {
-				if = {
-					limit = { 
-						is_ai = yes
-						is_historical_focus_on = yes 
-					}
-					add_ideas = {
-						stay_socialdemocracy
-						ally_like_hidden
-					}
-				}
-			}
-		}
 		#스타팅 정책
 		effect = {
 			IGM = {
@@ -26,8 +11,8 @@ on_actions = {
 					independent_judiciary
 					
 					free_press
-					neutral_stance
-					full_equality
+					racial_segregation
+					limited_womens_rights
 					strong_local_autonomy
 					higher_education
 					moderate_state_welfare
