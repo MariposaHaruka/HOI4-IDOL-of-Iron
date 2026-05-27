@@ -208,8 +208,32 @@ DEBUG_generic_medium_aircraft_organization = {
 	}
 }
 
-DEBUG_generic_heavy_aircraft_organization = {
-	include = generic_heavy_aircraft_organization
+DEBUG_ioi_generic_heavy_aircraft_organization = {
+	include = ioi_generic_heavy_aircraft_organization
+	allowed = {	
+		has_dlc = "Arms Against Tyranny"
+		is_debug = yes
+	}
+
+	visible = { #TODO_Manu: All this needs to be removed later on
+		owner = { has_country_flag = mio_show_all_archetypes_flag }
+	}
+}
+
+DEBUG_ioi_generic_strategic_bomber_organization = {
+	include = ioi_generic_strategic_bomber_organization
+	allowed = {	
+		has_dlc = "Arms Against Tyranny"
+		is_debug = yes
+	}
+
+	visible = { #TODO_Manu: All this needs to be removed later on
+		owner = { has_country_flag = mio_show_all_archetypes_flag }
+	}
+}
+
+DEBUG_ioi_generic_maritime_patrol_aircraft_organization = {
+	include = ioi_generic_maritime_patrol_aircraft_organization
 	allowed = {	
 		has_dlc = "Arms Against Tyranny"
 		is_debug = yes

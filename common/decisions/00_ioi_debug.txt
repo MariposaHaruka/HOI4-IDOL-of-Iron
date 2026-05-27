@@ -36,6 +36,38 @@ debug_test = {
 			set_country_flag = fascism_national_mobilization_law
 		}
 	}
+
+	DEBUG_MIO_SHOW_DEBUG_MIO_ARCHETYPES = {
+		priority = 100
+		allowed = {
+			always = yes
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			NOT = { has_country_flag = mio_show_all_archetypes_flag }
+		}
+		complete_effect = {
+			set_country_flag = mio_show_all_archetypes_flag
+		}
+	}
+
+	DEBUG_MIO_HIDE_DEBGU_MIO_ARCHETYPES = {
+		priority = 100
+		allowed = {
+			always = yes
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			has_country_flag = mio_show_all_archetypes_flag
+		}
+		complete_effect = {
+			clr_country_flag = mio_show_all_archetypes_flag
+		}
+	}
 }
 
 # coalition_debug_test = { }

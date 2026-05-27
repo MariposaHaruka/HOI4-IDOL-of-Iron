@@ -1,0 +1,14 @@
+ideas = {
+	country = {
+		heavy_aircraft_research_idea = {
+			picture = GFX_idea_SWE_marauder_bombers
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			research_bonus = {
+				mio_cat_all_heavy_aircraft_and_modules = 0.2
+			}
+		}
+	}
+}

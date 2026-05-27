@@ -1,0 +1,1057 @@
+####################
+#	전차 설계사		#
+#################### 
+
+
+
+####################
+#	함선 설계사		#
+#################### 
+
+
+
+####################
+#	항공 설계사		#
+#################### 
+
+#중항공기 설계사
+ioi_generic_heavy_aircraft_organization = {
+	icon = GFX_idea_generic_air_manufacturer_3
+
+	allowed = { always = no }
+
+	equipment_type = {
+		large_plane_airframe
+		large_plane_maritime_patrol_plane_airframe
+	}
+
+	research_categories = { mio_cat_all_heavy_aircraft_and_modules }
+	
+	tree_header_text = {
+		text = ioi_mio_heavy_aircraft_body
+		x = 2
+	}
+
+	tree_header_text = {
+		text = ioi_mio_heavy_aircraft_survive
+		x = 8
+	}
+
+	initial_trait = {
+		name = MIO_HA_initial_trait	#중항공기 설계사
+
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			air_bombing = 0.05
+			air_agility = -0.05
+		}
+	}
+
+	trait = {
+		token = MIO_HA_101
+		name = MIO_HA_101 #합금 표준화
+		icon = GFX_generic_mio_trait_icon_resources
+
+		position = { x=2 y=0 }
+
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.1
+			production_resource_penalty_factor = -0.1
+		}
+	}
+
+	trait = {
+		token = MIO_HA_102
+		name = MIO_HA_102 #동체 후미 연장
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+
+		position = { x=2 y=0 }
+		relative_position_id = MIO_HA_101
+
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_bombing = 0.05
+			naval_strike_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = MIO_HA_103
+		name = MIO_HA_103 #강화된 동체
+		icon = GFX_generic_mio_trait_icon_air_defence
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_HA_101
+		all_parents = { MIO_HA_101 MIO_HA_102 }
+		mutually_exclusive = { MIO_HA_104 }
+
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_defence = 0.15
+			weight = 0.1
+		}
+	}
+
+	trait = {
+		token = MIO_HA_104
+		name = MIO_HA_104 #공간 효율적인 설계
+		icon = GFX_generic_mio_trait_icon_air_defence
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_HA_102
+		all_parents = { MIO_HA_101 MIO_HA_102 }
+		mutually_exclusive = { MIO_HA_103 }
+		
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_defence = -0.05
+			weight = -0.2
+		}
+	}
+
+	trait = {
+		token = MIO_HA_105
+		name = MIO_HA_105 #드롭 해머 합금 성형
+		icon = GFX_generic_mio_trait_icon_resources
+
+		position = { x=-1 y=1 }
+		relative_position_id = MIO_HA_101
+		all_parents = { MIO_HA_101 }
+
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+			production_resource_penalty_factor = -0.1
+		}
+	}
+
+	trait = {
+		token = MIO_HA_106
+		name = MIO_HA_106 #여압 조종석
+		icon = GFX_generic_mio_trait_icon_air_superiority
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_HA_103
+		any_parent = { MIO_HA_103 MIO_HA_104 }
+
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_range = 0.05
+		}
+	}
+
+	trait = {
+		token = MIO_HA_107
+		name = MIO_HA_107 #고급 터보차저
+		icon = GFX_generic_mio_trait_icon_air_agility
+
+		position = { x=1 y=0 }
+		relative_position_id = MIO_HA_106
+		any_parent = { MIO_HA_103 MIO_HA_104 }
+
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
+
+	trait = {
+		token = MIO_HA_108
+		name = MIO_HA_108 #장거리 항법 장치
+		icon = GFX_generic_mio_trait_icon_naval_range
+
+		position = { x=2 y=0 }
+		relative_position_id = MIO_HA_106
+		any_parent = { MIO_HA_103 MIO_HA_104 }
+
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_range = 0.10
+		}
+	}
+
+	trait = {
+		token = MIO_HA_109
+		name = MIO_HA_109 #고품질 합금
+		icon = GFX_generic_mio_trait_icon_naval_range
+
+		position = { x=-1 y=1 }
+		relative_position_id = MIO_HA_105
+		all_parents = { MIO_HA_105 }
+		mutually_exclusive = { MIO_HA_110 }
+
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_agility = 0.05
+			reliability = 0.05
+		}
+
+		production_bonus = {
+			production_capacity_factor = -0.10
+			production_resource_need_factor = 0.10
+		}
+	}
+
+	trait = {
+		token = MIO_HA_110
+		name = MIO_HA_110 #정제된 합금
+		icon = GFX_generic_mio_trait_icon_air_agility
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_HA_105
+		all_parents = { MIO_HA_105 }
+		mutually_exclusive = { MIO_HA_109 }
+
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+			production_resource_need_factor = -0.15
+		}
+	}
+
+	trait = {
+		token = MIO_HA_111
+		name = MIO_HA_111 #개선된 설계사
+		icon = GFX_generic_mio_department_icon_plane_strategic_bomber_quality
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_HA_107
+		all_parents = { MIO_HA_106 MIO_HA_107 MIO_HA_108 }
+
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_agility = 0.05
+			reliability = 0.10
+			air_defence = 0.05
+			air_bombing = 0.10
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.10
+			production_resource_need_factor = -0.10
+		}
+	}
+
+	trait = {
+		token = MIO_HA_112
+		name = MIO_HA_112 #설계 효율화
+		icon = GFX_generic_mio_department_icon_plane_strategic_bomber_engine
+
+		position = { x=-1 y=1 }
+		relative_position_id = MIO_HA_111
+		all_parents = { MIO_HA_111 }
+		mutually_exclusive = { MIO_HA_113 MIO_HA_114 }
+
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			reliability = 0.05
+			air_bombing = 0.10
+		}
+	}
+
+	trait = {
+		token = MIO_HA_113
+		name = MIO_HA_113 #생산 효율화
+		icon = GFX_generic_mio_department_icon_plane_strategic_bomber_production
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_HA_111
+		all_parents = { MIO_HA_111 }
+		mutually_exclusive = { MIO_HA_113 MIO_HA_114 }
+
+		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
+
+
+		production_bonus = {
+			production_capacity_factor = 0.10
+			production_resource_need_factor = -0.10
+		}
+	}
+
+	trait = {
+		token = MIO_HA_114
+		name = MIO_HA_114 #연구 효율화
+		icon = GFX_generic_mio_department_icon_plane_strategic_bomber_quality
+
+		position = { x=1 y=1 }
+		relative_position_id = MIO_HA_111
+		all_parents = { MIO_HA_111 }
+		mutually_exclusive = { MIO_HA_113 MIO_HA_114 }
+
+		on_complete = {
+			FROM = {
+				add_ideas = heavy_aircraft_research_idea
+			}
+		}
+	}
+
+	trait = {
+		token = MIO_HA_115
+		name = MIO_HA_115 #대량 생산 체계
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_HA_109
+		any_parent ={ MIO_HA_109 MIO_HA_110 }
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+			production_resource_need_factor = -0.05
+		}
+	}
+
+	trait = {
+		token = MIO_HA_201
+		name = MIO_HA_201 #포탑 발사 속도 증가
+		icon = GFX_generic_mio_trait_icon_air_attack
+
+		position = { x=1 y=1 }
+		relative_position_id = MIO_HA_102
+		all_parents = { MIO_HA_102 }
+
+		equipment_bonus = {
+			air_attack = 0.15
+		}
+	}
+
+	trait = {
+		token = MIO_HA_202
+		name = MIO_HA_202 #자동 조정 조준기
+		icon = GFX_generic_mio_department_icon_plane_strategic_bomber_quality
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_HA_201
+		all_parents = { MIO_HA_201 }
+
+		equipment_bonus = {
+			air_bombing = 0.05
+		}
+	}
+
+	trait = {
+		token = MIO_HA_203
+		name = MIO_HA_203 #공중투하 소노부이
+		icon = GFX_generic_mio_trait_icon_detection
+
+		position = { x=1 y=1 }
+		relative_position_id = MIO_HA_201
+		all_parents = { MIO_HA_201 }
+
+		equipment_bonus = {
+			sub_detection = 0.05
+			surface_detection = 0.05
+		}
+	}
+
+	trait = {
+		token = MIO_HA_204
+		name = MIO_HA_204 #추가 폭탄 저장고
+		icon = GFX_generic_mio_trait_icon_air_attack
+
+		position = { x=1 y=2 }
+		relative_position_id = MIO_HA_201
+		any_parent = { MIO_HA_202 MIO_HA_203 }
+
+		equipment_bonus = {
+			air_bombing = 0.05
+			sub_detection = 0.05
+			surface_detection = 0.05
+		}
+	}
+}
+
+#전략폭격기 설계사 - 보잉 전용 설계사
+ioi_generic_strategic_bomber_organization = {
+	icon = GFX_idea_generic_air_manufacturer_3
+
+	allowed = { always = no }
+
+	equipment_type = {
+		large_plane_airframe
+	}
+
+	research_categories = { mio_cat_all_heavy_aircraft_and_modules }
+	
+	tree_header_text = {
+		text = ioi_mio_strategic_bomber_bombing
+		x = 2
+	}
+
+	tree_header_text = {
+		text = ioi_mio_strategic_bomber_survive
+		x = 8
+	}
+
+	initial_trait = {
+		name = MIO_SB_initial_trait	#전략폭격기 설계사
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.2
+		}
+		equipment_bonus = {
+			air_bombing = 0.05
+			air_agility = -0.05
+		}
+	}
+
+	trait = {
+		token = MIO_SB_101
+		name = MIO_SB_101 #유선형 동체
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x=1 y=0 }
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			air_agility = 0.1
+			maximum_speed = 0.1
+			air_range = 0.1
+		}
+	}
+
+	trait = {
+		token = MIO_SB_102
+		name = MIO_SB_102 #전금속 기체
+		icon = GFX_generic_mio_department_icon_plane_strategic_bomber
+
+		position = { x=3 y=0 }
+		relative_position_id = MIO_SB_101
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			air_defence = 0.05
+		}
+	}
+
+	trait = {
+		token = MIO_SB_103
+		name = MIO_SB_103 #포탑 강화
+		icon = GFX_generic_mio_trait_icon_air_attack
+
+		position = { x=3 y=0 }
+		relative_position_id = MIO_SB_102
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			air_attack = 1
+		}
+	}
+
+	trait = {
+		token = MIO_SB_104
+		name = MIO_SB_104 #정밀 조준기
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+
+		position = { x=-1 y=1 }
+		relative_position_id = MIO_SB_102
+		all_parents = { MIO_SB_101 MIO_SB_102 MIO_SB_103 }
+		mutually_exclusive = { MIO_SB_105 }
+		
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			air_bombing = 1
+			air_defence = 0.15
+			weight = 0.05
+			build_cost_ic = 0.05
+		}
+	}
+
+	trait = {
+		token = MIO_SB_105
+		name = MIO_SB_105 #더 많은 폭탄 투하
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+
+		position = { x=1 y=1 }
+		relative_position_id = MIO_SB_102
+		all_parents = { MIO_SB_101 MIO_SB_102 MIO_SB_103 }
+		mutually_exclusive = { MIO_SB_104 }
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			air_bombing = 1
+			air_defence = -0.15
+			night_penalty = -0.15
+		}
+	}
+
+	trait = {
+		token = MIO_SB_106
+		name = MIO_SB_106 #대형 폭탄
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_SB_104
+		all_parents = { MIO_SB_104 }
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			air_bombing = 1
+			thrust = 0.15
+		}
+		on_complete = {
+			FROM = { set_country_flag = MIO_SB_106 }
+		}
+	}
+
+	trait = {
+		token = MIO_SB_107
+		name = MIO_SB_107 #전략적 파괴 특화
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+
+		position = { x=1 y=1 }
+		relative_position_id = MIO_SB_104
+		any_parent = { MIO_SB_104 MIO_SB_105 }
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			air_bombing = 1
+		}
+		on_complete = {
+			FROM = { set_country_flag = MIO_SB_107 }
+		}
+	}
+
+	trait = {
+		token = MIO_SB_108
+		name = MIO_SB_108 #소이탄
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+
+		position = { x=2 y=1 }
+		relative_position_id = MIO_SB_104
+		all_parents = { MIO_SB_105 }
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			air_bombing = 1
+			thrust = 0.15
+		}
+		on_complete = {
+			FROM = { set_country_flag = MIO_SB_108 }
+		}
+	}
+
+	trait = {
+		token = MIO_SB_109
+		name = MIO_SB_109 #개선된 보잉
+		icon = GFX_generic_mio_department_icon_plane_strategic_bomber_quality
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_SB_101
+		all_parents = { MIO_SB_101 }
+
+		limit_to_equipment_type = { large_plane_airframe }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIO_SB_tt
+				FROM = {
+					OR = {
+						has_country_flag = MIO_SB_106
+						has_country_flag = MIO_SB_108
+					}
+					has_country_flag = MIO_SB_107
+				}
+			}
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.10
+			reliability = 0.10
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.10
+			production_resource_need_factor = -0.10
+		}
+	}
+
+	trait = {
+		token = MIO_SB_110
+		name = MIO_SB_110 #여압 케빈
+		icon = GFX_generic_mio_trait_icon_air_superiority
+
+		position = { x=-1 y=1 }
+		relative_position_id = MIO_SB_109
+		all_parents = { MIO_SB_109 }
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			air_range = 0.1
+		}
+	}
+
+	trait = {
+		token = MIO_SB_111
+		name = MIO_SB_111 #공기 역학적 개선
+		icon = GFX_generic_mio_trait_icon_air_agility
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_SB_109
+		all_parents = { MIO_SB_109 }
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			air_agility = 0.1
+			maximum_speed = 0.1
+		}
+	}
+
+	trait = {
+		token = MIO_SB_112
+		name = MIO_SB_112 #터보 엔진
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x=1 y=1 }
+		relative_position_id = MIO_SB_109
+		all_parents = { MIO_SB_109 }
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			maximum_speed = 0.2
+		}
+	}
+
+	trait = {
+		token = MIO_SB_201
+		name = MIO_SB_201 #포탑 기관총 강화
+		icon = GFX_generic_mio_trait_icon_air_attack
+
+		position = { x=-1 y=1 }
+		relative_position_id = MIO_SB_103
+		all_parents = { MIO_SB_103 }
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+
+		equipment_bonus = {
+			air_attack = 1
+		}
+	}
+
+	trait = {
+		token = MIO_SB_202
+		name = MIO_SB_202 #추가 포탑 탄약고
+		icon = GFX_generic_mio_trait_icon_air_attack
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_SB_103
+		all_parents = { MIO_SB_103 }
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			air_attack = 1
+		}
+	}
+
+	trait = {
+		token = MIO_SB_203
+		name = MIO_SB_203 #포탑 정확도 강화
+		icon = GFX_generic_mio_trait_icon_air_attack
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_SB_201
+		all_parents = { MIO_SB_201 MIO_SB_202 }
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			air_attack = 1
+		}
+	}
+
+	trait = {
+		token = MIO_SB_301
+		name = MIO_SB_301 #날아다니는 요새
+		icon = GFX_generic_mio_department_icon_plane_general_engine
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_SB_203
+		all_parents = { MIO_SB_110 MIO_SB_111 MIO_SB_112 MIO_SB_203 }
+
+		limit_to_equipment_type = { large_plane_airframe }
+
+		equipment_bonus = {
+			air_range = 0.2
+			air_agility = 0.15
+			air_defence = 0.2
+			fuel_consumption = 0.15
+		}
+	}
+}
+
+#해상초계기 설계사
+ioi_generic_maritime_patrol_aircraft_organization = {
+	icon = GFX_idea_generic_air_manufacturer_3
+
+	allowed = { always = no }
+
+	equipment_type = {
+		large_plane_maritime_patrol_plane_airframe
+	}
+
+	research_categories = { mio_cat_all_heavy_aircraft_and_modules }
+	
+	tree_header_text = {
+		text = ioi_mio_maritime_patrol_aircraft_survive
+		x = 2
+	}
+
+	tree_header_text = {
+		text = ioi_mio_maritime_patrol_aircraft_ass
+		x = 8
+	}
+
+	tree_header_text = {
+		text = ioi_mio_maritime_patrol_aircraft_asw
+		x = 10
+	}
+
+	initial_trait = {
+		name = MIO_MPA_initial_trait	#해상초계기 설계사
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.2
+		}
+		equipment_bonus = {
+			air_bombing = 0.05
+			air_agility = -0.05
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_101
+		name = MIO_MPA_101 #엔진 출력 강화
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x=2 y=0 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_agility = 0.05
+			maximum_speed = 0.1
+			air_range = 0.1
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_102
+		name = MIO_MPA_102 #전금속 동체
+		icon = GFX_generic_mio_department_icon_plane_strategic_bomber
+
+		position = { x=2 y=0 }
+		relative_position_id = MIO_MPA_101
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_defence = 0.05
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_103
+		name = MIO_MPA_103 #터렛 강화
+		icon = GFX_generic_mio_trait_icon_air_attack
+
+		position = { x=-1 y=1 }
+		relative_position_id = MIO_MPA_101
+		all_parents = { MIO_MPA_101 MIO_MPA_102 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_attack = 0.10
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_104
+		name = MIO_MPA_104 #동체 확장
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+
+		position = { x=-1 y=1 }
+		relative_position_id = MIO_MPA_103
+		all_parents = { MIO_MPA_103 }
+		mutually_exclusive = { MIO_MPA_105 }
+		
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_bombing = 0.05
+			naval_strike_attack = 0.05
+		}
+		on_complete = {
+			FROM = { set_country_flag = MIO_MPA_104 }
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_105
+		name = MIO_MPA_105 #비행정 선체
+		icon = GFX_generic_mio_trait_icon_naval_range
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_MPA_103
+		all_parents = { MIO_MPA_103 }
+		mutually_exclusive = { MIO_MPA_104 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_range = 0.15
+		}
+		on_complete = {
+			FROM = { set_country_flag = MIO_MPA_105 }
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_201
+		name = MIO_MPA_201 #관측창
+		icon = GFX_generic_mio_trait_icon_surface_detection
+
+		position = { x=1 y=1 }
+		relative_position_id = MIO_MPA_102
+		all_parents = { MIO_MPA_101 MIO_MPA_102 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			surface_detection = 0.15
+			sub_detection = 0.15
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_202
+		name = MIO_MPA_202 #기뢰 장비 강화
+		icon = GFX_generic_mio_trait_icon_mines
+
+		position = { x=-1 y=1 }
+		relative_position_id = MIO_MPA_201
+		all_parents = { MIO_MPA_201 }
+		mutually_exclusive = { MIO_MPA_203 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			mines_planting = 1
+		}
+		on_complete = {
+			FROM = { set_country_flag = MIO_MPA_107 }
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_203
+		name = MIO_MPA_203 #소해 장비 강화
+		icon = GFX_generic_mio_trait_icon_detection
+
+		position = { x=0 y=1 }
+		relative_position_id = MIO_MPA_201
+		all_parents = { MIO_MPA_201 }
+		mutually_exclusive = { MIO_MPA_202 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			mines_sweeping = 1
+		}
+		on_complete = {
+			FROM = { set_country_flag = MIO_MPA_108 }
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_204
+		name = MIO_MPA_204 #소노부이
+		icon = GFX_generic_mio_trait_icon_sub_detection
+
+		position = { x=1 y=1 }
+		relative_position_id = MIO_MPA_201
+		all_parents = { MIO_MPA_201 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			sub_detection = 0.15
+			surface_detection = 0.15
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_205
+		name = MIO_MPA_205 #어뢰 강화
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+
+		position = { x=-1 y=1 }
+		relative_position_id = MIO_MPA_204
+		all_parents = { MIO_MPA_204 }
+		mutually_exclusive = { MIO_MPA_206 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			naval_strike_attack = 0.25
+			naval_strike_targetting = 0.25
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_206
+		name = MIO_MPA_206 #폭뢰 강화
+		icon = GFX_generic_mio_trait_icon_sub_attack
+
+		position = { x=1 y=1 }
+		relative_position_id = MIO_MPA_204
+		all_parents = { MIO_MPA_204 }
+		mutually_exclusive = { MIO_MPA_205 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			naval_strike_attack = 0.15
+			naval_strike_targetting = 0.15
+			sub_detection = 0.15
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_207
+		name = MIO_MPA_207 #대잠초계기
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x=1 y=1 }
+		relative_position_id = MIO_MPA_205
+		any_parent = { MIO_MPA_205 MIO_MPA_206 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			sub_detection = 1
+		}
+		on_complete = {
+			FROM = { set_country_flag = MIO_MPA_207 }
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_300
+		name = MIO_MPA_300 #개선된 설계사
+		icon = GFX_generic_mio_department_icon_plane_maritime_patrol
+
+		position = { x=1 y=1 }
+		relative_position_id = MIO_MPA_101
+		all_parents = { MIO_MPA_101 MIO_MPA_102 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIO_MPA_tt
+				FROM = {
+					OR = {
+						has_country_flag = MIO_MPA_104
+						has_country_flag = MIO_MPA_105
+					}
+					has_country_flag = MIO_MPA_207
+				}
+			}
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.10
+			reliability = 0.10
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.10
+			production_resource_need_factor = -0.10
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_301
+		name = MIO_MPA_301 #유선형 날개
+		icon = GFX_generic_mio_trait_icon_air_agility
+
+		position = { x=1 y=2 }
+		relative_position_id = MIO_MPA_101
+		all_parents = { MIO_MPA_300 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_agility = 0.15
+			thrust = 0.05
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_302
+		name = MIO_MPA_302 #항속거리 증가
+		icon = GFX_generic_mio_trait_icon_air_range
+
+		position = { x=-1 y=1 }
+		relative_position_id = MIO_MPA_301
+		all_parents = { MIO_MPA_301 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			air_range = 0.1
+		}
+	}
+
+	trait = {
+		token = MIO_MPA_303
+		name = MIO_MPA_303 #양력 효율 강화
+		icon = GFX_generic_mio_trait_icon_air_agility
+
+		position = { x=1 y=1 }
+		relative_position_id = MIO_MPA_301
+		all_parents = { MIO_MPA_301 }
+
+		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
+
+		equipment_bonus = {
+			thrust = 0.15
+		}
+	}
+}
+
+####################
+#	기타 설계사		#
+#################### 
