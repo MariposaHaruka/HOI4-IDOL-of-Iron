@@ -3485,8 +3485,9 @@ focus_tree = {
 		icon = GFX_focus_ioi_generic_election_1
 		cost = 0
 
-		x = 67
+		x = 13
 		y = 0
+		relative_position_id = BLA_32001
 
 		ai_will_do = { factor = 50 }
 		available = { always = no }
@@ -4200,7 +4201,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_31215 focus = BLA_31216 focus = BLA_31227 focus = BLA_31228 focus = BLA_31232 }
 		available = { has_country_flag = BLA_schalle_integration }
-		mutually_exclusive = { focus = BLA_31501 focus = BLA_31601 }
+		mutually_exclusive = { focus = BLA_31501 focus = BLA_31601 focus = BLA_40001 }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4222,7 +4223,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_31215 focus = BLA_31216 focus = BLA_31227 focus = BLA_31228 focus = BLA_31232 }
 		available = { has_country_flag = BLA_schalle_integration }
-		mutually_exclusive = { focus = BLA_31401 focus = BLA_31601 }
+		mutually_exclusive = { focus = BLA_31401 focus = BLA_31601 focus = BLA_40001 }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4244,7 +4245,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_31215 focus = BLA_31216 focus = BLA_31227 focus = BLA_31228 focus = BLA_31232 }
 		available = { has_country_flag = BLA_schalle_integration }
-		mutually_exclusive = { focus = BLA_31401 focus = BLA_31501 }
+		mutually_exclusive = { focus = BLA_31401 focus = BLA_31501 focus = BLA_40001 }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4935,7 +4936,7 @@ focus_tree = {
 		icon = GFX_focus_BLA_33002
 		cost = 0
 
-		x = -2
+		x = -6
 		y = 1
 		relative_position_id = BLA_33001
 
@@ -4965,7 +4966,7 @@ focus_tree = {
 		icon = GFX_focus_BLA_33003
 		cost = 0
 
-		x = 0
+		x = -3
 		y = 1
 		relative_position_id = BLA_33001
 
@@ -5090,7 +5091,7 @@ focus_tree = {
 		icon = GFX_focus_BLA_33102
 		cost = 5
 
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = BLA_33004
 
@@ -5110,9 +5111,9 @@ focus_tree = {
 		icon = GFX_focus_BLA_32003
 		cost = 5
 
-		x = 1
-		y = 1
-		relative_position_id = BLA_33102
+		x = -2
+		y = 2
+		relative_position_id = BLA_33101
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = { focus = BLA_33101 }
@@ -5129,9 +5130,9 @@ focus_tree = {
 		icon = GFX_focus_BLA_31405
 		cost = 5
 
-		x = 3
-		y = 1
-		relative_position_id = BLA_33102
+		x = 0
+		y = 2
+		relative_position_id = BLA_33101
 
 		prerequisite = { focus = BLA_33101 }
 
@@ -5147,9 +5148,9 @@ focus_tree = {
 		icon = GFX_focus_SWE_socialist_reforms
 		cost = 5
 
-		x = 5
-		y = 1
-		relative_position_id = BLA_33102
+		x = 2
+		y = 2
+		relative_position_id = BLA_33101
 
 		prerequisite = { focus = BLA_33101 }
 
@@ -5859,13 +5860,15 @@ focus_tree = {
 		}
 		cost = 5
 
-		x = 61
-		y = 12
+		x = 62
+		y = 7
 
 		ai_will_do = { factor = 50 }
 
 		available_if_capitulated = yes
 		available = { has_country_flag = BLA_USKflag }
+		
+		mutually_exclusive = { focus = BLA_31401 focus = BLA_31501 focus = BLA_31601 }
 		prerequisite = { focus = BLA_31215 focus = BLA_31216 focus = BLA_31227 focus = BLA_31228 focus = BLA_31232 focus = BLA_32012 focus = BLA_32016 focus = BLA_32017 focus = BLA_32018 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -5879,7 +5882,7 @@ focus_tree = {
 		icon = GFX_focus_BLA_40101
 		cost = 5
 
-		x = -9
+		x = 0
 		y = 1
 		relative_position_id = BLA_40001
 
@@ -5995,7 +5998,7 @@ focus_tree = {
 		icon = GFX_focus_BLA_40201
 		cost = 5
 
-		x = -5
+		x = 4
 		y = 1
 		relative_position_id = BLA_40001
 
@@ -6167,8 +6170,8 @@ focus_tree = {
 		icon = GFX_focus_BLA_40301
 		cost = 5
 
-		x = -12
-		y = 1
+		x = 6
+		y = 5
 		relative_position_id = BLA_40001
 
 		ai_will_do = { factor = 50 }
@@ -6252,7 +6255,7 @@ focus_tree = {
 		icon = GFX_focus_BLA_40401
 		cost = 5
 
-		x = -1
+		x = 8
 		y = 1
 		relative_position_id = BLA_40001
 
@@ -6271,7 +6274,7 @@ focus_tree = {
 		icon = GFX_focus_BLA_40501
 		cost = 5
 
-		x = 1
+		x = 10
 		y = 1
 		relative_position_id = BLA_40001
 
@@ -6466,7 +6469,7 @@ focus_tree = {
 		icon = GFX_focus_BLA_40601
 		cost = 5
 
-		x = 3
+		x = 12
 		y = 1
 		relative_position_id = BLA_40001
 
@@ -6486,8 +6489,8 @@ focus_tree = {
 		icon = GFX_focus_BLA_40701
 		cost = 5
 
-		x = 6
-		y = 1
+		x = 13
+		y = 5
 		relative_position_id = BLA_40001
 
 		ai_will_do = { factor = 50 }

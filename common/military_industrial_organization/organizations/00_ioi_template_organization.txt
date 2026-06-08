@@ -1,18 +1,18 @@
 ####################
 #	전차 설계사		#
-#################### 
+####################
 
 
 
 ####################
 #	함선 설계사		#
-#################### 
+####################
 
 
 
 ####################
 #	항공 설계사		#
-#################### 
+####################
 
 #중항공기 설계사
 ioi_generic_heavy_aircraft_organization = {
@@ -26,7 +26,7 @@ ioi_generic_heavy_aircraft_organization = {
 	}
 
 	research_categories = { mio_cat_all_heavy_aircraft_and_modules }
-	
+
 	tree_header_text = {
 		text = ioi_mio_heavy_aircraft_body
 		x = 2
@@ -34,7 +34,7 @@ ioi_generic_heavy_aircraft_organization = {
 
 	tree_header_text = {
 		text = ioi_mio_heavy_aircraft_survive
-		x = 8
+		x = 6
 	}
 
 	initial_trait = {
@@ -71,7 +71,7 @@ ioi_generic_heavy_aircraft_organization = {
 		name = MIO_HA_102 #동체 후미 연장
 		icon = GFX_generic_mio_trait_icon_strategic_attack
 
-		position = { x=2 y=0 }
+		position = { x=4 y=0 }
 		relative_position_id = MIO_HA_101
 
 		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
@@ -109,7 +109,7 @@ ioi_generic_heavy_aircraft_organization = {
 		relative_position_id = MIO_HA_102
 		all_parents = { MIO_HA_101 MIO_HA_102 }
 		mutually_exclusive = { MIO_HA_103 }
-		
+
 		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
 
 		equipment_bonus = {
@@ -156,7 +156,7 @@ ioi_generic_heavy_aircraft_organization = {
 		name = MIO_HA_107 #고급 터보차저
 		icon = GFX_generic_mio_trait_icon_air_agility
 
-		position = { x=1 y=0 }
+		position = { x=2 y=0 }
 		relative_position_id = MIO_HA_106
 		any_parent = { MIO_HA_103 MIO_HA_104 }
 
@@ -172,7 +172,7 @@ ioi_generic_heavy_aircraft_organization = {
 		name = MIO_HA_108 #장거리 항법 장치
 		icon = GFX_generic_mio_trait_icon_naval_range
 
-		position = { x=2 y=0 }
+		position = { x=4 y=0 }
 		relative_position_id = MIO_HA_106
 		any_parent = { MIO_HA_103 MIO_HA_104 }
 
@@ -253,7 +253,7 @@ ioi_generic_heavy_aircraft_organization = {
 		name = MIO_HA_112 #설계 효율화
 		icon = GFX_generic_mio_department_icon_plane_strategic_bomber_engine
 
-		position = { x=-1 y=1 }
+		position = { x=-2 y=1 }
 		relative_position_id = MIO_HA_111
 		all_parents = { MIO_HA_111 }
 		mutually_exclusive = { MIO_HA_113 MIO_HA_114 }
@@ -274,7 +274,7 @@ ioi_generic_heavy_aircraft_organization = {
 		position = { x=0 y=1 }
 		relative_position_id = MIO_HA_111
 		all_parents = { MIO_HA_111 }
-		mutually_exclusive = { MIO_HA_113 MIO_HA_114 }
+		mutually_exclusive = { MIO_HA_112 MIO_HA_114 }
 
 		limit_to_equipment_type = { large_plane_airframe large_plane_maritime_patrol_plane_airframe }
 
@@ -290,10 +290,10 @@ ioi_generic_heavy_aircraft_organization = {
 		name = MIO_HA_114 #연구 효율화
 		icon = GFX_generic_mio_department_icon_plane_strategic_bomber_quality
 
-		position = { x=1 y=1 }
+		position = { x=2 y=1 }
 		relative_position_id = MIO_HA_111
 		all_parents = { MIO_HA_111 }
-		mutually_exclusive = { MIO_HA_113 MIO_HA_114 }
+		mutually_exclusive = { MIO_HA_112 MIO_HA_113 }
 
 		on_complete = {
 			FROM = {
@@ -388,15 +388,15 @@ ioi_generic_strategic_bomber_organization = {
 	}
 
 	research_categories = { mio_cat_all_heavy_aircraft_and_modules }
-	
+
 	tree_header_text = {
 		text = ioi_mio_strategic_bomber_bombing
-		x = 2
+		x = 1
 	}
 
 	tree_header_text = {
 		text = ioi_mio_strategic_bomber_survive
-		x = 8
+		x = 7
 	}
 
 	initial_trait = {
@@ -468,7 +468,7 @@ ioi_generic_strategic_bomber_organization = {
 		relative_position_id = MIO_SB_102
 		all_parents = { MIO_SB_101 MIO_SB_102 MIO_SB_103 }
 		mutually_exclusive = { MIO_SB_105 }
-		
+
 		limit_to_equipment_type = { large_plane_airframe }
 
 		equipment_bonus = {
@@ -720,7 +720,7 @@ ioi_generic_maritime_patrol_aircraft_organization = {
 	}
 
 	research_categories = { mio_cat_all_heavy_aircraft_and_modules }
-	
+
 	tree_header_text = {
 		text = ioi_mio_maritime_patrol_aircraft_survive
 		x = 2
@@ -728,12 +728,12 @@ ioi_generic_maritime_patrol_aircraft_organization = {
 
 	tree_header_text = {
 		text = ioi_mio_maritime_patrol_aircraft_ass
-		x = 8
+		x = 5
 	}
 
 	tree_header_text = {
 		text = ioi_mio_maritime_patrol_aircraft_asw
-		x = 10
+		x = 8
 	}
 
 	initial_trait = {
@@ -806,7 +806,7 @@ ioi_generic_maritime_patrol_aircraft_organization = {
 		relative_position_id = MIO_MPA_103
 		all_parents = { MIO_MPA_103 }
 		mutually_exclusive = { MIO_MPA_105 }
-		
+
 		limit_to_equipment_type = { large_plane_maritime_patrol_plane_airframe }
 
 		equipment_bonus = {
@@ -843,7 +843,7 @@ ioi_generic_maritime_patrol_aircraft_organization = {
 		name = MIO_MPA_201 #관측창
 		icon = GFX_generic_mio_trait_icon_surface_detection
 
-		position = { x=1 y=1 }
+		position = { x=3 y=1 }
 		relative_position_id = MIO_MPA_102
 		all_parents = { MIO_MPA_101 MIO_MPA_102 }
 
@@ -860,7 +860,7 @@ ioi_generic_maritime_patrol_aircraft_organization = {
 		name = MIO_MPA_202 #기뢰 장비 강화
 		icon = GFX_generic_mio_trait_icon_mines
 
-		position = { x=-1 y=1 }
+		position = { x=-2 y=1 }
 		relative_position_id = MIO_MPA_201
 		all_parents = { MIO_MPA_201 }
 		mutually_exclusive = { MIO_MPA_203 }
@@ -880,7 +880,7 @@ ioi_generic_maritime_patrol_aircraft_organization = {
 		name = MIO_MPA_203 #소해 장비 강화
 		icon = GFX_generic_mio_trait_icon_detection
 
-		position = { x=0 y=1 }
+		position = { x=-1 y=1 }
 		relative_position_id = MIO_MPA_201
 		all_parents = { MIO_MPA_201 }
 		mutually_exclusive = { MIO_MPA_202 }
@@ -1054,4 +1054,4 @@ ioi_generic_maritime_patrol_aircraft_organization = {
 
 ####################
 #	기타 설계사		#
-#################### 
+####################

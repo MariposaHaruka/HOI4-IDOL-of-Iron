@@ -11,7 +11,7 @@ wolfpacks = {
         always = yes
     }
 
-    ai_will_do = { 
+    ai_will_do = {
         base = 1
         modifier = {
             factor = 75
@@ -76,7 +76,7 @@ submarine_fleet_operations = {
         always = yes
     }
 
-    ai_will_do = { 
+    ai_will_do = {
         base = 1
         modifier = {
             factor = 25
@@ -135,7 +135,7 @@ capital_hunters = {
     xp_cost = 100
     xp_type = navy
 
-    ai_will_do = { 
+    ai_will_do = {
         base = 1
         modifier = {
             factor = 25
@@ -291,11 +291,8 @@ coastal_minelaying = {
 
     	}
     	clearing_procedures = {
-    		submarine = {
-    			mines_sweeping = 0.2
-    		}
     		destroyer = {
-    			mines_sweeping = 0.2
+    			mines_sweeping = 0.25
     		}
     	}
     }
@@ -315,7 +312,7 @@ long_range_submarines = {
             is_special_project_completed = sp:sp_naval_cruiser_submarine
             is_special_project_completed = sp:sp_naval_submarine_carrier
         }
-        
+
     }
     visible = {
         has_dlc = "No Compromise, No Surrender"
@@ -332,6 +329,10 @@ long_range_submarines = {
                     instant = yes
                 }
                 ship_hull_cruiser_submarine = {
+                    surface_detection = 0.1
+                    instant = yes
+                }
+                ship_hull_nuclear_submarine = {
                     surface_detection = 0.1
                     instant = yes
                 }
@@ -397,8 +398,7 @@ long_range_submarines = {
                 sub_detection = 0.2
                 torpedo_attack = 0.1
             }
-        }   
+        }
 
     }
 }
-

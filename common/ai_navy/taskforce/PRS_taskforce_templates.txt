@@ -4,14 +4,14 @@ PRS_StrikeForce_1 = {
 	}
 	ai_will_do = {
 		factor = 1
-	}	
+	}
 	mission = { naval_strike }
 	min_composition = {
 		destroyer = {
 			amount = 8
 		}
 	}
-	
+
 	optimal_composition = {
 		battleship = {
 			amount = 4
@@ -35,14 +35,14 @@ PRS_StrikeForceCarrier_1 = {
 	}
 	ai_will_do = {
 		factor = 1
-	}		
+	}
 	mission = { naval_strike }
 	min_composition = {
 		destroyer = {
 			amount = 8
 		}
 	}
-	
+
 	optimal_composition = {
 		carrier = {
 			amount = 2
@@ -69,13 +69,13 @@ PRS_PatrolReconForce_1 = {
 	}
 	ai_will_do = {
 		factor = 10
-	}	
+	}
 	mission = { naval_patrol }
 	min_composition = {
 		light_cruiser = {
 			amount = 1
 		}
-	}	
+	}
 	optimal_composition = {
 		light_cruiser = {
 			amount = 3
@@ -89,7 +89,7 @@ PRS_PatrolDominanceForce_1 = {
 	}
 	ai_will_do = {
 		factor = 10
-	}		
+	}
 	mission = { naval_patrol }
 	min_composition = {
 		destroyer = {
@@ -113,7 +113,7 @@ PRS_ConvoyRaiding_1 = {
 	}
 	ai_will_do = {
 		factor = 1
-	}	
+	}
 	mission = { convoy_raiding }
 	min_composition = {
 		submarine = {
@@ -121,9 +121,9 @@ PRS_ConvoyRaiding_1 = {
 		}
 	}
 
-	optimal_composition = {
+	optimal_composition = { #많은 잠수함!
 		submarine = {
-			amount = 12
+			amount = 20
 		}
 	}
 }
@@ -134,7 +134,7 @@ PRS_ConvoySurfaceRaiding_1 = {
 	}
 	ai_will_do = {
 		factor = 1
-	}	
+	}
 	mission = { convoy_raiding}
 	min_composition = {
 		battle_cruiser = {
@@ -155,14 +155,14 @@ PRS_ConvoyEscort_1 = {
 	}
 	ai_will_do = {
 		factor = 5
-	}		
+	}
 	mission = { convoy_escort }
 	min_composition = {
 		destroyer = {
 			amount = 3
 		}
 	}
-	
+
 	optimal_composition = {
 		destroyer = {
 			amount = 10
@@ -176,7 +176,7 @@ PRS_MineLaying_1 = {
 	}
 	ai_will_do = {
 		factor = 1
-	}	
+	}
 	mission = { mines_planting }
 	min_composition = {
 		destroyer = {
@@ -184,13 +184,13 @@ PRS_MineLaying_1 = {
 			role = 4
 		}
 	}
-	
+
 	optimal_composition = {
 		destroyer = {
 			amount = 4
 			role = 4
 		}
-		
+
 		light_cruiser = {
 			amount = 1
 			role = 4

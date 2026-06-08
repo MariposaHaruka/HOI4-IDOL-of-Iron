@@ -4,30 +4,67 @@ TOH_StrikeForce_1 = {
 	}
 	ai_will_do = {
 		factor = 1
-	}	
+	}
 	mission = { naval_strike }
 	min_composition = {
+		battleship = {
+			amount = 2
+		}
 		destroyer = {
 			amount = 8
 		}
 	}
-	
+
 	optimal_composition = {
 		carrier = {
+		battleship = {
+			amount = 4
+		}
+		light_cruiser = {
+			amount = 10
+		}
+		destroyer = {
+			amount = 16
+		}
+	}
+}
+
+TOH_StrikeForceCarrier_1 = {
+	allowed = {
+		original_tag = TOH
+	}
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			add = 10
+			has_navy_size = {
+				unit = carrier
+				size > 0
+			}
+		}
+	}
+	mission = { naval_strike }
+	min_composition = {
+		battleship = {
 			amount = 2
+		}
+		destroyer = {
+			amount = 8
+		}
+	}
+
+	optimal_composition = {
+		carrier = {
+			amount = 4
 		}
 		battleship = {
 			amount = 4
 		}
-		heavy_cruiser = {
-			amount = 4
-		}
 		light_cruiser = {
-			amount = 4
+			amount = 10
 		}
 		destroyer = {
-			amount = 28
-
+			amount = 16
 		}
 	}
 }
@@ -44,7 +81,7 @@ TOH_PatrolReconForce_1 = {
 		light_cruiser = {
 			amount = 1
 		}
-	}	
+	}
 	optimal_composition = {
 		light_cruiser = {
 			amount = 3
@@ -58,7 +95,7 @@ TOH_PatrolDominanceForce_1 = {
 	}
 	ai_will_do = {
 		factor = 5
-	}	
+	}
 	mission = { naval_patrol }
 	min_composition = {
 		destroyer = {
@@ -82,7 +119,7 @@ TOH_ConvoyRaiding_1 = {
 	}
 	ai_will_do = {
 		factor = 1
-	}	
+	}
 	mission = { convoy_raiding }
 	min_composition = {
 		submarine = {
@@ -103,7 +140,7 @@ TOH_ConvoySurfaceRaiding_1 = {
 	}
 	ai_will_do = {
 		factor = 1
-	}	
+	}
 	mission = { convoy_raiding }
 	min_composition = {
 		battle_cruiser = {
@@ -131,7 +168,7 @@ TOH_ConvoyEscort_1 = {
 			amount = 3
 		}
 	}
-	
+
 	optimal_composition = {
 		destroyer = {
 			amount = 10
@@ -153,13 +190,13 @@ TOH_MineLaying_1 = {
 			role = 4
 		}
 	}
-	
+
 	optimal_composition = {
 		destroyer = {
 			amount = 4
 			role = 4
 		}
-		
+
 		light_cruiser = {
 			amount = 1
 			role = 4

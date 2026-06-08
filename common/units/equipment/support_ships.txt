@@ -13,39 +13,39 @@ equipments = {
 		priority = 2000
 
 
-		
+
 		lg_armor_piercing = 0
 		lg_attack = 0
-		
+
 		hg_armor_piercing = 0
 		hg_attack = 0
-		
+
 		torpedo_attack = 0
-		sub_attack = 1
-		
+		sub_attack = 0
+
 		anti_air_attack = 0
-		
+
 		armor_value = 0
 
-		
+
 		surface_detection = 20
-		sub_detection = 1
+		sub_detection = 0
 		surface_visibility = 10
 		naval_speed = 32
 		reliability = 0.80
-		
-		naval_range = 3000
-		
-		max_strength = 25
-		
+
+		naval_range = 3500
+
+		max_strength = 30
+
 
 		fuel_consumption = 0
-		
+
 		build_cost_ic = 500
 		resources = {
 			steel = 2
 		}
-		
+
 		manpower = 250
 		naval_dominance_factor = 0
 	}
@@ -58,15 +58,15 @@ equipments = {
 		priority = 2000
 		model = support_ship
 		modifier_stat = {
-			modifier = naval_general_support 
+			modifier = naval_general_support
 			value = 100
 			type = naval_support
 		}
-		
+
 		module_slots = inherit
 		naval_dominance_factor = 0
 	}
-	
+
 	support_ship_2 = {
 		abbreviation = "ZZZ"
 		year = 1936
@@ -76,12 +76,12 @@ equipments = {
 		priority = 2000
 		model = support_ship
 		modifier_stat = {
-			modifier = naval_general_support 
+			modifier = naval_general_support
 			value = 150
 			type = naval_support
 		}
 		max_strength = 40
-		naval_range = 4000
+		naval_range = 5000
 		build_cost_ic = 650
 		manpower = 350
 		module_slots = inherit

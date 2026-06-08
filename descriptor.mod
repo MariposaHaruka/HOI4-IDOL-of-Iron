@@ -134,5 +134,5 @@ tags={
 	"Utilities"
 }
 name="Idol of Iron"
-supported_version="1.17.*"
+supported_version="1.18.*"
 remote_file_id="3404084143"

@@ -28,7 +28,7 @@ set_research_slots = 3
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_recon = 1
 	tech_engineers = 1
 	tech_trucks = 1
@@ -304,7 +304,7 @@ set_variable = { LLS_kokumindomei_seats = 2 } #국민동맹
 #set_variable = { LLS_kokumindomei_seats = 15 } #국민동맹
 #Total seats - 466
 
-#캐릭터 
+#캐릭터
 recruit_character = LLS_kousaka_honoka
 recruit_character = LLS_ayase_eri
 recruit_character = LLS_minami_kotori
@@ -495,7 +495,7 @@ create_equipment_variant = {
 	}
 	obsolete = yes
 }
-### Battleship Variants	
+### Battleship Variants
 create_equipment_variant = {
 	name = "Nagato Class"
 	name_group = LLS_BB_HISTORICAL
@@ -549,7 +549,7 @@ create_equipment_variant = {
 create_equipment_variant = {
 	name = "Fuso Class"
 	type = ship_hull_heavy_1
-	#design_team = mio:JAP_sasebo_naval_arsenal_organization
+	design_team = mio:LLS_sasebo_naval_arsenal_organization
 	name_group = LLS_BB_HISTORICAL
 	parent_version = 0
 	modules = {
@@ -576,7 +576,7 @@ create_equipment_variant = {
 create_equipment_variant = {
 	name = "Ise Class"
 	type = ship_hull_heavy_1
-	#design_team = mio:JAP_sasebo_naval_arsenal_organization
+	design_team = mio:LLS_sasebo_naval_arsenal_organization
 	name_group = LLS_BB_HISTORICAL
 	parent_version = 0
 	modules = {
@@ -600,8 +600,8 @@ create_equipment_variant = {
 		}
 	}
 }
-	
-### Heavy Cruiser Variants			
+
+### Heavy Cruiser Variants
 create_equipment_variant = {
 	name = "Myoko Class"
 	type = ship_hull_cruiser_2
@@ -823,7 +823,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Momi Class" 
+	name = "Momi Class"
 	type = ship_hull_light_1
 	name_group = LLS_DD_HISTORICAL
 	parent_version = 0
@@ -870,8 +870,8 @@ create_equipment_variant = {
 		mid_1_custom_slot = ship_mine_layer_1
 		rear_1_custom_slot = ship_mine_layer_1
 	}
-}	
-### Submarine Variants	
+}
+### Submarine Variants
 create_equipment_variant = {
 	name = "Kaidai III Class"
 	type = ship_hull_submarine_1
@@ -882,7 +882,7 @@ create_equipment_variant = {
 		fixed_ship_engine_slot = sub_ship_engine_1
 		rear_1_custom_slot = ship_torpedo_sub_1
 	}
-}	
+}
 create_equipment_variant = {
 	name = "Ro-26 Class"
 	type = ship_hull_submarine_1

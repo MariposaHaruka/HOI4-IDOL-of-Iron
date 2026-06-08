@@ -95,7 +95,7 @@ technologies = {
 		enable_equipment_modules = {
 			ship_light_battery_2
 			ship_light_medium_battery_2
-			ship_secondaries_2			
+			ship_secondaries_2
 		}
 
 
@@ -125,7 +125,7 @@ technologies = {
 	}
 
     basic_light_shell = {
-		
+
 		research_cost = 0.5
 
 		start_year = 1936
@@ -182,7 +182,7 @@ technologies = {
 				factor = 2
 				date > 1939.1.1
 			}
-			
+
 			modifier = {
 				factor = 5
 				OR = {
@@ -244,7 +244,7 @@ technologies = {
 				has_tech = improved_ship_hull_light
 				factor = 20
 			}
-			
+
 			modifier = {
 				factor = 1.5
 				date > 1939.1.1
@@ -254,7 +254,7 @@ technologies = {
 				factor = 1.5
 				date > 1940.1.1
 			}
-			
+
 			modifier = {
 				factor = 3
 				OR = {
@@ -326,7 +326,7 @@ technologies = {
 				has_war = yes
 				factor = 10
 			}
-			
+
 			modifier = {
 				factor = 2
 				date > 1942.1.1
@@ -336,7 +336,7 @@ technologies = {
 				factor = 2
 				date > 1943.1.1
 			}
-			
+
 			modifier = {
 				factor = 5
 				OR = {
@@ -487,7 +487,7 @@ technologies = {
 				}
 				factor = 2
 			}
-			
+
 			modifier = {
 				factor = 1.5
 				date > 1939.1.1
@@ -497,7 +497,7 @@ technologies = {
 				factor = 1.5
 				date > 1940.1.1
 			}
-			
+
 			modifier = {
 				factor = 3
 				OR = {
@@ -802,9 +802,9 @@ technologies = {
 	}
 
 		####  ##  ###  ###  ### ###   ##      #   #  ##  ###   ##  ### ###  ###
-		 #  #  # #  # #  # #   #  # #  #     #   # #  # #  # #  # #   #  # #  
-		 #  #  # ###  ###  ##  #  # #  #     # # # #### ###  #### ##  ###  ## 
- 		 #  #  # #  # #    #   #  # #  #     # # # #  # #  # #  # #   #  # #  
+		 #  #  # #  # #  # #   #  # #  #     #   # #  # #  # #  # #   #  # #
+		 #  #  # ###  ###  ##  #  # #  #     # # # #### ###  #### ##  ###  ##
+ 		 #  #  # #  # #    #   #  # #  #     # # # #  # #  # #  # #   #  # #
 		 #   ##  #  # #    ### ###   ##       # #  #  # #  # #  # #   #  # ###
 
     basic_torpedo = {
@@ -962,7 +962,7 @@ technologies = {
 			naval_torpedo_hit_chance_factor = 0.1
 		}
 		naval_torpedo_reveal_chance_factor = -0.25
-		
+
 		folder = {
 			name = mtgnavalsupportfolder
 			position = { x = 0 y = 16 }
@@ -1012,9 +1012,9 @@ technologies = {
 
 		enable_equipment_modules = {
 			ship_torpedo_2
-			ship_torpedo_sub_2			
+			ship_torpedo_sub_2
 		}
-		
+
 
 
 		folder = {
@@ -1059,9 +1059,9 @@ technologies = {
 
 		enable_equipment_modules = {
 			ship_torpedo_3
-			ship_torpedo_sub_3			
+			ship_torpedo_sub_3
 		}
-		
+
 
 
 		folder = {
@@ -1096,7 +1096,7 @@ technologies = {
 
 		enable_equipment_modules = {
 			ship_torpedo_4
-			ship_torpedo_sub_4			
+			ship_torpedo_sub_4
 		}
 
 		on_research_complete = {
@@ -1153,8 +1153,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1937.1.1
+			}
 			modifier = {
 				has_navy_size = { size < 10 }
 				factor = 0.1
@@ -1285,7 +1288,7 @@ technologies = {
 		### ### ###  ###      ##   ##  #  # ### ###   ##  #       #   # ### ### #  #  ##  ###   ##
 		#    #  #  # #       #  # #  # ## #  #  #  # #  # #       ## ## #    #  #  # #  # #  # #
 		##   #  ###  ##      #    #  # # ##  #  ###  #  # #       # # # ##   #  #### #  # #  #  #
-		#    #  #  # #       #  # #  # #  #  #  #  # #  # #       #   # #    #  #  # #  # #  #   #	
+		#    #  #  # #       #  # #  # #  #  #  #  # #  # #       #   # #    #  #  # #  # #  #   #
 		#   ### #  # ###      ##   ##  #  #  #  #  #  ##  ###     #   # ###  #  #  #  ##  ###  ##
 
 		#NOTE: FIRE CONTROL SYSTEMS ARE IN ELECTROMECHANICAL IMAINEERING FOLDER!
@@ -1314,7 +1317,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
 			modifier = {
 				has_navy_size = { size < 10 }
 				factor = 0.1
@@ -1368,7 +1371,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
 			modifier = {
 				has_war = yes
 				factor = 2
@@ -1422,7 +1425,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
 			modifier = {
 				has_war = yes
 				factor = 2
@@ -1626,7 +1629,7 @@ technologies = {
 					tag = IMA # IOI 수정
 					tag = TOH # IOI 수정
 				}
-				factor = 6
+				factor = 4
 			}
 			modifier = {
 				has_war = yes
@@ -1667,7 +1670,7 @@ technologies = {
 		heavy_cruiser = {
 			sub_detection = 0.1
 			}
-			
+
 		folder = {
 			name = mtgnavalsupportfolder
 			position = { x = 1 y = 10 }
@@ -1898,22 +1901,22 @@ technologies = {
 		special_project_specialization = { specialization_naval }
 	}
 
-	mtg_transport = { 
+	mtg_transport = {
 
 		transport_capacity = -0.33
 		naval_invasion_prep_days = -10
-		naval_invasion_division_cap = 2 
+		naval_invasion_division_cap = 2
 		naval_invasion_plan_cap = 1
 
 		path = {
 			leads_to_tech = mtg_landing_craft
 			research_cost_coeff = 1
-		}	
+		}
 
 		path = {
 			leads_to_tech = sp_multi_product_supply_ships
 			research_cost_coeff = 1
-		}	
+		}
 
 		research_cost = 1.5
 		start_year = 1922
@@ -1963,8 +1966,8 @@ technologies = {
 		#invasion_preparation = -0.25
 		amphibious_invasion_defence = 0.15
 		naval_invasion_prep_days = -10
-		naval_invasion_division_cap = 4 
-		naval_invasion_plan_cap = 3	
+		naval_invasion_division_cap = 4
+		naval_invasion_plan_cap = 3
 		#naval_invasion_capacity = 20
 
 		path = {
@@ -2050,8 +2053,8 @@ technologies = {
 		amphibious_invasion = 0.25
 		amphibious_invasion_defence = 0.5
 		naval_invasion_prep_days = -10
-		naval_invasion_division_cap = 5 
-		naval_invasion_plan_cap = 4			
+		naval_invasion_division_cap = 5
+		naval_invasion_plan_cap = 4
 		#naval_invasion_capacity = 100
 
 		research_cost = 2
@@ -2117,7 +2120,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		force_use_small_tech_layout = yes
-		is_special_project_tech = yes	
+		is_special_project_tech = yes
 		xp_research_type = navy
 		xp_boost_cost = 75
 		xp_research_bonus = 1.75
@@ -2131,7 +2134,7 @@ technologies = {
 		folder = {
 			name = naval_folder
 			position = { x = 1 y = 10 }
-		}		
+		}
 
 		categories = {
 			naval_equipment
@@ -2150,10 +2153,10 @@ technologies = {
 		}
 
 		underway_replenishment_range = 0.25
-		underway_replenishment_convoy_cost = -0.2	
-		
+		underway_replenishment_convoy_cost = -0.2
+
 		force_use_small_tech_layout = yes
-		is_special_project_tech = yes		
+		is_special_project_tech = yes
 		xp_research_type = navy
 		xp_boost_cost = 75
 		xp_research_bonus = 1.5
@@ -2167,13 +2170,13 @@ technologies = {
 		folder = {
 			name = naval_folder
 			position = { x = 1 y = 17 }
-		}		
+		}
 
 		categories = {
 			naval_equipment
 			tp_tech
 		}
-		special_project_specialization = { specialization_naval }	
+		special_project_specialization = { specialization_naval }
 	}
 
 	#### SUPPORT & REPAIR SHIPS ####
