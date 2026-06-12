@@ -17,7 +17,7 @@ buildings = {
 
 		infrastructure_construction_effect = yes
 		level_cap = { #IOI 수정
-			state_max = 10 
+			state_max = 10
 		}
 		country_modifiers = {
 			modifiers = {
@@ -84,8 +84,8 @@ buildings = {
 			province_max = 1
 		}
 		tags = { supply_building }
-	}	
-	
+	}
+
 	rail_way = {
 		base_cost = 170
 		per_level_extra_cost = 130
@@ -96,7 +96,7 @@ buildings = {
 			province_max = 1
 		}
 	}
-	
+
 	naval_facility = {
 		show_on_map = 1
 		base_cost = 12000
@@ -104,7 +104,7 @@ buildings = {
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 18
 		value = 1
-		spawn_point = naval_base_spawn 
+		spawn_point = naval_base_spawn
 		specialization = { specialization_naval }
 		tags = { facility }
 		disabled_in_dmz = yes
@@ -128,7 +128,7 @@ buildings = {
 		always_shown = yes
 		base_cost = 5000
 		per_level_extra_cost = 1000
-		spawn_point = naval_base_spawn 
+		spawn_point = naval_base_spawn
 		only_costal = yes
 		is_port = yes
 		icon_frame = 6
@@ -152,7 +152,7 @@ buildings = {
 		infrastructure_construction_effect = yes
 		level_cap = {
 			province_max = 10
-		}		
+		}
 	}
 
 	coastal_bunker = {
@@ -191,7 +191,7 @@ buildings = {
 			enemy_attrition = 0.1
 			state_production_speed_bunker_factor = 0.1
 			state_production_speed_coastal_bunker_factor = 0.1
-		}		
+		}
 	}
 
 	dockyard = {
@@ -209,7 +209,7 @@ buildings = {
 		}
 	}
 
-	
+
 	anti_air_building = {
 		show_on_map = 3
 		base_cost = 2500
@@ -234,7 +234,7 @@ buildings = {
 		refinery = yes
 		value = 5
 		infrastructure_construction_effect = yes
-		
+
 		show_modifier = yes
 
 		country_modifiers = {
@@ -255,14 +255,14 @@ buildings = {
 		value = 5
 		infrastructure_construction_effect = yes
 		fuel_silo = yes
-		per_level_extra_cost = -500		
+		per_level_extra_cost = -500
 		show_modifier = yes
 		country_modifiers = {
 			modifiers = {
 				max_fuel_building = 100.0 #k
 			}
 		}
-		
+
 		level_cap = {
 			state_max = 6  #IOI 수정
 		}
@@ -337,7 +337,7 @@ buildings = {
 			province_max = 1
 		}
 	}
-	
+
 	naval_headquarters = {
 		dlc_allowed = { has_dlc = "No Compromise, No Surrender" }
 		show_on_map = 1
@@ -366,7 +366,7 @@ buildings = {
 
 	nuclear_reactor = {
 		hide_if_missing_tech = yes
-		missing_tech_loc = { 
+		missing_tech_loc = {
 			localization_key = SP_BUILDING_MISSING_PROJECT
 			PROJECT = sp_nuclear_reactor
 		}
@@ -396,7 +396,7 @@ buildings = {
 
 	nuclear_reactor_heavy_water = {
 		hide_if_missing_tech = yes
-		missing_tech_loc = { 
+		missing_tech_loc = {
 			localization_key = SP_BUILDING_MISSING_PROJECT
 			PROJECT = sp_nuclear_reactor
 		}
@@ -425,7 +425,7 @@ buildings = {
 
 	commercial_nuclear_reactor = {
 		hide_if_missing_tech = yes
-		missing_tech_loc = { 
+		missing_tech_loc = {
 			localization_key = SP_BUILDING_MISSING_PROJECT
 			PROJECT = sp_commercial_nuclear_reactor
 		}
@@ -433,12 +433,12 @@ buildings = {
 		show_on_map = 1
 		base_cost = 35000
 		icon_frame = 27
-		#nuclear_reactor = yes
-		local_resources_coal = 250 #IOI 수정	
+		nuclear_reactor = yes
+		local_resources_coal = 250 #IOI 수정
 		affects_energy = yes
 		value = 10
 		infrastructure_construction_effect = yes
-		
+
 		country_modifiers = {
 			modifiers = {
 				nuclear_production_factor = 3
@@ -450,7 +450,7 @@ buildings = {
 		state_modifiers = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
-			state_resources_factor = 0.1	
+			state_resources_factor = 0.1
 			local_factory_energy_consumption = -0.50
 		}
 
@@ -501,7 +501,7 @@ buildings = {
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 17
 		value = 1
-		spawn_point = special_project_facility_spawn 
+		spawn_point = special_project_facility_spawn
 		specialization = { specialization_air}
 		tags = { facility }
 		need_supply = yes
@@ -525,7 +525,7 @@ buildings = {
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 19
 		value = 1
-		spawn_point = special_project_facility_spawn 
+		spawn_point = special_project_facility_spawn
 		specialization = { specialization_land }
 		tags = { facility }
 		disabled_in_dmz = yes
@@ -553,7 +553,7 @@ buildings = {
 		is_buildable = no
 		affects_energy = yes
 		need_detection = yes
-		detecting_intel_type = civilian 
+		detecting_intel_type = civilian
 		province_damage_modifiers = { flooded }
 		#state_damage_modifier = { kurdish_agitation }
 		only_display_if_exists = yes
@@ -581,11 +581,38 @@ buildings = {
 		is_buildable = no
 		affects_energy = yes
 		need_detection = yes
-		detecting_intel_type = civilian 
+		detecting_intel_type = civilian
 		province_damage_modifiers = { flooded }
 		only_display_if_exists = yes
 		special_icon = GFX_dam_icon_small
 		#local_resources_coal = 350 #IOI 수정
+		level_cap = {
+			province_max = 1
+		}
+		show_modifier = yes
+		state_modifiers = {
+			state_production_speed_buildings_factor = 0.15
+			local_building_slots_factor = 0.15
+			state_resources_factor = 0.1
+			local_factory_energy_consumption = -0.65
+		}
+	}
+
+	cataract_dam_mountain = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 26
+		value = 5
+		tags = { dam_building }
+		spawn_point = dam_spawn
+		is_buildable = no
+		affects_energy = yes
+		need_detection = yes
+		detecting_intel_type = civilian
+		province_damage_modifiers = { flooded }
+		only_display_if_exists = yes
+		special_icon = GFX_dam_icon_small
 		level_cap = {
 			province_max = 1
 		}
@@ -616,7 +643,7 @@ buildings = {
 		}
 		show_modifier = yes
 		state_modifiers = {
-			
+
 		}
 	}
 
@@ -638,10 +665,10 @@ buildings = {
 		}
 		show_modifier = yes
 		state_modifiers = {
-			
+
 		}
 	}
-	
+
 	energy_infrastructure = {
 		base_cost = 12000
 		icon_frame = 30
@@ -659,7 +686,7 @@ buildings = {
 			local_factory_energy_consumption_per_infrastructure = -0.075
 		}
 	}
-	
+
 	industrial_infrastructure = {
 		base_cost = 12000
 		icon_frame = 31

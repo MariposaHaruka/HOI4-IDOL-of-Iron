@@ -7,11 +7,14 @@ bookmarks = {
 		default_country = IMA
 		default = yes
 
+		filters = { label }
+
 		# MAJOR
 		IMA = {
+			minor = yes
 			history = IMA_IDOL_of_WAR_DESC
 			ideology = conservatism
-			new_content = yes
+			label = { new_content major_side IMA_side }
 			ideas = {
 				IMA_great_depression_1
 				IMA_winner_of_great_war
@@ -24,8 +27,10 @@ bookmarks = {
 		}
 
 		ICG = {
+			minor = yes
 			history = ICG_IDOL_of_WAR_DESC
 			ideology = liberalism_mod
+			label = { major_side IMA_side }
 			ideas = {
 				IMA_westminster_statute
 			}
@@ -35,8 +40,10 @@ bookmarks = {
 		}
 
 		BDG = {
+			minor = yes
 			history = BDG_IDOL_of_WAR_DESC
 			ideology = liberalism_mod
+			label = { major_side IMA_side }
 			ideas = {
 				the_grand_army
 			}
@@ -46,9 +53,10 @@ bookmarks = {
 		}
 
 		TOH = {
+			minor = yes
 			history = TOH_IDOL_of_WAR_DESC
 			ideology = authoritariancommunism
-			new_content = yes
+			label = { new_content major_side TOH_side }
 			ideas = {
 				TOH_2nd_5_year_plan_ns
 				TOH_disjointed_faction
@@ -60,9 +68,10 @@ bookmarks = {
 		}
 
 		PRS = {
+			minor = yes
 			history = PRS_IDOL_of_WAR_DESC
 			ideology = fascism
-			new_content = yes
+			label = { new_content major_side PRS_side }
 			ideas = {
 				PRS_sour_loser
 				PRS_reichsarbeitsdienst
@@ -76,8 +85,10 @@ bookmarks = {
 		}
 
 		ENS = {
+			minor = yes
 			history = ENS_IDOL_of_WAR_DESC
 			ideology = fascism
+			label = { major_side PRS_side }
 			ideas={
 				the_grand_army
 			}
@@ -87,8 +98,10 @@ bookmarks = {
 		}
 
 		HLL = {
+			minor = yes
 			history = HLL_IDOL_of_WAR_DESC
 			ideology = militarytotalism
+			label = { major_side PRS_side }
 			ideas = {
 				the_grand_army
 			}
@@ -98,9 +111,10 @@ bookmarks = {
 		}
 
 		BLA = {
+			minor = yes
 			history = BLA_IDOL_of_WAR_DESC
 			ideology = authoritariandemocracy
-			new_content = yes
+			label = { new_content major_side BLA_side }
 			ideas = {
 				BLA_bad_administrative_static
 				BLA_robot_technology_1
@@ -114,8 +128,10 @@ bookmarks = {
 		}
 
 		LLS = {
+			minor = yes
 			history = LLS_IDOL_of_WAR_DESC
 			ideology = authoritariandemocracy
+			label = { major_side LLS_side }
 			ideas = {
 				LLS_peace_preservation_law
 				LLS_narrow_gauge_railway
@@ -125,12 +141,11 @@ bookmarks = {
 
 			}
 		}
-
-		# MINOR
 		IML = {
 			minor = yes
 			history = IML_IDOL_of_WAR_DESC
 			ideology = conservatism
+			label = { major_side IMA_side }
 			ideas = {
 				IMA_westminster_statute
 			}
@@ -139,10 +154,12 @@ bookmarks = {
 			}
 		}
 
+		# MINOR
 		ISC = {
 			minor = yes
 			history = ISC_IDOL_of_WAR_DESC
 			ideology = conservatism
+			label = { other_side IMA_side }
 			ideas = {
 				IMA_westminster_statute
 			}
@@ -155,6 +172,7 @@ bookmarks = {
 			minor = yes
 			history = ISM_IDOL_of_WAR_DESC
 			ideology = conservatism
+			label = { other_side IMA_side }
 			ideas = {
 				IMA_westminster_statute
 			}
@@ -167,6 +185,7 @@ bookmarks = {
 			minor = yes
 			history = IDS_IDOL_of_WAR_DESC
 			ideology = conservatism
+			label = { other_side IMA_side }
 			ideas = {
 				IMA_westminster_statute
 			}
@@ -179,6 +198,7 @@ bookmarks = {
 			minor = yes
 			history = IGM_IDOL_of_WAR_DESC
 			ideology = conservatism
+			label = { other_side IMA_side }
 			ideas = {
 				IMA_westminster_statute
 			}
@@ -191,6 +211,7 @@ bookmarks = {
 			minor = yes
 			history = UMA_IDOL_of_WAR_DESC
 			ideology = authoritariandemocracy
+			label = { other_side PRS_side }
 			ideas = {
 				the_grand_army
 			}
@@ -202,7 +223,8 @@ bookmarks = {
 		HBR = {
 			minor = yes
 			history = HBR_IDOL_of_WAR_DESC
-			ideology = communism
+			ideology = fascism
+			label = { other_side PRS_side }
 			ideas = {
 				the_grand_army
 			}

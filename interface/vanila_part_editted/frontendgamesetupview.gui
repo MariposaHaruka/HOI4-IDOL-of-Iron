@@ -152,11 +152,11 @@ guiTypes = {
 			clicksound = click_checkbox
 		}
 
-		buttonType = {
-			name = "country_shine"
-			quadTextureSprite = "GFX_country_selection_entry_shine"
-			position = { x=0 y =0 }
-			clicksound = click_checkbox
+		iconType = {
+			name = "new_content"
+			position = { x = 110 y = 180 }
+			spriteType = "GFX_unplayed_content_notification"
+			alwaystransparent = yes
 		}
 
 		instantTextBoxType = {
@@ -176,27 +176,38 @@ guiTypes = {
 	containerWindowType = {
 		name = "country_entry_medium"
 
-
-		iconType = {
+    	iconType = {
 			name = "country_flag"
-			quadTextureSprite ="GFX_flag_small2"
-			position = { x = 9 y = 9 }
+			quadTextureSprite ="GFX_shield_medium"
+			position = { x = 26 y = 22 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
 
 		buttonType = {
 			name = "country"
-			quadTextureSprite = "GFX_mini_country_selector"
+			quadTextureSprite = "GFX_country_selection_minor_entry"
 			position = { x = 0 y = 0 }
 			clicksound = click_checkbox
 		}
 
-		buttonType = {
-			name = "country_shine"
-			quadTextureSprite = "GFX_mini_country_selector_shine"
-			position = { x=0 y =0 }
-			clicksound = click_checkbox
+		iconType = {
+			name = "new_content"
+			position = { x = 100 y = 15 }
+			spriteType = "GFX_unplayed_content_notification"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "country_name"
+			position = { x = 9 y = 78 }
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0 }
+			maxWidth = 131
+			maxHeight = 20
+			fixedsize = yes
+			format = center
+			Orientation = "UPPER_LEFT"
 		}
 	}
 
@@ -219,11 +230,27 @@ guiTypes = {
 			clicksound = click_checkbox
 		}
 
+		iconType = {
+			name = "new_content"
+			position = { x = 42 y = 0 }
+			spriteType = "GFX_unplayed_content_notification"
+			alwaystransparent = yes
+		}
+	}
+
+	### country filter
+	containerWindowType = {
+		name = "country_filter"
+		size = { width = 149 height = 33 }
+
 		buttonType = {
-			name = "country_shine"
-			quadTextureSprite = "GFX_mini_country_selector_shine"
-			position = { x=0 y =0 }
-			clicksound = click_checkbox
+			name = "button"
+			quadTextureSprite = "GFX_country_filter_entry"
+			buttonText = "FILTER"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+			oversound = ui_menu_over
+			frame = 2
 		}
 	}
 
@@ -645,7 +672,7 @@ guiTypes = {
 			maxHeight = 30
 			format = centre
 		}
-		background = { #IOI 수정
+		background = { # IOI 수정
 			name = "single_player_country_select_bg"
 			quadTextureSprite = "GFX_country_selection_bg_sub"
 
@@ -653,8 +680,21 @@ guiTypes = {
 
 		background = {
 			name = "single_player_country_bg"
-			quadTextureSprite = "GFX_country_selection_bg_new" #IOI 수정
+			quadTextureSprite = "GFX_country_selection_bg_new" # IOI 수정
 		}
+
+		containerWindowType = { # IOI 추가
+			name = "single_player_country_bg_character"
+			position = { x = 198 y = -311 }
+			Orientation = center
+		    origo = center
+
+			background = {
+    			name = "single_player_country_bg2"
+    			quadTextureSprite = "GFX_country_selection_bg_sub2"
+    		}
+		}
+
 
 		ButtonType = {
 			name = "back_button"
@@ -671,7 +711,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "select_button"
-			position = { x = -130 y = -52 }
+			position = { x = -130 y = -14 }
 			quadTextureSprite = "GFX_button_261x34"
 			buttonText = "FE_SELECT_COUNTRY"
 			buttonFont = "hoi_18mbs"
@@ -683,24 +723,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "countries"
-			position = { x = 170 y = 84 }
-			size = { width = -15 height = 120 }
-
-			gridboxType = {
-				name = "countries_grid"
-				position = { x = 0 y = 0 }
-				size = { width = 100% height = 100% }
-				slotsize = { width = 150 height = 100 }
-				add_horizontal = yes
-				max_slots_vertical = 3
-				max_slots_horizontal = 3
-				format = "UPPER_LEFT"
-			}
-		}
-
-		containerWindowType = {
-			name = "countries_medium"
-			position = { x = 616 y = 84 }
+			position = { x = 15 y = 48 }
 			size = { width = -15 height = 120 }
 
 			gridboxType = {
@@ -709,25 +732,50 @@ guiTypes = {
 				size = { width = 100% height = 100% }
 				slotsize = { width = 150 height = 0 }
 				add_horizontal = yes
-				max_slots_vertical = 3
-				max_slots_horizontal = 2
+				max_slots_vertical = 4
+				max_slots_horizontal = 6
 				format = "UPPER_LEFT"
 			}
 		}
 
+		OverlappingElementsBoxType = {
+			name = "filters"
+			position = { x = -1170 y = 430 }
+			size = { x = 2380 y = 32 }
+			orientation = left
+			spacing = 14.0
+		}
+
 		containerWindowType = {
-			name = "countries_mini"
-			position = { x = 616 y = 80 }
+			name = "countries_medium"
+			position = { x = 15 y = 48 }
 			size = { width = -15 height = 120 }
 
 			gridboxType = {
 				name = "countries_grid"
 				position = { x = 0 y = 0 }
 				size = { width = 100% height = 100% }
-				slotsize = { width = 62 height = 45 }
+				slotsize = { width = 125 height = 94 }
 				add_horizontal = yes
-				max_slots_horizontal = 3
-				max_slots_vertical = 7
+				max_slots_vertical = 4
+				max_slots_horizontal = 6
+				format = "UPPER_LEFT"
+			}
+		}
+
+		containerWindowType = {
+			name = "countries_mini"
+			position = { x = 15 y = 48 }
+			size = { width = -15 height = 120 }
+
+			gridboxType = {
+				name = "countries_grid"
+				position = { x = 0 y = 0 }
+				size = { width = 100% height = 100% }
+				slotsize = { width = 52 height = 38 }
+				add_horizontal = yes
+				max_slots_horizontal = 15
+				max_slots_vertical = 8
 				format = "UPPER_LEFT"
 			}
 		}
@@ -735,7 +783,7 @@ guiTypes = {
 		iconType = {
 			name = "minor_country_leader"
 			quadTextureSprite = "GFX_leader_unknown"
-			position = { x = 289 y = 441 }
+			position = { x = 289 y = 491 }
 			scale = 0.696
 			rotation = -0.04
 		}
@@ -743,13 +791,13 @@ guiTypes = {
 		iconType = {
 			name = "minor_portrait_overlay"
 			spriteType = "GFX_minor_portrait_overlay"
-			position = { x = 280 y = 430 }
+			position = { x = 280 y = 480 }
 		}
 
 
 		instantTextBoxType = {
 			name = "info_title"
-			position = { x = 10 y = 450 }
+			position = { x = 10 y = 496 }
 			font = "hoi4_typewriter22"
 			borderSize = {x = 0 y = 0}
 			text = "FE_COUNTRY_INFO_TITLE"
@@ -760,7 +808,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "info"
-			position = { x = 35 y = 485 }
+			position = { x = 35 y = 531 }
 
 			instantTextBoxType = {
 				name = "leader_label"
@@ -864,7 +912,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "nation_title"
-			position = { x = 442 y = 421 }
+			position = { x = 442 y = 467 }
 			font = "hoi_24header"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 340
@@ -875,7 +923,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "spirit"
-			position = { x = 451 y = 475 }
+			position = { x = 451 y = 521 }
 
 			iconType = {
 				name = "pol_faction_icon"
@@ -919,7 +967,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "history_title"
-			position = { x = 830 y = 450 }
+			position = { x = 830 y = 496 }
 			font = "hoi4_typewriter22"
 			borderSize = {x = 0 y = 0}
 			text = "FE_COUNTRY_HISTORY_TITLE"
@@ -937,6 +985,47 @@ guiTypes = {
 			maxHeight = 30
 			format = left
 			alwaystransparent = yes
+		}
+
+		dropDownBoxType = {
+			name = "more_countries"
+			position = { x = 10 y = 412 }
+
+			expandButton = {
+				name = "expand_button"
+				position = { x = 748 y = -12 }
+				quadTextureSprite = "GFX_peace_drop_down_button"
+				clicksound = click_default
+			}
+
+			expandedWindow = {
+				name = "expanded_window"
+				position = { x=0 y= -300 }
+				show_position = { x = 0 y = 25 }
+				show_animation_type = decelerated
+				hide_animation_type = accelerated
+				animation_time = 300
+				size = { width=815 height=58 }	# dynamically resized in code using countries_mini_expanded's slot size
+				verticalScrollbar = "right_vertical_slider"
+				scroll_wheel_factor = 50
+				smooth_scrolling = yes
+				margin = { top = 7 bottom = 7 right = 6 }
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_tiled_window_1b_thin_border"
+				}
+
+				gridBoxType = {
+					name = "countries_mini_expanded"
+					position = { x = 8 y = 0 }
+					size = { width = 199 height = 100%% }
+					slotsize = { width = 52 height = 38 }
+					add_horizontal = yes
+					max_slots_horizontal = 15
+					format = "UPPER_LEFT"
+				}
+			}
 		}
 
 		containerWindowType = { # IOI 추가
