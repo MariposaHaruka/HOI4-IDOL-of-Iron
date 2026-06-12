@@ -2,7 +2,6 @@
  ### AIR modifiers
  air_advisor_cost_factor_tt: "$MODIFIER_AIR_ADVISOR_COST_FACTOR$: $RIGHT|-=%1$"
  air_carrier_night_penalty_reduction_factor_tt: "$MODIFIER_AIR_CARRIER_NIGHT_PENALTY_REDUCTION_FACTOR$: $RIGHT|+=%1$"
- air_close_air_support_org_damage_factor_tt: "$MODIFIER_AIR_CAS_ORG_DAMAGE_FACTOR$: $RIGHT|+=%1$"
  air_detection_tt: "$MODIFIER_AIR_DETECTION$: $RIGHT|+=%1$"
  air_invasion_division_cap_tt: "$MODIFIER_AIR_INVASION_DIVISION_CAP$: $RIGHT|+=0$"
  air_invasion_preparation_tt: "$MODIFIER_AIR_INVASION_PREPARATION$: $RIGHT|-=%1$"
@@ -34,7 +33,6 @@
  attrition_for_controller_tt: "$MODIFIER_ATTRITION_FOR_CONTROLLER$: $RIGHT|-=%1$"
  combat_width_factor_tt: "$MODIFIER_COMBAT_WIDTH_FACTOR$: $RIGHT|-=%1$"
  command_abilities_cost_factor_tt: "$MODIFIER_COMMAND_ABILITIES_COST_FACTOR$: $RIGHT|-=%1$"
- defence_tt: "$MODIFIER_DEFENCE$: $RIGHT|+=%1$"
  dig_in_speed_tt: "$MODIFIER_DIG_IN_SPEED$: $RIGHT|+=0$"
  disable_strategic_redeployment_yes_tt: "$MODIFIER_STRATEGIC_REDEPLOYMENT_DISABLED$: §G예§!"
  disable_strategic_redeployment_no_tt: "$MODIFIER_STRATEGIC_REDEPLOYMENT_DISABLED$: §R아니오§!"
@@ -96,7 +94,6 @@
  mountaineers_special_forces_contribution_factor_tt: "$MODIFIER_MOUNTAINEERS_SPECIAL_FORCES_CONTRIBUTION_FACTOR$: $RIGHT|-=%0$"
  naval_invasion_planning_bonus_speed_tt: "$MODIFIER_NAVAL_INVASION_PLANNING_SPEED$: $RIGHT|+=%0$"
  no_supply_grace_tt: "$MODIFIER_NO_SUPPLY_GRACE$: $RIGHT|+=1$"
- offence_tt: "$MODIFIER_OFFENCE$: $RIGHT|+=%1$"
  paratroopers_special_forces_contribution_factor_tt: "$MODIFIER_PARATROOPERS_SPECIAL_FORCES_CONTRIBUTION_FACTOR$: $RIGHT|-=%0$"
  planning_decay_rate_factor_tt: "$MODIFIER_PLANNING_DECAY_RATE_FACTOR$: $RIGHT|-=%1$"
  planning_speed_tt: "$planning_speed_factor_tt$"
@@ -154,7 +151,6 @@
  navy_max_range_tt: "$MODIFIER_NAVY_MAX_RANGE$: $RIGHT|+=1$"
  navy_org_tt: "$MODIFIER_NAVY_ORG$: $RIGHT|+=1$"
  navy_visibility_tt: "$MODIFIER_NAVAL_VISIBILITY_FACTOR$: $RIGHT|-=%1$"
- navy_weather_penalty_tt: "$MODIFIER_NAVY_WEATHER_PENALTY$: $RIGHT|-=%1$"
  night_spotting_chance_tt: "$ODIFIER_NIGHT_SPOTTING_CHANC$: $RIGHT|+=%1$"
  ships_at_battle_start_tt: "$MODIFIER_SHIPS_AT_BATTLE_START_FACTOR$: $RIGHT|Y=%0$"
  strike_force_movement_org_loss_tt: "$MODIFIER_STRIKE_FORCE_MOVING_ORG$: $RIGHT|-=%1$"
@@ -175,13 +171,11 @@
  autonomy_gain_ll_to_subject_factor_tt: "$MODIFIER_AUTONOMY_GAIN_LL_TO_SUBJECT_FACTOR$: $RIGHT|+=%1$"
  autonomy_gain_trade_tt: "$MODIFIER_AUTONOMY_GAIN_TRADE$: $RIGHT|+=1$"
  autonomy_gain_trade_factor_tt: "$MODIFIER_AUTONOMY_GAIN_TRADE_FACTOR$: $RIGHT|+=%1$"
- autonomy_gain_warscore_tt: "$MODIFIER_AUTONOMY_GAIN_WARSCORE$: $RIGHT|+=1$"
  autonomy_gain_warscore_factor_tt: "$MODIFIER_AUTONOMY_GAIN_WARSCORE_FACTOR$: $RIGHT|+=%1$"
  can_master_build_for_us_yes_tt: "$MODIFIER_CAN_MASTER_BUILD_FOR_US$: §G예§!"
  can_master_build_for_us_no_tt: "$MODIFIER_CAN_MASTER_BUILD_FOR_US$: §R아니오§!"
  master_build_autonomy_factor_yes_tt: "$MODIFIER_MASTER_BUILD_AUTONOMY_FACTOR$: §G예§!"
  master_build_autonomy_factor_no_tt: "$MODIFIER_MASTER_BUILD_AUTONOMY_FACTOR$: §R아니오§!"
- overlord_trade_cost_factor_tt: "$MODIFIER_TRADE_COST_FACTOR$: $RIGHT|-=%1$"
  ### FACTION modifiers
  faction_subject_contribution_gain_tt: "$MODIFIER_FACTION_SUBJECT_CONTRIBUTION_GAIN$: $RIGHT|Y=%1$"
  ### GOVERNMENT IN EXILE modifiers
@@ -194,8 +188,7 @@
  airforce_intel_decryption_bonus_tt: "$MODIFIER_AIRFORCE_INTEL_DECRYPTION_BONUS$: $RIGHT|+=0$"
  army_intel_decryption_bonus_tt: "$MODIFIER_ARMY_INTEL_DECRYPTION_BONUS$: $RIGHT|+=0$"
  civilian_intel_decryption_bonus_tt: "$MODIFIER_CIVILIAN_INTEL_DECRYPTION_BONUS$: $RIGHT|+=0$"
- navy_intel_decryption_bonus_tt: "$MODIFIER_NAVY_INTEL_DECRYPTION_BONUS$: $RIGHT|+=0$
- airforce_intel_factor_tt: " $MODIFIER_AIRFORCE_INTEL_FACTOR$: $RIGHT|+=%1$"
+ navy_intel_decryption_bonus_tt: "$MODIFIER_NAVY_INTEL_DECRYPTION_BONUS$: $RIGHT|+=0$"
  army_intel_factor_tt: " $MODIFIER_ARMY_INTEL_FACTOR$: $RIGHT|+=%1$"
  civilian_intel_factor_tt: " $MODIFIER_CIVILIAN_INTEL_FACTOR$: $RIGHT|+=%1$"
  commando_trait_chance_factor_tt: "$MODIFIER_COMMANDO_TRAIT_CHANCE_FACTOR$: $RIGHT|+=%1$"
@@ -241,7 +234,6 @@
  cic_construction_boost_tt: "$MODIFIER_CIC_CONSTRUCTION_BOOST$: $RIGHT|+=%1$"
  cic_to_target_factor_tt: "$MODIFIER_CIC_TO_TARGET_FACTOR$: $RIGHT|-=%1$"
  civil_war_involvement_tension_tt: "$MODIFIER_CIVIL_WAR_INVOLVEMENT_TENSION$: $RIGHT|-=%1$"
- civilian_factory_use_tt: "$MODIFIER_CIVILIAN_FACTORY_USE$: $RIGHT|-=0$"
  coastal_bunker_effectiveness_factor_tt: "$MODIFIER_COASTAL_BUNKER_EFFECTIVENESS_FACTOR$: $RIGHT|+=%0$"
  compliance_gain_tt: "$modifier_compliance_gain_tt$"
  consumer_goods_expected_value_tt: "$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: $RIGHT|Y%1$"
@@ -284,7 +276,6 @@
  improve_relations_maintain_cost_factor_tt: "$MODIFIER_IMPROVE_RELATIONS_MAINTAIN_COST_FACTOR$: $RIGHT|-=%0$"
  justify_war_goal_when_in_major_war_time_tt: "$MODIFIER_JUSTIFY_WAR_GOAL_WHEN_IN_MAJOR_WAR_TIME$: $RIGHT|-=%1$"
  land_equipment_upgrade_xp_cost_tt: "$MODIFIER_LAND_EQUIPMENT_UPGRADE_XP_COST$: $RIGHT|-=%0$"
- land_reinforce_rate_tt: "$MODIFIER_LAND_REINFORCE_RATE$: $RIGHT|+=%1$"
  lend_lease_tension_with_overlord_tt: "$MODIFIER_LEND_LEASE_TENSION_LIMIT_WITH_OVERLORD$: $RIGHT|-=%1$"
  license_anti_tank_eq_cost_factor_tt: "$MODIFIER_LICENSE_ANTI_TANK_EQ_COST_FACTOR$: $RIGHT|-=%0$"
  license_anti_tank_eq_production_speed_factor_tt: "$MODIFIER_LICENSE_ANTI_TANK_EQ_PRODUCTION_SPEED_FACTOR$: $RIGHT|+=%0$"
@@ -316,7 +307,6 @@
  opinion_gain_monthly_tt: "$MODIFIER_OPINION_GAIN_MONTHLY$: $RIGHT|+=1$"
  opinion_gain_monthly_factor_tt: "$MODIFIER_OPINION_GAIN_MONTHLY_FACTOR$: $RIGHT|+=%2$"
  opinion_gain_monthly_same_ideology_tt: "$MODIFIER_OPINION_GAIN_MONTHLY_SAME_IDEOLOGY$: $RIGHT|+=1$"
- opinion_gain_monthly_same_ideology_factor_tt: "$MODIFIER_OPINION_GAIN_MONTHLY_SAME_IDEOLOGY_FACTOR$: $RIGHT|+=1$"
  out_of_power_impact_factor_tt: "$MODIFIER_OUT_OF_POWER_FACTOR$: $RIGHT|+=%0$"
  own_operative_capture_chance_factor_tt: "$MODIFIER_OWN_OPERATIVE_CAPTURE_CHANCE_FACTOR$: $RIGHT|-=%0$"
  own_operative_detection_chance_tt: "$MODIFIER_OWN_OPERATIVE_DETECTION_CHANCE$: $RIGHT|-=2$"
@@ -370,7 +360,6 @@
  local_non_core_manpower_tt: "$MODIFIER_LOCAL_NON_CORE_MANPOWER$: $RIGHT|+=%1$"
  local_non_core_supply_impact_factor_tt: "$MODIFIER_LOCAL_NON_CORE_SUPPLY_IMPACT$: $RIGHT|-=%0$"
  local_factory_energy_consumption_per_infrastructure_tt: "$MODIFIER_LOCAL_FACTORY_ENERGY_CONSUMPTION_PER_INFRASTRUCTURE$: $RIGHT|-=%2$"
- local_resource_gain_efficiency_per_infrastructure_tt: "$MODIFIER_LOCAL_RESOURCE_GAIN_EFFICIENCY_PER_INFRASTRUCTURE$: $RIGHT|+=%2$"
  local_resources_tt: "$MODIFIER_LOCAL_RESOURCES$: $RIGHT|+=%0$"
  state_production_speed_buildings_factor_tt: "$MODIFIER_STATE_PRODUCTION_SPEED_BUILDINGS_FACTOR_tt$"
  state_production_speed_facility_factor_tt: "$MODIFIER_STATE_PRODUCTION_SPEED_FACILITY_FACTOR$: $RIGHT|+=%1$"
@@ -2192,8 +2181,6 @@
  country_resource_cost_aluminium_tt: "$country_resource_cost_aluminium$: $RIGHT|-=0$"
  country_resource_cost_chromium_tt: "$country_resource_cost_chromium$: $RIGHT|-=0$"
  country_resource_cost_coal_tt: "$country_resource_cost_coal$: $RIGHT|-=0$"
- country_resource_cost_oil_tt: "$country_resource_cost_oil$: $RIGHT|-=0$"
- country_resource_costs_rubber_tt: "$country_resource_cost_rubber$: $RIGHT|-=0$"
  country_resource_cost_steel_tt: "$country_resource_cost_steel$: $RIGHT|-=0$"
  country_resource_cost_tungsten_tt: "$country_resource_cost_tungsten$: $RIGHT|-=0$"
  ### experience_gain_<Unit>_mission_factor
@@ -2598,7 +2585,7 @@
  unit_marine_design_cost_factor_tt: "$modifier_unit_marine_design_cost_factor$: $RIGHT|-=%0$"
  unit_marine_commando_design_cost_factor_tt: "$modifier_unit_marine_commando_design_cost_factor$: $RIGHT|-=%0$"
  unit_mechanized_design_cost_factor_tt: "$modifier_unit_mechanized_design_cost_factor_tt$"
- unit_medium_armor_design_cost_factor_tt: "$modifier_unit_medium_armor_design_cost_factor$: $RIGHT|-=%0$
+ unit_medium_armor_design_cost_factor_tt: "$modifier_unit_medium_armor_design_cost_factor$: $RIGHT|-=%0$"
  unit_medium_flame_tank_design_cost_factor_tt: "$modifier_unit_medium_flame_tank_design_cost_factor$: $RIGHT|-=%0$"
  unit_medium_sp_anti_air_brigade_design_cost_factor_tt: "$modifier_unit_medium_sp_anti_air_brigade_design_cost_factor$: $RIGHT|-=%0$"
  unit_medium_sp_artillery_brigade_design_cost_factor_tt: "$modifier_unit_medium_sp_artillery_brigade_design_cost_factor$: $RIGHT|-=%0$"
@@ -3256,73 +3243,73 @@
  missile_launcher: "미사일 잠수함"
  emplacement_gun_ammo: "다단 추진 거포 시설"
  #### 공통 모디파이어
- stat_build_cost_ic_tt: "생산 비용" #£production_cost  
+ stat_build_cost_ic_tt: "생산 비용" #£production_cost
  stat_maximum_speed_tt: "최대 속도" #£attacker_speed_texticon  #해군은 별도 속도 모디파이어 있음
- stat_reliability_tt: "신뢰도" #£repairing  
+ stat_reliability_tt: "신뢰도" #£repairing
  #### 육군 장비 모디파이어
- stat_additional_collateral_damage_tt: "추가 부수적 피해" #£attack_texticon  
- stat_air_attack_tt: "대공 공격" #£anti_air_gun_texticon  
- stat_ap_attack_tt: "관통" #£piercing_texticon  
- stat_armor_value_tt: "장갑" #£armor_texticon  
- stat_breakthrough_tt: "돌파" #£breakthrough_texticon  
- stat_defense_tt: "방어" #£defence_texticon  
- stat_entrenchment_tt: "참호" #£dig_in_texticon  
- stat_fuel_capacity_tt: "연료 보유량" #£fuel_texticon  
- stat_fuel_consumption_tt: "연료 사용량" #£fuel_consumption_texticon  
- stat_hard_attack_tt: "대물 공격" #£hard_attack_texticon  
- stat_hardness_tt: "기갑 비율" #£attacker_damage_texticon  
- stat_railway_gun_annex_ratio_tt: "합병 비율" #£railway_gun_texticon  
- stat_railway_gun_attack_tt: "포격" #£railway_gun_texticon  
- stat_railway_gun_hours_between_redistribution_tt: "재배치 간 시간" #£railway_gun_texticon  
- stat_soft_attack_tt: "대인 공격" #£soft_attack_texticon  
+ stat_additional_collateral_damage_tt: "추가 부수적 피해" #£attack_texticon
+ stat_air_attack_tt: "대공 공격" #£anti_air_gun_texticon
+ stat_ap_attack_tt: "관통" #£piercing_texticon
+ stat_armor_value_tt: "장갑" #£armor_texticon
+ stat_breakthrough_tt: "돌파" #£breakthrough_texticon
+ stat_defense_tt: "방어" #£defence_texticon
+ stat_entrenchment_tt: "참호" #£dig_in_texticon
+ stat_fuel_capacity_tt: "연료 보유량" #£fuel_texticon
+ stat_fuel_consumption_tt: "연료 사용량" #£fuel_consumption_texticon
+ stat_hard_attack_tt: "대물 공격" #£hard_attack_texticon
+ stat_hardness_tt: "기갑 비율" #£attacker_damage_texticon
+ stat_railway_gun_annex_ratio_tt: "합병 비율" #£railway_gun_texticon
+ stat_railway_gun_attack_tt: "포격" #£railway_gun_texticon
+ stat_railway_gun_hours_between_redistribution_tt: "재배치 간 시간" #£railway_gun_texticon
+ stat_soft_attack_tt: "대인 공격" #£soft_attack_texticon
  #### 해군 장비 모디파이어
- stat_anti_air_attack_tt: "대공" #£anti_air_texticon  
- #stat_armor_value_tt: "장갑" - 위에 이미 있음! #£armor_texticon  
- stat_carrier_size_tt: "함재기 적재량" #£carrier_capacity_texticon  
- stat_carrier_sub_detection_tt: "항공모함 대잠 탐지" #£spotting  
- stat_carrier_surface_detection_tt: "항공모함 수상 탐지" #£spotting  
- #stat_fuel_consumption_tt: "연료 사용량" - 위에 이미 있음! #£fuel_consumption_texticon  
- stat_hg_armor_piercing_tt: "주포 관통" #£naval_battery2_texticon  
- stat_hg_attack_tt: "주포 공격" #£hard_attack_texticon  
- stat_lg_armor_piercing_tt: "부포 관통" #£naval_battery_texticon  
- stat_lg_attack_tt: "부포 공격" #£soft_attack_texticon  
- stat_max_organisation_tt: "조직력" #£organization_texticon  
- stat_max_strength_tt: "내구도" #£strenght_texticon  
- stat_mines_planting_tt: "기뢰 부설" #£minelaying_texticon  
- stat_mines_sweeping_tt: "기뢰 소해" #£minesweeping_texticon  
- stat_naval_heavy_gun_hit_chance_factor_tt: "중함포 명중률" #£naval_battery2_texticon  
- stat_naval_light_gun_hit_chance_factor_tt: "경함포 명중률" #£naval_battery_texticon  
- stat_naval_range_tt: "최대 작전 범위" #£navy_anchor_texticon  
- stat_naval_speed_tt: "최대 속도" #£attacker_speed_texticon  
- stat_naval_torpedo_damage_reduction_factor_tt: "어뢰 피해량 감소" #£torpedo_texticon  
- stat_naval_torpedo_enemy_critical_chance_factor_tt: "어뢰 피격 시 치명타 확률" #£torpedo_texticon  
- stat_naval_torpedo_hit_chance_factor_tt: "어뢰 명중률" #£torpedo_texticon  
- stat_naval_weather_penalty_factor_tt: "날씨 불이익" #£weather_texticon  
- stat_sub_attack_tt: "폭뢰" #£depth_charge_texticon  
- stat_sub_detection_tt: "대잠 탐지" #£spotting  
- stat_sub_visibility_tt: "대잠 가시성" #£spotting  
- stat_submarine_carrier_size_tt: "잠수함 함재기 적재량" #£carrier_capacity_texticon  
- stat_surface_detection_tt: "수상 탐지" #£spotting  
- stat_surface_visibility_tt: "수상 가시성" #£spotting  
- stat_torpedo_attack_tt: "어뢰 공격" #£torpedo_texticon  
+ stat_anti_air_attack_tt: "대공" #£anti_air_texticon
+ #stat_armor_value_tt: "장갑" - 위에 이미 있음! #£armor_texticon
+ stat_carrier_size_tt: "함재기 적재량" #£carrier_capacity_texticon
+ stat_carrier_sub_detection_tt: "항공모함 대잠 탐지" #£spotting
+ stat_carrier_surface_detection_tt: "항공모함 수상 탐지" #£spotting
+ #stat_fuel_consumption_tt: "연료 사용량" - 위에 이미 있음! #£fuel_consumption_texticon
+ stat_hg_armor_piercing_tt: "주포 관통" #£naval_battery2_texticon
+ stat_hg_attack_tt: "주포 공격" #£hard_attack_texticon
+ stat_lg_armor_piercing_tt: "부포 관통" #£naval_battery_texticon
+ stat_lg_attack_tt: "부포 공격" #£soft_attack_texticon
+ stat_max_organisation_tt: "조직력" #£organization_texticon
+ stat_max_strength_tt: "내구도" #£strenght_texticon
+ stat_mines_planting_tt: "기뢰 부설" #£minelaying_texticon
+ stat_mines_sweeping_tt: "기뢰 소해" #£minesweeping_texticon
+ stat_naval_heavy_gun_hit_chance_factor_tt: "중함포 명중률" #£naval_battery2_texticon
+ stat_naval_light_gun_hit_chance_factor_tt: "경함포 명중률" #£naval_battery_texticon
+ stat_naval_range_tt: "최대 작전 범위" #£navy_anchor_texticon
+ stat_naval_speed_tt: "최대 속도" #£attacker_speed_texticon
+ stat_naval_torpedo_damage_reduction_factor_tt: "어뢰 피해량 감소" #£torpedo_texticon
+ stat_naval_torpedo_enemy_critical_chance_factor_tt: "어뢰 피격 시 치명타 확률" #£torpedo_texticon
+ stat_naval_torpedo_hit_chance_factor_tt: "어뢰 명중률" #£torpedo_texticon
+ stat_naval_weather_penalty_factor_tt: "날씨 불이익" #£weather_texticon
+ stat_sub_attack_tt: "폭뢰" #£depth_charge_texticon
+ stat_sub_detection_tt: "대잠 탐지" #£spotting
+ stat_sub_visibility_tt: "대잠 가시성" #£spotting
+ stat_submarine_carrier_size_tt: "잠수함 함재기 적재량" #£carrier_capacity_texticon
+ stat_surface_detection_tt: "수상 탐지" #£spotting
+ stat_surface_visibility_tt: "수상 가시성" #£spotting
+ stat_torpedo_attack_tt: "어뢰 공격" #£torpedo_texticon
  #### 공군 장비 모디파이어
- stat_air_agility_tt: "기동성" #£attacker_speed_texticon  
- #stat_air_attack_tt: "대공 공격" - 위에 이미 있음! #£attack_texticon  
- stat_air_bombing_tt: "전략폭격" #£strat_bombing_texticon  
- stat_air_defence_tt: "기체 방어력" #£defence_texticon  
- stat_air_ground_attack_tt: "지상 공격" #£cas_texticon  
- stat_air_range_tt: "항속 거리" #£air_range_texticon  
- stat_air_superiority_tt: "공중우세" #£air_superiority_texticon  
- #stat_fuel_consumption_tt: "연료 사용량" - 위에 이미 있음! #£fuel_consumption_texticon  
- #stat_mines_planting_tt: "기뢰 부설" - 위에 이미 있음! #£minelaying_texticon  
- #stat_mines_sweeping_tt: "기뢰 소해" - 위에 이미 있음! #£minesweeping_texticon 
- stat_naval_strike_attack_tt: "해상 공격" #£attack_texticon  
- stat_naval_strike_targetting_tt: "해상 조준" #£naval_strike_targetting_texticon  
- stat_night_penalty_tt: "야간 패널티" #£night_texticon  
- #stat_sub_detection_tt: "대잠 탐지" - 위에 이미 있음!  #£spotting  
- #stat_surface_detection_tt: "수상 탐지" - 위에 이미 있음!  #£spotting  
- stat_thrust_tt: "추력" #£speed_air_texticon  
- stat_weight_tt: "중량" #£divisions_texticon  
+ stat_air_agility_tt: "기동성" #£attacker_speed_texticon
+ #stat_air_attack_tt: "대공 공격" - 위에 이미 있음! #£attack_texticon
+ stat_air_bombing_tt: "전략폭격" #£strat_bombing_texticon
+ stat_air_defence_tt: "기체 방어력" #£defence_texticon
+ stat_air_ground_attack_tt: "지상 공격" #£cas_texticon
+ stat_air_range_tt: "항속 거리" #£air_range_texticon
+ stat_air_superiority_tt: "공중우세" #£air_superiority_texticon
+ #stat_fuel_consumption_tt: "연료 사용량" - 위에 이미 있음! #£fuel_consumption_texticon
+ #stat_mines_planting_tt: "기뢰 부설" - 위에 이미 있음! #£minelaying_texticon
+ #stat_mines_sweeping_tt: "기뢰 소해" - 위에 이미 있음! #£minesweeping_texticon
+ stat_naval_strike_attack_tt: "해상 공격" #£attack_texticon
+ stat_naval_strike_targetting_tt: "해상 조준" #£naval_strike_targetting_texticon
+ stat_night_penalty_tt: "야간 패널티" #£night_texticon
+ #stat_sub_detection_tt: "대잠 탐지" - 위에 이미 있음!  #£spotting
+ #stat_surface_detection_tt: "수상 탐지" - 위에 이미 있음!  #£spotting
+ stat_thrust_tt: "추력" #£speed_air_texticon
+ stat_weight_tt: "중량" #£divisions_texticon
  ### Equipment Modifiers
  train_armor_value_tt: "£armor_texticon  $train$ $stat_armor_value_tt$: $RIGHT|+=%1$"
  train_air_attack_tt: "£anti_air_gun_texticon  $train$ $stat_air_attack_tt$: $RIGHT|+=%1$"
