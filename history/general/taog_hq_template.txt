@@ -1,0 +1,269 @@
+# Default Army HQ templates, gated on TAOG DLC.
+# To add a country-specific HQ template, add a new `if` block below and add the tag to the generic fallback's NOT list.
+every_possible_country = {
+	limit = { has_TaOG = yes }
+	# IMA + 아이마스 국가
+	if = {
+		limit = {
+		    OR = {
+				tag = IMA
+				tag = ISC
+				tag = ISM
+				tag = IDS
+				tag = IGM
+		    }
+		}
+		division_template = {
+			name = "Army Headquarters"
+			template_counter = 121
+			is_army_hq = yes
+
+			regiments = {
+				hq_infantry = { x = 0 y = 0 }
+				hq_infantry = { x = 0 y = 1 }
+				hq_infantry = { x = 0 y = 2 }
+			}
+
+			support = {
+				hq_support_company = { x = 0 y = 0 }
+				hq_naval_liaison = { x = 0 y = 1 }
+				hq_specops = { x = 0 y = 2 }
+				# hq_military_police added via on_research_complete on tech_military_police
+			}
+		}
+	}
+
+	# ICG
+	if = {
+		limit = { tag = ICG }
+		division_template = {
+			name = "Field Army Headquarters"
+			template_counter = 121
+			is_army_hq = yes
+
+			regiments = {
+				hq_motorized = { x = 0 y = 0 }
+				hq_motorized = { x = 0 y = 1 }
+				hq_motorized = { x = 0 y = 2 }
+			}
+
+			support = {
+				hq_support_company = { x = 0 y = 0 }
+				hq_naval_liaison = { x = 0 y = 1 }
+				hq_air_liaison = { x = 0 y = 2 }
+				# hq_logistics added via on_research_complete on tech_logistics_company
+			}
+		}
+	}
+
+	# IML
+	if = {
+		limit = { tag = IML }
+		division_template = {
+			name = "Army Headquarters"
+			template_counter = 121
+			is_army_hq = yes
+
+			regiments = {
+				hq_motorized = { x = 0 y = 0 }
+				hq_motorized = { x = 0 y = 1 }
+				hq_motorized = { x = 0 y = 2 }
+			}
+
+			support = {
+				hq_support_company = { x = 0 y = 0 }
+				hq_naval_liaison = { x = 0 y = 1 }
+				hq_air_liaison = { x = 0 y = 2 }
+				# hq_logistics added via on_research_complete on tech_logistics_company
+			}
+		}
+	}
+
+	# TOH
+	if = {
+		limit = { tag = TOH }
+		division_template = {
+			name = "Shtab Armii"
+			template_counter = 121
+			is_army_hq = yes
+
+			regiments = {
+				hq_infantry = { x = 0 y = 0 }
+				hq_infantry = { x = 0 y = 1 }
+				hq_infantry = { x = 0 y = 2 }
+				hq_infantry = { x = 0 y = 3 }
+			}
+
+			support = {
+				hq_support_company = { x = 0 y = 0 }
+				# hq_logistics added via on_research_complete on tech_logistics_company
+			}
+		}
+	}
+
+	# PRS
+	if = {
+		limit = { tag = PRS }
+		division_template = {
+			name = "AOK"
+			template_counter = 121
+			is_army_hq = yes
+
+			regiments = {
+				hq_light_armor = { x = 0 y = 0 }
+				hq_light_armor = { x = 0 y = 1 }
+			}
+
+			support = {
+				hq_support_company = { x = 0 y = 0 }
+				hq_air_liaison = { x = 0 y = 1 }
+				hq_recon = { x = 0 y = 2 }
+			}
+		}
+	}
+
+	# BDG
+	if = {
+		limit = { tag = BDG }
+		division_template = {
+			name = "Quartier General d'Armee"
+			template_counter = 121
+			is_army_hq = yes
+
+			regiments = {
+				hq_infantry = { x = 0 y = 0 }
+				hq_infantry = { x = 0 y = 1 }
+				hq_infantry = { x = 0 y = 2 }
+			}
+
+			support = {
+				hq_support_company = { x = 0 y = 0 }
+				hq_air_liaison = { x = 0 y = 1 }
+				# hq_maintenance added via on_research_complete on tech_maintenance_company
+			}
+		}
+	}
+
+	# LLS + HLL
+	if = {
+		limit = {
+			OR = {
+				tag = LLS
+				AND = {
+					tag = LSS
+					is_subject_of = LLS
+				}
+				AND = {
+					tag = LSS
+					is_subject_of = LLS
+				}
+				AND = {
+					tag = LNH
+					is_subject_of = LLS
+				}
+				AND = {
+					tag = LST
+					is_subject_of = LLS
+				}
+				AND = {
+					tag = LHH
+					is_subject_of = LLS
+				}
+				AND = {
+					tag = LBB
+					is_subject_of = LLS
+				}
+			}
+		}
+		division_template = {
+			name = "Gun Shireibu"
+			template_counter = 121
+			is_army_hq = yes
+
+			regiments = {
+				hq_infantry = { x = 0 y = 0 }
+				hq_infantry = { x = 0 y = 1 }
+				hq_infantry = { x = 0 y = 2 }
+			}
+
+			support = {
+				hq_support_company = { x = 0 y = 0 }
+				hq_naval_liaison = { x = 0 y = 1 }
+				hq_recon = { x = 0 y = 2 }
+			}
+		}
+	}
+
+	if = {
+		limit = { tag = HLL }
+		division_template = {
+			name = "Cuartel General del Ejército"
+			template_counter = 121
+			is_army_hq = yes
+
+			regiments = {
+				hq_infantry = { x = 0 y = 0 }
+				hq_infantry = { x = 0 y = 1 }
+				hq_infantry = { x = 0 y = 2 }
+			}
+
+			support = {
+				hq_support_company = { x = 0 y = 0 }
+				hq_naval_liaison = { x = 0 y = 1 }
+				hq_recon = { x = 0 y = 2 }
+			}
+		}
+	}
+
+	# Generic fallback for every other TAOG country
+	if = {
+		limit = {
+			NOT = { tag = IMA }
+			NOT = { tag = ICG }
+			NOT = { tag = IML }
+			NOT = { tag = ISC }
+			NOT = { tag = ISM }
+			NOT = { tag = IDS }
+			NOT = { tag = IGM }
+			NOT = { tag = TOH }
+			NOT = { tag = PRS }
+			NOT = { tag = BDG }
+			NOT = { tag = LLS }
+			NOT = {
+			    tag = LSS
+			    is_subject_of = LLS
+			}
+			NOT = {
+				tag = LNH
+				is_subject_of = LLS
+			}
+			NOT = {
+				tag = LST
+				is_subject_of = LLS
+			}
+			NOT = {
+				tag = LHH
+				is_subject_of = LLS
+			}
+			NOT = {
+				tag = LBB
+				is_subject_of = LLS
+			}
+			NOT = { tag = HLL }
+		}
+		division_template = {
+			localization_key = "ARMY_HQ_TEMPLATE_NAME"
+			template_counter = 121
+			is_army_hq = yes
+
+			regiments = {
+				hq_infantry = { x = 0 y = 0 }
+				hq_infantry = { x = 0 y = 1 }
+			}
+
+			support = {
+				hq_support_company = { x = 0 y = 0 }
+			}
+		}
+	}
+}

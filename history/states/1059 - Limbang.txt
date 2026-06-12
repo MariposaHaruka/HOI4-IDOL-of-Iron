@@ -1,0 +1,38 @@
+state = {
+
+	id = 1059
+	name = "STATE_1059"
+
+	manpower = 89800
+
+	resources = {
+		oil = 1
+		coal = 4 # initial 2 + rural 2
+	}
+	
+	state_category = rural
+
+	history = {
+
+		owner = IGM
+		add_core_of = IGM
+
+		victory_points = {
+			13378 1 # Limbang
+		}
+
+		buildings = {
+
+			infrastructure = 1
+
+		}
+		
+	}
+
+	provinces = {
+		10269 13377 13378 
+	}
+
+	local_supplies = 0.0 
+}
+

@@ -1,25 +1,25 @@
 state = {
 	id = 518
 	name = "STATE_518"
-	manpower = 224000
-	
-	state_category = small_island
+	manpower = 230000 #PreTAOG 224000
+
+	state_category = large_island
 	resources = {
-		coal = 11 # 0 + small_island 1 + dam 10
+		coal = 13 # 0 + large_island 3 + dam 10
 	}
 
 	history = {
 		owner = ISC
 		add_core_of = ISC
 		victory_points = {
-			5187 1 
+			5187 1
 		}
 		buildings = {
 			infrastructure = 3 #was: 5
 			5187 = {
 				naval_base = 2
 				# The Great Lake Scheme
-				dam = 1 
+				dam = 1
 			}
 		}
 	}
@@ -27,5 +27,5 @@ state = {
 		2183 2189 5181 5187 10665 12645
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 0.0
 }

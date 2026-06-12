@@ -9,16 +9,26 @@ state = {
 		owner = RST
 		add_core_of = RST
 		
+		victory_points = {
+			4579 1 # Dobo  
+		}
+
 		buildings = {
-			infrastructure = 1
+
 			4579 = {
 				naval_base = 1
 			}
+
+			13400 = {
+				naval_base = 1
+			}
+
 		}
+
 	}
 
 	provinces = {
-		4579 
+		4579 13400
 	}
 	manpower = 36146
 	buildings_max_level_factor = 1	

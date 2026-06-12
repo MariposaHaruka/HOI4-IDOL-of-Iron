@@ -1,0 +1,35 @@
+state = {
+	id = 667
+	name = "STATE_667"
+	resources = {
+		rubber = 12 # was: 16
+		coal = 1 # 0 + town 4
+	}
+
+	history = {
+		owner = RST
+		add_core_of = RST
+		
+		buildings = {
+			infrastructure = 2
+			1355 = {
+				naval_base = 1
+			}
+			10175 = {
+				naval_base = 1
+			}
+			12234 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		7293 10191 12162 12219 12234 13387 13389 13390 13391 13388 13384 13392
+	}
+	manpower = 3460200
+	buildings_max_level_factor = 1
+	state_category = town
+
+	local_supplies = 3.0 
+}

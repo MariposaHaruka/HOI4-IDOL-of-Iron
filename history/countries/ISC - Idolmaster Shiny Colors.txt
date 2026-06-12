@@ -23,7 +23,8 @@ set_grand_doctrine = new_strategic_destruction
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_support = 1		
+	motorised_infantry = 1
+	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
 	tech_trucks = 1
@@ -93,47 +94,47 @@ add_dynamic_modifier = { modifier = ISC_navy }
 add_dynamic_modifier = { modifier = ISC_air_force }
 add_dynamic_modifier = { modifier = IMA_colonial_economy }
 
-## ISC_industry
+# ISC_industry
 
-## ISC_army
+# ISC_army
 
-set_variable = { ISC_army_anti_air_build_cost_ic = 0.30 } ### 별도 국민정신 적용
-set_variable = { ISC_army_anti_tank_build_cost_ic = 0.30 } ### 별도 국민정신 적용
-set_variable = { ISC_army_armor_build_cost_ic = 0.30 } ### 별도 국민정신 적용
-set_variable = { ISC_army_artillery_build_cost_ic = 0.30 } ### 별도 국민정신 적용
-set_variable = { ISC_army_infantry_build_cost_ic = 0.15 } ### 별도 국민정신 적용
-set_variable = { ISC_army_mechanized_build_cost_ic = 0.30 } ### 별도 국민정신 적용
-set_variable = { ISC_army_motorized_build_cost_ic = 0.30 } ### 별도 국민정신 적용
-set_variable = { ISC_army_rocket_build_cost_ic = 0.30 } ### 별도 국민정신 적용
-set_variable = { ISC_army_support_build_cost_ic = 0.30 } ### 별도 국민정신 적용
+set_variable = { ISC_army_anti_air_build_cost_ic = 0.30 } ## 별도 국민정신 적용
+set_variable = { ISC_army_anti_tank_build_cost_ic = 0.30 } ## 별도 국민정신 적용
+set_variable = { ISC_army_armor_build_cost_ic = 0.30 } ## 별도 국민정신 적용
+set_variable = { ISC_army_artillery_build_cost_ic = 0.30 } ## 별도 국민정신 적용
+set_variable = { ISC_army_infantry_build_cost_ic = 0.15 } ## 별도 국민정신 적용
+set_variable = { ISC_army_mechanized_build_cost_ic = 0.30 } ## 별도 국민정신 적용
+set_variable = { ISC_army_motorized_build_cost_ic = 0.30 } ## 별도 국민정신 적용
+set_variable = { ISC_army_rocket_build_cost_ic = 0.30 } ## 별도 국민정신 적용
+set_variable = { ISC_army_support_build_cost_ic = 0.30 } ## 별도 국민정신 적용
 
-## ISC_navy
+# ISC_navy
 
-set_variable = { ISC_navy_capital_ship_build_cost_ic = 0.20 } ### 별도 국민정신 적용
-set_variable = { ISC_navy_carrier_build_cost_ic = 0.20 } ### 별도 국민정신 적용
-set_variable = { ISC_navy_convoy_build_cost_ic = 0.05 } ### 별도 국민정신 적용
-set_variable = { ISC_navy_screen_ship_build_cost_ic = 0.20 } ### 별도 국민정신 적용
-set_variable = { ISC_navy_submarine_build_cost_ic = 0.20 } ### 별도 국민정신 적용
+set_variable = { ISC_navy_capital_ship_build_cost_ic = 0.20 } ## 별도 국민정신 적용
+set_variable = { ISC_navy_carrier_build_cost_ic = 0.20 } ## 별도 국민정신 적용
+set_variable = { ISC_navy_convoy_build_cost_ic = 0.05 } ## 별도 국민정신 적용
+set_variable = { ISC_navy_screen_ship_build_cost_ic = 0.20 } ## 별도 국민정신 적용
+set_variable = { ISC_navy_submarine_build_cost_ic = 0.20 } ## 별도 국민정신 적용
 
-## ISC_air_force
+# ISC_air_force
 
-set_variable = { ISC_air_force_air_transport_build_cost_ic = 0.35 } ### 별도 국민정신 적용
-set_variable = { ISC_air_force_cas_build_cost_ic = 0.35 } ### 별도 국민정신 적용
-set_variable = { ISC_air_force_fighter_build_cost_ic = 0.35 } ### 별도 국민정신 적용
-set_variable = { ISC_air_force_interceptor_build_cost_ic = 0.35 } ### 별도 국민정신 적용
-set_variable = { ISC_air_force_tactical_bomber_build_cost_ic = 0.35 } ### 별도 국민정신 적용
-set_variable = { ISC_air_force_missile_build_cost_ic = 0.35 } ### 별도 국민정신 적용
-set_variable = { ISC_air_force_naval_bomber_build_cost_ic = 0.35 } ### 별도 국민정신 적용
-set_variable = { ISC_air_force_strategic_bomber_build_cost_ic = 0.35 } ### 별도 국민정신 적용
-set_variable = { ISC_air_force_suicide_build_cost_ic = 0.35 } ### 별도 국민정신 적용
+set_variable = { ISC_air_force_air_transport_build_cost_ic = 0.35 } ## 별도 국민정신 적용
+set_variable = { ISC_air_force_cas_build_cost_ic = 0.35 } ## 별도 국민정신 적용
+set_variable = { ISC_air_force_fighter_build_cost_ic = 0.35 } ## 별도 국민정신 적용
+set_variable = { ISC_air_force_interceptor_build_cost_ic = 0.35 } ## 별도 국민정신 적용
+set_variable = { ISC_air_force_tactical_bomber_build_cost_ic = 0.35 } ## 별도 국민정신 적용
+set_variable = { ISC_air_force_missile_build_cost_ic = 0.35 } ## 별도 국민정신 적용
+set_variable = { ISC_air_force_naval_bomber_build_cost_ic = 0.35 } ## 별도 국민정신 적용
+set_variable = { ISC_air_force_strategic_bomber_build_cost_ic = 0.35 } ## 별도 국민정신 적용
+set_variable = { ISC_air_force_suicide_build_cost_ic = 0.35 } ## 별도 국민정신 적용
 
 #외교
 set_cosmetic_tag = ISC_IMA
 add_to_tech_sharing_group = bandainamco_research
 
 #정치 상황
-set_stability = 0.4
-set_war_support = 0.02
+set_stability = 0.7
+set_war_support = 0
 set_politics = {
 	ruling_party = conservatism
 	last_election = "1934.09.15"
@@ -151,7 +152,7 @@ set_popularities = {
 	anarchosyndicalism = 4
 	fascism = 1
 	militarytotalism = 1
-	authoritariandemocracy = 1 
+	authoritariandemocracy = 1
 	autocracy = 1
 }
 
@@ -167,7 +168,7 @@ set_variable = { ISC_independent_seats = 8 }
 set_variable = { ISC_centre_seats = 0 }
 #Total seats - 155
 
-#캐릭터 
+#캐릭터
 recruit_character = ISC_kuwayama_chiyuki #스타팅
 recruit_character = ISC_sakuragi_mano #정사 기준 전시내각 총리
 recruit_character = ISC_kazano_hiori
@@ -204,40 +205,90 @@ recruit_character = ISC_natsume_p
 #recruit_character = ISC_john_curtin
 #recruit_character = ISC_eric_campbell
 #recruit_character = ISC_richard_dixon
-#recruit_character = ISC_earle_page
-#recruit_character = ISC_rod_hull
-#recruit_character = ISC_leslie_morshead
-#recruit_character = ISC_thomas_blamey
-#recruit_character = ISC_henry_wynter
-#recruit_character = ISC_alan_vasey
-#recruit_character = ISC_horace_robertson
-#recruit_character = ISC_john_northcott
-#recruit_character = ISC_harold_farncomb
-#recruit_character = ISC_victor_crutchley
-#recruit_character = ISC_clive_caldwell
-#recruit_character = ISC_sydney_rowell
-#recruit_character = ISC_richard_williams
-#recruit_character = ISC_ragnar_colvin
-#recruit_character = ISC_norman_makin
-#recruit_character = ISC_james_fairbairn
-#recruit_character = ISC_john_collins
-#recruit_character = ISC_arthur_allen
-#recruit_character = ISC_vernon_sturdee
-#recruit_character = ISC_jack_crace
-#recruit_character = ISC_cederic_hicks
-#recruit_character = ISC_charles_burnett
-#recruit_character = ISC_edmund_herring
-#recruit_character = ISC_arthur_drakeford
-#recruit_character = ISC_john_lavarack
-#recruit_character = ISC_robert_g_menzies
+#recruit_character = ISC_robert_menzies
 #recruit_character = ISC_ben_chifley
 #recruit_character = ISC_frank_forde
 #recruit_character = ISC_alexander_hore_ruthven
 #recruit_character = ISC_jack_beasley
 #recruit_character = ISC_lance_sharkey
 #recruit_character = ISC_herbert_v_evatt
-#recruit_character = ISC_arthur_calwell
+#recruit_character = ISC_jack_piddington
+#recruit_character = ISC_leslie_morshead
+#recruit_character = ISC_thomas_blamey
 #recruit_character = ISC_iven_mackay
+#recruit_character = ISC_alan_vasey #George A. Vasey"
+#recruit_character = ISC_horace_robertson
+#recruit_character = ISC_john_northcott
+#recruit_character = ISC_john_collins
+#recruit_character = ISC_harold_farncomb
+#recruit_character = ISC_victor_crutchley
+#recruit_character = ISC_john_lavarack
+#recruit_character = ISC_sydney_rowell
+#recruit_character = ISC_vernon_sturdee
+#recruit_character = ISC_ragnar_colvin
+#recruit_character = ISC_richard_williams
+#recruit_character = ISC_charles_burnett
+#recruit_character = ISC_henry_wynter
+#recruit_character = ISC_james_fairbairn
+#recruit_character = ISC_arthur_allen
+#recruit_character = ISC_john_crace
+#recruit_character = ISC_edmund_herring
+if = {
+	limit = { has_TaOG = yes }
+	#recruit_character = ISC_joseph_lyons
+	#recruit_character = ISC_billy_hughes
+	#recruit_character = ISC_jack_miles
+	#recruit_character = ISC_fred_paterson
+	#recruit_character = ISC_percy_stephensen
+	#recruit_character = ISC_adela_walsh
+	#recruit_character = ISC_essington_lewis
+	#recruit_character = ISC_jacob_vouza
+	#recruit_character = ISC_geoffrey_street
+	#recruit_character = ISC_florence_v._mckenzie
+	#recruit_character = ISC_eric_l._lloyd
+	#recruit_character = ISC_jack_lang
+	#recruit_character = ISC_dorothy_tangney
+	#recruit_character = ISC_arthur_fadden
+	#recruit_character = ISC_james_scullin
+	#recruit_character = ISC_maurice_blackburn
+	#recruit_character = ISC_alexander_rud_mills
+	#recruit_character = ISC_rex_ingamells
+	#recruit_character = ISC_clare_stevenson
+	#recruit_character = ISC_gordon_bennett
+	#recruit_character = ISC_edward_milford
+	#recruit_character = ISC_herbert_lloyd
+	#recruit_character = ISC_stanley_savige
+	#recruit_character = ISC_kenneth_eather
+	#recruit_character = ISC_ivan_dougherty
+	#recruit_character = ISC_frank_berryman
+	#recruit_character = ISC_george_wootten
+	#recruit_character = ISC_gwynydd_meredith
+	#recruit_character = ISC_reginald_saunders
+	#recruit_character = ISC_joseph_burnett
+	#recruit_character = ISC_eric_feldt
+	#recruit_character = ISC_james_mcmanus
+	#recruit_character = ISC_leighton_bracegirdle
+	#recruit_character = ISC_george_jones
+	#recruit_character = ISC_stanley_goble
+	#recruit_character = ISC_george_mackinolty
+	#recruit_character = ISC_brudenell_white
+	#recruit_character = ISC_percival_mcneil
+	#recruit_character = ISC_guy_royle
+	#recruit_character = ISC_james_cannan
+	#recruit_character = ISC_peter_jeffrey
+	#recruit_character = ISC_mark_oliphant
+	#recruit_character = ISC_lawrence_wackett
+	else = {
+    	#recruit_character = ISC_earle_page
+    	#recruit_character = ISC_rod_hull
+    	#recruit_character = ISC_arthur_calwell
+    	#recruit_character = ISC_generic_fascist_demagogue
+    	#recruit_character = ISC_clive_caldwell
+    	#recruit_character = ISC_arthur_drakeford
+    	#recruit_character = ISC_cederic_hicks
+    	#recruit_character = ISC_norman_makin
+	}
+}
 #NZL
 #recruit_character = ISC_michael_joseph_savage
 #recruit_character = ISC_sidney_holland
@@ -268,8 +319,16 @@ recruit_character = ISC_natsume_p
 #recruit_character = ISC_walter_nash
 #recruit_character = ISC_w_a_veitch_milne
 #recruit_character = ISC_peter_fraser
+#recruit_character = ISC_bob_semple
+#recruit_character = ISC_leslie_lefeaux
+#recruit_character = ISC_thomas_leech
+#recruit_character = ISC_william_polson
+#recruit_character = ISC_alexander_galbraith
+#recruit_character = ISC_john_a_lee
+#recruit_character = ISC_bernard_ashwin
+#recruit_character = ISC_vic_wilcox
 
-##의회 시스템용
+#의회 시스템용
 recruit_character = ISC_parliament_seek_cooperation_1
 recruit_character = ISC_parliament_persuasion_1
 recruit_character = ISC_parliament_relation_1
@@ -756,13 +815,14 @@ parliament_ask_to_join_coalition_12 = {
 #장관진
 
 #무기 프리셋
-### Ship Variants ###
+## Ship Variants ##
 # Light Cruisers #
 create_equipment_variant = {
 	name = "Sydney Class"
 	type = ship_hull_cruiser_2
 	name_group = ISC_CL_HISTORICAL
 	parent_version = 0
+	#design_team = mio:ISC_cockatoo_docks_organization
 	modules = {
 		fixed_ship_battery_slot = ship_light_medium_battery_2
 		fixed_ship_anti_air_slot = ship_anti_air_2
@@ -787,6 +847,7 @@ create_equipment_variant = {
 	type = ship_hull_cruiser_1
 	name_group = ISC_CL_HISTORICAL
 	parent_version = 0
+	#design_team = mio:ISC_cockatoo_docks_organization
 	modules = {
 		fixed_ship_battery_slot = ship_light_medium_battery_1
 		fixed_ship_anti_air_slot = empty
@@ -805,6 +866,7 @@ create_equipment_variant = {
 	type = ship_hull_cruiser_2
 	name_group = ISC_CL_HISTORICAL
 	parent_version = 0
+	#design_team = mio:ISC_cockatoo_docks_organization
 	modules = {
 		fixed_ship_battery_slot = ship_light_medium_battery_2
 		fixed_ship_anti_air_slot = ship_anti_air_2
@@ -819,12 +881,29 @@ create_equipment_variant = {
 		rear_1_custom_slot = ship_light_medium_battery_2
 	}
 }
+create_equipment_variant = {
+	name = "Danae Class"
+	type = ship_hull_cruiser_1
+	name_group = ISC_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		mid_1_custom_slot = ship_torpedo_1
+		mid_2_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = empty
+	}
+}
 # Heavy Cruisers #
 create_equipment_variant = {
 	name = "Canberra Class"
 	type = ship_hull_cruiser_1
 	name_group = ISC_CA_HISTORICAL
 	parent_version = 0
+	#design_team = mio:ISC_cockatoo_docks_organization
 	modules = {
 		fixed_ship_battery_slot = ship_medium_battery_2
 		fixed_ship_anti_air_slot = ship_anti_air_1
@@ -844,12 +923,32 @@ create_equipment_variant = {
 		}
 	}
 }
+create_equipment_variant = {
+	name = "County Class"
+	type = ship_hull_cruiser_1
+	name_group = ISC_CA_HISTORICAL
+	parent_version = 0
+	#design_team = mio:ISC_cockatoo_docks_organization
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		fixed_ship_secondaries_slot = dp_ship_secondaries_1
+		mid_1_custom_slot = ship_airplane_launcher_1
+		mid_2_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_medium_battery_2
+	}
+}
 # Destroyers #
 create_equipment_variant = {
 	name = "V/W Class"
 	type = ship_hull_light_1
 	name_group = ISC_DD_HISTORICAL
 	parent_version = 0
+	#design_team = mio:ISC_morts_dock_organization
 	modules = {
 		fixed_ship_battery_slot = ship_light_battery_1
 		fixed_ship_anti_air_slot = ship_anti_air_1
@@ -872,6 +971,7 @@ create_equipment_variant = {
 	type = ship_hull_light_1
 	name_group = ISC_DD_HISTORICAL
 	parent_version = 0
+	#design_team = mio:ISC_morts_dock_organization
 	modules = {
 		fixed_ship_battery_slot = ship_light_battery_1
 		fixed_ship_anti_air_slot = empty
@@ -885,20 +985,59 @@ create_equipment_variant = {
 	obsolete = yes
 }
 
-# Light Cruisers #
+#보병 장비
 create_equipment_variant = {
-	name = "Danae Class"
-	type = ship_hull_cruiser_1
-	name_group = ISC_CL_HISTORICAL
-	parent_version = 0
-	modules = {
-		fixed_ship_battery_slot = ship_light_medium_battery_1
-		fixed_ship_anti_air_slot = ship_anti_air_1
-		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-		fixed_ship_radar_slot = empty
-		fixed_ship_engine_slot = cruiser_ship_engine_1
-		mid_1_custom_slot = ship_torpedo_1
-		mid_2_custom_slot = ship_torpedo_1
-		rear_1_custom_slot = empty
-	}
+	type = infantry_equipment_0
+	#design_team = mio:ISC_lithgow_arms_organization
+	show_position = no
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = infantry_equipment_1
+	#design_team = mio:ISC_lithgow_arms_organization
+	show_position = no
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = support_equipment_1
+	#design_team = mio:ISC_lysaght_organization
+	show_position = no
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = support_equipment_1
+	#design_team = mio:ISC_lysaght_organization
+	show_position = no
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = motorized_equipment_1
+	#design_team = mio:ISC_holden_organization
+	show_position = no
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = artillery_equipment_1
+	#design_team = mio:ISC_vickers-ruwolt_organization
+	show_position = no
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = anti_air_equipment_1
+	#design_team = mio:ISC_vickers-ruwolt_organization
+	show_position = no
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = transport_plane_equipment_1
+	#design_team = mio:ISC_de_havilland_australia_organization
+	show_position = no
+	mark_older_equipment_obsolete = yes
 }

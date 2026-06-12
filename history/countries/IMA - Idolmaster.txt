@@ -70,7 +70,7 @@ set_technology = {
 }
 if = {
 	limit = { has_BftB = yes }
-	set_technology = { 
+	set_technology = {
 		camelry = 1
 	}
 }
@@ -281,7 +281,7 @@ if = {
 	}
 	add_faction_goal_slot = {
 		category = long_term
-		value = 1 
+		value = 1
 	}
 }
 add_to_faction = ENG
@@ -314,7 +314,7 @@ set_popularities = {
 	anarchosyndicalism = 6
 	fascism = 1
 	militarytotalism = 1
-	authoritariandemocracy = 1 
+	authoritariandemocracy = 1
 	autocracy = 1
 }
 set_country_flag = IMA_haruka_crisis
@@ -346,7 +346,7 @@ set_variable = { IMA_fascist_seats = 3 }
 set_variable = { IMA_total_seats = 615 } #의석 총수이니 절대 바꾸지 말 것
 
 
-#캐릭터 
+#캐릭터
 recruit_character = IMA_amami_haruka
 recruit_character = IMA_kisaragi_chihaya
 recruit_character = IMA_hoshii_miki
@@ -437,6 +437,16 @@ recruit_character = IMA_john_cockcroft
 recruit_character = IMA_charles_goodeve
 recruit_character = IMA_nevil_shute
 recruit_character = IMA_robert_watson_watt
+
+if = {
+	limit = { has_TaOG = yes }
+	#recruit_character = IMA_robert_menzies #Through AST focus tree, Australian PM Menzies can become leader in ENG
+}
+
+if = {
+	limit = { has_GoE = yes }
+	#recruit_character = IMA_jack_churchill
+}
 
 if = {
 	limit = { has_LaR = yes }
@@ -1119,7 +1129,7 @@ if = {
 	}
 
 	create_equipment_variant = {
-		name = "Hawker Nimrod" 
+		name = "Hawker Nimrod"
 		type = cv_small_plane_airframe_0
 		design_team = mio:IMA_hawker_organization
 		modules = {
@@ -1131,7 +1141,7 @@ if = {
 	}
 
 	create_equipment_variant = {
-		name = "Gloster Gladiator" 
+		name = "Gloster Gladiator"
 		type = small_plane_airframe_0
 		design_team = mio:IMA_supermarine_organization
 		modules = {
@@ -1142,7 +1152,7 @@ if = {
 	}
 
 	create_equipment_variant = {
-		name = "Fairey Gordon" 
+		name = "Fairey Gordon"
 		type = small_plane_cas_airframe_0
 		design_team = mio:IMA_hawker_organization
 		modules = {
@@ -1154,7 +1164,7 @@ if = {
 		icon = "GFX_ENG_CAS1_medium"
 	}
 	create_equipment_variant = {
-		name = "Vickers Vildebeest" 
+		name = "Vickers Vildebeest"
 		type = small_plane_naval_bomber_airframe_0
 		design_team = mio:IMA_fairey_aviation_organization
 		modules = {
@@ -1165,7 +1175,7 @@ if = {
 		icon = "GFX_ENG_naval_bomber1_medium" #TODO GABRIEL: change if art in before release
 	}
 	create_equipment_variant = {
-		name = "Blackburn Shark" 
+		name = "Blackburn Shark"
 		type = cv_small_plane_naval_bomber_airframe_0
 		modules = {
 			fixed_main_weapon_slot = torpedo_mounting
@@ -1175,7 +1185,7 @@ if = {
 		icon = "GFX_ENG_naval_bomber1_medium"
 	}
 	create_equipment_variant = {
-		name = "Handley Page Heyford" 
+		name = "Handley Page Heyford"
 		type = medium_plane_airframe_0
 		design_team = mio:IMA_de_havilland_organization
 		modules = {
@@ -1186,7 +1196,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "Bristol Blenheim" 
+		name = "Bristol Blenheim"
 		type = medium_plane_airframe_1
 		design_team = mio:IMA_de_havilland_organization
 		modules = {

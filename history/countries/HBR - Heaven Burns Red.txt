@@ -20,10 +20,13 @@ set_grand_doctrine = new_fleet_in_being
 set_grand_doctrine = new_strategic_destruction
 
 #시작 기술
-set_technology = {
+et_technology = {
 	infantry_weapons = 1
 	gw_artillery = 1
 	interwar_antiair = 1
+	tech_trucks = 1
+	tech_support = 1
+	basic_train = 1
 }
 set_technology = {
 	basic_naval_mines = 1
@@ -31,11 +34,16 @@ set_technology = {
 	basic_battery = 1
 	basic_torpedo = 1
 	coastal_defense_ships = 1
+	early_ship_hull_submarine = 1
+	early_ship_hull_heavy = 1
+	early_ship_hull_cruiser = 1
 }
 if = {
 	limit = { has_BBA = yes }
 	set_technology = {
 		iw_small_airframe = 1
+		engines_1 = 1
+		aa_lmg = 1
 	}
 	else = {
 		set_technology = {
@@ -175,13 +183,13 @@ set_popularities = {
 	anarchosyndicalism = 1
 	fascism = 16
 	militarytotalism = 1
-	authoritariandemocracy = 74 
+	authoritariandemocracy = 74
 	autocracy = 2
 }
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = HBR_kayamori_ruka
 #recruit_character = HBR_izumi_yuki
 #recruit_character = HBR_aikawa_megumi
@@ -235,21 +243,73 @@ recruit_character = HBR_kayamori_ruka
 #recruit_character = HBR_asami_makiko
 
 #recruit_character = HBR_phraya_phahon
-#recruit_character = HBR_nangklao_chichalerm
-#recruit_character = HBR_chao_phonphayuhasena
-#recruit_character = HBR_nangklao_suriyawongse
-#recruit_character = HBR_tianliang_huntrakool
+if = {
+	limit = { has_TaOG = yes }
+	#recruit_character = HBR_phraya_songsuradet
+	#recruit_character = HBR_rangsit_prayurasakdi
+	#recruit_character = HBR_luang_wichitwathakan
+	#recruit_character = HBR_charun_rattanakun_seriroengrit
+	#recruit_character = HBR_adul_aduldejajaras
+	#recruit_character = HBR_phichit_kriangsakphichit
+	#recruit_character = HBR_luang_haansongkhram
+	#recruit_character = HBR_mangkorn_phromyothi
+	#recruit_character = HBR_luang_chawengsaksongkhram
+	#recruit_character = HBR_aditya_dibabha
+	#recruit_character = HBR_prince_subhasvasti
+	#recruit_character = HBR_jira_wichitsongkhram
+	#recruit_character = HBR_ananda_mahidol
+	#recruit_character = HBR_prajadhipok
+	#recruit_character = HBR_rambai_barni
+	#recruit_character = HBR_bowardej
+
+	#recruit_character = HBR_josiah_crosby
+	#recruit_character = HBR_puey_ungpakorn
+	#recruit_character = HBR_seni_pramoj
+	#recruit_character = HBR_prayoon_pamornmontri
+	#recruit_character = HBR_direk_jayanama
+	#recruit_character = HBR_phra_sitthi_ruang_dejpol
+	#recruit_character = HBR_pao_pienlert_boripanyutakit
+	#recruit_character = HBR_sanguan_tularaksa
+	#recruit_character = HBR_chao_phraya_sri_dharmathibhet
+	#recruit_character = HBR_vanich_pananont
+	#recruit_character = HBR_manopakorn_nitithada
+	#recruit_character = HBR_damrong_rajanubhab
+	#recruit_character = HBR_paribatra_sukhumbandhu
+	#recruit_character = HBR_wan_waithayakon
+	#recruit_character = HBR_vilas_osathanondh
+	#recruit_character = HBR_dhani_nivat
+	#recruit_character = HBR_chamkat_phalangkun
+	#recruit_character = HBR_phra_bisal_sukhumvit
+	#recruit_character = HBR_kukrit_pramoj
+	#recruit_character = HBR_sindh_kamalanavin
+	#recruit_character = HBR_prayoon_yuthasastrkosol
+	#recruit_character = HBR_luang_subhachalasai
+	#recruit_character = HBR_phin_choonhavan
+	#recruit_character = HBR_tiang_sirikhan
+	else = {
+    	#recruit_character = HBR_nangklao_chichalerm
+    	#recruit_character = HBR_chao_phonphayuhasena
+    	#recruit_character = HBR_nangklao_suriyawongse
+    	#recruit_character = HBR_manphya_khanphialong
+    	#recruit_character = HBR_luang_phibunsongkhram #This is Phibun
+    	#recruit_character = HBR_phraya_preechacholayudha
+    	#recruit_character = HBR_phraya_chitnasongkhla
+    	#recruit_character = HBR_sindhu_kamalanavin
+	}
+}
+#recruit_character = HBR_pridi_banomyong
+#recruit_character = HBR_plaek_phibunsongkhram
+
+
+
 #recruit_character = HBR_phra_silpasakrakorn
 #recruit_character = HBR_luang_sinthusongkhramchai
 #recruit_character = HBR_thawon_thamrongnawasawat
-#recruit_character = HBR_phraya_preechacholayudha
-#recruit_character = HBR_pridi_phanomyong
-#recruit_character = HBR_sindhu_kamalanavin
-#recruit_character = HBR_phraya_chitnasongkhla
+
 #recruit_character = HBR_phraya_thayarnpikart
 #recruit_character = HBR_phra_vechayanrangsarit
-#recruit_character = HBR_manphya_khanphialong
-#recruit_character = HBR_luang_phibunsongkhram
+
+
 #recruit_character = HBR_phraya_wichcitcholathai
 #recruit_character = HBR_sawat_phutianands
 #recruit_character = HBR_phraya_chalermarkiart
@@ -263,7 +323,7 @@ recruit_character = HBR_kayamori_ruka
 ### Ship Variants ###
 # Destroyers #
 create_equipment_variant = {
-	name = "Phra Ruang Class"				
+	name = "Phra Ruang Class"
 	type = ship_hull_light_1
 	name_group = HBR_DD_HISTORICAL
 	parent_version = 0
@@ -273,6 +333,57 @@ create_equipment_variant = {
 		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 		fixed_ship_radar_slot = empty
 		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+}
+create_equipment_variant = {
+	name = "Ratanakosindra Class"		# HTMS Ratanakosindra, HTMS Sukhothai - built 1924-1930
+	type = ship_hull_cruiser_1
+	name_group = HBR_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+}
+
+create_equipment_variant = {
+	name = "Trad Class"					# Trad, Phuket, Surasdra, Pattani - built 1935-1936
+	type = ship_hull_light_1
+	name_group = HBR_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_2
+		mid_1_custom_slot = empty
+		rear_1_custom_slot = empty
+	}
+}
+
+create_equipment_variant = {
+	name = "CMB Class"					# Thornycroft coastal motor torpedo boats - built around 1935
+	type = ship_hull_light_1
+	name_group = HBR_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_2
 		fixed_ship_torpedo_slot = ship_torpedo_1
 		mid_1_custom_slot = empty
 		rear_1_custom_slot = empty

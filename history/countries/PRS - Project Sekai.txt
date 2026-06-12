@@ -29,7 +29,7 @@ set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_recon = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_engineers = 1
 	tech_mountaineers = 1
 	tech_trucks = 1
@@ -262,7 +262,7 @@ set_variable = { PRS_total_control_over_domestic_affairs_focus_advisor = 0 } # T
 
 set_variable = { PRS_industrialist_prevailed = 0 } #For allowing only one Industrialist advisor to work on the ME focus
 
-#캐릭터 
+#캐릭터
 recruit_character = PRS_hoshino_ichika
 recruit_character = PRS_tenma_saki
 recruit_character = PRS_mochizuki_honami
@@ -410,7 +410,7 @@ recruit_character = PRS_kaito
 #recruit_character = PRS_peter_adolf_thiessen
 #recruit_character = PRS_gustav_ludwig_hertz
 #recruit_character = PRS_eduard_grote
-#recruit_character = PRS_ferdinand_porsche 
+#recruit_character = PRS_ferdinand_porsche
 #recruit_character = PRS_erwin_aders
 #recruit_character = PRS_hermann_burkhardt
 #recruit_character = PRS_ulrich_gabler
@@ -471,7 +471,7 @@ if = {
 		nationalities = { PRS }
 		gender = male
 	}
-	
+
 	create_operative_leader = {
 		name = GER_erich_gimpel
 		GFX = GFX_portrait_GER_erich_gimpel
@@ -481,7 +481,7 @@ if = {
 		nationalities = { PRS }
 		gender = male
 	}
-	
+
 	create_operative_leader = {
 		name = GER_fritz_duquesne
 		GFX = GFX_portrait_GER_fritz_joubert_duquesne
@@ -813,6 +813,24 @@ if = {
 		}
 		icon = "GFX_GER_improved_light_tank_medium"
 	}
+	create_equipment_variant = {
+		name = "StuG III"
+		type = medium_tank_destroyer_chassis_1
+		design_team = mio:PRS_alkett_organization
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_medium_cannon
+			turret_type_slot = tank_medium_fixed_superstructure_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 3
+		}
+	}
 }
 if = {
 	limit = { has_BBA = yes }
@@ -868,7 +886,7 @@ if = {
 		}
 		icon = "GFX_GER_tactical_bomber1_medium"
 	}
-	
+
 	create_equipment_variant = {
 		name = "Do 17"
 		type = medium_plane_airframe_1
@@ -949,7 +967,7 @@ if = {
 			}
 			obsolete = yes
 		}
-		
+
 		create_equipment_variant = {
 			name = "Do 17"
 			type = tac_bomber_equipment_0

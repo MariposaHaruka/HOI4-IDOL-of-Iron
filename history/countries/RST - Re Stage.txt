@@ -1,5 +1,5 @@
 #수도
-capital = 335
+capital = 1058
 
 #부대
 set_oob = "RST_ar"
@@ -16,7 +16,54 @@ set_grand_doctrine = new_strategic_destruction
 #시작 기술
 set_technology = {
 	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
 	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	marines = 1
+	basic_train = 1
+	bicycle_infantry = 1
+}
+
+set_technology = {
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	basic_battery = 1
+	basic_torpedo = 1
+	basic_depth_charges = 1
+	basic_cruiser_armor_scheme = 1
+	coastal_defense_ships = 1
+	mtg_transport = 1
+}
+
+if = {
+	limit = { has_BBA = yes }
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			early_bombs = 1
+			bba_early_transport_plane = 1
+			air_torpedoe_1 = 1
+		}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			early_transport_plane = 1
+		}
+	}
 }
 
 #인트로
@@ -151,9 +198,81 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = RST_shikimiya_mana
 
+
+#recruit_character = RST_a_t_van_starkenborgh_stachouwer
+#recruit_character = RST_sukarno
+#recruit_character = RST_sutan_sjahrir
+#recruit_character = RST_amir_sjarifuddin_harahap
+#recruit_character = RST_hein_ter_poorten
+#recruit_character = RST_murk_boersta
+#recruit_character = RST_ludolph_hendrik_van_oyen #whatever
+#recruit_character = RST_simon_spoor
+if = {
+	limit = { has_TaOG = yes }
+
+	# Leaders
+	#recruit_character = RST_bonifacius_cornelis_de_jonge #Only character to have a leader trait attatched at game start, keep him at the top. All others get theirs added outside of character definition
+	#recruit_character = RST_tan_malaka
+	#recruit_character = RST_andries_cornelis_dirk_de_graeff
+	#recruit_character = RST_mohammad_hatta
+	#recruit_character = RST_national_committee
+
+	# Advisors (Dutch)
+	#recruit_character = RST_charles_welter
+	#recruit_character = RST_christian_willhelm_bodenhausen
+	#recruit_character = RST_harry_kuneman
+	#recruit_character = RST_adipati_soejono
+	#recruit_character = RST_mohammad_hunsi_tharmin
+	#recruit_character = RST_oto_iskandar_di_nata
+	#recruit_character = RST_i_j_k_hendrowahyono
+	#recruit_character = RST_dick_de_hoog
+	#recruit_character = RST_soetardjo_kartohadikusomo
+	#recruit_character = RST_hok_hoei_kan
+
+	# Advisors (Republican)
+	#recruit_character = RST_sam_ratulangi
+	#recruit_character = RST_achmad_soebardjo
+	#recruit_character = RST_wirantakusumah_v
+	#recruit_character = RST_surachman_tjokoadisurjo
+	#recruit_character = RST_supomo
+	#recruit_character = RST_dr_samsi_sastrawidagda
+	#recruit_character = RST_ki_hajar_dewantara
+	#recruit_character = RST_iwa_kusuma_sumantri
+	#recruit_character = RST_dr_boentaran_martooatmodjo
+	#recruit_character = RST_mohammad_natsir
+	#recruit_character = RST_mohammad_roem
+	#recruit_character = RST_sjafruddin_prawiranegara
+	#recruit_character = RST_njono
+	#recruit_character = RST_setyadjit_soegondo
+	#recruit_character = RST_musso
+
+	# Generals/MHC (Dutch)
+	#recruit_character = RST_gerardus_johannes_berenschot
+	#recruit_character = RST_tjalling_bakker
+	#recruit_character = RST_gustav_adolf_ilgen
+	#recruit_character = RST_jacob_jan_pesman
+	#recruit_character = RST_pierre_antoine_cox
+	#recruit_character = RST_dirk_reinhard_adelbert_van_langen
+	#recruit_character = RST_gustave_statius_muller
+
+	# Generals/MHC (Indonesian)
+	#recruit_character = RST_sudirman
+	#recruit_character = RST_soengkono
+	#recruit_character = RST_moestopo
+	#recruit_character = RST_sutomo
+	#recruit_character = RST_djatikoesoemo
+	#recruit_character = RST_soerjadi_soerjadarma
+	#recruit_character = RST_mas_pardi
+	#recruit_character = RST_mohammad_nazir_isa
+	#recruit_character = RST_t_b_simatupang
+	#recruit_character = RST_oerip_soemohardjo
+	#recruit_character = RST_gatot_soebroto
+	#recruit_character = RST_kartosoewirjo
+
+}
 #장관진
 
 #무기 프리셋

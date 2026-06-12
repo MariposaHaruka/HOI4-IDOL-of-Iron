@@ -2,7 +2,7 @@ state = {
 	id = 668
 	name = "STATE_668"
 	manpower = 579100
-	
+
 	state_category = pastoral
 	resources = {
 		coal = 1 # 0 + pastoral 1
@@ -11,9 +11,13 @@ state = {
 	history = {
 		owner = RST
 		add_core_of = RST
-		
+		#set_resistance = 0
+		#set_compliance = 55
+		victory_points = {
+			7413 1 # Ternate
+		}
+
 		buildings = {
-			infrastructure = 2
 			1574 = {
 				naval_base = 1
 			}
@@ -27,8 +31,8 @@ state = {
 	}
 
 	provinces = {
-		1351 1419 1437 1574 7369 7413 7557 10141 10342 10409 
+		1351 1419 1437 1574 7369 7413 7557 10141 10342 10409
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 0.0
 }

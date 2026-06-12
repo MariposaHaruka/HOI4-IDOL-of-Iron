@@ -1,11 +1,11 @@
 state = {
 	id = 333
 	name = "STATE_333"
-	manpower = 589800
+	manpower = 503200
 	resources = {
 		rubber = 20 # was: 72, then 40
-		oil = 2 # was: 18, then 12
-		coal = 3 # 1 + rural 2
+		oil = 1
+		coal = 3 # initial 1 + rural 2
 	}
 	
 	state_category = rural
@@ -14,18 +14,22 @@ state = {
 		owner = IGM
 		add_core_of = IGM
 		victory_points = {
-			1208 3 
+			1208 3 # Kuching
 		}
+
 		buildings = {
+
 			infrastructure = 2
+
 			1208 = {
 				naval_base = 1
 			}
+
 		}
 	}
 
 	provinces = {
-		1208 2117 4216 4396 7443 8091 10269 10285 12283 12905 13377 13378 
+		1208 2117 4216 4396 7443 8091 10285 12283 12905   
 	}
 
 	local_supplies = 0.0 
