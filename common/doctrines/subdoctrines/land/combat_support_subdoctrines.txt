@@ -25,7 +25,7 @@ fire_concentration = {
         modifier = {
             factor = 75
             original_tag = FRA
-        }   
+        }
     }
 
      # EFFECTS
@@ -33,13 +33,11 @@ fire_concentration = {
 
     category_line_artillery = {
         defense = 0.05
-    }
-    category_line_artillery = {
         max_organisation = 5
     }
 
      rewards = {
-        
+
         predicted_fire = {
         #1
             category_line_artillery = {
@@ -49,7 +47,6 @@ fire_concentration = {
 
         standing_barrage = {
         #2
-            
             artillery_brigade = {
                 combat_width = -0.8
             }
@@ -59,7 +56,16 @@ fire_concentration = {
         }
         artillery_groups = {
         #3
+            category_regimental_support_artillery = {
+                soft_attack = 0.05
+                breakthrough = 0.1
+            }
+            category_support_artillery = {
+                soft_attack = 0.05
+                breakthrough = 0.1
+            }
             category_line_artillery = {
+                soft_attack = 0.05
                 breakthrough = 0.1
             }
         }
@@ -101,7 +107,7 @@ anti_tank_frontline = {
     ai_will_do = { base = 0 }
 
      # EFFECTS
-     
+
 
     engineer = {
         battalion_mult = {
@@ -115,14 +121,17 @@ anti_tank_frontline = {
         pakfront = {
         #1
             anti_tank_brigade = {
-                defense = 0.2
                 ap_attack = 0.1
-                soft_attack = 0.2
             }
+            anti_tank_battery = {
+                ap_attack = 0.2
+                hard_attack = 0.2
+			}
         }
         emplacement_rotation = {
         #2
             anti_tank_brigade = {
+                defense = 0.2
                 max_organisation = 10
             }
         }
@@ -131,6 +140,7 @@ anti_tank_frontline = {
             anti_tank_brigade = {
                 ap_attack = 0.1
                 hard_attack = 0.1
+                soft_attack = 0.2
             }
         }
         offensive_deployments = {
@@ -160,19 +170,19 @@ flying_batteries = {
     xp_type = army
 
     available = {
-    
+
     }
     visible = {
         has_dlc = "No Compromise, No Surrender"
     }
 
-    
+
     ai_will_do = {
         base = 1
 
         modifier = {
-            factor = 0 
-            NOT = { has_tech = rocket_artillery } 
+            factor = 0
+            NOT = { has_tech = rocket_artillery }
         }
     }
 
@@ -201,12 +211,16 @@ flying_batteries = {
             mot_artillery_brigade = {
                 max_organisation = 10
             }
+			mot_fire_support = {
+                max_organisation = 10
+                soft_attack = 0.1
+			}
         }
         counter_battery_tasks = {
-            
+
             recon = {
                 battalion_mult = {
-                    category = category_line_artillery 
+                    category = category_line_artillery
                     soft_attack = 0.05
                     defense = 0.1
                 }
@@ -214,7 +228,7 @@ flying_batteries = {
             }
             mot_recon = {
                 battalion_mult = {
-                    category = category_line_artillery 
+                    category = category_line_artillery
                     soft_attack = 0.05
                     defense = 0.1
                 }
@@ -225,8 +239,12 @@ flying_batteries = {
             armored_signal = {
                 battalion_mult = {
                     category = category_line_artillery
-                    initiative = 0.02
                     supply_consumption = -0.01
+                    add = yes
+                }
+				 battalion_mult = {
+                    category = category_line_artillery
+                    initiative = 0.02
                 }
             }
 
@@ -266,7 +284,7 @@ air_cavalry = {
     }
     visible = {
         has_dlc = "Gotterdammerung"
-    }   
+    }
 
     ai_will_do = { base = 0 }
 
@@ -281,7 +299,7 @@ air_cavalry = {
     }
 
      rewards = {
-        airborne_observers = { 
+        airborne_observers = {
             helicopter_recon = {
                 battalion_mult = {
                     category = category_artillery
@@ -299,8 +317,8 @@ air_cavalry = {
             helicopter_field_hospital = {
             battalion_mult = {
                 category = category_all_infantry
-                    max_strength = 0.05 
-                    default_morale = 0.05 
+                    max_strength = 0.05
+                    default_morale = 0.05
                 }
                 max_organisation = 5
                 casualty_trickleback = 0.05
@@ -317,7 +335,7 @@ air_cavalry = {
                 breakthrough = 0.05
                 max_organisation = 10
             }
-                
+
         }
         intervention_units = {
             helicopter_brigade = {
@@ -326,10 +344,10 @@ air_cavalry = {
                     soft_attack = 0.1
                 }
                 max_organisation = 10
-                
+
             }
         }
- 
+
 
      }
 }
@@ -349,7 +367,7 @@ mobile_recon_and_assault = {
     visible = {
         has_dlc = "La Resistance"
     }
-    
+
     ai_will_do = {
 
         base = 1
@@ -366,7 +384,7 @@ mobile_recon_and_assault = {
             is_major = no
         }
     }
-    
+
 
     armored_car = {
         max_organisation = 3
@@ -382,7 +400,10 @@ mobile_recon_and_assault = {
                 maximum_speed = 0.1
                 default_morale = 0.1
             }
-
+            mot_fire_support = {
+                max_organisation = 10
+                soft_attack = 0.1
+			}
         }
         long_range_reconnaissance = {
             category_recon = {
@@ -448,7 +469,7 @@ mobile_recon_and_assault_no_lar = {
         }
     }
 
-    
+
     ai_will_do = {
 
         base = 1
@@ -465,7 +486,7 @@ mobile_recon_and_assault_no_lar = {
             is_major = no
         }
     }
-    
+
 
     light_armor = {
         max_organisation = 5
@@ -478,7 +499,10 @@ mobile_recon_and_assault_no_lar = {
                 maximum_speed = 0.1
                 default_morale = 0.1
             }
-
+            mot_fire_support = {
+                max_organisation = 10
+                soft_attack = 0.1
+			}
         }
         long_range_reconnaissance = {
             category_recon = {
@@ -518,6 +542,12 @@ mobile_recon_and_assault_no_lar = {
                 recon = 0.2
                 breakthrough = 0.1
             }
+			category_tank_destroyer_regimental_support = {
+                breakthrough = 0.2
+			}
+			category_self_propelled_anti_air_regimental_support = {
+                breakthrough = 0.2
+			}
         }
     }
 }
@@ -533,7 +563,7 @@ self_propelled_support = {
     xp_type = army
 
     available = {
-       
+
     }
     visible = {
         has_dlc = "No Compromise, No Surrender"
@@ -568,7 +598,7 @@ self_propelled_support = {
             }
         }
         screening_attacks = {
-            
+
             recon = {
                 battalion_mult = {
                     category = category_self_propelled_artillery
@@ -632,7 +662,7 @@ self_propelled_support = {
 
     }
 
-    
+
 }
 
 siege_artillery = {
@@ -711,7 +741,7 @@ siege_artillery = {
                     railway_gun_hours_between_redistribution = -0.5
                     instant = yes
                 }
-                
+
             }
         }
         precomputed_firing_data = {
@@ -774,7 +804,7 @@ field_engineering = {
     xp_cost = 100
     xp_type = army
 
-    ai_will_do = { 
+    ai_will_do = {
         base = 1
         modifier = {
             factor = 75
@@ -782,7 +812,7 @@ field_engineering = {
                 original_tag = ITA
                 original_tag = JAP
                 original_tag = FIN
-            }            
+            }
         }
     }
 
@@ -823,7 +853,7 @@ field_engineering = {
             maintenance_company = {
                 max_organisation = 5
             }
-            
+
         }
         sapper_fieldcraft = {
             engineer = {
@@ -865,7 +895,7 @@ field_engineering = {
             engineer = {
                 max_organisation = 5
                 soft_attack = 0.05
-                hard_attack = 1  
+                hard_attack = 1
             }
             maintenance_company = {
                 max_organisation = 5

@@ -31,16 +31,36 @@ NDefines.NCountry.BASE_MAX_COMMAND_POWER = 500
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 1000
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 1000
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 1000
+NDefines.NMilitary.MAX_DIVISION_BRIGADE_WIDTH = 5			-- Max width of regiments in division designer (non-HQ templates).
+NDefines.NMilitary.MAX_DIVISION_BRIGADE_HEIGHT = 5		-- Max height of regiments in division designer (non-HQ templates).
+NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 4		-- Min height of regiments in division designer.
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_WIDTH = 2
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 5
+NDefines.NMilitary.MAX_REGIMENTAL_SUPPORT_WIDTH = 5		    -- Max width of regimental supports in division designer.
+NDefines.NMilitary.MAX_REGIMENTAL_SUPPORT_HEIGHT = 2		-- Max height of regimental supports in division designer.
+NDefines.NMilitary.MAX_HQ_BATTALION_WIDTH = 1			-- Max width of regiments in division designer (Army HQ templates).
+NDefines.NMilitary.MAX_HQ_BATTALION_HEIGHT = 4			-- Max height of regiments in division designer (Army HQ templates).
+NDefines.NMilitary.MAX_HQ_SUPPORT_WIDTH = 1			-- Max width of support in division designer (Army HQ templates).
+NDefines.NMilitary.MAX_HQ_SUPPORT_HEIGHT = 4			-- Max height of support in division designer (Army HQ templates).
+NDefines.NMilitary.MAX_HQ_REGIMENTAL_SUPPORT_WIDTH = 0		-- Max width of regimental supports in division designer (Army HQ templates).
+NDefines.NMilitary.MAX_HQ_REGIMENTAL_SUPPORT_HEIGHT = 0		-- Max height of regimental supports in division designer (Army HQ templates).
+NDefines.NMilitary.REGIMENTAL_SUPPORT_REQUIRED_BATTALIONS = { 3 } -- For each regimental support row, how many battalions are required in the regiment to be able to place a support in that row.
+NDefines.NMilitary.AI_BATTALION_BUILD_ORDER = { 	1,  6,  11, 16, 21,
+				     				                2,  7,  12, 17, 22,
+				     				                3,  8,  13, 18, 23,
+				     				                4,  9,  14, 19, 24,
+				     				                5,  10, 15, 20, 25 }
+NDefines.NMilitary.REGIMENTAL_SUPPORT_SLOT_COST_MULTIPLIER = 0.5 -- Regimental support slot costs are scaled by this value compared to normal support slots
+
 NDefines.NDiplomacy.PEACE_SCORE_SCALE_FACTOR = 2.15							-- Vanilla is 1.35
 NDefines.NDiplomacy.PEACE_SCORE_DISTRIBUTION = { 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2 } -- Vanilla is 0.2 in the first five turns
 NDefines.NDiplomacy.PEACE_CONTEST_REFUND_FACTOR = { 1.0, 0.90, 0.80, 0.70, 0.60, 0.50  } -- Vanilla is 1.0, 0.92, 0.84, 0.76
-
 NDefines.NDiplomacy.BASE_PEACE_PUPPET_FACTOR = 0	-- Vanilla is 200
 NDefines.NDiplomacy.BASE_PEACE_LIBERATE_FACTOR = 0  -- Vanilla is 100
 NDefines.NDiplomacy.BASE_PEACE_TAKE_UNCONTROLLED_STATE_FACTOR = 100 -- Vanilla is 10.0
-NDefines.NAI.PEACE_AI_EVALUATE_OTHER_ALWAYS = true;
+
+NDefines.NAI.PEACE_AI_EVALUATE_OTHER_ALWAYS = true
+
 NDefines.NDiplomacy.EQUIPMENT_PURCHASE_ACCEPTANCE_COMPETING_FACTIONS = 0
 NDefines.NDiplomacy.MARKET_ACCESS_ACCEPTANCE_COMPETING_FACTIONS = 0
 
@@ -109,7 +129,7 @@ NDefines.NAI.SCREEN_TASKFORCE_MAX_SHIP_COUNT = 5		-- optimum screen count for sc
 NDefines.NAI.SUB_TASKFORCE_MAX_SHIP_COUNT = 4 			-- optimum sub count for sub taskforces Vanilla is 16
 NDefines.NAI.DIPLOMACY_ACCEPT_VOLUNTEERS_BASE = 100
 NDefines.NAI.RESEARCH_AHEAD_OF_TIME_FACTOR = 4.5 		-- To which extent AI should care about ahead of time penalties to research
-NDefines.NAI.RESEARCH_AHEAD_BONUS_FACTOR = 2.5          -- To which extent AI should care about ahead of time bonuses to research
+NDefines.NAI.RESEARCH_AHEAD_BONUS_FACTOR = 25.0          -- To which extent AI should care about ahead of time bonuses to research
 NDefines.NAI.RESEARCH_BONUS_FACTOR = 2.0 				-- To which extent AI should care about bonuses to research
 NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_AIR_EQUIPMENT = 1.5   -- Vanilla is 1
 
@@ -156,3 +176,34 @@ NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 60 --10
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 100 --25
 NDefines.NGame.GAME_SPEED_SECONDS = { 0.4, 0.25, 0.1, 0.05, 0.0 } --{2.0, 0.5, 0.2, 0.1, 0.0}
 NDefines.NCountry.EVENT_PROCESS_OFFSET = 27 --20 
+
+NDefines.NFactions.FACTION_INTELLIGENCE_ALLOWED_ADVISOR_TRAIT = { -- Which advisor traits you need to have to be able to be selected as spymaster. You need to be of slottype political advisor regardless
+		"head_of_intelligence", -- 현혹적인 신사
+		"mastermind_code_cracker", -- 복호화 책임자
+		"expert_code_cracker", -- 암호 해독 전문가
+		"spymaster", -- 첩보장
+		"spymaster_no_lar",
+		"special_envoy", -- 사절
+        "intelligence_service_deputy" -- 정보국 부국장
+    }
+        -- "commander_of_the_fetno_derash"/"commander_of_the_fetno_derash_no_lar" -- 퍼트노 더라스 지휘관
+        -- "SWI_soviet_spy" -- 소련 첩보원
+		-- "SWI_intelligence_officer" -- 정보 장교
+		-- "BRA_soviet_spy" -- 소련 첩보원
+		-- "HUN_military_intelligence_officer" -- 군 정보 장교
+		-- "AUS_secretive_priest" -- 비밀스러운 사제
+		-- "AUS_veteran_head_of_agency" -- 베테랑 첩보기관장
+		-- "BEL_illusive_mastermind" -- 정체불명의 지략가
+		-- "GER_intelligence_coordinator" -- 첩보 조정관
+		-- "GER_secretary_of_state_security" -- 국가보안부 장관
+		-- "GER_reich_security_main_office_director_lar"/"GER_reich_security_main_office_director_no_lar" -- 국가보안본부 본부장
+		-- "head_of_the_abwehr"/"head_of_the_abwehr_improved" -- 방첩청장
+		-- "PRC_multi_talented_diplomat_lar"/"PRC_multi_talented_diplomat_no_lar" -- 다재다능한 외교관
+		-- "PRC_trained_by_the_nkvd" -- 내무인민위원부의 훈련을 거침
+		-- "PRC_spymaster" -- 종잡을 수 없는 첩자
+		-- "PHI_intelligence_bureau_chief" -- 정보기관 수장
+		-- "HUN_stalinist_agent" -- 스탈린주의 공작원
+		-- "JAP_tokko_chief" -- 특고 부장
+		-- "CHI_spymaster" -- 조사통계국 첩보장
+		-- "AST_intelligence_director" -- 정보국장
+		-- "AST_indomitable_scout" -- 불굴의 정찰병

@@ -1,19 +1,19 @@
 
 
-########    ###    ##    ## ##    ##     ######   ########   #######  ##     ## ########   ######  
-   ##      ## ##   ###   ## ##   ##     ##    ##  ##     ## ##     ## ##     ## ##     ## ##    ## 
-   ##     ##   ##  ####  ## ##  ##      ##        ##     ## ##     ## ##     ## ##     ## ##       
-   ##    ##     ## ## ## ## #####       ##   #### ########  ##     ## ##     ## ########   ######  
-   ##    ######### ##  #### ##  ##      ##    ##  ##   ##   ##     ## ##     ## ##              ## 
-   ##    ##     ## ##   ### ##   ##     ##    ##  ##    ##  ##     ## ##     ## ##        ##    ## 
-   ##    ##     ## ##    ## ##    ##     ######   ##     ##  #######   #######  ##         ######  
+########    ###    ##    ## ##    ##     ######   ########   #######  ##     ## ########   ######
+   ##      ## ##   ###   ## ##   ##     ##    ##  ##     ## ##     ## ##     ## ##     ## ##    ##
+   ##     ##   ##  ####  ## ##  ##      ##        ##     ## ##     ## ##     ## ##     ## ##
+   ##    ##     ## ## ## ## #####       ##   #### ########  ##     ## ##     ## ########   ######
+   ##    ######### ##  #### ##  ##      ##    ##  ##   ##   ##     ## ##     ## ##              ##
+   ##    ##     ## ##   ### ##   ##     ##    ##  ##    ##  ##     ## ##     ## ##        ##    ##
+   ##    ##     ## ##    ## ##    ##     ######   ##     ##  #######   #######  ##         ######
 
 
 mio_cat_eq_all_light_tank = { #Includes (standalone) Amphibious Tank Chassis
 	equipment_type = {
 		light_tank_chassis
 		amphibious_tank_chassis
-	}	
+	}
 }
 
 mio_cat_eq_all_medium_tank = { #Includes Modern Tank Chassis
@@ -32,7 +32,7 @@ mio_cat_eq_all_heavy_tank = { #Includes Super Heavy Tank Chassis
 
 mio_cat_eq_all_tank_destroyers = { #Includes Super Heavy Tank Chassis
 	equipment_type = {
-		light_tank_destroyer_chassis 
+		light_tank_destroyer_chassis
 		medium_tank_destroyer_chassis
 		heavy_tank_destroyer_chassis
 		super_heavy_tank_destroyer_chassis
@@ -52,7 +52,7 @@ mio_cat_eq_all_tanks = { #Includes All Tank Chassis
 		heavy_tank_chassis
 		super_heavy_tank_chassis
 		#Super Heavy and Tank Destroyers
-		light_tank_destroyer_chassis 
+		light_tank_destroyer_chassis
 		medium_tank_destroyer_chassis
 		heavy_tank_destroyer_chassis
 		super_heavy_tank_destroyer_chassis
@@ -61,13 +61,13 @@ mio_cat_eq_all_tanks = { #Includes All Tank Chassis
 }
 
 
- ######  ##     ## #### ########      ######   ########   #######  ##     ## ########   ######  
-##    ## ##     ##  ##  ##     ##    ##    ##  ##     ## ##     ## ##     ## ##     ## ##    ## 
-##       ##     ##  ##  ##     ##    ##        ##     ## ##     ## ##     ## ##     ## ##       
- ######  #########  ##  ########     ##   #### ########  ##     ## ##     ## ########   ######  
-      ## ##     ##  ##  ##           ##    ##  ##   ##   ##     ## ##     ## ##              ## 
-##    ## ##     ##  ##  ##           ##    ##  ##    ##  ##     ## ##     ## ##        ##    ## 
- ######  ##     ## #### ##            ######   ##     ##  #######   #######  ##         ######  
+ ######  ##     ## #### ########      ######   ########   #######  ##     ## ########   ######
+##    ## ##     ##  ##  ##     ##    ##    ##  ##     ## ##     ## ##     ## ##     ## ##    ##
+##       ##     ##  ##  ##     ##    ##        ##     ## ##     ## ##     ## ##     ## ##
+ ######  #########  ##  ########     ##   #### ########  ##     ## ##     ## ########   ######
+      ## ##     ##  ##  ##           ##    ##  ##   ##   ##     ## ##     ## ##              ##
+##    ## ##     ##  ##  ##           ##    ##  ##    ##  ##     ## ##     ## ##        ##    ##
+ ######  ##     ## #### ##            ######   ##     ##  #######   #######  ##         ######
 
 mio_cat_eq_all_carrier = { #Includes all CV --- Used due to custom loc capabilities
 	equipment_type = {
@@ -103,13 +103,13 @@ mio_cat_eq_all_ships_no_convoys = { #Includes all ships except convoys
 	}
 }
 
-########  ##          ###    ##    ## ########     ######   ########   #######  ##     ## ########   ######  
-##     ## ##         ## ##   ###   ## ##          ##    ##  ##     ## ##     ## ##     ## ##     ## ##    ## 
-##     ## ##        ##   ##  ####  ## ##          ##        ##     ## ##     ## ##     ## ##     ## ##       
-########  ##       ##     ## ## ## ## ######      ##   #### ########  ##     ## ##     ## ########   ######  
-##        ##       ######### ##  #### ##          ##    ##  ##   ##   ##     ## ##     ## ##              ## 
-##        ##       ##     ## ##   ### ##          ##    ##  ##    ##  ##     ## ##     ## ##        ##    ## 
-##        ######## ##     ## ##    ## ########     ######   ##     ##  #######   #######  ##         ######  
+########  ##          ###    ##    ## ########     ######   ########   #######  ##     ## ########   ######
+##     ## ##         ## ##   ###   ## ##          ##    ##  ##     ## ##     ## ##     ## ##     ## ##    ##
+##     ## ##        ##   ##  ####  ## ##          ##        ##     ## ##     ## ##     ## ##     ## ##
+########  ##       ##     ## ## ## ## ######      ##   #### ########  ##     ## ##     ## ########   ######
+##        ##       ######### ##  #### ##          ##    ##  ##   ##   ##     ## ##     ## ##              ##
+##        ##       ##     ## ##   ### ##          ##    ##  ##    ##  ##     ## ##     ## ##        ##    ##
+##        ######## ##     ## ##    ## ########     ######   ##     ##  #######   #######  ##         ######
 
 mio_cat_eq_all_small_plane = { #Includes all Small Aircraft (Fighter, CAS, Nav) and CV versions --- Used due to custom loc capabilities
 	equipment_type = {
@@ -164,6 +164,20 @@ mio_cat_eq_only_light_fighter = { #Includes Small Fighter and CV Fighter (no CAS
 	}
 }
 
+mio_cat_eq_only_light_cas = { #Includes Small CAS and CV CAS (no Fighter, no Nav...) --- Needed because plane designer is a gift to us all
+	equipment_type = {
+		small_plane_cas_airframe
+		cv_small_plane_cas_airframe
+	}
+}
+
+mio_cat_eq_only_light_nav = { #Includes Small NAV and CV NAV (no CAS, no Nav...) --- Needed because plane designer is a gift to us all
+	equipment_type = {
+		small_plane_naval_bomber_airframe
+		cv_small_plane_naval_bomber_airframe
+	}
+}
+
 mio_cat_eq_only_light_fighter_no_cv = { #Includes only Small Fighter (No CV, no CAS, no Nav...) --- Needed because plane designer is a gift to us all
 	equipment_type = {
 		small_plane_airframe_0
@@ -181,7 +195,7 @@ mio_cat_eq_only_light_fighter_no_cv = { #Includes only Small Fighter (No CV, no 
 	}
 }
 
-mio_cat_eq_only_light_fighter_and_CAS_no_cv = { #Includes only Small Fighter and CAS (No CV, no Nav...) --- Needed because plane designer is a gift to us all 
+mio_cat_eq_only_light_fighter_and_CAS_no_cv = { #Includes only Small Fighter and CAS (No CV, no Nav...) --- Needed because plane designer is a gift to us all
 	equipment_type = {
 		#FIGHTER
 		small_plane_airframe_0
@@ -238,12 +252,12 @@ mio_cat_eq_only_strategic_bomber = { #Includes only Strategic Bomber (No Maritim
 }
 
 
-   ###    ########  ######## #### ##       ##       ######## ########  ##    ## 
-  ## ##   ##     ##    ##     ##  ##       ##       ##       ##     ##  ##  ##  
- ##   ##  ##     ##    ##     ##  ##       ##       ##       ##     ##   ####   
-##     ## ########     ##     ##  ##       ##       ######   ########     ##    
-######### ##   ##      ##     ##  ##       ##       ##       ##   ##      ##    
-##     ## ##    ##     ##     ##  ##       ##       ##       ##    ##     ##    
+   ###    ########  ######## #### ##       ##       ######## ########  ##    ##
+  ## ##   ##     ##    ##     ##  ##       ##       ##       ##     ##  ##  ##
+ ##   ##  ##     ##    ##     ##  ##       ##       ##       ##     ##   ####
+##     ## ########     ##     ##  ##       ##       ######   ########     ##
+######### ##   ##      ##     ##  ##       ##       ##       ##   ##      ##
+##     ## ##    ##     ##     ##  ##       ##       ##       ##    ##     ##
 ##     ## ##     ##    ##    #### ######## ######## ######## ##     ##    ##
 
 mio_cat_eq_all_artillery = {
@@ -256,12 +270,12 @@ mio_cat_eq_all_artillery = {
 }
 
 
-##     ## ####  ######   ######  
-###   ###  ##  ##    ## ##    ## 
-#### ####  ##  ##       ##       
-## ### ##  ##   ######  ##       
-##     ##  ##        ## ##       
-##     ##  ##  ##    ## ##    ## 
+##     ## ####  ######   ######
+###   ###  ##  ##    ## ##    ##
+#### ####  ##  ##       ##
+## ### ##  ##   ######  ##
+##     ##  ##        ## ##
+##     ##  ##  ##    ## ##    ##
 ##     ## ####  ######   ######
 
 mio_cat_eq_all_infantry_and_support_equipment = {

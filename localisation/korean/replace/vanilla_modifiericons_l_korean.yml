@@ -1,7 +1,7 @@
 ﻿l_korean:
  #abilities_l_korean
  ABILITY_TOOLTIP_COST: "£command_power_texticon  지휘력 비용: $VALUE|H$"
- 
+
  #combat_l_korean
  CURR_COMB_STR: "£strenght_texticon  내구도: $VALUE|0%Y$"
  BM_ATTACK_VALUE: "£attack_texticon  공격: $VALUE|+=%$"
@@ -25,14 +25,14 @@
  ORG_DAMAGE_MULTIPLIER: "£organization_texticon  받은 조직력 피해"
  STR_DAMAGE_MULTIPLIER: "£strenght_texticon  받은 내구도 피해"
  WAR_SUPPORT_REDUCTION_ON_DAMAGE: "£war_support_modifiericons_texticon  피해에 의한 전쟁 지지도 감소"
- 
+
  #country_l_korean
  MANPOWER: "£manpower_texticon  인력"
- 
+
  #designer_l_korean
  DESIGNER_COMBATWIDTH: "£combat_width_texticon  전장 너비: "
  DESIGNER_MANPOWER: "£manpower_texticon  인력: "
- DESIGNER_TRAINING_TIME: "£training_texticon  훈련 시간: " 
+ DESIGNER_TRAINING_TIME: "£training_texticon  훈련 시간: "
 
  #effects_l_korean
  EFFECT_ADD_NATIONAL_UNITY: "£national_unity_texticon  기본 국가 단결도 획득: $VAL|+=%$."
@@ -77,7 +77,7 @@
  EFFECT_MANPOWER_ADD_STATE: "£population_texticon  현지 인구: $VAL|+=0$."
  EFFECT_ADD_THREAT: "£world_tension_texticon  세계 긴장도가 $THREAT|1R$ 증가합니다."
  EFFECT_REMOVE_THREAT: "£world_tension_texticon  세계 긴장도가 $THREAT|1G$ 감소합니다."
- 
+
 #ideas_l_korean
  tactic_elastic_defense_preferred_weight_factor: "£tactics_texticon  §Y탄력적인 방어§! 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐"
  tactic_overwhelming_fire_preferred_weight_factor: "£tactics_texticon  §Y압도적 화력§! 전술이 선호 전술이라면 해당 전술이 발동될 확률이 높아짐"
@@ -526,7 +526,7 @@
  MODIFIER_AIR_TAC_GROUND_ATTACK: "£tac_bomber_texticon  전술공격"
  MODIFIER_AIR_TAC_GROUND_ATTACK_FACTOR: "£tac_bomber_texticon  전술공격"
  MODIFIER_AIR_CAS_GROUND_ATTACK: "£cas_texticon  근접항공지원 공격"
- MODIFIER_AIR_CAS_GROUND_ATTACK: "£cas_texticon  근접항공지원 공격"
+ MODIFIER_AIR_CAS_GROUND_ATTACK_FACTOR: "£cas_texticon  근접항공지원 공격"
  MODIFIER_AIR_CAS_PRESENT_FACTOR: "£cas_texticon  지상 지원"
  MODIFIER_AIR_TAC_STRATEGIC_BOMBING_FACTOR: "£tac_bomber_texticon  전술폭격"
  MODIFIER_TRAINING_TIME_FACTOR: "£training_texticon  훈련 시간"
@@ -634,7 +634,7 @@
  MODIFIER_RESEARCH_SHARING_PER_COUNTRY_BONUS_FACTOR: "£tech_mod  기술 공유 혜택"
  MODIFIER_CAN_MASTER_BUILD_FOR_US: "종주국은 종속국의 영토에 건설 가능"
  MODIFIER_AUTONOMY_SUBJECT_GAIN: "£autonomy_texticon  종주국의 영향력"
- MODIFIER_CIVIL_WAR_INVOLVEMENT_TENSION: "£world_tension_texticon  내전 관여에 의한 긴장" 
+ MODIFIER_CIVIL_WAR_INVOLVEMENT_TENSION: "£world_tension_texticon  내전 관여에 의한 긴장"
  MASTER_BUILDS_FREEDOM_EFFECT: "£autonomy_texticon  종주국의 건물로 인한 자치도 효과"
  MODIFIER_ARMY_LEADER_COST_FACTOR: "£army_leader_cost_texticon  육군 지휘관 비용"
  MODIFIER_NAVY_LEADER_COST_FACTOR: "£army_leader_cost_texticon  해군 지휘관 비용"
@@ -980,7 +980,7 @@
  factory_sabotage_decrease_tooltip_REMOVED: "  민간공장 파괴 확률: §H+0%§! (§R+25%§!)\n  · 군수공장 파괴 확률: §H+0%§! (§R+25%§!)"
  resource_sabotage_decrease_tooltip_UNCHANGED: "  £sabotaged_resource_texticon  자원 파괴 확률: §G-25%§! (§H+0%§!)\n · £sabotaged_resource_texticon  자원 파괴 기간: §G-25%§! (§H+0%§!)"
  factory_sabotage_decrease_tooltip_UNCHANGED: "  £civ_factory_sabotage  민간공장 파괴 확률: §G-25%§! (§H+0%§!)\n  £mil_factory_sabotage  군수공장 파괴 확률: §G-25%§! (§H+0%§!)"
- 
+
  modifier_repair_speed_infrastructure_factor: "£repair_infrastructure_texticon  민간공장 수리 속도"
  modifier_repair_speed_industrial_complex_factor: "£repair_civ_factory_texticon  민간공장 수리 속도"
  modifier_repair_speed_arms_factory_factor: "£repair_mil_factory_texticon  군수공장 수리 속도"
@@ -1041,7 +1041,6 @@
  modifier_state_production_speed_industrial_complex_factor: "£construction_speed_texticon  §Y$industrial_complex$§! 건설 속도"
  modifier_state_production_speed_supply_node_factor: "£construction_speed_texticon  §Y$supply_node$§! 건설 속도"
  modifier_state_production_speed_rail_way_factor: "£construction_speed_texticon  §Y$rail_way$§! 건설 속도"
- modifier_state_production_speed_infrastructure_factor: "£construction_speed_texticon  §Y$infrastructure$§! 건설 속도"
  modifier_state_production_speed_arms_factory_factor: "£construction_speed_texticon  §Y$arms_factory$§! 건설 속도"
  modifier_state_production_speed_air_base_factor: "£construction_speed_texticon  §Y$air_base$§! 건설 속도"
  modifier_state_production_speed_naval_base_factor: "£construction_speed_texticon  §Y$naval_base$§! 건설 속도"
@@ -1591,10 +1590,10 @@
  MODIFIER_NAVAL_INVASION_PLANNING_SPEED: "£naval_invasion_texticon  상륙 계획"
  NAVAL_INVASION_PLANNING_BONUS_MALUS: "£naval_invasion_texticon  기본 해상 상륙 패널티: $VALUE|R0$§R%§!"
  MODIFIER_TERRAIN_TRAIT_XP_GAIN_FACTOR: "£experience_neutral_texticon  지형 특성 경험치 획득량"
- modifier_experience_gain_motorized_combat_factor: "£experience_neutral_combat_texticon  차량화보병 전투 경험치 획득량" #해군 쪽 모디파이어랑 표현 통일 
- modifier_experience_gain_mechanized_combat_factor: "£experience_neutral_combat_texticon  전투로 인한 기계화 경험치 획득량" #해군 쪽 모디파이어랑 표현 통일 
- modifier_experience_gain_infantry_combat_factor: "£experience_neutral_combat_texticon  전투로 인한 보병 경험치 획득량" #해군 쪽 모디파이어랑 표현 통일 
- modifier_experience_gain_artillery_combat_factor: "£experience_neutral_combat_texticon  전투로 인한 포병 경험치 획득량" #해군 쪽 모디파이어랑 표현 통일 
+ modifier_experience_gain_motorized_combat_factor: "£experience_neutral_combat_texticon  차량화보병 전투 경험치 획득량" #해군 쪽 모디파이어랑 표현 통일
+ modifier_experience_gain_mechanized_combat_factor: "£experience_neutral_combat_texticon  전투로 인한 기계화 경험치 획득량" #해군 쪽 모디파이어랑 표현 통일
+ modifier_experience_gain_infantry_combat_factor: "£experience_neutral_combat_texticon  전투로 인한 보병 경험치 획득량" #해군 쪽 모디파이어랑 표현 통일
+ modifier_experience_gain_artillery_combat_factor: "£experience_neutral_combat_texticon  전투로 인한 포병 경험치 획득량" #해군 쪽 모디파이어랑 표현 통일
  modifier_production_cost_supply_node_factor: "£under_construction_texticon  §Y보급 중심지§! 건설 비용"
  MODIFIER_SUPPLY_PENALTY_ON_CORE: "£supply_consumption_core_texticon  핵심 영토 내 보급 관련 전투 불이익"
  supply_combat_penalties_on_core_factor: "£supply_consumption_core_texticon  핵심 영토 내 보급 관련 전투 불이익"
@@ -1618,8 +1617,7 @@
  MODIFIER_GRANT_MEDAL_COST_FACTOR: "£medal_texticon  훈장 수여 비용"
  MODIFIER_FIELD_OFFICER_PROMOTION_PENALTY: "£army_leader_cost_texticon  야전 장교 사단 불이익"
  MODIFIER_FEMALE_DIVISIONAL_COMMANDER_CHANCE: "£officer_texticon  여성 사단장 확률"
- 
- excavation_tech_research: "£research_speed_electronics_texticon  채굴 기술 연구 속도"
+
  tank_manufacturer_cost_factor_MIO: "£mio_tank_cost_texticon  전차 §Y군수산업체§! 비용"
  naval_manufacturer_cost_factor_MIO: "£mio_naval_cost_texticon  해군 §Y군수산업체§! 비용"
  aircraft_manufacturer_cost_factor_MIO: "£mio_air_cost_texticon  항공기 §Y군수산업체§! 비용"
@@ -1667,10 +1665,7 @@
  large_plane_airframe_design_cost_factor: "£air_design_cost_texticon  대형기 설계 비용"
  MODIFIER_SPECIAL_FORCES_CAP_FLAT: "£specops_cap_texticon  특수부대 한도"
  special_forces_cap_flat_tt: "$MODIFIER_SPECIAL_FORCES_CAP_FLAT$: $RIGHT|+=0$"
- 
- naval_armor_research: "£research_speed_naval_armor_texticon  해군 장갑 도식 연구 속도"
- naval_artillery_research: "£research_speed_naval_artillery_texticon  함포 연구 속도"
- construction_tech_research: "£research_speed_construction_texticon  건설 기술 연구 속도"
+
  MODIFIER_PRODUCTION_SPEED_FACILITY_FACTOR: "£construction_speed_facility_texticon  시설 건설 속도"
  MODIFIERS_EXILE_MANPOWER_FACTOR: "£manpower_exiles_texticon  주재국으로 인력 망명"
  MODIFIER_RIVER_CROSSING_PENALTY_FACTOR_AGAINST_A_COUNTRY: "£attacker_speed_texticon  국가를 대상으로 한 도하 속도 불이익"
@@ -1771,7 +1766,7 @@
  MODIFIER_SPECIAL_PROJECT_FACILITY_SUPPLY_CONSUMPTION_FACTOR: "£facility_texticon  시설 보급 소비량: $FACTOR$"
 
  MODIFIER_SCIENTIST_XP_GAIN_FACTOR: "£scientist_exp_texticon  과학자 경험치 획득량"
- 
+
  MODIFIER_SCIENTIST_RESEARCH_BONUS_FACTOR: "£research_bonus_texticon  연구 혜택"
  MODIFIER_SCIENTIST_BREAKTHROUGH_BONUS_FACTOR: "£special_project_breakthrough_texticon  혁신 혜택"
 
@@ -1855,7 +1850,7 @@
  sp_tag_nuclear_warfare_speed_factor: "£special_project_nuclear_texticon  핵전쟁 특별 프로젝트 속도"
  sp_tag_nuclear_power_speed_factor: "£special_project_nuclear_texticon  원자력 특별 프로젝트 속도"
  sp_tag_radar_speed_factor: "£special_project_radar_texticon  레이더 특별 프로젝트 속도"
- 
+
  MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE: "£civ_factory_consumer_texticon  소비재 생산에 필요할 것으로 예상되는 공장의 수"
 
  ### SEA tmp
@@ -1893,7 +1888,7 @@
 
  #politics_l_korean
  POLITICS_IDEOLOGY_POPULARITY_CHANGE: "£boost_popularity_texticon  $IDEOLOGY$의 인기도 변화: $VALUE|+2%$"
- 
+
  #production_l_korean
  BONUS_PRODUCTION_COST_FACTOR: "£mio_production_cost_texticon  생산량 비용"
  BONUS_PRODUCTION_CAPACITY_FACTOR: "£mio_production_capacity_texticon  생산량"
@@ -1902,12 +1897,12 @@
  BONUS_PRODUCTION_RESOURCE_NEED_FACTOR: "£resources_texticon  생산 자원 필요"
  BONUS_PRODUCTION_RESOURCE_PENALTY_FACTOR: "£sabotaged_resource_texticon  생산 자원 불이익"
  BONUS_PRODUCTION_CONVERSION_SPEED_FACTOR: "£mio_conversion_speed_texticon  생산 전환 속도"
- 
+
  #research_l_korean
  air_equipment_research: "£research_speed_texticon  공군 연구 속도"
  support_tech_research: "£research_speed_texticon  지원 부대 연구 속도"
  synth_resources_research: "£research_speed_texticon  합성 자원 연구 속도"
- 
+
  #resistance_and_occupation_l_korean
  RESISTANCE_TARGET_VALUE: "£political_violence_texticon  저항군 목표: $VALUE|H%0$"
  RESISTANCE_TARGET_VALUE_CAPPED: "£political_violence_texticon  저항군 목표: $VALUE|H%0$ ($VALUE_NON_CAPPED|H%0$에게 제한됨)"
@@ -1929,7 +1924,7 @@
  RESISTANCE_CHANCE_FOR_ACTIVITY: "£political_violence_texticon  저항 활동 확률: $CHANCE|%.1H$"
  RESISTANCE_CHANCE_FOR_GARRISON_PENETRATE: "£political_violence_texticon  저항군이 주둔군에 침투할 확률: $CHANCE|%.0H$"
  STABILITY_RESISTANCE_PENALTY: "£political_violence_texticon  점령지의 저항군 목표: $PENALTY%%.0R$"
- 
+
  #stats_l_korean
  STAT_COMMON_MAX_ORG: "£organization_texticon  조직력: "
  STAT_ARMY_DEFAULT_MORALE: "£army_morale_texticon  회복률: "
@@ -2036,7 +2031,7 @@
  STAT_NAVY_WEATHER_PENALTY: "£weather_texticon  날씨 불이익: "
 
  #terrain_l_korean
- MOVEMENT_COST: "£movement_texticon  이 지형 유형에서의 이동 비용 x$VALUE|H$
+ MOVEMENT_COST: "£movement_texticon  이 지형 유형에서의 이동 비용 x$VALUE|H$"
  TERRAIN_COMBAT_WIDTH_COMB: "£combat_width_texticon  전장 너비: $VALUE|0Y$ (추가 공격: $ADD|0Y$)"
  TERRAIN_COMBAT_WIDTH: "£combat_width_texticon  전장 너비: $VALUE|0Y$"
  TERRAIN_ADDITIONAL_WIDTH: "£combat_width_texticon 추가 방향당 전장 너비: $VALUE|=0Y$"
@@ -2057,7 +2052,7 @@
  trait_bonus_maneuvering: "£maneuver_texticon  기동: $VAL|+=0$"
  trait_bonus_coordination: "£coordination_texticon  조직: $VAL|+=0$"
  expert_improviser_movement_bonus_on_land: "£movement_texticon  육상 이동 보너스: §G+10.0%§!"
- 
+
  #unit_l_korean
  ATTRITION: "£attrition_texticon  소모:"
  MODIFIER_NAVAL_INVASION_CAPACITY: "£naval_invasion_texticon  상륙 수용량"

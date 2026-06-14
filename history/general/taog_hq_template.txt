@@ -147,33 +147,7 @@ every_possible_country = {
 	# LLS + HLL
 	if = {
 		limit = {
-			OR = {
-				tag = LLS
-				AND = {
-					tag = LSS
-					is_subject_of = LLS
-				}
-				AND = {
-					tag = LSS
-					is_subject_of = LLS
-				}
-				AND = {
-					tag = LNH
-					is_subject_of = LLS
-				}
-				AND = {
-					tag = LST
-					is_subject_of = LLS
-				}
-				AND = {
-					tag = LHH
-					is_subject_of = LLS
-				}
-				AND = {
-					tag = LBB
-					is_subject_of = LLS
-				}
-			}
+			tag = LLS
 		}
 		division_template = {
 			name = "Gun Shireibu"
@@ -229,26 +203,6 @@ every_possible_country = {
 			NOT = { tag = PRS }
 			NOT = { tag = BDG }
 			NOT = { tag = LLS }
-			NOT = {
-			    tag = LSS
-			    is_subject_of = LLS
-			}
-			NOT = {
-				tag = LNH
-				is_subject_of = LLS
-			}
-			NOT = {
-				tag = LST
-				is_subject_of = LLS
-			}
-			NOT = {
-				tag = LHH
-				is_subject_of = LLS
-			}
-			NOT = {
-				tag = LBB
-				is_subject_of = LLS
-			}
 			NOT = { tag = HLL }
 		}
 		division_template = {

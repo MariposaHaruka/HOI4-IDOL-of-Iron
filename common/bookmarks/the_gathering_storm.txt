@@ -7,9 +7,8 @@ bookmarks = {
 		default_country = IMA
 		default = yes
 
-		filters = { label }
+		filters = { label } # 구분은 라벨로 함
 
-		# MAJOR
 		IMA = {
 			minor = yes
 			history = IMA_IDOL_of_WAR_DESC
@@ -33,114 +32,13 @@ bookmarks = {
 			label = { major_side IMA_side }
 			ideas = {
 				IMA_westminster_statute
+				no_content_country
 			}
 			focuses = {
 
 			}
 		}
 
-		BDG = {
-			minor = yes
-			history = BDG_IDOL_of_WAR_DESC
-			ideology = liberalism_mod
-			label = { major_side IMA_side }
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-
-			}
-		}
-
-		TOH = {
-			minor = yes
-			history = TOH_IDOL_of_WAR_DESC
-			ideology = authoritariancommunism
-			label = { new_content major_side TOH_side }
-			ideas = {
-				TOH_2nd_5_year_plan_ns
-				TOH_disjointed_faction
-				TOH_underdeveloped_army
-			}
-			focuses = {
-
-			}
-		}
-
-		PRS = {
-			minor = yes
-			history = PRS_IDOL_of_WAR_DESC
-			ideology = fascism
-			label = { new_content major_side PRS_side }
-			ideas = {
-				PRS_sour_loser
-				PRS_reichsarbeitsdienst
-				PRS_wehrmacht_problem_4
-			}
-			focuses = {
-				PRS_31008
-				PRS_32101
-				PRS_32201
-			}
-		}
-
-		ENS = {
-			minor = yes
-			history = ENS_IDOL_of_WAR_DESC
-			ideology = fascism
-			label = { major_side PRS_side }
-			ideas={
-				the_grand_army
-			}
-			focuses = {
-
-			}
-		}
-
-		HLL = {
-			minor = yes
-			history = HLL_IDOL_of_WAR_DESC
-			ideology = militarytotalism
-			label = { major_side PRS_side }
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-
-			}
-		}
-
-		BLA = {
-			minor = yes
-			history = BLA_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			label = { new_content major_side BLA_side }
-			ideas = {
-				BLA_bad_administrative_static
-				BLA_robot_technology_1
-				BLA_scientific_improvement_1
-			}
-			focuses = {
-				BLA_40001
-				BLA_50004
-				BLA_33115
-			}
-		}
-
-		LLS = {
-			minor = yes
-			history = LLS_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			label = { major_side LLS_side }
-			ideas = {
-				LLS_peace_preservation_law
-				LLS_narrow_gauge_railway
-				LNH_south_manchuria_railway_company
-			}
-			focuses = {
-
-			}
-		}
 		IML = {
 			minor = yes
 			history = IML_IDOL_of_WAR_DESC
@@ -148,13 +46,13 @@ bookmarks = {
 			label = { major_side IMA_side }
 			ideas = {
 				IMA_westminster_statute
+				no_content_country
 			}
 			focuses = {
 
 			}
 		}
 
-		# MINOR
 		ISC = {
 			minor = yes
 			history = ISC_IDOL_of_WAR_DESC
@@ -207,13 +105,177 @@ bookmarks = {
 			}
 		}
 
+		TOH = {
+			minor = yes
+			history = TOH_IDOL_of_WAR_DESC
+			ideology = authoritariancommunism
+			label = { new_content major_side TOH_side }
+			ideas = {
+				TOH_2nd_5_year_plan_ns
+				TOH_disjointed_faction
+				TOH_underdeveloped_army
+			}
+			focuses = {
+
+			}
+		}
+
+		PRS = {
+			minor = yes
+			history = PRS_IDOL_of_WAR_DESC
+			ideology = fascism
+			label = { new_content major_side PRS_side }
+			ideas = {
+				PRS_sour_loser
+				PRS_reichsarbeitsdienst
+				PRS_wehrmacht_problem_4
+			}
+			focuses = {
+				PRS_31008
+				PRS_32101
+				PRS_32201
+			}
+		}
+
+		BDG = {
+			minor = yes
+			history = BDG_IDOL_of_WAR_DESC
+			ideology = liberalism_mod
+			label = { major_side IMA_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+		ENS = {
+			minor = yes
+			history = ENS_IDOL_of_WAR_DESC
+			ideology = fascism
+			label = { major_side PRS_side }
+			ideas={
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+		LLS = {
+			minor = yes
+			history = LLS_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { major_side LLS_side }
+			ideas = {
+				LLS_peace_preservation_law
+				LLS_narrow_gauge_railway
+				LNH_south_manchuria_railway_company
+			}
+			focuses = {
+
+			}
+		}
+
+		LSS = {
+			minor = yes
+			history = LSS_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side LLS_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+		LNH = {
+			minor = yes
+			history = LNH_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side LLS_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+		LST = {
+			minor = yes
+			history = LST_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side LLS_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+		LHH = {
+			minor = yes
+			history = LHH_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side LLS_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+		LBB = {
+			minor = yes
+			history = LBB_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side LLS_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
 		UMA = {
 			minor = yes
 			history = UMA_IDOL_of_WAR_DESC
 			ideology = authoritariandemocracy
-			label = { other_side PRS_side }
+			label = { major_side PRS_side }
 			ideas = {
-				the_grand_army
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+		PRK = {
+			minor = yes
+			history = PRK_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side IMA_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+		IDP = {
+			minor = yes
+			history = IDP_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
 			}
 			focuses = {
 
@@ -226,19 +288,7 @@ bookmarks = {
 			ideology = fascism
 			label = { other_side PRS_side }
 			ideas = {
-				the_grand_army
-			}
-			focuses = {
-
-			}
-		}
-
-		DFD = {
-			minor = yes
-			history = DFD_IDOL_of_WAR_DESC
-			ideology = conservatism
-			ideas = {
-				the_grand_army
+				no_content_country
 			}
 			focuses = {
 
@@ -249,20 +299,156 @@ bookmarks = {
 			minor = yes
 			history = STR_IDOL_of_WAR_DESC
 			ideology = liberalism_mod
+			label = { other_side }
 			ideas = {
-				the_grand_army
+				no_content_country
 			}
 			focuses = {
 
 			}
 		}
 
-		SZS = {
+		DFD = {
 			minor = yes
-			history = SZS_IDOL_of_WAR_DESC
+			history = DFD_IDOL_of_WAR_DESC
 			ideology = conservatism
+			label = { other_side }
 			ideas = {
-				the_grand_army
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+		AGN = {
+			minor = yes
+			history = AGN_IDOL_of_WAR_DESC
+			ideology = conservatism
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+		BLA = {
+			minor = yes
+			history = BLA_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { new_content major_side BLA_side }
+			ideas = {
+				BLA_bad_administrative_static
+				BLA_robot_technology_1
+				BLA_scientific_improvement_1
+			}
+			focuses = {
+				BLA_40001
+				BLA_50004
+				BLA_33115
+			}
+		}
+
+        TKI = {
+			minor = yes
+			history = AGN_IDOL_of_WAR_DESC
+			ideology = conservatism
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        WDS = {
+			minor = yes
+			history = AGN_IDOL_of_WAR_DESC
+			ideology = conservatism
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        TSS = {
+			minor = yes
+			history = AGN_IDOL_of_WAR_DESC
+			ideology = conservatism
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        AIN = {
+			minor = yes
+			history = AGN_IDOL_of_WAR_DESC
+			ideology = conservatism
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        SBR = {
+			minor = yes
+			history = AGN_IDOL_of_WAR_DESC
+			ideology = conservatism
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        DOB = {
+			minor = yes
+			history = AGN_IDOL_of_WAR_DESC
+			ideology = conservatism
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        GFR = {
+			minor = yes
+			history = AGN_IDOL_of_WAR_DESC
+			ideology = conservatism
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        KJI = {
+			minor = yes
+			history = AGN_IDOL_of_WAR_DESC
+			ideology = conservatism
+			label = { other_side PRS_side }
+			ideas = {
+				no_content_country
 			}
 			focuses = {
 
@@ -273,56 +459,9 @@ bookmarks = {
 			minor = yes
 			history = GUP_IDOL_of_WAR_DESC
 			ideology = authoritariandemocracy
+			label = { major_side TOH_side }
 			ideas = {
-				the_grand_army
-			}
-			focuses = {
-
-			}
-		}
-
-		FGO = {
-			minor = yes
-			history = FGO_IDOL_of_WAR_DESC
-			ideology = anarchosyndicalism
-			ideas={
-				the_grand_army
-			}
-			focuses = {
-
-			}
-		}
-
-		IDP = {
-			minor = yes
-			history = IDP_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-
-			}
-		}
-
-		MCR = {
-			minor = yes
-			history = MCR_IDOL_of_WAR_DESC
-			ideology = autocracy
-			ideas = {
-				the_grand_army
-			}
-			focuses = {
-
-			}
-		}
-
-		AZU = {
-			minor = yes
-			history = AZU_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
-			ideas = {
-				the_grand_army
+				no_content_country
 			}
 			focuses = {
 
@@ -333,56 +472,751 @@ bookmarks = {
 			minor = yes
 			history = LAS_IDOL_of_WAR_DESC
 			ideology = authoritariandemocracy
+			label = { major_side BLA_side }
 			ideas = {
-				the_grand_army
+				no_content_country
 			}
 			focuses = {
 
 			}
 		}
 
-		LSS = {
+		ONK = {
 			minor = yes
-			history = LSS_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
+			history = ONK_IDOL_of_WAR_DESC
+			ideology = autocracy
+			label = { other_side PRS_side }
 			ideas = {
-				the_grand_army
+				no_content_country
 			}
 			focuses = {
 
 			}
 		}
 
-		LNH = {
+		FGO = {
 			minor = yes
-			history = LNH_IDOL_of_WAR_DESC
-			ideology = authoritariandemocracy
+			history = FGO_IDOL_of_WAR_DESC
+			ideology = anarchosyndicalism
+			label = { other_side }
 			ideas = {
-				the_grand_army
+				no_content_country
 			}
 			focuses = {
 
 			}
 		}
 
-		LST = {
+		AZU = {
 			minor = yes
-			history = LST_IDOL_of_WAR_DESC
+			history = AZU_IDOL_of_WAR_DESC
 			ideology = authoritariandemocracy
+			label = { major_side BLA_side }
 			ideas = {
-				the_grand_army
+				no_content_country
 			}
 			focuses = {
 
 			}
 		}
 
-		LHH = {
+		ZOS = {
 			minor = yes
-			history = LHH_IDOL_of_WAR_DESC
+			history = ZOS_IDOL_of_WAR_DESC
 			ideology = authoritariandemocracy
+			label = { other_side }
 			ideas = {
-				the_grand_army
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        BOR = {
+			minor = yes
+			history = BOR_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        KON = {
+			minor = yes
+			history = KON_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        SOE = {
+			minor = yes
+			history = SOE_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        TAK = {
+			minor = yes
+			history = TAK_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        AIK = {
+			minor = yes
+			history = AIK_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        PRP = {
+			minor = yes
+			history = PRP_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        SHP = {
+			minor = yes
+			history = SHP_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        UNP = {
+			minor = yes
+			history = UNP_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        MMM = {
+			minor = yes
+			history = MMM_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        KTC = {
+			minor = yes
+			history = KTC_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        MCR = {
+			minor = yes
+			history = MCR_IDOL_of_WAR_DESC
+			ideology = autocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        MLN = {
+			minor = yes
+			history = MLN_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        WUG = {
+			minor = yes
+			history = WUG_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        LCD = {
+			minor = yes
+			history = LCD_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        BPR = {
+			minor = yes
+			history = BPR_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        TSU = {
+			minor = yes
+			history = TSU_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+
+		SZS = {
+			minor = yes
+			history = SZS_IDOL_of_WAR_DESC
+			ideology = conservatism
+			label = { other_side IMA_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+		HLL = {
+			minor = yes
+			history = HLL_IDOL_of_WAR_DESC
+			ideology = militarytotalism
+			label = { major_side PRS_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+		POP = {
+			minor = yes
+			history = POP_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        CUE = {
+			minor = yes
+			history = CUE_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        UNU = {
+			minor = yes
+			history = UNU_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        LVD = {
+			minor = yes
+			history = LVD_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        IDI = {
+			minor = yes
+			history = IDI_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        AIC = {
+			minor = yes
+			history = AIC_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        IDC = {
+			minor = yes
+			history = IDC_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        GEC = {
+			minor = yes
+			history = GEC_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        DIF = {
+			minor = yes
+			history = DIF_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        LPR = {
+			minor = yes
+			history = LPR_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        YMC = {
+			minor = yes
+			history = YMC_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        NPT = {
+			minor = yes
+			history = NPT_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        VCD = {
+			minor = yes
+			history = VCD_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        TAB = {
+			minor = yes
+			history = TAB_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        DRF = {
+			minor = yes
+			history = DRF_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        AOP = {
+			minor = yes
+			history = AOP_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        GBC = {
+			minor = yes
+			history = GBC_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        NNN = {
+			minor = yes
+			history = NNN_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        FBD = {
+			minor = yes
+			history = FBD_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        ONS = {
+			minor = yes
+			history = ONS_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        EXT = {
+			minor = yes
+			history = EXT_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        PTD = {
+			minor = yes
+			history = PTD_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        RST = {
+			minor = yes
+			history = RST_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        SEL = {
+			minor = yes
+			history = SEL_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        PTK = {
+			minor = yes
+			history = PTK_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        LOC = {
+			minor = yes
+			history = LOC_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        LOS = {
+			minor = yes
+			history = LOS_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        HDA = {
+			minor = yes
+			history = HDA_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        STI = {
+			minor = yes
+			history = STI_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        HND = {
+			minor = yes
+			history = HND_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        MKR = {
+			minor = yes
+			history = MKR_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        DEV = {
+			minor = yes
+			history = DEV_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        URA = {
+			minor = yes
+			history = URA_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        VAM = {
+			minor = yes
+			history = VAM_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
+			}
+			focuses = {
+
+			}
+		}
+
+        REA = {
+			minor = yes
+			history = REA_IDOL_of_WAR_DESC
+			ideology = authoritariandemocracy
+			label = { other_side }
+			ideas = {
+				no_content_country
 			}
 			focuses = {
 

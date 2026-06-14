@@ -26,7 +26,7 @@
 
 	추가로 tt뒤에 *붙은건 툴팁 키는 존재하지만 다른 형태로 존재하는 경우니 꼭 확인할 것
 	대문자로 표기했다던가, 동일한 키가 존재하지만 철자 오류로 작동 안하는 경우도 존재하니, 해당 키의 위치를 병기함
-	
+
 	tt**의 경우 툴팁 키는 존재하지만,
 	모디파이어 표기 단위랑 툴팁 키의 표기 단위가 달라 별도로 tt** 표기한 경우이니 참고
 
@@ -61,11 +61,13 @@
 	army_infantry_attack_factor	#보병 사단 공격
 	army_morale	#사단 회복	#+1F
 	army_morale_factor	#사단 회복률	#+3%	#tt
+	army_non_core_attack_factor #비핵심 영토 대상 사단 공격    #  #tt
 	army_org	#사단 조직력	#+1F
 	army_org_factor	#사단 조직력	#+3%	#tt
 	attrition	#사단 손실	#-3%	#tt
 	attrition_for_controller	#사단 손실	#-3%
 	breakthrough_factor	#돌파	#+4%	#tt
+	cannot_retreat_while_attacking  #공격 중 퇴각 불가	#B
 	carrier_capacity_penalty_reduction	#항공모함 혼잡 #-3%
 	carrier_sortie_hours_delay	#항모 항공단 출격 지연(시간) #-0F
 	carrier_traffic	#함재기 출격 수 #+2%
@@ -236,6 +238,8 @@
 	army_infantry_defence_factor	#보병사단 방어	#+3%	#tt
 	army_morale	#사단 회복	#+1F
 	army_morale_factor	#사단 회복률	#+3%	#tt
+	army_non_core_attack_factor #비핵심 영토 대상 사단 공격    #  #tt
+	army_non_core_defence_factor    #비핵심 영토 내 사단 방어    #  #tt
 	army_org	#사단 조직력	#+1F
 	army_org_factor	#사단 조직력	#+3%	#tt
 	army_org_regain	#육군 조직력 회복	#+4%	#tt
@@ -247,9 +251,13 @@
 	attrition	#사단 손실	#-3%	#tt
 	attrition_for_controller	#사단 손실	#-3%
 	breakthrough_factor	#돌파	#+4%	#tt
+	cannot_retreat_while_attacking  #공격 중 퇴각 불가	#B
+	cannot_retreat_while_defending  #방어 중 퇴각 불가	#B
+	casualty_trickleback    #사상자 전선 복귀  #   #tt
 	cas_damage_reduction	#근접항공지원 공격에 대한 피해량 감소	#+3%	#tt
 	cavalry_attack_factor	#기병 공격	#+3%	#tt
 	cavalry_defence_factor	#기병 방어	#+3%	#tt
+	combat_entrenchment #참호 전투 혜택   #   #tt
 	combat_width_factor	#소속군 전장 너비	#-3%
 	command_abilities_cost_factor	#지휘관 능력 비용	#-4%
 	command_power_gain	#매일 지휘력 획득	#+2F	#tt
@@ -345,6 +353,7 @@
 	naval_invasion_planning_bonus_speed	#상륙 계획	#+2%
 	no_supply_grace	#물자 보급 유예 (시간)	#+1F
 	offence	#공격	#+4%
+	org_damage_multiplier   #받은 조직력 피해  #   #tt
 	org_loss_at_low_org_factor	#25% 미만일 경우 조직력 손실	#-4%	#tt
 	org_loss_when_moving	#이동 시 조직력 손실	#+4%	#tt
 	out_of_supply_factor	#비전투 시 보급품 고갈 불이익	#-3%	#tt
@@ -365,6 +374,7 @@
 	special_forces_no_supply_grace	#특수부대 보급 유예	#+1F	#tt
 	special_forces_out_of_supply_factor	#비전투 시 특수부대 보급품 고갈	#-4%	#tt
 	special_forces_training_time_factor	#특수부대 사단 훈련 시간	#-3%	#tt
+	str_damage_multiplier   #받은 내구도 피해	#   #tt
 	supply_combat_penalties_on_core_factor	#핵심 영토 내 보급 관련 전투 불이익	#-3%	#tt
 	supply_consumption_factor	#보급 소비량	#-3%	#tt
 	terrain_penalty_reduction	#지형 불이익 감소	#+3%
@@ -373,6 +383,7 @@
 	training_time_army_factor	#사단 훈련 시간	#Y3%
 	training_time_factor	#훈련 시간	#-4%	#tt
 	unit_upkeep_attrition_factor	#부대 유지비	#-2%
+	war_support_reduction_on_damage #사상자로 인한 전쟁 지지도 손실  #   #tt
 	winter_attrition	#추위로 인한 손실	#-3%
 	winter_attrition_factor	#추위로 인한 손실	#-3%	#tt
 
@@ -650,12 +661,15 @@
 	army_infantry_defence_factor	#보병사단 방어	#+3%
 	army_morale	#사단 회복	#+1F
 	army_morale_factor	#사단 회복률	#+3%	#tt
+	army_non_core_defence_factor    #비핵심 영토 내 사단 방어    #  #tt
 	army_org	#사단 조직력	#+1F
 	army_org_factor	#사단 조직력	#+3%	#tt
 	army_retreat_speed_factor	#퇴각하는 사단 속도	#+4%
 	attrition	#사단 손실	#-3%	#tt
 	attrition_for_controller	#사단 손실	#-3%
+	cannot_retreat_while_defending  #방어 중 퇴각 불가	#B
 	cavalry_defence_factor	#기병 방어	#+3%	#tt
+	combat_entrenchment #참호 전투 혜택   #   #tt
 	convoy_escort_efficiency	#호위 효율 #+3%	#tt
 	convoy_retreat_speed	#후퇴 시 수송선의 속도 #+2%	#tt
 	defence	#방어	#+4%
@@ -682,6 +696,7 @@
 	navy_screen_defence_factor	#보조함 방어	#tt
 	navy_submarine_defence_factor	#잠수함 방어
 	navy_submarine_detection_factor	#잠수함 탐지	#+4%	#tt
+	org_damage_multiplier   #받은 조직력 피해  #   #tt
 	puppet_cost_factor	#괴뢰국 생성 비용	#-4%	#tt
 	recon_factor	#수색	#+3%	#tt
 	recon_factor_while_entrenched	#참호 시 수색 혜택	#+3%	#tt
@@ -689,9 +704,11 @@
 	special_forces_defence_factor	#특수부대 방어	#+3%	#tt
 	static_anti_air_damage_factor	#고정 대공포 피해량 변동치	#+4%
 	static_anti_air_hit_chance_factor	#고정 대공포 타격 확률 변동치	#+4%	#tt
+	str_damage_multiplier   #받은 내구도 피해	#   #tt
 	sub_retreat_speed	#후퇴 시 잠수함 속도	#+2%	#tt
 	supply_consumption_factor	#보급 소비량	#-3%	#tt
 	terrain_penalty_reduction	#지형 불이익 감소	#+3%
+	war_support_reduction_on_damage #사상자로 인한 전쟁 지지도 손실  #   #tt
 
 ### FACTION modifiers
 	faction_influence_contribution_factor	#기여 영향력 획득량	#+4%	#tt
@@ -1177,7 +1194,7 @@
 
 	### <Ideology>_drift_from_guarantees
 		#### category: POLITICS Modifiers
-		
+
 		conservatism_drift_from_guarantees	#보장으로 인한 타국의 보수주의 증가	#+2F	#MOD
 		liberalism_mod_drift_from_guarantees	#보장으로 인한 타국의 자유주의 증가	#+2F	#MOD
 		progressivism_drift_from_guarantees	#보장으로 인한 타국의 진보주의 증가	#+2F	#MOD
@@ -1284,7 +1301,7 @@
 		experience_gain_super_heavy_sp_artillery_brigade_training_factor	#초중자주포 훈련 경험치 획득량	#+2%
 		experience_gain_super_heavy_tank_destroyer_brigade_training_factor	#초중구축전차 훈련 경험치 획득량	#+2%
 		experience_gain_winter_logistics_support_training_factor	#동계군수중대 훈련 경험치 획득량	#+2%	#X
-	
+
 		experience_gain_battle_cruiser_training_factor	#순양전함 훈련 경험치 획득량	#+2%
 		experience_gain_battleship_training_factor	#전함 훈련 경험치 획득량	#+2%
 		experience_gain_carrier_training_factor	#항공모함 훈련 경험치 획득량	#+2%
@@ -1470,6 +1487,7 @@
 		air_facility_max_level_terrain_limit
 		canal_kiel_max_level_terrain_limit
 		canal_panama_max_level_terrain_limit
+		cataract_dam_mountain_max_level_terrain_limit
 		commercial_nuclear_reactor_max_level_terrain_limit
 		dam_max_level_terrain_limit
 		land_facility_max_level_terrain_limit
@@ -1621,6 +1639,20 @@
 		canal_panama_water_deep_ocean_max_level_terrain_limit
 		canal_panama_water_fjords_max_level_terrain_limit
 		canal_panama_water_shallow_sea_max_level_terrain_limit
+		cataract_dam_mountain_desert_max_level_terrain_limit
+		cataract_dam_mountain_forest_max_level_terrain_limit
+		cataract_dam_mountain_hills_max_level_terrain_limit
+		cataract_dam_mountain_jungle_max_level_terrain_limit
+		cataract_dam_mountain_lakes_max_level_terrain_limit
+		cataract_dam_mountain_marsh_max_level_terrain_limit
+		cataract_dam_mountain_mountain_max_level_terrain_limit
+		cataract_dam_mountain_ocean_max_level_terrain_limit
+		cataract_dam_mountain_plains_max_level_terrain_limit
+		cataract_dam_mountain_unknown_max_level_terrain_limit
+		cataract_dam_mountain_urban_max_level_terrain_limit
+		cataract_dam_mountain_water_deep_ocean_max_level_terrain_limit
+		cataract_dam_mountain_water_fjords_max_level_terrain_limit
+		cataract_dam_mountain_water_shallow_sea_max_level_terrain_limit
 		coastal_bunker_lakes_max_level_terrain_limit
 		coastal_bunker_ocean_max_level_terrain_limit
 		coastal_bunker_unknown_max_level_terrain_limit
@@ -2425,7 +2457,7 @@
 
 	### state_repair_speed_<Building>_factor
 		#### category: STATE Modifiers
-		
+
 		state_repair_speed_air_base_factor	#공군기지 수리 속도	#+4%	#X
 		state_repair_speed_air_facility_factor	#공기역학 및 항공전자 연구소 수리 속도	#+4%	#X
 		state_repair_speed_anti_air_building_factor	#대공포 수리 속도	#+4%	#X
@@ -2433,6 +2465,7 @@
 		state_repair_speed_bunker_factor	#요새 수리 속도	#+4%	#X
 		state_repair_speed_canal_kiel_factor	#킬 운하 갑문 수리 속도	#+4%4%	#X
 		state_repair_speed_canal_panama_factor	#파나마 운하 갑문 수리 속도	#+4%4%	#X
+		state_repair_speed_cataract_dam_mountain_factor	#캐터랙트 댐 수리 속도	#+4%	#X
 		state_repair_speed_coastal_bunker_factor	#해안 요새 수리 속도	#+4%	#X
 		state_repair_speed_commercial_nuclear_reactor_factor	#민간 원자로 수리 속도	#+4%	#X
 		state_repair_speed_dam_factor	#댐 수리 속도	#+4%	#X
@@ -2554,7 +2587,8 @@
 		trait_disgruntled_xp_gain_factor	#언짢음 특성 경험치 획득량	#+4%
 		trait_sick_xp_gain_factor	#아픔 특성 경험치 획득량	#+4%
 		trait_wounded_xp_gain_factor	#부상당함 특성 경험치 획득량	#+4%
-		
+		trait_expeditionary_leader_trait_gain_factor	#원정 지도자 특성 경험치 획득량	#+4%   #X
+
 		#### 해군 트레잇
 		trait_old_guard_navy_xp_gain_factor	#보수파 (해군) 특성 경험치 획득량	#+4%
 		trait_navy_career_officer_xp_gain_factor	#직업장교 (해군) 특성 경험치 획득량	#+4%
@@ -2602,6 +2636,11 @@
 		trait_dive_bomber_xp_gain_factor	#급강하폭격 전문가 특성 경험치 획득량	#+4%
 		trait_torpedo_bomber_xp_gain_factor	#뇌격기 전문가 특성 경험치 획득량	#+4%
 		trait_fly_swatter_xp_gain_factor	#파리채 특성 경험치 획득량	#+4%
+		trait_carrier_officer_gain_factor   #항공모함 지휘관 특성 경험치 획득량   #+4% #X
+		trait_cruiser_officer_gain_factor   #순양함 지휘관 특성 경험치 획득량   #+4% #X
+		trait_destroyer_officer_gain_factor #구축함 지휘관 특성 경험치 획득량   #+4% #X
+		trait_heavy_ship_officer_gain_factor    #전함 지휘관 특성 경험치 획득량   #+4% #X
+		trait_submarine_officer_gain_factor #잠수함 지휘관 특성 경험치 획득량   #+4% #X
 
 		#### 첩보 트레잇
 		trait_operative_double_agent_xp_gain_factor	#이중간첩 공작원 특성 경험치 획득량	#+4%
@@ -2671,6 +2710,10 @@
 		trait_loyalty_to_india_xp_gain_factor
 		trait_loyalty_to_pakistan_xp_gain_factor
 		trait_peasant_sympathiser_xp_gain_factor
+		trait_INS_loyalty_to_indonesia_xp_gain_factor
+		trait_INS_loyalty_to_netherlands_xp_gain_factor
+		trait_INS_secret_commander_xp_gain_factor
+		trait_SIA_under_investigation_xp_gain_factor
 
 	### <Operation>_risk
 		#### category: COUNTRY Modifiers
@@ -2687,6 +2730,7 @@
 		operation_infiltrate_armed_forces_navy_risk	#해군 잠입 임무 위험도	#-2%	#X
 		operation_infiltrate_civilian_risk	#민간 행정 잠입 임무 위험도	#-2%	#X
 		operation_make_resistance_contacts_risk	#저항군과 연락책 구축 임무 위험도	#-2%
+		operation_rescue_general_risk	#포획된 지휘관 구출 임무 위험도	#-2%
 		operation_rescue_operative_risk	#공작원 구출 임무 위험도	#-2%
 		operation_steal_tech_risk	#청사진 탈취 임무 위험도	#-2%
 		operation_steal_tech_airforce_risk	#항공 산업 청사진 탈취 임무 위험도	#-2%	#X
@@ -2997,7 +3041,7 @@
 		experience_gain_super_heavy_sp_artillery_brigade_combat_factor	#초중자주포 전투 경험치 획득량	#+2%	#X
 		experience_gain_super_heavy_tank_destroyer_brigade_combat_factor	#초중구축전차 전투 경험치 획득량	#+2%	#X
 		experience_gain_winter_logistics_support_combat_factor	#동계군수중대 전투 경험치 획득량	#+2%	#X
-		
+
 		experience_gain_battle_cruiser_combat_factor	#순양전함 전투 경험치 획득량	#+2%
 		experience_gain_battleship_combat_factor	#전함 전투 경험치 획득량	#+2%
 		experience_gain_carrier_combat_factor	#항공모함 전투 경험치 획득량	#+2%
@@ -3060,6 +3104,7 @@
 		state_air_facility_max_level_terrain_limit
 		state_canal_kiel_max_level_terrain_limit
 		state_canal_panama_max_level_terrain_limit
+		state_cataract_dam_mountain_max_level_terrain_limit
 		state_commercial_nuclear_reactor_max_level_terrain_limit
 		state_dam_max_level_terrain_limit
 		state_land_facility_max_level_terrain_limit
@@ -3211,6 +3256,20 @@
 		state_canal_panama_water_deep_ocean_max_level_terrain_limit
 		state_canal_panama_water_fjords_max_level_terrain_limit
 		state_canal_panama_water_shallow_sea_max_level_terrain_limit
+		state_cataract_dam_mountain_desert_max_level_terrain_limit
+		state_cataract_dam_mountain_forest_max_level_terrain_limit
+		state_cataract_dam_mountain_hills_max_level_terrain_limit
+		state_cataract_dam_mountain_jungle_max_level_terrain_limit
+		state_cataract_dam_mountain_lakes_max_level_terrain_limit
+		state_cataract_dam_mountain_marsh_max_level_terrain_limit
+		state_cataract_dam_mountain_mountain_max_level_terrain_limit
+		state_cataract_dam_mountain_ocean_max_level_terrain_limit
+		state_cataract_dam_mountain_plains_max_level_terrain_limit
+		state_cataract_dam_mountain_unknown_max_level_terrain_limit
+		state_cataract_dam_mountain_urban_max_level_terrain_limit
+		state_cataract_dam_mountain_water_deep_ocean_max_level_terrain_limit
+		state_cataract_dam_mountain_water_fjords_max_level_terrain_limit
+		state_cataract_dam_mountain_water_shallow_sea_max_level_terrain_limit
 		state_coastal_bunker_lakes_max_level_terrain_limit
 		state_coastal_bunker_ocean_max_level_terrain_limit
 		state_coastal_bunker_unknown_max_level_terrain_limit
@@ -3844,6 +3903,7 @@
 		#### 해당 모디파이어는 건설 가능 건물이 아니라서 사용할 수 없는 모디파이어이니 절대 사용 할 일이 없도록 할것
 		production_speed_canal_kiel_factor
 		production_speed_canal_panama_factor
+		production_speed_cataract_dam_mountain_factor
 		production_speed_dam_factor
 		production_speed_dam_mountain_factor
 		production_speed_landmark_berlin_reichstag_factor
@@ -3869,7 +3929,7 @@
 
 	### <Ideology>_drift
 		#### category: POLITICS Modifiers
-	
+
 		conservatism_drift	#매일 보수주의 지지도	#+2F	#MOD
 		liberalism_mod_drift	#매일 자유주의 지지도	#+2F	#MOD
 		progressivism_drift	#매일 진보주의 지지도	#+2F	#MOD
@@ -4274,6 +4334,7 @@
 		operation_infiltrate_armed_forces_navy_outcome	#해군 잠입 임무 효율	#+2%	#X
 		operation_infiltrate_civilian_outcome	#민간 행정 잠입 임무 효율	#+2%	#X
 		operation_make_resistance_contacts_outcome	#저항군과 연락책 구축 임무 효율	#+2%
+		operation_rescue_general_outcome	#포획된 지휘관 구출 임무 효율	#+2%    #X
 		operation_rescue_operative_outcome	#공작원 구출 임무 효율	#+2%
 		operation_steal_tech_outcome	#청사진 탈취 임무 효율	#+2%
 		operation_steal_tech_airforce_outcome	#항공 산업 청사진 탈취 임무 효율	#+2%	#X
@@ -4308,7 +4369,7 @@
 
 	### <Ideology>_acceptance
 		#### category: POLITICS Modifiers
-		
+
 		conservatism_acceptance	#보수주의 외교 수용	#+0F	#MOD
 		liberalism_mod_acceptance	#자유주의 외교 수용	#+0F	#MOD
 		progressivism_acceptance	#진보주의 외교 수용	#+0F	#MOD
@@ -4437,7 +4498,7 @@
 		experience_gain_super_heavy_sp_artillery_brigade_mission_factor	#초중자주포 임무 경험치 획득량	#+2%	#X
 		experience_gain_super_heavy_tank_destroyer_brigade_mission_factor	#초중구축전차 임무 경험치 획득량	#+2%	#X
 		experience_gain_winter_logistics_support_mission_factor	#동계군수중대 임무 경험치 획득량	#+2%	#X
-		
+
 		experience_gain_battle_cruiser_mission_factor	#순양전함 임무 경험치 획득량	#+2%
 		experience_gain_battleship_mission_factor	#전함 임무 경험치 획득량	#+2%
 		experience_gain_carrier_mission_factor	#항공모함 임무 경험치 획득량	#+2%
@@ -4493,6 +4554,7 @@
 		operation_infiltrate_armed_forces_navy_cost	#해군 잠입 임무 비용	#-2%	#X
 		operation_infiltrate_civilian_cost	#민간 행정 잠입 임무 비용	#-2%	#X
 		operation_make_resistance_contacts_cost	#저항군과 연락책 구축 임무 비용	#-2%
+		operation_rescue_general_outcome    #포획된 지휘관 구출 임무 효율	#-2%	#X
 		operation_rescue_operative_cost	#공작원 구출 임무 비용	#-2%
 		operation_steal_tech_cost	#청사진 탈취 임무 비용	#-2%
 		operation_steal_tech_airforce_cost	#항공 산업 청사진 탈취 임무 비용	#-2%	#X
@@ -4537,7 +4599,7 @@
 		carriers_track_mastery_gain_factor	#항공모함 트랙 통달치 획득 요인	#+2%
 		screens_track_mastery_gain_factor	#보조함 트랙 통달치 획득 요인	#+2%
 		submarines_track_mastery_gain_factor	#잠수함 트랙 통달치 획득 요인	#+2%
-		
+
 		fighter_aircraft_track_mastery_gain_factor	#전투기 트랙 통달치 획득 요인	#+2%
 		strike_aircraft_track_mastery_gain_factor	#타격항공기 트랙 통달치 획득 요인	#+2%
 		medium_aircraft_track_mastery_gain_factor	#중형항공기 트랙 통달치 획득 요인	#+2%
@@ -4587,6 +4649,7 @@
 		#### 해당 모디파이어는 건설 가능 건물이 아니라서 사용할 수 없는 모디파이어이니 절대 사용 할 일이 없도록 할것
 		state_production_speed_canal_kiel_factor
 		state_production_speed_canal_panama_factor
+		state_production_speed_cataract_dam_mountain_factor
 		state_production_speed_dam_factor
 		state_production_speed_dam_mountain_factor
 		state_production_speed_landmark_berlin_reichstag_factor
@@ -4714,7 +4777,7 @@
 		unit_super_heavy_sp_artillery_brigade_design_cost_factor	#초중자주포 설계 비용	#-4%
 		unit_super_heavy_tank_destroyer_brigade_design_cost_factor	#초중구축전차 설계 비용	#-4%
 		unit_winter_logistics_support_design_cost_factor	#동계군수중대 설계 비용	#-4%	#X
-		
+
 		unit_battle_cruiser_design_cost_factor	#순양전함 설계 비용	#-4%
 		unit_battleship_design_cost_factor	#전함 설계 비용	#-4%
 		unit_carrier_design_cost_factor	#항공모함 설계 비용	#-4%
@@ -4756,7 +4819,7 @@
 
 	### production_cost_<Building>_factor
 		#### category: COUNTRY Modifiers
-		
+
 		production_cost_air_base_factor	#공군기지 건설 비용	#-4%	#X
 		production_cost_air_facility_factor	#공군 시설 건설 비용	#-4%	#X
 		production_cost_anti_air_building_factor	#대공포 건설 비용	#-4%	#X
@@ -4787,6 +4850,7 @@
 		#### 해당 모디파이어는 건설 가능 건물이 아니라서 사용할 수 없는 모디파이어이니 절대 사용 할 일이 없도록 할것
 		production_cost_canal_kiel_factor
 		production_cost_canal_panama_factor
+		production_cost_cataract_dam_mountain_factor
 		production_cost_dam_factor
 		production_cost_dam_mountain_factor
 		production_cost_landmark_berlin_reichstag_factor
@@ -4812,14 +4876,15 @@
 
 	### repair_speed_<Building>_factor
 		#### category: COUNTRY Modifiers
-		
+
 		repair_speed_air_base_factor	#공군기지 수리 속도	#+4%	#X
 		repair_speed_air_facility_factor	#공기역학 및 항공전자 연구소 수리 속도	#+4%	#X
 		repair_speed_anti_air_building_factor	#대공포 수리 속도	#+4%	#X
 		repair_speed_arms_factory_factor	#군수공장 수리 속도	#+4%
 		repair_speed_bunker_factor	#요새 수리 속도	#+4%	#X
-		repair_speed_canal_kiel_factor	#킬 운하 갑문 수리 속도	#+4%4%	#X
-		repair_speed_canal_panama_factor	#파나마 운하 갑문 수리 속도	#+4%4%	#X
+		repair_speed_canal_kiel_factor	#킬 운하 갑문 수리 속도	#+4%	#X
+		repair_speed_canal_panama_factor	#파나마 운하 갑문 수리 속도	#+4%	#X
+		repair_speed_cataract_dam_mountain_factor	#캐터랙트 댐 수리 속도	#+4%	#X
 		repair_speed_coastal_bunker_factor	#해안 요새 수리 속도	#+4%	#X
 		repair_speed_commercial_nuclear_reactor_factor	#민간 원자로 수리 속도	#+4%	#X
 		repair_speed_dam_factor	#댐 수리 속도	#+4%	#X
@@ -4888,7 +4953,7 @@
 	해당 변수는 실제로 다이나믹 모디파이어에 넣는게 불가능하므로, 자체 변수를 추가해야 합니다
 	그리고, 당연하지만 해당 모디파이어 변동치와 동일한 국민정신을 히든 트리거로 추가해야 합니다
 
-	그래서 모디파이어에 넣을 경우, 
+	그래서 모디파이어에 넣을 경우,
 	위의 정의한 변수에서 모디파이어 ID 부분을 빼고 뒤에 _tt만 입력하면
 	모디파이어가 작동하는 것처럼 구현이 가능합니다 'v'
 
@@ -4987,7 +5052,7 @@
 	해당 변수는 실제로 다이나믹 모디파이어에 넣는게 불가능하므로, 자체 변수를 추가해야 합니다
 	그리고, 당연하지만 해당 모디파이어 변동치와 동일한 국민정신을 히든 트리거로 추가해야 합니다
 
-	그래서 모디파이어에 넣을 경우, 
+	그래서 모디파이어에 넣을 경우,
 	위의 정의한 변수에서 모디파이어 ID 부분을 빼고 뒤에 _tt만 입력하면
 	모디파이어가 작동하는 것처럼 구현이 가능합니다 'v'
 
@@ -5013,9 +5078,9 @@
 		(스크립트상 표기로는 "(모디파이어) = 예"로 뜸)
 		해당 모디파이어 변동치 툴팁만들때 yes나 no에 따라 구분해서 만들 것()
 
-		이미 있는 툴팁 사용시 변수는 정상적으로 +-1 변동 처리하되, 
+		이미 있는 툴팁 사용시 변수는 정상적으로 +-1 변동 처리하되,
 		툴팁은 방향성에 따라 _yes_tt나 _no_tt를 사용하면 됨
-		
+
 		해당 모디파이어는 #B로 주석을 달아놨으니 참고
 
 
@@ -5032,4 +5097,3 @@
 		no_compliance_gain
 		nuclear_production
 		thermonuclear_production
-
