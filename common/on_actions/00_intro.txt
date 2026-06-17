@@ -43,5 +43,13 @@ on_actions = {
 				}
 			}
 		}
+
+		#업데이트 용
+		effect = {
+			every_country = {
+				limit = { has_unique_national_focus = no }
+				add_ideas = no_content_country
+			}
+		}
     }
 }

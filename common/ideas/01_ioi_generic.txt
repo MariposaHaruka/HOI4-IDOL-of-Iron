@@ -1,6 +1,6 @@
 ideas = {
 	hidden_ideas = {
-		#이념 관련 
+		#이념 관련
 		democratic_hidden = {
 			allowed = { is_democratic = yes }
 			allowed_civil_war = { always = no }
@@ -11,8 +11,8 @@ ideas = {
 				progressivism_acceptance = 1000
 				socialdemocracy_acceptance = 1000
 			}
-            on_add = { 
-                every_other_country = { 
+            on_add = {
+                every_other_country = {
                     limit = {
                         has_idea = democratic_hidden
                     }
@@ -43,17 +43,17 @@ ideas = {
             }
 		}
 		communism_hidden = {
-			allowed = { 
+			allowed = {
 				OR = {
 					has_government = communism
 					has_government = socialism
 				}
 			}
-			allowed_civil_war = { 
+			allowed_civil_war = {
 				OR = {
 					has_government = communism
 					has_government = socialism
-				} 
+				}
 			}
 			removal_cost = -1
 			modifier = {
@@ -61,8 +61,8 @@ ideas = {
 				socialism_acceptance = 500
 				anarchosyndicalism_acceptance = 250
 			}
-            on_add = { 
-                every_other_country = { 
+            on_add = {
+                every_other_country = {
                     limit = {
                         has_idea = communism_hidden
                     }
@@ -180,7 +180,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			
+
 			modifier = {
 				political_power_cost = 0.25
 				conscription_factor = -0.3
@@ -190,7 +190,7 @@ ideas = {
 
 		# 컨텐츠 없음
 		no_content_country = {
-			picture = generic_agrarian_society
+			picture = under_construction
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -225,7 +225,7 @@ ideas = {
 		}
 
 		#특별 계획
-		pecial_project_consumer_costs_high = { 
+		pecial_project_consumer_costs_high = {
 			allowed = {
 				always = yes
 			}
@@ -233,16 +233,16 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 			picture = generic_industrial_concern_1
-			
+
 			modifier = {
 				consumer_goods_factor = 0.1
 			}
 		}
 
-		special_project_consumer_costs_medium = { 
+		special_project_consumer_costs_medium = {
 			allowed = {
 				always = yes
 			}
@@ -250,16 +250,16 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 			picture = generic_industrial_concern_1
-			
+
 			modifier = {
 				consumer_goods_factor = 0.05
 			}
 		}
 
-		special_project_consumer_costs_low = { 
+		special_project_consumer_costs_low = {
 			allowed = {
 				always = yes
 			}
@@ -267,10 +267,10 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 			picture = generic_industrial_concern_1
-			
+
 			modifier = {
 				consumer_goods_factor = 0.025
 			}
@@ -293,7 +293,7 @@ ideas = {
 				#custom_modifier_tooltip = SOV_shocked_by_surprise_attack_cant_join_factions_tt
 			}
 		}
-		
+
 		TO_nato_ratified = {
 			picture = generic_#democratic_drift_bonus
 			removal_cost = -1
@@ -322,7 +322,7 @@ ideas = {
 		}
 
 		fascist_influence = {
-			
+
 			allowed = {
 				always = no
 			}
@@ -334,7 +334,7 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_fascism_drift_bonus
-			
+
 			modifier = {
 				fascism_drift = 0.1
 				fascism_acceptance = 85
@@ -354,7 +354,7 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_fascism_drift_bonus
-			
+
 			modifier = {
 				fascism_drift = 0.25
 				fascism_acceptance = 150
@@ -362,10 +362,10 @@ ideas = {
 
 			}
 		}
-		
+
 		communist_influence = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -377,15 +377,15 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_communism_drift_bonus
-			
+
 			modifier = {
 				communism_drift = 0.1
 				communism_acceptance = 85
 			}
 		}
 		democratic_influence = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -397,7 +397,7 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_#democratic_drift_bonus
-			
+
 			modifier = {
 				#democratic_drift = 0.1
 				#democratic_acceptance = 85
@@ -415,7 +415,7 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_pp_unity_bonus
-			
+
 			modifier = {
 				#neutrality_drift = 0.1
 				#neutrality_acceptance = 85
@@ -437,16 +437,16 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_fascism_drift_bonus
-			
+
 			modifier = {
 				fascism_drift = 0.1
 				fascism_acceptance = 35
 			}
 		}
-		
+
 		communist_influence_weak = {
 			name = communist_influence
-			
+
 			allowed = {
 				always = no
 			}
@@ -458,7 +458,7 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_communism_drift_bonus
-			
+
 			modifier = {
 				communism_drift = 0.1
 				communism_acceptance = 35
@@ -467,7 +467,7 @@ ideas = {
 
 		democratic_influence_weak = {
 			name = democratic_influence
-			
+
 			allowed = {
 				always = no
 			}
@@ -479,7 +479,7 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_#democratic_drift_bonus
-			
+
 			modifier = {
 				#democratic_drift = 0.1
 				#democratic_acceptance = 35
@@ -500,13 +500,13 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_pp_unity_bonus
-			
+
 			modifier = {
 				#neutrality_drift = 0.1
 				#neutrality_acceptance = 35
 			}
 		}
-		
+
 #		soviet_german_friendship = {
 #			allowed = {
 #				always = no
@@ -532,16 +532,16 @@ ideas = {
 #			}
 #
 #			removal_cost = -1
-#			
+#
 #			modifier = {
 #				communism_acceptance = 100
 #				fascism_acceptance = 100
 #			}
 #		}
-		
+
 		communist_pressure = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -553,15 +553,15 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_communism_drift_bonus
-			
+
 			modifier = {
 				communism_drift = 0.1
 			}
 		}
 		# from decision
 		socialist_education = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -573,7 +573,7 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_communism_drift_bonus
-			
+
 			modifier = {
 				communism_drift = 0.1
 				research_speed_factor = 0.035
@@ -581,7 +581,7 @@ ideas = {
 		}
 		# from decision
 		paramilitary_training = {
-			
+
 			allowed = {
 				always = no
 			}
@@ -593,7 +593,7 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_fascism_drift_bonus
-			
+
 			modifier = {
 				fascism_drift = 0.1
 				experience_gain_army = 0.1
@@ -601,8 +601,8 @@ ideas = {
 		}
 		# from decision
 		nation_building = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -614,13 +614,13 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_#democratic_drift_bonus
-			
+
 			modifier = {
 				#democratic_drift = 0.1
 				stability_factor = 0.1
 			}
 		}
-		
+
 		military_parade = {
 			allowed = {
 				always = no
@@ -633,16 +633,16 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_pp_unity_bonus
-			
+
 			modifier = {
 				#neutrality_drift = 0.1
 				mobilization_speed = 0.15
 			}
 		}
-		# Generic Focus Ideas		
+		# Generic Focus Ideas
 		collectivist_ethos_focus = {
-			
-		
+
+
 			allowed = {
 				always = no
 			}
@@ -650,7 +650,7 @@ ideas = {
 			allowed_civil_war = {
 				is_communism = yes
 			}
-		
+
 			removal_cost = -1
 
 			picture = generic_pp_unity_bonus
@@ -659,10 +659,10 @@ ideas = {
 				#democratic_drift = -0.02
 			}
 		}
-	
+
 		liberty_ethos_focus = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -670,19 +670,19 @@ ideas = {
 			allowed_civil_war = {
 				is_democratic = yes
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_#democratic_drift_bonus
-	
+
 			modifier = {
 				trade_opinion_factor = 0.2
 			}
 		}
-	
+
 		militarism_focus = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -690,20 +690,20 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_manpower_bonus
-	
+
 			modifier = {
 				conscription = 0.02
-				resistance_damage_to_garrison = -0.1 
+				resistance_damage_to_garrison = -0.1
 			}
 		}
-	
+
 		military_youth_focus = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -714,20 +714,20 @@ ideas = {
 					has_government = fascism
 				}
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_manpower_bonus
-	
+
 			modifier = {
 				conscription = 0.01
 				mobilization_speed = 0.25
 			}
 		}
-	
+
 		paramilitarism_focus = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -738,20 +738,20 @@ ideas = {
 					has_government = fascism
 				}
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_infantry_bonus
-	
+
 			modifier = {
 				training_time_army_factor = -0.1
 				supply_combat_penalties_on_core_factor = -0.15
 			}
 		}
-	
+
 		indoctrination_focus = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -762,20 +762,20 @@ ideas = {
 					has_government = fascism
 				}
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_pp_unity_bonus
-	
+
 			modifier = {
 				stability_factor = 0.05
 				weekly_manpower = 400
 			}
 		}
-	
+
 		ideological_fanaticism_focus = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -783,25 +783,25 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_pp_unity_bonus
-	
+
 			rule = {
 				can_create_factions = yes
 			}
-	
+
 			modifier = {
 				war_support_factor = 0.05
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
 			}
 		}
-	
+
 		political_commissars_focus = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -809,19 +809,19 @@ ideas = {
 			allowed_civil_war = {
 				is_communism = yes
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_morale_bonus
-	
+
 			modifier = {
 				army_morale_factor = 0.1
 			}
 		}
-	
+
 		neutrality_idea = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -833,9 +833,9 @@ ideas = {
 			cancel = {
 				has_war = yes
 			}
-			
+
 			removal_cost = -1
-	
+
 			modifier = {
 				#generate_wargoal_tension = 1.00
 				join_faction_tension = 1.00
@@ -847,10 +847,10 @@ ideas = {
 				ai_get_ally_desire_factor = -100
 			}
 		}
-	
+
 		deterrence = {
-			
-			
+
+
 			allowed = {
 				always = no
 			}
@@ -858,11 +858,11 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_production_bonus
-	
+
 			modifier = {
 				production_speed_bunker_factor = 0.2
 				production_speed_coastal_bunker_factor = 0.2
@@ -879,9 +879,9 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
-			
+
 			picture = generic_volunteer_expedition_bonus
 
 			modifier = {
@@ -897,11 +897,11 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_volunteer_expedition_bonus
-			
+
 			modifier = {
 				send_volunteer_divisions_required = -0.5
 			}
@@ -915,16 +915,16 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_pp_unity_bonus
-			
+
 			modifier = {
 				stability_factor = 0.10
 				war_support_factor = 0.1
 			}
-		}	
+		}
 
 		idea_political_correctness = {
 			allowed = {
@@ -934,14 +934,14 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_intel_bonus
-			
+
 			modifier = {
 				foreign_subversive_activites = -0.75
-			}			
+			}
 		}
 
 		communism_banned = {
@@ -1012,9 +1012,9 @@ ideas = {
 				nuclear = 0.15
 			}
 		}
-		
+
 		received_attache = {
-			
+
 			allowed = {
 				always = no
 			}
@@ -1024,7 +1024,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				army_org_factor = 0.02
 				planning_speed = 0.10
@@ -1040,7 +1040,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_manpower_bonus	
+			picture = generic_manpower_bonus
 			modifier = {
 				conscription_factor = -0.2
 			}
@@ -1053,7 +1053,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_manpower_bonus	
+			picture = generic_manpower_bonus
 			modifier = {
 				conscription_factor = -0.3
 			}
@@ -1066,7 +1066,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_manpower_bonus	
+			picture = generic_manpower_bonus
 			modifier = {
 				conscription_factor = -0.4
 			}
@@ -1181,15 +1181,15 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 
 			picture = generic_manpower_bonus
-			
+
 			modifier = {
-				army_core_attack_factor = 0.25 
+				army_core_attack_factor = 0.25
 			}
-		}	
+		}
 
 		idea_weapons_for_the_resistance = {
 
@@ -1200,16 +1200,16 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 
 			picture = chi_war_of_resistance3
-			
+
 			modifier = {
-				resistance_growth_on_our_occupied_states = 0.1 
-				resistance_damage_to_garrison_on_our_occupied_states = 0.25 
+				resistance_growth_on_our_occupied_states = 0.1
+				resistance_damage_to_garrison_on_our_occupied_states = 0.25
 			}
-		}	
+		}
 		MTG_naval_treaty_adherent = {
 
 			allowed = {
@@ -1219,11 +1219,11 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			
+
 			removal_cost = -1
 
 			picture = MTG_naval_treaty_adherent
-			
+
 			modifier = {
 				production_cost_max_ship_hull_cruiser = 5300
 				production_cost_max_ship_hull_heavy = 10000
@@ -1239,11 +1239,11 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			
+
 			removal_cost = -1
 
 			picture = MTG_naval_treaty_adherent_reduced
-			
+
 			modifier = {
 				production_cost_max_ship_hull_cruiser = 6000
 				production_cost_max_ship_hull_heavy = 12000
@@ -1259,11 +1259,11 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			
+
 			removal_cost = -1
 
 			picture = MTG_naval_treaty_adherent
-			
+
 			modifier = {
 				production_cost_max_ship_hull_cruiser = 5700
 				production_cost_max_ship_hull_heavy = 11500
@@ -1279,11 +1279,11 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			
+
 			removal_cost = -1
 
 			picture = MTG_naval_treaty_adherent_reduced
-			
+
 			modifier = {
 				production_cost_max_ship_hull_cruiser = 6500
 				production_cost_max_ship_hull_heavy = 14000
@@ -1291,7 +1291,7 @@ ideas = {
 			}
 		}
 
-		organization_of_african_unity_member_idea = { 
+		organization_of_african_unity_member_idea = {
 			allowed = {
 				always = no
 			}
@@ -1299,7 +1299,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
 			#TODO_ASD: Set correct icon - idea_generic_org_of_african_unity
@@ -1318,7 +1318,7 @@ ideas = {
 
 			allowed_civil_war = {
 			}
-			
+
 			removal_cost = -1
 
 			modifier = {
@@ -1337,7 +1337,7 @@ ideas = {
 
 			allowed_civil_war = {
 			}
-			
+
 			removal_cost = -1
 
 			modifier = {
@@ -1356,7 +1356,7 @@ ideas = {
 
 			allowed_civil_war = {
 			}
-			
+
 			removal_cost = -1
 
 			modifier = {
@@ -1394,7 +1394,7 @@ ideas = {
 
 			targeted_modifier = {
 				tag = STR
-				
+
 				river_crossing_factor_against = -0.25
 			}
 		}
@@ -1411,7 +1411,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 
 			on_remove = {
@@ -1425,7 +1425,7 @@ ideas = {
 			targeted_modifier = {
 				tag = LLS
 				spotting_chance_against = -0.1
-				navy_capital_ship_attack_factor_against = -0.1	
+				navy_capital_ship_attack_factor_against = -0.1
 			}
 		}
 
@@ -1440,7 +1440,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 
 			on_remove = {
@@ -1454,7 +1454,7 @@ ideas = {
 			targeted_modifier = {
 				tag = LLS
 				spotting_chance_against = -0.25
-				navy_capital_ship_attack_factor_against = -0.25		
+				navy_capital_ship_attack_factor_against = -0.25
 			}
 		}
 
@@ -1469,7 +1469,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
 
 			on_remove = {
@@ -1483,111 +1483,111 @@ ideas = {
 			targeted_modifier = {
 				tag = LLS
 				spotting_chance_against = -0.4
-				navy_capital_ship_attack_factor_against = -0.4		
+				navy_capital_ship_attack_factor_against = -0.4
 			}
 		}
 	}
 
 	# TECHNOLOGY
-	tank_manufacturer = { 
-	
+	tank_manufacturer = {
+
 		designer = yes
-		
+
 		generic_tank_manufacturer = {
 
 			picture = generic_tank_manufacturer_1
-			
+
 			allowed = { has_unique_national_focus = no }
-			
+
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				armor = 0.15
 			}
-			
+
 			traits = { tank_manufacturer }
 		}
 	}
-	naval_manufacturer = { 
+	naval_manufacturer = {
 		designer = yes
 		generic_naval_manufacturer = {
-			
+
 			picture = generic_naval_manufacturer_1
 
 			allowed = { has_unique_national_focus = no }
-			
+
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				naval_equipment = 0.15
 			}
-			
+
 			traits = { naval_manufacturer }
 		}
 	}
-	aircraft_manufacturer = { 
-	
+	aircraft_manufacturer = {
+
 		designer = yes
-	
+
 		generic_light_aircraft_manufacturer = {
-			
+
 			picture = generic_air_manufacturer_1
 			allowed = { has_unique_national_focus = no }
-			
+
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			
+
 			traits = { light_aircraft_manufacturer }
 		}
-		
+
 		generic_medium_aircraft_manufacturer = {
-			
+
 			picture = generic_air_manufacturer_3
 			allowed = { has_unique_national_focus = no }
-			
+
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			
+
 			traits = { medium_aircraft_manufacturer }
 		}
-		
+
 		generic_heavy_aircraft_manufacturer = {
 
 			picture = generic_air_manufacturer_2
 			allowed = { has_unique_national_focus = no }
-			
+
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			
+
 			traits = { heavy_aircraft_manufacturer }
 		}
-		
+
 		generic_naval_aircraft_manufacturer = {
-			
+
 			picture = generic_naval_manufacturer_2
 			allowed = { has_unique_national_focus = no }
-			
+
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			
+
 			traits = { naval_aircraft_manufacturer }
 		}
 	}
@@ -1595,28 +1595,28 @@ ideas = {
 		generic_industrial_concern = {
 			picture = generic_industrial_concern_1
 			allowed = { has_unique_national_focus = no }
-			
+
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				industry = 0.15
 			}
-			
+
 			traits = { industrial_concern }
 		}
 
 		generic_electronics_concern = {
 			picture = generic_electronics_concern_1
 			allowed = { has_unique_national_focus = no }
-			
+
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				electronics = 0.15
 			}
-			
+
 			traits = { electronics_concern }
 		}
 	}
@@ -1625,43 +1625,43 @@ ideas = {
 		generic_motorized_equipment_manufacturer = {
 			picture = generic_motorized_equipment_manufacturer_3
 			allowed = { has_unique_national_focus = no }
-			
+
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				motorized_equipment = 0.15
 			}
-			
+
 			traits = { motorized_equipment_manufacturer }
 		}
-		
+
 		generic_infantry_equipment_manufacturer = {
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = { has_unique_national_focus = no }
-			
+
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				infantry_weapons = 0.15
 			}
-			
+
 			traits = { infantry_equipment_manufacturer }
 		}
-		
+
 		generic_artillery_manufacturer = {
-			
+
 			picture = generic_artillery_manufacturer_2
 			allowed = { has_unique_national_focus = no }
-			
+
 			cost = 150
 			removal_cost = 10
-			
+
 			research_bonus = {
 				artillery = 0.15
 			}
-			
+
 			traits = { artillery_manufacturer }
 		}
 	}

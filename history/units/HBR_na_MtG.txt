@@ -3,13 +3,23 @@ units= {
 
 	######## NAVAL OOB ########
 	fleet = {
-		name = "Royal Seraph Navy"		
+		name = "Royal Seraph Navy"
 		naval_base = 7408 # Bangkok
-		task_force = {				
-			name = "Royal Seraph Navy"			
+		task_force = {
+			name = "Royal Seraph Navy"
 			location = 7408 # Bangkok
-			ship = { name = "SRNS Phra Ruang" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HBR version_name = "Phra Ruang Class" } } }
-		}				
-	}
-} 
+			ship = { name = "SRNS Ratanakosindra"  pride_of_the_fleet = yes  definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = HBR version_name = "Ratanakosindra Class" } } }
+			ship = { name = "SRNS Sukhothai" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = HBR version_name = "Ratanakosindra Class" } } }
 
+			ship = { name = "SRNS Phra Ruang" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HBR version_name = "Phra Ruang Class" } } }
+
+			ship = { name = "SRNS Trad" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HBR version_name = "Trad Class" } } }
+			ship = { name = "SRNS Phuket" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HBR version_name = "Trad Class" } } }
+			ship = { name = "SRNS Surasdra" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HBR version_name = "Trad Class" } } }
+			ship = { name = "SRNS Pattani" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HBR version_name = "Trad Class" } } }
+
+			ship = { name = "SRNS CMB 1" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HBR version_name = "CMB Class" } } }
+			ship = { name = "SRNS CMB 2" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = HBR version_name = "CMB Class" } } }
+		}
+	}
+}

@@ -34,7 +34,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Jezdecká brigáda"				# Cavalry Brigade -- precursor to Fast Divisions. Fast Divisions add 2nd regiment of 2x L tank, 2x mot 
+	name = "Jezdecká brigáda"				# Cavalry Brigade -- precursor to Fast Divisions. Fast Divisions add 2nd regiment of 2x L tank, 2x mot
 	division_names_group = PRK_CAV_01
 
 	regiments = {
@@ -50,14 +50,20 @@ division_template = {
 }
 
 division_template = {
-	name = "Rychlá divize"	#Fast division		
+	name = "Rychlá divize"	#Fast division		 -- these are in really bad shape in 1936. Orders are behind and they were force to take on tanks they didn't want due to politcal pressure. Large or
 	division_names_group = PRK_ARM_01
 	regiments = {
 		light_armor = { x = 0 y = 0 }
 		light_armor = { x = 0 y = 1 }
 		cavalry = { x = 1 y = 0 }
 		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
 	}
+
+	regimental_support = { #Various field pieces operated by the division at the regeniment level
+		field_guns = { x = 1 y = 0 }
+	}
+
 	support = {
 		recon = { x = 0 y = 0 }      # includes 1x AC comp, 1x L tank comp
 	}
@@ -96,7 +102,7 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 		force_equipment_variants = { light_tank_chassis_0 = { owner = "PRK" version_name = "Tancik vz. 33" } }
-		
+
 	}
 	division = { # "4. divize"
 		division_name = {

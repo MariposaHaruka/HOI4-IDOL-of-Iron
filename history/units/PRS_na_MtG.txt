@@ -1,20 +1,20 @@
 ﻿
 units= {
 	##### NAVAL UNITS #####
-	
+
 	fleet = {
-		name = "Kriegsmarine"			
+		name = "Kriegsmarine"
 		naval_base = 241  # Wilhemshaven
-		task_force = {				
+		task_force = {
 			name = "Hochseeflotte"
 			location = 241  # Wilhemshaven
-			ship = { name = "KMS Deutschland" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = PRS version_name = "Deutschland" } } }	
+			ship = { name = "KMS Deutschland" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = PRS version_name = "Deutschland" } } }
 			ship = { name = "KMS Admiral Scheer" pride_of_the_fleet = yes definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = PRS version_name = "Deutschland" } } }
-			ship = { name = "KMS Nürnberg" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = PRS version_name = "Leipzig" } } } 		
-			ship = { name = "KMS Leipzig" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = PRS version_name = "Leipzig" } } }		
-			ship = { name = "KMS Königsberg" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PRS version_name = "Königsberg" } } }			
-			ship = { name = "KMS Karlsruhe" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PRS version_name = "Königsberg" } } }	
-			ship = { name = "KMS Köln" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PRS version_name = "Königsberg" } } }			
+			ship = { name = "KMS Nürnberg" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = PRS version_name = "Leipzig" } } }
+			ship = { name = "KMS Leipzig" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = PRS version_name = "Leipzig" } } }
+			ship = { name = "KMS Königsberg" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PRS version_name = "Königsberg" } } }
+			ship = { name = "KMS Karlsruhe" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PRS version_name = "Königsberg" } } }
+			ship = { name = "KMS Köln" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PRS version_name = "Königsberg" } } }
 			ship = { name = "KMS Emden" definition = light_cruiser start_experience_factor = 0.2 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PRS version_name = "Emden" } } }
 			# 1. Torpedobootflottille
 			ship = { name = "KMS Jaguar" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PRS version_name = "Type 24" } } }
@@ -26,7 +26,7 @@ units= {
 			name = "Ostseeflotte"
 			location = 6332  # Konigsberg
 			ship = { name = "KMS Schleswig-Holstein" definition = battleship start_experience_factor = 0.2 equipment = { ship_hull_pre_dreadnought = { amount = 1 owner = PRS version_name = "Deutschland" } } }
-			ship = { name = "KMS Schlesien" definition = battleship start_experience_factor = 0.2 equipment = { ship_hull_pre_dreadnought = { amount = 1 owner = PRS version_name = "Deutschland" } } }			
+			ship = { name = "KMS Schlesien" definition = battleship start_experience_factor = 0.2 equipment = { ship_hull_pre_dreadnought = { amount = 1 owner = PRS version_name = "Deutschland" } } }
 			# 2. Torpedobootflottille
 			ship = { name = "KMS Möwe" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PRS version_name = "Type 24" } } }
 			ship = { name = "KMS Albatros" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PRS version_name = "Type 24" } } }
@@ -41,12 +41,12 @@ units= {
 		task_force = {
 			name = "Marineschule Kiel"
 			location = 6389 	# Kiel
-			ship = { name = "KMS Brummer" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PRS version_name = "Bremse" } } }			
+			ship = { name = "KMS Brummer" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PRS version_name = "Bremse" } } }
 			ship = { name = "KMS Bremse" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = PRS version_name = "Bremse" } } }
 		}
 	}
 	fleet = {
-		name = "Unterseeboots-Flotte "			
+		name = "Unterseeboots-Flotte "
 		naval_base = 6389  # Kiel
 		task_force = {
 			name = "I. U-Boots Flottille Weddigen"
@@ -68,7 +68,7 @@ units= {
 			# 2. Unterseebootsflottille
 			ship = { name = "KMS U-1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PRS version_name = "Type II" } } }
 			ship = { name = "KMS U-2" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PRS version_name = "Type II" } } }
-			ship = { name = "KMS U-3" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PRS version_name = "Type II" } } }
+			ship = { name = "KMS U-3" definition = submarine officer = { name = GER_gunther_prien portraits = { navy = { large = GFX_portrait_GER_gunther_prien small = GFX_portrait_GER_gunther_prien_small } } } equipment = { ship_hull_submarine_1 = { amount = 1 owner = PRS version_name = "Type II" } } } #U-3 not historical for Prien, but closest we can do in 1936.
 			# 3. Unterseebootsflottille
 			ship = { name = "KMS U-4" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PRS version_name = "Type II" } } }
 			ship = { name = "KMS U-5" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = PRS version_name = "Type II" } } }
@@ -90,7 +90,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = ship_hull_submarine_1
-			creator = "PRS" 
+			creator = "PRS"
 			version_name = "Type II"
 		}
 		requested_factories = 1
@@ -101,7 +101,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = ship_hull_submarine_1
-			creator = "PRS" 
+			creator = "PRS"
 			version_name = "Type II"
 		}
 		requested_factories = 1
@@ -112,7 +112,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = ship_hull_submarine_1
-			creator = "PRS" 
+			creator = "PRS"
 			version_name = "Type II"
 		}
 		requested_factories = 1
@@ -123,7 +123,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = ship_hull_submarine_1
-			creator = "PRS" 
+			creator = "PRS"
 			version_name = "Type II"
 		}
 		requested_factories = 1
@@ -154,7 +154,7 @@ instant_effect = {
 		amount = 2
 		industrial_manufacturer = mio:PRS_blohm_und_voss_organization
 	}
-	
+
 	# CA: "Graf Spee"
 	add_equipment_production = {
 		equipment = {

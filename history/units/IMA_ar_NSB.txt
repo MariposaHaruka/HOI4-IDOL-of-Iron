@@ -41,10 +41,28 @@ division_template = {
 		light_armor = { x = 0 y = 2 }
 	}
 }
+
+division_template = {
+	name = "Producer Motorised Division"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    mot_recon = { x = 0 y = 1 }
+	}
+}
+
 division_template = {
 	name = "Producer Colonial Garrison"
 	division_names_group = IMA_GAR_01
-	
+
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -87,7 +105,7 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.3
 	}
-	division= {	
+	division= {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 52
@@ -97,7 +115,7 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.3
 	}
-	division= {	
+	division= {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 1
@@ -107,7 +125,7 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.3
 	}
-	division= {	
+	division= {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 5
@@ -164,7 +182,7 @@ units = {
 		division_template = "Producer Infantry Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.3
-	}	
+	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
@@ -175,7 +193,7 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.3
 	}
-	division = {	
+	division = {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 42
@@ -205,7 +223,7 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.3
 	}
-	division= {	
+	division= {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 1
@@ -254,7 +272,7 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.3
 	}
-	division= {	
+	division= {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 61
@@ -264,7 +282,7 @@ units = {
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.15
 	}
-	division= {	
+	division= {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 62
@@ -274,7 +292,7 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.15
 	}
-	division= {	
+	division= {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 63
@@ -284,7 +302,7 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.15
 	}
-	division= {	
+	division= {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 64
@@ -294,7 +312,7 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.2
 	}
-	division= {	
+	division= {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 65
@@ -304,7 +322,7 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-	division= {	
+	division= {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 66
@@ -314,7 +332,7 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.15
 	}
-	division= {	
+	division= {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 67
@@ -351,7 +369,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = support_equipment_1
-			creator = "IMA" 
+			creator = "IMA"
 		}
 		requested_factories = 1
 		progress = 0.3
@@ -361,11 +379,22 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = light_tank_equipment_1
-			creator = "IMA" 
+			creator = "IMA"
 		}
 		requested_factories = 1
 		progress = 0.4
 		efficiency = 50
 		industrial_manufacturer = mio:IMA_vauxhall_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = IMA
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 80
+		industrial_manufacturer = mio:IMA_vauxhall_automotive_organization
 	}
 }

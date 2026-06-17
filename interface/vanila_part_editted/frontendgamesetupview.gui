@@ -241,11 +241,11 @@ guiTypes = {
 	### country filter
 	containerWindowType = {
 		name = "country_filter"
-		size = { width = 149 height = 33 }
+		size = { width = 149 height = 42 }
 
 		buttonType = {
 			name = "button"
-			quadTextureSprite = "GFX_country_filter_entry"
+			quadTextureSprite = "GFX_country_filter_entry_2"
 			buttonText = "FILTER"
 			buttonFont = "hoi_16mbs"
 			clicksound = click_default
@@ -738,14 +738,6 @@ guiTypes = {
 			}
 		}
 
-		OverlappingElementsBoxType = {
-			name = "filters"
-			position = { x = -1170 y = 430 }
-			size = { x = 2380 y = 32 }
-			orientation = left
-			spacing = 14.0
-		}
-
 		containerWindowType = {
 			name = "countries_medium"
 			position = { x = 15 y = 48 }
@@ -766,7 +758,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "countries_mini"
 			position = { x = 15 y = 48 }
-			size = { width = -15 height = 120 }
+			size = { width = -15 height = 80 }
 
 			gridboxType = {
 				name = "countries_grid"
@@ -1039,6 +1031,14 @@ guiTypes = {
 				quadTextureSprite = "GFX_tiled_window_character"
 				position = { x = 0  y = 0 }
 			}
+		}
+
+		OverlappingElementsBoxType = { # IOI 수정
+			name = "filters"
+			position = { x = -1221 y = 427 }
+			size = { x = 2700 y = 32 }
+			orientation = left
+			spacing = 4.0
 		}
 	}
 	containerWindowType = {

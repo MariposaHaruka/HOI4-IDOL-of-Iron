@@ -58,6 +58,23 @@ division_template = {
 	    mot_recon = { x = 0 y = 1 }
 	}
 }
+
+division_template = {
+	name = "Armoured Car Company" 	# Represents the RAF Armoured Car Companies used in the Middle East Front
+	division_names_group = IMA_CAR_01
+	role = garrison
+
+	regiments = {
+		armored_car = { x = 0 y = 0 }
+	    armored_car = { x = 0 y = 1 }
+		armored_car = { x = 1 y = 0 }
+		armored_car = { x = 1 y = 1 }
+	}
+	support = {
+        armored_car_recon = { x = 0 y = 0 }
+	}
+}
+
 division_template = {
 	name = "Producer Colonial Garrison"
 	division_names_group = IMA_GAR_01
@@ -231,7 +248,6 @@ units = {
 		division_template = "Producer Tank Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.3
-		force_equipment_variants = { light_tank_chassis_1 = { owner = "IMA" version_name = "4호 경전차" } }
 	}
 	division = {
 		division_name = {
@@ -342,6 +358,24 @@ units = {
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.15
 	}
+
+	##### Armoured Car Company RAF #####
+
+	division = {
+		name =  "No.1 Armoured Car Company RAF"
+		location = 1155  # 수에즈 운하
+		division_template = "Armoured Car Company"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name =  "No.2 Armoured Car Company RAF"
+		location = 1155  # 수에즈 운하
+		division_template = "Armoured Car Company"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
 }
 
 instant_effect = {
@@ -350,9 +384,10 @@ instant_effect = {
 			type = infantry_equipment_1
 			creator = "IMA"
 		}
-		requested_factories = 2
+		requested_factories = 3
 		progress = 0.1
 		efficiency = 50
+		industrial_manufacturer = mio:IMA_rsaf_enfield_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -362,8 +397,9 @@ instant_effect = {
 		requested_factories = 2
 		progress = 0.1
 		efficiency = 50
-		#industrial_manufacturer = mio:IMA_royal_arsenal_organization
+		industrial_manufacturer = mio:IMA_royal_arsenal_organization
 	}
+
 	add_equipment_production = {
 		equipment = {
 			type = support_equipment_1
@@ -373,6 +409,7 @@ instant_effect = {
 		progress = 0.3
 		efficiency = 50
 	}
+
 	add_equipment_production = {
 		equipment = {
 			type = light_tank_equipment_1
@@ -393,5 +430,16 @@ instant_effect = {
 		progress = 0.1
 		efficiency = 80
 		industrial_manufacturer = mio:IMA_vauxhall_automotive_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = gw_armored_car_equipment
+			creator = IMA
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 100
+		industrial_manufacturer = mio:IMA_crossley_motors_organization
 	}
 }

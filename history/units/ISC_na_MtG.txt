@@ -2,7 +2,7 @@ units = {
 
 	##### Naval OOB #####
 	fleet = {
-		name = "Royal Tsubasa Navy"			
+		name = "Royal Tsubasa Navy"
 		naval_base = 12406 # Sydney
 		task_force = {
 			name = "Tsubasa Squadron"
@@ -16,9 +16,7 @@ units = {
 			ship = { name = "ISSS Vendetta" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ISC version_name = "V/W Class" } } }
 			ship = { name = "ISSS Voyager" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ISC version_name = "V/W Class" } } }
 			ship = { name = "ISSS Waterhen" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ISC version_name = "V/W Class" } } }
-			ship = { name = "ISSS Stuart" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ISC version_name = "S Class" } } }
-		}				
+			ship = { name = "ISSS Stuart" definition = destroyer officer = { name = AST_hector_waller portraits = { navy = { large = GFX_portrait_AST_hector_waller small = GFX_portrait_AST_hector_waller_small } } } equipment = { ship_hull_light_1 = { amount = 1 owner = ISC version_name = "S Class" } } } #Historically Hector Waller served on HMS Brazen here, but it is a British ship.
+		}
 	}
 }
-
-

@@ -286,23 +286,23 @@ IMA_INF_02 = {
 	}
 }
 
-IMA_INF_03 = { 
-	name = "Producer Light Division" 
+IMA_INF_03 = {
+	name = "Producer Light Division"
 
-	for_countries = { IMA } 
+	for_countries = { IMA }
 
 	can_use = { always = yes }
 
-	division_types = { "infantry" "mechanized" } 
+	division_types = { "infantry" "mechanized" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { IMA_INF_03 } 
+	#link_numbering_with = { IMA_INF_03 }
 
-	fallback_name = "%d Producer (Light) Division" 
+	fallback_name = "%d Producer (Light) Division"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered = { 
+	ordered = {
 		14 = { "%dth Producer (Light) Division" } # raised in 1914 for Kitchener's Army
 		20 = { "%dth Producer (Light) Division" } # raised in 1914 for Kitchener's Army
 		1 = { "%dst Producer (Light) Division" }
@@ -333,7 +333,7 @@ IMA_INF_03 = {
 		28 = { "%dth Producer (Light) Division" }
 		29 = { "%dth Producer (Light) Division" }
 		30 = { "%dth Producer (Light) Division" }
-	} 
+	}
 }
 
 IMA_CAV_01 = {
@@ -371,7 +371,7 @@ IMA_CAV_02 = {
 
 	fallback_name = "%d Producer Cavalry Brigade"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Producer Cavalry Brigade" }
@@ -421,7 +421,7 @@ IMA_MOT_01 = {
 
 	fallback_name = "%d Producer Infantry Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		50 = { "%dth (Northumbrian) Producer Infantry Division" }			# actual motorized divisions
@@ -530,7 +530,7 @@ IMA_MOT_02 = {
 
 	fallback_name = "%d Producer Motor Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Producer Motor Division" }
@@ -580,7 +580,7 @@ IMA_MEC_01 = {
 
 	fallback_name = "%d Producer Infantry Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		50 = { "%dth (Northumbrian) Producer Infantry Division" }			# actual motorized divisions
@@ -675,6 +675,37 @@ IMA_MEC_01 = {
 	}
 }
 
+IMA_CAR_01 = {
+	name = "Armored Car Division"
+
+	for_countries = { IMA }
+
+	can_use = { always = yes }
+
+	division_types = { "armored_car" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { IMA_MOT_02 }
+
+	fallback_name = "No.%d Armoured Car Company RAF"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+
+		1 = { "No.%d Armoured Car Company RAF" }
+		2 = { "No.%d Armoured Car Company RAF" }
+		3 = { "No.%d Armoured Car Company RAF" }
+		4 = { "No.%d Armoured Car Company RAF" }
+		5 = { "No.%d Armoured Car Company RAF" }
+		6 = { "No.%d Armoured Car Company RAF" }
+		7 = { "No.%d Armoured Car Company RAF" }
+		8 = { "No.%d Armoured Car Company RAF" }
+		9 = { "No.%d Armoured Car Company RAF" }
+		10 = { "No.%d Armoured Car Company RAF" }
+	}
+}
+
 IMA_ARM_01 = {
 	name = "Producer Armoured Division"
 
@@ -689,7 +720,7 @@ IMA_ARM_01 = {
 
 	fallback_name = "%d Producer Armoured Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Producer Armoured Division" } # formed as Mobile Division
@@ -703,7 +734,7 @@ IMA_ARM_01 = {
 		11 = { "%dth Producer Armoured Division" }
 		42 = { "%dnd Producer Armoured Division" }
 		79 = { "%dth Producer Armoured Division" }
-		5 = { "%dth Producer Armoured Division" }		# phantom division	
+		5 = { "%dth Producer Armoured Division" }		# phantom division
 		3 = { "%drd Producer Armoured Division" }		# fictional divisions
 		4 = { "%dth Producer Armoured Division" }
 		12 = { "%dth Producer Armoured Division" }
@@ -742,7 +773,7 @@ IMA_ARM_02 = {
 
 	fallback_name = "%d Producer Army Tank Brigade"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Producer Army Tank Brigade" }
@@ -760,8 +791,8 @@ IMA_ARM_02 = {
 		11 = { "%dth Producer Army Tank Brigade" }
 		32 = { "%dnd Producer Army Tank Brigade" }
 		31 = { "%dst Producer Army Tank Brigade" }
-		5 = { "%dth Producer Army Tank Brigade" }		
-		7 = { "%dth Producer Army Tank Brigade" }		
+		5 = { "%dth Producer Army Tank Brigade" }
+		7 = { "%dth Producer Army Tank Brigade" }
 		4 = { "%dth Producer Army Tank Brigade" }
 		12 = { "%dth Producer Army Tank Brigade" }
 		13 = { "%dth Producer Army Tank Brigade" }
@@ -794,7 +825,7 @@ IMA_ARM_03 = {
 
 	fallback_name = "%d Producer Heavy Armoured Brigade"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Producer Heavy Armoured Brigade" }
@@ -844,7 +875,7 @@ IMA_PAR_01 = {
 
 	fallback_name = "%d Producer Airborne Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Producer Airborne Division" }
@@ -894,7 +925,7 @@ IMA_PAR_02 = {
 
 	fallback_name = "%d Producer Parachute Regiment"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Producer Parachute Regiment" }
@@ -944,7 +975,7 @@ IMA_MAR_01 = {
 
 	fallback_name = "%d Producer Marines Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Producer Marines Division" }
@@ -994,7 +1025,7 @@ IMA_MNT_01 = {
 
 	fallback_name = "%d Producer Infantry Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		52 = { "%dnd (Lowland) Producer Infantry Division" }
@@ -1057,7 +1088,7 @@ IMA_GAR_01 = {
 
 	fallback_name = "%d Producer Garrison Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		201 = { "Devon & Cornwall County Producer Div." }			# Home Counties Divisions (1940-41)
@@ -1124,23 +1155,23 @@ IMA_GAR_01 = {
 	}
 }
 
-IMA_AIR_01 = { 
-	name = "Producer Anti-Aircraft Division" 
+IMA_AIR_01 = {
+	name = "Producer Anti-Aircraft Division"
 
-	for_countries = { IMA } 
+	for_countries = { IMA }
 
-	can_use = { always = yes } 
+	can_use = { always = yes }
 
-	division_types = { "infantry" } 
+	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { IMA_AIR_01 } 
+	#link_numbering_with = { IMA_AIR_01 }
 
-	fallback_name = "%d Producer Anti-Aircraft Division" 
+	fallback_name = "%d Producer Anti-Aircraft Division"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered = { 
+	ordered = {
 		1 = { "%dst Producer Anti-Aircraft Division" } # formed 1935
 		2 = { "%dnd Producer Anti-Aircraft Division" } # formed 1935
 		3 = { "%drd Producer Anti-Aircraft Division" } # formed 1938
@@ -1191,7 +1222,7 @@ IMA_AIR_01 = {
 		48 = { "%dth Producer Anti-Aircraft Division" }
 		49 = { "%dth Producer Anti-Aircraft Division" }
 		50 = { "%dth Producer Anti-Aircraft Division" }
-	} 
+	}
 }
 
 IMA_DEM_01 = {
@@ -1208,7 +1239,7 @@ IMA_DEM_01 = {
 
 	fallback_name = "%d Loyalist Brigade"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Loyalist Brigade" }
@@ -1258,7 +1289,7 @@ IMA_FAS_01 = {
 
 	fallback_name = "%d Blackshirt Brigade"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Blackshirt Brigade" }
@@ -1293,5 +1324,3 @@ IMA_FAS_01 = {
 		30 = { "%dth Blackshirt Brigade" }
 	}
 }
-
-
