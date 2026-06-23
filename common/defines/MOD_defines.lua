@@ -1,7 +1,7 @@
 NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 10
 NDefines.NDiplomacy.MAX_OPINION_VALUE = 200							-- Max opinion value cap.
 NDefines.NDiplomacy.MIN_OPINION_VALUE = -200
-NDefines.NDiplomacy.TENSION_PUPPET = 1.75 -- vanilla is 1.25	
+NDefines.NDiplomacy.TENSION_PUPPET = 1.75 -- vanilla is 1.25
 NDefines.NBuildings.MAX_SHARED_SLOTS = 50
 NDefines.NBuildings.MAX_BUILDING_LEVELS = 56
 NDefines.NBuildings.SUPPLY_ROUTE_RESOURCE_BONUS = 0.4
@@ -37,7 +37,7 @@ NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 4		-- Min height of regiments i
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_WIDTH = 2
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 5
 NDefines.NMilitary.MAX_REGIMENTAL_SUPPORT_WIDTH = 5		    -- Max width of regimental supports in division designer.
-NDefines.NMilitary.MAX_REGIMENTAL_SUPPORT_HEIGHT = 2		-- Max height of regimental supports in division designer.
+NDefines.NMilitary.MAX_REGIMENTAL_SUPPORT_HEIGHT = 1		-- Max height of regimental supports in division designer. -- 2개이상은 왜인지 추가 안됨
 NDefines.NMilitary.MAX_HQ_BATTALION_WIDTH = 1			-- Max width of regiments in division designer (Army HQ templates).
 NDefines.NMilitary.MAX_HQ_BATTALION_HEIGHT = 4			-- Max height of regiments in division designer (Army HQ templates).
 NDefines.NMilitary.MAX_HQ_SUPPORT_WIDTH = 1			-- Max width of support in division designer (Army HQ templates).
@@ -68,7 +68,7 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.1					-- Max ammount of special fo
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 32					-- You can have a minimum of this many special forces battalions, regardless of the number of non-special forces battalions you have, this can also be modified by a country modifier
 NDefines.NCountry.MAJOR_MIN_FACTORIES = 50 --default 35		-- need at least these many factories to become a major
 -- modifiers female_random_operative_chance female_random_army_leader_chance female_random_admiral_chance
-NDefines.NCountry.FEMALE_UNIT_LEADER_BASE_CHANCE = { 
+NDefines.NCountry.FEMALE_UNIT_LEADER_BASE_CHANCE = {
     -- applies as a factor to female unit leader randomization
     -- the values needs to be zero if you don't actually have random portraits
     0.5, -- country leaders
@@ -175,7 +175,7 @@ NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 6
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 60 --10
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 100 --25
 NDefines.NGame.GAME_SPEED_SECONDS = { 0.4, 0.25, 0.1, 0.05, 0.0 } --{2.0, 0.5, 0.2, 0.1, 0.0}
-NDefines.NCountry.EVENT_PROCESS_OFFSET = 27 --20 
+NDefines.NCountry.EVENT_PROCESS_OFFSET = 27 --20
 
 NDefines.NFactions.FACTION_INTELLIGENCE_ALLOWED_ADVISOR_TRAIT = { -- Which advisor traits you need to have to be able to be selected as spymaster. You need to be of slottype political advisor regardless
 		"head_of_intelligence", -- 현혹적인 신사

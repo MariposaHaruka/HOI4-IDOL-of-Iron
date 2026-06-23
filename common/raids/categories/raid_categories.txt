@@ -5,7 +5,7 @@ categories = {
 	    intel_source = air
 	    faction_influence_score_on_success = 200
 	}
-	
+
 
 	paratrooper_raids = {
 	    intel_source = air
@@ -32,11 +32,39 @@ categories = {
 	    intel_source = army
 	    faction_influence_score_on_success = 50
 	    visible = { # IOI 임시조치
-	    	has_dlc = "No Compromise, No Surrender" 
-		    original_tag = KTC
+	    	OR = {
+		    	AND = {
+					has_dlc = "No Compromise, No Surrender"
+					original_tag = KTC
+				}
+				has_dlc = "Thunder at Our Gates"
+			}
+			has_country_flag = KTC_land_infiltration_raids
 	    }
 		available = { # IOI 임시조치
 			has_country_flag = KTC_land_infiltration_raids
+		}
+	}
+
+	naval_commando_raids = {
+		intel_source = naval
+		faction_influence_score_on_success = 50
+		visible = { # IOI 임시조치
+			has_dlc = "Thunder at Our Gates"
+			OR = {
+				original_tag = RST
+				original_tag = ISC
+			}
+			OR = {
+				has_country_flag = RST_naval_commando_raids
+				has_country_flag = ISC_naval_commando_raids
+			}
+		}
+		available = { # IOI 임시조치
+		    OR = {
+				has_country_flag = RST_naval_commando_raids
+				has_country_flag = ISC_naval_commando_raids
+			}
 		}
 	}
 }

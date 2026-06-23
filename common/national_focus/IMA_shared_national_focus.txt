@@ -34,7 +34,7 @@
 				has_focus_tree = IGM_focus
 			}
 		}
-		
+
 		#offset = { #이대로면 해당 중점은  (18,10) 에서 중점이 나옵니다
 		#	x = 9
 		#	y = 10
@@ -57,8 +57,8 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00001"
-			IMA = { 
-				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+			IMA = {
+				add_dynamic_modifier = { modifier = IMA_commonwealth }
 				add_political_power = 50
 			}
 			custom_effect_tooltip = commonwealth_effect_tt
@@ -75,13 +75,10 @@
 	shared_focus = {
 		id = IMA_shared_00002 #커먼웰스의 츠바사 자치령
 		icon = {
-			trigger = { 
+		    GFX_focus_IMA_shared_00002a = {
 				ISC = { is_subject_of = IMA }
 			}
-			value = GFX_focus_IMA_shared_00002a
-		}
-		icon = {
-			value = GFX_focus_IMA_shared_00002b
+			GFX_focus_IMA_shared_00002b = yes
 		}
 		cost = 5
 		text_icon = Commonwealth_ISC_style
@@ -103,8 +100,8 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00002"
-			ISC = { 
-				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+			ISC = {
+				add_dynamic_modifier = { modifier = IMA_commonwealth }
 				add_political_power = 50
 			}
 			custom_effect_tooltip = commonwealth_effect_tt
@@ -121,13 +118,10 @@
 	shared_focus = {
 		id = IMA_shared_00003 #커먼웰스의 사이코 자치령
 		icon = {
-			trigger = { 
+			GFX_focus_IMA_shared_00003a = {
 				ISM = { is_subject_of = IMA }
 			}
-			value = GFX_focus_IMA_shared_00003a
-		}
-		icon = {
-			value = GFX_focus_IMA_shared_00003b
+			GFX_focus_IMA_shared_00003b = yes
 		}
 		cost = 5
 		text_icon = Commonwealth_ISM_style
@@ -149,8 +143,8 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00003"
-			ISM = { 
-				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+			ISM = {
+				add_dynamic_modifier = { modifier = IMA_commonwealth }
 				add_political_power = 50
 			}
 			custom_effect_tooltip = commonwealth_effect_tt
@@ -167,13 +161,10 @@
 	shared_focus = {
 		id = IMA_shared_00004 #커먼웰스의 밀리언 자치령
 		icon = {
-			trigger = { 
+			GFX_focus_IMA_shared_00004a = {
 				IML = { is_subject_of = IMA }
 			}
-			value = GFX_focus_IMA_shared_00004a
-		}
-		icon = {
-			value = GFX_focus_IMA_shared_00004b
+			GFX_focus_IMA_shared_00004b = yes
 		}
 		cost = 5
 		text_icon = Commonwealth_IML_style
@@ -195,8 +186,8 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00004"
-			IML = { 
-				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+			IML = {
+				add_dynamic_modifier = { modifier = IMA_commonwealth }
 				add_political_power = 50
 			}
 			custom_effect_tooltip = commonwealth_effect_tt
@@ -213,13 +204,10 @@
 	shared_focus = {
 		id = IMA_shared_00005 #커먼웰스의 미시로 자치령
 		icon = {
-			trigger = { 
+			GFX_focus_IMA_shared_00005a = {
 				ICG = { is_subject_of = IMA }
 			}
-			value = GFX_focus_IMA_shared_00005a
-		}
-		icon = {
-			value = GFX_focus_IMA_shared_00005b
+			GFX_focus_IMA_shared_00005b = yes
 		}
 		cost = 5
 		text_icon = Commonwealth_ICG_style
@@ -241,8 +229,8 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00005"
-			ICG = { 
-				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+			ICG = {
+				add_dynamic_modifier = { modifier = IMA_commonwealth }
 				add_political_power = 50
 			}
 			custom_effect_tooltip = commonwealth_effect_tt
@@ -259,13 +247,10 @@
 	shared_focus = {
 		id = IMA_shared_00006 #커먼웰스의 디어리 자치령
 		icon = {
-			trigger = { 
+			GFX_focus_IMA_shared_00006a = {
 				IDS = { is_subject_of = IMA }
 			}
-			value = GFX_focus_IMA_shared_00006a
-		}
-		icon = {
-			value = GFX_focus_IMA_shared_00006b
+			GFX_focus_IMA_shared_00006b = yes
 		}
 		cost = 5
 		text_icon = Commonwealth_IDS_style
@@ -287,8 +272,8 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00006"
-			IDS = { 
-				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+			IDS = {
+				add_dynamic_modifier = { modifier = IMA_commonwealth }
 				add_political_power = 50
 			}
 			custom_effect_tooltip = commonwealth_effect_tt
@@ -305,13 +290,10 @@
 	shared_focus = {
 		id = IMA_shared_00007 #커먼웰스의 하츠보시 자치령
 		icon = {
-			trigger = { 
+			GFX_focus_IMA_shared_00007a = {
 				IGM = { is_subject_of = IMA }
 			}
-			value = GFX_focus_IMA_shared_00007a
-		}
-		icon = {
-			value = GFX_focus_IMA_shared_00007b
+			GFX_focus_IMA_shared_00007b = yes
 		}
 		cost = 5
 		text_icon = Commonwealth_IGM_style
@@ -333,8 +315,8 @@
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_00007"
-			IGM = { 
-				add_dynamic_modifier = { modifier = IMA_commonwealth } 
+			IGM = {
+				add_dynamic_modifier = { modifier = IMA_commonwealth }
 				add_political_power = 50
 			}
 			custom_effect_tooltip = commonwealth_effect_tt
@@ -353,12 +335,12 @@
 		icon = GFX_focus_IMA_shared_10001
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -14
 		y = 1
 		relative_position_id = IMA_shared_00001
 
-		ai_will_do = { factor = 50 } 
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_00001 focus = IMA_shared_00002 focus = IMA_shared_00003 focus = IMA_shared_00004 focus = IMA_shared_00005 focus = IMA_shared_00006 focus = IMA_shared_00007 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_COMMONWEALTH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
@@ -423,12 +405,12 @@
 		icon = GFX_focus_ioi_generic_air_command
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -4
 		y = 1
 		relative_position_id = IMA_shared_10001
 
-		ai_will_do = { factor = 50 } 
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_10001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_COMMONWEALTH FOCUS_FILTER_AIR_FORCE }
@@ -455,7 +437,7 @@
 		relative_position_id = IMA_shared_10001
 		text_icon = joint_focus_style
 
-		ai_will_do = { factor = 50 } 
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_10001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
@@ -480,7 +462,7 @@
 		y = 1
 		relative_position_id = IMA_shared_10001
 
-		ai_will_do = { factor = 50 } 
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_10001 }
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_COMMONWEALTH }
@@ -500,7 +482,7 @@
 		y = 1
 		relative_position_id = IMA_shared_10001
 
-		ai_will_do = { factor = 50 } 
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_10001 }
 		joint_trigger = { commomwealth_joined = yes }
 		available_if_capitulated = yes
@@ -514,13 +496,13 @@
 		id = IMA_shared_11002 #합동 공군 훈련
 		icon = GFX_goal_generic_air_fighter2
 		cost = 5
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_11001
 		text_icon = joint_focus_style
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_11001 }
 		available = { commomwealth_joined = yes }
 		joint_trigger = { commomwealth_joined = yes }
@@ -545,7 +527,7 @@
 			}
 		}
 
-		completion_reward_joint_member = { 
+		completion_reward_joint_member = {
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_commonwealth
@@ -560,18 +542,18 @@
 			}
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_11003 #연합 뇌격기 사령부
 		icon = GFX_focus_IMA_shared_11003
 		cost = 5
 		text_icon = Commonwealth_IMA_ICG_style
-	
+
 		x = -2
 		y = 1
 		relative_position_id = IMA_shared_11002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_11002 }
 		available = {
 			OR = {
@@ -641,7 +623,7 @@
 			}
 		}
 
-		completion_reward_joint_member = { 
+		completion_reward_joint_member = {
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_commonwealth
@@ -660,18 +642,18 @@
 			}
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_11004 #연합 폭격기 사령부
 		icon = GFX_focus_IMA_shared_11004
 		cost = 5
 		text_icon = Commonwealth_ICG_ISC_style
-	
+
 		x = 0
 		y = 1
 		relative_position_id = IMA_shared_11002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_11002 }
 		available = {
 			OR = {
@@ -743,7 +725,7 @@
 			}
 		}
 
-		completion_reward_joint_member = { 
+		completion_reward_joint_member = {
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_commonwealth
@@ -758,24 +740,24 @@
 			}
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_11005 #연합 전투기 사령부
 		icon = GFX_focus_IMA_shared_11005
 		cost = 5
 		text_icon = Commonwealth_IML_ISC_style
-	
+
 		x = 2
 		y = 1
 		relative_position_id = IMA_shared_11002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_11002 }
 		available = {
 			OR = {
 				AND = {
 					original_tag = IML
-					IML = { 
+					IML = {
 						commomwealth_joined = yes
 						OR = {
 							custom_trigger_tooltip = {
@@ -794,7 +776,7 @@
 				}
 				AND = {
 					original_tag = ISC
-					ISC = { 
+					ISC = {
 						commomwealth_joined = yes
 						OR = {
 							custom_trigger_tooltip = {
@@ -841,7 +823,7 @@
 			}
 		}
 
-		completion_reward_joint_member = { 
+		completion_reward_joint_member = {
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_commonwealth
@@ -856,18 +838,18 @@
 			}
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_11006 #커먼웰스 항공기 생산 계획
 		icon = GFX_focus_generic_aircraft_production
 		cost = 5
 		text_icon = Commonwealth_IMA_style
-	
+
 		x = 0
 		y = 1
 		relative_position_id = IMA_shared_11004
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_11003 }
 		prerequisite = { focus = IMA_shared_11004 }
 		prerequisite = { focus = IMA_shared_11005 }
@@ -927,7 +909,7 @@
 			}
 		}
 
-		completion_reward_joint_member = { 
+		completion_reward_joint_member = {
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_commonwealth
@@ -968,19 +950,19 @@
 			}
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_11051 #공군 비행단 파견
 		icon = GFX_focus_IMA_shared_11051
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 2
 		y = 1
 		relative_position_id = IMA_shared_11001
 		mutually_exclusive = { focus = IMA_shared_12051 }
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_11001 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -991,19 +973,19 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_11051"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_12051 #연합 해군항공대 창설
 		icon = GFX_focus_ioi_generic_sea_and_air
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -2
 		y = 1
 		relative_position_id = IMA_shared_12001
 		mutually_exclusive = { focus = IMA_shared_11051 }
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_12001 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -1014,18 +996,18 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12051"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_12052 #연합 항모전단
 		icon = GFX_goal_generic_navy_carrier
 		cost = 5
 		text_icon = Commonwealth_IMA_ICG_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_11051
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_11051 focus = IMA_shared_12051 }
 		available = {
 			OR = {
@@ -1049,18 +1031,18 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12052"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_12002 #합동 해군 훈련
 		icon = GFX_focus_IMA_shared_12002
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 2
 		y = 1
 		relative_position_id = IMA_shared_12001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_12001 }
 		available = { commomwealth_joined = yes }
 		joint_trigger = { commomwealth_joined = yes }
@@ -1085,7 +1067,7 @@
 			}
 		}
 
-		completion_reward_joint_member = { 
+		completion_reward_joint_member = {
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_commonwealth
@@ -1100,18 +1082,18 @@
 			}
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_12003 #태평양 제해권 확보
 		icon = GFX_focus_ioi_generic_pacific_fleet
 		cost = 5
 		text_icon = Commonwealth_ICG_ISC_style
-	
+
 		x = -3
 		y = 1
 		relative_position_id = IMA_shared_12002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_12002 }
 		available = {
 			OR = {
@@ -1135,18 +1117,18 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12003"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_12004 #대서양 제해권 확보
 		icon = 	GFX_focus_ioi_generic_atlantic_fleet
 		cost = 5
 		text_icon = Commonwealth_IMA_IML_style
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_12002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_12002 }
 		available = {
 			OR = {
@@ -1170,18 +1152,18 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12004"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_12005 #인도양 제해권 확보
 		icon = GFX_focus_ioi_generic_indian_fleet
 		cost = 5
 		text_icon = Commonwealth_ISM_IGM_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_12002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_12002 }
 		available = {
 			OR = {
@@ -1205,18 +1187,18 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_12005"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_12006 #빈슨 계획
 		icon = GFX_focus_POL_develop_polish_shipbuilding
 		cost = 5
 		text_icon = Commonwealth_ICG_style
-	
+
 		x = 0
 		y = 2
 		relative_position_id = IMA_shared_12002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_12003 }
 		prerequisite = { focus = IMA_shared_12004 }
 		prerequisite = { focus = IMA_shared_12005 }
@@ -1260,7 +1242,7 @@
 			}
 		}
 
-		completion_reward_joint_member = { 
+		completion_reward_joint_member = {
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_commonwealth
@@ -1286,18 +1268,18 @@
 			}
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_13012 #연합 공수전 사령부
 		icon = GFX_focus_eng_special_air_service
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_13001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_13001 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -1308,18 +1290,18 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_13012"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_13013 #제1 연합공수군
 		icon = GFX_focus_generic_paratrooper
 		cost = 5
 		text_icon = Commonwealth_IMA_IML_style
-	
+
 		x = 0
 		y = 1
 		relative_position_id = IMA_shared_13012
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_13012 }
 		available = {
 			OR = {
@@ -1343,19 +1325,19 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_13013"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_13022 #연합 해병대 사령부
 		icon = GFX_goal_generic_amphibious_assault
 
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_13001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_13001 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -1366,18 +1348,18 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_13022"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_13023 #갈리폴리의 반성
 		icon = GFX_focus_generic_naval_invasion_tank
 		cost = 5
 		text_icon = Commonwealth_ICG_ISC_style
-	
+
 		x = 0
 		y = 1
 		relative_position_id = IMA_shared_13022
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_13022 }
 		available = {
 			OR = {
@@ -1401,18 +1383,18 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_13023"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_14002 #합동 작전 훈련
 		icon = GFX_focus_ioi_generic_combined_arms_training_infantry_armor
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_14001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_14001 }
 		available = { commomwealth_joined = yes }
 		joint_trigger = { commomwealth_joined = yes }
@@ -1437,7 +1419,7 @@
 			}
 		}
 
-		completion_reward_joint_member = { 
+		completion_reward_joint_member = {
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_commonwealth
@@ -1452,20 +1434,20 @@
 			}
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_14003 #합동 기동 훈련
 		icon = GFX_focus_generic_tankette
 		cost = 5
 		text_icon = Commonwealth_ICG_IML_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_14001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_14001 }
-		available = { 
+		available = {
 			OR = {
 				AND = {
 					original_tag = ICG
@@ -1490,22 +1472,22 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14003"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_14004 #제15 집단군
 		icon = GFX_focus_ioi_generic_mass_concentration_of_army
 		cost = 5
 		text_icon = Commonwealth_IMA_style
-	
+
 		x = 0
 		y = 1
 		relative_position_id = IMA_shared_14002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_14002 }
-		available = { 
+		available = {
 			original_tag = IMA
-			IMA = { 
+			IMA = {
 				commomwealth_joined = yes
 				has_army_size = {
 					size > 35
@@ -1525,18 +1507,18 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14004"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_14005 #연합 기갑군
 		icon = GFX_focus_generic_tank_assault
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 0
 		y = 1
 		relative_position_id = IMA_shared_14003
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_14003 }
 		available = {
 			any_country = {
@@ -1553,21 +1535,21 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_14005"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_14006 #통합 모병
 		icon = GFX_focus_generic_full_social_mobilization
 		cost = 5
 		text_icon = Commonwealth_IML_ISM_style
-	
+
 		x = 1
 		y = 2
 		relative_position_id = IMA_shared_14002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_14004 }
 		prerequisite = { focus = IMA_shared_14005 }
-		available = { 
+		available = {
 			OR = {
 				AND = {
 					original_tag = IML
@@ -1595,37 +1577,37 @@
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_commonwealth
 			}
-			add_to_variable = { 
+			add_to_variable = {
 				IMA_commonwealth_conscription_factor = 0.10
 				tooltip = conscription_factor_tt
 			}
 		}
 
-		completion_reward_joint_member = { 
+		completion_reward_joint_member = {
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_commonwealth
 			}
-			add_to_variable = { 
+			add_to_variable = {
 				IMA_commonwealth_conscription_factor = 0.05
 				tooltip = conscription_factor_tt
 			}
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_14007 #커먼웰스 기갑 생산위원회
 		icon = GFX_focus_generic_tank_production
 		cost = 5
 		text_icon = Commonwealth_IML_style
-	
+
 		x = 3
 		y = 2
 		relative_position_id = IMA_shared_14002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_14005 }
-		available = { 
+		available = {
 			original_tag = IML
 			IML = { commomwealth_joined = yes }
 		}
@@ -1657,7 +1639,7 @@
 			}
 		}
 
-		completion_reward_joint_member = { 
+		completion_reward_joint_member = {
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = IMA_commonwealth
@@ -1681,12 +1663,12 @@
 		icon = GFX_focus_IMA_shared_20001
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_00001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_00001 focus = IMA_shared_00002 focus = IMA_shared_00003 focus = IMA_shared_00004 focus = IMA_shared_00005 focus = IMA_shared_00006 focus = IMA_shared_00007 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -1713,15 +1695,15 @@
 		icon = GFX_focus_generic_secret_service_agency
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_20001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_20001 }
-		available = { 
-			commomwealth_joined = yes 
+		available = {
+			commomwealth_joined = yes
 			is_cryptology_department_active = yes
 		}
 		joint_trigger = { commomwealth_joined = yes }
@@ -1771,7 +1753,7 @@
 					has_intelligence_agency = no
 				}
 				create_intelligence_agency = yes
-			}		
+			}
 		}
 	}
 
@@ -1780,12 +1762,12 @@
 		icon = GFX_focus_ioi_generic_agency
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_20001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_20001 }
 		available = { commomwealth_joined = yes }
 		joint_trigger = { commomwealth_joined = yes }
@@ -1809,15 +1791,15 @@
 		icon = GFX_focus_POL_complete_april_constitution
 		cost = 5
 		text_icon = Commonwealth_IMA_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_20002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_20002 }
 		prerequisite = { focus = IMA_shared_20003 }
-		available = { 
+		available = {
 			original_tag = IMA
 			IMA = { commomwealth_joined = yes }
 		}
@@ -1831,18 +1813,18 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_20004"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_30001 #커먼웰스 경제협력
 		icon = GFX_focus_IMA_shared_30001
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 5
 		y = 1
 		relative_position_id = IMA_shared_00001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_00001 focus = IMA_shared_00002 focus = IMA_shared_00003 focus = IMA_shared_00004 focus = IMA_shared_00005 focus = IMA_shared_00006 focus = IMA_shared_00007 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -1853,18 +1835,18 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_30001"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_31001 #커먼웰스 산업발전 기금
 		icon = GFX_focus_IMA_shared_31001
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_30001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_30001 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -1875,18 +1857,18 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_31001"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_32001 #커먼웰스 경제개발위원회
 		icon = GFX_focus_IMA_shared_32001
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_30001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_30001 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -1897,18 +1879,18 @@
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_32001"
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_31002 #제조업 지원
 		icon = GFX_goal_generic_production2
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_31001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_31001 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -1925,12 +1907,12 @@
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_32001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_31001 }
 		prerequisite = { focus = IMA_shared_32001 }
 		joint_trigger = {
@@ -1962,12 +1944,12 @@
 		icon = GFX_focus_IMA_shared_32002
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_32001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_32001 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -1984,12 +1966,12 @@
 		icon = GFX_focus_generic_low_cost_housing
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_31002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_31002 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -2006,12 +1988,12 @@
 		icon = GFX_focus_generic_road_investment
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_31003
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_31002 }
 		prerequisite = { focus = IMA_shared_31003 }
 		joint_trigger = {
@@ -2029,12 +2011,12 @@
 		icon = GFX_focus_generic_mining_industry
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_31003
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_31003 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -2051,12 +2033,12 @@
 		icon = GFX_focus_SWE_radiotjanst
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 0
 		y = 1
 		relative_position_id = IMA_shared_31004
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_31004 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -2073,12 +2055,12 @@
 		icon = GFX_focus_generic_railroad
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 0
 		y = 1
 		relative_position_id = IMA_shared_31005
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_31005 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -2095,12 +2077,12 @@
 		icon = GFX_focus_generic_steel
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 0
 		y = 1
 		relative_position_id = IMA_shared_31006
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_31006 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -2117,12 +2099,12 @@
 		icon = GFX_focus_generic_air_bases
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_31008
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_31008 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -2139,12 +2121,12 @@
 		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_31008
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_31008 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -2161,12 +2143,12 @@
 		icon = GFX_focus_ioi_generic_design_equipment_standards
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 5
 		y = 1
 		relative_position_id = IMA_shared_30001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_30001 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -2183,12 +2165,12 @@
 		icon = GFX_focus_ioi_generic_national_academy_of_sciences_2
 		text_icon = joint_focus_style
 		cost = 5
-	
+
 		x = 13
 		y = 1
 		relative_position_id = IMA_shared_00001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		available = {
 			commomwealth_joined = yes
 		}
@@ -2201,7 +2183,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_40001"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2216,12 +2198,12 @@
 		icon = GFX_focus_ioi_generic_research_craft_machine
 		text_icon = joint_focus_style
 		cost = 5
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_40001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_40001 }
 		available = {
 			commomwealth_joined = yes
@@ -2235,7 +2217,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_41001"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2250,12 +2232,12 @@
 		icon = GFX_focus_ioi_generic_ration
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_33001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_32001 }
 		prerequisite = { focus = IMA_shared_33001 }
 		prerequisite = { focus = IMA_shared_41001 }
@@ -2267,7 +2249,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_33002"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2282,12 +2264,12 @@
 		icon = GFX_focus_ioi_generic_heavy_industry
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_33002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_31003 }
 		prerequisite = { focus = IMA_shared_32002 }
 		prerequisite = { focus = IMA_shared_33002 }
@@ -2299,7 +2281,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_33003"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2314,12 +2296,12 @@
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_33002
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_31003 }
 		prerequisite = { focus = IMA_shared_32002 }
 		prerequisite = { focus = IMA_shared_33002 }
@@ -2331,7 +2313,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_33004"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2346,12 +2328,12 @@
 		icon = GFX_focus_ioi_generic_factory_complex
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_33003
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_33003 }
 		prerequisite = { focus = IMA_shared_33004 }
 		joint_trigger = {
@@ -2362,7 +2344,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_33005"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2377,12 +2359,12 @@
 		icon = GFX_focus_ioi_generic_upgrade_supplies
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_41001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_41001 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -2392,7 +2374,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_41002"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2407,12 +2389,12 @@
 		icon = GFX_focus_IMA_shared_42001
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_40001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_40001 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -2422,7 +2404,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42001"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2441,10 +2423,10 @@
 		x = 0
 		y = 1
 		relative_position_id = IMA_shared_42001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_42001 }
-		available = { 
+		available = {
 			OR = {
 				AND = {
 					original_tag = IMA
@@ -2465,7 +2447,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42002"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2480,14 +2462,14 @@
 		icon = GFX_focus_ioi_generic_research_army
 		cost = 5
 		text_icon = Commonwealth_ICG_IML_style
-	
+
 		x = 2
 		y = 1
 		relative_position_id = IMA_shared_42001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_42001 }
-		available = { 
+		available = {
 			OR = {
 				AND = {
 					original_tag = ICG
@@ -2508,7 +2490,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42003"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2517,20 +2499,20 @@
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_42004 #합동 함선연구
 		icon = GFX_focus_ioi_generic_research_navy
 		cost = 5
 		text_icon = Commonwealth_IMA_ICG_style
-	
+
 		x = 4
 		y = 1
 		relative_position_id = IMA_shared_42001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_42001 }
-		available = { 
+		available = {
 			OR = {
 				AND = {
 					original_tag = IMA
@@ -2551,7 +2533,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42004"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2560,18 +2542,18 @@
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_42005 #합동 산업연구
 		icon = GFX_focus_ioi_generic_research_industry
 		cost = 5
 		text_icon = joint_focus_style
-	
+
 		x = 6
 		y = 1
 		relative_position_id = IMA_shared_42001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_42001 }
 		joint_trigger = {
 			commomwealth_joined = yes
@@ -2581,7 +2563,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_44505"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2596,15 +2578,15 @@
 		icon = GFX_focus_generic_university_3
 		cost = 5
 		text_icon = Commonwealth_IMA_ICG_IML_style
-	
+
 		x = -1
 		y = 2
 		relative_position_id = IMA_shared_42001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_41001 }
 		prerequisite = { focus = IMA_shared_42001 }
-		available = { 
+		available = {
 			OR = {
 				AND = {
 					original_tag = IMA
@@ -2647,28 +2629,28 @@
 			hidden_effect = {
 				if = {
 					limit = { IMA = { commomwealth_joined = yes } }
-					IMA = { 
-						set_country_flag = IAS_installed 
+					IMA = {
+						set_country_flag = IAS_installed
 						add_ideas = institute_for_advanced_study
 					}
 				}
 				if = {
 					limit = { ICG = { commomwealth_joined = yes } }
-					ICG = { 
-						set_country_flag = IAS_installed 
+					ICG = {
+						set_country_flag = IAS_installed
 						add_ideas = institute_for_advanced_study
 					}
 				}
 				if = {
 					limit = { IML = { commomwealth_joined = yes } }
-					IML = { 
-						set_country_flag = IAS_installed 
+					IML = {
+						set_country_flag = IAS_installed
 						add_ideas = institute_for_advanced_study
 					}
 				}
 			}
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2687,10 +2669,10 @@
 		x = -1
 		y = 1
 		relative_position_id = IMA_shared_43001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_43001 }
-		available = { 
+		available = {
 			OR = {
 				AND = {
 					original_tag = IMA
@@ -2717,7 +2699,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42002"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2732,14 +2714,14 @@
 		icon = GFX_focus_rocketry
 		cost = 5
 		text_icon = Commonwealth_IMA_ICG_IML_style
-	
+
 		x = 1
 		y = 1
 		relative_position_id = IMA_shared_43001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_43001 }
-		available = { 
+		available = {
 			OR = {
 				AND = {
 					original_tag = IMA
@@ -2766,7 +2748,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42003"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
@@ -2775,20 +2757,20 @@
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}
 	}
-	
+
 	joint_focus = {
 		id = IMA_shared_43004 #레이더 연구
 		icon = GFX_goal_generic_radar
 		cost = 5
 		text_icon = Commonwealth_IMA_ICG_IML_style
-	
+
 		x = 3
 		y = 1
 		relative_position_id = IMA_shared_43001
-	
-		ai_will_do = { factor = 50 } 
+
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_shared_43001 }
-		available = { 
+		available = {
 			OR = {
 				AND = {
 					original_tag = IMA
@@ -2815,7 +2797,7 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus IMA_shared_42004"
 		}
-		
+
 		completion_reward_joint_originator = {
 			add_to_tech_sharing_group = Idolmaster_commonwealth_research_tech_sharing
 		}

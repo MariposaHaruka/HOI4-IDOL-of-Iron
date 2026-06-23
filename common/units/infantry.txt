@@ -8,7 +8,7 @@ sub_units = {
 		abbreviation = "INF"
 		sprite = infantry
 		map_icon_category = infantry
-		
+
 		priority = 600
 		ai_priority = 200
 		active = no
@@ -16,12 +16,12 @@ sub_units = {
 		type = {
 			infantry
 		}
-		
-		#can_exfiltrate_from_coast = yes #Can this subunit board convoys from a non-port location. 
+
+		#can_exfiltrate_from_coast = yes #Can this subunit board convoys from a non-port location.
 		#Intended for use with special forces marine templates; all non-support subunits in the division must have this flag set to yes
-		
+
 		group = infantry
-		
+
 		categories = {
 			category_front_line
 			category_light_infantry
@@ -29,9 +29,9 @@ sub_units = {
 			category_army
 			category_infantry_and_bicycle
 		}
-		
+
 		combat_width = 2
-		
+
 		#Size Definitions
 		max_strength = 25
 		max_organisation = 60
@@ -42,9 +42,9 @@ sub_units = {
 		training_time = 90
 		suppression = 1.5
 		weight = 0.5
-		
+
 		supply_consumption = 0.06
-	
+
 		need = {
 			infantry_equipment = 100
 		}
@@ -54,7 +54,7 @@ sub_units = {
 		abbreviation = "BIC"
 		sprite = bicycle
 		map_icon_category = infantry
-		
+
 		priority = 600
 		ai_priority = 150
 		active = no
@@ -62,9 +62,9 @@ sub_units = {
 		type = {
 			infantry
 		}
-		
+
 		group = infantry
-		
+
 		categories = {
 			category_front_line
 			category_light_infantry
@@ -72,9 +72,9 @@ sub_units = {
 			category_army
 			category_infantry_and_bicycle
 		}
-		
+
 		combat_width = 2
-		
+
 		#Size Definitions
 		max_strength = 25
 		max_organisation = 60
@@ -86,12 +86,12 @@ sub_units = {
 		training_time = 90
 		suppression = 2
 		weight = 0.5
-		
+
 		supply_consumption = 0.06
-	
+
 		need = {
 			infantry_equipment = 100
-			support_equipment = 10			
+			support_equipment = 10
 		}
 
 		forest = {
@@ -130,7 +130,7 @@ sub_units = {
 	#	abbreviation = "MOB"
 	#	sprite = motorized_bicycle
 	#	map_icon_category = infantry
-	#	
+	#
 	#	priority = 600
 	#	ai_priority = 150
 	#	active = no
@@ -138,9 +138,9 @@ sub_units = {
 	#	type = {
 	#		infantry
 	#	}
-	#	
+	#
 	#	group = infantry
-	#	
+	#
 	#	categories = {
 	#		category_front_line
 	#		category_light_infantry
@@ -148,9 +148,9 @@ sub_units = {
 	#		category_army
 	#		category_infantry_and_bicycle
 	#	}
-	#	
+	#
 	#	combat_width = 2
-	#	
+	#
 	#	#Size Definitions
 	#	max_strength = 25
 	#	max_organisation = 60
@@ -162,13 +162,13 @@ sub_units = {
 	#	training_time = 90
 	#	suppression = 2
 	#	weight = 0.5
-	#	
+	#
 	#	supply_consumption = 0.06
 	#
 	#	need = {
 	#		infantry_equipment = 100
 	#		support_equipment = 10
-	#		motorbike_equipment = 20			
+	#		motorbike_equipment = 20
 	#	}
 	#
 	#	forest = {
@@ -199,14 +199,14 @@ sub_units = {
 	#		movement = -0.05
 	#	}
 	#}
-	
+
 	marine = {
 		abbreviation = "MRN"
 		sprite = infantry
 		map_icon_category = infantry
 		special_forces = yes
 		marines = yes
-		
+
 		priority = 601
 		ai_priority = 200
 		active = no
@@ -214,9 +214,9 @@ sub_units = {
 		type = {
 			infantry
 		}
-		
+
 		group = infantry
-		
+
 		categories = {
 			category_front_line
 			category_light_infantry
@@ -225,10 +225,11 @@ sub_units = {
 			category_special_forces
 			category_marines
 			category_special_forces_leg_infantry
+			category_marines_and_amphibious
 		}
-		
+
 		combat_width = 2
-		
+
 		#Size Definitions
 		max_strength = 20
 		max_organisation = 70
@@ -241,7 +242,7 @@ sub_units = {
 		weight = 0.5
 		supply_consumption = 0.05
 		breakthrough = 0.3
-	
+
 		need = {
 			infantry_equipment = 150
 		}
@@ -264,7 +265,7 @@ sub_units = {
 		special_forces = yes
 		marines = yes
 		can_exfiltrate_from_coast = yes
-		
+
 		priority = 601
 		ai_priority = 200
 		active = no
@@ -272,9 +273,9 @@ sub_units = {
 		type = {
 			infantry
 		}
-		
+
 		group = infantry
-		
+
 		categories = {
 			category_front_line
 			category_light_infantry
@@ -283,10 +284,11 @@ sub_units = {
 			category_special_forces
 			category_marines
 			category_special_forces_leg_infantry
+			category_marines_and_amphibious
 		}
-		
+
 		combat_width = 2
-		
+
 		#Size Definitions
 		max_strength = 20
 		max_organisation = 70
@@ -299,7 +301,7 @@ sub_units = {
 		weight = 0.5
 		supply_consumption = 0.05
 		breakthrough = 0.3
-	
+
 		need = {
 			infantry_equipment = 150
 		}
@@ -314,7 +316,7 @@ sub_units = {
 			attack = 0.5
 		}
 	}
-	
+
 	mountaineers = {
 		abbreviation = "MTN"
 		sprite = infantry
@@ -329,9 +331,9 @@ sub_units = {
 		type = {
 			infantry
 		}
-		
+
 		group = infantry
-		
+
 		categories = {
 			category_front_line
 			category_light_infantry
@@ -341,9 +343,9 @@ sub_units = {
 			category_mountaineers
 			category_special_forces_leg_infantry
 		}
-		
+
 		combat_width = 2
-		
+
 		#Size Definitions
 		max_strength = 20
 		max_organisation = 70
@@ -354,10 +356,10 @@ sub_units = {
 		training_time = 120
 		suppression = 1
 		weight = 0.5
-		
+
 		supply_consumption = 0.05
 		breakthrough = 0.3
-	
+
 		need = {
 			infantry_equipment = 140
 		}
@@ -380,7 +382,7 @@ sub_units = {
 		map_icon_category = infantry
 		special_forces = yes
 		rangers = yes
-		
+
 		priority = 601
 		ai_priority = 200
 		active = no
@@ -445,9 +447,9 @@ sub_units = {
 		type = {
 			infantry
 		}
-		
+
 		group = infantry
-		
+
 		categories = {
 			category_front_line
 			category_light_infantry
@@ -457,9 +459,9 @@ sub_units = {
 			category_paratroopers
 			category_special_forces_leg_infantry
 		}
-		
+
 		combat_width = 2
-		
+
 		#Size Definitions
 		max_strength = 22
 		max_organisation = 70
@@ -473,7 +475,7 @@ sub_units = {
 		supply_consumption = 0.05
 
 		can_be_parachuted = yes
-	
+
 		need = {
 			infantry_equipment = 130
 		}
@@ -491,9 +493,9 @@ sub_units = {
 		type = {
 			motorized
 		}
-		
+
 		group = mobile
-		
+
 		categories = {
 			category_front_line
 			category_all_infantry
@@ -501,9 +503,9 @@ sub_units = {
 			category_vehicle_infantry
 			category_mobile_and_mobile_combat_sup
 		}
-		
+
 		combat_width = 2
-		
+
 		#Size Definitions
 		max_strength = 25
 		max_organisation = 60
@@ -515,10 +517,10 @@ sub_units = {
 		suppression = 2.2
 		weight = 0.75
 		supply_consumption = 0.065
-	
+
 		# this is what moves us and sets speed
 		transport = motorized_equipment
-	
+
 		need = {
 			infantry_equipment = 100
 			motorized_equipment = 35
@@ -563,9 +565,9 @@ sub_units = {
 		type = {
 			mechanized
 		}
-		
+
 		group = mobile
-		
+
 		categories = {
 			category_front_line
 			category_all_infantry
@@ -579,7 +581,7 @@ sub_units = {
 		#Offensive Abilities
 		soft_attack = 0.1
 		hard_attack = 4.0
-		
+
 		#Size Definitions
 		max_strength = 30
 		max_organisation = 60
@@ -590,9 +592,9 @@ sub_units = {
 		training_time = 120
 		suppression = 2
 		weight = 1
-		
+
 		supply_consumption = 0.14
-		
+
 		# needed since we give so much bonus to infantry even with no mech equipment
 		essential = {
 			infantry_equipment
@@ -633,11 +635,11 @@ sub_units = {
 
 		#hardness = 0.2 moving these buffs to unit stats
 	}
-	
+
 	fake_intel_unit = {
 		sprite = infantry
 		map_icon_category = infantry
-		
+
 		priority = 0
 		ai_priority = 0
 		active = no
@@ -645,18 +647,18 @@ sub_units = {
 		type = {
 			infantry
 		}
-		
+
 		group = infantry
-		
+
 		categories = {
 			category_front_line
 			category_light_infantry
 			category_all_infantry
 			category_army
 		}
-		
+
 		combat_width = 1
-		
+
 		#Size Definitions
 		max_strength = 1
 		max_organisation = 100
@@ -667,9 +669,9 @@ sub_units = {
 		training_time = 90
 		suppression = 1
 		weight = 0.5
-		
+
 		supply_consumption = 0.0
-	
+
 		need = {
 			infantry_equipment = 1
 		}
@@ -679,7 +681,7 @@ sub_units = {
 		abbreviation = "PEN"
 		sprite = infantry
 		map_icon_category = infantry
-		
+
 		priority = 400 #600
 		ai_priority = 150 #200
 		active = no
@@ -687,18 +689,18 @@ sub_units = {
 		type = {
 			infantry
 		}
-		
+
 		group = infantry
-		
+
 		categories = {
 			category_front_line
 			category_light_infantry
 			category_all_infantry
 			category_army
 		}
-		
+
 		combat_width = 2
-		
+
 		#Size Definitions
 		max_strength = 15 #25 (HP)
 		max_organisation = 70 #60 -> Lower HP but higher Org: They should keep fighting longer
@@ -709,11 +711,11 @@ sub_units = {
 		training_time = 50 #90 -> Already trained
 		suppression = 0.5 #1.5 -> Not for suppression roles
 		weight = 0.5
-		
+
 		supply_consumption = 0.05 #0.07 -> Don't need that much supply, and they have lower HP
-	
+
 		need = {
-			infantry_equipment = 85 #100 -> Same ratio as regular Infantry			
+			infantry_equipment = 85 #100 -> Same ratio as regular Infantry
 		}
 	}
 
@@ -721,7 +723,7 @@ sub_units = {
 		abbreviation = "IRR"
 		sprite = infantry
 		map_icon_category = infantry
-		
+
 		priority = 400
 		ai_priority = 150
 		active = no
@@ -729,18 +731,18 @@ sub_units = {
 		type = {
 			infantry
 		}
-		
+
 		group = infantry
-		
+
 		categories = {
 			category_front_line
 			category_light_infantry
 			category_all_infantry
 			category_army
 		}
-		
+
 		combat_width = 2
-		
+
 		#Size Definitions
 		max_strength = 30 # reg inf 25
 		max_organisation = 45 # reg inf 60
@@ -751,36 +753,36 @@ sub_units = {
 		training_time = 30 # was 75  # reg inf 90
 		suppression = 1.5 # reg inf 1.5
 		weight = 0.5
-		
+
 		supply_consumption = 0.04 # reg inf  0.06
 
-		# generally not as drilled in modern warfare as regular troops 
+		# generally not as drilled in modern warfare as regular troops
 		soft_attack = -0.05
-		# breakthrough = -0.1  
-		defense = -0.15 # was -0.25 
+		# breakthrough = -0.1
+		defense = -0.15 # was -0.25
 
 		# Terrain bonuses
 		# Attack bonuses higher as they thought defending was dishonourable
 		hills = {
-			attack = 0.15 # was 0.1 
+			attack = 0.15 # was 0.1
 			defence = 0.05
 		}
 		forest = {
-			attack = 0.15 # was 0.1 
+			attack = 0.15 # was 0.1
 			defence = 0.05
 		}
 		mountain = {
-			attack = 0.15 # was 0.1 
+			attack = 0.15 # was 0.1
 			defence = 0.05
 		}
 		desert = {
-			attack = 0.25 # was 0.1 
-			defence = 0.10	
+			attack = 0.25 # was 0.1
+			defence = 0.10
 		}
-		
-		
+
+
 		need = {
-			infantry_equipment = 80 # was 100 
+			infantry_equipment = 80 # was 100
 		}
 	}
 
@@ -788,7 +790,7 @@ sub_units = {
 		abbreviation = "MIL"
 		sprite = infantry
 		map_icon_category = infantry
-		
+
 		priority = 400
 		ai_priority = 150
 		active = no
@@ -796,9 +798,9 @@ sub_units = {
 		type = {
 			infantry
 		}
-		
+
 		group = infantry
-		
+
 		categories = {
 			category_front_line
 			category_light_infantry
@@ -806,9 +808,9 @@ sub_units = {
 			category_army
 			category_militia
 		}
-		
+
 		combat_width = 2
-		
+
 		#Size Definitions
 		max_strength = 25
 		max_organisation = 50 #reg infantry 60
@@ -819,9 +821,9 @@ sub_units = {
 		training_time = 80 #reg infantry 90
 		suppression = 1.5
 		weight = 0.5
-		
+
 		supply_consumption = 0.06
-	
+
 		need = {
 			infantry_equipment = 100
 		}

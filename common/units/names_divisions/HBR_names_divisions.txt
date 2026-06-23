@@ -1,5 +1,5 @@
 ﻿HBR_INF_01 = {
-	name = "Infantry Divisions"
+	name = "Royal Seraph Divisions"
 
 	for_countries = { HBR }
 
@@ -10,63 +10,64 @@
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { HBR_GAR_01 }
 
-	fallback_name = "%dth Infantry Division"
+	fallback_name = "%dth Royal Seraph Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "%dst Infantry Division" }
-		2 = { "%dnd Infantry Division" }
-		3 = { "%drd Infantry Division" }
-		4 = { "%dth Infantry Division" }
-		6 = { "%dth Infantry Division" }
-		7 = { "%dth Infantry Division" }
-		8 = { "%dth Infantry Division" }
-		9 = { "%dth Infantry Division" }
-		10 = { "%dth Infantry Division" }
-		11 = { "%dth Infantry Division" }
-		12 = { "%dth Infantry Division" }
-		13 = { "%dth Infantry Division" }
-		14 = { "%dth Infantry Division" }
-		15 = { "%dth Infantry Division" }
-		16 = { "%dth Infantry Division" }
-		17 = { "%dth Infantry Division" }
-		18 = { "%dth Infantry Division" }
-		19 = { "%dth Infantry Division" }
-		20 = { "%dth Infantry Division" }
-		21 = { "%dst Infantry Division" }
-		22 = { "%dnd Infantry Division" }
-		23 = { "%drd Infantry Division" }
-		24 = { "%dth Infantry Division" }
-		25 = { "%dth Infantry Division" }
-		26 = { "%dth Infantry Division" }
-		27 = { "%dth Infantry Division" }
-		28 = { "%dth Infantry Division" }
-		29 = { "%dth Infantry Division" }
-		30 = { "%dth Infantry Division" }
-		31 = { "%dst Infantry Division" }
-		32 = { "%dnd Infantry Division" }
-		33 = { "%drd Infantry Division" }
-		34 = { "%dth Infantry Division" }
-		35 = { "%dth Infantry Division" }
-		36 = { "%dth Infantry Division" }
-		37 = { "%dth Infantry Division" }
-		38 = { "%dth Infantry Division" }
-		39 = { "%dth Infantry Division" }
-		40 = { "%dth Infantry Division" }
-		41 = { "%dst Infantry Division" }
-		42 = { "%dnd Infantry Division" }
-		43 = { "%drd Infantry Division" }
-		44 = { "%dth Infantry Division" }
-		45 = { "%dth Infantry Division" }
-		46 = { "%dth Infantry Division" }
-		47 = { "%dth Infantry Division" }
-		48 = { "%dth Infantry Division" }
-		49 = { "%dth Infantry Division" }
-		50 = { "%dth Infantry Division" }
-		51 = { "%dst Infantry Division" }
-		52 = { "%dnd Infantry Division" }
-		53 = { "%drd Infantry Division" }
+		1 = { "%dst Royal Seraph Division" }
+		2 = { "%dnd Royal Seraph Division" }
+		3 = { "%drd Royal Seraph Division" }
+		4 = { "Ubon Division" }
+		5 = { "Surin Division" }
+		6 = { "Phayap Division" }
+		7 = { "Lopburi Division" }
+		8 = { "Vadhana Division" }
+		9 = { "Phra Nakhon Division" }
+		10 = { "%dth Royal Seraph Division" }
+		11 = { "%dth Royal Seraph Division" }
+		12 = { "%dth Royal Seraph Division" }
+		13 = { "%dth Royal Seraph Division" }
+		14 = { "%dth Royal Seraph Division" }
+		15 = { "%dth Royal Seraph Division" }
+		16 = { "%dth Royal Seraph Division" }
+		17 = { "%dth Royal Seraph Division" }
+		18 = { "%dth Royal Seraph Division" }
+		19 = { "%dth Royal Seraph Division" }
+		20 = { "%dth Royal Seraph Division" }
+		21 = { "%dst Royal Seraph Division" }
+		22 = { "%dnd Royal Seraph Division" }
+		23 = { "%drd Royal Seraph Division" }
+		24 = { "%dth Royal Seraph Division" }
+		25 = { "%dth Royal Seraph Division" }
+		26 = { "%dth Royal Seraph Division" }
+		27 = { "%dth Royal Seraph Division" }
+		28 = { "%dth Royal Seraph Division" }
+		29 = { "%dth Royal Seraph Division" }
+		30 = { "%dth Royal Seraph Division" }
+		31 = { "%dst Royal Seraph Division" }
+		32 = { "%dnd Royal Seraph Division" }
+		33 = { "%drd Royal Seraph Division" }
+		34 = { "%dth Royal Seraph Division" }
+		35 = { "%dth Royal Seraph Division" }
+		36 = { "%dth Royal Seraph Division" }
+		37 = { "%dth Royal Seraph Division" }
+		38 = { "%dth Royal Seraph Division" }
+		39 = { "%dth Royal Seraph Division" }
+		40 = { "%dth Royal Seraph Division" }
+		41 = { "%dst Royal Seraph Division" }
+		42 = { "%dnd Royal Seraph Division" }
+		43 = { "%drd Royal Seraph Division" }
+		44 = { "%dth Royal Seraph Division" }
+		45 = { "%dth Royal Seraph Division" }
+		46 = { "%dth Royal Seraph Division" }
+		47 = { "%dth Royal Seraph Division" }
+		48 = { "%dth Royal Seraph Division" }
+		49 = { "%dth Royal Seraph Division" }
+		50 = { "%dth Royal Seraph Division" }
+		51 = { "%dst Royal Seraph Division" }
+		52 = { "%dnd Royal Seraph Division" }
+		53 = { "%drd Royal Seraph Division" }
 
 	}
 }
@@ -85,7 +86,7 @@ HBR_CAV_01 = {
 
 	fallback_name = "%dth Seraph Cavalry"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Seraph Cavalry" }
@@ -158,7 +159,7 @@ HBR_MOT_01 = {
 
 	fallback_name = "%dth Seraph Infantry Motordiv."
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Seraph Infantry Motordiv." }
@@ -202,7 +203,7 @@ HBR_ARM_01 = {
 
 	fallback_name = "%dth Seraph Tank Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Seraph Tank Division" }
@@ -246,7 +247,7 @@ HBR_MEC_01 = {
 
 	fallback_name = "%dth Seraph Mechanized Div."
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Seraph Mechanized Div." }
@@ -288,63 +289,63 @@ HBR_GAR_01 = {
 	# Number reservation system will tie to another group.
 	link_numbering_with = { HBR_INF_01 }
 
-	fallback_name = "%dth Infantry Division"
+	fallback_name = "%dth Royal Seraph Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "%dst Infantry Division" }
-		2 = { "%dnd Infantry Division" }
-		3 = { "%drd Infantry Division" }
-		4 = { "%dth Infantry Division" }
-		6 = { "%dth Infantry Division" }
-		7 = { "%dth Infantry Division" }
-		8 = { "%dth Infantry Division" }
-		9 = { "%dth Infantry Division" }
-		10 = { "%dth Infantry Division" }
-		11 = { "%dth Infantry Division" }
-		12 = { "%dth Infantry Division" }
-		13 = { "%dth Infantry Division" }
-		14 = { "%dth Infantry Division" }
-		15 = { "%dth Infantry Division" }
-		16 = { "%dth Infantry Division" }
-		17 = { "%dth Infantry Division" }
-		18 = { "%dth Infantry Division" }
-		19 = { "%dth Infantry Division" }
-		20 = { "%dth Infantry Division" }
-		21 = { "%dst Infantry Division" }
-		22 = { "%dnd Infantry Division" }
-		23 = { "%drd Infantry Division" }
-		24 = { "%dth Infantry Division" }
-		25 = { "%dth Infantry Division" }
-		26 = { "%dth Infantry Division" }
-		27 = { "%dth Infantry Division" }
-		28 = { "%dth Infantry Division" }
-		29 = { "%dth Infantry Division" }
-		30 = { "%dth Infantry Division" }
-		31 = { "%dst Infantry Division" }
-		32 = { "%dnd Infantry Division" }
-		33 = { "%drd Infantry Division" }
-		34 = { "%dth Infantry Division" }
-		35 = { "%dth Infantry Division" }
-		36 = { "%dth Infantry Division" }
-		37 = { "%dth Infantry Division" }
-		38 = { "%dth Infantry Division" }
-		39 = { "%dth Infantry Division" }
-		40 = { "%dth Infantry Division" }
-		41 = { "%dst Infantry Division" }
-		42 = { "%dnd Infantry Division" }
-		43 = { "%drd Infantry Division" }
-		44 = { "%dth Infantry Division" }
-		45 = { "%dth Infantry Division" }
-		46 = { "%dth Infantry Division" }
-		47 = { "%dth Infantry Division" }
-		48 = { "%dth Infantry Division" }
-		49 = { "%dth Infantry Division" }
-		50 = { "%dth Infantry Division" }
-		51 = { "%dst Infantry Division" }
-		52 = { "%dnd Infantry Division" }
-		53 = { "%drd Infantry Division" }
+		1 = { "%dst Royal Seraph Division" }
+		2 = { "%dnd Royal Seraph Division" }
+		3 = { "%drd Royal Seraph Division" }
+		4 = { "%dth Royal Seraph Division" }
+		6 = { "%dth Royal Seraph Division" }
+		7 = { "%dth Royal Seraph Division" }
+		8 = { "%dth Royal Seraph Division" }
+		9 = { "%dth Royal Seraph Division" }
+		10 = { "%dth Royal Seraph Division" }
+		11 = { "%dth Royal Seraph Division" }
+		12 = { "%dth Royal Seraph Division" }
+		13 = { "%dth Royal Seraph Division" }
+		14 = { "%dth Royal Seraph Division" }
+		15 = { "%dth Royal Seraph Division" }
+		16 = { "%dth Royal Seraph Division" }
+		17 = { "%dth Royal Seraph Division" }
+		18 = { "%dth Royal Seraph Division" }
+		19 = { "%dth Royal Seraph Division" }
+		20 = { "%dth Royal Seraph Division" }
+		21 = { "%dst Royal Seraph Division" }
+		22 = { "%dnd Royal Seraph Division" }
+		23 = { "%drd Royal Seraph Division" }
+		24 = { "%dth Royal Seraph Division" }
+		25 = { "%dth Royal Seraph Division" }
+		26 = { "%dth Royal Seraph Division" }
+		27 = { "%dth Royal Seraph Division" }
+		28 = { "%dth Royal Seraph Division" }
+		29 = { "%dth Royal Seraph Division" }
+		30 = { "%dth Royal Seraph Division" }
+		31 = { "%dst Royal Seraph Division" }
+		32 = { "%dnd Royal Seraph Division" }
+		33 = { "%drd Royal Seraph Division" }
+		34 = { "%dth Royal Seraph Division" }
+		35 = { "%dth Royal Seraph Division" }
+		36 = { "%dth Royal Seraph Division" }
+		37 = { "%dth Royal Seraph Division" }
+		38 = { "%dth Royal Seraph Division" }
+		39 = { "%dth Royal Seraph Division" }
+		40 = { "%dth Royal Seraph Division" }
+		41 = { "%dst Royal Seraph Division" }
+		42 = { "%dnd Royal Seraph Division" }
+		43 = { "%drd Royal Seraph Division" }
+		44 = { "%dth Royal Seraph Division" }
+		45 = { "%dth Royal Seraph Division" }
+		46 = { "%dth Royal Seraph Division" }
+		47 = { "%dth Royal Seraph Division" }
+		48 = { "%dth Royal Seraph Division" }
+		49 = { "%dth Royal Seraph Division" }
+		50 = { "%dth Royal Seraph Division" }
+		51 = { "%dst Royal Seraph Division" }
+		52 = { "%dnd Royal Seraph Division" }
+		53 = { "%drd Royal Seraph Division" }
 
 	}
 }
@@ -363,7 +364,7 @@ HBR_MAR_01 = {
 
 	fallback_name = "%dth Seraph Marine Inf. Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Seraph Marine Inf. Division" }
@@ -407,7 +408,7 @@ HBR_MTN_01 = {
 
 	fallback_name = "%dth Seraph Monpak Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Seraph Monpak Division" }
@@ -450,7 +451,7 @@ HBR_PAR_01 = {
 
 	fallback_name = "%dth Seraph Paracommando Division"
 
-	# Names with numbers (only one number per entry). 
+	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "%dst Seraph Paracommando Division" }

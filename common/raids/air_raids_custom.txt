@@ -2291,7 +2291,7 @@ types = {
 		target_type = {
 			province = 9950
 		}
-		target_icon = GFX_facility_icon # TODO_JA: is there anything that fits better here? 
+		target_icon = GFX_facility_icon # TODO_JA: is there anything that fits better here?
 		launch_sound = raid_launch_air
 
 		arrow = {
@@ -2398,7 +2398,7 @@ types = {
 						add_timed_idea = {
 							idea = LLS_public_awareness_of_war_ns
 							days = 35
-						}	
+						}
 					}
 				}
 				actor_effects = {
@@ -2452,7 +2452,7 @@ types = {
 						add_timed_idea = {
 							idea = LLS_public_awareness_of_war_worst_ns
 							days = 140
-						}	
+						}
 					}
 				}
 				actor_effects = {
@@ -2473,7 +2473,7 @@ types = {
 		}
 	}
 
-	
+
 
 	AZU_tokyo_imperial_palace_bombing = {
 
@@ -3694,7 +3694,7 @@ types = {
 
 	LLS_pearl_harbor_strike = {
 
-		days_to_prepare = 35 
+		days_to_prepare = 35
 
 		range_factor = 14
 		unlimited_ai_range = yes
@@ -3716,6 +3716,7 @@ types = {
 
 		visible = {
 			#has_completed_focus = JAP_nanshin_ron - IOI 임시조치
+			has_country_flag = LLS_ready_to_attack_ICG
 		}
 
 		show_target = {
@@ -3731,21 +3732,23 @@ types = {
 		launchable = {
 			OR = {
 				#has_completed_focus = JAP_strike_the_southern_road - IOI 임시조치
+				has_country_flag = LLS_ready_to_attack_ICG
+
 				has_war_with = ICG
 			}
 		}
 
-		target_type = { 
-			province = 4180 
+		target_type = {
+			province = 4180
 		}
-		target_icon = GFX_naval_base_target_icon 
+		target_icon = GFX_naval_base_target_icon
 		launch_sound = raid_launch_air
 
 		arrow = {
 		    type = air
 		}
 
-		# Two separate means OR, in same means AND  
+		# Two separate means OR, in same means AND
 		unit_requirements = {
 			equipment = {
 				type = { cas }
@@ -3765,7 +3768,23 @@ types = {
 
 		success_factors = {
 			success = {
-				base = 0.85
+				base = 0.75
+
+				#completed_kido_butai_focus = {
+
+			        # MTTH block
+			    #    formula = {
+			    #       base = 0
+			    #       modifier = {
+			    #           has_completed_focus = JAP_form_the_kido_butai
+			    #           add = 1
+			    #       }
+			    #   }
+			    #
+				#    weight = 0.1
+				#    can_actor_affect = yes # If true, this modifier will be included in the list of measures the actor country can take to increase the success chance of the raid
+				#    can_target_affect = no # If true, this modifier will be included in the list of countermeasures the target country can take to decreases the success chance of the raid
+				#}
 
 				# Raiding unit modifiers
 				experience = {
@@ -3814,6 +3833,21 @@ types = {
 
 			critical = {
 				base = 0.1
+				#completed_kido_butai_focus = {
+
+				        # MTTH block
+				#        formula = {
+				#            base = 0
+				#            modifier = {
+				#                has_completed_focus = JAP_form_the_kido_butai
+				#                add = 1
+				#            }
+				#        }
+
+				#	    weight = 0.05
+				#	    can_actor_affect = yes # If true, this modifier will be included in the list of measures the actor country can take to increase the success chance of the raid
+				#	    can_target_affect = no # If true, this modifier will be included in the list of countermeasures the target country can take to decreases the success chance of the raid
+				#}
 
 			}
 		}
@@ -3828,10 +3862,10 @@ types = {
 							province = var:ROOT.target_province
 						}
 						damage_units = {
-							state = THIS 
-							limit = { tag = ICG } 
+							state = THIS
+							limit = { tag = ICG }
 							damage = 0.05
-							ratio = yes  
+							ratio = yes
 							army = no
 							navy = yes
 						}
@@ -3839,13 +3873,13 @@ types = {
 				}
 				actor_effects = {
 					raid_damage_units = {
-						plane_loss = 1 
+						plane_loss = 1
 						ratio = yes
 					}
 
 					var:actor_country = { #a failure doesn't help morale
 						add_war_support = -0.05
-						# Declare the war if it's not already happened 
+						# Declare the war if it's not already happened
 						IF = {
 							limit = {
 								NOT = {
@@ -3856,15 +3890,15 @@ types = {
 								target = ICG
 								type = take_state_focus
 								generator = { 629 }
-							}	
+							}
 						}
 					}
 					var:victim_country = {
-						
+
 						country_event = {
 							id = LLS_foreign_policy.101
 							hours = 6
-						}	
+						}
 
 					}
 				}
@@ -3883,10 +3917,10 @@ types = {
 							repair_speed_modifier = -0.05
 						}
 						damage_units = {
-							state = THIS 
-							limit = { tag = ICG } 
+							state = THIS
+							limit = { tag = ICG }
 							damage = 0.3
-							ratio = yes  
+							ratio = yes
 							army = no
 							navy = yes
 						}
@@ -3894,14 +3928,14 @@ types = {
 				}
 				actor_effects = {
 					raid_damage_units = {
-						plane_loss = 0.5 
+						plane_loss = 0.5
 						ratio = yes
 					}
 					raid_add_unit_experience = 0.1
 
 					var:actor_country = {
 						add_war_support = 0.02
-						# Declare the war if it's not already happened 
+						# Declare the war if it's not already happened
 						IF = {
 							limit = {
 								NOT = {
@@ -3912,20 +3946,20 @@ types = {
 								target = ICG
 								type = take_state_focus
 								generator = { 629 }
-							}	
+							}
 						}
 					}
 					var:victim_country = {
-						
+
 						country_event = {
 							id = LLS_foreign_policy.101
 							hours = 6
-						}	
+						}
 						set_country_flag = LLS_inflicted_loss_nr_1
 						add_timed_idea = {
-							idea = LLS_day_of_infamy_1 
+							idea = LLS_day_of_infamy_1
 							days = 180
-						}	
+						}
 
 					}
 				}
@@ -3944,10 +3978,10 @@ types = {
 							repair_speed_modifier = -0.15
 						}
 						damage_units = {
-							state = THIS 
-							limit = { tag = ICG } 
+							state = THIS
+							limit = { tag = ICG }
 							damage = 0.5
-							ratio = yes  
+							ratio = yes
 							army = no
 							navy = yes
 						}
@@ -3955,14 +3989,14 @@ types = {
 				}
 				actor_effects = {
 					raid_damage_units = {
-						plane_loss = 0.3 
+						plane_loss = 0.3
 						ratio = yes
 					}
 					raid_add_unit_experience = 0.2
 
 					var:actor_country = {
 						add_war_support = 0.05
-						# Declare the war if it's not already happened 
+						# Declare the war if it's not already happened
 						IF = {
 							limit = {
 								NOT = {
@@ -3973,20 +4007,20 @@ types = {
 								target = ICG
 								type = take_state_focus
 								generator = { 629 }
-							}	
+							}
 						}
 					}
 					var:victim_country = {
-						
+
 						country_event = {
 							id = LLS_foreign_policy.101
 							hours = 6
-						}	
+						}
 						set_country_flag = LLS_inflicted_loss_nr_2
 						add_timed_idea = {
-							idea = LLS_day_of_infamy_2 
+							idea = LLS_day_of_infamy_2
 							days = 180
-						}	
+						}
 
 					}
 				}
@@ -4005,10 +4039,10 @@ types = {
 							repair_speed_modifier = -0.25
 						}
 						damage_units = {
-							state = THIS 
-							limit = { tag = ICG } 
+							state = THIS
+							limit = { tag = ICG }
 							damage = 0.7
-							ratio = yes  
+							ratio = yes
 							army = no
 							navy = yes
 						}
@@ -4016,14 +4050,14 @@ types = {
 				}
 				actor_effects = {
 					raid_damage_units = {
-						plane_loss = 0.1 
+						plane_loss = 0.1
 						ratio = yes
 					}
 					raid_add_unit_experience = 0.35
 
 					var:actor_country = {
 						add_war_support = 0.05
-						# Declare the war if it's not already happened 
+						# Declare the war if it's not already happened
 						IF = {
 							limit = {
 								NOT = {
@@ -4034,20 +4068,20 @@ types = {
 								target = ICG
 								type = take_state_focus
 								generator = { 629 }
-							}	
+							}
 						}
 					}
 					var:victim_country = {
-						
+
 						country_event = {
 							id = LLS_foreign_policy.101
 							hours = 6
-						}	
+						}
 						set_country_flag = LLS_inflicted_loss_nr_3
 						add_timed_idea = {
-							idea = LLS_day_of_infamy_3 
+							idea = LLS_day_of_infamy_3
 							days = 180
-						}	
+						}
 
 					}
 				}

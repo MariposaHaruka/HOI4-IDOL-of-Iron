@@ -640,12 +640,12 @@ technologies = {
 				    category = cat_medium_armor
 				}
 			}
-			modifier = { #Use the research bonus from the focus! 
+			modifier = { #Use the research bonus from the focus!
 				factor = 0.5
 				tag = PRS # IOI 수정
 				NOT = {
 					has_completed_focus = PRS_21304 # IOI 수정
-				}	
+				}
 			}
 		}
 
@@ -1185,7 +1185,7 @@ technologies = {
 				}
 				custom_effect_tooltip = {
 					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_land_land_cruiser	
+					PROJECT = sp_land_land_cruiser
 				}
 			}
 		}
@@ -1328,7 +1328,7 @@ technologies = {
 		enable_equipment_modules = {
 			lc_armored_skirts #Module for Land Cruiser
 		}
-		
+
 		path = {
 			leads_to_tech = armor_tech_4
 			research_cost_coeff = 1
@@ -1669,7 +1669,7 @@ technologies = {
 		}
 
 		on_research_complete = {
-		
+
 		}
 
 		show_effect_as_desc = no
@@ -1700,14 +1700,14 @@ technologies = {
 
 		research_cost = 1
 		start_year = 1941
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 12 y = @1941 }
 		}
 
 		enable_equipment_modules = {
-			advanced_flamethrower			
+			advanced_flamethrower
 		}
 
 		light_flame_tank = {
@@ -1720,12 +1720,12 @@ technologies = {
 			jungle = {
 				attack = 0.05
 			}
-			urban = {
-				attack = 0.05
-			}
-			fort = {
-				attack = 0.05
-			}
+			#urban = {
+			#	attack = 0.05
+			#}
+			#fort = {
+			#	attack = 0.05
+			#}
 		}
 
 		medium_flame_tank = {
@@ -1738,12 +1738,12 @@ technologies = {
 			jungle = {
 				attack = 0.05
 			}
-			urban = {
-				attack = 0.05
-			}
-			fort = {
-				attack = 0.05
-			}
+			#urban = {
+			#	attack = 0.05
+			#}
+			#fort = {
+			#	attack = 0.05
+			#}
 		}
 
 		heavy_flame_tank = {
@@ -1756,12 +1756,12 @@ technologies = {
 			jungle = {
 				attack = 0.05
 			}
-			urban = {
-				attack = 0.05
-			}
-			fort = {
-				attack = 0.05
-			}
+			#urban = {
+			#	attack = 0.05
+			#}
+			#fort = {
+			#	attack = 0.05
+			#}
 		}
 
 		show_effect_as_desc = yes
@@ -1833,7 +1833,7 @@ technologies = {
 
 		research_cost = 1
 		start_year = 1943
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 7 y = @1943 }
@@ -1933,7 +1933,7 @@ technologies = {
 
 		research_cost = 1
 		start_year = 1943
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 9 y = @1943 }
@@ -2003,7 +2003,7 @@ technologies = {
 
 		research_cost = 1
 		start_year = 1943
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 11 y = @1943 }
@@ -2067,7 +2067,7 @@ technologies = {
 
 		research_cost = 1
 		start_year = 1945
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 9 y = @1945 }
@@ -2126,14 +2126,14 @@ technologies = {
 
 		research_cost = 1
 		start_year = 1943
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 13 y = @1943 }
 		}
 
 		enable_equipment_modules = {
-			lc_high_impact_obliterator_cannon			
+			lc_high_impact_obliterator_cannon
 		}
 
 		show_effect_as_desc = yes
