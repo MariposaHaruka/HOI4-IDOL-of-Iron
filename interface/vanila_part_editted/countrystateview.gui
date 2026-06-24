@@ -191,8 +191,8 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "state_resources"
-				position = { x= 26 y=301}
-				size = { width=135 height=99 }
+				position = { x= 26 y=270}
+				size = { width=135 height=140 }
 				
 				
 				background = {
@@ -202,26 +202,25 @@ guiTypes = {
 			
 				gridBoxType = {
 					name = "state_resources_entries"
-					position = { x = -42 y = -2 }
-					size = { width = 132 height = 60 }
+					position = { x = -44 y = 3 }
+					size = { width = 132 height = 70 }
 					format = "UPPER_LEFT"
-					slotsize = { width = 50 height = 31 }
+					slotsize = { width = 55 height = 30 }
 					max_slots_horizontal = 2
-					max_slots_vertical = 3
-					
+					max_slots_vertical = 4
 				}
 			}
 			
 			iconType ={
 				name ="population_icon"
 				spriteType = "GFX_population_icon"
-				position = { x = 20 y = 157 } # IOI 수정
+				position = { x = 20 y = 153 } # IOI 수정
 				Orientation = "UPPER_LEFT"
 			}
 			
 			instantTextboxType = {
 				name = "manpower"
-				position = { x = 64 y = 171 } # IOI 수정
+				position = { x = 64 y = 170 } # IOI 수정
 				textureFile = ""
 				font = "hoi_18mbs"
 				maxWidth = 80
@@ -231,7 +230,7 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "resistance_container"
-				position = { x = 20 y = 196}	
+				position = { x = 20 y = 185 }	
 				size = { width = 519 height = 100 }
 				
 				iconType ={
@@ -248,17 +247,17 @@ guiTypes = {
 				iconType ={
 					name ="state_compliance_icon"
 					spriteType = "GFX_compliance_icon"
-					position = { x = 0 y = 37 }
+					position = { x = 0 y = 30 }
 				}
 				
 				positionType = {
 					name = "compliance_status_pos"
-					position = { x = 36 y = 38 }
+					position = { x = 36 y = 34 }
 				}
 				
 				containerWindowType = {
 					name = "law_and_template_container"
-					position = { x = 0 y = 0}	
+					position = { x = 0 y = -8 }	
 					size = { width = 0 height = 0 }
 
 					buttonType = {
@@ -285,7 +284,7 @@ guiTypes = {
 
 					instantTextBoxType = {
 						name ="template_need_text"
-						position = { x = 100 y = 75 }
+						position = { x = 100 y = 78 } # IOI 수정
 						font = "hoi_16mbs"
 						text = "42"
 						maxWidth = 57
@@ -671,13 +670,13 @@ guiTypes = {
 		
 		iconType = {
 			name = "resource"
-			position = { x=53 y=8 }	 # IOI 수정
+			position = { x=53 y=39 } # IOI 수정
 			spriteType = "GFX_resources_strip"
 		}
 		
 		instantTextboxType = {
 			name = "amount"
-			position = { x = 70 y = 16 } # IOI 수정
+			position = { x = 70 y = 42 } # IOI 수정
 			font = "hoi_20b"
 			maxWidth = 37
 			maxHeight = 18
