@@ -134,19 +134,19 @@ guiTypes = {
 	
 		containerWindowType = {
 			name = "info"
-			position = { x=3 y=47}
+			position = { x=3 y=47 }
 			size = { width=100% height=100%% }
 			verticalScrollbar = "right_vertical_slider"
 			
 			containerWindowType = {
 				name = "base_stats"
-				position = { x=10 y=17 } # IOI 수정
+				position = { x=10 y=15 }	
 				size = { width=165 height=200 }
 				clipping = no
 				
 				instantTextboxType = {
 					name = "base_stats_label"
-					position = { x = 5 y = 17 } # IOI 수정
+					position = { x = 5 y = 16 }# IOI 수정
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_BASE_STATS_LABEL"
 					maxWidth = 150
@@ -156,7 +156,7 @@ guiTypes = {
 				
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 5 y = 40 } # IOI 수정
+					position = { x = 5 y = 36 }
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -166,13 +166,13 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "combat_stats"
-				position = { x=179 y=17 } # IOI 수정
+				position = { x=179 y=15 }	
 				size = { width=165 height=200 }
 				clipping = no
 				
 				instantTextboxType = {
 					name = "combat_stats_label"
-					position = { x = 10 y = 17 } # IOI 수정
+					position = { x = 10 y = 16 }# IOI 수정
 					font = "hoi4_typewriter22"
 					text = "DESIGNER_COMBAT_STATS_LABEL"
 					maxWidth = 150
@@ -182,7 +182,7 @@ guiTypes = {
 				
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 8 y = 40 } # IOI 수정
+					position = { x = 8 y = 36 }
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
@@ -192,14 +192,14 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "misc_stats"
-				position = { x=354 y=17 } # IOI 수정
+				position = { x=354 y=15 }	
 				size = { width=165 height=200 }
 				Orientation = UPPER_LEFT				
 				clipping = no
 				
 				instantTextboxType = {
 					name = "misc_stats_label"
-					position = { x = 10 y = 17 } # IOI 수정
+					position = { x = 10 y = 16 }# IOI 수정
 					font = "hoi4_typewriter22"
 					text = "FE_MISC_STATS"
 					maxWidth = 150
@@ -209,7 +209,7 @@ guiTypes = {
 				
 				gridboxtype = {
 					name = "stats_grid"
-					position = { x = 7 y = 40 } # IOI 수정
+					position = { x = 7 y = 36 }
 					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
