@@ -538,6 +538,10 @@ technologies = {
 			soft_attack = 0.15
 		}
 
+		rocket_battery = {
+			soft_attack = 0.15
+		}
+
 		path = {
 			leads_to_tech = rocket_artillery3
 			research_cost_coeff = 1
@@ -571,6 +575,10 @@ technologies = {
 	rocket_artillery3 = {
 
 		category_rocket_artillery = {
+			soft_attack = 0.15
+		}
+
+		rocket_battery = {
 			soft_attack = 0.15
 		}
 
@@ -646,6 +654,10 @@ technologies = {
 			anti_air_equipment_1
 		}
 
+		enable_subunits = {
+			anti_air_battery
+		}
+
 		enable_equipment_modules = {
 			ship_anti_air_2
 			tank_auto_cannon
@@ -714,6 +726,9 @@ technologies = {
 			air_attack = 0.1
 		}
 		anti_air_brigade = {
+			air_attack = 0.1
+		}
+		anti_air_battery = {
 			air_attack = 0.1
 		}
 		mot_anti_air_brigade = {
@@ -830,6 +845,9 @@ technologies = {
 		anti_air_brigade = {
 			air_attack = 0.1
 		}
+		anti_air_battery = {
+			air_attack = 0.1
+		}
 		mot_anti_air_brigade = {
 			air_attack = 0.1
 		}
@@ -885,6 +903,9 @@ technologies = {
 			air_attack = 0.1
 		}
 		anti_air_brigade = {
+			air_attack = 0.1
+		}
+		anti_air_battery = {
 			air_attack = 0.1
 		}
 		mot_anti_air_brigade = {
@@ -993,6 +1014,10 @@ technologies = {
 			tank_heavy_cannon
 			tank_buster_1
 			lc_high_velocity_cannon_turret #Module for Land Cruiser
+		}
+
+		enable_subunits = {
+			anti_tank_battery
 		}
 
 		path = {
@@ -1732,6 +1757,9 @@ technologies = {
 			fort = {
 				attack = 0.15
 			}
+			field_guns = {
+				ap_attack = 0.1
+			}
 		}
 
 		allow = {
@@ -1772,6 +1800,9 @@ technologies = {
 				attack = 0.15
 			}
 		}
+		field_guns = {
+			ap_attack = 0.1
+		}
 
 		allow = {
 			always = no
@@ -1798,6 +1829,9 @@ technologies = {
 			ap_attack = 0.15
 		}
 		mot_anti_tank_brigade = {
+			ap_attack = 0.15
+		}
+		anti_tank_battery = {
 			ap_attack = 0.15
 		}
 		category_tank_destroyers = {

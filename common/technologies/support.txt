@@ -91,6 +91,10 @@ technologies = {
 		enable_subunits = {
 			engineer
 		}
+		enable_subunits = {
+			limit = { has_TaOG = yes }
+			hq_engineer
+		}
 
 		path = {
 			leads_to_tech = tech_engineers2
@@ -441,7 +445,7 @@ technologies = {
 			light_tank_recon
 		}
 		enable_subunits = {
-			limit = { has_dlc = "Thunder at Our Gates"}
+			limit = { has_TaOG = yes }
 			hq_recon
 		}
 
@@ -641,14 +645,14 @@ technologies = {
 			military_police
 		}
 		enable_subunits = {
-			limit = { has_dlc = "Thunder at Our Gates"}
+			limit = { has_TaOG = yes}
 			hq_military_police
 		}
 
 		on_research_complete = {
 			if = {
 				limit = {
-					has_dlc = "Thunder at Our Gates"
+					has_TaOG = yes
 					tag = IMA # IOI 수정
 					is_ai = yes
 				}
@@ -861,14 +865,14 @@ technologies = {
 			maintenance_company
 		}
 		enable_subunits = {
-			limit = { has_dlc = "Thunder at Our Gates"}
+			limit = { has_TaOG = yes}
 			hq_maintenance
 		}
 
 		on_research_complete = {
 			if = {
 				limit = {
-					has_dlc = "Thunder at Our Gates"
+					has_TaOG = yes
 					tag = BDG # IOI 수정
 					is_ai = yes
 				}
@@ -921,7 +925,7 @@ technologies = {
 
 			modifier = {
 				factor = 10
-				tag = GER
+				tag = PRS
 				date > "1942.1.1"
 			}
 		}
@@ -1096,7 +1100,7 @@ technologies = {
 			field_hospital
 		}
 		enable_subunits = {
-			limit = { has_dlc = "Thunder at Our Gates"}
+			limit = { has_TaOG = yes}
 			hq_field_hospital
 		}
 
@@ -1343,6 +1347,35 @@ technologies = {
 		enable_subunits = {
 			logistics_company
 		}
+		enable_subunits = {
+			limit = { has_TaOG = yes }
+			hq_logistics
+		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					has_TaOG = yes
+					tag = ICG
+					is_ai = yes
+				}
+				add_units_to_division_template = {
+					template_name = "Field Army Headquarters"
+					support = { hq_logistics = 0 }
+				}
+			}
+			if = {
+				limit = {
+					has_TaOG = yes
+					tag = TOH
+					is_ai = yes
+				}
+				add_units_to_division_template = {
+					template_name = "Shtab Armii"
+					support = { hq_logistics = 0 }
+				}
+			}
+		}
 
 		path = {
 			leads_to_tech = tech_logistics_company2
@@ -1354,14 +1387,14 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		enable_subunits = {
-			limit = { has_dlc = "Thunder at Our Gates"}
+			limit = { has_TaOG = yes}
 			hq_logistics
 		}
 
 		on_research_complete = {
 			if = {
 				limit = {
-					has_dlc = "Thunder at Our Gates"
+					has_TaOG = yes
 					tag = ICG # IOI 수정
 					is_ai = yes
 				}
@@ -1372,7 +1405,7 @@ technologies = {
 			}
 			if = {
 				limit = {
-					has_dlc = "Thunder at Our Gates"
+					has_TaOG = yes
 					tag = TOH # IOI 수정
 					is_ai = yes
 				}
@@ -1585,7 +1618,7 @@ technologies = {
 			signal_company
 		}
 		enable_subunits = {
-			limit = { has_dlc = "Thunder at Our Gates"}
+			limit = { has_TaOG = yes}
 			hq_signal
 		}
 

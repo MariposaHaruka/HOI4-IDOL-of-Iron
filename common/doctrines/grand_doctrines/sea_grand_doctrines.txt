@@ -5,7 +5,7 @@ new_fleet_in_being = {
     description = GRAND_DOCTRINE_FLEET_IN_BEING_DESC
     icon = GFX_doctrine_fleet_in_being_medium
     available = {
-        always = yes
+        NOT = { has_country_flag = no_naval_academy }
     }
 
     xp_cost = 100
@@ -115,7 +115,7 @@ new_convoy_raiding = {
     description = GRAND_DOCTRINE_CONVOY_RAIDING_DESC
     icon = GFX_doctrine_trade_interdiction_medium
     available = {
-        always = yes
+        NOT = { has_country_flag = no_naval_academy }
     }
 
     xp_cost = 100
@@ -235,7 +235,7 @@ new_base_strike = {
     description = GRAND_DOCTRINE_BASE_STRIKE_DESC
     icon = GFX_doctrine_base_strike_medium
     available = {
-        always = yes
+        NOT = { has_country_flag = no_naval_academy }
     }
 
     xp_cost = 100

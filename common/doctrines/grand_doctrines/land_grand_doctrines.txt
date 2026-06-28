@@ -5,7 +5,7 @@ new_mobile_warfare = {
     description = GRAND_DOCTRINE_MOBILE_WARFARE_DESC
     icon = GFX_doctrine_mobile_warfare_medium
     available = {
-        always = yes
+        NOT = { has_country_flag = no_military_academy }
     }
 
     xp_cost = 100
@@ -117,6 +117,7 @@ new_mobile_warfare = {
         }
     }
 }
+
 superior_firepower = {
     folder = land
 
@@ -124,7 +125,7 @@ superior_firepower = {
     description = GRAND_DOCTRINE_SUPERIOR_FIREPOWER_DESC
     icon = GFX_doctrine_superior_firepower_medium
     available = {
-        always = yes
+        NOT = { has_country_flag = no_military_academy }
     }
 
     xp_cost = 100
@@ -373,7 +374,7 @@ mass_assault = {
     description = GRAND_DOCTRINE_MASS_ASSAULT_DESC
     icon = GFX_doctrine_mass_assault_medium
     available = {
-        always = yes
+        NOT = { has_country_flag = no_military_academy }
     }
 
     xp_cost = 100

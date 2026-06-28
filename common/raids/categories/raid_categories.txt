@@ -37,7 +37,7 @@ categories = {
 					has_dlc = "No Compromise, No Surrender"
 					original_tag = KTC
 				}
-				has_dlc = "Thunder at Our Gates"
+				has_TaOG = yes
 			}
 			has_country_flag = KTC_land_infiltration_raids
 	    }
@@ -50,7 +50,7 @@ categories = {
 		intel_source = naval
 		faction_influence_score_on_success = 50
 		visible = { # IOI 임시조치
-			has_dlc = "Thunder at Our Gates"
+			has_TaOG = yes
 			OR = {
 				original_tag = RST
 				original_tag = ISC
