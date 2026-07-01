@@ -40,7 +40,7 @@ types = {
 		}
 
 		allowed = {
-			
+
 		}
 		# Raid Type is visible
 		visible = {
@@ -170,7 +170,7 @@ types = {
 					raid_add_unit_experience = 0.1
 				}
 				victim_effects = {
-					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }  
+					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }
 					var:target_state = {
 						#bathe_in_hellfire_nuclear = yes
 						custom_effect_tooltip = raid_nuclear_strike_tt
@@ -198,7 +198,7 @@ types = {
 					raid_add_unit_experience = 0.35
 				}
 				victim_effects = {
-					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }  
+					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }
 					var:target_state = {
 						#bathe_in_hellfire_nuclear = yes
 						custom_effect_tooltip = raid_nuclear_strike_tt
@@ -227,7 +227,7 @@ types = {
 							use_nuke = no
 						}
 					}
-					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }  
+					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }
 					var:target_state = {
 						#bathe_in_hellfire_nuclear = yes
 						custom_effect_tooltip = raid_nuclear_strike_tt
@@ -236,7 +236,7 @@ types = {
 							days = 730
 						}
 					}
-					
+
 				}
 			}
 		}
@@ -336,6 +336,12 @@ types = {
             scale = 0.5
         }
 
+        unit_animations = {
+            stage = { state = "idle" }
+            stage = { state = "idle2" intro = "idle2_intro" at_progress = 0.33 }
+            stage = { state = "idle3" intro = "idle3_intro" at_progress = 0.66 }
+        }
+
 		success_factors = {
 			success = {
 				base = 0.8
@@ -390,7 +396,7 @@ types = {
 				}
 
 				victim_effects = {
-					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }  
+					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }
 					var:target_state = {
 						#bathe_in_hellfire_nuclear = yes
 						add_dynamic_modifier = {
@@ -501,6 +507,12 @@ types = {
             scale = 0.5
         }
 
+        unit_animations = {
+            stage = { state = "idle" }
+            stage = { state = "idle2" intro = "idle2_intro" at_progress = 0.33 }
+            stage = { state = "idle3" intro = "idle3_intro" at_progress = 0.66 }
+        }
+
 		success_factors = {
 			success = {
 				base = 0.8
@@ -534,7 +546,7 @@ types = {
 				actor_effects = {
 				}
 				victim_effects = {
-					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }  
+					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }
 					var:target_state = {
 						#bathe_in_hellfire_nuclear = yes
 						#custom_effect_tooltip = raid_nuclear_strike_tt
@@ -557,7 +569,7 @@ types = {
 				}
 
 				victim_effects = {
-					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }  
+					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }
 					var:target_state = {
 						#bathe_in_hellfire_nuclear = yes
 						add_dynamic_modifier = {
@@ -758,11 +770,11 @@ types = {
 						custom_effect_tooltip = raid_nuclear_strike_tt
 						hidden_effect = {
 							IF = {
-								limit = { 
+								limit = {
 									has_dynamic_modifier = {
 										modifier = fallout_atomic
 									}
-								}	
+								}
 								remove_dynamic_modifier = {
 									modifier = fallout_atomic
 								}
@@ -792,11 +804,11 @@ types = {
 						custom_effect_tooltip = raid_nuclear_strike_tt
 						hidden_effect = {
 							IF = {
-								limit = { 
+								limit = {
 									has_dynamic_modifier = {
 										modifier = fallout_atomic
 									}
-								}	
+								}
 								remove_dynamic_modifier = {
 									modifier = fallout_atomic
 								}
@@ -912,6 +924,12 @@ types = {
 
         unit_model = {
 			scale = 0.5
+        }
+
+        unit_animations = {
+            stage = { state = "idle" }
+            stage = { state = "idle2" intro = "idle2_intro" at_progress = 0.33 }
+            stage = { state = "idle3" intro = "idle3_intro" at_progress = 0.66 }
         }
 
 		success_factors = {
@@ -1078,6 +1096,12 @@ types = {
             scale = 0.5
         }
 
+        unit_animations = {
+            stage = { state = "idle" }
+            stage = { state = "idle2" intro = "idle2_intro" at_progress = 0.33 }
+            stage = { state = "idle3" intro = "idle3_intro" at_progress = 0.66 }
+        }
+
 		success_factors = {
 			success = {
 				base = 0.8
@@ -1109,7 +1133,7 @@ types = {
 				actor_effects = {
 				}
 				victim_effects = {
-					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }  
+					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }
 					var:target_state = {
 						#bathe_in_hellfire_thermonuclear = yes
 						#custom_effect_tooltip = raid_nuclear_strike_tt
@@ -1118,7 +1142,7 @@ types = {
 							days = 730
 						}
 					}
-					
+
 					var:actor_country = {
 						launch_nuke = {
 							province = var:ROOT.target_province #optional use either province or state
@@ -1133,7 +1157,7 @@ types = {
 				actor_effects = {
 				}
 				victim_effects = {
-					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }  
+					#var:actor_country = { save_global_event_target_as = nuclear_gandhi_actor_country }
 					var:target_state = {
 						#bathe_in_hellfire_thermonuclear = yes
 						add_dynamic_modifier = {

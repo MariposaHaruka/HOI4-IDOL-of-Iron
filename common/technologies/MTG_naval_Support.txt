@@ -1998,49 +1998,28 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 5
 
 			modifier = {
-				factor = 0.5
+				factor = 0.1
 				has_war = no
 			}
 
 			modifier = {
-				factor = 2
+				factor = 15
 				tag = ICG # IOI 수정
-			}
-			modifier = {
-				has_war_with = LLS # IOI 수정
-				factor = 2
-			}
-			modifier = {
-				factor = 50
-				tag = LLS # IOI 수정
-				OR = {
-					has_war_with = ICG # IOI 수정
-					AZU = { # IOI 수정
-						OR = {
-							has_capitulated = yes
-							exists = no
-		                    is_subject_of = LLS # IOI 수정
-						}
-					}
-				}
+				date > 1942.1.1
 			}
 
 			modifier = {
-				factor = 2
+				factor = 15
 				tag = IMA # IOI 수정
+				date > 1941.6.1
 			}
 
 			modifier = {
-				factor = 10
-				OR = {
-					tag = IMA # IOI 수정
-					tag = ICG # IOI 수정
-				}
-				has_war_with = PRS # IOI 수정
-				PRS = { has_war_with = TOH } # IOI 수정
+				factor = 15
+				tag = LLS # IOI 수정
 			}
 		}
 
