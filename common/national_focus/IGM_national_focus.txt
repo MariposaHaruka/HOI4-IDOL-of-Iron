@@ -785,7 +785,7 @@ focus_tree = {
 		x = 17
 		y = 0
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		allow_branch = {
 			always = no
 		}
@@ -1096,7 +1096,7 @@ focus_tree = {
 		x = 32
 		y = 0
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		available = { always = no }
 		allow_branch = {
 			always = no
@@ -1286,7 +1286,7 @@ focus_tree = {
 		x = 41
 		y = 0
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		allow_branch = {
 			always = no
 		}
@@ -1307,7 +1307,7 @@ focus_tree = {
 		x = 5
 		y = 0
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		allow_branch = {
 			always = no
 		}
@@ -2298,7 +2298,7 @@ focus_tree = {
 		allow_branch = {
 			always = no
 		}
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_DO008 }
 		
 		
@@ -2321,7 +2321,7 @@ focus_tree = {
 		allow_branch = {
 			always = no
 		}
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_DO009 }
 		mutually_exclusive = { focus = IGM_50004 }
 
@@ -2344,7 +2344,7 @@ focus_tree = {
 		allow_branch = {
 			always = no
 		}
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_DO009 }
 		mutually_exclusive = { focus = IGM_50003 }
 
@@ -2364,7 +2364,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_51002 }
 		
 		available_if_capitulated = yes
@@ -2383,7 +2383,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_51002 }
 		
 		available_if_capitulated = yes
@@ -2402,7 +2402,7 @@ focus_tree = {
 		x = -6
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_50003 }
 		mutually_exclusive = { focus = IGM_53001 }
 
@@ -2422,7 +2422,7 @@ focus_tree = {
 		x = 6
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_50003 }
 		mutually_exclusive = { focus = IGM_52001 }
 
@@ -2442,7 +2442,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_51003 }
 		prerequisite = { focus = IGM_51004 }
 		
@@ -2461,7 +2461,7 @@ focus_tree = {
 		x = -3
 		y = 1
 	
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52001 }
 		available = { always = no }
 		mutually_exclusive = { focus = IGM_52201 }
@@ -2482,7 +2482,7 @@ focus_tree = {
 		x = 3
 		y = 1
 	
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52001 }
 		available = { always = no }
 		mutually_exclusive = { focus = IGM_52101 }
@@ -2504,7 +2504,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_51005 }
 		
 		available_if_capitulated = yes
@@ -2523,7 +2523,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_51005 focus = IGM_52101 }
 		
 		available_if_capitulated = yes
@@ -2542,7 +2542,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_51005 focus = IGM_52101 }
 		
 		available_if_capitulated = yes
@@ -2561,7 +2561,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52101 focus = IGM_52201 }
 		mutually_exclusive = { focus = IGM_52202 }
 		
@@ -2581,7 +2581,7 @@ focus_tree = {
 		x = 5
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52201 }
 		mutually_exclusive = { focus = IGM_52002 }
 		
@@ -2601,7 +2601,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52101 focus = IGM_52201 }
 		
 		available_if_capitulated = yes
@@ -2620,7 +2620,7 @@ focus_tree = {
 		x = 7
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52201 }
 		
 		available_if_capitulated = yes
@@ -2639,7 +2639,7 @@ focus_tree = {
 		x = 9
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52201 }
 		
 		available_if_capitulated = yes
@@ -2658,7 +2658,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52204 focus = IGM_51007 }
 		mutually_exclusive = { focus = IGM_52104 }
 		available = { 
@@ -2690,7 +2690,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52204 focus = IGM_52205 focus = IGM_51007 }
 		available = { 
 			OR = {
@@ -2721,7 +2721,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_51006 }
 		prerequisite = { focus = IGM_51007 }
 		
@@ -2741,7 +2741,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52102 focus = IGM_51007 }
 		available = { 
 			OR = {
@@ -2772,7 +2772,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52102 focus = IGM_51007 }
 		mutually_exclusive = { focus = IGM_52206 }
 		available = { 
@@ -2804,7 +2804,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52103 focus = IGM_52104 }
 		
 		available_if_capitulated = yes
@@ -2823,7 +2823,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52103 focus = IGM_52104 }
 		
 		available_if_capitulated = yes
@@ -2842,7 +2842,7 @@ focus_tree = {
 		x = 2
 		y = 0
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52104 focus = IGM_52206 }
 		
 		available_if_capitulated = yes
@@ -2861,7 +2861,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52003 }
 		
 		available_if_capitulated = yes
@@ -2883,7 +2883,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52206 focus = IGM_52207 }
 		
 		available_if_capitulated = yes
@@ -2902,7 +2902,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52206 focus = IGM_52207 }
 		
 		available_if_capitulated = yes
@@ -2921,7 +2921,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_51008 }
 		
 		available_if_capitulated = yes
@@ -2940,7 +2940,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_51008 }
 		
 		available_if_capitulated = yes
@@ -2959,7 +2959,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_51010 }
 		
 		available_if_capitulated = yes
@@ -2978,7 +2978,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_51010 }
 		
 		available_if_capitulated = yes
@@ -2997,7 +2997,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52105 }
 		prerequisite = { focus = IGM_52106 }
 		
@@ -3017,7 +3017,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52107 }
 		
 		available_if_capitulated = yes
@@ -3036,7 +3036,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52107 }
 		
 		available_if_capitulated = yes
@@ -3055,7 +3055,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52108 }
 		prerequisite = { focus = IGM_52109 }
 		
@@ -3075,7 +3075,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52208 }
 		prerequisite = { focus = IGM_52209 }
 		
@@ -3095,7 +3095,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52210 }
 		
 		available_if_capitulated = yes
@@ -3114,7 +3114,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52210 }
 		
 		available_if_capitulated = yes
@@ -3133,7 +3133,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52211 }
 		prerequisite = { focus = IGM_52212 }
 		
@@ -3153,7 +3153,7 @@ focus_tree = {
 		x = -1
 		y = 2
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52004 }
 		mutually_exclusive = { focus = IGM_52006 }
 		
@@ -3173,7 +3173,7 @@ focus_tree = {
 		x = 1
 		y = 2
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52004 }
 		mutually_exclusive = { focus = IGM_52005 }
 		
@@ -3193,7 +3193,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52005 focus = IGM_52006 }
 		bypass = {
 			IGM = { 
@@ -3222,7 +3222,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52005 focus = IGM_52006 }
 		
 		available_if_capitulated = yes
@@ -3241,7 +3241,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52007 focus = IGM_52008 }
 		
 		available_if_capitulated = yes
@@ -3260,7 +3260,7 @@ focus_tree = {
 		x = -4
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52009 }
 		
 		available_if_capitulated = yes
@@ -3279,7 +3279,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52009 }
 		
 		available_if_capitulated = yes
@@ -3298,7 +3298,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52009 }
 		
 		available_if_capitulated = yes
@@ -3317,7 +3317,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52009 }
 		
 		available_if_capitulated = yes
@@ -3336,7 +3336,7 @@ focus_tree = {
 		x = 4
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_52009 }
 		
 		available_if_capitulated = yes
@@ -3355,7 +3355,7 @@ focus_tree = {
 		x = -3
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53001 }
 
 		available_if_capitulated = yes
@@ -3374,7 +3374,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53001 }
 
 		available_if_capitulated = yes
@@ -3394,7 +3394,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53001 }
 		mutually_exclusive = { focus = IGM_53201 }
 
@@ -3414,7 +3414,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53001 }
 		mutually_exclusive = { focus = IGM_53101 }
 
@@ -3434,7 +3434,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53101 focus = IGM_53201 }
 
 		available_if_capitulated = yes
@@ -3453,7 +3453,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53101 focus = IGM_53201 }
 
 		available_if_capitulated = yes
@@ -3472,7 +3472,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53101 focus = IGM_53201 }
 
 		available_if_capitulated = yes
@@ -3491,7 +3491,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53004 focus = IGM_53005 focus = IGM_53006 }
 		mutually_exclusive = { focus = IGM_53008 }
 
@@ -3511,7 +3511,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53004 focus = IGM_53005 focus = IGM_53006 }
 		mutually_exclusive = { focus = IGM_53007 }
 
@@ -3531,7 +3531,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53007 focus = IGM_53008 }
 
 		available_if_capitulated = yes
@@ -3550,7 +3550,7 @@ focus_tree = {
 		x = -3
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53101 }
 
 		available_if_capitulated = yes
@@ -3569,7 +3569,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53102 }
 
 		available_if_capitulated = yes
@@ -3588,7 +3588,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53102 }
 
 		available_if_capitulated = yes
@@ -3607,7 +3607,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53103 }
 
 		available_if_capitulated = yes
@@ -3626,7 +3626,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53104 }
 
 		available_if_capitulated = yes
@@ -3645,7 +3645,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53105 focus = IGM_53106 }
 
 		available_if_capitulated = yes
@@ -3664,7 +3664,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53105 focus = IGM_53106 }
 
 		available_if_capitulated = yes
@@ -3683,7 +3683,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53105 focus = IGM_53106 }
 		available = { has_government = anarchosyndicalism		}
 
@@ -3703,7 +3703,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53107 }
 		prerequisite = { focus = IGM_53108 }
 		available = { has_government = communism }
@@ -3725,7 +3725,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53108 }
 		prerequisite = { focus = IGM_53109 }
 		available = { has_government = anarchosyndicalism }
@@ -3747,7 +3747,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53201 }
 
 		available_if_capitulated = yes
@@ -3766,7 +3766,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53202 }
 
 		available_if_capitulated = yes
@@ -3785,7 +3785,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53202 }
 
 		available_if_capitulated = yes
@@ -3804,7 +3804,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53203 }
 
 		available_if_capitulated = yes
@@ -3823,7 +3823,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53204 }
 
 		available_if_capitulated = yes
@@ -3842,7 +3842,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53205 focus = IGM_53206 }
 
 		available_if_capitulated = yes
@@ -3861,7 +3861,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53205 focus = IGM_53206 }
 
 		available_if_capitulated = yes
@@ -3880,7 +3880,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53205 focus = IGM_53206 }
 		available = { has_government = anarchosyndicalism		}
 
@@ -3900,7 +3900,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53207 }
 		prerequisite = { focus = IGM_53208 }
 		available = { has_government = authoritariancommunism }
@@ -3922,7 +3922,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53208 }
 		prerequisite = { focus = IGM_53209 }
 		available = { has_government = socialism }
@@ -3944,7 +3944,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53110 focus = IGM_53111 focus = IGM_53210 focus = IGM_53211 }
 
 		available_if_capitulated = yes
@@ -3963,7 +3963,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53110 focus = IGM_53111 focus = IGM_53210 focus = IGM_53211 }
 
 		available_if_capitulated = yes
@@ -3982,7 +3982,7 @@ focus_tree = {
 		x = 4
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53110 focus = IGM_53111 focus = IGM_53210 focus = IGM_53211 }
 
 		available_if_capitulated = yes
@@ -4001,7 +4001,7 @@ focus_tree = {
 		x = 6
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53110 focus = IGM_53111 focus = IGM_53210 focus = IGM_53211 }
 
 		available_if_capitulated = yes
@@ -4020,7 +4020,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53010 focus = IGM_53011 focus = IGM_53012 focus = IGM_53013 }
 		mutually_exclusive = { focus = IGM_53015 focus = IGM_53016 focus = IGM_53017 }
 
@@ -4040,7 +4040,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53010 focus = IGM_53011 focus = IGM_53012 focus = IGM_53013 }
 		mutually_exclusive = { focus = IGM_53014 focus = IGM_53016 focus = IGM_53017 }
 
@@ -4060,7 +4060,7 @@ focus_tree = {
 		x = 4
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53010 focus = IGM_53011 focus = IGM_53012 focus = IGM_53013 }
 		mutually_exclusive = { focus = IGM_53014 focus = IGM_53015 focus = IGM_53017 }
 
@@ -4080,7 +4080,7 @@ focus_tree = {
 		x = 6
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53010 focus = IGM_53011 focus = IGM_53012 focus = IGM_53013 }
 		mutually_exclusive = {  focus = IGM_53014 focus = IGM_53015 focus = IGM_53016 }
 
@@ -4100,7 +4100,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53014 focus = IGM_53015 focus = IGM_53016 focus = IGM_53017 }
 		mutually_exclusive = { focus = IGM_53019 focus = IGM_53020 }
 
@@ -4120,7 +4120,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53014 focus = IGM_53015 focus = IGM_53016 focus = IGM_53017 }
 		mutually_exclusive = { focus = IGM_53018 focus = IGM_53020 }
 
@@ -4140,7 +4140,7 @@ focus_tree = {
 		x = 5
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53014 focus = IGM_53015 focus = IGM_53016 focus = IGM_53017 }
 		mutually_exclusive = { focus = IGM_53018 focus = IGM_53019 }
 
@@ -4160,7 +4160,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53018 focus = IGM_53019 focus = IGM_53020 }
 
 		available_if_capitulated = yes
@@ -4179,7 +4179,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53018 focus = IGM_53019 focus = IGM_53020 }
 
 		available_if_capitulated = yes
@@ -4198,7 +4198,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53018 focus = IGM_53019 focus = IGM_53020 }
 
 		available_if_capitulated = yes
@@ -4217,7 +4217,7 @@ focus_tree = {
 		x = 5
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53018 focus = IGM_53019 focus = IGM_53020 }
 
 		available_if_capitulated = yes
@@ -4236,7 +4236,7 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53018 focus = IGM_53019 focus = IGM_53020 }
 
 		available_if_capitulated = yes
@@ -4255,7 +4255,7 @@ focus_tree = {
 		x = 2
 		y = 2
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53018 focus = IGM_53019 focus = IGM_53020 }
 
 		available_if_capitulated = yes
@@ -4274,7 +4274,7 @@ focus_tree = {
 		x = 4
 		y = 2
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IGM_53018 focus = IGM_53019 focus = IGM_53020 }
 
 		available_if_capitulated = yes

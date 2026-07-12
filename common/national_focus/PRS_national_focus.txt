@@ -147,6 +147,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = PRS_11001
 		cost = 5
+		ai_will_do = { factor = 50 }
 		available = {
 			PRS_preparing_war_against_sekai = no
 			is_subject = no
@@ -270,6 +271,7 @@ focus_tree = {
 		relative_position_id = PRS_10002
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
@@ -335,6 +337,7 @@ focus_tree = {
 		cost = 5
 		available = {
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
@@ -381,7 +384,7 @@ focus_tree = {
 					}
 				}
 			}
-			else_if = { #if at peace
+			else = { #if at peace
 				if = {
 					limit = {
 						59 = {
@@ -436,6 +439,7 @@ focus_tree = {
 		available = {
 			51 = { is_fully_controlled_by = ROOT }
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
@@ -489,6 +493,7 @@ focus_tree = {
 				is_demilitarized_zone = no 
 			}
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
@@ -517,6 +522,7 @@ focus_tree = {
 			is_fascism = no
 			is_communism = no
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
@@ -557,6 +563,7 @@ focus_tree = {
 				is_fully_controlled_by = ROOT
 			}
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
@@ -585,6 +592,7 @@ focus_tree = {
 			is_subject = no
 			industrial_complex > 75
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
@@ -595,7 +603,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PRS_10010 #로켓 혁신신
+		id = PRS_10010 #로켓 혁신
 		icon = GFX_focus_rocketry
 		prerequisite = { focus = PRS_10009 }
 
@@ -607,6 +615,7 @@ focus_tree = {
 			is_subject = no
 			land_facility > 0
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -629,6 +638,7 @@ focus_tree = {
 			is_subject = no
 			land_facility > 0
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -711,6 +721,7 @@ focus_tree = {
 			is_subject = no
 			land_facility > 0
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -733,6 +744,7 @@ focus_tree = {
 			is_subject = no
 			land_facility > 0
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -755,6 +767,7 @@ focus_tree = {
 			is_subject = no
 			land_facility > 0
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -777,6 +790,7 @@ focus_tree = {
 			is_subject = no
 			land_facility > 0
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -785,7 +799,6 @@ focus_tree = {
 			unlock_decision_category_tooltip = PRS_wunderwaffen_plan
 		}
 	}
-
 
 	#건실 경제 루트
 	focus = {
@@ -803,6 +816,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = PRS_mefo_bills_ended }
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -849,6 +863,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = PRS_mefo_bills_ended }
 		}
+		ai_will_do = { factor = 50 }
 		mutually_exclusive = { focus = PRS_11005 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -894,6 +909,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = PRS_mefo_bills_ended }
 		}
+		ai_will_do = { factor = 50 }
 		mutually_exclusive = { focus = PRS_11004 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -941,6 +957,7 @@ focus_tree = {
 				is_neutrality = no
 			}
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -961,6 +978,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = PRS_mefo_bills_ended }
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -981,6 +999,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = PRS_mefo_bills_ended }
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1001,6 +1020,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = PRS_mefo_bills_ended }
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1022,6 +1042,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = PRS_mefo_bills_ended }
 		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -8125,6 +8146,7 @@ focus_tree = {
 		prerequisite = { focus = PRS_31311 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8142,6 +8164,7 @@ focus_tree = {
 		prerequisite = { focus = PRS_31301 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8159,6 +8182,7 @@ focus_tree = {
 		prerequisite = { focus = PRS_31313 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8176,6 +8200,7 @@ focus_tree = {
 		prerequisite = { focus = PRS_31314 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8194,6 +8219,7 @@ focus_tree = {
 		mutually_exclusive = { focus = PRS_31317 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8212,6 +8238,7 @@ focus_tree = {
 		mutually_exclusive = { focus = PRS_31316 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8229,6 +8256,7 @@ focus_tree = {
 		prerequisite = { focus = PRS_31316 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8246,6 +8274,7 @@ focus_tree = {
 		prerequisite = { focus = PRS_31101 focus = PRS_31201 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8264,6 +8293,7 @@ focus_tree = {
 		mutually_exclusive = { focus = PRS_31321 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8282,6 +8312,7 @@ focus_tree = {
 		mutually_exclusive = { focus = PRS_31320 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8299,6 +8330,7 @@ focus_tree = {
 		prerequisite = { focus = PRS_31320 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8316,6 +8348,7 @@ focus_tree = {
 		prerequisite = { focus = PRS_31320 focus = PRS_31321 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8333,6 +8366,7 @@ focus_tree = {
 		prerequisite = { focus = PRS_31321 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8351,6 +8385,7 @@ focus_tree = {
 		mutually_exclusive = { focus = PRS_31326 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8369,6 +8404,7 @@ focus_tree = {
 		mutually_exclusive = { focus = PRS_31325 }
 		cost = 5
 		available = { }
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8396,6 +8432,7 @@ focus_tree = {
 				has_civil_war = no
 			}
 		}
+		ai_will_do = { factor = 50 }
 
 		cancel = {
 			OR = {
@@ -8445,9 +8482,7 @@ focus_tree = {
 			} 
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 50 }
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -8829,7 +8864,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10	
+			factor = 50	
 			modifier = {
 				factor = 0
 				OR = {

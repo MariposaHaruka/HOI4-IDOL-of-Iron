@@ -1397,7 +1397,14 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_11012 focus = BLA_11013 }
 
-		available = { BLA_gehenna_participate = yes }
+		available = { 
+			BLA_gehenna_participate = yes
+			has_improved_light_tank = yes
+			OR = { # 이게 있어야 공수 경전차 사용 가능
+				has_doctrine = paratroopers_1
+				has_doctrine = paratroopers_2
+			}
+		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
@@ -1408,18 +1415,19 @@ focus_tree = {
 				uses = 1
 				category = cat_paratroopers_doctrine
 			}
+			#unlock_subunit = improved_airborne_light_armor
 			division_template = {
-					name = "Toramaru Paratrooper Division"
-					division_names_group = BLA_PAR_01
-					regiments = {
-						paratrooper = { x = 0 y = 0 }
-						paratrooper = { x = 0 y = 1 }
-						paratrooper = { x = 0 y = 2 }
-						paratrooper = { x = 1 y = 0 }
-						paratrooper = { x = 1 y = 1 }
-						paratrooper = { x = 1 y = 2 }
-					}
+				name = "Toramaru Paratrooper Division"
+				division_names_group = BLA_PAR_01
+				regiments = {
+					paratrooper = { x = 0 y = 0 }
+					paratrooper = { x = 0 y = 1 }
+					paratrooper = { x = 0 y = 2 }
+					paratrooper = { x = 1 y = 0 }
+					paratrooper = { x = 1 y = 1 }
+					paratrooper = { x = 1 y = 2 }
 				}
+			}
 			429 = {
 				create_unit = {
 					division = "division_template = \"Toramaru Paratrooper Division\" start_experience_factor = 0.2 start_equipment_factor = 1.0" owner = ROOT count = 2
@@ -1518,7 +1526,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = BLA_11019
-		x = -1
+		x = 1
 		y = 1
 
 		ai_will_do = { factor = 50 }
@@ -1541,7 +1549,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = BLA_11019
-		x = 1
+		x = -1
 		y = 1
 
 		ai_will_do = { factor = 50 }
@@ -3427,9 +3435,12 @@ focus_tree = {
 		x = 54
 		y = 0
 
-		ai_will_do = { factor = 50 }
+		ai_will_do = { factor = 0 } # 이벤트로 중점 통과
 		available = { always = no }
 		mutually_exclusive = { focus = BLA_32001 focus = BLA_33001 }
+		allow_branch = { 
+			NOT = { has_country_flag = BLA_school_country }
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3447,9 +3458,12 @@ focus_tree = {
 		x = 62
 		y = 0
 
-		ai_will_do = { factor = 50 }
+		ai_will_do = { factor = 0 } # 이벤트로 중점 통과
 		available = { always = no }
 		mutually_exclusive = { focus = BLA_31001 focus = BLA_33001 }
+		allow_branch = { 
+			NOT = { has_country_flag = BLA_school_country }
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3489,10 +3503,13 @@ focus_tree = {
 		y = 0
 		relative_position_id = BLA_32001
 
-		ai_will_do = { factor = 50 }
+		ai_will_do = { factor = 0 } # 이벤트로 중점 통과
 		available = { always = no }
 		mutually_exclusive = { focus = BLA_31001 focus = BLA_32001 }
-		allow_branch = { has_country_flag = on_construction_flag } # IOI 임시조치
+		allow_branch = { 
+			has_country_flag = on_construction_flag  # IOI 임시조치
+			NOT = { has_country_flag = BLA_school_country }
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4945,7 +4962,7 @@ focus_tree = {
 		icon = GFX_focus_BLA_33002
 		cost = 0
 
-		x = -6
+		x = -2
 		y = 1
 		relative_position_id = BLA_33001
 
@@ -4975,7 +4992,7 @@ focus_tree = {
 		icon = GFX_focus_BLA_33003
 		cost = 0
 
-		x = -3
+		x = 0
 		y = 1
 		relative_position_id = BLA_33001
 
@@ -5864,7 +5881,7 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		available = {
-			has_country_flag = BLA_USKflag
+			has_country_flag = BLA_USK_flag
 			OR = {
 				has_completed_focus = BLA_31215
 				has_completed_focus = BLA_31216
@@ -5881,6 +5898,9 @@ focus_tree = {
 				has_completed_focus = BLA_31501
 				has_completed_focus = BLA_31601
 			}
+		}
+		allow_branch = { 
+			NOT = { has_country_flag = BLA_school_country }
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5899,7 +5919,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40001
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40001 }
 		mutually_exclusive = { focus = BLA_40201 }
 
@@ -5919,7 +5939,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40101
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40101 }
 
 		available_if_capitulated = yes
@@ -5938,7 +5958,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40101
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40101 }
 
 		available_if_capitulated = yes
@@ -5957,7 +5977,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40102
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40102 }
 
 		available_if_capitulated = yes
@@ -5976,7 +5996,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40103
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40103 }
 
 		available_if_capitulated = yes
@@ -5995,7 +6015,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40104
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40104 }
 		prerequisite = { focus = BLA_40105 }
 
@@ -6015,7 +6035,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40001
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40001 }
 		mutually_exclusive = { focus = BLA_40101 }
 
@@ -6035,7 +6055,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40201
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40201 }
 
 		available_if_capitulated = yes
@@ -6054,7 +6074,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40201
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40201 }
 
 		available_if_capitulated = yes
@@ -6073,7 +6093,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40202
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40202 }
 
 		available_if_capitulated = yes
@@ -6092,7 +6112,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40203
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40203 }
 
 		available_if_capitulated = yes
@@ -6111,7 +6131,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40204
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40204 }
 		prerequisite = { focus = BLA_40205 }
 
@@ -6130,7 +6150,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40105
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40105 focus = BLA_40204 }
 
 		available_if_capitulated = yes
@@ -6148,7 +6168,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40002
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40002 }
 		prerequisite = { focus = BLA_40106 focus = BLA_40206 }
 
@@ -6167,7 +6187,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BLA_40002
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_40002 }
 		prerequisite = { focus = BLA_40106 focus = BLA_40206 }
 

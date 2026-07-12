@@ -1834,7 +1834,7 @@ focus_tree = {
 		relative_position_id = IMA_20001
 		x = -1
 		y = 1
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_20001 }
 		mutually_exclusive = { focus = IMA_20003 }
 
@@ -2973,7 +2973,7 @@ focus_tree = {
 		x = 3
 		y = 2
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_31002 }
 
 		available_if_capitulated = yes
@@ -4197,7 +4197,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_32004 }
 		mutually_exclusive = { focus = IMA_32404 }
 
@@ -4219,7 +4219,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_32004 }
 		mutually_exclusive = { focus = IMA_32304 }
 
@@ -4312,7 +4312,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_32005 }
 
 		available = {
@@ -4361,7 +4361,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_32005 }
 
 		available_if_capitulated = yes
@@ -4455,7 +4455,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_32008 }
 
 		available = {
@@ -4554,7 +4554,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_32009 }
 
 		available = {
@@ -4577,7 +4577,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 50 }
 		prerequisite = { focus = IMA_32010 }
 
 		available = {
@@ -7515,7 +7515,7 @@ focus_tree = {
 		x = 79
 		y = 0
 		
-		ai_will_do = { factor = 50 } #이벤트 통과 중점
+		ai_will_do = { factor = 0 } #이벤트 통과 중점
 		available = { always = no }
 
 		completion_reward = {
@@ -7533,7 +7533,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		ai_will_do = { factor = 50 } #이벤트 통과 중점
+		ai_will_do = { factor = 0 } #이벤트 통과 중점
 		prerequisite = { focus = IMA_50001 }
 		available = { always = no }
 		completion_reward = {
@@ -7551,7 +7551,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 0 } #이벤트 통과 중점
 		prerequisite = { focus = IMA_50001 }
 		available = { always = no }
 		completion_reward = {
@@ -7569,7 +7569,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 0 } #이벤트 통과 중점
 		prerequisite = { focus = IMA_50001 }
 		available = { always = no }
 		completion_reward = {

@@ -19,9 +19,7 @@ shared_focus = {
 
 	cost = 5
 
-	ai_will_do = {
-		factor = 50
-	}
+	ai_will_do = { factor = 50 }
 	available = { }
 	bypass = {
 		OR = {
@@ -55,9 +53,7 @@ shared_focus = {
 	relative_position_id = IMA_DO001 
 	cost = 5
 
-	ai_will_do = {
-		factor = 50
-	}
+	ai_will_do = { factor = 50 }
 	available = { }
 	bypass = {
 		OR = {
@@ -90,9 +86,7 @@ shared_focus = {
 	relative_position_id = IMA_DO001 
 	cost = 5
 
-	ai_will_do = {
-		factor = 50
-	}
+	ai_will_do = { factor = 50 }
 	available = { }
 	bypass = {
 		OR = {
@@ -125,9 +119,7 @@ shared_focus = {
 	relative_position_id = IMA_DO001 
 	cost = 5
 
-	ai_will_do = {
-		factor = 50
-	}
+	ai_will_do = { factor = 50 }
 	available = { }
 	bypass = {
 		OR = {
@@ -160,9 +152,7 @@ shared_focus = {
 	relative_position_id = IMA_DO002 
 	cost = 5
 
-	ai_will_do = {
-		factor = 50
-	}
+	ai_will_do = { factor = 50 }
 	available = {
 		OR = {
 			ROOT = { has_autonomy_state = ima_colony }
@@ -209,9 +199,7 @@ shared_focus = {
 	relative_position_id = IMA_DO003 
 	cost = 5
 
-	ai_will_do = {
-		factor = 50
-	}
+	ai_will_do = { factor = 50 }
 	available = {
 		ROOT = { has_autonomy_state = ima_dominion }
 	}
@@ -245,9 +233,7 @@ shared_focus = {
 	relative_position_id = IMA_DO004 
 	cost = 5
 
-	ai_will_do = {
-		factor = 50
-	}
+	ai_will_do = { factor = 50 }
 	available = {
 		ROOT = { has_autonomy_state = ima_dominion }
 	}
@@ -284,9 +270,7 @@ shared_focus = {
 	mutually_exclusive = { focus = IMA_DO009 }
 	cost = 5
 
-	ai_will_do = {
-		factor = 50
-	}
+	ai_will_do = { factor = 50 }
 	available = { 
 		ROOT = { has_autonomy_state = ima_dominion }
 		ROOT = { IMA_ready_for_westminster_statute = yes }
@@ -331,9 +315,7 @@ shared_focus = {
 	mutually_exclusive = { focus = IMA_DO008 }
 	cost = 5
 
-	ai_will_do = {
-		factor = 50
-	}
+	ai_will_do = { factor = 50 }
 	available = {  }
 	bypass = {
 		ROOT = { is_subject = no }
@@ -363,9 +345,7 @@ shared_focus = {
 	relative_position_id = IMA_DO008
 	cost = 5
 
-	ai_will_do = {
-		factor = 50
-	}
+	ai_will_do = { factor = 50 }
 	available = { }
 	bypass = { 
 		original_tag = ISC #얘넨 이거 필요 없음
