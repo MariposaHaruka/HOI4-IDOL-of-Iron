@@ -54,11 +54,11 @@ IMA_westminster_statute_category = { #웨스트민스터 헌장
 	icon = generic_political_actions
 	priority = 96
 	allowed = {
-		IMA = { 
-			NOT = { 
+		IMA = {
+			NOT = {
 				has_completed_focus = IMA_41001
 				has_completed_focus = IMA_43001
-			} 
+			}
 		}
 		OR = {
 			has_idea = IMA_westminster_statute
@@ -66,11 +66,11 @@ IMA_westminster_statute_category = { #웨스트민스터 헌장
 		}
 	}
 	visible = {
-		IMA = { 
-			NOT = { 
+		IMA = {
+			NOT = {
 				has_completed_focus = IMA_41001
 				has_completed_focus = IMA_43001
-			} 
+			}
 		}
 		OR = {
 			has_idea = IMA_westminster_statute
@@ -189,4 +189,20 @@ IMA_idol_committee_category= { #아이돌 마스터 회의
 		NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
 	}
 	visible_when_empty = yes
+}
+
+IMA_79th_armor_division_decision_category = { # 제79기갑사단
+	icon = SWI_federal_council
+	priority = 94
+	allowed = {
+	 	OR = {
+			original_tag = IMA
+			has_country_flag = IMA_79th_armor_division_expedition_flag
+		}
+	}
+	visible = {
+		has_completed_focus = IMA_51015
+		NOT = { has_country_flag = IMA_idol_national_unity_government_flag }
+	}
+	visible_when_empty = no
 }

@@ -250,8 +250,8 @@ focus_tree = {
 				tooltip = infantry_equipment_build_cost_ic_tt
 			}
 			add_to_variable = {
-				BLA_army_supply_factor = -0.05
-				tooltip = supply_factor_tt
+				BLA_army_supply_consumption_factor = -0.05
+				tooltip = supply_consumption_factor_tt
 			}
 			add_to_variable = {
 				BLA_army_army_leader_cost_factor = -0.05
@@ -4107,6 +4107,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_31203"
+			hidden_effect = {
+				clr_country_flag = BLA_president_missing # 학생회장 귀환 막음
+			}
 		}
 	}
 
