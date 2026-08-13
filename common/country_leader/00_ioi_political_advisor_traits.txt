@@ -1,174 +1,298 @@
 leader_traits = {
-	conservatism_worker = { #보수주의자
+	# 정치고문 - 이념 지지도만 올리는 경우
+	conservatism_advisor = { #정통 보수주의자
 		random = yes
 		sprite = 13
-		conservatism_drift = 0.15
+		conservatism_drift = 0.10
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				ai_conservatism = yes
-				add = 100
-			}
-			modifier = {
-				has_completed_focus = maintain_political_stance
-				is_democratic = yes
-				NOT = { has_government = conservatism }
+				has_government = conservatism
 				add = 50
 			}
 		}
 	}
-	liberalism_worker = { #자유주의자
+	liberalism_advisor = { #자유주의 정치가
 		random = yes
 		sprite = 13
-		liberalism_mod_drift = 0.15
+		liberalism_mod_drift = 0.10
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				ai_liberalism = yes
-				add = 100
-			}
-			modifier = {
-				has_completed_focus = maintain_political_stance
-				is_democratic = yes
-				NOT = { has_government = liberalism_mod }
+				has_government = liberalism_mod
 				add = 50
 			}
 		}
 	}
-	progressivism_worker = { #진보주의자
+	progressivism_advisor = { #진보 정치가
 		random = yes
 		sprite = 13
-		progressivism_drift = 0.15
+		progressivism_drift = 0.10
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				ai_progressivism = yes
-				add = 100
-			}
-			modifier = {
-				has_completed_focus = maintain_political_stance
-				is_democratic = yes
-				NOT = { has_government = progressivism }
+				has_government = progressivism
 				add = 50
 			}
 		}
 	}
-	socialdemocracy_worker = { #사민주의자
+	socialdemocracy_advisor = { #사민주의 정치가
 		random = yes
 		sprite = 13
-		socialdemocracy_drift = 0.15
+		socialdemocracy_drift = 0.10
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				ai_socialdemocracy = yes
-				add = 100
-			}
-			modifier = {
-				has_completed_focus = maintain_political_stance
-				is_democratic = yes
-				NOT = { has_government = socialdemocracy }
+				has_government = socialdemocracy
 				add = 50
 			}
 		}
 	}
-	communism_revolutionary_worker = { #연속혁명 운동가
+	communism_advisor = { #공산주의 조직자
 		random = yes
 		sprite = 13
-		communism_drift = 0.15
+		communism_drift = 0.10
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				ai_communism = yes
-				add = 100
+				has_government = communism
+				add = 50
 			}
 		}
 	}
-	socialism_revolutionary_worker = { #사회주의자
+	socialism_advisor = { #사회주의 운동가
 		random = yes
 		sprite = 13
-		socialism_drift = 0.15
+		socialism_drift = 0.10
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				ai_socialism = yes
-				add = 100
+				has_government = socialism
+				add = 50
 			}
 		}
 	}
-	authoritariancommunism_revolutionary_worker = { #공산혁명 운동가
+	authoritariancommunism_advisor = { #모스크바의 추종자
 		random = yes
 		sprite = 13
-		authoritariancommunism_drift = 0.15
+		authoritariancommunism_drift = 0.10
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				ai_authoritariancommunism = yes
-				add = 100
+				has_government = authoritariancommunism
+				add = 50
 			}
 		}
 	}
-	anarchosyndicalism_revolutionary_worker = { #아나키스트
+	anarchosyndicalism_advisor = { #노동운동가
 		random = yes
 		sprite = 13
-		anarchosyndicalism_drift = 0.15
+		anarchosyndicalism_drift = 0.10
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				ai_anarchosyndicalism = yes
-				add = 100
+				has_government = anarchosyndicalism
+				add = 50
 			}
 		}
 	}
-	fanatic_fascist = { #파시스트 운동가
+	fascist_advisor = { #파시스트 선동가
 		random = yes
 		sprite = 13
-		fascism_drift = 0.15
+		fascism_drift = 0.10
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				ai_fascism = yes
-				add = 100
+				has_government = fascism
+				add = 50
 			}
 		}
 	}
-	fanatic_militarytotalism = { #군국주의 운동가
+	militarytotalism_advisor = { #군국주의 운동가
 		random = yes
 		sprite = 13
-		militarytotalism_drift = 0.15
+		militarytotalism_drift = 0.10
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				ai_militarytotalism = yes
-				add = 100
+				has_government = militarytotalism
+				add = 50
 			}
 		}
 	}
-	autocracy_royalist = { #왕당주의자
+	autocracy_advisor = { #왕당파
 		random = yes
 		sprite = 13
-		autocracy_drift = 0.15
+		autocracy_drift = 0.10
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				ai_autocracy = yes
-				add = 100
+				has_government = autocracy
+				add = 50
 			}
 		}
 	}
-	authoritarian_royalist = { #권위주의자
+	authoritarian_advisor = { #권위주의 정치가
 		random = yes
 		sprite = 13
-		authoritariandemocracy_drift = 0.15
+		authoritariandemocracy_drift = 0.10
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				ai_authoritariandemocracy = yes
-				add = 100
+				has_government = authoritariandemocracy
+				add = 50
+			}
+		}
+	}
+	# 정치고문 - 다른 것도 올리는 경우
+
+
+	conservatism_advisor = { #정통 보수주의자
+		random = yes
+		sprite = 13
+		conservatism_drift = 0.10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = conservatism
+				add = 50
+			}
+		}
+	}
+	liberalism_advisor = { #자유주의 정치가
+		random = yes
+		sprite = 13
+		liberalism_mod_drift = 0.10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = liberalism_mod
+				add = 50
+			}
+		}
+	}
+	progressivism_advisor = { #진보 정치가
+		random = yes
+		sprite = 13
+		progressivism_drift = 0.10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = progressivism
+				add = 50
+			}
+		}
+	}
+	socialdemocracy_advisor = { #사민주의 정치가
+		random = yes
+		sprite = 13
+		socialdemocracy_drift = 0.10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = socialdemocracy
+				add = 50
+			}
+		}
+	}
+	communism_advisor = { #공산주의 조직자
+		random = yes
+		sprite = 13
+		communism_drift = 0.10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = communism
+				add = 50
+			}
+		}
+	}
+	socialism_advisor = { #사회주의 운동가
+		random = yes
+		sprite = 13
+		socialism_drift = 0.10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = socialism
+				add = 50
+			}
+		}
+	}
+	authoritariancommunism_advisor = { #모스크바의 추종자
+		random = yes
+		sprite = 13
+		authoritariancommunism_drift = 0.10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = authoritariancommunism
+				add = 50
+			}
+		}
+	}
+	anarchosyndicalism_advisor = { #노동운동가
+		random = yes
+		sprite = 13
+		anarchosyndicalism_drift = 0.10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = anarchosyndicalism
+				add = 50
+			}
+		}
+	}
+	fascist_advisor = { #파시스트 선동가
+		random = yes
+		sprite = 13
+		fascism_drift = 0.10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = fascism
+				add = 50
+			}
+		}
+	}
+	militarytotalism_advisor = { #군국주의 운동가
+		random = yes
+		sprite = 13
+		militarytotalism_drift = 0.10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = militarytotalism
+				add = 50
+			}
+		}
+	}
+	autocracy_advisor = { #왕당파
+		random = yes
+		sprite = 13
+		autocracy_drift = 0.10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = autocracy
+				add = 50
+			}
+		}
+	}
+	authoritarian_advisor = { #권위주의 정치가
+		random = yes
+		sprite = 13
+		authoritariandemocracy_drift = 0.10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = authoritariandemocracy
+				add = 50
 			}
 		}
 	}
 
-	#ONK
+	#ONK_temporary
 	the_chancellor_ONK = { #차르국 수상
 		sprite = 13
 		stability_factor = 0.1
