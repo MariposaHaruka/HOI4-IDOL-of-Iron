@@ -2861,6 +2861,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_21104"
+			if = {
+				limit = { has_completed_focus = BLA_51002 }
+				unlock_decision_tooltip = BLA_political_actions_promote_colonial_officials
+				else = {
+					custom_effect_tooltip = {
+						localization_key = available_decision_in_case_tt
+						ANOTHERFOCUS = BLA_51002
+						DECISIONNAME = BLA_political_actions_promote_colonial_officials
+					}
+				}
+			}
 		}
 	}
 
@@ -6656,7 +6667,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_50001"
 			country_event = BLA_bharat_problem.1
-			#unlock_decision_category_tooltip = BLA_bharat_committee
+			#unlock_decision_category_tooltip = BLA_bharat_committee - 이벤트로 해금 됨
 		}
 	}
 
@@ -6677,6 +6688,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_51001"
+			add_stability = 0.01
 			#unlock_decision_tooltip = BLA_bharat_problem_ethnic_committee
 		}
 	}
@@ -6704,7 +6716,11 @@ focus_tree = {
 				limit = { has_completed_focus = BLA_21104 }
 				unlock_decision_tooltip = BLA_political_actions_promote_colonial_officials
 				else = {
-					custom_effect_tooltip = BLA_political_actions_promote_colonial_officials_51002_tt
+					custom_effect_tooltip = {
+						localization_key = available_decision_in_case_tt
+						ANOTHERFOCUS = BLA_21104
+						DECISIONNAME = BLA_political_actions_promote_colonial_officials
+					}
 				}
 			}
 		}
@@ -6727,12 +6743,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_51003"
 			#unlock_decision_tooltip = BLA_bharat_committee_invite_english_general
+			add_stability = 0.01
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = BLA_bad_administrative
 			}
 			add_to_variable = {
-				BLA_bad_administrative_conscription_factor = 0.2
+				BLA_bad_administrative_conscription_factor = 0.01
 				tooltip = conscription_factor_tt
 			}
 		}
@@ -6754,6 +6772,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_51004"
+			add_stability = 0.02
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_bad_administrative
+			}
+			add_to_variable = {
+				BLA_bad_administrative_conscription_factor = 0.02
+				tooltip = conscription_factor_tt
+			}
 		}
 	}
 
@@ -6773,6 +6801,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_51005"
+			add_stability = 0.02
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = BLA_bad_administrative
@@ -6781,7 +6811,6 @@ focus_tree = {
 				BLA_bad_administrative_conscription_factor = 0.05
 				tooltip = conscription_factor_tt
 			}
-			remove_ideas = BLA_kivotos_bharat_problem
 		}
 	}
 
@@ -6802,7 +6831,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_51001"
-			add_stability = -0.1
+			add_stability = 0.02
+			add_political_power = 50
+			add_ideas = BLA_kivotos_bharat_problem
 		}
 	}
 
@@ -6899,7 +6930,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BLA_50002 #악습 타파
+		id = BLA_50002 #사회질서 확립
 		icon = GFX_focus_spr_crush_the_revolution
 		cost = 5
 
@@ -6914,6 +6945,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_50002"
+			add_stability = 0.02
+			add_political_power = 50
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_industry_modifier
+			}
+			add_to_variable = {
+				BLA_industry_consumer_goods_factor = -0.02
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 
@@ -6933,6 +6975,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_50003"
+			add_stability = 0.02
+			add_political_power = 50
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = BLA_bad_administrative
@@ -6989,11 +7034,22 @@ focus_tree = {
 			}
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_50005"
 			add_stability = 0.1
+			if = {
+				limit = { has_completed_focus = BLA_50006 }
+				unlock_decision_tooltip = BLA_technology_n_research_committee_elephantry_upgrade
+				else = {
+					custom_effect_tooltip = {
+						localization_key = available_decision_in_case_tt
+						ANOTHERFOCUS = BLA_MIL_13002
+						DECISIONNAME = BLA_technology_n_research_committee_elephantry_upgrade
+					}
+				}
+			}
 		}
 	}
 
 	focus = {
-		id = BLA_50006 #다문화의 우월성
+		id = BLA_50006 #다문화의 조화
 		icon = GFX_focus_ioi_generic_cultural_success
 		cost = 5
 
@@ -7009,6 +7065,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_50006"
 			add_stability = 0.1
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_industry_modifier
+			}
+			add_to_variable = {
+				BLA_industry_consumer_goods_factor = -0.03
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 

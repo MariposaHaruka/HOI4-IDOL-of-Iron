@@ -46,11 +46,8 @@ scripted_gui = {
 		}
 
 		triggers = {
-			flip_back_visible = { has_variable = wwi_intro_page_count }
-			flip_forward_visible = { has_variable = wwi_intro_page_count }
-
 			flip_back_click_enabled = { check_variable = { curr_intro1_page > 0 } }
-			flip_forward_click_enabled = { check_variable = { curr_intro1_page < wwi_intro_page_count } }
+			flip_forward_click_enabled = { check_variable = { curr_intro1_page < 3 } }
 		}
 
 		effects = {
@@ -62,7 +59,7 @@ scripted_gui = {
 			}
 			flip_forward_click = {
 				if = {
-					limit = { check_variable = { curr_intro1_page < wwi_intro_page_count } }
+					limit = { check_variable = { curr_intro1_page < 3 } }
 					add_to_variable = { curr_intro1_page = 1 }
 				}
 			}
@@ -80,6 +77,7 @@ scripted_gui = {
 		window_name =  mod_intro_tab_2_container
 		parent_window_name = "mod_welcome_container"
 		dirty = intro_variable
+		dirty = curr_intro1_page
 		dirty = curr_intro2_page
 
 		ai_enabled = { always = no }
@@ -144,4 +142,3 @@ scripted_gui = {
 		}
 	}
 }
-

@@ -12,24 +12,55 @@ defined_text = { #Any commented out GFX means the intro screen is ready but is w
 }
 
 defined_text = {
+	name = GetWorldHistoryContent
+	text = {
+		trigger = { check_variable = { curr_intro1_page = 3 } }
+		localization_key = world_history_content_4
+	}
+	text = {
+		trigger = { check_variable = { curr_intro1_page = 2 } }
+		localization_key = world_history_content_3
+	}
+	text = {
+		trigger = { check_variable = { curr_intro1_page = 1 } }
+		localization_key = world_history_content_2
+	}
+	text = {
+		localization_key = world_history_content_1
+	}
+}
+
+defined_text = {
+	name = GetWorldHistoryHeader
+	text = { trigger = { check_variable = { curr_intro1_page = 3 } } localization_key = world_history_header_4 }
+	text = { trigger = { check_variable = { curr_intro1_page = 2 } } localization_key = world_history_header_3 }
+	text = { trigger = { check_variable = { curr_intro1_page = 1 } } localization_key = world_history_header_2 }
+	text = { localization_key = world_history_header_1 }
+}
+
+defined_text = {
 	name = GetCountryContent
-	text = { 
-		trigger = { check_variable = { curr_intro2_page = 2 } } 
-		localization_key = country_culture|country_intro_content_3 
+	text = {
+		trigger = { check_variable = { curr_intro2_page = 3 } }
+		localization_key = country_culture|country_intro_content_4
 	}
-	text = { 
-		trigger = { check_variable = { curr_intro2_page = 1 } } 
-		localization_key = country_culture|country_intro_content_2 
+	text = {
+		trigger = { check_variable = { curr_intro2_page = 2 } }
+		localization_key = country_culture|country_intro_content_3
 	}
-	text = { 
-		localization_key = country_culture|country_intro_content_1 
+	text = {
+		trigger = { check_variable = { curr_intro2_page = 1 } }
+		localization_key = country_culture|country_intro_content_2
+	}
+	text = {
+		localization_key = country_culture|country_intro_content_1
 	}
 }
 
 defined_text = {
 	name = GetCountryIntroHeader
+	text = { trigger = { check_variable = { curr_intro2_page = 3 } } localization_key = country_culture|country_intro_header_4 }
 	text = { trigger = { check_variable = { curr_intro2_page = 2 } } localization_key = country_culture|country_intro_header_3 }
 	text = { trigger = { check_variable = { curr_intro2_page = 1 } } localization_key = country_culture|country_intro_header_2 }
 	text = { localization_key = country_culture|country_intro_header_1 }
 }
-
