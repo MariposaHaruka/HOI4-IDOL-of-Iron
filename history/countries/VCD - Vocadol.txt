@@ -70,13 +70,13 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 
 #국민 정신
 
-add_dynamic_modifier = { modifier = VCD_industry }
+add_dynamic_modifier = { modifier = VCD_industry_modifier }
 add_dynamic_modifier = { modifier = VCD_army }
 add_dynamic_modifier = { modifier = VCD_air_force }
 
@@ -185,7 +185,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = VCD_lily
 
 #recruit_character = VCD_kurt_schuschnigg
@@ -216,7 +216,7 @@ recruit_character = VCD_lily
 #recruit_character = VCD_franz_koritschoner
 #recruit_character = VCD_adolf_scharf
 #recruit_character = VCD_adolf_hoch
-#recruit_character = VCD_otto_bauer 
+#recruit_character = VCD_otto_bauer
 #recruit_character = VCD_alois_schonburg_hartenstein
 #recruit_character = VCD_julius_raab
 #recruit_character = VCD_leopold_figl
@@ -268,17 +268,17 @@ if = {
 	limit = { has_LaR = yes }
 	create_operative_leader = {
 		name = AUS_erwin_von_lahousen
-		bypass_recruitment = no 
-		available_to_spy_master = yes 
-		gfx = GFX_portrait_AUS_erwin_von_lahousen 
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		gfx = GFX_portrait_AUS_erwin_von_lahousen
 		traits = { operative_double_agent operative_commando }
 		nationalities = { VCD PRS }
 	}
 	create_operative_leader = {
 		name = AUS_wilhelm_ergert
-		bypass_recruitment = no 
-		available_to_spy_master = yes 
-		gfx = GFX_portrait_AUS_wilhelm_ergert 
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		gfx = GFX_portrait_AUS_wilhelm_ergert
 		traits = { operative_double_agent operative_linguist operative_safe_cracker }
 		nationalities = { VCD PRS PRP }
 	}

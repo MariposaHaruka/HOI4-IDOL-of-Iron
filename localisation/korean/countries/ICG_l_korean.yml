@@ -1,30 +1,75 @@
 ﻿l_korean:
+ ########################################
+ #########- Table of Contents - #########
+ ########################################
+ #Section 01: Country Intro
+ #Section 02: Ideas & National Spirits
+ #Section 03: State & Dynamic Modifiers
+ #Section 04: National Focuses
+ #Section 05: Equipment
+ #Section 06: Decisions
+ #Section 07: Events
+ #Section 08: GUI
+ #Section 09: Tooltips
+ #Section 10: Misc
+ ########################################
+ #####- Section 01: Country Intro - #####
+ ########################################
  ICG_country_intro_background: "GFX_ICG_intro"
  ICG_country_intro_header_1: "$generic_country_intro_header_1$"
- ICG_country_intro_header_2: "경로 가이드(스포일러 주의)"
+ ICG_country_intro_header_2: "$generic_country_intro_header_1$"
+ ICG_country_intro_header_3: "$generic_country_intro_header_1$"
+ ICG_country_intro_header_4: "아이돌 마스터 신데렐라 걸즈 경로 가이드(스포일러 주의)"
  ICG_country_intro_content_1: "$generic_country_content$\n\n"
- ICG_country_intro_content_2: "$generic_country_route$"
- #bop
- #ideas_static
+ ICG_country_intro_content_2: "$generic_country_content$\n\n"
+ ICG_country_intro_content_3: "$generic_country_content$\n\n"
+ ICG_country_intro_content_4: "$generic_country_route$"
+ ###################################################
+ #####- Section 02: Ideas & National Spirits - #####
+ ###################################################
  ICG_wounded_national_pride_idea: "상처 입은 국가적 자존심"
- #ideas_dynamic
- ICG_industry: "[ICG.GetName] 산업"
- ICG_industry_desc: ""
- ICG_industry_tt: "§Y$ICG_industry$§! 변동치:"
- ICG_army: "[ICG.GetName] 육군"
+ ####################################################
+ #####- Section 03: State & Dynamic Modifiers - #####
+ ####################################################
+ ICG_industry_modifier: "아이돌 마스터 신데렐라 걸즈 산업"
+ ICG_industry_modifier_desc: ""
+ ICG_army: "아이돌 마스터 신데렐라 걸즈 육군"
  ICG_army_desc: ""
- ICG_army_tt: "§Y$ICG_army$§! 변동치:"
- ICG_navy: "[ICG.GetName] 해군"
+ ICG_navy: "아이돌 마스터 신데렐라 걸즈 해군"
  ICG_navy_desc: ""
- ICG_navy_tt: "§Y$ICG_navy$§! 변동치:"
- ICG_air_force: "[ICG.GetName] 공군"
+ ICG_air_force: "아이돌 마스터 신데렐라 걸즈 공군"
  ICG_air_force_desc: ""
- ICG_air_force_tt: "§Y$ICG_air_force$§! 변동치:"
- #focus
- #equipment_version
- #equipment_army
- #equipment_navy
- #equipment_airforce
- #decisions
- #country_events
- 
+ # state modifiers
+ ###########################################
+ #####- Section 04: National Focuses - #####
+ ###########################################
+ # focus shortcut
+ # focus
+ ####################################
+ #####- Section 05: Equipment - #####
+ ####################################
+ # equipment version
+ # equipment army
+ # equipment navy
+ # equipment airforce
+ ####################################
+ #####- Section 06: Decisions - #####
+ ####################################
+ #################################
+ #####- Section 07: Events - #####
+ #################################
+ ##############################
+ #####- Section 08: GUI - #####
+ ##############################
+ # focus inlay
+ ###################################
+ #####- Section 09: Tooltips - #####
+ ###################################
+ # country flag
+ # custom trigger tooltip
+ # focus tooltip
+ # decision tooltip
+ # event tooltip
+ ###############################
+ #####- Section 10: Misc - #####
+ ###############################

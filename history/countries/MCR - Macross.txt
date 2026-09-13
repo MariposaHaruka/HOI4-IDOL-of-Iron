@@ -22,7 +22,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 5
@@ -30,7 +30,7 @@ set_convoys = 5
 #국민 정신
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = MCR_industry }
+add_dynamic_modifier = { modifier = MCR_industry_modifier }
 add_dynamic_modifier = { modifier = MCR_army }
 add_dynamic_modifier = { modifier = MCR_air_force }
 
@@ -151,7 +151,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = MCR_lynn_minmay
 recruit_character = MCR_nekki_basara
 
@@ -161,7 +161,7 @@ recruit_character = MCR_nekki_basara
 #recruit_character = MCR_ras_imru_haile_selassie
 #recruit_character = MCR_seyoum_mengesha
 #recruit_character = MCR_desta_damtew
-#recruit_character = MCR_ras_kassa 
+#recruit_character = MCR_ras_kassa
 #recruit_character = MCR_makonnen_endelkatchew
 #recruit_character = MCR_john_robinson
 #recruit_character = MCR_hailu_tekle_haymanot

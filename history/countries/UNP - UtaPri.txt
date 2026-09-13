@@ -19,7 +19,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 20
@@ -28,7 +28,7 @@ set_convoys = 20
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = UNP_industry }
+add_dynamic_modifier = { modifier = UNP_industry_modifier }
 add_dynamic_modifier = { modifier = UNP_army }
 add_dynamic_modifier = { modifier = UNP_navy }
 
@@ -149,7 +149,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = UNP_ittoki_otoya
 
 #장관진

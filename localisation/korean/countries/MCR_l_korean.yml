@@ -1,29 +1,78 @@
 ﻿l_korean:
+ ########################################
+ #########- Table of Contents - #########
+ ########################################
+ #Section 01: Country Intro
+ #Section 02: Ideas & National Spirits
+ #Section 03: State & Dynamic Modifiers
+ #Section 04: National Focuses
+ #Section 05: Equipment
+ #Section 06: Decisions
+ #Section 07: Events
+ #Section 08: GUI
+ #Section 09: Tooltips
+ #Section 10: Misc
+ ########################################
+ #####- Section 01: Country Intro - #####
+ ########################################
  MCR_country_intro_background: "GFX_MCR_intro"
  MCR_country_intro_header_1: "$generic_country_intro_header_1$"
- MCR_country_intro_header_2: "경로 가이드(스포일러 주의)"
+ MCR_country_intro_header_2: "$generic_country_intro_header_1$"
+ MCR_country_intro_header_3: "$generic_country_intro_header_1$"
+ MCR_country_intro_header_4: "마크로스 경로 가이드(스포일러 주의)"
  MCR_country_intro_content_1: "$generic_country_content$\n\n"
- MCR_country_intro_content_2: "$generic_country_route$"
- #bop
- #ideas_static
- #ideas_dynamic
- MCR_industry: "[MCR.GetName] 산업"
- MCR_industry_desc: ""
- MCR_industry_tt: "§Y$MCR_industry$§! 변동치:"
- MCR_army: "[MCR.GetName] 육군"
+ MCR_country_intro_content_2: "$generic_country_content$\n\n"
+ MCR_country_intro_content_3: "$generic_country_content$\n\n"
+ MCR_country_intro_content_4: "$generic_country_route$"
+ ###################################################
+ #####- Section 02: Ideas & National Spirits - #####
+ ###################################################
+ # bop
+ # MIO/designers
+ # idea
+ ####################################################
+ #####- Section 03: State & Dynamic Modifiers - #####
+ ####################################################
+ # dynamic modifiers
+ MCR_industry_modifier: "마크로스 산업"
+ MCR_industry_modifier_desc: ""
+ MCR_army: "마크로스 육군"
  MCR_army_desc: ""
- MCR_army_tt: "§Y$MCR_army$§! 변동치:"
- MCR_navy: "[MCR.GetName] 해군"
+ MCR_navy: "마크로스 해군"
  MCR_navy_desc: ""
- MCR_navy_tt: "§Y$MCR_navy$§! 변동치:"
- MCR_air_force: "[MCR.GetName] 공군"
+ MCR_air_force: "마크로스 공군"
  MCR_air_force_desc: ""
- MCR_air_force_tt: "§Y$MCR_air_force$§! 변동치:"
- #focus
- #equipment_version
- #equipment_army
- #equipment_navy
- #equipment_airforce
- #decisions
- #country_events
- 
+ # state modifiers
+ ###########################################
+ #####- Section 04: National Focuses - #####
+ ###########################################
+ # focus shortcut
+ # focus
+ ####################################
+ #####- Section 05: Equipment - #####
+ ####################################
+ # equipment version
+ # equipment army
+ # equipment navy
+ # equipment airforce
+ ####################################
+ #####- Section 06: Decisions - #####
+ ####################################
+ #################################
+ #####- Section 07: Events - #####
+ #################################
+ ##############################
+ #####- Section 08: GUI - #####
+ ##############################
+ # focus inlay
+ ###################################
+ #####- Section 09: Tooltips - #####
+ ###################################
+ # country flag
+ # custom trigger tooltip
+ # focus tooltip
+ # decision tooltip
+ # event tooltip
+ ###############################
+ #####- Section 10: Misc - #####
+ ###############################

@@ -1,29 +1,71 @@
 ﻿l_korean:
+ ########################################
+ #########- Table of Contents - #########
+ ########################################
+ #Section 01: Country Intro
+ #Section 02: Ideas & National Spirits
+ #Section 03: State & Dynamic Modifiers
+ #Section 04: National Focuses
+ #Section 05: Equipment
+ #Section 06: Decisions
+ #Section 07: Events
+ #Section 08: GUI
+ #Section 09: Tooltips
+ #Section 10: Misc
+ ########################################
+ #####- Section 01: Country Intro - #####
+ ########################################
  LAS_country_intro_background: "GFX_LAS_intro"
  LAS_country_intro_header_1: "$generic_country_intro_header_1$"
- LAS_country_intro_header_2: "경로 가이드(스포일러 주의)"
+ LAS_country_intro_header_2: "$generic_country_intro_header_1$"
+ LAS_country_intro_header_3: "$generic_country_intro_header_1$"
+ LAS_country_intro_header_4: "라스트 오리진 경로 가이드(스포일러 주의)"
  LAS_country_intro_content_1: "$generic_country_content$\n\n"
- LAS_country_intro_content_2: "$generic_country_route$"
- #bop
- #ideas_static
- #ideas_dynamic
- LAS_industry: "[LAS.GetName] 산업"
- LAS_industry_desc: ""
- LAS_industry_tt: "§Y$LAS_industry$§! 변동치:"
- LAS_army: "[LAS.GetName] 육군"
+ LAS_country_intro_content_2: "$generic_country_content$\n\n"
+ LAS_country_intro_content_3: "$generic_country_content$\n\n"
+ LAS_country_intro_content_4: "$generic_country_route$"
+ ###################################################
+ #####- Section 02: Ideas & National Spirits - #####
+ ###################################################
+ # bop
+ # MIO/designers
+ # idea
+ ####################################################
+ #####- Section 03: State & Dynamic Modifiers - #####
+ ####################################################
+ LAS_industry_modifier: "라스트 오리진 산업"
+ LAS_industry_modifier_desc: ""
+ LAS_army: "라스트 오리진 육군"
  LAS_army_desc: ""
- LAS_army_tt: "§Y$LAS_army$§! 변동치:"
- LAS_navy: "[LAS.GetName] 해군"
+ LAS_navy: "라스트 오리진 해군"
  LAS_navy_desc: ""
- LAS_navy_tt: "§Y$LAS_navy$§! 변동치:"
- LAS_air_force: "[LAS.GetName] 공군"
+ LAS_air_force: "라스트 오리진 공군"
  LAS_air_force_desc: ""
- LAS_air_force_tt: "§Y$LAS_air_force$§! 변동치:"
- #focus
+ ###########################################
+ #####- Section 04: National Focuses - #####
+ ###########################################
+ # focus
  LAS_tmp: "사령부 소집"
- #equipment_version
- #equipment_army
- #equipment_navy
- #equipment_airforce
- #decisions
- #country_events
+ ####################################
+ #####- Section 05: Equipment - #####
+ ####################################
+ ####################################
+ #####- Section 06: Decisions - #####
+ ####################################
+ #################################
+ #####- Section 07: Events - #####
+ #################################
+ ##############################
+ #####- Section 08: GUI - #####
+ ##############################
+ ###################################
+ #####- Section 09: Tooltips - #####
+ ###################################
+ # country flag
+ # custom trigger tooltip
+ # focus tooltip
+ # decision tooltip
+ # event tooltip
+ ###############################
+ #####- Section 10: Misc - #####
+ ###############################

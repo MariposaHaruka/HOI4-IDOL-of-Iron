@@ -35,7 +35,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 20
@@ -43,6 +43,10 @@ set_convoys = 20
 #국민 정신
 
 add_ideas = agrarian_society
+add_dynamic_modifier = { modifier = KJI_industry_modifier }
+add_dynamic_modifier = { modifier = KJI_army }
+add_dynamic_modifier = { modifier = KJI_navy }
+add_dynamic_modifier = { modifier = KJI_air_force }
 
 ## KJI_industry
 set_variable = { KJI_industry_production_speed_buildings_factor = -0.25 }
@@ -163,7 +167,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = KJI_enomoto_natsuki
 
 #장관진

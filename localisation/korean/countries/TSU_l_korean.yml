@@ -1,29 +1,78 @@
 ﻿l_korean:
+ ########################################
+ #########- Table of Contents - #########
+ ########################################
+ #Section 01: Country Intro
+ #Section 02: Ideas & National Spirits
+ #Section 03: State & Dynamic Modifiers
+ #Section 04: National Focuses
+ #Section 05: Equipment
+ #Section 06: Decisions
+ #Section 07: Events
+ #Section 08: GUI
+ #Section 09: Tooltips
+ #Section 10: Misc
+ ########################################
+ #####- Section 01: Country Intro - #####
+ ########################################
  TSU_country_intro_background: "GFX_TSU_intro"
  TSU_country_intro_header_1: "$generic_country_intro_header_1$"
- TSU_country_intro_header_2: "경로 가이드(스포일러 주의)"
+ TSU_country_intro_header_2: "$generic_country_intro_header_1$"
+ TSU_country_intro_header_3: "$generic_country_intro_header_1$"
+ TSU_country_intro_header_4: "츠키노 프로덕션(츠키프로) 경로 가이드(스포일러 주의)"
  TSU_country_intro_content_1: "$generic_country_content$\n\n"
- TSU_country_intro_content_2: "$generic_country_route$"
- #bop
- #ideas_static
- #ideas_dynamic
- TSU_industry: "[TSU.GetName] 산업"
- TSU_industry_desc: ""
- TSU_industry_tt: "§Y$TSU_industry$§! 변동치:"
- TSU_army: "[TSU.GetName] 육군"
+ TSU_country_intro_content_2: "$generic_country_content$\n\n"
+ TSU_country_intro_content_3: "$generic_country_content$\n\n"
+ TSU_country_intro_content_4: "$generic_country_route$"
+ ###################################################
+ #####- Section 02: Ideas & National Spirits - #####
+ ###################################################
+ # bop
+ # MIO/designers
+ # idea
+ ####################################################
+ #####- Section 03: State & Dynamic Modifiers - #####
+ ####################################################
+ # dynamic modifiers
+ TSU_industry_modifier: "츠키프로 산업"
+ TSU_industry_modifier_desc: ""
+ TSU_army: "츠키프로 육군"
  TSU_army_desc: ""
- TSU_army_tt: "§Y$TSU_army$§! 변동치:"
- TSU_navy: "[TSU.GetName] 해군"
+ TSU_navy: "츠키프로 해군"
  TSU_navy_desc: ""
- TSU_navy_tt: "§Y$TSU_navy$§! 변동치:"
- TSU_air_force: "[TSU.GetName] 공군"
+ TSU_air_force: "츠키프로 공군"
  TSU_air_force_desc: ""
- TSU_air_force_tt: "§Y$TSU_air_force$§! 변동치:"
- #focus
- #equipment_version
- #equipment_army
- #equipment_navy
- #equipment_airforce
- #decisions
- #country_events
- 
+ # state modifiers
+ ###########################################
+ #####- Section 04: National Focuses - #####
+ ###########################################
+ # focus shortcut
+ # focus
+ ####################################
+ #####- Section 05: Equipment - #####
+ ####################################
+ # equipment version
+ # equipment army
+ # equipment navy
+ # equipment airforce
+ ####################################
+ #####- Section 06: Decisions - #####
+ ####################################
+ #################################
+ #####- Section 07: Events - #####
+ #################################
+ ##############################
+ #####- Section 08: GUI - #####
+ ##############################
+ # focus inlay
+ ###################################
+ #####- Section 09: Tooltips - #####
+ ###################################
+ # country flag
+ # custom trigger tooltip
+ # focus tooltip
+ # decision tooltip
+ # event tooltip
+ ###############################
+ #####- Section 10: Misc - #####
+ ###############################

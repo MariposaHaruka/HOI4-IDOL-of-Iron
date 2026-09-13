@@ -28,7 +28,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 5
@@ -37,7 +37,7 @@ set_convoys = 5
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = ZOS_industry }
+add_dynamic_modifier = { modifier = ZOS_industry_modifier }
 add_dynamic_modifier = { modifier = ZOS_army }
 add_dynamic_modifier = { modifier = ZOS_navy }
 add_dynamic_modifier = { modifier = ZOS_air_force }
@@ -148,7 +148,7 @@ set_popularities = {
 
 #v의회
 
-#캐릭터 
+#캐릭터
 recruit_character = ZOS_tatsumi_kotaro
 recruit_character = ZOS_yamada_tae
 recruit_character = ZOS_minamoto_sakura

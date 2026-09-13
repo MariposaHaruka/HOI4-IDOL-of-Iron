@@ -116,7 +116,7 @@ add_breakthrough_progress = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 700
@@ -129,7 +129,7 @@ add_ideas = {
 	ICG_full_neutral
 }
 
-add_dynamic_modifier = { modifier = ICG_industry }
+add_dynamic_modifier = { modifier = ICG_industry_modifier }
 add_dynamic_modifier = { modifier = ICG_army }
 add_dynamic_modifier = { modifier = ICG_navy }
 add_dynamic_modifier = { modifier = ICG_air_force }

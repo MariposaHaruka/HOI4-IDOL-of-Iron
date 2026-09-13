@@ -28,14 +28,14 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 
 #국민 정신
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = GEC_industry }
+add_dynamic_modifier = { modifier = GEC_industry_modifier }
 add_dynamic_modifier = { modifier = GEC_army }
 
 ## GEC_industry
@@ -155,7 +155,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = GEC_morino_seria
 
 #recruit_character = GEC_ivan_belyaev
@@ -177,13 +177,13 @@ recruit_character = GEC_morino_seria
 #recruit_character = GEC_arturo_javier_gonzalez
 #recruit_character = GEC_aristides_rivas_ortellado
 #recruit_character = GEC_freire_gomez_esteves
-#recruit_character = GEC_ramon_paredes 
+#recruit_character = GEC_ramon_paredes
 #recruit_character = GEC_mutshuito_villasboa_barboza
 #recruit_character = GEC_emilio_gardel
 #recruit_character = GEC_anselmo_jover_peralta
 #recruit_character = GEC_bernardino_caballero
 #recruit_character = GEC_pedro_duarte_ortellado
-#recruit_character = GEC_felipe_molas_lopez 
+#recruit_character = GEC_felipe_molas_lopez
 #recruit_character = GEC_tomas_salomoni
 #recruit_character = GEC_justo_pastor_benitez
 #recruit_character = GEC_damian_bruyn

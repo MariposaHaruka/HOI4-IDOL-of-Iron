@@ -41,14 +41,14 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 10
 
 #국민 정신
 
-add_dynamic_modifier = { modifier = GBC_industry }
+add_dynamic_modifier = { modifier = GBC_industry_modifier }
 add_dynamic_modifier = { modifier = GBC_army }
 add_dynamic_modifier = { modifier = GBC_navy }
 add_dynamic_modifier = { modifier = GBC_air_force }
@@ -159,7 +159,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = GBC_iseri_nina
 recruit_character = GBC_awa_subaru
 recruit_character = GBC_kawaragi_momoka
@@ -208,7 +208,7 @@ recruit_character = GBC_ai
 #무기 프리셋
 ### Ship Variants ###
 create_equipment_variant = {
-	name = "Ronis Class"								
+	name = "Ronis Class"
 	type = ship_hull_submarine_1
 	name_group = GBC_SS_HISTORICAL
 	parent_version = 0

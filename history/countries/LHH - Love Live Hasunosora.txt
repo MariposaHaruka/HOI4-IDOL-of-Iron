@@ -19,7 +19,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 
@@ -30,7 +30,7 @@ add_ideas = {
 	LNH_south_manchuria_railway_company
 }
 
-add_dynamic_modifier = { modifier = LHH_industry }
+add_dynamic_modifier = { modifier = LHH_industry_modifier }
 add_dynamic_modifier = { modifier = LHH_army }
 add_dynamic_modifier = { modifier = LHH_air_force }
 add_dynamic_modifier = { modifier = LLS_lovelive_economy }
@@ -144,7 +144,7 @@ set_popularities = {
 }
 ban_communism_effect = yes
 
-#캐릭터 
+#캐릭터
 recruit_character = LHH_hinoshita_kaho
 recruit_character = LHH_murano_sayaka
 recruit_character = LHH_otomune_kozue

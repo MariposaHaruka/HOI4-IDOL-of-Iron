@@ -1,29 +1,71 @@
 ﻿l_korean:
+ ########################################
+ #########- Table of Contents - #########
+ ########################################
+ #Section 01: Country Intro
+ #Section 02: Ideas & National Spirits
+ #Section 03: State & Dynamic Modifiers
+ #Section 04: National Focuses
+ #Section 05: Equipment
+ #Section 06: Decisions
+ #Section 07: Events
+ #Section 08: GUI
+ #Section 09: Tooltips
+ #Section 10: Misc
+ ########################################
+ #####- Section 01: Country Intro - #####
+ ########################################
  MMM_country_intro_background: "GFX_MMM_intro"
  MMM_country_intro_header_1: "$generic_country_intro_header_1$"
- MMM_country_intro_header_2: "경로 가이드(스포일러 주의)"
+ MMM_country_intro_header_2: "$generic_country_intro_header_1$"
+ MMM_country_intro_header_3: "$generic_country_intro_header_1$"
+ MMM_country_intro_header_4: "마법소녀 마도카 마기카 경로 가이드(스포일러 주의)"
  MMM_country_intro_content_1: "$generic_country_content$\n\n"
- MMM_country_intro_content_2: "$generic_country_route$"
- #bop
+ MMM_country_intro_content_2: "$generic_country_content$\n\n"
+ MMM_country_intro_content_3: "$generic_country_content$\n\n"
+ MMM_country_intro_content_4: "$generic_country_route$"
+ # bop
  #ideas_static
- #ideas_dynamic
- MMM_industry: "[MMM.GetName] 산업"
- MMM_industry_desc: ""
- MMM_industry_tt: "§Y$MMM_industry$§! 변동치:"
- MMM_army: "[MMM.GetName] 육군"
+ # dynamic modifiers
+ MMM_industry_modifier: "마법소녀 마도카 마기카 산업"
+ MMM_industry_modifier_desc: ""
+ MMM_army: "마법소녀 마도카 마기카 육군"
  MMM_army_desc: ""
- MMM_army_tt: "§Y$MMM_army$§! 변동치:"
- MMM_navy: "[MMM.GetName] 해군"
+ MMM_navy: "마법소녀 마도카 마기카 해군"
  MMM_navy_desc: ""
- MMM_navy_tt: "§Y$MMM_navy$§! 변동치:"
- MMM_air_force: "[MMM.GetName] 공군"
+ MMM_air_force: "마법소녀 마도카 마기카 공군"
  MMM_air_force_desc: ""
- MMM_air_force_tt: "§Y$MMM_air_force$§! 변동치:"
- #focus
- #equipment_version
- #equipment_army
- #equipment_navy
- #equipment_airforce
- #decisions
- #country_events
- 
+ # state modifiers
+ ###########################################
+ #####- Section 04: National Focuses - #####
+ ###########################################
+ # focus shortcut
+ # focus
+ ####################################
+ #####- Section 05: Equipment - #####
+ ####################################
+ # equipment version
+ # equipment army
+ # equipment navy
+ # equipment airforce
+ ####################################
+ #####- Section 06: Decisions - #####
+ ####################################
+ #################################
+ #####- Section 07: Events - #####
+ #################################
+ ##############################
+ #####- Section 08: GUI - #####
+ ##############################
+ # focus inlay
+ ###################################
+ #####- Section 09: Tooltips - #####
+ ###################################
+ # country flag
+ # custom trigger tooltip
+ # focus tooltip
+ # decision tooltip
+ # event tooltip
+ ###############################
+ #####- Section 10: Misc - #####
+ ###############################

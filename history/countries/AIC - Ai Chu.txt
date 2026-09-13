@@ -15,11 +15,11 @@ set_grand_doctrine = new_fleet_in_being
 set_technology = {
 	infantry_weapons = 1
 	tech_trucks = 1
-	tech_support = 1	
+	tech_support = 1
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 10
@@ -29,7 +29,7 @@ add_ideas = {
 	agrarian_society
 }
 
-add_dynamic_modifier = { modifier = AIC_industry }
+add_dynamic_modifier = { modifier = AIC_industry_modifier }
 add_dynamic_modifier = { modifier = AIC_army }
 add_dynamic_modifier = { modifier = AIC_navy }
 

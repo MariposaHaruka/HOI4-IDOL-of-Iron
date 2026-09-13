@@ -3,21 +3,21 @@ capital = 126 #런던
 
 #부대
 if = {
-	limit = { 
-		has_NSB = yes 
+	limit = {
+		has_NSB = yes
 		has_LaR = yes
 	}
 	set_oob = "IMA_ar_NSB_LaR"
 	else_if = {
 		limit = {
-			has_NSB = yes 
+			has_NSB = yes
 			has_LaR = no
 		}
 		set_oob = "IMA_ar_NSB"
 	}
 	else_if = {
 		limit = {
-			has_NSB = no 
+			has_NSB = no
 			has_LaR = yes
 		}
 		set_oob = "IMA_ar_LaR"
@@ -153,7 +153,7 @@ add_breakthrough_progress = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 900

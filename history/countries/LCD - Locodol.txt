@@ -48,7 +48,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 10
@@ -57,7 +57,7 @@ set_convoys = 10
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = LCD_industry }
+add_dynamic_modifier = { modifier = LCD_industry_modifier }
 add_dynamic_modifier = { modifier = LCD_army }
 add_dynamic_modifier = { modifier = LCD_navy }
 add_dynamic_modifier = { modifier = LCD_air_force }
@@ -214,7 +214,7 @@ recruit_character = LCD_usami_nanako
 ### Ship Variants ###
 # Submarines #
 create_equipment_variant = {
-	name = "R1 Class"				
+	name = "R1 Class"
 	type = ship_hull_submarine_1
 	parent_version = 0
 	modules = {
@@ -225,7 +225,7 @@ create_equipment_variant = {
 }
 # Destroyers #
 create_equipment_variant = {
-	name = "Almirante Villar Class"				
+	name = "Almirante Villar Class"
 	type = ship_hull_light_1
 	name_group = LCD_DD_HISTORICAL
 	parent_version = 0
@@ -242,7 +242,7 @@ create_equipment_variant = {
 }
 # Heavy Cruisers #
 create_equipment_variant = {
-	name = "Almirante Grau Class"				
+	name = "Almirante Grau Class"
 	type = ship_hull_cruiser_coastal_defense_ship
 	name_group = LCD_CA_HISTORICAL
 	parent_version = 0

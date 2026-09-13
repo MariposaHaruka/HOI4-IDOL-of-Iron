@@ -1,4 +1,4 @@
-ICG_industry = {
+ICG_industry_modifier = {
 	enable = { always = yes }
 	icon = GFX_idea_ICG_dynamic_industry
 }
@@ -20,6 +20,6 @@ ICG_navy = {
 ICG_air_force = {
 	enable = { NOT = { has_country_flag = no_air_academy } }
 	icon = GFX_idea_ICG_dynamic_airforce
-	
+
 	air_mastery_gain_factor = AGN_air_force_air_mastery_gain_factor
 }

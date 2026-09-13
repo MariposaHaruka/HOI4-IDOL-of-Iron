@@ -46,7 +46,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 5
@@ -55,7 +55,7 @@ set_convoys = 5
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = SBR_industry }
+add_dynamic_modifier = { modifier = SBR_industry_modifier }
 add_dynamic_modifier = { modifier = SBR_army }
 add_dynamic_modifier = { modifier = SBR_navy }
 add_dynamic_modifier = { modifier = SBR_air_force }
@@ -166,13 +166,13 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = SBR_cyan
 
 
 #recruit_character = SBR_yasin_al_hashimi
 #recruit_character = SBR_ghazi_i
-	
+
 #recruit_character = SBR_rashid_ali_algaylani
 #recruit_character = SBR_yusuf_salman_yusuf
 #recruit_character = SBR_fahmi_said

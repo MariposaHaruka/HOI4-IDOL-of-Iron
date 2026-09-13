@@ -1,13 +1,13 @@
-LAS_industry = {
+LAS_industry_modifier = {
 	enable = { always = yes }
 	icon = GFX_idea_LAS_dynamic_industry
-	
+
 }
 
 LAS_army = {
 	enable = { always = yes }
 	icon = GFX_idea_LAS_dynamic_army
-	
+
 	land_mastery_gain_factor = AGN_army_land_mastery_gain_factor
 	#INITIAL
 	mobilization_laws_cost_factor = LAS_army_mobilization_laws_cost_factor #-0.1
@@ -39,16 +39,16 @@ LAS_army = {
 LAS_navy = {
 	enable = { NOT = { has_country_flag = no_naval_academy } }
 	icon = GFX_idea_LAS_dynamic_naval
-	
+
 	naval_mastery_gain_factor = AGN_navy_naval_mastery_gain_factor
-	
+
 }
 
 LAS_air_force = {
 	enable = { NOT = { has_country_flag = no_air_academy } }
 	icon = GFX_idea_LAS_dynamic_airforce
 
-	
+
 	air_mastery_gain_factor = AGN_air_force_air_mastery_gain_factor
 	#INITIAL
 	air_accidents_factor = LAS_airforce_air_accidents_factor #0.75
@@ -111,4 +111,3 @@ LAS_human = {
 	political_advisor_cost_factor = LAS_political_advisor_cost_factor #-0.15 -> Freedom of Debate, Unity of Action
 	opinion_gain_monthly_same_ideology_factor = LAS_opinion_gain_monthly_same_ideology_factor #0.25 -> The Construction of Communism
 }
-

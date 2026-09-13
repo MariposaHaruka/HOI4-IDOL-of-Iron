@@ -248,24 +248,24 @@ BLA_not_ruled_by_school = {
 
 #학교연락위원회 - 조건 관련
 BLA_shanhaijing_problem = {
-	NOT = { 
-		has_country_flag = BLA_SHA_kai_problem 
-		has_country_flag = BLA_SHA_genryumon_problem 
-		has_country_flag = BLA_SHA_genbu_promenade_problem 
+	NOT = {
+		has_country_flag = BLA_SHA_kai_problem
+		has_country_flag = BLA_SHA_genryumon_problem
+		has_country_flag = BLA_SHA_genbu_promenade_problem
 	}
 }
 BLA_redwinter_problem = {
 	NOT = { has_country_flag = BLA_RED_coup_problem }
 }
 BLA_gehenna_problem = {
-	NOT = { 
+	NOT = {
 		has_country_flag = BLA_GEH_prefect_pandemonium_problem
 		has_country_flag = BLA_GEH_gourmet_research_society_problem
 		has_country_flag = BLA_GEH_hot_spring_department_problem
 	}
 }
 BLA_trinity_problem = {
-	NOT = { 
+	NOT = {
 		has_country_flag = BLA_TRN_pater_problem
 		has_country_flag = BLA_TRN_GEH_problem
 	}
@@ -275,7 +275,7 @@ BLA_millenium_problem = {
 	NOT = { has_country_flag = BLA_MIL_decagrammaton_problem }
 }
 BLA_abydos_problem = {
-	NOT = { 
+	NOT = {
 		has_country_flag = BLA_ABY_debt_problem
 		has_country_flag = BLA_ABY_desert_problem
 	}
@@ -334,4 +334,27 @@ BLA_gehenna_get_modifier = {
 	988 = { has_dynamic_modifier = { modifier = BLA_GEH_modifiers } }
 	987 = { has_dynamic_modifier = { modifier = BLA_GEH_modifiers } }
 	1012 = { has_dynamic_modifier = { modifier = BLA_GEH_modifiers } }
+}
+
+
+# 육군 통합 문제
+BLA_army_united = {
+	custom_trigger_tooltip = {
+		tooltip = BLA_army_united_tt
+		OR = {
+			BLA_shanhaijing_integrate = yes
+			BLA_redwinter_integrate = yes
+			BLA_gehenna_integrate = yes
+			BLA_hyakkiyako_integrate = yes
+			BLA_millenium_integrate = yes
+			BLA_trinity_integrate = yes
+			BLA_abydos_integrate = yes
+			BLA_arius_integrate = yes
+			BLA_valkyrie_integrate = yes
+			BLA_srt_integrate = yes
+			BLA_highlander_integrate = yes
+			BLA_wildhunt_integrate = yes
+		}
+		check_variable = { BLA_integrated_army > 2 }
+	}
 }

@@ -19,7 +19,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 5
@@ -28,9 +28,9 @@ set_convoys = 5
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = TSS_industry }
-add_dynamic_modifier = { modifier = TSS_army }
-add_dynamic_modifier = { modifier = TSS_air_force }
+add_dynamic_modifier = { modifier = TSU_industry_modifier }
+add_dynamic_modifier = { modifier = TSU_army }
+add_dynamic_modifier = { modifier = TSU_air_force }
 
 ## TSU_industry
 set_variable = { TSU_industry_production_speed_buildings_factor = -0.25 }

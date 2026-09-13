@@ -20,7 +20,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 
@@ -28,7 +28,7 @@ set_variable = { country_intro_page_count = 2 }
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = TKI_industry }
+add_dynamic_modifier = { modifier = TKI_industry_modifier }
 add_dynamic_modifier = { modifier = TKI_army }
 
 ## TKI_industry
@@ -137,7 +137,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = TKI_yuuki_akiha
 recruit_character = TKI_tsukishima_minato
 recruit_character = TKI_tanaka_francesca

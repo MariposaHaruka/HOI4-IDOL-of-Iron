@@ -21,7 +21,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 10
@@ -30,7 +30,7 @@ set_convoys = 10
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = BPR_industry }
+add_dynamic_modifier = { modifier = BPR_industry_modifier }
 add_dynamic_modifier = { modifier = BPR_army }
 
 ## BPR_industry
@@ -148,7 +148,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = BPR_kitakado_tomohisa
 
 #장관진

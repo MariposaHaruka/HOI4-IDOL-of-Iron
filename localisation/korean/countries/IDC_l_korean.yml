@@ -1,29 +1,77 @@
 ﻿l_korean:
+ ########################################
+ #########- Table of Contents - #########
+ ########################################
+ #Section 01: Country Intro
+ #Section 02: Ideas & National Spirits
+ #Section 03: State & Dynamic Modifiers
+ #Section 04: National Focuses
+ #Section 05: Equipment
+ #Section 06: Decisions
+ #Section 07: Events
+ #Section 08: GUI
+ #Section 09: Tooltips
+ #Section 10: Misc
+ ########################################
+ #####- Section 01: Country Intro - #####
+ ########################################
  IDC_country_intro_background: "GFX_IDC_intro"
  IDC_country_intro_header_1: "$generic_country_intro_header_1$"
- IDC_country_intro_header_2: "경로 가이드(스포일러 주의)"
+ IDC_country_intro_header_2: "$generic_country_intro_header_1$"
+ IDC_country_intro_header_3: "$generic_country_intro_header_1$"
+ IDC_country_intro_header_4: "아이돌 크로니클 경로 가이드(스포일러 주의)"
  IDC_country_intro_content_1: "$generic_country_content$\n\n"
- IDC_country_intro_content_2: "$generic_country_route$"
- #bop
- #ideas_static
- #ideas_dynamic
- IDC_industry: "[IDC.GetName] 산업"
- IDC_industry_desc: ""
- IDC_industry_tt: "§Y$IDC_industry$§! 변동치:"
- IDC_army: "[IDC.GetName] 육군"
+ IDC_country_intro_content_2: "$generic_country_content$\n\n"
+ IDC_country_intro_content_3: "$generic_country_content$\n\n"
+ IDC_country_intro_content_4: "$generic_country_route$"
+ ###################################################
+ #####- Section 02: Ideas & National Spirits - #####
+ ###################################################
+ # bop
+ # MIO/designers
+ # idea
+ ####################################################
+ #####- Section 03: State & Dynamic Modifiers - #####
+ ####################################################
+ IDC_industry_modifier: "아이돌 크로니클 산업"
+ IDC_industry_modifier_desc: ""
+ IDC_army: "아이돌 크로니클 육군"
  IDC_army_desc: ""
- IDC_army_tt: "§Y$IDC_army$§! 변동치:"
- IDC_navy: "[IDC.GetName] 해군"
+ IDC_navy: "아이돌 크로니클 해군"
  IDC_navy_desc: ""
- IDC_navy_tt: "§Y$IDC_navy$§! 변동치:"
- IDC_air_force: "[IDC.GetName] 공군"
+ IDC_air_force: "아이돌 크로니클 공군"
  IDC_air_force_desc: ""
- IDC_air_force_tt: "§Y$IDC_air_force$§! 변동치:"
- #focus
- #equipment_version
- #equipment_army
- #equipment_navy
- #equipment_airforce
- #decisions
- #country_events
- 
+ # state modifiers
+ ###########################################
+ #####- Section 04: National Focuses - #####
+ ###########################################
+ # focus shortcut
+ # focus
+ ####################################
+ #####- Section 05: Equipment - #####
+ ####################################
+ # equipment version
+ # equipment army
+ # equipment navy
+ # equipment airforce
+ ####################################
+ #####- Section 06: Decisions - #####
+ ####################################
+ #################################
+ #####- Section 07: Events - #####
+ #################################
+ ##############################
+ #####- Section 08: GUI - #####
+ ##############################
+ # focus inlay
+ ###################################
+ #####- Section 09: Tooltips - #####
+ ###################################
+ # country flag
+ # custom trigger tooltip
+ # focus tooltip
+ # decision tooltip
+ # event tooltip
+ ###############################
+ #####- Section 10: Misc - #####
+ ###############################

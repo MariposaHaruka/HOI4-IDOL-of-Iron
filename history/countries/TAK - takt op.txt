@@ -21,7 +21,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 5
@@ -30,7 +30,7 @@ set_convoys = 5
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = TAK_industry }
+add_dynamic_modifier = { modifier = TAK_industry_modifier }
 add_dynamic_modifier = { modifier = TAK_army }
 add_dynamic_modifier = { modifier = TAK_navy }
 add_dynamic_modifier = { modifier = TAK_air_force }
@@ -141,7 +141,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = TAK_destiny_i
 
 #recruit_character = TAK_imam_yahya
@@ -172,4 +172,3 @@ recruit_character = TAK_destiny_i
 #	name = ""
 #	type = amphibious_tank_equipment_2
 #}
-

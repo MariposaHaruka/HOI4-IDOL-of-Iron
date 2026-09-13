@@ -47,7 +47,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 
@@ -56,7 +56,7 @@ add_ideas = {
 	BOR_neutrality
 }
 
-add_dynamic_modifier = { modifier = BOR_industry }
+add_dynamic_modifier = { modifier = BOR_industry_modifier }
 add_dynamic_modifier = { modifier = BOR_army }
 add_dynamic_modifier = { modifier = BOR_air_force }
 
@@ -131,7 +131,7 @@ set_popularities = {
 	anarchosyndicalism = 2
 	fascism = 12
 	militarytotalism = 1
-	authoritariandemocracy = 1 
+	authoritariandemocracy = 1
 	autocracy = 1
 }
 

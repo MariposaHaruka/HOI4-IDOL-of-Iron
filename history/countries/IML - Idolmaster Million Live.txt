@@ -29,7 +29,7 @@ set_grand_doctrine = new_strategic_destruction
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
 	tech_trucks = 1
@@ -56,7 +56,7 @@ set_technology = {
 	mtg_transport = 1
 }
 if = {
-	limit = { has_NSB = yes } 
+	limit = { has_NSB = yes }
 	set_technology = {
 		gwtank_chassis = 1
 		basic_light_tank_chassis = 1
@@ -81,13 +81,13 @@ if = {
 		set_technology = {
 			early_fighter = 1
 			naval_bomber1 = 1
-			early_bomber = 1	
+			early_bomber = 1
 		}
 	}
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 100
@@ -97,7 +97,7 @@ add_ideas = {
 	IMA_westminster_statute
 	IML_ratatat_1
 }
-add_dynamic_modifier = { modifier = IML_industry }
+add_dynamic_modifier = { modifier = IML_industry_modifier }
 add_dynamic_modifier = { modifier = IML_army }
 add_dynamic_modifier = { modifier = IML_navy }
 add_dynamic_modifier = { modifier = IML_air_force }
@@ -162,7 +162,7 @@ set_popularities = {
 	anarchosyndicalism = 1
 	fascism = 2
 	militarytotalism = 1
-	authoritariandemocracy = 1 
+	authoritariandemocracy = 1
 	autocracy = 1
 }
 
@@ -186,7 +186,7 @@ set_variable = { IML_total_seats = 245 }
 
 #Total seats - 245
 
-# 캐릭터 
+# 캐릭터
 recruit_character = IML_kasuga_mirai
 recruit_character = IML_mogami_shizuka
 recruit_character = IML_ibuki_tsubasa

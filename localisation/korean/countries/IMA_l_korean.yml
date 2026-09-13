@@ -1,11 +1,34 @@
 ﻿l_korean:
+ ########################################
+ #########- Table of Contents - #########
+ ########################################
+ #Section 01: Country Intro
+ #Section 02: Ideas & National Spirits
+ #Section 03: State & Dynamic Modifiers
+ #Section 04: National Focuses
+ #Section 05: Equipment
+ #Section 06: Decisions
+ #Section 07: Events
+ #Section 08: GUI
+ #Section 09: Tooltips
+ #Section 10: Misc
+ ########################################
+ #####- Section 01: Country Intro - #####
+ ########################################
  IMA_country_intro_background: "GFX_IMA_intro"
  IMA_country_intro_header_1: "$generic_country_intro_header_1$"
- IMA_country_intro_header_2: "경로 가이드(스포일러 주의)"
+ IMA_country_intro_header_2: "$generic_country_intro_header_1$"
+ IMA_country_intro_header_3: "$generic_country_intro_header_1$"
+ IMA_country_intro_header_4: "아이돌 마스터 경로 가이드(스포일러 주의)"
  IMA_country_intro_content_1: "$generic_country_content$\n\n"
- IMA_country_intro_content_2: "$generic_country_route$"
- #bop
- #ideas_static
+ IMA_country_intro_content_2: "$generic_country_content$\n\n"
+ IMA_country_intro_content_3: "$generic_country_content$\n\n"
+ IMA_country_intro_content_4: "$generic_country_route$"
+ ###################################################
+ #####- Section 02: Ideas & National Spirits - #####
+ ###################################################
+ # bop
+ # idea
  IMA_great_depression: "대공황"
  IMA_great_depression_desc: "1919년 전쟁이 끝나고 찾아온 전후 부흥기는, 1927년 급작스럽게 찾아온 런던발 대공황으로 인해 순식간에 사라지고 말았습니다. 런던에서 시작된 검은 금요일은 전세계를 대공황의 늪에 빠뜨리고 말았습니다. 동방 소비에트 연방처럼 철저한 계획 경제로 이겨낸 경우도 있었지만, 안타깝게도 대부분의 나라에서는 그렇지 못했습니다. 이는 남코 연방도 마찬가지였습니다. 남코 연방에 닥친 대공황은 치솟는 실업률과 세입의 급감을 불러왔습니다. 국민들과 정부가 또 다른 전쟁에 참전할 수 없을 정도로 걱정하는 것은 당연한 것입니다."
  IMA_great_depression_3_desc: "1919년 전쟁이 끝나고 찾아온 전후 부흥기는, 1927년 급작스럽게 찾아온 런던발 대공황으로 인해 순식간에 사라지고 말았습니다. 런던에서 시작된 검은 금요일은 전세계를 대공황의 늪에 빠뜨리고 말았습니다. 동방 소비에트 연방처럼 철저한 계획 경제로 이겨낸 경우도 있었지만, 안타깝게도 대부분의 나라에서는 그렇지 못했습니다. 이는 남코 연방도 마찬가지였습니다. 남코 연방에 닥친 대공황은 치솟는 실업률과 세입의 급감을 불러왔습니다. 국민들과 정부가 또 다른 전쟁에 참전할 수 없을 정도로 걱정하는 것은 당연한 것입니다.\n\n\n§Y최종적으로 우리가 대공황에서 벗어나기 위해선, 우리가 보유한 민간공장이 100개를 넘겨야 합니다.§!"
@@ -23,11 +46,31 @@
  IMA_army_start_setting: "$IMA_army$"
  IMA_navy_start_setting: "$IMA_navy$"
  IMA_air_force_start_setting: "$IMA_air_force$"
- IMA_11020_idea: "$IMA_11020$"
- IMA_11020_idea_desc: "노동자들의 권리를 존중하고 보호하는 법안 통과를 위한 기초로, 우리는 기업과 노동자 사이의 최소한의 합의점부터 찾았습니다. 일단은 200일부터 시작해서, 차츰 나아갈 예정입니다."
- IMA_11017_idea: "$IMA_11017$"
+ IMA_10007_hidden_idea: "전차 생산 계획"
+ IMA_10008_hidden_idea: "항공기 생산 계획"
+ IMA_11017_idea: "부채 재조정"
  IMA_11017_idea_desc: "잠시 동안만이라도, 우리의 재정 지출 완화를 한 고삐 늦출 필요가 있습니다."
- #ideas_dynamic
+ IMA_11020_idea: "켄싱턴 합의"
+ IMA_11020_idea_desc: "노동자들의 권리를 존중하고 보호하는 법안 통과를 위한 기초로, 우리는 기업과 노동자 사이의 최소한의 합의점부터 찾았습니다. 일단은 200일부터 시작해서, 차츰 나아갈 예정입니다."
+ IMA_31006_hidden_idea: "금속제 항공기"
+ IMA_31011_hidden_idea: "모스키토"
+ IMA_31105_hidden_idea: "스핏파이어"
+ IMA_31106_hidden_idea: "더 많은 스핏파이어"
+ IMA_31201_hidden_idea: "블레넘"
+ IMA_31208_hidden_idea: "폭격기 호위 편대"
+ IMA_32013_hidden_idea: "퍼니 전차"
+ IMA_33008_hidden_idea: "호위항공모함"
+ IMA_33011_hidden_idea: "대제국을 위한 순양함"
+ IMA_33018_hidden_idea: "제국 해군의 영광"
+ IMA_shared_11006_hidden_idea_joint_originator: "커먼웰스 항공기 생산 계획"
+ IMA_shared_11006_hidden_idea_joint_member: "커먼웰스 항공기 생산 계획"
+ IMA_shared_12006_hidden_idea_joint_originator: "커먼웰스 군함 생산 계획"
+ IMA_shared_12006_hidden_idea_joint_member: "커먼웰스 군함 생산 계획"
+ IMA_shared_14007_hidden_idea_joint_originator: "커먼웰스 기갑 생산위원회"
+ IMA_shared_14007_hidden_idea_joint_member: "커먼웰스 기갑 생산위원회"
+ ####################################################
+ #####- Section 03: State & Dynamic Modifiers - #####
+ ####################################################
  IMA_industry_modifier: "아이마스 산업"
  IMA_industry_modifier_desc: "우리의 산업 역량은 충분하지만, 대공황이 장기화되면서 그 역량이 점점 없어져가고 있습니다. 다시 산업 역량을 살려내어, 강대국의 위엄을 다시 보여줄 시간입니다."
  IMA_army: "아이마스 육군"
@@ -42,15 +85,10 @@
  IMA_commonwealth_desc: "더이상 자치령과 본국의 관계로 유지할 수 있는 시대는 끝났습니다. 서로 동등하게 나아가는 구조로 재편해서, 세계를 이끌어 나가야 합니다. 더 많이 주고받을 수록, 더 많은 장점을 누릴 수 있을 것입니다."
  IMA_bletchley_park: "GCHQ"
  IMA_bletchley_park_desc: "남코 연방의 암호해독기관 GCHQ는 전쟁부 산하의 MI1a와 해군 암호부서인 NID25을 통합한 기관입니다. 위치한 곳의 이름을 따 블레츨리 파크라는 이름으로 더 많이 불리기도 했으며, 불철주야로 적국의 암호 해독을 위해 애국심을 가진 사람들이 모여 일하는 기관입니다."
- #IMA_variable_tooltip
- IMA_left_anger_add_tt: "이 선택은 좌익의 분노를 $RIGHT|-0$ 불러올 것입니다!"
- IMA_left_anger_subtract_tt: "이 선택은 좌익의 분노를 $RIGHT|+0$ 가라앉힐 것입니다."
- IMA_right_anger_add_tt: "이 선택은 우익의 분노를 $RIGHT|-0$ 불러올 것입니다!"
- IMA_right_anger_subtract_tt: "이 선택은 우익의 분노를 $RIGHT|+0$ 가라앉힐 것입니다."
- IMA_dept_add_tt: "빚이 $RIGHT|-1$만큼 늘어납니다!"
- IMA_dept_subtract_tt: "빚이 $RIGHT|+1$만큼 줄어듭니다."
- IMA_reduce_depression_ongoing_tt: "우리는 현재 대공황 완화 정책을 시행하고 있지 않습니다."
- #focus_shortcut
+ ###########################################
+ #####- Section 04: National Focuses - #####
+ ###########################################
+ # focus shortcut
  IMA_history_sc: "역사적 정치 중점"
  IMA_althistory_left_sc: "비역사적 정치 중점 - 인민전선 집권"
  IMA_althistory_right_sc: "비역사적 정치 중점 - 국민전선 집권"
@@ -59,7 +97,7 @@
  IMA_army_sc: "육군 중점"
  IMA_navy_sc: "해군 중점"
  IMA_airforce_sc: "공군 중점"
- #focus
+ # focus
  IMA_10001: "금리 인하"
  IMA_10001_desc: "국가의 경제 재건 의지는, 금리를 인하해서 투자를 촉진해달라고 기업들에게 신호를 줄 필요가 있습니다."
  IMA_10002: "은행 감독"
@@ -74,10 +112,8 @@
  IMA_10006_desc: "자동차의 대중화를 위해, 우리는 우리 나라의 자동차 산업을 지원해야 합니다."
  IMA_10007: "전차 생산 계획"
  IMA_10007_desc: "새로 지어진 공장을 이용해, 우리는 육군을 위해 전차를 생산하는 데 사용해야 합니다."
- IMA_10007_hidden_idea: "전차 생산 계획"
  IMA_10008: "항공기 생산 계획"
  IMA_10008_desc: "새로 지어진 공장을 이용해, 우리는 공군을 위해 항공기를 생산하는 데 사용해야 합니다."
- IMA_10008_hidden_idea: "항공기 생산 계획"
  IMA_10009: "전시 배급제도"
  IMA_10009_desc: "전시 상황에는 브리튼 섬으로 우리가 수입하는 자원의 양이 크게 줄어들고, 그마저도 군수산업으로 사용되는 경우가 많습니다. 안정적인 자원 통제를 위해 전국적으로 전시 배급제를 실시할 필요성이 있습니다."
  IMA_10010: "전시 산업"
@@ -92,15 +128,12 @@
  IMA_11003_desc: "11003"
  IMA_11004: "공공공사관리부"
  IMA_11004_desc: "재정 지출을 올리기로 했으니, 국민들의 삶을 더 나아지도록 하는데 필요한 기반시설도 지어줄 필요가 있습니다. 이 계획을 입안하고 관리하는 기관으로 공공공사관리부를 만들기로 했습니다. 이럴 때 아니면 짓기 힘들어질 수 있습니다."
- IMA_11004_tt: "공공공사관리부를 통해, 한번에 최대 §Y3개§!의 공공사업을 동시에 진행할 수 있습니다!"
- IMA_WPA_tt: "공공공사관리부의 건설을 많이 시행할 수록, 일정량의 빚을 줄일 수 있습니다!"
  IMA_11005: "건강 보험 제도"
  IMA_11005_desc: "우리 국민이라면, 누구든지 최소한의 의료 지원을 받을 필요가 있습니다."
  IMA_11006: "유동 자본 규제"
  IMA_11006_desc: "11006"
  IMA_11007: "기간 시설 국유화"
  IMA_11007_desc: "11007"
- IMA_11007_tt: "이제 공공사업을 §G두 개§! 더 지정해서 실행할 수 있습니다."
  IMA_11008: "복지 예산 증액"
  IMA_11008_desc: "11008"
  IMA_11009: "채권 추가 발행"
@@ -126,7 +159,6 @@
  IMA_11019: "전시 금 공여"
  IMA_11019_desc: "11019"
  IMA_11020: "켄싱턴 합의"
- IMA_11020_trigget_tt: "§R좌익의 분노§!가 §R3§!보다 낮아야 합니다."
  IMA_11020_desc: "우리 노동자들은 낮은 임금과 적은 혜택으로 혹독한 환경에서 일하고 있습니다. 그들의 지위를 향상시키기 위해서 포괄적인 개혁안을 시행할 시기가 왔습니다."
  IMA_12001: "이오리 계획"
  IMA_12001_desc: "미나세 이오리는 제국 개선 계획의 일환으로, 제국내의 자유 경제를 통한 내수 활성화로 경제를 부양해야 한다고 주장했습니다."
@@ -214,8 +246,6 @@
  IMA_31005_desc: "우리 공군을 확장하기 위해선 더 많은 항공기가 필요하고, 더 많은 항공기를 운용하기 위해선 더 많은 조종사가 필요합니다. 세계 최초의 공군사관학교인 크란웰 비행훈련학교가 이 역할을 충실히 해낼 것입니다."
  IMA_31006: "금속제 항공기"
  IMA_31006_desc: "우리는 항공기를 기존엔 목재로 만드는 경우가 많았습니다. 하지만 항공기를 위협하는 대공 무기나 기관포 등이 좀 더 강해지고 있기 때문에, 조종사의 안전을 위해서라도 다른 나라의 사례처럼 금속 재질로 비행기를 만들기 시작해야 합니다."
- IMA_31006_tt: "§Y항공기 생산 비용이 일시적으로 상승하지만, 이후 중점이나 디시전을 통해 다시 생산 비용을 줄일 수 있습니다!§!"
- IMA_31006_hidden_idea: "금속제 항공기"
  IMA_31007: "연안 방어 사령부"
  IMA_31007_desc: "폭격기 사령부도, 전투기 사령부도, 우리 주변 영해에 출몰하는 적 해군을 대응할 여력이 부족합니다. 뇌격기를 전문적으로 쓰는 사령부를 만들어 뇌격기 부대를 운용해야 합니다."
  IMA_31008: "보포트"
@@ -226,12 +256,10 @@
  IMA_31010_desc: "전투기에 실을 수 있는 무장은 한정적이기 때문에, 기체 덩치를 키워서 더 많은 무장을 실을 수 있는 전투기를 만들어야 합니다. ...근데 이거 생각보다 기동성이 좋은데요?"
  IMA_31011: "모스키토"
  IMA_31011_desc: "31011"
- IMA_31011_hidden_idea: "모스키토"
  IMA_31012: "SAS"
  IMA_31012_desc: "데이비드 스털링은 적 후방에서 적을 교란하며 막대한 피해를 줄 수 있는 소규모 특공대를 편성할 것을 제안했습니다. 이들을 '공수특전'라고 명명함으로써, 적이 낙하산 부대에 대한 방어도 해야 한다고 오인하게 만드는 부수적 효과를 누릴 수 있습니다. 상당히 타당해 보이는 제안입니다."
  IMA_31013: "제1공수군단"
  IMA_31013_desc: "적대 지역에서 초기 공수 작전이 성공을 거둠에 따라, 공수부대가 향후 전력의 핵심이 될 것이 분명해졌습니다. 전용 훈련 시설과 장비를 갖춘다면 이러한 신기술을 우리 전략 전반에 도입하는 데 큰 도움이 될 것입니다."
- IMA_31013_tt: "§Y4개의 공수 사단§!이 §Y[ROOT.Capital.GetName]§!에서 생성됩니다."
  IMA_31101: "복엽기 퇴출"
  IMA_31101_desc: "기존의 복엽기는 기동성은 좋지만, 단엽기에 비해 속도가 느리다는 문제가 있습니다. 항공전이 빠른 속도를 기반으로 진행되는 상황에서, 차세대 전투기를 도입하는 데 있어서 우리는 기존의 복엽기가 아닌 단엽기로 도입해야 합니다."
  IMA_31102: "허리케인 개량"
@@ -242,10 +270,8 @@
  IMA_31104_desc: "타이푼은 고고도에서 성능이 나오지 못했기에 이를 재설계해서 템페스트를 만들었습니다."
  IMA_31105: "스핏파이어"
  IMA_31105_desc: "허리케인은 괜찮은 모델이지만, 목재로 만들어졌고 성능이 조금 나쁘다는 문제가 있습니다. 더 나은 성능의 스핏파이어를 도입해, 상공의 불리함을 뒤집어야 합니다."
- IMA_31105_hidden_idea: "스핏파이어"
  IMA_31106: "더 많은 스핏파이어"
  IMA_31106_desc: "우리는 우리 영공 뿐만 아니라, 대륙, 지중해, 태평양, 인도양 등 곳곳에서 활약하는 육군의 작전을 지원해줘야 합니다. 우리 영공 뿐만 아니라 더 많은 스핏파이어를 생산해 세계 곳곳의 영공도 지켜야 합니다."
- IMA_31106_hidden_idea: "더 많은 스핏파이어"
  IMA_31107: "영공 수호"
  IMA_31107_desc: "적이 상륙에 앞서 우리 영공을 지배하려 합니다. 그동안 준비한 스핏파이어와 허리케인, 그리고 우리들의 투지로 적 공군을 섬멸해야 합니다."
  IMA_31108: "항공기 생산단"
@@ -256,10 +282,8 @@
  IMA_31110_desc: "대륙에서 싸우는 우리 군대는 공군의 지원이 있어야 힘을 낼 수 있습니다. 우수한 기술력으로 만든 항공기로 상공을 지배하고, 적 공군을 섬멸해야 합니다."
  IMA_31201: "블레넘"
  IMA_31201_desc: "가장 빠른 항공기를 기반으로 폭격기를 만든다면 적 전투기가 쫒아오지 않는 무적의 폭격기를 만들 수 있을 것입니다."
- IMA_31201_hidden_idea: "블레넘"
  IMA_31202: "선전물 살포"
  IMA_31202_desc: "우리의 폭격기로는 정밀 폭격에 재한이 있습니다. 전투 지역 밖을 공격하는 폭격기로서는, 그저 선전물을 살포하는 것 이외에는 할 수 있는게 아무것도 없습니다."
- IMA_31202_tt: "§R적국에 대한 선전물 살포작전의 소티 횟수에 따라, 우리 폭격기 대대의 역량이 달라집니다!§!"
  IMA_31203: "스털링"
  IMA_31203_desc: ""
  IMA_31204: "핼리팩스"
@@ -272,7 +296,6 @@
  IMA_31207_desc: ""
  IMA_31208: "폭격기 호위 편대"
  IMA_31208_desc: "30029"
- IMA_31208_hidden_idea: "폭격기 호위 편대"
  IMA_31209: "톨보이"
  IMA_31209_desc: ""
  IMA_32001: "육군 긴급 재무장"
@@ -301,7 +324,6 @@
  IMA_32012_desc: "32012"
  IMA_32013: "퍼니전차"
  IMA_32013_desc: "호시이 미키와 퍼시 호바트는 기갑의 응용을 연구하면서, 방어선을 돌파하는 상륙용 기갑차량에 대한 아이디어를 내놓았습니다. 그런데... 이거 너무 괴상하게 생긴 거 같은데요?"
- IMA_32013_hidden_idea: "퍼니 전차"
  IMA_32014: "유니버셜 캐리어"
  IMA_32014_desc: "32014"
  IMA_32015: "본토 대공포 강화"
@@ -310,7 +332,6 @@
  IMA_32016_desc: "바다를 지배하는 것도 좋지만, 때로는 발을 적셔야 할 때가 있습니다. 적대적인 영토에 침공군을 상륙시키는 능력을 소홀히 해서는 안 됩니다."
  IMA_32017: "코만도 특전단"
  IMA_32017_desc: "32017"
- IMA_32017_tt: "§Y4개의 해병 사단§!이 §Y[ROOT.Capital.GetName]§!에서 생성됩니다."
  IMA_32101: "포병 재무장"
  IMA_32101_desc: "32101"
  IMA_32102: "포병부대 통합"
@@ -355,14 +376,12 @@
  IMA_33007_desc: "우리의 기뢰전 전문가들은 다음 전쟁에서 중요한 역할을 맡을 자기장, 음향 등의 감응식 신형 기뢰에 대해 조언을 했습니다. 소해법을 연구하기 위해 특수 해군 반비접촉위원회를 임명했고, 함정의 안전을 도모하고 진행 중인 기뢰 기술의 발전을 꾀할 수 있을지도 모릅니다."
  IMA_33008: "호위항공모함"
  IMA_33008_desc: "북대서양에 돌아다니는 적국의 잠수함을 잡아내기 위해선, 북대서양의 어느 곳에서건 잠수함을 탐지할 수 있어야 합니다. 하지만, 바다는 넓고 우리의 대잠초계기의 항속거리는 대서양 전역을 커버하기엔 턱없이 짧습니다.\n\n해상에 대잠초계기를 띄우는 방법은 여러가지 방법이 있지만, 우리는 항공모함의 특성에 주목해 해상에서 수송함대를 호위하고 잠수함을 발견하는데 도움이 될 호위항공모함을 도입하기로 결정했습니다."
- IMA_33008_hidden_idea: "호위항공모함"
  IMA_33009: "대서양을 넘어서"
  IMA_33009_desc: "항공모함을 운용하기엔 대서양은 너무 비좁은 곳입니다. 대서양을 넘어서 인도양과 태평양까지 항공모함을 운용할 수 있다면 우리 해군의 역량도 더 커질 것입니다."
  IMA_33010: "제국 해군"
  IMA_33010_desc: "우리 해군은 대서양만 돌아다니는 것이 아닌, 인도양과 태평양도 돌아다닌, 한마디로 전 세계 바다를 전역으로 활동한 대영제국 왕립 해군을 이어받은 해군입니다. 그 제국 해군 정신을 우리 남코 연방 해군이 배워야 할 필요성이 있습니다.\n\n패배 근성을 떨쳐내는 것은 물론, 우리는 다시 할 수 있다는 것을 보여주기 위해서입니다."
  IMA_33011: "대제국을 위한 순양함"
  IMA_33011_desc: "순양함은 주요 전력을 보호할 뿐만 아니라, 해상의 중,고강도 위협에도 단독으로 대응이 가능하고, 전함보다 저렴하게 만들수 있는 것이 장점인 함급입니다. 그 덕에 예전 대영제국 왕립 해군 시절에는 많은 순양함을 운용했습니다.\n\n우리의 결속력은 상선들을 보호하고 필요한 곳이라면 어디든 우리 군대를 파견하는 해군력에 달려 있습니다. 우리는 이를 위해 항상 광대한 순양함대에 의존해 왔습니다. 그리고 우리는 우리가 모든 곳에서 동시에 작전을 수행할 수 있도록 충분한 수의 함선들을 계속 보유해야만 합니다."
- IMA_33011_hidden_idea: "대제국을 위한 순양함"
  IMA_33012: "선박 긴급 징발"
  IMA_33012_desc: "우리 주변의 영해를 지키기 위해선, 더 많은 배가 필요합니다. 더 많은 수송선과 더 많은 군함을 만드는 것도 좋지만, 급한대로 민간선을 징발해 사용하는 것도 방법이 될 수 있습니다."
  IMA_33013: "노후함 개장"
@@ -371,14 +390,12 @@
  IMA_33014_desc: "33014"
  IMA_33015: "구축함을 위한 기지"
  IMA_33015_desc: "우리는 더 많은 구축함이 필요합니다. 그리고 대서양 건너의 [ICG.GetName]은 국토를 보호해야 합니다. 구축함 몇 척과 우리 영토에 군사 기지를 구축할 권리를 맞바꾸면, 모두에게 좋은 결과가 있기를 바랄 수 있습니다."
- IMA_33015_tt: "§Y[ICG.GetName]측이 동의를 하면 우리의 섬을 내주는 대신, 구축함 몇 척을 교환 받을 수 있습니다.§!"
  IMA_33016: "영국해협 봉쇄"
  IMA_33016_desc: "33016"
  IMA_33017: "지중해 봉쇄"
  IMA_33017_desc: "33017"
  IMA_33018: "제국 해군의 영광"
  IMA_33018_desc: "§Y\"이제 산과 하늘을 움직였던 힘은 없지만 여전히 우리는 우리이다. 영웅적인 마음을 품고 시간과 운명으로 약해졌지만 의지는 강하다. 분투하고 추구하며, 구하지만 굽히지 않는 우리.\"§!\n\n비록 우리는 더이상 제국도 아니고 영광스러운 왕립 해군도 아니지만, 그 정신을 이어받아 제국 해군의 정신으로 나아갈 필요가 있습니다. 비록 다른 나라들이 우리를 위협할 지라도, 우리의 영광은 영원하리!"
- IMA_33018_hidden_idea: "제국 해군의 영광"
  IMA_33101: "기동 함대 창설"
  IMA_33101_desc: "최근 항공모함의 공군력 운용과 그 속도에 주목해, 함대의 기동력을 올리는 방향으로 재편하자는 의견이 대두되고 있습니다. 그들의 의견이 아직 완전히 설득력 있지는 않지만, 어쩌면 전함 위주의 함포전이 항공전에 밀릴 가능성도 무시할 수는 없습니다."
  IMA_33102: "일러스트리어스급 항공모함"
@@ -525,7 +542,6 @@
  IMA_51018_desc: "51018"
  IMA_51019: "피리부는 사나이"
  IMA_51019_desc: "본토 곳곳에 시시각각 공습이 진행되고 있는 상황에서, 도시의 아이들은 이 공습의 위협에 아무 대책없이 노출되어 있습니다. 전쟁의 장기적인 수행에 있어서도, 나라의 미래를 위해서라도, 이 아이들을 하루빨리 시골로 피난시켜서 안전을 확보해야만 합니다.\n\n그리고 우리는 이 계획에... \"§Y피리부는 사나이§!\"라는 이름을 붙이기로 했습니다."
- IMA_51019_tt: "§Y도시 지역의 아이들을 시골로 피난시키는 작전이 진행됩니다.§!"
  IMA_51020: "하츠보시 전선"
  IMA_51020_desc: "51020"
  IMA_51021: "태평양 전선"
@@ -588,6 +604,7 @@
  IMA_51205_desc: "51205"
  IMA_51206: "배타적 민주주의"
  IMA_51206_desc: "51206"
+ # 아이마스 커먼웰스 협동 중점
  IMA_shared_00001: "커먼웰스의 [IMA.GetName]"
  IMA_shared_00001_desc: "IMA_shared_00001"
  IMA_shared_00002: "커먼웰스의 [ISC.GetName]"
@@ -602,15 +619,8 @@
  IMA_shared_00006_desc: "IMA_shared_00006"
  IMA_shared_00007: "커먼웰스의 [IGM.GetName]"
  IMA_shared_00007_desc: "IMA_shared_00007"
- commonwealth_leader_tt: "해당 국가는 커먼웰스의 종주국입니다."
- commonwealth_leader_check_tt: "해당 국가는 커먼웰스의 지도자가 될 수 있습니다."
- commonwealth_member_check_tt: "해당 국가는 커먼웰스의 소속국이 될 수 있습니다."
- commomwealth_joined_tt: "해당 국가는 커먼웰스에 참여중입니다."
- commomwealth_joined_tt_NOT: "해당 국가는 커먼웰스에 참여중이지 않습니다."
- commonwealth_effect_tt: "우리는 이제, 아이마스 커먼웰스에 참여하게 됩니다. 그와 동시에 아래 중점들을 진행할 수 있습니다.\n\n더 많은 중점을 열 수록, 더 많은 국가가 참여할 수록, 이 효과는 증가합니다."
  IMA_shared_10001: "연합군 사령부"
  IMA_shared_10001_desc: "IMA_shared_10001"
- IMA_shared_10001_tt: "§Y연합국에 합류한 그외 국가들§!과, §Y이후 연합국에 합류하는 국가들§!의 §Y군 지휘체계§!가 §G연합국 최고사령부 지휘체계§!로 변경됩니다!"
  IMA_shared_11001: "연합 공군 사령부"
  IMA_shared_11001_desc: "IMA_shared_11001"
  IMA_shared_11002: "합동 공군 훈련"
@@ -621,11 +631,8 @@
  IMA_shared_11004_desc: "IMA_shared_11004"
  IMA_shared_11005: "연합 전투기 사령부"
  IMA_shared_11005_desc: "IMA_shared_11005"
- IMA_shared_11005_heavy_fighter_tt: "최소 §Y350§!기 이상의 §Y중전투기§! 전개"
  IMA_shared_11006: "커먼웰스 항공기 생산 계획"
  IMA_shared_11006_desc: "IMA_shared_11006"
- IMA_shared_11006_hidden_idea_joint_originator: "커먼웰스 항공기 생산 계획"
- IMA_shared_11006_hidden_idea_joint_member: "커먼웰스 항공기 생산 계획"
  IMA_shared_11051: "공군 비행단 파견"
  IMA_shared_11051_desc: "IMA_shared_11051"
  IMA_shared_12001: "연합 해군 사령부"
@@ -640,8 +647,6 @@
  IMA_shared_12005_desc: "IMA_shared_12005"
  IMA_shared_12006: "커먼웰스 군함 생산 계획"
  IMA_shared_12006_desc: "IMA_shared_12006"
- IMA_shared_12006_hidden_idea_joint_originator: "커먼웰스 군함 생산 계획"
- IMA_shared_12006_hidden_idea_joint_member: "커먼웰스 군함 생산 계획"
  IMA_shared_12051: "연합 해군항공대 창설"
  IMA_shared_12051_desc: "IMA_shared_12051"
  IMA_shared_12052: "연합 항모전단"
@@ -670,8 +675,6 @@
  IMA_shared_14006_desc: "IMA_shared_14006"
  IMA_shared_14007: "커먼웰스 기갑 생산위원회"
  IMA_shared_14007_desc: "IMA_shared_14007"
- IMA_shared_14007_hidden_idea_joint_originator: "커먼웰스 기갑 생산위원회"
- IMA_shared_14007_hidden_idea_joint_member: "커먼웰스 기갑 생산위원회"
  IMA_shared_20001: "커먼웰스 정치협력"
  IMA_shared_20001_desc: "IMA_shared_20001"
  IMA_shared_20002: "정보 공유"
@@ -736,16 +739,13 @@
  IMA_shared_42005_desc: "IMA_shared_42005"
  IMA_shared_43001: "고등연구소"
  IMA_shared_43001_desc: "IMA_shared_43001"
- IMA_shared_43001_tt: "해당 중점을 찍을 수 있는 조건을 만족하는 국가에 한해 §G고등연구소가 설치됩니다.§!"
- IMA_shared_43001_IMA_tt: "[IMA.GetName]에 §G고등연구소가 설치됩니다.§!"
- IMA_shared_43001_ICG_tt: "[ICG.GetName]에 §G고등연구소가 설치됩니다.§!"
- IMA_shared_43001_IML_tt: "[IML.GetName]에 §G고등연구소가 설치됩니다.§!"
  IMA_shared_43002: "핵 연구"
  IMA_shared_43002_desc: "IMA_shared_43002"
  IMA_shared_43003: "로켓 공학 연구"
  IMA_shared_43003_desc: "IMA_shared_43003"
  IMA_shared_43004: "레이더 연구"
  IMA_shared_43004_desc: "IMA_shared_43004"
+ # 아이마스 식민지 국가 공통 중점
  IMA_DO001: "식민지 최고회의 소집"
  IMA_DO001_desc: "본국에서 자치령의 운명에 대한 지침을 결정한 이상, 우리도 우리의 운명을 결정짓기 위해 최고 위원들을 소집해 독립 문제에 대해 의논해봐야 합니다."
  IMA_DO002: "정치 논의"
@@ -766,8 +766,10 @@
  IMA_DO009_desc: "비록 본국은 헌장에 서명할 경우 독립을 약속을 했지만, 우리는 독립을 느긋하게 기다릴 정도로 시간 여유가 있는 것은 아닙니다. 빠르게 우리 스스로의 운명을 결정해야합니다."
  IMA_DO010: "제헌 선거"
  IMA_DO010_desc: "본국과의 관계를 정리한 다음 할 일은, 우리 나라를 이끌 의회를 구성하는 것입니다. 의회를 구성한 뒤, 제헌 헌법을 하루 빨리 만들어야 합니다."
- IMA_DO010_tt: "§G 한달 이내로 선거가 시작됩니다...!§!"
- #equipment_version
+ ####################################
+ #####- Section 05: Equipment - #####
+ ####################################
+ # equipment version
  IMA_EQUIPMENT_VERSION_1: "Mk. I"
  IMA_EQUIPMENT_VERSION_2: "Mk. II"
  IMA_EQUIPMENT_VERSION_3: "Mk. III"
@@ -781,7 +783,7 @@
  IMA_EQUIPMENT_VERSION_11: "Mk. XI"
  IMA_EQUIPMENT_VERSION_12: "Mk. XII"
  IMA_EQUIPMENT_VERSION_13: "Mk. XIII"
- #equipment_army
+ # equipment army
  IMA_infantry_equipment_0: "No.1 MkIII 소총"
  IMA_infantry_equipment_0_short: "No.1 MkIII 소총"
  IMA_infantry_equipment_1: "No.4 MkI 소총"
@@ -1066,24 +1068,9 @@
  IMA_cv_fighter_equipment_2_short: "풀머"
  IMA_cv_fighter_equipment_3: "페어리 파이어플라이"
  IMA_cv_fighter_equipment_3_short: "파이어플라이"
- #tooltips
- IMA_political_stabilized_tt: "우리나라의 정치적 방향성이 결정되었습니다."
- IMA_ready_for_westminster_statute_tt: "웨스트민스터 헌장에 서명할 준비가 되었습니다."
- #decisions
- IMA_parliament_category: "[FROM.GetName] 서민원"
- IMA_parliament_category_desc: "\n현재 §Y서민원§!은 다음과 같이 구성되어 있습니다:\n  [IMAconservative]\n  [IMAliberal]\n  [IMAnationallabour]\n  [IMAlabour]\n  [IMAcommunist]\n  [IMAproducercommunist]\n  [IMAfascist]\n  [IMArepublicanpeople]\n  [IMAkingsparty]\n\n"
- IMA_conservative_1_tt: "아이돌 보수당: [?IMA.IMA_conservative_seats]석/당 대표: 아마미 하루카"
- IMA_conservative_2_tt: "아이돌 보수당: [?IMA.IMA_conservative_seats]석/당 대표: 미우라 아즈사"
- IMA_liberal_1_tt: "아이돌 자유국민당: [?IMA.IMA_liberal_seats]석/당 대표: 키사라기 치하야"
- IMA_liberal_2_tt: "아이돌 자유국민당: [?IMA.IMA_liberal_seats]석/당 대표: 미나세 이오리"
- IMA_nationallabour_tt: "아이돌 국민노동당: [?IMA.IMA_nationallabour_seats]석/당 대표: 후타미 아미"
- IMA_labour_1_tt: "아이돌 노동당: [?IMA.IMA_conservative_seats]석/당 대표: 타카츠키 야요이"
- IMA_labour_2_tt: "아이돌 노동당: [?IMA.IMA_conservative_seats]석/당 대표: 후타미 마미"
- IMA_communist_tt: "아이돌 공산당: [?IMA.IMA_communist_seats]석/당 대표: 아키즈키 리츠코"
- IMA_producercommunist_tt: "아이돌 보수당: [?IMA.IMA_producercommunist_seats]석/당 대표: 아카바네 P"
- IMA_fascist_tt: "아이돌 파시스트 연합: [?IMA.IMA_fascist_seats]석/당 대표: 호시이 미키"
- IMA_republicanpeople_tt: "아이돌 공화국민당: [?IMA.IMA_republicanpeople_seats]석/당 대표: 하기와라 유키호"
- IMA_kingsparty_tt: "아이돌 국왕당: [?IMA.IMA_kingsparty_seats]석/당 대표: 시죠 타카네"
+ ####################################
+ #####- Section 06: Decisions - #####
+ ####################################
  IMA_haruka_crisis_category: "1936년 하루카 위기"
  IMA_haruka_crisis_category_desc: "\n\n\n\n£GFX_IMA_haruka_crisis_category_texticon \n\n\n\n\n\n1935년의 선거로 아이돌 보수당은 제1당의 지위를 간신히 유지하는 데 성공했지만, 과반을 넘기지 못해 아이돌 자유당과의 연립으로 과반을 유지하고 있는 중입니다. 아이돌 노동당과 아이돌 보수당, 아이돌 자유당 모두 불만이 나오고 있는 지금, 차기 수상 직을 놓고 웨스트민스터 서민원에서는 물밑 움직임이 오가고 있습니다.\n\n[IMAliverpoolfront]\n\n[IMAlondonfront]\n\n\n\n"
  IMA_liverpool_front_non_tt: "현재 §t노동자 집회§!는 정권 교체를 요구하는 수준으로 강하게 요구하고 있지 않습니다."
@@ -1108,8 +1095,6 @@
  IMA_economy_level_3: "§Y침체기에서 거의 벗어남§!"
  IMA_economy_level_4: "§G평상시의 경제 상태§!"
  IMA_economy_level_5: "§G작은 규모나마 경제 호황!§!"
- IMA_bankrupt_trigger_tt: "§R우리는 현재 채무 불이행 상태입니다!§!"
- IMA_bankrupt_trigger_tt_NOT: "§G우리는 현재 채무 불이행 상태가 아닙니다!§!"
  IMA_haruka_plan_build_infrastructure: "[FROM.GetName] 기반시설 건설"
  IMA_haruka_plan_build_industrial_complex: "[FROM.GetName] 민간공장 건설"
  IMA_haruka_plan_support_farmer_society: "[FROM.GetName] 농촌 시설 개선"
@@ -1126,7 +1111,6 @@
  IMA_iori_plan_minase_fund_2: "남코 상공회의소 기금"
  IMA_iori_plan_minase_fund_3: "남코 상공회의소 기금"
  IMA_iori_plan_minase_fund_status: "기업들이 지금까지 다음을 건설함:\n-§Y민간공장:§! §G[?IMA_built_a_civ]§!\n-§Y군수공장:§! §G[?IMA_built_a_mil]§!\n-§Y해군 조선소:§! §G[?IMA_built_a_dockyard]§!\n-§Y기반시설§!: §G[?IMA_built_a_infra]§!\n-§Y추가된 건설 슬롯§!: §G[?IMA_added_slot]§!"
- IMA_upgrade_minase_fund_tt: "남코 상공회의소 기금 투자를 통한 건설 기간이 §G10일§! 줄어듭니다!"
  IMA_iori_plan_support_harland_wolff: "$harland_wolff$ 지원"
  IMA_iori_plan_support_john_brown: "$john_brown_company$ 지원"
  IMA_iori_plan_support_cammell_laird: "$cammell_laird$ 지원"
@@ -1198,7 +1182,9 @@
  IMA_idol_committee_category_IMA_shiika: "$IMA_shiika$ 수상 추대"
  IMA_idol_committee_category_IMA_okuzora_kohaku: "$IMA_okuzora_kohaku$ 수상 추대"
  IMA_idol_committee_category_IMA_aya: "$IMA_aya$ 수상 추대"
- #country_events
+ #################################
+ #####- Section 07: Events - #####
+ #################################
  IMA_haruka_crisis.1.t: "리버풀 신년 시위"
  IMA_haruka_crisis.1.desc: ""
  IMA_haruka_crisis.1.a: "노동자들의 목소리를 들을 필요는 있지 않을까?"
@@ -1222,11 +1208,11 @@
  IMA_chihaya_liberalism_tt: "키사라기 치하야는 자유국민당의 총재 자리를 지키는 데 성공했습니다.\n\n하루카 정권의 내각의 안정도가 조금 올라갔습니다."
  IMA_haruka_crisis.4.b: "이오리가 새로운 총재의 자리에 올랐다. 이제 연립 정권은 끝이군."
  IMA_iori_liberalism_tt: "미나세 이오리가 새로운 자유국민당의 총재에 선출되었습니다.\n\n미나세 이오리의 공언대로, §R자유국민당은 더이상 하루카의 연립정권에 더이상 참여하지 않을 예정입니다.§!"
- IMA_haruka_crisis.5.t: "자유국민당 총재 선거"
+ IMA_haruka_crisis.5.t: "보수당 총재 선거"
  IMA_haruka_crisis.5.desc: ""
- IMA_haruka_crisis.5.a: "치하야가 총재 자리를 지키는 데 성공했다!"
+ IMA_haruka_crisis.5.a: "하루카가 총재 자리를 지키는 데 성공했다!"
  IMA_haruka_conservatism_tt: "아마미 하루카는 보수당의 총재 자리를 지키는 데 성공했습니다.\n\n하루카 정권의 내각의 안정도가 조금 올라갔습니다."
- IMA_haruka_crisis.5.b: "이오리가 새로운 총재의 자리에 올랐다. 이제 연립 정권은 끝이군."
+ IMA_haruka_crisis.5.b: "아즈사가 새로운 총재의 자리에 올랐다. 이제 하루카는 끝이군."
  IMA_azusa_conservatism_tt: "미우라 아즈사가 새로운 보수당의 총재에 선출되었습니다.\n\n§R이와 동시에, 총리 직이 공석으로 바뀌었으며, 1달 이내에 우리는 새로운 총선을 치를 것입니다...§!"
  IMA_great_depression.1.t: "네빌 체임벌린 재무장관의 경제 회복선언"
  IMA_great_depression.1.desc: "오늘 재무장관 네빌 체임벌린은 기자회견을 통해, 남코 연방의 경제 상태가 1927년 이전 수준을 회복했다고 발표했습니다.\n\n이제 우리는 앞으로 다가올 일에 준비를 하면 됩니다."
@@ -1410,3 +1396,66 @@
  IMA_inlay.10.g: "$IMA_inlay.g$"
  IMA_inlay.10.h: "$IMA_inlay.h$"
  IMA_inlay.10.i: "$IMA_inlay.i$"
+ ##############################
+ #####- Section 08: GUI - #####
+ ##############################
+ # 의회 GUI
+ IMA_parliament_category: "[FROM.GetName] 서민원"
+ IMA_parliament_category_desc: "\n현재 §Y서민원§!은 다음과 같이 구성되어 있습니다:\n  [IMAconservative]\n  [IMAliberal]\n  [IMAnationallabour]\n  [IMAlabour]\n  [IMAcommunist]\n  [IMAproducercommunist]\n  [IMAfascist]\n  [IMArepublicanpeople]\n  [IMAkingsparty]\n\n"
+ IMA_conservative_1_tt: "아이돌 보수당: [?IMA.IMA_conservative_seats]석/당 대표: 아마미 하루카"
+ IMA_conservative_2_tt: "아이돌 보수당: [?IMA.IMA_conservative_seats]석/당 대표: 미우라 아즈사"
+ IMA_liberal_1_tt: "아이돌 자유국민당: [?IMA.IMA_liberal_seats]석/당 대표: 키사라기 치하야"
+ IMA_liberal_2_tt: "아이돌 자유국민당: [?IMA.IMA_liberal_seats]석/당 대표: 미나세 이오리"
+ IMA_nationallabour_tt: "아이돌 국민노동당: [?IMA.IMA_nationallabour_seats]석/당 대표: 후타미 아미"
+ IMA_labour_1_tt: "아이돌 노동당: [?IMA.IMA_conservative_seats]석/당 대표: 타카츠키 야요이"
+ IMA_labour_2_tt: "아이돌 노동당: [?IMA.IMA_conservative_seats]석/당 대표: 후타미 마미"
+ IMA_communist_tt: "아이돌 공산당: [?IMA.IMA_communist_seats]석/당 대표: 아키즈키 리츠코"
+ IMA_producercommunist_tt: "아이돌 보수당: [?IMA.IMA_producercommunist_seats]석/당 대표: 아카바네 P"
+ IMA_fascist_tt: "아이돌 파시스트 연합: [?IMA.IMA_fascist_seats]석/당 대표: 호시이 미키"
+ IMA_republicanpeople_tt: "아이돌 공화국민당: [?IMA.IMA_republicanpeople_seats]석/당 대표: 하기와라 유키호"
+ IMA_kingsparty_tt: "아이돌 국왕당: [?IMA.IMA_kingsparty_seats]석/당 대표: 시죠 타카네"
+ ###################################
+ #####- Section 09: Tooltips - #####
+ ###################################
+ # variable tooltip
+ IMA_left_anger_add_tt: "이 선택은 좌익의 분노를 $RIGHT|-0$ 불러올 것입니다!"
+ IMA_left_anger_subtract_tt: "이 선택은 좌익의 분노를 $RIGHT|+0$ 가라앉힐 것입니다."
+ IMA_right_anger_add_tt: "이 선택은 우익의 분노를 $RIGHT|-0$ 불러올 것입니다!"
+ IMA_right_anger_subtract_tt: "이 선택은 우익의 분노를 $RIGHT|+0$ 가라앉힐 것입니다."
+ IMA_dept_add_tt: "빚이 $RIGHT|-1$만큼 늘어납니다!"
+ IMA_dept_subtract_tt: "빚이 $RIGHT|+1$만큼 줄어듭니다."
+ IMA_reduce_depression_ongoing_tt: "우리는 현재 대공황 완화 정책을 시행하고 있지 않습니다."
+ # focus tooltip
+ IMA_11004_tt: "공공공사관리부를 통해, 한번에 최대 §Y3개§!의 공공사업을 동시에 진행할 수 있습니다!"
+ IMA_WPA_tt: "공공공사관리부의 건설을 많이 시행할 수록, 일정량의 빚을 줄일 수 있습니다!"
+ IMA_11007_tt: "이제 공공사업을 §G두 개§! 더 지정해서 실행할 수 있습니다."
+ IMA_11020_trigget_tt: "§R좌익의 분노§!가 §R3§!보다 낮아야 합니다."
+ IMA_31006_tt: "§Y항공기 생산 비용이 일시적으로 상승하지만, 이후 중점이나 디시전을 통해 다시 생산 비용을 줄일 수 있습니다!§!"
+ IMA_31013_tt: "§Y4개의 공수 사단§!이 §Y[ROOT.Capital.GetName]§!에서 생성됩니다."
+ IMA_31202_tt: "§R적국에 대한 선전물 살포작전의 소티 횟수에 따라, 우리 폭격기 대대의 역량이 달라집니다!§!"
+ IMA_32017_tt: "§Y4개의 해병 사단§!이 §Y[ROOT.Capital.GetName]§!에서 생성됩니다."
+ IMA_33015_tt: "§Y[ICG.GetName]측이 동의를 하면 우리의 섬을 내주는 대신, 구축함 몇 척을 교환 받을 수 있습니다.§!"
+ IMA_51019_tt: "§Y도시 지역의 아이들을 시골로 피난시키는 작전이 진행됩니다.§!"
+ # trigger tooltips
+ IMA_political_stabilized_tt: "우리나라의 정치적 방향성이 결정되었습니다."
+ IMA_ready_for_westminster_statute_tt: "웨스트민스터 헌장에 서명할 준비가 되었습니다."
+ commonwealth_leader_tt: "해당 국가는 커먼웰스의 종주국입니다."
+ commonwealth_leader_check_tt: "해당 국가는 커먼웰스의 지도자가 될 수 있습니다."
+ commonwealth_member_check_tt: "해당 국가는 커먼웰스의 소속국이 될 수 있습니다."
+ commomwealth_joined_tt: "해당 국가는 커먼웰스에 참여중입니다."
+ commomwealth_joined_tt_NOT: "해당 국가는 커먼웰스에 참여중이지 않습니다."
+ commonwealth_effect_tt: "우리는 이제, 아이마스 커먼웰스에 참여하게 됩니다. 그와 동시에 아래 중점들을 진행할 수 있습니다.\n\n더 많은 중점을 열 수록, 더 많은 국가가 참여할 수록, 이 효과는 증가합니다."
+ IMA_shared_10001_tt: "§Y연합국에 합류한 그외 국가들§!과, §Y이후 연합국에 합류하는 국가들§!의 §Y군 지휘체계§!가 §G연합국 최고사령부 지휘체계§!로 변경됩니다!"
+ IMA_shared_11005_heavy_fighter_tt: "최소 §Y350§!기 이상의 §Y중전투기§! 전개"
+ IMA_shared_43001_tt: "해당 중점을 찍을 수 있는 조건을 만족하는 국가에 한해 §G고등연구소가 설치됩니다.§!"
+ IMA_shared_43001_IMA_tt: "[IMA.GetName]에 §G고등연구소가 설치됩니다.§!"
+ IMA_shared_43001_ICG_tt: "[ICG.GetName]에 §G고등연구소가 설치됩니다.§!"
+ IMA_shared_43001_IML_tt: "[IML.GetName]에 §G고등연구소가 설치됩니다.§!"
+ IMA_DO010_tt: "§G 한달 이내로 선거가 시작됩니다...!§!"
+ # decisions tooltips
+ IMA_bankrupt_trigger_tt: "§R우리는 현재 채무 불이행 상태입니다!§!"
+ IMA_bankrupt_trigger_tt_NOT: "§G우리는 현재 채무 불이행 상태가 아닙니다!§!"
+ IMA_upgrade_minase_fund_tt: "남코 상공회의소 기금 투자를 통한 건설 기간이 §G10일§! 줄어듭니다!"
+ ###############################
+ #####- Section 10: Misc - #####
+ ###############################

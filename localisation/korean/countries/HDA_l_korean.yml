@@ -1,29 +1,77 @@
 ﻿l_korean:
+ ########################################
+ #########- Table of Contents - #########
+ ########################################
+ #Section 01: Country Intro
+ #Section 02: Ideas & National Spirits
+ #Section 03: State & Dynamic Modifiers
+ #Section 04: National Focuses
+ #Section 05: Equipment
+ #Section 06: Decisions
+ #Section 07: Events
+ #Section 08: GUI
+ #Section 09: Tooltips
+ #Section 10: Misc
+ ########################################
+ #####- Section 01: Country Intro - #####
+ ########################################
  HDA_country_intro_background: "GFX_HDA_intro"
  HDA_country_intro_header_1: "$generic_country_intro_header_1$"
- HDA_country_intro_header_2: "경로 가이드(스포일러 주의)"
+ HDA_country_intro_header_2: "$generic_country_intro_header_1$"
+ HDA_country_intro_header_3: "$generic_country_intro_header_1$"
+ HDA_country_intro_header_4: "HANDEAD ANTHEM 경로 가이드(스포일러 주의)"
  HDA_country_intro_content_1: "$generic_country_content$\n\n"
- HDA_country_intro_content_2: "$generic_country_route$"
- #bop
- #ideas_static
- #ideas_dynamic
- HDA_industry: "[HDA.GetName] 산업"
- HDA_industry_desc: ""
- HDA_industry_tt: "§Y$HDA_industry$§! 변동치:"
- HDA_army: "[HDA.GetName] 육군"
+ HDA_country_intro_content_2: "$generic_country_content$\n\n"
+ HDA_country_intro_content_3: "$generic_country_content$\n\n"
+ HDA_country_intro_content_4: "$generic_country_route$"
+ ###################################################
+ #####- Section 02: Ideas & National Spirits - #####
+ ###################################################
+ # bop
+ # MIO/designers
+ # idea
+ ####################################################
+ #####- Section 03: State & Dynamic Modifiers - #####
+ ####################################################
+ HDA_industry_modifier: "HANDEAD ANTHEM 산업"
+ HDA_industry_modifier_desc: ""
+ HDA_army: "HANDEAD ANTHEM 육군"
  HDA_army_desc: ""
- HDA_army_tt: "§Y$HDA_army$§! 변동치:"
- HDA_navy: "[HDA.GetName] 해군"
+ HDA_navy: "HANDEAD ANTHEM 해군"
  HDA_navy_desc: ""
- HDA_navy_tt: "§Y$HDA_navy$§! 변동치:"
- HDA_air_force: "[HDA.GetName] 공군"
+ HDA_air_force: "HANDEAD ANTHEM 공군"
  HDA_air_force_desc: ""
- HDA_air_force_tt: "§Y$HDA_air_force$§! 변동치:"
- #focus
- #equipment_version
- #equipment_army
- #equipment_navy
- #equipment_airforce
- #decisions
- #country_events
- 
+ # state modifiers
+ ###########################################
+ #####- Section 04: National Focuses - #####
+ ###########################################
+ # focus shortcut
+ # focus
+ ####################################
+ #####- Section 05: Equipment - #####
+ ####################################
+ # equipment version
+ # equipment army
+ # equipment navy
+ # equipment airforce
+ ####################################
+ #####- Section 06: Decisions - #####
+ ####################################
+ #################################
+ #####- Section 07: Events - #####
+ #################################
+ ##############################
+ #####- Section 08: GUI - #####
+ ##############################
+ # focus inlay
+ ###################################
+ #####- Section 09: Tooltips - #####
+ ###################################
+ # country flag
+ # custom trigger tooltip
+ # focus tooltip
+ # decision tooltip
+ # event tooltip
+ ###############################
+ #####- Section 10: Misc - #####
+ ###############################

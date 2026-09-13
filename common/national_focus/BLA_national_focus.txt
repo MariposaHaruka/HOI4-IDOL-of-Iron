@@ -85,11 +85,12 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_NAVY FOCUS_FILTER_AIR_FORCE FOCUS_FILTER_ARMY }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_10001"
 			add_command_power = 20
 			add_political_power = 50
+			army_experience = 30
 			unlock_decision_category_tooltip = BLA_military_committee_category
 		}
 	}
@@ -114,11 +115,12 @@ focus_tree = {
 			429 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = BLA_industry_modifier
@@ -148,6 +150,7 @@ focus_tree = {
 		y = 1
 
 		ai_will_do = { factor = 50 }
+		available = { has_completed_focus = BLA_11001 }
 		prerequisite = { focus = BLA_10002 }
 
 
@@ -178,6 +181,7 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_10002 }
+		available = { has_completed_focus = BLA_12001 }
 
 
 		available_if_capitulated = yes
@@ -210,16 +214,26 @@ focus_tree = {
 
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_ARMY }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_10005"
+			army_experience = 20
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = BLA_army
 			}
 			add_to_variable = {
-				BLA_army_experience_gain_army_factor = 0.02
+				BLA_army_experience_gain_army_factor = 0.05
 				tooltip = experience_gain_army_factor_tt
+			}
+			add_to_variable = {
+				BLA_army_training_time_army_factor = -0.05
+				tooltip = training_time_army_factor_tt
+			}
+			add_to_variable = {
+				BLA_army_army_org_factor = 0.03
+				tooltip = army_org_factor_tt
 			}
 		}
 	}
@@ -235,7 +249,7 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_10005 }
-
+		available = { BLA_army_united = yes }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -246,8 +260,8 @@ focus_tree = {
 				DYNMOD = BLA_army
 			}
 			add_to_variable = {
-				BLA_army_infantry_equipment_build_cost_ic = -0.05
-				tooltip = infantry_equipment_build_cost_ic_tt
+				BLA_army_training_time_army_factor = -0.05
+				tooltip = training_time_army_factor_tt
 			}
 			add_to_variable = {
 				BLA_army_supply_consumption_factor = -0.05
@@ -271,7 +285,7 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_10005 }
-
+		available = { BLA_army_united = yes }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -320,6 +334,7 @@ focus_tree = {
 			custom_effect_tooltip = military_academy_tt
 			hidden_effect = { clr_country_flag = no_military_academy }
 			army_experience = 50
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = BLA_army
@@ -333,13 +348,18 @@ focus_tree = {
 				tooltip = army_leader_cost_factor_tt
 			}
 			add_to_variable = {
-				BLA_army_land_mastery_gain_factor = -0.10
+				BLA_army_land_mastery_gain_factor = 0.10
 				tooltip = land_mastery_gain_factor_tt
 			}
 			add_to_variable = {
-				BLA_army_promote_cost_factor = -0.1
+				BLA_army_army_org_factor = 0.03
+				tooltip = army_org_factor_tt
+			}
+			add_to_variable = {
+				BLA_army_promote_cost_factor = -0.05
 				tooltip = promote_cost_factor_tt
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = BLA_bad_administrative
@@ -367,7 +387,27 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ARMY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_10002"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_10009"
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_army
+			}
+			add_to_variable = {
+				BLA_army_army_attack_factor = 0.05
+				tooltip = army_attack_factor_tt
+			}
+			add_to_variable = {
+				BLA_army_army_defence_factor = 0.05
+				tooltip = army_defence_factor_tt
+			}
+			add_to_variable = {
+				BLA_army_army_morale_factor = 0.05
+				tooltip = army_morale_factor_tt
+			}
+			add_to_variable = {
+				BLA_army_army_speed_factor = 0.05
+				tooltip = army_speed_factor_tt
+			}
 		}
 	}
 
@@ -1397,7 +1437,7 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		prerequisite = { focus = BLA_11012 focus = BLA_11013 }
 
-		available = { 
+		available = {
 			BLA_gehenna_participate = yes
 			has_improved_light_tank = yes
 			OR = { # 이게 있어야 공수 경전차 사용 가능
@@ -3449,7 +3489,7 @@ focus_tree = {
 		ai_will_do = { factor = 0 } # 이벤트로 중점 통과
 		available = { always = no }
 		mutually_exclusive = { focus = BLA_32001 focus = BLA_33001 }
-		allow_branch = { 
+		allow_branch = {
 			NOT = { has_country_flag = BLA_school_country }
 		}
 
@@ -3472,7 +3512,7 @@ focus_tree = {
 		ai_will_do = { factor = 0 } # 이벤트로 중점 통과
 		available = { always = no }
 		mutually_exclusive = { focus = BLA_31001 focus = BLA_33001 }
-		allow_branch = { 
+		allow_branch = {
 			NOT = { has_country_flag = BLA_school_country }
 		}
 
@@ -3517,7 +3557,7 @@ focus_tree = {
 		ai_will_do = { factor = 0 } # 이벤트로 중점 통과
 		available = { always = no }
 		mutually_exclusive = { focus = BLA_31001 focus = BLA_32001 }
-		allow_branch = { 
+		allow_branch = {
 			has_country_flag = on_construction_flag  # IOI 임시조치
 			NOT = { has_country_flag = BLA_school_country }
 		}
@@ -5913,7 +5953,7 @@ focus_tree = {
 				has_completed_focus = BLA_31601
 			}
 		}
-		allow_branch = { 
+		allow_branch = {
 			NOT = { has_country_flag = BLA_school_country }
 		}
 

@@ -1,29 +1,77 @@
 ﻿l_korean:
+ ########################################
+ #########- Table of Contents - #########
+ ########################################
+ #Section 01: Country Intro
+ #Section 02: Ideas & National Spirits
+ #Section 03: State & Dynamic Modifiers
+ #Section 04: National Focuses
+ #Section 05: Equipment
+ #Section 06: Decisions
+ #Section 07: Events
+ #Section 08: GUI
+ #Section 09: Tooltips
+ #Section 10: Misc
+ ########################################
+ #####- Section 01: Country Intro - #####
+ ########################################
  KON_country_intro_background: "GFX_KON_intro"
  KON_country_intro_header_1: "$generic_country_intro_header_1$"
- KON_country_intro_header_2: "경로 가이드(스포일러 주의)"
+ KON_country_intro_header_2: "$generic_country_intro_header_1$"
+ KON_country_intro_header_3: "$generic_country_intro_header_1$"
+ KON_country_intro_header_4: "케이온 경로 가이드(스포일러 주의)"
  KON_country_intro_content_1: "$generic_country_content$\n\n"
- KON_country_intro_content_2: "$generic_country_route$"
- #bop
- #ideas_static
- #ideas_dynamic
- KON_industry: "[KON.GetName] 산업"
- KON_industry_desc: ""
- KON_industry_tt: "§Y$KON_industry$§! 변동치:"
- KON_army: "[KON.GetName] 육군"
+ KON_country_intro_content_2: "$generic_country_content$\n\n"
+ KON_country_intro_content_3: "$generic_country_content$\n\n"
+ KON_country_intro_content_4: "$generic_country_route$"
+ ###################################################
+ #####- Section 02: Ideas & National Spirits - #####
+ ###################################################
+ # bop
+ # MIO/designers
+ # idea
+ ####################################################
+ #####- Section 03: State & Dynamic Modifiers - #####
+ ####################################################
+ KON_industry_modifier: "케이온 산업"
+ KON_industry_modifier_desc: ""
+ KON_army: "케이온 육군"
  KON_army_desc: ""
- KON_army_tt: "§Y$KON_army$§! 변동치:"
- KON_navy: "[KON.GetName] 해군"
+ KON_navy: "케이온 해군"
  KON_navy_desc: ""
- KON_navy_tt: "§Y$KON_navy$§! 변동치:"
- KON_air_force: "[KON.GetName] 공군"
+ KON_air_force: "케이온 공군"
  KON_air_force_desc: ""
- KON_air_force_tt: "§Y$KON_air_force$§! 변동치:"
- #focus
- #equipment_version
- #equipment_army
- #equipment_navy
- #equipment_airforce
- #decisions
- #country_events
- 
+ # state modifiers
+ ###########################################
+ #####- Section 04: National Focuses - #####
+ ###########################################
+ # focus shortcut
+ # focus
+ ####################################
+ #####- Section 05: Equipment - #####
+ ####################################
+ # equipment version
+ # equipment army
+ # equipment navy
+ # equipment airforce
+ ####################################
+ #####- Section 06: Decisions - #####
+ ####################################
+ #################################
+ #####- Section 07: Events - #####
+ #################################
+ ##############################
+ #####- Section 08: GUI - #####
+ ##############################
+ # focus inlay
+ ###################################
+ #####- Section 09: Tooltips - #####
+ ###################################
+ # country flag
+ # custom trigger tooltip
+ # focus tooltip
+ # decision tooltip
+ # event tooltip
+ ###############################
+ #####- Section 10: Misc - #####
+ ###############################

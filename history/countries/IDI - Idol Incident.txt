@@ -18,7 +18,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 10
@@ -28,7 +28,7 @@ add_ideas = {
 	agrarian_society
 }
 
-add_dynamic_modifier = { modifier = IDI_industry }
+add_dynamic_modifier = { modifier = IDI_industry_modifier }
 add_dynamic_modifier = { modifier = IDI_army }
 add_dynamic_modifier = { modifier = IDI_navy }
 add_dynamic_modifier = { modifier = IDI_air_force }
@@ -142,13 +142,13 @@ set_popularities = {
 	anarchosyndicalism = 1
 	fascism = 1
 	militarytotalism = 1
-	authoritariandemocracy = 1 
+	authoritariandemocracy = 1
 	autocracy = 1
 }
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = IDI_hoshina_natsuki
 
 #recruit_character = IDI_josé_agripino_barnet

@@ -67,7 +67,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 40
@@ -77,7 +77,7 @@ add_ideas = {
 	agrarian_society
 }
 
-add_dynamic_modifier = { modifier = AZU_industry }
+add_dynamic_modifier = { modifier = AZU_industry_modifier }
 add_dynamic_modifier = { modifier = AZU_army }
 add_dynamic_modifier = { modifier = AZU_navy }
 add_dynamic_modifier = { modifier = AZU_air_force }
@@ -197,7 +197,7 @@ set_variable = { AZU_air_force_suicide_build_cost_ic = 0.35 } ### 별도 국민�
 
 #외교
 give_guarantee = LAS
-add_opinion_modifier = { 
+add_opinion_modifier = {
 	target = KTC
 	modifier = hostile_status
 }
@@ -242,7 +242,7 @@ recruit_character = AZU_dummy_ANA #더미
 recruit_character = AZU_uss_enterprise #스타팅 지도자, 절대 앞에 주석 씌우지 말것
 #나중에 추가하거든 ID 순으로 정리해서 넣을것, 누구 넣었는지 피보지 말고...
 #recruit_character = AZU_universal_bulin
-#recruit_character = AZU_prototype_bulin 
+#recruit_character = AZU_prototype_bulin
 #recruit_character = AZU_specialized_bulin
 #recruit_character = AZU_uss_dewey
 #recruit_character = AZU_uss_cassin
@@ -962,12 +962,12 @@ recruit_character = AZU_uss_enterprise #스타팅 지도자, 절대 앞에 주�
 #recruit_character = AZU_chen_yi
 #recruit_character = AZU_soong_mei_ling
 #recruit_character = AZU_lin_sen
-#recruit_character = AZU_wang_ganchang 
+#recruit_character = AZU_wang_ganchang
 #recruit_character = AZU_dai_li # Shared in pre-sea
-#recruit_character = AZU_t_v_soong # Shared 
-#recruit_character = PRS_alexander_von_falkenhausen # Shared 
-#recruit_character = ICG_claire_lee_chennault # Shared 
-#recruit_character = AZU_kwong_jiang # Shared 
+#recruit_character = AZU_t_v_soong # Shared
+#recruit_character = PRS_alexander_von_falkenhausen # Shared
+#recruit_character = ICG_claire_lee_chennault # Shared
+#recruit_character = AZU_kwong_jiang # Shared
 
 #SHX
 #recruit_character = AZU_yan_xishan
@@ -1139,7 +1139,7 @@ recruit_character = AZU_uss_enterprise #스타팅 지도자, 절대 앞에 주�
 ### Ship Variants ###
 # Destroyers #
 create_equipment_variant = {
-	name = "Jianwei Class"			
+	name = "Jianwei Class"
 	type = ship_hull_light_1
 	name_group = AZU_DD_HISTORICAL
 	parent_version = 0

@@ -92,7 +92,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 35
@@ -120,7 +120,7 @@ add_ideas = {
 	LAS_robot_technology_1
 }
 
-add_dynamic_modifier = { modifier = LAS_industry }
+add_dynamic_modifier = { modifier = LAS_industry_modifier }
 add_dynamic_modifier = { modifier = LAS_army }
 add_dynamic_modifier = { modifier = LAS_navy }
 add_dynamic_modifier = { modifier = LAS_air_force }

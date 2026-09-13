@@ -26,7 +26,7 @@ set_technology = {
 	infantry_weapons1 = 1
 	tech_mountaineers = 1
 	tech_trucks = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
 	gw_artillery = 1
@@ -76,14 +76,14 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 10
 
 #국민 정신
 
-add_dynamic_modifier = { modifier = UMA_industry }
+add_dynamic_modifier = { modifier = UMA_industry_modifier }
 add_dynamic_modifier = { modifier = UMA_army }
 add_dynamic_modifier = { modifier = UMA_navy }
 add_dynamic_modifier = { modifier = UMA_air_force }
@@ -432,7 +432,7 @@ if = {
 ### Ship Variants ###
 # Submarines #
 create_equipment_variant = {
-	name = "Wilk Class"				
+	name = "Wilk Class"
 	type = ship_hull_submarine_2
 	name_group = UMA_SS_HISTORICAL
 	parent_version = 0
@@ -444,7 +444,7 @@ create_equipment_variant = {
 }
 # Destroyers #
 create_equipment_variant = {
-	name = "Wicher Class"				
+	name = "Wicher Class"
 	type = ship_hull_light_1
 	name_group = UMA_DD_HISTORICAL
 	parent_version = 0
@@ -547,5 +547,5 @@ if = {
 			special_type_slot_1 = lmg_defense_turret
 		}
 		icon = "GFX_POL_CAS1_medium"
-	}		
+	}
 }

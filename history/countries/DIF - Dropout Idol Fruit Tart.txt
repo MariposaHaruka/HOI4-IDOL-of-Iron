@@ -31,7 +31,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 
@@ -41,7 +41,7 @@ add_ideas = single_parliament
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = DIF_industry }
+add_dynamic_modifier = { modifier = DIF_industry_modifier }
 add_dynamic_modifier = { modifier = DIF_army }
 add_dynamic_modifier = { modifier = DIF_navy }
 
@@ -154,13 +154,13 @@ set_popularities = {
 	anarchosyndicalism = 1
 	fascism = 12
 	militarytotalism = 1
-	authoritariandemocracy = 22 
+	authoritariandemocracy = 22
 	autocracy = 1
 }
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = DIF_sakura_ino
 
 #장관진

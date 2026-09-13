@@ -26,7 +26,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 10
@@ -34,7 +34,7 @@ set_convoys = 10
 #국민 정신
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = HDA_industry }
+add_dynamic_modifier = { modifier = HDA_industry_modifier }
 add_dynamic_modifier = { modifier = HDA_army }
 add_dynamic_modifier = { modifier = HDA_navy }
 
@@ -156,7 +156,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = HDA_tenjin_kou
 
 #recruit_character = HDA_pierre_ryckmans

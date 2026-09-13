@@ -77,7 +77,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 20
@@ -87,7 +87,7 @@ add_ideas = {
 	GUP_senshado_project
 }
 
-add_dynamic_modifier = { modifier = GUP_industry }
+add_dynamic_modifier = { modifier = GUP_industry_modifier }
 add_dynamic_modifier = { modifier = GUP_army }
 add_dynamic_modifier = { modifier = GUP_navy }
 add_dynamic_modifier = { modifier = GUP_air_force }
@@ -298,7 +298,7 @@ if = {
 ### Ship Variants ###
 # Submarines #
 create_equipment_variant = {
-	name = "Birinci Inönü Class"				
+	name = "Birinci Inönü Class"
 	type = ship_hull_submarine_1
 	name_group = GUP_SS_HISTORICAL
 	parent_version = 0
@@ -310,7 +310,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Dumlupinar Class"				
+	name = "Dumlupinar Class"
 	type = ship_hull_submarine_2
 	name_group = GUP_SS_HISTORICAL
 	parent_version = 0
@@ -333,7 +333,7 @@ create_equipment_variant = {
 }
 # Destroyers #
 create_equipment_variant = {
-	name = "Peyk Class"									# large torpedo boats		
+	name = "Peyk Class"									# large torpedo boats
 	type = ship_hull_light_1
 	name_group = GUP_DD_HISTORICAL
 	parent_version = 0
@@ -367,7 +367,7 @@ create_equipment_variant = {
 }
 # Cruisers #
 create_equipment_variant = {
-	name = "Mecidiye Class"								# represents Mecidiye and Hamidiye protected cruisers		
+	name = "Mecidiye Class"								# represents Mecidiye and Hamidiye protected cruisers
 	type = ship_hull_cruiser_coastal_defense_ship
 	name_group = GUP_CL_HISTORICAL
 	parent_version = 0
@@ -386,7 +386,7 @@ create_equipment_variant = {
 }
 # Battlecruiser #
 create_equipment_variant = {
-	name = "Yavuz Class"	
+	name = "Yavuz Class"
 	type = ship_hull_heavy_1
 	name_group = GUP_BC_HISTORICAL
 	parent_version = 0

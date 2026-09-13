@@ -1,29 +1,78 @@
 ﻿l_korean:
+ ########################################
+ #########- Table of Contents - #########
+ ########################################
+ #Section 01: Country Intro
+ #Section 02: Ideas & National Spirits
+ #Section 03: State & Dynamic Modifiers
+ #Section 04: National Focuses
+ #Section 05: Equipment
+ #Section 06: Decisions
+ #Section 07: Events
+ #Section 08: GUI
+ #Section 09: Tooltips
+ #Section 10: Misc
+ ########################################
+ #####- Section 01: Country Intro - #####
+ ########################################
  NNN_country_intro_background: "GFX_NNN_intro"
  NNN_country_intro_header_1: "$generic_country_intro_header_1$"
- NNN_country_intro_header_2: "경로 가이드(스포일러 주의)"
+ MMM_country_intro_header_2: "$generic_country_intro_header_1$"
+ MMM_country_intro_header_3: "$generic_country_intro_header_1$"
+ NNN_country_intro_header_4: "22/7 경로 가이드(스포일러 주의)"
  NNN_country_intro_content_1: "$generic_country_content$\n\n"
- NNN_country_intro_content_2: "$generic_country_route$"
- #bop
- #ideas_static
- #ideas_dynamic
- NNN_industry: "[NNN.GetName] 산업"
- NNN_industry_desc: ""
- NNN_industry_tt: "§Y$NNN_industry$§! 변동치:"
- NNN_army: "[NNN.GetName] 육군"
+ MMM_country_intro_content_2: "$generic_country_content$\n\n"
+ MMM_country_intro_content_3: "$generic_country_content$\n\n"
+ NNN_country_intro_content_4: "$generic_country_route$"
+ ###################################################
+ #####- Section 02: Ideas & National Spirits - #####
+ ###################################################
+ # bop
+ # MIO/designers
+ # idea
+ ####################################################
+ #####- Section 03: State & Dynamic Modifiers - #####
+ ####################################################
+ # dynamic modifiers
+ NNN_industry_modifier: "22/7 산업"
+ NNN_industry_modifier_desc: ""
+ NNN_army: "22/7 육군"
  NNN_army_desc: ""
- NNN_army_tt: "§Y$NNN_army$§! 변동치:"
- NNN_navy: "[NNN.GetName] 해군"
+ NNN_navy: "22/7 해군"
  NNN_navy_desc: ""
- NNN_navy_tt: "§Y$NNN_navy$§! 변동치:"
- NNN_air_force: "[NNN.GetName] 공군"
+ NNN_air_force: "22/7 공군"
  NNN_air_force_desc: ""
- NNN_air_force_tt: "§Y$NNN_air_force$§! 변동치:"
- #focus
- #equipment_version
- #equipment_army
- #equipment_navy
- #equipment_airforce
- #decisions
- #country_events
- 
+ # state modifiers
+ ###########################################
+ #####- Section 04: National Focuses - #####
+ ###########################################
+ # focus shortcut
+ # focus
+ ####################################
+ #####- Section 05: Equipment - #####
+ ####################################
+ # equipment version
+ # equipment army
+ # equipment navy
+ # equipment airforce
+ ####################################
+ #####- Section 06: Decisions - #####
+ ####################################
+ #################################
+ #####- Section 07: Events - #####
+ #################################
+ ##############################
+ #####- Section 08: GUI - #####
+ ##############################
+ # focus inlay
+ ###################################
+ #####- Section 09: Tooltips - #####
+ ###################################
+ # country flag
+ # custom trigger tooltip
+ # focus tooltip
+ # decision tooltip
+ # event tooltip
+ ###############################
+ #####- Section 10: Misc - #####
+ ###############################

@@ -22,7 +22,7 @@ set_technology = {
 	tech_trucks = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_engineers = 1
 	tech_mountaineers = 1
 	basic_train = 1
@@ -42,7 +42,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 50
@@ -51,7 +51,7 @@ set_convoys = 50
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = LPR_industry }
+add_dynamic_modifier = { modifier = LPR_industry_modifier }
 add_dynamic_modifier = { modifier = LPR_army }
 add_dynamic_modifier = { modifier = LPR_navy }
 add_dynamic_modifier = { modifier = LPR_air_force }
@@ -148,7 +148,7 @@ set_variable = { LPR_air_force_suicide_build_cost_ic = 0.35 } ### 별도 국민�
 #외교
 
 #정치 상황
-set_stability = 0.25 
+set_stability = 0.25
 set_war_support = 0.40
 set_politics = {
 	ruling_party = authoritariandemocracy
@@ -191,7 +191,7 @@ IF = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = LPR_tiara
 
 #recruit_character = LPR_arturo_alessandri
@@ -301,7 +301,7 @@ IF = {
 ### Ship Variants ###
 # Submarines #
 create_equipment_variant = {
-	name = "H1 Class"				
+	name = "H1 Class"
 	type = ship_hull_submarine_1
 	name_group = LPR_SS_HISTORICAL
 	parent_version = 0
@@ -313,7 +313,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Capitán O'Brien Class"				
+	name = "Capitán O'Brien Class"
 	type = ship_hull_submarine_1
 	name_group = LPR_SS_HISTORICAL
 	parent_version = 0
@@ -325,7 +325,7 @@ create_equipment_variant = {
 }
 # Destroyers #
 create_equipment_variant = {
-	name = "Almirante Lynch Class"				
+	name = "Almirante Lynch Class"
 	type = ship_hull_light_1
 	name_group = LPR_DD_HISTORICAL
 	parent_version = 0
@@ -342,7 +342,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Serrano Class"	
+	name = "Serrano Class"
 	type = ship_hull_light_1
 	name_group = LPR_DD_HISTORICAL
 	parent_version = 0
@@ -359,7 +359,7 @@ create_equipment_variant = {
 }
 # Cruisers #
 create_equipment_variant = {
-	name = "O'Higgins Class"				
+	name = "O'Higgins Class"
 	type = ship_hull_cruiser_coastal_defense_ship
 	name_group = LPR_CA_HISTORICAL
 	parent_version = 0
@@ -377,7 +377,7 @@ create_equipment_variant = {
 	}
 }
 create_equipment_variant = {
-	name = "Chacabuco Class"				
+	name = "Chacabuco Class"
 	type = ship_hull_cruiser_coastal_defense_ship
 	name_group = LPR_CL_HISTORICAL
 	parent_version = 0
@@ -396,7 +396,7 @@ create_equipment_variant = {
 }
 # Battleships #
 create_equipment_variant = {
-	name = "Almirante Latorre Class"	
+	name = "Almirante Latorre Class"
 	type = ship_hull_heavy_1
 	name_group = LPR_BB_HISTORICAL
 	parent_version = 0

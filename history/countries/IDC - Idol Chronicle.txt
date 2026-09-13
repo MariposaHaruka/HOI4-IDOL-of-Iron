@@ -26,7 +26,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 
@@ -35,7 +35,7 @@ add_ideas = {
 	agrarian_society
 }
 
-add_dynamic_modifier = { modifier = IDC_industry }
+add_dynamic_modifier = { modifier = IDC_industry_modifier }
 add_dynamic_modifier = { modifier = IDC_army }
 add_dynamic_modifier = { modifier = IDC_air_force }
 
@@ -146,7 +146,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = IDC_satomi_hina
 recruit_character = IDC_kyokoku_ruri
 recruit_character = IDC_matsudaira_yuria

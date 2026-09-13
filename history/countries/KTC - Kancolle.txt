@@ -21,7 +21,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 
@@ -29,7 +29,7 @@ set_variable = { country_intro_page_count = 2 }
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = KTC_industry }
+add_dynamic_modifier = { modifier = KTC_industry_modifier }
 add_dynamic_modifier = { modifier = KTC_army }
 
 ## KTC_industry
@@ -122,9 +122,9 @@ set_variable = { KTC_air_force_strategic_bomber_build_cost_ic = 0.35 } ### 별�
 set_variable = { KTC_air_force_suicide_build_cost_ic = 0.35 } ### 별도 국민정신 적용
 
 #외교
-add_opinion_modifier = { 
-	target = AZU 
-	modifier = hostile_status 
+add_opinion_modifier = {
+	target = AZU
+	modifier = hostile_status
 }
 
 #정치 상황

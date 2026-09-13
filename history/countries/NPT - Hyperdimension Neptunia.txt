@@ -37,7 +37,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 10
@@ -46,7 +46,7 @@ set_convoys = 10
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = NPT_industry }
+add_dynamic_modifier = { modifier = NPT_industry_modifier }
 add_dynamic_modifier = { modifier = NPT_army }
 add_dynamic_modifier = { modifier = NPT_navy }
 add_dynamic_modifier = { modifier = NPT_air_force }
@@ -162,13 +162,13 @@ set_popularities = {
 	anarchosyndicalism = 0
 	fascism = 4
 	militarytotalism = 0
-	authoritariandemocracy = 0 
+	authoritariandemocracy = 0
 	autocracy = 72
 }
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = NPT_neptune
 
 #recruit_character = NPT_reza_shah_pahlavi
@@ -211,7 +211,7 @@ recruit_character = NPT_neptune
 #recruit_character = NPT_generic_non_aligned
 #recruit_character = NPT_sky_guy
 #recruit_character = NPT_land_guy
-#recruit_character = NPT_karim_buzarjamehri 
+#recruit_character = NPT_karim_buzarjamehri
 #recruit_character = NPT_abdolsamad_kambakhsh
 #recruit_character = NPT_assadollah_hosseinpoor
 #recruit_character = NPT_haj_ali_razmara

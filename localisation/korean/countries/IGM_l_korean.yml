@@ -1,25 +1,49 @@
 ﻿l_korean:
+ ########################################
+ #########- Table of Contents - #########
+ ########################################
+ #Section 01: Country Intro
+ #Section 02: Ideas & National Spirits
+ #Section 03: State & Dynamic Modifiers
+ #Section 04: National Focuses
+ #Section 05: Equipment
+ #Section 06: Decisions
+ #Section 07: Events
+ #Section 08: GUI
+ #Section 09: Tooltips
+ #Section 10: Misc
+ ########################################
+ #####- Section 01: Country Intro - #####
+ ########################################
  IGM_country_intro_background: "GFX_IGM_intro"
  IGM_country_intro_header_1: "$generic_country_intro_header_1$"
- IGM_country_intro_header_2: "경로 가이드(스포일러 주의)"
+ IGM_country_intro_header_2: "$generic_country_intro_header_1$"
+ IGM_country_intro_header_3: "$generic_country_intro_header_1$"
+ IGM_country_intro_header_4: "학원 아이돌 마스터 경로 가이드(스포일러 주의)"
  IGM_country_intro_content_1: "$generic_country_content$\n\n"
- IGM_country_intro_content_2: "$generic_country_route$"
- #bop
- #ideas_static
- #ideas_dynamic
- IGM_industry: "[IGM.GetName] 산업"
- IGM_industry_desc: ""
- IGM_industry_tt: "§Y$IGM_industry$§! 변동치:"
- IGM_army: "[IGM.GetName] 육군"
+ IGM_country_intro_content_2: "$generic_country_content$\n\n"
+ IGM_country_intro_content_3: "$generic_country_content$\n\n"
+ IGM_country_intro_content_4: "$generic_country_route$"
+ ###################################################
+ #####- Section 02: Ideas & National Spirits - #####
+ ###################################################
+ # bop
+ # MIO/designers
+ # idea
+ ####################################################
+ #####- Section 03: State & Dynamic Modifiers - #####
+ ####################################################
+ IGM_industry_modifier: "학원 아이돌 마스터 산업"
+ IGM_industry_modifier_desc: ""
+ IGM_army: "학원 아이돌 마스터 육군"
  IGM_army_desc: ""
- IGM_army_tt: "§Y$IGM_army$§! 변동치:"
- IGM_navy: "[IGM.GetName] 해군"
+ IGM_navy: "학원 아이돌 마스터 해군"
  IGM_navy_desc: ""
- IGM_navy_tt: "§Y$IGM_navy$§! 변동치:"
- IGM_air_force: "[IGM.GetName] 공군"
+ IGM_air_force: "학원 아이돌 마스터 공군"
  IGM_air_force_desc: ""
- IGM_air_force_tt: "§Y$IGM_air_force$§! 변동치:"
- #focus
+ ###########################################
+ #####- Section 04: National Focuses - #####
+ ###########################################
  IGM_10001: "국토건설부"
  IGM_10001_desc: ""
  IGM_10002: "싱가포르 항구 개발"
@@ -438,9 +462,26 @@
  IGM_53210_desc: ""
  IGM_53211: "농민 투쟁 전파"
  IGM_53211_desc: ""
- #equipment_version
- #equipment_army
- #equipment_navy
- #equipment_airforce
- #decisions
- #country_events
+ ####################################
+ #####- Section 05: Equipment - #####
+ ####################################
+ ####################################
+ #####- Section 06: Decisions - #####
+ ####################################
+ #################################
+ #####- Section 07: Events - #####
+ #################################
+ ##############################
+ #####- Section 08: GUI - #####
+ ##############################
+ ###################################
+ #####- Section 09: Tooltips - #####
+ ###################################
+ # country flag
+ # custom trigger tooltip
+ # focus tooltip
+ # decision tooltip
+ # event tooltip
+ ###############################
+ #####- Section 10: Misc - #####
+ ###############################

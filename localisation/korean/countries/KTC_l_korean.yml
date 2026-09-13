@@ -1,24 +1,48 @@
 ﻿l_korean:
+ ########################################
+ #########- Table of Contents - #########
+ ########################################
+ #Section 01: Country Intro
+ #Section 02: Ideas & National Spirits
+ #Section 03: State & Dynamic Modifiers
+ #Section 04: National Focuses
+ #Section 05: Equipment
+ #Section 06: Decisions
+ #Section 07: Events
+ #Section 08: GUI
+ #Section 09: Tooltips
+ #Section 10: Misc
+ ########################################
+ #####- Section 01: Country Intro - #####
+ ########################################
  KTC_country_intro_background: "GFX_KTC_intro"
  KTC_country_intro_header_1: "$generic_country_intro_header_1$"
- KTC_country_intro_header_2: "경로 가이드(스포일러 주의)"
+ KTC_country_intro_header_2: "$generic_country_intro_header_1$"
+ KTC_country_intro_header_3: "$generic_country_intro_header_1$"
+ KTC_country_intro_header_4: "함대 컬렉션 경로 가이드(스포일러 주의)"
  KTC_country_intro_content_1: "$generic_country_content$\n\n"
- KTC_country_intro_content_2: "$generic_country_route$"
- #bop
- #ideas_static
- #ideas_dynamic
- KTC_industry: "[KTC.GetName] 산업"
- KTC_industry_desc: ""
- KTC_industry_tt: "§Y$KTC_industry$§! 변동치:"
- KTC_army: "[KTC.GetName] 육군"
+ KTC_country_intro_content_2: "$generic_country_content$\n\n"
+ KTC_country_intro_content_3: "$generic_country_content$\n\n"
+ KTC_country_intro_content_4: "$generic_country_route$"
+ ###################################################
+ #####- Section 02: Ideas & National Spirits - #####
+ ###################################################
+ # bop
+ # MIO/designers
+ # idea
+ ####################################################
+ #####- Section 03: State & Dynamic Modifiers - #####
+ ####################################################
+ # dynamic modifiers
+ KTC_industry_modifier: "함대 컬렉션 산업"
+ KTC_industry_modifier_desc: ""
+ KTC_army: "함대 컬렉션 육군"
  KTC_army_desc: ""
- KTC_army_tt: "§Y$KTC_army$§! 변동치:"
- KTC_navy: "[KTC.GetName] 해군"
+ KTC_navy: "함대 컬렉션 해군"
  KTC_navy_desc: ""
- KTC_navy_tt: "§Y$KTC_navy$§! 변동치:"
- KTC_air_force: "[KTC.GetName] 공군"
+ KTC_air_force: "함대 컬렉션 공군"
  KTC_air_force_desc: ""
- KTC_air_force_tt: "§Y$KTC_air_force$§! 변동치:"
+ # state modifiers
  KTC_guerilla_cells_active_1: "$PRC_guerilla_cells_active_1$"
  KTC_guerilla_cells_active_2: "$PRC_guerilla_cells_active_2$"
  KTC_anti_japanese_base: "$PRC_anti_japanese_base$"
@@ -30,11 +54,37 @@
  KTC_probed_border_defenses_victim_massive: "$PRC_probed_border_defenses_victim_massive$"
  KTC_infiltrated_border_defenses: "$PRC_infiltrated_border_defenses$"
  KTC_sabotaged_border_defenses: "$PRC_sabotaged_border_defenses$"
- #focus
- #equipment_version
- #equipment_army
- #equipment_navy
- #equipment_airforce
- #decisions
- #country_events
- 
+ # state modifiers
+ ###########################################
+ #####- Section 04: National Focuses - #####
+ ###########################################
+ # focus shortcut
+ # focus
+ ####################################
+ #####- Section 05: Equipment - #####
+ ####################################
+ # equipment version
+ # equipment army
+ # equipment navy
+ # equipment airforce
+ ####################################
+ #####- Section 06: Decisions - #####
+ ####################################
+ #################################
+ #####- Section 07: Events - #####
+ #################################
+ ##############################
+ #####- Section 08: GUI - #####
+ ##############################
+ # focus inlay
+ ###################################
+ #####- Section 09: Tooltips - #####
+ ###################################
+ # country flag
+ # custom trigger tooltip
+ # focus tooltip
+ # decision tooltip
+ # event tooltip
+ ###############################
+ #####- Section 10: Misc - #####
+ ###############################

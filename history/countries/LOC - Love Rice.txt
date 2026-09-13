@@ -21,7 +21,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 
@@ -29,7 +29,7 @@ set_variable = { country_intro_page_count = 2 }
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = LOC_industry }
+add_dynamic_modifier = { modifier = LOC_industry_modifier }
 add_dynamic_modifier = { modifier = LOC_army }
 
 ## LOC_industry
@@ -149,7 +149,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = LOC_hinohikari
 
 #장관진

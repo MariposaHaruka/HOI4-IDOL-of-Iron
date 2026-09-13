@@ -51,7 +51,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 10
@@ -61,7 +61,7 @@ add_ideas = {
 	HLL_5th_4_years_plan
 }
 
-add_dynamic_modifier = { modifier = HLL_industry }
+add_dynamic_modifier = { modifier = HLL_industry_modifier }
 add_dynamic_modifier = { modifier = HLL_army }
 add_dynamic_modifier = { modifier = HLL_navy }
 add_dynamic_modifier = { modifier = HLL_air_force }
@@ -178,7 +178,7 @@ set_popularities = {
 	anarchosyndicalism = 1
 	fascism = 1
 	militarytotalism = 74
-	authoritariandemocracy = 16 
+	authoritariandemocracy = 16
 	autocracy = 2
 }
 ban_communism_effect = yes
@@ -471,7 +471,7 @@ if = {
 			type = fighter_equipment_0
 			upgrades = {
 				plane_gun_upgrade = 1
-				plane_range_upgrade = 0  
+				plane_range_upgrade = 0
 				plane_engine_upgrade = 2
 				plane_reliability_upgrade = 1
 			}

@@ -63,7 +63,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 40
@@ -72,7 +72,7 @@ set_convoys = 40
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = FGO_industry }
+add_dynamic_modifier = { modifier = FGO_industry_modifier }
 add_dynamic_modifier = { modifier = FGO_army }
 add_dynamic_modifier = { modifier = FGO_navy }
 add_dynamic_modifier = { modifier = FGO_air_force }

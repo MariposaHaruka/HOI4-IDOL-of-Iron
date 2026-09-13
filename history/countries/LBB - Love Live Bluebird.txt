@@ -17,7 +17,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 
@@ -28,7 +28,7 @@ add_ideas = {
 	LNH_south_manchuria_railway_company
 }
 
-add_dynamic_modifier = { modifier = LBB_industry }
+add_dynamic_modifier = { modifier = LBB_industry_modifier }
 add_dynamic_modifier = { modifier = LBB_army }
 add_dynamic_modifier = { modifier = LBB_navy }
 add_dynamic_modifier = { modifier = LBB_air_force }
@@ -143,7 +143,7 @@ set_popularities = {
 }
 ban_communism_effect = yes
 
-#캐릭터 
+#캐릭터
 recruit_character = LBB_takahashi_polka
 recruit_character = LBB_azabu_mai
 recruit_character = LBB_goto_akira

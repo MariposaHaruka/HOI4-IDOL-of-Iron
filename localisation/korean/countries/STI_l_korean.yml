@@ -1,29 +1,78 @@
 ﻿l_korean:
+ ########################################
+ #########- Table of Contents - #########
+ ########################################
+ #Section 01: Country Intro
+ #Section 02: Ideas & National Spirits
+ #Section 03: State & Dynamic Modifiers
+ #Section 04: National Focuses
+ #Section 05: Equipment
+ #Section 06: Decisions
+ #Section 07: Events
+ #Section 08: GUI
+ #Section 09: Tooltips
+ #Section 10: Misc
+ ########################################
+ #####- Section 01: Country Intro - #####
+ ########################################
  STI_country_intro_background: "GFX_STI_intro"
  STI_country_intro_header_1: "$generic_country_intro_header_1$"
- STI_country_intro_header_2: "경로 가이드(스포일러 주의)"
+ STI_country_intro_header_2: "$generic_country_intro_header_1$"
+ STI_country_intro_header_3: "$generic_country_intro_header_1$"
+ STI_country_intro_header_4: "STATION IDOL LATCH! 경로 가이드(스포일러 주의)"
  STI_country_intro_content_1: "$generic_country_content$\n\n"
- STI_country_intro_content_2: "$generic_country_route$"
- #bop
- #ideas_static
- #ideas_dynamic
- STI_industry: "[STI.GetName] 산업"
- STI_industry_desc: ""
- STI_industry_tt: "§Y$STI_industry$§! 변동치:"
- STI_army: "[STI.GetName] 육군"
+ STI_country_intro_content_2: "$generic_country_content$\n\n"
+ STI_country_intro_content_3: "$generic_country_content$\n\n"
+ STI_country_intro_content_4: "$generic_country_route$"
+ ###################################################
+ #####- Section 02: Ideas & National Spirits - #####
+ ###################################################
+ # bop
+ # MIO/designers
+ # idea
+ ####################################################
+ #####- Section 03: State & Dynamic Modifiers - #####
+ ####################################################
+ # dynamic modifiers
+ STI_industry_modifier: "STATION IDOL LATCH! 산업"
+ STI_industry_modifier_desc: ""
+ STI_army: "STATION IDOL LATCH! 육군"
  STI_army_desc: ""
- STI_army_tt: "§Y$STI_army$§! 변동치:"
- STI_navy: "[STI.GetName] 해군"
+ STI_navy: "STATION IDOL LATCH! 해군"
  STI_navy_desc: ""
- STI_navy_tt: "§Y$STI_navy$§! 변동치:"
- STI_air_force: "[STI.GetName] 공군"
+ STI_air_force: "STATION IDOL LATCH! 공군"
  STI_air_force_desc: ""
- STI_air_force_tt: "§Y$STI_air_force$§! 변동치:"
- #focus
- #equipment_version
- #equipment_army
- #equipment_navy
- #equipment_airforce
- #decisions
- #country_events
- 
+ # state modifiers
+ ###########################################
+ #####- Section 04: National Focuses - #####
+ ###########################################
+ # focus shortcut
+ # focus
+ ####################################
+ #####- Section 05: Equipment - #####
+ ####################################
+ # equipment version
+ # equipment army
+ # equipment navy
+ # equipment airforce
+ ####################################
+ #####- Section 06: Decisions - #####
+ ####################################
+ #################################
+ #####- Section 07: Events - #####
+ #################################
+ ##############################
+ #####- Section 08: GUI - #####
+ ##############################
+ # focus inlay
+ ###################################
+ #####- Section 09: Tooltips - #####
+ ###################################
+ # country flag
+ # custom trigger tooltip
+ # focus tooltip
+ # decision tooltip
+ # event tooltip
+ ###############################
+ #####- Section 10: Misc - #####
+ ###############################

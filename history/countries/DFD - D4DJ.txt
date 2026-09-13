@@ -28,10 +28,10 @@ set_technology = {
 	gw_artillery = 1
 	interwar_antiair = 1
 	tech_recon = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_engineers = 1
 	basic_train = 1
-	interwar_antitank = 1 # 
+	interwar_antitank = 1 #
 }
 set_technology = {
 	basic_naval_mines = 1
@@ -88,7 +88,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 25
@@ -97,7 +97,7 @@ set_convoys = 25
 add_ideas = {
 }
 
-add_dynamic_modifier = { modifier = DFD_industry }
+add_dynamic_modifier = { modifier = DFD_industry_modifier }
 add_dynamic_modifier = { modifier = DFD_army }
 add_dynamic_modifier = { modifier = DFD_navy }
 add_dynamic_modifier = { modifier = DFD_air_force }
@@ -158,7 +158,7 @@ set_popularities = {
 	anarchosyndicalism = 6
 	fascism = 1
 	militarytotalism = 1
-	authoritariandemocracy = 1 
+	authoritariandemocracy = 1
 	autocracy = 1
 }
 
@@ -209,7 +209,7 @@ recruit_character = DFD_kofune_ryujin
 
 #recruit_character = DFD_per_albin_hansson
 #recruit_character = DFD_sven_olov_lindholm
-#recruit_character = DFD_sven_linderot 
+#recruit_character = DFD_sven_linderot
 #recruit_character = DFD_folke_hogberg #NOT U
 #recruit_character = DFD_erik_af_edholm #NOT U
 #recruit_character = DFD_claes_lindstrom
@@ -230,7 +230,7 @@ recruit_character = DFD_kofune_ryujin
 #recruit_character = DFD_ernst_wigforss
 #recruit_character = DFD_thorwald_bergquist
 #recruit_character = DFD_osten_unden
- 
+
 #recruit_character = DFD_johan_nygaardsvold
 #recruit_character = DFD_vidkun_quisling
 #recruit_character = DFD_peder_anker_wedel_jarlsberg
@@ -255,7 +255,7 @@ recruit_character = DFD_kofune_ryujin
 #recruit_character = DFD_adolf_indrebo
 #recruit_character = DFD_halvdan_koht
 #recruit_character = DFD_trygve_halvdan_lie
-#recruit_character = DFD_carsten_tank_nielsen 
+#recruit_character = DFD_carsten_tank_nielsen
 #recruit_character = DFD_queen_mathilde_i
 #recruit_character = DFD_martin_tranmael
 #recruit_character = DFD_johan_h_andresen
@@ -271,13 +271,13 @@ recruit_character = DFD_kofune_ryujin
 #recruit_character = DFD_sverre_riisnaes
 #recruit_character = DFD_birger_meidell
 #recruit_character = DFD_ragnar_skancke
-#recruit_character = DFD_jacob_ager_laurantzon	  
+#recruit_character = DFD_jacob_ager_laurantzon
 #recruit_character = DFD_jacob_hivden_haug
 #recruit_character = DFD_rasmus_hatledal
 #recruit_character = DFD_bjorn_christophersen
 #recruit_character = DFD_joakim_lehmkuhl
 #recruit_character = DFD_oscar_torp
-#recruit_character = DFD_hans_ystgaard 
+#recruit_character = DFD_hans_ystgaard
 #recruit_character = DFD_birger_eriksen
 #recruit_character = DFD_edvard_christian_danielsen
 #recruit_character = DFD_rolf_fuglesang
@@ -292,7 +292,7 @@ recruit_character = DFD_kofune_ryujin
 ### Ship Variants ###
 # Submarines #
 create_equipment_variant = {
-	name = "Hajen Class"					# represents Hajen and Bävern classes	
+	name = "Hajen Class"					# represents Hajen and Bävern classes
 	type = ship_hull_submarine_1
 	name_group = DFD_SS_HISTORICAL
 	parent_version = 0
@@ -304,7 +304,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Valen Class"				
+	name = "Valen Class"
 	type = ship_hull_submarine_1
 	name_group = DFD_SS_HISTORICAL
 	parent_version = 0
@@ -316,7 +316,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Draken Class"				
+	name = "Draken Class"
 	type = ship_hull_submarine_2
 	name_group = DFD_SS_HISTORICAL
 	parent_version = 0
@@ -328,7 +328,7 @@ create_equipment_variant = {
 }
 # Destroyers #
 create_equipment_variant = {
-	name = "Örnen Class"					# torpedo boats		
+	name = "Örnen Class"					# torpedo boats
 	type = ship_hull_light_1
 	name_group = DFD_DD_HISTORICAL
 	parent_version = 0
@@ -362,7 +362,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Clas Fleming Class"				# minelayer		
+	name = "Clas Fleming Class"				# minelayer
 	type = ship_hull_light_1
 	name_group = DFD_DD_HISTORICAL
 	parent_version = 0
@@ -379,7 +379,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Göteborg Class"	
+	name = "Göteborg Class"
 	type = ship_hull_light_2
 	name_group = DFD_DD_HISTORICAL
 	parent_version = 0
@@ -396,7 +396,7 @@ create_equipment_variant = {
 }
 # Cruisers #
 create_equipment_variant = {
-	name = "Fylgia Class"				
+	name = "Fylgia Class"
 	type = ship_hull_cruiser_coastal_defense_ship
 	name_group = DFD_CL_HISTORICAL
 	parent_version = 0
@@ -415,7 +415,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Äran Class"				
+	name = "Äran Class"
 	type = ship_hull_cruiser_coastal_defense_ship
 	name_group = DFD_CA_HISTORICAL
 	parent_version = 0
@@ -434,7 +434,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Oscar II Class"				
+	name = "Oscar II Class"
 	type = ship_hull_cruiser_coastal_defense_ship
 	name_group = DFD_CA_HISTORICAL
 	parent_version = 0
@@ -453,7 +453,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Sverige Class"				
+	name = "Sverige Class"
 	type = ship_hull_cruiser_coastal_defense_ship
 	name_group = DFD_CA_HISTORICAL
 	parent_version = 0
@@ -490,7 +490,7 @@ create_equipment_variant = {
 
 # Submarines #
 create_equipment_variant = {
-	name = "A & B Class"						
+	name = "A & B Class"
 	type = ship_hull_submarine_1
 	name_group = DFD_SS_HISTORICAL
 	parent_version = 0
@@ -502,7 +502,7 @@ create_equipment_variant = {
 }
 # Destroyers #
 create_equipment_variant = {
-	name = "Draug Class"							
+	name = "Draug Class"
 	type = ship_hull_light_1
 	name_group = DFD_DD_HISTORICAL
 	parent_version = 0
@@ -518,7 +518,7 @@ create_equipment_variant = {
 	}
 }
 create_equipment_variant = {
-	name = "Frøya Class"								# minelayer		
+	name = "Frøya Class"								# minelayer
 	type = ship_hull_light_1
 	name_group = DFD_DD_HISTORICAL
 	parent_version = 0
@@ -535,7 +535,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Olaf Tryggvason Class"							# minelayer		
+	name = "Olaf Tryggvason Class"							# minelayer
 	type = ship_hull_light_2
 	name_group = DFD_DD_HISTORICAL
 	parent_version = 0
@@ -552,7 +552,7 @@ create_equipment_variant = {
 }
 # Heavy Cruisers #
 create_equipment_variant = {
-	name = "Norge Class"				
+	name = "Norge Class"
 	type = ship_hull_cruiser_coastal_defense_ship
 	name_group = DFD_CA_HISTORICAL
 	parent_version = 0

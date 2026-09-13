@@ -30,7 +30,7 @@ set_research_slots = 3
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_recon = 1
 	tech_trucks = 1
 	gw_artillery = 1
@@ -76,7 +76,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 150
@@ -85,7 +85,7 @@ set_convoys = 150
 add_ideas = direct_election
 add_ideas = single_parliament
 
-add_dynamic_modifier = { modifier = STR_industry }
+add_dynamic_modifier = { modifier = STR_industry_modifier }
 add_dynamic_modifier = { modifier = STR_army }
 add_dynamic_modifier = { modifier = STR_navy }
 add_dynamic_modifier = { modifier = STR_air_force }
@@ -195,7 +195,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = STR_aijo_karen
 #recruit_character = STR_kagura_hikari
 #recruit_character = STR_tsuyuzaki_mahiru
@@ -378,7 +378,7 @@ create_equipment_variant = {
 }
 # Destroyers #
 create_equipment_variant = {
-	name = "Van Ghent Class"			
+	name = "Van Ghent Class"
 	type = ship_hull_light_1
 	name_group = STR_DD_HISTORICAL
 	parent_version = 0
@@ -395,7 +395,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Van Galen Class"				
+	name = "Van Galen Class"
 	type = ship_hull_light_1
 	name_group = STR_DD_HISTORICAL
 	parent_version = 0
@@ -446,7 +446,7 @@ create_equipment_variant = {
 }
 # Heavy Cruisers #
 create_equipment_variant = {
-	name = "Hertog Hendrik Class"			
+	name = "Hertog Hendrik Class"
 	type = ship_hull_cruiser_coastal_defense_ship
 	name_group = STR_CA_HISTORICAL
 	parent_version = 0
@@ -464,7 +464,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Soerabaja Class"				# represents Soerabaja (De Zeven Provinciën) and Jacob van Heemskerck 
+	name = "Soerabaja Class"				# represents Soerabaja (De Zeven Provinciën) and Jacob van Heemskerck
 	type = ship_hull_cruiser_coastal_defense_ship
 	name_group = STR_CA_HISTORICAL
 	parent_version = 0

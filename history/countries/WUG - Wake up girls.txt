@@ -20,7 +20,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 10
@@ -29,7 +29,7 @@ set_convoys = 10
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = WUG_industry }
+add_dynamic_modifier = { modifier = WUG_industry_modifier }
 add_dynamic_modifier = { modifier = WUG_army }
 add_dynamic_modifier = { modifier = WUG_navy }
 add_dynamic_modifier = { modifier = WUG_air_force }
@@ -140,7 +140,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = WUG_shimada_mayu
 recruit_character = WUG_nanase_yoshino
 

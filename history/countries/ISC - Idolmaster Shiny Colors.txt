@@ -80,7 +80,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 100
@@ -88,7 +88,7 @@ set_convoys = 100
 #국민 정신
 add_ideas = {
 }
-add_dynamic_modifier = { modifier = ISC_industry }
+add_dynamic_modifier = { modifier = ISC_industry_modifier }
 add_dynamic_modifier = { modifier = ISC_army }
 add_dynamic_modifier = { modifier = ISC_navy }
 add_dynamic_modifier = { modifier = ISC_air_force }

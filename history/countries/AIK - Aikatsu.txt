@@ -21,7 +21,7 @@ set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_trucks = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
 	gw_artillery = 1
@@ -65,13 +65,13 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 25
 
 #국민 정신
-add_dynamic_modifier = { modifier = AIK_industry }
+add_dynamic_modifier = { modifier = AIK_industry_modifier }
 add_dynamic_modifier = { modifier = AIK_army }
 add_dynamic_modifier = { modifier = AIK_navy }
 add_dynamic_modifier = { modifier = AIK_air_force }
@@ -132,13 +132,13 @@ set_popularities = {
 	anarchosyndicalism = 1
 	fascism = 1
 	militarytotalism = 6
-	authoritariandemocracy = 51 
+	authoritariandemocracy = 51
 	autocracy = 1
 }
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = AIK_hoshimiya_ichigo
 
 #recruit_character = AIK_gheorghe_tatarescu
@@ -173,7 +173,7 @@ recruit_character = AIK_hoshimiya_ichigo
 #무기 프리셋
 ### Ship Variants ###
 create_equipment_variant = {
-	name = "Delfinul Class"				
+	name = "Delfinul Class"
 	type = ship_hull_submarine_2
 	name_group = AIK_SS_HISTORICAL
 	parent_version = 0
@@ -185,7 +185,7 @@ create_equipment_variant = {
 }
 # Destroyers #
 create_equipment_variant = {
-	name = "Marasti Class"				
+	name = "Marasti Class"
 	type = ship_hull_light_1
 	name_group = AIK_DD_HISTORICAL
 	parent_version = 0
@@ -202,7 +202,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Regele Ferdinand Class"	
+	name = "Regele Ferdinand Class"
 	type = ship_hull_light_1
 	name_group = AIK_DD_HISTORICAL
 	parent_version = 0
@@ -221,7 +221,7 @@ create_equipment_variant = {
 if = {
 	limit = { has_BBA = yes }
 	create_equipment_variant = {
-		name = "IAR 14" 
+		name = "IAR 14"
 		type = small_plane_airframe_0
 		modules = {
 			fixed_main_weapon_slot = light_mg_2x

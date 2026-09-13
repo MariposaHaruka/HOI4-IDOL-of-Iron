@@ -24,7 +24,7 @@ set_research_slots = 3
 set_technology = {
 	infantry_weapons = 1
 	tech_mountaineers = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
 	tech_trucks = 1
@@ -62,7 +62,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 80
@@ -71,7 +71,7 @@ set_convoys = 80
 add_ideas = direct_election
 add_ideas = single_parliament
 
-add_dynamic_modifier = { modifier = WDS_industry }
+add_dynamic_modifier = { modifier = WDS_industry_modifier }
 add_dynamic_modifier = { modifier = WDS_army }
 add_dynamic_modifier = { modifier = WDS_navy }
 add_dynamic_modifier = { modifier = WDS_air_force }
@@ -175,13 +175,13 @@ set_popularities = {
 	anarchosyndicalism = 6
 	fascism = 1
 	militarytotalism = 1
-	authoritariandemocracy = 1 
+	authoritariandemocracy = 1
 	autocracy = 1
 }
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = WDS_otori_kokona
 #recruit_character = WDS_shizuka
 #recruit_character = WDS_kathrina_griebel
@@ -264,7 +264,7 @@ if = {
 ### Ship Variants ###
 # Submarines #
 create_equipment_variant = {
-	name = "Katsonis Class"				
+	name = "Katsonis Class"
 	type = ship_hull_submarine_1
 	name_group = WDS_SS_HISTORICAL
 	parent_version = 0
@@ -276,7 +276,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Glafkos Class"				
+	name = "Glafkos Class"
 	type = ship_hull_submarine_2
 	name_group = WDS_SS_HISTORICAL
 	parent_version = 0
@@ -288,7 +288,7 @@ create_equipment_variant = {
 }
 # Destroyers #
 create_equipment_variant = {
-	name = "Aetos Class"					
+	name = "Aetos Class"
 	type = ship_hull_light_1
 	name_group = WDS_DD_HISTORICAL
 	parent_version = 0
@@ -305,7 +305,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Hydra Class"	
+	name = "Hydra Class"
 	type = ship_hull_light_1
 	name_group = WDS_DD_HISTORICAL
 	parent_version = 0
@@ -322,7 +322,7 @@ create_equipment_variant = {
 }
 # Cruisers #
 create_equipment_variant = {
-	name = "Averof Class"				
+	name = "Averof Class"
 	type = ship_hull_cruiser_coastal_defense_ship
 	name_group = WDS_CA_HISTORICAL
 	parent_version = 0
@@ -341,7 +341,7 @@ create_equipment_variant = {
 	obsolete = yes
 }
 create_equipment_variant = {
-	name = "Elli Class"				
+	name = "Elli Class"
 	type = ship_hull_cruiser_1
 	name_group = WDS_CL_HISTORICAL
 	parent_version = 0
@@ -360,7 +360,7 @@ create_equipment_variant = {
 }
 # Battleships #
 create_equipment_variant = {
-	name = "Kilkis Class"	
+	name = "Kilkis Class"
 	type = ship_hull_pre_dreadnought
 	name_group = WDS_BB_HISTORICAL
 	parent_version = 0

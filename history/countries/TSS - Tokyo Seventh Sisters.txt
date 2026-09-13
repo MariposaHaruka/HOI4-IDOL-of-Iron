@@ -21,7 +21,7 @@ if = {
 	set_technology = {
 		gwtank_chassis = 1
 	}
-	else = { 
+	else = {
 		set_technology = {
 			gwtank = 1
 		}
@@ -29,7 +29,7 @@ if = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 5
@@ -40,7 +40,7 @@ add_ideas = single_parliament
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = TSS_industry }
+add_dynamic_modifier = { modifier = TSS_industry_modifier }
 add_dynamic_modifier = { modifier = TSS_army }
 add_dynamic_modifier = { modifier = TSS_navy }
 add_dynamic_modifier = { modifier = TSS_air_force }
@@ -162,7 +162,7 @@ set_popularities = {
 
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = TSS_kasukabe_haru
 #recruit_character = TSS_tendoji_musubi
 #recruit_character = TSS_tsunomori_rona

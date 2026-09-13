@@ -17,7 +17,7 @@ set_grand_doctrine = new_strategic_destruction
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_engineers = 1
 	gw_artillery = 1
 }
@@ -32,7 +32,7 @@ if = {
 	}
 }
 
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 set_convoys = 5
 
 set_cosmetic_tag = LSS_LLS
@@ -46,7 +46,7 @@ add_ideas = {
 	LNH_south_manchuria_railway_company
 }
 
-add_dynamic_modifier = { modifier = LSS_industry }
+add_dynamic_modifier = { modifier = LSS_industry_modifier }
 add_dynamic_modifier = { modifier = LSS_army }
 add_dynamic_modifier = { modifier = LSS_navy }
 add_dynamic_modifier = { modifier = LSS_air_force }

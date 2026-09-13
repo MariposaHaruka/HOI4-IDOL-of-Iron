@@ -17,7 +17,7 @@ set_technology = {
 }
 
 #인트로
-set_variable = { country_intro_page_count = 2 }
+set_variable = { country_intro_page_count = 3 }
 
 #수송선
 set_convoys = 5
@@ -28,7 +28,7 @@ add_ideas = single_parliament
 
 add_ideas = agrarian_society
 
-add_dynamic_modifier = { modifier = SHP_industry }
+add_dynamic_modifier = { modifier = SHP_industry_modifier }
 add_dynamic_modifier = { modifier = SHP_army }
 add_dynamic_modifier = { modifier = SHP_navy }
 add_dynamic_modifier = { modifier = SHP_air_force }
@@ -149,7 +149,7 @@ set_popularities = {
 }
 #의회
 
-#캐릭터 
+#캐릭터
 recruit_character = SHP_nabatame_haru
 
 #recruit_character = SHP_sténio_vincent
