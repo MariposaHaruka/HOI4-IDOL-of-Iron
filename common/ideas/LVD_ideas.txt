@@ -1,5 +1,36 @@
 ideas = {
-	country = { }
+	country = {
+		LVD_after_golden_legacy = {
+			allowed = {
+				original_tag = LVD
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = RAJ_state_of_famine_country
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.25
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+		}
+		LVD_rump_state = {
+			allowed = {
+				original_tag = LVD
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = weak_industry
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

@@ -1,5 +1,75 @@
 ideas = {
 	country = {
+		#시작 국민정신
+		ISC_citizen_army = {
+			allowed = {
+				original_tag = ISC
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = citizen_militia_1
+			modifier = {
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				army_non_core_attack_factor = -0.2
+				army_non_core_defence_factor = -0.2
+			}
+		}
+		ISC_great_depression = {
+			allowed = {
+				original_tag = ISC
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_economic_crisis
+
+			modifier = {
+				consumer_goods_factor = 0.4
+				stability_factor = -0.1
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+			}
+		}
+		ISC_anzac_spirit = {
+			allowed = {
+				original_tag = ISC
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = chi_army_corruption3
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_non_core_attack_factor = 0.05
+				army_non_core_defence_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		ISC_indigenous_problem = {
+			allowed = {
+				original_tag = ISC
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			picture = generic_immigration
+
+			modifier = {
+				conscription_factor = -0.35
+			}
+
+		}
+
+		#몰루
 		parliament_seek_cooperation_1_idea = {
 			allowed = { always = no }
 			on_add = { parliament_seek_cooperation_1_idea_effect = yes }

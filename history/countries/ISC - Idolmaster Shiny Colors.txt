@@ -62,10 +62,12 @@ if = {
 	set_technology = {
 		aa_lmg = 1
 		engines_1 = 1
+		air_torpedoe_1 = 1
 		early_bombs = 1
 		iw_small_airframe = 1
 		iw_medium_airframe = 1
 		iw_large_airframe = 1
+		bba_early_transport_plane = 1
 	}
 	else = {
 		set_technology = {
@@ -87,6 +89,10 @@ set_convoys = 100
 
 #국민 정신
 add_ideas = {
+	ISC_citizen_army
+	ISC_great_depression
+	ISC_anzac_spirit
+	ISC_indigenous_problem
 }
 add_dynamic_modifier = { modifier = ISC_industry_modifier }
 add_dynamic_modifier = { modifier = ISC_army }

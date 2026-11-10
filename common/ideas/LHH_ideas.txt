@@ -1,5 +1,65 @@
 ideas = {
-	country = { }
+	country = {
+		LHH_white_army = {
+			allowed = {
+				original_tag = LHH
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_war_of_resistance
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+				army_morale_factor = -0.05
+			}
+		}
+		LHH_mongol_veto = {
+			allowed = {
+				original_tag = LHH
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			picture = generic_secret_police
+
+			modifier = {
+				political_power_factor = -0.1
+				political_advisor_cost_factor = 0.25
+				trade_laws_cost_factor = 0.25
+				mobilization_laws_cost_factor = 0.25
+				economy_cost_factor = 0.25
+				economic_advisor_cost_factor = 0.25
+				internal_advisor_cost_factor = 0.25
+				high_command_cost_factor = 0.25
+				is_army_navy_balance_cost_factor = 1.00 #관동군은 애초에 육군이라서 그만
+				is_female_service_cost_factor = 0.25
+				is_high_command_order_cost_factor = 0.25
+				is_logistic_cost_factor = 0.25
+				is_military_budget_cost_factor = 0.25
+				is_non_core_mobilization_law_cost_factor = 0.25
+				is_officer_training_cost_factor = 0.25
+				is_training_quality_cost_factor = 0.25
+				theorist_cost_factor = 0.25
+				is_construction_cost_factor = 0.25
+				is_economy_model_cost_factor = 0.25
+				is_education_policy_cost_factor = 0.25
+				is_industry_base_cost_factor = 0.25
+				is_labours_union_cost_factor = 0.25
+				is_local_autonomy_policy_cost_factor = 0.25
+				is_minors_policy_cost_factor = 0.25
+				is_press_policy_cost_factor = 0.25
+				is_research_cost_factor = 0.25
+				is_resource_cost_factor = 0.25
+				is_taxation_cost_factor = 0.25
+				is_welfare_policy_cost_factor = 0.25
+				is_woman_policy_cost_factor = 0.25
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

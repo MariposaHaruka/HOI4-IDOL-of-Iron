@@ -1,5 +1,123 @@
 ideas = {
-	country = { }
+	country = { 
+		DOB_sotokanda_regime = {
+			allowed = {
+				original_tag = DOB
+			}
+			allowed_civil_war = {
+				always = no
+			}	
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = 0.05
+				war_support_factor = -0.15
+			}
+		}
+		DOB_shelter_of_freedom = {
+			allowed = {
+				original_tag = DOB
+			}
+			allowed_civil_war = {
+				always = no
+			}	
+			removal_cost = -1
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				weekly_manpower = 105
+				recruitable_population_factor = 0.01
+			}
+		}
+		
+		DOB_church_power_1 = {
+			picture = chi_war_of_resistance
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				industrial_capacity_factory = 0.2
+				stability_factor = -0.05
+			}
+		}
+		
+		DOB_church_power_2 = {
+			picture = chi_war_of_resistance2
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		DOB_church_power_3 = {
+			picture = chi_war_of_resistance2
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}	
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		
+		DOB_church_power_4 = {
+			picture = chi_war_of_resistance3
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		DOB_church_power_5 = {
+			picture = chi_war_of_resistance3
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.15
+				stability_factor = -0.05
+			}			
+		}
+
+		DOB_oil_concessions = {
+			picture = ARG_resource_extration_focus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = { 
+				local_resources_factor = 0.05
+				consumer_goods_factor = -0.05
+				stability_factor = -0.10
+			}
+		}		
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

@@ -54,8 +54,12 @@ set_variable = { country_intro_page_count = 3 }
 set_convoys = 10
 
 #국민 정신
+add_ideas = {
+	LCD_political_polarization
+	LCD_great_depression
 
-add_ideas = agrarian_society
+	agrarian_society
+}
 
 add_dynamic_modifier = { modifier = LCD_industry_modifier }
 add_dynamic_modifier = { modifier = LCD_army }

@@ -1,5 +1,35 @@
 ideas = {
-	country = { }
+	country = {
+		RST_mismanaged_admin = {
+			allowed = {
+				original_tag = RST
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.25
+				consumer_goods_factor = 0.2
+				stability_factor = -0.3
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		RST_memory_of_colony = {
+			allowed = {
+				original_tag = RST
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_army_war_college
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.3
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

@@ -57,7 +57,7 @@ guiTypes = {
 			frame = 6
 		}
 	}
-	
+
 	containerWindowType = {
 		name = "high_command_entry"
 		position = {x=30 y=-4}
@@ -65,7 +65,7 @@ guiTypes = {
 		Orientation = upper_left
 		clipping = no
 		scale = 1
-		
+
 		iconType = {
 			name = "idea_alert_glow"
 			position = { x = 73 y = 92 }
@@ -74,7 +74,7 @@ guiTypes = {
 			scale = 0.65
 			alwaystransparent = yes
 		}
-		
+
 		buttonType = {
 			name = "button"
 			position = { x = 40 y = 60 }
@@ -108,7 +108,7 @@ guiTypes = {
 		Orientation = upper_left
 		clipping = no
 		scale = 1
-		
+
 		iconType = {
 			name = "idea_alert_glow"
 			position = { x = 0 y = 80 }
@@ -117,7 +117,7 @@ guiTypes = {
 			scale = 0.65
 			alwaystransparent = yes
 		}
-		
+
 		buttonType = {
 			name = "button"
 			position = { x = -30 y = 50 }
@@ -147,7 +147,7 @@ guiTypes = {
 			name = "leader_text"
 			position = {x=35 y=60 }
 			font = "hoi_18mbs"
-			# fixedsize = yes	
+			# fixedsize = yes
 			maxWidth = 110
 			maxHeight = 23
 			alwaystransparent = yes
@@ -162,7 +162,7 @@ guiTypes = {
 		Orientation = upper_left
 		clipping = no
 		scale = 0
-		
+
 		iconType = {
 			name = "idea_alert_glow"
 			position = { x = 0 y = 80 }
@@ -171,7 +171,7 @@ guiTypes = {
 			scale = 0.65
 			alwaystransparent = yes
 		}
-		
+
 		buttonType = {
 			name = "button"
 			position = { x = -30 y = 50 }
@@ -215,7 +215,7 @@ guiTypes = {
 		Orientation = upper_left
 		clipping = no
 		scale = 1
-		
+
 		iconType = {
 			name = "idea_alert_glow"
 			position = { x = 0 y = 80 }
@@ -224,7 +224,7 @@ guiTypes = {
 			scale = 0.65
 			alwaystransparent = yes
 		}
-		
+
 		buttonType = {
 			name = "button"
 			position = { x = -30 y = 50 }
@@ -268,7 +268,7 @@ guiTypes = {
 		Orientation = upper_left
 		clipping = no
 		scale = 1
-		
+
 		iconType = {
 			name = "idea_alert_glow"
 			position = { x = 75 y = 92 }
@@ -303,10 +303,10 @@ guiTypes = {
 			frame = 1
 		}
 	}
-	
+
 	containerWindowType = {
 		name = "track_progress_item"
-		
+
 		iconType = {
 			name = "full_mastery_icon"
 			spriteType = "GFX_neutral_experience"
@@ -327,7 +327,7 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 	}
-					
+
 
     #### OFFICER CORP MAIN VIEW ####
 
@@ -424,12 +424,12 @@ guiTypes = {
 			format = "UPPER_LEFT"
 		}
 	}
-	
+
 	containerWindowType = {
 		name = "preferred_tactic_container"
 		position = { x = 430 y = 0 } # IOI 수정
 		size = { width = 98% height = 270 }
-	
+
 		buttonType ={
 			name ="button_prefered_tactic_selection"
 			spriteType = "GFX_preferred_tactic_button"
@@ -459,7 +459,7 @@ guiTypes = {
 			name = "army_hq_templates_toggle_container"
 			position = { x = 10 y = 5 }
 			size = { width = 30 height = 99 }
-			
+
 
 			buttonType = {
 				name = "button_army_hq_templates_toggle"
@@ -536,7 +536,7 @@ guiTypes = {
 		}
 
 		background = {
-			name = "Background"		
+			name = "Background"
 			quadTextureSprite ="GFX_tiled_generic_overlay_bg1"
 		}
 
@@ -552,13 +552,13 @@ guiTypes = {
 		    name = "no_taog_offset"
 		    position = { x = 0 y = -57 }
 		}
-		
+
 		containerWindowType = {
 			name = "army_header"
 			position = { x = 0 y = 5 }
 			size = { width = 98% height = 200 }
 			margin = { top = 0 left = 0 bottom = 0 right = 0}
-			
+
 			background = {
 				name = "Background"
 				quadTextureSprite ="GFX_army_tiled_marble_bg"
@@ -599,7 +599,7 @@ guiTypes = {
 				maxWidth = 240
 				maxHeight = 20
 				format = left
-			}			
+			}
 
 			containerWindowType = {
 				name = "army_chief"
@@ -632,7 +632,7 @@ guiTypes = {
 				}
 
 				iconType = {
-					#Subdoctrine motive. Also can control what's displayed before subdoctrine is chosen. 
+					#Subdoctrine motive. Also can control what's displayed before subdoctrine is chosen.
 					name = "icon"
 					position = { x=61 y=69 }
 					Orientation = CENTER
@@ -658,7 +658,7 @@ guiTypes = {
 					max_slots_vertical = 1
 				}
 			}
-			
+
 			buttonType = {
 				name = "commander_roster_army"
 				quadTextureSprite = "GFX_diplo_filter_entry"
@@ -669,7 +669,7 @@ guiTypes = {
 				pdx_tooltip = "COMMANDER_ROSTER_ARMY_TOOLTIP"
 				pdx_tooltip_delayed = "COMMANDER_ROSTER_ARMY_TOOLTIP_DELAYED"
 			}
-			
+
 			buttonType = {
 				name = "commander_roster_division"
 				quadTextureSprite = "GFX_diplo_filter_entry"
@@ -680,7 +680,33 @@ guiTypes = {
 				pdx_tooltip = "COMMANDER_ROSTER_DIVISION_TOOLTIP"
 				pdx_tooltip_delayed = "COMMANDER_ROSTER_DIVISION_TOOLTIP_DELAYED"
 			}
-			
+
+			containerWindowType = {
+				# Citation counter badge overlaid on the top-right corner of "commander_roster_division"
+				name = "commander_roster_division_badge"
+				position = { x = 484 y = 90 }
+				size = { width = 20 height = 20 }
+				clipping = no
+
+				iconType = {
+					name = "badge_bg"
+					spriteType = "GFX_topbar_alert_bg"
+					alwaystransparent = yes
+					frame = 1
+				}
+
+				instantTextBoxType = {
+					name = "badge_text"
+					position = { x = 0 y = 0 }
+					font = "hoi_16mbs"
+					text = "9"
+					format = center
+					maxWidth = 16
+					maxHeight = 16
+					fixedsize = yes
+					alwaystransparent = yes
+				}
+			}
 		}
 
 		containerWindowType = {
@@ -718,7 +744,7 @@ guiTypes = {
 				maxWidth = 240
 				maxHeight = 20
 				format = left
-			}			
+			}
 
 			containerWindowType = {
 				name = "navy_chief"
@@ -753,7 +779,7 @@ guiTypes = {
 				position = { x=260 y=-10 }
 				size = {width=20 height=20}
 				clipping = no
-				
+
 				buttonType = {
 					#Subdoctrine background
 					name = "button"
@@ -762,7 +788,7 @@ guiTypes = {
 				}
 
 				iconType = {
-					#Subdoctrine motive. Also can control what's displayed before subdoctrine is chosen. 
+					#Subdoctrine motive. Also can control what's displayed before subdoctrine is chosen.
 					name = "icon"
 					position = { x=61 y=68 }
 					spriteType = "GFX_naval_doctrine_medium" # Default icon when no grand doctrine is active
@@ -788,7 +814,7 @@ guiTypes = {
 					max_slots_vertical = 1
 				}
 			}
-			
+
 			buttonType = {
 				name = "commander_roster_navy"
 				quadTextureSprite = "GFX_diplo_filter_entry"
@@ -799,7 +825,7 @@ guiTypes = {
 				pdx_tooltip = "COMMANDER_ROSTER_NAVY_TOOLTIP"
 				pdx_tooltip_delayed = "COMMANDER_ROSTER_NAVY_TOOLTIP_DELAYED"
 			}
-			
+
 			buttonType = {
 				name = "commander_roster_ship"
 				quadTextureSprite = "GFX_diplo_filter_entry"
@@ -810,7 +836,32 @@ guiTypes = {
 				pdx_tooltip = "COMMANDER_ROSTER_SHIP_TOOLTIP"
 				pdx_tooltip_delayed = "COMMANDER_ROSTER_SHIP_TOOLTIP_DELAYED"
 			}
-			
+			containerWindowType = {
+				# Citation counter badge overlaid on the top-right corner of "commander_roster_ship"
+				name = "commander_roster_ship_badge"
+				position = { x = 480 y = 60 }
+				size = { width = 20 height = 20 }
+				clipping = no
+
+				iconType = {
+					name = "badge_bg"
+					spriteType = "GFX_topbar_alert_bg"
+					alwaystransparent = yes
+					frame = 1
+				}
+
+				instantTextBoxType = {
+					name = "badge_text"
+					position = { x = 2 y = 3 }
+					font = "hoi_16mbs"
+					text = "9"
+					format = center
+					maxWidth = 16
+					maxHeight = 16
+					fixedsize = yes
+					alwaystransparent = yes
+				}
+			}
 		}
 
 		containerWindowType = {
@@ -848,7 +899,7 @@ guiTypes = {
 				maxWidth = 240
 				maxHeight = 20
 				format = left
-			}			
+			}
 
 			containerWindowType = {
 				name = "air_chief"
@@ -892,7 +943,7 @@ guiTypes = {
 				}
 
 				iconType = {
-					#Subdoctrine motive. Also can control what's displayed before subdoctrine is chosen. 
+					#Subdoctrine motive. Also can control what's displayed before subdoctrine is chosen.
 					name = "icon"
 					position = { x=61 y=68 }
 					spriteType = "GFX_air_doctrine_medium" # Default icon when no grand doctrine is active
@@ -919,13 +970,13 @@ guiTypes = {
 				}
 			}
 		}
-		
+
 		containerWindowType = {
 			name = "special_forces_header"
 			position = { x = 0 y = 619 }
 			size = { width = 98% height = 145 }
 			margin = { top = 0 left = 0 bottom = 0 right = 0}
-			
+
 			background = {
 				name = "Background"
 				quadTextureSprite ="GFX_army_tiled_marble_bg"
@@ -965,7 +1016,7 @@ guiTypes = {
 				maxWidth = 240
 				maxHeight = 20
 				format = left
-			}			
+			}
 
 			containerWindowType = {
 				name = "special_forces_doctrine_button" # A container window of the format X_doctrine_button will automatically be linked to doctrine folder "X"
@@ -998,7 +1049,7 @@ guiTypes = {
 					alwaystransparent = yes
 					frame = 1
 				}
-				
+
 				gridBoxType = {
 					#Container for numbers
 					name = track_status_grid
@@ -1007,17 +1058,17 @@ guiTypes = {
 					max_slots_vertical = 1
 				}
 			}
-			
+
 		}
-		
+
 		containerWindowType = {
 			name = "army_spirits_view"
 			position = { x = 18 y = 138 }
 			size = {width=95% height=30%}
 			clipping = no
-			
+
 			scale = 0.9
-			
+
 			gridboxtype = {
 				name = "spirit_grid"
 				position = { x = 0 y = 67 }
@@ -1034,7 +1085,7 @@ guiTypes = {
 			size = { width=95% height=22% }
 			clipping = no
 			scale = 0.9
-			
+
 			gridboxtype = {
 				name = "spirit_grid"
 				position = { x = 0 y = 67 }
@@ -1051,7 +1102,7 @@ guiTypes = {
 			size = { width=95% height=22% }
 			clipping = no
 			scale = 0.9
-			
+
 			gridboxtype = {
 				name = "spirit_grid"
 				position = { x = 0 y = 67 }
@@ -1072,7 +1123,7 @@ guiTypes = {
 	} # END OF countryofficercorpview
 
     #### SPIRITS ####
-	
+
     containerWindowType = {
 		name = "division_command_spirit_entry"
 		position = { x = 55 y = -56 }
@@ -1466,7 +1517,7 @@ guiTypes = {
 			name = "Background"
 			quadTextureSprite ="GFX_tiled_plain_bg"
 		}
-		
+
 		buttonType = {
 			name = "icon_background_army"
 			position = { x = -270 y = 50 }
@@ -1476,7 +1527,7 @@ guiTypes = {
 			orientation = "center_up"
 			alwaystransparent = yes
 		}
-		
+
 		buttonType = {
 			name = "icon_background_navy"
 			position = { x = -265 y = 50 }
@@ -1496,7 +1547,7 @@ guiTypes = {
 			orientation = "center_up"
 			alwaystransparent = yes
 		}
-		
+
 		buttonType = {
 			name = "icon_inherited_spirit_bg"
 			position = { x = -49 y = 32 }
@@ -1506,7 +1557,7 @@ guiTypes = {
 			orientation = "center_up"
 			alwaystransparent = yes
 		}
-		
+
 		instantTextboxType = {
 			name = "title"
 			position = { x = -308 y = 5 } # IOI 수정
@@ -1565,7 +1616,7 @@ guiTypes = {
 				}
 			}
 		}
-		
+
 		buttonType = {
 			name = "close"
 			position = { x = -42 y = 5 }
@@ -1961,7 +2012,7 @@ guiTypes = {
 			format = center
 			alwaystransparent = yes
 		}
-	} 
+	}
 
 	containerWindowType = {
 		name = "naval_command_spirit_window_item_grid"
@@ -2275,7 +2326,7 @@ guiTypes = {
 		name = "faction_intel_agency_char_view_item"
 		size = { width = 231 height = 74 }
 		clipping = no
-			
+
 		background = {
 			name = "Background"
 			quadTextureSprite ="GFX_tiled_window2_1b_border"
@@ -2287,7 +2338,7 @@ guiTypes = {
 			spriteType = "GFX_idea_entry_bg_2"
 			clicksound = click_default
 		}
-			
+
 		iconType = {
 			name = "icon"
 			position = { x = 42 y = 38 }
@@ -2307,33 +2358,33 @@ guiTypes = {
 
 		containerWindowType = {
 		    name = "traits_container"
-		    position = { x = 76 y = 0 }	
+		    position = { x = 76 y = 0 }
 		    show_position = { x = 0 y = 0 }
 			size = { width=170 height=100%% }
-			
+
 			instantTextboxType = {
 				name = "name"
 				position = { x = 0 y = 14 } # IOI 수정
 				font = "hoi_18mbs"
-				fixedsize = yes			
+				fixedsize = yes
 				maxWidth = 150
 				maxHeight = 13
 				format = left
-				alwaystransparent = yes			
+				alwaystransparent = yes
 			}
 
 			instantTextboxType = {
 				name = "traits"
 				position = { x = 0 y = 28 }
 				font = "hoi_16mbs"
-				fixedsize = yes			
+				fixedsize = yes
 				maxWidth = 140
 				maxHeight = 100%%
 				format = left
-				alwaystransparent = yes			
+				alwaystransparent = yes
 			}
 		}
-		
+
 		instantTextboxType = {
 			name = "cost"
 			position = { x = 80 y = 47 }

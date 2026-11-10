@@ -1,5 +1,71 @@
 ideas = {
-	country = { }
+	country = {
+		LPR_mapuche_conflict = {
+			allowed = {
+				original_tag = LPR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = CHL_the_mapuche_conflict
+			removal_cost = -1
+			modifier = {
+				line_change_production_efficiency_factor = -0.1
+				consumer_goods_factor = 0.15
+				conscription_factor = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		LPR_alessandri_plan = {
+			allowed = {
+				original_tag = LPR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = man_five_year_plan_industry
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		LPR_citizen_guard = {
+			allowed = {
+				original_tag = LPR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = YUG_federal_defense_council
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				training_time_army_factor = -0.15
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+			}
+		}
+		LPR_great_depression = {
+			allowed = {
+				original_tag = LPR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_economic_crisis
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = -0.1
+				production_speed_buildings_factor = -0.15
+				stability_factor = -0.15
+				min_export = -0.15
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

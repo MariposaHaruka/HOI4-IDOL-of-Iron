@@ -13,7 +13,6 @@ ideas = {
 				political_power_cost = 1
 				consumer_goods_factor = 0.60
 				conscription_factor = -0.5
-				join_faction_tension = 0.20
 				local_resources_factor = -0.2
 			}
 		}
@@ -45,10 +44,27 @@ ideas = {
 			removal_cost = -1
 			picture = neutrality_idea
 			modifier = {
-				stability_factor = -0.2
-				consumer_goods_factor = 0.1
-				industrial_capacity_factory = -0.2
-				industrial_capacity_dockyard = -0.2
+				conscription_factor = -0.5
+				join_faction_tension = 1.00
+				send_volunteers_tension = 1.00
+				guarantee_tension = 1.00
+				embargo_threshold_factor = 1.00
+				war_support_factor = -0.3
+				production_speed_arms_factory_factor = -0.3
+			}
+		}
+		ICG_monroe_doctrine_enforcer = {
+			picture = generic_democratic_drift_bonus
+
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+
 			}
 		}
 		

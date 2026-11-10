@@ -1,5 +1,5 @@
 #수도
-capital = 289 #방콕
+capital = 1076 #방콕
 
 #부대
 set_oob = "HBR_ar"
@@ -51,6 +51,10 @@ if = {
 		}
 	}
 }
+set_technology = {
+	elephantry = 1
+	popup = no
+}
 
 #인트로
 set_variable = { country_intro_page_count = 3 }
@@ -60,8 +64,15 @@ set_convoys = 15
 
 #국민 정신
 add_ideas = {
+	HBR_weak_industry
+	HBR_khana_ratsadon
+	HBR_pan_seraph
+
+	#인민당 관련 국민정신
+	HBR_civilian_slight_support
+	HBR_military_slight_support
+
 	agrarian_society
-	HBR_greater_seraph
 }
 
 add_dynamic_modifier = { modifier = HBR_industry_modifier }

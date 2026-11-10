@@ -1,5 +1,72 @@
 ideas = {
-	country = { }
+	country = {
+		IDP_patagonia_problem = {
+			allowed = {
+				original_tag = IDP
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_communism_drift_bonus
+			modifier = {
+				stability_factor = -0.1
+				socialism_drift = 0.01
+				communism_drift = 0.01
+				authoritariancommunism_drift = 0.01
+				anarchosyndicalism_drift = 0.01
+			}
+		}
+		IDP_roca_runciman_treaty = {
+			allowed = {
+				original_tag = IDP
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = HUN_treaty_of_triannon
+			modifier = {
+				consumer_goods_factor = 0.1
+				min_export = 0.2
+				production_speed_industrial_complex_factor = 0.05
+				economy_cost_factor = 0.1
+				trade_laws_cost_factor = 0.1
+			}
+		}
+		IDP_political_corruption = {
+			allowed = {
+				original_tag = IDP
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ARG_political_corruption_modifier
+			modifier = {
+				political_power_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.1
+				war_support_factor = -0.2
+			}
+		}
+		IDP_hoshimi_regime = {
+			allowed = {
+				original_tag = IDP
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = ARG_infamous_decade
+			modifier = {
+				stability_factor = -0.1
+				authoritariandemocracy_drift = 0.02
+				political_advisor_cost_factor = 0.25
+				war_support_factor = -0.1
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

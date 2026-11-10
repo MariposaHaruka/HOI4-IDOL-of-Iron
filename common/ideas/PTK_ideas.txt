@@ -1,5 +1,40 @@
 ideas = {
-	country = { }
+	country = {
+		PTK_weak_industry = {
+			allowed = {
+				original_tag = PTK
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = weak_industry
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				consumer_goods_factor = 0.3
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+		}
+		PTK_jegalryang_plan = {
+			allowed = {
+				original_tag = PTK
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = man_five_year_plan_industry
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.25
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				political_power_gain = 0.3
+				stability_factor = 0.2
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

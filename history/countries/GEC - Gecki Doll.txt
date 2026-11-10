@@ -33,7 +33,16 @@ set_variable = { country_intro_page_count = 3 }
 #수송선
 
 #국민 정신
-add_ideas = agrarian_society
+add_timed_idea = {
+	idea = GEC_aftermath_of_the_chaco_war
+	days = 1400
+}
+add_ideas = {
+	GEC_old_landlordism
+	GEC_unstable_government
+
+	agrarian_society
+}
 
 add_dynamic_modifier = { modifier = GEC_industry_modifier }
 add_dynamic_modifier = { modifier = GEC_army }

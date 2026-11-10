@@ -11,7 +11,7 @@ carrier_battlegroups = {
         base = 1
         modifier = {
             factor = 50
-            original_tag = ICG
+            original_tag = USA
         }
     }
 
@@ -67,8 +67,8 @@ floating_airfields = {
         modifier = {
             factor = 25
             OR = {
-                original_tag = IMA
-                original_tag = BDG
+                original_tag = ENG
+                original_tag = FRA
             }
         }
         modifier = {
@@ -216,7 +216,7 @@ broad_naval_support = {
     	}
     	escorts_in_battle = {
             equipment_bonus = {
-                escort_carrier = {
+                ship_hull_escort_carrier = {
                     lg_attack = 0.15
                     anti_air_attack = 0.1
                     lg_armor_piercing = 0.15
@@ -250,7 +250,7 @@ massed_carrier_fleet = {
         base = 1
         modifier = {
             factor = 50
-            original_tag = LLS
+            original_tag = JAP
         }
     }
     available = {
@@ -303,15 +303,15 @@ light_task_forces = {
         base = 1
         modifier = {
             factor = 25
-            original_tag = PRS
+            original_tag = GER
         }
         modifier = {
             factor = 25
-            original_tag = ENS
+            original_tag = ITA
         }
         modifier = {
             factor = 25
-            original_tag = TOH
+            original_tag = SOV
         }
     }
     mastery = { 
@@ -349,8 +349,8 @@ light_task_forces = {
     	}
     	screen_raiders = {
     		destroyer = {
-    			lg_attack = 0.2
-    			lg_armor_piercing = 0.2
+    			lg_attack = 0.05
+    			lg_armor_piercing = 0.05
     			max_organisation = 20
     		}
     	}

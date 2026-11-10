@@ -1,5 +1,66 @@
 ideas = {
-	country = { }
+	country = {
+		FGO_undiversified_economy = {
+			allowed = {
+				original_tag = FGO
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = great_depression
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.2
+				production_factory_max_efficiency_factor = -0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+		}
+		FGO_weak_government = {
+			allowed = {
+				original_tag = FGO
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			modifier = {
+				command_power_gain_mult = -0.4
+				stability_factor = -0.2
+				political_power_factor = -0.2
+			}
+		}
+		FGO_home_of_revolution = {
+			allowed = {
+				original_tag = FGO
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_communism_drift_bonus
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.025
+				surrender_limit = 0.1
+				production_lack_of_resource_penalty_factor = 0.5 #이거 수치 과한건 알고 있지만 초반 무역 영향력을 받을 방법이 없어서 그럼
+			}
+		}
+		FGO_disjointed_army = {
+			allowed = {
+				original_tag = FGO
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_army_problems
+			removal_cost = -1
+			modifier = {
+				planning_speed = -0.2
+				army_org_factor = -0.2
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

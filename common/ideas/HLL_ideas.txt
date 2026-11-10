@@ -1,5 +1,67 @@
 ideas = {
-	country = { }
+	country = {
+		HLL_unstable_government = {
+			allowed = {
+				original_tag = HLL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = RAJ_partition_chaos_bad
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.15
+			}
+		}
+		HLL_4year_plan = {
+			allowed = {
+				original_tag = HLL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = man_five_year_plan_industry
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		HLL_oil_economy = {
+			allowed = {
+				original_tag = HLL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ARG_resource_extration_focus
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = -0.1
+				min_export = 0.1
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+		}
+		HLL_democratic_movement = {
+			allowed = {
+				original_tag = HLL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_democratic_drift_bonus
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				conservatism_drift = 0.01
+				liberalism_mod_drift = 0.01
+				progressivism_drift = 0.01
+				socialdemocracy_drift = 0.01
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

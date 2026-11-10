@@ -26,7 +26,12 @@ set_convoys = 5
 
 #국민 정신
 
-add_ideas = agrarian_society
+add_ideas = {
+	CUE_anti_communism
+	CUE_house_of_cards
+
+	agrarian_society
+}
 
 add_dynamic_modifier = { modifier = CUE_industry_modifier }
 add_dynamic_modifier = { modifier = CUE_army }

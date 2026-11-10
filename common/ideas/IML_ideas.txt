@@ -1,6 +1,7 @@
 ideas = {
 	country = { 
 		IML_ratatat_1 = {
+			name = IML_ratatat
 			allowed = {
 				original_tag = IML
 			}
@@ -10,14 +11,14 @@ ideas = {
 			removal_cost = -1
 			picture = IML_ratatat
 			modifier = {
-				stability_factor = -0.1
-				war_stability_factor = -0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.1
 				conscription_factor = 0.02
 				production_speed_buildings_factor = 0.05
 			}
 		}
 		IML_ratatat_2 = {
+			name = IML_ratatat
 			allowed = {
 				original_tag = IML
 			}
@@ -28,12 +29,40 @@ ideas = {
 			picture = IML_ratatat
 			modifier = {
 				stability_factor = 0.1
-				war_stability_factor = 0.1
+				war_support_factor = 0.1
 				consumer_goods_factor = -0.1
 				conscription_factor = 0.1
 				production_speed_buildings_factor = 0.1
 				local_building_slots_factor = 0.1
 				state_resources_factor = 0.1
+			}
+		}
+		IML_shelter_of_freedom = {
+			allowed = {
+				original_tag = IML
+			}
+			allowed_civil_war = {
+				always = no
+			}	
+			removal_cost = -1
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				weekly_manpower = 105
+				recruitable_population_factor = 0.01
+			}
+		}
+		IML_quebec_problem = {
+			allowed = {
+				original_tag = IML
+			}
+			allowed_civil_war = {
+				always = no
+			}	
+			removal_cost = -1
+			picture = chi_war_of_resistance2
+			modifier = {
+				political_power_cost = 0.30
+				stability_factor = -0.2
 			}
 		}
 		IML_national_research_committee = {
@@ -45,12 +74,11 @@ ideas = {
 			}	
 			removal_cost = -1
 			picture = BLA_scientific_improvement
+			research_bonus = {
+				industry = 0.05
+			}
 			modifier = {
-				stability_factor = -0.1
-				war_stability_factor = -0.1
-				consumer_goods_factor = 0.1
-				conscription_factor = 0.02
-				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
 			}
 		}
 	}

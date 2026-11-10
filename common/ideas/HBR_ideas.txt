@@ -1,5 +1,100 @@
 ideas = {
-	country = { }
+	hidden_ideas = {
+		#인민당 세력
+		HBR_civilian_slight_support = {
+			picture = PLACEHOLDER_idea_icon #임시
+			allowed_civil_war = {
+				always = yes
+			}
+			allowed = {
+				original_tag = HBR
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+
+		HBR_military_slight_support = {
+			picture = PLACEHOLDER_idea_icon #임시
+			allowed_civil_war = {
+				always = yes
+			}
+			allowed = {
+				original_tag = HBR
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+	}
+	country = {
+		HBR_weak_industry = {
+			allowed = {
+				original_tag = HBR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = weak_industry
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+			}
+		}
+		HBR_khana_ratsadon = {
+			allowed = {
+				original_tag = HBR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_volunteer_expedition_bonus
+			removal_cost = -1
+			modifier = {
+				custom_modifier_tooltip = HBR_khana_ratsadon_tt
+			}
+		}
+		HBR_pan_seraph = {
+			allowed = {
+				original_tag = HBR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_war_of_resistance2
+			removal_cost = -1
+			cancel = {
+				670 = { is_fully_controlled_by = ROOT } #라오스
+				1068 = { is_fully_controlled_by = ROOT } #란창
+				1069 = { is_fully_controlled_by = ROOT } #바삭
+
+				993 = { is_fully_controlled_by = ROOT } #테나세림
+				994 = { is_fully_controlled_by = ROOT } #켄퉁-양쉐
+				999 = { is_fully_controlled_by = ROOT } #샨 연방주
+
+				741 = { is_fully_controlled_by = ROOT } #캄보디아
+				1067 = { is_fully_controlled_by = ROOT } #바탐방
+
+				1061 = { is_fully_controlled_by = ROOT } #펄리스-케다
+				1062 = { is_fully_controlled_by = ROOT } #클란탄-트렝가누
+				1064 = { is_fully_controlled_by = ROOT } #페락
+				1065 = { is_fully_controlled_by = ROOT } #페낭
+			}
+			modifier = {
+				stability_factor = -0.1
+				stability_weekly = -0.003
+				war_support_factor = -0.1
+				custom_modifier_tooltip = HBR_pan_seraph_tt
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

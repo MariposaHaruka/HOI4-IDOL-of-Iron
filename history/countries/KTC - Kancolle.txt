@@ -14,6 +14,8 @@ set_grand_doctrine = mass_assault
 set_grand_doctrine = new_fleet_in_being
 set_grand_doctrine = new_operational_integrity
 
+set_rule = { can_join_factions = no }
+
 #시작 기술
 set_technology = {
 	infantry_weapons = 1
@@ -27,7 +29,13 @@ set_variable = { country_intro_page_count = 3 }
 
 #국민 정신
 
-add_ideas = agrarian_society
+add_ideas = {
+	KTC_broken_economy
+	KTC_complicated_power
+	KTC_long_march
+
+	agrarian_society
+}
 
 add_dynamic_modifier = { modifier = KTC_industry_modifier }
 add_dynamic_modifier = { modifier = KTC_army }

@@ -6,7 +6,7 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
-			}	
+			}
 			removal_cost = -1
 			equipment_bonus = {
 				capital_ship = { build_cost_ic = 0.15 }
@@ -21,7 +21,7 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
-			}	
+			}
 			removal_cost = -1
 			equipment_bonus = {
 				convoy = { build_cost_ic = 0.15 }
@@ -37,13 +37,44 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
-			}	
+			}
 			removal_cost = -1
 			equipment_bonus = {
-				capital_ship = { build_cost_ic = 0.15 }
-				carrier = { build_cost_ic = 0.15 }
-				screen_ship = { build_cost_ic = 0.15 }
-				submarine = { build_cost_ic = 0.15 }
+				fighter = { build_cost_ic = 0.15 }
+				heavy_fighter = { build_cost_ic = 0.15 }
+				cas = { build_cost_ic = 0.15 }
+				naval_bomber = { build_cost_ic = 0.15 }
+				tactical_bomber = { build_cost_ic = 0.15 }
+				strategic_bomber = { build_cost_ic = 0.15 }
+				scout_plane = { build_cost_ic = 0.15 }
+				maritime_patrol_plane = { build_cost_ic = 0.15 }
+				air_transport = { build_cost_ic = 0.15 }
+			}
+		}
+		BLA_11109_hidden_idea = {
+			allowed = {
+				original_tag = BLA
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				fighter = { build_cost_ic = -0.15 }
+				heavy_fighter = { build_cost_ic = -0.15 }
+			}
+		}
+		BLA_11209_hidden_idea = {
+			allowed = {
+				original_tag = BLA
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				tactical_bomber = { build_cost_ic = -0.15 }
+				strategic_bomber = { build_cost_ic = -0.15 }
 			}
 		}
 		BLA_12102_hidden_idea = {
@@ -52,7 +83,7 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
-			}	
+			}
 			removal_cost = -1
 			equipment_bonus = {
 				capital_ship = { build_cost_ic = -0.1 }
@@ -64,7 +95,7 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
-			}	
+			}
 			removal_cost = -1
 			equipment_bonus = {
 				carrier = { build_cost_ic = -0.1 }
@@ -76,7 +107,7 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
-			}	
+			}
 			removal_cost = -1
 			equipment_bonus = {
 				submarine = { build_cost_ic = -0.05 }
@@ -88,7 +119,7 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
-			}	
+			}
 			removal_cost = -1
 			equipment_bonus = {
 				ship_hull_light = { build_cost_ic = -0.05 }
@@ -120,7 +151,7 @@ ideas = {
 		}
 
 	}
-	
+
 	country = {
 		BLA_bad_administrative_static = { #인트로 소개 부분에만 나올 국민정신
 			allowed = { original_tag = BLA }
@@ -165,14 +196,14 @@ ideas = {
 				is_research_cost_factor = 1.5
 			}
 		}
-		
+
 		BLA_robot_technology_1 = { #로봇 기술
 			name = BLA_robot_technology
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			picture = BLA_robot_technology
-			modifier = { 
+			modifier = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				army_attack_factor = -0.1
@@ -180,7 +211,7 @@ ideas = {
 				army_speed_factor = -0.1
 			}
 		}
-		
+
 		BLA_robot_technology_2 = { #로봇 기술
 			name = BLA_robot_technology
 			allowed = { original_tag = BLA }
@@ -193,7 +224,7 @@ ideas = {
 				conscription_factor = 0.1
 			}
 		}
-		
+
 		BLA_robot_technology_3 = { #로봇 기술
 			name = BLA_robot_technology
 			allowed = { original_tag = BLA }
@@ -209,7 +240,7 @@ ideas = {
 				army_speed_factor = 0.1
 			}
 		}
-		
+
 		BLA_robot_technology_max = { #로봇 기술
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
@@ -224,7 +255,7 @@ ideas = {
 				army_speed_factor = 0.05
 			}
 		}
-		
+
 		BLA_scientific_improvement_1 = { #과학적 발전
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
@@ -234,7 +265,7 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
-		
+
 		BLA_scientific_improvement_2 = { #과학적 발전
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
@@ -244,17 +275,17 @@ ideas = {
 				research_speed_factor = 0.1
 			}
 		}
-		
+
 		BLA_scientific_improvement_3 = { #과학적 발전
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			picture = BLA_scientific_improvement
-			modifier = { 
+			modifier = {
 				research_speed_factor = 0.15
 			}
 		}
-		
+
 		BLA_scientific_improvement_4 = { #과학적 발전
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
@@ -265,19 +296,19 @@ ideas = {
 				research_sharing_per_country_bonus_factor = 0.05
 			}
 		}
-		
+
 		BLA_scientific_improvement_5 = { #과학적 발전
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			picture = BLA_scientific_improvement
-			modifier = { 
+			modifier = {
 				research_speed_factor = 0.25
 				research_sharing_per_country_bonus_factor = 0.1
 				production_lack_of_resource_penalty_factor = 0.05
 			}
 		}
-		
+
 		BLA_scientific_improvement_max = { #과학적 발전
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
@@ -320,7 +351,7 @@ ideas = {
 			}
 		}
 
-		
+
 		BLA_kivotos_bharat_problem = { #키보토스-인도인 문제
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
@@ -335,21 +366,21 @@ ideas = {
 			}
 		}
 
-		BLA_eimi_fleet_plan_idea = { #종합 해군 생산계획 
+		BLA_eimi_fleet_plan_idea = { #종합 해군 생산계획
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			picture = BLA_eimi_fleet_plan
-			equipment_bonus = { 
+			equipment_bonus = {
 				capital_ship = {
 					build_cost_ic = -0.1
-				} 
+				}
 				screen_ship = {
 					build_cost_ic = -0.1
-				} 
+				}
 				submarine = {
 					build_cost_ic = -0.1
-				} 
+				}
 				carrier = {
 					build_cost_ic = -0.1
 				}
@@ -359,12 +390,12 @@ ideas = {
 			}
 		}
 
-		BLA_airplane_production_plan_idea = { #종합 공군 생산계획 
+		BLA_airplane_production_plan_idea = { #종합 공군 생산계획
 			allowed = { original_tag = BLA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			picture = BLA_airplane_production_plan_idea
-			equipment_bonus = { 
+			equipment_bonus = {
 				air_transport = {
 					build_cost_ic = -0.1
 				}
@@ -395,14 +426,14 @@ ideas = {
 			}
 		}
 	}
-	tank_manufacturer = { 
+	tank_manufacturer = {
 		designer = yes
 		BLA_millenium_engineer_tank_development = {
 			picture = BLA_engineer
 			allowed = {
 				original_TAG = BLA
 			}
-			research_bonus = { 
+			research_bonus = {
 				armor = 0.25
 			}
 			traits = { fast_tank_manufacturer }
@@ -418,7 +449,7 @@ ideas = {
 			allowed = {
 				original_TAG = BLA
 			}
-			research_bonus = { 
+			research_bonus = {
 				armor = 0.25
 			}
 			traits = { heavy_tank_manufacturer }
@@ -434,7 +465,7 @@ ideas = {
 			allowed = {
 				original_TAG = BLA
 			}
-			research_bonus = { 
+			research_bonus = {
 				armor = 0.25
 			}
 			traits = { infantry_tank_manufacturer }
@@ -450,7 +481,7 @@ ideas = {
 			allowed = {
 				original_TAG = BLA
 			}
-			research_bonus = { 
+			research_bonus = {
 				armor = 0.25
 			}
 			traits = { medium_tank_manufacturer }
@@ -473,7 +504,7 @@ ideas = {
 			available = {
 			}
 			ai_will_do = {
-				base = 1 
+				base = 1
 				modifier = {
 					has_country_flag = BLA_kaiser_country
 					factor = 10
@@ -481,14 +512,14 @@ ideas = {
 			}
 		}
 	}
-	naval_manufacturer = { 
+	naval_manufacturer = {
 		designer = yes
 		BLA_millenium_engineer_battleship_development = {
 			picture = BLA_engineer
 			allowed = {
 				original_TAG = BLA
 			}
-			research_bonus = { 
+			research_bonus = {
 				naval_equipment = 0.25
 			}
 			traits = { battlefleet_designer }
@@ -504,7 +535,7 @@ ideas = {
 			allowed = {
 				original_TAG = BLA
 			}
-			research_bonus = { 
+			research_bonus = {
 				naval_equipment = 0.25
 			}
 			traits = { convoy_escort_naval_manufacturer }
@@ -527,7 +558,7 @@ ideas = {
 			available = {
 			}
 			ai_will_do = {
-				base = 1 
+				base = 1
 				modifier = {
 					has_country_flag = BLA_kaiser_country
 					factor = 10
@@ -542,7 +573,7 @@ ideas = {
 			allowed = {
 				original_TAG = BLA
 			}
-			research_bonus = { 
+			research_bonus = {
 				air_equipment = 0.25
 			}
 			traits = { multi_role_aircraft_manufacturer }
@@ -558,7 +589,7 @@ ideas = {
 			allowed = {
 				original_TAG = BLA
 			}
-			research_bonus = { 
+			research_bonus = {
 				air_equipment = 0.25
 			}
 			traits = { multi_role_aircraft_manufacturer }
@@ -581,7 +612,7 @@ ideas = {
 			available = {
 			}
 			ai_will_do = {
-				base = 1 
+				base = 1
 				modifier = {
 					has_country_flag = BLA_kaiser_country
 					factor = 10
@@ -601,7 +632,7 @@ ideas = {
 			available = {
 			}
 			ai_will_do = {
-				base = 1 
+				base = 1
 				modifier = {
 					has_country_flag = BLA_kaiser_country
 					factor = 10
@@ -628,7 +659,7 @@ ideas = {
 			allowed = {
 				original_TAG = BLA
 			}
-			research_bonus = { 
+			research_bonus = {
 				train_tech = 0.25
 			}
 			traits = { construction_company }
@@ -641,7 +672,7 @@ ideas = {
 		}
 	}
 	materiel_manufacturer = {
-		designer = yes 
+		designer = yes
 		BLA_kazeyama = {
 			allowed = {
 				original_tag = BLA

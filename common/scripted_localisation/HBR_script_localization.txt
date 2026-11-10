@@ -1,3 +1,20 @@
 #의회
 #당수
 #중점
+
+#인민당
+defined_text = {
+	name = GetCivilianFactionDesc
+	text = {
+		trigger = { has_idea = HBR_civilian_slight_support }
+		localization_key = idea_desc|HBR_civilian_slight_support
+	}
+}
+
+defined_text = {
+	name = GetMilitaryFactionDesc
+	text = {
+		trigger = { has_idea = HBR_military_slight_support }
+		localization_key = idea_desc|HBR_military_slight_support
+	}
+}

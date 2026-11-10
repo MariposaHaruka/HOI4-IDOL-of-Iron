@@ -1,8 +1,8 @@
 ideologies = {
 	#민주주의 계열
 	conservatism = {
-		types = { 
-			conservatism_subtype = {} 
+		types = {
+			conservatism_subtype = {}
 			#catholic_democracy = {
 			#	can_be_randomly_selected = no
 			#	color = { 0 115 205 }
@@ -19,7 +19,7 @@ ideologies = {
 		rules = {
 			can_create_collaboration_government = no
 			can_declare_war_on_same_ideology = yes
-			can_force_government = yes
+			can_force_government = no
 			can_send_volunteers = yes
 			can_puppet = no
 			can_lower_tension = yes
@@ -61,7 +61,7 @@ ideologies = {
 		ai_give_core_state_control_threshold = 0 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
 	}
 
-	
+
 	liberalism_mod = {
 		types = { liberalism_subtype = {} }
 		dynamic_faction_names = {
@@ -75,7 +75,7 @@ ideologies = {
 		rules = {
 			can_create_collaboration_government = no
 			can_declare_war_on_same_ideology = yes
-			can_force_government = yes
+			can_force_government = no
 			can_send_volunteers = yes
 			can_puppet = no
 			can_lower_tension = yes
@@ -115,7 +115,7 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.5 # multiplies threat impact on number of desired units by this value, defaults to 1.0. If at war, the larger of this value and NDefines::NAI::WANTED_UNITS_WAR_THREAT_FACTOR will be used instead
 		ai_give_core_state_control_threshold = 0 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
 	}
-	
+
 	progressivism = {
 		types = { progressivism_subtype = {} }
 		dynamic_faction_names = {
@@ -129,7 +129,7 @@ ideologies = {
 		rules = {
 			can_create_collaboration_government = no
 			can_declare_war_on_same_ideology = yes
-			can_force_government = yes
+			can_force_government = no
 			can_send_volunteers = yes
 			can_puppet = no
 			can_lower_tension = yes
@@ -171,7 +171,7 @@ ideologies = {
 		ai_give_core_state_control_threshold = 0 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
 	}
 
-	
+
 	socialdemocracy = {
 		types = { socialdemocracy_subtype = {} }
 		dynamic_faction_names = {
@@ -185,7 +185,7 @@ ideologies = {
 		rules = {
 			can_create_collaboration_government = no
 			can_declare_war_on_same_ideology = yes
-			can_force_government = yes
+			can_force_government = no
 			can_send_volunteers = yes
 			can_puppet = no
 			can_lower_tension = yes
@@ -238,7 +238,7 @@ ideologies = {
 
 		color = { 255 100 100  }
 		rules = {
-			can_force_government = yes
+			can_force_government = no
 			can_send_volunteers = yes
 			can_puppet = no
 			can_join_factions = no
@@ -268,7 +268,7 @@ ideologies = {
 	}
 
 
-	
+
 	communism = {
 		types = { communism_subtype = {} }
 		dynamic_faction_names = {
@@ -281,7 +281,7 @@ ideologies = {
 
 		color = { 233 70 70 }
 		rules = {
-			can_force_government = yes
+			can_force_government = no
 			can_send_volunteers = yes
 			can_puppet = no
 			can_join_factions = no
@@ -308,7 +308,7 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.20
 	}
 
-	
+
 	authoritariancommunism = {
 		types = { authoritariancommunism_subtype = {} }
 		dynamic_faction_names = {
@@ -321,7 +321,7 @@ ideologies = {
 
 		color = { 255 0 0  }
 		rules = {
-			can_force_government = yes
+			can_force_government = no
 			can_send_volunteers = yes
 			can_puppet = no
 			can_join_factions = no
@@ -350,7 +350,7 @@ ideologies = {
 		ai_give_core_state_control_threshold = 0 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
 	}
 
-	
+
 	anarchosyndicalism = {
 		types = { anarchosyndicalism_subtype = {} }
 		dynamic_faction_names = {
@@ -363,7 +363,7 @@ ideologies = {
 
 		color = { 187 0 0 }
 		rules = {
-			can_force_government = yes
+			can_force_government = no
 			can_send_volunteers = yes
 			can_puppet = no
 			can_join_factions = no
@@ -393,7 +393,7 @@ ideologies = {
 	}
 
 	#파시즘 계열
-	
+
 	fascism = {
 		types = { fascism_subtype = {} }
 		dynamic_faction_names = {
@@ -406,7 +406,7 @@ ideologies = {
 
 		color = { 0 0 0 }
 		rules = {
-			can_force_government = yes
+			can_force_government = no
 			can_send_volunteers = yes
 			can_puppet = no
 			can_join_factions = no
@@ -449,7 +449,7 @@ ideologies = {
 
 		color = { 150 75 0 }
 		rules = {
-			can_force_government = yes
+			can_force_government = no
 			can_send_volunteers = yes
 			can_puppet = no
 			can_join_factions = no
@@ -493,7 +493,7 @@ ideologies = {
 		}
 		color = { 192 192 192 }
 		rules = {
-			can_force_government = yes
+			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
 			can_create_factions = no
@@ -525,7 +525,7 @@ ideologies = {
 		ai_give_core_state_control_threshold = 0 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
 	}
 
-	
+
 	autocracy = {
 		types = { autocracy_subtype = {} }
 		dynamic_faction_names = {
@@ -538,7 +538,7 @@ ideologies = {
 
 		color = { 100 100 100 }
 		rules = {
-			can_force_government = yes
+			can_force_government = no
 			can_puppet = no
 			can_join_factions = no
 			can_create_factions = no

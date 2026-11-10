@@ -1,5 +1,68 @@
 ideas = {
-	country = { }
+	country = {
+		IDS_amsterdam_treaty = {
+			allowed = {
+				original_tag = IDS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = HUN_treaty_of_triannon
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				conscription_factor = -0.15
+			}
+		}
+		IDS_great_depression = {
+			allowed = {
+				original_tag = IDS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_economic_crisis
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				min_export = -0.15
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.1
+
+			}
+		}
+		IDS_weak_economy = {
+			allowed = {
+				original_tag = IDS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = great_depression
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+			}
+		}
+		IDS_esequiba_gold = {
+			allowed = {
+				original_tag = IDS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SPR_seize_the_gold_reserves
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

@@ -70,7 +70,14 @@ set_convoys = 40
 
 #국민 정신
 
-add_ideas = agrarian_society
+add_ideas = {
+	FGO_undiversified_economy
+	FGO_weak_government
+	FGO_home_of_revolution
+	FGO_disjointed_army
+
+	agrarian_society
+}
 
 add_dynamic_modifier = { modifier = FGO_industry_modifier }
 add_dynamic_modifier = { modifier = FGO_army }

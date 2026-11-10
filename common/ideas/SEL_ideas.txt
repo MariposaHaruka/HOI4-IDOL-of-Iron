@@ -1,5 +1,35 @@
 ideas = {
-	country = { }
+	country = {
+		SEL_weak_industry = {
+			allowed = {
+				original_tag = SEL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = weak_industry
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				consumer_goods_factor = 0.3
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+		}
+		SEL_memory_of_colony = {
+			allowed = {
+				original_tag = SEL
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_army_war_college
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.2
+			}
+		}
+	}
 	tank_manufacturer = { }
 	naval_manufacturer = { }
 	aircraft_manufacturer = { }

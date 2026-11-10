@@ -1069,14 +1069,14 @@ guiTypes = {
 					name = "MIO_bg"
 					quadTextureSprite ="GFX_mini_bg"
 				}
-		
+
 			iconType = {
 				name ="MIO_icon"
 				spriteType = "GFX_industrial_manufacturer_icon"
 				position = { x= 7 y = 7 } # IOI 수정
 				Orientation = "UPPER_LEFT"
 			}
-		
+
 			instantTextBoxType = {
 				name ="available_MIOs"
 				position = { x= 30 y = 8 }
@@ -1087,7 +1087,7 @@ guiTypes = {
 				maxHeight = 24
 				fixedsize = yes
 			}
-		}	
+		}
 
 		buttonType = {
 			name = "checkbox"
@@ -1120,8 +1120,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "resources"
-			position = { x = 10 y = 50 }
-			size = { width = 100% height = 100% }
+			position = { x = 18 y = 50 }
+			size = { width = 462 height = 35 }
 
 			background = {
 				name = "Background"
@@ -1139,7 +1139,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "oil_checkbox"
-				position = { x = 22 y = 1 }
+				position = { x = 28 y = 1 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"
 				clicksound = click_checkbox
@@ -1147,7 +1147,7 @@ guiTypes = {
 
 			iconType = {
 				name = "rubber_icon"
-				position = { x=58 y=2 }
+				position = { x=66 y=2 }
 				spriteType = "GFX_resources_strip"
 				frame = 3
 				#pdx_tooltip = "PRODUCTION_MATERIALS_RUBBER"
@@ -1155,7 +1155,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "rubber_checkbox"
-				position = { x = 80 y = 1 }
+				position = { x = 94 y = 1 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"
 				clicksound = click_checkbox
@@ -1163,7 +1163,7 @@ guiTypes = {
 
 			iconType = {
 				name = "steel_icon"
-				position = { x=113 y=2 }
+				position = { x=132 y=2 }
 				spriteType = "GFX_resources_strip"
 				frame = 5
 				#pdx_tooltip = "PRODUCTION_MATERIALS_STEEL"
@@ -1171,7 +1171,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "steel_checkbox"
-				position = { x = 138 y = 1 }
+				position = { x = 160 y = 1 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"
 				clicksound = click_checkbox
@@ -1179,7 +1179,7 @@ guiTypes = {
 
 			iconType = {
 				name = "aluminium_icon"
-				position = { x=173 y=1 }
+				position = { x=198 y=2 }
 				spriteType = "GFX_resources_strip"
 				frame = 2
 				#pdx_tooltip = "PRODUCTION_MATERIALS_ALUMINIUM"
@@ -1187,7 +1187,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "aluminium_checkbox"
-				position = { x = 195 y = 1 }
+				position = { x = 226 y = 1 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"
 				clicksound = click_checkbox
@@ -1195,7 +1195,7 @@ guiTypes = {
 
 			iconType = {
 				name = "tungsten_icon"
-				position = { x=229 y=2 }
+				position = { x=264 y=2 }
 				spriteType = "GFX_resources_strip"
 				frame = 4
 				#pdx_tooltip = "PRODUCTION_MATERIALS_TUNGSTEN"
@@ -1203,7 +1203,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "tungsten_checkbox"
-				position = { x = 253 y = 1 }
+				position = { x = 292 y = 1 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"
 				clicksound = click_checkbox
@@ -1211,7 +1211,7 @@ guiTypes = {
 
 			iconType = {
 				name = "chromium_icon"
-				position = { x=287 y=2 }
+				position = { x=330 y=2 }
 				spriteType = "GFX_resources_strip"
 				frame = 6
 				#pdx_tooltip = "PRODUCTION_MATERIALS_CHROMIUM"
@@ -1219,22 +1219,22 @@ guiTypes = {
 
 			buttonType = {
 				name = "chromium_checkbox"
-				position = { x = 311 y = 1 }
+				position = { x = 358 y = 1 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"
 				clicksound = click_checkbox
 			}
 			iconType = {
 				name = "coal_icon"
-				position = { x=346 y=2 }
+				position = { x=396 y=2 }
 				spriteType = "GFX_resources_strip"
 				frame = 7
-				#pdx_tooltip = "PRODUCTION_MATERIALS_CHROMIUM"
+				#pdx_tooltip = "PRODUCTION_MATERIALS_COAL"
 			}
 
 			buttonType = {
 				name = "coal_checkbox"
-				position = { x = 359 y = 1 }
+				position = { x = 424 y = 1 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"
 				clicksound = click_checkbox
@@ -1306,14 +1306,14 @@ guiTypes = {
 					name = "MIO_bg"
 					quadTextureSprite ="GFX_mini_bg"
 				}
-		
+
 			iconType = {
 				name ="MIO_icon"
 				spriteType = "GFX_industrial_manufacturer_icon"
 				position = { x= 5 y = 3 } # IOI 수정
 				Orientation = "UPPER_LEFT"
 			}
-		
+
 			instantTextBoxType = {
 				name ="available_MIOs"
 				position = { x= 40 y = 8 } # IOI 수정
@@ -1324,7 +1324,7 @@ guiTypes = {
 				maxHeight = 24
 				fixedsize = yes
 			}
-		}	
+		}
 
 		buttonType = {
 			name = "checkbox"
@@ -1676,7 +1676,7 @@ guiTypes = {
 			name = "name"
 			position = { x = 40 y = 4 }
 			textureFile = ""
-			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 154
 			maxHeight = 19
@@ -1853,7 +1853,7 @@ guiTypes = {
 			position = { x= 195 y = 1 }
 			spriteType = "GFX_attach_manufacturer"
 			scale = 0.45
-		}		
+		}
 
 		instantTextboxType = {
 			name = "priority"
@@ -2016,7 +2016,7 @@ guiTypes = {
 			name = "name"
 			position = { x = 40 y = 4 }
 			textureFile = ""
-			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 154
 			maxHeight = 20
@@ -2337,7 +2337,7 @@ guiTypes = {
 			editBoxType = {
 				name = "new_name_box"
 				position = { x = 35 y = 8 }
-				font = "name_18b" # IOI 임시조치 - 폰트 수정시 지울 것
+				font = "hoi_18b"
 				size = { x=260 y=20 }
 			}
 
@@ -2379,7 +2379,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 12 y = 9 }
-			font = "name_18b" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
 			text = "HMS William Wallace"
 			maxWidth = 290
@@ -2719,7 +2719,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 40 y = 4 }
-			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 154
 			maxHeight = 19
@@ -2753,7 +2753,7 @@ guiTypes = {
 			name = "name_list_btn"
 			position = { x=315 y=81	 }
 			quadTextureSprite = "GFX_naval_name_list_button"
-			buttonFont = "name_16mbs" # IOI 임시조치 - 폰트 수정시 지울 것
+			buttonFont = "hoi_16mbs"
 			clicksound = click_default
 			buttontext = "HMS William Wallace"
 		}
@@ -2819,7 +2819,7 @@ guiTypes = {
 			position = { x= 195 y = 1 }
 			spriteType = "GFX_attach_manufacturer"
 			scale = 0.45
-		}	
+		}
 
 		instantTextboxType = {
 			name = "priority"
@@ -3013,7 +3013,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 40 y = 4 }
-			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 154
 			maxHeight = 20
@@ -3352,7 +3352,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 40 y = 3 }
-			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 155
 			maxHeight = 19
@@ -3652,7 +3652,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 40 y = 4 }
-			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 160
 			maxHeight = 19
@@ -3861,7 +3861,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 54 y = 4 }
-			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 170
 			maxHeight = 20
@@ -4083,7 +4083,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 40 y = 3 }
-			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 160
 			maxHeight = 20
@@ -4323,7 +4323,7 @@ guiTypes = {
 			clicksound = click_default
 			frame = 1
 		}
-		
+
 		iconType = {
 			name ="outdated_equipment_overlay"
 			spriteType = "GFX_outdated_naval_equipment_overlay"
@@ -4351,14 +4351,14 @@ guiTypes = {
 			quadTextureSprite ="GFX_flag_small"
 			position = { x = 342 y = 25 }
 		}
-		
+
 		iconType = {
 			name = "role_icon"
 			spriteType = "GFX_wing_types_map"
 			position = { x = 334 y = 10 }
 			alwaystransparent = yes
 		}
-		
+
 		containerWindowType = {
 			name = "missions"
 			position = { x = 67 y = 60 }
@@ -4373,7 +4373,7 @@ guiTypes = {
 				format = "LOWER_LEFT"
 			}
 		}
-		
+
 		iconType = {
 			name ="equipment_designer"
 			spriteType = "GFX_tech_idea_bg"
@@ -4408,7 +4408,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 20 y = 4 } # IOI 수정 - 폰트 수정시 추가 수정할 것
-			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18mbs"
 			text = "Maus"
 			maxWidth = 308
 			maxHeight = 19
@@ -4552,7 +4552,7 @@ guiTypes = {
 			name = "name"
 			position = { x = 28 y = 4 } # IOI 수정 - 폰트 수정시 추가 수정할 것
 			textureFile = ""
-			font = "name_18mbs" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = "Maus"
 			maxWidth = 308
@@ -4575,18 +4575,18 @@ guiTypes = {
 			format = left
 			alwaystransparent = yes
 		}
-		
+
 		containerWindowType = { #Currently unused, but we might put something in here eventually.
 			name = "missions"
 			position = { x = 72 y = 58 }
 			size = { width = 200 height = 20 }
 			Orientation = upper_left
-			
+
 			# background = {
 			# 	name = "Background"
 			# 	quadTextureSprite ="GFX_tiled_window_transparent"
 			# }
-			
+
 			gridboxtype = {
 				name = "mission_grid"
 				size = { width = 200 height = 20 }
@@ -4595,7 +4595,7 @@ guiTypes = {
 				format = "UPPER_LEFT"
 			}
 		}
-		
+
 		iconType = {
 			name ="dominance_icon"
 			spriteType = "GFX_naval_dominance_support_strip"
@@ -4612,7 +4612,7 @@ guiTypes = {
 			maxHeight = 20
 			format = left
 		}
-		
+
 		gridBoxType = {
 			name = "resources_grid"
 			position = { x = 376 y = 8 }
@@ -4774,7 +4774,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 39 y = 9 }
-			font = "name_18b" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
 			text = "somewhere"
 			maxWidth = 280
@@ -4802,7 +4802,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 39 y = 9 }
-			font = "name_18b" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
 			text = "somewhere"
 			maxWidth = 280
@@ -4832,7 +4832,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 39 y = 9 }
-			font = "name_18b" # IOI 임시조치 - 폰트 수정시 지울 것
+			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
 			text = "somewhere"
 			maxWidth = 280
@@ -4893,7 +4893,7 @@ guiTypes = {
 			spriteType = "GFX_resources_strip"
 			alwaystransparent = yes
 		}
-		
+
 		instantTextboxType = {
 			name = "value"
 			position = { x=35 y=7 }
@@ -4905,7 +4905,7 @@ guiTypes = {
 			format = left
 			orientation = "UPPER_LEFT"
 			alwaystransparent = yes
-		}	
+		}
 
 	}
 }

@@ -6,7 +6,7 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
-			}	
+			}
 			removal_cost = -1
 			picture = generic_disjointed_gov
 			modifier = {
@@ -23,13 +23,12 @@ ideas = {
 				conscription_factor = -0.9
 			}
 		}
-
 		LAS_robot_technology_1 = { #로봇 기술
 			allowed = { original_tag = LAS }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
-			picture = LAS_robot_technology
-			modifier = { 
+			picture = BLA_robot_technology
+			modifier = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				army_attack_factor = -0.1
@@ -37,24 +36,24 @@ ideas = {
 				army_speed_factor = -0.1
 			}
 		}
-		
 		LAS_robot_technology_2 = { #로봇 기술
+			name = LAS_robot_technology_1
 			allowed = { original_tag = LAS }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
-			picture = LAS_robot_technology
+			picture = BLA_robot_technology
 			modifier = {
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
 				conscription_factor = 0.1
 			}
 		}
-		
 		LAS_robot_technology_3 = { #로봇 기술
+			name = LAS_robot_technology_1
 			allowed = { original_tag = LAS }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
-			picture = LAS_robot_technology
+			picture = BLA_robot_technology
 			modifier = {
 				industrial_capacity_factory = 0.15
 				industrial_capacity_dockyard = 0.15
@@ -62,6 +61,15 @@ ideas = {
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
 				army_speed_factor = 0.1
+			}
+		}
+		LAS_wish_to_go_back_to_home = {
+			allowed = { original_tag = LAS }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+				war_support_factor = 0.30
 			}
 		}
 	}

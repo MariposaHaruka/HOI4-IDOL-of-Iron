@@ -33,8 +33,16 @@ set_variable = { country_intro_page_count = 3 }
 set_convoys = 10
 
 #국민 정신
+add_timed_idea = {
+	idea = POP_aftermath_of_the_chaco_war
+	days = 1400
+}
+add_ideas = {
+	POP_great_depression
+	POP_unstable_government
 
-add_ideas = agrarian_society
+	agrarian_society
+}
 
 add_dynamic_modifier = { modifier = POP_industry_modifier }
 add_dynamic_modifier = { modifier = POP_army }

@@ -26,7 +26,12 @@ set_convoys = 5
 add_ideas = direct_election
 add_ideas = single_parliament
 
-add_ideas = agrarian_society
+add_ideas = {
+	SHP_unstable_government
+	SHP_poor_country
+
+	agrarian_society
+}
 
 add_dynamic_modifier = { modifier = SHP_industry_modifier }
 add_dynamic_modifier = { modifier = SHP_army }

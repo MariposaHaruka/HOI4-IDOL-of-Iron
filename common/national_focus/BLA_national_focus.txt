@@ -1,5 +1,3 @@
-#!gfx:interface\focus.gfx
-#!gfx:interface\generic_focus.gfx
 focus_tree = {
 	id = BLA_focus
 	country = {
@@ -827,11 +825,35 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11101"
+			air_experience = 25
+			add_mastery_bonus = {
+				name = BLA_11101
+				bonus = 0.1
+				days = 1095
+				track = heavy_aircraft
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_air_force
+			}
+			add_to_variable = {
+				BLA_air_force_experience_gain_air_factor = 0.1
+				tooltip = experience_gain_air_factor_tt
+			}
+			add_to_variable = {
+				BLA_air_force_experience_gain_tac_bomber_training_factor = 0.1
+				tooltip = experience_gain_tac_bomber_training_factor_tt
+			}
+			add_to_variable = {
+				BLA_air_force_experience_gain_strat_bomber_training_factor = 0.1
+				tooltip = experience_gain_strat_bomber_training_factor_tt
+			}
 		}
 	}
 
 	focus = {
-		id = BLA_11102 #전략폭격의 우월성
+		id = BLA_11102 #전략 폭격의 우월성
 		icon = GFX_focus_BLA_11102
 		cost = 5
 
@@ -847,6 +869,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11102"
+			add_doctrine_cost_reduction = {
+				name = BLA_11102
+				cost_reduction = 0.5
+				category = air_doctrine
+			}
 		}
 	}
 
@@ -867,6 +894,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11103"
+			add_doctrine_cost_reduction = {
+				name = BLA_11103
+				cost_reduction = 0.5
+				category = air_doctrine
+			}
 		}
 	}
 
@@ -888,7 +920,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11104"
 			air_experience = 25
+			add_tech_bonus = {
+				name = BLA_11102
+				bonus = 1.0
+				uses = 1
+				category = strategic_bomber
+			}
 			BLA_design_track_crasher = yes
+
 		}
 	}
 
@@ -910,6 +949,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11105"
 			air_experience = 25
+			add_tech_bonus = {
+				name = BLA_11103
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber
+			}
 			BLA_design_thundergun = yes
 		}
 	}
@@ -938,6 +983,18 @@ focus_tree = {
 				BLA_air_force_air_strategic_bomber_bombing_factor = 0.15
 				tooltip = air_strategic_bomber_bombing_factor_tt
 			}
+			add_to_variable = {
+				BLA_air_force_air_bombing_targetting = 0.15
+				tooltip = air_bombing_targetting_tt
+			}
+			add_to_variable = {
+				BLA_air_force_air_mission_efficiency = 0.1
+				tooltip = air_mission_efficiency_tt
+			}
+			add_to_variable = {
+				BLA_air_force_air_accidents_factor = -0.1
+				tooltip = air_accidents_factor_tt
+			}
 		}
 	}
 
@@ -956,13 +1013,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11106"
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.2
-				name = BLA_11002
-				uses = 1
-				category = air_doctrine
-			}
+			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11107"
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = BLA_air_force
@@ -985,10 +1036,6 @@ focus_tree = {
 					BLA_air_force_air_strategic_bomber_bombing_factor = 0.15
 					tooltip = air_strategic_bomber_bombing_factor_tt
 				}
-				add_to_variable = {
-					BLA_air_force_strategic_bomber_build_cost_ic = -0.15
-					tooltip = strategic_bomber_build_cost_ic_tt
-				}
 			}
 			else_if = {
 				limit = { has_completed_focus = BLA_11103 }
@@ -996,12 +1043,9 @@ focus_tree = {
 					BLA_air_force_air_cas_efficiency = -0.15
 					tooltip = air_cas_efficiency_tt
 				}
-				add_to_variable = {
-					BLA_air_force_tactical_bomber_build_cost_ic = -0.15
-					tooltip = tactical_bomber_build_cost_ic_tt
-				}
 			}
 			else = {
+				custom_effect_tooltip = generic_line_break_tt
 				custom_effect_tooltip = BLA_11107_tt
 			}
 		}
@@ -1028,8 +1072,12 @@ focus_tree = {
 				DYNMOD = BLA_air_force
 			}
 			add_to_variable = {
-				BLA_air_force_air_agility_factor = 0.1
-				tooltip = air_agility_factor_tt
+				BLA_air_force_air_cas_efficiency = 0.15
+				tooltip = air_cas_efficiency_tt
+			}
+			add_to_variable = {
+				BLA_air_force_air_bombing_targetting = 0.15
+				tooltip = air_bombing_targetting_tt
 			}
 		}
 	}
@@ -1050,6 +1098,41 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11109"
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_air_force
+			}
+			add_to_variable = {
+				BLA_air_force_air_range_factor = 0.1
+				tooltip = air_range_factor_tt
+			}
+			add_to_variable = {
+				BLA_air_force_air_mission_efficiency = 0.2
+				tooltip = air_mission_efficiency_tt
+			}
+			add_to_variable = {
+				BLA_air_force_air_accidents_factor = -0.1
+				tooltip = air_accidents_factor_tt
+			}
+			add_to_variable = {
+				BLA_air_force_strategic_bomber_build_cost_ic = -0.15
+				tooltip = strategic_bomber_build_cost_ic_tt
+			}
+			add_to_variable = {
+				BLA_air_force_tactical_bomber_build_cost_ic = -0.15
+				tooltip = tactical_bomber_build_cost_ic_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = BLA_11109_tt
+			#unlock_decision_tooltip = BLA_military_committee_better_frame_strategic_bomber
+			#unlock_decision_tooltip = BLA_military_committee_more_bomb_strategic_bomber
+			#unlock_decision_tooltip = BLA_military_committee_faster_strategic_bomber
+			#unlock_decision_tooltip = BLA_military_committee_better_frame_tactical_bomber
+			#unlock_decision_tooltip = BLA_military_committee_more_bomb_tactical_bomber
+			#unlock_decision_tooltip = BLA_military_committee_faster_tactical_bomber
+			hidden_effect = {
+				add_ideas = BLA_11109_hidden_idea
+			}
 		}
 	}
 
@@ -1069,7 +1152,30 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11101"
+			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11201"
+			air_experience = 25
+			add_mastery_bonus = {
+				name = BLA_11101
+				bonus = 0.1
+				days = 1095
+				track = fighter_aircraft
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_air_force
+			}
+			add_to_variable = {
+				BLA_air_force_experience_gain_air_factor = 0.1
+				tooltip = experience_gain_air_factor_tt
+			}
+			add_to_variable = {
+				BLA_air_force_experience_gain_fighter_training_factor = 0.1
+				tooltip = experience_gain_fighter_training_factor_tt
+			}o_variable = {
+				BLA_air_force_experience_gain_heavy_fighter_training_factor = 0.1
+				tooltip = experience_gain_heavy_fighter_training_factor_tt
+			}
 		}
 	}
 
@@ -1090,21 +1196,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11202"
-			custom_effect_tooltip = {
-				localization_key = dynmod_modifiy_tt
-				DYNMOD = BLA_air_force
-			}
-			add_to_variable = {
-				BLA_air_force_air_agility_factor = 0.1
-				tooltip = air_agility_factor_tt
-			}
-			add_to_variable = {
-				BLA_air_force_air_escort_efficiency = 0.15
-				tooltip = air_escort_efficiency_tt
-			}
-			add_to_variable = {
-				BLA_air_force_air_intercept_efficiency = 0.15
-				tooltip = air_intercept_efficiency_tt
+			add_doctrine_cost_reduction = {
+				name = BLA_11202
+				cost_reduction = 0.5
+				category = air_doctrine
 			}
 		}
 	}
@@ -1126,21 +1221,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11203"
-			custom_effect_tooltip = {
-				localization_key = dynmod_modifiy_tt
-				DYNMOD = BLA_air_force
-			}
-			add_to_variable = {
-				BLA_air_force_air_agility_factor = 0.1
-				tooltip = air_agility_factor_tt
-			}
-			add_to_variable = {
-				BLA_air_force_air_superiority_efficiency = 0.15
-				tooltip = air_superiority_efficiency_tt
-			}
-			add_to_variable = {
-				BLA_air_force_air_intercept_efficiency = 0.15
-				tooltip = air_intercept_efficiency_tt
+			add_doctrine_cost_reduction = {
+				name = BLA_11203
+				cost_reduction = 0.5
+				category = air_doctrine
 			}
 		}
 	}
@@ -1163,6 +1247,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11204"
 			air_experience = 25
+			add_tech_bonus = {
+				name = BLA_11204
+				bonus = 1.0
+				uses = 1
+				category = cat_heavy_fighter
+			}
 			BLA_design_chabasco = yes
 		}
 	}
@@ -1185,6 +1275,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11205"
 			air_experience = 25
+			add_tech_bonus = {
+				name = BLA_11205
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
 			BLA_design_supernova = yes
 		}
 	}
@@ -1205,6 +1301,26 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11206"
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_air_force
+			}
+			add_to_variable = {
+				BLA_air_force_air_escort_efficiency = 0.15
+				tooltip = air_escort_efficiency_tt
+			}
+			add_to_variable = {
+				BLA_air_force_air_intercept_efficiency = 0.15
+				tooltip = air_intercept_efficiency_tt
+			}
+			add_to_variable = {
+				BLA_air_force_air_mission_efficiency = 0.1
+				tooltip = air_mission_efficiency_tt
+			}
+			add_to_variable = {
+				BLA_air_force_air_accidents_factor = -0.1
+				tooltip = air_accidents_factor_tt
+			}
 		}
 	}
 
@@ -1224,19 +1340,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11206"
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.2
-				name = BLA_11002
-				uses = 1
-				category = air_doctrine
-			}
-			custom_effect_tooltip = {
-				localization_key = dynmod_modifiy_tt
-				DYNMOD = BLA_air_force
-			}
 			add_to_variable = {
 				BLA_air_force_air_mastery_gain_factor = 0.1
 				tooltip = air_mastery_gain_factor_tt
+			}
+			add_to_variable = {
+				BLA_air_force_experience_gain_air_factor = 0.1
+				tooltip = experience_gain_air_factor_tt
 			}
 			add_to_variable = {
 				BLA_air_force_air_ace_generation_chance_factor = 0.1
@@ -1248,10 +1358,6 @@ focus_tree = {
 					BLA_air_force_air_escort_efficiency = 0.15
 					tooltip = air_escort_efficiency_tt
 				}
-				add_to_variable = {
-					BLA_air_force_heavy_fighter_build_cost_ic = -0.15
-					tooltip = heavy_fighter_build_cost_ic_tt
-				}
 			}
 			else_if = {
 				limit = { has_completed_focus = BLA_11203 }
@@ -1259,12 +1365,9 @@ focus_tree = {
 					BLA_air_force_air_superiority_efficiency= 0.15
 					tooltip = air_superiority_efficiency_tt
 				}
-				add_to_variable = {
-					BLA_air_force_fighter_build_cost_ic = -0.15
-					tooltip = fighter_build_cost_ic_tt
-				}
 			}
 			else = {
+				custom_effect_tooltip = generic_line_break_tt
 				custom_effect_tooltip = BLA_11207_tt
 			}
 		}
@@ -1286,6 +1389,26 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11208"
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_air_force
+			}
+			add_to_variable = {
+				BLA_air_force_air_superiority_efficiency = 0.15
+				tooltip = air_escort_efficiency_tt
+			}
+			add_to_variable = {
+				BLA_air_force_air_escort_efficiency = 0.15
+				tooltip = air_escort_efficiency_tt
+			}
+			add_to_variable = {
+				BLA_air_force_air_mission_efficiency = 0.1
+				tooltip = air_mission_efficiency_tt
+			}
+			add_to_variable = {
+				BLA_air_force_air_accidents_factor = -0.1
+				tooltip = air_accidents_factor_tt
+			}
 		}
 	}
 
@@ -1305,6 +1428,41 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_11209"
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_air_force
+			}
+			add_to_variable = {
+				BLA_air_force_air_range_factor = 0.1
+				tooltip = air_range_factor_tt
+			}
+			add_to_variable = {
+				BLA_air_force_air_mission_efficiency = 0.2
+				tooltip = air_mission_efficiency_tt
+			}
+			add_to_variable = {
+				BLA_air_force_air_accidents_factor = -0.1
+				tooltip = air_accidents_factor_tt
+			}
+			add_to_variable = {
+				BLA_air_force_fighter_build_cost_ic = -0.15
+				tooltip = fighter_build_cost_ic_tt
+			}
+			add_to_variable = {
+				BLA_air_force_heavy_fighter_build_cost_ic = -0.15
+				tooltip = heavy_fighter_build_cost_ic_tt
+			}
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = BLA_11209_tt
+			#unlock_decision_tooltip = BLA_military_committee_better_frame_fighter
+			#unlock_decision_tooltip = BLA_military_committee_better_guns_fighter
+			#unlock_decision_tooltip = BLA_military_committee_faster_fighter
+			#unlock_decision_tooltip = BLA_military_committee_better_frame_heavy_fighter
+			#unlock_decision_tooltip = BLA_military_committee_better_guns_heavy_fighter
+			#unlock_decision_tooltip = BLA_military_committee_faster_heavy_fighter
+			hidden_effect = {
+				add_ideas = BLA_11209_hidden_idea
+			}
 		}
 	}
 
@@ -1759,6 +1917,7 @@ focus_tree = {
 				BLA_navy_naval_mastery_gain_factor = 0.10
 				tooltip = naval_mastery_gain_factor_tt
 			}
+			custom_effect_tooltip = generic_line_break_tt
 			custom_effect_tooltip = {
 				localization_key = dynmod_modifiy_tt
 				DYNMOD = BLA_bad_administrative
@@ -4152,7 +4311,8 @@ focus_tree = {
 		relative_position_id = BLA_31202
 
 		ai_will_do = { factor = 50 }
-		prerequisite = { focus = BLA_31202 focus = BLA_31231 }
+		prerequisite = { focus = BLA_31202 }
+		prerequisite = { focus = BLA_31231 }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4174,7 +4334,7 @@ focus_tree = {
 		relative_position_id = BLA_31231
 
 		ai_will_do = { factor = 50 }
-		prerequisite = { focus = BLA_31231 focus = BLA_32005 }
+		prerequisite = { focus = BLA_31231 }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4195,7 +4355,8 @@ focus_tree = {
 		relative_position_id = BLA_31233
 
 		ai_will_do = { factor = 50 }
-		prerequisite = { focus = BLA_31233 focus = BLA_31203 }
+		prerequisite = { focus = BLA_31233 }
+		prerequisite = { focus = BLA_31203 }
 		available = { has_completed_focus = BLA_31201 }
 
 		available_if_capitulated = yes
@@ -4799,7 +4960,7 @@ focus_tree = {
 		relative_position_id = BLA_32005
 
 		ai_will_do = { factor = 50 }
-		prerequisite = { focus = BLA_31231 focus = BLA_32005 }
+		prerequisite = { focus = BLA_32005 }
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4858,8 +5019,7 @@ focus_tree = {
 		relative_position_id = BLA_32008
 
 		ai_will_do = { factor = 50 }
-		prerequisite = { focus = BLA_31233 }
-		prerequisite = { focus = BLA_32008 }
+		prerequisite = { focus = BLA_31233 focus = BLA_32008 }
 
 		available = {
 			custom_trigger_tooltip = {
@@ -10096,6 +10256,59 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus completed: BLA_MIL_11004"
+			425 = {
+				add_victory_points = {
+					province = 4315
+					value = 5
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12146
+					level = 5
+				}
+				add_building_construction = {
+					type = bunker
+					province = 4344
+					level = 5
+				}
+			}
+			423 = {
+				add_building_construction = {
+					type = bunker
+					province = 7391
+					level = 5
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12275
+					level = 5
+				}
+				add_building_construction = {
+					type = bunker
+					province = 7363
+					level = 5
+				}
+				add_building_construction = {
+					type = bunker
+					province = 8067
+					level = 5
+				}
+				add_building_construction = {
+					type = bunker
+					province = 10808
+					level = 5
+				}
+			}
+			unlock_decision_tooltip = BLA_military_committee_category_eridu_expansion_plan
+			custom_effect_tooltip = generic_line_break_tt
+			custom_effect_tooltip = {
+				localization_key = dynmod_modifiy_tt
+				DYNMOD = BLA_army
+			}
+			add_to_variable = {
+				BLA_army_land_bunker_effectiveness_factor = 0.15
+				tooltip = land_bunker_effectiveness_factor_tt
+			}
 		}
 	}
 
@@ -13760,8 +13973,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_takanashi_hoshino
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				BLA_abydos_integrate = yes
 			}
 		}
 
@@ -13786,8 +14003,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_takanashi_hoshino
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				BLA_abydos_integrate = yes
 			}
 		}
 
@@ -13814,8 +14035,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_takanashi_hoshino
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				BLA_abydos_integrate = yes
 			}
 		}
 
@@ -13842,8 +14067,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sunaookami_shiroko
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				BLA_abydos_integrate = yes
 			}
 		}
 
@@ -13868,8 +14097,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sunaookami_shiroko
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				BLA_abydos_integrate = yes
 			}
 		}
 
@@ -13895,8 +14128,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_takanashi_hoshino
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				BLA_abydos_integrate = yes
 			}
 		}
 
@@ -13921,8 +14158,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		available = {
 			custom_trigger_tooltip = {
-				BLA_abydos_participate = yes
-				tooltip = BLA_abydos_participate_tt
+				tooltip = {
+					localization_key = BLA_available_focus_tt
+					CHARACTER = BLA_sunaookami_shiroko
+					INTEGRATION = BLA_abydos_integrate_tt
+				}
+				BLA_abydos_integrate = yes
 			}
 		}
 

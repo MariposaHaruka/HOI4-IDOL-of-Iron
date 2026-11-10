@@ -11,15 +11,11 @@ wolfpacks = {
         always = yes
     }
 
-    ai_will_do = {
+    ai_will_do = { 
         base = 1
         modifier = {
             factor = 75
-            original_tag = PRS
-        }
-        modifier = {
-            factor = 75
-            original_tag = HLL
+            original_tag = GER
         }
     }
 
@@ -76,23 +72,23 @@ submarine_fleet_operations = {
         always = yes
     }
 
-    ai_will_do = {
+    ai_will_do = { 
         base = 1
         modifier = {
             factor = 25
-            original_tag = ICG
+            original_tag = USA
         }
         modifier = {
             factor = 25
-            original_tag = BDG
+            original_tag = FRA
         }
         modifier = {
             factor = 25
-            original_tag = ENS
+            original_tag = ITA
         }
         modifier = {
             factor = 25
-            original_tag = TOH
+            original_tag = SOV
         }
     }
 
@@ -135,11 +131,11 @@ capital_hunters = {
     xp_cost = 100
     xp_type = navy
 
-    ai_will_do = {
+    ai_will_do = { 
         base = 1
         modifier = {
             factor = 25
-            original_tag = LLS
+            original_tag = JAP
         }
     }
     available = {
@@ -312,7 +308,7 @@ long_range_submarines = {
             is_special_project_completed = sp:sp_naval_cruiser_submarine
             is_special_project_completed = sp:sp_naval_submarine_carrier
         }
-
+        
     }
     visible = {
         has_dlc = "No Compromise, No Surrender"
@@ -354,7 +350,10 @@ long_range_submarines = {
                 ship_hull_carrier_submarine = {
                     surface_visibility = -0.1
                     instant = yes
-
+                }
+                ship_hull_nuclear_submarine = {
+                    surface_visibility = -0.05
+                    instant = yes
                 }
             }
         }
@@ -372,6 +371,11 @@ long_range_submarines = {
                 }
                 ship_hull_carrier_submarine = {
                     naval_speed = 0.2
+                    instant = yes
+                }
+                ship_hull_nuclear_submarine = {
+                    naval_speed = 0.1
+                    torpedo_attack = 0.1
                     instant = yes
                 }
             }
@@ -398,7 +402,9 @@ long_range_submarines = {
                 sub_detection = 0.2
                 torpedo_attack = 0.1
             }
-        }
+        }   
 
     }
-}
+
+
+

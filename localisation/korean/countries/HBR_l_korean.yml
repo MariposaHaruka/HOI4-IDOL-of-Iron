@@ -30,10 +30,18 @@
  # bop
  # MIO/designers
  # idea
+ HBR_weak_industry: "열악한 산업"
+ HBR_weak_industry_desc: "우리는 갓 독립한 국가가 아닌 국가 중에서 산업력이 크게 떨어지는 국가입니다. 어떻게든 열악한 환경을 극복해야 합니다."
+ HBR_khana_ratsadon: "세라프 인민당"
+ HBR_khana_ratsadon_desc: "1932년 쿠데타로 집권한 세라프 인민당은 민간 세력과 군부 세력이 합심해 세라프 국을 진보적으로 이끌기 위해 합심한 집단입니다. 하지만 같은 목표만 갖고 성립된 집단이기에 이 균형은 언제 깨질지 아무도 모릅니다."
+ HBR_pan_seraph: "대 세라프 주의"
+ HBR_pan_seraph_desc: "태국은 20세기 초반 외세로부터 영토를 뜯긴 아픈 역사를 가지고 있습니다. 대공황이 닥친 뒤, 세라프국은 이 강역을 다시 확보할 기회를 갖게 되었습니다. 지금 이 순간이 아니면 어쩌면 다시 예전 영토로 돌아갈 수 없을지도 모릅니다."
+ # 인민당 관련
+ HBR_civilian_slight_support: "민간 세력 - 약간의 지지"
+ HBR_military_slight_support: "군부 세력 - 약간의 지지"
  ####################################################
  #####- Section 03: State & Dynamic Modifiers - #####
- ####################################################
- HBR_industry_modifier: "헤븐 번즈 레드 산업"
+ ####################################################HBR_industry_modifier: "헤븐 번즈 레드 산업"
  HBR_industry_modifier_desc: ""
  HBR_army: "헤븐 번즈 레드 육군"
  HBR_army_desc: ""
@@ -69,6 +77,9 @@
  ###################################
  # country flag
  # custom trigger tooltip
+ # idea tooltip
+ HBR_khana_ratsadon_tt: "현재 세력 수준: \n[GetCivilianFactionDesc] \n[GetMilitaryFactionDesc]"
+ HBR_pan_seraph_tt: "대 세라프 복원 시 제거:\n§Y라오스§!, §Y란창§!, §Y바삭§!, §Y테나세림§!, §Y샨 연방 주§!, §Y켄퉁-양쉐§!, §Y바탐방§!, §Y캄보디아§!, §Y펄리스-케다§!, §Y클란탄-트렝가누§!, §Y페락§!, §Y페낭§!를 완전히 지배해야 합니다."
  # focus tooltip
  # decision tooltip
  # event tooltip

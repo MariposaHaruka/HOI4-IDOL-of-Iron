@@ -62,4 +62,92 @@ on_actions = {
 	#		}
 	#	}
 	#}
+	
+	#먼로주의 트리거
+	#ROOT = attacking side
+	#FROM = defending side
+	on_declare_war = {
+		effect = {
+			#아메리카 대륙이 아닌 국가가 아메리카 대륙 국가 침략
+			IF = {
+				limit = {
+					ICG = {
+						exists = yes
+						has_idea = ICG_monroe_doctrine_enforcer
+					}
+					FROM = {
+						capital_scope = {
+							is_core_of = PREV
+							OR = {
+								is_on_continent = north_america
+								is_on_continent = south_america
+							}
+						}
+					}
+					ROOT = {
+						capital_scope = {
+							is_core_of = PREV
+							NOT = { is_on_continent = north_america }
+							NOT = { is_on_continent = south_america }
+						}
+					}
+				}
+				ROOT = {
+					ICG = {
+						country_event = {
+							id = ICG_monroe.1
+							days = 3
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			#아메리카 대륙이 아닌 국가와 세력인 아메리카 국가가 다른 아메리카 대륙 국가 침략
+			IF = {
+				limit = {
+					NOT = { ROOT = { tag = ICG } }
+					NOT = { FROM = { tag = ICG } }
+					ICG = {
+						exists = yes
+						has_idea = ICG_monroe_doctrine_enforcer
+					}
+					FROM = {
+						capital_scope = {
+							is_core_of = PREV
+							OR = {
+								is_on_continent = north_america
+								is_on_continent = south_america
+							}
+						}
+					}
+					ROOT = {
+						capital_scope = {
+							is_core_of = PREV
+							OR = {
+								is_on_continent = north_america
+								is_on_continent = south_america
+							}
+						}
+						is_in_faction = yes
+						faction_leader = { 
+							capital_scope = {
+								is_core_of = PREV
+								NOT = { is_on_continent = north_america }
+								NOT = { is_on_continent = south_america }
+							}
+						}
+					}
+				}
+				ROOT = {
+					ICG = {
+						country_event = {
+							id = ICG_monroe.1
+							days = 3
+						}
+					}
+				}
+			}
+		}
+	}
 }

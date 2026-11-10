@@ -273,7 +273,27 @@ leader_traits = {
 	light_tank_manufacturer = {
 		random = no
 		equipment_bonus = {
-			armor = {
+			light_tank_chassis = {
+				maximum_speed = 0.05
+				soft_attack = 0.05
+			}
+			light_tank_aa_chassis = {
+				maximum_speed = 0.05
+				soft_attack = 0.05
+			}
+			light_tank_artillery_chassis = {
+				maximum_speed = 0.05
+				soft_attack = 0.05
+			}
+			light_tank_destroyer_chassis = {
+				maximum_speed = 0.05
+				soft_attack = 0.05
+			}
+			light_tank_amphibious_chassis = {
+				maximum_speed = 0.05
+				soft_attack = 0.05
+			}
+			light_tank_flame_chassis = {
 				maximum_speed = 0.05
 				soft_attack = 0.05
 			}
@@ -287,7 +307,23 @@ leader_traits = {
 	tank_destroyer_manufacturer = {
 		random = no
 		equipment_bonus = {
-			armor = {
+			light_tank_destroyer_chassis = {
+				armor_value = 0.05
+				hard_attack = 0.05
+			}
+			medium_tank_destroyer_chassis = {
+				armor_value = 0.05
+				hard_attack = 0.05
+			}
+			heavy_tank_destroyer_chassis = {
+				armor_value = 0.05
+				hard_attack = 0.05
+			}
+			super_heavy_tank_destroyer_chassis = {
+				armor_value = 0.05
+				hard_attack = 0.05
+			}
+			modern_tank_destroyer_chassis = {
 				armor_value = 0.05
 				hard_attack = 0.05
 			}
@@ -301,7 +337,15 @@ leader_traits = {
 	flame_tank_manufacturer = {
 		random = no
 		equipment_bonus = {
-			armor = {
+			light_tank_flame_chassis = {
+				reliability = 0.05
+				build_cost_ic = -0.05
+			}
+			medium_tank_flame_chassis = {
+				reliability = 0.05
+				build_cost_ic = -0.05
+			}
+			heavy_tank_flame_chassis = {
 				reliability = 0.05
 				build_cost_ic = -0.05
 			}
@@ -315,7 +359,19 @@ leader_traits = {
 	amphibious_tank_manufacturer = {
 		random = no
 		equipment_bonus = {
-			armor = {
+			amphibious_tank_chassis = {
+				reliability = 0.05
+				breakthrough = 0.05
+			}
+			light_tank_amphibious_chassis = {
+				reliability = 0.05
+				breakthrough = 0.05
+			}
+			medium_tank_amphibious_chassis = {
+				reliability = 0.05
+				breakthrough = 0.05
+			}
+			heavy_tank_amphibious_chassis = {
 				reliability = 0.05
 				breakthrough = 0.05
 			}
@@ -329,7 +385,23 @@ leader_traits = {
 	artillery_tank_manufacturer = {
 		random = no
 		equipment_bonus = {
-			armor = {
+			light_tank_artillery_chassis = {
+				hard_attack = 0.05
+				breakthrough = 0.05
+			}
+			medium_tank_artillery_chassis = {
+				hard_attack = 0.05
+				breakthrough = 0.05
+			}
+			heavy_tank_artillery_chassis = {
+				hard_attack = 0.05
+				breakthrough = 0.05
+			}
+			super_heavy_tank_artillery_chassis = {
+				hard_attack = 0.05
+				breakthrough = 0.05
+			}
+			modern_tank_artillery_chassis = {
 				hard_attack = 0.05
 				breakthrough = 0.05
 			}
@@ -343,7 +415,23 @@ leader_traits = {
 	anti_air_tank_manufacturer = {
 		random = no
 		equipment_bonus = {
-			armor = {
+			light_tank_aa_chassis = {
+				air_attack = 0.05
+				soft_attack = 0.05
+			}
+			medium_tank_aa_chassis = {
+				air_attack = 0.05
+				soft_attack = 0.05
+			}
+			heavy_tank_aa_chassis = {
+				air_attack = 0.05
+				soft_attack = 0.05
+			}
+			super_heavy_tank_aa_chassis = {
+				air_attack = 0.05
+				soft_attack = 0.05
+			}
+			modern_tank_aa_chassis = {
 				air_attack = 0.05
 				soft_attack = 0.05
 			}
